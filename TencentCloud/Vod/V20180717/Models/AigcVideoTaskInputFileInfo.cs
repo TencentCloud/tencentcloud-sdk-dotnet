@@ -58,26 +58,34 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 参考类型，GV模型适用。
         /// 注意：
-        /// 
-        /// 当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+        /// 当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+        /// 当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// 主体id.
+        /// 主体 Id。
         /// 适用模型：Vidu-q2.
-        /// 当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+        /// 当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 适用于Vidu-q2模型。
-        /// 当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+        /// 适用于 Vidu-q2 模型。
+        /// 当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
+
+        /// <summary>
+        /// 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+        /// <li>Enabled：保留</li>
+        /// <li>Disabled：不保留</li>
+        /// </summary>
+        [JsonProperty("KeepOriginalSound")]
+        public string KeepOriginalSound{ get; set; }
 
 
         /// <summary>
@@ -92,6 +100,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
             this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "KeepOriginalSound", this.KeepOriginalSound);
         }
     }
 }

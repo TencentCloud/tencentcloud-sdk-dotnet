@@ -422,6 +422,20 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("MaxRingTimeoutSecond")]
         public long? MaxRingTimeoutSecond{ get; set; }
 
+        /// <summary>
+        /// 环境音场景，没有的话不填。
+        /// coffee_shops：咖啡店氛围，背景中有人聊天
+        /// busy_office：客服中心
+        /// </summary>
+        [JsonProperty("AmbientSoundType")]
+        public string AmbientSoundType{ get; set; }
+
+        /// <summary>
+        /// 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+        /// </summary>
+        [JsonProperty("AmbientSoundVolume")]
+        public float? AmbientSoundVolume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -466,6 +480,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
             this.SetParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
             this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+            this.SetParamSimple(map, prefix + "AmbientSoundType", this.AmbientSoundType);
+            this.SetParamSimple(map, prefix + "AmbientSoundVolume", this.AmbientSoundVolume);
         }
     }
 }

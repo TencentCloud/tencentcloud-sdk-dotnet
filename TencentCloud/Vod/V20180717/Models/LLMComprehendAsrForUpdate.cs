@@ -15,26 +15,22 @@
  * under the License.
  */
 
-namespace TencentCloud.Goosefs.V20220519.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterRolesRequest : AbstractModel
+    public class LLMComprehendAsrForUpdate : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 文本转录任务开关，可选值：
+        /// - ON：开启文本转录任务；
+        /// - OFF：关闭文本转录任务。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// 角色名
-        /// </summary>
-        [JsonProperty("RoleName")]
-        public string RoleName{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -42,8 +38,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

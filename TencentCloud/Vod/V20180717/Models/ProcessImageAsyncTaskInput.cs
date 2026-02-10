@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
+        /// <summary>
+        /// 图片异步处理扩展参数。
+        /// </summary>
+        [JsonProperty("ExtendedParameter")]
+        public ProcessImageAsyncInputExtendedParameter ExtendedParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamObj(map, prefix + "ExtendedParameter.", this.ExtendedParameter);
         }
     }
 }

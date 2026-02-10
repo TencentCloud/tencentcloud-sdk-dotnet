@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Goosefs.V20220519.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ListLoadTasksRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 集群 ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 任务创建起始时间戳，默认为3天前：当前时间戳-86400*3
+        /// </summary>
+        [JsonProperty("StartTimestamp")]
+        public ulong? StartTimestamp{ get; set; }
+
+        /// <summary>
+        /// 任务变更时间戳
+        /// </summary>
+        [JsonProperty("EndTimestamp")]
+        public ulong? EndTimestamp{ get; set; }
+
+        /// <summary>
+        /// 筛选任务状态，枚举Waiting,Running,Canceled,Completed。默认返回所有任务
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// 筛选优先级任务，默认返回所有任务
+        /// </summary>
+        [JsonProperty("Priority")]
+        public ulong? Priority{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "StartTimestamp", this.StartTimestamp);
+            this.SetParamSimple(map, prefix + "EndTimestamp", this.EndTimestamp);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
+        }
+    }
+}
+

@@ -37,7 +37,9 @@ namespace TencentCloud.Tione.V20211111.Models
         ///     InstanceId (资源组节点id)
         ///     InstanceStatus (资源组节点状态)
         /// 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-        /// 3. 每次请求的Filters的上限为10，Filter.Values的上限为100
+        /// 3. Filter.Negative: 是否取反，默认为false
+        /// 4. Filter.Fuzzy: 是否模糊查询，默认为false
+        /// 5. 每次请求的Filters的上限为10，Filter.Values的上限为100
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -68,6 +68,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>JITTranscoding: 即时转码</li>
         /// <li>VideoSnapshot: 视频截图</li>
         /// <li>JITEncryption: 即时加密</li>
+        /// <li>MediaEnhancement: 音视频增强</li>
+        /// <li>ImageCompression: 图片压缩</li>
+        /// <li>ImageEnhancement: 图片增强</li>
+        /// <li>ImageSuperResolution: 图片超分</li>
+        /// <li>ImageAdvanceCompression: 图片高级压缩</li>
+        /// <li>ImageUnderstanding: 图片理解</li>
+        /// <li>AddTraceWatermark: 添加溯源水印</li>
+        /// <li>AddBlindWatermark: 添加盲水印</li>
+        /// <li>AddNagraWatermark: 添加NAGRA数字水印</li>
+        /// <li>ExtractTraceWatermark: 提取溯源水印</li>
+        /// <li>ExtractBlindWatermark: 提取盲水印</li>
+        /// <li>ExtractNagraWatermark: 提取NAGRA数字水印</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

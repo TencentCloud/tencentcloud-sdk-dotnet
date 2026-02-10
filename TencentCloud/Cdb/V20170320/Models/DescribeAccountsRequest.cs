@@ -60,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
+        /// <summary>
+        /// 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+        /// </summary>
+        [JsonProperty("HostRegexp")]
+        public string HostRegexp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
             this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "HostRegexp", this.HostRegexp);
         }
     }
 }

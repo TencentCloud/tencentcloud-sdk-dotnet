@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+        /// 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

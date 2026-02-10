@@ -32,13 +32,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 指定分页每页返回的数据条数，单页最大1000
+        /// 指定分页每页返回的数据条数，单页最大支持 200。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+        /// 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -66,6 +66,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否导出当前成员企业数据
         /// <ul><li> **false**：不导出（默认值）</li>
         /// <li> **true**：导出</li></ul>
+        /// 
+        /// p.s.
+        /// 若传入此参数， LImit参数将无效，导出的为全量数据。
         /// </summary>
         [JsonProperty("Export")]
         public bool? Export{ get; set; }

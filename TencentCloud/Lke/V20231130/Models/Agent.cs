@@ -108,6 +108,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AdvancedConfig")]
         public AgentAdvancedConfig AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// 工具数量上限
+        /// </summary>
+        [JsonProperty("MaxToolCount")]
+        public long? MaxToolCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
             this.SetParamSimple(map, prefix + "AgentMode", this.AgentMode);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamSimple(map, prefix + "MaxToolCount", this.MaxToolCount);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// base64加密后的密码
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// 用户链接来自的 IP
+        /// 用户链接来自的 IP地址
         /// </summary>
         [JsonProperty("WhiteHost")]
         public string WhiteHost{ get; set; }

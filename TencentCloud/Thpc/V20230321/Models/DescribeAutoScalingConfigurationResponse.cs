@@ -25,25 +25,25 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群ID。
+        /// <p>集群ID。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
+        /// <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
         /// </summary>
         [JsonProperty("ExpansionBusyTime")]
         public long? ExpansionBusyTime{ get; set; }
 
         /// <summary>
-        /// 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
+        /// <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
         /// </summary>
         [JsonProperty("ShrinkIdleTime")]
         public long? ShrinkIdleTime{ get; set; }
 
         /// <summary>
-        /// 扩容队列配置概览列表。
+        /// <p>扩容队列配置概览列表。</p>
         /// </summary>
         [JsonProperty("QueueConfigs")]
         public QueueConfigOverview[] QueueConfigs{ get; set; }

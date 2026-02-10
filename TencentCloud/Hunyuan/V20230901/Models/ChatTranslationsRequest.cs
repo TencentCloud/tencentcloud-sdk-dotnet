@@ -88,6 +88,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("References")]
         public Reference[] References{ get; set; }
 
+        /// <summary>
+        /// 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+        /// </summary>
+        [JsonProperty("GlossaryIDs")]
+        public string[] GlossaryIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Field", this.Field);
             this.SetParamArrayObj(map, prefix + "References.", this.References);
+            this.SetParamArraySimple(map, prefix + "GlossaryIDs.", this.GlossaryIDs);
         }
     }
 }

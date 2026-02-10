@@ -37,6 +37,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string WidgetRunId{ get; set; }
 
         /// <summary>
+        /// Widget显示数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("View")]
+        public string View{ get; set; }
+
+        /// <summary>
         /// Widget状态数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "WidgetId", this.WidgetId);
             this.SetParamSimple(map, prefix + "WidgetRunId", this.WidgetRunId);
+            this.SetParamSimple(map, prefix + "View", this.View);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "Position", this.Position);
             this.SetParamSimple(map, prefix + "EncodedWidget", this.EncodedWidget);

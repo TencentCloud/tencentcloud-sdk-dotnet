@@ -69,6 +69,20 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
+        /// <summary>
+        /// 目标图片长边长度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+        /// </summary>
+        [JsonProperty("LongSide")]
+        public long? LongSide{ get; set; }
+
+        /// <summary>
+        /// 目标图片短边长度，不能超过4096。
+        /// 注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+        /// </summary>
+        [JsonProperty("ShortSide")]
+        public long? ShortSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +95,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "LongSide", this.LongSide);
+            this.SetParamSimple(map, prefix + "ShortSide", this.ShortSide);
         }
     }
 }

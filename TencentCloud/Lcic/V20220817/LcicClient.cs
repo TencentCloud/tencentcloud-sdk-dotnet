@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Lcic.V20220817
         public BatchDescribeDocumentResponse BatchDescribeDocumentSync(BatchDescribeDocumentRequest req)
         {
             return InternalRequestAsync<BatchDescribeDocumentResponse>(req, "BatchDescribeDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量获取信令录制回放token，用于回放指定课堂时鉴权
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetPlaybackTokenRequest"/></param>
+        /// <returns><see cref="BatchGetPlaybackTokenResponse"/></returns>
+        public Task<BatchGetPlaybackTokenResponse> BatchGetPlaybackToken(BatchGetPlaybackTokenRequest req)
+        {
+            return InternalRequestAsync<BatchGetPlaybackTokenResponse>(req, "BatchGetPlaybackToken");
+        }
+
+        /// <summary>
+        /// 批量获取信令录制回放token，用于回放指定课堂时鉴权
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetPlaybackTokenRequest"/></param>
+        /// <returns><see cref="BatchGetPlaybackTokenResponse"/></returns>
+        public BatchGetPlaybackTokenResponse BatchGetPlaybackTokenSync(BatchGetPlaybackTokenRequest req)
+        {
+            return InternalRequestAsync<BatchGetPlaybackTokenResponse>(req, "BatchGetPlaybackToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -489,6 +510,27 @@ namespace TencentCloud.Lcic.V20220817
         public DeleteGroupMemberResponse DeleteGroupMemberSync(DeleteGroupMemberRequest req)
         {
             return InternalRequestAsync<DeleteGroupMemberResponse>(req, "DeleteGroupMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除该堂课的录制记录
+        /// </summary>
+        /// <param name="req"><see cref="DeletePlaybackItemRequest"/></param>
+        /// <returns><see cref="DeletePlaybackItemResponse"/></returns>
+        public Task<DeletePlaybackItemResponse> DeletePlaybackItem(DeletePlaybackItemRequest req)
+        {
+            return InternalRequestAsync<DeletePlaybackItemResponse>(req, "DeletePlaybackItem");
+        }
+
+        /// <summary>
+        /// 删除该堂课的录制记录
+        /// </summary>
+        /// <param name="req"><see cref="DeletePlaybackItemRequest"/></param>
+        /// <returns><see cref="DeletePlaybackItemResponse"/></returns>
+        public DeletePlaybackItemResponse DeletePlaybackItemSync(DeletePlaybackItemRequest req)
+        {
+            return InternalRequestAsync<DeletePlaybackItemResponse>(req, "DeletePlaybackItem")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -856,6 +898,48 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 信令录制视频观看记录查询接口，用于查询指定课堂在指定时间段内的用户播放记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlayRecordsRequest"/></param>
+        /// <returns><see cref="DescribePlayRecordsResponse"/></returns>
+        public Task<DescribePlayRecordsResponse> DescribePlayRecords(DescribePlayRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribePlayRecordsResponse>(req, "DescribePlayRecords");
+        }
+
+        /// <summary>
+        /// 信令录制视频观看记录查询接口，用于查询指定课堂在指定时间段内的用户播放记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlayRecordsRequest"/></param>
+        /// <returns><see cref="DescribePlayRecordsResponse"/></returns>
+        public DescribePlayRecordsResponse DescribePlayRecordsSync(DescribePlayRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribePlayRecordsResponse>(req, "DescribePlayRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询录制信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlaybackListRequest"/></param>
+        /// <returns><see cref="DescribePlaybackListResponse"/></returns>
+        public Task<DescribePlaybackListResponse> DescribePlaybackList(DescribePlaybackListRequest req)
+        {
+            return InternalRequestAsync<DescribePlaybackListResponse>(req, "DescribePlaybackList");
+        }
+
+        /// <summary>
+        /// 查询录制信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlaybackListRequest"/></param>
+        /// <returns><see cref="DescribePlaybackListResponse"/></returns>
+        public DescribePlaybackListResponse DescribePlaybackListSync(DescribePlaybackListRequest req)
+        {
+            return InternalRequestAsync<DescribePlaybackListResponse>(req, "DescribePlaybackList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取房间提问列表
         /// </summary>
         /// <param name="req"><see cref="DescribeQuestionListRequest"/></param>
@@ -1175,6 +1259,27 @@ namespace TencentCloud.Lcic.V20220817
         public ForbidSendMsgResponse ForbidSendMsgSync(ForbidSendMsgRequest req)
         {
             return InternalRequestAsync<ForbidSendMsgResponse>(req, "ForbidSendMsg")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取信令录制回放token，用于回放指定课堂时鉴权
+        /// </summary>
+        /// <param name="req"><see cref="GetPlaybackTokenRequest"/></param>
+        /// <returns><see cref="GetPlaybackTokenResponse"/></returns>
+        public Task<GetPlaybackTokenResponse> GetPlaybackToken(GetPlaybackTokenRequest req)
+        {
+            return InternalRequestAsync<GetPlaybackTokenResponse>(req, "GetPlaybackToken");
+        }
+
+        /// <summary>
+        /// 获取信令录制回放token，用于回放指定课堂时鉴权
+        /// </summary>
+        /// <param name="req"><see cref="GetPlaybackTokenRequest"/></param>
+        /// <returns><see cref="GetPlaybackTokenResponse"/></returns>
+        public GetPlaybackTokenResponse GetPlaybackTokenSync(GetPlaybackTokenRequest req)
+        {
+            return InternalRequestAsync<GetPlaybackTokenResponse>(req, "GetPlaybackToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

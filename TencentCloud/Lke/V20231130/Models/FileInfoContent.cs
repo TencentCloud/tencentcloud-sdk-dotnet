@@ -26,8 +26,10 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 实时文档解析接口返回的 DocBizId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocBizId")]
+        [System.Obsolete]
         public ulong? DocBizId{ get; set; }
 
         /// <summary>
@@ -58,6 +60,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
+        /// <summary>
+        /// 实时文档解析接口返回的 doc_id。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DocId")]
+        public ulong? DocId{ get; set; }
+
+        /// <summary>
+        /// 文件创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +85,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "DocId", this.DocId);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

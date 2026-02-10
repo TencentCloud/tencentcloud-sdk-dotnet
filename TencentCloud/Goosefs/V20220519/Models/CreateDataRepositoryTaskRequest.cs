@@ -66,6 +66,18 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("TextLocation")]
         public string TextLocation{ get; set; }
 
+        /// <summary>
+        /// 是否开启自定义路径(暂时仅供预热使用)
+        /// </summary>
+        [JsonProperty("EnableDataFlowSubPath")]
+        public bool? EnableDataFlowSubPath{ get; set; }
+
+        /// <summary>
+        /// 自定义路径(暂时仅供预热使用)
+        /// </summary>
+        [JsonProperty("DataFlowSubPath")]
+        public string DataFlowSubPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
             this.SetParamSimple(map, prefix + "TextLocation", this.TextLocation);
+            this.SetParamSimple(map, prefix + "EnableDataFlowSubPath", this.EnableDataFlowSubPath);
+            this.SetParamSimple(map, prefix + "DataFlowSubPath", this.DataFlowSubPath);
         }
     }
 }

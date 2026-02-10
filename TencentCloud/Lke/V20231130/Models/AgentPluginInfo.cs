@@ -38,6 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Model")]
         public AgentModelInfo Model{ get; set; }
@@ -50,6 +51,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 知识库问答插件配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KnowledgeQa")]
         public AgentKnowledgeQAPlugin KnowledgeQa{ get; set; }

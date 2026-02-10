@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwch.V20200915
 
        private const string endpoint = "cdwch.tencentcloudapi.com";
        private const string version = "2020-09-15";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -617,6 +617,27 @@ namespace TencentCloud.Cdwch.V20200915
         public ResizeDiskResponse ResizeDiskSync(ResizeDiskRequest req)
         {
             return InternalRequestAsync<ResizeDiskResponse>(req, "ResizeDisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启实例，可以按节点类型和节点进行重启，可选滚动重启
+        /// </summary>
+        /// <param name="req"><see cref="RestartInstanceRequest"/></param>
+        /// <returns><see cref="RestartInstanceResponse"/></returns>
+        public Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartInstanceResponse>(req, "RestartInstance");
+        }
+
+        /// <summary>
+        /// 重启实例，可以按节点类型和节点进行重启，可选滚动重启
+        /// </summary>
+        /// <param name="req"><see cref="RestartInstanceRequest"/></param>
+        /// <returns><see cref="RestartInstanceResponse"/></returns>
+        public RestartInstanceResponse RestartInstanceSync(RestartInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartInstanceResponse>(req, "RestartInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

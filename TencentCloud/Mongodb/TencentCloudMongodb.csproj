@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FB4519A5-C29F-3021-9DF3-791DE27C2D8D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1377</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="V20190725\Models\AssignProjectResponse.cs" />
     <Compile Include="V20190725\Models\AuditInstance.cs" />
+    <Compile Include="V20190725\Models\AuditLog.cs" />
+    <Compile Include="V20190725\Models\AuditLogFile.cs" />
     <Compile Include="V20190725\Models\AuditLogFilter.cs" />
     <Compile Include="V20190725\Models\Auth.cs" />
     <Compile Include="V20190725\Models\BackupDownloadTask.cs" />
@@ -59,6 +61,8 @@
     <Compile Include="V20190725\Models\BackupInfo.cs" />
     <Compile Include="V20190725\Models\BackupTotalSize.cs" />
     <Compile Include="V20190725\Models\ClientConnection.cs" />
+    <Compile Include="V20190725\Models\CloseAuditServiceRequest.cs" />
+    <Compile Include="V20190725\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20190725\Models\CreateAccountUserRequest.cs" />
     <Compile Include="V20190725\Models\CreateAccountUserResponse.cs" />
     <Compile Include="V20190725\Models\CreateAuditLogFileRequest.cs" />
@@ -90,8 +94,14 @@
     <Compile Include="V20190725\Models\DescribeAccountUsersResponse.cs" />
     <Compile Include="V20190725\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditConfigRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditConfigResponse.cs" />
     <Compile Include="V20190725\Models\DescribeAuditInstanceListRequest.cs" />
     <Compile Include="V20190725\Models\DescribeAuditInstanceListResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditLogFilesRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditLogsRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeAuditLogsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeBackupDownloadTaskRequest.cs" />
     <Compile Include="V20190725\Models\DescribeBackupDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\DescribeBackupRulesRequest.cs" />

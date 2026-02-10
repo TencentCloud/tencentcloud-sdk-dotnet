@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FileInfo")]
         public ProcessImageAsyncOutputFileInfo FileInfo{ get; set; }
 
+        /// <summary>
+        /// 图片理解结果。
+        /// </summary>
+        [JsonProperty("OutputText")]
+        public string OutputText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "FileInfo.", this.FileInfo);
+            this.SetParamSimple(map, prefix + "OutputText", this.OutputText);
         }
     }
 }

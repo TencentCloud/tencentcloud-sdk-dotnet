@@ -25,10 +25,16 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群ID。	
+        /// <p>集群ID。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>队列名称</p>
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
         }
     }
 }

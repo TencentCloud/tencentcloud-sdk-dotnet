@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1377</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -317,6 +317,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateMPSTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleRequest.cs" />
@@ -385,6 +387,8 @@
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMPSTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMediaRequest.cs" />
@@ -485,6 +489,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMPSTemplatesRequest.cs" />
@@ -627,6 +633,8 @@
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20180717\Models\ImageTransform.cs" />
+    <Compile Include="V20180717\Models\ImageUnderstandingInfo.cs" />
+    <Compile Include="V20180717\Models\ImageUnderstandingItem.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
@@ -638,6 +646,11 @@
     <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\JustInTimeTranscodeTemplate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendAsr.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendAsrForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendSummary.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendSummaryForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendTemplateItem.cs" />
     <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\ListFilesRequest.cs" />
     <Compile Include="V20180717\Models\ListFilesResponse.cs" />
@@ -739,6 +752,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMPSTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyMPSTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
@@ -819,6 +834,7 @@
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
     <Compile Include="V20180717\Models\ProcessImageAsync.cs" />
     <Compile Include="V20180717\Models\ProcessImageAsyncInput.cs" />
+    <Compile Include="V20180717\Models\ProcessImageAsyncInputExtendedParameter.cs" />
     <Compile Include="V20180717\Models\ProcessImageAsyncOutput.cs" />
     <Compile Include="V20180717\Models\ProcessImageAsyncOutputConfig.cs" />
     <Compile Include="V20180717\Models\ProcessImageAsyncOutputFileInfo.cs" />

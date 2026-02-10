@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="CancelLoadTaskRequest"/></param>
+        /// <returns><see cref="CancelLoadTaskResponse"/></returns>
+        public Task<CancelLoadTaskResponse> CancelLoadTask(CancelLoadTaskRequest req)
+        {
+            return InternalRequestAsync<CancelLoadTaskResponse>(req, "CancelLoadTask");
+        }
+
+        /// <summary>
+        /// 取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="CancelLoadTaskRequest"/></param>
+        /// <returns><see cref="CancelLoadTaskResponse"/></returns>
+        public CancelLoadTaskResponse CancelLoadTaskSync(CancelLoadTaskRequest req)
+        {
+            return InternalRequestAsync<CancelLoadTaskResponse>(req, "CancelLoadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
         /// </summary>
         /// <param name="req"><see cref="CreateDataRepositoryTaskRequest"/></param>
@@ -218,6 +239,27 @@ namespace TencentCloud.Goosefs.V20220519
         public CreateFilesetResponse CreateFilesetSync(CreateFilesetRequest req)
         {
             return InternalRequestAsync<CreateFilesetResponse>(req, "CreateFileset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// GooseFS 预热相关接口，用于下发，列出，查询，修改预热任务。用于元数据预热、数据预热场景。 注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadTaskRequest"/></param>
+        /// <returns><see cref="CreateLoadTaskResponse"/></returns>
+        public Task<CreateLoadTaskResponse> CreateLoadTask(CreateLoadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLoadTaskResponse>(req, "CreateLoadTask");
+        }
+
+        /// <summary>
+        /// GooseFS 预热相关接口，用于下发，列出，查询，修改预热任务。用于元数据预热、数据预热场景。 注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadTaskRequest"/></param>
+        /// <returns><see cref="CreateLoadTaskResponse"/></returns>
+        public CreateLoadTaskResponse CreateLoadTaskSync(CreateLoadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLoadTaskResponse>(req, "CreateLoadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,31 +390,6 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
-        /// 接口废弃
-        /// 
-        /// 查询GooseFS集群角色
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>
-        /// <returns><see cref="DescribeClusterRolesResponse"/></returns>
-        public Task<DescribeClusterRolesResponse> DescribeClusterRoles(DescribeClusterRolesRequest req)
-        {
-            return InternalRequestAsync<DescribeClusterRolesResponse>(req, "DescribeClusterRoles");
-        }
-
-        /// <summary>
-        /// 接口废弃
-        /// 
-        /// 查询GooseFS集群角色
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>
-        /// <returns><see cref="DescribeClusterRolesResponse"/></returns>
-        public DescribeClusterRolesResponse DescribeClusterRolesSync(DescribeClusterRolesRequest req)
-        {
-            return InternalRequestAsync<DescribeClusterRolesResponse>(req, "DescribeClusterRoles")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取数据流通任务实时状态，用作客户端控制
         /// </summary>
         /// <param name="req"><see cref="DescribeDataRepositoryTaskStatusRequest"/></param>
@@ -478,6 +495,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 查询单个预热任务执行情况。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadTaskRequest"/></param>
+        /// <returns><see cref="DescribeLoadTaskResponse"/></returns>
+        public Task<DescribeLoadTaskResponse> DescribeLoadTask(DescribeLoadTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadTaskResponse>(req, "DescribeLoadTask");
+        }
+
+        /// <summary>
+        /// 查询单个预热任务执行情况。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadTaskRequest"/></param>
+        /// <returns><see cref="DescribeLoadTaskResponse"/></returns>
+        public DescribeLoadTaskResponse DescribeLoadTaskSync(DescribeLoadTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadTaskResponse>(req, "DescribeLoadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 解绑文件系统与Bucket的映射
         /// </summary>
         /// <param name="req"><see cref="DetachFileSystemBucketRequest"/></param>
@@ -516,6 +554,27 @@ namespace TencentCloud.Goosefs.V20220519
         public ExpandCapacityResponse ExpandCapacitySync(ExpandCapacityRequest req)
         {
             return InternalRequestAsync<ExpandCapacityResponse>(req, "ExpandCapacity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出该集群下所有预热任务。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="ListLoadTasksRequest"/></param>
+        /// <returns><see cref="ListLoadTasksResponse"/></returns>
+        public Task<ListLoadTasksResponse> ListLoadTasks(ListLoadTasksRequest req)
+        {
+            return InternalRequestAsync<ListLoadTasksResponse>(req, "ListLoadTasks");
+        }
+
+        /// <summary>
+        /// 列出该集群下所有预热任务。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="ListLoadTasksRequest"/></param>
+        /// <returns><see cref="ListLoadTasksResponse"/></returns>
+        public ListLoadTasksResponse ListLoadTasksSync(ListLoadTasksRequest req)
+        {
+            return InternalRequestAsync<ListLoadTasksResponse>(req, "ListLoadTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +680,27 @@ namespace TencentCloud.Goosefs.V20220519
         public UpdateFilesetGeneralConfigResponse UpdateFilesetGeneralConfigSync(UpdateFilesetGeneralConfigRequest req)
         {
             return InternalRequestAsync<UpdateFilesetGeneralConfigResponse>(req, "UpdateFilesetGeneralConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变更已有 GooseFS 预热任务配置，仅任务状态为 waiting 时可调用该接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLoadTaskPriorityRequest"/></param>
+        /// <returns><see cref="UpdateLoadTaskPriorityResponse"/></returns>
+        public Task<UpdateLoadTaskPriorityResponse> UpdateLoadTaskPriority(UpdateLoadTaskPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateLoadTaskPriorityResponse>(req, "UpdateLoadTaskPriority");
+        }
+
+        /// <summary>
+        /// 变更已有 GooseFS 预热任务配置，仅任务状态为 waiting 时可调用该接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLoadTaskPriorityRequest"/></param>
+        /// <returns><see cref="UpdateLoadTaskPriorityResponse"/></returns>
+        public UpdateLoadTaskPriorityResponse UpdateLoadTaskPrioritySync(UpdateLoadTaskPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateLoadTaskPriorityResponse>(req, "UpdateLoadTaskPriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

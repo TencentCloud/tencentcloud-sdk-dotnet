@@ -66,6 +66,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("NatureLanguageToSqlModelConfig")]
         public NL2SQLModelConfig NatureLanguageToSqlModelConfig{ get; set; }
 
+        /// <summary>
+        /// 是否开启图谱检索
+        /// </summary>
+        [JsonProperty("GraphRetrieval")]
+        public bool? GraphRetrieval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "RerankModelSwitch", this.RerankModelSwitch);
             this.SetParamSimple(map, prefix + "RerankModel", this.RerankModel);
             this.SetParamObj(map, prefix + "NatureLanguageToSqlModelConfig.", this.NatureLanguageToSqlModelConfig);
+            this.SetParamSimple(map, prefix + "GraphRetrieval", this.GraphRetrieval);
         }
     }
 }

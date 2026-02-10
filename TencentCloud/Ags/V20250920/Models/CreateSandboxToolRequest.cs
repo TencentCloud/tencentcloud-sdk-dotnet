@@ -84,6 +84,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("CustomConfiguration")]
         public CustomConfiguration CustomConfiguration{ get; set; }
 
+        /// <summary>
+        /// 沙箱工具日志推送相关配置
+        /// </summary>
+        [JsonProperty("LogConfiguration")]
+        public LogConfiguration LogConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+            this.SetParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
         }
     }
 }

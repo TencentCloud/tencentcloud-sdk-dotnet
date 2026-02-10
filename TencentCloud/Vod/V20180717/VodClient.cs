@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -639,6 +639,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建大模型解析模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="CreateLLMComprehendTemplateResponse"/></returns>
+        public Task<CreateLLMComprehendTemplateResponse> CreateLLMComprehendTemplate(CreateLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLLMComprehendTemplateResponse>(req, "CreateLLMComprehendTemplate");
+        }
+
+        /// <summary>
+        /// 创建大模型解析模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="CreateLLMComprehendTemplateResponse"/></returns>
+        public CreateLLMComprehendTemplateResponse CreateLLMComprehendTemplateSync(CreateLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLLMComprehendTemplateResponse>(req, "CreateLLMComprehendTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1372,6 +1393,31 @@ namespace TencentCloud.Vod.V20180717
         public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplateSync(DeleteJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<DeleteJustInTimeTranscodeTemplateResponse>(req, "DeleteJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLLMComprehendTemplateResponse"/></returns>
+        public Task<DeleteLLMComprehendTemplateResponse> DeleteLLMComprehendTemplate(DeleteLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMComprehendTemplateResponse>(req, "DeleteLLMComprehendTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义图像异步处理模板。
+        /// 
+        /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLLMComprehendTemplateResponse"/></returns>
+        public DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplateSync(DeleteLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMComprehendTemplateResponse>(req, "DeleteLLMComprehendTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2519,6 +2565,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplatesSync(DescribeJustInTimeTranscodeTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据大模型解析模板唯一标识，获取大模型解析模板详情列表。返回结果包含符合条件的所有用户自定义大模型解析模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMComprehendTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLLMComprehendTemplatesResponse"/></returns>
+        public Task<DescribeLLMComprehendTemplatesResponse> DescribeLLMComprehendTemplates(DescribeLLMComprehendTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMComprehendTemplatesResponse>(req, "DescribeLLMComprehendTemplates");
+        }
+
+        /// <summary>
+        /// 根据大模型解析模板唯一标识，获取大模型解析模板详情列表。返回结果包含符合条件的所有用户自定义大模型解析模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMComprehendTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLLMComprehendTemplatesResponse"/></returns>
+        public DescribeLLMComprehendTemplatesResponse DescribeLLMComprehendTemplatesSync(DescribeLLMComprehendTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMComprehendTemplatesResponse>(req, "DescribeLLMComprehendTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3893,6 +3960,27 @@ namespace TencentCloud.Vod.V20180717
         public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplateSync(ModifyJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<ModifyJustInTimeTranscodeTemplateResponse>(req, "ModifyJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改大模型解析模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLLMComprehendTemplateResponse"/></returns>
+        public Task<ModifyLLMComprehendTemplateResponse> ModifyLLMComprehendTemplate(ModifyLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMComprehendTemplateResponse>(req, "ModifyLLMComprehendTemplate");
+        }
+
+        /// <summary>
+        /// 修改大模型解析模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMComprehendTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLLMComprehendTemplateResponse"/></returns>
+        public ModifyLLMComprehendTemplateResponse ModifyLLMComprehendTemplateSync(ModifyLLMComprehendTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMComprehendTemplateResponse>(req, "ModifyLLMComprehendTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

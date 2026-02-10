@@ -91,7 +91,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
-        /// <p>录制方式，可以有以下取值：0 开启自动录制（默认值）1  禁止录制2 开启手动录制 注： - 如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 - 如果该配置取值为2，需通过startRecord、stopRecord接口控制录制的开始和结束。</p>
+        /// <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制（默认）</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制。</li></ul>
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }

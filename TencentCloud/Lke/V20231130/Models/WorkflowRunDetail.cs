@@ -127,6 +127,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("WorkflowGraph")]
         public string WorkflowGraph{ get; set; }
 
+        /// <summary>
+        /// 当前的回复消息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestMessage")]
+        public AsyncWorkflowMessage LatestMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "MainModelName", this.MainModelName);
             this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
             this.SetParamSimple(map, prefix + "WorkflowGraph", this.WorkflowGraph);
+            this.SetParamObj(map, prefix + "LatestMessage.", this.LatestMessage);
         }
     }
 }

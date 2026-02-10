@@ -347,6 +347,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("AIAgentName")]
         public string AIAgentName{ get; set; }
 
+        /// <summary>
+        /// 接通后系统挂断原因，枚举类似
+        /// </summary>
+        [JsonProperty("SysHangupReason")]
+        public long? SysHangupReason{ get; set; }
+
+        /// <summary>
+        /// 接通后系统挂断原因，文字描述信息
+        /// </summary>
+        [JsonProperty("SysHangupReasonString")]
+        public string SysHangupReasonString{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -393,6 +405,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
             this.SetParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
+            this.SetParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
+            this.SetParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
         }
     }
 }

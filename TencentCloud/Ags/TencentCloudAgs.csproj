@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1377</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20250920\Models\APIKeyInfo.cs" />
     <Compile Include="V20250920\Models\AcquireSandboxInstanceTokenRequest.cs" />
     <Compile Include="V20250920\Models\AcquireSandboxInstanceTokenResponse.cs" />
+    <Compile Include="V20250920\Models\CLSConfig.cs" />
     <Compile Include="V20250920\Models\CfsStorageSource.cs" />
     <Compile Include="V20250920\Models\CosStorageSource.cs" />
     <Compile Include="V20250920\Models\CreateAPIKeyRequest.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="V20250920\Models\Filter.cs" />
     <Compile Include="V20250920\Models\HttpGetAction.cs" />
     <Compile Include="V20250920\Models\ImageStorageSource.cs" />
+    <Compile Include="V20250920\Models\LogConfiguration.cs" />
     <Compile Include="V20250920\Models\MountOption.cs" />
     <Compile Include="V20250920\Models\NetworkConfiguration.cs" />
     <Compile Include="V20250920\Models\PauseSandboxInstanceRequest.cs" />

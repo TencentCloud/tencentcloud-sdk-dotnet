@@ -40,6 +40,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// 要关联映射的bucket列表
         /// </summary>
         [JsonProperty("MappedBucketList")]
+        [System.Obsolete]
         public MappedBucket[] MappedBucketList{ get; set; }
 
 

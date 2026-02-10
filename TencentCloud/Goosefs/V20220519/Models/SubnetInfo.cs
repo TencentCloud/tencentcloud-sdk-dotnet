@@ -36,6 +36,24 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 应用的集群；可以是集群id,也可以是All
+        /// </summary>
+        [JsonProperty("UsedCluster")]
+        public string UsedCluster{ get; set; }
+
+        /// <summary>
+        /// cidr，只有当IsDirectConnect为true时才生效
+        /// </summary>
+        [JsonProperty("CIDR")]
+        public string CIDR{ get; set; }
+
+        /// <summary>
+        /// 是否为专线接入场景
+        /// </summary>
+        [JsonProperty("IsDirectConnect")]
+        public bool? IsDirectConnect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Goosefs.V20220519.Models
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "UsedCluster", this.UsedCluster);
+            this.SetParamSimple(map, prefix + "CIDR", this.CIDR);
+            this.SetParamSimple(map, prefix + "IsDirectConnect", this.IsDirectConnect);
         }
     }
 }

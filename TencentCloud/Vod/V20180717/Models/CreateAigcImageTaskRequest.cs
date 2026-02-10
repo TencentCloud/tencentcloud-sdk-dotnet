@@ -86,6 +86,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcImageOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
+        /// 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -123,6 +129,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

@@ -45,7 +45,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 图片正反面
         /// FRONT：正面
-        /// BACK：反面
+        /// BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
         /// 默认为FRONT
         /// </summary>
         [JsonProperty("CardSide")]

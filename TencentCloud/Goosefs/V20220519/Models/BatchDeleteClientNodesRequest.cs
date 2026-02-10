@@ -42,6 +42,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("SingleClusterFlag")]
         public bool? SingleClusterFlag{ get; set; }
 
+        /// <summary>
+        /// 客户端集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamArrayObj(map, prefix + "ClientNodes.", this.ClientNodes);
             this.SetParamSimple(map, prefix + "SingleClusterFlag", this.SingleClusterFlag);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

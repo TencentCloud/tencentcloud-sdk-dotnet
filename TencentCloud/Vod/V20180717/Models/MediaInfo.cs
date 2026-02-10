@@ -120,6 +120,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("MPSAiMediaInfo")]
         public MPSAiMediaInfo MPSAiMediaInfo{ get; set; }
 
+        /// <summary>
+        /// 图片理解信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageUnderstandingInfo")]
+        public ImageUnderstandingInfo ImageUnderstandingInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +147,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
             this.SetParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
+            this.SetParamObj(map, prefix + "ImageUnderstandingInfo.", this.ImageUnderstandingInfo);
         }
     }
 }

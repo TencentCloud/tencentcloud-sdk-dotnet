@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Goosefs.V20220519.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClusterRole : AbstractModel
+    public class CreateLLMComprehendTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 大模型理解模板的唯一标识
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
 
         /// <summary>
-        /// 角色名
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RoleName")]
-        public string RoleName{ get; set; }
-
-        /// <summary>
-        /// 描述
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 目录列表
-        /// </summary>
-        [JsonProperty("DirectoryList")]
-        public string[] DirectoryList{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArraySimple(map, prefix + "DirectoryList.", this.DirectoryList);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

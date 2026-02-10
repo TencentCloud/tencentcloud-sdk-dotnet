@@ -25,12 +25,6 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 文件系统类型, 可填goosefs和goosefsx
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
         /// 文件系统名
         /// </summary>
         [JsonProperty("Name")]
@@ -59,6 +53,13 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// 文件系统类型, 可填goosefs和goosefsx
+        /// </summary>
+        [JsonProperty("Type")]
+        [System.Obsolete]
+        public string Type{ get; set; }
 
         /// <summary>
         /// 文件系统关联的tag
@@ -90,12 +91,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

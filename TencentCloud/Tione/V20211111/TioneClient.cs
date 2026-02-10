@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -459,7 +459,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询资源组详情
+        /// 查询资源组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingResourceGroupsRequest"/></param>
         /// <returns><see cref="DescribeBillingResourceGroupsResponse"/></returns>
@@ -469,7 +469,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询资源组详情
+        /// 查询资源组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingResourceGroupsRequest"/></param>
         /// <returns><see cref="DescribeBillingResourceGroupsResponse"/></returns>

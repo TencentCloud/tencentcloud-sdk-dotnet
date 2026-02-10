@@ -42,6 +42,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("InitialPassword")]
         public string InitialPassword{ get; set; }
 
+        /// <summary>
+        /// 所属集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "NodeIp", this.NodeIp);
             this.SetParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
             this.SetParamSimple(map, prefix + "InitialPassword", this.InitialPassword);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

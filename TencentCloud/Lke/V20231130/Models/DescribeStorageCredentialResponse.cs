@@ -67,7 +67,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 主号
+        /// 企业主账号
         /// </summary>
         [JsonProperty("CorpUin")]
         public string CorpUin{ get; set; }
@@ -83,6 +83,18 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("UploadPath")]
         public string UploadPath{ get; set; }
+
+        /// <summary>
+        /// 文件上传地址，使用put请求上传文件到该地址
+        /// </summary>
+        [JsonProperty("UploadUrl")]
+        public string UploadUrl{ get; set; }
+
+        /// <summary>
+        /// 文件的预签名地址，支持下载
+        /// </summary>
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -106,6 +118,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CorpUin", this.CorpUin);
             this.SetParamSimple(map, prefix + "ImagePath", this.ImagePath);
             this.SetParamSimple(map, prefix + "UploadPath", this.UploadPath);
+            this.SetParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

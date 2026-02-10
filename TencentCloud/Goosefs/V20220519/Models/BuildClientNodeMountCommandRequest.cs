@@ -36,6 +36,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("CustomMountDir")]
         public string CustomMountDir{ get; set; }
 
+        /// <summary>
+        /// 客户端集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         {
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "CustomMountDir", this.CustomMountDir);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1377";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mongodb.V20190725
         public AssignProjectResponse AssignProjectSync(AssignProjectRequest req)
         {
             return InternalRequestAsync<AssignProjectResponse>(req, "AssignProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CloseAuditService）用于关闭审计服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService");
+        }
+
+        /// <summary>
+        /// 本接口（CloseAuditService）用于关闭审计服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -350,6 +371,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public Task<DescribeAuditConfigResponse> DescribeAuditConfig(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public DescribeAuditConfigResponse DescribeAuditConfigSync(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
@@ -367,6 +409,48 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public Task<DescribeAuditLogsResponse> DescribeAuditLogs(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public DescribeAuditLogsResponse DescribeAuditLogsSync(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -37,11 +37,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
+        /// 大模型理解模板的唯一标识
+        /// </summary>
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
+
+        /// <summary>
         /// 需要导入知识库任务类型，可选值有：
         /// - AiAnalysis.DescriptionTask
         /// - SmartSubtitle.AsrFullTextTask
         /// </summary>
         [JsonProperty("ImportTasks")]
+        [System.Obsolete]
         public string[] ImportTasks{ get; set; }
 
 
@@ -52,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
         }
     }
