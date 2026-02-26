@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务创建成功后，返回的任务ID。
-        /// 调用查询接口，轮询获取任务进度及生成结果。
+        /// <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

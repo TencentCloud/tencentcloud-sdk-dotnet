@@ -84,6 +84,27 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("TableGuid")]
         public string TableGuid{ get; set; }
 
+        /// <summary>
+        /// Catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// Catalog(如有).数据库(如有).表名名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualifiedName")]
+        public string QualifiedName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +119,9 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TablePhysicalId", this.TablePhysicalId);
             this.SetParamSimple(map, prefix + "DbGuid", this.DbGuid);
             this.SetParamSimple(map, prefix + "TableGuid", this.TableGuid);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "QualifiedName", this.QualifiedName);
         }
     }
 }

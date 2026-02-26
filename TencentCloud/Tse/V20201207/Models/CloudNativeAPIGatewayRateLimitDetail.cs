@@ -62,6 +62,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public ExternalRedis ExternalRedis{ get; set; }
 
         /// <summary>
+        /// 全局配置中的redis配置
+        /// </summary>
+        [JsonProperty("GlobalConfigId")]
+        public string GlobalConfigId{ get; set; }
+
+        /// <summary>
         /// 计数器策略 
         /// local 单机
         /// redis  默认redis
@@ -135,6 +141,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Header", this.Header);
             this.SetParamSimple(map, prefix + "LimitBy", this.LimitBy);
             this.SetParamObj(map, prefix + "ExternalRedis.", this.ExternalRedis);
+            this.SetParamSimple(map, prefix + "GlobalConfigId", this.GlobalConfigId);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamObj(map, prefix + "RateLimitResponse.", this.RateLimitResponse);
             this.SetParamSimple(map, prefix + "RateLimitResponseUrl", this.RateLimitResponseUrl);

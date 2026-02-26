@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1377</VersionPrefix>
+    <VersionPrefix>3.0.1378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -129,6 +129,8 @@
     <Compile Include="V20170312\Models\CcnInstance.cs" />
     <Compile Include="V20170312\Models\CcnInstanceInfo.cs" />
     <Compile Include="V20170312\Models\CcnInstanceWithoutRegion.cs" />
+    <Compile Include="V20170312\Models\CcnPolicyBasedRoutingNextHop.cs" />
+    <Compile Include="V20170312\Models\CcnPolicyBasedRoutingRule.cs" />
     <Compile Include="V20170312\Models\CcnRegionBandwidthLimit.cs" />
     <Compile Include="V20170312\Models\CcnRegionBandwidthLimitInfo.cs" />
     <Compile Include="V20170312\Models\CcnRoute.cs" />
@@ -168,6 +170,10 @@
     <Compile Include="V20170312\Models\CreateAssistantCidrResponse.cs" />
     <Compile Include="V20170312\Models\CreateBandwidthPackageRequest.cs" />
     <Compile Include="V20170312\Models\CreateBandwidthPackageResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCcnPolicyBasedRoutingNextHopRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCcnPolicyBasedRoutingNextHopResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCcnPolicyBasedRoutingRulesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCcnPolicyBasedRoutingRulesResponse.cs" />
     <Compile Include="V20170312\Models\CreateCcnRequest.cs" />
     <Compile Include="V20170312\Models\CreateCcnResponse.cs" />
     <Compile Include="V20170312\Models\CreateCcnRouteTablesRequest.cs" />
@@ -293,6 +299,10 @@
     <Compile Include="V20170312\Models\DeleteAssistantCidrResponse.cs" />
     <Compile Include="V20170312\Models\DeleteBandwidthPackageRequest.cs" />
     <Compile Include="V20170312\Models\DeleteBandwidthPackageResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnPolicyBasedRoutingNextHopRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnPolicyBasedRoutingNextHopResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnPolicyBasedRoutingRuleRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnPolicyBasedRoutingRuleResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCcnRequest.cs" />
     <Compile Include="V20170312\Models\DeleteCcnResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCcnRouteTablesRequest.cs" />
@@ -427,6 +437,10 @@
     <Compile Include="V20170312\Models\DescribeBandwidthPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnAttachedInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnAttachedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnPolicyBasedRoutingNextHopRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnPolicyBasedRoutingNextHopResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnPolicyBasedRoutingRuleRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnPolicyBasedRoutingRuleResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRouteTableBroadcastPolicysRequest.cs" />
@@ -787,6 +801,10 @@
     <Compile Include="V20170312\Models\ModifyCcnAttachedInstancesAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCcnAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnPolicyBasedRoutingNextHopAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnPolicyBasedRoutingNextHopAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnPolicyBasedRoutingRuleAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnPolicyBasedRoutingRuleAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRouteTablesRequest.cs" />

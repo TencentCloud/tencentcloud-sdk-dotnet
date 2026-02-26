@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -1018,6 +1018,48 @@ namespace TencentCloud.Vpc.V20170312
         public CreateCcnResponse CreateCcnSync(CreateCcnRequest req)
         {
             return InternalRequestAsync<CreateCcnResponse>(req, "CreateCcn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="CreateCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public Task<CreateCcnPolicyBasedRoutingNextHopResponse> CreateCcnPolicyBasedRoutingNextHop(CreateCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<CreateCcnPolicyBasedRoutingNextHopResponse>(req, "CreateCcnPolicyBasedRoutingNextHop");
+        }
+
+        /// <summary>
+        /// 创建云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="CreateCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public CreateCcnPolicyBasedRoutingNextHopResponse CreateCcnPolicyBasedRoutingNextHopSync(CreateCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<CreateCcnPolicyBasedRoutingNextHopResponse>(req, "CreateCcnPolicyBasedRoutingNextHop")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnPolicyBasedRoutingRulesRequest"/></param>
+        /// <returns><see cref="CreateCcnPolicyBasedRoutingRulesResponse"/></returns>
+        public Task<CreateCcnPolicyBasedRoutingRulesResponse> CreateCcnPolicyBasedRoutingRules(CreateCcnPolicyBasedRoutingRulesRequest req)
+        {
+            return InternalRequestAsync<CreateCcnPolicyBasedRoutingRulesResponse>(req, "CreateCcnPolicyBasedRoutingRules");
+        }
+
+        /// <summary>
+        /// 创建云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnPolicyBasedRoutingRulesRequest"/></param>
+        /// <returns><see cref="CreateCcnPolicyBasedRoutingRulesResponse"/></returns>
+        public CreateCcnPolicyBasedRoutingRulesResponse CreateCcnPolicyBasedRoutingRulesSync(CreateCcnPolicyBasedRoutingRulesRequest req)
+        {
+            return InternalRequestAsync<CreateCcnPolicyBasedRoutingRulesResponse>(req, "CreateCcnPolicyBasedRoutingRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2413,6 +2455,48 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteCcnResponse DeleteCcnSync(DeleteCcnRequest req)
         {
             return InternalRequestAsync<DeleteCcnResponse>(req, "DeleteCcn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="DeleteCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public Task<DeleteCcnPolicyBasedRoutingNextHopResponse> DeleteCcnPolicyBasedRoutingNextHop(DeleteCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnPolicyBasedRoutingNextHopResponse>(req, "DeleteCcnPolicyBasedRoutingNextHop");
+        }
+
+        /// <summary>
+        /// 删除云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="DeleteCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public DeleteCcnPolicyBasedRoutingNextHopResponse DeleteCcnPolicyBasedRoutingNextHopSync(DeleteCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnPolicyBasedRoutingNextHopResponse>(req, "DeleteCcnPolicyBasedRoutingNextHop")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnPolicyBasedRoutingRuleRequest"/></param>
+        /// <returns><see cref="DeleteCcnPolicyBasedRoutingRuleResponse"/></returns>
+        public Task<DeleteCcnPolicyBasedRoutingRuleResponse> DeleteCcnPolicyBasedRoutingRule(DeleteCcnPolicyBasedRoutingRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnPolicyBasedRoutingRuleResponse>(req, "DeleteCcnPolicyBasedRoutingRule");
+        }
+
+        /// <summary>
+        /// 删除云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnPolicyBasedRoutingRuleRequest"/></param>
+        /// <returns><see cref="DeleteCcnPolicyBasedRoutingRuleResponse"/></returns>
+        public DeleteCcnPolicyBasedRoutingRuleResponse DeleteCcnPolicyBasedRoutingRuleSync(DeleteCcnPolicyBasedRoutingRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnPolicyBasedRoutingRuleResponse>(req, "DeleteCcnPolicyBasedRoutingRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3857,6 +3941,48 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstancesSync(DescribeCcnAttachedInstancesRequest req)
         {
             return InternalRequestAsync<DescribeCcnAttachedInstancesResponse>(req, "DescribeCcnAttachedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="DescribeCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public Task<DescribeCcnPolicyBasedRoutingNextHopResponse> DescribeCcnPolicyBasedRoutingNextHop(DescribeCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnPolicyBasedRoutingNextHopResponse>(req, "DescribeCcnPolicyBasedRoutingNextHop");
+        }
+
+        /// <summary>
+        /// 查询云联网策略路由下一跳
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnPolicyBasedRoutingNextHopRequest"/></param>
+        /// <returns><see cref="DescribeCcnPolicyBasedRoutingNextHopResponse"/></returns>
+        public DescribeCcnPolicyBasedRoutingNextHopResponse DescribeCcnPolicyBasedRoutingNextHopSync(DescribeCcnPolicyBasedRoutingNextHopRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnPolicyBasedRoutingNextHopResponse>(req, "DescribeCcnPolicyBasedRoutingNextHop")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnPolicyBasedRoutingRuleRequest"/></param>
+        /// <returns><see cref="DescribeCcnPolicyBasedRoutingRuleResponse"/></returns>
+        public Task<DescribeCcnPolicyBasedRoutingRuleResponse> DescribeCcnPolicyBasedRoutingRule(DescribeCcnPolicyBasedRoutingRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnPolicyBasedRoutingRuleResponse>(req, "DescribeCcnPolicyBasedRoutingRule");
+        }
+
+        /// <summary>
+        /// 查询云联网策略路由匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnPolicyBasedRoutingRuleRequest"/></param>
+        /// <returns><see cref="DescribeCcnPolicyBasedRoutingRuleResponse"/></returns>
+        public DescribeCcnPolicyBasedRoutingRuleResponse DescribeCcnPolicyBasedRoutingRuleSync(DescribeCcnPolicyBasedRoutingRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnPolicyBasedRoutingRuleResponse>(req, "DescribeCcnPolicyBasedRoutingRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7384,6 +7510,48 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyCcnAttributeResponse ModifyCcnAttributeSync(ModifyCcnAttributeRequest req)
         {
             return InternalRequestAsync<ModifyCcnAttributeResponse>(req, "ModifyCcnAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新云联网策略路由下一跳参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnPolicyBasedRoutingNextHopAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnPolicyBasedRoutingNextHopAttributeResponse"/></returns>
+        public Task<ModifyCcnPolicyBasedRoutingNextHopAttributeResponse> ModifyCcnPolicyBasedRoutingNextHopAttribute(ModifyCcnPolicyBasedRoutingNextHopAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnPolicyBasedRoutingNextHopAttributeResponse>(req, "ModifyCcnPolicyBasedRoutingNextHopAttribute");
+        }
+
+        /// <summary>
+        /// 更新云联网策略路由下一跳参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnPolicyBasedRoutingNextHopAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnPolicyBasedRoutingNextHopAttributeResponse"/></returns>
+        public ModifyCcnPolicyBasedRoutingNextHopAttributeResponse ModifyCcnPolicyBasedRoutingNextHopAttributeSync(ModifyCcnPolicyBasedRoutingNextHopAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnPolicyBasedRoutingNextHopAttributeResponse>(req, "ModifyCcnPolicyBasedRoutingNextHopAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新云联网策略路由匹配规则参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnPolicyBasedRoutingRuleAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnPolicyBasedRoutingRuleAttributeResponse"/></returns>
+        public Task<ModifyCcnPolicyBasedRoutingRuleAttributeResponse> ModifyCcnPolicyBasedRoutingRuleAttribute(ModifyCcnPolicyBasedRoutingRuleAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnPolicyBasedRoutingRuleAttributeResponse>(req, "ModifyCcnPolicyBasedRoutingRuleAttribute");
+        }
+
+        /// <summary>
+        /// 更新云联网策略路由匹配规则参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnPolicyBasedRoutingRuleAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnPolicyBasedRoutingRuleAttributeResponse"/></returns>
+        public ModifyCcnPolicyBasedRoutingRuleAttributeResponse ModifyCcnPolicyBasedRoutingRuleAttributeSync(ModifyCcnPolicyBasedRoutingRuleAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnPolicyBasedRoutingRuleAttributeResponse>(req, "ModifyCcnPolicyBasedRoutingRuleAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

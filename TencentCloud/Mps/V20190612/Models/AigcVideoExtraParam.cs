@@ -25,60 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
-        /// 
-        /// 不同模型支持的分辨率选项:
-        /// 1. Kling 720P(默认), 1080P。
-        /// 2. Hailuo 768P(默认), 1080P。
-        /// 3. Vidu 720P(默认)，1080P。
-        /// 4. GV 720P(默认),1080P。
-        /// 5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-        /// 
-        /// 注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。
+        /// <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 指定所生成视频的宽高比。 
-        /// 
-        /// 不同模型对于此参数的支持：
-        /// 1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-        /// 2. Hailuo 暂不支持。
-        /// 3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-        /// 4. GV 16:9(默认值)、9:16。
-        /// 5. OS 仅文生视频支持, 16:9(默认), 9:16。
-        /// 
-        /// 注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+        /// <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 是否添加图标水印。
-        /// 1. Hailuo 支持此参数。
-        /// 2. Kling 支持此参数。
-        /// 3. Vidu 支持此参数。
+        /// <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol>
         /// </summary>
         [JsonProperty("LogoAdd")]
         public long? LogoAdd{ get; set; }
 
         /// <summary>
-        /// 为视频生成音频。接受的值包括 true 或 false。 
-        /// 
-        /// 支持此参数的模型：
-        /// 1. GV，默认true。
-        /// 2. OS，默认true。
+        /// <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol>
         /// </summary>
         [JsonProperty("EnableAudio")]
         public bool? EnableAudio{ get; set; }
 
         /// <summary>
-        /// 错峰模型，目前仅支持Vidu模型。
-        /// 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+        /// <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p>
         /// </summary>
         [JsonProperty("OffPeak")]
         public bool? OffPeak{ get; set; }
+
+        /// <summary>
+        /// <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p>
+        /// </summary>
+        [JsonProperty("EnableBgm")]
+        public bool? EnableBgm{ get; set; }
 
 
         /// <summary>
@@ -91,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
             this.SetParamSimple(map, prefix + "OffPeak", this.OffPeak);
+            this.SetParamSimple(map, prefix + "EnableBgm", this.EnableBgm);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -388,6 +388,27 @@ namespace TencentCloud.Ses.V20201002
         public DeleteReceiverResponse DeleteReceiverSync(DeleteReceiverRequest req)
         {
             return InternalRequestAsync<DeleteReceiverResponse>(req, "DeleteReceiver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取垃圾投诉数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAbuseReportRequest"/></param>
+        /// <returns><see cref="GetAbuseReportResponse"/></returns>
+        public Task<GetAbuseReportResponse> GetAbuseReport(GetAbuseReportRequest req)
+        {
+            return InternalRequestAsync<GetAbuseReportResponse>(req, "GetAbuseReport");
+        }
+
+        /// <summary>
+        /// 获取垃圾投诉数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAbuseReportRequest"/></param>
+        /// <returns><see cref="GetAbuseReportResponse"/></returns>
+        public GetAbuseReportResponse GetAbuseReportSync(GetAbuseReportRequest req)
+        {
+            return InternalRequestAsync<GetAbuseReportResponse>(req, "GetAbuseReport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

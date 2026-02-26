@@ -25,33 +25,33 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 生命周期管理策略创建的时间
+        /// <p>生命周期管理策略创建的时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 生命周期管理策略ID
+        /// <p>生命周期管理策略ID</p>
         /// </summary>
         [JsonProperty("LifecyclePolicyID")]
         public string LifecyclePolicyID{ get; set; }
 
         /// <summary>
-        /// 生命周期管理策略名称
+        /// <p>生命周期管理策略名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifecyclePolicyName")]
         public string LifecyclePolicyName{ get; set; }
 
         /// <summary>
-        /// 生命周期管理策略关联的管理规则列表
+        /// <p>生命周期管理策略关联的管理规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LifecycleRules")]
         public LifecycleRule[] LifecycleRules{ get; set; }
 
         /// <summary>
-        /// 生命周期管理策略关联目录的绝对路径列表
+        /// <p>生命周期管理策略关联目录的绝对路径列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paths")]

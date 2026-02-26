@@ -38,7 +38,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string FailReason{ get; set; }
 
         /// <summary>
-        /// 是否冻结
+        /// 是否已被冻结（只在 Status=success时有效）
         /// </summary>
         [JsonProperty("FreezeStatus")]
         public bool? FreezeStatus{ get; set; }

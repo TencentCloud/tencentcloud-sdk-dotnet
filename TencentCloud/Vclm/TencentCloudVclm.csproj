@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20240523\VclmClient.cs" />
     <Compile Include="V20240523\Models\CheckAnimateImageJobRequest.cs" />
     <Compile Include="V20240523\Models\CheckAnimateImageJobResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeAigcVideoJobRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeAigcVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHunyuanToVideoJobRequest.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="V20240523\Models\Image.cs" />
     <Compile Include="V20240523\Models\LogoParam.cs" />
     <Compile Include="V20240523\Models\LogoRect.cs" />
+    <Compile Include="V20240523\Models\SubmitAigcVideoJobRequest.cs" />
+    <Compile Include="V20240523\Models\SubmitAigcVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitHunyuanToVideoJobRequest.cs" />

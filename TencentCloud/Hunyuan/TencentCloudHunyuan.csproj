@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1377</VersionPrefix>
+    <VersionPrefix>3.0.1378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,8 +58,16 @@
     <Compile Include="V20230901\Models\ChatTranslationsResponse.cs" />
     <Compile Include="V20230901\Models\Choice.cs" />
     <Compile Include="V20230901\Models\Content.cs" />
+    <Compile Include="V20230901\Models\CreateGlossaryEntryRequest.cs" />
+    <Compile Include="V20230901\Models\CreateGlossaryEntryResponse.cs" />
+    <Compile Include="V20230901\Models\CreateGlossaryRequest.cs" />
+    <Compile Include="V20230901\Models\CreateGlossaryResponse.cs" />
     <Compile Include="V20230901\Models\CreateThreadRequest.cs" />
     <Compile Include="V20230901\Models\CreateThreadResponse.cs" />
+    <Compile Include="V20230901\Models\DeleteGlossaryEntryRequest.cs" />
+    <Compile Include="V20230901\Models\DeleteGlossaryEntryResponse.cs" />
+    <Compile Include="V20230901\Models\DeleteGlossaryRequest.cs" />
+    <Compile Include="V20230901\Models\DeleteGlossaryResponse.cs" />
     <Compile Include="V20230901\Models\Delta.cs" />
     <Compile Include="V20230901\Models\EmbeddingData.cs" />
     <Compile Include="V20230901\Models\EmbeddingUsage.cs" />
@@ -81,6 +89,11 @@
     <Compile Include="V20230901\Models\GetThreadResponse.cs" />
     <Compile Include="V20230901\Models\GetTokenCountRequest.cs" />
     <Compile Include="V20230901\Models\GetTokenCountResponse.cs" />
+    <Compile Include="V20230901\Models\Glossary.cs" />
+    <Compile Include="V20230901\Models\GlossaryEntry.cs" />
+    <Compile Include="V20230901\Models\GlossaryEntryCreateItem.cs" />
+    <Compile Include="V20230901\Models\GlossaryEntryDeleteItem.cs" />
+    <Compile Include="V20230901\Models\GlossaryEntryUpdateItem.cs" />
     <Compile Include="V20230901\Models\GroupChatCompletionsRequest.cs" />
     <Compile Include="V20230901\Models\GroupChatCompletionsResponse.cs" />
     <Compile Include="V20230901\Models\GroupChatConfig.cs" />
@@ -92,6 +105,10 @@
     <Compile Include="V20230901\Models\ImageQuestionResponse.cs" />
     <Compile Include="V20230901\Models\ImageUrl.cs" />
     <Compile Include="V20230901\Models\Knowledge.cs" />
+    <Compile Include="V20230901\Models\ListGlossaryEntryRequest.cs" />
+    <Compile Include="V20230901\Models\ListGlossaryEntryResponse.cs" />
+    <Compile Include="V20230901\Models\ListGlossaryRequest.cs" />
+    <Compile Include="V20230901\Models\ListGlossaryResponse.cs" />
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />
     <Compile Include="V20230901\Models\Message.cs" />
@@ -133,6 +150,8 @@
     <Compile Include="V20230901\Models\TranslationChoice.cs" />
     <Compile Include="V20230901\Models\TranslationDelta.cs" />
     <Compile Include="V20230901\Models\TranslationMessage.cs" />
+    <Compile Include="V20230901\Models\UpdateGlossaryEntryRequest.cs" />
+    <Compile Include="V20230901\Models\UpdateGlossaryEntryResponse.cs" />
     <Compile Include="V20230901\Models\Usage.cs" />
     <Compile Include="V20230901\Models\UserLocation.cs" />
     <Compile Include="V20230901\Models\VideoFrames.cs" />

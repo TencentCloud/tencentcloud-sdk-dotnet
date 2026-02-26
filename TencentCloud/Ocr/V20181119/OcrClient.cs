@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -321,6 +321,31 @@ namespace TencentCloud.Ocr.V20181119
         public DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJobSync(DescribeExtractDocAgentJobRequest req)
         {
             return InternalRequestAsync<DescribeExtractDocAgentJobResponse>(req, "DescribeExtractDocAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 
+        /// 默认接口请求并发限制：2次/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMarkEssayAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeMarkEssayAgentJobResponse"/></returns>
+        public Task<DescribeMarkEssayAgentJobResponse> DescribeMarkEssayAgentJob(DescribeMarkEssayAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeMarkEssayAgentJobResponse>(req, "DescribeMarkEssayAgentJob");
+        }
+
+        /// <summary>
+        /// 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 
+        /// 默认接口请求并发限制：2次/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMarkEssayAgentJobRequest"/></param>
+        /// <returns><see cref="DescribeMarkEssayAgentJobResponse"/></returns>
+        public DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJobSync(DescribeMarkEssayAgentJobRequest req)
+        {
+            return InternalRequestAsync<DescribeMarkEssayAgentJobResponse>(req, "DescribeMarkEssayAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2905,6 +2930,31 @@ namespace TencentCloud.Ocr.V20181119
         public SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJobSync(SubmitExtractDocAgentJobRequest req)
         {
             return InternalRequestAsync<SubmitExtractDocAgentJobResponse>(req, "SubmitExtractDocAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 
+        /// 默认接口请求并发限制：2次/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMarkEssayAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitMarkEssayAgentJobResponse"/></returns>
+        public Task<SubmitMarkEssayAgentJobResponse> SubmitMarkEssayAgentJob(SubmitMarkEssayAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMarkEssayAgentJobResponse>(req, "SubmitMarkEssayAgentJob");
+        }
+
+        /// <summary>
+        /// 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 
+        /// 默认接口请求并发限制：2次/分钟。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMarkEssayAgentJobRequest"/></param>
+        /// <returns><see cref="SubmitMarkEssayAgentJobResponse"/></returns>
+        public SubmitMarkEssayAgentJobResponse SubmitMarkEssayAgentJobSync(SubmitMarkEssayAgentJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMarkEssayAgentJobResponse>(req, "SubmitMarkEssayAgentJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

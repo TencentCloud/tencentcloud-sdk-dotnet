@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20230616
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Monitor.V20230616
         }
 
         /// <summary>
+        /// 删除通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentTmplsRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentTmplsResponse"/></returns>
+        public Task<DeleteNoticeContentTmplsResponse> DeleteNoticeContentTmpls(DeleteNoticeContentTmplsRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentTmplsResponse>(req, "DeleteNoticeContentTmpls");
+        }
+
+        /// <summary>
+        /// 删除通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentTmplsRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentTmplsResponse"/></returns>
+        public DeleteNoticeContentTmplsResponse DeleteNoticeContentTmplsSync(DeleteNoticeContentTmplsRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentTmplsResponse>(req, "DeleteNoticeContentTmpls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 按需查询告警的通知历史
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNotifyHistoriesRequest"/></param>
@@ -92,6 +113,48 @@ namespace TencentCloud.Monitor.V20230616
         public DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistoriesSync(DescribeAlarmNotifyHistoriesRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNotifyHistoriesResponse>(req, "DescribeAlarmNotifyHistories")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据查询条件获取自定义通知内容模板，若所有查询条件空，则获取账号下所有模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentTmplResponse"/></returns>
+        public Task<DescribeNoticeContentTmplResponse> DescribeNoticeContentTmpl(DescribeNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentTmplResponse>(req, "DescribeNoticeContentTmpl");
+        }
+
+        /// <summary>
+        /// 根据查询条件获取自定义通知内容模板，若所有查询条件空，则获取账号下所有模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentTmplResponse"/></returns>
+        public DescribeNoticeContentTmplResponse DescribeNoticeContentTmplSync(DescribeNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentTmplResponse>(req, "DescribeNoticeContentTmpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentTmplResponse"/></returns>
+        public Task<ModifyNoticeContentTmplResponse> ModifyNoticeContentTmpl(ModifyNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentTmplResponse>(req, "ModifyNoticeContentTmpl");
+        }
+
+        /// <summary>
+        /// 修改通知内容模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentTmplRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentTmplResponse"/></returns>
+        public ModifyNoticeContentTmplResponse ModifyNoticeContentTmplSync(ModifyNoticeContentTmplRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentTmplResponse>(req, "ModifyNoticeContentTmpl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

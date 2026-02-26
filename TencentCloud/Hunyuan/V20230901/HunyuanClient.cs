@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -141,6 +141,48 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 创建自定义术语库，在翻译时自动将源语言术语替换为指定的目标语言译文，确保专业术语翻译的一致性和准确性。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryResponse"/></returns>
+        public Task<CreateGlossaryResponse> CreateGlossary(CreateGlossaryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryResponse>(req, "CreateGlossary");
+        }
+
+        /// <summary>
+        /// 创建自定义术语库，在翻译时自动将源语言术语替换为指定的目标语言译文，确保专业术语翻译的一致性和准确性。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryResponse"/></returns>
+        public CreateGlossaryResponse CreateGlossarySync(CreateGlossaryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryResponse>(req, "CreateGlossary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryEntryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryEntryResponse"/></returns>
+        public Task<CreateGlossaryEntryResponse> CreateGlossaryEntry(CreateGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryEntryResponse>(req, "CreateGlossaryEntry");
+        }
+
+        /// <summary>
+        /// 添加术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryEntryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryEntryResponse"/></returns>
+        public CreateGlossaryEntryResponse CreateGlossaryEntrySync(CreateGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryEntryResponse>(req, "CreateGlossaryEntry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
         /// 
         ///  1. 本接口暂不支持返回图片内容。
@@ -168,6 +210,48 @@ namespace TencentCloud.Hunyuan.V20230901
         public CreateThreadResponse CreateThreadSync(CreateThreadRequest req)
         {
             return InternalRequestAsync<CreateThreadResponse>(req, "CreateThread")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除术语库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryResponse"/></returns>
+        public Task<DeleteGlossaryResponse> DeleteGlossary(DeleteGlossaryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryResponse>(req, "DeleteGlossary");
+        }
+
+        /// <summary>
+        /// 删除术语库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryResponse"/></returns>
+        public DeleteGlossaryResponse DeleteGlossarySync(DeleteGlossaryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryResponse>(req, "DeleteGlossary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryEntryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryEntryResponse"/></returns>
+        public Task<DeleteGlossaryEntryResponse> DeleteGlossaryEntry(DeleteGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryEntryResponse>(req, "DeleteGlossaryEntry");
+        }
+
+        /// <summary>
+        /// 删除术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryEntryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryEntryResponse"/></returns>
+        public DeleteGlossaryEntryResponse DeleteGlossaryEntrySync(DeleteGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryEntryResponse>(req, "DeleteGlossaryEntry")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -442,6 +526,48 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 查询术语库。
+        /// </summary>
+        /// <param name="req"><see cref="ListGlossaryRequest"/></param>
+        /// <returns><see cref="ListGlossaryResponse"/></returns>
+        public Task<ListGlossaryResponse> ListGlossary(ListGlossaryRequest req)
+        {
+            return InternalRequestAsync<ListGlossaryResponse>(req, "ListGlossary");
+        }
+
+        /// <summary>
+        /// 查询术语库。
+        /// </summary>
+        /// <param name="req"><see cref="ListGlossaryRequest"/></param>
+        /// <returns><see cref="ListGlossaryResponse"/></returns>
+        public ListGlossaryResponse ListGlossarySync(ListGlossaryRequest req)
+        {
+            return InternalRequestAsync<ListGlossaryResponse>(req, "ListGlossary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="ListGlossaryEntryRequest"/></param>
+        /// <returns><see cref="ListGlossaryEntryResponse"/></returns>
+        public Task<ListGlossaryEntryResponse> ListGlossaryEntry(ListGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<ListGlossaryEntryResponse>(req, "ListGlossaryEntry");
+        }
+
+        /// <summary>
+        /// 查询术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="ListGlossaryEntryRequest"/></param>
+        /// <returns><see cref="ListGlossaryEntryResponse"/></returns>
+        public ListGlossaryEntryResponse ListGlossaryEntrySync(ListGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<ListGlossaryEntryResponse>(req, "ListGlossaryEntry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
@@ -621,6 +747,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public TextToImageLiteResponse TextToImageLiteSync(TextToImageLiteRequest req)
         {
             return InternalRequestAsync<TextToImageLiteResponse>(req, "TextToImageLite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGlossaryEntryRequest"/></param>
+        /// <returns><see cref="UpdateGlossaryEntryResponse"/></returns>
+        public Task<UpdateGlossaryEntryResponse> UpdateGlossaryEntry(UpdateGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<UpdateGlossaryEntryResponse>(req, "UpdateGlossaryEntry");
+        }
+
+        /// <summary>
+        /// 更新术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGlossaryEntryRequest"/></param>
+        /// <returns><see cref="UpdateGlossaryEntryResponse"/></returns>
+        public UpdateGlossaryEntryResponse UpdateGlossaryEntrySync(UpdateGlossaryEntryRequest req)
+        {
+            return InternalRequestAsync<UpdateGlossaryEntryResponse>(req, "UpdateGlossaryEntry")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

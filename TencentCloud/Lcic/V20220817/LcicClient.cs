@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -1410,6 +1410,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 使用源账号登录课堂，源账号为注册时填入的originId
+        /// </summary>
+        /// <param name="req"><see cref="LoginOriginIdWithRoomRequest"/></param>
+        /// <returns><see cref="LoginOriginIdWithRoomResponse"/></returns>
+        public Task<LoginOriginIdWithRoomResponse> LoginOriginIdWithRoom(LoginOriginIdWithRoomRequest req)
+        {
+            return InternalRequestAsync<LoginOriginIdWithRoomResponse>(req, "LoginOriginIdWithRoom");
+        }
+
+        /// <summary>
+        /// 使用源账号登录课堂，源账号为注册时填入的originId
+        /// </summary>
+        /// <param name="req"><see cref="LoginOriginIdWithRoomRequest"/></param>
+        /// <returns><see cref="LoginOriginIdWithRoomResponse"/></returns>
+        public LoginOriginIdWithRoomResponse LoginOriginIdWithRoomSync(LoginOriginIdWithRoomRequest req)
+        {
+            return InternalRequestAsync<LoginOriginIdWithRoomResponse>(req, "LoginOriginIdWithRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 登录
         /// </summary>
         /// <param name="req"><see cref="LoginUserRequest"/></param>
@@ -1427,6 +1448,27 @@ namespace TencentCloud.Lcic.V20220817
         public LoginUserResponse LoginUserSync(LoginUserRequest req)
         {
             return InternalRequestAsync<LoginUserResponse>(req, "LoginUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 登录课堂
+        /// </summary>
+        /// <param name="req"><see cref="LoginUserWithRoomRequest"/></param>
+        /// <returns><see cref="LoginUserWithRoomResponse"/></returns>
+        public Task<LoginUserWithRoomResponse> LoginUserWithRoom(LoginUserWithRoomRequest req)
+        {
+            return InternalRequestAsync<LoginUserWithRoomResponse>(req, "LoginUserWithRoom");
+        }
+
+        /// <summary>
+        /// 登录课堂
+        /// </summary>
+        /// <param name="req"><see cref="LoginUserWithRoomRequest"/></param>
+        /// <returns><see cref="LoginUserWithRoomResponse"/></returns>
+        public LoginUserWithRoomResponse LoginUserWithRoomSync(LoginUserWithRoomRequest req)
+        {
+            return InternalRequestAsync<LoginUserWithRoomResponse>(req, "LoginUserWithRoom")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,13 +31,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 过滤参数,工作流名称或ID查询名称：Keyword,工作流ID查询名称：WorkflowId,文件夹查询名称：FolderId,负责人查询名称：InChargeUin, 工作流执行id: ExecutionId
+        /// 过滤参数, 工作流名称或ID查询名称: Keyword, 工作流ID查询名称: WorkflowId,文件夹查询名称: FolderId, 负责人查询名称: InChargeUin, 工作流执行id: ExecutionId, 计划调度时间区间: ScheduleTimeGreaterEqual, ScheduleTimeLessEqual
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段，排序字段名称	如下开始时间：CreateTime，结束时间：EndTime
+        /// 排序字段，排序字段名称	如下开始时间：CreateTime，结束时间：EndTime，计划调度时间：ScheduleTime
         /// </summary>
         [JsonProperty("OrderFields")]
         public OrderField[] OrderFields{ get; set; }

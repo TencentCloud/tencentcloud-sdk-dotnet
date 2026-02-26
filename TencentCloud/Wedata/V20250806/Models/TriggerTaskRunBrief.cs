@@ -137,6 +137,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 计划调度时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleTime")]
+        public string ScheduleTime{ get; set; }
+
+        /// <summary>
         /// 更新时间戳
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -409,6 +416,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ExecutionResult")]
         public string ExecutionResult{ get; set; }
 
+        /// <summary>
+        /// 依赖策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DependencyTriggerPolicy")]
+        public string DependencyTriggerPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -431,6 +445,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CreaterUin", this.CreaterUin);
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ScheduleTime", this.ScheduleTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "DependenceFinishedTime", this.DependenceFinishedTime);
             this.SetParamSimple(map, prefix + "QueueStartTime", this.QueueStartTime);
@@ -470,6 +485,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "SupportRerun", this.SupportRerun);
             this.SetParamSimple(map, prefix + "WorkflowExecutionState", this.WorkflowExecutionState);
             this.SetParamSimple(map, prefix + "ExecutionResult", this.ExecutionResult);
+            this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         }
     }
 }

@@ -37,61 +37,76 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// 目标下单产品/套餐Id
+        /// 目标下单产品/套餐Id。
+        /// 对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// 默认只下单不支付，为ture则下单并支付
+        /// 默认只下单不支付，为ture则下单并支付。
+        /// 如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。
         /// </summary>
         [JsonProperty("CreateAndPay")]
         public bool? CreateAndPay{ get; set; }
 
         /// <summary>
-        /// 购买时长
+        /// 购买时长，与TimeUnit字段搭配使用。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)
+        /// 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+        /// 对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 资源唯一标识
+        /// 资源唯一标识。
+        /// 在云开发环境 续费和变配 场景下必传，取值为环境ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 来源可选[qcloud,miniapp]，默认qcloud
+        /// 来源可选[qcloud,miniapp]，默认qcloud。
+        /// miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 资源别名
+        /// 环境别名，用于新购云开发环境时，给云开发环境起别名。
+        /// 仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+        /// 
+        /// ### 格式要求
+        /// - 可选字符： 小写字母(a~z)、数字、减号(-)
+        /// - 不能以 减号(-) 开头或结尾
+        /// - 不能有连个连续的 减号(-)
+        /// - 长度不超过20位
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 环境id
+        /// 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 开启超限按量
+        /// 开启超限按量。
+        /// 开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+        /// 详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。
         /// </summary>
         [JsonProperty("EnableExcess")]
         public bool? EnableExcess{ get; set; }
 
         /// <summary>
-        /// 变配目标产品/套餐id
+        /// 变配目标套餐id，对于云开发环境变配场景下必传。
+        /// 对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
         /// </summary>
         [JsonProperty("ModifyPackageId")]
         public string ModifyPackageId{ get; set; }
@@ -103,7 +118,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Extension{ get; set; }
 
         /// <summary>
-        /// 是否自动选择代金券支付
+        /// 是否自动选择代金券支付。
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }

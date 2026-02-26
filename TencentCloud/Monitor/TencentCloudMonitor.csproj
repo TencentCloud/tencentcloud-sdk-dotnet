@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,12 +50,20 @@
     <Compile Include="V20230616\MonitorClient.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
+    <Compile Include="V20230616\Models\DeleteNoticeContentTmplsRequest.cs" />
+    <Compile Include="V20230616\Models\DeleteNoticeContentTmplsResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeNoticeContentTmplRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\ModifyNoticeContentTmplRequest.cs" />
+    <Compile Include="V20230616\Models\ModifyNoticeContentTmplResponse.cs" />
+    <Compile Include="V20230616\Models\NoticeContentTmpl.cs" />
+    <Compile Include="V20230616\Models\NoticeContentTmplBindPolicyCount.cs" />
     <Compile Include="V20230616\Models\NoticeContentTmplItem.cs" />
     <Compile Include="V20230616\Models\PageByNoParams.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmpl.cs" />
@@ -263,6 +271,8 @@
     <Compile Include="V20180724\Models\DescribeMonitorResourceInfoResponse.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeNotificationContentTemplateSupportsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeNotificationContentTemplateSupportsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePhoneAlarmFlowTotalCountRequest.cs" />
     <Compile Include="V20180724\Models\DescribePhoneAlarmFlowTotalCountResponse.cs" />
     <Compile Include="V20180724\Models\DescribePluginOverviewsRequest.cs" />
@@ -447,6 +457,8 @@
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\NoticeBindPolicys.cs" />
     <Compile Include="V20180724\Models\NoticeContentTmplBindInfo.cs" />
+    <Compile Include="V20180724\Models\NotificationContentTemplateSupport.cs" />
+    <Compile Include="V20180724\Models\NotificationContentTemplateSupportDetail.cs" />
     <Compile Include="V20180724\Models\Operator.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
     <Compile Include="V20180724\Models\Point.cs" />

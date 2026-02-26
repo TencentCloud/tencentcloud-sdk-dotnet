@@ -25,22 +25,28 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 负载均衡器ID
+        /// <p>负载均衡器ID</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡监听器 ID
+        /// <p>应用型负载均衡监听器 ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 转发规则ID，注意：针对七层监听器此参数必填
+        /// <p>转发规则ID，注意：针对七层监听器此参数必填</p>
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
+
+        /// <summary>
+        /// <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+        /// </summary>
+        [JsonProperty("PortList")]
+        public ulong?[] PortList{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamArraySimple(map, prefix + "PortList.", this.PortList);
         }
     }
 }

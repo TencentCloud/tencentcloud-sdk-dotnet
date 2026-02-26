@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Vclm.V20240523
         public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
         {
             return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeAigcVideoJobResponse"/></returns>
+        public Task<DescribeAigcVideoJobResponse> DescribeAigcVideoJob(DescribeAigcVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcVideoJobResponse>(req, "DescribeAigcVideoJob");
+        }
+
+        /// <summary>
+        /// 查询生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeAigcVideoJobResponse"/></returns>
+        public DescribeAigcVideoJobResponse DescribeAigcVideoJobSync(DescribeAigcVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcVideoJobResponse>(req, "DescribeAigcVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -283,6 +304,27 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeVideoVoiceJobResponse DescribeVideoVoiceJobSync(DescribeVideoVoiceJobRequest req)
         {
             return InternalRequestAsync<DescribeVideoVoiceJobResponse>(req, "DescribeVideoVoiceJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAigcVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitAigcVideoJobResponse"/></returns>
+        public Task<SubmitAigcVideoJobResponse> SubmitAigcVideoJob(SubmitAigcVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAigcVideoJobResponse>(req, "SubmitAigcVideoJob");
+        }
+
+        /// <summary>
+        /// 提交生视频任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAigcVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitAigcVideoJobResponse"/></returns>
+        public SubmitAigcVideoJobResponse SubmitAigcVideoJobSync(SubmitAigcVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAigcVideoJobResponse>(req, "SubmitAigcVideoJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

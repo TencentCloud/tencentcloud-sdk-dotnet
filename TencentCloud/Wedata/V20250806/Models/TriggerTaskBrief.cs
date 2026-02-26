@@ -122,6 +122,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
+        /// <summary>
+        /// 依赖策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DependencyTriggerPolicy")]
+        public string DependencyTriggerPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TaskTypeId", this.TaskTypeId);
             this.SetParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
+            this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         }
     }
 }

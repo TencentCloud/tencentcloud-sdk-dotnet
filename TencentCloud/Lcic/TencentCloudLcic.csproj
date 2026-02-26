@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1377</VersionPrefix>
+    <VersionPrefix>3.0.1378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -190,8 +190,12 @@
     <Compile Include="V20220817\Models\KickUserFromRoomResponse.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdRequest.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdResponse.cs" />
+    <Compile Include="V20220817\Models\LoginOriginIdWithRoomRequest.cs" />
+    <Compile Include="V20220817\Models\LoginOriginIdWithRoomResponse.cs" />
     <Compile Include="V20220817\Models\LoginUserRequest.cs" />
     <Compile Include="V20220817\Models\LoginUserResponse.cs" />
+    <Compile Include="V20220817\Models\LoginUserWithRoomRequest.cs" />
+    <Compile Include="V20220817\Models\LoginUserWithRoomResponse.cs" />
     <Compile Include="V20220817\Models\MemberRecord.cs" />
     <Compile Include="V20220817\Models\MessageItem.cs" />
     <Compile Include="V20220817\Models\MessageList.cs" />

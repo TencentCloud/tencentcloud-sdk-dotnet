@@ -25,43 +25,37 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 身份证号。
+        /// <p>身份证号。</p>
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名。
-        /// - 中文请使用UTF-8编码。
+        /// <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用于人脸比对的照片，图片的Base64值；
-        /// Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+        /// <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 本接口不需要传递此参数。
+        /// <p>本接口不需要传递此参数。</p>
         /// </summary>
         [JsonProperty("Optional")]
         public string Optional{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。
-        /// - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 自定义描述字段。
-        /// - 用于描述调用业务信息，出参中将返回此描述字段。 
-        /// - 每个自定义描述字段支持[1,10]个字符。
+        /// <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

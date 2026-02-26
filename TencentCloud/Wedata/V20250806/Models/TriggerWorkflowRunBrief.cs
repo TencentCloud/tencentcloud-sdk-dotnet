@@ -81,6 +81,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 计划调度时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleTime")]
+        public string ScheduleTime{ get; set; }
+
+        /// <summary>
         /// 执行开始时间戳
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -255,6 +262,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TriggerId", this.TriggerId);
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ScheduleTime", this.ScheduleTime);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
             this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
             this.SetParamSimple(map, prefix + "ExecutionCostTime", this.ExecutionCostTime);

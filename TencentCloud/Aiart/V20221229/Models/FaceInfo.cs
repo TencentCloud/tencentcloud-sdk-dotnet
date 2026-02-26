@@ -31,7 +31,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string[] ImageUrls{ get; set; }
 
         /// <summary>
-        /// 模版图人脸坐标。
+        /// 模板图人脸坐标。
         /// </summary>
         [JsonProperty("TemplateFaceRect")]
         public Rect TemplateFaceRect{ get; set; }

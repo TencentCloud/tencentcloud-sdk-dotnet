@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// Db类型 1. FLEXDB 2.MYSQL
+        /// Db类型: MYSQL
         /// </summary>
         [JsonProperty("DbInstanceType")]
         public string DbInstanceType{ get; set; }

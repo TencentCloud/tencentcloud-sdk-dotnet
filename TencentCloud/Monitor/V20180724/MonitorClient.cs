@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -484,6 +484,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS的接口，迁移后已经不需要该功能
+        /// 
         /// 创建全局告警通知渠道。集群内创建的告警规则如果未配置告警通知渠道，默认走全局告警通知渠道（建议在控制台创建告警，集群内创建告警不易维护）
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusGlobalNotificationRequest"/></param>
@@ -494,6 +496,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS的接口，迁移后已经不需要该功能
+        /// 
         /// 创建全局告警通知渠道。集群内创建的告警规则如果未配置告警通知渠道，默认走全局告警通知渠道（建议在控制台创建告警，集群内创建告警不易维护）
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusGlobalNotificationRequest"/></param>
@@ -1735,6 +1739,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 查询告警通知内容模板支持的变量或者函数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotificationContentTemplateSupportsRequest"/></param>
+        /// <returns><see cref="DescribeNotificationContentTemplateSupportsResponse"/></returns>
+        public Task<DescribeNotificationContentTemplateSupportsResponse> DescribeNotificationContentTemplateSupports(DescribeNotificationContentTemplateSupportsRequest req)
+        {
+            return InternalRequestAsync<DescribeNotificationContentTemplateSupportsResponse>(req, "DescribeNotificationContentTemplateSupports");
+        }
+
+        /// <summary>
+        /// 查询告警通知内容模板支持的变量或者函数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotificationContentTemplateSupportsRequest"/></param>
+        /// <returns><see cref="DescribeNotificationContentTemplateSupportsResponse"/></returns>
+        public DescribeNotificationContentTemplateSupportsResponse DescribeNotificationContentTemplateSupportsSync(DescribeNotificationContentTemplateSupportsRequest req)
+        {
+            return InternalRequestAsync<DescribeNotificationContentTemplateSupportsResponse>(req, "DescribeNotificationContentTemplateSupports")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询周期内电话流水总数
         /// </summary>
         /// <param name="req"><see cref="DescribePhoneAlarmFlowTotalCountRequest"/></param>
@@ -2050,6 +2075,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS的接口，迁移后已经不需要
+        /// 
         /// 查询全局告警通知渠道
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusGlobalNotificationRequest"/></param>
@@ -2060,6 +2087,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS的接口，迁移后已经不需要
+        /// 
         /// 查询全局告警通知渠道
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusGlobalNotificationRequest"/></param>
@@ -2958,6 +2987,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS接口，迁移后不需要
+        /// 
         /// 修改全局告警通知渠道
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusGlobalNotificationRequest"/></param>
@@ -2968,6 +2999,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 之前TPS接口，迁移后不需要
+        /// 
         /// 修改全局告警通知渠道
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusGlobalNotificationRequest"/></param>
