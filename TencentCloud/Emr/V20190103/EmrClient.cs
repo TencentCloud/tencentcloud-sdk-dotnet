@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1379";
 
         /// <summary>
         /// Client constructor.
@@ -518,6 +518,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeDAGInfoResponse DescribeDAGInfoSync(DescribeDAGInfoRequest req)
         {
             return InternalRequestAsync<DescribeDAGInfoResponse>(req, "DescribeDAGInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询EMR事件监控数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEMREventListRequest"/></param>
+        /// <returns><see cref="DescribeEMREventListResponse"/></returns>
+        public Task<DescribeEMREventListResponse> DescribeEMREventList(DescribeEMREventListRequest req)
+        {
+            return InternalRequestAsync<DescribeEMREventListResponse>(req, "DescribeEMREventList");
+        }
+
+        /// <summary>
+        /// 查询EMR事件监控数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEMREventListRequest"/></param>
+        /// <returns><see cref="DescribeEMREventListResponse"/></returns>
+        public DescribeEMREventListResponse DescribeEMREventListSync(DescribeEMREventListRequest req)
+        {
+            return InternalRequestAsync<DescribeEMREventListResponse>(req, "DescribeEMREventList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

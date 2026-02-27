@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1379";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeApmPrometheusRuleResponse DescribeApmPrometheusRuleSync(DescribeApmPrometheusRuleRequest req)
         {
             return InternalRequestAsync<DescribeApmPrometheusRuleResponse>(req, "DescribeApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SQL注入详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSQLInjectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmSQLInjectionDetailResponse"/></returns>
+        public Task<DescribeApmSQLInjectionDetailResponse> DescribeApmSQLInjectionDetail(DescribeApmSQLInjectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSQLInjectionDetailResponse>(req, "DescribeApmSQLInjectionDetail");
+        }
+
+        /// <summary>
+        /// 查询SQL注入详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSQLInjectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmSQLInjectionDetailResponse"/></returns>
+        public DescribeApmSQLInjectionDetailResponse DescribeApmSQLInjectionDetailSync(DescribeApmSQLInjectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSQLInjectionDetailResponse>(req, "DescribeApmSQLInjectionDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

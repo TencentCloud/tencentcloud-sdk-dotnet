@@ -85,18 +85,6 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string ForwardingMode{ get; set; }
 
         /// <summary>
-        /// <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-        /// </summary>
-        [JsonProperty("TcpIdleConnectTimeout")]
-        public long? TcpIdleConnectTimeout{ get; set; }
-
-        /// <summary>
-        /// <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-        /// </summary>
-        [JsonProperty("OthersIdleConnectTimeout")]
-        public long? OthersIdleConnectTimeout{ get; set; }
-
-        /// <summary>
         /// <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
         /// </summary>
         [JsonProperty("RescheduleUnbindRs")]
@@ -136,8 +124,6 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ForwardingMode", this.ForwardingMode);
-            this.SetParamSimple(map, prefix + "TcpIdleConnectTimeout", this.TcpIdleConnectTimeout);
-            this.SetParamSimple(map, prefix + "OthersIdleConnectTimeout", this.OthersIdleConnectTimeout);
             this.SetParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
             this.SetParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
             this.SetParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);

@@ -25,79 +25,79 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 规格ID
+        /// <p>规格ID</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL的版本编号
+        /// <p>PostgreSQL的版本编号</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 内核编号对应的完整版本名称
+        /// <p>内核编号对应的完整版本名称</p>
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
-        /// CPU核数
+        /// <p>CPU核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存大小，单位：MB
+        /// <p>内存大小，单位：MB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 该规格所支持最大存储容量，单位：GB
+        /// <p>该规格所支持最大存储容量，单位：GB</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 该规格所支持最小存储容量，单位：GB
+        /// <p>该规格所支持最小存储容量，单位：GB</p>
         /// </summary>
         [JsonProperty("MinStorage")]
         public ulong? MinStorage{ get; set; }
 
         /// <summary>
-        /// 该规格的预估QPS
+        /// <p>该规格的预估QPS</p>
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// 【该字段废弃】
+        /// <p>【该字段废弃】</p>
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
 
         /// <summary>
-        /// 机器类型
+        /// <p>机器类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// PostgreSQL的主要版本编号
+        /// <p>PostgreSQL的主要版本编号</p>
         /// </summary>
         [JsonProperty("MajorVersion")]
         public string MajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL的内核版本编号
+        /// <p>PostgreSQL的内核版本编号</p>
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// 是否支持TDE数据加密功能，0-不支持，1-支持
+        /// <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
         /// </summary>
         [JsonProperty("IsSupportTDE")]
         public long? IsSupportTDE{ get; set; }

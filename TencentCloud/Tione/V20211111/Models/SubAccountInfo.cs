@@ -54,6 +54,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LinuxGid")]
         public long? LinuxGid{ get; set; }
 
+        /// <summary>
+        /// 子账号在Linux下的用户名
+        /// </summary>
+        [JsonProperty("LinuxUserName")]
+        public string LinuxUserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamSimple(map, prefix + "LinuxUid", this.LinuxUid);
             this.SetParamSimple(map, prefix + "LinuxGid", this.LinuxGid);
+            this.SetParamSimple(map, prefix + "LinuxUserName", this.LinuxUserName);
         }
     }
 }

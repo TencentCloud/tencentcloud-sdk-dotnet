@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1379</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20180317\ClbClient.cs" />
+    <Compile Include="V20180317\Models\AssociateCustomizedConfigRequest.cs" />
+    <Compile Include="V20180317\Models\AssociateCustomizedConfigResponse.cs" />
     <Compile Include="V20180317\Models\AssociateTargetGroupsRequest.cs" />
     <Compile Include="V20180317\Models\AssociateTargetGroupsResponse.cs" />
     <Compile Include="V20180317\Models\AssociationItem.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="V20180317\Models\BatchRegisterTargetsResponse.cs" />
     <Compile Include="V20180317\Models\BatchTarget.cs" />
     <Compile Include="V20180317\Models\BindDetailItem.cs" />
+    <Compile Include="V20180317\Models\BindItem.cs" />
     <Compile Include="V20180317\Models\BlockedIP.cs" />
     <Compile Include="V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="V20180317\Models\CertInfo.cs" />
@@ -182,6 +185,8 @@
     <Compile Include="V20180317\Models\DescribeTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="V20180317\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20180317\Models\DisassociateCustomizedConfigRequest.cs" />
+    <Compile Include="V20180317\Models\DisassociateCustomizedConfigResponse.cs" />
     <Compile Include="V20180317\Models\DisassociateTargetGroupsRequest.cs" />
     <Compile Include="V20180317\Models\DisassociateTargetGroupsResponse.cs" />
     <Compile Include="V20180317\Models\ExclusiveCluster.cs" />
