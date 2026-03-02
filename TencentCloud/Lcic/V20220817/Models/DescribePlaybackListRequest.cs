@@ -31,6 +31,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
+        /// <p>房间ID</p>
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
+
+        /// <summary>
         /// <p>分页查询当前页数，从1开始递增</p>
         /// </summary>
         [JsonProperty("Page")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

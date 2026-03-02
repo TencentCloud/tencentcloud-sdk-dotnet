@@ -25,31 +25,31 @@ namespace TencentCloud.Tdai.V20250717.Models
     {
         
         /// <summary>
-        /// 智能体ID
+        /// <p>智能体ID</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 智能体版本
+        /// <p>智能体版本</p>
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 智能体实例的参数列表
+        /// <p>智能体实例的参数列表</p>
         /// </summary>
         [JsonProperty("Parameters")]
         public Parameter[] Parameters{ get; set; }
 
         /// <summary>
-        /// 资源的标签信息
+        /// <p>资源的标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }

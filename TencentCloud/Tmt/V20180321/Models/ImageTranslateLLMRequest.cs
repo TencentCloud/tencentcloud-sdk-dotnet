@@ -25,39 +25,19 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+        /// <p>图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 目标语言，支持语言列表：
-        /// 
-        /// - 中文：zh
-        /// - 繁体（中国台湾）：zh-TW
-        /// - 繁体（中国香港）：zh-HK
-        /// - 英文：en
-        /// - 日语：ja
-        /// - 韩语：ko
-        /// - 泰语：th
-        /// - 越南语：vi
-        /// - 俄语：ru
-        /// - 德语：de
-        /// - 法语：fr
-        /// - 阿拉伯语：ar
-        /// - 西班牙语：es
-        /// - 意大利语：it
-        /// - 印度尼西亚语：id
-        /// - 马来西亚语：ms
-        /// - 葡萄牙语：pt
-        /// - 土耳其语：tr
-        /// - 
+        /// <p>目标语言，支持语言列表：</p><ul><li>中文：zh</li><li>繁体（中国台湾）：zh-TW</li><li>繁体（中国香港）：zh-HK</li><li>英文：en</li><li>日语：ja</li><li>韩语：ko</li><li>泰语：th</li><li>越南语：vi</li><li>俄语：ru</li><li>德语：de</li><li>法语：fr</li><li>阿拉伯语：ar</li><li>西班牙语：es</li><li>意大利语：it</li><li>印度尼西亚语：id</li><li>马来西亚语：ms</li><li>葡萄牙语：pt</li><li>土耳其语：tr<br>-</li></ul>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
+        /// <p>输入图 Url。 使用Url的时候，Data参数需要传入&quot;&quot;。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

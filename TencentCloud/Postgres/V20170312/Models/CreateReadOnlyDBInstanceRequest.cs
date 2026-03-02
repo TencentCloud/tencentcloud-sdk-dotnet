@@ -25,149 +25,134 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例所属主可用区， 如：ap-guangzhou-3；
-        /// 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+        /// <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+        /// <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
-        /// 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+        /// <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+        /// <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p>
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+        /// <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月。
-        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-        /// <li>后付费：只支持1</li>
+        /// <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+        /// <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+        /// <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，目前支持：
-        /// <li>PREPAID：预付费，即包年包月。</li>
-        /// <li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-        /// 默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+        /// <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券：
-        /// <li>0：否</li>
-        /// <li>1：是</li>
-        /// 默认值：0
+        /// <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券ID列表，目前仅支持指定一张代金券。
+        /// <p>代金券ID列表，目前仅支持指定一张代金券。</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 续费标记：
-        /// <li>0：手动续费</li>
-        /// <li>1：自动续费</li>
-        /// 默认值：0
+        /// <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 项目ID。默认值为0，表示归属默认项目。
+        /// <p>项目ID。默认值为0，表示归属默认项目。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 优惠活动ID
+        /// <p>优惠活动ID</p>
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// 只读组ID。
+        /// <p>只读组ID。</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+        /// <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }
 
         /// <summary>
-        /// 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+        /// <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 是否需要支持Ipv6：
-        /// <li>0：否</li>
-        /// <li>1：是</li>
-        /// 默认值：0
+        /// <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
         /// </summary>
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }
 
         /// <summary>
-        /// 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+        /// <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 不再需要指定，内核版本号与主实例保持一致
+        /// <p>不再需要指定，内核版本号与主实例保持一致</p>
         /// </summary>
         [JsonProperty("DBVersion")]
         [System.Obsolete]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 专属集群ID
+        /// <p>专属集群ID</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+        /// <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }

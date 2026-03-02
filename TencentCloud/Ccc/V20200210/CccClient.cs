@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1380";
 
         /// <summary>
         /// Client constructor.
@@ -1159,7 +1159,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取通话详情
+        /// 此接口用于在通话结束后，通过 session id 和时间戳，查询单一通话的通话详情。包括：主被叫信息、录音等。
         /// </summary>
         /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
         /// <returns><see cref="DescribeSessionDetailResponse"/></returns>
@@ -1169,7 +1169,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取通话详情
+        /// 此接口用于在通话结束后，通过 session id 和时间戳，查询单一通话的通话详情。包括：主被叫信息、录音等。
         /// </summary>
         /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
         /// <returns><see cref="DescribeSessionDetailResponse"/></returns>

@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。
+        /// 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。
+        /// 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -54,6 +54,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
+        /// <summary>
+        /// 仅Redis产品使用；实例Proxy ID。
+        /// </summary>
+        [JsonProperty("InstanceProxyId")]
+        public string InstanceProxyId{ get; set; }
+
+        /// <summary>
+        /// 仅Redis产品使用；命令。
+        /// </summary>
+        [JsonProperty("Cmd")]
+        public string Cmd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
+            this.SetParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
+            this.SetParamSimple(map, prefix + "Cmd", this.Cmd);
         }
     }
 }

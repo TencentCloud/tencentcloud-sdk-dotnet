@@ -48,7 +48,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 日志查询条数，默认值100，最大值100
+        /// 日志查询条数，默认值100，最大值1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -110,6 +110,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string VoiceName{ get; set; }
 
         /// <summary>
-        /// 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
+        /// 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
         /// </summary>
         [JsonProperty("PromptAudio")]
         public string PromptAudio{ get; set; }
@@ -46,6 +46,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// TTS的API密钥
         /// </summary>
         [JsonProperty("APIKey")]
+        [System.Obsolete]
         public string APIKey{ get; set; }
 
         /// <summary>

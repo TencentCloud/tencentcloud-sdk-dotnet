@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 订单号列表。每个实例对应一个订单号。
+        /// <p>订单号列表。每个实例对应一个订单号。</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 冻结流水号。
+        /// <p>冻结流水号。</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// 创建成功的实例ID集合，只在后付费情景下有返回值。
+        /// <p>创建成功的实例ID集合，只在后付费情景下有返回值。</p>
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }

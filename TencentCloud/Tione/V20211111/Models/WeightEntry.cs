@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 流量权重值，同 ServiceGroup 下 总和应为 100
+        /// 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

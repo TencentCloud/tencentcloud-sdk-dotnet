@@ -97,7 +97,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string QueuedSkillGroupName{ get; set; }
 
         /// <summary>
-        /// 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+        /// 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
         /// </summary>
         [JsonProperty("RecordURL")]
         public string RecordURL{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string CustomRecordURL{ get; set; }
 
         /// <summary>
-        /// 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+        /// 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
         /// </summary>
         [JsonProperty("AsrURL")]
         public string AsrURL{ get; set; }

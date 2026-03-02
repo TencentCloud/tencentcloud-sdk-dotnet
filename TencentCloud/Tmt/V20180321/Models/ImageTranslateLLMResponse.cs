@@ -25,43 +25,43 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 图片数据的Base64字符串，输出格式为JPG。
+        /// <p>图片数据的Base64字符串，输出格式为JPG。</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 原文本主要源语言。
+        /// <p>原文本主要源语言。</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 目标翻译语言。
+        /// <p>目标翻译语言。</p>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 图片中的全部原文本。
+        /// <p>图片中的全部原文本。</p>
         /// </summary>
         [JsonProperty("SourceText")]
         public string SourceText{ get; set; }
 
         /// <summary>
-        /// 图片中全部译文。
+        /// <p>图片中全部译文。</p>
         /// </summary>
         [JsonProperty("TargetText")]
         public string TargetText{ get; set; }
 
         /// <summary>
-        /// 逆时针图片角度，取值范围为0-359
+        /// <p>逆时针图片角度，取值范围为0-359</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 翻译详情信息
+        /// <p>翻译详情信息</p>
         /// </summary>
         [JsonProperty("TransDetails")]
         public TransDetail[] TransDetails{ get; set; }

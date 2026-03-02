@@ -60,6 +60,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
+        /// <summary>
+        /// 架构，共享版-intranet，企业版-userVpc
+        /// </summary>
+        [JsonProperty("DeployPlace")]
+        public string DeployPlace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "AgentName", this.AgentName);
             this.SetParamSimple(map, prefix + "AgentInternalName", this.AgentInternalName);
             this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+            this.SetParamSimple(map, prefix + "DeployPlace", this.DeployPlace);
         }
     }
 }

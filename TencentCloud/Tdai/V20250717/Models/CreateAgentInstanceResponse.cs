@@ -25,13 +25,13 @@ namespace TencentCloud.Tdai.V20250717.Models
     {
         
         /// <summary>
-        /// 智能体实例ID
+        /// <p>智能体实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 智能体实例名称
+        /// <p>智能体实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
