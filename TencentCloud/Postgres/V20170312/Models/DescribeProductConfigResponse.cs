@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 售卖规格列表。
+        /// <p>售卖规格列表。</p>
         /// </summary>
         [JsonProperty("SpecInfoList")]
         public SpecInfo[] SpecInfoList{ get; set; }

@@ -25,16 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区名称
+        /// <p>可用区名称</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 数据库引擎，支持：
-        /// 1、postgresql（云数据库PostgreSQL）；
-        /// 2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-        /// 如不指定默认使用postgresql。
+        /// <p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；<br>如不指定默认使用postgresql。</p>
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }

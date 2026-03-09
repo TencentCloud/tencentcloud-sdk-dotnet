@@ -25,13 +25,13 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 需进行组件生成的3D模型文件，仅支持FBX格式。
+        /// <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
         /// </summary>
         [JsonProperty("File")]
         public InputFile3D File{ get; set; }
 
         /// <summary>
-        /// 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+        /// <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

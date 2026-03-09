@@ -25,261 +25,238 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 进程名称
+        /// <p>进程名称</p>
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
 
         /// <summary>
-        /// 命中规则名称
+        /// <p>命中规则名称</p>
         /// </summary>
         [JsonProperty("MatchRuleName")]
         public string MatchRuleName{ get; set; }
 
         /// <summary>
-        /// 生成时间
+        /// <p>生成时间</p>
         /// </summary>
         [JsonProperty("FoundTime")]
         public string FoundTime{ get; set; }
 
         /// <summary>
-        /// 容器名
+        /// <p>容器名</p>
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
-        /// 镜像名
+        /// <p>镜像名</p>
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 动作执行结果，   BEHAVIOR_NONE: 无
-        ///     BEHAVIOR_ALERT: 告警
-        ///     BEHAVIOR_RELEASE：放行
-        ///     BEHAVIOR_HOLDUP_FAILED:拦截失败
-        ///     BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
+        /// <p>动作执行结果，   BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
         /// </summary>
         [JsonProperty("Behavior")]
         public string Behavior{ get; set; }
 
         /// <summary>
-        /// 状态0:未处理  “EVENT_UNDEAL”:事件未处理
-        ///     "EVENT_DEALED":事件已经处理
-        ///     "EVENT_INGNORE"：事件已经忽略
+        /// <p>状态0:未处理  “EVENT_UNDEAL”:事件未处理<br>    &quot;EVENT_DEALED&quot;:事件已经处理<br>    &quot;EVENT_INGNORE&quot;：事件已经忽略</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 事件记录的唯一id
+        /// <p>事件记录的唯一id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 文件名称
+        /// <p>文件名称</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 事件类型， FILE_ABNORMAL_READ:文件异常读取
+        /// <p>事件类型， FILE_ABNORMAL_READ:文件异常读取</p>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 镜像id, 用于跳转
+        /// <p>镜像id, 用于跳转</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 容器id, 用于跳转
+        /// <p>容器id, 用于跳转</p>
         /// </summary>
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// 事件解决方案
+        /// <p>事件解决方案</p>
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
-        /// 事件详细描述
+        /// <p>事件详细描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 命中策略id
+        /// <p>命中策略id</p>
         /// </summary>
         [JsonProperty("MatchRuleId")]
         public string MatchRuleId{ get; set; }
 
         /// <summary>
-        /// 命中规则行为：
-        /// RULE_MODE_RELEASE 放行
-        /// RULE_MODE_ALERT  告警
-        /// RULE_MODE_HOLDUP 拦截
+        /// <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
         /// </summary>
         [JsonProperty("MatchAction")]
         public string MatchAction{ get; set; }
 
         /// <summary>
-        /// 命中规则进程信息
+        /// <p>命中规则进程信息</p>
         /// </summary>
         [JsonProperty("MatchProcessPath")]
         public string MatchProcessPath{ get; set; }
 
         /// <summary>
-        /// 命中规则文件信息
+        /// <p>命中规则文件信息</p>
         /// </summary>
         [JsonProperty("MatchFilePath")]
         public string MatchFilePath{ get; set; }
 
         /// <summary>
-        /// 文件路径，包含名字
+        /// <p>文件路径，包含名字</p>
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// 规则是否存在
+        /// <p>规则是否存在</p>
         /// </summary>
         [JsonProperty("RuleExist")]
         public bool? RuleExist{ get; set; }
 
         /// <summary>
-        /// 事件数量
+        /// <p>事件数量</p>
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
-        /// 最近生成时间
+        /// <p>最近生成时间</p>
         /// </summary>
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
 
         /// <summary>
-        /// 规则组id
+        /// <p>规则组id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 网络状态
-        /// 未隔离  	NORMAL
-        /// 已隔离		ISOLATED
-        /// 隔离中		ISOLATING
-        /// 隔离失败	ISOLATE_FAILED
-        /// 解除隔离中  RESTORING
-        /// 解除隔离失败 RESTORE_FAILED
+        /// <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
-        /// 容器子状态
-        /// "AGENT_OFFLINE"       //Agent离线
-        /// "NODE_DESTROYED"      //节点已销毁
-        /// "CONTAINER_EXITED"    //容器已退出
-        /// "CONTAINER_DESTROYED" //容器已销毁
-        /// "SHARED_HOST"         // 容器与主机共享网络
-        /// "RESOURCE_LIMIT"      //隔离操作资源超限
-        /// "UNKNOW"              // 原因未知
+        /// <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// 容器隔离操作来源
+        /// <p>容器隔离操作来源</p>
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// 容器状态
-        /// 正在运行: RUNNING
-        /// 暂停: PAUSED
-        /// 停止: STOPPED
-        /// 已经创建: CREATED
-        /// 已经销毁: DESTROYED
-        /// 正在重启中: RESTARTING
-        /// 迁移中: REMOVING
+        /// <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
-        /// 节点名称：如果是超级节点，展示的实质上是它的node_id
+        /// <p>节点名称：如果是超级节点，展示的实质上是它的node_id</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// pod名称
+        /// <p>pod名称</p>
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// pod ip
+        /// <p>pod ip</p>
         /// </summary>
         [JsonProperty("PodIP")]
         public string PodIP{ get; set; }
 
         /// <summary>
-        /// 节点类型：NORMAL普通节点、SUPER超级节点
+        /// <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 节点的唯一id，主要是超级节点使用
+        /// <p>节点的唯一id，主要是超级节点使用</p>
         /// </summary>
         [JsonProperty("NodeUniqueID")]
         public string NodeUniqueID{ get; set; }
 
         /// <summary>
-        /// 节点公网IP
+        /// <p>节点公网IP</p>
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
 
         /// <summary>
-        /// 节点id
+        /// <p>节点id</p>
         /// </summary>
         [JsonProperty("NodeID")]
         public string NodeID{ get; set; }
 
         /// <summary>
-        /// uuid
+        /// <p>uuid</p>
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
-        /// 节点内网ip
+        /// <p>节点内网ip</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>命令行参数</p>
+        /// </summary>
+        [JsonProperty("CmdLine")]
+        public string CmdLine{ get; set; }
 
 
         /// <summary>
@@ -325,6 +302,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "CmdLine", this.CmdLine);
         }
     }
 }

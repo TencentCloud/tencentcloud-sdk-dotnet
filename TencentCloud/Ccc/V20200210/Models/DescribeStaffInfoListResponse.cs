@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 坐席用户总数
+        /// <p>坐席用户总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 坐席用户信息列表
+        /// <p>坐席用户信息列表</p>
         /// </summary>
         [JsonProperty("StaffList")]
         public StaffInfo[] StaffList{ get; set; }

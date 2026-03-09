@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 媒体列表。
+        /// <p>媒体列表。</p>
         /// </summary>
         [JsonProperty("SearchResults")]
         public SemanticsSearchResult[] SearchResults{ get; set; }

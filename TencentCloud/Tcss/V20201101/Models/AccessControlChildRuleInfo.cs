@@ -25,30 +25,34 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 策略模式,  RULE_MODE_RELEASE: 放行
-        ///    RULE_MODE_ALERT: 告警
-        ///    RULE_MODE_HOLDUP:拦截
+        /// <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
         /// </summary>
         [JsonProperty("RuleMode")]
         public string RuleMode{ get; set; }
 
         /// <summary>
-        /// 进程路径
+        /// <p>进程路径</p>
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
 
         /// <summary>
-        /// 被访问文件路径，仅仅在访问控制生效
+        /// <p>被访问文件路径，仅仅在访问控制生效</p>
         /// </summary>
         [JsonProperty("TargetFilePath")]
         public string TargetFilePath{ get; set; }
 
         /// <summary>
-        /// 子策略id
+        /// <p>子策略id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
+
+        /// <summary>
+        /// <p>命令行参数</p>
+        /// </summary>
+        [JsonProperty("CmdLine")]
+        public string CmdLine{ get; set; }
 
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
             this.SetParamSimple(map, prefix + "TargetFilePath", this.TargetFilePath);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "CmdLine", this.CmdLine);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Drm.V20181115.Models
     {
         
         /// <summary>
-        /// 播放许可证的有效期
+        /// <p>播放许可证的有效期</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("LicenseDurationSeconds")]
         public ulong? LicenseDurationSeconds{ get; set; }
 
         /// <summary>
-        /// 开始播放后，允许最长播放时间
+        /// <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PlaybackDurationSeconds")]
         public ulong? PlaybackDurationSeconds{ get; set; }

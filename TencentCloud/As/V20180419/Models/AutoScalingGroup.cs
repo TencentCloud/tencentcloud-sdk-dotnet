@@ -25,230 +25,205 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 伸缩组ID
+        /// <p>伸缩组ID</p>
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 伸缩组名称
+        /// <p>伸缩组名称</p>
         /// </summary>
         [JsonProperty("AutoScalingGroupName")]
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// 伸缩组当前状态。取值范围：
-        /// <li>NORMAL：正常</li>
-        /// <li>CVM_ABNORMAL：启动配置异常</li>
-        /// <li>LB_ABNORMAL：负载均衡器异常</li>
-        /// <li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-        /// <li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-        /// <li>VPC_ABNORMAL：VPC网络异常</li>
-        /// <li>SUBNET_ABNORMAL：VPC子网异常</li>
-        /// <li>INSUFFICIENT_BALANCE：余额不足</li>
-        /// <li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-        /// <li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+        /// <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
         /// </summary>
         [JsonProperty("AutoScalingGroupStatus")]
         public string AutoScalingGroupStatus{ get; set; }
 
         /// <summary>
-        /// 创建时间，采用UTC标准计时
+        /// <p>创建时间，采用UTC标准计时</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 默认冷却时间，单位秒
+        /// <p>默认冷却时间，单位秒</p>
         /// </summary>
         [JsonProperty("DefaultCooldown")]
         public long? DefaultCooldown{ get; set; }
 
         /// <summary>
-        /// 期望实例数
+        /// <p>期望实例数</p>
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public long? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// 启用状态，取值包括`ENABLED`和`DISABLED`
+        /// <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p>
         /// </summary>
         [JsonProperty("EnabledStatus")]
         public string EnabledStatus{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡器列表
+        /// <p>应用型负载均衡器列表</p>
         /// </summary>
         [JsonProperty("ForwardLoadBalancerSet")]
         public ForwardLoadBalancer[] ForwardLoadBalancerSet{ get; set; }
 
         /// <summary>
-        /// 实例数量
+        /// <p>实例数量</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 状态为`IN_SERVICE`实例的数量
+        /// <p>状态为<code>IN_SERVICE</code>实例的数量</p>
         /// </summary>
         [JsonProperty("InServiceInstanceCount")]
         public long? InServiceInstanceCount{ get; set; }
 
         /// <summary>
-        /// 启动配置ID
+        /// <p>启动配置ID</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// 启动配置名称
+        /// <p>启动配置名称</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationName")]
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// 传统型负载均衡器ID列表
+        /// <p>传统型负载均衡器ID列表</p>
         /// </summary>
         [JsonProperty("LoadBalancerIdSet")]
         public string[] LoadBalancerIdSet{ get; set; }
 
         /// <summary>
-        /// 最大实例数
+        /// <p>最大实例数</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// 最小实例数
+        /// <p>最小实例数</p>
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 子网ID列表
+        /// <p>子网ID列表</p>
         /// </summary>
         [JsonProperty("SubnetIdSet")]
         public string[] SubnetIdSet{ get; set; }
 
         /// <summary>
-        /// 销毁策略。取值范围如下：
-        /// <li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-        /// <li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+        /// <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
         /// </summary>
         [JsonProperty("TerminationPolicySet")]
         public string[] TerminationPolicySet{ get; set; }
 
         /// <summary>
-        /// 私有网络ID。
+        /// <p>私有网络ID。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 可用区列表
+        /// <p>可用区列表</p>
         /// </summary>
         [JsonProperty("ZoneSet")]
         public string[] ZoneSet{ get; set; }
 
         /// <summary>
-        /// 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-        /// <li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-        /// <li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-        /// <li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+        /// <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public string RetryPolicy{ get; set; }
 
         /// <summary>
-        /// 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+        /// <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p>
         /// </summary>
         [JsonProperty("InActivityStatus")]
         public string InActivityStatus{ get; set; }
 
         /// <summary>
-        /// 伸缩组标签列表
+        /// <p>伸缩组标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 服务设置
+        /// <p>服务设置</p>
         /// </summary>
         [JsonProperty("ServiceSettings")]
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+        /// <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p>
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
         /// <summary>
-        /// 多可用区/子网策略。
-        /// <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-        /// <li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+        /// <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
         /// </summary>
         [JsonProperty("MultiZoneSubnetPolicy")]
         public string MultiZoneSubnetPolicy{ get; set; }
 
         /// <summary>
-        /// 伸缩组实例健康检查类型，取值如下：
-        /// <li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-        /// <li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+        /// <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
         /// </summary>
         [JsonProperty("HealthCheckType")]
         public string HealthCheckType{ get; set; }
 
         /// <summary>
-        /// CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-        /// 默认值：0。取值范围[0, 7200]，单位：秒。
+        /// <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p>
         /// </summary>
         [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
 
         /// <summary>
-        /// 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-        /// <li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-        /// <li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
+        /// <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
         /// </summary>
         [JsonProperty("InstanceAllocationPolicy")]
         public string InstanceAllocationPolicy{ get; set; }
 
         /// <summary>
-        /// 竞价混合模式下，各计费类型实例的分配策略。
-        /// 仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+        /// <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p>
         /// </summary>
         [JsonProperty("SpotMixedAllocationPolicy")]
         public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
 
         /// <summary>
-        /// 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-        /// <li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-        /// <li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
+        /// <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
         /// </summary>
         [JsonProperty("CapacityRebalance")]
         public bool? CapacityRebalance{ get; set; }
 
         /// <summary>
-        /// 实例名称序号相关设置。
+        /// <p>实例名称序号相关设置。</p>
         /// </summary>
         [JsonProperty("InstanceNameIndexSettings")]
         public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }
 
         /// <summary>
-        /// 实例主机名序号相关设置。
+        /// <p>实例主机名序号相关设置。</p>
         /// </summary>
         [JsonProperty("HostNameIndexSettings")]
         public HostNameIndexSettings HostNameIndexSettings{ get; set; }
 
         /// <summary>
-        /// 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+        /// <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p>
         /// </summary>
         [JsonProperty("ConcurrentScaleOutForDesiredCapacity")]
         public bool? ConcurrentScaleOutForDesiredCapacity{ get; set; }

@@ -180,6 +180,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Envs")]
         public EnvVar[] Envs{ get; set; }
 
+        /// <summary>
+        /// 描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +217,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

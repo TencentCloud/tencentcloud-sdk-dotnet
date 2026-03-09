@@ -49,6 +49,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
+        /// 安全组列表
+        /// </summary>
+        [JsonProperty("SecurityGroupIDs")]
+        public string[] SecurityGroupIDs{ get; set; }
+
+        /// <summary>
         /// 节点预付费信息
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamArraySimple(map, prefix + "MachineNames.", this.MachineNames);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIDs.", this.SecurityGroupIDs);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         }
     }

@@ -103,10 +103,16 @@ namespace TencentCloud.Ctem.V20231128.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
+
+        /// <summary>
+        /// <p>排序方式</p>
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamArraySimple(map, prefix + "EnterpriseUidList.", this.EnterpriseUidList);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "CustomerId", this.CustomerId);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

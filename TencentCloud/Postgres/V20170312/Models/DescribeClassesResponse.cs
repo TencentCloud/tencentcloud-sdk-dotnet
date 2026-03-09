@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 数据库规格列表
+        /// <p>数据库规格列表</p>
         /// </summary>
         [JsonProperty("ClassInfoSet")]
         public ClassInfo[] ClassInfoSet{ get; set; }

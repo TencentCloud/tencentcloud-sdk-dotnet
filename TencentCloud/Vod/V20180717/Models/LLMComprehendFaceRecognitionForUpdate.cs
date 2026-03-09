@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLogStorageConfigRequest : AbstractModel
+    public class LLMComprehendFaceRecognitionForUpdate : AbstractModel
     {
         
         /// <summary>
-        /// 是否修改有效期（已废弃）
+        /// 
         /// </summary>
-        [JsonProperty("IsModifyPeriod")]
-        public bool? IsModifyPeriod{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 存储类型，string数组
+        /// 
         /// </summary>
-        [JsonProperty("Type")]
-        public string[] Type{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
-        /// 日志存储时长，3640表示不限
+        /// 
         /// </summary>
-        [JsonProperty("Period")]
-        public long? Period{ get; set; }
+        [JsonProperty("DefaultLibraryLabelSet")]
+        public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 日志存储时长单位，年year/月month/天day
+        /// 
         /// </summary>
-        [JsonProperty("Granularity")]
-        public string Granularity{ get; set; }
+        [JsonProperty("UserDefineLibraryLabelSet")]
+        public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 语言类型
+        /// 
         /// </summary>
-        [JsonProperty("MsgLanguage")]
-        public string MsgLanguage{ get; set; }
+        [JsonProperty("FaceLibrary")]
+        public string FaceLibrary{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsModifyPeriod", this.IsModifyPeriod);
-            this.SetParamArraySimple(map, prefix + "Type.", this.Type);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
-            this.SetParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamArraySimple(map, prefix + "DefaultLibraryLabelSet.", this.DefaultLibraryLabelSet);
+            this.SetParamArraySimple(map, prefix + "UserDefineLibraryLabelSet.", this.UserDefineLibraryLabelSet);
+            this.SetParamSimple(map, prefix + "FaceLibrary", this.FaceLibrary);
         }
     }
 }

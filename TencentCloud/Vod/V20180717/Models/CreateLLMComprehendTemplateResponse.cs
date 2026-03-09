@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 大模型理解模板的唯一标识
+        /// <p>大模型理解模板的唯一标识</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

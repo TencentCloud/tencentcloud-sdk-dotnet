@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1382";
 
         /// <summary>
         /// Client constructor.
@@ -1100,6 +1100,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeApiListVersionTwoResponse DescribeApiListVersionTwoSync(DescribeApiListVersionTwoRequest req)
         {
             return InternalRequestAsync<DescribeApiListVersionTwoResponse>(req, "DescribeApiListVersionTwo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取api安全敏感规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecSensitiveRuleListRequest"/></param>
+        /// <returns><see cref="DescribeApiSecSensitiveRuleListResponse"/></returns>
+        public Task<DescribeApiSecSensitiveRuleListResponse> DescribeApiSecSensitiveRuleList(DescribeApiSecSensitiveRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecSensitiveRuleListResponse>(req, "DescribeApiSecSensitiveRuleList");
+        }
+
+        /// <summary>
+        /// 获取api安全敏感规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecSensitiveRuleListRequest"/></param>
+        /// <returns><see cref="DescribeApiSecSensitiveRuleListResponse"/></returns>
+        public DescribeApiSecSensitiveRuleListResponse DescribeApiSecSensitiveRuleListSync(DescribeApiSecSensitiveRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecSensitiveRuleListResponse>(req, "DescribeApiSecSensitiveRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

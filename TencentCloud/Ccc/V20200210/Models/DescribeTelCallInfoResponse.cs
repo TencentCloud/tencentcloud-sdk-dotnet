@@ -25,44 +25,44 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 呼出套餐包消耗分钟数
+        /// <p>呼出套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("TelCallOutCount")]
         public long? TelCallOutCount{ get; set; }
 
         /// <summary>
-        /// 呼入套餐包消耗分钟数
+        /// <p>呼入套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("TelCallInCount")]
         public long? TelCallInCount{ get; set; }
 
         /// <summary>
-        /// 坐席使用统计个数
+        /// <p>坐席使用统计个数</p>
         /// </summary>
         [JsonProperty("SeatUsedCount")]
         public long? SeatUsedCount{ get; set; }
 
         /// <summary>
-        /// 音频套餐包消耗分钟数
+        /// <p>音频套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("VoipCallInCount")]
         [System.Obsolete]
         public long? VoipCallInCount{ get; set; }
 
         /// <summary>
-        /// 音频套餐包消耗分钟数
+        /// <p>音频套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("VOIPCallInCount")]
         public long? VOIPCallInCount{ get; set; }
 
         /// <summary>
-        /// 离线语音转文字套餐包消耗分钟数
+        /// <p>离线语音转文字套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("AsrOfflineCount")]
         public long? AsrOfflineCount{ get; set; }
 
         /// <summary>
-        /// 实时语音转文字套餐包消耗分钟数
+        /// <p>实时语音转文字套餐包消耗分钟数</p>
         /// </summary>
         [JsonProperty("AsrRealtimeCount")]
         public long? AsrRealtimeCount{ get; set; }

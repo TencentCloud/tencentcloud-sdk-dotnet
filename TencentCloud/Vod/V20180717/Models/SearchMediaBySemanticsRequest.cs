@@ -25,39 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 需要进行搜索的内容
+        /// <p>需要进行搜索的内容</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 返回的记录条数，默认值：20。
+        /// <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li>
+        /// <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
         /// </summary>
         [JsonProperty("Categories")]
         public string[] Categories{ get; set; }
 
         /// <summary>
-        /// 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li>
+        /// <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 搜索的任务类型，可选值有： 
-        /// - AiAnalysis.DescriptionTask 
-        /// - SmartSubtitle.AsrFullTextTask
+        /// <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p>
+        /// </summary>
+        [JsonProperty("Persons")]
+        public string[] Persons{ get; set; }
+
+        /// <summary>
+        /// <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
         /// </summary>
         [JsonProperty("TaskTypes")]
         public string[] TaskTypes{ get; set; }
@@ -73,6 +77,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "Persons.", this.Persons);
             this.SetParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
         }
     }

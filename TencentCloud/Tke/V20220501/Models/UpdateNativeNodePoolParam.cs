@@ -129,7 +129,7 @@ namespace TencentCloud.Tke.V20220501.Models
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 是否更新存量节点
+        /// 是否更新存量节点MetaData(包括： metadata、annotation、label)
         /// </summary>
         [JsonProperty("UpdateExistedNode")]
         public bool? UpdateExistedNode{ get; set; }
@@ -139,6 +139,14 @@ namespace TencentCloud.Tke.V20220501.Models
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+        /// 
+        /// management包括：nameserver、host、kubelet、kernel参数
+        /// </summary>
+        [JsonProperty("UpdateMachineManagement")]
+        public string UpdateMachineManagement{ get; set; }
 
         /// <summary>
         /// ssh公钥id数组
@@ -195,6 +203,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
             this.SetParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "UpdateMachineManagement", this.UpdateMachineManagement);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamSimple(map, prefix + "DeletePolicy", this.DeletePolicy);
             this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);

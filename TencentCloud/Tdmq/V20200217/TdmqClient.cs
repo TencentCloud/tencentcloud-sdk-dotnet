@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1382";
 
         /// <summary>
         /// Client constructor.
@@ -113,27 +113,6 @@ namespace TencentCloud.Tdmq.V20200217
         public ClearCmqSubscriptionFilterTagsResponse ClearCmqSubscriptionFilterTagsSync(ClearCmqSubscriptionFilterTagsRequest req)
         {
             return InternalRequestAsync<ClearCmqSubscriptionFilterTagsResponse>(req, "ClearCmqSubscriptionFilterTags")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建用户的集群
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterRequest"/></param>
-        /// <returns><see cref="CreateClusterResponse"/></returns>
-        public Task<CreateClusterResponse> CreateCluster(CreateClusterRequest req)
-        {
-            return InternalRequestAsync<CreateClusterResponse>(req, "CreateCluster");
-        }
-
-        /// <summary>
-        /// 创建用户的集群
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterRequest"/></param>
-        /// <returns><see cref="CreateClusterResponse"/></returns>
-        public CreateClusterResponse CreateClusterSync(CreateClusterRequest req)
-        {
-            return InternalRequestAsync<CreateClusterResponse>(req, "CreateCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
