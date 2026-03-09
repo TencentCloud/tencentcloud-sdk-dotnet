@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1381</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -149,6 +149,8 @@
     <Compile Include="V20201016\Models\CreateMetricConfigResponse.cs" />
     <Compile Include="V20201016\Models\CreateMetricSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\CreateMetricSubscribeResponse.cs" />
+    <Compile Include="V20201016\Models\CreateNetworkApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\CreateNetworkApplicationResponse.cs" />
     <Compile Include="V20201016\Models\CreateNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\CreateNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\CreateRebuildIndexTaskRequest.cs" />
@@ -225,6 +227,8 @@
     <Compile Include="V20201016\Models\DeleteMetricConfigResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMetricSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMetricSubscribeResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteNetworkApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteNetworkApplicationResponse.cs" />
     <Compile Include="V20201016\Models\DeleteNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\DeleteNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
@@ -320,6 +324,10 @@
     <Compile Include="V20201016\Models\DescribeMetricSubscribePreviewResponse.cs" />
     <Compile Include="V20201016\Models\DescribeMetricSubscribesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeMetricSubscribesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeNetworkApplicationDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeNetworkApplicationDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeNetworkApplicationsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeNetworkApplicationsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeNoticeContentsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeNoticeContentsResponse.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsRequest.cs" />
@@ -458,6 +466,8 @@
     <Compile Include="V20201016\Models\ModifyMetricConfigResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMetricSubscribeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyMetricSubscribeResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyNetworkApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyNetworkApplicationResponse.cs" />
     <Compile Include="V20201016\Models\ModifyNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\ModifyNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
@@ -476,6 +486,8 @@
     <Compile Include="V20201016\Models\MultiCondition.cs" />
     <Compile Include="V20201016\Models\MultiTopicSearchInformation.cs" />
     <Compile Include="V20201016\Models\NetInfo.cs" />
+    <Compile Include="V20201016\Models\NetworkApplicationDetail.cs" />
+    <Compile Include="V20201016\Models\NetworkApplicationInfo.cs" />
     <Compile Include="V20201016\Models\NoticeContent.cs" />
     <Compile Include="V20201016\Models\NoticeContentInfo.cs" />
     <Compile Include="V20201016\Models\NoticeContentTemplate.cs" />

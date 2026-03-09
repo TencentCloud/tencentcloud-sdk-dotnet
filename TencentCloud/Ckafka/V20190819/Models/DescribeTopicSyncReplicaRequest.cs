@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 偏移量，不填默认为0
+        /// <p>偏移量，不填默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为20，必须大于0。
+        /// <p>返回数量，默认值为20，必须大于0。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 仅筛选未同步副本
+        /// <p>仅筛选未同步副本</p>
         /// </summary>
         [JsonProperty("OutOfSyncReplicaOnly")]
         public bool? OutOfSyncReplicaOnly{ get; set; }

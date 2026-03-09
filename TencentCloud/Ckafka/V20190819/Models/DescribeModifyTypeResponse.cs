@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回的变配类型结构
+        /// <p>返回的变配类型结构</p>
         /// </summary>
         [JsonProperty("Result")]
         public DescModifyType Result{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 记录总数
+        /// <p>记录总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 闪信记录列表
+        /// <p>闪信记录列表</p>
         /// </summary>
         [JsonProperty("FlashSMSList")]
         public FlashSMSRecord[] FlashSMSList{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }
 
+        /// <summary>
+        /// 规则生效范围，SG安全组，LH轻量服务器
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
             this.SetParamSimple(map, prefix + "Sequence", this.Sequence);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
         }
     }
 }

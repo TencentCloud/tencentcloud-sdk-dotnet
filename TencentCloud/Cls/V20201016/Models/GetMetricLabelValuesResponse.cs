@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 时序metric label values
+        /// <p>时序metric label values</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

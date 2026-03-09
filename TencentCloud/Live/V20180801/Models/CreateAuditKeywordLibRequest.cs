@@ -24,12 +24,40 @@ namespace TencentCloud.Live.V20180801.Models
     public class CreateAuditKeywordLibRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>自定义词库名称。</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>自定义词库名称描述。</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
+        /// <summary>
+        /// <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+        /// </summary>
+        [JsonProperty("MatchType")]
+        public string MatchType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
         }
     }
 }

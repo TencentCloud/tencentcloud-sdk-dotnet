@@ -25,115 +25,115 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 命令ID。
+        /// <p>命令ID。</p>
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// 命令名称。
+        /// <p>命令名称。</p>
         /// </summary>
         [JsonProperty("CommandName")]
         public string CommandName{ get; set; }
 
         /// <summary>
-        /// 命令描述。
+        /// <p>命令描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Base64编码后的命令内容。
+        /// <p>Base64编码后的命令内容。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+        /// <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// 命令执行路径。
+        /// <p>命令执行路径。</p>
         /// </summary>
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
         /// <summary>
-        /// 命令超时时间。
+        /// <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+        /// <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+        /// <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 是否启用自定义参数功能。
+        /// <p>是否启用自定义参数功能。</p>
         /// </summary>
         [JsonProperty("EnableParameter")]
         public bool? EnableParameter{ get; set; }
 
         /// <summary>
-        /// 自定义参数的默认取值。
+        /// <p>自定义参数的默认取值。</p>
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// 自定义参数的默认取值。
+        /// <p>自定义参数的默认取值。</p>
         /// </summary>
         [JsonProperty("DefaultParameterConfs")]
         public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
 
         /// <summary>
-        /// 命令关联的场景
+        /// <p>命令关联的场景</p>
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
         /// <summary>
-        /// 命令的结构化描述。公共命令有值，用户命令为空字符串。
+        /// <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
         /// </summary>
         [JsonProperty("FormattedDescription")]
         public string FormattedDescription{ get; set; }
 
         /// <summary>
-        /// 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+        /// <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// 命令关联的标签列表。
+        /// <p>命令关联的标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 在实例上执行命令的用户名。
+        /// <p>在实例上执行命令的用户名。</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 日志上传的cos bucket 地址。
+        /// <p>日志上传的cos bucket 地址。</p>
         /// </summary>
         [JsonProperty("OutputCOSBucketUrl")]
         public string OutputCOSBucketUrl{ get; set; }
 
         /// <summary>
-        /// 日志在cos bucket中的目录。
+        /// <p>日志在cos bucket中的目录。</p>
         /// </summary>
         [JsonProperty("OutputCOSKeyPrefix")]
         public string OutputCOSKeyPrefix{ get; set; }

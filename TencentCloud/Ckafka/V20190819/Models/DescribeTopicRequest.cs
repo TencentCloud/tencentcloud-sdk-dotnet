@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 过滤条件，按照 topicName 过滤，支持模糊查询
+        /// <p>过滤条件，按照 topicName 过滤，支持模糊查询</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移量，不填默认为0
+        /// <p>偏移量，不填默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认为20，最大值为50
+        /// <p>返回数量，不填则默认为20，最大值为50</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Acl预设策略名称
+        /// <p>Acl预设策略名称</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }

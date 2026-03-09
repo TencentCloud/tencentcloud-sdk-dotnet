@@ -25,37 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 套餐单价原价。
+        /// <p>套餐单价原价。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("OriginalBundlePrice")]
         public float? OriginalBundlePrice{ get; set; }
 
         /// <summary>
-        /// 原价。
+        /// <p>原价。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 折扣。
+        /// <p>折扣。</p>
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// 折后价。
+        /// <p>折后价。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 价格货币单位。取值范围CNY:人民币。USD:美元。
+        /// <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// 计费项目明细。
+        /// <p>计费项目明细。</p>
         /// </summary>
         [JsonProperty("DetailPrices")]
         public DetailPrice[] DetailPrices{ get; set; }

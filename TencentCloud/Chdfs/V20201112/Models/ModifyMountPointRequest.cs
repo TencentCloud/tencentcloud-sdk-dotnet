@@ -25,19 +25,19 @@ namespace TencentCloud.Chdfs.V20201112.Models
     {
         
         /// <summary>
-        /// 挂载点ID
+        /// <p>挂载点ID</p>
         /// </summary>
         [JsonProperty("MountPointId")]
         public string MountPointId{ get; set; }
 
         /// <summary>
-        /// 挂载点名称
+        /// <p>挂载点名称</p>
         /// </summary>
         [JsonProperty("MountPointName")]
         public string MountPointName{ get; set; }
 
         /// <summary>
-        /// 挂载点状态
+        /// <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
         /// </summary>
         [JsonProperty("MountPointStatus")]
         public ulong? MountPointStatus{ get; set; }

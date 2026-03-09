@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
+        /// <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

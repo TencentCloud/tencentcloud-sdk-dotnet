@@ -77,6 +77,17 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 自动续费标识。取值范围：
+        /// - NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
+        /// - NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
+        /// 
+        /// 默认取值：NOTIFY_AND_MANUAL_RENEW。
+        /// 若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +100,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

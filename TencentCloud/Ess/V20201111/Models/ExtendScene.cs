@@ -26,6 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 印章来源类型
+        /// 印章来源类型包括下面几种：
+        /// <ul>
+        /// <li>CREATE-客户上传图片创建</li>
+        /// <li>GENERATE-系统模版印章生成</li>
+        /// <li>SIST_SEAL-深圳电子印章</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回topic 副本详情
+        /// <p>返回topic 副本详情</p>
         /// </summary>
         [JsonProperty("Result")]
         public TopicInSyncReplicaResult Result{ get; set; }

@@ -25,50 +25,49 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
-        /// 计算集群可用区。
+        /// <p>计算集群可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 计算集群类型，取值范围：
-        /// - KUBERNETES
+        /// <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 计算集群Service CIDR，不能与VPC网段重合。
+        /// <p>计算集群Service CIDR，不能与VPC网段重合。</p>
         /// </summary>
         [JsonProperty("ServiceCidr")]
         public string ServiceCidr{ get; set; }
 
         /// <summary>
-        /// 资源配额。
+        /// <p>资源配额。</p>
         /// </summary>
         [JsonProperty("ResourceQuota")]
         public ResourceQuota ResourceQuota{ get; set; }
 
         /// <summary>
-        /// 限制范围。
+        /// <p>限制范围。</p>
         /// </summary>
         [JsonProperty("LimitRange")]
         public LimitRange LimitRange{ get; set; }
 
         /// <summary>
-        /// 系统节点池实例规格。
+        /// <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
         /// </summary>
         [JsonProperty("SystemNodeInstanceType")]
         public string SystemNodeInstanceType{ get; set; }
 
         /// <summary>
-        /// 系统节点池实例数量。
+        /// <p>系统节点池实例数量。</p>
         /// </summary>
         [JsonProperty("SystemNodeCount")]
         public ulong? SystemNodeCount{ get; set; }
 
         /// <summary>
-        /// 纳管环境自动升配
+        /// <p>纳管环境自动升配</p>
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }

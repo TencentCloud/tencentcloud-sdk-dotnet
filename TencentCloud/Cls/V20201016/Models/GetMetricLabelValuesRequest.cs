@@ -24,12 +24,47 @@ namespace TencentCloud.Cls.V20201016.Models
     public class GetMetricLabelValuesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>时序主题id</p>
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// <p>时序label名称</p>
+        /// </summary>
+        [JsonProperty("LabelName")]
+        public string LabelName{ get; set; }
+
+        /// <summary>
+        /// <p>起始时间</p>
+        /// </summary>
+        [JsonProperty("Start")]
+        public ulong? Start{ get; set; }
+
+        /// <summary>
+        /// <p>结束时间</p>
+        /// </summary>
+        [JsonProperty("End")]
+        public ulong? End{ get; set; }
+
+        /// <summary>
+        /// <p>Label匹配规则</p>
+        /// </summary>
+        [JsonProperty("Match")]
+        public string[] Match{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "LabelName", this.LabelName);
+            this.SetParamSimple(map, prefix + "Start", this.Start);
+            this.SetParamSimple(map, prefix + "End", this.End);
+            this.SetParamArraySimple(map, prefix + "Match.", this.Match);
         }
     }
 }

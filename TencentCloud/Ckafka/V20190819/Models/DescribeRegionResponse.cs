@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回地域枚举结果列表
+        /// <p>返回地域枚举结果列表</p>
         /// </summary>
         [JsonProperty("Result")]
         public Region[] Result{ get; set; }

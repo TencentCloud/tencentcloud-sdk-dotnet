@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 置信度。
+        /// <p>置信度。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 片段起始时间偏移。
+        /// <p>片段起始时间偏移。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 片段结束时间偏移。
+        /// <p>片段结束时间偏移。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1381</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -613,6 +613,10 @@
     <Compile Include="V20180228\Models\DescribeOpenPortStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeOverviewStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeOverviewStatisticsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePatchEffectHostListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePatchEffectHostListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePatchInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePatchInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventsRequest.cs" />
@@ -829,6 +833,8 @@
     <Compile Include="V20180228\Models\DescribeWebPageProtectStatResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWebPageServiceInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWebPageServiceInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWindowsPatchListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWindowsPatchListResponse.cs" />
     <Compile Include="V20180228\Models\DestroyOrderRequest.cs" />
     <Compile Include="V20180228\Models\DestroyOrderResponse.cs" />
     <Compile Include="V20180228\Models\DuplicateHosts.cs" />
@@ -842,6 +848,7 @@
     <Compile Include="V20180228\Models\EditTagsResponse.cs" />
     <Compile Include="V20180228\Models\EffectiveMachineInfo.cs" />
     <Compile Include="V20180228\Models\EmergencyVul.cs" />
+    <Compile Include="V20180228\Models\EventPatchInfo.cs" />
     <Compile Include="V20180228\Models\EventStat.cs" />
     <Compile Include="V20180228\Models\ExportAssetAppListRequest.cs" />
     <Compile Include="V20180228\Models\ExportAssetAppListResponse.cs" />
@@ -926,6 +933,8 @@
     <Compile Include="V20180228\Models\ExportMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\ExportNonlocalLoginPlacesRequest.cs" />
     <Compile Include="V20180228\Models\ExportNonlocalLoginPlacesResponse.cs" />
+    <Compile Include="V20180228\Models\ExportPatchEffectHostListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportPatchEffectHostListResponse.cs" />
     <Compile Include="V20180228\Models\ExportPrivilegeEventsRequest.cs" />
     <Compile Include="V20180228\Models\ExportPrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\ExportProtectDirListRequest.cs" />
@@ -972,6 +981,8 @@
     <Compile Include="V20180228\Models\ExportVulListResponse.cs" />
     <Compile Include="V20180228\Models\ExportWebPageEventListRequest.cs" />
     <Compile Include="V20180228\Models\ExportWebPageEventListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportWindowsPatchListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportWindowsPatchListResponse.cs" />
     <Compile Include="V20180228\Models\FieldValueRatioInfo.cs" />
     <Compile Include="V20180228\Models\FileTamperEvent.cs" />
     <Compile Include="V20180228\Models\FileTamperRule.cs" />
@@ -1151,6 +1162,7 @@
     <Compile Include="V20180228\Models\OrderModifyObject.cs" />
     <Compile Include="V20180228\Models\OrderResource.cs" />
     <Compile Include="V20180228\Models\OsName.cs" />
+    <Compile Include="V20180228\Models\PatchEffectHostList.cs" />
     <Compile Include="V20180228\Models\PatchInfoDetail.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PolicyRules.cs" />
@@ -1184,6 +1196,7 @@
     <Compile Include="V20180228\Models\RegionInfo.cs" />
     <Compile Include="V20180228\Models\RegionListDetail.cs" />
     <Compile Include="V20180228\Models\RegionSet.cs" />
+    <Compile Include="V20180228\Models\RelateVulInfo.cs" />
     <Compile Include="V20180228\Models\RemoveLocalStorageItemRequest.cs" />
     <Compile Include="V20180228\Models\RemoveLocalStorageItemResponse.cs" />
     <Compile Include="V20180228\Models\RemoveMachineRequest.cs" />

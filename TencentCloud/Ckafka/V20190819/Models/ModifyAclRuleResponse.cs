@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 规则的唯一表示Key
+        /// <p>规则的唯一表示Key</p>
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

@@ -25,109 +25,109 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例Id，可通过DescribeInstances接口获取。
+        /// <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 只能包含字母、数字、下划线、“-”、“.”
+        /// <p>只能包含字母、数字、下划线、“-”、“.”</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Partition个数，大于0
+        /// <p>Partition个数，大于0</p>
         /// </summary>
         [JsonProperty("PartitionNum")]
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// 副本个数，不能多于 broker 数，最大为3
+        /// <p>副本个数，不能多于 broker 数，最大为3</p>
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// ip白名单开关, 1:打开  0:关闭，默认不打开
+        /// <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p>
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// Ip白名单列表，配额限制，enableWhileList=1时必选
+        /// <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+        /// <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 最小同步副本数，默认为1
+        /// <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+        /// <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+        /// <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+        /// <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+        /// <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// 预设ACL规则, 1:打开  0:关闭，默认不打开
+        /// <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// 预设ACL规则的名称
+        /// <p>预设ACL规则的名称</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+        /// <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 消息保存的时间类型:CreateTime/LogAppendTime
+        /// <p>消息保存的时间类型:CreateTime/LogAppendTime</p>
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]
         public string LogMsgTimestampType{ get; set; }

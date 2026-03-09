@@ -57,7 +57,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public DBInfo[] Info{ get; set; }
 
         /// <summary>
-        /// 实例服务提供商，如:"aliyun","others"
+        /// 实例服务提供商，如:"others","aliyun","aws"
         /// </summary>
         [JsonProperty("Supplier")]
         public string Supplier{ get; set; }

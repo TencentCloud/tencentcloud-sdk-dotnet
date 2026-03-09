@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 通话的 session id
+        /// <p>通话的 session id</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+        /// <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+        /// <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
         /// </summary>
         [JsonProperty("EndTimestamp")]
         public long? EndTimestamp{ get; set; }

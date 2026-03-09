@@ -25,62 +25,64 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入的视频文件信息。
+        /// <p>输入的视频文件信息。</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public EditMediaFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 媒体处理输出文件的目标存储。
+        /// <p>媒体处理输出文件的目标存储。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 媒体处理输出文件的目标路径。
-        /// 
-        /// 注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+        /// <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p>
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// 【剪辑】任务生成的文件配置。
+        /// <p>【剪辑】任务生成的文件配置。</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public EditMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 【合成】任务配置。
-        /// 
-        /// 注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+        /// <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p>
         /// </summary>
         [JsonProperty("ComposeConfig")]
         public ComposeMediaConfig ComposeConfig{ get; set; }
 
         /// <summary>
-        /// 任务的事件通知信息，不填代表不获取事件通知。
+        /// <p>任务的事件通知信息，不填代表不获取事件通知。</p>
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+        /// <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+        /// <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+        /// <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
+
+        /// <summary>
+        /// <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -97,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

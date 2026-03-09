@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回的实例详情结果对象
+        /// <p>返回的实例详情结果对象</p>
         /// </summary>
         [JsonProperty("Result")]
         public InstanceDetailResponse Result{ get; set; }

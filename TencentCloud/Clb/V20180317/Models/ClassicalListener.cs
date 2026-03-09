@@ -25,109 +25,109 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡监听器ID
+        /// <p>负载均衡监听器ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器端口
+        /// <p>负载均衡监听器端口</p>
         /// </summary>
         [JsonProperty("ListenerPort")]
         public long? ListenerPort{ get; set; }
 
         /// <summary>
-        /// 监听器后端转发端口
+        /// <p>监听器后端转发端口</p>
         /// </summary>
         [JsonProperty("InstancePort")]
         public long? InstancePort{ get; set; }
 
         /// <summary>
-        /// 监听器名称
+        /// <p>监听器名称</p>
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 监听器协议类型
+        /// <p>监听器协议类型</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 会话保持时间
+        /// <p>会话保持时间</p>
         /// </summary>
         [JsonProperty("SessionExpire")]
         public long? SessionExpire{ get; set; }
 
         /// <summary>
-        /// 是否开启了健康检查：1（开启）、0（关闭）
+        /// <p>是否开启了健康检查：1（开启）、0（关闭）</p>
         /// </summary>
         [JsonProperty("HealthSwitch")]
         public long? HealthSwitch{ get; set; }
 
         /// <summary>
-        /// 响应超时时间
+        /// <p>响应超时时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("TimeOut")]
         public long? TimeOut{ get; set; }
 
         /// <summary>
-        /// 检查间隔
+        /// <p>检查间隔</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("IntervalTime")]
         public long? IntervalTime{ get; set; }
 
         /// <summary>
-        /// 健康阈值
+        /// <p>健康阈值</p>
         /// </summary>
         [JsonProperty("HealthNum")]
         public long? HealthNum{ get; set; }
 
         /// <summary>
-        /// 不健康阈值
+        /// <p>不健康阈值</p>
         /// </summary>
         [JsonProperty("UnhealthNum")]
         public long? UnhealthNum{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+        /// <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
         /// </summary>
         [JsonProperty("HttpHash")]
         public string HttpHash{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+        /// <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
         /// </summary>
         [JsonProperty("HttpCode")]
         public long? HttpCode{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+        /// <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
         /// </summary>
         [JsonProperty("HttpCheckPath")]
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTPS 监听器的认证方式
+        /// <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+        /// <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+        /// <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
-        /// 监听器的状态，0 表示创建中，1 表示运行中
+        /// <p>监听器的状态，0 表示创建中，1 表示运行中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

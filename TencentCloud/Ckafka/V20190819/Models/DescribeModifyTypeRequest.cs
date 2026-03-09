@@ -25,52 +25,58 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 升配后的带宽，单位mb
+        /// <p>升配后的带宽，单位mb</p>
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// 升配后的磁盘，单位G
+        /// <p>升配后的磁盘，单位G</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 磁盘类型，例如 CLOUD_PREMIUM
+        /// <p>磁盘类型，例如 CLOUD_PREMIUM</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 分区数量
+        /// <p>分区数量</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// topic数量
+        /// <p>topic数量</p>
         /// </summary>
         [JsonProperty("Topic")]
         public long? Topic{ get; set; }
 
         /// <summary>
-        /// 实例类型例如 sp_ckafka_profession
+        /// <p>实例类型例如 sp_ckafka_profession</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 变配入口
+        /// <p>变配入口</p>
         /// </summary>
         [JsonProperty("ModifyEntry")]
         public string ModifyEntry{ get; set; }
+
+        /// <summary>
+        /// <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+        /// </summary>
+        [JsonProperty("ModifyZone")]
+        public bool? ModifyZone{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ModifyEntry", this.ModifyEntry);
+            this.SetParamSimple(map, prefix + "ModifyZone", this.ModifyZone);
         }
     }
 }

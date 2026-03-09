@@ -24,12 +24,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class NatRegionInfoWithArea : AbstractModel
     {
         
+        /// <summary>
+        /// 地域ID，如：ap-guangzhou。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

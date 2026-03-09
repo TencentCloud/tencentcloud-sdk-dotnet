@@ -25,20 +25,20 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 返回数据
+        /// <p>返回数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CaptchaStatisticObj Data{ get; set; }
 
         /// <summary>
-        /// 返回码
+        /// <p>返回码</p>
         /// </summary>
         [JsonProperty("CaptchaCode")]
         public long? CaptchaCode{ get; set; }
 
         /// <summary>
-        /// 返回信息
+        /// <p>返回信息</p>
         /// </summary>
         [JsonProperty("CaptchaMsg")]
         public string CaptchaMsg{ get; set; }

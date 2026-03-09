@@ -133,7 +133,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? SnatEnable{ get; set; }
 
         /// <summary>
-        /// <p>数据压缩模式</p>
+        /// <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
         /// </summary>
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }

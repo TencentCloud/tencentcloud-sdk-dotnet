@@ -25,41 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 可用区。
+        /// <p>可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 云硬盘类型。枚举值如下：
-        /// 
-        /// <li>CLOUD_BASIC：普通云硬盘</li>
-        /// <li>CLOUD_PREMIUM：高性能云硬盘</li>
-        /// <li>CLOUD_SSD：SSD云硬盘</li>
+        /// <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 云硬盘可售卖状态。
+        /// <p>云硬盘可售卖状态。</p>
         /// </summary>
         [JsonProperty("DiskSalesState")]
         public string DiskSalesState{ get; set; }
 
         /// <summary>
-        /// 最大云硬盘大小。
+        /// <p>最大云硬盘大小。</p><p>单位：GB</p>
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
-        /// 最小云硬盘大小。
+        /// <p>最小云硬盘大小。</p><p>单位：GB</p>
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public long? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘步长。
+        /// <p>云硬盘步长。</p><p>单位：GB</p>
         /// </summary>
         [JsonProperty("DiskStepSize")]
         public long? DiskStepSize{ get; set; }

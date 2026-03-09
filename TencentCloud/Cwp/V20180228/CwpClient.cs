@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -5100,6 +5100,48 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询补丁影响的主机信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribePatchEffectHostListResponse"/></returns>
+        public Task<DescribePatchEffectHostListResponse> DescribePatchEffectHostList(DescribePatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<DescribePatchEffectHostListResponse>(req, "DescribePatchEffectHostList");
+        }
+
+        /// <summary>
+        /// 查询补丁影响的主机信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribePatchEffectHostListResponse"/></returns>
+        public DescribePatchEffectHostListResponse DescribePatchEffectHostListSync(DescribePatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<DescribePatchEffectHostListResponse>(req, "DescribePatchEffectHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 补丁详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchInfoRequest"/></param>
+        /// <returns><see cref="DescribePatchInfoResponse"/></returns>
+        public Task<DescribePatchInfoResponse> DescribePatchInfo(DescribePatchInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePatchInfoResponse>(req, "DescribePatchInfo");
+        }
+
+        /// <summary>
+        /// 补丁详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchInfoRequest"/></param>
+        /// <returns><see cref="DescribePatchInfoResponse"/></returns>
+        public DescribePatchInfoResponse DescribePatchInfoSync(DescribePatchInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePatchInfoResponse>(req, "DescribePatchInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本地提权信息详情
         /// </summary>
         /// <param name="req"><see cref="DescribePrivilegeEventInfoRequest"/></param>
@@ -7368,6 +7410,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取补丁信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWindowsPatchListRequest"/></param>
+        /// <returns><see cref="DescribeWindowsPatchListResponse"/></returns>
+        public Task<DescribeWindowsPatchListResponse> DescribeWindowsPatchList(DescribeWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<DescribeWindowsPatchListResponse>(req, "DescribeWindowsPatchList");
+        }
+
+        /// <summary>
+        /// 获取补丁信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWindowsPatchListRequest"/></param>
+        /// <returns><see cref="DescribeWindowsPatchListResponse"/></returns>
+        public DescribeWindowsPatchListResponse DescribeWindowsPatchListSync(DescribeWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<DescribeWindowsPatchListResponse>(req, "DescribeWindowsPatchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DestroyOrder  该接口可以对资源销毁.
         /// </summary>
         /// <param name="req"><see cref="DestroyOrderRequest"/></param>
@@ -8334,6 +8397,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 导出补丁影响主机列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportPatchEffectHostListRequest"/></param>
+        /// <returns><see cref="ExportPatchEffectHostListResponse"/></returns>
+        public Task<ExportPatchEffectHostListResponse> ExportPatchEffectHostList(ExportPatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<ExportPatchEffectHostListResponse>(req, "ExportPatchEffectHostList");
+        }
+
+        /// <summary>
+        /// 导出补丁影响主机列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportPatchEffectHostListRequest"/></param>
+        /// <returns><see cref="ExportPatchEffectHostListResponse"/></returns>
+        public ExportPatchEffectHostListResponse ExportPatchEffectHostListSync(ExportPatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<ExportPatchEffectHostListResponse>(req, "ExportPatchEffectHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 导出本地提权事件
         /// </summary>
         /// <param name="req"><see cref="ExportPrivilegeEventsRequest"/></param>
@@ -8813,6 +8897,27 @@ namespace TencentCloud.Cwp.V20180228
         public ExportWebPageEventListResponse ExportWebPageEventListSync(ExportWebPageEventListRequest req)
         {
             return InternalRequestAsync<ExportWebPageEventListResponse>(req, "ExportWebPageEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出Windows补丁列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportWindowsPatchListRequest"/></param>
+        /// <returns><see cref="ExportWindowsPatchListResponse"/></returns>
+        public Task<ExportWindowsPatchListResponse> ExportWindowsPatchList(ExportWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<ExportWindowsPatchListResponse>(req, "ExportWindowsPatchList");
+        }
+
+        /// <summary>
+        /// 导出Windows补丁列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportWindowsPatchListRequest"/></param>
+        /// <returns><see cref="ExportWindowsPatchListResponse"/></returns>
+        public ExportWindowsPatchListResponse ExportWindowsPatchListSync(ExportWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<ExportWindowsPatchListResponse>(req, "ExportWindowsPatchList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

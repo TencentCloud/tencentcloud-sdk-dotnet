@@ -25,40 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 计费时长。
+        /// <p>计费时长。</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 时间单位。
-        /// 取值为：
-        /// - m - 月
-        /// - d - 日
+        /// <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 总价。
+        /// <p>总价。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }
 
         /// <summary>
-        /// 折后总价。
+        /// <p>折后总价。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public float? RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 折扣。
+        /// <p>折扣。</p>
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// 具体折扣详情。
+        /// <p>具体折扣详情。</p>
         /// </summary>
         [JsonProperty("PolicyDetail")]
         public PolicyDetail PolicyDetail{ get; set; }

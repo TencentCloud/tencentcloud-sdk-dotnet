@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 智能精彩集锦地址。
+        /// <p>智能精彩集锦地址。</p>
         /// </summary>
         [JsonProperty("HighlightUrl")]
         public string HighlightUrl{ get; set; }
 
         /// <summary>
-        /// 智能精彩集锦封面地址。
+        /// <p>智能精彩集锦封面地址。</p>
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
 
         /// <summary>
-        /// 智能精彩集锦的可信度，取值范围是 0 到 100。
+        /// <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 智能精彩集锦持续时间。
+        /// <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+        /// <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public HighlightSegmentItem[] SegmentSet{ get; set; }

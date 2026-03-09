@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -3162,7 +3162,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 同步执行 TWeSee 语义理解任务
+        /// 上传文件并同步执行 TWeSee 语义理解任务
         /// </summary>
         /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskWithFileRequest"/></param>
         /// <returns><see cref="InvokeTWeSeeRecognitionTaskWithFileResponse"/></returns>
@@ -3172,7 +3172,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 同步执行 TWeSee 语义理解任务
+        /// 上传文件并同步执行 TWeSee 语义理解任务
         /// </summary>
         /// <param name="req"><see cref="InvokeTWeSeeRecognitionTaskWithFileRequest"/></param>
         /// <returns><see cref="InvokeTWeSeeRecognitionTaskWithFileResponse"/></returns>

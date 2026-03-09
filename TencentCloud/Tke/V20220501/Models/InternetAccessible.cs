@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 带宽
+        /// 带宽，单位为Mbps
         /// </summary>
         [JsonProperty("MaxBandwidthOut")]
         public long? MaxBandwidthOut{ get; set; }

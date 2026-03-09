@@ -25,62 +25,62 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 是否内部APP
+        /// <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("IsInternalApp")]
         public long? IsInternalApp{ get; set; }
 
         /// <summary>
-        /// 应用标识
+        /// <p>应用标识</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+        /// <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// 可用区名称
+        /// <p>可用区名称</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+        /// <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public long? ZoneStatus{ get; set; }
 
         /// <summary>
-        /// 额外标识
+        /// <p>额外标识</p>
         /// </summary>
         [JsonProperty("Exflag")]
         [System.Obsolete]
         public string Exflag{ get; set; }
 
         /// <summary>
-        /// true为售罄，false为未售罄
+        /// <p>true为售罄，false为未售罄</p>
         /// </summary>
         [JsonProperty("SoldOut")]
         public string SoldOut{ get; set; }
 
         /// <summary>
-        /// 标准版售罄信息
+        /// <p>标准版售罄信息</p>
         /// </summary>
         [JsonProperty("SalesInfo")]
         public SaleInfo[] SalesInfo{ get; set; }
 
         /// <summary>
-        /// 额外标识
+        /// <p>额外标识</p>
         /// </summary>
         [JsonProperty("ExtraFlag")]
         public string ExtraFlag{ get; set; }

@@ -259,6 +259,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 规则分区，1最前分区，2中间分区，3最后分区
+        /// </summary>
+        [JsonProperty("RulePartition")]
+        public long? RulePartition{ get; set; }
+
+        /// <summary>
+        /// 规则生效范围，SG安全组，LH轻量服务器
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -298,6 +310,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamObj(map, prefix + "DnsParseCount.", this.DnsParseCount);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "RulePartition", this.RulePartition);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
         }
     }
 }

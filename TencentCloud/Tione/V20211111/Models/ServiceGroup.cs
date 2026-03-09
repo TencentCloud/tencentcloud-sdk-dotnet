@@ -197,6 +197,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
+        /// <summary>
+        /// 网关日志投递相关配置
+        /// </summary>
+        [JsonProperty("GatewayLogConfig")]
+        public LogConfig GatewayLogConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
             this.SetParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
         }
     }
 }

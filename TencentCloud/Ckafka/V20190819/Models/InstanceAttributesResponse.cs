@@ -300,6 +300,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DeleteProtectionEnable")]
         public long? DeleteProtectionEnable{ get; set; }
 
+        /// <summary>
+        /// <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
+        /// <summary>
+        /// <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+        /// </summary>
+        [JsonProperty("TransactionalIdExpirationMs")]
+        public long? TransactionalIdExpirationMs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -352,6 +364,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+            this.SetParamSimple(map, prefix + "TransactionalIdExpirationMs", this.TransactionalIdExpirationMs);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
-        /// 云服务器可用区。
+        /// <p>云服务器可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 云服务器实例规格。
+        /// <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

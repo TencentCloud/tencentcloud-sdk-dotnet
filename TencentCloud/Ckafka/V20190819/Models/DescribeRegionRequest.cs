@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回最大结果数
+        /// <p>返回最大结果数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 业务字段，可忽略
+        /// <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// cdc专有集群业务字段，可忽略
+        /// <p>cdc专有集群业务字段，可忽略</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

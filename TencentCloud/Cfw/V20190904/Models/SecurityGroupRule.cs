@@ -119,6 +119,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
+        /// <summary>
+        /// 规则生效范围，SG安全组，LH轻量服务器
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
         }
     }
 }

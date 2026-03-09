@@ -25,40 +25,46 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例版本
+        /// <p>ckafka集群实例版本</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// broker版本信息
+        /// <p>broker版本信息</p>
         /// </summary>
         [JsonProperty("CurBrokerVersion")]
         public string CurBrokerVersion{ get; set; }
 
         /// <summary>
-        /// 最新版本信息
+        /// <p>最新版本信息</p>
         /// </summary>
         [JsonProperty("LatestBrokerVersion")]
         public LatestBrokerVersion[] LatestBrokerVersion{ get; set; }
 
         /// <summary>
-        /// 允许跨大版本内核升级
+        /// <p>允许跨大版本内核升级</p>
         /// </summary>
         [JsonProperty("AllowUpgradeHighVersion")]
         public bool? AllowUpgradeHighVersion{ get; set; }
 
         /// <summary>
-        /// 允许升级的大版本
+        /// <p>允许升级的大版本</p>
         /// </summary>
         [JsonProperty("HighVersionSet")]
         public string[] HighVersionSet{ get; set; }
 
         /// <summary>
-        /// 允许小版本号配置自动删除消费者组
+        /// <p>允许小版本号配置自动删除消费者组</p>
         /// </summary>
         [JsonProperty("AllowAutoDeleteTimestamp")]
         public bool? AllowAutoDeleteTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>允许修改事务ID过期时间配置</p>
+        /// </summary>
+        [JsonProperty("AllowModifyTxnIdExpiration")]
+        public bool? AllowModifyTxnIdExpiration{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AllowUpgradeHighVersion", this.AllowUpgradeHighVersion);
             this.SetParamArraySimple(map, prefix + "HighVersionSet.", this.HighVersionSet);
             this.SetParamSimple(map, prefix + "AllowAutoDeleteTimestamp", this.AllowAutoDeleteTimestamp);
+            this.SetParamSimple(map, prefix + "AllowModifyTxnIdExpiration", this.AllowModifyTxnIdExpiration);
         }
     }
 }

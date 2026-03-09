@@ -28,7 +28,7 @@ namespace TencentCloud.Wav.V20210129
 
        private const string endpoint = "wav.tencentcloudapi.com";
        private const string version = "2021-01-29";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,8 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 产品已EOL
+        /// 
         /// 该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
         /// </summary>
         /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
@@ -85,6 +87,8 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 产品已EOL
+        /// 
         /// 该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
         /// </summary>
         /// <param name="req"><see cref="CreateCorpTagRequest"/></param>

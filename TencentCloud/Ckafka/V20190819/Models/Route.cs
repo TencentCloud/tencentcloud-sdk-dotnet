@@ -25,82 +25,78 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例接入方式
-        /// 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
-        /// 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-        /// 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
-        /// 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+        /// <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// 路由Id
+        /// <p>路由Id</p>
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
+        /// <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
 
         /// <summary>
-        /// 虚拟IP列表
+        /// <p>虚拟IP列表</p>
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名port
+        /// <p>域名port</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainPort")]
         public long? DomainPort{ get; set; }
 
         /// <summary>
-        /// 时间戳
+        /// <p>时间戳</p>
         /// </summary>
         [JsonProperty("DeleteTimestamp")]
         public string DeleteTimestamp{ get; set; }
 
         /// <summary>
-        /// 子网Id
+        /// <p>子网Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subnet")]
         public string Subnet{ get; set; }
 
         /// <summary>
-        /// 虚拟IP列表(1对1 broker节点)
+        /// <p>虚拟IP列表(1对1 broker节点)</p>
         /// </summary>
         [JsonProperty("BrokerVipList")]
         public VipEntity[] BrokerVipList{ get; set; }
 
         /// <summary>
-        /// 私有网络Id
+        /// <p>私有网络Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+        /// <p>路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

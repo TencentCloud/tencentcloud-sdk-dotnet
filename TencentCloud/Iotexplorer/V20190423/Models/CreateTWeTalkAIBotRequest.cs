@@ -78,6 +78,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("CustomTools")]
         public string CustomTools{ get; set; }
 
+        /// <summary>
+        /// WebHook工具配置(JSON字符串格式)
+        /// </summary>
+        [JsonProperty("WebhookTools")]
+        public string WebhookTools{ get; set; }
+
+        /// <summary>
+        /// 智能体模板类型
+        /// </summary>
+        [JsonProperty("BotType")]
+        public string BotType{ get; set; }
+
+        /// <summary>
+        /// 知识库相关配置(JSON字符串格式)
+        /// </summary>
+        [JsonProperty("RAGConfig")]
+        public string RAGConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "AgentConfig.", this.AgentConfig);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "CustomTools", this.CustomTools);
+            this.SetParamSimple(map, prefix + "WebhookTools", this.WebhookTools);
+            this.SetParamSimple(map, prefix + "BotType", this.BotType);
+            this.SetParamSimple(map, prefix + "RAGConfig", this.RAGConfig);
         }
     }
 }

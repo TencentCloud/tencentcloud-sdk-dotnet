@@ -25,55 +25,55 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 大小。
+        /// <p>大小。</p>
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 容器类型。
+        /// <p>容器类型。</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 视频流码率平均值与音频流码率平均值之和，单位：bps。
+        /// <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// 视频流高度的最大值，单位：px。
+        /// <p>视频流高度的最大值，单位：px。</p>
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 视频流宽度的最大值，单位：px。
+        /// <p>视频流宽度的最大值，单位：px。</p>
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 时长，单位：秒。
+        /// <p>时长，单位：秒。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 视频拍摄时的选择角度，单位：度
+        /// <p>视频拍摄时的选择角度，单位：度</p>
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
-        /// 视频流信息。
+        /// <p>视频流信息。</p>
         /// </summary>
         [JsonProperty("VideoStreamInfoSet")]
         public VideoStreamInfo[] VideoStreamInfoSet{ get; set; }
 
         /// <summary>
-        /// 音频流信息。
+        /// <p>音频流信息。</p>
         /// </summary>
         [JsonProperty("AudioStreamInfoSet")]
         public AudioStreamInfo[] AudioStreamInfoSet{ get; set; }

@@ -25,55 +25,55 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+        /// <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+        /// <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
         /// </summary>
         [JsonProperty("EndTimestamp")]
         public long? EndTimestamp{ get; set; }
 
         /// <summary>
-        /// 闪信投递号码（被叫号码）
+        /// <p>闪信投递号码（被叫号码）</p>
         /// </summary>
         [JsonProperty("DeliveryNumber")]
         public string DeliveryNumber{ get; set; }
 
         /// <summary>
-        /// 呼叫关联的系统号码
+        /// <p>呼叫关联的系统号码</p>
         /// </summary>
         [JsonProperty("ServingNumber")]
         public string ServingNumber{ get; set; }
 
         /// <summary>
-        /// 会话 ID
+        /// <p>会话 ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 投递结果 1 为成功，其他为失败
+        /// <p>投递结果 1 为成功，其他为失败</p>
         /// </summary>
         [JsonProperty("DeliveryStatus")]
         public long? DeliveryStatus{ get; set; }
 
         /// <summary>
-        /// 分页大小，默认 20，最大 100
+        /// <p>分页大小，默认 20，最大 1000</p><p>取值范围：[20, 1000]</p><p>单位：条</p><p>默认值：20</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 分页页码，从 0 开始
+        /// <p>分页页码，从 0 开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }

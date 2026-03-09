@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 计量模式
+        /// 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。
         /// </summary>
         [JsonProperty("InstanceMeteringType")]
         public string InstanceMeteringType{ get; set; }

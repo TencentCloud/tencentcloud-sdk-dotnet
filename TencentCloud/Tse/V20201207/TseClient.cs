@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1378";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Tse.V20201207
         public CreateGovernanceInstancesResponse CreateGovernanceInstancesSync(CreateGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<CreateGovernanceInstancesResponse>(req, "CreateGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建泳道组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="CreateGovernanceLaneGroupsResponse"/></returns>
+        public Task<CreateGovernanceLaneGroupsResponse> CreateGovernanceLaneGroups(CreateGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceLaneGroupsResponse>(req, "CreateGovernanceLaneGroups");
+        }
+
+        /// <summary>
+        /// 创建泳道组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="CreateGovernanceLaneGroupsResponse"/></returns>
+        public CreateGovernanceLaneGroupsResponse CreateGovernanceLaneGroupsSync(CreateGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceLaneGroupsResponse>(req, "CreateGovernanceLaneGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +911,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteGovernanceInstancesByHostResponse DeleteGovernanceInstancesByHostSync(DeleteGovernanceInstancesByHostRequest req)
         {
             return InternalRequestAsync<DeleteGovernanceInstancesByHostResponse>(req, "DeleteGovernanceInstancesByHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除泳道组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceLaneGroupsResponse"/></returns>
+        public Task<DeleteGovernanceLaneGroupsResponse> DeleteGovernanceLaneGroups(DeleteGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceLaneGroupsResponse>(req, "DeleteGovernanceLaneGroups");
+        }
+
+        /// <summary>
+        /// 删除泳道组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceLaneGroupsResponse"/></returns>
+        public DeleteGovernanceLaneGroupsResponse DeleteGovernanceLaneGroupsSync(DeleteGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceLaneGroupsResponse>(req, "DeleteGovernanceLaneGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1608,6 +1650,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询泳道组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceLaneGroupsResponse"/></returns>
+        public Task<DescribeGovernanceLaneGroupsResponse> DescribeGovernanceLaneGroups(DescribeGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceLaneGroupsResponse>(req, "DescribeGovernanceLaneGroups");
+        }
+
+        /// <summary>
+        /// 查询泳道组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceLaneGroupsResponse"/></returns>
+        public DescribeGovernanceLaneGroupsResponse DescribeGovernanceLaneGroupsSync(DescribeGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceLaneGroupsResponse>(req, "DescribeGovernanceLaneGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询服务治理中心命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGovernanceNamespacesRequest"/></param>
@@ -2276,6 +2339,27 @@ namespace TencentCloud.Tse.V20201207
         public ModifyGovernanceInstancesResponse ModifyGovernanceInstancesSync(ModifyGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<ModifyGovernanceInstancesResponse>(req, "ModifyGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建泳道组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceLaneGroupsResponse"/></returns>
+        public Task<ModifyGovernanceLaneGroupsResponse> ModifyGovernanceLaneGroups(ModifyGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceLaneGroupsResponse>(req, "ModifyGovernanceLaneGroups");
+        }
+
+        /// <summary>
+        /// 创建泳道组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceLaneGroupsRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceLaneGroupsResponse"/></returns>
+        public ModifyGovernanceLaneGroupsResponse ModifyGovernanceLaneGroupsSync(ModifyGovernanceLaneGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceLaneGroupsResponse>(req, "ModifyGovernanceLaneGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

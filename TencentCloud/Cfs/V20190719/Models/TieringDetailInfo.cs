@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 低频存储容量
+        /// <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
         /// </summary>
         [JsonProperty("TieringSizeInBytes")]
         public long? TieringSizeInBytes{ get; set; }
 
         /// <summary>
-        /// 冷存储容量
+        /// <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
         /// </summary>
         [JsonProperty("SecondaryTieringSizeInBytes")]
         public long? SecondaryTieringSizeInBytes{ get; set; }

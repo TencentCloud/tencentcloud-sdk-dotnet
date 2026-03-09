@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mna.V20210119
         public ActivateHardwareResponse ActivateHardwareSync(ActivateHardwareRequest req)
         {
             return InternalRequestAsync<ActivateHardwareResponse>(req, "ActivateHardware")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新建应用
+        /// </summary>
+        /// <param name="req"><see cref="AddApplicationRequest"/></param>
+        /// <returns><see cref="AddApplicationResponse"/></returns>
+        public Task<AddApplicationResponse> AddApplication(AddApplicationRequest req)
+        {
+            return InternalRequestAsync<AddApplicationResponse>(req, "AddApplication");
+        }
+
+        /// <summary>
+        /// 新建应用
+        /// </summary>
+        /// <param name="req"><see cref="AddApplicationRequest"/></param>
+        /// <returns><see cref="AddApplicationResponse"/></returns>
+        public AddApplicationResponse AddApplicationSync(AddApplicationRequest req)
+        {
+            return InternalRequestAsync<AddApplicationResponse>(req, "AddApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +201,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 删除应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationResponse>(req, "DeleteApplication");
+        }
+
+        /// <summary>
+        /// 删除应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public DeleteApplicationResponse DeleteApplicationSync(DeleteApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationResponse>(req, "DeleteApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除设备信息
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
@@ -281,6 +323,27 @@ namespace TencentCloud.Mna.V20210119
         public GetActiveDeviceCountResponse GetActiveDeviceCountSync(GetActiveDeviceCountRequest req)
         {
             return InternalRequestAsync<GetActiveDeviceCountResponse>(req, "GetActiveDeviceCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 应用查询
+        /// </summary>
+        /// <param name="req"><see cref="GetApplicationRequest"/></param>
+        /// <returns><see cref="GetApplicationResponse"/></returns>
+        public Task<GetApplicationResponse> GetApplication(GetApplicationRequest req)
+        {
+            return InternalRequestAsync<GetApplicationResponse>(req, "GetApplication");
+        }
+
+        /// <summary>
+        /// 应用查询
+        /// </summary>
+        /// <param name="req"><see cref="GetApplicationRequest"/></param>
+        /// <returns><see cref="GetApplicationResponse"/></returns>
+        public GetApplicationResponse GetApplicationSync(GetApplicationRequest req)
+        {
+            return InternalRequestAsync<GetApplicationResponse>(req, "GetApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +953,48 @@ namespace TencentCloud.Mna.V20210119
         public SetNotifyUrlResponse SetNotifyUrlSync(SetNotifyUrlRequest req)
         {
             return InternalRequestAsync<SetNotifyUrlResponse>(req, "SetNotifyUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新应用信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplicationInfoRequest"/></param>
+        /// <returns><see cref="UpdateApplicationInfoResponse"/></returns>
+        public Task<UpdateApplicationInfoResponse> UpdateApplicationInfo(UpdateApplicationInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateApplicationInfoResponse>(req, "UpdateApplicationInfo");
+        }
+
+        /// <summary>
+        /// 更新应用信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplicationInfoRequest"/></param>
+        /// <returns><see cref="UpdateApplicationInfoResponse"/></returns>
+        public UpdateApplicationInfoResponse UpdateApplicationInfoSync(UpdateApplicationInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateApplicationInfoResponse>(req, "UpdateApplicationInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新应用密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplicationKeyRequest"/></param>
+        /// <returns><see cref="UpdateApplicationKeyResponse"/></returns>
+        public Task<UpdateApplicationKeyResponse> UpdateApplicationKey(UpdateApplicationKeyRequest req)
+        {
+            return InternalRequestAsync<UpdateApplicationKeyResponse>(req, "UpdateApplicationKey");
+        }
+
+        /// <summary>
+        /// 更新应用密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplicationKeyRequest"/></param>
+        /// <returns><see cref="UpdateApplicationKeyResponse"/></returns>
+        public UpdateApplicationKeyResponse UpdateApplicationKeySync(UpdateApplicationKeyRequest req)
+        {
+            return InternalRequestAsync<UpdateApplicationKeyResponse>(req, "UpdateApplicationKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

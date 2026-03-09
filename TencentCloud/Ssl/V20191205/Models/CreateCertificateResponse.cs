@@ -25,16 +25,22 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书ID列表
+        /// <p>证书ID列表</p>
         /// </summary>
         [JsonProperty("CertificateIds")]
         public string[] CertificateIds{ get; set; }
 
         /// <summary>
-        /// 订单号列表
+        /// <p>订单号列表</p>
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
+
+        /// <summary>
+        /// <p>资源ID列表</p>
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
             this.SetParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

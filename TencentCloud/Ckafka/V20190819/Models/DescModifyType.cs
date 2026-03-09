@@ -36,27 +36,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("MigrateFlag")]
         public bool? MigrateFlag{ get; set; }
 
-        /// <summary>
-        /// 迁移预计耗时(稳定模式)秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MigrateCostTime")]
-        public long? MigrateCostTime{ get; set; }
-
-        /// <summary>
-        /// 升配模式(1:稳定模式，2:高速模式)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("UpgradeStrategy")]
-        public long? UpgradeStrategy{ get; set; }
-
-        /// <summary>
-        /// 迁移预计耗时(高速模式)秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MigrateCostTimeHighSpeed")]
-        public long? MigrateCostTimeHighSpeed{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,9 +44,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
             this.SetParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
-            this.SetParamSimple(map, prefix + "MigrateCostTime", this.MigrateCostTime);
-            this.SetParamSimple(map, prefix + "UpgradeStrategy", this.UpgradeStrategy);
-            this.SetParamSimple(map, prefix + "MigrateCostTimeHighSpeed", this.MigrateCostTimeHighSpeed);
         }
     }
 }

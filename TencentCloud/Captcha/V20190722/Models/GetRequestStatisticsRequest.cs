@@ -25,25 +25,25 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 验证码AppId
+        /// <p>验证码AppId</p>
         /// </summary>
         [JsonProperty("CaptchaAppId")]
         public string CaptchaAppId{ get; set; }
 
         /// <summary>
-        /// 开始时间字符串
+        /// <p>开始时间字符串</p>
         /// </summary>
         [JsonProperty("StartTimeStr")]
         public string StartTimeStr{ get; set; }
 
         /// <summary>
-        /// 结束时间字符串
+        /// <p>结束时间字符串</p>
         /// </summary>
         [JsonProperty("EndTimeStr")]
         public string EndTimeStr{ get; set; }
 
         /// <summary>
-        /// 查询粒度
+        /// <p>查询粒度</p>
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }

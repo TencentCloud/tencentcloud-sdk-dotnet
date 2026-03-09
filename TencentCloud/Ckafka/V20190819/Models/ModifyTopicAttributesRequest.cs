@@ -25,115 +25,115 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名
+        /// <p>主题名</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+        /// <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// IP 白名单开关，1：打开；0：关闭。
+        /// <p>IP 白名单开关，1：打开；0：关闭。</p>
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// 默认为1。
+        /// <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// 默认为 0，0：false；1：true。
+        /// <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// 消息保留时间，单位：ms，当前最小值为60000ms。
+        /// <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+        /// <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+        /// <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// 消息删除策略，可以选择delete 或者compact
+        /// <p>消息删除策略，可以选择delete 或者compact</p>
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// Ip白名单列表，配额限制，enableWhileList=1时必选
+        /// <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// 预设ACL规则, 1:打开  0:关闭，默认不打开
+        /// <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// ACL规则名
+        /// <p>ACL规则名</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+        /// <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 生产限流，单位 MB/s；设置为-1，则生产不限流
+        /// <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
         /// </summary>
         [JsonProperty("QuotaProducerByteRate")]
         public long? QuotaProducerByteRate{ get; set; }
 
         /// <summary>
-        /// 消费限流，单位 MB/s；设置为-1，则消费不限流
+        /// <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
         /// </summary>
         [JsonProperty("QuotaConsumerByteRate")]
         public long? QuotaConsumerByteRate{ get; set; }
 
         /// <summary>
-        /// topic副本数  最小值 1,最大值 3
+        /// <p>topic副本数  最小值 1,最大值 3</p>
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// 消息保存的时间类型：CreateTime/LogAppendTime
+        /// <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]
         public string LogMsgTimestampType{ get; set; }

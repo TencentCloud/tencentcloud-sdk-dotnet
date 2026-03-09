@@ -25,86 +25,73 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+        /// <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+        /// <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
         /// </summary>
         [JsonProperty("CommandName")]
         public string CommandName{ get; set; }
 
         /// <summary>
-        /// 命令描述。不超过120字符。
+        /// <p>命令描述。不超过120字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Base64编码后的命令内容，长度不可超过64KB。
+        /// <p>Base64编码后的命令内容，长度不可超过64KB。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
+        /// <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// 命令执行路径。
+        /// <p>命令执行路径。</p>
         /// </summary>
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
         /// <summary>
-        /// 命令超时时间。取值范围[1, 86400]。
+        /// <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-        /// 采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-        /// 仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-        /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-        /// 自定义参数最多20个。
-        /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+        /// <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-        /// 参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-        /// 仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-        /// 自定义参数最多20个。
+        /// <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
         /// </summary>
         [JsonProperty("DefaultParameterConfs")]
         public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
 
         /// <summary>
-        /// 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
+        /// <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+        /// <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
         /// </summary>
         [JsonProperty("OutputCOSBucketUrl")]
         public string OutputCOSBucketUrl{ get; set; }
 
         /// <summary>
-        /// 指定日志在cos bucket中的目录，目录命名有如下规则：
-        /// 1. 可用数字、中英文和可见字符的组合，长度最多为60。
-        /// 2. 用 / 分割路径，可快速创建子目录。
-        /// 3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+        /// <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
         /// </summary>
         [JsonProperty("OutputCOSKeyPrefix")]
         public string OutputCOSKeyPrefix{ get; set; }

@@ -25,64 +25,49 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 封装格式，可选值：
-        /// <li>mp4 </li>
-        /// <li>mov </li>
-        /// 不填则使用视频导出编码配置。
+        /// <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-        /// 视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-        /// 例如：项目的宽高比是 16：9 ：
-        /// <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-        /// <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-        /// 不填则使用视频导出编码配置。
+        /// <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("ShortEdge")]
         public ulong? ShortEdge{ get; set; }
 
         /// <summary>
-        /// 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-        /// 不填则使用视频导出编码配置。
+        /// <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p>
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 帧率。取值范围：[15, 60]，不填默认值为 25。
+        /// <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p>
         /// </summary>
         [JsonProperty("FrameRate")]
         public float? FrameRate{ get; set; }
 
         /// <summary>
-        /// 是否去除视频数据，可选值：
-        /// <li>0：保留；</li>
-        /// <li>1：去除。</li>
-        /// 不填则使用视频导出编码配置。
+        /// <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 是否去除音频数据，可选值：
-        /// <li>0：保留；</li>
-        /// <li>1：去除。</li>
-        /// 不填则使用视频导出编码配置。
+        /// <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 片段起始时间，单位：毫秒。
+        /// <p>片段起始时间，单位：毫秒。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 片段结束时间，单位：毫秒。
+        /// <p>片段结束时间，单位：毫秒。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

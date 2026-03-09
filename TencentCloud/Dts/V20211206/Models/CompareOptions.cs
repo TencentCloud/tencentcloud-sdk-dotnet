@@ -50,6 +50,7 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareMode")]
         public string[] CompareMode{ get; set; }

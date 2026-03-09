@@ -25,72 +25,55 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 请求体被加密后的密文（Base64编码），本接口只支持加密传输
+        /// <p>请求体被加密后的密文（Base64编码），本接口只支持加密传输</p>
         /// </summary>
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// <p>敏感数据加密信息。对传入信息有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+        /// <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// FRONT：身份证有照片的一面（人像面），
-        /// BACK：身份证有国徽的一面（国徽面），
-        /// 该参数如果不填，将为您自动判断身份证正反面。
+        /// <p>FRONT：身份证有照片的一面（人像面），<br>BACK：身份证有国徽的一面（国徽面），<br>该参数如果不填，将为您自动判断身份证正反面。</p>
         /// </summary>
         [JsonProperty("CardSide")]
         public string CardSide{ get; set; }
 
         /// <summary>
-        /// 以下可选字段均为bool 类型，默认false：
-        /// CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-        /// CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-        /// CopyWarn，复印件告警
-        /// BorderCheckWarn，边框不完整和框内遮挡告警
-        /// ReshootWarn，屏幕翻拍告警
-        /// DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）
-        /// TempIdWarn，临时身份证告警
-        /// InvalidDateWarn，身份证有效日期不合法告警
-        /// Quality，图片质量分数（评价图片的模糊程度）
-        /// MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-        /// ReflectWarn，是否开启反光检测
-        /// SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-        /// API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
+        /// <p>以下可选字段均为bool 类型，默认false：<br>CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）<br>CropPortrait，人像照片裁剪（自动抠取身份证头像区域）<br>CopyWarn，复印件告警<br>BorderCheckWarn，边框不完整和框内遮挡告警<br>ReshootWarn，屏幕翻拍告警<br>DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证、水印告警）<br>TempIdWarn，临时身份证告警<br>InvalidDateWarn，身份证有效日期不合法告警<br>Quality，图片质量分数（评价图片的模糊程度）<br>MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）<br>ReflectWarn，是否开启反光检测<br>SDK 设置方式参考：Config = Json.stringify({&quot;CropIdCard&quot;:true,&quot;CropPortrait&quot;:true})<br>API 3.0 Explorer 设置方式参考：Config = {&quot;CropIdCard&quot;:true,&quot;CropPortrait&quot;:true}</p>
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
-        /// 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+        /// <p>默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。</p>
         /// </summary>
         [JsonProperty("EnableRecognitionRectify")]
         public bool? EnableRecognitionRectify{ get; set; }
 
         /// <summary>
-        /// 默认值为false。
-        /// 
-        /// 此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的"ReflectWarn":true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。
+        /// <p>默认值为false。</p><p>此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的&quot;ReflectWarn&quot;:true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。</p>
         /// </summary>
         [JsonProperty("EnableReflectDetail")]
         public bool? EnableReflectDetail{ get; set; }
 
         /// <summary>
-        /// Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+        /// <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
         /// </summary>
         [JsonProperty("CardWarnType")]
         public string CardWarnType{ get; set; }

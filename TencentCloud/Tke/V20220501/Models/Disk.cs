@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20220501.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 云盘大小(G）
+        /// 云盘大小 (G）
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -61,6 +61,20 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
+        /// <summary>
+        /// 加密系统盘
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public string Encrypt{ get; set; }
+
+        /// <summary>
+        /// 自定义 KMS ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +87,8 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

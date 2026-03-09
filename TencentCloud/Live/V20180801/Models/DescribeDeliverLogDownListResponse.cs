@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 日志信息列表。
+        /// <p>日志信息列表。</p>
         /// </summary>
         [JsonProperty("LogInfoList")]
         public PushLogInfo[] LogInfoList{ get; set; }
 
         /// <summary>
-        /// 总条数。
+        /// <p>总条数。</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }

@@ -58,6 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 该字段已无效。
         /// </summary>
         [JsonProperty("TasksNotifyMode")]
+        [System.Obsolete]
         public string TasksNotifyMode{ get; set; }
 
 

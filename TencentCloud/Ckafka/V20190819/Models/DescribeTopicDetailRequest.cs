@@ -25,49 +25,49 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+        /// <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// （过滤条件）按照topicName过滤，支持模糊查询
+        /// <p>（过滤条件）按照topicName过滤，支持模糊查询</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移量，不填默认为0
+        /// <p>偏移量，不填默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认 20，取值要大于0
+        /// <p>返回数量，不填则默认 20，取值要大于0</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Acl预设策略名称
+        /// <p>Acl预设策略名称</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
+        /// <p>根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。</p><p>该参数为空时，默认按CreateTime倒序排序</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 0-顺序、1-倒序，默认值为0。
+        /// <p>0-顺序、1-倒序，默认值为0。</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 目前支持 ReplicaNum （副本数）筛选
+        /// <p>目前支持 ReplicaNum （副本数）筛选</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

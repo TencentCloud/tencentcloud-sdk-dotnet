@@ -90,6 +90,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// 直接添加为原生节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
             this.SetParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }

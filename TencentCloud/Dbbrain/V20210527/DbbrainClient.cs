@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1380";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public CreateMailProfileResponse CreateMailProfileSync(CreateMailProfileRequest req)
         {
             return InternalRequestAsync<CreateMailProfileResponse>(req, "CreateMailProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建中断会话的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMongoDBKillTaskRequest"/></param>
+        /// <returns><see cref="CreateMongoDBKillTaskResponse"/></returns>
+        public Task<CreateMongoDBKillTaskResponse> CreateMongoDBKillTask(CreateMongoDBKillTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMongoDBKillTaskResponse>(req, "CreateMongoDBKillTask");
+        }
+
+        /// <summary>
+        /// 创建中断会话的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMongoDBKillTaskRequest"/></param>
+        /// <returns><see cref="CreateMongoDBKillTaskResponse"/></returns>
+        public CreateMongoDBKillTaskResponse CreateMongoDBKillTaskSync(CreateMongoDBKillTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMongoDBKillTaskResponse>(req, "CreateMongoDBKillTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

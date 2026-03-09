@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1378";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -4304,6 +4304,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeCustomerGatewaysResponse DescribeCustomerGatewaysSync(DescribeCustomerGatewaysRequest req)
         {
             return InternalRequestAsync<DescribeCustomerGatewaysResponse>(req, "DescribeCustomerGateways")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询用户创建带宽包时可指定的可用区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignatedZonesRequest"/></param>
+        /// <returns><see cref="DescribeDesignatedZonesResponse"/></returns>
+        public Task<DescribeDesignatedZonesResponse> DescribeDesignatedZones(DescribeDesignatedZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignatedZonesResponse>(req, "DescribeDesignatedZones");
+        }
+
+        /// <summary>
+        /// 用于查询用户创建带宽包时可指定的可用区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignatedZonesRequest"/></param>
+        /// <returns><see cref="DescribeDesignatedZonesResponse"/></returns>
+        public DescribeDesignatedZonesResponse DescribeDesignatedZonesSync(DescribeDesignatedZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignatedZonesResponse>(req, "DescribeDesignatedZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

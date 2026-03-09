@@ -152,6 +152,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SpName")]
         public string SpName{ get; set; }
 
+        /// <summary>
+        /// DNS Server地址
+        /// </summary>
+        [JsonProperty("DnsServers")]
+        public DnsServers DnsServers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
             this.SetParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
             this.SetParamSimple(map, prefix + "SpName", this.SpName);
+            this.SetParamObj(map, prefix + "DnsServers.", this.DnsServers);
         }
     }
 }

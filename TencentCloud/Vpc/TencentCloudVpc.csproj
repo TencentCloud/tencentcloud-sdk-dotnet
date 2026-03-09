@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1378</VersionPrefix>
+    <VersionPrefix>3.0.1381</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -471,6 +471,8 @@
     <Compile Include="V20170312\Models\DescribeCustomerGatewayVendorsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCustomerGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCustomerGatewaysResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDesignatedZonesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDesignatedZonesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDhcpIpsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDhcpIpsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDirectConnectGatewayCcnRoutesRequest.cs" />
@@ -649,6 +651,7 @@
     <Compile Include="V20170312\Models\DescribeVpnGatewaySslServersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysResponse.cs" />
+    <Compile Include="V20170312\Models\DesignatedZoneInfoDict.cs" />
     <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRuleDiff.cs" />
     <Compile Include="V20170312\Models\DetachCcnInstancesRequest.cs" />
@@ -693,6 +696,7 @@
     <Compile Include="V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DnsServers.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="V20170312\Models\DownloadVpnGatewaySslClientCertRequest.cs" />

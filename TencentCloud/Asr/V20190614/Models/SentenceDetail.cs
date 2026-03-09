@@ -25,96 +25,107 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 单句最终识别结果
+        /// <p>单句最终识别结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinalSentence")]
         public string FinalSentence{ get; set; }
 
         /// <summary>
-        /// 单句中间识别结果，使用空格拆分为多个词
+        /// <p>单句中间识别结果，使用空格拆分为多个词</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SliceSentence")]
         public string SliceSentence{ get; set; }
 
         /// <summary>
-        /// 口语转书面语结果，开启改功能才有值
+        /// <p>口语转书面语结果，开启该功能才有值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WrittenText")]
         public string WrittenText{ get; set; }
 
         /// <summary>
-        /// 单句开始时间（毫秒）
+        /// <p>单句开始时间（毫秒）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartMs")]
         public long? StartMs{ get; set; }
 
         /// <summary>
-        /// 单句结束时间（毫秒）
+        /// <p>单句结束时间（毫秒）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndMs")]
         public long? EndMs{ get; set; }
 
         /// <summary>
-        /// 单句中词个数
+        /// <p>单句中词个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WordsNum")]
         public long? WordsNum{ get; set; }
 
         /// <summary>
-        /// 单句中词详情
+        /// <p>单句中词详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Words")]
         public SentenceWords[] Words{ get; set; }
 
         /// <summary>
-        /// 单句语速，单位：字数/秒
+        /// <p>单句语速，单位：字数/秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeechSpeed")]
         public float? SpeechSpeed{ get; set; }
 
         /// <summary>
-        /// 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-        /// 单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+        /// <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeakerId")]
         public long? SpeakerId{ get; set; }
 
         /// <summary>
-        /// 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+        /// <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmotionalEnergy")]
         public float? EmotionalEnergy{ get; set; }
 
         /// <summary>
-        /// 本句与上一句之间的静音时长
+        /// <p>本句与上一句之间的静音时长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SilenceTime")]
         public long? SilenceTime{ get; set; }
 
         /// <summary>
-        /// 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+        /// <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmotionType")]
         public string[] EmotionType{ get; set; }
 
         /// <summary>
-        /// 关键词识别结果列表
+        /// <p>关键词识别结果列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyWordResults")]
         public KeyWordResult[] KeyWordResults{ get; set; }
+
+        /// <summary>
+        /// <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
+        /// </summary>
+        [JsonProperty("LangType")]
+        public string LangType{ get; set; }
+
+        /// <summary>
+        /// <p>说话人角色名称</p>
+        /// </summary>
+        [JsonProperty("SpeakerRoleName")]
+        public string SpeakerRoleName{ get; set; }
 
 
         /// <summary>
@@ -135,6 +146,8 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
             this.SetParamArraySimple(map, prefix + "EmotionType.", this.EmotionType);
             this.SetParamArrayObj(map, prefix + "KeyWordResults.", this.KeyWordResults);
+            this.SetParamSimple(map, prefix + "LangType", this.LangType);
+            this.SetParamSimple(map, prefix + "SpeakerRoleName", this.SpeakerRoleName);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 变更预付费实例配置返回结构
+        /// <p>变更预付费实例配置返回结构</p>
         /// </summary>
         [JsonProperty("Result")]
         public CreateInstancePreResp Result{ get; set; }

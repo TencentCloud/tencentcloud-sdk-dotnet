@@ -25,16 +25,22 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 数组
+        /// <p>数组</p>
         /// </summary>
         [JsonProperty("List")]
         public DisplayJobRecordDetail[] List{ get; set; }
+
+        /// <summary>
+        /// <p>持股路径</p>
+        /// </summary>
+        [JsonProperty("EnterpriseEquityPath")]
+        public Equity[] EnterpriseEquityPath{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Ctem.V20231128.Models
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamArrayObj(map, prefix + "EnterpriseEquityPath.", this.EnterpriseEquityPath);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

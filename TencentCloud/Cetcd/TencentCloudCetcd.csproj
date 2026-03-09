@@ -1,0 +1,111 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{D933AA85-E7D3-3DE8-9FCE-E5A1DFE73BAD}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1381</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Cetcd</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20220325\CetcdClient.cs" />
+    <Compile Include="V20220325\Models\ChargePrepaidConfig.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdInstanceRequest.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdInstanceResponse.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdSnapshotPolicyRequest.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdSnapshotPolicyResponse.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdSnapshotRequest.cs" />
+    <Compile Include="V20220325\Models\CreateEtcdSnapshotResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdAvailableVersionsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdAvailableVersionsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdCreatingProgressRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdCreatingProgressResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdCredentialsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdCredentialsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdInstancesRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdInstancesResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdQuotaRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdQuotaResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdRegionsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdRegionsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdSnapshotsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdSnapshotsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdTasksRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeEtcdTasksResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeRPCMethodListRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeRPCMethodListResponse.cs" />
+    <Compile Include="V20220325\Models\DisableEtcdInstanceDeletionProtectionRequest.cs" />
+    <Compile Include="V20220325\Models\DisableEtcdInstanceDeletionProtectionResponse.cs" />
+    <Compile Include="V20220325\Models\EnableEtcdInstanceDeletionProtectionRequest.cs" />
+    <Compile Include="V20220325\Models\EnableEtcdInstanceDeletionProtectionResponse.cs" />
+    <Compile Include="V20220325\Models\Etcd.cs" />
+    <Compile Include="V20220325\Models\EtcdAdvancedSettings.cs" />
+    <Compile Include="V20220325\Models\EtcdAutoCompactionSettings.cs" />
+    <Compile Include="V20220325\Models\EtcdBackupSettings.cs" />
+    <Compile Include="V20220325\Models\EtcdCredential.cs" />
+    <Compile Include="V20220325\Models\EtcdMember.cs" />
+    <Compile Include="V20220325\Models\EtcdMonitorSettings.cs" />
+    <Compile Include="V20220325\Models\EtcdSecuritySettings.cs" />
+    <Compile Include="V20220325\Models\EtcdSnapshot.cs" />
+    <Compile Include="V20220325\Models\EtcdSnapshotPolicy.cs" />
+    <Compile Include="V20220325\Models\EtcdTaskInfo.cs" />
+    <Compile Include="V20220325\Models\Filter.cs" />
+    <Compile Include="V20220325\Models\InstanceConfig.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdAttributeRequest.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdAttributeResponse.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdConfigurationRequest.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdConfigurationResponse.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdSnapshotPolicyRequest.cs" />
+    <Compile Include="V20220325\Models\ModifyEtcdSnapshotPolicyResponse.cs" />
+    <Compile Include="V20220325\Models\PrometheusCreationParam.cs" />
+    <Compile Include="V20220325\Models\RPCMethod.cs" />
+    <Compile Include="V20220325\Models\RegionInstance.cs" />
+    <Compile Include="V20220325\Models\ResizeEtcdInstanceRequest.cs" />
+    <Compile Include="V20220325\Models\ResizeEtcdInstanceResponse.cs" />
+    <Compile Include="V20220325\Models\TaskStepInfo.cs" />
+    <Compile Include="V20220325\Models\UpgradeEtcdInstanceRequest.cs" />
+    <Compile Include="V20220325\Models\UpgradeEtcdInstanceResponse.cs" />
+    <Compile Include="V20220325\Models\VersionInstance.cs" />
+  </ItemGroup>
+</Project>

@@ -216,6 +216,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
+        /// <summary>
+        /// <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }

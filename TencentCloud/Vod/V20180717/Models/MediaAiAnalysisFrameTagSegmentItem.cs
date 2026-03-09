@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 按帧标签起始的偏移时间。
+        /// <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 按帧标签结束的偏移时间。
+        /// <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 时间片段内的标签列表。
+        /// <p>时间片段内的标签列表。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisFrameTagItem[] TagSet{ get; set; }

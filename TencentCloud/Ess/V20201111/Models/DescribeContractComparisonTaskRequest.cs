@@ -44,6 +44,26 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ShowDetail")]
         public bool? ShowDetail{ get; set; }
 
+        /// <summary>
+        /// 搜索条件，具体参考Filter结构体。本接口取值：
+        /// 
+        /// 1. **format-type：**
+        /// 按照【 合同文本格式类型 】进行过滤；
+        /// 类型：String；
+        /// 是否必填项：否；
+        /// 类型如下：
+        /// <ul><li> **0**：段落（正文）</li>
+        /// <li> **1**：标点符号</li>
+        /// <li> **2**：页眉页脚</li>
+        /// <li> **3**：目录</li>
+        /// <li> **4**：印章</li>
+        /// <li> **5**：序号</li>
+        /// <li> **7**：下划线内容（填写区）</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "ShowDetail", this.ShowDetail);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

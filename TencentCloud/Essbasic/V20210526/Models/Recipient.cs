@@ -25,93 +25,73 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同参与方的角色ID
+        /// <p>合同参与方的角色ID</p>
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与者类型, 可以选择的类型如下:
-        /// <ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-        /// <li> **INDIVIDUAL** :此角色为个人参与方</li>
-        /// <li> **PROMOTER** :此角色是发起方</li></ul>
+        /// <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }
 
         /// <summary>
-        /// 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+        /// <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+        /// <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 是否需要校验，
-        /// true-是，
-        /// false-否
+        /// <p>是否需要校验，<br>true-是，<br>false-否</p>
         /// </summary>
         [JsonProperty("RequireValidation")]
         public bool? RequireValidation{ get; set; }
 
         /// <summary>
-        /// 是否必须填写，
-        /// true-是，
-        /// false-否
+        /// <p>是否必须填写，<br>true-是，<br>false-否</p>
         /// </summary>
         [JsonProperty("RequireSign")]
         public bool? RequireSign{ get; set; }
 
         /// <summary>
-        /// 内部字段，签署类型
+        /// <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
         /// </summary>
         [JsonProperty("SignType")]
         public long? SignType{ get; set; }
 
         /// <summary>
-        /// 签署顺序：数字越小优先级越高
+        /// <p>签署顺序：数字越小优先级越高</p>
         /// </summary>
         [JsonProperty("RoutingOrder")]
         public long? RoutingOrder{ get; set; }
 
         /// <summary>
-        /// 是否是发起方，
-        /// true-是 
-        /// false-否
+        /// <p>是否是发起方，<br>true-是<br>false-否</p>
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 签署人查看合同校验方式, 支持的类型如下:
-        /// <ul><li> 1 :实名认证查看</li>
-        /// <li> 2 :手机号校验查看</li></ul>
+        /// <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
         /// </summary>
         [JsonProperty("ApproverVerifyTypes")]
         public long?[] ApproverVerifyTypes{ get; set; }
 
         /// <summary>
-        /// 签署人进行合同签署时的认证方式，支持的类型如下:
-        /// <ul><li> 1 :人脸认证</li>
-        /// <li> 2 :签署密码</li>
-        /// <li> 3 :运营商三要素认证</li>
-        /// <li> 4 :UKey认证</li>
-        /// <li> 5 :设备指纹识别</li>
-        /// <li> 6 :设备面容识别</li></ul>
+        /// <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
 
         /// <summary>
-        /// 签署方是否可以转他人处理
-        /// 
-        /// <ul><li> **false** : ( 默认)可以转他人处理</li>
-        /// <li> **true** :不可以转他人处理</li></ul>
+        /// <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
         /// </summary>
         [JsonProperty("NoTransfer")]
         public bool? NoTransfer{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -719,6 +719,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建网络应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkApplicationRequest"/></param>
+        /// <returns><see cref="CreateNetworkApplicationResponse"/></returns>
+        public Task<CreateNetworkApplicationResponse> CreateNetworkApplication(CreateNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateNetworkApplicationResponse>(req, "CreateNetworkApplication");
+        }
+
+        /// <summary>
+        /// 创建网络应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkApplicationRequest"/></param>
+        /// <returns><see cref="CreateNetworkApplicationResponse"/></returns>
+        public CreateNetworkApplicationResponse CreateNetworkApplicationSync(CreateNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateNetworkApplicationResponse>(req, "CreateNetworkApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于创建通知内容。
         /// </summary>
         /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
@@ -1399,6 +1420,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteMetricSubscribeResponse DeleteMetricSubscribeSync(DeleteMetricSubscribeRequest req)
         {
             return InternalRequestAsync<DeleteMetricSubscribeResponse>(req, "DeleteMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除网络应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkApplicationRequest"/></param>
+        /// <returns><see cref="DeleteNetworkApplicationResponse"/></returns>
+        public Task<DeleteNetworkApplicationResponse> DeleteNetworkApplication(DeleteNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteNetworkApplicationResponse>(req, "DeleteNetworkApplication");
+        }
+
+        /// <summary>
+        /// 删除网络应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkApplicationRequest"/></param>
+        /// <returns><see cref="DeleteNetworkApplicationResponse"/></returns>
+        public DeleteNetworkApplicationResponse DeleteNetworkApplicationSync(DeleteNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteNetworkApplicationResponse>(req, "DeleteNetworkApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2392,6 +2434,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取网络应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationDetailRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationDetailResponse"/></returns>
+        public Task<DescribeNetworkApplicationDetailResponse> DescribeNetworkApplicationDetail(DescribeNetworkApplicationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationDetailResponse>(req, "DescribeNetworkApplicationDetail");
+        }
+
+        /// <summary>
+        /// 获取网络应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationDetailRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationDetailResponse"/></returns>
+        public DescribeNetworkApplicationDetailResponse DescribeNetworkApplicationDetailSync(DescribeNetworkApplicationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationDetailResponse>(req, "DescribeNetworkApplicationDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取网络应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationsResponse"/></returns>
+        public Task<DescribeNetworkApplicationsResponse> DescribeNetworkApplications(DescribeNetworkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationsResponse>(req, "DescribeNetworkApplications");
+        }
+
+        /// <summary>
+        /// 获取网络应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationsResponse"/></returns>
+        public DescribeNetworkApplicationsResponse DescribeNetworkApplicationsSync(DescribeNetworkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationsResponse>(req, "DescribeNetworkApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取通知内容列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
@@ -3230,6 +3314,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyMetricSubscribeResponse ModifyMetricSubscribeSync(ModifyMetricSubscribeRequest req)
         {
             return InternalRequestAsync<ModifyMetricSubscribeResponse>(req, "ModifyMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改网络应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkApplicationRequest"/></param>
+        /// <returns><see cref="ModifyNetworkApplicationResponse"/></returns>
+        public Task<ModifyNetworkApplicationResponse> ModifyNetworkApplication(ModifyNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkApplicationResponse>(req, "ModifyNetworkApplication");
+        }
+
+        /// <summary>
+        /// 修改网络应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkApplicationRequest"/></param>
+        /// <returns><see cref="ModifyNetworkApplicationResponse"/></returns>
+        public ModifyNetworkApplicationResponse ModifyNetworkApplicationSync(ModifyNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkApplicationResponse>(req, "ModifyNetworkApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

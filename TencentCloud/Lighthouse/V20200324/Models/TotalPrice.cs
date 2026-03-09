@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 原始总计价格。
+        /// <p>原始总计价格。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 折扣总计价格。
+        /// <p>折扣总计价格。</p><p>单位：元</p>
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

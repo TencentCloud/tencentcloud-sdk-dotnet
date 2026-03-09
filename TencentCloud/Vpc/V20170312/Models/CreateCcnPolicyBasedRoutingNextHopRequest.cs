@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+        /// 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
         /// </summary>
         [JsonProperty("NextHopResourceType")]
         public string NextHopResourceType{ get; set; }

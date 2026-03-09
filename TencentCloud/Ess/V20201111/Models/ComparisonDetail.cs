@@ -62,6 +62,22 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("DiffText")]
         public string DiffText{ get; set; }
 
+        /// <summary>
+        /// 合同文本的格式类型。
+        /// 类型如下：
+        /// <ul><li> **0**：段落（正文）</li>
+        /// <li> **1**：标点符号</li>
+        /// <li> **2**：页眉页脚</li>
+        /// <li> **3**：目录</li>
+        /// <li> **4**：印章</li>
+        /// <li> **5**：序号</li>
+        /// <li> **6**：水印</li>
+        /// <li> **7**：下划线内容（填写区）</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("FormatType")]
+        public long? FormatType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +89,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamSimple(map, prefix + "OriginText", this.OriginText);
             this.SetParamSimple(map, prefix + "DiffText", this.DiffText);
+            this.SetParamSimple(map, prefix + "FormatType", this.FormatType);
         }
     }
 }

@@ -25,62 +25,62 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// （过滤条件）按照实例ID过滤
+        /// <p>（过滤条件）按照实例ID过滤</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+        /// <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+        /// <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 偏移量，不填默认为0。
+        /// <p>偏移量，不填默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认10，最大值20。
+        /// <p>返回数量，不填则默认10，最大值20。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 匹配标签key值。
+        /// <p>匹配标签key值。</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+        /// <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 已经废弃， 使用InstanceIdList
+        /// <p>已经废弃， 使用InstanceIdList</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         [System.Obsolete]
         public string InstanceIds{ get; set; }
 
         /// <summary>
-        /// 按照实例ID过滤
+        /// <p>按照实例ID过滤</p>
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// 根据标签列表过滤实例（取交集）
+        /// <p>根据标签列表过滤实例（取交集）</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }

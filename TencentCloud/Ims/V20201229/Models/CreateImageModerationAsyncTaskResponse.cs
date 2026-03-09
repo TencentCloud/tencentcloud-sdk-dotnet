@@ -25,7 +25,7 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 该字段用于返回检测对象对应请求参数中的DataId。
+        /// <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }

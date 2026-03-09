@@ -25,240 +25,248 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
+        /// <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务状态，取值：
-        /// <li>WAITING：等待中；</li>
-        /// <li>PROCESSING：处理中；</li>
-        /// <li>FINISH：已完成；</li>
-        /// <li>ABORTED：已终止。</li>
+        /// <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+        /// <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureTask")]
         public ProcedureTask ProcedureTask{ get; set; }
 
         /// <summary>
-        /// 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+        /// <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EditMediaTask")]
         public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
-        /// 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+        /// <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatPublishTask")]
         public WechatPublishTask WechatPublishTask{ get; set; }
 
         /// <summary>
-        /// 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+        /// <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComposeMediaTask")]
         public ComposeMediaTask ComposeMediaTask{ get; set; }
 
         /// <summary>
-        /// 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+        /// <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SplitMediaTask")]
         public SplitMediaTask SplitMediaTask{ get; set; }
 
         /// <summary>
-        /// 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+        /// <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishTask")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
 
         /// <summary>
-        /// 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+        /// <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullUploadTask")]
         public PullUploadTask PullUploadTask{ get; set; }
 
         /// <summary>
-        /// 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+        /// <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
 
         /// <summary>
-        /// 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+        /// <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConcatTask")]
         public ConcatTask2017 ConcatTask{ get; set; }
 
         /// <summary>
-        /// 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+        /// <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClipTask")]
         public ClipTask2017 ClipTask{ get; set; }
 
         /// <summary>
-        /// 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+        /// <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateImageSpriteTask")]
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+        /// <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+        /// <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoveWatermarkTask")]
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+        /// <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RebuildMediaTask")]
         public RebuildMediaTask RebuildMediaTask{ get; set; }
 
         /// <summary>
-        /// 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+        /// <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkTask")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+        /// <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractCopyRightWatermarkTask")]
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+        /// <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// 该字段已无效。
+        /// <p>该字段已无效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReduceMediaBitrateTask")]
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
-        /// 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+        /// <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DescribeFileAttributesTask")]
         public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
 
         /// <summary>
-        /// 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+        /// <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityInspectTask")]
         public QualityInspectTask QualityInspectTask{ get; set; }
 
         /// <summary>
-        /// 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+        /// <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityEnhanceTask")]
         public QualityEnhanceTask QualityEnhanceTask{ get; set; }
 
         /// <summary>
-        /// 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+        /// <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingTask")]
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
-        /// MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+        /// <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
         /// </summary>
         [JsonProperty("ProcessMediaByMPSTask")]
         public ProcessMediaByMPS ProcessMediaByMPSTask{ get; set; }
 
         /// <summary>
-        /// AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+        /// <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
         /// </summary>
         [JsonProperty("AigcImageTask")]
         public AigcImageTask AigcImageTask{ get; set; }
 
         /// <summary>
-        /// AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+        /// <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
         /// </summary>
         [JsonProperty("AigcVideoTask")]
         public AigcVideoTask AigcVideoTask{ get; set; }
 
         /// <summary>
-        /// 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
+        /// <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledge")]
         public ImportMediaKnowledgeTask ImportMediaKnowledge{ get; set; }
 
         /// <summary>
-        /// 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
+        /// <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
         /// </summary>
         [JsonProperty("SceneAigcImageTask")]
         public SceneAigcImageTask SceneAigcImageTask{ get; set; }
 
         /// <summary>
-        /// 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+        /// <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
         /// </summary>
         [JsonProperty("SceneAigcVideoTask")]
         public SceneAigcVideoTask SceneAigcVideoTask{ get; set; }
 
         /// <summary>
-        /// 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+        /// <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
         /// </summary>
         [JsonProperty("ProcessImageAsyncTask")]
         public ProcessImageAsync ProcessImageAsyncTask{ get; set; }
 
         /// <summary>
-        /// 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+        /// <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkTask")]
         public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }
+
+        /// <summary>
+        /// <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("CreateAigcAdvancedCustomElementTask")]
+        public CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask{ get; set; }
+
+        /// <summary>
+        /// <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("CreateAigcCustomVoiceTask")]
+        public CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -307,6 +315,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SceneAigcVideoTask.", this.SceneAigcVideoTask);
             this.SetParamObj(map, prefix + "ProcessImageAsyncTask.", this.ProcessImageAsyncTask);
             this.SetParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
+            this.SetParamObj(map, prefix + "CreateAigcAdvancedCustomElementTask.", this.CreateAigcAdvancedCustomElementTask);
+            this.SetParamObj(map, prefix + "CreateAigcCustomVoiceTask.", this.CreateAigcCustomVoiceTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

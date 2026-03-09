@@ -25,25 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// PDF文件页X坐标位置,以PDF单页左上角为坐标原点
+        /// PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
         /// </summary>
         [JsonProperty("X")]
         public float? X{ get; set; }
 
         /// <summary>
-        /// PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
+        /// PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
         /// </summary>
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
         /// <summary>
-        /// 距离X坐标的宽度，用于在PDF文件进行画框。
+        /// 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
         /// </summary>
         [JsonProperty("Width")]
         public float? Width{ get; set; }
 
         /// <summary>
-        /// 距离Y坐标的高度，用于在PDF文件进行画框。
+        /// 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
         /// </summary>
         [JsonProperty("Height")]
         public float? Height{ get; set; }

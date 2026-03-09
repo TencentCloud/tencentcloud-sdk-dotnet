@@ -25,28 +25,34 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
+        /// <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 订单号列表
+        /// <p>订单号列表</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+        /// <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 订单和购买实例对应映射列表
+        /// <p>订单和购买实例对应映射列表</p>
         /// </summary>
         [JsonProperty("DealNameInstanceIdMapping")]
         public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }
+
+        /// <summary>
+        /// <p>CAM鉴权返回的eventId</p>
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 公网带宽
+        /// 公网带宽，单位为Mbps
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }

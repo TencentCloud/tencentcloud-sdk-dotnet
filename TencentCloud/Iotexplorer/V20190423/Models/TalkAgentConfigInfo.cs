@@ -108,6 +108,24 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("FastVoiceType")]
         public string FastVoiceType{ get; set; }
 
+        /// <summary>
+        /// 实时字幕回调地址，支持HTTP/HTTPS
+        /// </summary>
+        [JsonProperty("SubtitleCallbackUrl")]
+        public string SubtitleCallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 回调签名密钥，最大32字符，用于HMAC SHA256签名
+        /// </summary>
+        [JsonProperty("SubtitleCallbackSignKey")]
+        public string SubtitleCallbackSignKey{ get; set; }
+
+        /// <summary>
+        /// 字幕推送超时时间（秒），参考TRTC规范
+        /// </summary>
+        [JsonProperty("SubtitleCallbackTimeout")]
+        public long? SubtitleCallbackTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
             this.SetParamSimple(map, prefix + "DefaultVoiceType", this.DefaultVoiceType);
             this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
+            this.SetParamSimple(map, prefix + "SubtitleCallbackUrl", this.SubtitleCallbackUrl);
+            this.SetParamSimple(map, prefix + "SubtitleCallbackSignKey", this.SubtitleCallbackSignKey);
+            this.SetParamSimple(map, prefix + "SubtitleCallbackTimeout", this.SubtitleCallbackTimeout);
         }
     }
 }

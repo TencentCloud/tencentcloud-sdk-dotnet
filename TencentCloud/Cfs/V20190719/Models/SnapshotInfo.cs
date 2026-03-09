@@ -25,92 +25,92 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 创建快照时间
+        /// <p>创建快照时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 快照名称
+        /// <p>快照名称</p>
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 快照ID
+        /// <p>快照ID</p>
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+        /// <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// <p>地域名称</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 文件系统ID
+        /// <p>文件系统ID</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 快照大小
+        /// <p>快照大小</p><p>单位：MiB</p>
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 保留时长天
+        /// <p>保留时长天</p>
         /// </summary>
         [JsonProperty("AliveDay")]
         public ulong? AliveDay{ get; set; }
 
         /// <summary>
-        /// 快照进度百分比，1表示1% 范围1-100
+        /// <p>快照进度百分比，1表示1% 范围1-100</p>
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
-        /// 账号ID
+        /// <p>账号ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 快照删除时间
+        /// <p>快照删除时间</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// 文件系统名称
+        /// <p>文件系统名称</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// 快照标签
+        /// <p>快照标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 快照类型，general为通用系列快照，turbo为Turbo系列快照
+        /// <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
 
         /// <summary>
-        /// 实际快照时间，反映快照对应文件系统某个时刻的数据。
+        /// <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotTime")]

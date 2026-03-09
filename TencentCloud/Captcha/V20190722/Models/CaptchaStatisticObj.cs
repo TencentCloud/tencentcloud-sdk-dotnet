@@ -25,63 +25,63 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 请求总量
+        /// <p>请求总量</p>
         /// </summary>
         [JsonProperty("ActionTotal")]
         public long? ActionTotal{ get; set; }
 
         /// <summary>
-        /// 验证总量
+        /// <p>验证总量</p>
         /// </summary>
         [JsonProperty("VerifyTotal")]
         public long? VerifyTotal{ get; set; }
 
         /// <summary>
-        /// 验证通过总量
+        /// <p>验证通过总量</p>
         /// </summary>
         [JsonProperty("VerifyThroughTotal")]
         public long? VerifyThroughTotal{ get; set; }
 
         /// <summary>
-        /// 验证拦截总量
+        /// <p>验证拦截总量</p>
         /// </summary>
         [JsonProperty("VerifyInterceptTotal")]
         public long? VerifyInterceptTotal{ get; set; }
 
         /// <summary>
-        /// 票据校验总量
+        /// <p>票据校验总量</p>
         /// </summary>
         [JsonProperty("TicketTotal")]
         public long? TicketTotal{ get; set; }
 
         /// <summary>
-        /// 票据通过总量
+        /// <p>票据通过总量</p>
         /// </summary>
         [JsonProperty("TicketThroughTotal")]
         public long? TicketThroughTotal{ get; set; }
 
         /// <summary>
-        /// 票据拦截总量
+        /// <p>票据拦截总量</p>
         /// </summary>
         [JsonProperty("TicketInterceptTotal")]
         public long? TicketInterceptTotal{ get; set; }
 
         /// <summary>
-        /// 请求趋势图
+        /// <p>请求趋势图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestTrend")]
         public RequestTrendObj[] RequestTrend{ get; set; }
 
         /// <summary>
-        /// 拦截率趋势图
+        /// <p>拦截率趋势图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InterceptPerTrend")]
         public InterceptPerTrendObj[] InterceptPerTrend{ get; set; }
 
         /// <summary>
-        /// 票据校验趋势图
+        /// <p>票据校验趋势图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TicketCheckTrend")]

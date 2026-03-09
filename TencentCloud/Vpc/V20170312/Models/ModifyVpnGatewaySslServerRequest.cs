@@ -90,6 +90,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SamlData")]
         public string SamlData{ get; set; }
 
+        /// <summary>
+        /// DNS Server地址
+        /// </summary>
+        [JsonProperty("DnsServers")]
+        public DnsServers DnsServers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
             this.SetParamSimple(map, prefix + "SamlData", this.SamlData);
+            this.SetParamObj(map, prefix + "DnsServers.", this.DnsServers);
         }
     }
 }

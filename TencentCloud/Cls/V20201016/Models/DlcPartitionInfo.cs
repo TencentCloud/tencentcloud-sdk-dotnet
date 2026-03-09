@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// cls日志中的字段名
+        /// <p>cls日志中的字段名</p>
         /// </summary>
         [JsonProperty("ClsField")]
         public string ClsField{ get; set; }
 
         /// <summary>
-        /// dlc表的列名
+        /// <p>dlc表的列名</p>
         /// </summary>
         [JsonProperty("DlcField")]
         public string DlcField{ get; set; }
 
         /// <summary>
-        /// dlc字段类型
+        /// <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
         /// </summary>
         [JsonProperty("DlcFieldType")]
         public string DlcFieldType{ get; set; }

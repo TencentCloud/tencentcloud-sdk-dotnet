@@ -25,37 +25,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kafka 消费分组
+        /// <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
+        /// <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
         /// </summary>
         [JsonProperty("Topics")]
         public string[] Topics{ get; set; }
 
         /// <summary>
-        /// 模糊匹配 topicName
+        /// <p>模糊匹配 topicName</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 本次查询的偏移位置，默认为0
+        /// <p>本次查询的偏移位置，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 本次返回结果的最大个数，默认为50，最大值为50
+        /// <p>本次返回结果的最大个数，默认为50，最大值为50</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

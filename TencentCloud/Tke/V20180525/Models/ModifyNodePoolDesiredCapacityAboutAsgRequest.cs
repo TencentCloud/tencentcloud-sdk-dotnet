@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点池所关联的伸缩组的期望实例数
+        /// 节点池所关联的伸缩组的期望实例数，单位个
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public long? DesiredCapacity{ get; set; }
