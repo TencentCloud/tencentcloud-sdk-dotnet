@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间名称过滤条件
+        /// <p>工作空间名称过滤条件</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

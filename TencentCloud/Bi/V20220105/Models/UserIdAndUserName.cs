@@ -58,7 +58,14 @@ namespace TencentCloud.Bi.V20220105.Models
         public string LastLogin{ get; set; }
 
         /// <summary>
-        /// 停启用状态
+        /// 用户状态。
+        /// 取值范围：
+        /// 
+        /// - 1：启用
+        /// - 0：停用
+        /// 
+        /// 默认值：1
+        /// 示例值：1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

@@ -68,6 +68,9 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// 默认看板
+        /// 取值范围：
+        /// 1：项目看板 
+        /// 2：我的看板
         /// </summary>
         [JsonProperty("DefaultPanelType")]
         public long? DefaultPanelType{ get; set; }

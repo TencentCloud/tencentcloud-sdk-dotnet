@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1380";
+       private const string sdkVersion = "SDK_NET_3.0.1383";
 
         /// <summary>
         /// Client constructor.
@@ -205,6 +205,29 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：
+        /// 启动云端转录功能。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="CreateCloudTranscriptionResponse"/></returns>
+        public Task<CreateCloudTranscriptionResponse> CreateCloudTranscription(CreateCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudTranscriptionResponse>(req, "CreateCloudTranscription");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 启动云端转录功能。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="CreateCloudTranscriptionResponse"/></returns>
+        public CreateCloudTranscriptionResponse CreateCloudTranscriptionSync(CreateCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudTranscriptionResponse>(req, "CreateCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
         /// </summary>
         /// <param name="req"><see cref="CreatePictureRequest"/></param>
@@ -306,6 +329,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudSliceTaskResponse DeleteCloudSliceTaskSync(DeleteCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<DeleteCloudSliceTaskResponse>(req, "DeleteCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启转录后，可以使用此接口来停止转录任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DeleteCloudTranscriptionResponse"/></returns>
+        public Task<DeleteCloudTranscriptionResponse> DeleteCloudTranscription(DeleteCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription");
+        }
+
+        /// <summary>
+        /// 成功开启转录后，可以使用此接口来停止转录任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DeleteCloudTranscriptionResponse"/></returns>
+        public DeleteCloudTranscriptionResponse DeleteCloudTranscriptionSync(DeleteCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -486,6 +530,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCloudSliceTaskResponse DescribeCloudSliceTaskSync(DescribeCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<DescribeCloudSliceTaskResponse>(req, "DescribeCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启转录后，可以使用此接口来查询录制状态。仅在转录任务进行时有效，转录退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeCloudTranscriptionResponse"/></returns>
+        public Task<DescribeCloudTranscriptionResponse> DescribeCloudTranscription(DescribeCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription");
+        }
+
+        /// <summary>
+        /// 成功开启转录后，可以使用此接口来查询录制状态。仅在转录任务进行时有效，转录退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeCloudTranscriptionResponse"/></returns>
+        public DescribeCloudTranscriptionResponse DescribeCloudTranscriptionSync(DescribeCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

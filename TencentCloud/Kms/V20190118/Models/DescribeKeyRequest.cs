@@ -30,6 +30,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
+        /// <summary>
+        /// 可信服务成员账号信息
+        /// </summary>
+        [JsonProperty("MemberAccount")]
+        public MemberAccount MemberAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
         }
     }
 }

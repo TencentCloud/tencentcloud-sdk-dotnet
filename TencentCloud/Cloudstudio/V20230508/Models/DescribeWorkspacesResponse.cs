@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间列表
+        /// <p>工作空间列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public WorkspaceStatusInfo[] Data{ get; set; }

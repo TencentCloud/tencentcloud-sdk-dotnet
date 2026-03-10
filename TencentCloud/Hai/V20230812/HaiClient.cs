@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1383";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeServiceLoginSettingsResponse DescribeServiceLoginSettingsSync(DescribeServiceLoginSettingsRequest req)
         {
             return InternalRequestAsync<DescribeServiceLoginSettingsResponse>(req, "DescribeServiceLoginSettings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeServices) 用于查询一个或多个服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesRequest"/></param>
+        /// <returns><see cref="DescribeServicesResponse"/></returns>
+        public Task<DescribeServicesResponse> DescribeServices(DescribeServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesResponse>(req, "DescribeServices");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeServices) 用于查询一个或多个服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesRequest"/></param>
+        /// <returns><see cref="DescribeServicesResponse"/></returns>
+        public DescribeServicesResponse DescribeServicesSync(DescribeServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesResponse>(req, "DescribeServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

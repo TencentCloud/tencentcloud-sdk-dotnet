@@ -25,28 +25,34 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单月份，格式为2023-04
+        /// <p>账单月份，格式为2023-04</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 账单维度类型，枚举值如下：business、project、region、payMode、tag
+        /// <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 标签键，GroupType=tag获取标签维度账单时传
+        /// <p>标签键，GroupType=tag获取标签维度账单时传</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }
 
         /// <summary>
-        /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+        /// <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
+
+        /// <summary>
+        /// <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamArraySimple(map, prefix + "TagKey.", this.TagKey);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
         }
     }
 }

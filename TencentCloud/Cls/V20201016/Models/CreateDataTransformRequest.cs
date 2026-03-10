@@ -42,7 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 名称限制
         /// - 不能为空字符串
         /// - 不能包含字符'|'
-        /// - 最长 255 个字符
+        /// - 最长128 个字符
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1383</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20210331\Models\AddPermissionPolicyToRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\AddShareUnitMembersRequest.cs" />
     <Compile Include="V20210331\Models\AddShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitNodeRequest.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitNodeResponse.cs" />
     <Compile Include="V20210331\Models\AddShareUnitRequest.cs" />
     <Compile Include="V20210331\Models\AddShareUnitResourcesRequest.cs" />
     <Compile Include="V20210331\Models\AddShareUnitResourcesResponse.cs" />
@@ -138,6 +140,8 @@
     <Compile Include="V20210331\Models\DeleteSCIMCredentialResponse.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitMembersRequest.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitNodeRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitNodeResponse.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitRequest.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitResourcesRequest.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitResourcesResponse.cs" />
@@ -184,6 +188,8 @@
     <Compile Include="V20210331\Models\DescribeShareAreasResponse.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitMembersRequest.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitNodesRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitNodesResponse.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitResourcesRequest.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitResourcesResponse.cs" />
     <Compile Include="V20210331\Models\DescribeShareUnitsRequest.cs" />
@@ -320,6 +326,7 @@
     <Compile Include="V20210331\Models\ShareResource.cs" />
     <Compile Include="V20210331\Models\ShareResourceToMember.cs" />
     <Compile Include="V20210331\Models\ShareUnitMember.cs" />
+    <Compile Include="V20210331\Models\ShareUnitNode.cs" />
     <Compile Include="V20210331\Models\ShareUnitResource.cs" />
     <Compile Include="V20210331\Models\Tag.cs" />
     <Compile Include="V20210331\Models\TagComplianceDetails.cs" />

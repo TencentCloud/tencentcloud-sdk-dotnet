@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1383";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Organization.V20210331
         public AddShareUnitMembersResponse AddShareUnitMembersSync(AddShareUnitMembersRequest req)
         {
             return InternalRequestAsync<AddShareUnitMembersResponse>(req, "AddShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加共享单元部门
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitNodeRequest"/></param>
+        /// <returns><see cref="AddShareUnitNodeResponse"/></returns>
+        public Task<AddShareUnitNodeResponse> AddShareUnitNode(AddShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitNodeResponse>(req, "AddShareUnitNode");
+        }
+
+        /// <summary>
+        /// 添加共享单元部门
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitNodeRequest"/></param>
+        /// <returns><see cref="AddShareUnitNodeResponse"/></returns>
+        public AddShareUnitNodeResponse AddShareUnitNodeSync(AddShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitNodeResponse>(req, "AddShareUnitNode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -999,6 +1020,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 删除共享单元部门
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitNodeRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitNodeResponse"/></returns>
+        public Task<DeleteShareUnitNodeResponse> DeleteShareUnitNode(DeleteShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitNodeResponse>(req, "DeleteShareUnitNode");
+        }
+
+        /// <summary>
+        /// 删除共享单元部门
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitNodeRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitNodeResponse"/></returns>
+        public DeleteShareUnitNodeResponse DeleteShareUnitNodeSync(DeleteShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitNodeResponse>(req, "DeleteShareUnitNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除共享单元资源
         /// </summary>
         /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
@@ -1457,6 +1499,27 @@ namespace TencentCloud.Organization.V20210331
         public DescribeShareUnitMembersResponse DescribeShareUnitMembersSync(DescribeShareUnitMembersRequest req)
         {
             return InternalRequestAsync<DescribeShareUnitMembersResponse>(req, "DescribeShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取共享单元部门列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitNodesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitNodesResponse"/></returns>
+        public Task<DescribeShareUnitNodesResponse> DescribeShareUnitNodes(DescribeShareUnitNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitNodesResponse>(req, "DescribeShareUnitNodes");
+        }
+
+        /// <summary>
+        /// 获取共享单元部门列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitNodesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitNodesResponse"/></returns>
+        public DescribeShareUnitNodesResponse DescribeShareUnitNodesSync(DescribeShareUnitNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitNodesResponse>(req, "DescribeShareUnitNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

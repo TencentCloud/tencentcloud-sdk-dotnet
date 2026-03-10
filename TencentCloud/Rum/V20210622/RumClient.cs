@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1383";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataBridgeUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataBridgeUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataBridgeUrlV2Response"/></returns>
+        public Task<DescribeDataBridgeUrlV2Response> DescribeDataBridgeUrlV2(DescribeDataBridgeUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataBridgeUrlV2Response>(req, "DescribeDataBridgeUrlV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataBridgeUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataBridgeUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataBridgeUrlV2Response"/></returns>
+        public DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2Sync(DescribeDataBridgeUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataBridgeUrlV2Response>(req, "DescribeDataBridgeUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取DescribeDataCustomUrl信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataCustomUrlRequest"/></param>
@@ -390,6 +411,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataCustomUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataCustomUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataCustomUrlV2Response"/></returns>
+        public Task<DescribeDataCustomUrlV2Response> DescribeDataCustomUrlV2(DescribeDataCustomUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataCustomUrlV2Response>(req, "DescribeDataCustomUrlV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataCustomUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataCustomUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataCustomUrlV2Response"/></returns>
+        public DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2Sync(DescribeDataCustomUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataCustomUrlV2Response>(req, "DescribeDataCustomUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取DescribeDataEventUrl信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEventUrlRequest"/></param>
@@ -407,6 +449,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataEventUrlResponse DescribeDataEventUrlSync(DescribeDataEventUrlRequest req)
         {
             return InternalRequestAsync<DescribeDataEventUrlResponse>(req, "DescribeDataEventUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取DescribeDataEventUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataEventUrlV2Response"/></returns>
+        public Task<DescribeDataEventUrlV2Response> DescribeDataEventUrlV2(DescribeDataEventUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataEventUrlV2Response>(req, "DescribeDataEventUrlV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataEventUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataEventUrlV2Response"/></returns>
+        public DescribeDataEventUrlV2Response DescribeDataEventUrlV2Sync(DescribeDataEventUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataEventUrlV2Response>(req, "DescribeDataEventUrlV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +537,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataFetchUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlV2Response"/></returns>
+        public Task<DescribeDataFetchUrlV2Response> DescribeDataFetchUrlV2(DescribeDataFetchUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataFetchUrlV2Response>(req, "DescribeDataFetchUrlV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataFetchUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlV2Response"/></returns>
+        public DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2Sync(DescribeDataFetchUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataFetchUrlV2Response>(req, "DescribeDataFetchUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取loginfo信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataLogUrlInfoRequest"/></param>
@@ -516,6 +600,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取LogUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataLogUrlStatisticsV2Response> DescribeDataLogUrlStatisticsV2(DescribeDataLogUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataLogUrlStatisticsV2Response>(req, "DescribeDataLogUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// 获取LogUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsV2Response"/></returns>
+        public DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2Sync(DescribeDataLogUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataLogUrlStatisticsV2Response>(req, "DescribeDataLogUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取PerformancePage信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataPerformancePageRequest"/></param>
@@ -533,6 +638,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataPerformancePageResponse DescribeDataPerformancePageSync(DescribeDataPerformancePageRequest req)
         {
             return InternalRequestAsync<DescribeDataPerformancePageResponse>(req, "DescribeDataPerformancePage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取PerformancePage信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageV2Request"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageV2Response"/></returns>
+        public Task<DescribeDataPerformancePageV2Response> DescribeDataPerformancePageV2(DescribeDataPerformancePageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPerformancePageV2Response>(req, "DescribeDataPerformancePageV2");
+        }
+
+        /// <summary>
+        /// 获取PerformancePage信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageV2Request"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageV2Response"/></returns>
+        public DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2Sync(DescribeDataPerformancePageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPerformancePageV2Response>(req, "DescribeDataPerformancePageV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +789,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataSetUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSetUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataSetUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataSetUrlStatisticsV2Response> DescribeDataSetUrlStatisticsV2(DescribeDataSetUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataSetUrlStatisticsV2Response>(req, "DescribeDataSetUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataSetUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSetUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataSetUrlStatisticsV2Response"/></returns>
+        public DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2Sync(DescribeDataSetUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataSetUrlStatisticsV2Response>(req, "DescribeDataSetUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取DescribeDataStaticProject信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataStaticProjectRequest"/></param>
@@ -680,6 +827,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataStaticProjectResponse DescribeDataStaticProjectSync(DescribeDataStaticProjectRequest req)
         {
             return InternalRequestAsync<DescribeDataStaticProjectResponse>(req, "DescribeDataStaticProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取DescribeDataStaticProject信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticProjectV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticProjectV2Response"/></returns>
+        public Task<DescribeDataStaticProjectV2Response> DescribeDataStaticProjectV2(DescribeDataStaticProjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticProjectV2Response>(req, "DescribeDataStaticProjectV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataStaticProject信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticProjectV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticProjectV2Response"/></returns>
+        public DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2Sync(DescribeDataStaticProjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticProjectV2Response>(req, "DescribeDataStaticProjectV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +873,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataStaticResource信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticResourceV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticResourceV2Response"/></returns>
+        public Task<DescribeDataStaticResourceV2Response> DescribeDataStaticResourceV2(DescribeDataStaticResourceV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticResourceV2Response>(req, "DescribeDataStaticResourceV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataStaticResource信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticResourceV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticResourceV2Response"/></returns>
+        public DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2Sync(DescribeDataStaticResourceV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticResourceV2Response>(req, "DescribeDataStaticResourceV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取DescribeDataStaticUrl信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataStaticUrlRequest"/></param>
@@ -722,6 +911,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataStaticUrlResponse DescribeDataStaticUrlSync(DescribeDataStaticUrlRequest req)
         {
             return InternalRequestAsync<DescribeDataStaticUrlResponse>(req, "DescribeDataStaticUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取DescribeDataStaticUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticUrlV2Response"/></returns>
+        public Task<DescribeDataStaticUrlV2Response> DescribeDataStaticUrlV2(DescribeDataStaticUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticUrlV2Response>(req, "DescribeDataStaticUrlV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataStaticUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticUrlV2Response"/></returns>
+        public DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2Sync(DescribeDataStaticUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticUrlV2Response>(req, "DescribeDataStaticUrlV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -745,6 +955,29 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPageSync(DescribeDataWebVitalsPageRequest req)
         {
             return InternalRequestAsync<DescribeDataWebVitalsPageResponse>(req, "DescribeDataWebVitalsPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取DescribeDataWebVitalsPage信息，用户核心活动信息
+        /// 页面加载性能之Web Vitals。性能关键点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataWebVitalsPageV2Request"/></param>
+        /// <returns><see cref="DescribeDataWebVitalsPageV2Response"/></returns>
+        public Task<DescribeDataWebVitalsPageV2Response> DescribeDataWebVitalsPageV2(DescribeDataWebVitalsPageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataWebVitalsPageV2Response>(req, "DescribeDataWebVitalsPageV2");
+        }
+
+        /// <summary>
+        /// 获取DescribeDataWebVitalsPage信息，用户核心活动信息
+        /// 页面加载性能之Web Vitals。性能关键点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataWebVitalsPageV2Request"/></param>
+        /// <returns><see cref="DescribeDataWebVitalsPageV2Response"/></returns>
+        public DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2Sync(DescribeDataWebVitalsPageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataWebVitalsPageV2Response>(req, "DescribeDataWebVitalsPageV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -997,6 +1230,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeScoresResponse DescribeScoresSync(DescribeScoresRequest req)
         {
             return InternalRequestAsync<DescribeScoresResponse>(req, "DescribeScores")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取首页分数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresV2Request"/></param>
+        /// <returns><see cref="DescribeScoresV2Response"/></returns>
+        public Task<DescribeScoresV2Response> DescribeScoresV2(DescribeScoresV2Request req)
+        {
+            return InternalRequestAsync<DescribeScoresV2Response>(req, "DescribeScoresV2");
+        }
+
+        /// <summary>
+        /// 获取首页分数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresV2Request"/></param>
+        /// <returns><see cref="DescribeScoresV2Response"/></returns>
+        public DescribeScoresV2Response DescribeScoresV2Sync(DescribeScoresV2Request req)
+        {
+            return InternalRequestAsync<DescribeScoresV2Response>(req, "DescribeScoresV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

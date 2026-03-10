@@ -84,6 +84,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
+        /// <summary>
+        /// 可信服务成员账号信息数组
+        /// </summary>
+        [JsonProperty("MemberAccounts")]
+        public MemberAccount[] MemberAccounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+            this.SetParamArrayObj(map, prefix + "MemberAccounts.", this.MemberAccounts);
         }
     }
 }

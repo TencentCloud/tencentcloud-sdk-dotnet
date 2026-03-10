@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Browser{ get; set; }
 
         /// <summary>
-        /// 耗时计算
+        /// 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
         /// </summary>
         [JsonProperty("CostType")]
         public string CostType{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Env{ get; set; }
 
         /// <summary>
-        /// 获取package
+        /// 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }

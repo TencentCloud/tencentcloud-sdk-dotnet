@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1383";
 
         /// <summary>
         /// Client constructor.
@@ -418,6 +418,8 @@ namespace TencentCloud.Tcb.V20180608
 
         /// <summary>
         /// 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+        /// 
+        /// 接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
         /// </summary>
         /// <param name="req"><see cref="DeleteTableRequest"/></param>
         /// <returns><see cref="DeleteTableResponse"/></returns>
@@ -428,6 +430,8 @@ namespace TencentCloud.Tcb.V20180608
 
         /// <summary>
         /// 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+        /// 
+        /// 接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
         /// </summary>
         /// <param name="req"><see cref="DeleteTableRequest"/></param>
         /// <returns><see cref="DeleteTableResponse"/></returns>
@@ -826,6 +830,8 @@ namespace TencentCloud.Tcb.V20180608
 
         /// <summary>
         /// 查询表的相关信息，包括索引等信息
+        /// 
+        /// 接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
         /// <returns><see cref="DescribeTableResponse"/></returns>
@@ -836,6 +842,8 @@ namespace TencentCloud.Tcb.V20180608
 
         /// <summary>
         /// 查询表的相关信息，包括索引等信息
+        /// 
+        /// 接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
         /// <returns><see cref="DescribeTableResponse"/></returns>
@@ -846,7 +854,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// 本接口(DescribeTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>
@@ -856,7 +864,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+        /// 本接口(DescribeTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>

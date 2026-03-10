@@ -67,7 +67,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// 耗时计算方式
+        /// 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
         /// </summary>
         [JsonProperty("CostType")]
         public string CostType{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Env{ get; set; }
 
         /// <summary>
-        /// 网络状态
+        /// 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
         /// </summary>
         [JsonProperty("NetStatus")]
         public string NetStatus{ get; set; }

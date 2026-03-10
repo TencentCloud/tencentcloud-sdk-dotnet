@@ -30,6 +30,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("DataKeyId")]
         public string DataKeyId{ get; set; }
 
+        /// <summary>
+        /// 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+        /// </summary>
+        [JsonProperty("MemberAccount")]
+        public MemberAccount MemberAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
+            this.SetParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
         }
     }
 }

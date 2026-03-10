@@ -32,6 +32,12 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// 驱动
+        /// 取值范围：
+        /// MYSQL：MySQL数据库
+        /// PRESTO：PRESTO数据库
+        /// POSTGRE：PostgreSQL数据库
+        /// DLC：DLC数据库
+        /// MSSQL：微软SQL Server数据库
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

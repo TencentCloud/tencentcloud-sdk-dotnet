@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+        /// allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

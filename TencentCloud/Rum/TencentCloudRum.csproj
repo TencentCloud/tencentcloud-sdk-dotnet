@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1383</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,22 +76,34 @@
     <Compile Include="V20210622\Models\DescribeAppSingleCaseDetailListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeAppSingleCaseListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeAppSingleCaseListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataBridgeUrlV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataBridgeUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataCustomUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataCustomUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataCustomUrlV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataCustomUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataEventUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataEventUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataEventUrlV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataEventUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchProjectRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchProjectResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlInfoRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataFetchUrlV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataFetchUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlInfoRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPerformancePageV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPerformancePageV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlInfoRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsRequest.cs" />
@@ -106,14 +118,24 @@
     <Compile Include="V20210622\Models\DescribeDataResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticProjectRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticProjectResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticProjectV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticProjectV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticResourceRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticResourceResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticResourceV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticResourceV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataStaticUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticUrlV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataWebVitalsPageRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataWebVitalsPageResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataWebVitalsPageV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeDataWebVitalsPageV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="V20210622\Models\DescribeErrorResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsRequest.cs" />
@@ -138,6 +160,8 @@
     <Compile Include="V20210622\Models\DescribeRumStatsLogListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeScoresRequest.cs" />
     <Compile Include="V20210622\Models\DescribeScoresResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeScoresV2Request.cs" />
+    <Compile Include="V20210622\Models\DescribeScoresV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeTawAreasRequest.cs" />
     <Compile Include="V20210622\Models\DescribeTawAreasResponse.cs" />
     <Compile Include="V20210622\Models\DescribeTawInstancesRequest.cs" />
@@ -166,6 +190,7 @@
     <Compile Include="V20210622\Models\RumPvInfo.cs" />
     <Compile Include="V20210622\Models\RumUvInfo.cs" />
     <Compile Include="V20210622\Models\ScoreInfo.cs" />
+    <Compile Include="V20210622\Models\ScoreInfoV2.cs" />
     <Compile Include="V20210622\Models\StopInstanceRequest.cs" />
     <Compile Include="V20210622\Models\StopInstanceResponse.cs" />
     <Compile Include="V20210622\Models\StopProjectRequest.cs" />

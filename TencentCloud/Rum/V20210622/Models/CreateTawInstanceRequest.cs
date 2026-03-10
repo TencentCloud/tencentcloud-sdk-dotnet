@@ -79,7 +79,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string BuyingChannel{ get; set; }
 
         /// <summary>
-        /// 预付费资源包类型(仅预付费需要)
+        /// 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
         /// </summary>
         [JsonProperty("ResourcePackageType")]
         public ulong? ResourcePackageType{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 自动续费类型
+        /// 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
         /// </summary>
         [JsonProperty("AutoRenewalType")]
         public long? AutoRenewalType{ get; set; }

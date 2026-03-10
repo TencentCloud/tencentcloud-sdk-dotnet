@@ -31,13 +31,27 @@ namespace TencentCloud.Bi.V20220105.Models
         public long? TableId{ get; set; }
 
         /// <summary>
-        /// 条数
+        /// 模式。
+        /// 取值范围：
+        /// - ALL：全部
+        /// - Specify：指定
+        /// - TAG：标签
+        /// 
+        /// 默认值：ALL
+        /// 示例值：ALL
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 角色类型
+        /// 角色类型。
+        /// 取值范围：
+        /// 
+        /// - ROLES：按角色
+        /// - Others：其它
+        /// 
+        /// 默认值：Others
+        /// 示例值：Others
         /// </summary>
         [JsonProperty("RoleType")]
         public string RoleType{ get; set; }
@@ -55,13 +69,27 @@ namespace TencentCloud.Bi.V20220105.Models
         public string RulerInfo{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 类型。
+        /// 取值范围：
+        /// 
+        /// - ROW：行权限
+        /// - COLUMN：列权限
+        /// 
+        /// 默认值：ROW
+        /// 示例值：ROW
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 开启状态。
+        /// 取值范围：
+        /// 
+        /// - Open：开启
+        /// - Close：关闭
+        /// 
+        /// 默认值：Close
+        /// 示例值：Close
         /// </summary>
         [JsonProperty("OpenStatus")]
         public string OpenStatus{ get; set; }

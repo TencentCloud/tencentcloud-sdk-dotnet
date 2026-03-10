@@ -54,6 +54,10 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// 事务状态
+        /// 取值范围：
+        /// 1: 处理中
+        /// 2: 处理成功
+        /// 3: 处理失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranStatus")]

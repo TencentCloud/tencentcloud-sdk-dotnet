@@ -32,7 +32,16 @@ namespace TencentCloud.Bi.V20220105.Models
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 可见/可用
+        /// 可用性。
+        /// 取值范围：
+        /// 
+        /// - usable：可用
+        /// - visible：可见
+        /// - disabled：不可用
+        /// - hidden：隐藏
+        /// 
+        /// 默认值：disabled
+        /// 示例值：disabled
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeType")]

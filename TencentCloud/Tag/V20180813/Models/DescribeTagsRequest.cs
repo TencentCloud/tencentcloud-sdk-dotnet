@@ -25,43 +25,43 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+        /// <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+        /// <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        /// <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为 15
+        /// <p>每页大小，默认为 15，最大1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        /// <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+        /// <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 是否展现项目标签。1:展示  0:不展示
+        /// <p>是否展现项目标签。1:展示  0:不展示</p>
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }

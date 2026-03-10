@@ -25,18 +25,46 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题ID
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 别名
-        /// 限制：不能包含字符 |。
+        /// <p>别名<br>限制：不能包含字符 |。</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
+
+        /// <summary>
+        /// <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("IsCrossAccount")]
+        public bool? IsCrossAccount{ get; set; }
+
+        /// <summary>
+        /// <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
+        /// </summary>
+        [JsonProperty("RoleARN")]
+        public string RoleARN{ get; set; }
+
+        /// <summary>
+        /// <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
+        /// <summary>
+        /// <p>topic名称</p>
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
+        /// <summary>
+        /// <p>日志集的名称</p>
+        /// </summary>
+        [JsonProperty("LogsetName")]
+        public string LogsetName{ get; set; }
 
 
         /// <summary>
@@ -46,6 +74,11 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "IsCrossAccount", this.IsCrossAccount);
+            this.SetParamSimple(map, prefix + "RoleARN", this.RoleARN);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
         }
     }
 }

@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// netType | 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。也可通过 Type=condition（show tag values）查询当前数据集中的实际可选值。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

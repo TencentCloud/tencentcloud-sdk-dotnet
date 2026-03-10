@@ -73,7 +73,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 网关出带宽。
+        /// 网关出带宽，单位：Mbps。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }

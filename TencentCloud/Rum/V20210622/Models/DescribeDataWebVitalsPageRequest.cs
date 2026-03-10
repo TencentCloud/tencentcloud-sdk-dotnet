@@ -61,7 +61,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 来源页面
+        /// 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Browser{ get; set; }
 
         /// <summary>
-        /// 耗时计算
+        /// Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
         /// </summary>
         [JsonProperty("CostType")]
         public string CostType{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("MongoConnector")]
         public MongoConnector MongoConnector{ get; set; }
 
+        /// <summary>
+        /// 指定表名过滤，为空时返回所有表
+        /// </summary>
+        [JsonProperty("TableNames")]
+        public string[] TableNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "MgoOffset", this.MgoOffset);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamObj(map, prefix + "MongoConnector.", this.MongoConnector);
+            this.SetParamArraySimple(map, prefix + "TableNames.", this.TableNames);
         }
     }
 }

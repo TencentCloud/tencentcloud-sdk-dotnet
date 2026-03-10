@@ -25,20 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 腾讯云可观测平台通知模板 ID
+        /// <p>腾讯云可观测平台通知模板 ID</p>
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
 
         /// <summary>
-        /// 腾讯云可观测平台内容模板ID，不传默认内容模板
+        /// <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentTmplId")]
         public string ContentTmplId{ get; set; }
 
         /// <summary>
-        /// 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+        /// <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
         /// </summary>
         [JsonProperty("AlarmLevels")]
         public ulong?[] AlarmLevels{ get; set; }

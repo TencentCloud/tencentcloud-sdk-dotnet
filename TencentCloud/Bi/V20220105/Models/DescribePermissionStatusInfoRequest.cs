@@ -31,7 +31,14 @@ namespace TencentCloud.Bi.V20220105.Models
         public long? TableId{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 类型。
+        /// 取值范围：
+        /// 
+        /// - ROW：行权限
+        /// - COLUMN：列权限
+        /// 
+        /// 默认值：ROW
+        /// 示例值：ROW
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

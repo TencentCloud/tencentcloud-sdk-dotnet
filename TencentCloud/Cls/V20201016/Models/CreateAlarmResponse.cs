@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警策略ID。
+        /// <p>告警策略ID。</p>
         /// </summary>
         [JsonProperty("AlarmId")]
         public string AlarmId{ get; set; }

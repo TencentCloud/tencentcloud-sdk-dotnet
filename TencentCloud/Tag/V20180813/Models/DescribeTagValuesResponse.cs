@@ -25,25 +25,25 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 结果总数
+        /// <p>结果总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 数据位移偏量
+        /// <p>数据位移偏量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小
+        /// <p>每页大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

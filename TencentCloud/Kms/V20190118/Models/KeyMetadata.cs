@@ -174,6 +174,24 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("SourceHsmClusterId")]
         public string SourceHsmClusterId{ get; set; }
 
+        /// <summary>
+        /// 成员账号appId
+        /// </summary>
+        [JsonProperty("AccountAppId")]
+        public ulong? AccountAppId{ get; set; }
+
+        /// <summary>
+        /// 成员账号uin
+        /// </summary>
+        [JsonProperty("AccountUin")]
+        public ulong? AccountUin{ get; set; }
+
+        /// <summary>
+        /// 成员账号名称
+        /// </summary>
+        [JsonProperty("AccountName")]
+        public string AccountName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +223,9 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
             this.SetParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
             this.SetParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
+            this.SetParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
+            this.SetParamSimple(map, prefix + "AccountUin", this.AccountUin);
+            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
         }
     }
 }

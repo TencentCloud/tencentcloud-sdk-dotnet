@@ -90,6 +90,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 成员账号信息数组
+        /// </summary>
+        [JsonProperty("MemberAccounts")]
+        public MemberAccount[] MemberAccounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "DataKeyLen", this.DataKeyLen);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamArrayObj(map, prefix + "MemberAccounts.", this.MemberAccounts);
         }
     }
 }

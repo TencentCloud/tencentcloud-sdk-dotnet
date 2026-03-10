@@ -145,7 +145,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Browser{ get; set; }
 
         /// <summary>
-        /// 耗时计算方式
+        /// 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
         /// </summary>
         [JsonProperty("CostType")]
         public string CostType{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Env{ get; set; }
 
         /// <summary>
-        /// httpcode响应码
+        /// HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
