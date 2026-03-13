@@ -228,6 +228,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OpenDynamicSignFlow")]
         public bool? OpenDynamicSignFlow{ get; set; }
 
+        /// <summary>
+        /// 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+        /// </summary>
+        [JsonProperty("Workflow")]
+        public bool? Workflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -257,6 +263,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
             this.SetParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
+            this.SetParamSimple(map, prefix + "Workflow", this.Workflow);
         }
     }
 }

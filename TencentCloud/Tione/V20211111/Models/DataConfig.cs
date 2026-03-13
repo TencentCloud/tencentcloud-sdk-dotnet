@@ -107,6 +107,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("HostPathSource")]
         public HostPath HostPathSource{ get; set; }
 
+        /// <summary>
+        /// 公有云数据源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicDataSource")]
+        public PublicDataSourceFS PublicDataSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
             this.SetParamObj(map, prefix + "CBSSource.", this.CBSSource);
             this.SetParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
+            this.SetParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
         }
     }
 }

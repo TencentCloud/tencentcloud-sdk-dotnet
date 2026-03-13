@@ -56,6 +56,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+        /// </summary>
+        [JsonProperty("FlowGroupOptions")]
+        public FlowGroupOptions FlowGroupOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "FlowGroupInfos.", this.FlowGroupInfos);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
         }
     }
 }

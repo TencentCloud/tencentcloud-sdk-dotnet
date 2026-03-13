@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1383</VersionPrefix>
+    <VersionPrefix>3.0.1384</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,14 +48,10 @@
 
   <ItemGroup>
     <Compile Include="V20210622\RumClient.cs" />
-    <Compile Include="V20210622\Models\CreateProjectRequest.cs" />
-    <Compile Include="V20210622\Models\CreateProjectResponse.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileRequest.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileResponse.cs" />
     <Compile Include="V20210622\Models\CreateStarProjectRequest.cs" />
     <Compile Include="V20210622\Models\CreateStarProjectResponse.cs" />
-    <Compile Include="V20210622\Models\CreateTawInstanceRequest.cs" />
-    <Compile Include="V20210622\Models\CreateTawInstanceResponse.cs" />
     <Compile Include="V20210622\Models\CreateWhitelistRequest.cs" />
     <Compile Include="V20210622\Models\CreateWhitelistResponse.cs" />
     <Compile Include="V20210622\Models\DeleteInstanceRequest.cs" />

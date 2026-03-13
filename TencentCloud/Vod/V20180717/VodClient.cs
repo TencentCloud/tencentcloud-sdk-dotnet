@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1382";
+       private const string sdkVersion = "SDK_NET_3.0.1384";
 
         /// <summary>
         /// Client constructor.
@@ -252,6 +252,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于创建 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAdvancedCustomElementRequest"/></param>
+        /// <returns><see cref="CreateAigcAdvancedCustomElementResponse"/></returns>
+        public Task<CreateAigcAdvancedCustomElementResponse> CreateAigcAdvancedCustomElement(CreateAigcAdvancedCustomElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAdvancedCustomElementResponse>(req, "CreateAigcAdvancedCustomElement");
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAdvancedCustomElementRequest"/></param>
+        /// <returns><see cref="CreateAigcAdvancedCustomElementResponse"/></returns>
+        public CreateAigcAdvancedCustomElementResponse CreateAigcAdvancedCustomElementSync(CreateAigcAdvancedCustomElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAdvancedCustomElementResponse>(req, "CreateAigcAdvancedCustomElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
@@ -290,6 +311,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcCustomElementResponse CreateAigcCustomElementSync(CreateAigcCustomElementRequest req)
         {
             return InternalRequestAsync<CreateAigcCustomElementResponse>(req, "CreateAigcCustomElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 自定义音色。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
+        /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>
+        public Task<CreateAigcCustomVoiceResponse> CreateAigcCustomVoice(CreateAigcCustomVoiceRequest req)
+        {
+            return InternalRequestAsync<CreateAigcCustomVoiceResponse>(req, "CreateAigcCustomVoice");
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 自定义音色。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
+        /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>
+        public CreateAigcCustomVoiceResponse CreateAigcCustomVoiceSync(CreateAigcCustomVoiceRequest req)
+        {
+            return InternalRequestAsync<CreateAigcCustomVoiceResponse>(req, "CreateAigcCustomVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

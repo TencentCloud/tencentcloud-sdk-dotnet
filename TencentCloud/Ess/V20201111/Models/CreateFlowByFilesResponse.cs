@@ -50,6 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public ApproverItem[] Approvers{ get; set; }
 
         /// <summary>
+        /// 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+        /// </summary>
+        [JsonProperty("WorkflowInstanceId")]
+        public string WorkflowInstanceId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "WorkflowInstanceId", this.WorkflowInstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

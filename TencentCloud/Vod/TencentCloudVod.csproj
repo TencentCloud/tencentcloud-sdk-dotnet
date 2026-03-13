@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1382</VersionPrefix>
+    <VersionPrefix>3.0.1384</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -254,6 +254,8 @@
     <Compile Include="V20180717\Models\CreateAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcAdvancedCustomElementInput.cs" />
     <Compile Include="V20180717\Models\CreateAigcAdvancedCustomElementOutput.cs" />
+    <Compile Include="V20180717\Models\CreateAigcAdvancedCustomElementRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcAdvancedCustomElementResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcAdvancedCustomElementTask.cs" />
     <Compile Include="V20180717\Models\CreateAigcApiTokenRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcApiTokenResponse.cs" />
@@ -261,6 +263,8 @@
     <Compile Include="V20180717\Models\CreateAigcCustomElementResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceInput.cs" />
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceOutput.cs" />
+    <Compile Include="V20180717\Models\CreateAigcCustomVoiceRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcCustomVoiceResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceTask.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskResponse.cs" />

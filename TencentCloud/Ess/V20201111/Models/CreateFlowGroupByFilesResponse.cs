@@ -43,6 +43,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowGroupApprovers[] Approvers{ get; set; }
 
         /// <summary>
+        /// 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+        /// </summary>
+        [JsonProperty("WorkflowInstanceId")]
+        public string WorkflowInstanceId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "WorkflowInstanceId", this.WorkflowInstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

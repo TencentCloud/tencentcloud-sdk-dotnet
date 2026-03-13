@@ -201,6 +201,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [System.Obsolete]
         public SignComponentConfig SignComponentConfig{ get; set; }
 
+        /// <summary>
+        /// 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+        /// </summary>
+        [JsonProperty("Workflow")]
+        public bool? Workflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +234,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
             this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+            this.SetParamSimple(map, prefix + "Workflow", this.Workflow);
         }
     }
 }

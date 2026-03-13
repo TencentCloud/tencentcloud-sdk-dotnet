@@ -49,6 +49,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OtherApproverNotifyType")]
         public string OtherApproverNotifyType{ get; set; }
 
+        /// <summary>
+        /// 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+        /// </summary>
+        [JsonProperty("FlowGroupNeedWorkflow")]
+        public bool? FlowGroupNeedWorkflow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "SelfOrganizationApproverNotifyType", this.SelfOrganizationApproverNotifyType);
             this.SetParamSimple(map, prefix + "OtherApproverNotifyType", this.OtherApproverNotifyType);
+            this.SetParamSimple(map, prefix + "FlowGroupNeedWorkflow", this.FlowGroupNeedWorkflow);
         }
     }
 }

@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateProjectResponse : AbstractModel
+    public class VerifyBizLicenseEnterprise4Request : AbstractModel
     {
         
         /// <summary>
-        /// 项目 id
+        /// <p>统一社会信用代码</p>
         /// </summary>
-        [JsonProperty("ID")]
-        public ulong? ID{ get; set; }
+        [JsonProperty("CreditCode")]
+        public string CreditCode{ get; set; }
 
         /// <summary>
-        /// 项目唯一key
+        /// <p>企业名称</p>
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("EntName")]
+        public string EntName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>法人代表</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LrName")]
+        public string LrName{ get; set; }
+
+        /// <summary>
+        /// <p>注册登记证件号码</p>
+        /// </summary>
+        [JsonProperty("IdNum")]
+        public string IdNum{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "CreditCode", this.CreditCode);
+            this.SetParamSimple(map, prefix + "EntName", this.EntName);
+            this.SetParamSimple(map, prefix + "LrName", this.LrName);
+            this.SetParamSimple(map, prefix + "IdNum", this.IdNum);
         }
     }
 }

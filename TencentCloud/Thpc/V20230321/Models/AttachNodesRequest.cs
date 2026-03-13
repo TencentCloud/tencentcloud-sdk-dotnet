@@ -25,41 +25,46 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点的实例id列表
+        /// <p>节点的实例id列表</p>
         /// </summary>
         [JsonProperty("ResourceSet")]
         public string[] ResourceSet{ get; set; }
 
         /// <summary>
-        /// 队列名称。不指定则为默认队列：
-        /// SLURM默认队列为：compute。 
+        /// <p>队列名称。不指定则为默认队列：<br>SLURM默认队列为：compute。</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
+        /// <p>指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+        /// <p>要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。</p>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+        /// <p>提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅<a href="https://cloud.tencent.com/document/product/213/17526">Windows</a>和<a href="https://cloud.tencent.com/document/product/213/17525">Linux</a>启动时运行命令。</p>
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
+
+        /// <summary>
+        /// <p>控制实例加入集群是否跳过重装系统</p><p>默认值：False</p>
+        /// </summary>
+        [JsonProperty("SkipResetInstance")]
+        public bool? SkipResetInstance{ get; set; }
 
 
         /// <summary>
@@ -73,6 +78,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "SkipResetInstance", this.SkipResetInstance);
         }
     }
 }

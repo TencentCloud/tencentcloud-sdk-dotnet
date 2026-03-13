@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1383";
+       private const string sdkVersion = "SDK_NET_3.0.1384";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Rum.V20210622
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 创建 RUM 应用（归属于某个团队）
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectRequest"/></param>
-        /// <returns><see cref="CreateProjectResponse"/></returns>
-        public Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
-        {
-            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject");
-        }
-
-        /// <summary>
-        /// 创建 RUM 应用（归属于某个团队）
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectRequest"/></param>
-        /// <returns><see cref="CreateProjectResponse"/></returns>
-        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
-        {
-            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -113,27 +92,6 @@ namespace TencentCloud.Rum.V20210622
         public CreateStarProjectResponse CreateStarProjectSync(CreateStarProjectRequest req)
         {
             return InternalRequestAsync<CreateStarProjectResponse>(req, "CreateStarProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建 RUM 业务系统
-        /// </summary>
-        /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
-        /// <returns><see cref="CreateTawInstanceResponse"/></returns>
-        public Task<CreateTawInstanceResponse> CreateTawInstance(CreateTawInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateTawInstanceResponse>(req, "CreateTawInstance");
-        }
-
-        /// <summary>
-        /// 创建 RUM 业务系统
-        /// </summary>
-        /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
-        /// <returns><see cref="CreateTawInstanceResponse"/></returns>
-        public CreateTawInstanceResponse CreateTawInstanceSync(CreateTawInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateTawInstanceResponse>(req, "CreateTawInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,27 +25,27 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 检测到的文本信息，具体内容请点击左侧链接。
+        /// <p>检测到的文本信息，具体内容请点击左侧链接。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableDetections")]
         public TableInfo[] TableDetections{ get; set; }
 
         /// <summary>
-        /// Base64 编码后的 Excel 数据。
+        /// <p>Base64 编码后的 Excel 数据。</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 图片为PDF时，返回PDF的总页数，默认为0
+        /// <p>图片为PDF时，返回PDF的总页数，默认为0</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfPageSize")]
         public long? PdfPageSize{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°。
+        /// <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Angle")]
