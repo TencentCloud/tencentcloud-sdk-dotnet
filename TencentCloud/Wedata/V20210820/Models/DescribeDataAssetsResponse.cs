@@ -21,29 +21,43 @@ namespace TencentCloud.Wedata.V20210820.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTableMetaResponse : AbstractModel
+    public class DescribeDataAssetsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 表的元数据信息
+        /// 数据资产记录列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TableMeta")]
-        public TableMeta TableMeta{ get; set; }
+        [JsonProperty("DataSetRecords")]
+        public DataSetRecord[] DataSetRecords{ get; set; }
 
         /// <summary>
-        /// 生命周期信息
+        /// 总数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LifecycleInfo")]
-        public LifecycleInfo LifecycleInfo{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// 页码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TagVoteSumList")]
-        public TagVoteSum[] TagVoteSumList{ get; set; }
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 每页数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 指标列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorRecords")]
+        public IndicatorBaseInfo[] IndicatorRecords{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,9 +71,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TableMeta.", this.TableMeta);
-            this.SetParamObj(map, prefix + "LifecycleInfo.", this.LifecycleInfo);
-            this.SetParamArrayObj(map, prefix + "TagVoteSumList.", this.TagVoteSumList);
+            this.SetParamArrayObj(map, prefix + "DataSetRecords.", this.DataSetRecords);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamArrayObj(map, prefix + "IndicatorRecords.", this.IndicatorRecords);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

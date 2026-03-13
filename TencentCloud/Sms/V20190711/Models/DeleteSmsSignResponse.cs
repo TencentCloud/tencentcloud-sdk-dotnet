@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 删除签名响应
+        /// <p>删除签名响应</p>
         /// </summary>
         [JsonProperty("DeleteSignStatus")]
         public DeleteSignStatus DeleteSignStatus{ get; set; }

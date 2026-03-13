@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20210111.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSignStatus : AbstractModel
+    public class AssetDimSimpleVO : AbstractModel
     {
         
         /// <summary>
-        /// <p>删除状态信息。</p>
+        /// ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DeleteStatus")]
-        public string DeleteStatus{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
 
         /// <summary>
-        /// <p>删除时间，UNIX 时间戳（单位：秒）。</p>
+        /// 名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DeleteTime")]
-        public ulong? DeleteTime{ get; set; }
+        [JsonProperty("DimName")]
+        public string DimName{ get; set; }
+
+        /// <summary>
+        /// 编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DimCode")]
+        public string DimCode{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeleteStatus", this.DeleteStatus);
-            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "DimName", this.DimName);
+            this.SetParamSimple(map, prefix + "DimCode", this.DimCode);
         }
     }
 }

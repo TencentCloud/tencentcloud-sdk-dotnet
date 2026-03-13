@@ -73,6 +73,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskNameExistMode")]
         public ulong? TaskNameExistMode{ get; set; }
 
+        /// <summary>
+        /// 工作流所属目录路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkFlowFolderPath")]
+        public string WorkFlowFolderPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkFlowId", this.WorkFlowId);
             this.SetParamSimple(map, prefix + "WorkFlowName", this.WorkFlowName);
             this.SetParamSimple(map, prefix + "TaskNameExistMode", this.TaskNameExistMode);
+            this.SetParamSimple(map, prefix + "WorkFlowFolderPath", this.WorkFlowFolderPath);
         }
     }
 }

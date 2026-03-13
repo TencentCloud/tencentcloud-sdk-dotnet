@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 修改签名响应
+        /// <p>修改签名响应</p>
         /// </summary>
         [JsonProperty("ModifySignStatus")]
         public ModifySignStatus ModifySignStatus{ get; set; }

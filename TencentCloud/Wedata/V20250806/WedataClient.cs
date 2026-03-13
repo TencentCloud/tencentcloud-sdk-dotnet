@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1385";
 
         /// <summary>
         /// Client constructor.
@@ -533,6 +533,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateTriggerWorkflowResponse CreateTriggerWorkflowSync(CreateTriggerWorkflowRequest req)
         {
             return InternalRequestAsync<CreateTriggerWorkflowResponse>(req, "CreateTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 工作流调度模型下运行工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowRunResponse"/></returns>
+        public Task<CreateTriggerWorkflowRunResponse> CreateTriggerWorkflowRun(CreateTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowRunResponse>(req, "CreateTriggerWorkflowRun");
+        }
+
+        /// <summary>
+        /// 工作流调度模型下运行工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowRunResponse"/></returns>
+        public CreateTriggerWorkflowRunResponse CreateTriggerWorkflowRunSync(CreateTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowRunResponse>(req, "CreateTriggerWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

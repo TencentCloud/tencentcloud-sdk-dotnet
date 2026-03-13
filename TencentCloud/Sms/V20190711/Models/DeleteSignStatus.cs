@@ -25,13 +25,13 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 删除状态信息。
+        /// <p>删除状态信息。</p>
         /// </summary>
         [JsonProperty("DeleteStatus")]
         public string DeleteStatus{ get; set; }
 
         /// <summary>
-        /// 删除时间，UNIX 时间戳（单位：秒）。
+        /// <p>删除时间，UNIX 时间戳（单位：秒）。</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public ulong? DeleteTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 删除模板响应
+        /// <p>删除模板响应</p>
         /// </summary>
         [JsonProperty("DeleteTemplateStatus")]
         public DeleteTemplateStatus DeleteTemplateStatus{ get; set; }

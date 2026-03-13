@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 待删除的模板 ID。
+        /// <p>待删除的模板 ID。</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }

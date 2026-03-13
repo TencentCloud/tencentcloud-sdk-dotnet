@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1385";
 
         /// <summary>
         /// Client constructor.
@@ -1730,6 +1730,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeColumnsMetaResponse DescribeColumnsMetaSync(DescribeColumnsMetaRequest req)
         {
             return InternalRequestAsync<DescribeColumnsMetaResponse>(req, "DescribeColumnsMeta")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDataAssetsResponse"/></returns>
+        public Task<DescribeDataAssetsResponse> DescribeDataAssets(DescribeDataAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDataAssetsResponse>(req, "DescribeDataAssets");
+        }
+
+        /// <summary>
+        /// 查询数据资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDataAssetsResponse"/></returns>
+        public DescribeDataAssetsResponse DescribeDataAssetsSync(DescribeDataAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDataAssetsResponse>(req, "DescribeDataAssets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

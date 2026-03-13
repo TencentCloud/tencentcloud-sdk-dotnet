@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1381</VersionPrefix>
+    <VersionPrefix>3.0.1385</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,7 @@
     <Compile Include="V20210820\Models\ApproveModify.cs" />
     <Compile Include="V20210820\Models\ApproveType.cs" />
     <Compile Include="V20210820\Models\AssetDim.cs" />
+    <Compile Include="V20210820\Models\AssetDimSimpleVO.cs" />
     <Compile Include="V20210820\Models\AssetDimTableColumn.cs" />
     <Compile Include="V20210820\Models\AsyncResourceVO.cs" />
     <Compile Include="V20210820\Models\AttributeItemDTO.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="V20210820\Models\BizCatalogsInfo.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
     <Compile Include="V20210820\Models\CandidateDsDTo.cs" />
+    <Compile Include="V20210820\Models\ChangeLog.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistRequest.cs" />
     <Compile Include="V20210820\Models\CheckAlarmRegularNameExistResponse.cs" />
     <Compile Include="V20210820\Models\CheckIntegrationNodeNameExistsRequest.cs" />
@@ -211,11 +213,13 @@
     <Compile Include="V20210820\Models\DagInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DagInstancesResponse.cs" />
     <Compile Include="V20210820\Models\DailyScoreInfo.cs" />
+    <Compile Include="V20210820\Models\DataAssetOption.cs" />
     <Compile Include="V20210820\Models\DataCheckStat.cs" />
     <Compile Include="V20210820\Models\DataServicePublishedApiListFilter.cs" />
     <Compile Include="V20210820\Models\DataServiceRequestListOrder.cs" />
     <Compile Include="V20210820\Models\DataServiceRequestParam.cs" />
     <Compile Include="V20210820\Models\DataServiceResponseParam.cs" />
+    <Compile Include="V20210820\Models\DataSetRecord.cs" />
     <Compile Include="V20210820\Models\DataSourceConnectStatus.cs" />
     <Compile Include="V20210820\Models\DataSourceEnvInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfo.cs" />
@@ -295,6 +299,8 @@
     <Compile Include="V20210820\Models\DescribeColumnLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnsMetaRequest.cs" />
     <Compile Include="V20210820\Models\DescribeColumnsMetaResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDataAssetsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDataAssetsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataCheckStatRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDataCheckStatResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataServicePublishedApiDetailRequest.cs" />
@@ -649,6 +655,7 @@
     <Compile Include="V20210820\Models\GetTaskInstanceRequest.cs" />
     <Compile Include="V20210820\Models\GetTaskInstanceResponse.cs" />
     <Compile Include="V20210820\Models\GovDatasourceInfo.cs" />
+    <Compile Include="V20210820\Models\IndicatorBaseInfo.cs" />
     <Compile Include="V20210820\Models\IndicatorBaseSimpleInfo.cs" />
     <Compile Include="V20210820\Models\InstanceApiOpsRequest.cs" />
     <Compile Include="V20210820\Models\InstanceCondition.cs" />
@@ -811,6 +818,8 @@
     <Compile Include="V20210820\Models\RegisterEventListenerResponse.cs" />
     <Compile Include="V20210820\Models\RegisterEventRequest.cs" />
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
+    <Compile Include="V20210820\Models\RegisteredModelAlias.cs" />
+    <Compile Include="V20210820\Models\RegisteredModelTag.cs" />
     <Compile Include="V20210820\Models\RelatedTask.cs" />
     <Compile Include="V20210820\Models\RemoveDatabaseRequest.cs" />
     <Compile Include="V20210820\Models\RemoveDatabaseResponse.cs" />
@@ -1110,6 +1119,9 @@
     <Compile Include="V20250806\Models\CreateTriggerWorkflowRequest.cs" />
     <Compile Include="V20250806\Models\CreateTriggerWorkflowResponse.cs" />
     <Compile Include="V20250806\Models\CreateTriggerWorkflowResult.cs" />
+    <Compile Include="V20250806\Models\CreateTriggerWorkflowRunRequest.cs" />
+    <Compile Include="V20250806\Models\CreateTriggerWorkflowRunResponse.cs" />
+    <Compile Include="V20250806\Models\CreateTriggerWorkflowRunResult.cs" />
     <Compile Include="V20250806\Models\CreateWorkflowFolderRequest.cs" />
     <Compile Include="V20250806\Models\CreateWorkflowFolderResponse.cs" />
     <Compile Include="V20250806\Models\CreateWorkflowPermissionsRequest.cs" />

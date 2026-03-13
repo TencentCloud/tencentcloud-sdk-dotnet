@@ -25,43 +25,43 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// 套餐包创建时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageCreateTime")]
         public ulong? PackageCreateTime{ get; set; }
 
         /// <summary>
-        /// 套餐包生效时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageEffectiveTime")]
         public ulong? PackageEffectiveTime{ get; set; }
 
         /// <summary>
-        /// 套餐包过期时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageExpiredTime")]
         public ulong? PackageExpiredTime{ get; set; }
 
         /// <summary>
-        /// 套餐包条数。
+        /// <p>套餐包条数。</p><p>单位：条</p>
         /// </summary>
         [JsonProperty("PackageAmount")]
         public ulong? PackageAmount{ get; set; }
 
         /// <summary>
-        /// 套餐包类别，0表示赠送套餐包，1表示购买套餐包。
+        /// <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐</li><li>1： 购买套餐包</li></ul>
         /// </summary>
         [JsonProperty("PackageType")]
         public ulong? PackageType{ get; set; }
 
         /// <summary>
-        /// 套餐包 ID。
+        /// <p>套餐包 ID。</p>
         /// </summary>
         [JsonProperty("PackageId")]
         public ulong? PackageId{ get; set; }
 
         /// <summary>
-        /// 当前使用套餐包条数。
+        /// <p>当前使用套餐包条数。</p><p>单位：条</p>
         /// </summary>
         [JsonProperty("CurrentUsage")]
         public ulong? CurrentUsage{ get; set; }

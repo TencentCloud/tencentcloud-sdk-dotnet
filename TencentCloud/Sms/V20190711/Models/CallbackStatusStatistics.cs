@@ -25,55 +25,55 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 短信回执量统计。
+        /// <p>短信回执量统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("CallbackCount")]
         public ulong? CallbackCount{ get; set; }
 
         /// <summary>
-        /// 短信提交成功量统计。
+        /// <p>短信提交成功量统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("RequestSuccessCount")]
         public ulong? RequestSuccessCount{ get; set; }
 
         /// <summary>
-        /// 短信回执失败量统计。
+        /// <p>短信回执失败量统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("CallbackFailCount")]
         public ulong? CallbackFailCount{ get; set; }
 
         /// <summary>
-        /// 短信回执成功量统计。
+        /// <p>短信回执成功量统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("CallbackSuccessCount")]
         public ulong? CallbackSuccessCount{ get; set; }
 
         /// <summary>
-        /// 运营商内部错误统计。
+        /// <p>运营商内部错误统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("InternalErrorCount")]
         public ulong? InternalErrorCount{ get; set; }
 
         /// <summary>
-        /// 号码无效或空号统计。
+        /// <p>号码无效或空号统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("InvalidNumberCount")]
         public ulong? InvalidNumberCount{ get; set; }
 
         /// <summary>
-        /// 停机、关机等错误统计。
+        /// <p>停机、关机等错误统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("ShutdownErrorCount")]
         public ulong? ShutdownErrorCount{ get; set; }
 
         /// <summary>
-        /// 号码拉入黑名单统计。
+        /// <p>号码拉入黑名单统计。</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("BlackListCount")]
         public ulong? BlackListCount{ get; set; }
 
         /// <summary>
-        /// 运营商频率限制统计。
+        /// <p>运营商频率限制数</p><p>单位：数</p>
         /// </summary>
         [JsonProperty("FrequencyLimitCount")]
         public ulong? FrequencyLimitCount{ get; set; }

@@ -399,6 +399,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
+        /// <summary>
+        /// 任务子状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskSubType")]
+        public long? TaskSubType{ get; set; }
+
+        /// <summary>
+        /// 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotExistsCheckPoint")]
+        public long? NotExistsCheckPoint{ get; set; }
+
+        /// <summary>
+        /// savepiontPath
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SavePointId")]
+        public string SavePointId{ get; set; }
+
+        /// <summary>
+        /// savepiontId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SavePointPath")]
+        public string SavePointPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -459,6 +487,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "TaskSubType", this.TaskSubType);
+            this.SetParamSimple(map, prefix + "NotExistsCheckPoint", this.NotExistsCheckPoint);
+            this.SetParamSimple(map, prefix + "SavePointId", this.SavePointId);
+            this.SetParamSimple(map, prefix + "SavePointPath", this.SavePointPath);
         }
     }
 }

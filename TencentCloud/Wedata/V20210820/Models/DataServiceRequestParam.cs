@@ -87,6 +87,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 关联标准编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StdCode")]
+        public string StdCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
             this.SetParamSimple(map, prefix + "ExampleValue", this.ExampleValue);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "StdCode", this.StdCode);
         }
     }
 }

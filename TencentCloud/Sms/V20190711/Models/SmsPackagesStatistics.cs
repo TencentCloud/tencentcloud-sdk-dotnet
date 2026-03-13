@@ -25,61 +25,61 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+        /// <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
         /// </summary>
         [JsonProperty("PackageCreateTime")]
         public string PackageCreateTime{ get; set; }
 
         /// <summary>
-        /// 套餐包创建时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageCreateUnixTime")]
         public ulong? PackageCreateUnixTime{ get; set; }
 
         /// <summary>
-        /// 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+        /// <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
         /// </summary>
         [JsonProperty("PackageEffectiveTime")]
         public string PackageEffectiveTime{ get; set; }
 
         /// <summary>
-        /// 套餐包生效时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageEffectiveUnixTime")]
         public ulong? PackageEffectiveUnixTime{ get; set; }
 
         /// <summary>
-        /// 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+        /// <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
         /// </summary>
         [JsonProperty("PackageExpiredTime")]
         public string PackageExpiredTime{ get; set; }
 
         /// <summary>
-        /// 套餐包过期时间，UNIX 时间戳（单位：秒）。
+        /// <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("PackageExpiredUnixTime")]
         public ulong? PackageExpiredUnixTime{ get; set; }
 
         /// <summary>
-        /// 套餐包条数。
+        /// <p>套餐包条数。</p><p>单位：条</p>
         /// </summary>
         [JsonProperty("AmountOfPackage")]
         public ulong? AmountOfPackage{ get; set; }
 
         /// <summary>
-        /// 0表示赠送套餐包，1表示购买套餐包。
+        /// <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
         /// </summary>
         [JsonProperty("TypeOfPackage")]
         public ulong? TypeOfPackage{ get; set; }
 
         /// <summary>
-        /// 套餐包 ID。
+        /// <p>套餐包 ID。</p>
         /// </summary>
         [JsonProperty("PackageId")]
         public ulong? PackageId{ get; set; }
 
         /// <summary>
-        /// 当前使用量。
+        /// <p>当前使用量。</p><p>单位：条</p>
         /// </summary>
         [JsonProperty("CurrentUsage")]
         public ulong? CurrentUsage{ get; set; }

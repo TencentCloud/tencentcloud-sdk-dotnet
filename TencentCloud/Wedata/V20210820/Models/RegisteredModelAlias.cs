@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20210111.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSignStatus : AbstractModel
+    public class RegisteredModelAlias : AbstractModel
     {
         
         /// <summary>
-        /// <p>删除状态信息。</p>
+        /// 别名的名称
         /// </summary>
-        [JsonProperty("DeleteStatus")]
-        public string DeleteStatus{ get; set; }
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
 
         /// <summary>
-        /// <p>删除时间，UNIX 时间戳（单位：秒）。</p>
+        /// 别名指向的模型版本号
         /// </summary>
-        [JsonProperty("DeleteTime")]
-        public ulong? DeleteTime{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeleteStatus", this.DeleteStatus);
-            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

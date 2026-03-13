@@ -147,6 +147,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TablePhysicalId")]
         public string TablePhysicalId{ get; set; }
 
+        /// <summary>
+        /// Catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// Catalog(如有).数据库(如有).表名名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualifiedName")]
+        public string QualifiedName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +191,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "Ext", this.Ext);
             this.SetParamSimple(map, prefix + "TablePhysicalId", this.TablePhysicalId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "QualifiedName", this.QualifiedName);
         }
     }
 }
