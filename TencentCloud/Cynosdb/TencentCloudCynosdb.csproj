@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1379</VersionPrefix>
+    <VersionPrefix>3.0.1386</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,7 @@
     <Compile Include="V20190107\Models\CreateAuditRuleTemplateResponse.cs" />
     <Compile Include="V20190107\Models\CreateBackupRequest.cs" />
     <Compile Include="V20190107\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20190107\Models\CreateBackupVaultItem.cs" />
     <Compile Include="V20190107\Models\CreateCLSDeliveryRequest.cs" />
     <Compile Include="V20190107\Models\CreateCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\CreateClusterDatabaseRequest.cs" />
@@ -625,6 +626,7 @@
     <Compile Include="V20190107\Models\UpgradeProxyVersionRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeProxyVersionResponse.cs" />
     <Compile Include="V20190107\Models\UserHostPrivilege.cs" />
+    <Compile Include="V20190107\Models\VaultInfo.cs" />
     <Compile Include="V20190107\Models\ZoneStockInfo.cs" />
     <Compile Include="V20190107\Models\ZoneStockInfo4Libra.cs" />
   </ItemGroup>

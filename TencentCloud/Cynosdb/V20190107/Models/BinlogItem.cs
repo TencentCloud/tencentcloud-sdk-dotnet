@@ -60,6 +60,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
+        /// <summary>
+        /// 备份投递状态
+        /// </summary>
+        [JsonProperty("CopyStatus")]
+        public string CopyStatus{ get; set; }
+
+        /// <summary>
+        /// 保险箱信息
+        /// </summary>
+        [JsonProperty("VaultInfos")]
+        public VaultInfo[] VaultInfos{ get; set; }
+
+        /// <summary>
+        /// 加密秘钥key
+        /// </summary>
+        [JsonProperty("EncryptKeyId")]
+        public string EncryptKeyId{ get; set; }
+
+        /// <summary>
+        /// 加密秘钥地域
+        /// </summary>
+        [JsonProperty("EncryptRegion")]
+        public string EncryptRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +96,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "BinlogId", this.BinlogId);
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+            this.SetParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+            this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+            this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1384";
+       private const string sdkVersion = "SDK_NET_3.0.1386";
 
         /// <summary>
         /// Client constructor.
@@ -353,6 +353,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcImageTaskResponse CreateAigcImageTaskSync(CreateAigcImageTaskRequest req)
         {
             return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 自定义主体（Vidu）。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcSubjectRequest"/></param>
+        /// <returns><see cref="CreateAigcSubjectResponse"/></returns>
+        public Task<CreateAigcSubjectResponse> CreateAigcSubject(CreateAigcSubjectRequest req)
+        {
+            return InternalRequestAsync<CreateAigcSubjectResponse>(req, "CreateAigcSubject");
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 自定义主体（Vidu）。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcSubjectRequest"/></param>
+        /// <returns><see cref="CreateAigcSubjectResponse"/></returns>
+        public CreateAigcSubjectResponse CreateAigcSubjectSync(CreateAigcSubjectRequest req)
+        {
+            return InternalRequestAsync<CreateAigcSubjectResponse>(req, "CreateAigcSubject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

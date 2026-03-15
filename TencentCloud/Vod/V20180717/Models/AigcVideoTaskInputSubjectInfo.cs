@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillingEnableResponse : AbstractModel
+    public class AigcVideoTaskInputSubjectInfo : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>固定主体Id。</p><ul><li>Kling主体<strong>必选</strong>；</li><li>Vidu主体可选。</li></ul>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// <p>固定名称。</p><ul><li>Vidu主体<strong>必选</strong>；</li><li>Kling主体可选。</li></ul>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

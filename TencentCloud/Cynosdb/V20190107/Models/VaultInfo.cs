@@ -21,33 +21,38 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BinlogConfigInfo : AbstractModel
+    public class VaultInfo : AbstractModel
     {
         
         /// <summary>
-        /// binlog保留时间
+        /// 保险箱id
         /// </summary>
-        [JsonProperty("BinlogSaveDays")]
-        public long? BinlogSaveDays{ get; set; }
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
 
         /// <summary>
-        /// binlog异地地域备份是否开启
+        /// 保险箱name
         /// </summary>
-        [JsonProperty("BinlogCrossRegionsEnable")]
-        public string BinlogCrossRegionsEnable{ get; set; }
+        [JsonProperty("VaultName")]
+        public string VaultName{ get; set; }
 
         /// <summary>
-        /// binlog异地地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 保险箱地域
         /// </summary>
-        [JsonProperty("BinlogCrossRegions")]
-        public string[] BinlogCrossRegions{ get; set; }
+        [JsonProperty("VaultRegion")]
+        public string VaultRegion{ get; set; }
 
         /// <summary>
-        /// 保险箱信息
+        /// 保险箱状态
         /// </summary>
-        [JsonProperty("AutoCopyVaults")]
-        public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
+        [JsonProperty("VaultStatus")]
+        public string VaultStatus{ get; set; }
+
+        /// <summary>
+        /// 备份保留时间
+        /// </summary>
+        [JsonProperty("BackupSaveSeconds")]
+        public long? BackupSaveSeconds{ get; set; }
 
 
         /// <summary>
@@ -55,10 +60,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
-            this.SetParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
-            this.SetParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
-            this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
+            this.SetParamSimple(map, prefix + "VaultName", this.VaultName);
+            this.SetParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
+            this.SetParamSimple(map, prefix + "VaultStatus", this.VaultStatus);
+            this.SetParamSimple(map, prefix + "BackupSaveSeconds", this.BackupSaveSeconds);
         }
     }
 }

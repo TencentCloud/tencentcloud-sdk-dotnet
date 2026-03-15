@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 需要修改的实例列表
+        /// <p>需要修改的实例列表</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 1表示开启自动续费，0为关闭自动续费
+        /// <p>1表示开启自动续费，0为关闭自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

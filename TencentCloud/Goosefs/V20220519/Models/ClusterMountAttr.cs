@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TableColumn : AbstractModel
+    public class ClusterMountAttr : AbstractModel
     {
         
         /// <summary>
-        /// 列名称
+        /// 挂载的文件系统Id
         /// </summary>
-        [JsonProperty("Col")]
-        public string Col{ get; set; }
+        [JsonProperty("StorageFileSystemId")]
+        public string StorageFileSystemId{ get; set; }
 
         /// <summary>
-        /// 列类型
+        /// 客户端集群挂载点。入参是节点的自定义挂载点，出参是集群的默认挂载点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("MountPoint")]
+        public string MountPoint{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Col", this.Col);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "StorageFileSystemId", this.StorageFileSystemId);
+            this.SetParamSimple(map, prefix + "MountPoint", this.MountPoint);
         }
     }
 }

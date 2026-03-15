@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1384</VersionPrefix>
+    <VersionPrefix>3.0.1386</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -175,6 +175,7 @@
     <Compile Include="V20180717\Models\AigcVideoTask.cs" />
     <Compile Include="V20180717\Models\AigcVideoTaskInput.cs" />
     <Compile Include="V20180717\Models\AigcVideoTaskInputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcVideoTaskInputSubjectInfo.cs" />
     <Compile Include="V20180717\Models\AigcVideoTaskOutput.cs" />
     <Compile Include="V20180717\Models\AigcVideoTaskOutputFileInfo.cs" />
     <Compile Include="V20180717\Models\AnimatedGraphicTaskInput.cs" />
@@ -268,6 +269,11 @@
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceTask.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskResponse.cs" />
+    <Compile Include="V20180717\Models\CreateAigcSubjectInput.cs" />
+    <Compile Include="V20180717\Models\CreateAigcSubjectOutput.cs" />
+    <Compile Include="V20180717\Models\CreateAigcSubjectRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcSubjectResponse.cs" />
+    <Compile Include="V20180717\Models\CreateAigcSubjectTask.cs" />
     <Compile Include="V20180717\Models\CreateAigcVideoTaskRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcVideoTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateAnimatedGraphicsTemplateRequest.cs" />

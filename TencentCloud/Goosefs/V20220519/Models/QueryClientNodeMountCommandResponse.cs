@@ -15,40 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDatabaseTableResponse : AbstractModel
+    public class QueryClientNodeMountCommandResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例名称。
+        /// 挂载命令
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 数据库名称。
-        /// </summary>
-        [JsonProperty("DbName")]
-        public string DbName{ get; set; }
-
-        /// <summary>
-        /// 表名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
-
-        /// <summary>
-        /// 列信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Cols")]
-        public TableColumn[] Cols{ get; set; }
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,10 +42,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DbName", this.DbName);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
-            this.SetParamArrayObj(map, prefix + "Cols.", this.Cols);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyBinlogStatusResponse : AbstractModel
+    public class QueryClientNodeMountCommandRequest : AbstractModel
     {
         
         /// <summary>
-        /// flow的流程id
+        /// 客户端集群ID
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 集群挂载信息
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ClusterMountInfo")]
+        public ClusterMountAttr[] ClusterMountInfo{ get; set; }
+
+        /// <summary>
+        /// 文件系统id
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "ClusterMountInfo.", this.ClusterMountInfo);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         }
     }
 }

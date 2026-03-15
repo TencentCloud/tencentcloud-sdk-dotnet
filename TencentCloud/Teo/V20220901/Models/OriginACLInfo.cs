@@ -59,6 +59,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 源站防护回源ACL控制域。
+        /// </summary>
+        [JsonProperty("OriginACLFamily")]
+        public string OriginACLFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
             this.SetParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
         }
     }
 }

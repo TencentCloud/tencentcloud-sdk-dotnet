@@ -96,6 +96,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
+        /// <summary>
+        /// 投递状态
+        /// </summary>
+        [JsonProperty("CopyStatus")]
+        public string CopyStatus{ get; set; }
+
+        /// <summary>
+        /// 秘钥id
+        /// </summary>
+        [JsonProperty("EncryptKeyId")]
+        public string EncryptKeyId{ get; set; }
+
+        /// <summary>
+        /// 秘钥地域
+        /// </summary>
+        [JsonProperty("EncryptRegion")]
+        public string EncryptRegion{ get; set; }
+
+        /// <summary>
+        /// 保险箱信息
+        /// </summary>
+        [JsonProperty("VaultInfos")]
+        public VaultInfo[] VaultInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +138,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+            this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+            this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+            this.SetParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
         }
     }
 }

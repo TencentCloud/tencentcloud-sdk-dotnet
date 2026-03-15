@@ -21,11 +21,11 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAigcVideoTaskResponse : AbstractModel
+    public class CreateAigcSubjectResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>任务 ID。</p>
+        /// <p>任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

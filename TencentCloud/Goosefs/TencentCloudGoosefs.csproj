@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1377</VersionPrefix>
+    <VersionPrefix>3.0.1386</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,12 +58,15 @@
     <Compile Include="V20220519\Models\BatchDeleteClientNodesResponse.cs" />
     <Compile Include="V20220519\Models\BuildClientNodeMountCommandRequest.cs" />
     <Compile Include="V20220519\Models\BuildClientNodeMountCommandResponse.cs" />
+    <Compile Include="V20220519\Models\BuildCustomerClusterRequest.cs" />
+    <Compile Include="V20220519\Models\BuildCustomerClusterResponse.cs" />
     <Compile Include="V20220519\Models\CancelLoadTaskRequest.cs" />
     <Compile Include="V20220519\Models\CancelLoadTaskResponse.cs" />
     <Compile Include="V20220519\Models\ChargeAttribute.cs" />
     <Compile Include="V20220519\Models\ClientClusterManagerNodeInfo.cs" />
     <Compile Include="V20220519\Models\ClientNodeAttribute.cs" />
     <Compile Include="V20220519\Models\ClientToken.cs" />
+    <Compile Include="V20220519\Models\ClusterMountAttr.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskRequest.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskResponse.cs" />
     <Compile Include="V20220519\Models\CreateFileSystemRequest.cs" />
@@ -72,8 +75,11 @@
     <Compile Include="V20220519\Models\CreateFilesetResponse.cs" />
     <Compile Include="V20220519\Models\CreateLoadTaskRequest.cs" />
     <Compile Include="V20220519\Models\CreateLoadTaskResponse.cs" />
+    <Compile Include="V20220519\Models\CustomerClusterAttr.cs" />
     <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeRequest.cs" />
     <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeResponse.cs" />
+    <Compile Include="V20220519\Models\DeleteCustomerClusterRequest.cs" />
+    <Compile Include="V20220519\Models\DeleteCustomerClusterResponse.cs" />
     <Compile Include="V20220519\Models\DeleteFileSystemRequest.cs" />
     <Compile Include="V20220519\Models\DeleteFileSystemResponse.cs" />
     <Compile Include="V20220519\Models\DeleteFilesetRequest.cs" />
@@ -84,6 +90,8 @@
     <Compile Include="V20220519\Models\DescribeClusterClientTokenResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClusterRoleTokenRequest.cs" />
     <Compile Include="V20220519\Models\DescribeClusterRoleTokenResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeCustomerClusterRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeCustomerClusterResponse.cs" />
     <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusRequest.cs" />
     <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusResponse.cs" />
     <Compile Include="V20220519\Models\DescribeFileSystemBucketsRequest.cs" />
@@ -114,6 +122,10 @@
     <Compile Include="V20220519\Models\MetadataLoadAttrs.cs" />
     <Compile Include="V20220519\Models\ModifyDataRepositoryBandwidthRequest.cs" />
     <Compile Include="V20220519\Models\ModifyDataRepositoryBandwidthResponse.cs" />
+    <Compile Include="V20220519\Models\MountMultipleStorageFileSystemRequest.cs" />
+    <Compile Include="V20220519\Models\MountMultipleStorageFileSystemResponse.cs" />
+    <Compile Include="V20220519\Models\QueryClientNodeMountCommandRequest.cs" />
+    <Compile Include="V20220519\Models\QueryClientNodeMountCommandResponse.cs" />
     <Compile Include="V20220519\Models\QueryCrossVpcSubnetSupportForClientNodeRequest.cs" />
     <Compile Include="V20220519\Models\QueryCrossVpcSubnetSupportForClientNodeResponse.cs" />
     <Compile Include="V20220519\Models\QueryDataRepositoryBandwidthRequest.cs" />

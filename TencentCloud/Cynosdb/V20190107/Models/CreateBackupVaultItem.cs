@@ -15,21 +15,37 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillingEnableRequest : AbstractModel
+    public class CreateBackupVaultItem : AbstractModel
     {
         
+        /// <summary>
+        /// 保险箱id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
+
+        /// <summary>
+        /// 保险箱地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VaultRegion")]
+        public string VaultRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
+            this.SetParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
         }
     }
 }

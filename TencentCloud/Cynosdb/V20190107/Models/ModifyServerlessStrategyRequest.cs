@@ -104,6 +104,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
+        /// <summary>
+        /// 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+        /// </summary>
+        [JsonProperty("SecurityGroupIdsForNewRo")]
+        public string[] SecurityGroupIdsForNewRo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
             this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIdsForNewRo.", this.SecurityGroupIdsForNewRo);
         }
     }
 }

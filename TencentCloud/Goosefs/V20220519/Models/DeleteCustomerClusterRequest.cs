@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAigcVideoTaskResponse : AbstractModel
+    public class DeleteCustomerClusterRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>任务 ID。</p>
+        /// 文件系统id
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 客户端集群ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

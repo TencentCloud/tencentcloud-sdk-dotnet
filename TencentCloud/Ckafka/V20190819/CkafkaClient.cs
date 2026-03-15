@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1386";
 
         /// <summary>
         /// Client constructor.
@@ -1251,7 +1251,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 枚举地域,只支持广州地域
+        /// 枚举地域信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>
@@ -1261,7 +1261,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 枚举地域,只支持广州地域
+        /// 枚举地域信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>

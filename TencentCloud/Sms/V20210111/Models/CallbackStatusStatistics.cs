@@ -25,55 +25,55 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// <p>短信回执量统计。</p><p>单位：数</p>
+        /// <p>短信回执量统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("CallbackCount")]
         public ulong? CallbackCount{ get; set; }
 
         /// <summary>
-        /// <p>短信提交成功量统计。</p><p>单位：数</p>
+        /// <p>短信提交成功量统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("RequestSuccessCount")]
         public ulong? RequestSuccessCount{ get; set; }
 
         /// <summary>
-        /// <p>短信回执失败量统计。</p><p>单位：数</p>
+        /// <p>短信回执失败量统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("CallbackFailCount")]
         public ulong? CallbackFailCount{ get; set; }
 
         /// <summary>
-        /// <p>短信回执成功量统计。</p><p>单位：数</p>
+        /// <p>短信回执成功量统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("CallbackSuccessCount")]
         public ulong? CallbackSuccessCount{ get; set; }
 
         /// <summary>
-        /// <p>运营商内部错误统计。</p><p>单位：数</p>
+        /// <p>运营商内部错误统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("InternalErrorCount")]
         public ulong? InternalErrorCount{ get; set; }
 
         /// <summary>
-        /// <p>号码无效或空号统计。</p><p>单位：数</p>
+        /// <p>号码无效或空号统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("InvalidNumberCount")]
         public ulong? InvalidNumberCount{ get; set; }
 
         /// <summary>
-        /// <p>停机、关机等错误统计。</p><p>单位：数</p>
+        /// <p>停机、关机等错误统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("ShutdownErrorCount")]
         public ulong? ShutdownErrorCount{ get; set; }
 
         /// <summary>
-        /// <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
+        /// <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("BlackListCount")]
         public ulong? BlackListCount{ get; set; }
 
         /// <summary>
-        /// <p>运营商频率限制统计。</p><p>单位：数</p>
+        /// <p>运营商频率限制统计。</p><p>单位：个</p>
         /// </summary>
         [JsonProperty("FrequencyLimitCount")]
         public ulong? FrequencyLimitCount{ get; set; }

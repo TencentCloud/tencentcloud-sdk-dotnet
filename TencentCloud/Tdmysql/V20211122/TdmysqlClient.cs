@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1376";
+       private const string sdkVersion = "SDK_NET_3.0.1386";
 
         /// <summary>
         /// Client constructor.
@@ -113,31 +113,6 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteDBSBackupSetsResponse DeleteDBSBackupSetsSync(DeleteDBSBackupSetsRequest req)
         {
             return InternalRequestAsync<DeleteDBSBackupSetsResponse>(req, "DeleteDBSBackupSets")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 已无地方调用
-        /// 
-        /// 本接口（DescribeBillingEnable）用于查询计费是否开启
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingEnableRequest"/></param>
-        /// <returns><see cref="DescribeBillingEnableResponse"/></returns>
-        public Task<DescribeBillingEnableResponse> DescribeBillingEnable(DescribeBillingEnableRequest req)
-        {
-            return InternalRequestAsync<DescribeBillingEnableResponse>(req, "DescribeBillingEnable");
-        }
-
-        /// <summary>
-        /// 已无地方调用
-        /// 
-        /// 本接口（DescribeBillingEnable）用于查询计费是否开启
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingEnableRequest"/></param>
-        /// <returns><see cref="DescribeBillingEnableResponse"/></returns>
-        public DescribeBillingEnableResponse DescribeBillingEnableSync(DescribeBillingEnableRequest req)
-        {
-            return InternalRequestAsync<DescribeBillingEnableResponse>(req, "DescribeBillingEnable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -247,31 +222,6 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 冗余接口，无人调用
-        /// 
-        /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
-        public Task<DescribeDatabaseTableResponse> DescribeDatabaseTable(DescribeDatabaseTableRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseTableResponse>(req, "DescribeDatabaseTable");
-        }
-
-        /// <summary>
-        /// 冗余接口，无人调用
-        /// 
-        /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
-        public DescribeDatabaseTableResponse DescribeDatabaseTableSync(DescribeDatabaseTableRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseTableResponse>(req, "DescribeDatabaseTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口（DescribeFlow）用于查询异步任务流程状态
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>
@@ -352,31 +302,6 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
         {
             return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口功能已被 ModifyInstanceCdc 完全覆盖
-        /// 
-        /// 修改binlog状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyBinlogStatusRequest"/></param>
-        /// <returns><see cref="ModifyBinlogStatusResponse"/></returns>
-        public Task<ModifyBinlogStatusResponse> ModifyBinlogStatus(ModifyBinlogStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyBinlogStatusResponse>(req, "ModifyBinlogStatus");
-        }
-
-        /// <summary>
-        /// 接口功能已被 ModifyInstanceCdc 完全覆盖
-        /// 
-        /// 修改binlog状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyBinlogStatusRequest"/></param>
-        /// <returns><see cref="ModifyBinlogStatusResponse"/></returns>
-        public ModifyBinlogStatusResponse ModifyBinlogStatusSync(ModifyBinlogStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyBinlogStatusResponse>(req, "ModifyBinlogStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

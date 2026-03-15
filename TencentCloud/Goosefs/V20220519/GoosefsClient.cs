@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1386";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 构建客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="BuildCustomerClusterRequest"/></param>
+        /// <returns><see cref="BuildCustomerClusterResponse"/></returns>
+        public Task<BuildCustomerClusterResponse> BuildCustomerCluster(BuildCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<BuildCustomerClusterResponse>(req, "BuildCustomerCluster");
+        }
+
+        /// <summary>
+        /// 构建客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="BuildCustomerClusterRequest"/></param>
+        /// <returns><see cref="BuildCustomerClusterResponse"/></returns>
+        public BuildCustomerClusterResponse BuildCustomerClusterSync(BuildCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<BuildCustomerClusterResponse>(req, "BuildCustomerCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
         /// </summary>
         /// <param name="req"><see cref="CancelLoadTaskRequest"/></param>
@@ -285,6 +306,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 删除客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomerClusterRequest"/></param>
+        /// <returns><see cref="DeleteCustomerClusterResponse"/></returns>
+        public Task<DeleteCustomerClusterResponse> DeleteCustomerCluster(DeleteCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomerClusterResponse>(req, "DeleteCustomerCluster");
+        }
+
+        /// <summary>
+        /// 删除客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomerClusterRequest"/></param>
+        /// <returns><see cref="DeleteCustomerClusterResponse"/></returns>
+        public DeleteCustomerClusterResponse DeleteCustomerClusterSync(DeleteCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomerClusterResponse>(req, "DeleteCustomerCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除文件系统
         /// </summary>
         /// <param name="req"><see cref="DeleteFileSystemRequest"/></param>
@@ -386,6 +428,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DescribeClusterRoleTokenResponse DescribeClusterRoleTokenSync(DescribeClusterRoleTokenRequest req)
         {
             return InternalRequestAsync<DescribeClusterRoleTokenResponse>(req, "DescribeClusterRoleToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerClusterRequest"/></param>
+        /// <returns><see cref="DescribeCustomerClusterResponse"/></returns>
+        public Task<DescribeCustomerClusterResponse> DescribeCustomerCluster(DescribeCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerClusterResponse>(req, "DescribeCustomerCluster");
+        }
+
+        /// <summary>
+        /// 查询客户端集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerClusterRequest"/></param>
+        /// <returns><see cref="DescribeCustomerClusterResponse"/></returns>
+        public DescribeCustomerClusterResponse DescribeCustomerClusterSync(DescribeCustomerClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerClusterResponse>(req, "DescribeCustomerCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -596,6 +659,48 @@ namespace TencentCloud.Goosefs.V20220519
         public ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidthSync(ModifyDataRepositoryBandwidthRequest req)
         {
             return InternalRequestAsync<ModifyDataRepositoryBandwidthResponse>(req, "ModifyDataRepositoryBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 客户端集群挂载存储集群
+        /// </summary>
+        /// <param name="req"><see cref="MountMultipleStorageFileSystemRequest"/></param>
+        /// <returns><see cref="MountMultipleStorageFileSystemResponse"/></returns>
+        public Task<MountMultipleStorageFileSystemResponse> MountMultipleStorageFileSystem(MountMultipleStorageFileSystemRequest req)
+        {
+            return InternalRequestAsync<MountMultipleStorageFileSystemResponse>(req, "MountMultipleStorageFileSystem");
+        }
+
+        /// <summary>
+        /// 客户端集群挂载存储集群
+        /// </summary>
+        /// <param name="req"><see cref="MountMultipleStorageFileSystemRequest"/></param>
+        /// <returns><see cref="MountMultipleStorageFileSystemResponse"/></returns>
+        public MountMultipleStorageFileSystemResponse MountMultipleStorageFileSystemSync(MountMultipleStorageFileSystemRequest req)
+        {
+            return InternalRequestAsync<MountMultipleStorageFileSystemResponse>(req, "MountMultipleStorageFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成客户端的挂载命令
+        /// </summary>
+        /// <param name="req"><see cref="QueryClientNodeMountCommandRequest"/></param>
+        /// <returns><see cref="QueryClientNodeMountCommandResponse"/></returns>
+        public Task<QueryClientNodeMountCommandResponse> QueryClientNodeMountCommand(QueryClientNodeMountCommandRequest req)
+        {
+            return InternalRequestAsync<QueryClientNodeMountCommandResponse>(req, "QueryClientNodeMountCommand");
+        }
+
+        /// <summary>
+        /// 生成客户端的挂载命令
+        /// </summary>
+        /// <param name="req"><see cref="QueryClientNodeMountCommandRequest"/></param>
+        /// <returns><see cref="QueryClientNodeMountCommandResponse"/></returns>
+        public QueryClientNodeMountCommandResponse QueryClientNodeMountCommandSync(QueryClientNodeMountCommandRequest req)
+        {
+            return InternalRequestAsync<QueryClientNodeMountCommandResponse>(req, "QueryClientNodeMountCommand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

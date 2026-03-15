@@ -66,6 +66,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BackupTriggerStrategy")]
         public string BackupTriggerStrategy{ get; set; }
 
+        /// <summary>
+        /// 保险箱信息
+        /// </summary>
+        [JsonProperty("AutoCopyVaults")]
+        public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupIntervalTime", this.BackupIntervalTime);
             this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
+            this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }
     }
 }

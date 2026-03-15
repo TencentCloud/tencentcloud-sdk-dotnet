@@ -258,6 +258,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("GdnTaskInfo")]
         public GdnTaskInfo GdnTaskInfo{ get; set; }
 
+        /// <summary>
+        /// 保险箱id
+        /// </summary>
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
+
+        /// <summary>
+        /// 保险箱名称
+        /// </summary>
+        [JsonProperty("VaultName")]
+        public string VaultName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +314,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
             this.SetParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
             this.SetParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
+            this.SetParamSimple(map, prefix + "VaultName", this.VaultName);
         }
     }
 }

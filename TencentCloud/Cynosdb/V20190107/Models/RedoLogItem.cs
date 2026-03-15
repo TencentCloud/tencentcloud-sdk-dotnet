@@ -72,6 +72,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// 保险箱信息
+        /// </summary>
+        [JsonProperty("VaultInfos")]
+        public VaultInfo[] VaultInfos{ get; set; }
+
+        /// <summary>
+        /// 备份投递状态
+        /// </summary>
+        [JsonProperty("CopyStatus")]
+        public string CopyStatus{ get; set; }
+
+        /// <summary>
+        /// 加密秘钥key
+        /// </summary>
+        [JsonProperty("EncryptKeyId")]
+        public string EncryptKeyId{ get; set; }
+
+        /// <summary>
+        /// 加密秘钥地域
+        /// </summary>
+        [JsonProperty("EncryptRegion")]
+        public string EncryptRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+            this.SetParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+            this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+            this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
         }
     }
 }

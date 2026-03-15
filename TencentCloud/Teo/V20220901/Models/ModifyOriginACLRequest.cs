@@ -36,6 +36,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginACLEntities")]
         public OriginACLEntity[] OriginACLEntities{ get; set; }
 
+        /// <summary>
+        /// 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+        /// 具体取值说明如下：
+        /// <li>gaz：标准全球可用区控制域；</li>
+        /// <li>mlc：标准中国大陆可用区控制域；</li>
+        /// <li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+        /// <li>plat-gaz：精简全球可用区控制域；</li>
+        /// <li>plat-mlc：精简中国大陆可用区控制域；</li>
+        /// <li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+        /// </summary>
+        [JsonProperty("OriginACLFamily")]
+        public string OriginACLFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +57,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "OriginACLEntities.", this.OriginACLEntities);
+            this.SetParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
         }
     }
 }

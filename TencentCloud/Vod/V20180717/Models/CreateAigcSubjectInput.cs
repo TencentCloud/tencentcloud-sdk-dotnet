@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDatabaseTableRequest : AbstractModel
+    public class CreateAigcSubjectInput : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID，形如：tdsql3-ow7t8lmc。
+        /// <p>主体名称。</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("SubjectName")]
+        public string SubjectName{ get; set; }
 
         /// <summary>
-        /// 数据库名称，通过 DescribeDatabases 接口获取。
+        /// <p>主体图片。</p>
         /// </summary>
-        [JsonProperty("DbName")]
-        public string DbName{ get; set; }
+        [JsonProperty("SubjectImages")]
+        public string[] SubjectImages{ get; set; }
 
         /// <summary>
-        /// 表名称，通过 DescribeDatabaseObjects 接口获取。
+        /// <p>主体视频。</p>
         /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
+        [JsonProperty("SubjectVideos")]
+        public string[] SubjectVideos{ get; set; }
+
+        /// <summary>
+        /// <p>主体音色ID。</p>
+        /// </summary>
+        [JsonProperty("VoiceId")]
+        public string VoiceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DbName", this.DbName);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamSimple(map, prefix + "SubjectName", this.SubjectName);
+            this.SetParamArraySimple(map, prefix + "SubjectImages.", this.SubjectImages);
+            this.SetParamArraySimple(map, prefix + "SubjectVideos.", this.SubjectVideos);
+            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
         }
     }
 }

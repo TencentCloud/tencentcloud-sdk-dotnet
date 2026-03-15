@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyBinlogStatusRequest : AbstractModel
+    public class MountMultipleStorageFileSystemRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例id
+        /// 客户端集群所属的文件系统id
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 1打开0关闭
+        /// 客户端集群Id
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("CustomerClusterId")]
+        public string CustomerClusterId{ get; set; }
+
+        /// <summary>
+        /// 挂载的存储集群的id
+        /// </summary>
+        [JsonProperty("StorageFileSystemId")]
+        public string StorageFileSystemId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "CustomerClusterId", this.CustomerClusterId);
+            this.SetParamSimple(map, prefix + "StorageFileSystemId", this.StorageFileSystemId);
         }
     }
 }

@@ -77,10 +77,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+        /// 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
         /// </summary>
         [JsonProperty("BackupTriggerStrategy")]
         public string BackupTriggerStrategy{ get; set; }
+
+        /// <summary>
+        /// 备份投递关系
+        /// </summary>
+        [JsonProperty("AutoCopyVaults")]
+        public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
 
 
         /// <summary>
@@ -97,6 +103,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
             this.SetParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
+            this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }
     }
 }
