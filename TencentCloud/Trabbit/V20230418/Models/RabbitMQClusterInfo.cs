@@ -25,172 +25,196 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// <p>地域信息</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位
+        /// <p>创建时间，毫秒为单位</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 集群说明信息
+        /// <p>集群说明信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// VPC及网络信息
+        /// <p>VPC及网络信息</p>
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// <p>可用区信息</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 虚拟主机数量
+        /// <p>虚拟主机数量</p>
         /// </summary>
         [JsonProperty("VirtualHostNumber")]
         public long? VirtualHostNumber{ get; set; }
 
         /// <summary>
-        /// 队列数量
+        /// <p>队列数量</p>
         /// </summary>
         [JsonProperty("QueueNumber")]
         public long? QueueNumber{ get; set; }
 
         /// <summary>
-        /// 每秒生产消息数 单位：条/秒
+        /// <p>每秒生产消息数 单位：条/秒</p>
         /// </summary>
         [JsonProperty("MessagePublishRate")]
         public float? MessagePublishRate{ get; set; }
 
         /// <summary>
-        /// 堆积消息数 单位：条
+        /// <p>堆积消息数 单位：条</p>
         /// </summary>
         [JsonProperty("MessageStackNumber")]
         public long? MessageStackNumber{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Channel数量
+        /// <p>Channel数量</p>
         /// </summary>
         [JsonProperty("ChannelNumber")]
         public long? ChannelNumber{ get; set; }
 
         /// <summary>
-        /// Connection数量
+        /// <p>Connection数量</p>
         /// </summary>
         [JsonProperty("ConnectionNumber")]
         public long? ConnectionNumber{ get; set; }
 
         /// <summary>
-        /// Consumer数量
+        /// <p>Consumer数量</p>
         /// </summary>
         [JsonProperty("ConsumerNumber")]
         public long? ConsumerNumber{ get; set; }
 
         /// <summary>
-        /// Exchang数量
+        /// <p>Exchang数量</p>
         /// </summary>
         [JsonProperty("ExchangeNumber")]
         public long? ExchangeNumber{ get; set; }
 
         /// <summary>
-        /// 集群异常信息
+        /// <p>集群异常信息</p>
         /// </summary>
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启镜像队列策略。1表示开启，0表示没开启。
+        /// <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public long? MirrorQueuePolicyFlag{ get; set; }
 
         /// <summary>
-        /// 每秒消费消息数 单位：条/秒
+        /// <p>每秒消费消息数 单位：条/秒</p>
         /// </summary>
         [JsonProperty("MessageConsumeRate")]
         public float? MessageConsumeRate{ get; set; }
 
         /// <summary>
-        /// 集群版本信息
+        /// <p>集群版本信息</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 计费模式，0-后付费，1-预付费
+        /// <p>计费模式，0-后付费，1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 消息保留时间，单位小时
+        /// <p>消息保留时间，单位小时</p>
         /// </summary>
         [JsonProperty("MessageRetainTime")]
         public ulong? MessageRetainTime{ get; set; }
 
         /// <summary>
-        /// 发送消息流量比例
+        /// <p>发送消息流量比例</p>
         /// </summary>
         [JsonProperty("SendReceiveRatio")]
         public float? SendReceiveRatio{ get; set; }
 
         /// <summary>
-        /// 消息轨迹保留时间，单位小时
+        /// <p>消息轨迹保留时间，单位小时</p>
         /// </summary>
         [JsonProperty("TraceTime")]
         public ulong? TraceTime{ get; set; }
 
         /// <summary>
-        /// 实例标签列表
+        /// <p>实例标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public RabbitMQServerlessTag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启弹性tps</p>
+        /// </summary>
+        [JsonProperty("ElasticTpsFlag")]
+        public bool? ElasticTpsFlag{ get; set; }
+
+        /// <summary>
+        /// <p>弹性tps倍数，默认弹1倍</p>
+        /// </summary>
+        [JsonProperty("ElasticTpsRatio")]
+        public float? ElasticTpsRatio{ get; set; }
+
+        /// <summary>
+        /// <p>最大重投次数</p>
+        /// </summary>
+        [JsonProperty("MaxRedeliverCount")]
+        public ulong? MaxRedeliverCount{ get; set; }
+
+        /// <summary>
+        /// <p>消费超时时间，单位min</p>
+        /// </summary>
+        [JsonProperty("ConsumerTimeout")]
+        public ulong? ConsumerTimeout{ get; set; }
 
 
         /// <summary>
@@ -226,6 +250,10 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
             this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ElasticTpsFlag", this.ElasticTpsFlag);
+            this.SetParamSimple(map, prefix + "ElasticTpsRatio", this.ElasticTpsRatio);
+            this.SetParamSimple(map, prefix + "MaxRedeliverCount", this.MaxRedeliverCount);
+            this.SetParamSimple(map, prefix + "ConsumerTimeout", this.ConsumerTimeout);
         }
     }
 }

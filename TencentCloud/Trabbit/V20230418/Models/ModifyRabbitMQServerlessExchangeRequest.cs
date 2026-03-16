@@ -48,6 +48,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 备用交换机
+        /// </summary>
+        [JsonProperty("AlternateExchange")]
+        public string AlternateExchange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
             this.SetParamSimple(map, prefix + "ExchangeName", this.ExchangeName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
         }
     }
 }

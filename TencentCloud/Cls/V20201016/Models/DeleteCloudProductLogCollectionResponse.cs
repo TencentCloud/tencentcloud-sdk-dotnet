@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 枚举值，0创建中 1创建完成 2删除中 3删除完成
+        /// <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

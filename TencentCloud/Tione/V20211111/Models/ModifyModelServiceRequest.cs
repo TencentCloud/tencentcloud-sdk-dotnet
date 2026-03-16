@@ -257,6 +257,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SchedulingStrategy")]
         public string SchedulingStrategy{ get; set; }
 
+        /// <summary>
+        /// 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+        /// </summary>
+        [JsonProperty("TargetProjectId")]
+        public long? TargetProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -298,6 +304,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
             this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
+            this.SetParamSimple(map, prefix + "TargetProjectId", this.TargetProjectId);
         }
     }
 }

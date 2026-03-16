@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

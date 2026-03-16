@@ -175,7 +175,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Ret{ get; set; }
 
         /// <summary>
-        /// 网络状态
+        /// 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
         /// </summary>
         [JsonProperty("NetStatus")]
         public string NetStatus{ get; set; }

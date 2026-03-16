@@ -30,6 +30,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("AndroidInstanceId")]
         public string AndroidInstanceId{ get; set; }
 
+        /// <summary>
+        /// 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public string ExpiredTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         }
     }
 }

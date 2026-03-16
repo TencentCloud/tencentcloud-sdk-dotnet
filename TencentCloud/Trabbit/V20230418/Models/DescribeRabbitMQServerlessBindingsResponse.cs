@@ -25,13 +25,13 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 路由关系列表
+        /// <p>路由关系列表</p>
         /// </summary>
         [JsonProperty("BindingInfoList")]
         public RabbitMQBindingListInfo[] BindingInfoList{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

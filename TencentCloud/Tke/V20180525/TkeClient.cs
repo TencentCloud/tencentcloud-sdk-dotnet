@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1382";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -638,6 +638,27 @@ namespace TencentCloud.Tke.V20180525
         public CreateEksLogConfigResponse CreateEksLogConfigSync(CreateEksLogConfigRequest req)
         {
             return InternalRequestAsync<CreateEksLogConfigResponse>(req, "CreateEksLogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalNodePoolRequest"/></param>
+        /// <returns><see cref="CreateExternalNodePoolResponse"/></returns>
+        public Task<CreateExternalNodePoolResponse> CreateExternalNodePool(CreateExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<CreateExternalNodePoolResponse>(req, "CreateExternalNodePool");
+        }
+
+        /// <summary>
+        /// 创建第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalNodePoolRequest"/></param>
+        /// <returns><see cref="CreateExternalNodePoolResponse"/></returns>
+        public CreateExternalNodePoolResponse CreateExternalNodePoolSync(CreateExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<CreateExternalNodePoolResponse>(req, "CreateExternalNodePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1310,6 +1331,48 @@ namespace TencentCloud.Tke.V20180525
         public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstancesSync(DeleteEdgeClusterInstancesRequest req)
         {
             return InternalRequestAsync<DeleteEdgeClusterInstancesResponse>(req, "DeleteEdgeClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除第三方节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExternalNodeRequest"/></param>
+        /// <returns><see cref="DeleteExternalNodeResponse"/></returns>
+        public Task<DeleteExternalNodeResponse> DeleteExternalNode(DeleteExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteExternalNodeResponse>(req, "DeleteExternalNode");
+        }
+
+        /// <summary>
+        /// 删除第三方节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExternalNodeRequest"/></param>
+        /// <returns><see cref="DeleteExternalNodeResponse"/></returns>
+        public DeleteExternalNodeResponse DeleteExternalNodeSync(DeleteExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteExternalNodeResponse>(req, "DeleteExternalNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExternalNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteExternalNodePoolResponse"/></returns>
+        public Task<DeleteExternalNodePoolResponse> DeleteExternalNodePool(DeleteExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<DeleteExternalNodePoolResponse>(req, "DeleteExternalNodePool");
+        }
+
+        /// <summary>
+        /// 删除第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExternalNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteExternalNodePoolResponse"/></returns>
+        public DeleteExternalNodePoolResponse DeleteExternalNodePoolSync(DeleteExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<DeleteExternalNodePoolResponse>(req, "DeleteExternalNodePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2763,6 +2826,69 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查看第三方节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeResponse"/></returns>
+        public Task<DescribeExternalNodeResponse> DescribeExternalNode(DescribeExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeResponse>(req, "DescribeExternalNode");
+        }
+
+        /// <summary>
+        /// 查看第三方节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeResponse"/></returns>
+        public DescribeExternalNodeResponse DescribeExternalNodeSync(DescribeExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeResponse>(req, "DescribeExternalNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看第三方节点池列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodePoolsRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodePoolsResponse"/></returns>
+        public Task<DescribeExternalNodePoolsResponse> DescribeExternalNodePools(DescribeExternalNodePoolsRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodePoolsResponse>(req, "DescribeExternalNodePools");
+        }
+
+        /// <summary>
+        /// 查看第三方节点池列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodePoolsRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodePoolsResponse"/></returns>
+        public DescribeExternalNodePoolsResponse DescribeExternalNodePoolsSync(DescribeExternalNodePoolsRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodePoolsResponse>(req, "DescribeExternalNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取第三方节点添加脚本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeScriptRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeScriptResponse"/></returns>
+        public Task<DescribeExternalNodeScriptResponse> DescribeExternalNodeScript(DescribeExternalNodeScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeScriptResponse>(req, "DescribeExternalNodeScript");
+        }
+
+        /// <summary>
+        /// 获取第三方节点添加脚本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeScriptRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeScriptResponse"/></returns>
+        public DescribeExternalNodeScriptResponse DescribeExternalNodeScriptSync(DescribeExternalNodeScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeScriptResponse>(req, "DescribeExternalNodeScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看开启第三方节点池配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
@@ -4002,6 +4128,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 驱逐第三方节点
+        /// </summary>
+        /// <param name="req"><see cref="DrainExternalNodeRequest"/></param>
+        /// <returns><see cref="DrainExternalNodeResponse"/></returns>
+        public Task<DrainExternalNodeResponse> DrainExternalNode(DrainExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DrainExternalNodeResponse>(req, "DrainExternalNode");
+        }
+
+        /// <summary>
+        /// 驱逐第三方节点
+        /// </summary>
+        /// <param name="req"><see cref="DrainExternalNodeRequest"/></param>
+        /// <returns><see cref="DrainExternalNodeResponse"/></returns>
+        public DrainExternalNodeResponse DrainExternalNodeSync(DrainExternalNodeRequest req)
+        {
+            return InternalRequestAsync<DrainExternalNodeResponse>(req, "DrainExternalNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开启集群审计
         /// </summary>
         /// <param name="req"><see cref="EnableClusterAuditRequest"/></param>
@@ -4124,6 +4271,27 @@ namespace TencentCloud.Tke.V20180525
         public EnableEventPersistenceResponse EnableEventPersistenceSync(EnableEventPersistenceRequest req)
         {
             return InternalRequestAsync<EnableEventPersistenceResponse>(req, "EnableEventPersistence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启第三方节点池支持
+        /// </summary>
+        /// <param name="req"><see cref="EnableExternalNodeSupportRequest"/></param>
+        /// <returns><see cref="EnableExternalNodeSupportResponse"/></returns>
+        public Task<EnableExternalNodeSupportResponse> EnableExternalNodeSupport(EnableExternalNodeSupportRequest req)
+        {
+            return InternalRequestAsync<EnableExternalNodeSupportResponse>(req, "EnableExternalNodeSupport");
+        }
+
+        /// <summary>
+        /// 开启第三方节点池支持
+        /// </summary>
+        /// <param name="req"><see cref="EnableExternalNodeSupportRequest"/></param>
+        /// <returns><see cref="EnableExternalNodeSupportResponse"/></returns>
+        public EnableExternalNodeSupportResponse EnableExternalNodeSupportSync(EnableExternalNodeSupportRequest req)
+        {
+            return InternalRequestAsync<EnableExternalNodeSupportResponse>(req, "EnableExternalNodeSupport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4670,6 +4838,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePoolSync(ModifyClusterVirtualNodePoolRequest req)
         {
             return InternalRequestAsync<ModifyClusterVirtualNodePoolResponse>(req, "ModifyClusterVirtualNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExternalNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyExternalNodePoolResponse"/></returns>
+        public Task<ModifyExternalNodePoolResponse> ModifyExternalNodePool(ModifyExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<ModifyExternalNodePoolResponse>(req, "ModifyExternalNodePool");
+        }
+
+        /// <summary>
+        /// 修改第三方节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExternalNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyExternalNodePoolResponse"/></returns>
+        public ModifyExternalNodePoolResponse ModifyExternalNodePoolSync(ModifyExternalNodePoolRequest req)
+        {
+            return InternalRequestAsync<ModifyExternalNodePoolResponse>(req, "ModifyExternalNodePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

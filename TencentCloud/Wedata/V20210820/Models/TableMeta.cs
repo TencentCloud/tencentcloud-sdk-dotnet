@@ -592,6 +592,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EngineCreator")]
         public string EngineCreator{ get; set; }
 
+        /// <summary>
+        /// 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectStatus")]
+        public long? ProjectStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -679,6 +686,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
             this.SetParamSimple(map, prefix + "EngineCreator", this.EngineCreator);
+            this.SetParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
         }
     }
 }

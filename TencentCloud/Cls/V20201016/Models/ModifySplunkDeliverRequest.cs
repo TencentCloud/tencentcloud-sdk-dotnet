@@ -31,13 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+        /// <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+        /// <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? HasServiceLog{ get; set; }
 
         /// <summary>
-        /// <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+        /// <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
         /// </summary>
         [JsonProperty("IndexAck")]
         public long? IndexAck{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Index{ get; set; }
 
         /// <summary>
-        /// <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+        /// <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
@@ -101,6 +101,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("DSLFilter")]
         public string DSLFilter{ get; set; }
+
+        /// <summary>
+        /// <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+        /// </summary>
+        [JsonProperty("ExternalRole")]
+        public ExternalRole ExternalRole{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
+            this.SetParamObj(map, prefix + "ExternalRole.", this.ExternalRole);
         }
     }
 }

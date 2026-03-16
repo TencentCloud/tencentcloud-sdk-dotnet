@@ -311,6 +311,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("GatewayLogConfig")]
         public LogConfig GatewayLogConfig{ get; set; }
 
+        /// <summary>
+        /// 网关相关配置
+        /// </summary>
+        [JsonProperty("GatewayConfig")]
+        public GatewayConfig GatewayConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -361,6 +367,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
             this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
             this.SetParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
+            this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         }
     }
 }

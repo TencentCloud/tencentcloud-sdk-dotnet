@@ -28,7 +28,7 @@ namespace TencentCloud.Tiw.V20190919
 
        private const string endpoint = "tiw.tencentcloudapi.com";
        private const string version = "2019-09-19";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -264,7 +264,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询文档转码任务的执行进度与转码结果
+        /// 查询文档转码任务的执行进度与转码结果，支持查询最近半年内的任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>
         /// <returns><see cref="DescribeTranscodeResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询文档转码任务的执行进度与转码结果
+        /// 查询文档转码任务的执行进度与转码结果，支持查询最近半年内的任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>
         /// <returns><see cref="DescribeTranscodeResponse"/></returns>

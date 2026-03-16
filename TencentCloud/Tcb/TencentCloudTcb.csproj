@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1384</VersionPrefix>
+    <VersionPrefix>3.0.1387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,12 +101,16 @@
     <Compile Include="V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeBaasPackageListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeBaasPackageListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeBillingInfoRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeBillingInfoResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResult.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResultRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResultResponse.cs" />
@@ -147,8 +151,10 @@
     <Compile Include="V20180608\Models\DropIndex.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigRequest.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigResponse.cs" />
+    <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\IndexAccesses.cs" />
     <Compile Include="V20180608\Models\IndexInfo.cs" />
     <Compile Include="V20180608\Models\Indexkey.cs" />
@@ -180,6 +186,7 @@
     <Compile Include="V20180608\Models\MySQLClusterDetail.cs" />
     <Compile Include="V20180608\Models\MySQLNetDetail.cs" />
     <Compile Include="V20180608\Models\MySQLTaskStatus.cs" />
+    <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\Pager.cs" />
     <Compile Include="V20180608\Models\PermissionInfo.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
@@ -197,6 +204,7 @@
     <Compile Include="V20180608\Models\StorageInfo.cs" />
     <Compile Include="V20180608\Models\TableInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
+    <Compile Include="V20180608\Models\TkeClusterInfo.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />

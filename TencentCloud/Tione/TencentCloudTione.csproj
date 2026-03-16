@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1384</VersionPrefix>
+    <VersionPrefix>3.0.1387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20211111\Models\Container.cs" />
     <Compile Include="V20211111\Models\ContainerStatus.cs" />
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
+    <Compile Include="V20211111\Models\CreateDataSourceRequest.cs" />
+    <Compile Include="V20211111\Models\CreateDataSourceResponse.cs" />
     <Compile Include="V20211111\Models\CreateDatasetRequest.cs" />
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
     <Compile Include="V20211111\Models\CreateExportRequest.cs" />
@@ -136,6 +138,8 @@
     <Compile Include="V20211111\Models\CreateModelServiceAuthTokenResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\CreateMountLimitRequest.cs" />
+    <Compile Include="V20211111\Models\CreateMountLimitResponse.cs" />
     <Compile Include="V20211111\Models\CreateNotebookRequest.cs" />
     <Compile Include="V20211111\Models\CreateNotebookResponse.cs" />
     <Compile Include="V20211111\Models\CreatePresignedNotebookUrlRequest.cs" />
@@ -149,10 +153,13 @@
     <Compile Include="V20211111\Models\DataConfig.cs" />
     <Compile Include="V20211111\Models\DataPoint.cs" />
     <Compile Include="V20211111\Models\DataSetConfig.cs" />
+    <Compile Include="V20211111\Models\DataSourceInfo.cs" />
     <Compile Include="V20211111\Models\DatasetGroup.cs" />
     <Compile Include="V20211111\Models\DatasetInfo.cs" />
     <Compile Include="V20211111\Models\DefaultInnerCallInfo.cs" />
     <Compile Include="V20211111\Models\DefaultNginxGatewayCallInfo.cs" />
+    <Compile Include="V20211111\Models\DeleteDataSourceRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteDataSourceResponse.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetRequest.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetResponse.cs" />
     <Compile Include="V20211111\Models\DeleteExportRequest.cs" />
@@ -163,6 +170,8 @@
     <Compile Include="V20211111\Models\DeleteModelServiceGroupResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteMountLimitRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteMountLimitResponse.cs" />
     <Compile Include="V20211111\Models\DeleteNotebookRequest.cs" />
     <Compile Include="V20211111\Models\DeleteNotebookResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelRequest.cs" />
@@ -183,6 +192,10 @@
     <Compile Include="V20211111\Models\DescribeBillingSpecsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBuildInImagesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBuildInImagesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeDataSourceRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeDataSourceResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeDataSourcesRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeDataSourcesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeEventsRequest.cs" />
@@ -207,6 +220,12 @@
     <Compile Include="V20211111\Models\DescribeModelServiceHotUpdatedResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeMountInstanceRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeMountInstanceResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeMountInstancesRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeMountInstancesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeMountLimitsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeMountLimitsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeNotebookRequest.cs" />
     <Compile Include="V20211111\Models\DescribeNotebookResponse.cs" />
     <Compile Include="V20211111\Models\DescribeNotebooksRequest.cs" />
@@ -232,6 +251,7 @@
     <Compile Include="V20211111\Models\ExposeNetworkConfig.cs" />
     <Compile Include="V20211111\Models\ExposePortConfig.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
+    <Compile Include="V20211111\Models\GatewayConfig.cs" />
     <Compile Include="V20211111\Models\GooseFS.cs" />
     <Compile Include="V20211111\Models\GooseFSx.cs" />
     <Compile Include="V20211111\Models\GpuDetail.cs" />
@@ -274,6 +294,9 @@
     <Compile Include="V20211111\Models\ModifyNotebookTagsResponse.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
+    <Compile Include="V20211111\Models\MountConfigureInfo.cs" />
+    <Compile Include="V20211111\Models\MountInstanceInfo.cs" />
+    <Compile Include="V20211111\Models\MountLimitInfo.cs" />
     <Compile Include="V20211111\Models\MultiModalContent.cs" />
     <Compile Include="V20211111\Models\NotebookDetail.cs" />
     <Compile Include="V20211111\Models\NotebookSetItem.cs" />
@@ -325,6 +348,7 @@
     <Compile Include="V20211111\Models\StopNotebookResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\StorageExtraConf.cs" />
     <Compile Include="V20211111\Models\SubAccountInfo.cs" />
     <Compile Include="V20211111\Models\TCPSocketAction.cs" />
     <Compile Include="V20211111\Models\TJCallInfo.cs" />
@@ -333,6 +357,10 @@
     <Compile Include="V20211111\Models\TrainingModelVersionDTO.cs" />
     <Compile Include="V20211111\Models\TrainingTaskDetail.cs" />
     <Compile Include="V20211111\Models\TrainingTaskSetItem.cs" />
+    <Compile Include="V20211111\Models\UpdateDataSourceRequest.cs" />
+    <Compile Include="V20211111\Models\UpdateDataSourceResponse.cs" />
+    <Compile Include="V20211111\Models\UpdateMountLimitRequest.cs" />
+    <Compile Include="V20211111\Models\UpdateMountLimitResponse.cs" />
     <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoRequest.cs" />
     <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoResponse.cs" />
     <Compile Include="V20211111\Models\Usage.cs" />

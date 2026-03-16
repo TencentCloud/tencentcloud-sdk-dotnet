@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志配置详情列表
+        /// <p>日志配置详情列表</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public CloudProductLogTaskInfo[] Tasks{ get; set; }
 
         /// <summary>
-        /// 日志配置总数
+        /// <p>日志配置总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

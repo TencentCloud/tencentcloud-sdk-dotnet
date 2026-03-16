@@ -126,6 +126,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("DSLFilter")]
         public string DSLFilter{ get; set; }
 
+        /// <summary>
+        /// <p>高级配置-跨账户投递参数</p>
+        /// </summary>
+        [JsonProperty("ExternalRole")]
+        public ExternalRole ExternalRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "IndexAck", this.IndexAck);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
+            this.SetParamObj(map, prefix + "ExternalRole.", this.ExternalRole);
         }
     }
 }

@@ -70,6 +70,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("GrpcHost")]
         public string GrpcHost{ get; set; }
 
+        /// <summary>
+        /// 网关相关配置
+        /// </summary>
+        [JsonProperty("GatewayConfig")]
+        public GatewayConfig GatewayConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
             this.SetParamSimple(map, prefix + "EnableLimit", this.EnableLimit);
             this.SetParamSimple(map, prefix + "GrpcHost", this.GrpcHost);
+            this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         }
     }
 }

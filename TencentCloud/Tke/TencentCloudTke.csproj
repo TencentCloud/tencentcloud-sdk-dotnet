@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1382</VersionPrefix>
+    <VersionPrefix>3.0.1387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="V20180525\Models\ClusterCondition.cs" />
     <Compile Include="V20180525\Models\ClusterCredential.cs" />
+    <Compile Include="V20180525\Models\ClusterExternalConfig.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="V20180525\Models\ClusterInternalLB.cs" />
     <Compile Include="V20180525\Models\ClusterLevelAttribute.cs" />
@@ -139,6 +140,8 @@
     <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreateEksLogConfigRequest.cs" />
     <Compile Include="V20180525\Models\CreateEksLogConfigResponse.cs" />
+    <Compile Include="V20180525\Models\CreateExternalNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\CreateExternalNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\CreateGlobalMaintenanceWindowAndExclusionsRequest.cs" />
     <Compile Include="V20180525\Models\CreateGlobalMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheRequest.cs" />
@@ -207,6 +210,10 @@
     <Compile Include="V20180525\Models\DeleteEdgeCVMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteExternalNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteExternalNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteExternalNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteExternalNodeResponse.cs" />
     <Compile Include="V20180525\Models\DeleteGlobalMaintenanceWindowAndExclusionRequest.cs" />
     <Compile Include="V20180525\Models\DeleteGlobalMaintenanceWindowAndExclusionResponse.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesRequest.cs" />
@@ -345,6 +352,12 @@
     <Compile Include="V20180525\Models\DescribeEncryptionStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodePoolsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodePoolsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeScriptRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeScriptResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigResponse.cs" />
     <Compile Include="V20180525\Models\DescribeGlobalMaintenanceWindowAndExclusionsRequest.cs" />
@@ -464,6 +477,8 @@
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
     <Compile Include="V20180525\Models\DrainClusterVirtualNodeRequest.cs" />
     <Compile Include="V20180525\Models\DrainClusterVirtualNodeResponse.cs" />
+    <Compile Include="V20180525\Models\DrainExternalNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DrainExternalNodeResponse.cs" />
     <Compile Include="V20180525\Models\DriverVersion.cs" />
     <Compile Include="V20180525\Models\ECMEnhancedService.cs" />
     <Compile Include="V20180525\Models\ECMRunMonitorServiceEnabled.cs" />
@@ -493,6 +508,8 @@
     <Compile Include="V20180525\Models\EnableEncryptionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\EnableEventPersistenceRequest.cs" />
     <Compile Include="V20180525\Models\EnableEventPersistenceResponse.cs" />
+    <Compile Include="V20180525\Models\EnableExternalNodeSupportRequest.cs" />
+    <Compile Include="V20180525\Models\EnableExternalNodeSupportResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
@@ -504,6 +521,8 @@
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="V20180525\Models\ExtensionAddon.cs" />
+    <Compile Include="V20180525\Models\ExternalNode.cs" />
+    <Compile Include="V20180525\Models\ExternalNodePool.cs" />
     <Compile Include="V20180525\Models\FailedResource.cs" />
     <Compile Include="V20180525\Models\Filter.cs" />
     <Compile Include="V20180525\Models\Flag.cs" />
@@ -590,6 +609,8 @@
     <Compile Include="V20180525\Models\ModifyClusterTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyExternalNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyExternalNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyGlobalMaintenanceWindowAndExclusionsRequest.cs" />
     <Compile Include="V20180525\Models\ModifyGlobalMaintenanceWindowAndExclusionsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyMasterComponentRequest.cs" />

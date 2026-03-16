@@ -25,7 +25,7 @@ namespace TencentCloud.Tiw.V20190919.Models
     {
         
         /// <summary>
-        /// 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
+        /// <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

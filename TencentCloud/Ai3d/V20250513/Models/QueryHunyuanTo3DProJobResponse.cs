@@ -25,28 +25,40 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+        /// <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码
+        /// <p>错误码</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 生成的3D文件数组。
+        /// <p>生成的3D文件数组。</p>
         /// </summary>
         [JsonProperty("ResultFile3Ds")]
         public File3D[] ResultFile3Ds{ get; set; }
+
+        /// <summary>
+        /// <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p>
+        /// </summary>
+        [JsonProperty("ResultCreditDetails")]
+        public string ResultCreditDetails{ get; set; }
+
+        /// <summary>
+        /// <p>任务总消耗积分。</p>
+        /// </summary>
+        [JsonProperty("ResultCreditConsumed")]
+        public float? ResultCreditConsumed{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +76,8 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
+            this.SetParamSimple(map, prefix + "ResultCreditDetails", this.ResultCreditDetails);
+            this.SetParamSimple(map, prefix + "ResultCreditConsumed", this.ResultCreditConsumed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

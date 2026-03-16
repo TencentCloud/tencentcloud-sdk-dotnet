@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1385";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -5740,7 +5740,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 上报table元数据
+        /// 上报table元数据,当前列数量限制在300
         /// </summary>
         /// <param name="req"><see cref="ReportTableRequest"/></param>
         /// <returns><see cref="ReportTableResponse"/></returns>
@@ -5750,7 +5750,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 上报table元数据
+        /// 上报table元数据,当前列数量限制在300
         /// </summary>
         /// <param name="req"><see cref="ReportTableRequest"/></param>
         /// <returns><see cref="ReportTableResponse"/></returns>

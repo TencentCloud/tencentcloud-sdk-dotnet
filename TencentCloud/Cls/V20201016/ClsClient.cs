@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1386";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -3714,7 +3714,7 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// | 字段名   | 是否必选 | 含义                                                         |
         /// | -------- | -------- | ------------------------------------------------------------ |
-        /// | time     | 是       | 日志时间（Unix 格式时间戳），支持秒、毫秒，建议采用毫秒      |
+        /// | time     | 是       | 日志时间（Unix 格式时间戳），支持秒、毫秒、微秒，建议采用毫秒      |
         /// | contents | 否       | key-value 格式的日志内容，表示一条日志里的多个 key-value 组合 |
         /// 
         /// Content 说明：
@@ -3866,7 +3866,7 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// | 字段名   | 是否必选 | 含义                                                         |
         /// | -------- | -------- | ------------------------------------------------------------ |
-        /// | time     | 是       | 日志时间（Unix 格式时间戳），支持秒、毫秒，建议采用毫秒      |
+        /// | time     | 是       | 日志时间（Unix 格式时间戳），支持秒、毫秒、微秒，建议采用毫秒      |
         /// | contents | 否       | key-value 格式的日志内容，表示一条日志里的多个 key-value 组合 |
         /// 
         /// Content 说明：

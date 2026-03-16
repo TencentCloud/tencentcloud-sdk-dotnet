@@ -25,31 +25,31 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志主题名称
+        /// <p>日志主题名称</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// <p>日志集ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志集名称
+        /// <p>日志集名称</p>
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// -1 创建中，1创建完成 
+        /// <p>-1 创建中，1创建完成</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

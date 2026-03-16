@@ -73,7 +73,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Level{ get; set; }
 
         /// <summary>
-        /// 类型暂无
+        /// 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

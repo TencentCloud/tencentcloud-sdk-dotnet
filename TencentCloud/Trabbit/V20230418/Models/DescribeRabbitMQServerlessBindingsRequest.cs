@@ -25,49 +25,49 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost参数
+        /// <p>Vhost参数</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 分页offset
+        /// <p>分页offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页limit
+        /// <p>分页limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
+        /// <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 根据源Exchange精准搜索过滤
+        /// <p>根据源Exchange精准搜索过滤</p>
         /// </summary>
         [JsonProperty("SourceExchange")]
         public string SourceExchange{ get; set; }
 
         /// <summary>
-        /// 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+        /// <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+        /// <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
         /// </summary>
         [JsonProperty("DestinationExchange")]
         public string DestinationExchange{ get; set; }

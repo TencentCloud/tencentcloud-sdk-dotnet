@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1384";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -77,6 +77,27 @@ namespace TencentCloud.Tione.V20211111
         public ChatCompletionResponse ChatCompletionSync(ChatCompletionRequest req)
         {
             return InternalRequestAsync<ChatCompletionResponse>(req, "ChatCompletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public Task<CreateDataSourceResponse> CreateDataSource(CreateDataSourceRequest req)
+        {
+            return InternalRequestAsync<CreateDataSourceResponse>(req, "CreateDataSource");
+        }
+
+        /// <summary>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public CreateDataSourceResponse CreateDataSourceSync(CreateDataSourceRequest req)
+        {
+            return InternalRequestAsync<CreateDataSourceResponse>(req, "CreateDataSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -165,6 +186,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 创建挂载限制
+        /// </summary>
+        /// <param name="req"><see cref="CreateMountLimitRequest"/></param>
+        /// <returns><see cref="CreateMountLimitResponse"/></returns>
+        public Task<CreateMountLimitResponse> CreateMountLimit(CreateMountLimitRequest req)
+        {
+            return InternalRequestAsync<CreateMountLimitResponse>(req, "CreateMountLimit");
+        }
+
+        /// <summary>
+        /// 创建挂载限制
+        /// </summary>
+        /// <param name="req"><see cref="CreateMountLimitRequest"/></param>
+        /// <returns><see cref="CreateMountLimitResponse"/></returns>
+        public CreateMountLimitResponse CreateMountLimitSync(CreateMountLimitRequest req)
+        {
+            return InternalRequestAsync<CreateMountLimitResponse>(req, "CreateMountLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建Notebook
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookRequest"/></param>
@@ -245,6 +287,27 @@ namespace TencentCloud.Tione.V20211111
         public CreateTrainingTaskResponse CreateTrainingTaskSync(CreateTrainingTaskRequest req)
         {
             return InternalRequestAsync<CreateTrainingTaskResponse>(req, "CreateTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourceRequest"/></param>
+        /// <returns><see cref="DeleteDataSourceResponse"/></returns>
+        public Task<DeleteDataSourceResponse> DeleteDataSource(DeleteDataSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteDataSourceResponse>(req, "DeleteDataSource");
+        }
+
+        /// <summary>
+        /// 删除数据源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourceRequest"/></param>
+        /// <returns><see cref="DeleteDataSourceResponse"/></returns>
+        public DeleteDataSourceResponse DeleteDataSourceSync(DeleteDataSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteDataSourceResponse>(req, "DeleteDataSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -350,6 +413,27 @@ namespace TencentCloud.Tione.V20211111
         public DeleteModelServiceGroupResponse DeleteModelServiceGroupSync(DeleteModelServiceGroupRequest req)
         {
             return InternalRequestAsync<DeleteModelServiceGroupResponse>(req, "DeleteModelServiceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除挂载限制。注意：删除挂载限制后，该存储对应的所有数据源也会被删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMountLimitRequest"/></param>
+        /// <returns><see cref="DeleteMountLimitResponse"/></returns>
+        public Task<DeleteMountLimitResponse> DeleteMountLimit(DeleteMountLimitRequest req)
+        {
+            return InternalRequestAsync<DeleteMountLimitResponse>(req, "DeleteMountLimit");
+        }
+
+        /// <summary>
+        /// 删除挂载限制。注意：删除挂载限制后，该存储对应的所有数据源也会被删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMountLimitRequest"/></param>
+        /// <returns><see cref="DeleteMountLimitResponse"/></returns>
+        public DeleteMountLimitResponse DeleteMountLimitSync(DeleteMountLimitRequest req)
+        {
+            return InternalRequestAsync<DeleteMountLimitResponse>(req, "DeleteMountLimit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -560,6 +644,48 @@ namespace TencentCloud.Tione.V20211111
         public DescribeBuildInImagesResponse DescribeBuildInImagesSync(DescribeBuildInImagesRequest req)
         {
             return InternalRequestAsync<DescribeBuildInImagesResponse>(req, "DescribeBuildInImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceResponse"/></returns>
+        public Task<DescribeDataSourceResponse> DescribeDataSource(DescribeDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceResponse>(req, "DescribeDataSource");
+        }
+
+        /// <summary>
+        /// 获取数据源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceResponse"/></returns>
+        public DescribeDataSourceResponse DescribeDataSourceSync(DescribeDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceResponse>(req, "DescribeDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourcesRequest"/></param>
+        /// <returns><see cref="DescribeDataSourcesResponse"/></returns>
+        public Task<DescribeDataSourcesResponse> DescribeDataSources(DescribeDataSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourcesResponse>(req, "DescribeDataSources");
+        }
+
+        /// <summary>
+        /// 获取数据源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourcesRequest"/></param>
+        /// <returns><see cref="DescribeDataSourcesResponse"/></returns>
+        public DescribeDataSourcesResponse DescribeDataSourcesSync(DescribeDataSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourcesResponse>(req, "DescribeDataSources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -816,6 +942,69 @@ namespace TencentCloud.Tione.V20211111
         public DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdatedSync(DescribeModelServiceHotUpdatedRequest req)
         {
             return InternalRequestAsync<DescribeModelServiceHotUpdatedResponse>(req, "DescribeModelServiceHotUpdated")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeMountInstance
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountInstanceRequest"/></param>
+        /// <returns><see cref="DescribeMountInstanceResponse"/></returns>
+        public Task<DescribeMountInstanceResponse> DescribeMountInstance(DescribeMountInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeMountInstanceResponse>(req, "DescribeMountInstance");
+        }
+
+        /// <summary>
+        /// DescribeMountInstance
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountInstanceRequest"/></param>
+        /// <returns><see cref="DescribeMountInstanceResponse"/></returns>
+        public DescribeMountInstanceResponse DescribeMountInstanceSync(DescribeMountInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeMountInstanceResponse>(req, "DescribeMountInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 非数据源挂载时获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountInstancesRequest"/></param>
+        /// <returns><see cref="DescribeMountInstancesResponse"/></returns>
+        public Task<DescribeMountInstancesResponse> DescribeMountInstances(DescribeMountInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeMountInstancesResponse>(req, "DescribeMountInstances");
+        }
+
+        /// <summary>
+        /// 非数据源挂载时获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountInstancesRequest"/></param>
+        /// <returns><see cref="DescribeMountInstancesResponse"/></returns>
+        public DescribeMountInstancesResponse DescribeMountInstancesSync(DescribeMountInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeMountInstancesResponse>(req, "DescribeMountInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取挂载限制列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountLimitsRequest"/></param>
+        /// <returns><see cref="DescribeMountLimitsResponse"/></returns>
+        public Task<DescribeMountLimitsResponse> DescribeMountLimits(DescribeMountLimitsRequest req)
+        {
+            return InternalRequestAsync<DescribeMountLimitsResponse>(req, "DescribeMountLimits");
+        }
+
+        /// <summary>
+        /// 获取挂载限制列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMountLimitsRequest"/></param>
+        /// <returns><see cref="DescribeMountLimitsResponse"/></returns>
+        public DescribeMountLimitsResponse DescribeMountLimitsSync(DescribeMountLimitsRequest req)
+        {
+            return InternalRequestAsync<DescribeMountLimitsResponse>(req, "DescribeMountLimits")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1257,6 +1446,48 @@ namespace TencentCloud.Tione.V20211111
         public StopTrainingTaskResponse StopTrainingTaskSync(StopTrainingTaskRequest req)
         {
             return InternalRequestAsync<StopTrainingTaskResponse>(req, "StopTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新数据源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataSourceRequest"/></param>
+        /// <returns><see cref="UpdateDataSourceResponse"/></returns>
+        public Task<UpdateDataSourceResponse> UpdateDataSource(UpdateDataSourceRequest req)
+        {
+            return InternalRequestAsync<UpdateDataSourceResponse>(req, "UpdateDataSource");
+        }
+
+        /// <summary>
+        /// 更新数据源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataSourceRequest"/></param>
+        /// <returns><see cref="UpdateDataSourceResponse"/></returns>
+        public UpdateDataSourceResponse UpdateDataSourceSync(UpdateDataSourceRequest req)
+        {
+            return InternalRequestAsync<UpdateDataSourceResponse>(req, "UpdateDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建挂载限制
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMountLimitRequest"/></param>
+        /// <returns><see cref="UpdateMountLimitResponse"/></returns>
+        public Task<UpdateMountLimitResponse> UpdateMountLimit(UpdateMountLimitRequest req)
+        {
+            return InternalRequestAsync<UpdateMountLimitResponse>(req, "UpdateMountLimit");
+        }
+
+        /// <summary>
+        /// 创建挂载限制
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMountLimitRequest"/></param>
+        /// <returns><see cref="UpdateMountLimitResponse"/></returns>
+        public UpdateMountLimitResponse UpdateMountLimitSync(UpdateMountLimitRequest req)
+        {
+            return InternalRequestAsync<UpdateMountLimitResponse>(req, "UpdateMountLimit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

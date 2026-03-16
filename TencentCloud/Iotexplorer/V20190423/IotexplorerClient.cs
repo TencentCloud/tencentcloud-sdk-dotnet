@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ActivateTWeCallLicenseResponse ActivateTWeCallLicenseSync(ActivateTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// TWeTalk设备激活接口。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateTWeTalkRequest"/></param>
+        /// <returns><see cref="ActivateTWeTalkResponse"/></returns>
+        public Task<ActivateTWeTalkResponse> ActivateTWeTalk(ActivateTWeTalkRequest req)
+        {
+            return InternalRequestAsync<ActivateTWeTalkResponse>(req, "ActivateTWeTalk");
+        }
+
+        /// <summary>
+        /// TWeTalk设备激活接口。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateTWeTalkRequest"/></param>
+        /// <returns><see cref="ActivateTWeTalkResponse"/></returns>
+        public ActivateTWeTalkResponse ActivateTWeTalkSync(ActivateTWeTalkRequest req)
+        {
+            return InternalRequestAsync<ActivateTWeTalkResponse>(req, "ActivateTWeTalk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2969,6 +2990,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTWeTalkAIBotListResponse GetTWeTalkAIBotListSync(GetTWeTalkAIBotListRequest req)
         {
             return InternalRequestAsync<GetTWeTalkAIBotListResponse>(req, "GetTWeTalkAIBotList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// TWeTalk消耗账单明细。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkActiveRecordListRequest"/></param>
+        /// <returns><see cref="GetTWeTalkActiveRecordListResponse"/></returns>
+        public Task<GetTWeTalkActiveRecordListResponse> GetTWeTalkActiveRecordList(GetTWeTalkActiveRecordListRequest req)
+        {
+            return InternalRequestAsync<GetTWeTalkActiveRecordListResponse>(req, "GetTWeTalkActiveRecordList");
+        }
+
+        /// <summary>
+        /// TWeTalk消耗账单明细。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkActiveRecordListRequest"/></param>
+        /// <returns><see cref="GetTWeTalkActiveRecordListResponse"/></returns>
+        public GetTWeTalkActiveRecordListResponse GetTWeTalkActiveRecordListSync(GetTWeTalkActiveRecordListRequest req)
+        {
+            return InternalRequestAsync<GetTWeTalkActiveRecordListResponse>(req, "GetTWeTalkActiveRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询TWeTalk设备激活状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkActiveStatusRequest"/></param>
+        /// <returns><see cref="GetTWeTalkActiveStatusResponse"/></returns>
+        public Task<GetTWeTalkActiveStatusResponse> GetTWeTalkActiveStatus(GetTWeTalkActiveStatusRequest req)
+        {
+            return InternalRequestAsync<GetTWeTalkActiveStatusResponse>(req, "GetTWeTalkActiveStatus");
+        }
+
+        /// <summary>
+        /// 查询TWeTalk设备激活状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeTalkActiveStatusRequest"/></param>
+        /// <returns><see cref="GetTWeTalkActiveStatusResponse"/></returns>
+        public GetTWeTalkActiveStatusResponse GetTWeTalkActiveStatusSync(GetTWeTalkActiveStatusRequest req)
+        {
+            return InternalRequestAsync<GetTWeTalkActiveStatusResponse>(req, "GetTWeTalkActiveStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
