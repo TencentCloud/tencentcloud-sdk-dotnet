@@ -25,58 +25,55 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 每页限制
+        /// <p>每页限制</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 账号组ID
+        /// <p>账号组ID</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 排序类型, 倒序：desc，顺序：asc
+        /// <p>排序类型, 倒序：desc，顺序：asc</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 风险等级
-        /// 1：高风险。
-        /// 2：中风险。
-        /// 3：低风险。
+        /// <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// 规则状态
+        /// <p>规则状态</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 评估结果
+        /// <p>评估结果</p>
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string[] ComplianceResult{ get; set; }
 
         /// <summary>
-        /// 规则名
+        /// <p>规则名</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则所属账号ID
+        /// <p>规则所属账号ID</p>
         /// </summary>
         [JsonProperty("RuleOwnerId")]
         public ulong? RuleOwnerId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1382</VersionPrefix>
+    <VersionPrefix>3.0.1388</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -447,6 +447,18 @@
     <Compile Include="V20201101\Models\DescribeImageAutoAuthorizedTaskListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventTendencyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventTendencyResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskRequest.cs" />
@@ -477,6 +489,10 @@
     <Compile Include="V20201101\Models\DescribeK8sApiAbnormalTendencyResponse.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticRequest.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionBlackListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionBlackListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionWhiteListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallAuditRecordRequest.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallAuditRecordResponse.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallClusterListRequest.cs" />
@@ -523,6 +539,10 @@
     <Compile Include="V20201101\Models\DescribeReverseShellEventsExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellEventsRequest.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsRequest.cs" />
@@ -686,6 +706,9 @@
     <Compile Include="V20201101\Models\HostInfo.cs" />
     <Compile Include="V20201101\Models\ImageAutoAuthorizedTask.cs" />
     <Compile Include="V20201101\Models\ImageComponent.cs" />
+    <Compile Include="V20201101\Models\ImageDenyEvent.cs" />
+    <Compile Include="V20201101\Models\ImageDenyEventTendency.cs" />
+    <Compile Include="V20201101\Models\ImageDenyRule.cs" />
     <Compile Include="V20201101\Models\ImageHost.cs" />
     <Compile Include="V20201101\Models\ImageInfo.cs" />
     <Compile Include="V20201101\Models\ImageProgress.cs" />
@@ -712,6 +735,7 @@
     <Compile Include="V20201101\Models\K8sApiAbnormalRuleListItem.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalRuleScopeInfo.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalTendencyItem.cs" />
+    <Compile Include="V20201101\Models\MaliciousConnectionRuleInfo.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessStatusRequest.cs" />
@@ -807,6 +831,8 @@
     <Compile Include="V20201101\Models\RaspInfo.cs" />
     <Compile Include="V20201101\Models\RaspRule.cs" />
     <Compile Include="V20201101\Models\RaspRuleVul.cs" />
+    <Compile Include="V20201101\Models\RegexpRuleInfo.cs" />
+    <Compile Include="V20201101\Models\RegexpRuleListItem.cs" />
     <Compile Include="V20201101\Models\RegionInfo.cs" />
     <Compile Include="V20201101\Models\RegistryConnDetectResult.cs" />
     <Compile Include="V20201101\Models\RemoveAssetImageRegistryRegistryDetailRequest.cs" />
@@ -899,5 +925,6 @@
     <Compile Include="V20201101\Models\VulTendencyInfo.cs" />
     <Compile Include="V20201101\Models\VulTopRankingInfo.cs" />
     <Compile Include="V20201101\Models\WarningRule.cs" />
+    <Compile Include="V20201101\Models\WhiteListRegexpExpressionInfo.cs" />
   </ItemGroup>
 </Project>

@@ -25,10 +25,16 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+        /// 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
         /// </summary>
         [JsonProperty("ChecklistId")]
         public string ChecklistId{ get; set; }
+
+        /// <summary>
+        /// 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+        /// </summary>
+        [JsonProperty("ChecklistIds")]
+        public string[] ChecklistIds{ get; set; }
 
         /// <summary>
         /// 合同审查任务创建时间。
@@ -56,7 +62,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? PolicyType{ get; set; }
 
         /// <summary>
-        /// 合同审查的PDF文件资源ID。
+        /// 合同审查的PDF、WORD文件资源ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -70,11 +76,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public OutputRisk[] Risks{ get; set; }
 
         /// <summary>
-        /// 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+        /// 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public RiskIdentificationRoleInfo Role{ get; set; }
+
+        /// <summary>
+        /// 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+        /// </summary>
+        [JsonProperty("Roles")]
+        public RiskIdentificationRoleInfo[] Roles{ get; set; }
 
         /// <summary>
         /// 合同审查任务状态。
@@ -148,12 +160,14 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ChecklistId", this.ChecklistId);
+            this.SetParamArraySimple(map, prefix + "ChecklistIds.", this.ChecklistIds);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "FinishedOn", this.FinishedOn);
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamArrayObj(map, prefix + "Risks.", this.Risks);
             this.SetParamObj(map, prefix + "Role.", this.Role);
+            this.SetParamArrayObj(map, prefix + "Roles.", this.Roles);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);

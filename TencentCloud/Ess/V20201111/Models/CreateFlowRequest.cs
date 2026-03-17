@@ -191,6 +191,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Workflow")]
         public bool? Workflow{ get; set; }
 
+        /// <summary>
+        /// 发起合同流程时对合同流程的部分操作加以限制的配置。
+        /// </summary>
+        [JsonProperty("FlowOperateLimit")]
+        public FlowOperateLimit FlowOperateLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -216,6 +222,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
             this.SetParamSimple(map, prefix + "Workflow", this.Workflow);
+            this.SetParamObj(map, prefix + "FlowOperateLimit.", this.FlowOperateLimit);
         }
     }
 }

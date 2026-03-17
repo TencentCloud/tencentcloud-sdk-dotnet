@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1387</VersionPrefix>
+    <VersionPrefix>3.0.1388</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -803,6 +803,8 @@
     <Compile Include="V20220501\Models\DescribeClusterMachinesResponse.cs" />
     <Compile Include="V20220501\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20220501\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeGPUInfoRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeGPUInfoResponse.cs" />
     <Compile Include="V20220501\Models\DescribeHealthCheckPoliciesRequest.cs" />
     <Compile Include="V20220501\Models\DescribeHealthCheckPoliciesResponse.cs" />
     <Compile Include="V20220501\Models\DescribeHealthCheckPolicyBindingsRequest.cs" />
@@ -811,6 +813,8 @@
     <Compile Include="V20220501\Models\DescribeHealthCheckTemplateResponse.cs" />
     <Compile Include="V20220501\Models\DescribeNodePoolsRequest.cs" />
     <Compile Include="V20220501\Models\DescribeNodePoolsResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="V20220501\Models\Disk.cs" />
     <Compile Include="V20220501\Models\ExternalNodeInfo.cs" />
     <Compile Include="V20220501\Models\ExternalNodePoolInfo.cs" />

@@ -171,6 +171,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OpenDynamicSignFlow")]
         public bool? OpenDynamicSignFlow{ get; set; }
 
+        /// <summary>
+        /// <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+        /// </summary>
+        [JsonProperty("FlowOperateLimit")]
+        public FlowOperateLimit FlowOperateLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -201,6 +207,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamSimple(map, prefix + "OpenDynamicFlow", this.OpenDynamicFlow);
             this.SetParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
+            this.SetParamObj(map, prefix + "FlowOperateLimit.", this.FlowOperateLimit);
         }
     }
 }

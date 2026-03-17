@@ -206,6 +206,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AllowKeyboardLogger")]
         public bool? AllowKeyboardLogger{ get; set; }
 
+        /// <summary>
+        /// 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+        /// </summary>
+        [JsonProperty("MaxAccessCredentialDuration")]
+        public ulong? MaxAccessCredentialDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +248,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
             this.SetParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
+            this.SetParamSimple(map, prefix + "MaxAccessCredentialDuration", this.MaxAccessCredentialDuration);
         }
     }
 }

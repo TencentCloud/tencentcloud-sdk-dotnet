@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1382";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -2643,6 +2643,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询应用防护白名单攻击类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackTypeRequest"/></param>
+        /// <returns><see cref="DescribeAttackTypeResponse"/></returns>
+        public Task<DescribeAttackTypeResponse> DescribeAttackType(DescribeAttackTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackTypeResponse>(req, "DescribeAttackType");
+        }
+
+        /// <summary>
+        /// 查询应用防护白名单攻击类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackTypeRequest"/></param>
+        /// <returns><see cref="DescribeAttackTypeResponse"/></returns>
+        public DescribeAttackTypeResponse DescribeAttackTypeSync(DescribeAttackTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackTypeResponse>(req, "DescribeAttackType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取网络攻击威胁类型列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackVulTypeListRequest"/></param>
@@ -4071,6 +4092,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询java内存马和rasp的是否注入风险服务配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInjectRiskyServiceSwitchRequest"/></param>
+        /// <returns><see cref="DescribeInjectRiskyServiceSwitchResponse"/></returns>
+        public Task<DescribeInjectRiskyServiceSwitchResponse> DescribeInjectRiskyServiceSwitch(DescribeInjectRiskyServiceSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeInjectRiskyServiceSwitchResponse>(req, "DescribeInjectRiskyServiceSwitch");
+        }
+
+        /// <summary>
+        /// 查询java内存马和rasp的是否注入风险服务配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInjectRiskyServiceSwitchRequest"/></param>
+        /// <returns><see cref="DescribeInjectRiskyServiceSwitchResponse"/></returns>
+        public DescribeInjectRiskyServiceSwitchResponse DescribeInjectRiskyServiceSwitchSync(DescribeInjectRiskyServiceSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeInjectRiskyServiceSwitchResponse>(req, "DescribeInjectRiskyServiceSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询java内存马事件详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeJavaMemShellInfoRequest"/></param>
@@ -4466,6 +4508,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeLogTypeResponse DescribeLogTypeSync(DescribeLogTypeRequest req)
         {
             return InternalRequestAsync<DescribeLogTypeResponse>(req, "DescribeLogType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public Task<DescribeLoginTypeGlobalConfResponse> DescribeLoginTypeGlobalConf(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf");
+        }
+
+        /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConfSync(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public Task<DescribeLoginTypeHostResponse> DescribeLoginTypeHost(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost");
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public DescribeLoginTypeHostResponse DescribeLoginTypeHostSync(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5016,6 +5100,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取反弹Shell规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemShellRulesRequest"/></param>
+        /// <returns><see cref="DescribeMemShellRulesResponse"/></returns>
+        public Task<DescribeMemShellRulesResponse> DescribeMemShellRules(DescribeMemShellRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeMemShellRulesResponse>(req, "DescribeMemShellRules");
+        }
+
+        /// <summary>
+        /// 获取反弹Shell规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemShellRulesRequest"/></param>
+        /// <returns><see cref="DescribeMemShellRulesResponse"/></returns>
+        public DescribeMemShellRulesResponse DescribeMemShellRulesSync(DescribeMemShellRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeMemShellRulesResponse>(req, "DescribeMemShellRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询网络攻击设置
         /// </summary>
         /// <param name="req"><see cref="DescribeNetAttackSettingRequest"/></param>
@@ -5562,6 +5667,111 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 应用防护事件列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventCWPResponse"/></returns>
+        public Task<DescribeRaspEventCWPResponse> DescribeRaspEventCWP(DescribeRaspEventCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventCWPResponse>(req, "DescribeRaspEventCWP");
+        }
+
+        /// <summary>
+        /// 应用防护事件列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventCWPResponse"/></returns>
+        public DescribeRaspEventCWPResponse DescribeRaspEventCWPSync(DescribeRaspEventCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventCWPResponse>(req, "DescribeRaspEventCWP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 应用防御事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailCWPResponse"/></returns>
+        public Task<DescribeRaspEventDetailCWPResponse> DescribeRaspEventDetailCWP(DescribeRaspEventDetailCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailCWPResponse>(req, "DescribeRaspEventDetailCWP");
+        }
+
+        /// <summary>
+        /// 应用防御事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailCWPResponse"/></returns>
+        public DescribeRaspEventDetailCWPResponse DescribeRaspEventDetailCWPSync(DescribeRaspEventDetailCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailCWPResponse>(req, "DescribeRaspEventDetailCWP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 应用防御事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailTCSSResponse"/></returns>
+        public Task<DescribeRaspEventDetailTCSSResponse> DescribeRaspEventDetailTCSS(DescribeRaspEventDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailTCSSResponse>(req, "DescribeRaspEventDetailTCSS");
+        }
+
+        /// <summary>
+        /// 应用防御事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailTCSSResponse"/></returns>
+        public DescribeRaspEventDetailTCSSResponse DescribeRaspEventDetailTCSSSync(DescribeRaspEventDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailTCSSResponse>(req, "DescribeRaspEventDetailTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 应用防护事件列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventTCSSResponse"/></returns>
+        public Task<DescribeRaspEventTCSSResponse> DescribeRaspEventTCSS(DescribeRaspEventTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventTCSSResponse>(req, "DescribeRaspEventTCSS");
+        }
+
+        /// <summary>
+        /// 应用防护事件列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventTCSSResponse"/></returns>
+        public DescribeRaspEventTCSSResponse DescribeRaspEventTCSSSync(DescribeRaspEventTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventTCSSResponse>(req, "DescribeRaspEventTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用防护授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public Task<DescribeRaspLicenseListResponse> DescribeRaspLicenseList(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList");
+        }
+
+        /// <summary>
+        /// 查询应用防护授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public DescribeRaspLicenseListResponse DescribeRaspLicenseListSync(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看漏洞防御最大cpu限制
         /// </summary>
         /// <param name="req"><see cref="DescribeRaspMaxCpuRequest"/></param>
@@ -5579,6 +5789,69 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeRaspMaxCpuResponse DescribeRaspMaxCpuSync(DescribeRaspMaxCpuRequest req)
         {
             return InternalRequestAsync<DescribeRaspMaxCpuResponse>(req, "DescribeRaspMaxCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取容器视角应用防护内存马扫描事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellDetailTCSSResponse"/></returns>
+        public Task<DescribeRaspMemShellDetailTCSSResponse> DescribeRaspMemShellDetailTCSS(DescribeRaspMemShellDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellDetailTCSSResponse>(req, "DescribeRaspMemShellDetailTCSS");
+        }
+
+        /// <summary>
+        /// 获取容器视角应用防护内存马扫描事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellDetailTCSSResponse"/></returns>
+        public DescribeRaspMemShellDetailTCSSResponse DescribeRaspMemShellDetailTCSSSync(DescribeRaspMemShellDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellDetailTCSSResponse>(req, "DescribeRaspMemShellDetailTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取容器视角内存马扫描事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellListTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellListTCSSResponse"/></returns>
+        public Task<DescribeRaspMemShellListTCSSResponse> DescribeRaspMemShellListTCSS(DescribeRaspMemShellListTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellListTCSSResponse>(req, "DescribeRaspMemShellListTCSS");
+        }
+
+        /// <summary>
+        /// 获取容器视角内存马扫描事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellListTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellListTCSSResponse"/></returns>
+        public DescribeRaspMemShellListTCSSResponse DescribeRaspMemShellListTCSSSync(DescribeRaspMemShellListTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellListTCSSResponse>(req, "DescribeRaspMemShellListTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重保防护授权插件详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspPluginListRequest"/></param>
+        /// <returns><see cref="DescribeRaspPluginListResponse"/></returns>
+        public Task<DescribeRaspPluginListResponse> DescribeRaspPluginList(DescribeRaspPluginListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspPluginListResponse>(req, "DescribeRaspPluginList");
+        }
+
+        /// <summary>
+        /// 重保防护授权插件详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspPluginListRequest"/></param>
+        /// <returns><see cref="DescribeRaspPluginListResponse"/></returns>
+        public DescribeRaspPluginListResponse DescribeRaspPluginListSync(DescribeRaspPluginListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspPluginListResponse>(req, "DescribeRaspPluginList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5705,6 +5978,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeReverseShellRulesResponse DescribeReverseShellRulesSync(DescribeReverseShellRulesRequest req)
         {
             return InternalRequestAsync<DescribeReverseShellRulesResponse>(req, "DescribeReverseShellRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取反弹Shell规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRulesAggregationResponse"/></returns>
+        public Task<DescribeReverseShellRulesAggregationResponse> DescribeReverseShellRulesAggregation(DescribeReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRulesAggregationResponse>(req, "DescribeReverseShellRulesAggregation");
+        }
+
+        /// <summary>
+        /// 获取反弹Shell规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRulesAggregationResponse"/></returns>
+        public DescribeReverseShellRulesAggregationResponse DescribeReverseShellRulesAggregationSync(DescribeReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRulesAggregationResponse>(req, "DescribeReverseShellRulesAggregation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询反弹shell系统策略配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public Task<DescribeReverseShellSystemPolicyConfigResponse> DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig");
+        }
+
+        /// <summary>
+        /// 查询反弹shell系统策略配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfigSync(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6465,6 +6780,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询反弹shell策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShellPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeShellPolicyListResponse"/></returns>
+        public Task<DescribeShellPolicyListResponse> DescribeShellPolicyList(DescribeShellPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeShellPolicyListResponse>(req, "DescribeShellPolicyList");
+        }
+
+        /// <summary>
+        /// 查询反弹shell策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShellPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeShellPolicyListResponse"/></returns>
+        public DescribeShellPolicyListResponse DescribeShellPolicyListSync(DescribeShellPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeShellPolicyListResponse>(req, "DescribeShellPolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据策略名查询策略是否存在
         /// </summary>
         /// <param name="req"><see cref="DescribeStrategyExistRequest"/></param>
@@ -6801,6 +7137,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取漏洞防御策略和事件统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceOverviewCountRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceOverviewCountResponse"/></returns>
+        public Task<DescribeVulDefenceOverviewCountResponse> DescribeVulDefenceOverviewCount(DescribeVulDefenceOverviewCountRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceOverviewCountResponse>(req, "DescribeVulDefenceOverviewCount");
+        }
+
+        /// <summary>
+        /// 获取漏洞防御策略和事件统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceOverviewCountRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceOverviewCountResponse"/></returns>
+        public DescribeVulDefenceOverviewCountResponse DescribeVulDefenceOverviewCountSync(DescribeVulDefenceOverviewCountRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceOverviewCountResponse>(req, "DescribeVulDefenceOverviewCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取单台主机漏洞防御插件信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVulDefencePluginDetailRequest"/></param>
@@ -6881,6 +7238,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeVulDefenceSettingResponse DescribeVulDefenceSettingSync(DescribeVulDefenceSettingRequest req)
         {
             return InternalRequestAsync<DescribeVulDefenceSettingResponse>(req, "DescribeVulDefenceSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询漏洞防御设置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceSettingListRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceSettingListResponse"/></returns>
+        public Task<DescribeVulDefenceSettingListResponse> DescribeVulDefenceSettingList(DescribeVulDefenceSettingListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceSettingListResponse>(req, "DescribeVulDefenceSettingList");
+        }
+
+        /// <summary>
+        /// 查询漏洞防御设置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceSettingListRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceSettingListResponse"/></returns>
+        public DescribeVulDefenceSettingListResponse DescribeVulDefenceSettingListSync(DescribeVulDefenceSettingListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceSettingListResponse>(req, "DescribeVulDefenceSettingList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7427,6 +7805,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeWindowsPatchListResponse DescribeWindowsPatchListSync(DescribeWindowsPatchListRequest req)
         {
             return InternalRequestAsync<DescribeWindowsPatchListResponse>(req, "DescribeWindowsPatchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用防护白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYDRaspBlackWhiteRequest"/></param>
+        /// <returns><see cref="DescribeYDRaspBlackWhiteResponse"/></returns>
+        public Task<DescribeYDRaspBlackWhiteResponse> DescribeYDRaspBlackWhite(DescribeYDRaspBlackWhiteRequest req)
+        {
+            return InternalRequestAsync<DescribeYDRaspBlackWhiteResponse>(req, "DescribeYDRaspBlackWhite");
+        }
+
+        /// <summary>
+        /// 查询应用防护白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYDRaspBlackWhiteRequest"/></param>
+        /// <returns><see cref="DescribeYDRaspBlackWhiteResponse"/></returns>
+        public DescribeYDRaspBlackWhiteResponse DescribeYDRaspBlackWhiteSync(DescribeYDRaspBlackWhiteRequest req)
+        {
+            return InternalRequestAsync<DescribeYDRaspBlackWhiteResponse>(req, "DescribeYDRaspBlackWhite")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10184,6 +10583,27 @@ namespace TencentCloud.Cwp.V20180228
         public RansomDefenseRollbackResponse RansomDefenseRollbackSync(RansomDefenseRollbackRequest req)
         {
             return InternalRequestAsync<RansomDefenseRollbackResponse>(req, "RansomDefenseRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞防御概览信息，包括事件趋势及插件开启情况
+        /// </summary>
+        /// <param name="req"><see cref="RaspEventOverviewRequest"/></param>
+        /// <returns><see cref="RaspEventOverviewResponse"/></returns>
+        public Task<RaspEventOverviewResponse> RaspEventOverview(RaspEventOverviewRequest req)
+        {
+            return InternalRequestAsync<RaspEventOverviewResponse>(req, "RaspEventOverview");
+        }
+
+        /// <summary>
+        /// 获取漏洞防御概览信息，包括事件趋势及插件开启情况
+        /// </summary>
+        /// <param name="req"><see cref="RaspEventOverviewRequest"/></param>
+        /// <returns><see cref="RaspEventOverviewResponse"/></returns>
+        public RaspEventOverviewResponse RaspEventOverviewSync(RaspEventOverviewRequest req)
+        {
+            return InternalRequestAsync<RaspEventOverviewResponse>(req, "RaspEventOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

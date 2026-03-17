@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -222,6 +222,27 @@ namespace TencentCloud.Tke.V20220501
         }
 
         /// <summary>
+        /// 请求该接口，会返回所有适配该机型和操作系统组合的gpu驱动版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGPUInfoRequest"/></param>
+        /// <returns><see cref="DescribeGPUInfoResponse"/></returns>
+        public Task<DescribeGPUInfoResponse> DescribeGPUInfo(DescribeGPUInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeGPUInfoResponse>(req, "DescribeGPUInfo");
+        }
+
+        /// <summary>
+        /// 请求该接口，会返回所有适配该机型和操作系统组合的gpu驱动版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGPUInfoRequest"/></param>
+        /// <returns><see cref="DescribeGPUInfoResponse"/></returns>
+        public DescribeGPUInfoResponse DescribeGPUInfoSync(DescribeGPUInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeGPUInfoResponse>(req, "DescribeGPUInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询健康检测策略
         /// </summary>
         /// <param name="req"><see cref="DescribeHealthCheckPoliciesRequest"/></param>
@@ -302,6 +323,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeNodePoolsResponse DescribeNodePoolsSync(DescribeNodePoolsRequest req)
         {
             return InternalRequestAsync<DescribeNodePoolsResponse>(req, "DescribeNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询原生节点机型配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeZoneInstanceConfigInfosResponse"/></returns>
+        public Task<DescribeZoneInstanceConfigInfosResponse> DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneInstanceConfigInfosResponse>(req, "DescribeZoneInstanceConfigInfos");
+        }
+
+        /// <summary>
+        /// 查询原生节点机型配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeZoneInstanceConfigInfosResponse"/></returns>
+        public DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfosSync(DescribeZoneInstanceConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneInstanceConfigInfosResponse>(req, "DescribeZoneInstanceConfigInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

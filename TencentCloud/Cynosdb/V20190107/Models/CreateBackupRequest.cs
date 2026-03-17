@@ -54,6 +54,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
+        /// <summary>
+        /// 	投递到保险箱的信息
+        /// </summary>
+        [JsonProperty("Vaults")]
+        public CreateBackupVaultItem[] Vaults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "BackupDatabases.", this.BackupDatabases);
             this.SetParamArrayObj(map, prefix + "BackupTables.", this.BackupTables);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamArrayObj(map, prefix + "Vaults.", this.Vaults);
         }
     }
 }

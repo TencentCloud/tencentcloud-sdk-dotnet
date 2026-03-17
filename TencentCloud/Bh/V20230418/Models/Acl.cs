@@ -236,6 +236,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("TicketName")]
         public string TicketName{ get; set; }
 
+        /// <summary>
+        /// 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+        /// </summary>
+        [JsonProperty("MaxAccessCredentialDuration")]
+        public ulong? MaxAccessCredentialDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -277,6 +283,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AclType", this.AclType);
             this.SetParamSimple(map, prefix + "TicketId", this.TicketId);
             this.SetParamSimple(map, prefix + "TicketName", this.TicketName);
+            this.SetParamSimple(map, prefix + "MaxAccessCredentialDuration", this.MaxAccessCredentialDuration);
         }
     }
 }

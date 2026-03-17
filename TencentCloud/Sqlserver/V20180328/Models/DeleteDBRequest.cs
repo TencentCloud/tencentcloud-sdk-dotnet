@@ -25,16 +25,22 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-rljoi3bf
+        /// <p>实例ID，形如mssql-rljoi3bf</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库名数组
+        /// <p>数据库名数组</p>
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
+
+        /// <summary>
+        /// <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("NoDoBackup")]
+        public ulong? NoDoBackup{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamSimple(map, prefix + "NoDoBackup", this.NoDoBackup);
         }
     }
 }

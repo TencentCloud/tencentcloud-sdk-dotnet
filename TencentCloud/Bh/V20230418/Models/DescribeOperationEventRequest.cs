@@ -85,7 +85,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页每页记录数，默认20
+        /// 分页每页记录数，默认20，最大200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

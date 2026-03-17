@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1382</VersionPrefix>
+    <VersionPrefix>3.0.1388</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -146,6 +146,7 @@
     <Compile Include="V20180228\Models\CheckLogKafkaConnectionStateResponse.cs" />
     <Compile Include="V20180228\Models\ClearLocalStorageRequest.cs" />
     <Compile Include="V20180228\Models\ClearLocalStorageResponse.cs" />
+    <Compile Include="V20180228\Models\ClientSettingHost.cs" />
     <Compile Include="V20180228\Models\CloudFromCnt.cs" />
     <Compile Include="V20180228\Models\CommandLine.cs" />
     <Compile Include="V20180228\Models\CreateBanWhiteListRequest.cs" />
@@ -379,6 +380,8 @@
     <Compile Include="V20180228\Models\DescribeAttackTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackTrendsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackTrendsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeAttackTypeRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeAttackTypeResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackVulTypeListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackVulTypeListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBanModeRequest.cs" />
@@ -515,6 +518,8 @@
     <Compile Include="V20180228\Models\DescribeIgnoreRuleEffectHostListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeImportMachineInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeImportMachineInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeInjectRiskyServiceSwitchRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeInjectRiskyServiceSwitchResponse.cs" />
     <Compile Include="V20180228\Models\DescribeJavaMemShellInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeJavaMemShellInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeJavaMemShellListRequest.cs" />
@@ -553,6 +558,10 @@
     <Compile Include="V20180228\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLogTypeRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLogTypeResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLoginTypeGlobalConfRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLoginTypeGlobalConfResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLoginTypeHostRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLoginTypeHostResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteCombinedListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteCombinedListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteHostListRequest.cs" />
@@ -605,6 +614,8 @@
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListAffectListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareWhiteListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMemShellRulesRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMemShellRulesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackSettingRequest.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackSettingResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNetAttackWhiteListRequest.cs" />
@@ -657,8 +668,24 @@
     <Compile Include="V20180228\Models\DescribeRansomDefenseStrategyMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseTrendRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseTrendResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventCWPRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventCWPResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventDetailCWPRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventDetailCWPResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventDetailTCSSRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventDetailTCSSResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventTCSSRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspEventTCSSResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspLicenseListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspLicenseListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRaspMaxCpuRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRaspMaxCpuResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMemShellDetailTCSSRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMemShellDetailTCSSResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMemShellListTCSSRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMemShellListTCSSResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspPluginListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspPluginListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRaspRuleVulsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRaspRuleVulsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRaspRulesRequest.cs" />
@@ -669,8 +696,12 @@
     <Compile Include="V20180228\Models\DescribeReverseShellEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellEventsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellRulesAggregationRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellRulesAggregationResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellSystemPolicyConfigRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellSystemPolicyConfigResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRiskBatchStatusRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRiskBatchStatusResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsEventInfoRequest.cs" />
@@ -743,6 +774,8 @@
     <Compile Include="V20180228\Models\DescribeServerRelatedDirInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeServersAndRiskAndFirstInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeServersAndRiskAndFirstInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeShellPolicyListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeShellPolicyListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeStrategyExistRequest.cs" />
     <Compile Include="V20180228\Models\DescribeStrategyExistResponse.cs" />
     <Compile Include="V20180228\Models\DescribeTagMachinesRequest.cs" />
@@ -773,6 +806,8 @@
     <Compile Include="V20180228\Models\DescribeVulDefenceEventResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVulDefenceOverviewCountRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVulDefenceOverviewCountResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceOverviewRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceOverviewResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefencePluginDetailRequest.cs" />
@@ -781,6 +816,8 @@
     <Compile Include="V20180228\Models\DescribeVulDefencePluginExceptionCountResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefencePluginStatusRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefencePluginStatusResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVulDefenceSettingListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVulDefenceSettingListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceSettingRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulDefenceSettingResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulEffectHostListRequest.cs" />
@@ -835,6 +872,8 @@
     <Compile Include="V20180228\Models\DescribeWebPageServiceInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWindowsPatchListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWindowsPatchListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeYDRaspBlackWhiteRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeYDRaspBlackWhiteResponse.cs" />
     <Compile Include="V20180228\Models\DestroyOrderRequest.cs" />
     <Compile Include="V20180228\Models\DestroyOrderResponse.cs" />
     <Compile Include="V20180228\Models\DuplicateHosts.cs" />
@@ -1041,6 +1080,7 @@
     <Compile Include="V20180228\Models\MalwareRiskOverview.cs" />
     <Compile Include="V20180228\Models\MalwareWhiteListAffectEvent.cs" />
     <Compile Include="V20180228\Models\MalwareWhiteListInfo.cs" />
+    <Compile Include="V20180228\Models\MemShellRule.cs" />
     <Compile Include="V20180228\Models\ModifyAutoOpenProVersionConfigRequest.cs" />
     <Compile Include="V20180228\Models\ModifyAutoOpenProVersionConfigResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBanModeRequest.cs" />
@@ -1159,6 +1199,7 @@
     <Compile Include="V20180228\Models\NetAttackTrend.cs" />
     <Compile Include="V20180228\Models\NetAttackWhiteRule.cs" />
     <Compile Include="V20180228\Models\OpenPortStatistics.cs" />
+    <Compile Include="V20180228\Models\OrderDetail.cs" />
     <Compile Include="V20180228\Models\OrderModifyObject.cs" />
     <Compile Include="V20180228\Models\OrderResource.cs" />
     <Compile Include="V20180228\Models\OsName.cs" />
@@ -1188,6 +1229,16 @@
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineBackupInfo.cs" />
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineDetail.cs" />
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineInfo.cs" />
+    <Compile Include="V20180228\Models\RaspAttackTypeListItem.cs" />
+    <Compile Include="V20180228\Models\RaspEvent.cs" />
+    <Compile Include="V20180228\Models\RaspEventDetail.cs" />
+    <Compile Include="V20180228\Models\RaspEventOverview.cs" />
+    <Compile Include="V20180228\Models\RaspEventOverviewRequest.cs" />
+    <Compile Include="V20180228\Models\RaspEventOverviewResponse.cs" />
+    <Compile Include="V20180228\Models\RaspLicenseList.cs" />
+    <Compile Include="V20180228\Models\RaspLicensePlugin.cs" />
+    <Compile Include="V20180228\Models\RaspMemShellDetail.cs" />
+    <Compile Include="V20180228\Models\RaspMemShellEvent.cs" />
     <Compile Include="V20180228\Models\RaspRule.cs" />
     <Compile Include="V20180228\Models\RaspRuleVul.cs" />
     <Compile Include="V20180228\Models\RecordInfo.cs" />
@@ -1208,9 +1259,11 @@
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellEventInfo.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
+    <Compile Include="V20180228\Models\ReverseShellRuleAggregation.cs" />
     <Compile Include="V20180228\Models\RiskDnsEvent.cs" />
     <Compile Include="V20180228\Models\RiskDnsList.cs" />
     <Compile Include="V20180228\Models\RiskDnsPolicy.cs" />
+    <Compile Include="V20180228\Models\RiskMainClass.cs" />
     <Compile Include="V20180228\Models\RiskProcessEvent.cs" />
     <Compile Include="V20180228\Models\RuleInfo.cs" />
     <Compile Include="V20180228\Models\ScanAssetRequest.cs" />
@@ -1255,6 +1308,7 @@
     <Compile Include="V20180228\Models\SetLocalStorageExpireResponse.cs" />
     <Compile Include="V20180228\Models\SetLocalStorageItemRequest.cs" />
     <Compile Include="V20180228\Models\SetLocalStorageItemResponse.cs" />
+    <Compile Include="V20180228\Models\ShellPolicyList.cs" />
     <Compile Include="V20180228\Models\StandardModeConfig.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectRequest.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectResponse.cs" />
@@ -1290,6 +1344,7 @@
     <Compile Include="V20180228\Models\UpdateMachineTagsRequest.cs" />
     <Compile Include="V20180228\Models\UpdateMachineTagsResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
+    <Compile Include="V20180228\Models\UuidHostip.cs" />
     <Compile Include="V20180228\Models\ValueInfo.cs" />
     <Compile Include="V20180228\Models\VersionWhiteConfig.cs" />
     <Compile Include="V20180228\Models\VertexDetail.cs" />
@@ -1300,6 +1355,7 @@
     <Compile Include="V20180228\Models\VulDefencePluginDetail.cs" />
     <Compile Include="V20180228\Models\VulDefencePluginStatus.cs" />
     <Compile Include="V20180228\Models\VulDefenceRangeDetail.cs" />
+    <Compile Include="V20180228\Models\VulDefenceSetting.cs" />
     <Compile Include="V20180228\Models\VulDetailInfo.cs" />
     <Compile Include="V20180228\Models\VulEffectHostList.cs" />
     <Compile Include="V20180228\Models\VulEffectModuleInfo.cs" />
@@ -1326,6 +1382,7 @@
     <Compile Include="V20180228\Models\WebHookReceiverUsage.cs" />
     <Compile Include="V20180228\Models\WebHookRuleDetail.cs" />
     <Compile Include="V20180228\Models\WebHookRuleSummary.cs" />
+    <Compile Include="V20180228\Models\YDRaspBlackWhiteListItem.cs" />
     <Compile Include="V20180228\Models\ZoneInfo.cs" />
   </ItemGroup>
 </Project>

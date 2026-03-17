@@ -28,7 +28,7 @@ namespace TencentCloud.Trp.V20210515
 
        private const string endpoint = "trp.tencentcloudapi.com";
        private const string version = "2021-05-15";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -1192,6 +1192,27 @@ namespace TencentCloud.Trp.V20210515
         public ReportBatchCallbackStatusResponse ReportBatchCallbackStatusSync(ReportBatchCallbackStatusRequest req)
         {
             return InternalRequestAsync<ReportBatchCallbackStatusResponse>(req, "ReportBatchCallbackStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 扫码数据上报
+        /// </summary>
+        /// <param name="req"><see cref="ReportScanDetailRequest"/></param>
+        /// <returns><see cref="ReportScanDetailResponse"/></returns>
+        public Task<ReportScanDetailResponse> ReportScanDetail(ReportScanDetailRequest req)
+        {
+            return InternalRequestAsync<ReportScanDetailResponse>(req, "ReportScanDetail");
+        }
+
+        /// <summary>
+        /// 扫码数据上报
+        /// </summary>
+        /// <param name="req"><see cref="ReportScanDetailRequest"/></param>
+        /// <returns><see cref="ReportScanDetailResponse"/></returns>
+        public ReportScanDetailResponse ReportScanDetailSync(ReportScanDetailRequest req)
+        {
+            return InternalRequestAsync<ReportScanDetailResponse>(req, "ReportScanDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

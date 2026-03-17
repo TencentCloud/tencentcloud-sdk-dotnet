@@ -25,13 +25,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 列表页统计信息
+        /// <p>列表页统计信息</p>
         /// </summary>
         [JsonProperty("DomainCountInfo")]
         public DomainCountInfo DomainCountInfo{ get; set; }
 
         /// <summary>
-        /// 域名列表
+        /// <p>域名列表</p>
         /// </summary>
         [JsonProperty("DomainList")]
         public DomainListItem[] DomainList{ get; set; }

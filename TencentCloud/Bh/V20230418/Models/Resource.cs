@@ -348,6 +348,30 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("IOAResourceId")]
         public string IOAResourceId{ get; set; }
 
+        /// <summary>
+        /// 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+        /// </summary>
+        [JsonProperty("ResourceEdition")]
+        public string ResourceEdition{ get; set; }
+
+        /// <summary>
+        /// 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 计费时长
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public ulong? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 计费模式 0后付费，1预付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public ulong? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -408,6 +432,10 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
             this.SetParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
             this.SetParamSimple(map, prefix + "IOAResourceId", this.IOAResourceId);
+            this.SetParamSimple(map, prefix + "ResourceEdition", this.ResourceEdition);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

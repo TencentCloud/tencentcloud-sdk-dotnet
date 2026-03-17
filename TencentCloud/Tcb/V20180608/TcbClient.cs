@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -637,6 +637,27 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCreateMySQLResultResponse DescribeCreateMySQLResultSync(DescribeCreateMySQLResultRequest req)
         {
             return InternalRequestAsync<DescribeCreateMySQLResultResponse>(req, "DescribeCreateMySQLResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据指定指标名称，查询某环境在指定时间范围内的监控数据，返回按统计粒度聚合后的时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeCurveDataResponse"/></returns>
+        public Task<DescribeCurveDataResponse> DescribeCurveData(DescribeCurveDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCurveDataResponse>(req, "DescribeCurveData");
+        }
+
+        /// <summary>
+        /// 根据指定指标名称，查询某环境在指定时间范围内的监控数据，返回按统计粒度聚合后的时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeCurveDataResponse"/></returns>
+        public DescribeCurveDataResponse DescribeCurveDataSync(DescribeCurveDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCurveDataResponse>(req, "DescribeCurveData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -30,6 +30,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 保险箱id
+        /// </summary>
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
+
+        /// <summary>
+        /// 保险箱地域
+        /// </summary>
+        [JsonProperty("VaultRegion")]
+        public string VaultRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
+            this.SetParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
         }
     }
 }

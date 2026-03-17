@@ -25,13 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 详情
+        /// <p>详情</p>
         /// </summary>
         [JsonProperty("Items")]
         public ConfigRule[] Items{ get; set; }

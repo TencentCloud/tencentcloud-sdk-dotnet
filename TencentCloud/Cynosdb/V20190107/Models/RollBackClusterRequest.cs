@@ -74,6 +74,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RollbackMode")]
         public string RollbackMode{ get; set; }
 
+        /// <summary>
+        /// 保险箱id
+        /// </summary>
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
             this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
             this.SetParamSimple(map, prefix + "RollbackMode", this.RollbackMode);
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
         }
     }
 }

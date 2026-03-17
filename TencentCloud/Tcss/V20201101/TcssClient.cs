@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1382";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -3699,6 +3699,132 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 查询镜像拦截事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventDetailResponse"/></returns>
+        public Task<DescribeImageDenyEventDetailResponse> DescribeImageDenyEventDetail(DescribeImageDenyEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventDetailResponse>(req, "DescribeImageDenyEventDetail");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventDetailResponse"/></returns>
+        public DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetailSync(DescribeImageDenyEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventDetailResponse>(req, "DescribeImageDenyEventDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像拦截事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventListResponse"/></returns>
+        public Task<DescribeImageDenyEventListResponse> DescribeImageDenyEventList(DescribeImageDenyEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventListResponse>(req, "DescribeImageDenyEventList");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventListResponse"/></returns>
+        public DescribeImageDenyEventListResponse DescribeImageDenyEventListSync(DescribeImageDenyEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventListResponse>(req, "DescribeImageDenyEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像拦截事件趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventTendencyRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventTendencyResponse"/></returns>
+        public Task<DescribeImageDenyEventTendencyResponse> DescribeImageDenyEventTendency(DescribeImageDenyEventTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventTendencyResponse>(req, "DescribeImageDenyEventTendency");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截事件趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventTendencyRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventTendencyResponse"/></returns>
+        public DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendencySync(DescribeImageDenyEventTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventTendencyResponse>(req, "DescribeImageDenyEventTendency")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleDetailResponse"/></returns>
+        public Task<DescribeImageDenyRuleDetailResponse> DescribeImageDenyRuleDetail(DescribeImageDenyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleDetailResponse>(req, "DescribeImageDenyRuleDetail");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleDetailResponse"/></returns>
+        public DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetailSync(DescribeImageDenyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleDetailResponse>(req, "DescribeImageDenyRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleListResponse"/></returns>
+        public Task<DescribeImageDenyRuleListResponse> DescribeImageDenyRuleList(DescribeImageDenyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleListResponse>(req, "DescribeImageDenyRuleList");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleListResponse"/></returns>
+        public DescribeImageDenyRuleListResponse DescribeImageDenyRuleListSync(DescribeImageDenyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleListResponse>(req, "DescribeImageDenyRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleSummaryResponse"/></returns>
+        public Task<DescribeImageDenyRuleSummaryResponse> DescribeImageDenyRuleSummary(DescribeImageDenyRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleSummaryResponse>(req, "DescribeImageDenyRuleSummary");
+        }
+
+        /// <summary>
+        /// 查询镜像拦截规则统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleSummaryResponse"/></returns>
+        public DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummarySync(DescribeImageDenyRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleSummaryResponse>(req, "DescribeImageDenyRuleSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户镜像仓库下的命令空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
@@ -4010,6 +4136,48 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeLogStorageStatisticResponse DescribeLogStorageStatisticSync(DescribeLogStorageStatisticRequest req)
         {
             return InternalRequestAsync<DescribeLogStorageStatisticResponse>(req, "DescribeLogStorageStatistic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询恶意外连黑名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionBlackListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionBlackListResponse"/></returns>
+        public Task<DescribeMaliciousConnectionBlackListResponse> DescribeMaliciousConnectionBlackList(DescribeMaliciousConnectionBlackListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionBlackListResponse>(req, "DescribeMaliciousConnectionBlackList");
+        }
+
+        /// <summary>
+        /// 查询恶意外连黑名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionBlackListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionBlackListResponse"/></returns>
+        public DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackListSync(DescribeMaliciousConnectionBlackListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionBlackListResponse>(req, "DescribeMaliciousConnectionBlackList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询恶意外连白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionWhiteListResponse"/></returns>
+        public Task<DescribeMaliciousConnectionWhiteListResponse> DescribeMaliciousConnectionWhiteList(DescribeMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionWhiteListResponse>(req, "DescribeMaliciousConnectionWhiteList");
+        }
+
+        /// <summary>
+        /// 查询恶意外连白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionWhiteListResponse"/></returns>
+        public DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteListSync(DescribeMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionWhiteListResponse>(req, "DescribeMaliciousConnectionWhiteList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4537,6 +4705,48 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExportSync(DescribeReverseShellEventsExportRequest req)
         {
             return InternalRequestAsync<DescribeReverseShellEventsExportResponse>(req, "DescribeReverseShellEventsExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询反弹shell正则白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListResponse"/></returns>
+        public Task<DescribeReverseShellRegexpWhiteListResponse> DescribeReverseShellRegexpWhiteList(DescribeReverseShellRegexpWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListResponse>(req, "DescribeReverseShellRegexpWhiteList");
+        }
+
+        /// <summary>
+        /// 查询反弹shell正则白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListResponse"/></returns>
+        public DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteListSync(DescribeReverseShellRegexpWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListResponse>(req, "DescribeReverseShellRegexpWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询反弹shell正则白名单详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListInfoResponse"/></returns>
+        public Task<DescribeReverseShellRegexpWhiteListInfoResponse> DescribeReverseShellRegexpWhiteListInfo(DescribeReverseShellRegexpWhiteListInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListInfoResponse>(req, "DescribeReverseShellRegexpWhiteListInfo");
+        }
+
+        /// <summary>
+        /// 查询反弹shell正则白名单详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListInfoResponse"/></returns>
+        public DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfoSync(DescribeReverseShellRegexpWhiteListInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListInfoResponse>(req, "DescribeReverseShellRegexpWhiteListInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

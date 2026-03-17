@@ -25,16 +25,22 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 子订单ID
+        /// <p>子订单ID</p>
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 子订单号
+        /// <p>子订单号</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
+
+        /// <summary>
+        /// <p>资源ID</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         {
             this.SetParamSimple(map, prefix + "DealId", this.DealId);
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }
