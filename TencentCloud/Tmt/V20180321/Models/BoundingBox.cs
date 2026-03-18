@@ -25,25 +25,25 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 左上顶点x坐标
+        /// <p>左上顶点x坐标</p>
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 左上顶点y坐标
+        /// <p>左上顶点y坐标</p>
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// 宽
+        /// <p>宽</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 高
+        /// <p>高</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

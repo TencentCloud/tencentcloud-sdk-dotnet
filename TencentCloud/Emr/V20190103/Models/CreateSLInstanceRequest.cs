@@ -84,6 +84,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DeploymentMode")]
         public string DeploymentMode{ get; set; }
 
+        /// <summary>
+        /// 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }
 }

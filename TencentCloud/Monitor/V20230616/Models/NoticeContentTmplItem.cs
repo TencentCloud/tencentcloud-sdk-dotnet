@@ -73,6 +73,12 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("PagerDutyRobot")]
         public PagerDutyRobotNoticeTmplMatcher[] PagerDutyRobot{ get; set; }
 
+        /// <summary>
+        /// GoogleChat
+        /// </summary>
+        [JsonProperty("GoogleChatRobot")]
+        public GoogleChatRobotNoticeTmplMatcher[] GoogleChatRobot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamArrayObj(map, prefix + "Webhook.", this.Webhook);
             this.SetParamArrayObj(map, prefix + "TeamsRobot.", this.TeamsRobot);
             this.SetParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
+            this.SetParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
         }
     }
 }

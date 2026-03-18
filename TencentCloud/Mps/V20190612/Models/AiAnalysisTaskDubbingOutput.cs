@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 译制视频路径。
+        /// <p>译制视频路径。</p>
         /// </summary>
         [JsonProperty("VideoPath")]
         public string VideoPath{ get; set; }
 
         /// <summary>
-        /// 标记文件路径
+        /// <p>标记文件路径</p>
         /// </summary>
         [JsonProperty("SpeakerPath")]
         public string SpeakerPath{ get; set; }
 
         /// <summary>
-        /// 音色id
+        /// <p>音色id</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 译制视频存储位置。
+        /// <p>译制视频存储位置。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

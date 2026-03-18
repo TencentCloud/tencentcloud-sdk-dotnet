@@ -107,6 +107,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("UpgradableDeviceNum")]
         public long? UpgradableDeviceNum{ get; set; }
 
+        /// <summary>
+        /// 有新版本可升级的设备数量
+        /// </summary>
+        [JsonProperty("UpgradeDeviceNum")]
+        public long? UpgradeDeviceNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +131,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "AuthNum", this.AuthNum);
             this.SetParamSimple(map, prefix + "GenuineRate", this.GenuineRate);
             this.SetParamSimple(map, prefix + "UpgradableDeviceNum", this.UpgradableDeviceNum);
+            this.SetParamSimple(map, prefix + "UpgradeDeviceNum", this.UpgradeDeviceNum);
         }
     }
 }

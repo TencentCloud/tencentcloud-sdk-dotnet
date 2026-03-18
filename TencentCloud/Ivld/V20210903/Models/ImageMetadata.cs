@@ -25,35 +25,35 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 媒资图片文件大小，单位为Byte
+        /// <p>媒资图片文件大小，单位为Byte</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
 
         /// <summary>
-        /// 媒资图片文件MD5
+        /// <p>媒资图片文件MD5</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
 
         /// <summary>
-        /// 媒资图片文件宽度
+        /// <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 媒资图片文件高度
+        /// <p>媒资图片文件高度</p><p>单位：像素（px）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 媒资图片文件格式
+        /// <p>媒资图片文件格式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]

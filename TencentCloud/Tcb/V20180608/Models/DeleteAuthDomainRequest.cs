@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 域名ID列表，支持批量
+        /// 域名ID列表，支持批量传递
         /// </summary>
         [JsonProperty("DomainIds")]
         public string[] DomainIds{ get; set; }

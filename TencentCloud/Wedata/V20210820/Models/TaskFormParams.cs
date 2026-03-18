@@ -96,6 +96,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LatestSavedVersionId")]
         public string LatestSavedVersionId{ get; set; }
 
+        /// <summary>
+        /// 任务状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +119,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "LatestSavedVersion", this.LatestSavedVersion);
             this.SetParamSimple(map, prefix + "LatestSavedVersionId", this.LatestSavedVersionId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

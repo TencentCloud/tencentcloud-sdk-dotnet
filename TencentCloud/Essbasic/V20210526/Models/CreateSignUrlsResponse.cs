@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 生成的签署参与者的签署链接信息数组。
+        /// <p>生成的签署参与者的签署链接信息数组。</p>
         /// </summary>
         [JsonProperty("SignUrlInfos")]
         public SignUrlInfo[] SignUrlInfos{ get; set; }
 
         /// <summary>
-        /// 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+        /// <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
         /// </summary>
         [JsonProperty("ErrorMessages")]
         public string[] ErrorMessages{ get; set; }

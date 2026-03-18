@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 页数，从0开始
+        /// <p>页数，从0开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小，默认20
+        /// <p>分页大小，默认20</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

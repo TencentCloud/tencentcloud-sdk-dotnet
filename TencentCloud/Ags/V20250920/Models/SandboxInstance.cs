@@ -25,67 +25,67 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱实例唯一标识符
+        /// <p>沙箱实例唯一标识符</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 所属沙箱工具 ID
+        /// <p>所属沙箱工具 ID</p>
         /// </summary>
         [JsonProperty("ToolId")]
         public string ToolId{ get; set; }
 
         /// <summary>
-        /// 所属沙箱工具名称
+        /// <p>所属沙箱工具名称</p>
         /// </summary>
         [JsonProperty("ToolName")]
         public string ToolName{ get; set; }
 
         /// <summary>
-        /// 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
+        /// <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 超时时间（秒），null 表示无超时设置
+        /// <p>超时时间（秒），null 表示无超时设置</p>
         /// </summary>
         [JsonProperty("TimeoutSeconds")]
         public ulong? TimeoutSeconds{ get; set; }
 
         /// <summary>
-        /// 过期时间（ISO 8601 格式），null 表示无过期时间
+        /// <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
         /// </summary>
         [JsonProperty("ExpiresAt")]
         public string ExpiresAt{ get; set; }
 
         /// <summary>
-        /// 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
+        /// <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
         /// </summary>
         [JsonProperty("StopReason")]
         public string StopReason{ get; set; }
 
         /// <summary>
-        /// 创建时间（ISO 8601 格式）
+        /// <p>创建时间（ISO 8601 格式）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间（ISO 8601 格式）
+        /// <p>更新时间（ISO 8601 格式）</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 存储挂载选项
+        /// <p>存储挂载选项</p>
         /// </summary>
         [JsonProperty("MountOptions")]
         public MountOption[] MountOptions{ get; set; }
 
         /// <summary>
-        /// 沙箱实例自定义配置
+        /// <p>沙箱实例自定义配置</p>
         /// </summary>
         [JsonProperty("CustomConfiguration")]
         public CustomConfigurationDetail CustomConfiguration{ get; set; }

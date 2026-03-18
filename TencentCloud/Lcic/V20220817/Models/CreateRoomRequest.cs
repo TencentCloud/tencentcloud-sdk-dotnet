@@ -230,6 +230,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordMerge")]
         public ulong? RecordMerge{ get; set; }
 
+        /// <summary>
+        /// <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+        /// </summary>
+        [JsonProperty("EnableLiveRelay")]
+        public ulong? EnableLiveRelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +276,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
             this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
             this.SetParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
+            this.SetParamSimple(map, prefix + "EnableLiveRelay", this.EnableLiveRelay);
         }
     }
 }

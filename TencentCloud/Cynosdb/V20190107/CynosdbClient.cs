@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1389";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 计算修改备份保留时长后将会过期删除的备份文件列表
+        /// </summary>
+        /// <param name="req"><see cref="CalculateBackupSaveSecExpiresRequest"/></param>
+        /// <returns><see cref="CalculateBackupSaveSecExpiresResponse"/></returns>
+        public Task<CalculateBackupSaveSecExpiresResponse> CalculateBackupSaveSecExpires(CalculateBackupSaveSecExpiresRequest req)
+        {
+            return InternalRequestAsync<CalculateBackupSaveSecExpiresResponse>(req, "CalculateBackupSaveSecExpires");
+        }
+
+        /// <summary>
+        /// 计算修改备份保留时长后将会过期删除的备份文件列表
+        /// </summary>
+        /// <param name="req"><see cref="CalculateBackupSaveSecExpiresRequest"/></param>
+        /// <returns><see cref="CalculateBackupSaveSecExpiresResponse"/></returns>
+        public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpiresSync(CalculateBackupSaveSecExpiresRequest req)
+        {
+            return InternalRequestAsync<CalculateBackupSaveSecExpiresResponse>(req, "CalculateBackupSaveSecExpires")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
         /// </summary>
         /// <param name="req"><see cref="CheckCreateLibraDBInstanceRequest"/></param>
@@ -218,6 +239,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstanceSync(CheckCreateLibraDBInstanceRequest req)
         {
             return InternalRequestAsync<CheckCreateLibraDBInstanceResponse>(req, "CheckCreateLibraDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
+        /// </summary>
+        /// <param name="req"><see cref="CheckTransferClusterZoneRequest"/></param>
+        /// <returns><see cref="CheckTransferClusterZoneResponse"/></returns>
+        public Task<CheckTransferClusterZoneResponse> CheckTransferClusterZone(CheckTransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<CheckTransferClusterZoneResponse>(req, "CheckTransferClusterZone");
+        }
+
+        /// <summary>
+        /// 本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
+        /// </summary>
+        /// <param name="req"><see cref="CheckTransferClusterZoneRequest"/></param>
+        /// <returns><see cref="CheckTransferClusterZoneResponse"/></returns>
+        public CheckTransferClusterZoneResponse CheckTransferClusterZoneSync(CheckTransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<CheckTransferClusterZoneResponse>(req, "CheckTransferClusterZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +386,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CloseWanResponse CloseWanSync(CloseWanRequest req)
         {
             return InternalRequestAsync<CloseWanResponse>(req, "CloseWan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将备份文件复制到指定的备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="CopyBackupToVaultRequest"/></param>
+        /// <returns><see cref="CopyBackupToVaultResponse"/></returns>
+        public Task<CopyBackupToVaultResponse> CopyBackupToVault(CopyBackupToVaultRequest req)
+        {
+            return InternalRequestAsync<CopyBackupToVaultResponse>(req, "CopyBackupToVault");
+        }
+
+        /// <summary>
+        /// 将备份文件复制到指定的备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="CopyBackupToVaultRequest"/></param>
+        /// <returns><see cref="CopyBackupToVaultResponse"/></returns>
+        public CopyBackupToVaultResponse CopyBackupToVaultSync(CopyBackupToVaultRequest req)
+        {
+            return InternalRequestAsync<CopyBackupToVaultResponse>(req, "CopyBackupToVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +726,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 创建备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="CreateVaultRequest"/></param>
+        /// <returns><see cref="CreateVaultResponse"/></returns>
+        public Task<CreateVaultResponse> CreateVault(CreateVaultRequest req)
+        {
+            return InternalRequestAsync<CreateVaultResponse>(req, "CreateVault");
+        }
+
+        /// <summary>
+        /// 创建备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="CreateVaultRequest"/></param>
+        /// <returns><see cref="CreateVaultResponse"/></returns>
+        public CreateVaultResponse CreateVaultSync(CreateVaultRequest req)
+        {
+            return InternalRequestAsync<CreateVaultResponse>(req, "CreateVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccounts）用于删除用户账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
@@ -743,6 +827,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteBackupResponse DeleteBackupSync(DeleteBackupRequest req)
         {
             return InternalRequestAsync<DeleteBackupResponse>(req, "DeleteBackup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从备份保险箱中删除指定的备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupVaultRequest"/></param>
+        /// <returns><see cref="DeleteBackupVaultResponse"/></returns>
+        public Task<DeleteBackupVaultResponse> DeleteBackupVault(DeleteBackupVaultRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupVaultResponse>(req, "DeleteBackupVault");
+        }
+
+        /// <summary>
+        /// 从备份保险箱中删除指定的备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupVaultRequest"/></param>
+        /// <returns><see cref="DeleteBackupVaultResponse"/></returns>
+        public DeleteBackupVaultResponse DeleteBackupVaultSync(DeleteBackupVaultRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupVaultResponse>(req, "DeleteBackupVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -869,6 +974,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
         {
             return InternalRequestAsync<DeleteParamTemplateResponse>(req, "DeleteParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVaultsRequest"/></param>
+        /// <returns><see cref="DeleteVaultsResponse"/></returns>
+        public Task<DeleteVaultsResponse> DeleteVaults(DeleteVaultsRequest req)
+        {
+            return InternalRequestAsync<DeleteVaultsResponse>(req, "DeleteVaults");
+        }
+
+        /// <summary>
+        /// 批量删除备份保险箱
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVaultsRequest"/></param>
+        /// <returns><see cref="DeleteVaultsResponse"/></returns>
+        public DeleteVaultsResponse DeleteVaultsSync(DeleteVaultsRequest req)
+        {
+            return InternalRequestAsync<DeleteVaultsResponse>(req, "DeleteVaults")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1146,6 +1272,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 根据保险箱ID查询备份文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBackupListByVaultResponse"/></returns>
+        public Task<DescribeBackupListByVaultResponse> DescribeBackupListByVault(DescribeBackupListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault");
+        }
+
+        /// <summary>
+        /// 根据保险箱ID查询备份文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBackupListByVaultResponse"/></returns>
+        public DescribeBackupListByVaultResponse DescribeBackupListByVaultSync(DescribeBackupListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（DescribeBinlogConfig）用于查询binlog配置
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
@@ -1184,6 +1331,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrlSync(DescribeBinlogDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeBinlogDownloadUrlResponse>(req, "DescribeBinlogDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询保险箱内binlog备份
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBinlogListByVaultResponse"/></returns>
+        public Task<DescribeBinlogListByVaultResponse> DescribeBinlogListByVault(DescribeBinlogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogListByVaultResponse>(req, "DescribeBinlogListByVault");
+        }
+
+        /// <summary>
+        /// 查询保险箱内binlog备份
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBinlogListByVaultResponse"/></returns>
+        public DescribeBinlogListByVaultResponse DescribeBinlogListByVaultSync(DescribeBinlogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogListByVaultResponse>(req, "DescribeBinlogListByVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2175,6 +2343,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询RedoLog备份
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogListByVaultResponse"/></returns>
+        public Task<DescribeRedoLogListByVaultResponse> DescribeRedoLogListByVault(DescribeRedoLogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogListByVaultResponse>(req, "DescribeRedoLogListByVault");
+        }
+
+        /// <summary>
+        /// 查询RedoLog备份
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogListByVaultResponse"/></returns>
+        public DescribeRedoLogListByVaultResponse DescribeRedoLogListByVaultSync(DescribeRedoLogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogListByVaultResponse>(req, "DescribeRedoLogListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeRedoLogs）用于查询redo日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedoLogsRequest"/></param>
@@ -2444,6 +2633,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
         {
             return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询备份保险箱关联的集群信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultBackupClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeVaultBackupClusterInfoResponse"/></returns>
+        public Task<DescribeVaultBackupClusterInfoResponse> DescribeVaultBackupClusterInfo(DescribeVaultBackupClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultBackupClusterInfoResponse>(req, "DescribeVaultBackupClusterInfo");
+        }
+
+        /// <summary>
+        /// 查询备份保险箱关联的集群信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultBackupClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeVaultBackupClusterInfoResponse"/></returns>
+        public DescribeVaultBackupClusterInfoResponse DescribeVaultBackupClusterInfoSync(DescribeVaultBackupClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultBackupClusterInfoResponse>(req, "DescribeVaultBackupClusterInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询备份保险箱列表，支持分页、筛选和排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultsRequest"/></param>
+        /// <returns><see cref="DescribeVaultsResponse"/></returns>
+        public Task<DescribeVaultsResponse> DescribeVaults(DescribeVaultsRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultsResponse>(req, "DescribeVaults");
+        }
+
+        /// <summary>
+        /// 查询备份保险箱列表，支持分页、筛选和排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultsRequest"/></param>
+        /// <returns><see cref="DescribeVaultsResponse"/></returns>
+        public DescribeVaultsResponse DescribeVaultsSync(DescribeVaultsRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultsResponse>(req, "DescribeVaults")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3011,6 +3242,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyBinlogSaveDaysResponse ModifyBinlogSaveDaysSync(ModifyBinlogSaveDaysRequest req)
         {
             return InternalRequestAsync<ModifyBinlogSaveDaysResponse>(req, "ModifyBinlogSaveDays")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群Binlog和RedoLog自动拷贝到保险箱的配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultRequest"/></param>
+        /// <returns><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultResponse"/></returns>
+        public Task<ModifyClusterBinlogRedoLogAutoCopyVaultResponse> ModifyClusterBinlogRedoLogAutoCopyVault(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterBinlogRedoLogAutoCopyVaultResponse>(req, "ModifyClusterBinlogRedoLogAutoCopyVault");
+        }
+
+        /// <summary>
+        /// 修改集群Binlog和RedoLog自动拷贝到保险箱的配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultRequest"/></param>
+        /// <returns><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultResponse"/></returns>
+        public ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVaultSync(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterBinlogRedoLogAutoCopyVaultResponse>(req, "ModifyClusterBinlogRedoLogAutoCopyVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3620,6 +3872,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfigSync(ModifySnapBackupCrossRegionConfigRequest req)
         {
             return InternalRequestAsync<ModifySnapBackupCrossRegionConfigResponse>(req, "ModifySnapBackupCrossRegionConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改备份保险箱配置，包括名称、描述、保留时长、加密密钥、锁定时间等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVaultRequest"/></param>
+        /// <returns><see cref="ModifyVaultResponse"/></returns>
+        public Task<ModifyVaultResponse> ModifyVault(ModifyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyVaultResponse>(req, "ModifyVault");
+        }
+
+        /// <summary>
+        /// 修改备份保险箱配置，包括名称、描述、保留时长、加密密钥、锁定时间等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVaultRequest"/></param>
+        /// <returns><see cref="ModifyVaultResponse"/></returns>
+        public ModifyVaultResponse ModifyVaultSync(ModifyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyVaultResponse>(req, "ModifyVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4376,6 +4649,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public SwitchProxyVpcResponse SwitchProxyVpcSync(SwitchProxyVpcRequest req)
         {
             return InternalRequestAsync<SwitchProxyVpcResponse>(req, "SwitchProxyVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（TransferClusterZone）用于发起跨可用区迁移。
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
+        /// <returns><see cref="TransferClusterZoneResponse"/></returns>
+        public Task<TransferClusterZoneResponse> TransferClusterZone(TransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone");
+        }
+
+        /// <summary>
+        /// 本接口（TransferClusterZone）用于发起跨可用区迁移。
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
+        /// <returns><see cref="TransferClusterZoneResponse"/></returns>
+        public TransferClusterZoneResponse TransferClusterZoneSync(TransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

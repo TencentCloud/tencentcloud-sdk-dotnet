@@ -25,28 +25,28 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 矩形框左上角水平座标
+        /// <p>矩形框左上角水平座标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("X")]
         public float? X{ get; set; }
 
         /// <summary>
-        /// 矩形框左上角竖直座标
+        /// <p>矩形框左上角竖直座标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
         /// <summary>
-        /// 矩形框宽度
+        /// <p>矩形框宽度</p><p>单位：像素（px）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public float? Width{ get; set; }
 
         /// <summary>
-        /// 矩形框长度
+        /// <p>矩形框长度</p><p>单位：像素（px）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]

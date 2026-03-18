@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1388</VersionPrefix>
+    <VersionPrefix>3.0.1389</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20180608\TcbClient.cs" />
+    <Compile Include="V20180608\Models\AddProviderRequest.cs" />
+    <Compile Include="V20180608\Models\AddProviderResponse.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
     <Compile Include="V20180608\Models\BindCloudBaseAccessDomainRequest.cs" />
@@ -70,6 +72,8 @@
     <Compile Include="V20180608\Models\CreateCloudBaseGWAPIRequest.cs" />
     <Compile Include="V20180608\Models\CreateCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvRequest.cs" />
+    <Compile Include="V20180608\Models\CreateEnvResourceRequest.cs" />
+    <Compile Include="V20180608\Models\CreateEnvResourceResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvResponse.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
@@ -92,6 +96,8 @@
     <Compile Include="V20180608\Models\DeleteCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainRequest.cs" />
     <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteProviderRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteProviderResponse.cs" />
     <Compile Include="V20180608\Models\DeleteTableRequest.cs" />
     <Compile Include="V20180608\Models\DeleteTableResponse.cs" />
     <Compile Include="V20180608\Models\DeleteUsersRequest.cs" />
@@ -103,6 +109,8 @@
     <Compile Include="V20180608\Models\DescribeBaasPackageListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeBillingInfoRequest.cs" />
     <Compile Include="V20180608\Models\DescribeBillingInfoResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeClientRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeClientResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIRequest.cs" />
@@ -126,6 +134,8 @@
     <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskRequest.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeLoginConfigRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeLoginConfigResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLClusterDetailRequest.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLClusterDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLTaskStatusRequest.cs" />
@@ -143,6 +153,8 @@
     <Compile Include="V20180608\Models\DescribeUserListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeUserListResp.cs" />
     <Compile Include="V20180608\Models\DescribeUserListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeVmSpecRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeVmSpecResponse.cs" />
     <Compile Include="V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="V20180608\Models\DestroyEnvResponse.cs" />
     <Compile Include="V20180608\Models\DestroyMySQLRequest.cs" />
@@ -153,9 +165,13 @@
     <Compile Include="V20180608\Models\DropIndex.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigRequest.cs" />
     <Compile Include="V20180608\Models\EditAuthConfigResponse.cs" />
+    <Compile Include="V20180608\Models\EmailProviderConfig.cs" />
+    <Compile Include="V20180608\Models\EmailSmtpConfig.cs" />
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\GetProvidersRequest.cs" />
+    <Compile Include="V20180608\Models\GetProvidersResponse.cs" />
     <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\IndexAccesses.cs" />
     <Compile Include="V20180608\Models\IndexInfo.cs" />
@@ -163,12 +179,17 @@
     <Compile Include="V20180608\Models\KVPair.cs" />
     <Compile Include="V20180608\Models\ListTablesRequest.cs" />
     <Compile Include="V20180608\Models\ListTablesResponse.cs" />
+    <Compile Include="V20180608\Models\LocalizedMessage.cs" />
     <Compile Include="V20180608\Models\LogObject.cs" />
     <Compile Include="V20180608\Models\LogResObject.cs" />
     <Compile Include="V20180608\Models\LogServiceInfo.cs" />
+    <Compile Include="V20180608\Models\MFALoginConfig.cs" />
+    <Compile Include="V20180608\Models\MessageLocalized.cs" />
     <Compile Include="V20180608\Models\MgoCommandParam.cs" />
     <Compile Include="V20180608\Models\MgoIndexKeys.cs" />
     <Compile Include="V20180608\Models\MgoKeySchema.cs" />
+    <Compile Include="V20180608\Models\ModifyClientRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyClientResponse.cs" />
     <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIRequest.cs" />
     <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\ModifyClsTopicRequest.cs" />
@@ -179,6 +200,10 @@
     <Compile Include="V20180608\Models\ModifyEnvPlanResponse.cs" />
     <Compile Include="V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyLoginConfigRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyLoginConfigResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyProviderRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyProviderResponse.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleRequest.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleResponse.cs" />
     <Compile Include="V20180608\Models\ModifyUserRequest.cs" />
@@ -190,7 +215,12 @@
     <Compile Include="V20180608\Models\MySQLTaskStatus.cs" />
     <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\Pager.cs" />
+    <Compile Include="V20180608\Models\PasswordUpdateLoginConfig.cs" />
     <Compile Include="V20180608\Models\PermissionInfo.cs" />
+    <Compile Include="V20180608\Models\Provider.cs" />
+    <Compile Include="V20180608\Models\ProviderConfig.cs" />
+    <Compile Include="V20180608\Models\ProviderRequestParametersMap.cs" />
+    <Compile Include="V20180608\Models\ProviderResponseParametersMap.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="V20180608\Models\RenewEnvRequest.cs" />
@@ -210,5 +240,9 @@
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />
+    <Compile Include="V20180608\Models\VMPrice.cs" />
+    <Compile Include="V20180608\Models\VMSpec.cs" />
+    <Compile Include="V20180608\Models\VMSpecLightHouse.cs" />
+    <Compile Include="V20180608\Models\VerificationConfig.cs" />
   </ItemGroup>
 </Project>

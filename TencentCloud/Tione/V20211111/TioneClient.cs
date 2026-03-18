@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1389";
 
         /// <summary>
         /// Client constructor.
@@ -1068,6 +1068,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribePlatformImagesResponse DescribePlatformImagesSync(DescribePlatformImagesRequest req)
         {
             return InternalRequestAsync<DescribePlatformImagesResponse>(req, "DescribePlatformImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 公共算法版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicAlgoVersionListRequest"/></param>
+        /// <returns><see cref="DescribePublicAlgoVersionListResponse"/></returns>
+        public Task<DescribePublicAlgoVersionListResponse> DescribePublicAlgoVersionList(DescribePublicAlgoVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribePublicAlgoVersionListResponse>(req, "DescribePublicAlgoVersionList");
+        }
+
+        /// <summary>
+        /// 公共算法版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicAlgoVersionListRequest"/></param>
+        /// <returns><see cref="DescribePublicAlgoVersionListResponse"/></returns>
+        public DescribePublicAlgoVersionListResponse DescribePublicAlgoVersionListSync(DescribePublicAlgoVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribePublicAlgoVersionListResponse>(req, "DescribePublicAlgoVersionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

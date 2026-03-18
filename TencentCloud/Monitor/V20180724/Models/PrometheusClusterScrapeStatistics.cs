@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 被采集的点数
+        /// 被采集的点个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScrapedRate")]
@@ -45,7 +45,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusJobScrapeStatistics[] Jobs{ get; set; }
 
         /// <summary>
-        /// 过滤前的指标采集速率
+        /// 每秒过滤前的指标采集速率
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SamplesRate")]

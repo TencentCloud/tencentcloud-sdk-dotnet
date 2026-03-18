@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 被采集的点数
+        /// 每秒被采集的点数
         /// </summary>
         [JsonProperty("ScrapedRate")]
         public float? ScrapedRate{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusClusterScrapeStatistics[] Global{ get; set; }
 
         /// <summary>
-        /// 过滤前的指标采集速率
+        /// 过滤前的每秒指标采集速率
         /// </summary>
         [JsonProperty("SamplesRate")]
         public float? SamplesRate{ get; set; }

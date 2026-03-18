@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 待删除客服邮箱列表，一次最大支持200个。
+        /// <p>待删除客服邮箱列表，一次最大支持200个。</p>
         /// </summary>
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }

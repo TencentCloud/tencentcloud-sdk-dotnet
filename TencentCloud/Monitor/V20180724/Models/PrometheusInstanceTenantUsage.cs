@@ -46,14 +46,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         public float? Total{ get; set; }
 
         /// <summary>
-        /// 基础指标用量
+        /// 基础指标用量个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Basic")]
         public float? Basic{ get; set; }
 
         /// <summary>
-        /// 付费指标用量
+        /// 付费指标用量个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fee")]

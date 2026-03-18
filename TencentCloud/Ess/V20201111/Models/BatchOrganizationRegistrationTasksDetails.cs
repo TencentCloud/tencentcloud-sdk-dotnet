@@ -67,6 +67,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
+        /// <summary>
+        /// 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
+        /// </summary>
+        [JsonProperty("AuthorizationInfoId")]
+        public string AuthorizationInfoId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "AuthorizationInfoId", this.AuthorizationInfoId);
         }
     }
 }

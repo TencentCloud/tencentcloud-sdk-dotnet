@@ -25,10 +25,16 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 无法删除的状态为在线的客服列表
+        /// <p>无法删除的状态为在线的客服列表</p>
         /// </summary>
         [JsonProperty("OnlineStaffList")]
         public string[] OnlineStaffList{ get; set; }
+
+        /// <summary>
+        /// <p>坐席删除详情</p>
+        /// </summary>
+        [JsonProperty("DeleteStatusInfo")]
+        public string DeleteStatusInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "OnlineStaffList.", this.OnlineStaffList);
+            this.SetParamSimple(map, prefix + "DeleteStatusInfo", this.DeleteStatusInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

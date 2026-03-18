@@ -73,6 +73,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EventBroadcastType")]
         public string EventBroadcastType{ get; set; }
 
+        /// <summary>
+        /// 事件生产者任务Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProducerTaskId")]
+        public string ProducerTaskId{ get; set; }
+
+        /// <summary>
+        /// 事件维度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Dimension")]
+        public string Dimension{ get; set; }
+
+        /// <summary>
+        /// 事件状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 事件触发时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventTriggerTs")]
+        public string EventTriggerTs{ get; set; }
+
+        /// <summary>
+        /// 事件ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CaseId")]
+        public string CaseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +121,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "PropertiesList.", this.PropertiesList);
             this.SetParamSimple(map, prefix + "EventBroadcastType", this.EventBroadcastType);
+            this.SetParamSimple(map, prefix + "ProducerTaskId", this.ProducerTaskId);
+            this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "EventTriggerTs", this.EventTriggerTs);
+            this.SetParamSimple(map, prefix + "CaseId", this.CaseId);
         }
     }
 }

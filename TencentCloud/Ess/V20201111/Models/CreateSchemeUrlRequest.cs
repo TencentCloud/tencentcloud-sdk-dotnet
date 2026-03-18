@@ -165,6 +165,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("PickUpAfterJoined")]
         public bool? PickUpAfterJoined{ get; set; }
 
+        /// <summary>
+        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+        /// </summary>
+        [JsonProperty("CanSkipReadFlow")]
+        public bool? CanSkipReadFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +194,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
             this.SetParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
             this.SetParamSimple(map, prefix + "PickUpAfterJoined", this.PickUpAfterJoined);
+            this.SetParamSimple(map, prefix + "CanSkipReadFlow", this.CanSkipReadFlow);
         }
     }
 }

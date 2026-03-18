@@ -25,67 +25,67 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
+        /// <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
         /// </summary>
         [JsonProperty("ToolName")]
         public string ToolName{ get; set; }
 
         /// <summary>
-        /// 沙箱工具类型，目前支持：browser、code-interpreter、custom
+        /// <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
         /// </summary>
         [JsonProperty("ToolType")]
         public string ToolType{ get; set; }
 
         /// <summary>
-        /// 网络配置
+        /// <p>网络配置</p>
         /// </summary>
         [JsonProperty("NetworkConfiguration")]
         public NetworkConfiguration NetworkConfiguration{ get; set; }
 
         /// <summary>
-        /// 沙箱工具描述，最大长度 200 字符
+        /// <p>沙箱工具描述，最大长度 200 字符</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+        /// <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
         /// </summary>
         [JsonProperty("DefaultTimeout")]
         public string DefaultTimeout{ get; set; }
 
         /// <summary>
-        /// 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
+        /// <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 幂等性 Token，长度不超过 64 字符
+        /// <p>幂等性 Token，长度不超过 64 字符</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 角色ARN
+        /// <p>角色ARN</p>
         /// </summary>
         [JsonProperty("RoleArn")]
         public string RoleArn{ get; set; }
 
         /// <summary>
-        /// 沙箱工具存储配置
+        /// <p>沙箱工具存储配置</p>
         /// </summary>
         [JsonProperty("StorageMounts")]
         public StorageMount[] StorageMounts{ get; set; }
 
         /// <summary>
-        /// 沙箱工具自定义配置
+        /// <p>沙箱工具自定义配置</p>
         /// </summary>
         [JsonProperty("CustomConfiguration")]
         public CustomConfiguration CustomConfiguration{ get; set; }
 
         /// <summary>
-        /// 沙箱工具日志推送相关配置
+        /// <p>沙箱工具日志推送相关配置</p>
         /// </summary>
         [JsonProperty("LogConfiguration")]
         public LogConfiguration LogConfiguration{ get; set; }

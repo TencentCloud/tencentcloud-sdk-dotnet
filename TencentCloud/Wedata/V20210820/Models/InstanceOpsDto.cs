@@ -524,6 +524,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Ext")]
         public StrToStrMap Ext{ get; set; }
 
+        /// <summary>
+        /// 事件列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedEventList")]
+        public EventCaseAuditLogOptDto[] RelatedEventList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -602,6 +609,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DlcTaskId", this.DlcTaskId);
             this.SetParamSimple(map, prefix + "DlcSparkJobId", this.DlcSparkJobId);
             this.SetParamObj(map, prefix + "Ext.", this.Ext);
+            this.SetParamArrayObj(map, prefix + "RelatedEventList.", this.RelatedEventList);
         }
     }
 }

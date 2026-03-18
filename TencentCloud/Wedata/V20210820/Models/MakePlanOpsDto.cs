@@ -102,6 +102,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public StrToStrMap[] MapParamList{ get; set; }
 
         /// <summary>
+        /// 补录扩展属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MakeExtList")]
+        public StrToStrMap[] MakeExtList{ get; set; }
+
+        /// <summary>
         /// 创建人ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -301,6 +308,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetTaskCycle", this.TargetTaskCycle);
             this.SetParamSimple(map, prefix + "TargetTaskAction", this.TargetTaskAction);
             this.SetParamArrayObj(map, prefix + "MapParamList.", this.MapParamList);
+            this.SetParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

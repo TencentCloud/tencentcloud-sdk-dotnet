@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1389";
 
         /// <summary>
         /// Client constructor.
@@ -1314,6 +1314,27 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 关闭客户端TCP访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableClientTcpAccessRequest"/></param>
+        /// <returns><see cref="DisableClientTcpAccessResponse"/></returns>
+        public Task<DisableClientTcpAccessResponse> DisableClientTcpAccess(DisableClientTcpAccessRequest req)
+        {
+            return InternalRequestAsync<DisableClientTcpAccessResponse>(req, "DisableClientTcpAccess");
+        }
+
+        /// <summary>
+        /// 关闭客户端TCP访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableClientTcpAccessRequest"/></param>
+        /// <returns><see cref="DisableClientTcpAccessResponse"/></returns>
+        public DisableClientTcpAccessResponse DisableClientTcpAccessSync(DisableClientTcpAccessRequest req)
+        {
+            return InternalRequestAsync<DisableClientTcpAccessResponse>(req, "DisableClientTcpAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 关闭公网访问堡垒机
         /// </summary>
         /// <param name="req"><see cref="DisableExternalAccessRequest"/></param>
@@ -1356,6 +1377,48 @@ namespace TencentCloud.Bh.V20230418
         }
 
         /// <summary>
+        /// 关闭web访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableWebAccessRequest"/></param>
+        /// <returns><see cref="DisableWebAccessResponse"/></returns>
+        public Task<DisableWebAccessResponse> DisableWebAccess(DisableWebAccessRequest req)
+        {
+            return InternalRequestAsync<DisableWebAccessResponse>(req, "DisableWebAccess");
+        }
+
+        /// <summary>
+        /// 关闭web访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="DisableWebAccessRequest"/></param>
+        /// <returns><see cref="DisableWebAccessResponse"/></returns>
+        public DisableWebAccessResponse DisableWebAccessSync(DisableWebAccessRequest req)
+        {
+            return InternalRequestAsync<DisableWebAccessResponse>(req, "DisableWebAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启客户端TCP访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableClientTcpAccessRequest"/></param>
+        /// <returns><see cref="EnableClientTcpAccessResponse"/></returns>
+        public Task<EnableClientTcpAccessResponse> EnableClientTcpAccess(EnableClientTcpAccessRequest req)
+        {
+            return InternalRequestAsync<EnableClientTcpAccessResponse>(req, "EnableClientTcpAccess");
+        }
+
+        /// <summary>
+        /// 开启客户端TCP访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableClientTcpAccessRequest"/></param>
+        /// <returns><see cref="EnableClientTcpAccessResponse"/></returns>
+        public EnableClientTcpAccessResponse EnableClientTcpAccessSync(EnableClientTcpAccessRequest req)
+        {
+            return InternalRequestAsync<EnableClientTcpAccessResponse>(req, "EnableClientTcpAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开启公网访问堡垒机
         /// </summary>
         /// <param name="req"><see cref="EnableExternalAccessRequest"/></param>
@@ -1394,6 +1457,27 @@ namespace TencentCloud.Bh.V20230418
         public EnableIntranetAccessResponse EnableIntranetAccessSync(EnableIntranetAccessRequest req)
         {
             return InternalRequestAsync<EnableIntranetAccessResponse>(req, "EnableIntranetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启web访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableWebAccessRequest"/></param>
+        /// <returns><see cref="EnableWebAccessResponse"/></returns>
+        public Task<EnableWebAccessResponse> EnableWebAccess(EnableWebAccessRequest req)
+        {
+            return InternalRequestAsync<EnableWebAccessResponse>(req, "EnableWebAccess");
+        }
+
+        /// <summary>
+        /// 开启web访问堡垒机
+        /// </summary>
+        /// <param name="req"><see cref="EnableWebAccessRequest"/></param>
+        /// <returns><see cref="EnableWebAccessResponse"/></returns>
+        public EnableWebAccessResponse EnableWebAccessSync(EnableWebAccessRequest req)
+        {
+            return InternalRequestAsync<EnableWebAccessResponse>(req, "EnableWebAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

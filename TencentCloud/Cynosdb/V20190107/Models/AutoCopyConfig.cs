@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cynosdb.V20190107.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AutoCopyConfig : AbstractModel
+    {
+        
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 保险箱ID
+        /// </summary>
+        [JsonProperty("VaultId")]
+        public string VaultId{ get; set; }
+
+        /// <summary>
+        /// 保险箱地域
+        /// </summary>
+        [JsonProperty("VaultRegion")]
+        public string VaultRegion{ get; set; }
+
+        /// <summary>
+        /// 投递类型：binlog, redolog, snapshot, logic
+        /// </summary>
+        [JsonProperty("CopyType")]
+        public string CopyType{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
+            this.SetParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
+            this.SetParamSimple(map, prefix + "CopyType", this.CopyType);
+        }
+    }
+}
+

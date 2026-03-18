@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1387</VersionPrefix>
+    <VersionPrefix>3.0.1389</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,7 @@
     <Compile Include="V20191022\Models\UpdateNotebookInstanceResponse.cs" />
     <Compile Include="V20191022\Models\VpcConfig.cs" />
     <Compile Include="V20211111\TioneClient.cs" />
+    <Compile Include="V20211111\Models\AggregatePublicAlgoVersion.cs" />
     <Compile Include="V20211111\Models\Attribute.cs" />
     <Compile Include="V20211111\Models\AuthToken.cs" />
     <Compile Include="V20211111\Models\AuthTokenBase.cs" />
@@ -232,6 +233,8 @@
     <Compile Include="V20211111\Models\DescribeNotebooksResponse.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesRequest.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribePublicAlgoVersionListRequest.cs" />
+    <Compile Include="V20211111\Models\DescribePublicAlgoVersionListResponse.cs" />
     <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosRequest.cs" />
     <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingModelVersionRequest.cs" />
@@ -244,6 +247,8 @@
     <Compile Include="V20211111\Models\DescribeTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
+    <Compile Include="V20211111\Models\DeviceImageInfo.cs" />
+    <Compile Include="V20211111\Models\DeviceMaterialInfo.cs" />
     <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\Event.cs" />
@@ -275,6 +280,7 @@
     <Compile Include="V20211111\Models\LocalDisk.cs" />
     <Compile Include="V20211111\Models\LogConfig.cs" />
     <Compile Include="V20211111\Models\LogIdentity.cs" />
+    <Compile Include="V20211111\Models\MaterialInfo.cs" />
     <Compile Include="V20211111\Models\Message.cs" />
     <Compile Include="V20211111\Models\MetricData.cs" />
     <Compile Include="V20211111\Models\ModelAccelerateTask.cs" />
@@ -309,6 +315,7 @@
     <Compile Include="V20211111\Models\PrivateLinkInfo.cs" />
     <Compile Include="V20211111\Models\Probe.cs" />
     <Compile Include="V20211111\Models\ProbeAction.cs" />
+    <Compile Include="V20211111\Models\PublicAlgoVersion.cs" />
     <Compile Include="V20211111\Models\PublicDataSourceFS.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsResponse.cs" />
@@ -319,6 +326,7 @@
     <Compile Include="V20211111\Models\ResourceGroupInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInstanceRunningJobInfo.cs" />
+    <Compile Include="V20211111\Models\ResourceSpec.cs" />
     <Compile Include="V20211111\Models\RollingUpdate.cs" />
     <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
@@ -354,6 +362,7 @@
     <Compile Include="V20211111\Models\TJCallInfo.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
     <Compile Include="V20211111\Models\TagFilter.cs" />
+    <Compile Include="V20211111\Models\TrainParam.cs" />
     <Compile Include="V20211111\Models\TrainingModelVersionDTO.cs" />
     <Compile Include="V20211111\Models\TrainingTaskDetail.cs" />
     <Compile Include="V20211111\Models\TrainingTaskSetItem.cs" />

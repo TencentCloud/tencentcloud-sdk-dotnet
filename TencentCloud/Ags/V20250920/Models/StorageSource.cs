@@ -25,19 +25,19 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 对象存储桶配置
+        /// <p>对象存储桶配置</p>
         /// </summary>
         [JsonProperty("Cos")]
         public CosStorageSource Cos{ get; set; }
 
         /// <summary>
-        /// 镜像卷配置
+        /// <p>镜像卷配置</p>
         /// </summary>
         [JsonProperty("Image")]
         public ImageStorageSource Image{ get; set; }
 
         /// <summary>
-        /// 文件存储配置
+        /// <p>文件存储配置</p>
         /// </summary>
         [JsonProperty("Cfs")]
         public CfsStorageSource Cfs{ get; set; }

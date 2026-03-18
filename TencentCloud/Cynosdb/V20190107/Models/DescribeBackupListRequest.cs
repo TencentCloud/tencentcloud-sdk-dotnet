@@ -115,6 +115,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsCrossRegionsBackup")]
         public string IsCrossRegionsBackup{ get; set; }
 
+        /// <summary>
+        /// 需要查询的状态
+        /// </summary>
+        [JsonProperty("BackupStatus")]
+        public string[] BackupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
             this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
             this.SetParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
+            this.SetParamArraySimple(map, prefix + "BackupStatus.", this.BackupStatus);
         }
     }
 }

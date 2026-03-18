@@ -59,6 +59,13 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("RelateOption")]
         public string RelateOption{ get; set; }
 
+        /// <summary>
+        /// 值类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValueType")]
+        public string ValueType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamArraySimple(map, prefix + "Value.", this.Value);
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
             this.SetParamSimple(map, prefix + "RelateOption", this.RelateOption);
+            this.SetParamSimple(map, prefix + "ValueType", this.ValueType);
         }
     }
 }

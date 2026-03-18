@@ -61,6 +61,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("NeedSubmitScheduleForTemplate")]
         public bool? NeedSubmitScheduleForTemplate{ get; set; }
 
+        /// <summary>
+        /// 指定审批人列表
+        /// </summary>
+        [JsonProperty("AssignApprovalList")]
+        public string[] AssignApprovalList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "OriginalParams.", this.OriginalParams);
             this.SetParamSimple(map, prefix + "VersionRemark", this.VersionRemark);
             this.SetParamSimple(map, prefix + "NeedSubmitScheduleForTemplate", this.NeedSubmitScheduleForTemplate);
+            this.SetParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
         }
     }
 }

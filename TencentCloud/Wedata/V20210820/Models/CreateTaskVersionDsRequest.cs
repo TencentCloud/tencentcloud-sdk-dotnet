@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EnableMakeUp")]
         public bool? EnableMakeUp{ get; set; }
 
+        /// <summary>
+        /// 指定审批人列表
+        /// </summary>
+        [JsonProperty("AssignApprovalList")]
+        public string[] AssignApprovalList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
             this.SetParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
             this.SetParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
+            this.SetParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
         }
     }
 }

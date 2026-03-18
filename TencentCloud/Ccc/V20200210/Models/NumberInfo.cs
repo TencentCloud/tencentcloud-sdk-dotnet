@@ -25,22 +25,28 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 号码
+        /// <p>号码</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 绑定的外呼技能组
+        /// <p>绑定的外呼技能组</p>
         /// </summary>
         [JsonProperty("CallOutSkillGroupIds")]
         public ulong?[] CallOutSkillGroupIds{ get; set; }
 
         /// <summary>
-        /// 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+        /// <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
+
+        /// <summary>
+        /// <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+        /// </summary>
+        [JsonProperty("CostType")]
+        public long? CostType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamArraySimple(map, prefix + "CallOutSkillGroupIds.", this.CallOutSkillGroupIds);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "CostType", this.CostType);
         }
     }
 }

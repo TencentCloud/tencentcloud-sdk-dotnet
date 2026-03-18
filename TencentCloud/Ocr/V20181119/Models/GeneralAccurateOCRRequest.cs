@@ -25,52 +25,64 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+        /// <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
         /// </summary>
         [JsonProperty("IsWords")]
         public bool? IsWords{ get; set; }
 
         /// <summary>
-        /// 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+        /// <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
         /// </summary>
         [JsonProperty("EnableDetectSplit")]
         public bool? EnableDetectSplit{ get; set; }
 
         /// <summary>
-        /// 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+        /// <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
         /// </summary>
         [JsonProperty("IsPdf")]
         public bool? IsPdf{ get; set; }
 
         /// <summary>
-        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+        /// <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
         /// </summary>
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
         /// <summary>
-        /// 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+        /// <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
         /// </summary>
         [JsonProperty("EnableDetectText")]
         public bool? EnableDetectText{ get; set; }
 
         /// <summary>
-        /// 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+        /// <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
         /// </summary>
         [JsonProperty("ConfigID")]
         public string ConfigID{ get; set; }
+
+        /// <summary>
+        /// <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+        /// </summary>
+        [JsonProperty("WordsType")]
+        public string WordsType{ get; set; }
+
+        /// <summary>
+        /// <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+        /// </summary>
+        [JsonProperty("LanguageInfo")]
+        public bool? LanguageInfo{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
             this.SetParamSimple(map, prefix + "ConfigID", this.ConfigID);
+            this.SetParamSimple(map, prefix + "WordsType", this.WordsType);
+            this.SetParamSimple(map, prefix + "LanguageInfo", this.LanguageInfo);
         }
     }
 }

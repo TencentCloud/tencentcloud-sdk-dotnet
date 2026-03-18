@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 提取的类型是文本
+        /// <p>提取的类型是文本</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 提取的内型是选项
+        /// <p>提取的类型是选项</p>
         /// </summary>
         [JsonProperty("Chosen")]
         public string[] Chosen{ get; set; }
 
         /// <summary>
-        /// 提取类型是布尔值
+        /// <p>提取类型是布尔值</p>
         /// </summary>
         [JsonProperty("Boolean")]
         public bool? Boolean{ get; set; }
 
         /// <summary>
-        /// 提取类型是数字
+        /// <p>提取类型是数字</p>
         /// </summary>
         [JsonProperty("Number")]
         public float? Number{ get; set; }

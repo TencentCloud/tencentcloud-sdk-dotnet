@@ -25,13 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 课堂Id。
+        /// <p>课堂Id。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// 请求RTMP推流链接，0：否，1：是，默认为0。
+        /// <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
         /// </summary>
         [JsonProperty("RTMPStreamingURL")]
         public ulong? RTMPStreamingURL{ get; set; }

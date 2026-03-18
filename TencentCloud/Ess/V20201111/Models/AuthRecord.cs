@@ -58,6 +58,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AuditStatus")]
         public long? AuditStatus{ get; set; }
 
+        /// <summary>
+        /// 审核失败原因，
+        /// 当 AuditStatus 返回2时，则会返回具体的原因。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +75,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OperatorMobile", this.OperatorMobile);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

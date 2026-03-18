@@ -85,7 +85,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
-        /// <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
+        /// <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }
@@ -224,6 +224,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordMerge")]
         public ulong? RecordMerge{ get; set; }
 
+        /// <summary>
+        /// <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+        /// </summary>
+        [JsonProperty("EnableLiveRelay")]
+        public ulong? EnableLiveRelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +269,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
             this.SetParamArraySimple(map, prefix + "Guests.", this.Guests);
             this.SetParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
+            this.SetParamSimple(map, prefix + "EnableLiveRelay", this.EnableLiveRelay);
         }
     }
 }

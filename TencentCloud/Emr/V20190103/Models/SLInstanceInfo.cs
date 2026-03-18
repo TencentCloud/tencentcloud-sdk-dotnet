@@ -85,10 +85,22 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? VpcId{ get; set; }
 
         /// <summary>
+        /// 主可用区私有网络名
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
         /// 主可用区子网ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public ulong? SubnetId{ get; set; }
+
+        /// <summary>
+        /// 主可用区子网名
+        /// </summary>
+        [JsonProperty("SubnetName")]
+        public string SubnetName{ get; set; }
 
         /// <summary>
         /// 状态码
@@ -146,6 +158,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DeployRole")]
         public string DeployRole{ get; set; }
 
+        /// <summary>
+        /// webui地址
+        /// </summary>
+        [JsonProperty("WebUIUrl")]
+        public string WebUIUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,7 +180,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
@@ -172,6 +192,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "DeployRole", this.DeployRole);
+            this.SetParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
         }
     }
 }
