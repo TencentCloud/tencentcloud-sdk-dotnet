@@ -25,40 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 智能擦除模板名称长度限制：64 个字符。
+        /// <p>智能擦除模板名称长度限制：64 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 擦除类型
-        /// - subtitle 去字幕
-        /// - watermark 去水印
-        /// - privacy 隐私保护
+        /// <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// 智能擦除模板描述信息长度限制：256 个字符。
+        /// <p>智能擦除模板描述信息长度限制：256 个字符。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
+        /// <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// 水印擦除配置，EraseType取watermark时必填且仅此时生效。
+        /// <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+        /// <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }

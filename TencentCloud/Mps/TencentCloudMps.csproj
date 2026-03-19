@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1389</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -324,6 +324,8 @@
     <Compile Include="V20190612\Models\CreateStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\CreateSubtitleEmbedTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateSubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateVideoDatabaseEntryTaskRequest.cs" />
@@ -378,6 +380,8 @@
     <Compile Include="V20190612\Models\DeleteStreamLinkOutputResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteSubtitleEmbedTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteSubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteWatermarkTemplateRequest.cs" />
@@ -485,6 +489,8 @@
     <Compile Include="V20190612\Models\DescribeStreamLinkRegionsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeSubtitleEmbedTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeSubtitleEmbedTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTasksRequest.cs" />
@@ -702,6 +708,8 @@
     <Compile Include="V20190612\Models\ModifyStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\ModifySubtitleEmbedTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifySubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyWatermarkTemplateRequest.cs" />
@@ -838,8 +846,14 @@
     <Compile Include="V20190612\Models\StreamLinkRegionInfo.cs" />
     <Compile Include="V20190612\Models\StreamSelector.cs" />
     <Compile Include="V20190612\Models\StreamUrlDetail.cs" />
+    <Compile Include="V20190612\Models\SubtitleBoardConfig.cs" />
+    <Compile Include="V20190612\Models\SubtitleEmbedConfig.cs" />
+    <Compile Include="V20190612\Models\SubtitleEmbedTemplateItem.cs" />
+    <Compile Include="V20190612\Models\SubtitleLayoutConfig.cs" />
+    <Compile Include="V20190612\Models\SubtitleOutlineConfig.cs" />
     <Compile Include="V20190612\Models\SubtitlePosition.cs" />
     <Compile Include="V20190612\Models\SubtitleResult.cs" />
+    <Compile Include="V20190612\Models\SubtitleShadowConfig.cs" />
     <Compile Include="V20190612\Models\SubtitleTemplate.cs" />
     <Compile Include="V20190612\Models\SubtitleTransResultItem.cs" />
     <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1389</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -132,6 +132,8 @@
     <Compile Include="V20220817\Models\DescribeGroupMemberListResponse.cs" />
     <Compile Include="V20220817\Models\DescribeGroupRequest.cs" />
     <Compile Include="V20220817\Models\DescribeGroupResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeLiveRelayConfigRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeLiveRelayConfigResponse.cs" />
     <Compile Include="V20220817\Models\DescribeMarqueeRequest.cs" />
     <Compile Include="V20220817\Models\DescribeMarqueeResponse.cs" />
     <Compile Include="V20220817\Models\DescribePlayRecordsRequest.cs" />
@@ -203,6 +205,8 @@
     <Compile Include="V20220817\Models\ModifyAppResponse.cs" />
     <Compile Include="V20220817\Models\ModifyGroupRequest.cs" />
     <Compile Include="V20220817\Models\ModifyGroupResponse.cs" />
+    <Compile Include="V20220817\Models\ModifyLiveRelayConfigRequest.cs" />
+    <Compile Include="V20220817\Models\ModifyLiveRelayConfigResponse.cs" />
     <Compile Include="V20220817\Models\ModifyRoomRequest.cs" />
     <Compile Include="V20220817\Models\ModifyRoomResponse.cs" />
     <Compile Include="V20220817\Models\ModifyUserProfileRequest.cs" />

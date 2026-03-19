@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -806,6 +806,27 @@ namespace TencentCloud.Ess.V20201111
         public CreateConvertTaskApiResponse CreateConvertTaskApiSync(CreateConvertTaskApiRequest req)
         {
             return InternalRequestAsync<CreateConvertTaskApiResponse>(req, "CreateConvertTaskApi")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据加签请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateDigitalDataSignRequest"/></param>
+        /// <returns><see cref="CreateDigitalDataSignResponse"/></returns>
+        public Task<CreateDigitalDataSignResponse> CreateDigitalDataSign(CreateDigitalDataSignRequest req)
+        {
+            return InternalRequestAsync<CreateDigitalDataSignResponse>(req, "CreateDigitalDataSign");
+        }
+
+        /// <summary>
+        /// 创建数据加签请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateDigitalDataSignRequest"/></param>
+        /// <returns><see cref="CreateDigitalDataSignResponse"/></returns>
+        public CreateDigitalDataSignResponse CreateDigitalDataSignSync(CreateDigitalDataSignRequest req)
+        {
+            return InternalRequestAsync<CreateDigitalDataSignResponse>(req, "CreateDigitalDataSign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5192,6 +5213,27 @@ namespace TencentCloud.Ess.V20201111
         public VerifyDigitFileResponse VerifyDigitFileSync(VerifyDigitFileRequest req)
         {
             return InternalRequestAsync<VerifyDigitFileResponse>(req, "VerifyDigitFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 数据加签验签接口
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDigitalDataSignRequest"/></param>
+        /// <returns><see cref="VerifyDigitalDataSignResponse"/></returns>
+        public Task<VerifyDigitalDataSignResponse> VerifyDigitalDataSign(VerifyDigitalDataSignRequest req)
+        {
+            return InternalRequestAsync<VerifyDigitalDataSignResponse>(req, "VerifyDigitalDataSign");
+        }
+
+        /// <summary>
+        /// 数据加签验签接口
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDigitalDataSignRequest"/></param>
+        /// <returns><see cref="VerifyDigitalDataSignResponse"/></returns>
+        public VerifyDigitalDataSignResponse VerifyDigitalDataSignSync(VerifyDigitalDataSignRequest req)
+        {
+            return InternalRequestAsync<VerifyDigitalDataSignResponse>(req, "VerifyDigitalDataSign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

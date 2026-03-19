@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 各个资源的Top 访问数据详情。
+        /// <p>各个资源的Top 访问数据详情。</p>
         /// </summary>
         [JsonProperty("Data")]
         public TopDataMore[] Data{ get; set; }

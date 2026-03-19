@@ -72,18 +72,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ConfigID")]
         public string ConfigID{ get; set; }
 
-        /// <summary>
-        /// <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-        /// </summary>
-        [JsonProperty("WordsType")]
-        public string WordsType{ get; set; }
-
-        /// <summary>
-        /// <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-        /// </summary>
-        [JsonProperty("LanguageInfo")]
-        public bool? LanguageInfo{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,8 +86,6 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
             this.SetParamSimple(map, prefix + "ConfigID", this.ConfigID);
-            this.SetParamSimple(map, prefix + "WordsType", this.WordsType);
-            this.SetParamSimple(map, prefix + "LanguageInfo", this.LanguageInfo);
         }
     }
 }

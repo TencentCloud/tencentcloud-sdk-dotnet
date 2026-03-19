@@ -25,77 +25,55 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 域名列表，最多支持20个域名
+        /// <p>域名列表，最多支持20个域名</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-        /// 支持近 60 天内的数据查询，每次查询时间区间为 3 小时
+        /// <p>查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间<br>支持近 60 天内的数据查询，每次查询时间区间为 3 小时</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-        /// 结束时间与起始时间区间最大为 3 小时
+        /// <p>查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间<br>结束时间与起始时间区间最大为 3 小时</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 指定查询指标，支持:
-        /// bandwidth：带宽，单位为 bps
-        /// flux：流量，单位为 byte
-        /// request：请求数，单位为 次
-        /// statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
-        /// 2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
-        /// 3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
-        /// 4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
-        /// 5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
-        /// 支持指定具体状态码查询，若未产生过，则返回为空
+        /// <p>指定查询指标，支持:<br>bandwidth：带宽，单位为 bps<br>flux：流量，单位为 byte<br>request：请求数，单位为 次<br>statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次<br>2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次<br>3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次<br>4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次<br>5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次<br>支持指定具体状态码查询，若未产生过，则返回为空</p>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 指定省份查询，不填充表示查询所有省份
-        /// 省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+        /// <p>指定省份查询，不填充表示查询所有省份（注：指定条件查询只支持映射表范围）<br>省份、国家/地区编码可以查看 <a href="https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8">省份编码映射</a></p>
         /// </summary>
         [JsonProperty("Districts")]
         public long?[] Districts{ get; set; }
 
         /// <summary>
-        /// 指定运营商查询，不填充表示查询所有运营商
-        /// 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+        /// <p>指定运营商查询，不填充表示查询所有运营商（注：指定条件查询只支持映射表范围）<br>运营商编码可以查看 <a href="https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8">运营商编码映射</a></p>
         /// </summary>
         [JsonProperty("Isps")]
         public long?[] Isps{ get; set; }
 
         /// <summary>
-        /// 指定协议查询，不填充表示查询所有协议
-        /// all：所有协议
-        /// http：指定查询 HTTP 对应指标
-        /// https：指定查询 HTTPS 对应指标
+        /// <p>指定协议查询，不填充表示查询所有协议<br>all：所有协议<br>http：指定查询 HTTP 对应指标<br>https：指定查询 HTTPS 对应指标</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 指定IP协议查询，不填充表示查询所有协议
-        /// all：所有协议
-        /// ipv4：指定查询 ipv4 对应指标
-        /// ipv6：指定查询 ipv6 对应指标
-        /// 指定IP协议查询时，不可同时指定省份、运营商查询
+        /// <p>指定IP协议查询，不填充表示查询所有协议<br>all：所有协议<br>ipv4：指定查询 ipv4 对应指标<br>ipv6：指定查询 ipv6 对应指标<br>指定IP协议查询时，不可同时指定省份、运营商查询</p>
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 时间粒度，支持以下几种模式（默认5min）：
-        /// min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
-        /// 5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+        /// <p>时间粒度，支持以下几种模式（默认5min）：<br>min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据<br>5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据</p>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

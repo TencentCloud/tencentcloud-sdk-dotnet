@@ -25,17 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 时间粒度，根据查询时传递参数指定：
-        /// min：1 分钟粒度
-        /// 5min：5 分钟粒度
-        /// hour：1 小时粒度
-        /// day：天粒度
+        /// <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 数据明细
+        /// <p>数据明细</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResourceBillingData[] Data{ get; set; }

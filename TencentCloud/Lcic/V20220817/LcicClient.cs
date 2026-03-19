@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -877,6 +877,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取转推配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRelayConfigRequest"/></param>
+        /// <returns><see cref="DescribeLiveRelayConfigResponse"/></returns>
+        public Task<DescribeLiveRelayConfigResponse> DescribeLiveRelayConfig(DescribeLiveRelayConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveRelayConfigResponse>(req, "DescribeLiveRelayConfig");
+        }
+
+        /// <summary>
+        /// 获取转推配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRelayConfigRequest"/></param>
+        /// <returns><see cref="DescribeLiveRelayConfigResponse"/></returns>
+        public DescribeLiveRelayConfigResponse DescribeLiveRelayConfigSync(DescribeLiveRelayConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveRelayConfigResponse>(req, "DescribeLiveRelayConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询跑马灯配置
         /// </summary>
         /// <param name="req"><see cref="DescribeMarqueeRequest"/></param>
@@ -1511,6 +1532,27 @@ namespace TencentCloud.Lcic.V20220817
         public ModifyGroupResponse ModifyGroupSync(ModifyGroupRequest req)
         {
             return InternalRequestAsync<ModifyGroupResponse>(req, "ModifyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改转推配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRelayConfigRequest"/></param>
+        /// <returns><see cref="ModifyLiveRelayConfigResponse"/></returns>
+        public Task<ModifyLiveRelayConfigResponse> ModifyLiveRelayConfig(ModifyLiveRelayConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveRelayConfigResponse>(req, "ModifyLiveRelayConfig");
+        }
+
+        /// <summary>
+        /// 修改转推配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRelayConfigRequest"/></param>
+        /// <returns><see cref="ModifyLiveRelayConfigResponse"/></returns>
+        public ModifyLiveRelayConfigResponse ModifyLiveRelayConfigSync(ModifyLiveRelayConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveRelayConfigResponse>(req, "ModifyLiveRelayConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

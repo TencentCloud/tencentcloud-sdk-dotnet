@@ -48,6 +48,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// <p>文件大小。</p><p>单位：MB</p>
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public float? FileSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "PlaybackUrl", this.PlaybackUrl);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

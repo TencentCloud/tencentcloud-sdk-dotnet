@@ -74,6 +74,21 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>korean.ttf：韩语</li>
         /// <li>japanese.ttf：日语</li>
         /// <li>thai.ttf：泰语</li>
+        /// <li>roboto.ttf：Roboto</li>
+        /// <li>notosans.ttf：NotoSans</li>
+        /// <li>notosansthai.ttf：泰语NotoSansThai</li>
+        /// <li>sarabun.ttf：泰语Sarabun</li>
+        /// <li>kanit.ttf：泰语Kanit</li>
+        /// <li>charmonman.ttf：泰语Charmonman</li>
+        /// <li>notonaskharabic.ttf：阿拉伯语NotoNaskhArabic</li>
+        /// <li>notosansdevanagari.ttf：印度语NotoSansDevanagari</li>
+        /// <li>notosanstc.ttf：粤语思源黑体NotoSansTC</li>
+        /// <li>notosanskr.ttf：韩语NotoSansKR</li>
+        /// <li>gothica1.ttf：韩语GothicA1</li>
+        /// <li>nanummyeongjo.ttf：韩语NanumMyeongjo</li>
+        /// <li>notosansjp.ttf：日语NotoSansJP</li>
+        /// <li>notoserifjp.ttf：日语NotoSerifJP</li>
+        /// <li>shipporimincho.ttf：日语ShipporiMincho</li>
         /// 默认：hei.ttf 黑体。
         /// <br>注意：
         /// <li>楷体推荐使用kai.ttf</li>

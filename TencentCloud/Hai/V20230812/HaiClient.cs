@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1383";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
+        /// 本接口(CreateInferServiceByTemplate)用于根据模板创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferServiceByTemplateRequest"/></param>
+        /// <returns><see cref="CreateInferServiceByTemplateResponse"/></returns>
+        public Task<CreateInferServiceByTemplateResponse> CreateInferServiceByTemplate(CreateInferServiceByTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateInferServiceByTemplateResponse>(req, "CreateInferServiceByTemplate");
+        }
+
+        /// <summary>
+        /// 本接口(CreateInferServiceByTemplate)用于根据模板创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferServiceByTemplateRequest"/></param>
+        /// <returns><see cref="CreateInferServiceByTemplateResponse"/></returns>
+        public CreateInferServiceByTemplateResponse CreateInferServiceByTemplateSync(CreateInferServiceByTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateInferServiceByTemplateResponse>(req, "CreateInferServiceByTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建musk prompt 任务
         /// </summary>
         /// <param name="req"><see cref="CreateMuskPromptRequest"/></param>
@@ -96,6 +117,27 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
+        /// 本接口(DeployInferService)用于部署推理服务
+        /// </summary>
+        /// <param name="req"><see cref="DeployInferServiceRequest"/></param>
+        /// <returns><see cref="DeployInferServiceResponse"/></returns>
+        public Task<DeployInferServiceResponse> DeployInferService(DeployInferServiceRequest req)
+        {
+            return InternalRequestAsync<DeployInferServiceResponse>(req, "DeployInferService");
+        }
+
+        /// <summary>
+        /// 本接口(DeployInferService)用于部署推理服务
+        /// </summary>
+        /// <param name="req"><see cref="DeployInferServiceRequest"/></param>
+        /// <returns><see cref="DeployInferServiceResponse"/></returns>
+        public DeployInferServiceResponse DeployInferServiceSync(DeployInferServiceRequest req)
+        {
+            return InternalRequestAsync<DeployInferServiceResponse>(req, "DeployInferService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeApplications）用于查询应用
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
@@ -113,6 +155,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
         {
             return InternalRequestAsync<DescribeApplicationsResponse>(req, "DescribeApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeDeployTemplatesResponse"/></returns>
+        public Task<DescribeDeployTemplatesResponse> DescribeDeployTemplates(DescribeDeployTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeployTemplatesResponse>(req, "DescribeDeployTemplates");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeDeployTemplatesResponse"/></returns>
+        public DescribeDeployTemplatesResponse DescribeDeployTemplatesSync(DescribeDeployTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeployTemplatesResponse>(req, "DescribeDeployTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -155,6 +218,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeModels)用于查询模型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelsRequest"/></param>
+        /// <returns><see cref="DescribeModelsResponse"/></returns>
+        public Task<DescribeModelsResponse> DescribeModels(DescribeModelsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelsResponse>(req, "DescribeModels");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeModels)用于查询模型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelsRequest"/></param>
+        /// <returns><see cref="DescribeModelsResponse"/></returns>
+        public DescribeModelsResponse DescribeModelsSync(DescribeModelsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelsResponse>(req, "DescribeModels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

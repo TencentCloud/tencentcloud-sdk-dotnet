@@ -25,21 +25,21 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 识别字幕结果
+        /// <p>识别字幕结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecognizeSubtitleResult")]
         public SubtitleResult[] RecognizeSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 翻译字幕结果
+        /// <p>翻译字幕结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransSubtitleResult")]
         public SubtitleResult[] TransSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 字幕文件存储位置
+        /// <p>字幕文件存储位置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]

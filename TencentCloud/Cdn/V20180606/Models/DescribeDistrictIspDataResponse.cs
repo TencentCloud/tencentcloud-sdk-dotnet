@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 地区运营商数据明细
+        /// <p>地区运营商数据明细</p>
         /// </summary>
         [JsonProperty("Data")]
         public DistrictIspInfo[] Data{ get; set; }

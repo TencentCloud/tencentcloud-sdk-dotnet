@@ -25,66 +25,55 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 查询起始日期：yyyy-MM-dd HH:mm:ss
-        /// 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-        /// 返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
-        /// 仅支持 90 天内数据查询
+        /// <p>查询起始日期：yyyy-MM-dd<br>仅支持按天粒度的数据查询，取入参中的天信息作为起始日期<br>返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04，返回数据的起始时间为2018-09-04 00:00:00<br>仅支持 90 天内数据查询</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束日期：yyyy-MM-dd HH:mm:ss
-        /// 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-        /// 返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
-        /// EndTime 需要大于等于 StartTime
+        /// <p>查询结束日期：yyyy-MM-dd<br>仅支持按天粒度的数据查询，取入参中的天信息作为结束日期<br>返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05，返回数据的结束时间为2018-09-05 23:59:59<br>EndTime 需要大于等于 StartTime</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 排序对象，支持以下几种形式：
-        /// ip、ua_device、ua_browser、ua_os、referer
+        /// <p>排序对象，支持以下几种形式：<br>ip、ua_device、ua_browser、ua_os、referer</p>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 排序使用的指标名称：
-        /// flux：Metric 为 host 时指代访问流量
-        /// request：Metric 为 host 时指代访问请求数
+        /// <p>排序使用的指标名称：<br>flux：Metric 为 host 时指代访问流量<br>request：Metric 为 host 时指代访问请求数</p>
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
         /// <summary>
-        /// 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        /// <p>指定查询域名列表，最多可一次性查询 30 个加速域名明细</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        /// <p>未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主</p>
         /// </summary>
         [JsonProperty("Project")]
         public long? Project{ get; set; }
 
         /// <summary>
-        /// 是否详细显示每个域名的的具体数值
+        /// <p>是否详细显示每个域名的的具体数值</p>
         /// </summary>
         [JsonProperty("Detail")]
         public bool? Detail{ get; set; }
 
         /// <summary>
-        /// 指定服务地域查询，不填充表示查询中国境内 CDN 数据
-        /// mainland：指定查询中国境内 CDN 数据
-        /// overseas：指定查询中国境外 CDN 数据
+        /// <p>指定服务地域查询，不填充表示查询中国境内 CDN 数据<br>mainland：指定查询中国境内 CDN 数据<br>overseas：指定查询中国境外 CDN 数据</p>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 指定查询的产品数据，目前仅可使用cdn
+        /// <p>指定查询的产品数据，目前仅可使用cdn</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

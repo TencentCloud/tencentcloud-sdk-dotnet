@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1386</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,14 @@
     <Compile Include="V20180801\Models\AuditKeywordInfo.cs" />
     <Compile Include="V20180801\Models\AuthenticateDomainOwnerRequest.cs" />
     <Compile Include="V20180801\Models\AuthenticateDomainOwnerResponse.cs" />
+    <Compile Include="V20180801\Models\AvatarAnchorInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarBackgroundInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarImageInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarRoomInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarScriptInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarTemporaryScriptInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarTimbreInfo.cs" />
+    <Compile Include="V20180801\Models\AvatarTimbreList.cs" />
     <Compile Include="V20180801\Models\BackupStreamDetailData.cs" />
     <Compile Include="V20180801\Models\BackupStreamGroupInfo.cs" />
     <Compile Include="V20180801\Models\BandwidthInfo.cs" />
@@ -104,6 +112,8 @@
     <Compile Include="V20180801\Models\ConcurrentRecordStreamNum.cs" />
     <Compile Include="V20180801\Models\CopyCasterRequest.cs" />
     <Compile Include="V20180801\Models\CopyCasterResponse.cs" />
+    <Compile Include="V20180801\Models\CopyLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\CopyLiveAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordLibRequest.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordLibResponse.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordsRequest.cs" />
@@ -120,6 +130,10 @@
     <Compile Include="V20180801\Models\CreateCasterResponse.cs" />
     <Compile Include="V20180801\Models\CreateCommonMixStreamRequest.cs" />
     <Compile Include="V20180801\Models\CreateCommonMixStreamResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarRoomResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarScriptRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarScriptResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
@@ -176,6 +190,10 @@
     <Compile Include="V20180801\Models\DeleteCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\DeleteCasterRequest.cs" />
     <Compile Include="V20180801\Models\DeleteCasterResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarRoomResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarScriptRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarScriptResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateRequest.cs" />
@@ -264,6 +282,18 @@
     <Compile Include="V20180801\Models\DescribeGroupProIspPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeHttpStatusInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeHttpStatusInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarBackgroundListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarBackgroundListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarImageListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarImageListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarRoomsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarRoomsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarScriptsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarScriptsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarTemporaryScriptListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarTemporaryScriptListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarTimbreListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarTimbreListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCallbackRulesRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCallbackRulesResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveCallbackTemplateRequest.cs" />
@@ -424,6 +454,8 @@
     <Compile Include="V20180801\Models\ForbidLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\ForbidLiveStreamRequest.cs" />
     <Compile Include="V20180801\Models\ForbidLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\GenerateLiveAvatarScriptBroadcastRequest.cs" />
+    <Compile Include="V20180801\Models\GenerateLiveAvatarScriptBroadcastResponse.cs" />
     <Compile Include="V20180801\Models\GroupProIspDataInfo.cs" />
     <Compile Include="V20180801\Models\HlsSpecialParam.cs" />
     <Compile Include="V20180801\Models\HttpCodeInfo.cs" />
@@ -455,6 +487,10 @@
     <Compile Include="V20180801\Models\ModifyCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\ModifyCasterRequest.cs" />
     <Compile Include="V20180801\Models\ModifyCasterResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveAvatarRoomResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveAvatarScriptRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveAvatarScriptResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainCertBindingsRequest.cs" />
@@ -520,7 +556,11 @@
     <Compile Include="V20180801\Models\ScreenshotTask.cs" />
     <Compile Include="V20180801\Models\SendLiveCloudEffectRequest.cs" />
     <Compile Include="V20180801\Models\SendLiveCloudEffectResponse.cs" />
+    <Compile Include="V20180801\Models\SendTemporaryScriptToAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\SendTemporaryScriptToAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\SnapshotTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\StartLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\StartLiveAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\StartLivePadStreamRequest.cs" />
     <Compile Include="V20180801\Models\StartLivePadStreamResponse.cs" />
     <Compile Include="V20180801\Models\StartLiveStreamMonitorRequest.cs" />
@@ -529,6 +569,8 @@
     <Compile Include="V20180801\Models\StopCasterPgmResponse.cs" />
     <Compile Include="V20180801\Models\StopCasterPvwRequest.cs" />
     <Compile Include="V20180801\Models\StopCasterPvwResponse.cs" />
+    <Compile Include="V20180801\Models\StopLiveAvatarRoomRequest.cs" />
+    <Compile Include="V20180801\Models\StopLiveAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\StopLivePadStreamRequest.cs" />
     <Compile Include="V20180801\Models\StopLivePadStreamResponse.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordRequest.cs" />

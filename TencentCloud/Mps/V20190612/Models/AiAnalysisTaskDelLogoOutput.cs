@@ -25,45 +25,45 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 擦除后文件的路径。
+        /// <p>擦除后文件的路径。</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 擦除后文件的存储位置。
+        /// <p>擦除后文件的存储位置。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 基于画面提取的字幕文件路径。
+        /// <p>基于画面提取的字幕文件路径。</p>
         /// </summary>
         [JsonProperty("OriginSubtitlePath")]
         public string OriginSubtitlePath{ get; set; }
 
         /// <summary>
-        /// 基于画面提取的字幕翻译文件路径。
+        /// <p>基于画面提取的字幕翻译文件路径。</p>
         /// </summary>
         [JsonProperty("TranslateSubtitlePath")]
         public string TranslateSubtitlePath{ get; set; }
 
         /// <summary>
-        /// 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+        /// <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitlePos")]
         public SubtitlePosition SubtitlePos{ get; set; }
 
         /// <summary>
-        /// 音色克隆后的视频文件地址
+        /// <p>音色克隆后的视频文件地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceClonedVideo")]
         public string VoiceClonedVideo{ get; set; }
 
         /// <summary>
-        /// 音色克隆的标注文件地址
+        /// <p>音色克隆的标注文件地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceClonedMarkFile")]

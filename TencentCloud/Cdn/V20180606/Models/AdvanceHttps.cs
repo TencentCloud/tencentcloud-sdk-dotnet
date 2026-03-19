@@ -25,45 +25,42 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 自定义Tls数据开关
+        /// <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomTlsStatus")]
         public string CustomTlsStatus{ get; set; }
 
         /// <summary>
-        /// Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+        /// <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }
 
         /// <summary>
-        /// 自定义加密套件
+        /// <p>自定义加密套件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cipher")]
         public string Cipher{ get; set; }
 
         /// <summary>
-        /// 回源双向校验开启状态
-        /// off - 关闭校验
-        /// oneWay - 校验源站
-        /// twoWay - 双向校验
+        /// <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyOriginType")]
         public string VerifyOriginType{ get; set; }
 
         /// <summary>
-        /// 回源层证书配置信息
+        /// <p>回源层证书配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertInfo")]
         public ServerCert CertInfo{ get; set; }
 
         /// <summary>
-        /// 源站证书配置信息
+        /// <p>源站证书配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginCertInfo")]

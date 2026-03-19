@@ -25,37 +25,49 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 擦除类型
-        /// - subtitle 去字幕
-        /// - watermark 去水印
-        /// - privacy 隐私保护
+        /// <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// 字幕擦除配置；
-        /// 当EraseType值为：subtitle，此字段为必填参数
+        /// <p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// 水印擦除配置；
-        /// 当EraseType值为：watermark，此字段为必填参数
+        /// <p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 隐私保护配置；
-        /// 当EraseType值为：privacy，此字段为必填参数
+        /// <p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
+
+        /// <summary>
+        /// <p>擦除字幕压制模板id。</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedId")]
+        public long? SubtitleEmbedId{ get; set; }
+
+        /// <summary>
+        /// <p>压制配置，默认开启1, 把字幕压制回原字幕位置。</p>
+        /// </summary>
+        [JsonProperty("UseOriginalPos")]
+        public long? UseOriginalPos{ get; set; }
+
+        /// <summary>
+        /// <p>压制配置，默认开启1, 开启后使用原字幕字号。</p>
+        /// </summary>
+        [JsonProperty("UseOriginalSize")]
+        public long? UseOriginalSize{ get; set; }
 
 
         /// <summary>
@@ -67,6 +79,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EraseSubtitleConfig.", this.EraseSubtitleConfig);
             this.SetParamObj(map, prefix + "EraseWatermarkConfig.", this.EraseWatermarkConfig);
             this.SetParamObj(map, prefix + "ErasePrivacyConfig.", this.ErasePrivacyConfig);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+            this.SetParamSimple(map, prefix + "UseOriginalPos", this.UseOriginalPos);
+            this.SetParamSimple(map, prefix + "UseOriginalSize", this.UseOriginalSize);
         }
     }
 }

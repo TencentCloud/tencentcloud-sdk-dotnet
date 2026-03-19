@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A7008F4E-5673-33C5-B938-C6F9D4CCFECA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1383</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,18 +51,28 @@
     <Compile Include="V20230812\Models\ApplicationInfo.cs" />
     <Compile Include="V20230812\Models\COSStorage.cs" />
     <Compile Include="V20230812\Models\ComputeDetail.cs" />
+    <Compile Include="V20230812\Models\ComputeInfo.cs" />
+    <Compile Include="V20230812\Models\ComputeResource.cs" />
     <Compile Include="V20230812\Models\ContainerInfo.cs" />
     <Compile Include="V20230812\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20230812\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20230812\Models\CreateInferServiceByTemplateRequest.cs" />
+    <Compile Include="V20230812\Models\CreateInferServiceByTemplateResponse.cs" />
     <Compile Include="V20230812\Models\CreateMuskPromptRequest.cs" />
     <Compile Include="V20230812\Models\CreateMuskPromptResponse.cs" />
+    <Compile Include="V20230812\Models\DeployInferServiceRequest.cs" />
+    <Compile Include="V20230812\Models\DeployInferServiceResponse.cs" />
     <Compile Include="V20230812\Models\DeploymentConfig.cs" />
     <Compile Include="V20230812\Models\DescribeApplicationsRequest.cs" />
     <Compile Include="V20230812\Models\DescribeApplicationsResponse.cs" />
+    <Compile Include="V20230812\Models\DescribeDeployTemplatesRequest.cs" />
+    <Compile Include="V20230812\Models\DescribeDeployTemplatesResponse.cs" />
     <Compile Include="V20230812\Models\DescribeInstanceNetworkStatusRequest.cs" />
     <Compile Include="V20230812\Models\DescribeInstanceNetworkStatusResponse.cs" />
     <Compile Include="V20230812\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20230812\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20230812\Models\DescribeModelsRequest.cs" />
+    <Compile Include="V20230812\Models\DescribeModelsResponse.cs" />
     <Compile Include="V20230812\Models\DescribeMuskPromptsRequest.cs" />
     <Compile Include="V20230812\Models\DescribeMuskPromptsResponse.cs" />
     <Compile Include="V20230812\Models\DescribeRegionsRequest.cs" />
@@ -88,7 +98,9 @@
     <Compile Include="V20230812\Models\ItemPriceDetail.cs" />
     <Compile Include="V20230812\Models\LoginService.cs" />
     <Compile Include="V20230812\Models\LoginSetting.cs" />
+    <Compile Include="V20230812\Models\ModelDetail.cs" />
     <Compile Include="V20230812\Models\MuskPromptInfo.cs" />
+    <Compile Include="V20230812\Models\NetworkSetting.cs" />
     <Compile Include="V20230812\Models\NetworkStatus.cs" />
     <Compile Include="V20230812\Models\Price.cs" />
     <Compile Include="V20230812\Models\RegionInfo.cs" />
@@ -100,6 +112,7 @@
     <Compile Include="V20230812\Models\RunInstancesResponse.cs" />
     <Compile Include="V20230812\Models\SceneInfo.cs" />
     <Compile Include="V20230812\Models\ServiceDetail.cs" />
+    <Compile Include="V20230812\Models\ServiceMetaData.cs" />
     <Compile Include="V20230812\Models\ServicePriceDetail.cs" />
     <Compile Include="V20230812\Models\StartInstanceRequest.cs" />
     <Compile Include="V20230812\Models\StartInstanceResponse.cs" />
@@ -107,6 +120,7 @@
     <Compile Include="V20230812\Models\StopInstanceResponse.cs" />
     <Compile Include="V20230812\Models\StorageInfo.cs" />
     <Compile Include="V20230812\Models\SystemDisk.cs" />
+    <Compile Include="V20230812\Models\TemplateDetail.cs" />
     <Compile Include="V20230812\Models\TerminateInstancesRequest.cs" />
     <Compile Include="V20230812\Models\TerminateInstancesResponse.cs" />
     <Compile Include="V20230812\Models\UpdateServiceConfigsRequest.cs" />

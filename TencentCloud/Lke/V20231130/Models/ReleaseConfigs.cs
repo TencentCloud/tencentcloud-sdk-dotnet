@@ -40,6 +40,10 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 状态
+        /// 2：待发布
+        /// 3：发布中
+        /// 4：已发布
+        /// 5：发布失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -828,6 +828,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 告警 1.0 API，不能再使用否则会导致后端数据不一致
+        /// 
         /// 删除告警策略组
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>
@@ -838,6 +840,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 告警 1.0 API，不能再使用否则会导致后端数据不一致
+        /// 
         /// 删除告警策略组
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>

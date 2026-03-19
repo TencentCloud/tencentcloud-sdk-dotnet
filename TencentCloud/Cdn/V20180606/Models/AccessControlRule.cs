@@ -25,30 +25,28 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// requestHeader ：对请求头部进行访问控制
-        /// url ： 对访问url进行访问控制
+        /// <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 封禁内容
+        /// <p>封禁内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleContent")]
         public string RuleContent{ get; set; }
 
         /// <summary>
-        /// on ：正则匹配
-        /// off ：字面匹配
+        /// <p>on ：正则匹配<br>off ：字面匹配</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Regex")]
         public string Regex{ get; set; }
 
         /// <summary>
-        /// RuleType为requestHeader时必填，否则不需要填
+        /// <p>RuleType为requestHeader时必填，否则不需要填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleHeader")]

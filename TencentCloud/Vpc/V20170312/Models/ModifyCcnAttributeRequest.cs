@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TrafficMarkingPolicyFlag")]
         public bool? TrafficMarkingPolicyFlag{ get; set; }
 
+        /// <summary>
+        /// 是否切换为混合计费
+        /// </summary>
+        [JsonProperty("MixedBillingFlag")]
+        public bool? MixedBillingFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
             this.SetParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
             this.SetParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
+            this.SetParamSimple(map, prefix + "MixedBillingFlag", this.MixedBillingFlag);
         }
     }
 }

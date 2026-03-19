@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1386";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -289,6 +289,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 调用该接口，用于复制数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CopyLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="CopyLiveAvatarRoomResponse"/></returns>
+        public Task<CopyLiveAvatarRoomResponse> CopyLiveAvatarRoom(CopyLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<CopyLiveAvatarRoomResponse>(req, "CopyLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于复制数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CopyLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="CopyLiveAvatarRoomResponse"/></returns>
+        public CopyLiveAvatarRoomResponse CopyLiveAvatarRoomSync(CopyLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<CopyLiveAvatarRoomResponse>(req, "CopyLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建关键词库，直播审核功能使用。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditKeywordLibRequest"/></param>
@@ -459,6 +480,48 @@ namespace TencentCloud.Live.V20180801
         public CreateCommonMixStreamResponse CreateCommonMixStreamSync(CreateCommonMixStreamRequest req)
         {
             return InternalRequestAsync<CreateCommonMixStreamResponse>(req, "CreateCommonMixStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="CreateLiveAvatarRoomResponse"/></returns>
+        public Task<CreateLiveAvatarRoomResponse> CreateLiveAvatarRoom(CreateLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<CreateLiveAvatarRoomResponse>(req, "CreateLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="CreateLiveAvatarRoomResponse"/></returns>
+        public CreateLiveAvatarRoomResponse CreateLiveAvatarRoomSync(CreateLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<CreateLiveAvatarRoomResponse>(req, "CreateLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间话术。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="CreateLiveAvatarScriptResponse"/></returns>
+        public Task<CreateLiveAvatarScriptResponse> CreateLiveAvatarScript(CreateLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<CreateLiveAvatarScriptResponse>(req, "CreateLiveAvatarScript");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间话术。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="CreateLiveAvatarScriptResponse"/></returns>
+        public CreateLiveAvatarScriptResponse CreateLiveAvatarScriptSync(CreateLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<CreateLiveAvatarScriptResponse>(req, "CreateLiveAvatarScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1138,6 +1201,48 @@ namespace TencentCloud.Live.V20180801
         public DeleteCasterOutputInfoResponse DeleteCasterOutputInfoSync(DeleteCasterOutputInfoRequest req)
         {
             return InternalRequestAsync<DeleteCasterOutputInfoResponse>(req, "DeleteCasterOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于删除已有的数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="DeleteLiveAvatarRoomResponse"/></returns>
+        public Task<DeleteLiveAvatarRoomResponse> DeleteLiveAvatarRoom(DeleteLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveAvatarRoomResponse>(req, "DeleteLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于删除已有的数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="DeleteLiveAvatarRoomResponse"/></returns>
+        public DeleteLiveAvatarRoomResponse DeleteLiveAvatarRoomSync(DeleteLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveAvatarRoomResponse>(req, "DeleteLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于删除已有的数字人直播间里面的话术。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="DeleteLiveAvatarScriptResponse"/></returns>
+        public Task<DeleteLiveAvatarScriptResponse> DeleteLiveAvatarScript(DeleteLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveAvatarScriptResponse>(req, "DeleteLiveAvatarScript");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于删除已有的数字人直播间里面的话术。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="DeleteLiveAvatarScriptResponse"/></returns>
+        public DeleteLiveAvatarScriptResponse DeleteLiveAvatarScriptSync(DeleteLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveAvatarScriptResponse>(req, "DeleteLiveAvatarScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2088,6 +2193,132 @@ namespace TencentCloud.Live.V20180801
         public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoListSync(DescribeHttpStatusInfoListRequest req)
         {
             return InternalRequestAsync<DescribeHttpStatusInfoListResponse>(req, "DescribeHttpStatusInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人背景列表信息列表。根据入参，可返回官方预设背景，以及用户上传背景。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarBackgroundListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarBackgroundListResponse"/></returns>
+        public Task<DescribeLiveAvatarBackgroundListResponse> DescribeLiveAvatarBackgroundList(DescribeLiveAvatarBackgroundListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarBackgroundListResponse>(req, "DescribeLiveAvatarBackgroundList");
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人背景列表信息列表。根据入参，可返回官方预设背景，以及用户上传背景。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarBackgroundListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarBackgroundListResponse"/></returns>
+        public DescribeLiveAvatarBackgroundListResponse DescribeLiveAvatarBackgroundListSync(DescribeLiveAvatarBackgroundListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarBackgroundListResponse>(req, "DescribeLiveAvatarBackgroundList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人形象信息列表。包括官方预制形象，以及个人定制形象。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarImageListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarImageListResponse"/></returns>
+        public Task<DescribeLiveAvatarImageListResponse> DescribeLiveAvatarImageList(DescribeLiveAvatarImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarImageListResponse>(req, "DescribeLiveAvatarImageList");
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人形象信息列表。包括官方预制形象，以及个人定制形象。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarImageListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarImageListResponse"/></returns>
+        public DescribeLiveAvatarImageListResponse DescribeLiveAvatarImageListSync(DescribeLiveAvatarImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarImageListResponse>(req, "DescribeLiveAvatarImageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarRoomsRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarRoomsResponse"/></returns>
+        public Task<DescribeLiveAvatarRoomsResponse> DescribeLiveAvatarRooms(DescribeLiveAvatarRoomsRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarRoomsResponse>(req, "DescribeLiveAvatarRooms");
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarRoomsRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarRoomsResponse"/></returns>
+        public DescribeLiveAvatarRoomsResponse DescribeLiveAvatarRoomsSync(DescribeLiveAvatarRoomsRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarRoomsResponse>(req, "DescribeLiveAvatarRooms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间话术信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarScriptsRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarScriptsResponse"/></returns>
+        public Task<DescribeLiveAvatarScriptsResponse> DescribeLiveAvatarScripts(DescribeLiveAvatarScriptsRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarScriptsResponse>(req, "DescribeLiveAvatarScripts");
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间话术信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarScriptsRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarScriptsResponse"/></returns>
+        public DescribeLiveAvatarScriptsResponse DescribeLiveAvatarScriptsSync(DescribeLiveAvatarScriptsRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarScriptsResponse>(req, "DescribeLiveAvatarScripts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询临时驱动数字人播报话术列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarTemporaryScriptListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarTemporaryScriptListResponse"/></returns>
+        public Task<DescribeLiveAvatarTemporaryScriptListResponse> DescribeLiveAvatarTemporaryScriptList(DescribeLiveAvatarTemporaryScriptListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarTemporaryScriptListResponse>(req, "DescribeLiveAvatarTemporaryScriptList");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询临时驱动数字人播报话术列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarTemporaryScriptListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarTemporaryScriptListResponse"/></returns>
+        public DescribeLiveAvatarTemporaryScriptListResponse DescribeLiveAvatarTemporaryScriptListSync(DescribeLiveAvatarTemporaryScriptListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarTemporaryScriptListResponse>(req, "DescribeLiveAvatarTemporaryScriptList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人声音信息列表。包括官方预制音色，以及个人复刻音色。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarTimbreListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarTimbreListResponse"/></returns>
+        public Task<DescribeLiveAvatarTimbreListResponse> DescribeLiveAvatarTimbreList(DescribeLiveAvatarTimbreListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarTimbreListResponse>(req, "DescribeLiveAvatarTimbreList");
+        }
+
+        /// <summary>
+        /// 调用该接口，获取可用的数字人声音信息列表。包括官方预制音色，以及个人复刻音色。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveAvatarTimbreListRequest"/></param>
+        /// <returns><see cref="DescribeLiveAvatarTimbreListResponse"/></returns>
+        public DescribeLiveAvatarTimbreListResponse DescribeLiveAvatarTimbreListSync(DescribeLiveAvatarTimbreListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveAvatarTimbreListResponse>(req, "DescribeLiveAvatarTimbreList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3803,6 +4034,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 调用该接口，用于触发话术播报生成，并返回音频播报URL。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateLiveAvatarScriptBroadcastRequest"/></param>
+        /// <returns><see cref="GenerateLiveAvatarScriptBroadcastResponse"/></returns>
+        public Task<GenerateLiveAvatarScriptBroadcastResponse> GenerateLiveAvatarScriptBroadcast(GenerateLiveAvatarScriptBroadcastRequest req)
+        {
+            return InternalRequestAsync<GenerateLiveAvatarScriptBroadcastResponse>(req, "GenerateLiveAvatarScriptBroadcast");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于触发话术播报生成，并返回音频播报URL。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateLiveAvatarScriptBroadcastRequest"/></param>
+        /// <returns><see cref="GenerateLiveAvatarScriptBroadcastResponse"/></returns>
+        public GenerateLiveAvatarScriptBroadcastResponse GenerateLiveAvatarScriptBroadcastSync(GenerateLiveAvatarScriptBroadcastRequest req)
+        {
+            return InternalRequestAsync<GenerateLiveAvatarScriptBroadcastResponse>(req, "GenerateLiveAvatarScriptBroadcast")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 可通过调用该接口，对点播源的直播拉流任务进行插播操作。
         /// 注意：
         /// 1. 仅支持对有效且运行中的点播源任务进行插播操作。
@@ -3958,6 +4210,48 @@ namespace TencentCloud.Live.V20180801
         public ModifyCasterOutputInfoResponse ModifyCasterOutputInfoSync(ModifyCasterOutputInfoRequest req)
         {
             return InternalRequestAsync<ModifyCasterOutputInfoResponse>(req, "ModifyCasterOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于修改数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="ModifyLiveAvatarRoomResponse"/></returns>
+        public Task<ModifyLiveAvatarRoomResponse> ModifyLiveAvatarRoom(ModifyLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveAvatarRoomResponse>(req, "ModifyLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于修改数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="ModifyLiveAvatarRoomResponse"/></returns>
+        public ModifyLiveAvatarRoomResponse ModifyLiveAvatarRoomSync(ModifyLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveAvatarRoomResponse>(req, "ModifyLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于修改数字人直播间话术。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="ModifyLiveAvatarScriptResponse"/></returns>
+        public Task<ModifyLiveAvatarScriptResponse> ModifyLiveAvatarScript(ModifyLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveAvatarScriptResponse>(req, "ModifyLiveAvatarScript");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于修改数字人直播间话术。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveAvatarScriptRequest"/></param>
+        /// <returns><see cref="ModifyLiveAvatarScriptResponse"/></returns>
+        public ModifyLiveAvatarScriptResponse ModifyLiveAvatarScriptSync(ModifyLiveAvatarScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveAvatarScriptResponse>(req, "ModifyLiveAvatarScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4398,6 +4692,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 调用该接口，用于临时驱动数字人播报。
+        /// </summary>
+        /// <param name="req"><see cref="SendTemporaryScriptToAvatarRoomRequest"/></param>
+        /// <returns><see cref="SendTemporaryScriptToAvatarRoomResponse"/></returns>
+        public Task<SendTemporaryScriptToAvatarRoomResponse> SendTemporaryScriptToAvatarRoom(SendTemporaryScriptToAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<SendTemporaryScriptToAvatarRoomResponse>(req, "SendTemporaryScriptToAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于临时驱动数字人播报。
+        /// </summary>
+        /// <param name="req"><see cref="SendTemporaryScriptToAvatarRoomRequest"/></param>
+        /// <returns><see cref="SendTemporaryScriptToAvatarRoomResponse"/></returns>
+        public SendTemporaryScriptToAvatarRoomResponse SendTemporaryScriptToAvatarRoomSync(SendTemporaryScriptToAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<SendTemporaryScriptToAvatarRoomResponse>(req, "SendTemporaryScriptToAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于启动数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="StartLiveAvatarRoomResponse"/></returns>
+        public Task<StartLiveAvatarRoomResponse> StartLiveAvatarRoom(StartLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<StartLiveAvatarRoomResponse>(req, "StartLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于启动数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="StartLiveAvatarRoomResponse"/></returns>
+        public StartLiveAvatarRoomResponse StartLiveAvatarRoomSync(StartLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<StartLiveAvatarRoomResponse>(req, "StartLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 使用该接口将直播流开始切入垫片。
         /// </summary>
         /// <param name="req"><see cref="StartLivePadStreamRequest"/></param>
@@ -4480,6 +4816,27 @@ namespace TencentCloud.Live.V20180801
         public StopCasterPvwResponse StopCasterPvwSync(StopCasterPvwRequest req)
         {
             return InternalRequestAsync<StopCasterPvwResponse>(req, "StopCasterPvw")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于停止数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="StopLiveAvatarRoomResponse"/></returns>
+        public Task<StopLiveAvatarRoomResponse> StopLiveAvatarRoom(StopLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<StopLiveAvatarRoomResponse>(req, "StopLiveAvatarRoom");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于停止数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveAvatarRoomRequest"/></param>
+        /// <returns><see cref="StopLiveAvatarRoomResponse"/></returns>
+        public StopLiveAvatarRoomResponse StopLiveAvatarRoomSync(StopLiveAvatarRoomRequest req)
+        {
+            return InternalRequestAsync<StopLiveAvatarRoomResponse>(req, "StopLiveAvatarRoom")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

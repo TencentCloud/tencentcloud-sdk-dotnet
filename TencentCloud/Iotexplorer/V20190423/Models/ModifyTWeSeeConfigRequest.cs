@@ -72,6 +72,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SummaryConfig")]
         public VisionSummaryConfig SummaryConfig{ get; set; }
 
+        /// <summary>
+        /// 云存事件 ID 过滤规则配置，不传则不修改
+        /// </summary>
+        [JsonProperty("EventIdFilterConfig")]
+        public SeeEventIdFilterConfig EventIdFilterConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
             this.SetParamSimple(map, prefix + "Config", this.Config);
             this.SetParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+            this.SetParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
         }
     }
 }

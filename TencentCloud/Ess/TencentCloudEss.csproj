@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1389</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20201111\Models\CreateContractReviewWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateConvertTaskApiRequest.cs" />
     <Compile Include="V20201111\Models\CreateConvertTaskApiResponse.cs" />
+    <Compile Include="V20201111\Models\CreateDigitalDataSignRequest.cs" />
+    <Compile Include="V20201111\Models\CreateDigitalDataSignResponse.cs" />
     <Compile Include="V20201111\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20201111\Models\CreateDocumentResponse.cs" />
     <Compile Include="V20201111\Models\CreateDynamicFlowApproverRequest.cs" />
@@ -434,6 +436,7 @@
     <Compile Include="V20201111\Models\RiskIdentificationRoleInfo.cs" />
     <Compile Include="V20201111\Models\RuleIdConfig.cs" />
     <Compile Include="V20201111\Models\SealInfo.cs" />
+    <Compile Include="V20201111\Models\SignCertificate.cs" />
     <Compile Include="V20201111\Models\SignComponentConfig.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />
     <Compile Include="V20201111\Models\SignUrl.cs" />
@@ -464,6 +467,8 @@
     <Compile Include="V20201111\Models\VerifyDigitFileRequest.cs" />
     <Compile Include="V20201111\Models\VerifyDigitFileResponse.cs" />
     <Compile Include="V20201111\Models\VerifyDigitFileResult.cs" />
+    <Compile Include="V20201111\Models\VerifyDigitalDataSignRequest.cs" />
+    <Compile Include="V20201111\Models\VerifyDigitalDataSignResponse.cs" />
     <Compile Include="V20201111\Models\VerifyPdfRequest.cs" />
     <Compile Include="V20201111\Models\VerifyPdfResponse.cs" />
     <Compile Include="V20201111\Models\WebThemeConfig.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -699,6 +699,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建自定义字幕压制模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="CreateSubtitleEmbedTemplateResponse"/></returns>
+        public Task<CreateSubtitleEmbedTemplateResponse> CreateSubtitleEmbedTemplate(CreateSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSubtitleEmbedTemplateResponse>(req, "CreateSubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// 创建自定义字幕压制模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="CreateSubtitleEmbedTemplateResponse"/></returns>
+        public CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplateSync(CreateSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSubtitleEmbedTemplateResponse>(req, "CreateSubtitleEmbedTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户自定义转码模板，数量上限：1000
         /// </summary>
         /// <param name="req"><see cref="CreateTranscodeTemplateRequest"/></param>
@@ -1290,6 +1311,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroupSync(DeleteStreamLinkSecurityGroupRequest req)
         {
             return InternalRequestAsync<DeleteStreamLinkSecurityGroupResponse>(req, "DeleteStreamLinkSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户自定义字幕压制模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSubtitleEmbedTemplateResponse"/></returns>
+        public Task<DeleteSubtitleEmbedTemplateResponse> DeleteSubtitleEmbedTemplate(DeleteSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSubtitleEmbedTemplateResponse>(req, "DeleteSubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// 删除用户自定义字幕压制模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSubtitleEmbedTemplateResponse"/></returns>
+        public DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplateSync(DeleteSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSubtitleEmbedTemplateResponse>(req, "DeleteSubtitleEmbedTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2151,6 +2193,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroupsSync(DescribeStreamLinkSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DescribeStreamLinkSecurityGroupsResponse>(req, "DescribeStreamLinkSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据字幕压制模板唯一标识，获取字幕压制模板详情列表。返回结果包含符合条件的所有用户自定义字幕压制模板及系统预置字幕压制模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubtitleEmbedTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSubtitleEmbedTemplatesResponse"/></returns>
+        public Task<DescribeSubtitleEmbedTemplatesResponse> DescribeSubtitleEmbedTemplates(DescribeSubtitleEmbedTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSubtitleEmbedTemplatesResponse>(req, "DescribeSubtitleEmbedTemplates");
+        }
+
+        /// <summary>
+        /// 根据字幕压制模板唯一标识，获取字幕压制模板详情列表。返回结果包含符合条件的所有用户自定义字幕压制模板及系统预置字幕压制模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubtitleEmbedTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSubtitleEmbedTemplatesResponse"/></returns>
+        public DescribeSubtitleEmbedTemplatesResponse DescribeSubtitleEmbedTemplatesSync(DescribeSubtitleEmbedTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSubtitleEmbedTemplatesResponse>(req, "DescribeSubtitleEmbedTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3027,6 +3090,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroupSync(ModifyStreamLinkSecurityGroupRequest req)
         {
             return InternalRequestAsync<ModifyStreamLinkSecurityGroupResponse>(req, "ModifyStreamLinkSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户自定义字幕压制模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="ModifySubtitleEmbedTemplateResponse"/></returns>
+        public Task<ModifySubtitleEmbedTemplateResponse> ModifySubtitleEmbedTemplate(ModifySubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySubtitleEmbedTemplateResponse>(req, "ModifySubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// 修改用户自定义字幕压制模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="ModifySubtitleEmbedTemplateResponse"/></returns>
+        public ModifySubtitleEmbedTemplateResponse ModifySubtitleEmbedTemplateSync(ModifySubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySubtitleEmbedTemplateResponse>(req, "ModifySubtitleEmbedTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

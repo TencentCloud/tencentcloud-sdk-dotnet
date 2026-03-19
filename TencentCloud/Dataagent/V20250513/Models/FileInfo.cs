@@ -25,76 +25,82 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 文件名称
+        /// <p>文件名称</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件大小，字节
+        /// <p>文件大小，字节</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public float? FileSize{ get; set; }
 
         /// <summary>
-        /// 文件类型,0=文本,1=表格，默认0
+        /// <p>文件类型,0=文本,1=表格，默认0</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 文件ID
+        /// <p>文件ID</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 状态，0：数据处理中  1：可用 -1：错误
+        /// <p>状态，0：数据处理中  1：可用 -1：错误</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 操作者
+        /// <p>操作者</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 分片策略
+        /// <p>分片策略</p>
         /// </summary>
         [JsonProperty("ChunkConfig")]
         public KnowledgeTaskConfig ChunkConfig{ get; set; }
 
         /// <summary>
-        /// 文件来源0=unknow,1=user_cos,2=local
+        /// <p>文件来源0=unknow,1=user_cos,2=local</p>
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
-        /// 文件url
+        /// <p>文件url</p>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 是否官方示例，0=否，1=是
+        /// <p>是否官方示例，0=否，1=是</p>
         /// </summary>
         [JsonProperty("IsShowCase")]
         public long? IsShowCase{ get; set; }
 
         /// <summary>
-        /// 文档摘要
+        /// <p>文档摘要</p>
         /// </summary>
         [JsonProperty("DocumentSummary")]
         public string DocumentSummary{ get; set; }
+
+        /// <summary>
+        /// <p>网页地址</p>
+        /// </summary>
+        [JsonProperty("WebUrl")]
+        public string WebUrl{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "IsShowCase", this.IsShowCase);
             this.SetParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
+            this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
         }
     }
 }

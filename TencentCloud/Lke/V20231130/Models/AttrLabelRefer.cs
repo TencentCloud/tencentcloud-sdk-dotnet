@@ -25,7 +25,8 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 标签来源，1：标签
+        /// 标签来源，1：标签。
+        /// 使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }

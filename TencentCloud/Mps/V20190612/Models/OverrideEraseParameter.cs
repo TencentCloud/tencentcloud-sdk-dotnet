@@ -25,34 +25,34 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 擦除类型
-        /// - subtitle 去字幕
-        /// - watermark 去水印
-        /// - privacy 隐私保护
+        /// <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// 字幕擦除配置；
-        /// 当EraseType值为：subtitle，此字段为必填参数
+        /// <p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public UpdateSmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// 水印擦除配置；
-        /// 当EraseType值为：watermark，此字段为必填参数
+        /// <p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public UpdateSmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 隐私保护配置；
-        /// 当EraseType值为：privacy，此字段为必填参数
+        /// <p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public UpdateSmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
+
+        /// <summary>
+        /// <p>擦除压制字幕模板id。</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedId")]
+        public long? SubtitleEmbedId{ get; set; }
 
 
         /// <summary>
@@ -64,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EraseSubtitleConfig.", this.EraseSubtitleConfig);
             this.SetParamObj(map, prefix + "EraseWatermarkConfig.", this.EraseWatermarkConfig);
             this.SetParamObj(map, prefix + "ErasePrivacyConfig.", this.ErasePrivacyConfig);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
         }
     }
 }

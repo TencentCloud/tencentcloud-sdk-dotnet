@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1389</VersionPrefix>
+    <VersionPrefix>3.0.1390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,7 @@
     <Compile Include="Faceid\**\*.cs" />
     <Compile Include="Fmu\**\*.cs" />
     <Compile Include="Ft\**\*.cs" />
+    <Compile Include="Ga2\**\*.cs" />
     <Compile Include="Gaap\**\*.cs" />
     <Compile Include="Gme\**\*.cs" />
     <Compile Include="Goosefs\**\*.cs" />

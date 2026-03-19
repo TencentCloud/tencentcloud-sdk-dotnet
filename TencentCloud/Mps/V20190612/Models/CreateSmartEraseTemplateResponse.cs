@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 智能擦除模板唯一标识
+        /// <p>智能擦除模板唯一标识</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

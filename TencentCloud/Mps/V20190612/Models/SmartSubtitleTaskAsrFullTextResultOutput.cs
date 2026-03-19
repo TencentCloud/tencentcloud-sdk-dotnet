@@ -25,26 +25,32 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 语音全文识别片段列表。
+        /// <p>语音全文识别片段列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// 字幕文件路径
+        /// <p>字幕文件路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 字幕文件地址。
+        /// <p>字幕文件地址。</p>
         /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
         /// <summary>
-        /// 字幕文件存储位置。
+        /// <p>识别字幕结果信息。</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfo")]
+        public SubtitleResult SubtitleInfo{ get; set; }
+
+        /// <summary>
+        /// <p>字幕文件存储位置。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+            this.SetParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }

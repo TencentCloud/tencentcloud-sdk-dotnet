@@ -145,6 +145,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RegexPriority")]
         public long? RegexPriority{ get; set; }
 
+        /// <summary>
+        /// querysring参数
+        /// </summary>
+        [JsonProperty("QueryStringParameters")]
+        public KVMapping[] QueryStringParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
             this.SetParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
             this.SetParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
+            this.SetParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
         }
     }
 }

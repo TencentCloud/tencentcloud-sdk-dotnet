@@ -25,21 +25,21 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 封禁类型
+        /// <p>封禁类型<br>forbidden - 封禁</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// 封禁规则类型
+        /// <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 封禁规则路径
+        /// <p>封禁规则路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RulePaths")]

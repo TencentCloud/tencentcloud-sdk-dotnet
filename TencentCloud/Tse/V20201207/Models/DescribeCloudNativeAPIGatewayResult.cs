@@ -190,6 +190,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("AvailableVersions")]
         public string[] AvailableVersions{ get; set; }
 
+        /// <summary>
+        /// 网关可以升级的版本号列表
+        /// </summary>
+        [JsonProperty("AvailableUpgradeVersions")]
+        public string[] AvailableUpgradeVersions{ get; set; }
+
+        /// <summary>
+        /// 是否提示可升级
+        /// </summary>
+        [JsonProperty("AvailableUpgrade")]
+        public bool? AvailableUpgrade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +235,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
             this.SetParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
+            this.SetParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
+            this.SetParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
         }
     }
 }

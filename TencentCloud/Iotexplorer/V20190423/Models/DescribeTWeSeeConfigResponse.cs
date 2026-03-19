@@ -43,6 +43,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string Config{ get; set; }
 
         /// <summary>
+        /// 摘要配置参数
+        /// </summary>
+        [JsonProperty("SummaryConfig")]
+        public VisionSummaryConfig SummaryConfig{ get; set; }
+
+        /// <summary>
+        /// 云存事件 ID 过滤规则配置项
+        /// </summary>
+        [JsonProperty("EventIdFilterConfig")]
+        public SeeEventIdFilterConfig EventIdFilterConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
             this.SetParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+            this.SetParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
