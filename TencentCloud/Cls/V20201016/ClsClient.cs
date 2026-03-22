@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1391";
 
         /// <summary>
         /// Client constructor.
@@ -3461,6 +3461,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyWebCallbackResponse ModifyWebCallbackSync(ModifyWebCallbackRequest req)
         {
             return InternalRequestAsync<ModifyWebCallbackResponse>(req, "ModifyWebCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建OpenClaw依赖的资源与索引
+        /// </summary>
+        /// <param name="req"><see cref="OpenClawServiceRequest"/></param>
+        /// <returns><see cref="OpenClawServiceResponse"/></returns>
+        public Task<OpenClawServiceResponse> OpenClawService(OpenClawServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClawServiceResponse>(req, "OpenClawService");
+        }
+
+        /// <summary>
+        /// 本接口用于创建OpenClaw依赖的资源与索引
+        /// </summary>
+        /// <param name="req"><see cref="OpenClawServiceRequest"/></param>
+        /// <returns><see cref="OpenClawServiceResponse"/></returns>
+        public OpenClawServiceResponse OpenClawServiceSync(OpenClawServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClawServiceResponse>(req, "OpenClawService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,7 +31,8 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] DocBizIds{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// 应用ID。
+        /// 删除知识库文档时，该参数填入知识库ID。
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }

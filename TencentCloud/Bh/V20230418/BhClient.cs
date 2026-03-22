@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1391";
 
         /// <summary>
         /// Client constructor.
@@ -974,6 +974,48 @@ namespace TencentCloud.Bh.V20230418
         public DescribeDeviceAccountsResponse DescribeDeviceAccountsSync(DescribeDeviceAccountsRequest req)
         {
             return InternalRequestAsync<DescribeDeviceAccountsResponse>(req, "DescribeDeviceAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户导入的主机数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCountRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCountResponse"/></returns>
+        public Task<DescribeDeviceCountResponse> DescribeDeviceCount(DescribeDeviceCountRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCountResponse>(req, "DescribeDeviceCount");
+        }
+
+        /// <summary>
+        /// 查询用户导入的主机数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCountRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCountResponse"/></returns>
+        public DescribeDeviceCountResponse DescribeDeviceCountSync(DescribeDeviceCountRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCountResponse>(req, "DescribeDeviceCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户导入的主机数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCountSummaryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCountSummaryResponse"/></returns>
+        public Task<DescribeDeviceCountSummaryResponse> DescribeDeviceCountSummary(DescribeDeviceCountSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCountSummaryResponse>(req, "DescribeDeviceCountSummary");
+        }
+
+        /// <summary>
+        /// 查询用户导入的主机数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCountSummaryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCountSummaryResponse"/></returns>
+        public DescribeDeviceCountSummaryResponse DescribeDeviceCountSummarySync(DescribeDeviceCountSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCountSummaryResponse>(req, "DescribeDeviceCountSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

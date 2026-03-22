@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1391";
 
         /// <summary>
         /// Client constructor.
@@ -211,6 +211,7 @@ namespace TencentCloud.Lke.V20231130
         /// 知识库相关背景知识介绍
         /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
         /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
+        /// 单个知识库内支持创建的分类数量上限为 2000 个。
         /// </summary>
         /// <param name="req"><see cref="CreateQACateRequest"/></param>
         /// <returns><see cref="CreateQACateResponse"/></returns>
@@ -224,6 +225,7 @@ namespace TencentCloud.Lke.V20231130
         /// 知识库相关背景知识介绍
         /// “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
         /// “标签”文档：https://cloud.tencent.com/document/product/1759/112956
+        /// 单个知识库内支持创建的分类数量上限为 2000 个。
         /// </summary>
         /// <param name="req"><see cref="CreateQACateRequest"/></param>
         /// <returns><see cref="CreateQACateResponse"/></returns>
@@ -319,7 +321,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
-        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
         /// <returns><see cref="CreateWorkflowRunResponse"/></returns>
@@ -330,7 +332,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
-        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
         /// <returns><see cref="CreateWorkflowRunResponse"/></returns>

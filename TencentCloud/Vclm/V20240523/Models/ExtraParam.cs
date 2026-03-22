@@ -25,25 +25,22 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 预签名的上传url，支持把视频直接传到客户指定的地址。
+        /// <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
         /// </summary>
         [JsonProperty("UserDesignatedUrl")]
         public string UserDesignatedUrl{ get; set; }
 
         /// <summary>
-        /// 回调地址
-        /// 需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-        /// 数据格式如下：
-        /// {
-        ///     "JobId": "1397428070633955328",
-        ///     "Status": "DONE",
-        ///     "ErrorCode": "",
-        ///     "ErrorMessage": "",
-        ///     "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-        /// }
+        /// <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// <p>BGM音频文本。</p>
+        /// </summary>
+        [JsonProperty("BGMText")]
+        public string BGMText{ get; set; }
 
 
         /// <summary>
@@ -53,6 +50,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         {
             this.SetParamSimple(map, prefix + "UserDesignatedUrl", this.UserDesignatedUrl);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "BGMText", this.BGMText);
         }
     }
 }

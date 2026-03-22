@@ -26,6 +26,7 @@ namespace TencentCloud.Lke.V20231130.Models
         
         /// <summary>
         /// 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+        /// 修改知识库文档时，该参数填入知识库ID。
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }

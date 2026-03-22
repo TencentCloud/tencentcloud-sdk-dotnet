@@ -25,35 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// <p>需要返回的数量，默认为10，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-        /// <li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-        /// <li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-        /// <li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li>
+        /// <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// 排序方式 asc,desc
+        /// <p>排序方式 asc,desc</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

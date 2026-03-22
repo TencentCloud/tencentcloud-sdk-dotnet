@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1389</VersionPrefix>
+    <VersionPrefix>3.0.1391</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,10 @@
     <Compile Include="V20230418\Models\DescribeDepartmentsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceAccountsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceAccountsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceCountRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceCountResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceCountSummaryRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceCountSummaryResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceGroupMembersRequest.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceGroupMembersResponse.cs" />
     <Compile Include="V20230418\Models\DescribeDeviceGroupsRequest.cs" />
@@ -187,6 +191,7 @@
     <Compile Include="V20230418\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20230418\Models\Device.cs" />
     <Compile Include="V20230418\Models\DeviceAccount.cs" />
+    <Compile Include="V20230418\Models\DeviceCount.cs" />
     <Compile Include="V20230418\Models\DisableClientTcpAccessRequest.cs" />
     <Compile Include="V20230418\Models\DisableClientTcpAccessResponse.cs" />
     <Compile Include="V20230418\Models\DisableExternalAccessRequest.cs" />

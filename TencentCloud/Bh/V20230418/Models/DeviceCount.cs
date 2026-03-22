@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Bh.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendEmailResponse : AbstractModel
+    public class DeviceCount : AbstractModel
     {
         
         /// <summary>
-        /// <p>接受消息生成的唯一消息标识符。</p>
+        /// 资产类型
         /// </summary>
-        [JsonProperty("MessageId")]
-        public string MessageId{ get; set; }
+        [JsonProperty("Kind")]
+        public long? Kind{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 资产数目
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

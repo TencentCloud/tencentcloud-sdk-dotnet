@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+        /// <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p>
         /// </summary>
         [JsonProperty("RegionZones")]
         public AvailableRegion[] RegionZones{ get; set; }

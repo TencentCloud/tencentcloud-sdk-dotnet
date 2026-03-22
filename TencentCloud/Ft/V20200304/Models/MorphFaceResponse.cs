@@ -25,13 +25,13 @@ namespace TencentCloud.Ft.V20200304.Models
     {
         
         /// <summary>
-        /// 人像渐变任务的Job id
+        /// <p>人像渐变任务的Job id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 预估处理时间，粒度为秒
+        /// <p>预估处理时间，粒度为秒</p>
         /// </summary>
         [JsonProperty("EstimatedProcessTime")]
         public long? EstimatedProcessTime{ get; set; }

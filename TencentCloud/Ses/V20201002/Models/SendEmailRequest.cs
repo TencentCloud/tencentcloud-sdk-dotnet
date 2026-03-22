@@ -25,88 +25,85 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
+        /// <p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// 邮件主题
+        /// <p>邮件主题</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
         /// <summary>
-        /// 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-        /// Destination/Cc/Bcc三个参数必须至少存在一个。
+        /// <p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }
 
         /// <summary>
-        /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+        /// <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// 抄送人邮箱地址，最多支持抄送20人。
+        /// <p>抄送人邮箱地址，最多支持抄送20人。</p>
         /// </summary>
         [JsonProperty("Cc")]
         public string[] Cc{ get; set; }
 
         /// <summary>
-        /// 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
+        /// <p>密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。</p>
         /// </summary>
         [JsonProperty("Bcc")]
         public string[] Bcc{ get; set; }
 
         /// <summary>
-        /// 使用模板发送时，填写模板相关参数。
-        /// <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+        /// <p>使用模板发送时，填写模板相关参数。</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
 
         /// <summary>
-        /// 已废弃
-        /// <dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+        /// <p>已废弃</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote>
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
+        /// <p>需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误</p>
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+        /// <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
         /// <summary>
-        /// 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+        /// <p>邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道</p>
         /// </summary>
         [JsonProperty("TriggerType")]
         public ulong? TriggerType{ get; set; }
 
         /// <summary>
-        /// smtp头中的Message-Id字段
+        /// <p>smtp头中的Message-Id字段</p>
         /// </summary>
         [JsonProperty("SmtpMessageId")]
         public string SmtpMessageId{ get; set; }
 
         /// <summary>
-        /// smtp头中可以设置的其它字段
+        /// <p>smtp头中可以设置的其它字段</p>
         /// </summary>
         [JsonProperty("SmtpHeaders")]
         public string SmtpHeaders{ get; set; }
 
         /// <summary>
-        /// smtp头中的from字段，建议域名与FromEmailAddress保持一致
+        /// <p>smtp头中的from字段，建议域名与FromEmailAddress保持一致</p>
         /// </summary>
         [JsonProperty("HeaderFrom")]
         public string HeaderFrom{ get; set; }

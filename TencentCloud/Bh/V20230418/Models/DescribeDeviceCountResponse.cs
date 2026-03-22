@@ -15,40 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Bh.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncDubbingResponse : AbstractModel
+    public class DescribeDeviceCountResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>错误码，成功时返回0</p>
+        /// 主机总数
         /// </summary>
-        [JsonProperty("ErrorCode")]
-        public long? ErrorCode{ get; set; }
-
-        /// <summary>
-        /// <p>错误信息，成功时返回success</p>
-        /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
-
-        /// <summary>
-        /// <p>合成音频的base64编码，wav格式。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AudioData")]
-        public string AudioData{ get; set; }
-
-        /// <summary>
-        /// <p>克隆的音色Id。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("VoiceId")]
-        public string VoiceId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,10 +42,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
-            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
