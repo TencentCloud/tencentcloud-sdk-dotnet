@@ -31,7 +31,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+        /// 【必填】系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)，需要和GroupId或者GroupIds匹配
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }

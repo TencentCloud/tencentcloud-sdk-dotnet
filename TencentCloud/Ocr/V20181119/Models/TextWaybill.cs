@@ -25,46 +25,52 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 收件人姓名
+        /// <p>收件人姓名</p>
         /// </summary>
         [JsonProperty("RecName")]
         public WaybillObj RecName{ get; set; }
 
         /// <summary>
-        /// 收件人手机号
+        /// <p>收件人手机号</p>
         /// </summary>
         [JsonProperty("RecNum")]
         public WaybillObj RecNum{ get; set; }
 
         /// <summary>
-        /// 收件人地址
+        /// <p>收件人地址</p>
         /// </summary>
         [JsonProperty("RecAddr")]
         public WaybillObj RecAddr{ get; set; }
 
         /// <summary>
-        /// 寄件人姓名
+        /// <p>寄件人姓名</p>
         /// </summary>
         [JsonProperty("SenderName")]
         public WaybillObj SenderName{ get; set; }
 
         /// <summary>
-        /// 寄件人手机号
+        /// <p>寄件人手机号</p>
         /// </summary>
         [JsonProperty("SenderNum")]
         public WaybillObj SenderNum{ get; set; }
 
         /// <summary>
-        /// 寄件人地址
+        /// <p>寄件人地址</p>
         /// </summary>
         [JsonProperty("SenderAddr")]
         public WaybillObj SenderAddr{ get; set; }
 
         /// <summary>
-        /// 运单号
+        /// <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
         /// </summary>
         [JsonProperty("WaybillNum")]
         public WaybillObj WaybillNum{ get; set; }
+
+        /// <summary>
+        /// <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+        /// </summary>
+        [JsonProperty("MainWaybillNum")]
+        public WaybillObj MainWaybillNum{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "SenderNum.", this.SenderNum);
             this.SetParamObj(map, prefix + "SenderAddr.", this.SenderAddr);
             this.SetParamObj(map, prefix + "WaybillNum.", this.WaybillNum);
+            this.SetParamObj(map, prefix + "MainWaybillNum.", this.MainWaybillNum);
         }
     }
 }

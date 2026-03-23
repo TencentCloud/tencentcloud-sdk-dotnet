@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1392</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20221121\CsipClient.cs" />
+    <Compile Include="V20221121\Models\AIAgentAsset.cs" />
     <Compile Include="V20221121\Models\AKInfo.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarm.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarmCount.cs" />
@@ -96,6 +97,8 @@
     <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAIAgentAssetListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAIAgentAssetListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAbnormalCallRecordRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAbnormalCallRecordResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAccessKeyAlarmDetailRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1392";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 AI agent 资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentAssetListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentAssetListResponse"/></returns>
+        public Task<DescribeAIAgentAssetListResponse> DescribeAIAgentAssetList(DescribeAIAgentAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList");
+        }
+
+        /// <summary>
+        /// 获取 AI agent 资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentAssetListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentAssetListResponse"/></returns>
+        public DescribeAIAgentAssetListResponse DescribeAIAgentAssetListSync(DescribeAIAgentAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

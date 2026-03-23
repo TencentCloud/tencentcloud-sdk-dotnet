@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+        /// <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
         /// </summary>
         [JsonProperty("Data")]
         public TaskStatData[] Data{ get; set; }

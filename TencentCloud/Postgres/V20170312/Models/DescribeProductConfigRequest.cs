@@ -36,6 +36,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
 
+        /// <summary>
+        /// <p>实例存储类型，根据存储类型返回支持的版本和规格</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

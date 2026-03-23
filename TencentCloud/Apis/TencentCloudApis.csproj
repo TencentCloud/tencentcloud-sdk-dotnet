@@ -1,0 +1,159 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{7944596E-C265-32BB-8E66-BB35988DF25C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1392</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Apis</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20240801\ApisClient.cs" />
+    <Compile Include="V20240801\Models\AgentAppMcpServerDTO.cs" />
+    <Compile Include="V20240801\Models\AgentAppMcpServerVO.cs" />
+    <Compile Include="V20240801\Models\AgentAppModelServiceDTO.cs" />
+    <Compile Include="V20240801\Models\AgentAppSecretKeyVO.cs" />
+    <Compile Include="V20240801\Models\AgentCredentialContentDTO.cs" />
+    <Compile Include="V20240801\Models\AgentCredentialContentHeaderDTO.cs" />
+    <Compile Include="V20240801\Models\BindMcpSecurityRuleDTO.cs" />
+    <Compile Include="V20240801\Models\BindMcpSecurityRuleVO.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppMcpServersRequest.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppMcpServersResponse.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppModelServicesRequest.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppModelServicesResponse.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppRequest.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppResp.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\CreateAgentCredentialRequest.cs" />
+    <Compile Include="V20240801\Models\CreateAgentCredentialResponse.cs" />
+    <Compile Include="V20240801\Models\CreateMcpServerRequest.cs" />
+    <Compile Include="V20240801\Models\CreateMcpServerResponse.cs" />
+    <Compile Include="V20240801\Models\CreateModelRequest.cs" />
+    <Compile Include="V20240801\Models\CreateModelResponse.cs" />
+    <Compile Include="V20240801\Models\CreateModelServiceRequest.cs" />
+    <Compile Include="V20240801\Models\CreateModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppMcpServersRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppMcpServersResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppModelServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppModelServicesResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentCredentialRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentCredentialResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteMcpServerRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteMcpServerResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteModelRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteModelResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteModelServiceRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppMcpServersRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppMcpServersResp.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppMcpServersResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppModelServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppModelServicesResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppResp.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppsRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppsResp.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppsResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppsSortDTO.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentCredentialRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentCredentialResp.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentCredentialResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentCredentialsRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentCredentialsResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServerRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServerResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServerResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServersRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServersResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMcpServersResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeModelRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeModelResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeModelResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServiceRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServiceResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServicesResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServicesResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeModelServicesSort.cs" />
+    <Compile Include="V20240801\Models\DescribeModelsRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeModelsResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeModelsResponseVO.cs" />
+    <Compile Include="V20240801\Models\DescribeModelsSort.cs" />
+    <Compile Include="V20240801\Models\IDNameVO.cs" />
+    <Compile Include="V20240801\Models\InvokeLimitConfigDTO.cs" />
+    <Compile Include="V20240801\Models\IpConfig.cs" />
+    <Compile Include="V20240801\Models\LimitWindowsDTO.cs" />
+    <Compile Include="V20240801\Models\McpInputOutSchema.cs" />
+    <Compile Include="V20240801\Models\McpSecurityRule.cs" />
+    <Compile Include="V20240801\Models\McpSecurityRulesVO.cs" />
+    <Compile Include="V20240801\Models\McpTool.cs" />
+    <Compile Include="V20240801\Models\McpToolAnnotation.cs" />
+    <Compile Include="V20240801\Models\McpUrlObj.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentAppModelServicesRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentAppModelServicesResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentAppRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentCredentialRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyAgentCredentialResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyMcpServerRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyMcpServerResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyModelRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyModelResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyModelServiceRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\PluginConfigDTO.cs" />
+    <Compile Include="V20240801\Models\PluginFormValueDTO.cs" />
+    <Compile Include="V20240801\Models\ResultIDVO.cs" />
+    <Compile Include="V20240801\Models\ResultIDsVO.cs" />
+    <Compile Include="V20240801\Models\StartEndTime.cs" />
+    <Compile Include="V20240801\Models\TargetHostDTO.cs" />
+    <Compile Include="V20240801\Models\TargetModelDTO.cs" />
+    <Compile Include="V20240801\Models\TmsConfigDTO.cs" />
+    <Compile Include="V20240801\Models\TokenLimitConfigDTO.cs" />
+    <Compile Include="V20240801\Models\ToolConfigDTO.cs" />
+    <Compile Include="V20240801\Models\ToolConfigVO.cs" />
+  </ItemGroup>
+</Project>

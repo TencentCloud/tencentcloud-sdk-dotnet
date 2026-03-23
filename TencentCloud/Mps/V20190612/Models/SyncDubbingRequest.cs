@@ -61,6 +61,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioLang{ get; set; }
 
         /// <summary>
+        /// <p>输出相关参数</p><p>可以指定输出形式等</p>
+        /// </summary>
+        [JsonProperty("Output")]
+        public SyncDubbingOutputOption Output{ get; set; }
+
+        /// <summary>
         /// <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
         /// </summary>
         [JsonProperty("ExtParam")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "AudioLang", this.AudioLang);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

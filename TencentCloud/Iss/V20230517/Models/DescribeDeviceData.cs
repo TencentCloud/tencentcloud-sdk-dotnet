@@ -25,190 +25,196 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设备ID
+        /// <p>设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+        /// <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备接入协议，1:RTMP,2:GB,3:GW 
+        /// <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }
 
         /// <summary>
-        /// 设备类型，1:IPC,2:NVR
+        /// <p>设备类型，1:IPC,2:NVR</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 设备接入服务节点id
+        /// <p>设备接入服务节点id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 设备接入服务节点名称
+        /// <p>设备接入服务节点名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 设备流传输协议，1:UDP,2:TCP 
+        /// <p>设备流传输协议，1:UDP,2:TCP</p>
         /// </summary>
         [JsonProperty("TransportProtocol")]
         public long? TransportProtocol{ get; set; }
 
         /// <summary>
-        /// 设备密码
+        /// <p>设备密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 设备描述
+        /// <p>设备描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// sip服务ID
+        /// <p>sip服务ID</p>
         /// </summary>
         [JsonProperty("SipId")]
         public string SipId{ get; set; }
 
         /// <summary>
-        /// sip服务域
+        /// <p>sip服务域</p>
         /// </summary>
         [JsonProperty("SipDomain")]
         public string SipDomain{ get; set; }
 
         /// <summary>
-        /// sip服务IP地址
+        /// <p>sip服务IP地址</p>
         /// </summary>
         [JsonProperty("SipIp")]
         public string SipIp{ get; set; }
 
         /// <summary>
-        /// sip服务端口
+        /// <p>sip服务端口</p>
         /// </summary>
         [JsonProperty("SipPort")]
         public long? SipPort{ get; set; }
 
         /// <summary>
-        /// Rtmp设备推流地址(仅rtmp设备有效)
+        /// <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
         /// </summary>
         [JsonProperty("PushStreamUrl")]
         public string PushStreamUrl{ get; set; }
 
         /// <summary>
-        /// 设备状态，0:未注册,1:在线,2:离线,3:禁用
+        /// <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 设备所属组织ID
+        /// <p>设备所属组织ID</p>
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+        /// <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 设备所属网关名称
+        /// <p>设备所属网关名称</p>
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
-        /// 设备网关协议名称
+        /// <p>设备网关协议名称</p>
         /// </summary>
         [JsonProperty("ProtocolTypeName")]
         public string ProtocolTypeName{ get; set; }
 
         /// <summary>
-        /// 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+        /// <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
         /// <summary>
-        /// 设备接入IP
+        /// <p>设备接入IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 设备Port
+        /// <p>设备Port</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 设备用户名
+        /// <p>设备用户名</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 设备地域
+        /// <p>设备地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 设备厂商
+        /// <p>设备厂商</p>
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
-        /// 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+        /// <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
         /// </summary>
         [JsonProperty("AudioSwitch")]
         public long? AudioSwitch{ get; set; }
 
         /// <summary>
-        /// 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+        /// <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
         /// </summary>
         [JsonProperty("SubscribeSwitch")]
         public long? SubscribeSwitch{ get; set; }
 
         /// <summary>
-        /// RTMP推流地址自定义appName
+        /// <p>RTMP推流地址自定义appName</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// RTMP推流地址自定义streamName
+        /// <p>RTMP推流地址自定义streamName</p>
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 是否开启静音帧（0：关闭；1 开启）
+        /// <p>是否开启静音帧（0：关闭；1 开启）</p>
         /// </summary>
         [JsonProperty("SilentFrameSwitch")]
         public long? SilentFrameSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+        /// </summary>
+        [JsonProperty("PushStreamSecureUrl")]
+        public string PushStreamSecureUrl{ get; set; }
 
 
         /// <summary>
@@ -247,6 +253,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
+            this.SetParamSimple(map, prefix + "PushStreamSecureUrl", this.PushStreamSecureUrl);
         }
     }
 }

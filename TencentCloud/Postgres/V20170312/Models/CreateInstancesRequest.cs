@@ -216,6 +216,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

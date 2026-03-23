@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1392";
 
         /// <summary>
         /// Client constructor.
@@ -6797,6 +6797,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeShellPolicyListResponse DescribeShellPolicyListSync(DescribeShellPolicyListRequest req)
         {
             return InternalRequestAsync<DescribeShellPolicyListResponse>(req, "DescribeShellPolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 补丁详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillInfoResponse"/></returns>
+        public Task<DescribeSkillInfoResponse> DescribeSkillInfo(DescribeSkillInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillInfoResponse>(req, "DescribeSkillInfo");
+        }
+
+        /// <summary>
+        /// 补丁详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillInfoResponse"/></returns>
+        public DescribeSkillInfoResponse DescribeSkillInfoSync(DescribeSkillInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillInfoResponse>(req, "DescribeSkillInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

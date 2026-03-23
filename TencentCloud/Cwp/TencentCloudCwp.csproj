@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1388</VersionPrefix>
+    <VersionPrefix>3.0.1392</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -776,6 +776,8 @@
     <Compile Include="V20180228\Models\DescribeServersAndRiskAndFirstInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeShellPolicyListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeShellPolicyListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeSkillInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeSkillInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeStrategyExistRequest.cs" />
     <Compile Include="V20180228\Models\DescribeStrategyExistResponse.cs" />
     <Compile Include="V20180228\Models\DescribeTagMachinesRequest.cs" />
@@ -1309,6 +1311,7 @@
     <Compile Include="V20180228\Models\SetLocalStorageItemRequest.cs" />
     <Compile Include="V20180228\Models\SetLocalStorageItemResponse.cs" />
     <Compile Include="V20180228\Models\ShellPolicyList.cs" />
+    <Compile Include="V20180228\Models\SkillInfo.cs" />
     <Compile Include="V20180228\Models\StandardModeConfig.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectRequest.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectResponse.cs" />
