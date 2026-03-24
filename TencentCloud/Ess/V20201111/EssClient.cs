@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1393";
 
         /// <summary>
         /// Client constructor.
@@ -3568,6 +3568,27 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 本接口（DescribeContractReviewMarkedRiskExportTask）用于查询由 ExportContractReviewMarkedRisk 接口创建的导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewMarkedRiskExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewMarkedRiskExportTaskResponse"/></returns>
+        public Task<DescribeContractReviewMarkedRiskExportTaskResponse> DescribeContractReviewMarkedRiskExportTask(DescribeContractReviewMarkedRiskExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewMarkedRiskExportTaskResponse>(req, "DescribeContractReviewMarkedRiskExportTask");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeContractReviewMarkedRiskExportTask）用于查询由 ExportContractReviewMarkedRisk 接口创建的导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewMarkedRiskExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewMarkedRiskExportTaskResponse"/></returns>
+        public DescribeContractReviewMarkedRiskExportTaskResponse DescribeContractReviewMarkedRiskExportTaskSync(DescribeContractReviewMarkedRiskExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewMarkedRiskExportTaskResponse>(req, "DescribeContractReviewMarkedRiskExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeContractReviewTaskRequest"/></param>
@@ -4565,6 +4586,27 @@ namespace TencentCloud.Ess.V20201111
         public ExportContractComparisonTaskResponse ExportContractComparisonTaskSync(ExportContractComparisonTaskRequest req)
         {
             return InternalRequestAsync<ExportContractComparisonTaskResponse>(req, "ExportContractComparisonTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractReviewMarkedRisk）用于创建导出任务，可以导出合同审查标注风险项,包括忽略的、标记错误的、人工标注的风险等
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractReviewMarkedRiskRequest"/></param>
+        /// <returns><see cref="ExportContractReviewMarkedRiskResponse"/></returns>
+        public Task<ExportContractReviewMarkedRiskResponse> ExportContractReviewMarkedRisk(ExportContractReviewMarkedRiskRequest req)
+        {
+            return InternalRequestAsync<ExportContractReviewMarkedRiskResponse>(req, "ExportContractReviewMarkedRisk");
+        }
+
+        /// <summary>
+        /// 本接口（ExportContractReviewMarkedRisk）用于创建导出任务，可以导出合同审查标注风险项,包括忽略的、标记错误的、人工标注的风险等
+        /// </summary>
+        /// <param name="req"><see cref="ExportContractReviewMarkedRiskRequest"/></param>
+        /// <returns><see cref="ExportContractReviewMarkedRiskResponse"/></returns>
+        public ExportContractReviewMarkedRiskResponse ExportContractReviewMarkedRiskSync(ExportContractReviewMarkedRiskRequest req)
+        {
+            return InternalRequestAsync<ExportContractReviewMarkedRiskResponse>(req, "ExportContractReviewMarkedRisk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

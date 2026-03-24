@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例列表。
+        /// <p>负载均衡实例列表。</p>
         /// </summary>
         [JsonProperty("LoadBalancers")]
         public LoadBalancerHealth[] LoadBalancers{ get; set; }

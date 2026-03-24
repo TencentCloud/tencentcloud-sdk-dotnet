@@ -80,6 +80,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InChargeNameList")]
         public string[] InChargeNameList{ get; set; }
 
+        /// <summary>
+        /// 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+        /// 'Y': '调度中',
+        /// 'F': '已下线',
+        /// 'O': '已暂停',
+        /// 'INVALID': '已失效',
+        /// 'DELETED': '已删除' 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public string TaskStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +106,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamArraySimple(map, prefix + "InChargeIdList.", this.InChargeIdList);
             this.SetParamArraySimple(map, prefix + "InChargeNameList.", this.InChargeNameList);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         }
     }
 }

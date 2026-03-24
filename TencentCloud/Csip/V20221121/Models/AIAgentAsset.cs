@@ -85,6 +85,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("MetadataRiskURL")]
         public string MetadataRiskURL{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("SkillState")]
+        public SkillState SkillState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IdentityMethod", this.IdentityMethod);
             this.SetParamSimple(map, prefix + "ExposureStatus", this.ExposureStatus);
             this.SetParamSimple(map, prefix + "MetadataRiskURL", this.MetadataRiskURL);
+            this.SetParamObj(map, prefix + "SkillState.", this.SkillState);
         }
     }
 }

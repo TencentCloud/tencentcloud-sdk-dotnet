@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1393";
 
         /// <summary>
         /// Client constructor.
@@ -2280,6 +2280,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取产品动态注册详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="DescribeProductDynamicRegisterResponse"/></returns>
+        public Task<DescribeProductDynamicRegisterResponse> DescribeProductDynamicRegister(DescribeProductDynamicRegisterRequest req)
+        {
+            return InternalRequestAsync<DescribeProductDynamicRegisterResponse>(req, "DescribeProductDynamicRegister");
+        }
+
+        /// <summary>
+        /// 获取产品动态注册详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="DescribeProductDynamicRegisterResponse"/></returns>
+        public DescribeProductDynamicRegisterResponse DescribeProductDynamicRegisterSync(DescribeProductDynamicRegisterRequest req)
+        {
+            return InternalRequestAsync<DescribeProductDynamicRegisterResponse>(req, "DescribeProductDynamicRegister")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询项目详情
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectRequest"/></param>
@@ -3578,6 +3599,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIServiceSync(ModifyProductCloudStorageAIServiceRequest req)
         {
             return InternalRequestAsync<ModifyProductCloudStorageAIServiceResponse>(req, "ModifyProductCloudStorageAIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改产品动态注册
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="ModifyProductDynamicRegisterResponse"/></returns>
+        public Task<ModifyProductDynamicRegisterResponse> ModifyProductDynamicRegister(ModifyProductDynamicRegisterRequest req)
+        {
+            return InternalRequestAsync<ModifyProductDynamicRegisterResponse>(req, "ModifyProductDynamicRegister");
+        }
+
+        /// <summary>
+        /// 修改产品动态注册
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="ModifyProductDynamicRegisterResponse"/></returns>
+        public ModifyProductDynamicRegisterResponse ModifyProductDynamicRegisterSync(ModifyProductDynamicRegisterRequest req)
+        {
+            return InternalRequestAsync<ModifyProductDynamicRegisterResponse>(req, "ModifyProductDynamicRegister")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

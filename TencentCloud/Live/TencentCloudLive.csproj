@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1393</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -174,6 +174,8 @@
     <Compile Include="V20180801\Models\CreateRecordTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateScreenshotTaskRequest.cs" />
     <Compile Include="V20180801\Models\CreateScreenshotTaskResponse.cs" />
+    <Compile Include="V20180801\Models\CreateVideoRedrawTaskRequest.cs" />
+    <Compile Include="V20180801\Models\CreateVideoRedrawTaskResponse.cs" />
     <Compile Include="V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="V20180801\Models\DelayInfo.cs" />
     <Compile Include="V20180801\Models\DeleteAuditKeywordsRequest.cs" />
@@ -607,6 +609,8 @@
     <Compile Include="V20180801\Models\UnBindLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\UpdateLiveWatermarkRequest.cs" />
     <Compile Include="V20180801\Models\UpdateLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\VideoRedrawCosInfo.cs" />
+    <Compile Include="V20180801\Models\VideoRedrawInput.cs" />
     <Compile Include="V20180801\Models\WatermarkInfo.cs" />
     <Compile Include="V20180801\Models\XP2PDetailInfo.cs" />
   </ItemGroup>

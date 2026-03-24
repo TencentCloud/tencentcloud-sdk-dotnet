@@ -25,46 +25,37 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 起始时间点，接口查询支持两种时间格式：
-        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-        /// 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-        /// 开始时间和结束时间的格式需要保持一致。
+        /// <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间点，接口查询支持两种时间格式：
-        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-        /// 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-        /// 开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。
+        /// <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 播放域名，
-        /// 若不填，则为查询所有播放域名的在线流数据。
+        /// <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p>
         /// </summary>
         [JsonProperty("PlayDomain")]
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// 流名称，精确匹配。
-        /// 若不填，则为查询总体播放数据。
+        /// <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p>
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-        /// 若不填，则为查询总体播放数据。
+        /// <p>该参数暂不可用。</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+        /// <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

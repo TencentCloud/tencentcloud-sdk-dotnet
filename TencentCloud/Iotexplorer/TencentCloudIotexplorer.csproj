@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1393</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,8 @@
     <Compile Include="V20190423\Models\DescribePositionFenceListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeProductCloudStorageAIServiceRequest.cs" />
     <Compile Include="V20190423\Models\DescribeProductCloudStorageAIServiceResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeProductDynamicRegisterRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeProductDynamicRegisterResponse.cs" />
     <Compile Include="V20190423\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20190423\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20190423\Models\DescribeSpaceFenceEventListRequest.cs" />
@@ -434,6 +436,8 @@
     <Compile Include="V20190423\Models\ModifyPositionSpaceResponse.cs" />
     <Compile Include="V20190423\Models\ModifyProductCloudStorageAIServiceRequest.cs" />
     <Compile Include="V20190423\Models\ModifyProductCloudStorageAIServiceResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyProductDynamicRegisterRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyProductDynamicRegisterResponse.cs" />
     <Compile Include="V20190423\Models\ModifyProjectRequest.cs" />
     <Compile Include="V20190423\Models\ModifyProjectResponse.cs" />
     <Compile Include="V20190423\Models\ModifySpacePropertyRequest.cs" />

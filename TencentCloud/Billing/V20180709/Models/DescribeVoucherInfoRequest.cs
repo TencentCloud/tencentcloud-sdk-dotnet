@@ -25,142 +25,148 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 一页多少条数据，默认是20条，最大不超过1000
+        /// <p>一页多少条数据，默认是20条，最大不超过1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 第多少页，默认是1
+        /// <p>第多少页，默认是1</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
+        /// <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 代金券id
+        /// <p>代金券id</p>
         /// </summary>
         [JsonProperty("VoucherId")]
         public string VoucherId{ get; set; }
 
         /// <summary>
-        /// 代金券订单id
+        /// <p>代金券订单id</p>
         /// </summary>
         [JsonProperty("CodeId")]
         public string CodeId{ get; set; }
 
         /// <summary>
-        /// 商品码
+        /// <p>商品码</p>
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 活动id
+        /// <p>活动id</p>
         /// </summary>
         [JsonProperty("ActivityId")]
         public string ActivityId{ get; set; }
 
         /// <summary>
-        /// 代金券名称
+        /// <p>代金券名称</p>
         /// </summary>
         [JsonProperty("VoucherName")]
         public string VoucherName{ get; set; }
 
         /// <summary>
-        /// 发放开始时间,例：2021-01-01
+        /// <p>发放开始时间,例：2021-01-01</p>
         /// </summary>
         [JsonProperty("TimeFrom")]
         public string TimeFrom{ get; set; }
 
         /// <summary>
-        /// 发放结束时间，例：2021-01-01
+        /// <p>发放结束时间，例：2021-01-01</p>
         /// </summary>
         [JsonProperty("TimeTo")]
         public string TimeTo{ get; set; }
 
         /// <summary>
-        /// 指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
+        /// <p>指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间</p>
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 指定升序降序：desc、asc
+        /// <p>指定升序降序：desc、asc</p>
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// 付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
+        /// <p>付费模式，postPay后付费/prePay预付费/riPay预留实例/&quot;&quot;或者&quot;*&quot;表示全部模式，如果payMode为&quot;&quot;或&quot;*&quot;，那么productCode与subProductCode必须传空</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
+        /// <p>付费场景PayMode=postPay时：spotpay-竞价实例,&quot;settle account&quot;-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景</p>
         /// </summary>
         [JsonProperty("PayScene")]
         public string PayScene{ get; set; }
 
         /// <summary>
-        /// 操作人，默认就是用户uin
+        /// <p>操作人，默认就是用户uin</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+        /// <p>代金券主类型 has_price 为有价现金券 no_price 为无价代金券</p>
         /// </summary>
         [JsonProperty("VoucherMainType")]
         public string VoucherMainType{ get; set; }
 
         /// <summary>
-        /// 代金券副类型 discount 为折扣券 deduct 为抵扣券
+        /// <p>代金券副类型 discount 为折扣券 deduct 为抵扣券</p>
         /// </summary>
         [JsonProperty("VoucherSubType")]
         public string VoucherSubType{ get; set; }
 
         /// <summary>
-        /// 券有效时间开始时间
+        /// <p>券有效时间开始时间</p>
         /// </summary>
         [JsonProperty("StartTimeFrom")]
         public string StartTimeFrom{ get; set; }
 
         /// <summary>
-        /// 券有效时间结束时间
+        /// <p>券有效时间结束时间</p>
         /// </summary>
         [JsonProperty("StartTimeTo")]
         public string StartTimeTo{ get; set; }
 
         /// <summary>
-        /// 券失效时间开始时间
+        /// <p>券失效时间开始时间</p>
         /// </summary>
         [JsonProperty("EndTimeFrom")]
         public string EndTimeFrom{ get; set; }
 
         /// <summary>
-        /// 券失效时间结束时间
+        /// <p>券失效时间结束时间</p>
         /// </summary>
         [JsonProperty("EndTimeTo")]
         public string EndTimeTo{ get; set; }
 
         /// <summary>
-        /// 发券时间开始时间
+        /// <p>发券时间开始时间</p>
         /// </summary>
         [JsonProperty("CreateTimeFrom")]
         public string CreateTimeFrom{ get; set; }
 
         /// <summary>
-        /// 发券时间结束时间
+        /// <p>发券时间结束时间</p>
         /// </summary>
         [JsonProperty("CreateTimeTo")]
         public string CreateTimeTo{ get; set; }
+
+        /// <summary>
+        /// <p>语言参数</p><p>默认值：zh</p><p>期望返回产品名称中文或其他语言，目前仅支持中文、英文；填&quot;zh&quot;或不填时返回中文，其他情况返回英文</p>
+        /// </summary>
+        [JsonProperty("Lang")]
+        public string Lang{ get; set; }
 
 
         /// <summary>
@@ -191,6 +197,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "EndTimeTo", this.EndTimeTo);
             this.SetParamSimple(map, prefix + "CreateTimeFrom", this.CreateTimeFrom);
             this.SetParamSimple(map, prefix + "CreateTimeTo", this.CreateTimeTo);
+            this.SetParamSimple(map, prefix + "Lang", this.Lang);
         }
     }
 }

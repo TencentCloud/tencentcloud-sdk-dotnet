@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 券总数
+        /// <p>券总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 总余额（微分）
+        /// <p>总余额（微分）</p>
         /// </summary>
         [JsonProperty("TotalBalance")]
         public long? TotalBalance{ get; set; }
 
         /// <summary>
-        /// 代金券相关信息
+        /// <p>代金券相关信息</p>
         /// </summary>
         [JsonProperty("VoucherInfos")]
         public VoucherInfos[] VoucherInfos{ get; set; }

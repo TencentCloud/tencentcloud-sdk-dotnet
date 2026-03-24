@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1393";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Dnspod.V20210323
         public CheckSnapshotRollbackResponse CheckSnapshotRollbackSync(CheckSnapshotRollbackRequest req)
         {
             return InternalRequestAsync<CheckSnapshotRollbackResponse>(req, "CheckSnapshotRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DNSPod商品下单并支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndPayDealRequest"/></param>
+        /// <returns><see cref="CreateAndPayDealResponse"/></returns>
+        public Task<CreateAndPayDealResponse> CreateAndPayDeal(CreateAndPayDealRequest req)
+        {
+            return InternalRequestAsync<CreateAndPayDealResponse>(req, "CreateAndPayDeal");
+        }
+
+        /// <summary>
+        /// DNSPod商品下单并支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndPayDealRequest"/></param>
+        /// <returns><see cref="CreateAndPayDealResponse"/></returns>
+        public CreateAndPayDealResponse CreateAndPayDealSync(CreateAndPayDealRequest req)
+        {
+            return InternalRequestAsync<CreateAndPayDealResponse>(req, "CreateAndPayDeal")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

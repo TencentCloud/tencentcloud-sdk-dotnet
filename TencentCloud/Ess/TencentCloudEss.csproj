@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1393</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -261,6 +261,8 @@
     <Compile Include="V20201111\Models\DescribeContractReviewChecklistWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewChecklistsWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewChecklistsWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewMarkedRiskExportTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeContractReviewMarkedRiskExportTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewTaskListWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewTaskListWebUrlResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewTaskRequest.cs" />
@@ -331,6 +333,8 @@
     <Compile Include="V20201111\Models\EmbedUrlOption.cs" />
     <Compile Include="V20201111\Models\ExportContractComparisonTaskRequest.cs" />
     <Compile Include="V20201111\Models\ExportContractComparisonTaskResponse.cs" />
+    <Compile Include="V20201111\Models\ExportContractReviewMarkedRiskRequest.cs" />
+    <Compile Include="V20201111\Models\ExportContractReviewMarkedRiskResponse.cs" />
     <Compile Include="V20201111\Models\ExportContractReviewResultRequest.cs" />
     <Compile Include="V20201111\Models\ExportContractReviewResultResponse.cs" />
     <Compile Include="V20201111\Models\ExtendAuthInfo.cs" />

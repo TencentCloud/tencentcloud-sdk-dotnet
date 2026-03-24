@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 记录数
+        /// 查询结果总数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
@@ -38,6 +38,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Items")]
         public RuleGroup[] Items{ get; set; }
 
+        /// <summary>
+        /// 已开启监控任务数量（在查询结果总量中）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorEnabledCount")]
+        public ulong? MonitorEnabledCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "MonitorEnabledCount", this.MonitorEnabledCount);
         }
     }
 }

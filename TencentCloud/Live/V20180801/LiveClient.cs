@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1393";
 
         /// <summary>
         /// Client constructor.
@@ -1050,6 +1050,27 @@ namespace TencentCloud.Live.V20180801
         public CreateScreenshotTaskResponse CreateScreenshotTaskSync(CreateScreenshotTaskRequest req)
         {
             return InternalRequestAsync<CreateScreenshotTaskResponse>(req, "CreateScreenshotTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建AI转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public Task<CreateVideoRedrawTaskResponse> CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask");
+        }
+
+        /// <summary>
+        /// 创建AI转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public CreateVideoRedrawTaskResponse CreateVideoRedrawTaskSync(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

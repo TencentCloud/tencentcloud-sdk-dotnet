@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 要查询的负载均衡实例ID列表。
+        /// <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p>
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 要查询的监听器ID列表。
+        /// <p>要查询的监听器ID列表。</p>
         /// </summary>
         [JsonProperty("ListenerIds")]
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// 要查询的转发规则ID列表。
+        /// <p>要查询的转发规则ID列表。</p>
         /// </summary>
         [JsonProperty("LocationIds")]
         public string[] LocationIds{ get; set; }

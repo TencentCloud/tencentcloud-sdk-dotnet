@@ -413,6 +413,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
+        /// <summary>
+        /// <p>是否默认使用探针自带熔断阈值</p>
+        /// </summary>
+        [JsonProperty("UseDefaultFuseConfig")]
+        public bool? UseDefaultFuseConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -480,6 +486,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
             this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
         }
     }
 }

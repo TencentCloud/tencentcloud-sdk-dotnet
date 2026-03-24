@@ -25,46 +25,52 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 命名空间名称
+        /// <p>命名空间名称</p>
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 访问级别，True为公开，False为私有
+        /// <p>访问级别，True为公开，False为私有</p>
         /// </summary>
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
 
         /// <summary>
-        /// 扫描级别，True为自动，False为手动
+        /// <p>扫描级别，True为自动，False为手动</p>
         /// </summary>
         [JsonProperty("IsAutoScan")]
         public bool? IsAutoScan{ get; set; }
 
         /// <summary>
-        /// 阻断开关，True为开放，False为关闭
+        /// <p>阻断开关，True为开放，False为关闭</p>
         /// </summary>
         [JsonProperty("IsPreventVUL")]
         public bool? IsPreventVUL{ get; set; }
 
         /// <summary>
-        /// 阻断漏洞等级，目前仅支持 low、medium、high
+        /// <p>阻断漏洞等级，目前仅支持 low、medium、high</p>
         /// </summary>
         [JsonProperty("Severity")]
         public string Severity{ get; set; }
 
         /// <summary>
-        /// 漏洞白名单列表
+        /// <p>漏洞白名单列表</p>
         /// </summary>
         [JsonProperty("CVEWhitelistItems")]
         public CVEWhitelistItem[] CVEWhitelistItems{ get; set; }
+
+        /// <summary>
+        /// <p>tag列表</p>
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "IsPreventVUL", this.IsPreventVUL);
             this.SetParamSimple(map, prefix + "Severity", this.Severity);
             this.SetParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

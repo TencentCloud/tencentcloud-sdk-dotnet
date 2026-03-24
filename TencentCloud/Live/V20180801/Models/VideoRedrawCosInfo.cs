@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Live.V20180801.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class VideoRedrawCosInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>cos所在地域</p>
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// <p>cos桶信息</p>
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
+
+        /// <summary>
+        /// <p>任务存放cos的目录</p>
+        /// </summary>
+        [JsonProperty("Dir")]
+        public string Dir{ get; set; }
+
+        /// <summary>
+        /// <p>临时Cos SecretId</p>
+        /// </summary>
+        [JsonProperty("TmpSecretId")]
+        public string TmpSecretId{ get; set; }
+
+        /// <summary>
+        /// <p>临时Cos SecretKey</p>
+        /// </summary>
+        [JsonProperty("TmpSecretKey")]
+        public string TmpSecretKey{ get; set; }
+
+        /// <summary>
+        /// <p>临时token</p>
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "Dir", this.Dir);
+            this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
+            this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+        }
+    }
+}
+

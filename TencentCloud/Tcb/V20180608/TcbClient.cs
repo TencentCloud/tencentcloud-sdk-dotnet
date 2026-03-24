@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1393";
 
         /// <summary>
         /// Client constructor.
@@ -548,6 +548,27 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁云服务器实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVmInstanceRequest"/></param>
+        /// <returns><see cref="DeleteVmInstanceResponse"/></returns>
+        public Task<DeleteVmInstanceResponse> DeleteVmInstance(DeleteVmInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteVmInstanceResponse>(req, "DeleteVmInstance");
+        }
+
+        /// <summary>
+        /// 销毁云服务器实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVmInstanceRequest"/></param>
+        /// <returns><see cref="DeleteVmInstanceResponse"/></returns>
+        public DeleteVmInstanceResponse DeleteVmInstanceSync(DeleteVmInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteVmInstanceResponse>(req, "DeleteVmInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1094,6 +1115,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询环境下的云服务器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVmInstancesRequest"/></param>
+        /// <returns><see cref="DescribeVmInstancesResponse"/></returns>
+        public Task<DescribeVmInstancesResponse> DescribeVmInstances(DescribeVmInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeVmInstancesResponse>(req, "DescribeVmInstances");
+        }
+
+        /// <summary>
+        /// 查询环境下的云服务器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVmInstancesRequest"/></param>
+        /// <returns><see cref="DescribeVmInstancesResponse"/></returns>
+        public DescribeVmInstancesResponse DescribeVmInstancesSync(DescribeVmInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeVmInstancesResponse>(req, "DescribeVmInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 云服务器规格list
         /// </summary>
         /// <param name="req"><see cref="DescribeVmSpecRequest"/></param>
@@ -1238,6 +1280,27 @@ namespace TencentCloud.Tcb.V20180608
         public GetProvidersResponse GetProvidersSync(GetProvidersRequest req)
         {
             return InternalRequestAsync<GetProvidersResponse>(req, "GetProviders")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务器价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireVmPriceRequest"/></param>
+        /// <returns><see cref="InquireVmPriceResponse"/></returns>
+        public Task<InquireVmPriceResponse> InquireVmPrice(InquireVmPriceRequest req)
+        {
+            return InternalRequestAsync<InquireVmPriceResponse>(req, "InquireVmPrice");
+        }
+
+        /// <summary>
+        /// 查询服务器价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireVmPriceRequest"/></param>
+        /// <returns><see cref="InquireVmPriceResponse"/></returns>
+        public InquireVmPriceResponse InquireVmPriceSync(InquireVmPriceRequest req)
+        {
+            return InternalRequestAsync<InquireVmPriceResponse>(req, "InquireVmPrice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -88,6 +88,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatabaseId")]
         public string DatabaseId{ get; set; }
 
+        /// <summary>
+        /// 所属catalog名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 所属catalog 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogType")]
+        public string CatalogType{ get; set; }
+
+        /// <summary>
+        /// 是否InformationSchema
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsInformationSchema")]
+        public bool? IsInformationSchema{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +125,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
             this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "CatalogType", this.CatalogType);
+            this.SetParamSimple(map, prefix + "IsInformationSchema", this.IsInformationSchema);
         }
     }
 }
