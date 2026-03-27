@@ -42,6 +42,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("ExpireSeconds")]
         public ulong? ExpireSeconds{ get; set; }
 
+        /// <summary>
+        /// <p>用户ID</p>
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArraySimple(map, prefix + "RoomIds.", this.RoomIds);
             this.SetParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

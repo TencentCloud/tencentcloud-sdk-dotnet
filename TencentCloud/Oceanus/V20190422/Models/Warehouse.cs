@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// <p>状态</p>
+        /// <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// <p>catalogtype</p>
+        /// <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogType")]

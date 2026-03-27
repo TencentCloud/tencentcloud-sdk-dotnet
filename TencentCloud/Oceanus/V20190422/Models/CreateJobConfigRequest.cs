@@ -25,232 +25,238 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业Id
+        /// <p>作业Id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 主类
+        /// <p>主类</p>
         /// </summary>
         [JsonProperty("EntrypointClass")]
         public string EntrypointClass{ get; set; }
 
         /// <summary>
-        /// 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+        /// <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
         /// </summary>
         [JsonProperty("ProgramArgs")]
         public string ProgramArgs{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 资源引用数组
+        /// <p>资源引用数组</p>
         /// </summary>
         [JsonProperty("ResourceRefs")]
         public ResourceRef[] ResourceRefs{ get; set; }
 
         /// <summary>
-        /// 作业默认并行度
+        /// <p>作业默认并行度</p>
         /// </summary>
         [JsonProperty("DefaultParallelism")]
         public ulong? DefaultParallelism{ get; set; }
 
         /// <summary>
-        /// 系统参数
+        /// <p>系统参数</p>
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
         /// <summary>
-        /// 1: 作业配置达到上限之后，自动删除可删除的最早版本
+        /// <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
         /// </summary>
         [JsonProperty("AutoDelete")]
         public long? AutoDelete{ get; set; }
 
         /// <summary>
-        /// 作业使用的 COS 存储桶名
+        /// <p>作业使用的 COS 存储桶名</p>
         /// </summary>
         [JsonProperty("COSBucket")]
         public string COSBucket{ get; set; }
 
         /// <summary>
-        /// 是否采集作业日志
+        /// <p>是否采集作业日志</p>
         /// </summary>
         [JsonProperty("LogCollect")]
         public bool? LogCollect{ get; set; }
 
         /// <summary>
-        /// JobManager规格
+        /// <p>JobManager规格</p>
         /// </summary>
         [JsonProperty("JobManagerSpec")]
         public float? JobManagerSpec{ get; set; }
 
         /// <summary>
-        /// TaskManager规格
+        /// <p>TaskManager规格</p>
         /// </summary>
         [JsonProperty("TaskManagerSpec")]
         public float? TaskManagerSpec{ get; set; }
 
         /// <summary>
-        /// CLS日志集ID
+        /// <p>CLS日志集ID</p>
         /// </summary>
         [JsonProperty("ClsLogsetId")]
         public string ClsLogsetId{ get; set; }
 
         /// <summary>
-        /// CLS日志主题ID
+        /// <p>CLS日志主题ID</p>
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// 日志采集类型 2：CLS；3：COS
+        /// <p>日志采集类型 2：CLS；3：COS</p>
         /// </summary>
         [JsonProperty("LogCollectType")]
         public long? LogCollectType{ get; set; }
 
         /// <summary>
-        /// pyflink作业运行时使用的python版本
+        /// <p>pyflink作业运行时使用的python版本</p>
         /// </summary>
         [JsonProperty("PythonVersion")]
         public string PythonVersion{ get; set; }
 
         /// <summary>
-        /// 工作空间 SerialId
+        /// <p>工作空间 SerialId</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
 
         /// <summary>
-        /// 日志级别
+        /// <p>日志级别</p>
         /// </summary>
         [JsonProperty("LogLevel")]
         public string LogLevel{ get; set; }
 
         /// <summary>
-        /// Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+        /// <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
         /// </summary>
         [JsonProperty("AutoRecover")]
         public long? AutoRecover{ get; set; }
 
         /// <summary>
-        /// 类日志级别
+        /// <p>类日志级别</p>
         /// </summary>
         [JsonProperty("ClazzLevels")]
         public ClazzLevel[] ClazzLevels{ get; set; }
 
         /// <summary>
-        /// 是否打开专家模式
+        /// <p>是否打开专家模式</p>
         /// </summary>
         [JsonProperty("ExpertModeOn")]
         public bool? ExpertModeOn{ get; set; }
 
         /// <summary>
-        /// 专家模式的配置
+        /// <p>专家模式的配置</p>
         /// </summary>
         [JsonProperty("ExpertModeConfiguration")]
         public ExpertModeConfiguration ExpertModeConfiguration{ get; set; }
 
         /// <summary>
-        /// trace链路
+        /// <p>trace链路</p>
         /// </summary>
         [JsonProperty("TraceModeOn")]
         public bool? TraceModeOn{ get; set; }
 
         /// <summary>
-        /// trace链路配置
+        /// <p>trace链路配置</p>
         /// </summary>
         [JsonProperty("TraceModeConfiguration")]
         public TraceModeConfiguration TraceModeConfiguration{ get; set; }
 
         /// <summary>
-        /// checkpoint保留个数
+        /// <p>checkpoint保留个数</p>
         /// </summary>
         [JsonProperty("CheckpointRetainedNum")]
         public long? CheckpointRetainedNum{ get; set; }
 
         /// <summary>
-        /// 算子拓扑图
+        /// <p>算子拓扑图</p>
         /// </summary>
         [JsonProperty("JobGraph")]
         public JobGraph JobGraph{ get; set; }
 
         /// <summary>
-        /// es索引名称
+        /// <p>es索引名称</p>
         /// </summary>
         [JsonProperty("EsServerlessIndex")]
         public string EsServerlessIndex{ get; set; }
 
         /// <summary>
-        /// es索引空间
+        /// <p>es索引空间</p>
         /// </summary>
         [JsonProperty("EsServerlessSpace")]
         public string EsServerlessSpace{ get; set; }
 
         /// <summary>
-        /// flink版本
+        /// <p>flink版本</p>
         /// </summary>
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
         /// <summary>
-        /// JobManager cpu
+        /// <p>JobManager cpu</p>
         /// </summary>
         [JsonProperty("JobManagerCpu")]
         public float? JobManagerCpu{ get; set; }
 
         /// <summary>
-        /// JobManager 内存
+        /// <p>JobManager 内存</p>
         /// </summary>
         [JsonProperty("JobManagerMem")]
         public float? JobManagerMem{ get; set; }
 
         /// <summary>
-        /// jdk版本
+        /// <p>jdk版本</p>
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
 
         /// <summary>
-        /// TaskManager cpu
+        /// <p>TaskManager cpu</p>
         /// </summary>
         [JsonProperty("TaskManagerCpu")]
         public float? TaskManagerCpu{ get; set; }
 
         /// <summary>
-        /// TaskManager 内存
+        /// <p>TaskManager 内存</p>
         /// </summary>
         [JsonProperty("TaskManagerMem")]
         public float? TaskManagerMem{ get; set; }
 
         /// <summary>
-        /// 0=默认使用老的 1=使用新的
+        /// <p>0=默认使用老的 1=使用新的</p>
         /// </summary>
         [JsonProperty("UseOldSystemConnector")]
         public long? UseOldSystemConnector{ get; set; }
 
         /// <summary>
-        /// 压缩参数
+        /// <p>压缩参数</p>
         /// </summary>
         [JsonProperty("ProgramArgsAfterGzip")]
         public string ProgramArgsAfterGzip{ get; set; }
 
         /// <summary>
-        /// checkpoint 超时时间
+        /// <p>checkpoint 超时时间</p>
         /// </summary>
         [JsonProperty("CheckpointTimeoutSecond")]
         public long? CheckpointTimeoutSecond{ get; set; }
 
         /// <summary>
-        /// checkpoint 间隔时间
+        /// <p>checkpoint 间隔时间</p>
         /// </summary>
         [JsonProperty("CheckpointIntervalSecond")]
         public long? CheckpointIntervalSecond{ get; set; }
+
+        /// <summary>
+        /// <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("VariableReplaceMode")]
+        public long? VariableReplaceMode{ get; set; }
 
 
         /// <summary>
@@ -296,6 +302,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ProgramArgsAfterGzip", this.ProgramArgsAfterGzip);
             this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
             this.SetParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
+            this.SetParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
         }
     }
 }

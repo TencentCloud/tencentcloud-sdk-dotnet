@@ -25,28 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 价格
+        /// <p>折扣后价格</p>
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// 高精度价格
+        /// <p>高精度折扣后价格</p>
         /// </summary>
         [JsonProperty("HighPrecisionPrice")]
         public float? HighPrecisionPrice{ get; set; }
 
         /// <summary>
-        /// 币种
+        /// <p>原价</p>
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// <p>高精度原价</p>
+        /// </summary>
+        [JsonProperty("HighPrecisionOriginalPrice")]
+        public float? HighPrecisionOriginalPrice{ get; set; }
+
+        /// <summary>
+        /// <p>币种</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// 价格金额单位
-        /// 
-        /// - pent: 分
-        /// - microPent: 微分
+        /// <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
         /// </summary>
         [JsonProperty("AmountUnit")]
         public string AmountUnit{ get; set; }
@@ -65,6 +74,8 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "HighPrecisionPrice", this.HighPrecisionPrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "HighPrecisionOriginalPrice", this.HighPrecisionOriginalPrice);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

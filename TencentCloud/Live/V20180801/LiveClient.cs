@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1393";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -1713,6 +1713,27 @@ namespace TencentCloud.Live.V20180801
         public DeleteScreenshotTaskResponse DeleteScreenshotTaskSync(DeleteScreenshotTaskRequest req)
         {
             return InternalRequestAsync<DeleteScreenshotTaskResponse>(req, "DeleteScreenshotTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询视频转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIGCTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAIGCTaskStatusResponse"/></returns>
+        public Task<DescribeAIGCTaskStatusResponse> DescribeAIGCTaskStatus(DescribeAIGCTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAIGCTaskStatusResponse>(req, "DescribeAIGCTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询视频转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIGCTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAIGCTaskStatusResponse"/></returns>
+        public DescribeAIGCTaskStatusResponse DescribeAIGCTaskStatusSync(DescribeAIGCTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAIGCTaskStatusResponse>(req, "DescribeAIGCTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

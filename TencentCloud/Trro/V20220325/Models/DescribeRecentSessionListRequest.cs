@@ -25,37 +25,37 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 页码，从1开始
+        /// <p>页码，从1开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页个数
+        /// <p>每页个数</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 设备ID，支持过滤远端设备或现场设备
+        /// <p>设备ID，支持过滤远端设备或现场设备</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
+        /// <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+        /// <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

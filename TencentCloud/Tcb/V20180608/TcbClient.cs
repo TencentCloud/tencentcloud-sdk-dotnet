@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1393";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -79,48 +79,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 绑定云开发自定义域名，用于云接入和静态托管
-        /// </summary>
-        /// <param name="req"><see cref="BindCloudBaseAccessDomainRequest"/></param>
-        /// <returns><see cref="BindCloudBaseAccessDomainResponse"/></returns>
-        public Task<BindCloudBaseAccessDomainResponse> BindCloudBaseAccessDomain(BindCloudBaseAccessDomainRequest req)
-        {
-            return InternalRequestAsync<BindCloudBaseAccessDomainResponse>(req, "BindCloudBaseAccessDomain");
-        }
-
-        /// <summary>
-        /// 绑定云开发自定义域名，用于云接入和静态托管
-        /// </summary>
-        /// <param name="req"><see cref="BindCloudBaseAccessDomainRequest"/></param>
-        /// <returns><see cref="BindCloudBaseAccessDomainResponse"/></returns>
-        public BindCloudBaseAccessDomainResponse BindCloudBaseAccessDomainSync(BindCloudBaseAccessDomainRequest req)
-        {
-            return InternalRequestAsync<BindCloudBaseAccessDomainResponse>(req, "BindCloudBaseAccessDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 绑定自定义域名
-        /// </summary>
-        /// <param name="req"><see cref="BindCloudBaseGWDomainRequest"/></param>
-        /// <returns><see cref="BindCloudBaseGWDomainResponse"/></returns>
-        public Task<BindCloudBaseGWDomainResponse> BindCloudBaseGWDomain(BindCloudBaseGWDomainRequest req)
-        {
-            return InternalRequestAsync<BindCloudBaseGWDomainResponse>(req, "BindCloudBaseGWDomain");
-        }
-
-        /// <summary>
-        /// 绑定自定义域名
-        /// </summary>
-        /// <param name="req"><see cref="BindCloudBaseGWDomainRequest"/></param>
-        /// <returns><see cref="BindCloudBaseGWDomainResponse"/></returns>
-        public BindCloudBaseGWDomainResponse BindCloudBaseGWDomainSync(BindCloudBaseGWDomainRequest req)
-        {
-            return InternalRequestAsync<BindCloudBaseGWDomainResponse>(req, "BindCloudBaseGWDomain")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 检查是否开通Tcb服务
         /// </summary>
         /// <param name="req"><see cref="CheckTcbServiceRequest"/></param>
@@ -138,6 +96,27 @@ namespace TencentCloud.Tcb.V20180608
         public CheckTcbServiceResponse CheckTcbServiceSync(CheckTcbServiceRequest req)
         {
             return InternalRequestAsync<CheckTcbServiceResponse>(req, "CheckTcbService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云开发平台的API Key。在指定云开发环境下创建一个 API Key 访问凭证。支持两种类型：api_key（服务端管理员访问凭证，以管理员身份签发，可设置有效期，不设置有效期则永不过期，单个环境最多创建 5 个）和 publish_key（前端匿名访问凭证，固定有效期，每个环境仅保留一个）。创建成功后将返回 API Key 明文 Token，该值仅在创建时返回一次，请妥善保存。需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public Task<CreateApiKeyResponse> CreateApiKey(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey");
+        }
+
+        /// <summary>
+        /// 创建云开发平台的API Key。在指定云开发环境下创建一个 API Key 访问凭证。支持两种类型：api_key（服务端管理员访问凭证，以管理员身份签发，可设置有效期，不设置有效期则永不过期，单个环境最多创建 5 个）和 publish_key（前端匿名访问凭证，固定有效期，每个环境仅保留一个）。创建成功后将返回 API Key 明文 Token，该值仅在创建时返回一次，请妥善保存。需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -210,27 +189,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 创建云开发网关API
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="CreateCloudBaseGWAPIResponse"/></returns>
-        public Task<CreateCloudBaseGWAPIResponse> CreateCloudBaseGWAPI(CreateCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<CreateCloudBaseGWAPIResponse>(req, "CreateCloudBaseGWAPI");
-        }
-
-        /// <summary>
-        /// 创建云开发网关API
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="CreateCloudBaseGWAPIResponse"/></returns>
-        public CreateCloudBaseGWAPIResponse CreateCloudBaseGWAPISync(CreateCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<CreateCloudBaseGWAPIResponse>(req, "CreateCloudBaseGWAPI")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口用于购买云开发环境。
         /// 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
         /// 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
@@ -299,6 +257,27 @@ namespace TencentCloud.Tcb.V20180608
         public CreateEnvResourceResponse CreateEnvResourceSync(CreateEnvResourceRequest req)
         {
             return InternalRequestAsync<CreateEnvResourceResponse>(req, "CreateEnvResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="CreateHTTPServiceRouteResponse"/></returns>
+        public Task<CreateHTTPServiceRouteResponse> CreateHTTPServiceRoute(CreateHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<CreateHTTPServiceRouteResponse>(req, "CreateHTTPServiceRoute");
+        }
+
+        /// <summary>
+        /// 本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="CreateHTTPServiceRouteResponse"/></returns>
+        public CreateHTTPServiceRouteResponse CreateHTTPServiceRouteSync(CreateHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<CreateHTTPServiceRouteResponse>(req, "CreateHTTPServiceRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -412,6 +391,50 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 创建虚拟服务器
+        /// 创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateVmInstanceRequest"/></param>
+        /// <returns><see cref="CreateVmInstanceResponse"/></returns>
+        public Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateVmInstanceResponse>(req, "CreateVmInstance");
+        }
+
+        /// <summary>
+        /// 创建虚拟服务器
+        /// 创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateVmInstanceRequest"/></param>
+        /// <returns><see cref="CreateVmInstanceResponse"/></returns>
+        public CreateVmInstanceResponse CreateVmInstanceSync(CreateVmInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateVmInstanceResponse>(req, "CreateVmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定云开发环境下的某个 API Key 服务端访问凭证。删除后，该 API Key 对应的 Token 将被吊销，已使用该 Key 发起的请求将失败。该操作具有幂等性，若指定的 API Key 不存在则直接返回成功。需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public Task<DeleteApiKeyResponse> DeleteApiKey(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey");
+        }
+
+        /// <summary>
+        /// 删除指定云开发环境下的某个 API Key 服务端访问凭证。删除后，该 API Key 对应的 Token 将被吊销，已使用该 Key 发起的请求将失败。该操作具有幂等性，若指定的 API Key 不存在则直接返回成功。需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public DeleteApiKeyResponse DeleteApiKeySync(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除合法域名。
         /// 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
         /// 可以通过接口 [DescribeAuthDomains](https://cloud.tencent.com/document/product/876/42151) 获取当前已绑定生效的安全域名，将对应安全域名的id填入Domainlds中
@@ -443,44 +466,23 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 删除网关API
+        /// 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
         /// </summary>
-        /// <param name="req"><see cref="DeleteCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="DeleteCloudBaseGWAPIResponse"/></returns>
-        public Task<DeleteCloudBaseGWAPIResponse> DeleteCloudBaseGWAPI(DeleteCloudBaseGWAPIRequest req)
+        /// <param name="req"><see cref="DeleteHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="DeleteHTTPServiceRouteResponse"/></returns>
+        public Task<DeleteHTTPServiceRouteResponse> DeleteHTTPServiceRoute(DeleteHTTPServiceRouteRequest req)
         {
-            return InternalRequestAsync<DeleteCloudBaseGWAPIResponse>(req, "DeleteCloudBaseGWAPI");
+            return InternalRequestAsync<DeleteHTTPServiceRouteResponse>(req, "DeleteHTTPServiceRoute");
         }
 
         /// <summary>
-        /// 删除网关API
+        /// 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
         /// </summary>
-        /// <param name="req"><see cref="DeleteCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="DeleteCloudBaseGWAPIResponse"/></returns>
-        public DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPISync(DeleteCloudBaseGWAPIRequest req)
+        /// <param name="req"><see cref="DeleteHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="DeleteHTTPServiceRouteResponse"/></returns>
+        public DeleteHTTPServiceRouteResponse DeleteHTTPServiceRouteSync(DeleteHTTPServiceRouteRequest req)
         {
-            return InternalRequestAsync<DeleteCloudBaseGWAPIResponse>(req, "DeleteCloudBaseGWAPI")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除网关域名
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCloudBaseGWDomainRequest"/></param>
-        /// <returns><see cref="DeleteCloudBaseGWDomainResponse"/></returns>
-        public Task<DeleteCloudBaseGWDomainResponse> DeleteCloudBaseGWDomain(DeleteCloudBaseGWDomainRequest req)
-        {
-            return InternalRequestAsync<DeleteCloudBaseGWDomainResponse>(req, "DeleteCloudBaseGWDomain");
-        }
-
-        /// <summary>
-        /// 删除网关域名
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCloudBaseGWDomainRequest"/></param>
-        /// <returns><see cref="DeleteCloudBaseGWDomainResponse"/></returns>
-        public DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomainSync(DeleteCloudBaseGWDomainRequest req)
-        {
-            return InternalRequestAsync<DeleteCloudBaseGWDomainResponse>(req, "DeleteCloudBaseGWDomain")
+            return InternalRequestAsync<DeleteHTTPServiceRouteResponse>(req, "DeleteHTTPServiceRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -569,6 +571,27 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteVmInstanceResponse DeleteVmInstanceSync(DeleteVmInstanceRequest req)
         {
             return InternalRequestAsync<DeleteVmInstanceResponse>(req, "DeleteVmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 API Key 列表。分页查询指定云开发环境下的 API Key 访问凭证列表。支持按类型过滤（api_key 或 publish_key）。未指定类型时，默认仅返回 api_key 类型的记录。列表查询中 api_key 类型的令牌值将进行脱敏处理（仅保留前后各 6 位字符）；publish_key 类型始终返回完整明文。接口需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyListResponse"/></returns>
+        public Task<DescribeApiKeyListResponse> DescribeApiKeyList(DescribeApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList");
+        }
+
+        /// <summary>
+        /// 查询 API Key 列表。分页查询指定云开发环境下的 API Key 访问凭证列表。支持按类型过滤（api_key 或 publish_key）。未指定类型时，默认仅返回 api_key 类型的记录。列表查询中 api_key 类型的令牌值将进行脱敏处理（仅保留前后各 6 位字符）；publish_key 类型始终返回完整明文。接口需要管理员权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyListResponse"/></returns>
+        public DescribeApiKeyListResponse DescribeApiKeyListSync(DescribeApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -678,48 +701,6 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildServiceSync(DescribeCloudBaseBuildServiceRequest req)
         {
             return InternalRequestAsync<DescribeCloudBaseBuildServiceResponse>(req, "DescribeCloudBaseBuildService")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取网关API列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseGWAPIResponse"/></returns>
-        public Task<DescribeCloudBaseGWAPIResponse> DescribeCloudBaseGWAPI(DescribeCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseGWAPIResponse>(req, "DescribeCloudBaseGWAPI");
-        }
-
-        /// <summary>
-        /// 获取网关API列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseGWAPIResponse"/></returns>
-        public DescribeCloudBaseGWAPIResponse DescribeCloudBaseGWAPISync(DescribeCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseGWAPIResponse>(req, "DescribeCloudBaseGWAPI")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取网关服务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseGWServiceRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseGWServiceResponse"/></returns>
-        public Task<DescribeCloudBaseGWServiceResponse> DescribeCloudBaseGWService(DescribeCloudBaseGWServiceRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseGWServiceResponse>(req, "DescribeCloudBaseGWService");
-        }
-
-        /// <summary>
-        /// 获取网关服务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudBaseGWServiceRequest"/></param>
-        /// <returns><see cref="DescribeCloudBaseGWServiceResponse"/></returns>
-        public DescribeCloudBaseGWServiceResponse DescribeCloudBaseGWServiceSync(DescribeCloudBaseGWServiceRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudBaseGWServiceResponse>(req, "DescribeCloudBaseGWService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -891,6 +872,50 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeEnvsResponse DescribeEnvsSync(DescribeEnvsRequest req)
         {
             return InternalRequestAsync<DescribeEnvsResponse>(req, "DescribeEnvs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询网关版本信息
+        /// 暂不鉴权
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayVersionsResponse"/></returns>
+        public Task<DescribeGatewayVersionsResponse> DescribeGatewayVersions(DescribeGatewayVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayVersionsResponse>(req, "DescribeGatewayVersions");
+        }
+
+        /// <summary>
+        /// 查询网关版本信息
+        /// 暂不鉴权
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayVersionsResponse"/></returns>
+        public DescribeGatewayVersionsResponse DescribeGatewayVersionsSync(DescribeGatewayVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayVersionsResponse>(req, "DescribeGatewayVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="DescribeHTTPServiceRouteResponse"/></returns>
+        public Task<DescribeHTTPServiceRouteResponse> DescribeHTTPServiceRoute(DescribeHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeHTTPServiceRouteResponse>(req, "DescribeHTTPServiceRoute");
+        }
+
+        /// <summary>
+        /// 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="DescribeHTTPServiceRouteResponse"/></returns>
+        public DescribeHTTPServiceRouteResponse DescribeHTTPServiceRouteSync(DescribeHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<DescribeHTTPServiceRouteResponse>(req, "DescribeHTTPServiceRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1353,27 +1378,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 修改云开发网关API
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="ModifyCloudBaseGWAPIResponse"/></returns>
-        public Task<ModifyCloudBaseGWAPIResponse> ModifyCloudBaseGWAPI(ModifyCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<ModifyCloudBaseGWAPIResponse>(req, "ModifyCloudBaseGWAPI");
-        }
-
-        /// <summary>
-        /// 修改云开发网关API
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCloudBaseGWAPIRequest"/></param>
-        /// <returns><see cref="ModifyCloudBaseGWAPIResponse"/></returns>
-        public ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPISync(ModifyCloudBaseGWAPIRequest req)
-        {
-            return InternalRequestAsync<ModifyCloudBaseGWAPIResponse>(req, "ModifyCloudBaseGWAPI")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 修改日志主题
         /// </summary>
         /// <param name="req"><see cref="ModifyClsTopicRequest"/></param>
@@ -1458,6 +1462,27 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyEnvPlanResponse ModifyEnvPlanSync(ModifyEnvPlanRequest req)
         {
             return InternalRequestAsync<ModifyEnvPlanResponse>(req, "ModifyEnvPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口ModifyHTTPServiceRoute用于修改HTTP访问服务路由。支持增量修改，对应字段不传参数表示不需要修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="ModifyHTTPServiceRouteResponse"/></returns>
+        public Task<ModifyHTTPServiceRouteResponse> ModifyHTTPServiceRoute(ModifyHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<ModifyHTTPServiceRouteResponse>(req, "ModifyHTTPServiceRoute");
+        }
+
+        /// <summary>
+        /// 本接口ModifyHTTPServiceRoute用于修改HTTP访问服务路由。支持增量修改，对应字段不传参数表示不需要修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHTTPServiceRouteRequest"/></param>
+        /// <returns><see cref="ModifyHTTPServiceRouteResponse"/></returns>
+        public ModifyHTTPServiceRouteResponse ModifyHTTPServiceRouteSync(ModifyHTTPServiceRouteRequest req)
+        {
+            return InternalRequestAsync<ModifyHTTPServiceRouteResponse>(req, "ModifyHTTPServiceRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

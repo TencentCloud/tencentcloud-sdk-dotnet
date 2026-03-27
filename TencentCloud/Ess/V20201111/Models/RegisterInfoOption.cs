@@ -26,7 +26,7 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 是否允许编辑企业注册时的法人姓名。
-        /// <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
+        /// <br/>true：不允许编辑<br/>false：允许编辑（默认值）<br/>
         /// 
         /// 注意：
         /// RegisterInfo 中的LegalName值不为空的时候，才可设置为不可编辑。
@@ -45,6 +45,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// RegisterInfo 中的UnifiedSocialCreditCode值不为空的时候，才可设置为不可编辑。
         /// </summary>
         [JsonProperty("UnifiedSocialCreditCodeCNameSame")]
+        [System.Obsolete]
         public bool? UnifiedSocialCreditCodeCNameSame{ get; set; }
 
         /// <summary>
@@ -59,6 +60,19 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OrganizationIdCardTypeSame")]
         public bool? OrganizationIdCardTypeSame{ get; set; }
 
+        /// <summary>
+        /// 是否允许编辑企业注册时统一社会信用代码。
+        /// <br/>true:不允许编辑。
+        /// <br/>false:允许编辑（默认值）。
+        /// <br/>
+        /// 
+        /// 
+        /// 注意：
+        /// RegisterInfo 中的UnifiedSocialCreditCode值不为空的时候，才可设置为不可编辑。
+        /// </summary>
+        [JsonProperty("UnifiedSocialCreditCodeSame")]
+        public bool? UnifiedSocialCreditCodeSame{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "LegalNameSame", this.LegalNameSame);
             this.SetParamSimple(map, prefix + "UnifiedSocialCreditCodeCNameSame", this.UnifiedSocialCreditCodeCNameSame);
             this.SetParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
+            this.SetParamSimple(map, prefix + "UnifiedSocialCreditCodeSame", this.UnifiedSocialCreditCodeSame);
         }
     }
 }

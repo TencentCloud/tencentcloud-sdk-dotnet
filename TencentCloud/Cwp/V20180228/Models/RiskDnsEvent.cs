@@ -121,7 +121,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ReferenceLink{ get; set; }
 
         /// <summary>
-        /// 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+        /// 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
         /// </summary>
         [JsonProperty("HandleStatus")]
         public long? HandleStatus{ get; set; }

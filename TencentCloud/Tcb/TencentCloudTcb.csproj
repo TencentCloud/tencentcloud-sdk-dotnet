@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1393</VersionPrefix>
+    <VersionPrefix>3.0.1394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,31 +50,26 @@
     <Compile Include="V20180608\TcbClient.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
+    <Compile Include="V20180608\Models\ApiKeyToken.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
-    <Compile Include="V20180608\Models\BindCloudBaseAccessDomainRequest.cs" />
-    <Compile Include="V20180608\Models\BindCloudBaseAccessDomainResponse.cs" />
-    <Compile Include="V20180608\Models\BindCloudBaseGWDomainRequest.cs" />
-    <Compile Include="V20180608\Models\BindCloudBaseGWDomainResponse.cs" />
+    <Compile Include="V20180608\Models\BanConfig.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
-    <Compile Include="V20180608\Models\CloudBaseClientQPSPolicy.cs" />
-    <Compile Include="V20180608\Models\CloudBaseGWAPI.cs" />
-    <Compile Include="V20180608\Models\CloudBaseGWAPIQPSPolicy.cs" />
-    <Compile Include="V20180608\Models\CloudBaseGWService.cs" />
-    <Compile Include="V20180608\Models\CloudBaseOption.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
+    <Compile Include="V20180608\Models\CreateApiKeyRequest.cs" />
+    <Compile Include="V20180608\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20180608\Models\CreateAuthDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateAuthDomainResponse.cs" />
     <Compile Include="V20180608\Models\CreateBillDealRequest.cs" />
     <Compile Include="V20180608\Models\CreateBillDealResponse.cs" />
-    <Compile Include="V20180608\Models\CreateCloudBaseGWAPIRequest.cs" />
-    <Compile Include="V20180608\Models\CreateCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvRequest.cs" />
     <Compile Include="V20180608\Models\CreateEnvResourceRequest.cs" />
     <Compile Include="V20180608\Models\CreateEnvResourceResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvResponse.cs" />
+    <Compile Include="V20180608\Models\CreateHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\CreateHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
     <Compile Include="V20180608\Models\CreateIndex.cs" />
@@ -88,14 +83,17 @@
     <Compile Include="V20180608\Models\CreateUserRequest.cs" />
     <Compile Include="V20180608\Models\CreateUserResp.cs" />
     <Compile Include="V20180608\Models\CreateUserResponse.cs" />
+    <Compile Include="V20180608\Models\CreateVmInstanceRequest.cs" />
+    <Compile Include="V20180608\Models\CreateVmInstanceResponse.cs" />
+    <Compile Include="V20180608\Models\CustomLogConfig.cs" />
     <Compile Include="V20180608\Models\DatabasesInfo.cs" />
     <Compile Include="V20180608\Models\DbInstance.cs" />
+    <Compile Include="V20180608\Models\DeleteApiKeyRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20180608\Models\DeleteAuthDomainRequest.cs" />
     <Compile Include="V20180608\Models\DeleteAuthDomainResponse.cs" />
-    <Compile Include="V20180608\Models\DeleteCloudBaseGWAPIRequest.cs" />
-    <Compile Include="V20180608\Models\DeleteCloudBaseGWAPIResponse.cs" />
-    <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainRequest.cs" />
-    <Compile Include="V20180608\Models\DeleteCloudBaseGWDomainResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DeleteProviderRequest.cs" />
     <Compile Include="V20180608\Models\DeleteProviderResponse.cs" />
     <Compile Include="V20180608\Models\DeleteTableRequest.cs" />
@@ -105,6 +103,8 @@
     <Compile Include="V20180608\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20180608\Models\DeleteVmInstanceRequest.cs" />
     <Compile Include="V20180608\Models\DeleteVmInstanceResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeApiKeyListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeApiKeyListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeAuthDomainsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeBaasPackageListRequest.cs" />
@@ -115,10 +115,6 @@
     <Compile Include="V20180608\Models\DescribeClientResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
-    <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIRequest.cs" />
-    <Compile Include="V20180608\Models\DescribeCloudBaseGWAPIResponse.cs" />
-    <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceRequest.cs" />
-    <Compile Include="V20180608\Models\DescribeCloudBaseGWServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResult.cs" />
@@ -134,6 +130,10 @@
     <Compile Include="V20180608\Models\DescribeEnvLimitResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeGatewayVersionsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeGatewayVersionsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskRequest.cs" />
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskResponse.cs" />
     <Compile Include="V20180608\Models\DescribeLoginConfigRequest.cs" />
@@ -173,9 +173,19 @@
     <Compile Include="V20180608\Models\EmailSmtpConfig.cs" />
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />
+    <Compile Include="V20180608\Models\ExternalStorage.cs" />
+    <Compile Include="V20180608\Models\Filter.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\GatewayVersionItem.cs" />
     <Compile Include="V20180608\Models\GetProvidersRequest.cs" />
     <Compile Include="V20180608\Models\GetProvidersResponse.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceDomain.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceDomainParam.cs" />
+    <Compile Include="V20180608\Models\HTTPServicePathRewrite.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceQPSPerClient.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceRoute.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceRouteParam.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceRouteQPSPolicy.cs" />
     <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\IndexAccesses.cs" />
     <Compile Include="V20180608\Models\IndexInfo.cs" />
@@ -196,8 +206,6 @@
     <Compile Include="V20180608\Models\MgoKeySchema.cs" />
     <Compile Include="V20180608\Models\ModifyClientRequest.cs" />
     <Compile Include="V20180608\Models\ModifyClientResponse.cs" />
-    <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIRequest.cs" />
-    <Compile Include="V20180608\Models\ModifyCloudBaseGWAPIResponse.cs" />
     <Compile Include="V20180608\Models\ModifyClsTopicRequest.cs" />
     <Compile Include="V20180608\Models\ModifyClsTopicResponse.cs" />
     <Compile Include="V20180608\Models\ModifyDatabaseACLRequest.cs" />
@@ -206,6 +214,8 @@
     <Compile Include="V20180608\Models\ModifyEnvPlanResponse.cs" />
     <Compile Include="V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\ModifyLoginConfigRequest.cs" />
     <Compile Include="V20180608\Models\ModifyLoginConfigResponse.cs" />
     <Compile Include="V20180608\Models\ModifyProviderRequest.cs" />
@@ -246,10 +256,12 @@
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />
+    <Compile Include="V20180608\Models\VMLoginConfiguration.cs" />
     <Compile Include="V20180608\Models\VMPrice.cs" />
     <Compile Include="V20180608\Models\VMSpec.cs" />
     <Compile Include="V20180608\Models\VMSpecLightHouse.cs" />
     <Compile Include="V20180608\Models\VerificationConfig.cs" />
     <Compile Include="V20180608\Models\VmInstance.cs" />
+    <Compile Include="V20180608\Models\WxGatewayCustomConfig.cs" />
   </ItemGroup>
 </Project>

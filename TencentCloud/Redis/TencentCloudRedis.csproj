@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,9 +75,13 @@
     <Compile Include="V20180412\Models\ClearInstanceResponse.cs" />
     <Compile Include="V20180412\Models\CloneInstancesRequest.cs" />
     <Compile Include="V20180412\Models\CloneInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\CloseLogRequest.cs" />
+    <Compile Include="V20180412\Models\CloseLogResponse.cs" />
     <Compile Include="V20180412\Models\CloseSSLRequest.cs" />
     <Compile Include="V20180412\Models\CloseSSLResponse.cs" />
     <Compile Include="V20180412\Models\CommandTake.cs" />
+    <Compile Include="V20180412\Models\CreateExportTaskRequest.cs" />
+    <Compile Include="V20180412\Models\CreateExportTaskResponse.cs" />
     <Compile Include="V20180412\Models\CreateInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\CreateInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\CreateInstancesRequest.cs" />
@@ -87,12 +91,15 @@
     <Compile Include="V20180412\Models\CreateReplicationGroupRequest.cs" />
     <Compile Include="V20180412\Models\CreateReplicationGroupResponse.cs" />
     <Compile Include="V20180412\Models\DelayDistribution.cs" />
+    <Compile Include="V20180412\Models\DeleteExportTaskRequest.cs" />
+    <Compile Include="V20180412\Models\DeleteExportTaskResponse.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DeleteReplicationInstanceRequest.cs" />
     <Compile Include="V20180412\Models\DeleteReplicationInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\DeliverSummary.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupDetailRequest.cs" />
@@ -107,6 +114,8 @@
     <Compile Include="V20180412\Models\DescribeCommonDBInstancesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeExportTasksRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeExportTasksResponse.cs" />
     <Compile Include="V20180412\Models\DescribeGlobalReplicationAreaRequest.cs" />
     <Compile Include="V20180412\Models\DescribeGlobalReplicationAreaResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceAccountRequest.cs" />
@@ -156,6 +165,10 @@
     <Compile Include="V20180412\Models\DescribeInstanceZoneInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeLogInstanceListRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeLogInstanceListResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeLogsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeLogsResponse.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
     <Compile Include="V20180412\Models\DescribeParamTemplateInfoRequest.cs" />
@@ -200,6 +213,8 @@
     <Compile Include="V20180412\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\EnableReplicaReadonlyRequest.cs" />
     <Compile Include="V20180412\Models\EnableReplicaReadonlyResponse.cs" />
+    <Compile Include="V20180412\Models\ExportFile.cs" />
+    <Compile Include="V20180412\Models\Filter.cs" />
     <Compile Include="V20180412\Models\Groups.cs" />
     <Compile Include="V20180412\Models\HotKeyInfo.cs" />
     <Compile Include="V20180412\Models\Inbound.cs" />
@@ -212,6 +227,7 @@
     <Compile Include="V20180412\Models\InstanceClusterNode.cs" />
     <Compile Include="V20180412\Models\InstanceClusterShard.cs" />
     <Compile Include="V20180412\Models\InstanceEnumParam.cs" />
+    <Compile Include="V20180412\Models\InstanceInfo.cs" />
     <Compile Include="V20180412\Models\InstanceIntegerParam.cs" />
     <Compile Include="V20180412\Models\InstanceMultiParam.cs" />
     <Compile Include="V20180412\Models\InstanceNode.cs" />
@@ -227,6 +243,9 @@
     <Compile Include="V20180412\Models\KillMasterGroupRequest.cs" />
     <Compile Include="V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="V20180412\Models\LogDeliveryInfo.cs" />
+    <Compile Include="V20180412\Models\LogFilter.cs" />
+    <Compile Include="V20180412\Models\LogInstance.cs" />
+    <Compile Include="V20180412\Models\LogResult.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
@@ -257,6 +276,8 @@
     <Compile Include="V20180412\Models\ModifyInstanceReadOnlyResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyLogRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyLogResponse.cs" />
     <Compile Include="V20180412\Models\ModifyMaintenanceWindowRequest.cs" />
     <Compile Include="V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="V20180412\Models\ModifyNetworkConfigRequest.cs" />
@@ -265,6 +286,8 @@
     <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\ModifyReplicationGroupRequest.cs" />
     <Compile Include="V20180412\Models\ModifyReplicationGroupResponse.cs" />
+    <Compile Include="V20180412\Models\OpenLogRequest.cs" />
+    <Compile Include="V20180412\Models\OpenLogResponse.cs" />
     <Compile Include="V20180412\Models\OpenSSLRequest.cs" />
     <Compile Include="V20180412\Models\OpenSSLResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />

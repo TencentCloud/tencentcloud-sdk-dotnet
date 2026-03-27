@@ -48,6 +48,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("CustomVariables")]
         public CustomVariable[] CustomVariables{ get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [JsonProperty("VisitorId")]
+        public string VisitorId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "RunEnv", this.RunEnv);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+            this.SetParamSimple(map, prefix + "VisitorId", this.VisitorId);
         }
     }
 }

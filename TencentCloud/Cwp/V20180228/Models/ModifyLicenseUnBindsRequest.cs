@@ -32,6 +32,10 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 授权类型
+        /// - 0 按量付费-专业版
+        /// - 1 包年包月-专业版
+        /// - 2 包年包月-旗舰版
+        /// - 3 包年包月-轻量版
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }

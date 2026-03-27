@@ -108,6 +108,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
+        /// <summary>
+        /// 重试策略
+        /// </summary>
+        [JsonProperty("RetryPolicy")]
+        public RetryPolicy RetryPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +133,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         }
     }
 }

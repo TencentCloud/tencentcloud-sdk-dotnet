@@ -25,7 +25,7 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 各时间段的会话统计数据
+        /// <p>各时间段的会话统计数据</p>
         /// </summary>
         [JsonProperty("SessionStatistics")]
         public SessionIntervalStatistic[] SessionStatistics{ get; set; }

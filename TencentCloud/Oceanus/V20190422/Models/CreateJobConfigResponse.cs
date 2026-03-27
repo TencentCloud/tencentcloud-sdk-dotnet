@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业配置版本号
+        /// <p>作业配置版本号</p>
         /// </summary>
         [JsonProperty("Version")]
         public ulong? Version{ get; set; }

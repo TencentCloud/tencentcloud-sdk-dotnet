@@ -495,6 +495,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MetaFrom")]
         public string MetaFrom{ get; set; }
 
+        /// <summary>
+        /// 引擎侧责任人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineOwner")]
+        public string EngineOwner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -568,6 +575,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FullName", this.FullName);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
+            this.SetParamSimple(map, prefix + "EngineOwner", this.EngineOwner);
         }
     }
 }

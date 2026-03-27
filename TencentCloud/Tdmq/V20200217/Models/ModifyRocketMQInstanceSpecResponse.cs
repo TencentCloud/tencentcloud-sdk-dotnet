@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 订单号
+        /// <p>订单号</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }

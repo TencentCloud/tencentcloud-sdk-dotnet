@@ -25,32 +25,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 专享实例ID
+        /// <p>专享实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例规格，
-        /// rocket-vip-basic-1 基础型
-        /// rocket-vip-basic-2 标准型
-        /// rocket-vip-basic-3 高阶Ⅰ型
-        /// rocket-vip-basic-4 高阶Ⅱ型
+        /// <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 存储空间，GB为单位
+        /// <p>存储空间，GB为单位</p>
         /// </summary>
         [JsonProperty("StorageSize")]
         public ulong? StorageSize{ get; set; }
+
+        /// <summary>
+        /// <p>部署可用区列表</p>
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public string[] ZoneIds{ get; set; }
 
 
         /// <summary>
@@ -62,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

@@ -92,6 +92,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string MessageModel{ get; set; }
 
         /// <summary>
+        /// 重试策略
+        /// </summary>
+        [JsonProperty("RetryPolicy")]
+        public RetryPolicy RetryPolicy{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MessageModel", this.MessageModel);
+            this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

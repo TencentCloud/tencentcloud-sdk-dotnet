@@ -45,6 +45,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? ErrCode{ get; set; }
 
         /// <summary>
+        /// 错误信息
+        /// </summary>
+        [JsonProperty("ErrMessage")]
+        public string ErrMessage{ get; set; }
+
+        /// <summary>
         /// 过期时间
         /// </summary>
         [JsonProperty("ExpireTime")]
@@ -59,6 +65,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }

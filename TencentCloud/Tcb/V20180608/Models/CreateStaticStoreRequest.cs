@@ -36,6 +36,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EnableUnion")]
         public bool? EnableUnion{ get; set; }
 
+        /// <summary>
+        /// 外部存储源。
+        /// </summary>
+        [JsonProperty("ExternalStorage")]
+        public ExternalStorage ExternalStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
+            this.SetParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
         }
     }
 }

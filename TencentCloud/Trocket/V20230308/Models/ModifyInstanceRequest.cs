@@ -97,6 +97,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
+        /// <summary>
+        /// 部署可用区列表
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public string[] ZoneIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
             this.SetParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

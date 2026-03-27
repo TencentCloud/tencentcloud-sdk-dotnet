@@ -25,19 +25,19 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 总个数
+        /// <p>总个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 会话列表
+        /// <p>会话列表</p>
         /// </summary>
         [JsonProperty("RecentSessionList")]
         public RecentSessionInfo[] RecentSessionList{ get; set; }
 
         /// <summary>
-        /// 本页数量
+        /// <p>本页数量</p>
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 统计时间间隔：hour|day|month
+        /// <p>统计时间间隔：hour|day|month</p>
         /// </summary>
         [JsonProperty("StatisticInterval")]
         public string StatisticInterval{ get; set; }
 
         /// <summary>
-        /// 设备ID
+        /// <p>设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 起始时间，单位：秒
+        /// <p>起始时间，单位：秒</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，单位：秒
+        /// <p>结束时间，单位：秒</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

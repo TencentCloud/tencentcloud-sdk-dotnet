@@ -66,6 +66,24 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("DetailedPerms")]
         public DetailedRolePerm[] DetailedPerms{ get; set; }
 
+        /// <summary>
+        /// AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+        /// </summary>
+        [JsonProperty("RoleGenerateMode")]
+        public string RoleGenerateMode{ get; set; }
+
+        /// <summary>
+        /// 选择MANUAL模式下，需要手动输入AK值
+        /// </summary>
+        [JsonProperty("AccessKey")]
+        public string AccessKey{ get; set; }
+
+        /// <summary>
+        /// 选择MANUAL模式下，需要手动输入SK值
+        /// </summary>
+        [JsonProperty("SecretKey")]
+        public string SecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PermType", this.PermType);
             this.SetParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
+            this.SetParamSimple(map, prefix + "RoleGenerateMode", this.RoleGenerateMode);
+            this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
+            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
         }
     }
 }

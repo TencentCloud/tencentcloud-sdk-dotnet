@@ -25,285 +25,291 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业Id
+        /// <p>作业Id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 主类
+        /// <p>主类</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EntrypointClass")]
         public string EntrypointClass{ get; set; }
 
         /// <summary>
-        /// 主类入参
+        /// <p>主类入参</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgramArgs")]
         public string ProgramArgs{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 作业配置创建时间
+        /// <p>作业配置创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 作业配置的版本号
+        /// <p>作业配置的版本号</p>
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// 作业默认并行度
+        /// <p>作业默认并行度</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultParallelism")]
         public ulong? DefaultParallelism{ get; set; }
 
         /// <summary>
-        /// 系统参数
+        /// <p>系统参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
         /// <summary>
-        /// 引用资源
+        /// <p>引用资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRefDetails")]
         public ResourceRefDetail[] ResourceRefDetails{ get; set; }
 
         /// <summary>
-        /// 创建者uin
+        /// <p>创建者uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 作业配置上次启动时间
+        /// <p>作业配置上次启动时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 作业绑定的存储桶
+        /// <p>作业绑定的存储桶</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("COSBucket")]
         public string COSBucket{ get; set; }
 
         /// <summary>
-        /// 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+        /// <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogCollect")]
         public long? LogCollect{ get; set; }
 
         /// <summary>
-        /// 作业的最大并行度
+        /// <p>作业的最大并行度</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxParallelism")]
         public ulong? MaxParallelism{ get; set; }
 
         /// <summary>
-        /// JobManager规格
+        /// <p>JobManager规格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobManagerSpec")]
         public float? JobManagerSpec{ get; set; }
 
         /// <summary>
-        /// TaskManager规格
+        /// <p>TaskManager规格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskManagerSpec")]
         public float? TaskManagerSpec{ get; set; }
 
         /// <summary>
-        /// CLS日志集ID
+        /// <p>CLS日志集ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsLogsetId")]
         public string ClsLogsetId{ get; set; }
 
         /// <summary>
-        /// CLS日志主题ID
+        /// <p>CLS日志主题ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// pyflink作业运行的python版本
+        /// <p>pyflink作业运行的python版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PythonVersion")]
         public string PythonVersion{ get; set; }
 
         /// <summary>
-        /// Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+        /// <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRecover")]
         public long? AutoRecover{ get; set; }
 
         /// <summary>
-        /// 日志级别
+        /// <p>日志级别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogLevel")]
         public string LogLevel{ get; set; }
 
         /// <summary>
-        /// 类日志级别
+        /// <p>类日志级别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClazzLevels")]
         public ClazzLevel[] ClazzLevels{ get; set; }
 
         /// <summary>
-        /// 是否开启专家模式
+        /// <p>是否开启专家模式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpertModeOn")]
         public bool? ExpertModeOn{ get; set; }
 
         /// <summary>
-        /// 专家模式的配置
+        /// <p>专家模式的配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpertModeConfiguration")]
         public ExpertModeConfiguration ExpertModeConfiguration{ get; set; }
 
         /// <summary>
-        /// trace链路
+        /// <p>trace链路</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceModeOn")]
         public bool? TraceModeOn{ get; set; }
 
         /// <summary>
-        /// trace链路配置
+        /// <p>trace链路配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceModeConfiguration")]
         public TraceModeConfiguration TraceModeConfiguration{ get; set; }
 
         /// <summary>
-        /// checkpoint保留个数
+        /// <p>checkpoint保留个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckpointRetainedNum")]
         public long? CheckpointRetainedNum{ get; set; }
 
         /// <summary>
-        /// 算子拓扑图
+        /// <p>算子拓扑图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobGraph")]
         public JobGraph JobGraph{ get; set; }
 
         /// <summary>
-        /// es索引
+        /// <p>es索引</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsServerlessIndex")]
         public string EsServerlessIndex{ get; set; }
 
         /// <summary>
-        /// es空间
+        /// <p>es空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsServerlessSpace")]
         public string EsServerlessSpace{ get; set; }
 
         /// <summary>
-        /// es索引中文
+        /// <p>es索引中文</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// es空间中文
+        /// <p>es空间中文</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceName")]
         public string WorkspaceName{ get; set; }
 
         /// <summary>
-        /// flink 版本
+        /// <p>flink 版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
         /// <summary>
-        /// jdk版本
+        /// <p>jdk版本</p>
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
 
         /// <summary>
-        /// jm使用cpu数目
+        /// <p>jm使用cpu数目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobManagerCpu")]
         public float? JobManagerCpu{ get; set; }
 
         /// <summary>
-        /// jm使用内存数目
+        /// <p>jm使用内存数目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobManagerMem")]
         public float? JobManagerMem{ get; set; }
 
         /// <summary>
-        /// tm使用cpu数
+        /// <p>tm使用cpu数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskManagerCpu")]
         public float? TaskManagerCpu{ get; set; }
 
         /// <summary>
-        /// tm使用mem数
+        /// <p>tm使用mem数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskManagerMem")]
         public float? TaskManagerMem{ get; set; }
 
         /// <summary>
-        /// 运行中配置
+        /// <p>运行中配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobConfigItem")]
         public JobConfig JobConfigItem{ get; set; }
 
         /// <summary>
-        /// checkpoint 超时时间
+        /// <p>checkpoint 超时时间</p>
         /// </summary>
         [JsonProperty("CheckpointTimeoutSecond")]
         public long? CheckpointTimeoutSecond{ get; set; }
 
         /// <summary>
-        /// checkpoint 间隔时间
+        /// <p>checkpoint 间隔时间</p>
         /// </summary>
         [JsonProperty("CheckpointIntervalSecond")]
         public long? CheckpointIntervalSecond{ get; set; }
+
+        /// <summary>
+        /// <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("VariableReplaceMode")]
+        public long? VariableReplaceMode{ get; set; }
 
 
         /// <summary>
@@ -352,6 +358,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
             this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
             this.SetParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
+            this.SetParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
         }
     }
 }

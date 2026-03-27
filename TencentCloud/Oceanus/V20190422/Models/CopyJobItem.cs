@@ -25,37 +25,37 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 需要复制的作业serial id
+        /// <p>需要复制的作业serial id</p>
         /// </summary>
         [JsonProperty("SourceId")]
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 目标集群的cluster serial id
+        /// <p>目标集群的cluster serial id</p>
         /// </summary>
         [JsonProperty("TargetClusterId")]
         public string TargetClusterId{ get; set; }
 
         /// <summary>
-        /// 需要复制的作业名称
+        /// <p>需要复制的作业名称</p>
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
-        /// 新作业的名称
+        /// <p>新作业的名称</p>
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
-        /// 新作业的目录id
+        /// <p>新作业的目录id</p>
         /// </summary>
         [JsonProperty("TargetFolderId")]
         public string TargetFolderId{ get; set; }
 
         /// <summary>
-        /// 源作业类型
+        /// <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
         /// </summary>
         [JsonProperty("JobType")]
         public long? JobType{ get; set; }

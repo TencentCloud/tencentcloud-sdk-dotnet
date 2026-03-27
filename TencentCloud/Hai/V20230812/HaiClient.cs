@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Hai.V20230812
         public CreateMuskPromptResponse CreateMuskPromptSync(CreateMuskPromptRequest req)
         {
             return InternalRequestAsync<CreateMuskPromptResponse>(req, "CreateMuskPrompt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteService) 用于删除一个指定配置的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceRequest"/></param>
+        /// <returns><see cref="DeleteServiceResponse"/></returns>
+        public Task<DeleteServiceResponse> DeleteService(DeleteServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteServiceResponse>(req, "DeleteService");
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteService) 用于删除一个指定配置的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceRequest"/></param>
+        /// <returns><see cref="DeleteServiceResponse"/></returns>
+        public DeleteServiceResponse DeleteServiceSync(DeleteServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteServiceResponse>(req, "DeleteService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +365,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeServicesResponse DescribeServicesSync(DescribeServicesRequest req)
         {
             return InternalRequestAsync<DescribeServicesResponse>(req, "DescribeServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeServciesCallInfo) 用于查询服务调用信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesCallInfoRequest"/></param>
+        /// <returns><see cref="DescribeServicesCallInfoResponse"/></returns>
+        public Task<DescribeServicesCallInfoResponse> DescribeServicesCallInfo(DescribeServicesCallInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesCallInfoResponse>(req, "DescribeServicesCallInfo");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeServciesCallInfo) 用于查询服务调用信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesCallInfoRequest"/></param>
+        /// <returns><see cref="DescribeServicesCallInfoResponse"/></returns>
+        public DescribeServicesCallInfoResponse DescribeServicesCallInfoSync(DescribeServicesCallInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesCallInfoResponse>(req, "DescribeServicesCallInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

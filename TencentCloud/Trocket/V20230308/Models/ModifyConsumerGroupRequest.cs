@@ -61,6 +61,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 重试策略
+        /// </summary>
+        [JsonProperty("RetryPolicy")]
+        public RetryPolicy RetryPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         }
     }
 }

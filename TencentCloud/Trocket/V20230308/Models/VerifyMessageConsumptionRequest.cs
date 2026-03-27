@@ -37,16 +37,16 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 客户端ID
-        /// </summary>
-        [JsonProperty("ClientId")]
-        public string ClientId{ get; set; }
-
-        /// <summary>
         /// 消息ID
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
+
+        /// <summary>
+        /// 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+        /// </summary>
+        [JsonProperty("ClientId")]
+        public string ClientId{ get; set; }
 
         /// <summary>
         /// 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
@@ -62,8 +62,8 @@ namespace TencentCloud.Trocket.V20230308.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
-            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
+            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         }
     }

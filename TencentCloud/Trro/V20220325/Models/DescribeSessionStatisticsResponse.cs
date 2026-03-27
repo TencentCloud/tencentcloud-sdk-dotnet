@@ -25,31 +25,31 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 会话数量
+        /// <p>会话数量</p>
         /// </summary>
         [JsonProperty("SessionNum")]
         public ulong? SessionNum{ get; set; }
 
         /// <summary>
-        /// 通话时长，单位：分钟
+        /// <p>通话时长，单位：分钟</p>
         /// </summary>
         [JsonProperty("TotalDuration")]
         public ulong? TotalDuration{ get; set; }
 
         /// <summary>
-        /// 活跃现场设备数
+        /// <p>活跃现场设备数</p>
         /// </summary>
         [JsonProperty("ActiveFieldDeviceNum")]
         public ulong? ActiveFieldDeviceNum{ get; set; }
 
         /// <summary>
-        /// 活跃远端设备数
+        /// <p>活跃远端设备数</p>
         /// </summary>
         [JsonProperty("ActiveRemoteDeviceNum")]
         public ulong? ActiveRemoteDeviceNum{ get; set; }
 
         /// <summary>
-        /// 优良会话占比，单位：%
+        /// <p>优良会话占比，单位：%</p>
         /// </summary>
         [JsonProperty("NotBadSessionRatio")]
         public ulong? NotBadSessionRatio{ get; set; }

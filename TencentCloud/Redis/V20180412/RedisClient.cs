@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 关闭日志
+        /// </summary>
+        /// <param name="req"><see cref="CloseLogRequest"/></param>
+        /// <returns><see cref="CloseLogResponse"/></returns>
+        public Task<CloseLogResponse> CloseLog(CloseLogRequest req)
+        {
+            return InternalRequestAsync<CloseLogResponse>(req, "CloseLog");
+        }
+
+        /// <summary>
+        /// 关闭日志
+        /// </summary>
+        /// <param name="req"><see cref="CloseLogRequest"/></param>
+        /// <returns><see cref="CloseLogResponse"/></returns>
+        public CloseLogResponse CloseLogSync(CloseLogRequest req)
+        {
+            return InternalRequestAsync<CloseLogResponse>(req, "CloseLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CloseSSL）用于关闭SSL加密认证。
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
@@ -281,6 +302,27 @@ namespace TencentCloud.Redis.V20180412
         public CloseSSLResponse CloseSSLSync(CloseSSLRequest req)
         {
             return InternalRequestAsync<CloseSSLResponse>(req, "CloseSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public Task<CreateExportTaskResponse> CreateExportTask(CreateExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExportTaskResponse>(req, "CreateExportTask");
+        }
+
+        /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public CreateExportTaskResponse CreateExportTaskSync(CreateExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExportTaskResponse>(req, "CreateExportTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -365,6 +407,27 @@ namespace TencentCloud.Redis.V20180412
         public CreateReplicationGroupResponse CreateReplicationGroupSync(CreateReplicationGroupRequest req)
         {
             return InternalRequestAsync<CreateReplicationGroupResponse>(req, "CreateReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteExportTaskResponse"/></returns>
+        public Task<DeleteExportTaskResponse> DeleteExportTask(DeleteExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteExportTaskResponse>(req, "DeleteExportTask");
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteExportTaskResponse"/></returns>
+        public DeleteExportTaskResponse DeleteExportTaskSync(DeleteExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteExportTaskResponse>(req, "DeleteExportTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -575,6 +638,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeExportTasks）用于查询日志文件的下载任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeExportTasksResponse"/></returns>
+        public Task<DescribeExportTasksResponse> DescribeExportTasks(DescribeExportTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeExportTasksResponse>(req, "DescribeExportTasks");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeExportTasks）用于查询日志文件的下载任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeExportTasksResponse"/></returns>
+        public DescribeExportTasksResponse DescribeExportTasksSync(DescribeExportTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeExportTasksResponse>(req, "DescribeExportTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1079,6 +1163,48 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeLogInstanceListResponse"/></returns>
+        public Task<DescribeLogInstanceListResponse> DescribeLogInstanceList(DescribeLogInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeLogInstanceListResponse>(req, "DescribeLogInstanceList");
+        }
+
+        /// <summary>
+        /// 日志实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeLogInstanceListResponse"/></returns>
+        public DescribeLogInstanceListResponse DescribeLogInstanceListSync(DescribeLogInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeLogInstanceListResponse>(req, "DescribeLogInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public Task<DescribeLogsResponse> DescribeLogs(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs");
+        }
+
+        /// <summary>
+        /// 查询日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public DescribeLogsResponse DescribeLogsSync(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1948,6 +2074,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 修改日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public Task<ModifyLogResponse> ModifyLog(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog");
+        }
+
+        /// <summary>
+        /// 修改日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public ModifyLogResponse ModifyLogSync(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
@@ -2028,6 +2175,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyReplicationGroupResponse ModifyReplicationGroupSync(ModifyReplicationGroupRequest req)
         {
             return InternalRequestAsync<ModifyReplicationGroupResponse>(req, "ModifyReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启日志
+        /// </summary>
+        /// <param name="req"><see cref="OpenLogRequest"/></param>
+        /// <returns><see cref="OpenLogResponse"/></returns>
+        public Task<OpenLogResponse> OpenLog(OpenLogRequest req)
+        {
+            return InternalRequestAsync<OpenLogResponse>(req, "OpenLog");
+        }
+
+        /// <summary>
+        /// 开启日志
+        /// </summary>
+        /// <param name="req"><see cref="OpenLogRequest"/></param>
+        /// <returns><see cref="OpenLogResponse"/></returns>
+        public OpenLogResponse OpenLogSync(OpenLogRequest req)
+        {
+            return InternalRequestAsync<OpenLogResponse>(req, "OpenLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

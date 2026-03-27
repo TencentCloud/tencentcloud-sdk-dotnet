@@ -25,37 +25,37 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 页码，从1开始
+        /// <p>页码，从1开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页个数
+        /// <p>每页个数</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 设备ID
+        /// <p>设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

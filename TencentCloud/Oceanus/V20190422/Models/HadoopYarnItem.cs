@@ -25,51 +25,51 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// ClusterGroupSerialId
+        /// <p>ClusterGroupSerialId</p>
         /// </summary>
         [JsonProperty("ClusterGroupSerialId")]
         public string ClusterGroupSerialId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// cpu
+        /// <p>cpu</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// mem
+        /// <p>mem</p>
         /// </summary>
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 配置文件内容
+        /// <p>配置文件内容</p>
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
-        /// CreatorUin
+        /// <p>CreatorUin</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }

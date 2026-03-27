@@ -25,46 +25,52 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 慢查询耗时时长。单位：毫秒。
+        /// <p>慢查询耗时时长。单位：毫秒。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 客户端地址。
+        /// <p>客户端地址。</p>
         /// </summary>
         [JsonProperty("Client")]
         public string Client{ get; set; }
 
         /// <summary>
-        /// 慢查询的命令。
+        /// <p>慢查询的命令。</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 慢查询详细命令行信息。
+        /// <p>慢查询详细命令行信息。</p>
         /// </summary>
         [JsonProperty("CommandLine")]
         public string CommandLine{ get; set; }
 
         /// <summary>
-        /// 执行时间。
+        /// <p>执行时间。</p>
         /// </summary>
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }
 
         /// <summary>
-        /// 收客户端请求时长(ms)
+        /// <p>收客户端请求时长(ms)</p>
         /// </summary>
         [JsonProperty("RecvClientEnd")]
         public long? RecvClientEnd{ get; set; }
 
         /// <summary>
-        /// 发送客户端请求时长(ms)
+        /// <p>发送客户端请求时长(ms)</p>
         /// </summary>
         [JsonProperty("SendClientEnd")]
         public long? SendClientEnd{ get; set; }
+
+        /// <summary>
+        /// <p>Proxy节点ID。</p>
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
             this.SetParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
             this.SetParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
         }
     }
 }

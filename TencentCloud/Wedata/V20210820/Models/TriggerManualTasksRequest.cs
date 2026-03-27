@@ -49,7 +49,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] DataTimeList{ get; set; }
 
         /// <summary>
-        /// 工作流ID
+        /// 手动工作流ID
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
@@ -61,8 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 需要运行的任务列表
-        /// TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+        /// 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }

@@ -31,16 +31,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
+        /// 主机(%或ipv4地址)
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
+        /// <summary>
         /// 密码，密码长度范围为8到64个字符
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// 主机(%或ipv4地址)
+        /// 是否开启密码轮转(0:关闭;1:开启)
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("PasswordRotation")]
+        public long? PasswordRotation{ get; set; }
 
         /// <summary>
         /// 描述
@@ -61,8 +67,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
+            this.SetParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }

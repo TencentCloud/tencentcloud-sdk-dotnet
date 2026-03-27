@@ -49,16 +49,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string MsgId{ get; set; }
 
         /// <summary>
-        /// 客户端ID
-        /// </summary>
-        [JsonProperty("ClientId")]
-        public string ClientId{ get; set; }
-
-        /// <summary>
         /// 主题名称
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
+
+        /// <summary>
+        /// 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+        /// </summary>
+        [JsonProperty("ClientId")]
+        public string ClientId{ get; set; }
 
 
         /// <summary>
@@ -70,8 +70,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
-            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
         }
     }
 }

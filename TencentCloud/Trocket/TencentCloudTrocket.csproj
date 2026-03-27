@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1383</VersionPrefix>
+    <VersionPrefix>3.0.1394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -154,6 +154,7 @@
     <Compile Include="V20230308\Models\ResendDeadLetterMessageResponse.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetRequest.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetResponse.cs" />
+    <Compile Include="V20230308\Models\RetryPolicy.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageRequest.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageResponse.cs" />

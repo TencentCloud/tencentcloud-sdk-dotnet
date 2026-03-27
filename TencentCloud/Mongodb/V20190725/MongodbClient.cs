@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -1301,6 +1301,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecSync(ModifyDBInstanceSpecRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceSpecResponse>(req, "ModifyDBInstanceSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceAz)用于调整 MongoDB 云数据库的节点可用区分布，可通过指定主可用区和全部可用区分布信息完成云数据库的节点分布调整。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAzRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAzResponse"/></returns>
+        public Task<ModifyInstanceAzResponse> ModifyInstanceAz(ModifyInstanceAzRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAzResponse>(req, "ModifyInstanceAz");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceAz)用于调整 MongoDB 云数据库的节点可用区分布，可通过指定主可用区和全部可用区分布信息完成云数据库的节点分布调整。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAzRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAzResponse"/></returns>
+        public ModifyInstanceAzResponse ModifyInstanceAzSync(ModifyInstanceAzRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAzResponse>(req, "ModifyInstanceAz")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
