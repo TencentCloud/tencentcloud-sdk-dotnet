@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 转码模板唯一标识。
+        /// <p>转码模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

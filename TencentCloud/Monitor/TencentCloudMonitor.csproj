@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,21 @@
 
   <ItemGroup>
     <Compile Include="V20230616\MonitorClient.cs" />
+    <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinTask.cs" />
+    <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinTaskList.cs" />
+    <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLog.cs" />
+    <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogDetail.cs" />
+    <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogList.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsRequest.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinTaskListRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinTaskListResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesResponse.cs" />
     <Compile Include="V20230616\Models\DescribeNoticeContentTmplRequest.cs" />
@@ -77,6 +88,9 @@
     <Compile Include="V20230616\Models\QCloudYeheWeChatNoticeTmplItem.cs" />
     <Compile Include="V20230616\Models\TeamsRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\TeamsRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\TriggerAIWorkbenchSREDigitalTwinTaskRequest.cs" />
+    <Compile Include="V20230616\Models\TriggerAIWorkbenchSREDigitalTwinTaskResponse.cs" />
+    <Compile Include="V20230616\Models\TriggerDigitalTwinTaskResp.cs" />
     <Compile Include="V20230616\Models\WeWorkRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\WeWorkRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\WebhookNoticeTmpl.cs" />

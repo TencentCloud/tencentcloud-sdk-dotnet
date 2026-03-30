@@ -90,6 +90,30 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CodecTag")]
         public string CodecTag{ get; set; }
 
+        /// <summary>
+        /// <p>Gop数值单位。</p><p>枚举值：</p><ul><li>frame： 表示帧数。</li><li>second： 表示秒数。</li></ul><p>默认值：frame</p>
+        /// </summary>
+        [JsonProperty("GopUnit")]
+        public string GopUnit{ get; set; }
+
+        /// <summary>
+        /// <p>码率控制模式。</p><p>枚举值：</p><ul><li>VBR： Variable Bit Rate，动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。</li><li>ABR： Average Bit Rate，平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。</li><li>CBR： Constant Bit Rate，恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。</li><li>VCRF： Constant Rate Factor，恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。</li></ul><p>默认值：VBR</p>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// <p>最大连续B帧数，默认为自动， -1 表示修改为自动值。</p><p>取值范围：[-1, 16]</p>
+        /// </summary>
+        [JsonProperty("Bframes")]
+        public long? Bframes{ get; set; }
+
+        /// <summary>
+        /// <p>分片平均时长。0或不填表示自动，将根据视频的 GOP 等特征自动选择合适的分片时长。</p><p>取值范围：[0, 10]</p><p>单位：秒</p><p>只支持转码模板，暂不支持自适应码流模板。</p>
+        /// </summary>
+        [JsonProperty("HlsTime")]
+        public long? HlsTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +131,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
             this.SetParamSimple(map, prefix + "CodecTag", this.CodecTag);
+            this.SetParamSimple(map, prefix + "GopUnit", this.GopUnit);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Bframes", this.Bframes);
+            this.SetParamSimple(map, prefix + "HlsTime", this.HlsTime);
         }
     }
 }

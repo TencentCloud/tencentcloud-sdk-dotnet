@@ -186,6 +186,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PodNumbers")]
         public long? PodNumbers{ get; set; }
 
+        /// <summary>
+        /// spark app名称
+        /// </summary>
+        [JsonProperty("SparkAppName")]
+        public string SparkAppName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -218,6 +224,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
             this.SetParamSimple(map, prefix + "PodSize", this.PodSize);
             this.SetParamSimple(map, prefix + "PodNumbers", this.PodNumbers);
+            this.SetParamSimple(map, prefix + "SparkAppName", this.SparkAppName);
         }
     }
 }

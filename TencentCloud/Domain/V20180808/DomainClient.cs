@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1346";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -963,6 +963,27 @@ namespace TencentCloud.Domain.V20180808
         public ModifyDomainDNSBatchResponse ModifyDomainDNSBatchSync(ModifyDomainDNSBatchRequest req)
         {
             return InternalRequestAsync<ModifyDomainDNSBatchResponse>(req, "ModifyDomainDNSBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyDomainOwner) 用于域名过户。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainOwnerRequest"/></param>
+        /// <returns><see cref="ModifyDomainOwnerResponse"/></returns>
+        public Task<ModifyDomainOwnerResponse> ModifyDomainOwner(ModifyDomainOwnerRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainOwnerResponse>(req, "ModifyDomainOwner");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyDomainOwner) 用于域名过户。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainOwnerRequest"/></param>
+        /// <returns><see cref="ModifyDomainOwnerResponse"/></returns>
+        public ModifyDomainOwnerResponse ModifyDomainOwnerSync(ModifyDomainOwnerRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainOwnerResponse>(req, "ModifyDomainOwner")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

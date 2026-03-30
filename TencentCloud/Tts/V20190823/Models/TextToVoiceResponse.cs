@@ -25,19 +25,19 @@ namespace TencentCloud.Tts.V20190823.Models
     {
         
         /// <summary>
-        /// base64编码的wav/mp3音频数据
+        /// <p>base64编码的wav/mp3音频数据</p>
         /// </summary>
         [JsonProperty("Audio")]
         public string Audio{ get; set; }
 
         /// <summary>
-        /// 一次请求对应一个SessionId
+        /// <p>一次请求对应一个SessionId</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 时间戳信息，若未开启时间戳，则返回空数组。
+        /// <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
         /// </summary>
         [JsonProperty("Subtitles")]
         public Subtitle[] Subtitles{ get; set; }

@@ -25,104 +25,102 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 转码模板唯一标识。
+        /// <p>转码模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public string Definition{ get; set; }
 
         /// <summary>
-        /// 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+        /// <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 转码模板名称。
+        /// <p>转码模板名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述信息。
+        /// <p>模板描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 模板类型，取值：
-        /// <li>Preset：系统预置模板；</li>
-        /// <li>Custom：用户自定义模板。</li>
+        /// <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 是否去除视频数据，取值：
-        /// <li>0：保留；</li>
-        /// <li>1：去除。</li>
+        /// <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 是否去除音频数据，取值：
-        /// <li>0：保留；</li>
-        /// <li>1：去除。</li>
+        /// <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+        /// <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+        /// <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 极速高清转码参数。
+        /// <p>极速高清转码参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// 音视频增强配置。
+        /// <p>音视频增强配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 封装格式过滤条件，可选值：
-        /// <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-        /// <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+        /// <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
 
         /// <summary>
-        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 切片类型，仅当 Container 为 hls 时有效。
+        /// <p>切片类型，仅当 Container 为 hls 时有效。</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数。</p>
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -145,6 +143,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

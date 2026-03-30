@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Domain.V20180808.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ModifyDomainOwnerRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 域名ID
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public string DomainId{ get; set; }
+
+        /// <summary>
+        /// 新用户UIN
+        /// </summary>
+        [JsonProperty("NewOwnerUin")]
+        public string NewOwnerUin{ get; set; }
+
+        /// <summary>
+        /// 新用户APPID
+        /// </summary>
+        [JsonProperty("NewOwnerAppId")]
+        public string NewOwnerAppId{ get; set; }
+
+        /// <summary>
+        /// 是否同时转移对应的 DNS 解析域名，默认false
+        /// </summary>
+        [JsonProperty("TransferDns")]
+        public bool? TransferDns{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "NewOwnerUin", this.NewOwnerUin);
+            this.SetParamSimple(map, prefix + "NewOwnerAppId", this.NewOwnerAppId);
+            this.SetParamSimple(map, prefix + "TransferDns", this.TransferDns);
+        }
+    }
+}
+

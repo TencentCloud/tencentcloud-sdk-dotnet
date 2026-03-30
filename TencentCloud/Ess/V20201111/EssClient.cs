@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -930,6 +930,27 @@ namespace TencentCloud.Ess.V20201111
         public CreateDocumentResponse CreateDocumentSync(CreateDocumentRequest req)
         {
             return InternalRequestAsync<CreateDocumentResponse>(req, "CreateDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateDraftContractByPromptsTask）用于创建智能合同起草任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDraftContractByPromptsTaskRequest"/></param>
+        /// <returns><see cref="CreateDraftContractByPromptsTaskResponse"/></returns>
+        public Task<CreateDraftContractByPromptsTaskResponse> CreateDraftContractByPromptsTask(CreateDraftContractByPromptsTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDraftContractByPromptsTaskResponse>(req, "CreateDraftContractByPromptsTask");
+        }
+
+        /// <summary>
+        /// 此接口（CreateDraftContractByPromptsTask）用于创建智能合同起草任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDraftContractByPromptsTaskRequest"/></param>
+        /// <returns><see cref="CreateDraftContractByPromptsTaskResponse"/></returns>
+        public CreateDraftContractByPromptsTaskResponse CreateDraftContractByPromptsTaskSync(CreateDraftContractByPromptsTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDraftContractByPromptsTaskResponse>(req, "CreateDraftContractByPromptsTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3664,6 +3685,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrlSync(DescribeContractReviewWebUrlRequest req)
         {
             return InternalRequestAsync<DescribeContractReviewWebUrlResponse>(req, "DescribeContractReviewWebUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（DescribeDraftContractByPromptsTask）用于查询智能合同起草任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDraftContractByPromptsTaskRequest"/></param>
+        /// <returns><see cref="DescribeDraftContractByPromptsTaskResponse"/></returns>
+        public Task<DescribeDraftContractByPromptsTaskResponse> DescribeDraftContractByPromptsTask(DescribeDraftContractByPromptsTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDraftContractByPromptsTaskResponse>(req, "DescribeDraftContractByPromptsTask");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeDraftContractByPromptsTask）用于查询智能合同起草任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDraftContractByPromptsTaskRequest"/></param>
+        /// <returns><see cref="DescribeDraftContractByPromptsTaskResponse"/></returns>
+        public DescribeDraftContractByPromptsTaskResponse DescribeDraftContractByPromptsTaskSync(DescribeDraftContractByPromptsTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDraftContractByPromptsTaskResponse>(req, "DescribeDraftContractByPromptsTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

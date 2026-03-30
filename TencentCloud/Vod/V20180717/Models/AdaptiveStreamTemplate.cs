@@ -25,46 +25,48 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频参数信息。
+        /// <p>视频参数信息。</p>
         /// </summary>
         [JsonProperty("Video")]
         public VideoTemplateInfo Video{ get; set; }
 
         /// <summary>
-        /// 音频参数信息。
+        /// <p>音频参数信息。</p>
         /// </summary>
         [JsonProperty("Audio")]
         public AudioTemplateInfo Audio{ get; set; }
 
         /// <summary>
-        /// 是否移除音频流，取值范围：
-        /// <li>0：否，</li>
-        /// <li>1：是。</li>
+        /// <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 是否移除视频流，取值范围：
-        /// <li>0：否，</li>
-        /// <li>1：是。</li>
+        /// <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 极速高清转码参数。
+        /// <p>极速高清转码参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// 音视频增强配置。
+        /// <p>音视频增强配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数。</p>
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -78,6 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

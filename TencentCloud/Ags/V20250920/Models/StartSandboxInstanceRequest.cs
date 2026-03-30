@@ -25,40 +25,52 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱工具 ID，与 ToolName 至少有一个要填
+        /// <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
         /// </summary>
         [JsonProperty("ToolId")]
         public string ToolId{ get; set; }
 
         /// <summary>
-        /// 沙箱工具名称，与 ToolId 至少有一个要填
+        /// <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
         /// </summary>
         [JsonProperty("ToolName")]
         public string ToolName{ get; set; }
 
         /// <summary>
-        /// 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
+        /// <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public string Timeout{ get; set; }
 
         /// <summary>
-        /// 幂等性 Token，长度不超过 64 字符
+        /// <p>幂等性 Token，长度不超过 64 字符</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 沙箱实例存储挂载配置
+        /// <p>沙箱实例存储挂载配置</p>
         /// </summary>
         [JsonProperty("MountOptions")]
         public MountOption[] MountOptions{ get; set; }
 
         /// <summary>
-        /// 沙箱实例自定义配置
+        /// <p>沙箱实例自定义配置</p>
         /// </summary>
         [JsonProperty("CustomConfiguration")]
         public CustomConfiguration CustomConfiguration{ get; set; }
+
+        /// <summary>
+        /// <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+        /// </summary>
+        [JsonProperty("AuthMode")]
+        public string AuthMode{ get; set; }
+
+        /// <summary>
+        /// <p>沙箱元数据</p>
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public MetadataVar[] Metadata{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+            this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
+            this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

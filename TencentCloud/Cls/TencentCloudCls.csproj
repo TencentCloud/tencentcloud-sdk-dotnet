@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1391</VersionPrefix>
+    <VersionPrefix>3.0.1395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20201016\ClsClient.cs" />
+    <Compile Include="V20201016\Models\AccessControlRule.cs" />
     <Compile Include="V20201016\Models\AddMachineGroupInfoRequest.cs" />
     <Compile Include="V20201016\Models\AddMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\AdvanceFilterRuleInfo.cs" />
@@ -65,9 +66,11 @@
     <Compile Include="V20201016\Models\AlertHistoryRecord.cs" />
     <Compile Include="V20201016\Models\AnalysisDimensional.cs" />
     <Compile Include="V20201016\Models\AnonymousInfo.cs" />
+    <Compile Include="V20201016\Models\AnonymousLoginInfo.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\AppointLabel.cs" />
+    <Compile Include="V20201016\Models\AuthRoleInfo.cs" />
     <Compile Include="V20201016\Models\BaseMetricCollectConfig.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
     <Compile Include="V20201016\Models\CancelRebuildIndexTaskRequest.cs" />
@@ -89,6 +92,8 @@
     <Compile Include="V20201016\Models\ConditionInfo.cs" />
     <Compile Include="V20201016\Models\ConfigExtraInfo.cs" />
     <Compile Include="V20201016\Models\ConfigInfo.cs" />
+    <Compile Include="V20201016\Models\Console.cs" />
+    <Compile Include="V20201016\Models\ConsoleAccount.cs" />
     <Compile Include="V20201016\Models\ConsoleSharingConfig.cs" />
     <Compile Include="V20201016\Models\ConsoleSharingInfo.cs" />
     <Compile Include="V20201016\Models\ConsoleSharingParam.cs" />
@@ -113,6 +118,8 @@
     <Compile Include="V20201016\Models\CreateConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigRequest.cs" />
     <Compile Include="V20201016\Models\CreateConfigResponse.cs" />
+    <Compile Include="V20201016\Models\CreateConsoleRequest.cs" />
+    <Compile Include="V20201016\Models\CreateConsoleResponse.cs" />
     <Compile Include="V20201016\Models\CreateConsoleSharingRequest.cs" />
     <Compile Include="V20201016\Models\CreateConsoleSharingResponse.cs" />
     <Compile Include="V20201016\Models\CreateConsumerGroupRequest.cs" />
@@ -191,6 +198,8 @@
     <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConfigResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteConsoleRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteConsoleResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConsoleSharingRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConsoleSharingResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConsumerGroupRequest.cs" />
@@ -264,6 +273,8 @@
     <Compile Include="V20201016\Models\DescribeConfigsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConsoleSharingListRequest.cs" />
     <Compile Include="V20201016\Models\DescribeConsoleSharingListResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeConsolesRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeConsolesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConsumerGroupsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeConsumerGroupsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConsumerOffsetsRequest.cs" />
@@ -431,6 +442,8 @@
     <Compile Include="V20201016\Models\ModifyConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConfigRequest.cs" />
     <Compile Include="V20201016\Models\ModifyConfigResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyConsoleRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyConsoleResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConsoleSharingRequest.cs" />
     <Compile Include="V20201016\Models\ModifyConsoleSharingResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConsumerGroupRequest.cs" />

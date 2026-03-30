@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20230616
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,69 @@ namespace TencentCloud.Monitor.V20230616
         }
 
         /// <summary>
+        /// 查询AI工作台SRE数字分身任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinTaskListResponse"/></returns>
+        public Task<DescribeAIWorkbenchSREDigitalTwinTaskListResponse> DescribeAIWorkbenchSREDigitalTwinTaskList(DescribeAIWorkbenchSREDigitalTwinTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinTaskListResponse>(req, "DescribeAIWorkbenchSREDigitalTwinTaskList");
+        }
+
+        /// <summary>
+        /// 查询AI工作台SRE数字分身任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinTaskListResponse"/></returns>
+        public DescribeAIWorkbenchSREDigitalTwinTaskListResponse DescribeAIWorkbenchSREDigitalTwinTaskListSync(DescribeAIWorkbenchSREDigitalTwinTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinTaskListResponse>(req, "DescribeAIWorkbenchSREDigitalTwinTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI工作台SRE数字分身工作日志详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse"/></returns>
+        public Task<DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse> DescribeAIWorkbenchSREDigitalTwinWorkLogDetail(DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse>(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogDetail");
+        }
+
+        /// <summary>
+        /// 查询AI工作台SRE数字分身工作日志详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse"/></returns>
+        public DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse DescribeAIWorkbenchSREDigitalTwinWorkLogDetailSync(DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse>(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI工作台SRE数字分身任务工作日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse"/></returns>
+        public Task<DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse> DescribeAIWorkbenchSREDigitalTwinWorkLogList(DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse>(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogList");
+        }
+
+        /// <summary>
+        /// 查询AI工作台SRE数字分身任务工作日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest"/></param>
+        /// <returns><see cref="DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse"/></returns>
+        public DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse DescribeAIWorkbenchSREDigitalTwinWorkLogListSync(DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse>(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 按需查询告警的通知历史
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNotifyHistoriesRequest"/></param>
@@ -155,6 +218,27 @@ namespace TencentCloud.Monitor.V20230616
         public ModifyNoticeContentTmplResponse ModifyNoticeContentTmplSync(ModifyNoticeContentTmplRequest req)
         {
             return InternalRequestAsync<ModifyNoticeContentTmplResponse>(req, "ModifyNoticeContentTmpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 触发数字分身任务请求
+        /// </summary>
+        /// <param name="req"><see cref="TriggerAIWorkbenchSREDigitalTwinTaskRequest"/></param>
+        /// <returns><see cref="TriggerAIWorkbenchSREDigitalTwinTaskResponse"/></returns>
+        public Task<TriggerAIWorkbenchSREDigitalTwinTaskResponse> TriggerAIWorkbenchSREDigitalTwinTask(TriggerAIWorkbenchSREDigitalTwinTaskRequest req)
+        {
+            return InternalRequestAsync<TriggerAIWorkbenchSREDigitalTwinTaskResponse>(req, "TriggerAIWorkbenchSREDigitalTwinTask");
+        }
+
+        /// <summary>
+        /// 触发数字分身任务请求
+        /// </summary>
+        /// <param name="req"><see cref="TriggerAIWorkbenchSREDigitalTwinTaskRequest"/></param>
+        /// <returns><see cref="TriggerAIWorkbenchSREDigitalTwinTaskResponse"/></returns>
+        public TriggerAIWorkbenchSREDigitalTwinTaskResponse TriggerAIWorkbenchSREDigitalTwinTaskSync(TriggerAIWorkbenchSREDigitalTwinTaskRequest req)
+        {
+            return InternalRequestAsync<TriggerAIWorkbenchSREDigitalTwinTaskResponse>(req, "TriggerAIWorkbenchSREDigitalTwinTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

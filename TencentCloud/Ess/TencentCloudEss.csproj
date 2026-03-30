@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1394</VersionPrefix>
+    <VersionPrefix>3.0.1395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,8 @@
     <Compile Include="V20201111\Models\CreateDigitalDataSignResponse.cs" />
     <Compile Include="V20201111\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20201111\Models\CreateDocumentResponse.cs" />
+    <Compile Include="V20201111\Models\CreateDraftContractByPromptsTaskRequest.cs" />
+    <Compile Include="V20201111\Models\CreateDraftContractByPromptsTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateDynamicFlowApproverRequest.cs" />
     <Compile Include="V20201111\Models\CreateDynamicFlowApproverResponse.cs" />
     <Compile Include="V20201111\Models\CreateEmbedWebUrlRequest.cs" />
@@ -269,6 +271,8 @@
     <Compile Include="V20201111\Models\DescribeContractReviewTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewWebUrlRequest.cs" />
     <Compile Include="V20201111\Models\DescribeContractReviewWebUrlResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeDraftContractByPromptsTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeDraftContractByPromptsTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeEnterpriseContractReviewChecklistsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeEnterpriseContractReviewChecklistsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailRequest.cs" />

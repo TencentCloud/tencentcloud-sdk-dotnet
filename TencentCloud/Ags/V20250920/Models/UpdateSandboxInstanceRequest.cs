@@ -25,16 +25,22 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱实例ID
+        /// <p>沙箱实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+        /// <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public string Timeout{ get; set; }
+
+        /// <summary>
+        /// <p>沙箱实例元数据</p>
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public MetadataVar[] Metadata{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

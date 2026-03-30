@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1391";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -337,6 +337,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateConfigExtraResponse CreateConfigExtraSync(CreateConfigExtraRequest req)
         {
             return InternalRequestAsync<CreateConfigExtraResponse>(req, "CreateConfigExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleRequest"/></param>
+        /// <returns><see cref="CreateConsoleResponse"/></returns>
+        public Task<CreateConsoleResponse> CreateConsole(CreateConsoleRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleResponse>(req, "CreateConsole");
+        }
+
+        /// <summary>
+        /// 本接口用于创建DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleRequest"/></param>
+        /// <returns><see cref="CreateConsoleResponse"/></returns>
+        public CreateConsoleResponse CreateConsoleSync(CreateConsoleRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleResponse>(req, "CreateConsole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1042,6 +1063,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroupSync(DeleteConfigFromMachineGroupRequest req)
         {
             return InternalRequestAsync<DeleteConfigFromMachineGroupResponse>(req, "DeleteConfigFromMachineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleRequest"/></param>
+        /// <returns><see cref="DeleteConsoleResponse"/></returns>
+        public Task<DeleteConsoleResponse> DeleteConsole(DeleteConsoleRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleResponse>(req, "DeleteConsole");
+        }
+
+        /// <summary>
+        /// 本接口用于删除DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleRequest"/></param>
+        /// <returns><see cref="DeleteConsoleResponse"/></returns>
+        public DeleteConsoleResponse DeleteConsoleSync(DeleteConsoleRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleResponse>(req, "DeleteConsole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1798,6 +1840,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeConsoleSharingListResponse DescribeConsoleSharingListSync(DescribeConsoleSharingListRequest req)
         {
             return InternalRequestAsync<DescribeConsoleSharingListResponse>(req, "DescribeConsoleSharingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询DataSight控制台实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsolesRequest"/></param>
+        /// <returns><see cref="DescribeConsolesResponse"/></returns>
+        public Task<DescribeConsolesResponse> DescribeConsoles(DescribeConsolesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsolesResponse>(req, "DescribeConsoles");
+        }
+
+        /// <summary>
+        /// 查询DataSight控制台实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsolesRequest"/></param>
+        /// <returns><see cref="DescribeConsolesResponse"/></returns>
+        public DescribeConsolesResponse DescribeConsolesSync(DescribeConsolesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsolesResponse>(req, "DescribeConsoles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2934,6 +2997,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyConfigExtraResponse ModifyConfigExtraSync(ModifyConfigExtraRequest req)
         {
             return InternalRequestAsync<ModifyConfigExtraResponse>(req, "ModifyConfigExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于编辑DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleRequest"/></param>
+        /// <returns><see cref="ModifyConsoleResponse"/></returns>
+        public Task<ModifyConsoleResponse> ModifyConsole(ModifyConsoleRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleResponse>(req, "ModifyConsole");
+        }
+
+        /// <summary>
+        /// 本接口用于编辑DataSight控制台
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleRequest"/></param>
+        /// <returns><see cref="ModifyConsoleResponse"/></returns>
+        public ModifyConsoleResponse ModifyConsoleSync(ModifyConsoleRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleResponse>(req, "ModifyConsole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

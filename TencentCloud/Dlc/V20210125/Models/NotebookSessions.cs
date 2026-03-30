@@ -114,6 +114,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// Kernel id
+        /// </summary>
+        [JsonProperty("KernelId")]
+        public string KernelId{ get; set; }
+
+        /// <summary>
+        /// spark app名称
+        /// </summary>
+        [JsonProperty("SparkAppName")]
+        public string SparkAppName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamSimple(map, prefix + "KernelId", this.KernelId);
+            this.SetParamSimple(map, prefix + "SparkAppName", this.SparkAppName);
         }
     }
 }
