@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1392";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -1160,6 +1160,69 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeResourcePoolPackInstances)用于查询指定实例资源池内已创建的实例列表及其物理拓扑信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPackInstancesRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPackInstancesResponse"/></returns>
+        public Task<DescribeResourcePoolPackInstancesResponse> DescribeResourcePoolPackInstances(DescribeResourcePoolPackInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPackInstancesResponse>(req, "DescribeResourcePoolPackInstances");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeResourcePoolPackInstances)用于查询指定实例资源池内已创建的实例列表及其物理拓扑信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPackInstancesRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPackInstancesResponse"/></returns>
+        public DescribeResourcePoolPackInstancesResponse DescribeResourcePoolPackInstancesSync(DescribeResourcePoolPackInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPackInstancesResponse>(req, "DescribeResourcePoolPackInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeResourcePoolPackTypeConfigs)用于查询当前地域/可用区支持创建实例资源池的整机/半整机规格列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPackTypeConfigsRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPackTypeConfigsResponse"/></returns>
+        public Task<DescribeResourcePoolPackTypeConfigsResponse> DescribeResourcePoolPackTypeConfigs(DescribeResourcePoolPackTypeConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPackTypeConfigsResponse>(req, "DescribeResourcePoolPackTypeConfigs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeResourcePoolPackTypeConfigs)用于查询当前地域/可用区支持创建实例资源池的整机/半整机规格列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPackTypeConfigsRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPackTypeConfigsResponse"/></returns>
+        public DescribeResourcePoolPackTypeConfigsResponse DescribeResourcePoolPackTypeConfigsSync(DescribeResourcePoolPackTypeConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPackTypeConfigsResponse>(req, "DescribeResourcePoolPackTypeConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeResourcePoolPacks)用于查询用户已创建的实例资源池列表，包括资源池基本信息、剩余容量、底层物理拓扑信息等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPacksResponse"/></returns>
+        public Task<DescribeResourcePoolPacksResponse> DescribeResourcePoolPacks(DescribeResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPacksResponse>(req, "DescribeResourcePoolPacks");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeResourcePoolPacks)用于查询用户已创建的实例资源池列表，包括资源池基本信息、剩余容量、底层物理拓扑信息等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="DescribeResourcePoolPacksResponse"/></returns>
+        public DescribeResourcePoolPacksResponse DescribeResourcePoolPacksSync(DescribeResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePoolPacksResponse>(req, "DescribeResourcePoolPacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
         /// 
         /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
@@ -1417,6 +1480,27 @@ namespace TencentCloud.Cvm.V20170312
         public ImportKeyPairResponse ImportKeyPairSync(ImportKeyPairRequest req)
         {
             return InternalRequestAsync<ImportKeyPairResponse>(req, "ImportKeyPair")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseResourcePoolPacks)用于查询创建实例资源池的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseResourcePoolPacksResponse"/></returns>
+        public Task<InquirePricePurchaseResourcePoolPacksResponse> InquirePricePurchaseResourcePoolPacks(InquirePricePurchaseResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<InquirePricePurchaseResourcePoolPacksResponse>(req, "InquirePricePurchaseResourcePoolPacks");
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseResourcePoolPacks)用于查询创建实例资源池的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseResourcePoolPacksResponse"/></returns>
+        public InquirePricePurchaseResourcePoolPacksResponse InquirePricePurchaseResourcePoolPacksSync(InquirePricePurchaseResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<InquirePricePurchaseResourcePoolPacksResponse>(req, "InquirePricePurchaseResourcePoolPacks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2088,6 +2172,33 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(PurchaseResourcePoolPacks)用于创建一个或多个实例资源池，每个资源池绑定一个整机或半整机规格的物理资源容量。
+        /// 
+        /// * 实例资源池为剩余容量按量付费模式，购买前请确保账户余额充足。
+        /// * 本接口为异步接口，创建请求发送成功后会返回DedicatedResourcePackIds，此时创建任务并未完成。
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="PurchaseResourcePoolPacksResponse"/></returns>
+        public Task<PurchaseResourcePoolPacksResponse> PurchaseResourcePoolPacks(PurchaseResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<PurchaseResourcePoolPacksResponse>(req, "PurchaseResourcePoolPacks");
+        }
+
+        /// <summary>
+        /// 本接口(PurchaseResourcePoolPacks)用于创建一个或多个实例资源池，每个资源池绑定一个整机或半整机规格的物理资源容量。
+        /// 
+        /// * 实例资源池为剩余容量按量付费模式，购买前请确保账户余额充足。
+        /// * 本接口为异步接口，创建请求发送成功后会返回DedicatedResourcePackIds，此时创建任务并未完成。
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="PurchaseResourcePoolPacksResponse"/></returns>
+        public PurchaseResourcePoolPacksResponse PurchaseResourcePoolPacksSync(PurchaseResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<PurchaseResourcePoolPacksResponse>(req, "PurchaseResourcePoolPacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (RebootInstances) 用于重启实例。
         /// 
         /// * 只有状态为`RUNNING`的实例才可以进行此操作。
@@ -2578,6 +2689,37 @@ namespace TencentCloud.Cvm.V20170312
         public TerminateInstancesResponse TerminateInstancesSync(TerminateInstancesRequest req)
         {
             return InternalRequestAsync<TerminateInstancesResponse>(req, "TerminateInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(TerminateResourcePoolPacks)用于销毁指定的实例资源池。
+        /// 
+        /// * 销毁资源池不会销毁池内已创建的实例。
+        /// * 池内实例会从专属资源池解绑，转移至公共资源池，继续按原生命周期运行。
+        /// * 转移后无法再查询底层物理拓扑信息。
+        /// * 释放底层物理资源并删除资源池记录。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="TerminateResourcePoolPacksResponse"/></returns>
+        public Task<TerminateResourcePoolPacksResponse> TerminateResourcePoolPacks(TerminateResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<TerminateResourcePoolPacksResponse>(req, "TerminateResourcePoolPacks");
+        }
+
+        /// <summary>
+        /// 本接口(TerminateResourcePoolPacks)用于销毁指定的实例资源池。
+        /// 
+        /// * 销毁资源池不会销毁池内已创建的实例。
+        /// * 池内实例会从专属资源池解绑，转移至公共资源池，继续按原生命周期运行。
+        /// * 转移后无法再查询底层物理拓扑信息。
+        /// * 释放底层物理资源并删除资源池记录。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateResourcePoolPacksRequest"/></param>
+        /// <returns><see cref="TerminateResourcePoolPacksResponse"/></returns>
+        public TerminateResourcePoolPacksResponse TerminateResourcePoolPacksSync(TerminateResourcePoolPacksRequest req)
+        {
+            return InternalRequestAsync<TerminateResourcePoolPacksResponse>(req, "TerminateResourcePoolPacks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

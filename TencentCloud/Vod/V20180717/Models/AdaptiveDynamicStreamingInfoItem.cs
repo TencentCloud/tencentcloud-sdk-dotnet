@@ -25,78 +25,76 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 转自适应码流规格。
+        /// <p>转自适应码流规格。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 打包格式，取值范围：
-        /// <li>HLS；</li>
-        /// <li>DASH。</li>
+        /// <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }
 
         /// <summary>
-        /// 加密类型。
+        /// <p>加密类型。</p>
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// 播放地址。
+        /// <p>播放地址。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 媒体文件大小，单位：字节。
-        /// <li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-        /// <li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-        /// <li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+        /// <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 数字水印类型。可选值：
-        /// <li>Trace 表示经过溯源水印处理；</li>
-        /// <li>CopyRight 表示经过版权水印处理；</li>
-        /// <li>None 表示没有经过数字水印处理。</li>
+        /// <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// 子流信息列表。
+        /// <p>子流信息列表。</p>
         /// </summary>
         [JsonProperty("SubStreamSet")]
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
 
         /// <summary>
-        /// 版权信息。
+        /// <p>版权信息。</p>
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
 
         /// <summary>
-        /// 数字水印模板id。
+        /// <p>数字水印模板id。</p>
         /// </summary>
         [JsonProperty("BlindWatermarkDefinition")]
         public long? BlindWatermarkDefinition{ get; set; }
 
         /// <summary>
-        /// 字幕信息列表。
+        /// <p>字幕信息列表。</p>
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public MediaSubtitleItem[] SubtitleSet{ get; set; }
 
         /// <summary>
-        /// 默认字幕的唯一标识。
+        /// <p>默认字幕的唯一标识。</p>
         /// </summary>
         [JsonProperty("DefaultSubtitleId")]
         public string DefaultSubtitleId{ get; set; }
+
+        /// <summary>
+        /// <p>DRM加密方法。</p>
+        /// </summary>
+        [JsonProperty("DrmEncryptType")]
+        public string DrmEncryptType{ get; set; }
 
 
         /// <summary>
@@ -115,6 +113,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
             this.SetParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
             this.SetParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
+            this.SetParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
         }
     }
 }

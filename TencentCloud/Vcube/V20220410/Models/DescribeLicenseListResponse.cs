@@ -25,6 +25,30 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
+        /// 临期license数量
+        /// </summary>
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// 正式license总览统计数据
+        /// </summary>
+        [JsonProperty("Overview")]
+        public Overview Overview{ get; set; }
+
+        /// <summary>
+        /// 临期license列表
+        /// </summary>
+        [JsonProperty("LicenseList")]
+        public OverviewLicense[] LicenseList{ get; set; }
+
+        /// <summary>
+        /// 测试license总览统计数据
+        /// </summary>
+        [JsonProperty("TrialOverview")]
+        public Overview TrialOverview{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Vcube.V20220410.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamObj(map, prefix + "Overview.", this.Overview);
+            this.SetParamArrayObj(map, prefix + "LicenseList.", this.LicenseList);
+            this.SetParamObj(map, prefix + "TrialOverview.", this.TrialOverview);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

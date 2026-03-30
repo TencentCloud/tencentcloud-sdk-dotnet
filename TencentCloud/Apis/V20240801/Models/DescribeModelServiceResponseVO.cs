@@ -191,6 +191,20 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 是否开启提示词安全检测
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PromptModerateStatus")]
+        public bool? PromptModerateStatus{ get; set; }
+
+        /// <summary>
+        /// 提示词安全检测配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PromptModerateConfig")]
+        public PromptModerateConfigDTO PromptModerateConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +238,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
+            this.SetParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
         }
     }
 }

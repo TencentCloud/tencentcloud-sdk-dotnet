@@ -48,6 +48,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
 
+        /// <summary>
+        /// 实例所属的实例资源池机架ID，仅用于出参。
+        /// </summary>
+        [JsonProperty("RackId")]
+        public string RackId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
             this.SetParamSimple(map, prefix + "HostId", this.HostId);
+            this.SetParamSimple(map, prefix + "RackId", this.RackId);
         }
     }
 }

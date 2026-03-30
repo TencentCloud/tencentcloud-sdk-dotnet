@@ -25,21 +25,21 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+        /// <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitGroup")]
         public string HitGroup{ get; set; }
 
         /// <summary>
-        /// 命中的相似度
+        /// <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SimilarityScore")]
         public float? SimilarityScore{ get; set; }
 
         /// <summary>
-        /// 命中的模板id
+        /// <p>命中的模板id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitTemplate")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1382</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,7 @@
     <Compile Include="V20180125\Models\ApiAsset.cs" />
     <Compile Include="V20180125\Models\ApiDataFilter.cs" />
     <Compile Include="V20180125\Models\ApiDetailSampleHistory.cs" />
+    <Compile Include="V20180125\Models\ApiGuardContent.cs" />
     <Compile Include="V20180125\Models\ApiNameMethod.cs" />
     <Compile Include="V20180125\Models\ApiNameOp.cs" />
     <Compile Include="V20180125\Models\ApiParameterType.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="V20180125\Models\CacheUrlItems.cs" />
     <Compile Include="V20180125\Models\CdcCluster.cs" />
     <Compile Include="V20180125\Models\CdcRegion.cs" />
+    <Compile Include="V20180125\Models\ClawRiskItem.cs" />
     <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
     <Compile Include="V20180125\Models\ClbObject.cs" />
     <Compile Include="V20180125\Models\ClbWafRegionItem.cs" />
@@ -296,6 +298,8 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentSecCheckRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentSecCheckResponse.cs" />
     <Compile Include="V20180125\Models\DescribeLogHistogramRequest.cs" />
     <Compile Include="V20180125\Models\DescribeLogHistogramResponse.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusRequest.cs" />
@@ -322,6 +326,8 @@
     <Compile Include="V20180125\Models\DescribePostCLSFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeQClawContentSecCheckRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeQClawContentSecCheckResponse.cs" />
     <Compile Include="V20180125\Models\DescribeRateLimitsV2Request.cs" />
     <Compile Include="V20180125\Models\DescribeRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
@@ -419,8 +425,12 @@
     <Compile Include="V20180125\Models\JWTConfig.cs" />
     <Compile Include="V20180125\Models\JobDateTime.cs" />
     <Compile Include="V20180125\Models\KVInt.cs" />
+    <Compile Include="V20180125\Models\KeyWordInfo.cs" />
+    <Compile Include="V20180125\Models\LLMDetectResult.cs" />
     <Compile Include="V20180125\Models\LLMMonPkg.cs" />
     <Compile Include="V20180125\Models\LLMPkg.cs" />
+    <Compile Include="V20180125\Models\LLMRisks.cs" />
+    <Compile Include="V20180125\Models\LLMSensitiveValueLevel.cs" />
     <Compile Include="V20180125\Models\LimitHeader.cs" />
     <Compile Include="V20180125\Models\LimitHeaderName.cs" />
     <Compile Include="V20180125\Models\LimitMethod.cs" />
@@ -562,6 +572,7 @@
     <Compile Include="V20180125\Models\PostCKafkaFlowInfo.cs" />
     <Compile Include="V20180125\Models\PostCLSFlowInfo.cs" />
     <Compile Include="V20180125\Models\ProductInfo.cs" />
+    <Compile Include="V20180125\Models\PromptDetectResult.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\QueryBypassAllStatusRequest.cs" />

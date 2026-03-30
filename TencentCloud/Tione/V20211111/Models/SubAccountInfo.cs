@@ -60,6 +60,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LinuxUserName")]
         public string LinuxUserName{ get; set; }
 
+        /// <summary>
+        /// 是否开启 root 登录
+        /// </summary>
+        [JsonProperty("EnableRootLogin")]
+        public bool? EnableRootLogin{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "LinuxUid", this.LinuxUid);
             this.SetParamSimple(map, prefix + "LinuxGid", this.LinuxGid);
             this.SetParamSimple(map, prefix + "LinuxUserName", this.LinuxUserName);
+            this.SetParamSimple(map, prefix + "EnableRootLogin", this.EnableRootLogin);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

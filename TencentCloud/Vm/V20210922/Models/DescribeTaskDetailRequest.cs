@@ -25,13 +25,13 @@ namespace TencentCloud.Vm.V20210922.Models
     {
         
         /// <summary>
-        /// 任务ID，创建任务后返回的TaskId字段
+        /// <p>任务ID，创建任务后返回的TaskId字段</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 是否展示所有分片，默认只展示命中规则的分片
+        /// <p>是否展示所有分片，默认只展示命中规则的分片</p>
         /// </summary>
         [JsonProperty("ShowAllSegments")]
         public bool? ShowAllSegments{ get; set; }

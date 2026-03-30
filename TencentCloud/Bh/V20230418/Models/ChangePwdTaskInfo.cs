@@ -156,6 +156,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
+        /// <summary>
+        /// 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
             this.SetParamSimple(map, prefix + "NextTime", this.NextTime);
             this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

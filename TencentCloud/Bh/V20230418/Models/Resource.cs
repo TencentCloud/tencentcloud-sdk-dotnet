@@ -372,6 +372,18 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
+        /// <summary>
+        /// 计费侧地域
+        /// </summary>
+        [JsonProperty("BillingRegion")]
+        public string BillingRegion{ get; set; }
+
+        /// <summary>
+        /// 计费侧可用区
+        /// </summary>
+        [JsonProperty("BillingZone")]
+        public string BillingZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -436,6 +448,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "BillingRegion", this.BillingRegion);
+            this.SetParamSimple(map, prefix + "BillingZone", this.BillingZone);
         }
     }
 }

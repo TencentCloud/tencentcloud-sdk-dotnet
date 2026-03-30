@@ -25,7 +25,7 @@ namespace TencentCloud.Tds.V20220801.Models
     {
         
         /// <summary>
-        /// 客户端通过SDK获取的设备Token
+        /// <p>客户端通过SDK获取的设备Token</p>
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }

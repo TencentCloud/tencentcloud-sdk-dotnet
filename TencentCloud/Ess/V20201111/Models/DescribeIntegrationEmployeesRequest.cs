@@ -33,6 +33,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 指定分页每页返回的数据条数，单页最大支持 20。
+        /// 如果没有传递， 则为默认值20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

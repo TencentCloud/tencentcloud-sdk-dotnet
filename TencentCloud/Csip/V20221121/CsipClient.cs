@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1395";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -848,6 +848,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskListSync(DescribeHighBaseLineRiskListRequest req)
         {
             return InternalRequestAsync<DescribeHighBaseLineRiskListResponse>(req, "DescribeHighBaseLineRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialResponse"/></returns>
+        public Task<DescribeKeySandboxCredentialResponse> DescribeKeySandboxCredential(DescribeKeySandboxCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialResponse>(req, "DescribeKeySandboxCredential");
+        }
+
+        /// <summary>
+        /// 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialResponse"/></returns>
+        public DescribeKeySandboxCredentialResponse DescribeKeySandboxCredentialSync(DescribeKeySandboxCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialResponse>(req, "DescribeKeySandboxCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询凭证列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialListResponse"/></returns>
+        public Task<DescribeKeySandboxCredentialListResponse> DescribeKeySandboxCredentialList(DescribeKeySandboxCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialListResponse>(req, "DescribeKeySandboxCredentialList");
+        }
+
+        /// <summary>
+        /// 查询凭证列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialListResponse"/></returns>
+        public DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialListSync(DescribeKeySandboxCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialListResponse>(req, "DescribeKeySandboxCredentialList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

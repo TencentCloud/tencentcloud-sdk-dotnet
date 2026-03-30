@@ -25,85 +25,89 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// binlog 日志备份文件名
+        /// <p>binlog 日志备份文件名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备份文件大小，单位：Byte
+        /// <p>备份文件大小，单位：Byte</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 文件存储时间，时间格式：2016-03-17 02:10:37
+        /// <p>文件存储时间，时间格式：2016-03-17 02:10:37</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 下载地址
-        /// 说明：此下载地址和参数 InternetUrl 的下载地址一样。
+        /// <p>下载地址<br>说明：此下载地址和参数 InternetUrl 的下载地址一样。</p>
         /// </summary>
         [JsonProperty("IntranetUrl")]
         public string IntranetUrl{ get; set; }
 
         /// <summary>
-        /// 下载地址
-        /// 说明：此下载地址和参数 IntranetUrl 的下载地址一样。
+        /// <p>下载地址<br>说明：此下载地址和参数 IntranetUrl 的下载地址一样。</p>
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }
 
         /// <summary>
-        /// 日志具体类型，可能的值有：binlog - 二进制日志
+        /// <p>日志具体类型，可能的值有：binlog - 二进制日志</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// binlog 文件起始时间
+        /// <p>binlog 文件起始时间</p>
         /// </summary>
         [JsonProperty("BinlogStartTime")]
         public string BinlogStartTime{ get; set; }
 
         /// <summary>
-        /// binlog 文件截止时间
+        /// <p>binlog 文件截止时间</p>
         /// </summary>
         [JsonProperty("BinlogFinishTime")]
         public string BinlogFinishTime{ get; set; }
 
         /// <summary>
-        /// 本地binlog文件所在地域
+        /// <p>本地binlog文件所在地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+        /// <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// binlog异地备份详细信息
+        /// <p>binlog异地备份详细信息</p>
         /// </summary>
         [JsonProperty("RemoteInfo")]
         public RemoteBackupInfo[] RemoteInfo{ get; set; }
 
         /// <summary>
-        /// 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+        /// <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
         /// </summary>
         [JsonProperty("CosStorageType")]
         public long? CosStorageType{ get; set; }
 
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         [System.Obsolete]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>备份完成进度</p>
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
 
 
         /// <summary>
@@ -124,6 +128,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
             this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

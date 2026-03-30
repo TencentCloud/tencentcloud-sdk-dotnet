@@ -166,6 +166,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
         /// </summary>
         [JsonProperty("HttpsUpstreamPort")]
+        [System.Obsolete]
         public string HttpsUpstreamPort{ get; set; }
 
         /// <summary>

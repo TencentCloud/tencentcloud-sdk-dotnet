@@ -59,6 +59,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
+        /// <summary>
+        /// 0: 普通用户 1: entraId用户
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserTag")]
+        public ulong? UserTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "UserTag", this.UserTag);
         }
     }
 }

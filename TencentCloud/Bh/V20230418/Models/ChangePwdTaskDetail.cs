@@ -37,10 +37,16 @@ namespace TencentCloud.Bh.V20230418.Models
         public string Account{ get; set; }
 
         /// <summary>
-        /// 上次改密结果。0-未改密  1-改密成功 2-改密失败
+        /// 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
         /// </summary>
         [JsonProperty("LastChangeStatus")]
         public ulong? LastChangeStatus{ get; set; }
+
+        /// <summary>
+        /// 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public ulong? TaskStatus{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamObj(map, prefix + "Device.", this.Device);
             this.SetParamSimple(map, prefix + "Account", this.Account);
             this.SetParamSimple(map, prefix + "LastChangeStatus", this.LastChangeStatus);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         }
     }
 }

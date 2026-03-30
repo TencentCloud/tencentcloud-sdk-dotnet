@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1388</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,8 @@
     <Compile Include="V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="V20180328\Models\CloseInterCommunicationRequest.cs" />
     <Compile Include="V20180328\Models\CloseInterCommunicationResponse.cs" />
+    <Compile Include="V20180328\Models\CloseLogRequest.cs" />
+    <Compile Include="V20180328\Models\CloseLogResponse.cs" />
     <Compile Include="V20180328\Models\CompleteExpansionRequest.cs" />
     <Compile Include="V20180328\Models\CompleteExpansionResponse.cs" />
     <Compile Include="V20180328\Models\CompleteMigrationRequest.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="V20180328\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="V20180328\Models\CreateDBRequest.cs" />
     <Compile Include="V20180328\Models\CreateDBResponse.cs" />
+    <Compile Include="V20180328\Models\CreateExportTaskRequest.cs" />
+    <Compile Include="V20180328\Models\CreateExportTaskResponse.cs" />
     <Compile Include="V20180328\Models\CreateIncrementalMigrationRequest.cs" />
     <Compile Include="V20180328\Models\CreateIncrementalMigrationResponse.cs" />
     <Compile Include="V20180328\Models\CreateMigrationRequest.cs" />
@@ -129,6 +133,8 @@
     <Compile Include="V20180328\Models\DeleteDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\DeleteDBRequest.cs" />
     <Compile Include="V20180328\Models\DeleteDBResponse.cs" />
+    <Compile Include="V20180328\Models\DeleteExportTaskRequest.cs" />
+    <Compile Include="V20180328\Models\DeleteExportTaskResponse.cs" />
     <Compile Include="V20180328\Models\DeleteIncrementalMigrationRequest.cs" />
     <Compile Include="V20180328\Models\DeleteIncrementalMigrationResponse.cs" />
     <Compile Include="V20180328\Models\DeleteMigrationRequest.cs" />
@@ -137,6 +143,7 @@
     <Compile Include="V20180328\Models\DeletePublishSubscribeResponse.cs" />
     <Compile Include="V20180328\Models\DeleteRestoreTaskRequest.cs" />
     <Compile Include="V20180328\Models\DeleteRestoreTaskResponse.cs" />
+    <Compile Include="V20180328\Models\DeliverSummary.cs" />
     <Compile Include="V20180328\Models\DescribeAccountPrivilegeByDBRequest.cs" />
     <Compile Include="V20180328\Models\DescribeAccountPrivilegeByDBResponse.cs" />
     <Compile Include="V20180328\Models\DescribeAccountsRequest.cs" />
@@ -193,6 +200,8 @@
     <Compile Include="V20180328\Models\DescribeDatabasesNormalResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeExportTasksRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeExportTasksResponse.cs" />
     <Compile Include="V20180328\Models\DescribeFlowStatusRequest.cs" />
     <Compile Include="V20180328\Models\DescribeFlowStatusResponse.cs" />
     <Compile Include="V20180328\Models\DescribeHASwitchLogRequest.cs" />
@@ -211,6 +220,10 @@
     <Compile Include="V20180328\Models\DescribeInstanceTasksResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceTradeParameterRequest.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceTradeParameterResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeLogInstanceListRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeLogInstanceListResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeLogsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeLogsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMigrationDatabasesRequest.cs" />
@@ -267,7 +280,9 @@
     <Compile Include="V20180328\Models\DrZoneInfo.cs" />
     <Compile Include="V20180328\Models\EventConfig.cs" />
     <Compile Include="V20180328\Models\Events.cs" />
+    <Compile Include="V20180328\Models\ExportFile.cs" />
     <Compile Include="V20180328\Models\FileAction.cs" />
+    <Compile Include="V20180328\Models\Filter.cs" />
     <Compile Include="V20180328\Models\InquiryPriceCreateDBInstancesRequest.cs" />
     <Compile Include="V20180328\Models\InquiryPriceCreateDBInstancesResponse.cs" />
     <Compile Include="V20180328\Models\InquiryPriceRenewDBInstanceRequest.cs" />
@@ -275,10 +290,14 @@
     <Compile Include="V20180328\Models\InquiryPriceUpgradeDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\InstanceDBDetail.cs" />
+    <Compile Include="V20180328\Models\InstanceInfo.cs" />
     <Compile Include="V20180328\Models\InstanceRenewInfo.cs" />
     <Compile Include="V20180328\Models\InstanceTask.cs" />
     <Compile Include="V20180328\Models\InterInstance.cs" />
     <Compile Include="V20180328\Models\InterInstanceFlow.cs" />
+    <Compile Include="V20180328\Models\LogFilter.cs" />
+    <Compile Include="V20180328\Models\LogInstance.cs" />
+    <Compile Include="V20180328\Models\LogResult.cs" />
     <Compile Include="V20180328\Models\MigrateDB.cs" />
     <Compile Include="V20180328\Models\MigrateDetail.cs" />
     <Compile Include="V20180328\Models\MigrateSource.cs" />
@@ -341,6 +360,8 @@
     <Compile Include="V20180328\Models\ModifyInstanceEncryptAttributesResponse.cs" />
     <Compile Include="V20180328\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="V20180328\Models\ModifyInstanceParamResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyLogRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyLogResponse.cs" />
     <Compile Include="V20180328\Models\ModifyMaintenanceSpanRequest.cs" />
     <Compile Include="V20180328\Models\ModifyMaintenanceSpanResponse.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationRequest.cs" />
@@ -356,6 +377,8 @@
     <Compile Include="V20180328\Models\OldVip.cs" />
     <Compile Include="V20180328\Models\OpenInterCommunicationRequest.cs" />
     <Compile Include="V20180328\Models\OpenInterCommunicationResponse.cs" />
+    <Compile Include="V20180328\Models\OpenLogRequest.cs" />
+    <Compile Include="V20180328\Models\OpenLogResponse.cs" />
     <Compile Include="V20180328\Models\ParamRecord.cs" />
     <Compile Include="V20180328\Models\Parameter.cs" />
     <Compile Include="V20180328\Models\ParameterDetail.cs" />
@@ -416,6 +439,7 @@
     <Compile Include="V20180328\Models\SwitchCloudInstanceHAResponse.cs" />
     <Compile Include="V20180328\Models\SwitchLog.cs" />
     <Compile Include="V20180328\Models\TDEConfigAttribute.cs" />
+    <Compile Include="V20180328\Models\TagList.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />

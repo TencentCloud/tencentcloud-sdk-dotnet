@@ -25,94 +25,94 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 证件类型（护照信息页识别结果）
+        /// <p>证件类型（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 发行国家（护照信息页识别结果）
+        /// <p>发行国家（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("IssuingCountry")]
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// 护照号码（护照信息页识别结果）
+        /// <p>护照号码（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("PassportID")]
         public string PassportID{ get; set; }
 
         /// <summary>
-        /// 姓（护照信息页识别结果）
+        /// <p>姓（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("Surname")]
         public string Surname{ get; set; }
 
         /// <summary>
-        /// 名（护照信息页识别结果）
+        /// <p>名（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("GivenName")]
         public string GivenName{ get; set; }
 
         /// <summary>
-        /// 姓名（护照信息页识别结果）
+        /// <p>姓名（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 国籍信息（护照信息页识别结果）
+        /// <p>国籍信息（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 出生日期（护照信息页识别结果）
+        /// <p>出生日期（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// 性别（护照信息页识别结果）
+        /// <p>性别（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 发行日期（护照信息页识别结果）
+        /// <p>发行日期（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("DateOfIssuance")]
         public string DateOfIssuance{ get; set; }
 
         /// <summary>
-        /// 截止日期（护照信息页识别结果）
+        /// <p>截止日期（护照信息页识别结果）</p>
         /// </summary>
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
         /// <summary>
-        /// 持证人签名（护照信息页识别结果）
-        /// 
-        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
         /// </summary>
         [JsonProperty("Signature")]
         public string Signature{ get; set; }
 
         /// <summary>
-        /// 签发地点（护照信息页识别结果）
-        /// 
-        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
         /// </summary>
         [JsonProperty("IssuePlace")]
         public string IssuePlace{ get; set; }
 
         /// <summary>
-        /// 签发机关（护照信息页识别结果）
-        /// 
-        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
         /// </summary>
         [JsonProperty("IssuingAuthority")]
         public string IssuingAuthority{ get; set; }
+
+        /// <summary>
+        /// <p>出生地（护照信息页识别结果）</p>
+        /// </summary>
+        [JsonProperty("BirthPlace")]
+        public string BirthPlace{ get; set; }
 
 
         /// <summary>
@@ -134,6 +134,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Signature", this.Signature);
             this.SetParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
             this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
+            this.SetParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
         }
     }
 }

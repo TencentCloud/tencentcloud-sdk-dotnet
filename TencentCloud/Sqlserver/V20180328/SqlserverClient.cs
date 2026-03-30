@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CloseInterCommunicationResponse CloseInterCommunicationSync(CloseInterCommunicationRequest req)
         {
             return InternalRequestAsync<CloseInterCommunicationResponse>(req, "CloseInterCommunication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭日志
+        /// </summary>
+        /// <param name="req"><see cref="CloseLogRequest"/></param>
+        /// <returns><see cref="CloseLogResponse"/></returns>
+        public Task<CloseLogResponse> CloseLog(CloseLogRequest req)
+        {
+            return InternalRequestAsync<CloseLogResponse>(req, "CloseLog");
+        }
+
+        /// <summary>
+        /// 关闭日志
+        /// </summary>
+        /// <param name="req"><see cref="CloseLogRequest"/></param>
+        /// <returns><see cref="CloseLogResponse"/></returns>
+        public CloseLogResponse CloseLogSync(CloseLogRequest req)
+        {
+            return InternalRequestAsync<CloseLogResponse>(req, "CloseLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +411,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public Task<CreateExportTaskResponse> CreateExportTask(CreateExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExportTaskResponse>(req, "CreateExportTask");
+        }
+
+        /// <summary>
+        /// 创建日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public CreateExportTaskResponse CreateExportTaskSync(CreateExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExportTaskResponse>(req, "CreateExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
         /// </summary>
         /// <param name="req"><see cref="CreateIncrementalMigrationRequest"/></param>
@@ -596,6 +638,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DeleteDBInstanceResponse DeleteDBInstanceSync(DeleteDBInstanceRequest req)
         {
             return InternalRequestAsync<DeleteDBInstanceResponse>(req, "DeleteDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteExportTaskResponse"/></returns>
+        public Task<DeleteExportTaskResponse> DeleteExportTask(DeleteExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteExportTaskResponse>(req, "DeleteExportTask");
+        }
+
+        /// <summary>
+        /// 删除日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteExportTaskResponse"/></returns>
+        public DeleteExportTaskResponse DeleteExportTaskSync(DeleteExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteExportTaskResponse>(req, "DeleteExportTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1272,6 +1335,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 查询日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeExportTasksResponse"/></returns>
+        public Task<DescribeExportTasksResponse> DescribeExportTasks(DescribeExportTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeExportTasksResponse>(req, "DescribeExportTasks");
+        }
+
+        /// <summary>
+        /// 查询日志下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeExportTasksResponse"/></returns>
+        public DescribeExportTasksResponse DescribeExportTasksSync(DescribeExportTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeExportTasksResponse>(req, "DescribeExportTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeFlowStatus)用于查询流程状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowStatusRequest"/></param>
@@ -1457,6 +1541,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameterSync(DescribeInstanceTradeParameterRequest req)
         {
             return InternalRequestAsync<DescribeInstanceTradeParameterResponse>(req, "DescribeInstanceTradeParameter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeLogInstanceListResponse"/></returns>
+        public Task<DescribeLogInstanceListResponse> DescribeLogInstanceList(DescribeLogInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeLogInstanceListResponse>(req, "DescribeLogInstanceList");
+        }
+
+        /// <summary>
+        /// 日志实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeLogInstanceListResponse"/></returns>
+        public DescribeLogInstanceListResponse DescribeLogInstanceListSync(DescribeLogInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeLogInstanceListResponse>(req, "DescribeLogInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public Task<DescribeLogsResponse> DescribeLogs(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs");
+        }
+
+        /// <summary>
+        /// 查询日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public DescribeLogsResponse DescribeLogsSync(DescribeLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2620,6 +2746,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 修改日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public Task<ModifyLogResponse> ModifyLog(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog");
+        }
+
+        /// <summary>
+        /// 修改日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public ModifyLogResponse ModifyLogSync(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintenanceSpanRequest"/></param>
@@ -2763,6 +2910,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public OpenInterCommunicationResponse OpenInterCommunicationSync(OpenInterCommunicationRequest req)
         {
             return InternalRequestAsync<OpenInterCommunicationResponse>(req, "OpenInterCommunication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启审计日志
+        /// </summary>
+        /// <param name="req"><see cref="OpenLogRequest"/></param>
+        /// <returns><see cref="OpenLogResponse"/></returns>
+        public Task<OpenLogResponse> OpenLog(OpenLogRequest req)
+        {
+            return InternalRequestAsync<OpenLogResponse>(req, "OpenLog");
+        }
+
+        /// <summary>
+        /// 开启审计日志
+        /// </summary>
+        /// <param name="req"><see cref="OpenLogRequest"/></param>
+        /// <returns><see cref="OpenLogResponse"/></returns>
+        public OpenLogResponse OpenLogSync(OpenLogRequest req)
+        {
+            return InternalRequestAsync<OpenLogResponse>(req, "OpenLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

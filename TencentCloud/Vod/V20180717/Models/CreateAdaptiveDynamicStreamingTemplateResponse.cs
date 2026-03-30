@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 自适应转码模板唯一标识。
+        /// <p>自适应转码模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

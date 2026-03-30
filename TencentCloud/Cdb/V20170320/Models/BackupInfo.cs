@@ -25,133 +25,139 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 备份文件名
+        /// <p>备份文件名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备份文件大小，单位：Byte
+        /// <p>备份文件大小，单位：Byte</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 备份快照时间，时间格式：2016-03-17 02:10:37
+        /// <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 下载地址
+        /// <p>下载地址</p>
         /// </summary>
         [JsonProperty("IntranetUrl")]
         public string IntranetUrl{ get; set; }
 
         /// <summary>
-        /// 下载地址
+        /// <p>下载地址</p>
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }
 
         /// <summary>
-        /// 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+        /// <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 备份子任务的ID，删除备份文件时使用
+        /// <p>备份子任务的ID，删除备份文件时使用</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+        /// <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 备份任务的完成时间
+        /// <p>备份任务的完成时间</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+        /// <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 备份任务的开始时间
+        /// <p>备份任务的开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+        /// <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+        /// <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
         /// </summary>
         [JsonProperty("Way")]
         public string Way{ get; set; }
 
         /// <summary>
-        /// 手动备份别名
+        /// <p>手动备份别名</p>
         /// </summary>
         [JsonProperty("ManualBackupName")]
         public string ManualBackupName{ get; set; }
 
         /// <summary>
-        /// 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+        /// <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
         /// </summary>
         [JsonProperty("SaveMode")]
         public string SaveMode{ get; set; }
 
         /// <summary>
-        /// 本地备份所在地域
+        /// <p>本地备份所在地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 异地备份详细信息
+        /// <p>异地备份详细信息</p>
         /// </summary>
         [JsonProperty("RemoteInfo")]
         public RemoteBackupInfo[] RemoteInfo{ get; set; }
 
         /// <summary>
-        /// 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+        /// <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
         /// </summary>
         [JsonProperty("CosStorageType")]
         public long? CosStorageType{ get; set; }
 
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份文件是否加密， on-加密， off-未加密
+        /// <p>备份完成进度</p>
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
+        /// <p>备份文件是否加密， on-加密， off-未加密</p>
         /// </summary>
         [JsonProperty("EncryptionFlag")]
         public string EncryptionFlag{ get; set; }
 
         /// <summary>
-        /// 备份GTID点位
+        /// <p>备份GTID点位</p>
         /// </summary>
         [JsonProperty("ExecutedGTIDSet")]
         public string ExecutedGTIDSet{ get; set; }
 
         /// <summary>
-        /// 备份文件MD5值
+        /// <p>备份文件MD5值</p>
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
@@ -181,6 +187,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
             this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
             this.SetParamSimple(map, prefix + "ExecutedGTIDSet", this.ExecutedGTIDSet);
             this.SetParamSimple(map, prefix + "MD5", this.MD5);

@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -3468,6 +3468,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 批量获取日志URL。
+        /// 日志数据打包存在一定延迟，24小时候数据包趋于完整。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogDownloadListRequest"/></param>
         /// <returns><see cref="DescribeLogDownloadListResponse"/></returns>
@@ -3478,6 +3479,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 批量获取日志URL。
+        /// 日志数据打包存在一定延迟，24小时候数据包趋于完整。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogDownloadListRequest"/></param>
         /// <returns><see cref="DescribeLogDownloadListResponse"/></returns>

@@ -31,6 +31,18 @@ namespace TencentCloud.Ai3d.V20250513.Models
         public File3D File3D{ get; set; }
 
         /// <summary>
+        /// <p>混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1<br>仅选择3.1版本时，多视图功能可用。</p>
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
+        /// <p>多视角的模型图片（仅3.1版本支持），视角参考值：<br>left：左视图；<br>right：右视图；<br>back：后视图；<br>top：顶视图；<br>bottom：底视图；<br>left_front：左前45°视图；<br>right_front：右前45°视图；</p><p>每个视角仅限制一张图片。<br>●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）<br>●图片分辨率限制：单边分辨率小于5000且大于128。<br>●支持图片格式：支持jpg或png</p>
+        /// </summary>
+        [JsonProperty("MultiViewImages")]
+        public ViewImage[] MultiViewImages{ get; set; }
+
+        /// <summary>
         /// <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p>
         /// </summary>
         [JsonProperty("Prompt")]
@@ -55,6 +67,8 @@ namespace TencentCloud.Ai3d.V20250513.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "File3D.", this.File3D);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamArrayObj(map, prefix + "MultiViewImages.", this.MultiViewImages);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamSimple(map, prefix + "EnablePBR", this.EnablePBR);

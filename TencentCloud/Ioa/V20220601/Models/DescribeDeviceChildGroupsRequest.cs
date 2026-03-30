@@ -51,7 +51,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 操作系统类型（0：win，1：linux，2：mac，4：android，5：ios；默认0：系统win）
+        /// 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }

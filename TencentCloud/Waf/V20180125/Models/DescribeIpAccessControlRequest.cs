@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// 域名，当操作对象为全局规则时，Domain参数应填写为"global"
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -81,7 +81,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

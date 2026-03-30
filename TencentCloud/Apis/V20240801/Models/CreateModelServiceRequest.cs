@@ -126,6 +126,18 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
+        /// <summary>
+        /// 是否开启提示词安全检测
+        /// </summary>
+        [JsonProperty("PromptModerateStatus")]
+        public bool? PromptModerateStatus{ get; set; }
+
+        /// <summary>
+        /// 提示词安全检测配置
+        /// </summary>
+        [JsonProperty("PromptModerateConfig")]
+        public PromptModerateConfigDTO PromptModerateConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamArraySimple(map, prefix + "IpBlackList.", this.IpBlackList);
             this.SetParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
+            this.SetParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
         }
     }
 }

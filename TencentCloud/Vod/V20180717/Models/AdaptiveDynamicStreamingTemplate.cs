@@ -25,93 +25,85 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 转自适应码流模板唯一标识。
+        /// <p>转自适应码流模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 模板类型，取值范围：
-        /// <li>Preset：系统预置模板；</li>
-        /// <li>Custom：用户自定义模板。</li>
+        /// <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 转自适应码流模板名称。
+        /// <p>转自适应码流模板名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 转自适应码流模板描述信息。
+        /// <p>转自适应码流模板描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 自适应转码格式，取值范围：
-        /// <li>HLS。</li>
+        /// <p>自适应转码格式，取值范围：</p><li>HLS。</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// DRM 类型，取值范围：
-        /// <li>SimpleAES</li>
-        /// <li>Widevine</li>
-        /// <li>FairPlay</li>
-        /// 如果取值为空字符串，代表不对视频做 DRM 保护。
+        /// <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// DRM 的密钥提供商，取值范围：
-        /// <li>SDMC：华曦达；</li>
-        /// <li>VOD：云点播。</li>
-        /// 默认值为 VOD 。
+        /// <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
         /// </summary>
         [JsonProperty("DrmKeyProvider")]
         public string DrmKeyProvider{ get; set; }
 
         /// <summary>
-        /// 自适应转码输入流参数信息，最多输入10路流。
+        /// <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+        /// </summary>
+        [JsonProperty("DrmEncryptType")]
+        public string DrmEncryptType{ get; set; }
+
+        /// <summary>
+        /// <p>自适应转码输入流参数信息，最多输入10路流。</p>
         /// </summary>
         [JsonProperty("StreamInfos")]
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// 是否禁止视频低码率转高码率，取值范围：
-        /// <li>0：否，</li>
-        /// <li>1：是。</li>
+        /// <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
         /// </summary>
         [JsonProperty("DisableHigherVideoBitrate")]
         public ulong? DisableHigherVideoBitrate{ get; set; }
 
         /// <summary>
-        /// 是否禁止视频分辨率转高分辨率，取值范围：
-        /// <li>0：否，</li>
-        /// <li>1：是。</li>
+        /// <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
         /// </summary>
         [JsonProperty("DisableHigherVideoResolution")]
         public ulong? DisableHigherVideoResolution{ get; set; }
 
         /// <summary>
-        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 切片类型，仅当 Format 为 HLS 时有效。
+        /// <p>切片类型，仅当 Format 为 HLS 时有效。</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
@@ -129,6 +121,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
+            this.SetParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

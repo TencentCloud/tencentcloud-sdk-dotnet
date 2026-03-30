@@ -25,23 +25,35 @@ namespace TencentCloud.Vm.V20210922.Models
     {
         
         /// <summary>
-        /// 传入的类型可选：URL，COS
+        /// <p>传入的类型可选：URL，COS</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Url地址
+        /// <p>Url地址</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 桶信息。当输入当时COS时，该字段不为空
+        /// <p>桶信息。当输入当时COS时，该字段不为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketInfo")]
         public string BucketInfo{ get; set; }
+
+        /// <summary>
+        /// <p>大模型审核可选输入图片列表</p>
+        /// </summary>
+        [JsonProperty("ImageUrlList")]
+        public string[] ImageUrlList{ get; set; }
+
+        /// <summary>
+        /// <p>大模型审核场景下，base64编码的审核要求内容</p>
+        /// </summary>
+        [JsonProperty("TextContent")]
+        public string TextContent{ get; set; }
 
 
         /// <summary>
@@ -52,6 +64,8 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "BucketInfo", this.BucketInfo);
+            this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
+            this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
         }
     }
 }

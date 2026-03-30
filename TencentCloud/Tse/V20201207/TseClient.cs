@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建或编辑云原生网关跨域配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrModifyCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="CreateOrModifyCloudNativeAPIGatewayCORSResponse"/></returns>
+        public Task<CreateOrModifyCloudNativeAPIGatewayCORSResponse> CreateOrModifyCloudNativeAPIGatewayCORS(CreateOrModifyCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<CreateOrModifyCloudNativeAPIGatewayCORSResponse>(req, "CreateOrModifyCloudNativeAPIGatewayCORS");
+        }
+
+        /// <summary>
+        /// 创建或编辑云原生网关跨域配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrModifyCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="CreateOrModifyCloudNativeAPIGatewayCORSResponse"/></returns>
+        public CreateOrModifyCloudNativeAPIGatewayCORSResponse CreateOrModifyCloudNativeAPIGatewayCORSSync(CreateOrModifyCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<CreateOrModifyCloudNativeAPIGatewayCORSResponse>(req, "CreateOrModifyCloudNativeAPIGatewayCORS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建或编辑云原生网关访问控制
         /// </summary>
         /// <param name="req"><see cref="CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest"/></param>
@@ -596,6 +617,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGatewaySync(DeleteCloudNativeAPIGatewayRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewayResponse>(req, "DeleteCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云原生网关跨域插件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayCORSResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayCORSResponse> DeleteCloudNativeAPIGatewayCORS(DeleteCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCORSResponse>(req, "DeleteCloudNativeAPIGatewayCORS");
+        }
+
+        /// <summary>
+        /// 删除云原生网关跨域插件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayCORSResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayCORSResponse DeleteCloudNativeAPIGatewayCORSSync(DeleteCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCORSResponse>(req, "DeleteCloudNativeAPIGatewayCORS")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1121,6 +1163,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGatewaySync(DescribeCloudNativeAPIGatewayRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayResponse>(req, "DescribeCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关跨域配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCORSResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayCORSResponse> DescribeCloudNativeAPIGatewayCORS(DescribeCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCORSResponse>(req, "DescribeCloudNativeAPIGatewayCORS");
+        }
+
+        /// <summary>
+        /// 查询云原生网关跨域配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCORSRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCORSResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayCORSResponse DescribeCloudNativeAPIGatewayCORSSync(DescribeCloudNativeAPIGatewayCORSRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCORSResponse>(req, "DescribeCloudNativeAPIGatewayCORS")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

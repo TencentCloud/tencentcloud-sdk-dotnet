@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1395</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,9 @@
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLog.cs" />
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogDetail.cs" />
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogList.cs" />
+    <Compile Include="V20230616\Models\AlarmLable.cs" />
+    <Compile Include="V20230616\Models\AlarmNotifyHistory.cs" />
+    <Compile Include="V20230616\Models\ChannelsReceivers.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsRequest.cs" />
@@ -78,7 +81,9 @@
     <Compile Include="V20230616\Models\NoticeContentTmpl.cs" />
     <Compile Include="V20230616\Models\NoticeContentTmplBindPolicyCount.cs" />
     <Compile Include="V20230616\Models\NoticeContentTmplItem.cs" />
+    <Compile Include="V20230616\Models\NotifyRelatedNotice.cs" />
     <Compile Include="V20230616\Models\PageByNoParams.cs" />
+    <Compile Include="V20230616\Models\PageByNoResult.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplHeader.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplMatcher.cs" />

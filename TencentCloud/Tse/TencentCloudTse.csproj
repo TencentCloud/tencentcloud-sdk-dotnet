@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -129,6 +129,8 @@
     <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupResponse.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceRequest.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceResponse.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayCORSResponse.cs" />
     <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest.cs" />
     <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20201207\Models\CreateOrUpdateConfigFileAndReleaseRequest.cs" />
@@ -138,6 +140,8 @@
     <Compile Include="V20201207\Models\CreateWafDomainsResponse.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateRequest.cs" />
@@ -191,6 +195,8 @@
     <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategiesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategyBindingGroupsRequest.cs" />
     <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategyBindingGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCORSResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest.cs" />
@@ -261,6 +267,7 @@
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosRequest.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeKongCORSResult.cs" />
     <Compile Include="V20201207\Models\DescribeKongIpRestrictionResult.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />

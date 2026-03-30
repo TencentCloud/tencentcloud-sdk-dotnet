@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1382";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -1881,6 +1881,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 大模型请求内容和响应内容审核接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentSecCheckResponse"/></returns>
+        public Task<DescribeLLMContentSecCheckResponse> DescribeLLMContentSecCheck(DescribeLLMContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentSecCheckResponse>(req, "DescribeLLMContentSecCheck");
+        }
+
+        /// <summary>
+        /// 大模型请求内容和响应内容审核接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentSecCheckResponse"/></returns>
+        public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheckSync(DescribeLLMContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentSecCheckResponse>(req, "DescribeLLMContentSecCheck")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于构建日志数量直方图
         /// </summary>
         /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
@@ -2150,6 +2171,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeProtectionModesResponse DescribeProtectionModesSync(DescribeProtectionModesRequest req)
         {
             return InternalRequestAsync<DescribeProtectionModesResponse>(req, "DescribeProtectionModes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型请求内容和响应内容审核接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQClawContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeQClawContentSecCheckResponse"/></returns>
+        public Task<DescribeQClawContentSecCheckResponse> DescribeQClawContentSecCheck(DescribeQClawContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeQClawContentSecCheckResponse>(req, "DescribeQClawContentSecCheck");
+        }
+
+        /// <summary>
+        /// 大模型请求内容和响应内容审核接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQClawContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeQClawContentSecCheckResponse"/></returns>
+        public DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheckSync(DescribeQClawContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeQClawContentSecCheckResponse>(req, "DescribeQClawContentSecCheck")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

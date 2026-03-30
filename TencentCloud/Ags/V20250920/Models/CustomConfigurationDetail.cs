@@ -25,58 +25,64 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 镜像地址
+        /// <p>镜像地址</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 镜像仓库类型：`TCR`、`CCR`。
+        /// <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
         /// </summary>
         [JsonProperty("ImageRegistryType")]
         public string ImageRegistryType{ get; set; }
 
         /// <summary>
-        /// 镜像 Digest
+        /// <p>镜像 Digest</p>
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
 
         /// <summary>
-        /// 启动命令
+        /// <p>启动命令</p>
         /// </summary>
         [JsonProperty("Command")]
         public string[] Command{ get; set; }
 
         /// <summary>
-        /// 启动参数
+        /// <p>启动参数</p>
         /// </summary>
         [JsonProperty("Args")]
         public string[] Args{ get; set; }
 
         /// <summary>
-        /// 环境变量
+        /// <p>环境变量</p>
         /// </summary>
         [JsonProperty("Env")]
         public EnvVar[] Env{ get; set; }
 
         /// <summary>
-        /// 端口配置
+        /// <p>端口配置</p>
         /// </summary>
         [JsonProperty("Ports")]
         public PortConfiguration[] Ports{ get; set; }
 
         /// <summary>
-        /// 资源配置
+        /// <p>资源配置</p>
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceConfiguration Resources{ get; set; }
 
         /// <summary>
-        /// 探针配置
+        /// <p>探针配置</p>
         /// </summary>
         [JsonProperty("Probe")]
         public ProbeConfiguration Probe{ get; set; }
+
+        /// <summary>
+        /// <p>沙箱 DNS 配置</p>
+        /// </summary>
+        [JsonProperty("DNSConfig")]
+        public DNSConfig DNSConfig{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamArrayObj(map, prefix + "Ports.", this.Ports);
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamObj(map, prefix + "Probe.", this.Probe);
+            this.SetParamObj(map, prefix + "DNSConfig.", this.DNSConfig);
         }
     }
 }

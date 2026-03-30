@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1395</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20221121\CsipClient.cs" />
     <Compile Include="V20221121\Models\AIAgentAsset.cs" />
     <Compile Include="V20221121\Models\AKInfo.cs" />
+    <Compile Include="V20221121\Models\AccessCredentialOutput.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarm.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarmCount.cs" />
     <Compile Include="V20221121\Models\AccessKeyAlarmInfo.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="V20221121\Models\CreateDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CredentialEffectScope.cs" />
     <Compile Include="V20221121\Models\CsipRiskCenterStatistics.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
     <Compile Include="V20221121\Models\DataSearchBug.cs" />
@@ -159,6 +161,10 @@
     <Compile Include="V20221121\Models\DescribeGatewayAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeKeySandboxCredentialListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeKeySandboxCredentialListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeKeySandboxCredentialRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeKeySandboxCredentialResponse.cs" />
     <Compile Include="V20221121\Models\DescribeListenerListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeListenerListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsRequest.cs" />
@@ -245,6 +251,7 @@
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\HighBaseLineRiskItem.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\KeySandboxCredential.cs" />
     <Compile Include="V20221121\Models\KeyValue.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
@@ -272,6 +279,7 @@
     <Compile Include="V20221121\Models\RiskRuleInfo.cs" />
     <Compile Include="V20221121\Models\RiskRuleItem.cs" />
     <Compile Include="V20221121\Models\RoleInfo.cs" />
+    <Compile Include="V20221121\Models\STSCredentialOutput.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\ServerRisk.cs" />

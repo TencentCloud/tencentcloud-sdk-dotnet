@@ -202,6 +202,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("AvailableUpgrade")]
         public bool? AvailableUpgrade{ get; set; }
 
+        /// <summary>
+        /// 可回退的版本
+        /// </summary>
+        [JsonProperty("AvailableRollbackVersion")]
+        public string AvailableRollbackVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +243,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
             this.SetParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
             this.SetParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
+            this.SetParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
         }
     }
 }

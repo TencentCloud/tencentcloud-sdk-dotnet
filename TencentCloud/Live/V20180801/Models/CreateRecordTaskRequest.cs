@@ -25,51 +25,49 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 流名称。
+        /// <p>流名称。</p>
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 推流域名。
+        /// <p>推流域名。</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 推流路径。
+        /// <p>推流路径。</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+        /// <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
+        /// <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 推流类型，默认0。取值：
-        /// 0-直播推流。
-        /// 1-合成流，即 A+B=C 类型混流。
+        /// <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p>
         /// </summary>
         [JsonProperty("StreamType")]
         public ulong? StreamType{ get; set; }
 
         /// <summary>
-        /// 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+        /// <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }
 
         /// <summary>
-        /// 扩展字段，暂无定义。默认为空。
+        /// <p>扩展字段，暂无定义。默认为空。</p>
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

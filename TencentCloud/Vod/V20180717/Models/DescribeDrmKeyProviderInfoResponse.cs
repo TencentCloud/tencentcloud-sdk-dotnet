@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+        /// <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
         /// </summary>
         [JsonProperty("SDMCInfo")]
         public SDMCDrmKeyProviderInfo SDMCInfo{ get; set; }
