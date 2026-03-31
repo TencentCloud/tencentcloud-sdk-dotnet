@@ -43,6 +43,12 @@ namespace TencentCloud.Es.V20180416.Models
         public string YMLConfig{ get; set; }
 
         /// <summary>
+        /// 客户自定义dns配置
+        /// </summary>
+        [JsonProperty("UserDnsIp")]
+        public string UserDnsIp{ get; set; }
+
+        /// <summary>
         /// 实例绑定的ES集群信息
         /// </summary>
         [JsonProperty("BindedES")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "YMLConfig", this.YMLConfig);
+            this.SetParamSimple(map, prefix + "UserDnsIp", this.UserDnsIp);
             this.SetParamObj(map, prefix + "BindedES.", this.BindedES);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);

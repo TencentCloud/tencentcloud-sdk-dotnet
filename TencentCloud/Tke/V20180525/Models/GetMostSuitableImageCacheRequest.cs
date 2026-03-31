@@ -30,6 +30,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
 
+        /// <summary>
+        /// 容器镜像制作snapshotter
+        /// </summary>
+        [JsonProperty("Snapshotter")]
+        public string Snapshotter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Images.", this.Images);
+            this.SetParamSimple(map, prefix + "Snapshotter", this.Snapshotter);
         }
     }
 }

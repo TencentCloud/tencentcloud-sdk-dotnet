@@ -31,19 +31,19 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 起草要求
+        /// 起草要求，范围要求 5-1000 字
         /// </summary>
         [JsonProperty("Requirement")]
         public string Requirement{ get; set; }
 
         /// <summary>
-        /// 参考模板文件资源id（PDF/Word格式）
+        /// 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
         /// </summary>
         [JsonProperty("ReferenceTemplateId")]
         public string ReferenceTemplateId{ get; set; }
 
         /// <summary>
-        /// 相关规定文件资源id列表（PDF/Word格式）
+        /// 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
         /// </summary>
         [JsonProperty("RequirementFileIds")]
         public string[] RequirementFileIds{ get; set; }

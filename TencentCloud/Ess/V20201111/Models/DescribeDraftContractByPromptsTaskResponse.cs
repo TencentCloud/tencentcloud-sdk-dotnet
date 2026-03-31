@@ -49,6 +49,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
+        /// 生成的合同文件下载链接，有效期2小时
+        /// </summary>
+        [JsonProperty("ContractUrl")]
+        public string ContractUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "ContractName", this.ContractName);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "ContractUrl", this.ContractUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

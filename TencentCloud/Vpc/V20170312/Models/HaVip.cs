@@ -99,7 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public HaVipAssociation[] HaVipAssociationSet{ get; set; }
 
         /// <summary>
-        /// 是否开启`HAVIP`的飘移范围校验。
+        /// 是否开启`HAVIP`的漂移范围校验。
         /// </summary>
         [JsonProperty("CheckAssociate")]
         public bool? CheckAssociate{ get; set; }
@@ -111,7 +111,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+        /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
         /// </summary>
         [JsonProperty("FlushedTime")]
         public string FlushedTime{ get; set; }

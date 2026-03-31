@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+        /// <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }

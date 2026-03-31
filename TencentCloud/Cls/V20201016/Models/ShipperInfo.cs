@@ -162,6 +162,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TaskStatus")]
         public ulong? TaskStatus{ get; set; }
 
+        /// <summary>
+        /// <p>用于生成投递到COS 的文件路径中的时间变量</p>
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

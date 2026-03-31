@@ -25,73 +25,66 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-        /// 注意：
-        /// * 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+        /// <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-        /// 注意：仅当检索分析语句(Query)不包含SQL时有效
+        /// <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的是否为统计分析（即SQL）结果
+        /// <p>返回的是否为统计分析（即SQL）结果</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// 匹配检索条件的原始日志
+        /// <p>匹配检索条件的原始日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// 日志统计分析结果的列名
-        /// 当UseNewAnalysis为false时生效
+        /// <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColNames")]
         public string[] ColNames{ get; set; }
 
         /// <summary>
-        /// 日志统计分析结果
-        /// 当UseNewAnalysis为false时生效
+        /// <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// 日志统计分析结果
-        /// 当UseNewAnalysis为true时生效
+        /// <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// 日志统计分析结果的列属性
-        /// 当UseNewAnalysis为true时生效
+        /// <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]
         public Column[] Columns{ get; set; }
 
         /// <summary>
-        /// 本次统计分析使用的采样率
+        /// <p>本次统计分析使用的采样率</p>
         /// </summary>
         [JsonProperty("SamplingRate")]
         public float? SamplingRate{ get; set; }
 
         /// <summary>
-        /// 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+        /// <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topics")]

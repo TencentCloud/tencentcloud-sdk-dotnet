@@ -25,61 +25,61 @@ namespace TencentCloud.Tds.V20220801.Models
     {
         
         /// <summary>
-        /// 客户端通过SDK获取的设备Token
+        /// <p>客户端通过SDK获取的设备Token</p>
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }
 
         /// <summary>
-        /// 使用场景。目前仅支持login-登录场景、register-注册场景
+        /// <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
         /// </summary>
         [JsonProperty("SceneCode")]
         public string SceneCode{ get; set; }
 
         /// <summary>
-        /// 用户唯一标识
+        /// <p>用户唯一标识</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 事件时间戳（毫秒）
+        /// <p>事件时间戳（毫秒）</p>
         /// </summary>
         [JsonProperty("EventTime")]
         public ulong? EventTime{ get; set; }
 
         /// <summary>
-        /// 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
+        /// <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
         /// </summary>
         [JsonProperty("ElapsedTime")]
         public ulong? ElapsedTime{ get; set; }
 
         /// <summary>
-        /// 微信的OpenId
+        /// <p>微信的OpenId</p>
         /// </summary>
         [JsonProperty("WeChatOpenId")]
         public string WeChatOpenId{ get; set; }
 
         /// <summary>
-        /// 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
+        /// <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 业务客户端IP
+        /// <p>业务客户端IP</p>
         /// </summary>
         [JsonProperty("BizClientIp")]
         public string BizClientIp{ get; set; }
 
         /// <summary>
-        /// QQ的OpenId
+        /// <p>QQ的OpenId</p>
         /// </summary>
         [JsonProperty("QQOpenId")]
         public string QQOpenId{ get; set; }
 
         /// <summary>
-        /// 数据授权信息
+        /// <p>数据授权信息</p>
         /// </summary>
         [JsonProperty("DataAuthorization")]
         public DataAuthorizationInfo DataAuthorization{ get; set; }

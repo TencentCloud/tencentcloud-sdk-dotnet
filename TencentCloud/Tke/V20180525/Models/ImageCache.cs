@@ -108,6 +108,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 镜像缓存类型
+        /// </summary>
+        [JsonProperty("ImageCacheType")]
+        public string ImageCacheType{ get; set; }
+
+        /// <summary>
+        /// 镜像缓存所属snapshotter类型
+        /// </summary>
+        [JsonProperty("Snapshotter")]
+        public string Snapshotter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +139,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
             this.SetParamArrayObj(map, prefix + "ImageRegistryCredentials.", this.ImageRegistryCredentials);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ImageCacheType", this.ImageCacheType);
+            this.SetParamSimple(map, prefix + "Snapshotter", this.Snapshotter);
         }
     }
 }

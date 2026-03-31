@@ -54,6 +54,36 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DstPort")]
         public string DstPort{ get; set; }
 
+        /// <summary>
+        /// 流量镜像过滤规则唯一ID。
+        /// </summary>
+        [JsonProperty("TrafficMirrorFilterRuleId")]
+        public string TrafficMirrorFilterRuleId{ get; set; }
+
+        /// <summary>
+        /// 流量镜像过滤规则优先级。
+        /// </summary>
+        [JsonProperty("Priority")]
+        public ulong? Priority{ get; set; }
+
+        /// <summary>
+        /// 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
+        /// 流量镜像过滤规则描述。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 创建时间。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "SrcPort", this.SrcPort);
             this.SetParamSimple(map, prefix + "DstPort", this.DstPort);
+            this.SetParamSimple(map, prefix + "TrafficMirrorFilterRuleId", this.TrafficMirrorFilterRuleId);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

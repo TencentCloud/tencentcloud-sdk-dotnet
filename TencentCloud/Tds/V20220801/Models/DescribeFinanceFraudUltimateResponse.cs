@@ -25,94 +25,106 @@ namespace TencentCloud.Tds.V20220801.Models
     {
         
         /// <summary>
-        /// App版本信息
+        /// <p>App版本信息</p>
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// 品牌
+        /// <p>品牌</p>
         /// </summary>
         [JsonProperty("Brand")]
         public string Brand{ get; set; }
 
         /// <summary>
-        /// 客户端IP
+        /// <p>客户端IP</p>
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 机型
+        /// <p>机型</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// <p>网络类型</p>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 应用包名
+        /// <p>应用包名</p>
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// 平台（2-Android，3-iOS，4-H5，5-微信小程序）
+        /// <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 系统版本
+        /// <p>系统版本</p>
         /// </summary>
         [JsonProperty("SystemVersion")]
         public string SystemVersion{ get; set; }
 
         /// <summary>
-        /// SDK版本号
+        /// <p>SDK版本号</p>
         /// </summary>
         [JsonProperty("SdkBuildNo")]
         public string SdkBuildNo{ get; set; }
 
         /// <summary>
-        /// 实时风险信息
+        /// <p>实时风险信息</p>
         /// </summary>
         [JsonProperty("RiskInfos")]
         public RiskInfo[] RiskInfos{ get; set; }
 
         /// <summary>
-        /// 离线风险信息
+        /// <p>离线风险信息</p>
         /// </summary>
         [JsonProperty("HistRiskInfos")]
         public RiskInfo[] HistRiskInfos{ get; set; }
 
         /// <summary>
-        /// 设备匿名标识
+        /// <p>设备匿名标识</p>
         /// </summary>
         [JsonProperty("Openid")]
         public string Openid{ get; set; }
 
         /// <summary>
-        /// 场景风险信息
+        /// <p>场景风险信息</p>
         /// </summary>
         [JsonProperty("SceneRiskInfos")]
         public RiskInfo[] SceneRiskInfos{ get; set; }
 
         /// <summary>
-        /// 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+        /// <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p>
         /// </summary>
         [JsonProperty("SuggestionLevel")]
         public ulong? SuggestionLevel{ get; set; }
 
         /// <summary>
-        /// 图灵盾统一ID
+        /// <p>图灵盾统一ID</p>
         /// </summary>
         [JsonProperty("Unionid")]
         public string Unionid{ get; set; }
+
+        /// <summary>
+        /// <p>检测时间戳（毫秒）</p>
+        /// </summary>
+        [JsonProperty("RiskCheckTimestamp")]
+        public string RiskCheckTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>额外信息</p>
+        /// </summary>
+        [JsonProperty("ExtraInfos")]
+        public ExtraInfo[] ExtraInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -141,6 +153,8 @@ namespace TencentCloud.Tds.V20220801.Models
             this.SetParamArrayObj(map, prefix + "SceneRiskInfos.", this.SceneRiskInfos);
             this.SetParamSimple(map, prefix + "SuggestionLevel", this.SuggestionLevel);
             this.SetParamSimple(map, prefix + "Unionid", this.Unionid);
+            this.SetParamSimple(map, prefix + "RiskCheckTimestamp", this.RiskCheckTimestamp);
+            this.SetParamArrayObj(map, prefix + "ExtraInfos.", this.ExtraInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

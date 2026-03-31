@@ -216,6 +216,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("MultiZoneInfo")]
         public ZoneDetail[] MultiZoneInfo{ get; set; }
 
+        /// <summary>
+        /// 客户自定义dns配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserDnsIp")]
+        public string UserDnsIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +260,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
             this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+            this.SetParamSimple(map, prefix + "UserDnsIp", this.UserDnsIp);
         }
     }
 }

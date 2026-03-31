@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回的code，0为正常，非0为错误
+        /// <p>返回的code，0为正常，非0为错误</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// 成功消息
+        /// <p>成功消息</p>
         /// </summary>
         [JsonProperty("ReturnMessage")]
         public string ReturnMessage{ get; set; }
 
         /// <summary>
-        /// 操作型返回的Data数据,可能有flowId等
+        /// <p>操作型返回的Data数据,可能有flowId等</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

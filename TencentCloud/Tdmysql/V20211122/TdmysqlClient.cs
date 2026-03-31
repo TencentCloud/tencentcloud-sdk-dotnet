@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1386";
+       private const string sdkVersion = "SDK_NET_3.0.1398";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 创建实例备份集
+        /// 创建实例手工备份  CreateDBSBackup
         /// </summary>
         /// <param name="req"><see cref="CreateDBSBackupRequest"/></param>
         /// <returns><see cref="CreateDBSBackupResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 创建实例备份集
+        /// 创建实例手工备份  CreateDBSBackup
         /// </summary>
         /// <param name="req"><see cref="CreateDBSBackupRequest"/></param>
         /// <returns><see cref="CreateDBSBackupResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 删除实例备份集
+        /// 删除实例手工备份 DeleteDBSBackupSets
         /// </summary>
         /// <param name="req"><see cref="DeleteDBSBackupSetsRequest"/></param>
         /// <returns><see cref="DeleteDBSBackupSetsResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 删除实例备份集
+        /// 删除实例手工备份 DeleteDBSBackupSets
         /// </summary>
         /// <param name="req"><see cref="DeleteDBSBackupSetsRequest"/></param>
         /// <returns><see cref="DeleteDBSBackupSetsResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 可恢复时间查询
+        /// 获取可恢复时间 DescribeDBSAvailableRecoveryTime
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSAvailableRecoveryTimeRequest"/></param>
         /// <returns><see cref="DescribeDBSAvailableRecoveryTimeResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 可恢复时间查询
+        /// 获取可恢复时间 DescribeDBSAvailableRecoveryTime
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSAvailableRecoveryTimeRequest"/></param>
         /// <returns><see cref="DescribeDBSAvailableRecoveryTimeResponse"/></returns>
@@ -159,7 +159,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 查询实例克隆列表
+        /// 查询实例克隆列表 DescribeDBSCloneInstances
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSCloneInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBSCloneInstancesResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 查询实例克隆列表
+        /// 查询实例克隆列表 DescribeDBSCloneInstances
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSCloneInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBSCloneInstancesResponse"/></returns>
@@ -348,7 +348,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 修改实例备份策略
+        /// 修改实例备份策略 ModifyDBSBackupPolicy
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupPolicyRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupPolicyResponse"/></returns>
@@ -358,7 +358,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 修改实例备份策略
+        /// 修改实例备份策略 ModifyDBSBackupPolicy
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupPolicyRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupPolicyResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 修改备份集备注
+        /// 修改实例备份备注 ModifyDBSBackupSetComment
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupSetCommentRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupSetCommentResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// 修改备份集备注
+        /// 修改实例备份备注 ModifyDBSBackupSetComment
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupSetCommentRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupSetCommentResponse"/></returns>

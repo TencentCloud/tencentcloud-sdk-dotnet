@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 投递任务ID
+        /// <p>投递任务ID</p>
         /// </summary>
         [JsonProperty("ShipperId")]
         public string ShipperId{ get; set; }

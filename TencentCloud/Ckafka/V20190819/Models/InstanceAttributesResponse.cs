@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Vport{ get; set; }
 
         /// <summary>
-        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+        /// <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+        /// <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -253,19 +253,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+        /// <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
         /// </summary>
         [JsonProperty("ElasticBandwidthSwitch")]
         public long? ElasticBandwidthSwitch{ get; set; }
 
         /// <summary>
-        /// <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+        /// <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
         /// </summary>
         [JsonProperty("ElasticBandwidthOpenStatus")]
         public long? ElasticBandwidthOpenStatus{ get; set; }
 
         /// <summary>
-        /// <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+        /// <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -301,13 +301,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? DeleteProtectionEnable{ get; set; }
 
         /// <summary>
-        /// <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+        /// <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+        /// <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
         /// </summary>
         [JsonProperty("TransactionalIdExpirationMs")]
         public long? TransactionalIdExpirationMs{ get; set; }

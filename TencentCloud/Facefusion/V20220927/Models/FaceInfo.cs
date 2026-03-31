@@ -25,25 +25,25 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 人脸框的横坐标
+        /// <p>人脸框的横坐标</p>
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 人脸框的纵坐标
+        /// <p>人脸框的纵坐标</p>
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// 人脸框的宽度
+        /// <p>人脸框的宽度。<br>单位：px</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 人脸框的高度
+        /// <p>人脸框的高度。<br>单位：px</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

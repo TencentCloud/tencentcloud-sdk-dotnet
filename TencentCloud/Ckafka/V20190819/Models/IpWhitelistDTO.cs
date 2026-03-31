@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filters : AbstractModel
+    public class IpWhitelistDTO : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>放通IP或网段</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("CidrBlock")]
+        public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 实例ID内容
+        /// <p>描述</p>
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
-        /// 模糊匹配
-        /// </summary>
-        [JsonProperty("ExactMatch")]
-        public string ExactMatch{ get; set; }
+        [JsonProperty("PolicyDescription")]
+        public string PolicyDescription{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+            this.SetParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
         }
     }
 }

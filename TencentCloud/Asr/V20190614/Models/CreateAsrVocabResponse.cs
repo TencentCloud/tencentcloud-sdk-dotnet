@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 词表ID，可用于获取词表信息
+        /// <p>词表ID，可用于获取词表信息</p>
         /// </summary>
         [JsonProperty("VocabId")]
         public string VocabId{ get; set; }

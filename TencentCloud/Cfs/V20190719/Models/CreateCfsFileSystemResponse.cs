@@ -25,49 +25,49 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统创建时间
+        /// <p>文件系统创建时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 用户自定义文件系统名称
+        /// <p>用户自定义文件系统名称</p>
         /// </summary>
         [JsonProperty("CreationToken")]
         public string CreationToken{ get; set; }
 
         /// <summary>
-        /// 文件系统 ID
+        /// <p>文件系统 ID</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+        /// <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 文件系统已使用容量大小，单位为 Byte
+        /// <p>文件系统已使用容量大小，单位为 Byte</p>
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// 可用区 ID
+        /// <p>可用区 ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 用户自定义文件系统名称
+        /// <p>用户自定义文件系统名称</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// 文件系统是否加密
+        /// <p>文件系统是否加密</p>
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }

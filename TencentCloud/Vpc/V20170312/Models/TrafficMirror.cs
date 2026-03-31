@@ -108,6 +108,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TargetInfo")]
         public TrafficMirrorTargetResourceInfo[] TargetInfo{ get; set; }
 
+        /// <summary>
+        /// 流量镜像入站过滤规则。
+        /// </summary>
+        [JsonProperty("IngressFilterRules")]
+        public TrafficMirrorFilter[] IngressFilterRules{ get; set; }
+
+        /// <summary>
+        /// 流量镜像出站过滤规则。
+        /// </summary>
+        [JsonProperty("EgressFilterRules")]
+        public TrafficMirrorFilter[] EgressFilterRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "TargetInfo.", this.TargetInfo);
+            this.SetParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+            this.SetParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
         }
     }
 }
