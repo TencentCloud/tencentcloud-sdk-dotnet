@@ -25,51 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 图片异步处理模板唯一标识。
+        /// <p>图片异步处理模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 图片异步处理模板名称。
+        /// <p>图片异步处理模板名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 图片异步处理模板描述信息。
+        /// <p>图片异步处理模板描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 解析级别，可选值为：
-        /// - Audio: 音频级解析
-        /// - Video: 视频级解析
+        /// <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 分段摘要解析配置
+        /// <p>分段摘要解析配置</p>
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummary Summary{ get; set; }
 
         /// <summary>
-        /// 文本转录解析配置
+        /// <p>文本转录解析配置</p>
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsr Asr{ get; set; }
 
         /// <summary>
-        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>人脸识别解析配置</p>
+        /// </summary>
+        [JsonProperty("FaceRecognition")]
+        public LLMComprehendFaceRecognition FaceRecognition{ get; set; }
+
+        /// <summary>
+        /// <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -86,6 +90,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamObj(map, prefix + "Summary.", this.Summary);
             this.SetParamObj(map, prefix + "Asr.", this.Asr);
+            this.SetParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

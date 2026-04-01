@@ -207,6 +207,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+        /// </summary>
+        [JsonProperty("DestValueType")]
+        public string DestValueType{ get; set; }
+
+        /// <summary>
+        /// 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+        /// </summary>
+        [JsonProperty("RulePartition")]
+        public long? RulePartition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +252,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Invalid", this.Invalid);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "DestValueType", this.DestValueType);
+            this.SetParamSimple(map, prefix + "RulePartition", this.RulePartition);
         }
     }
 }

@@ -25,70 +25,82 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 配置项名称
+        /// <p>配置项名称</p>
         /// </summary>
         [JsonProperty("ConfKey")]
         public string ConfKey{ get; set; }
 
         /// <summary>
-        /// 配置项内容
+        /// <p>配置项内容</p>
         /// </summary>
         [JsonProperty("ConfValue")]
         public string ConfValue{ get; set; }
 
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 是否需要重启
+        /// <p>是否需要重启</p>
         /// </summary>
         [JsonProperty("NeedRestart")]
         public bool? NeedRestart{ get; set; }
 
         /// <summary>
-        /// 是否可编辑
+        /// <p>是否可编辑</p>
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
-        /// 配置项解释
+        /// <p>配置项解释</p>
         /// </summary>
         [JsonProperty("ConfDesc")]
         public string ConfDesc{ get; set; }
 
         /// <summary>
-        /// 文件名称
+        /// <p>文件名称</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 规则名称类型
+        /// <p>规则名称类型</p>
         /// </summary>
         [JsonProperty("ModifyRuleType")]
         public string ModifyRuleType{ get; set; }
 
         /// <summary>
-        /// 规则名称内容
+        /// <p>规则名称内容</p>
         /// </summary>
         [JsonProperty("ModifyRuleValue")]
         public string ModifyRuleValue{ get; set; }
 
         /// <summary>
-        /// 修改人的uin
+        /// <p>修改人的uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// <p>取值范围</p>
+        /// </summary>
+        [JsonProperty("ValueRange")]
+        public string ValueRange{ get; set; }
+
+        /// <summary>
+        /// <p>标记异常</p>
+        /// </summary>
+        [JsonProperty("AbnormalParam")]
+        public string AbnormalParam{ get; set; }
 
 
         /// <summary>
@@ -107,6 +119,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "ModifyRuleValue", this.ModifyRuleValue);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "ValueRange", this.ValueRange);
+            this.SetParamSimple(map, prefix + "AbnormalParam", this.AbnormalParam);
         }
     }
 }

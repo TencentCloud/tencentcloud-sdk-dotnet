@@ -25,16 +25,22 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+        /// <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
 
         /// <summary>
-        /// 分散置放群组名称，长度1-60个字符，支持中、英文。
+        /// <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+        /// </summary>
+        [JsonProperty("Affinity")]
+        public long? Affinity{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
         }
     }
 }

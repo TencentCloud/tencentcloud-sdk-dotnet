@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Direction{ get; set; }
 
         /// <summary>
-        /// 流量镜像的采集对象。
+        /// 流量镜像的采集对象 (最多支持20个采集对象)。
         /// </summary>
         [JsonProperty("CollectorSrcs")]
         public string[] CollectorSrcs{ get; set; }
@@ -96,6 +96,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 流量镜像入站过滤规则。
+        /// </summary>
+        [JsonProperty("IngressFilterRules")]
+        public TrafficMirrorFilter[] IngressFilterRules{ get; set; }
+
+        /// <summary>
+        /// 流量镜像出站过滤规则。
+        /// </summary>
+        [JsonProperty("EgressFilterRules")]
+        public TrafficMirrorFilter[] EgressFilterRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+            this.SetParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
         }
     }
 }

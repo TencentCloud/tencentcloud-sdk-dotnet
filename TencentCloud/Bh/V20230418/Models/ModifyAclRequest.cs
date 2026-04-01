@@ -49,49 +49,49 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板文件上行
+        /// 是否开启剪贴板文件上行，不传时默认为false
         /// </summary>
         [JsonProperty("AllowClipFileUp")]
         public bool? AllowClipFileUp{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板文件下行
+        /// 是否开启剪贴板文件下行，不传时默认为false
         /// </summary>
         [JsonProperty("AllowClipFileDown")]
         public bool? AllowClipFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板文本（含图片）上行
+        /// 是否开启剪贴板文本（含图片）上行，不传时默认为false
         /// </summary>
         [JsonProperty("AllowClipTextUp")]
         public bool? AllowClipTextUp{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板文本（含图片）下行
+        /// 是否开启剪贴板文本（含图片）下行，不传时默认为false
         /// </summary>
         [JsonProperty("AllowClipTextDown")]
         public bool? AllowClipTextDown{ get; set; }
 
         /// <summary>
-        /// 是否开启文件传输上传
+        /// 是否开启文件传输上传，不传时默认为false
         /// </summary>
         [JsonProperty("AllowFileUp")]
         public bool? AllowFileUp{ get; set; }
 
         /// <summary>
-        /// 文件传输上传大小限制（预留参数，目前暂未使用）
+        /// 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
         /// </summary>
         [JsonProperty("MaxFileUpSize")]
         public ulong? MaxFileUpSize{ get; set; }
 
         /// <summary>
-        /// 是否开启文件传输下载
+        /// 是否开启文件传输下载，不传时默认为false
         /// </summary>
         [JsonProperty("AllowFileDown")]
         public bool? AllowFileDown{ get; set; }
 
         /// <summary>
-        /// 文件传输下载大小限制（预留参数，目前暂未使用）
+        /// 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
         /// </summary>
         [JsonProperty("MaxFileDownSize")]
         public ulong? MaxFileDownSize{ get; set; }
@@ -115,61 +115,61 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong?[] DeviceIdSet{ get; set; }
 
         /// <summary>
-        /// 关联的应用资产ID集合
+        /// 关联的应用资产ID集合，不传时表示不选择任何应用资产
         /// </summary>
         [JsonProperty("AppAssetIdSet")]
         public ulong?[] AppAssetIdSet{ get; set; }
 
         /// <summary>
-        /// 关联的资产组ID
+        /// 关联的资产组ID，不传时表示不选择任何资产组
         /// </summary>
         [JsonProperty("DeviceGroupIdSet")]
         public ulong?[] DeviceGroupIdSet{ get; set; }
 
         /// <summary>
-        /// 关联的账号
+        /// 关联的资产账号，不传时表示不选择任何资产账号
         /// </summary>
         [JsonProperty("AccountSet")]
         public string[] AccountSet{ get; set; }
 
         /// <summary>
-        /// 关联的高危命令模板ID
+        /// 关联的高危命令模板ID，不传时表示不选择任何模板
         /// </summary>
         [JsonProperty("CmdTemplateIdSet")]
         public ulong?[] CmdTemplateIdSet{ get; set; }
 
         /// <summary>
-        /// 关联高危DB模板ID
+        /// 关联高危DB模板ID，不传时表示不选择任何模板
         /// </summary>
         [JsonProperty("ACTemplateIdSet")]
         public string[] ACTemplateIdSet{ get; set; }
 
         /// <summary>
-        /// 是否开启 RDP 磁盘映射文件上传
+        /// 是否开启 RDP 磁盘映射文件上传，不传时默认为false
         /// </summary>
         [JsonProperty("AllowDiskFileUp")]
         public bool? AllowDiskFileUp{ get; set; }
 
         /// <summary>
-        /// 是否开启 RDP 磁盘映射文件下载
+        /// 是否开启 RDP 磁盘映射文件下载，不传时默认为false
         /// </summary>
         [JsonProperty("AllowDiskFileDown")]
         public bool? AllowDiskFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启rz sz文件上传
+        /// 是否开启rz sz文件上传，不传时默认为false
         /// </summary>
         [JsonProperty("AllowShellFileUp")]
         public bool? AllowShellFileUp{ get; set; }
 
         /// <summary>
-        /// 是否开启rz sz文件下载
+        /// 是否开启rz sz文件下载，不传时默认为false
         /// </summary>
         [JsonProperty("AllowShellFileDown")]
         public bool? AllowShellFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启 SFTP 文件删除
+        /// 是否开启 SFTP 文件删除，不传时默认为false
         /// </summary>
         [JsonProperty("AllowFileDel")]
         public bool? AllowFileDel{ get; set; }
@@ -195,19 +195,19 @@ namespace TencentCloud.Bh.V20230418.Models
         public string DepartmentId{ get; set; }
 
         /// <summary>
-        /// 是否允许使用访问串
+        /// 是否允许使用访问串，不传时默认为true
         /// </summary>
         [JsonProperty("AllowAccessCredential")]
         public bool? AllowAccessCredential{ get; set; }
 
         /// <summary>
-        /// 是否允许键盘记录
+        /// 是否允许键盘记录，不传时默认为false
         /// </summary>
         [JsonProperty("AllowKeyboardLogger")]
         public bool? AllowKeyboardLogger{ get; set; }
 
         /// <summary>
-        /// 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+        /// 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
         /// </summary>
         [JsonProperty("MaxAccessCredentialDuration")]
         public ulong? MaxAccessCredentialDuration{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 集群实例ID
+        /// <p>集群实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否是open api查询
+        /// <p>是否是open api查询</p>
         /// </summary>
         [JsonProperty("IsOpenApi")]
         public bool? IsOpenApi{ get; set; }

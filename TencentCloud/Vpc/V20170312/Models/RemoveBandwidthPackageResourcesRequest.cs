@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+        /// 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。<li>EIP资源列表：可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。高防EIP、Anycast EIP、精品BGP EIP默认不支持从共享带宽包中移除，其中高防EIP和精品BGP IP可以迁移到其他同线路类型的共享带宽包中。</li><li>LB资源列表：可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。</li>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }

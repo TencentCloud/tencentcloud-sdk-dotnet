@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1399";
 
         /// <summary>
         /// Client constructor.
@@ -428,6 +428,27 @@ namespace TencentCloud.Tke.V20220501
         public RebootMachinesResponse RebootMachinesSync(RebootMachinesRequest req)
         {
             return InternalRequestAsync<RebootMachinesResponse>(req, "RebootMachines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置 TKE 节点池期望节点数
+        /// </summary>
+        /// <param name="req"><see cref="ScaleNodePoolRequest"/></param>
+        /// <returns><see cref="ScaleNodePoolResponse"/></returns>
+        public Task<ScaleNodePoolResponse> ScaleNodePool(ScaleNodePoolRequest req)
+        {
+            return InternalRequestAsync<ScaleNodePoolResponse>(req, "ScaleNodePool");
+        }
+
+        /// <summary>
+        /// 设置 TKE 节点池期望节点数
+        /// </summary>
+        /// <param name="req"><see cref="ScaleNodePoolRequest"/></param>
+        /// <returns><see cref="ScaleNodePoolResponse"/></returns>
+        public ScaleNodePoolResponse ScaleNodePoolSync(ScaleNodePoolRequest req)
+        {
+            return InternalRequestAsync<ScaleNodePoolResponse>(req, "ScaleNodePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

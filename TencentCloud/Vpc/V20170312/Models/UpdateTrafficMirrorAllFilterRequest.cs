@@ -54,6 +54,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CollectorNormalFilters")]
         public TrafficMirrorFilter[] CollectorNormalFilters{ get; set; }
 
+        /// <summary>
+        /// 流量镜像入站过滤规则。
+        /// </summary>
+        [JsonProperty("IngressFilterRules")]
+        public TrafficMirrorFilter[] IngressFilterRules{ get; set; }
+
+        /// <summary>
+        /// 流量镜像出站过滤规则。
+        /// </summary>
+        [JsonProperty("EgressFilterRules")]
+        public TrafficMirrorFilter[] EgressFilterRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "CollectorSrcs.", this.CollectorSrcs);
             this.SetParamSimple(map, prefix + "NatId", this.NatId);
             this.SetParamArrayObj(map, prefix + "CollectorNormalFilters.", this.CollectorNormalFilters);
+            this.SetParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+            this.SetParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
         }
     }
 }

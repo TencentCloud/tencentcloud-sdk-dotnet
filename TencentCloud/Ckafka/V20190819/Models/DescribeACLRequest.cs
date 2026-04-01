@@ -58,6 +58,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 关键字匹配
         /// </summary>
         [JsonProperty("SearchWord")]
+        [System.Obsolete]
         public string SearchWord{ get; set; }
 
 

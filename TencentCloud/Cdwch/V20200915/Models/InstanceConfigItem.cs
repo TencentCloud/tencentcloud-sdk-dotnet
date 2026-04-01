@@ -25,16 +25,34 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// key
+        /// <p>key</p>
         /// </summary>
         [JsonProperty("ConfKey")]
         public string ConfKey{ get; set; }
 
         /// <summary>
-        /// value
+        /// <p>value</p>
         /// </summary>
         [JsonProperty("ConfValue")]
         public string ConfValue{ get; set; }
+
+        /// <summary>
+        /// <p>add/delete/update</p>
+        /// </summary>
+        [JsonProperty("ModifyType")]
+        public string ModifyType{ get; set; }
+
+        /// <summary>
+        /// <p>是否需要重启</p>
+        /// </summary>
+        [JsonProperty("NeedRestart")]
+        public bool? NeedRestart{ get; set; }
+
+        /// <summary>
+        /// <p>修改前的值</p>
+        /// </summary>
+        [JsonProperty("OriginalConfValue")]
+        public string OriginalConfValue{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Cdwch.V20200915.Models
         {
             this.SetParamSimple(map, prefix + "ConfKey", this.ConfKey);
             this.SetParamSimple(map, prefix + "ConfValue", this.ConfValue);
+            this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
+            this.SetParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
+            this.SetParamSimple(map, prefix + "OriginalConfValue", this.OriginalConfValue);
         }
     }
 }

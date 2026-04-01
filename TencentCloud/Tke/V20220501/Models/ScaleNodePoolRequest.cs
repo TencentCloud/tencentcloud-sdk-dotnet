@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwch.V20200915.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceResponse : AbstractModel
+    public class ScaleNodePoolRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>实例描述信息</p>
+        /// <p>集群 ID</p>
         /// </summary>
-        [JsonProperty("InstanceInfo")]
-        public InstanceInfo InstanceInfo{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>节点池 ID</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NodePoolId")]
+        public string NodePoolId{ get; set; }
+
+        /// <summary>
+        /// <p>期望节点数</p>
+        /// </summary>
+        [JsonProperty("Replicas")]
+        public long? Replicas{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdwch.V20200915.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
         }
     }
 }

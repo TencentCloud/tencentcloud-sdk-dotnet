@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>人脸识别任务开关</p><p>枚举值：</p><ul><li>ON： 开启智能人脸识别任务</li><li>OFF： 关闭智能人脸识别任务</li></ul><p>默认值：OFF</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果</p><p>取值范围：[0, 100]</p><p>默认值：95</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。</p><p>枚举值：</p><ul><li>entertainment： 娱乐明星</li><li>sport： 体育明星</li><li>politician： 政治人物</li></ul>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。 </p><p>入参限制：标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>人物库选择</p><p>枚举值：</p><ul><li>Default： 使用默认人物库</li><li>UserDefine： 使用用户自定义人物库</li><li>All： 同时使用默认人物库和用户自定义人物库</li></ul><p>默认值：All</p>
         /// </summary>
         [JsonProperty("FaceLibrary")]
         public string FaceLibrary{ get; set; }
