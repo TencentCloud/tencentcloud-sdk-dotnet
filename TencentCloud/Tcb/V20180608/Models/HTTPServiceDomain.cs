@@ -91,6 +91,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         public HTTPServiceRoute[] Routes{ get; set; }
 
         /// <summary>
+        /// 扩展字段，内部包含headers处理等
+        /// </summary>
+        [JsonProperty("Extension")]
+        public HTTPServiceExtension Extension{ get; set; }
+
+        /// <summary>
         /// 域名创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -119,6 +125,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DNSStatus", this.DNSStatus);
             this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
+            this.SetParamObj(map, prefix + "Extension.", this.Extension);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

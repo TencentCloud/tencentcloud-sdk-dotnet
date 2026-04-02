@@ -25,28 +25,40 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        ///  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则
+        /// <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 要审核的内容
+        /// <p>要审核的内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public ApiGuardContent Content{ get; set; }
 
         /// <summary>
-        /// 标识用户的id，限速使用，不填，则限速会不生效
+        /// <p>标识用户的id，限速使用，不填，则限速会不生效</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 会话id
+        /// <p>会话id</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>工具名称</p>
+        /// </summary>
+        [JsonProperty("ToolName")]
+        public string ToolName{ get; set; }
+
+        /// <summary>
+        /// <p>工具执行的参数</p>
+        /// </summary>
+        [JsonProperty("ToolArgs")]
+        public string ToolArgs{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
+            this.SetParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
         }
     }
 }

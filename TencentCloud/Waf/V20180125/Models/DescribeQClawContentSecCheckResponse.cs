@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 检测结果
+        /// <p>检测结果</p>
         /// </summary>
         [JsonProperty("Data")]
         public LLMRisks Data{ get; set; }

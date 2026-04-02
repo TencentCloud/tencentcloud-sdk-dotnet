@@ -25,49 +25,49 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        ///  仅输出侧：涉敏信息
+        /// <p>仅输出侧：涉敏信息</p>
         /// </summary>
         [JsonProperty("SensitiveResult")]
         public LLMSensitiveValueLevel[] SensitiveResult{ get; set; }
 
         /// <summary>
-        ///  输入输出均检测：关键词库命中信息
+        /// <p>输入输出均检测：关键词库命中信息</p>
         /// </summary>
         [JsonProperty("KeyWordsResult")]
         public KeyWordInfo[] KeyWordsResult{ get; set; }
 
         /// <summary>
-        /// 输入输出均检测：数据分类分级结果
+        /// <p>输入输出均检测：数据分类分级结果</p>
         /// </summary>
         [JsonProperty("DataCategoryResult")]
         public string[] DataCategoryResult{ get; set; }
 
         /// <summary>
-        ///  仅输入侧检出：prompt检测的结果
+        /// <p>仅输入侧检出：prompt检测的结果</p>
         /// </summary>
         [JsonProperty("PromptInjectionResult")]
         public PromptDetectResult PromptInjectionResult{ get; set; }
 
         /// <summary>
-        /// 命中的规则ID
+        /// <p>命中的规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 命中的规则名称
+        /// <p>命中的规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则动作
+        /// <p>规则动作</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 攻击payload
+        /// <p>攻击payload</p>
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1391</VersionPrefix>
+    <VersionPrefix>3.0.1400</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -429,6 +429,8 @@
     <Compile Include="V20220901\Models\DescribeSecurityPolicyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSharedCNAMERequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7AnalysisDataRequest.cs" />
@@ -524,6 +526,8 @@
     <Compile Include="V20220901\Models\IPRegionInfo.cs" />
     <Compile Include="V20220901\Models\IPReputation.cs" />
     <Compile Include="V20220901\Models\IPReputationGroup.cs" />
+    <Compile Include="V20220901\Models\IPSSLConfig.cs" />
+    <Compile Include="V20220901\Models\IPSSLSetting.cs" />
     <Compile Include="V20220901\Models\IPWhitelist.cs" />
     <Compile Include="V20220901\Models\IPv6Parameters.cs" />
     <Compile Include="V20220901\Models\Identification.cs" />
@@ -645,6 +649,8 @@
     <Compile Include="V20220901\Models\ModifySecurityJSInjectionRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySharedCNAMERequest.cs" />
+    <Compile Include="V20220901\Models\ModifySharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\ModifyWebSecurityTemplateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneRequest.cs" />
@@ -713,6 +719,7 @@
     <Compile Include="V20220901\Models\RateLimitingRules.cs" />
     <Compile Include="V20220901\Models\RealtimeLogDeliveryTask.cs" />
     <Compile Include="V20220901\Models\RedirectActionParameters.cs" />
+    <Compile Include="V20220901\Models\ReferenceHolder.cs" />
     <Compile Include="V20220901\Models\RefreshMultiPathGatewaySecretKeyRequest.cs" />
     <Compile Include="V20220901\Models\RefreshMultiPathGatewaySecretKeyResponse.cs" />
     <Compile Include="V20220901\Models\RenewFlag.cs" />
@@ -753,6 +760,7 @@
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
     <Compile Include="V20220901\Models\SessionRateControl.cs" />
     <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
+    <Compile Include="V20220901\Models\SharedCNAMEInfo.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
     <Compile Include="V20220901\Models\SlowAttackDefense.cs" />
     <Compile Include="V20220901\Models\SlowPostConfig.cs" />

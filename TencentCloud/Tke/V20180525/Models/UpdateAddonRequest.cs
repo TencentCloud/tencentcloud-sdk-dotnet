@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AddonVersion{ get; set; }
 
         /// <summary>
-        /// addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。
+        /// addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
         /// </summary>
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1390";
+       private const string sdkVersion = "SDK_NET_3.0.1400";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ga2.V20250115
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建全球加速实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorResponse"/></returns>
+        public Task<CreateGlobalAcceleratorResponse> CreateGlobalAccelerator(CreateGlobalAcceleratorRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorResponse>(req, "CreateGlobalAccelerator");
+        }
+
+        /// <summary>
+        /// 创建全球加速实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorResponse"/></returns>
+        public CreateGlobalAcceleratorResponse CreateGlobalAcceleratorSync(CreateGlobalAcceleratorRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorResponse>(req, "CreateGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

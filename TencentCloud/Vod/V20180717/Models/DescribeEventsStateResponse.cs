@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 待进行拉取的事件通知数，为近似值，约5秒延迟。
+        /// <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p>
         /// </summary>
         [JsonProperty("CountOfEventsToPull")]
         public ulong? CountOfEventsToPull{ get; set; }

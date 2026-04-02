@@ -25,13 +25,19 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
+        /// 筛选字段名，对应实体属性名（驼峰命名）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+        /// 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }

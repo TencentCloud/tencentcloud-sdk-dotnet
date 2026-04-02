@@ -25,107 +25,119 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 基础信息。包括视频名称、分类、播放地址、封面图片等。
+        /// <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicInfo")]
         public MediaBasicInfo BasicInfo{ get; set; }
 
         /// <summary>
-        /// 元信息。包括大小、时长、视频流信息、音频流信息等。
+        /// <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+        /// <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeInfo")]
         public MediaTranscodeInfo TranscodeInfo{ get; set; }
 
         /// <summary>
-        /// 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+        /// <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnimatedGraphicsInfo")]
         public MediaAnimatedGraphicsInfo AnimatedGraphicsInfo{ get; set; }
 
         /// <summary>
-        /// 采样截图信息。对视频采样截图后，相关截图信息。
+        /// <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotInfo")]
         public MediaSampleSnapshotInfo SampleSnapshotInfo{ get; set; }
 
         /// <summary>
-        /// 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+        /// <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteInfo")]
         public MediaImageSpriteInfo ImageSpriteInfo{ get; set; }
 
         /// <summary>
-        /// 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+        /// <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetInfo")]
         public MediaSnapshotByTimeOffsetInfo SnapshotByTimeOffsetInfo{ get; set; }
 
         /// <summary>
-        /// 视频打点信息。对视频设置的各个打点信息。
+        /// <p>视频打点信息。对视频设置的各个打点信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyFrameDescInfo")]
         public MediaKeyFrameDescInfo KeyFrameDescInfo{ get; set; }
 
         /// <summary>
-        /// 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+        /// <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingInfo")]
         public MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo{ get; set; }
 
         /// <summary>
-        /// 小程序审核信息。
+        /// <p>小程序审核信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniProgramReviewInfo")]
         public MediaMiniProgramReviewInfo MiniProgramReviewInfo{ get; set; }
 
         /// <summary>
-        /// 字幕信息。
+        /// <p>字幕信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleInfo")]
         public MediaSubtitleInfo SubtitleInfo{ get; set; }
 
         /// <summary>
-        /// 媒体文件唯一标识 ID。
+        /// <p>媒体文件唯一标识 ID。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 审核信息。
+        /// <p>审核信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewInfo")]
         public FileReviewInfo ReviewInfo{ get; set; }
 
         /// <summary>
-        /// MPS智能媒资信息
+        /// <p>MPS智能媒资信息</p>
         /// </summary>
         [JsonProperty("MPSAiMediaInfo")]
         public MPSAiMediaInfo MPSAiMediaInfo{ get; set; }
 
         /// <summary>
-        /// 图片理解信息。
+        /// <p>图片理解信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUnderstandingInfo")]
         public ImageUnderstandingInfo ImageUnderstandingInfo{ get; set; }
+
+        /// <summary>
+        /// <p>智能知识库信息。</p>
+        /// </summary>
+        [JsonProperty("KnowledgeBasesInfo")]
+        public KnowledgeBasesInfo KnowledgeBasesInfo{ get; set; }
+
+        /// <summary>
+        /// <p>人脸识别信息。</p>
+        /// </summary>
+        [JsonProperty("FaceRecognitionInfo")]
+        public FaceRecognitionInfo FaceRecognitionInfo{ get; set; }
 
 
         /// <summary>
@@ -148,6 +160,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
             this.SetParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
             this.SetParamObj(map, prefix + "ImageUnderstandingInfo.", this.ImageUnderstandingInfo);
+            this.SetParamObj(map, prefix + "KnowledgeBasesInfo.", this.KnowledgeBasesInfo);
+            this.SetParamObj(map, prefix + "FaceRecognitionInfo.", this.FaceRecognitionInfo);
         }
     }
 }

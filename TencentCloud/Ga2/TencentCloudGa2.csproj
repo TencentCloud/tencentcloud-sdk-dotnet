@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1390</VersionPrefix>
+    <VersionPrefix>3.0.1400</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,10 @@
 
   <ItemGroup>
     <Compile Include="V20250115\Ga2Client.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorRequest.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorResponse.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementRequest.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementResponse.cs" />
+    <Compile Include="V20250115\Models\Tag.cs" />
   </ItemGroup>
 </Project>

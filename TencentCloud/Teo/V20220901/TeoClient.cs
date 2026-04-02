@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1391";
+       private const string sdkVersion = "SDK_NET_3.0.1400";
 
         /// <summary>
         /// Client constructor.
@@ -2803,6 +2803,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询共享CNAME列表，支持模糊搜索、分页、排序等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
+        /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
+        public Task<DescribeSharedCNAMEResponse> DescribeSharedCNAME(DescribeSharedCNAMERequest req)
+        {
+            return InternalRequestAsync<DescribeSharedCNAMEResponse>(req, "DescribeSharedCNAME");
+        }
+
+        /// <summary>
+        /// 查询共享CNAME列表，支持模糊搜索、分页、排序等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
+        /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
+        public DescribeSharedCNAMEResponse DescribeSharedCNAMESync(DescribeSharedCNAMERequest req)
+        {
+            return InternalRequestAsync<DescribeSharedCNAMEResponse>(req, "DescribeSharedCNAME")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p>本接口（<code>DescribeTimingL4Data</code>）用于查询四层时序数据列表。</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
@@ -4275,6 +4296,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifySecurityPolicyResponse ModifySecurityPolicySync(ModifySecurityPolicyRequest req)
         {
             return InternalRequestAsync<ModifySecurityPolicyResponse>(req, "ModifySecurityPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改共享 CNAME。当前仅支持修改共享 CNAME 的描述和设置 IP SSL类型的共享CNAME关联IP SSL 域名，共享 CNAME 本身创建后不支持修改。该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
+        /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
+        public Task<ModifySharedCNAMEResponse> ModifySharedCNAME(ModifySharedCNAMERequest req)
+        {
+            return InternalRequestAsync<ModifySharedCNAMEResponse>(req, "ModifySharedCNAME");
+        }
+
+        /// <summary>
+        /// 用于修改共享 CNAME。当前仅支持修改共享 CNAME 的描述和设置 IP SSL类型的共享CNAME关联IP SSL 域名，共享 CNAME 本身创建后不支持修改。该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
+        /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
+        public ModifySharedCNAMEResponse ModifySharedCNAMESync(ModifySharedCNAMERequest req)
+        {
+            return InternalRequestAsync<ModifySharedCNAMEResponse>(req, "ModifySharedCNAME")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

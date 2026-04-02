@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音频流的码率，单位：bps。
+        /// <p>音频流的码率，单位：bps。</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// 音频流的采样率，单位：hz。
+        /// <p>音频流的采样率，单位：hz。</p>
         /// </summary>
         [JsonProperty("SamplingRate")]
         public long? SamplingRate{ get; set; }
 
         /// <summary>
-        /// 音频流的编码格式，例如 aac。
+        /// <p>音频流的编码格式，例如 aac。</p>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }

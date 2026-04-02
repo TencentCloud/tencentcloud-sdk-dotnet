@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+        /// <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
         /// </summary>
         [JsonProperty("ClothesFileInfos")]
         public SceneAigcImageTaskInputFileInfo[] ClothesFileInfos{ get; set; }
 
         /// <summary>
-        /// AI换衣的提示词。
+        /// <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }

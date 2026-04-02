@@ -25,16 +25,23 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// smtp配置
+        /// <p>smtp配置</p>
         /// </summary>
         [JsonProperty("SmtpConfig")]
         public EmailSmtpConfig SmtpConfig{ get; set; }
 
         /// <summary>
-        /// 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+        /// <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
         /// </summary>
         [JsonProperty("On")]
         public string On{ get; set; }
+
+        /// <summary>
+        /// <p>邮件模板配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateConfig")]
+        public EmailTemplateConfig TemplateConfig{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamObj(map, prefix + "SmtpConfig.", this.SmtpConfig);
             this.SetParamSimple(map, prefix + "On", this.On);
+            this.SetParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
         }
     }
 }

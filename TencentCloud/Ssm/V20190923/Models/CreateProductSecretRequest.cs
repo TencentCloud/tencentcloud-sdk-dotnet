@@ -25,100 +25,94 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+        /// <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-        /// 可选字符集包括：
-        /// 数字字符：[0, 9]，
-        /// 小写字符：[a, z]，
-        /// 大写字符：[A, Z]，
-        /// 特殊字符(全英文符号)：下划线(_)，
-        /// 前缀必须以大写或小写字母开头。
+        /// <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
         /// </summary>
         [JsonProperty("UserNamePrefix")]
         public string UserNamePrefix{ get; set; }
 
         /// <summary>
-        /// 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。
+        /// <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 云产品实例ID。
+        /// <p>云产品实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 账号的域名，IP形式，支持填入%。
+        /// <p>账号的域名，IP形式，支持填入%。</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 将凭据与云产品实例绑定时，需要授予的权限列表。
+        /// <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p>
         /// </summary>
         [JsonProperty("PrivilegesList")]
         public ProductPrivilegeUnit[] PrivilegesList{ get; set; }
 
         /// <summary>
-        /// 描述信息，用于详细描述用途等，最大支持2048字节。
+        /// <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 指定对凭据进行加密的KMS CMK。
-        /// 如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-        /// 您也可以指定在同region 下自行创建的KMS CMK进行加密。
+        /// <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// <p>标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-        /// 当EnableRotation为True时，此参数必填。
+        /// <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p>
         /// </summary>
         [JsonProperty("RotationBeginTime")]
         public string RotationBeginTime{ get; set; }
 
         /// <summary>
-        /// 是否开启轮转
-        /// True -- 开启
-        /// False -- 不开启
-        /// 如果不指定，默认为False。
+        /// <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p>
         /// </summary>
         [JsonProperty("EnableRotation")]
         public bool? EnableRotation{ get; set; }
 
         /// <summary>
-        /// 轮转周期，以天为单位，默认为1天。
+        /// <p>轮转周期，以天为单位，默认为1天。</p>
         /// </summary>
         [JsonProperty("RotationFrequency")]
         public long? RotationFrequency{ get; set; }
 
         /// <summary>
-        /// KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+        /// <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
         /// </summary>
         [JsonProperty("KmsHsmClusterId")]
         public string KmsHsmClusterId{ get; set; }
 
         /// <summary>
-        /// 账户备注
+        /// <p>账户备注</p>
         /// </summary>
         [JsonProperty("AccountRemark")]
         public string AccountRemark{ get; set; }
+
+        /// <summary>
+        /// <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -140,6 +134,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
             this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
             this.SetParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

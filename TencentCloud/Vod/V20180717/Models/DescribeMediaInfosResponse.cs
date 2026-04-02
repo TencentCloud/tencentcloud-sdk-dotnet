@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 媒体文件信息列表。
+        /// <p>媒体文件信息列表。</p>
         /// </summary>
         [JsonProperty("MediaInfoSet")]
         public MediaInfo[] MediaInfoSet{ get; set; }
 
         /// <summary>
-        /// 不存在的文件 ID 列表。
+        /// <p>不存在的文件 ID 列表。</p>
         /// </summary>
         [JsonProperty("NotExistFileIdSet")]
         public string[] NotExistFileIdSet{ get; set; }

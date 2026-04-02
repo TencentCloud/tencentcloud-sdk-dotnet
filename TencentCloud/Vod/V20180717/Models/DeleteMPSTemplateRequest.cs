@@ -33,6 +33,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 需要删除的 MPS 模板的类型。取值：
         /// <li>Transcode: 删除转码模板。</li>
+        /// <li>AIAnalysis: 创建智能分析模板。</li>
+        /// <li>SmartSubtitle: 创建智能字幕模板。</li>
+        /// <li>SmartErase: 创建智能擦除模板。</li>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
