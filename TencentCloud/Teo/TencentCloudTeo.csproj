@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1400</VersionPrefix>
+    <VersionPrefix>3.0.1401</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,7 @@
     <Compile Include="V20220901\Models\ClientIpHeader.cs" />
     <Compile Include="V20220901\Models\CnameStatus.cs" />
     <Compile Include="V20220901\Models\CodeAction.cs" />
+    <Compile Include="V20220901\Models\ComponentReference.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\CompressionParameters.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
@@ -191,6 +192,8 @@
     <Compile Include="V20220901\Models\CreateCustomizeErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\CreateDnsRecordRequest.cs" />
     <Compile Include="V20220901\Models\CreateDnsRecordResponse.cs" />
+    <Compile Include="V20220901\Models\CreateEdgeKVNamespaceRequest.cs" />
+    <Compile Include="V20220901\Models\CreateEdgeKVNamespaceResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRequest.cs" />
     <Compile Include="V20220901\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleRequest.cs" />
@@ -255,6 +258,7 @@
     <Compile Include="V20220901\Models\DDoSProtection.cs" />
     <Compile Include="V20220901\Models\DDosProtectionConfig.cs" />
     <Compile Include="V20220901\Models\DNSPodDetail.cs" />
+    <Compile Include="V20220901\Models\DefaultDenySecurityActionParameters.cs" />
     <Compile Include="V20220901\Models\DefaultServerCertInfo.cs" />
     <Compile Include="V20220901\Models\DeleteAccelerationDomainsRequest.cs" />
     <Compile Include="V20220901\Models\DeleteAccelerationDomainsResponse.cs" />
@@ -270,6 +274,8 @@
     <Compile Include="V20220901\Models\DeleteCustomErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\DeleteDnsRecordsRequest.cs" />
     <Compile Include="V20220901\Models\DeleteDnsRecordsResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteEdgeKVNamespaceRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteEdgeKVNamespaceResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRequest.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesRequest.cs" />
@@ -349,8 +355,12 @@
     <Compile Include="V20220901\Models\DescribeDeployHistoryResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDnsRecordsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDnsRecordsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeEdgeKVNamespacesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeEdgeKVNamespacesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeFunctionComponentBindingsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeFunctionComponentBindingsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeFunctionRulesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeFunctionRulesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeFunctionRuntimeEnvironmentRequest.cs" />
@@ -472,6 +482,14 @@
     <Compile Include="V20220901\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220901\Models\DropPageConfig.cs" />
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
+    <Compile Include="V20220901\Models\EdgeKVDeleteRequest.cs" />
+    <Compile Include="V20220901\Models\EdgeKVDeleteResponse.cs" />
+    <Compile Include="V20220901\Models\EdgeKVGetRequest.cs" />
+    <Compile Include="V20220901\Models\EdgeKVGetResponse.cs" />
+    <Compile Include="V20220901\Models\EdgeKVListRequest.cs" />
+    <Compile Include="V20220901\Models\EdgeKVListResponse.cs" />
+    <Compile Include="V20220901\Models\EdgeKVPutRequest.cs" />
+    <Compile Include="V20220901\Models\EdgeKVPutResponse.cs" />
     <Compile Include="V20220901\Models\EnableOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\EnableOriginACLResponse.cs" />
     <Compile Include="V20220901\Models\EntityStatus.cs" />
@@ -499,6 +517,7 @@
     <Compile Include="V20220901\Models\ForceRedirectHTTPSParameters.cs" />
     <Compile Include="V20220901\Models\FrequentScanningProtection.cs" />
     <Compile Include="V20220901\Models\Function.cs" />
+    <Compile Include="V20220901\Models\FunctionComponentBinding.cs" />
     <Compile Include="V20220901\Models\FunctionEnvironmentVariable.cs" />
     <Compile Include="V20220901\Models\FunctionRegionSelection.cs" />
     <Compile Include="V20220901\Models\FunctionRule.cs" />
@@ -546,6 +565,9 @@
     <Compile Include="V20220901\Models\JITVideoProcess.cs" />
     <Compile Include="V20220901\Models\JSInjectionRule.cs" />
     <Compile Include="V20220901\Models\JustInTimeTranscodeTemplate.cs" />
+    <Compile Include="V20220901\Models\KVNamespace.cs" />
+    <Compile Include="V20220901\Models\KVNamespaceParameters.cs" />
+    <Compile Include="V20220901\Models\KeyValuePair.cs" />
     <Compile Include="V20220901\Models\KnownBotCategories.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L4Proxy.cs" />
@@ -590,6 +612,10 @@
     <Compile Include="V20220901\Models\ModifyDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyEdgeKVNamespaceRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyEdgeKVNamespaceResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyFunctionComponentBindingsRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyFunctionComponentBindingsResponse.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionRequest.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionResponse.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionRulePriorityRequest.cs" />

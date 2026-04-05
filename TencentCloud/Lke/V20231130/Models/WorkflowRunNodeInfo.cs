@@ -25,77 +25,77 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 节点ID
+        /// <p>节点ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeType")]
         public ulong? NodeType{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// <p>节点名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 输入
+        /// <p>输入</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 输出
+        /// <p>输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
-        /// 任务输出
+        /// <p>任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskOutput")]
         public string TaskOutput{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailMessage")]
         public string FailMessage{ get; set; }
 
         /// <summary>
-        /// 花费时长
+        /// <p>花费时长，单位为毫秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostMilliSeconds")]
         public ulong? CostMilliSeconds{ get; set; }
 
         /// <summary>
-        /// 大模型输出信息
+        /// <p>大模型输出信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatisticInfos")]
         public StatisticInfo[] StatisticInfos{ get; set; }
 
         /// <summary>
-        /// 错误代码
+        /// <p>错误代码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailCode")]

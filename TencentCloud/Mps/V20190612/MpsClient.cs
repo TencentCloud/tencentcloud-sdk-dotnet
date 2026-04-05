@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1401";
 
         /// <summary>
         /// Client constructor.
@@ -2348,6 +2348,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetailSync(DescribeVideoSearchTaskDetailRequest req)
         {
             return InternalRequestAsync<DescribeVideoSearchTaskDetailResponse>(req, "DescribeVideoSearchTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步接口。查询可用音色，支持通过类型、标签、语言等条件检索音色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public Task<DescribeVoicesResponse> DescribeVoices(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices");
+        }
+
+        /// <summary>
+        /// 同步接口。查询可用音色，支持通过类型、标签、语言等条件检索音色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public DescribeVoicesResponse DescribeVoicesSync(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

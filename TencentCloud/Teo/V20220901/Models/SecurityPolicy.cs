@@ -66,6 +66,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("BotManagementLite")]
         public BotManagementLite BotManagementLite{ get; set; }
 
+        /// <summary>
+        /// 默认拦截动作配置。
+        /// </summary>
+        [JsonProperty("DefaultDenySecurityActionParameters")]
+        public DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
             this.SetParamObj(map, prefix + "BotManagement.", this.BotManagement);
             this.SetParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
+            this.SetParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1399</VersionPrefix>
+    <VersionPrefix>3.0.1401</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,8 @@
     <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteInstancesActionTimerRequest.cs" />
     <Compile Include="V20170312\Models\DeleteInstancesActionTimerResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteInstancesDisasterRecoverGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteInstancesDisasterRecoverGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateRequest.cs" />

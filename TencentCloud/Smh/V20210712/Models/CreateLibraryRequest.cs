@@ -25,31 +25,31 @@ namespace TencentCloud.Smh.V20210712.Models
     {
         
         /// <summary>
-        /// 媒体库名称，最多 50 个字符
+        /// <p>媒体库名称，最多 50 个字符</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备注，最多 250 个字符
+        /// <p>备注，最多 250 个字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+        /// <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+        /// <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// 媒体库配置项，部分参数新建后不可更改
+        /// <p>媒体库配置项，部分参数新建后不可更改</p>
         /// </summary>
         [JsonProperty("LibraryExtension")]
         public LibraryExtension LibraryExtension{ get; set; }

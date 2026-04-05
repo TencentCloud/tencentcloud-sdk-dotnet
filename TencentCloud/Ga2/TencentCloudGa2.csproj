@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1400</VersionPrefix>
+    <VersionPrefix>3.0.1401</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,65 @@
 
   <ItemGroup>
     <Compile Include="V20250115\Ga2Client.cs" />
+    <Compile Include="V20250115\Models\AcceleratorAreas.cs" />
+    <Compile Include="V20250115\Models\AcceleratorRegionSet.cs" />
+    <Compile Include="V20250115\Models\CreateAccelerateAreasRequest.cs" />
+    <Compile Include="V20250115\Models\CreateAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\CreateEndpointGroupRequest.cs" />
+    <Compile Include="V20250115\Models\CreateEndpointGroupResponse.cs" />
+    <Compile Include="V20250115\Models\CreateForwardingRuleRequest.cs" />
+    <Compile Include="V20250115\Models\CreateForwardingRuleResponse.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorResponse.cs" />
+    <Compile Include="V20250115\Models\CreateListenerRequest.cs" />
+    <Compile Include="V20250115\Models\CreateListenerResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteAccelerateAreasRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteEndpointGroupsRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteEndpointGroupsResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteForwardingRuleRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteListenerRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteListenerResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeAccelerateAreasRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeAccelerateRegionsRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeAccelerateRegionsResponse.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementRequest.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeEndpointGroupsRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeEndpointGroupsResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeForwardingRuleRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorsRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorsResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeListenersRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeListenersResponse.cs" />
+    <Compile Include="V20250115\Models\EndpointConfigurations.cs" />
+    <Compile Include="V20250115\Models\EndpointGroupConfiguration.cs" />
+    <Compile Include="V20250115\Models\EndpointGroupConfigurationSet.cs" />
+    <Compile Include="V20250115\Models\Filter.cs" />
+    <Compile Include="V20250115\Models\ForwardingRuleSet.cs" />
+    <Compile Include="V20250115\Models\GlobalAcceleratorSet.cs" />
+    <Compile Include="V20250115\Models\IpAddressInfoSet.cs" />
+    <Compile Include="V20250115\Models\ListenerSet.cs" />
+    <Compile Include="V20250115\Models\ModifyAccelerateAreasRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyEndpointGroupRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyEndpointGroupResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyForwardingRuleRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyListenerRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyListenerResponse.cs" />
+    <Compile Include="V20250115\Models\OriginHeader.cs" />
+    <Compile Include="V20250115\Models\PortOverride.cs" />
+    <Compile Include="V20250115\Models\PortRanges.cs" />
+    <Compile Include="V20250115\Models\RuleAction.cs" />
+    <Compile Include="V20250115\Models\RuleCondition.cs" />
     <Compile Include="V20250115\Models\Tag.cs" />
   </ItemGroup>
 </Project>

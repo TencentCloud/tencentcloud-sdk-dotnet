@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1400";
+       private const string sdkVersion = "SDK_NET_3.0.1401";
 
         /// <summary>
         /// Client constructor.
@@ -2171,27 +2171,6 @@ namespace TencentCloud.Waf.V20180125
         public DescribeProtectionModesResponse DescribeProtectionModesSync(DescribeProtectionModesRequest req)
         {
             return InternalRequestAsync<DescribeProtectionModesResponse>(req, "DescribeProtectionModes")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 大模型请求内容和响应内容审核接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQClawContentSecCheckRequest"/></param>
-        /// <returns><see cref="DescribeQClawContentSecCheckResponse"/></returns>
-        public Task<DescribeQClawContentSecCheckResponse> DescribeQClawContentSecCheck(DescribeQClawContentSecCheckRequest req)
-        {
-            return InternalRequestAsync<DescribeQClawContentSecCheckResponse>(req, "DescribeQClawContentSecCheck");
-        }
-
-        /// <summary>
-        /// 大模型请求内容和响应内容审核接口
-        /// </summary>
-        /// <param name="req"><see cref="DescribeQClawContentSecCheckRequest"/></param>
-        /// <returns><see cref="DescribeQClawContentSecCheckResponse"/></returns>
-        public DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheckSync(DescribeQClawContentSecCheckRequest req)
-        {
-            return InternalRequestAsync<DescribeQClawContentSecCheckResponse>(req, "DescribeQClawContentSecCheck")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

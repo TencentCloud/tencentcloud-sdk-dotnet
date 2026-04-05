@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1401";
 
         /// <summary>
         /// Client constructor.
@@ -442,6 +442,27 @@ namespace TencentCloud.Cvm.V20170312
         public DeleteInstancesActionTimerResponse DeleteInstancesActionTimerSync(DeleteInstancesActionTimerRequest req)
         {
             return InternalRequestAsync<DeleteInstancesActionTimerResponse>(req, "DeleteInstancesActionTimer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteInstancesDisasterRecoverGroups) 用于将云服务器实例从指定的置放群组中批量移除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteInstancesDisasterRecoverGroupsResponse"/></returns>
+        public Task<DeleteInstancesDisasterRecoverGroupsResponse> DeleteInstancesDisasterRecoverGroups(DeleteInstancesDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesDisasterRecoverGroupsResponse>(req, "DeleteInstancesDisasterRecoverGroups");
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteInstancesDisasterRecoverGroups) 用于将云服务器实例从指定的置放群组中批量移除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteInstancesDisasterRecoverGroupsResponse"/></returns>
+        public DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroupsSync(DeleteInstancesDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesDisasterRecoverGroupsResponse>(req, "DeleteInstancesDisasterRecoverGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

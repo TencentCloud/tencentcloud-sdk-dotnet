@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 删除虚拟集群的名称数组
+        /// <p>删除虚拟集群的名称数组</p>
         /// </summary>
         [JsonProperty("DataEngineNames")]
         public string[] DataEngineNames{ get; set; }

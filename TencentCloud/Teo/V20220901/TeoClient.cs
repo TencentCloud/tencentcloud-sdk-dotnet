@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1400";
+       private const string sdkVersion = "SDK_NET_3.0.1401";
 
         /// <summary>
         /// Client constructor.
@@ -439,6 +439,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateDnsRecordResponse CreateDnsRecordSync(CreateDnsRecordRequest req)
         {
             return InternalRequestAsync<CreateDnsRecordResponse>(req, "CreateDnsRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于在指定站点下创建 KV 命名空间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
+        public Task<CreateEdgeKVNamespaceResponse> CreateEdgeKVNamespace(CreateEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeKVNamespaceResponse>(req, "CreateEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// 本接口用于在指定站点下创建 KV 命名空间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
+        public CreateEdgeKVNamespaceResponse CreateEdgeKVNamespaceSync(CreateEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeKVNamespaceResponse>(req, "CreateEdgeKVNamespace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1145,6 +1166,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
         {
             return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除指定的 KV 命名空间。删除后命名空间内的所有键值对数据将被清空且不可恢复。若命名空间正被边缘函数引用，需先解除绑定关系后方可删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
+        public Task<DeleteEdgeKVNamespaceResponse> DeleteEdgeKVNamespace(DeleteEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<DeleteEdgeKVNamespaceResponse>(req, "DeleteEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// 本接口用于删除指定的 KV 命名空间。删除后命名空间内的所有键值对数据将被清空且不可恢复。若命名空间正被边缘函数引用，需先解除绑定关系后方可删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
+        public DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespaceSync(DeleteEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<DeleteEdgeKVNamespaceResponse>(req, "DeleteEdgeKVNamespace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1951,6 +1993,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询指定站点下的 KV 命名空间列表，支持分页、排序和条件过滤。返回命名空间的基本信息、存储容量使用情况以及被引用关系。若查询不到数据，则返回空数组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
+        public Task<DescribeEdgeKVNamespacesResponse> DescribeEdgeKVNamespaces(DescribeEdgeKVNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeKVNamespacesResponse>(req, "DescribeEdgeKVNamespaces");
+        }
+
+        /// <summary>
+        /// 查询指定站点下的 KV 命名空间列表，支持分页、排序和条件过滤。返回命名空间的基本信息、存储容量使用情况以及被引用关系。若查询不到数据，则返回空数组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
+        public DescribeEdgeKVNamespacesResponse DescribeEdgeKVNamespacesSync(DescribeEdgeKVNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeKVNamespacesResponse>(req, "DescribeEdgeKVNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 在版本管理模式下，用于查询环境信息，可获取环境 ID、类型、当前生效版本等。版本管理功能内测中，当前仅白名单开放。
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
@@ -1968,6 +2031,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询指定边缘函数的组件绑定列表，支持分页和条件过滤，返回绑定的组件类型、变量名及配置参数等详细信息。当前支持的绑定组件类型为 KV 命名空间（kv_namespace）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
+        public Task<DescribeFunctionComponentBindingsResponse> DescribeFunctionComponentBindings(DescribeFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionComponentBindingsResponse>(req, "DescribeFunctionComponentBindings");
+        }
+
+        /// <summary>
+        /// 本接口用于查询指定边缘函数的组件绑定列表，支持分页和条件过滤，返回绑定的组件类型、变量名及配置参数等详细信息。当前支持的绑定组件类型为 KV 命名空间（kv_namespace）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
+        public DescribeFunctionComponentBindingsResponse DescribeFunctionComponentBindingsSync(DescribeFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionComponentBindingsResponse>(req, "DescribeFunctionComponentBindings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3283,6 +3367,90 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于删除指定命名空间中的一个或多个键值对数据，支持批量删除。删除后数据不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
+        /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
+        public Task<EdgeKVDeleteResponse> EdgeKVDelete(EdgeKVDeleteRequest req)
+        {
+            return InternalRequestAsync<EdgeKVDeleteResponse>(req, "EdgeKVDelete");
+        }
+
+        /// <summary>
+        /// 本接口用于删除指定命名空间中的一个或多个键值对数据，支持批量删除。删除后数据不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
+        /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
+        public EdgeKVDeleteResponse EdgeKVDeleteSync(EdgeKVDeleteRequest req)
+        {
+            return InternalRequestAsync<EdgeKVDeleteResponse>(req, "EdgeKVDelete")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于从指定命名空间中批量读取键的值，支持一次查询最多 20 个键。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
+        /// <returns><see cref="EdgeKVGetResponse"/></returns>
+        public Task<EdgeKVGetResponse> EdgeKVGet(EdgeKVGetRequest req)
+        {
+            return InternalRequestAsync<EdgeKVGetResponse>(req, "EdgeKVGet");
+        }
+
+        /// <summary>
+        /// 本接口用于从指定命名空间中批量读取键的值，支持一次查询最多 20 个键。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
+        /// <returns><see cref="EdgeKVGetResponse"/></returns>
+        public EdgeKVGetResponse EdgeKVGetSync(EdgeKVGetRequest req)
+        {
+            return InternalRequestAsync<EdgeKVGetResponse>(req, "EdgeKVGet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于列出指定命名空间下的所有键名，支持前缀过滤。通过 Cursor 实现游标遍历，返回下一个游标用于继续查询。适用于遍历命名空间中的所有键。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVListRequest"/></param>
+        /// <returns><see cref="EdgeKVListResponse"/></returns>
+        public Task<EdgeKVListResponse> EdgeKVList(EdgeKVListRequest req)
+        {
+            return InternalRequestAsync<EdgeKVListResponse>(req, "EdgeKVList");
+        }
+
+        /// <summary>
+        /// 本接口用于列出指定命名空间下的所有键名，支持前缀过滤。通过 Cursor 实现游标遍历，返回下一个游标用于继续查询。适用于遍历命名空间中的所有键。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVListRequest"/></param>
+        /// <returns><see cref="EdgeKVListResponse"/></returns>
+        public EdgeKVListResponse EdgeKVListSync(EdgeKVListRequest req)
+        {
+            return InternalRequestAsync<EdgeKVListResponse>(req, "EdgeKVList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于向指定命名空间写入键值对数据，支持设置过期时间。若键已存在则覆盖原有值，若不存在则创建新键值对。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
+        /// <returns><see cref="EdgeKVPutResponse"/></returns>
+        public Task<EdgeKVPutResponse> EdgeKVPut(EdgeKVPutRequest req)
+        {
+            return InternalRequestAsync<EdgeKVPutResponse>(req, "EdgeKVPut");
+        }
+
+        /// <summary>
+        /// 本接口用于向指定命名空间写入键值对数据，支持设置过期时间。若键已存在则覆盖原有值，若不存在则创建新键值对。
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
+        /// <returns><see cref="EdgeKVPutResponse"/></returns>
+        public EdgeKVPutResponse EdgeKVPutSync(EdgeKVPutRequest req)
+        {
+            return InternalRequestAsync<EdgeKVPutResponse>(req, "EdgeKVPut")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于站点首次开启源站防护，启用后 EdgeOne 将会使用特定的回源 IP 网段为七层加速域名/四层代理实例回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需要启用超过 200 个资源，可先通过指定资源的方式以最大数量启用，剩余资源通过 ModifyOriginACL 接口启用。后续新增七层加速域名/四层代理实例均请通过 ModifyOriginACL 接口配置。同时开启的时候对开白的账户支持选择其他回源 IP 网段版本，例如精简版，来达到使用更少的 IP 网段回源效果。
         /// 
         /// 注意：
@@ -3704,6 +3872,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于修改指定 KV 命名空间的属性信息，当前支持修改命名空间描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
+        public Task<ModifyEdgeKVNamespaceResponse> ModifyEdgeKVNamespace(ModifyEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<ModifyEdgeKVNamespaceResponse>(req, "ModifyEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// 本接口用于修改指定 KV 命名空间的属性信息，当前支持修改命名空间描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
+        public ModifyEdgeKVNamespaceResponse ModifyEdgeKVNamespaceSync(ModifyEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<ModifyEdgeKVNamespaceResponse>(req, "ModifyEdgeKVNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
@@ -3721,6 +3910,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyFunctionResponse ModifyFunctionSync(ModifyFunctionRequest req)
         {
             return InternalRequestAsync<ModifyFunctionResponse>(req, "ModifyFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改边缘函数与组件的绑定关系，支持绑定（bind）、覆盖绑定（bind-override）、解绑（unbind）和重置绑定（rebind）四种操作模式。通过指定操作类型和组件列表，可实现对函数组件绑定关系的管理。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
+        public Task<ModifyFunctionComponentBindingsResponse> ModifyFunctionComponentBindings(ModifyFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionComponentBindingsResponse>(req, "ModifyFunctionComponentBindings");
+        }
+
+        /// <summary>
+        /// 修改边缘函数与组件的绑定关系，支持绑定（bind）、覆盖绑定（bind-override）、解绑（unbind）和重置绑定（rebind）四种操作模式。通过指定操作类型和组件列表，可实现对函数组件绑定关系的管理。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
+        public ModifyFunctionComponentBindingsResponse ModifyFunctionComponentBindingsSync(ModifyFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionComponentBindingsResponse>(req, "ModifyFunctionComponentBindings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

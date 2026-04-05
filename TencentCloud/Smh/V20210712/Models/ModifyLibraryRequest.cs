@@ -25,25 +25,25 @@ namespace TencentCloud.Smh.V20210712.Models
     {
         
         /// <summary>
-        /// 媒体库 ID
+        /// <p>媒体库 ID</p>
         /// </summary>
         [JsonProperty("LibraryId")]
         public string LibraryId{ get; set; }
 
         /// <summary>
-        /// 媒体库名称，最多 50 个字符。如不传则不修改。
+        /// <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备注，最多 250 个字符。如不传则不修改。
+        /// <p>备注，最多 250 个字符。如不传则不修改。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+        /// <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
         /// </summary>
         [JsonProperty("LibraryExtension")]
         public LibraryExtension LibraryExtension{ get; set; }

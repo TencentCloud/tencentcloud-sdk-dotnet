@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1397";
+       private const string sdkVersion = "SDK_NET_3.0.1401";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,48 @@ namespace TencentCloud.Omics.V20221128
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询HPC集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHPCClustersRequest"/></param>
+        /// <returns><see cref="DescribeHPCClustersResponse"/></returns>
+        public Task<DescribeHPCClustersResponse> DescribeHPCClusters(DescribeHPCClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeHPCClustersResponse>(req, "DescribeHPCClusters");
+        }
+
+        /// <summary>
+        /// 查询HPC集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHPCClustersRequest"/></param>
+        /// <returns><see cref="DescribeHPCClustersResponse"/></returns>
+        public DescribeHPCClustersResponse DescribeHPCClustersSync(DescribeHPCClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeHPCClustersResponse>(req, "DescribeHPCClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询HPC节点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHPCNodesRequest"/></param>
+        /// <returns><see cref="DescribeHPCNodesResponse"/></returns>
+        public Task<DescribeHPCNodesResponse> DescribeHPCNodes(DescribeHPCNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeHPCNodesResponse>(req, "DescribeHPCNodes");
+        }
+
+        /// <summary>
+        /// 查询HPC节点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHPCNodesRequest"/></param>
+        /// <returns><see cref="DescribeHPCNodesResponse"/></returns>
+        public DescribeHPCNodesResponse DescribeHPCNodesSync(DescribeHPCNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeHPCNodesResponse>(req, "DescribeHPCNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +428,27 @@ namespace TencentCloud.Omics.V20221128
         public ModifyVolumeResponse ModifyVolumeSync(ModifyVolumeRequest req)
         {
             return InternalRequestAsync<ModifyVolumeResponse>(req, "ModifyVolume")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启HPC节点
+        /// </summary>
+        /// <param name="req"><see cref="RebootHPCNodesRequest"/></param>
+        /// <returns><see cref="RebootHPCNodesResponse"/></returns>
+        public Task<RebootHPCNodesResponse> RebootHPCNodes(RebootHPCNodesRequest req)
+        {
+            return InternalRequestAsync<RebootHPCNodesResponse>(req, "RebootHPCNodes");
+        }
+
+        /// <summary>
+        /// 重启HPC节点
+        /// </summary>
+        /// <param name="req"><see cref="RebootHPCNodesRequest"/></param>
+        /// <returns><see cref="RebootHPCNodesResponse"/></returns>
+        public RebootHPCNodesResponse RebootHPCNodesSync(RebootHPCNodesRequest req)
+        {
+            return InternalRequestAsync<RebootHPCNodesResponse>(req, "RebootHPCNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

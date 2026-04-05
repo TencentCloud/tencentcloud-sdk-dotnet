@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+        /// 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }

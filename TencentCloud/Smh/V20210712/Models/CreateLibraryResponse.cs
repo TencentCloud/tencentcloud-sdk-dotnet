@@ -25,10 +25,16 @@ namespace TencentCloud.Smh.V20210712.Models
     {
         
         /// <summary>
-        /// 媒体库 ID
+        /// <p>媒体库 ID</p>
         /// </summary>
         [JsonProperty("LibraryId")]
         public string LibraryId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AccessDomain")]
+        public string AccessDomain{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Smh.V20210712.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LibraryId", this.LibraryId);
+            this.SetParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
