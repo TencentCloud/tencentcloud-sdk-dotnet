@@ -25,25 +25,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 冻结流水，一次开通一个冻结流水。
+        /// <p>冻结流水，一次开通一个冻结流水。</p>
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
-        /// 后付费订单号。
+        /// <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 发货资源id列表。
+        /// <p>发货资源id列表。</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
+        [System.Obsolete]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 大订单号
+        /// <p>大订单号</p>
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

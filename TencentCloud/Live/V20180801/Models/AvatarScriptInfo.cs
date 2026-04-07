@@ -25,54 +25,55 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间话术 ID。
+        /// <p>数字人直播间话术 ID。</p>
         /// </summary>
         [JsonProperty("ScriptId")]
         public string ScriptId{ get; set; }
 
         /// <summary>
-        /// 话术标题。
+        /// <p>数字人直播间产品 ID。</p>
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// <p>话术标题。</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 话术内容。
+        /// <p>话术内容。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 话术状态。
-        /// PENDING --未生成。
-        /// PROCESSING --生成中。
-        /// READY --已生成。
+        /// <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 时长。单位：毫秒。
+        /// <p>时长。单位：毫秒。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 话术位置。
+        /// <p>话术位置。</p>
         /// </summary>
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
         /// <summary>
-        /// 话术创建时间，UTC时间。
-        /// 注意：UTC时间和北京时间相差八小时。
+        /// <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 话术最后更新时间，UTC时间。
-        /// 注意：UTC时间和北京时间相差八小时。
+        /// <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -84,6 +85,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ScriptId", this.ScriptId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Status", this.Status);

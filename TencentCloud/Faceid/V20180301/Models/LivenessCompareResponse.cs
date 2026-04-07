@@ -32,7 +32,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BestFrameBase64{ get; set; }
 
         /// <summary>
-        /// <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p>
+        /// <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人（采用固定阈值70，误通过率为万分之一，不支持调整阈值）。</p>
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }

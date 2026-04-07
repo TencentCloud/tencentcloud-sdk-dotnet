@@ -25,16 +25,22 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 事件列表
+        /// <p>事件列表</p>
         /// </summary>
         [JsonProperty("List")]
         public K8sApiAbnormalEventListItem[] List{ get; set; }
 
         /// <summary>
-        /// 总数量
+        /// <p>总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>k8s告警类型和对应中文翻译</p>
+        /// </summary>
+        [JsonProperty("RuleTypeZhSet")]
+        public K8SAPIRuleTypeZhItem[] RuleTypeZhSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamArrayObj(map, prefix + "List.", this.List);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "RuleTypeZhSet.", this.RuleTypeZhSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

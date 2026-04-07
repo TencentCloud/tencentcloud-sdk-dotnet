@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EditAuthConfigRequest : AbstractModel
+    public class ProgramAlertCounts : AbstractModel
     {
         
         /// <summary>
-        /// 环境id
+        /// <p>Program ID。</p>
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("ProgramId")]
+        public string ProgramId{ get; set; }
 
         /// <summary>
-        /// 手机号登录配置 "TRUE",  "FALSE", "LOGIN_ONLY"
+        /// <p>Program名称。</p>
         /// </summary>
-        [JsonProperty("PhoneNumberLogin")]
-        public string PhoneNumberLogin{ get; set; }
+        [JsonProperty("ProgramName")]
+        public string ProgramName{ get; set; }
 
         /// <summary>
-        /// 匿名登录配置 "TRUE",  "FALSE"
+        /// <p>告警分类。</p>
         /// </summary>
-        [JsonProperty("AnonymousLogin")]
-        public string AnonymousLogin{ get; set; }
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
 
         /// <summary>
-        /// 用户名密码登录配置 "TRUE",  "FALSE"
+        /// <p>出现次数</p>
         /// </summary>
-        [JsonProperty("UsernameLogin")]
-        public string UsernameLogin{ get; set; }
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// <p>更新时间。</p>
+        /// </summary>
+        [JsonProperty("LastModifiedTime")]
+        public ulong? LastModifiedTime{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamSimple(map, prefix + "PhoneNumberLogin", this.PhoneNumberLogin);
-            this.SetParamSimple(map, prefix + "AnonymousLogin", this.AnonymousLogin);
-            this.SetParamSimple(map, prefix + "UsernameLogin", this.UsernameLogin);
+            this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
+            this.SetParamSimple(map, prefix + "ProgramName", this.ProgramName);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "LastModifiedTime", this.LastModifiedTime);
         }
     }
 }

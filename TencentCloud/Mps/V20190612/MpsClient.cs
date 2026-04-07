@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1401";
+       private const string sdkVersion = "SDK_NET_3.0.1402";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Mps.V20190612
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 开通SSAI
+        /// </summary>
+        /// <param name="req"><see cref="ActivateSSAIRequest"/></param>
+        /// <returns><see cref="ActivateSSAIResponse"/></returns>
+        public Task<ActivateSSAIResponse> ActivateSSAI(ActivateSSAIRequest req)
+        {
+            return InternalRequestAsync<ActivateSSAIResponse>(req, "ActivateSSAI");
+        }
+
+        /// <summary>
+        /// 开通SSAI
+        /// </summary>
+        /// <param name="req"><see cref="ActivateSSAIRequest"/></param>
+        /// <returns><see cref="ActivateSSAIResponse"/></returns>
+        public ActivateSSAIResponse ActivateSSAISync(ActivateSSAIRequest req)
+        {
+            return InternalRequestAsync<ActivateSSAIResponse>(req, "ActivateSSAI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建媒体封装用户。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateStreamPackageRequest"/></param>
+        /// <returns><see cref="ActivateStreamPackageResponse"/></returns>
+        public Task<ActivateStreamPackageResponse> ActivateStreamPackage(ActivateStreamPackageRequest req)
+        {
+            return InternalRequestAsync<ActivateStreamPackageResponse>(req, "ActivateStreamPackage");
+        }
+
+        /// <summary>
+        /// 创建媒体封装用户。
+        /// </summary>
+        /// <param name="req"><see cref="ActivateStreamPackageRequest"/></param>
+        /// <returns><see cref="ActivateStreamPackageResponse"/></returns>
+        public ActivateStreamPackageResponse ActivateStreamPackageSync(ActivateStreamPackageRequest req)
+        {
+            return InternalRequestAsync<ActivateStreamPackageResponse>(req, "ActivateStreamPackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -699,6 +741,111 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<CreateStreamPackageLinearAssemblyChannelResponse> CreateStreamPackageLinearAssemblyChannel(CreateStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyChannelResponse>(req, "CreateStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannelSync(CreateStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyChannelResponse>(req, "CreateStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<CreateStreamPackageLinearAssemblyProgramResponse> CreateStreamPackageLinearAssemblyProgram(CreateStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyProgramResponse>(req, "CreateStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// 创建线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgramSync(CreateStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyProgramResponse>(req, "CreateStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建SSAI广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSSAIChannelResponse"/></returns>
+        public Task<CreateStreamPackageSSAIChannelResponse> CreateStreamPackageSSAIChannel(CreateStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSSAIChannelResponse>(req, "CreateStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// 创建SSAI广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSSAIChannelResponse"/></returns>
+        public CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannelSync(CreateStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSSAIChannelResponse>(req, "CreateStreamPackageSSAIChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceResponse"/></returns>
+        public Task<CreateStreamPackageSourceResponse> CreateStreamPackageSource(CreateStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceResponse>(req, "CreateStreamPackageSource");
+        }
+
+        /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceResponse"/></returns>
+        public CreateStreamPackageSourceResponse CreateStreamPackageSourceSync(CreateStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceResponse>(req, "CreateStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceLocationResponse"/></returns>
+        public Task<CreateStreamPackageSourceLocationResponse> CreateStreamPackageSourceLocation(CreateStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceLocationResponse>(req, "CreateStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// 创建媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceLocationResponse"/></returns>
+        public CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocationSync(CreateStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceLocationResponse>(req, "CreateStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建自定义字幕压制模板
         /// </summary>
         /// <param name="req"><see cref="CreateSubtitleEmbedTemplateRequest"/></param>
@@ -1315,6 +1462,174 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除媒体包装Channel。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyChannelResponse> DeleteStreamPackageLinearAssemblyChannel(DeleteStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelResponse>(req, "DeleteStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 删除媒体包装Channel。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannelSync(DeleteStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelResponse>(req, "DeleteStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除媒体包装Channel。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyChannelsResponse> DeleteStreamPackageLinearAssemblyChannels(DeleteStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelsResponse>(req, "DeleteStreamPackageLinearAssemblyChannels");
+        }
+
+        /// <summary>
+        /// 批量删除媒体包装Channel。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannelsSync(DeleteStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelsResponse>(req, "DeleteStreamPackageLinearAssemblyChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyProgramResponse> DeleteStreamPackageLinearAssemblyProgram(DeleteStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramResponse>(req, "DeleteStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// 删除线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgramSync(DeleteStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramResponse>(req, "DeleteStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyProgramsResponse> DeleteStreamPackageLinearAssemblyPrograms(DeleteStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsResponse>(req, "DeleteStreamPackageLinearAssemblyPrograms");
+        }
+
+        /// <summary>
+        /// 批量删除线性组装Program。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyProgramsSync(DeleteStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsResponse>(req, "DeleteStreamPackageLinearAssemblyPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除同一Channel下的ID
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsByChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsByChannelResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyProgramsByChannelResponse> DeleteStreamPackageLinearAssemblyProgramsByChannel(DeleteStreamPackageLinearAssemblyProgramsByChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsByChannelResponse>(req, "DeleteStreamPackageLinearAssemblyProgramsByChannel");
+        }
+
+        /// <summary>
+        /// 批量删除同一Channel下的ID
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsByChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsByChannelResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyProgramsByChannelResponse DeleteStreamPackageLinearAssemblyProgramsByChannelSync(DeleteStreamPackageLinearAssemblyProgramsByChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsByChannelResponse>(req, "DeleteStreamPackageLinearAssemblyProgramsByChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSSAIChannelResponse"/></returns>
+        public Task<DeleteStreamPackageSSAIChannelResponse> DeleteStreamPackageSSAIChannel(DeleteStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSSAIChannelResponse>(req, "DeleteStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// 删除广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSSAIChannelResponse"/></returns>
+        public DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannelSync(DeleteStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSSAIChannelResponse>(req, "DeleteStreamPackageSSAIChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除媒体包装Source。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceResponse"/></returns>
+        public Task<DeleteStreamPackageSourceResponse> DeleteStreamPackageSource(DeleteStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceResponse>(req, "DeleteStreamPackageSource");
+        }
+
+        /// <summary>
+        /// 批量删除媒体包装Source。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceResponse"/></returns>
+        public DeleteStreamPackageSourceResponse DeleteStreamPackageSourceSync(DeleteStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceResponse>(req, "DeleteStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除媒体包装SourceLocation。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceLocationResponse"/></returns>
+        public Task<DeleteStreamPackageSourceLocationResponse> DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// 删除媒体包装SourceLocation。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceLocationResponse"/></returns>
+        public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocationSync(DeleteStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义字幕压制模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubtitleEmbedTemplateRequest"/></param>
@@ -1735,6 +2050,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询用户开通mps信息，是否开通/授权。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMDPMPSUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeMDPMPSUserInfoResponse"/></returns>
+        public Task<DescribeMDPMPSUserInfoResponse> DescribeMDPMPSUserInfo(DescribeMDPMPSUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMDPMPSUserInfoResponse>(req, "DescribeMDPMPSUserInfo");
+        }
+
+        /// <summary>
+        /// 查询用户开通mps信息，是否开通/授权。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMDPMPSUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeMDPMPSUserInfoResponse"/></returns>
+        public DescribeMDPMPSUserInfoResponse DescribeMDPMPSUserInfoSync(DescribeMDPMPSUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMDPMPSUserInfoResponse>(req, "DescribeMDPMPSUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaMetaDataRequest"/></param>
@@ -1815,6 +2151,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeQualityControlTemplatesResponse DescribeQualityControlTemplatesSync(DescribeQualityControlTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeQualityControlTemplatesResponse>(req, "DescribeQualityControlTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SSAI开通状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSAIActivateStateRequest"/></param>
+        /// <returns><see cref="DescribeSSAIActivateStateResponse"/></returns>
+        public Task<DescribeSSAIActivateStateResponse> DescribeSSAIActivateState(DescribeSSAIActivateStateRequest req)
+        {
+            return InternalRequestAsync<DescribeSSAIActivateStateResponse>(req, "DescribeSSAIActivateState");
+        }
+
+        /// <summary>
+        /// 查询SSAI开通状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSAIActivateStateRequest"/></param>
+        /// <returns><see cref="DescribeSSAIActivateStateResponse"/></returns>
+        public DescribeSSAIActivateStateResponse DescribeSSAIActivateStateSync(DescribeSSAIActivateStateRequest req)
+        {
+            return InternalRequestAsync<DescribeSSAIActivateStateResponse>(req, "DescribeSSAIActivateState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2193,6 +2550,342 @@ namespace TencentCloud.Mps.V20190612
         public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroupsSync(DescribeStreamLinkSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DescribeStreamLinkSecurityGroupsResponse>(req, "DescribeStreamLinkSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体封装用户开通情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageActivateStateRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageActivateStateResponse"/></returns>
+        public Task<DescribeStreamPackageActivateStateResponse> DescribeStreamPackageActivateState(DescribeStreamPackageActivateStateRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageActivateStateResponse>(req, "DescribeStreamPackageActivateState");
+        }
+
+        /// <summary>
+        /// 查询媒体封装用户开通情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageActivateStateRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageActivateStateResponse"/></returns>
+        public DescribeStreamPackageActivateStateResponse DescribeStreamPackageActivateStateSync(DescribeStreamPackageActivateStateRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageActivateStateResponse>(req, "DescribeStreamPackageActivateState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体包装线性组装频道信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelResponse> DescribeStreamPackageLinearAssemblyChannel(DescribeStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelResponse>(req, "DescribeStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 查询媒体包装线性组装频道信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannelSync(DescribeStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelResponse>(req, "DescribeStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询线性组装频道告警信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelAlertsResponse> DescribeStreamPackageLinearAssemblyChannelAlerts(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelAlertsResponse>(req, "DescribeStreamPackageLinearAssemblyChannelAlerts");
+        }
+
+        /// <summary>
+        /// 查询线性组装频道告警信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlertsSync(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelAlertsResponse>(req, "DescribeStreamPackageLinearAssemblyChannelAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询线性组装频道信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelsResponse> DescribeStreamPackageLinearAssemblyChannels(DescribeStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelsResponse>(req, "DescribeStreamPackageLinearAssemblyChannels");
+        }
+
+        /// <summary>
+        /// 查询线性组装频道信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannelsSync(DescribeStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelsResponse>(req, "DescribeStreamPackageLinearAssemblyChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体包装Program信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramResponse> DescribeStreamPackageLinearAssemblyProgram(DescribeStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramResponse>(req, "DescribeStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// 查询媒体包装Program信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgramSync(DescribeStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramResponse>(req, "DescribeStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Programe信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse> DescribeStreamPackageLinearAssemblyProgramSchedules(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse>(req, "DescribeStreamPackageLinearAssemblyProgramSchedules");
+        }
+
+        /// <summary>
+        /// 查询Programe信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedulesSync(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse>(req, "DescribeStreamPackageLinearAssemblyProgramSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Programe信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramsResponse> DescribeStreamPackageLinearAssemblyPrograms(DescribeStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramsResponse>(req, "DescribeStreamPackageLinearAssemblyPrograms");
+        }
+
+        /// <summary>
+        /// 查询Programe信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyProgramsSync(DescribeStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramsResponse>(req, "DescribeStreamPackageLinearAssemblyPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 频道线性组装用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyUsageResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyUsageResponse> DescribeStreamPackageLinearAssemblyUsage(DescribeStreamPackageLinearAssemblyUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyUsageResponse>(req, "DescribeStreamPackageLinearAssemblyUsage");
+        }
+
+        /// <summary>
+        /// 频道线性组装用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyUsageResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyUsageResponse DescribeStreamPackageLinearAssemblyUsageSync(DescribeStreamPackageLinearAssemblyUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyUsageResponse>(req, "DescribeStreamPackageLinearAssemblyUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIChannelResponse> DescribeStreamPackageSSAIChannel(DescribeStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelResponse>(req, "DescribeStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// 查询广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelResponse"/></returns>
+        public DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannelSync(DescribeStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelResponse>(req, "DescribeStreamPackageSSAIChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量查询广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelsResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIChannelsResponse> DescribeStreamPackageSSAIChannels(DescribeStreamPackageSSAIChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelsResponse>(req, "DescribeStreamPackageSSAIChannels");
+        }
+
+        /// <summary>
+        /// 批量查询广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelsResponse"/></returns>
+        public DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannelsSync(DescribeStreamPackageSSAIChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelsResponse>(req, "DescribeStreamPackageSSAIChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// SSAI广告替换用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIUsageResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIUsageResponse> DescribeStreamPackageSSAIUsage(DescribeStreamPackageSSAIUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIUsageResponse>(req, "DescribeStreamPackageSSAIUsage");
+        }
+
+        /// <summary>
+        /// SSAI广告替换用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIUsageResponse"/></returns>
+        public DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsageSync(DescribeStreamPackageSSAIUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIUsageResponse>(req, "DescribeStreamPackageSSAIUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceResponse"/></returns>
+        public Task<DescribeStreamPackageSourceResponse> DescribeStreamPackageSource(DescribeStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceResponse>(req, "DescribeStreamPackageSource");
+        }
+
+        /// <summary>
+        /// 查询媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceResponse"/></returns>
+        public DescribeStreamPackageSourceResponse DescribeStreamPackageSourceSync(DescribeStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceResponse>(req, "DescribeStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询线性组装Source告警信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceAlertsResponse"/></returns>
+        public Task<DescribeStreamPackageSourceAlertsResponse> DescribeStreamPackageSourceAlerts(DescribeStreamPackageSourceAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceAlertsResponse>(req, "DescribeStreamPackageSourceAlerts");
+        }
+
+        /// <summary>
+        /// 查询线性组装Source告警信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceAlertsResponse"/></returns>
+        public DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlertsSync(DescribeStreamPackageSourceAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceAlertsResponse>(req, "DescribeStreamPackageSourceAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体包装SourceLocation信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationResponse"/></returns>
+        public Task<DescribeStreamPackageSourceLocationResponse> DescribeStreamPackageSourceLocation(DescribeStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationResponse>(req, "DescribeStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// 查询媒体包装SourceLocation信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationResponse"/></returns>
+        public DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocationSync(DescribeStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationResponse>(req, "DescribeStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SourceLocation信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationsResponse"/></returns>
+        public Task<DescribeStreamPackageSourceLocationsResponse> DescribeStreamPackageSourceLocations(DescribeStreamPackageSourceLocationsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationsResponse>(req, "DescribeStreamPackageSourceLocations");
+        }
+
+        /// <summary>
+        /// 查询SourceLocation信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationsResponse"/></returns>
+        public DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocationsSync(DescribeStreamPackageSourceLocationsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationsResponse>(req, "DescribeStreamPackageSourceLocations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Source信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourcesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourcesResponse"/></returns>
+        public Task<DescribeStreamPackageSourcesResponse> DescribeStreamPackageSources(DescribeStreamPackageSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourcesResponse>(req, "DescribeStreamPackageSources");
+        }
+
+        /// <summary>
+        /// 查询Source信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourcesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourcesResponse"/></returns>
+        public DescribeStreamPackageSourcesResponse DescribeStreamPackageSourcesSync(DescribeStreamPackageSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourcesResponse>(req, "DescribeStreamPackageSources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3115,6 +3808,111 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 修改媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<ModifyStreamPackageLinearAssemblyChannelResponse> ModifyStreamPackageLinearAssemblyChannel(ModifyStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyChannelResponse>(req, "ModifyStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 修改媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannelSync(ModifyStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyChannelResponse>(req, "ModifyStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改媒体包装Program信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<ModifyStreamPackageLinearAssemblyProgramResponse> ModifyStreamPackageLinearAssemblyProgram(ModifyStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyProgramResponse>(req, "ModifyStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// 修改媒体包装Program信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgramSync(ModifyStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyProgramResponse>(req, "ModifyStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSSAIChannelResponse"/></returns>
+        public Task<ModifyStreamPackageSSAIChannelResponse> ModifyStreamPackageSSAIChannel(ModifyStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSSAIChannelResponse>(req, "ModifyStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// 修改广告插入配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSSAIChannelResponse"/></returns>
+        public ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannelSync(ModifyStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSSAIChannelResponse>(req, "ModifyStreamPackageSSAIChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceResponse"/></returns>
+        public Task<ModifyStreamPackageSourceResponse> ModifyStreamPackageSource(ModifyStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceResponse>(req, "ModifyStreamPackageSource");
+        }
+
+        /// <summary>
+        /// 修改媒体包装Source信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceResponse"/></returns>
+        public ModifyStreamPackageSourceResponse ModifyStreamPackageSourceSync(ModifyStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceResponse>(req, "ModifyStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改媒体包装SourceLocation信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceLocationResponse"/></returns>
+        public Task<ModifyStreamPackageSourceLocationResponse> ModifyStreamPackageSourceLocation(ModifyStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceLocationResponse>(req, "ModifyStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// 修改媒体包装SourceLocation信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceLocationResponse"/></returns>
+        public ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocationSync(ModifyStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceLocationResponse>(req, "ModifyStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户自定义字幕压制模板。
         /// </summary>
         /// <param name="req"><see cref="ModifySubtitleEmbedTemplateRequest"/></param>
@@ -3438,6 +4236,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 启动媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StartStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<StartStreamPackageLinearAssemblyChannelResponse> StartStreamPackageLinearAssemblyChannel(StartStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageLinearAssemblyChannelResponse>(req, "StartStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 启动媒体包装频道。
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StartStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannelSync(StartStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageLinearAssemblyChannelResponse>(req, "StartStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止媒体传输流。
         /// </summary>
         /// <param name="req"><see cref="StopStreamLinkFlowRequest"/></param>
@@ -3455,6 +4274,27 @@ namespace TencentCloud.Mps.V20190612
         public StopStreamLinkFlowResponse StopStreamLinkFlowSync(StopStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<StopStreamLinkFlowResponse>(req, "StopStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止线性组装频道。
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StopStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<StopStreamPackageLinearAssemblyChannelResponse> StopStreamPackageLinearAssemblyChannel(StopStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StopStreamPackageLinearAssemblyChannelResponse>(req, "StopStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// 停止线性组装频道。
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StopStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannelSync(StopStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StopStreamPackageLinearAssemblyChannelResponse>(req, "StopStreamPackageLinearAssemblyChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

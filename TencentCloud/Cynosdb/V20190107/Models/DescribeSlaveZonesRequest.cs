@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("OssClusterId")]
         public long? OssClusterId{ get; set; }
 
+        /// <summary>
+        /// 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+        /// </summary>
+        [JsonProperty("StorageVersion")]
+        public string StorageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "OssClusterId", this.OssClusterId);
+            this.SetParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
         }
     }
 }

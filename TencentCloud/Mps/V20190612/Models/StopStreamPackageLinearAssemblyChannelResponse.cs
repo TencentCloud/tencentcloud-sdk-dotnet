@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReinstateEnvResponse : AbstractModel
+    public class StopStreamPackageLinearAssemblyChannelResponse : AbstractModel
     {
         
         /// <summary>

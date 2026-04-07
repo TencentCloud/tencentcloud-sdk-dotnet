@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1400</VersionPrefix>
+    <VersionPrefix>3.0.1402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,7 @@
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRResponse.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />
+    <Compile Include="V20180525\Models\ClientConnection.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
     <Compile Include="V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\ClusterAsGroup.cs" />
@@ -308,6 +309,8 @@
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRoutesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRoutesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterSchedulerPolicyRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterSchedulerPolicyResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterStatusRequest.cs" />
@@ -520,6 +523,9 @@
     <Compile Include="V20180525\Models\ExistedInstance.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
+    <Compile Include="V20180525\Models\ExtenderClientConfig.cs" />
+    <Compile Include="V20180525\Models\ExtenderManagedResource.cs" />
+    <Compile Include="V20180525\Models\Extenders.cs" />
     <Compile Include="V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="V20180525\Models\ExternalNode.cs" />
     <Compile Include="V20180525\Models\ExternalNodePool.cs" />
@@ -605,6 +611,8 @@
     <Compile Include="V20180525\Models\ModifyClusterRollOutSequenceTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterSchedulerPolicyRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterSchedulerPolicyResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterTagsRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
@@ -654,6 +662,7 @@
     <Compile Include="V20180525\Models\OptionalRuntimes.cs" />
     <Compile Include="V20180525\Models\PendingRelease.cs" />
     <Compile Include="V20180525\Models\PermissionItem.cs" />
+    <Compile Include="V20180525\Models\PluginSet.cs" />
     <Compile Include="V20180525\Models\PodChargeInfo.cs" />
     <Compile Include="V20180525\Models\PodDeductionRate.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
@@ -720,10 +729,14 @@
     <Compile Include="V20180525\Models\ScaleInMaster.cs" />
     <Compile Include="V20180525\Models\ScaleOutClusterMasterRequest.cs" />
     <Compile Include="V20180525\Models\ScaleOutClusterMasterResponse.cs" />
+    <Compile Include="V20180525\Models\SchedulerPluginConfigs.cs" />
+    <Compile Include="V20180525\Models\SchedulerPolicyConfig.cs" />
+    <Compile Include="V20180525\Models\SchedulerPolicyPriority.cs" />
     <Compile Include="V20180525\Models\SecurityContext.cs" />
     <Compile Include="V20180525\Models\SequenceFlow.cs" />
     <Compile Include="V20180525\Models\SequenceTag.cs" />
     <Compile Include="V20180525\Models\ServiceAccountAuthenticationOptions.cs" />
+    <Compile Include="V20180525\Models\ServiceReference.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="V20180525\Models\Step.cs" />

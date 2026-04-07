@@ -25,201 +25,196 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 扩容的时间单位。取值范围：
-        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+        /// <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 扩容的时长。结合TimeUnit一起使用。
-        /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-        /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+        /// <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例计费模式。取值范围：
-        /// <li>0：表示按量计费。</li>
-        /// <li>1：表示包年包月。</li>
+        /// <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+        /// <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 引导操作脚本设置。
+        /// <p>引导操作脚本设置。</p>
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
         public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
 
         /// <summary>
-        /// 扩容的Task节点数量。
+        /// <p>扩容的Task节点数量。</p>
         /// </summary>
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
         /// <summary>
-        /// 扩容的Core节点数量。
+        /// <p>扩容的Core节点数量。</p>
         /// </summary>
         [JsonProperty("CoreCount")]
         public ulong? CoreCount{ get; set; }
 
         /// <summary>
-        /// 扩容时不需要安装的进程。
+        /// <p>扩容时不需要安装的进程。</p>
         /// </summary>
         [JsonProperty("UnNecessaryNodeList")]
         public ulong?[] UnNecessaryNodeList{ get; set; }
 
         /// <summary>
-        /// 扩容的Router节点数量。
+        /// <p>扩容的Router节点数量。</p>
         /// </summary>
         [JsonProperty("RouterCount")]
         public ulong? RouterCount{ get; set; }
 
         /// <summary>
-        /// 部署的服务。
-        /// <li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-        /// <li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
+        /// <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public ulong?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// 启动的进程。
+        /// <p>启动的进程。</p>
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public ulong?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
-        /// 分散置放群组ID列表，当前仅支持指定一个。
+        /// <p>分散置放群组ID列表，当前仅支持指定一个。</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// 扩容节点绑定标签列表。
+        /// <p>扩容节点绑定标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+        /// <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+        /// <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p>
         /// </summary>
         [JsonProperty("PodSpec")]
         public PodSpec PodSpec{ get; set; }
 
         /// <summary>
-        /// 使用clickhouse集群扩容时，选择的机器分组名称
+        /// <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
         /// </summary>
         [JsonProperty("ClickHouseClusterName")]
         public string ClickHouseClusterName{ get; set; }
 
         /// <summary>
-        /// 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+        /// <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
         /// </summary>
         [JsonProperty("ClickHouseClusterType")]
         public string ClickHouseClusterType{ get; set; }
 
         /// <summary>
-        /// 规则扩容指定 yarn node label
+        /// <p>规则扩容指定 yarn node label</p>
         /// </summary>
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
         /// <summary>
-        /// POD自定义权限和自定义参数
+        /// <p>POD自定义权限和自定义参数</p>
         /// </summary>
         [JsonProperty("PodParameter")]
         public PodParameter PodParameter{ get; set; }
 
         /// <summary>
-        /// 扩容的Master节点的数量。
-        /// 使用clickhouse集群扩容时，该参数不生效。
-        /// 使用kafka集群扩容时，该参数不生效。
-        /// 当HardwareResourceType=POD时，该参数不生效。
+        /// <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p>
         /// </summary>
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
 
         /// <summary>
-        /// 扩容后是否启动服务，true：启动，false：不启动
+        /// <p>扩容后是否启动服务，true：启动，false：不启动</p>
         /// </summary>
         [JsonProperty("StartServiceAfterScaleOut")]
         public string StartServiceAfterScaleOut{ get; set; }
 
         /// <summary>
-        /// 可用区，默认是集群的主可用区
+        /// <p>可用区，默认是集群的主可用区</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 子网，默认是集群创建时的子网
+        /// <p>子网，默认是集群创建时的子网</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 预设配置组
+        /// <p>预设配置组</p>
         /// </summary>
         [JsonProperty("ScaleOutServiceConfAssign")]
         public string ScaleOutServiceConfAssign{ get; set; }
 
         /// <summary>
-        /// 0表示关闭自动续费，1表示开启自动续费
+        /// <p>0表示关闭自动续费，1表示开启自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+        /// <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// 计算资源id
+        /// <p>计算资源id</p>
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
 
         /// <summary>
-        /// 计算资源高级设置
+        /// <p>计算资源高级设置</p>
         /// </summary>
         [JsonProperty("ComputeResourceAdvanceParams")]
         public ComputeResourceAdvanceParams ComputeResourceAdvanceParams{ get; set; }
 
         /// <summary>
-        /// 节点标记信息，目前只提供tf平台使用
+        /// <p>节点标记信息，目前只提供tf平台使用</p>
         /// </summary>
         [JsonProperty("NodeMarks")]
         public NodeMark NodeMarks{ get; set; }
 
         /// <summary>
-        /// 扩容指定计算组
+        /// <p>扩容指定计算组</p>
         /// </summary>
         [JsonProperty("WarehouseName")]
         public string WarehouseName{ get; set; }
+
+        /// <summary>
+        /// <p>分区置放群组分区</p>
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public long? PartitionNumber{ get; set; }
 
 
         /// <summary>
@@ -258,6 +253,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
             this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
             this.SetParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         }
     }
 }

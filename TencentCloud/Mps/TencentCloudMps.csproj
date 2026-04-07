@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1401</VersionPrefix>
+    <VersionPrefix>3.0.1402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,10 +51,15 @@
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
     <Compile Include="V20190612\Models\ActionConfigInfo.cs" />
+    <Compile Include="V20190612\Models\ActivateSSAIRequest.cs" />
+    <Compile Include="V20190612\Models\ActivateSSAIResponse.cs" />
+    <Compile Include="V20190612\Models\ActivateStreamPackageRequest.cs" />
+    <Compile Include="V20190612\Models\ActivateStreamPackageResponse.cs" />
     <Compile Include="V20190612\Models\Activity.cs" />
     <Compile Include="V20190612\Models\ActivityPara.cs" />
     <Compile Include="V20190612\Models\ActivityResItem.cs" />
     <Compile Include="V20190612\Models\ActivityResult.cs" />
+    <Compile Include="V20190612\Models\AdBreakInfo.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -193,6 +198,7 @@
     <Compile Include="V20190612\Models\AigcVideoExtraParam.cs" />
     <Compile Include="V20190612\Models\AigcVideoReferenceImageInfo.cs" />
     <Compile Include="V20190612\Models\AigcVideoReferenceVideoInfo.cs" />
+    <Compile Include="V20190612\Models\AliasValueConf.cs" />
     <Compile Include="V20190612\Models\AnimatedGraphicTaskInput.cs" />
     <Compile Include="V20190612\Models\AnimatedGraphicsTemplate.cs" />
     <Compile Include="V20190612\Models\ArtifactRepairConfig.cs" />
@@ -203,6 +209,8 @@
     <Compile Include="V20190612\Models\AsrHotwordsSetItem.cs" />
     <Compile Include="V20190612\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20190612\Models\AsrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\AssemblyUsageDetail.cs" />
+    <Compile Include="V20190612\Models\AssemblyUsageInfo.cs" />
     <Compile Include="V20190612\Models\AudioBeautifyConfig.cs" />
     <Compile Include="V20190612\Models\AudioDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\AudioEnhanceConfig.cs" />
@@ -229,8 +237,10 @@
     <Compile Include="V20190612\Models\BlindWatermarkEmbedInfo.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkInput.cs" />
     <Compile Include="V20190612\Models\BlindWatermarkTemplate.cs" />
+    <Compile Include="V20190612\Models\ChannelAlertResp.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\ClipRangeInfo.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ComposeAudioItem.cs" />
     <Compile Include="V20190612\Models\ComposeAudioOperation.cs" />
@@ -252,6 +262,7 @@
     <Compile Include="V20190612\Models\ComposeTransitionOperation.cs" />
     <Compile Include="V20190612\Models\ComposeVideoItem.cs" />
     <Compile Include="V20190612\Models\ComposeVideoStream.cs" />
+    <Compile Include="V20190612\Models\ConfigAliasesInfo.cs" />
     <Compile Include="V20190612\Models\ContainerDiagnoseResultItem.cs" />
     <Compile Include="V20190612\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20190612\Models\CosFileUploadTrigger.cs" />
@@ -324,6 +335,16 @@
     <Compile Include="V20190612\Models\CreateStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSSAIChannelResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSourceRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamPackageSourceResponse.cs" />
     <Compile Include="V20190612\Models\CreateSubtitleEmbedTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateRequest.cs" />
@@ -338,6 +359,7 @@
     <Compile Include="V20190612\Models\CreateWordSamplesResponse.cs" />
     <Compile Include="V20190612\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\DashManifestInfo.cs" />
     <Compile Include="V20190612\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteAIRecognitionTemplateRequest.cs" />
@@ -380,6 +402,22 @@
     <Compile Include="V20190612\Models\DeleteStreamLinkOutputResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyChannelsRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyChannelsResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramsByChannelRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramsByChannelResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramsRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSSAIChannelResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSourceRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamPackageSourceResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSubtitleEmbedTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateRequest.cs" />
@@ -432,6 +470,8 @@
     <Compile Include="V20190612\Models\DescribeInputSRTSettings.cs" />
     <Compile Include="V20190612\Models\DescribeLiveRecordTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeLiveRecordTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeMDPMPSUserInfoRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeMDPMPSUserInfoResponse.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataRequest.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataResponse.cs" />
     <Compile Include="V20190612\Models\DescribeOutput.cs" />
@@ -453,6 +493,8 @@
     <Compile Include="V20190612\Models\DescribeQualityControlTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeRTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeRTSPPullSourceAddress.cs" />
+    <Compile Include="V20190612\Models\DescribeSSAIActivateStateRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeSSAIActivateStateResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSchedulesRequest.cs" />
@@ -489,6 +531,38 @@
     <Compile Include="V20190612\Models\DescribeStreamLinkRegionsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageActivateStateRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageActivateStateResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelAlertsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelAlertsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyChannelsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramSchedulesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyUsageRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageLinearAssemblyUsageResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIChannelResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIChannelsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIChannelsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIUsageRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSSAIUsageResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceAlertsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceAlertsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceLocationsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceLocationsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourceResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourcesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamPackageSourcesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSubtitleEmbedTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSubtitleEmbedTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailRequest.cs" />
@@ -595,6 +669,8 @@
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\InputAddress.cs" />
+    <Compile Include="V20190612\Models\LinearAssemblyChannelInfo.cs" />
+    <Compile Include="V20190612\Models\LinearAssemblyProgramInfo.cs" />
     <Compile Include="V20190612\Models\LiveActivityResItem.cs" />
     <Compile Include="V20190612\Models\LiveActivityResult.cs" />
     <Compile Include="V20190612\Models\LiveAiAnalysisDescriptionItem.cs" />
@@ -635,6 +711,7 @@
     <Compile Include="V20190612\Models\MP4ConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ManageTaskRequest.cs" />
     <Compile Include="V20190612\Models\ManageTaskResponse.cs" />
+    <Compile Include="V20190612\Models\ManifestInfo.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisClassificationItem.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisCoverItem.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisDescriptionItem.cs" />
@@ -664,6 +741,7 @@
     <Compile Include="V20190612\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="V20190612\Models\MediaTranscodeItem.cs" />
     <Compile Include="V20190612\Models\MediaVideoStreamItem.cs" />
+    <Compile Include="V20190612\Models\Metadata.cs" />
     <Compile Include="V20190612\Models\ModifyAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyAIRecognitionTemplateRequest.cs" />
@@ -710,6 +788,16 @@
     <Compile Include="V20190612\Models\ModifyStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupRequest.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSSAIChannelResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSourceRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamPackageSourceResponse.cs" />
     <Compile Include="V20190612\Models\ModifySubtitleEmbedTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateRequest.cs" />
@@ -719,13 +807,16 @@
     <Compile Include="V20190612\Models\ModifyWordSampleRequest.cs" />
     <Compile Include="V20190612\Models\ModifyWordSampleResponse.cs" />
     <Compile Include="V20190612\Models\MosaicInput.cs" />
+    <Compile Include="V20190612\Models\NameServer.cs" />
     <Compile Include="V20190612\Models\NumberFormat.cs" />
     <Compile Include="V20190612\Models\OcrFullTextConfigureInfo.cs" />
     <Compile Include="V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfo.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\OutputAddress.cs" />
+    <Compile Include="V20190612\Models\OutputInfo.cs" />
     <Compile Include="V20190612\Models\OutputRISTSourceAddressResp.cs" />
+    <Compile Include="V20190612\Models\OutputReq.cs" />
     <Compile Include="V20190612\Models\OutputSRTSourceAddressResp.cs" />
     <Compile Include="V20190612\Models\OverrideEraseParameter.cs" />
     <Compile Include="V20190612\Models\OverrideTranscodeParameter.cs" />
@@ -734,6 +825,8 @@
     <Compile Include="V20190612\Models\ParseNotificationRequest.cs" />
     <Compile Include="V20190612\Models\ParseNotificationResponse.cs" />
     <Compile Include="V20190612\Models\PidSelector.cs" />
+    <Compile Include="V20190612\Models\PlaybackInfo.cs" />
+    <Compile Include="V20190612\Models\PlaybackInfoReq.cs" />
     <Compile Include="V20190612\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\PoliticalConfigureInfo.cs" />
@@ -757,6 +850,9 @@
     <Compile Include="V20190612\Models\ProcessLiveStreamResponse.cs" />
     <Compile Include="V20190612\Models\ProcessMediaRequest.cs" />
     <Compile Include="V20190612\Models\ProcessMediaResponse.cs" />
+    <Compile Include="V20190612\Models\ProgramAlertCounts.cs" />
+    <Compile Include="V20190612\Models\ProgramAlertInfos.cs" />
+    <Compile Include="V20190612\Models\ProgramScheduleInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedAsrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProhibitedConfigureInfo.cs" />
@@ -799,6 +895,9 @@
     <Compile Include="V20190612\Models\SRTFECSimpleOptions.cs" />
     <Compile Include="V20190612\Models\SRTSourceAddressReq.cs" />
     <Compile Include="V20190612\Models\SRTSourceAddressResp.cs" />
+    <Compile Include="V20190612\Models\SSAIChannelInfo.cs" />
+    <Compile Include="V20190612\Models\SSAIConf.cs" />
+    <Compile Include="V20190612\Models\SSAIUsageInfo.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20190612\Models\ScheduleAnalysisTaskResult.cs" />
@@ -813,11 +912,13 @@
     <Compile Include="V20190612\Models\SearchTaskResult.cs" />
     <Compile Include="V20190612\Models\SearchValueInput.cs" />
     <Compile Include="V20190612\Models\SecurityGroupInfo.cs" />
+    <Compile Include="V20190612\Models\SegmentDeliverInfo.cs" />
     <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SelectingSubtitleAreasConfig.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
+    <Compile Include="V20190612\Models\SlateInfo.cs" />
     <Compile Include="V20190612\Models\SmartErasePrivacyConfig.cs" />
     <Compile Include="V20190612\Models\SmartEraseSubtitleConfig.cs" />
     <Compile Include="V20190612\Models\SmartEraseTaskInput.cs" />
@@ -839,12 +940,22 @@
     <Compile Include="V20190612\Models\SmartSubtitlesTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
+    <Compile Include="V20190612\Models\SourceAlert.cs" />
+    <Compile Include="V20190612\Models\SourceInfo.cs" />
+    <Compile Include="V20190612\Models\SourceLocationInfo.cs" />
+    <Compile Include="V20190612\Models\SourcePackageConf.cs" />
+    <Compile Include="V20190612\Models\SourceTag.cs" />
     <Compile Include="V20190612\Models\SpecificationDataItem.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />
+    <Compile Include="V20190612\Models\SpliceInsertInfo.cs" />
     <Compile Include="V20190612\Models\StartStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\StartStreamLinkFlowResponse.cs" />
+    <Compile Include="V20190612\Models\StartStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\StartStreamPackageLinearAssemblyChannelResponse.cs" />
     <Compile Include="V20190612\Models\StopStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\StopStreamLinkFlowResponse.cs" />
+    <Compile Include="V20190612\Models\StopStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20190612\Models\StopStreamPackageLinearAssemblyChannelResponse.cs" />
     <Compile Include="V20190612\Models\StreamLinkRegionInfo.cs" />
     <Compile Include="V20190612\Models\StreamSelector.cs" />
     <Compile Include="V20190612\Models\StreamUrlDetail.cs" />
@@ -883,6 +994,8 @@
     <Compile Include="V20190612\Models\TextTranslationResponse.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="V20190612\Models\TimeShiftInfo.cs" />
+    <Compile Include="V20190612\Models\TimeSignalInfo.cs" />
     <Compile Include="V20190612\Models\TimeSpotCheck.cs" />
     <Compile Include="V20190612\Models\TrackInfo.cs" />
     <Compile Include="V20190612\Models\TrackSelector.cs" />
@@ -895,6 +1008,7 @@
     <Compile Include="V20190612\Models\UpdateSmartEraseSubtitleConfig.cs" />
     <Compile Include="V20190612\Models\UpdateSmartEraseWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\UrlInputInfo.cs" />
+    <Compile Include="V20190612\Models\UsageDetail.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineConfigureInfo.cs" />

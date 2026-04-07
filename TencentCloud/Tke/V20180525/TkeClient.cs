@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1400";
+       private const string sdkVersion = "SDK_NET_3.0.1402";
 
         /// <summary>
         /// Client constructor.
@@ -2360,6 +2360,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeClusterRoutesResponse DescribeClusterRoutesSync(DescribeClusterRoutesRequest req)
         {
             return InternalRequestAsync<DescribeClusterRoutesResponse>(req, "DescribeClusterRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群调度策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSchedulerPolicyRequest"/></param>
+        /// <returns><see cref="DescribeClusterSchedulerPolicyResponse"/></returns>
+        public Task<DescribeClusterSchedulerPolicyResponse> DescribeClusterSchedulerPolicy(DescribeClusterSchedulerPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSchedulerPolicyResponse>(req, "DescribeClusterSchedulerPolicy");
+        }
+
+        /// <summary>
+        /// 查询集群调度策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSchedulerPolicyRequest"/></param>
+        /// <returns><see cref="DescribeClusterSchedulerPolicyResponse"/></returns>
+        public DescribeClusterSchedulerPolicyResponse DescribeClusterSchedulerPolicySync(DescribeClusterSchedulerPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSchedulerPolicyResponse>(req, "DescribeClusterSchedulerPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4796,6 +4817,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfigSync(ModifyClusterRuntimeConfigRequest req)
         {
             return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群调度策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterSchedulerPolicyRequest"/></param>
+        /// <returns><see cref="ModifyClusterSchedulerPolicyResponse"/></returns>
+        public Task<ModifyClusterSchedulerPolicyResponse> ModifyClusterSchedulerPolicy(ModifyClusterSchedulerPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterSchedulerPolicyResponse>(req, "ModifyClusterSchedulerPolicy");
+        }
+
+        /// <summary>
+        /// 修改集群调度策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterSchedulerPolicyRequest"/></param>
+        /// <returns><see cref="ModifyClusterSchedulerPolicyResponse"/></returns>
+        public ModifyClusterSchedulerPolicyResponse ModifyClusterSchedulerPolicySync(ModifyClusterSchedulerPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterSchedulerPolicyResponse>(req, "ModifyClusterSchedulerPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

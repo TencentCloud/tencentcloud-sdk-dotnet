@@ -25,123 +25,130 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 命中规则名称
+        /// <p>命中规则名称</p>
         /// </summary>
         [JsonProperty("MatchRuleName")]
         public string MatchRuleName{ get; set; }
 
         /// <summary>
-        /// 命中规则类型
+        /// <p>命中规则类型</p>
         /// </summary>
         [JsonProperty("MatchRuleType")]
         public string MatchRuleType{ get; set; }
 
         /// <summary>
-        /// 告警等级
+        /// <p>告警等级</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+        /// <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p>
         /// </summary>
         [JsonProperty("ClusterRunningStatus")]
         public string ClusterRunningStatus{ get; set; }
 
         /// <summary>
-        /// 初次生成时间
+        /// <p>初次生成时间</p>
         /// </summary>
         [JsonProperty("FirstCreateTime")]
         public string FirstCreateTime{ get; set; }
 
         /// <summary>
-        /// 最近一次生成时间
+        /// <p>最近一次生成时间</p>
         /// </summary>
         [JsonProperty("LastCreateTime")]
         public string LastCreateTime{ get; set; }
 
         /// <summary>
-        /// 告警数量
+        /// <p>告警数量</p>
         /// </summary>
         [JsonProperty("AlarmCount")]
         public ulong? AlarmCount{ get; set; }
 
         /// <summary>
-        /// 状态
-        /// "EVENT_UNDEAL":未处理
-        /// "EVENT_DEALED": 已处理
-        /// "EVENT_IGNORE": 忽略
-        /// "EVENT_DEL": 删除
-        /// "EVENT_ADD_WHITE": 加白
+        /// <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 集群masterIP
+        /// <p>集群masterIP</p>
         /// </summary>
         [JsonProperty("ClusterMasterIP")]
         public string ClusterMasterIP{ get; set; }
 
         /// <summary>
-        /// k8s版本
+        /// <p>k8s版本</p>
         /// </summary>
         [JsonProperty("K8sVersion")]
         public string K8sVersion{ get; set; }
 
         /// <summary>
-        /// 运行时组件
+        /// <p>运行时组件</p>
         /// </summary>
         [JsonProperty("RunningComponent")]
         public string[] RunningComponent{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 建议
+        /// <p>建议</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 请求信息
+        /// <p>请求信息</p>
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("MatchRuleID")]
         public string MatchRuleID{ get; set; }
 
         /// <summary>
-        /// 高亮字段数组
+        /// <p>高亮字段数组</p>
         /// </summary>
         [JsonProperty("HighLightFields")]
         public string[] HighLightFields{ get; set; }
 
         /// <summary>
-        /// 命中规则
+        /// <p>命中规则</p>
         /// </summary>
         [JsonProperty("MatchRule")]
         public K8sApiAbnormalRuleScopeInfo MatchRule{ get; set; }
+
+        /// <summary>
+        /// <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+        /// </summary>
+        [JsonProperty("HighLightFieldsVal")]
+        public string HighLightFieldsVal{ get; set; }
+
+        /// <summary>
+        /// <p>规则中文</p>
+        /// </summary>
+        [JsonProperty("RuleTypeZH")]
+        public string RuleTypeZH{ get; set; }
 
 
         /// <summary>
@@ -168,6 +175,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "MatchRuleID", this.MatchRuleID);
             this.SetParamArraySimple(map, prefix + "HighLightFields.", this.HighLightFields);
             this.SetParamObj(map, prefix + "MatchRule.", this.MatchRule);
+            this.SetParamSimple(map, prefix + "HighLightFieldsVal", this.HighLightFieldsVal);
+            this.SetParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
         }
     }
 }

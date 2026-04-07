@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 趋势周期(默认为7天)
+        /// <p>趋势周期(默认为7天)</p>
         /// </summary>
         [JsonProperty("TendencyPeriod")]
         public ulong? TendencyPeriod{ get; set; }

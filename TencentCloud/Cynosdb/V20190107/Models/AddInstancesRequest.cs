@@ -25,113 +25,110 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cpu核数
+        /// <p>Cpu核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存，单位为GB
+        /// <p>内存，单位为GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 新增只读实例数，取值范围为(0,15]
+        /// <p>新增只读实例数，取值范围为(0,15]</p>
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// 实例机器类型，支持值如下：
-        /// - common：表示通用型
-        /// - exclusive：表示独享型
+        /// <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+        /// <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// 所属VPC网络ID。
+        /// <p>所属VPC网络ID。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 所属子网ID，如果设置了VpcId，则SubnetId必填。
+        /// <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 新增RO组时使用的Port，取值范围为[0,65535)
+        /// <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+        /// <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 是否自动选择代金券 1是 0否 默认为0
+        /// <p>是否自动选择代金券 1是 0否 默认为0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 数据库类型，取值范围: 
-        /// <li> MYSQL </li>
+        /// <p>数据库类型，取值范围: </p><li> MYSQL </li>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 订单来源，字符串长度范围为[0,64)
+        /// <p>订单来源，字符串长度范围为[0,64)</p>
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// 交易模式 0-下单并支付 1-下单
+        /// <p>交易模式 0-下单并支付 1-下单</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// 参数模板ID
+        /// <p>参数模板ID</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 参数列表，ParamTemplateId 传入时InstanceParams才有效
+        /// <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
         /// </summary>
         [JsonProperty("InstanceParams")]
         public ModifyParamItem[] InstanceParams{ get; set; }
 
         /// <summary>
-        /// 安全组ID，新建只读实例时可以指定安全组。
+        /// <p>安全组ID，新建只读实例时可以指定安全组。</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// proxy同步升级
+        /// <p>proxy同步升级</p>
         /// </summary>
         [JsonProperty("UpgradeProxy")]
         public UpgradeProxy UpgradeProxy{ get; set; }

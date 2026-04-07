@@ -25,25 +25,27 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 节点Label数组
+        /// <p>节点Label数组</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public TkeLabel[] Labels{ get; set; }
 
         /// <summary>
-        /// 节点污点
+        /// <p>节点污点</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// base64 编码的用户脚本，在初始化节点之前执行
+        /// <p>base64 编码的用户脚本，在初始化节点之前执行</p>
         /// </summary>
         [JsonProperty("PreStartUserScript")]
         public string PreStartUserScript{ get; set; }
 
         /// <summary>
-        /// base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+        /// <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
         /// </summary>
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }

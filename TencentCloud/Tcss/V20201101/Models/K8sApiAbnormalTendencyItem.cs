@@ -25,76 +25,82 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 日期
+        /// <p>日期</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 异常UA请求事件数
+        /// <p>异常UA请求事件数</p>
         /// </summary>
         [JsonProperty("ExceptionUARequestCount")]
         public ulong? ExceptionUARequestCount{ get; set; }
 
         /// <summary>
-        /// 匿名用户权限事件数
+        /// <p>匿名用户权限事件数</p>
         /// </summary>
         [JsonProperty("AnonymousUserRightCount")]
         public ulong? AnonymousUserRightCount{ get; set; }
 
         /// <summary>
-        /// 凭据信息获取事件数
+        /// <p>凭据信息获取事件数</p>
         /// </summary>
         [JsonProperty("CredentialInformationObtainCount")]
         public ulong? CredentialInformationObtainCount{ get; set; }
 
         /// <summary>
-        /// 敏感数据挂载事件数
+        /// <p>敏感数据挂载事件数</p>
         /// </summary>
         [JsonProperty("SensitiveDataMountCount")]
         public ulong? SensitiveDataMountCount{ get; set; }
 
         /// <summary>
-        /// 命令执行事件数
+        /// <p>命令执行事件数</p>
         /// </summary>
         [JsonProperty("CmdExecCount")]
         public ulong? CmdExecCount{ get; set; }
 
         /// <summary>
-        /// 异常定时任务事件数
+        /// <p>异常定时任务事件数</p>
         /// </summary>
         [JsonProperty("AbnormalScheduledTaskCount")]
         public ulong? AbnormalScheduledTaskCount{ get; set; }
 
         /// <summary>
-        /// 静态Pod创建数
+        /// <p>静态Pod创建数</p>
         /// </summary>
         [JsonProperty("StaticsPodCreateCount")]
         public ulong? StaticsPodCreateCount{ get; set; }
 
         /// <summary>
-        /// 可疑容器创建数
+        /// <p>可疑容器创建数</p>
         /// </summary>
         [JsonProperty("DoubtfulContainerCreateCount")]
         public ulong? DoubtfulContainerCreateCount{ get; set; }
 
         /// <summary>
-        /// 自定义规则事件数
+        /// <p>自定义规则事件数</p>
         /// </summary>
         [JsonProperty("UserDefinedRuleCount")]
         public ulong? UserDefinedRuleCount{ get; set; }
 
         /// <summary>
-        /// 匿名访问事件数
+        /// <p>匿名访问事件数</p>
         /// </summary>
         [JsonProperty("AnonymousAccessCount")]
         public ulong? AnonymousAccessCount{ get; set; }
 
         /// <summary>
-        /// 特权容器事件数
+        /// <p>特权容器事件数</p>
         /// </summary>
         [JsonProperty("PrivilegeContainerCount")]
         public ulong? PrivilegeContainerCount{ get; set; }
+
+        /// <summary>
+        /// <p>规则类型对应告警数量</p>
+        /// </summary>
+        [JsonProperty("RuleTypeCountSet")]
+        public K8SAPIRuleTypeCountItem[] RuleTypeCountSet{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "UserDefinedRuleCount", this.UserDefinedRuleCount);
             this.SetParamSimple(map, prefix + "AnonymousAccessCount", this.AnonymousAccessCount);
             this.SetParamSimple(map, prefix + "PrivilegeContainerCount", this.PrivilegeContainerCount);
+            this.SetParamArrayObj(map, prefix + "RuleTypeCountSet.", this.RuleTypeCountSet);
         }
     }
 }

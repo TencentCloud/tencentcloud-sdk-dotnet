@@ -60,6 +60,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LocalNumberTrimAC")]
         public bool? LocalNumberTrimAC{ get; set; }
 
+        /// <summary>
+        /// 被叫格式透传 （完成透传用户输入，不做处理）
+        /// </summary>
+        [JsonProperty("CalleeFormatPassthrough")]
+        public bool? CalleeFormatPassthrough{ get; set; }
+
+        /// <summary>
+        /// 主叫格式透传 （完成透传用户输入，不做处理）
+        /// </summary>
+        [JsonProperty("CallerFormatPassthrough")]
+        public bool? CallerFormatPassthrough{ get; set; }
+
+        /// <summary>
+        /// 国际长途前缀码
+        /// </summary>
+        [JsonProperty("InternationalNumberPrefix")]
+        public string InternationalNumberPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
             this.SetParamSimple(map, prefix + "MobileNddPrefix", this.MobileNddPrefix);
             this.SetParamSimple(map, prefix + "LocalNumberTrimAC", this.LocalNumberTrimAC);
+            this.SetParamSimple(map, prefix + "CalleeFormatPassthrough", this.CalleeFormatPassthrough);
+            this.SetParamSimple(map, prefix + "CallerFormatPassthrough", this.CallerFormatPassthrough);
+            this.SetParamSimple(map, prefix + "InternationalNumberPrefix", this.InternationalNumberPrefix);
         }
     }
 }

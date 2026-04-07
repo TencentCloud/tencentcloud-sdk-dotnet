@@ -25,46 +25,40 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 范围
-        /// 系统事件:
-        /// ANONYMOUS_ACCESS: 匿名访问
-        /// ABNORMAL_UA_REQ: 异常UA请求
-        /// ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-        /// GET_CREDENTIALS: 凭据信息获取
-        /// MOUNT_SENSITIVE_PATH: 敏感路径挂载
-        /// COMMAND_RUN: 命令执行
-        /// PRIVILEGE_CONTAINER: 特权容器
-        /// EXCEPTION_CRONTAB_TASK: 异常定时任务
-        /// STATICS_POD: 静态pod创建
-        /// ABNORMAL_CREATE_POD: 异常pod创建
-        /// USER_DEFINED: 用户自定义
+        /// <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
+        /// <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
+        /// <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 开关状态(true:开 false:关) 适用于系统规则
+        /// <p>开关状态(true:开 false:关) 适用于系统规则</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 是否被删除 适用于自定义规则入参
+        /// <p>是否被删除 适用于自定义规则入参</p>
         /// </summary>
         [JsonProperty("IsDelete")]
         public bool? IsDelete{ get; set; }
+
+        /// <summary>
+        /// <p>规则类型对应中文</p>
+        /// </summary>
+        [JsonProperty("RuleTypeZH")]
+        public string RuleTypeZH{ get; set; }
 
 
         /// <summary>
@@ -77,6 +71,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsDelete", this.IsDelete);
+            this.SetParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
         }
     }
 }

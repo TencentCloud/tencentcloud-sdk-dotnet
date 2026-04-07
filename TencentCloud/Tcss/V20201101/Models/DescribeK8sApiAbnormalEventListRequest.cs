@@ -25,41 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 过滤条件。
-        /// <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-        /// <li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-        /// <li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-        /// <li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-        /// <li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-        /// <li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-        /// <li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-        /// <li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+        /// <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// <p>需要返回的数量，默认为10，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// <p>排序方式</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段
-        /// LatestFoundTime: 最近生成时间
-        /// AlarmCount: 告警数量
+        /// <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

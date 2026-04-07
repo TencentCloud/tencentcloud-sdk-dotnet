@@ -25,72 +25,78 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 列名称，不区分大小写，最大支持25个字符。
+        /// <p>列名称，不区分大小写，最大支持25个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+        /// <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 对该类的注释。
+        /// <p>对该类的注释。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 表示整个 numeric 的长度
+        /// <p>表示整个 numeric 的长度</p>
         /// </summary>
         [JsonProperty("Precision")]
         public long? Precision{ get; set; }
 
         /// <summary>
-        /// 表示小数部分的长度
+        /// <p>表示小数部分的长度</p>
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
 
         /// <summary>
-        /// 是否为null
+        /// <p>是否为null</p>
         /// </summary>
         [JsonProperty("Nullable")]
         public string Nullable{ get; set; }
 
         /// <summary>
-        /// 字段位置，小的在前
+        /// <p>字段位置，小的在前</p>
         /// </summary>
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
         /// <summary>
-        /// 字段创建时间
+        /// <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 字段修改时间
+        /// <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
         /// <summary>
-        /// 是否为分区字段
+        /// <p>是否为分区字段</p>
         /// </summary>
         [JsonProperty("IsPartition")]
         public bool? IsPartition{ get; set; }
 
         /// <summary>
-        /// 数据脱敏策略信息
+        /// <p>数据脱敏策略信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataMaskStrategyInfo")]
         public DataMaskStrategyInfo DataMaskStrategyInfo{ get; set; }
+
+        /// <summary>
+        /// <p>数据字段说明</p>
+        /// </summary>
+        [JsonProperty("TypeText")]
+        public string TypeText{ get; set; }
 
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
             this.SetParamSimple(map, prefix + "IsPartition", this.IsPartition);
             this.SetParamObj(map, prefix + "DataMaskStrategyInfo.", this.DataMaskStrategyInfo);
+            this.SetParamSimple(map, prefix + "TypeText", this.TypeText);
         }
     }
 }

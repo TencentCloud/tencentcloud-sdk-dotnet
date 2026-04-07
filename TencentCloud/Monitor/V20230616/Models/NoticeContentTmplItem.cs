@@ -25,59 +25,65 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 官网通知渠道配置
+        /// <p>官网通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QCloudYehe")]
         public QCloudYeheNoticeTmplMatcher[] QCloudYehe{ get; set; }
 
         /// <summary>
-        /// 企业微信机器人通知渠道配置
+        /// <p>企业微信机器人通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeWorkRobot")]
         public WeWorkRobotNoticeTmplMatcher[] WeWorkRobot{ get; set; }
 
         /// <summary>
-        /// 钉钉机器人通知渠道配置
+        /// <p>钉钉机器人通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DingDingRobot")]
         public DingDingRobotNoticeTmplMatcher[] DingDingRobot{ get; set; }
 
         /// <summary>
-        /// 飞书机器人通知渠道配置
+        /// <p>飞书机器人通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeiShuRobot")]
         public FeiShuRobotNoticeTmplMatcher[] FeiShuRobot{ get; set; }
 
         /// <summary>
-        /// 自定义Webhook通知渠道配置
+        /// <p>自定义Webhook通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Webhook")]
         public WebhookNoticeTmplMatcher[] Webhook{ get; set; }
 
         /// <summary>
-        /// Teams机器人通知渠道配置
+        /// <p>Teams机器人通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeamsRobot")]
         public TeamsRobotNoticeTmplMatcher[] TeamsRobot{ get; set; }
 
         /// <summary>
-        /// PagerDutyRobot机器人通知渠道配置
+        /// <p>PagerDutyRobot机器人通知渠道配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PagerDutyRobot")]
         public PagerDutyRobotNoticeTmplMatcher[] PagerDutyRobot{ get; set; }
 
         /// <summary>
-        /// GoogleChat
+        /// <p>GoogleChat</p>
         /// </summary>
         [JsonProperty("GoogleChatRobot")]
         public GoogleChatRobotNoticeTmplMatcher[] GoogleChatRobot{ get; set; }
+
+        /// <summary>
+        /// <p>Slack</p>
+        /// </summary>
+        [JsonProperty("SlackRobot")]
+        public SlackRobotNoticeTmplMatcher[] SlackRobot{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamArrayObj(map, prefix + "TeamsRobot.", this.TeamsRobot);
             this.SetParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
             this.SetParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
+            this.SetParamArrayObj(map, prefix + "SlackRobot.", this.SlackRobot);
         }
     }
 }

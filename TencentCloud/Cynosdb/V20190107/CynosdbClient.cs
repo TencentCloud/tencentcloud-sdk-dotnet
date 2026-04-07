@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1402";
 
         /// <summary>
         /// Client constructor.
@@ -1835,6 +1835,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstanceSpecsResponse DescribeInstanceSpecsSync(DescribeInstanceSpecsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceSpecsResponse>(req, "DescribeInstanceSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据操作类型查询实例规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecsByOperationTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecsByOperationTypeResponse"/></returns>
+        public Task<DescribeInstanceSpecsByOperationTypeResponse> DescribeInstanceSpecsByOperationType(DescribeInstanceSpecsByOperationTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecsByOperationTypeResponse>(req, "DescribeInstanceSpecsByOperationType");
+        }
+
+        /// <summary>
+        /// 根据操作类型查询实例规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecsByOperationTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecsByOperationTypeResponse"/></returns>
+        public DescribeInstanceSpecsByOperationTypeResponse DescribeInstanceSpecsByOperationTypeSync(DescribeInstanceSpecsByOperationTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecsByOperationTypeResponse>(req, "DescribeInstanceSpecsByOperationType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

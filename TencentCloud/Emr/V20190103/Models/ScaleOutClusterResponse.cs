@@ -25,38 +25,38 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端Token。
+        /// <p>客户端Token。</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 扩容流程ID。
+        /// <p>扩容流程ID。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 查询流程状态，流程额外信息
+        /// <p>查询流程状态，流程额外信息</p>
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
 
         /// <summary>
-        /// 订单号。
+        /// <p>订单号。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 大订单号。
+        /// <p>大订单号。</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
