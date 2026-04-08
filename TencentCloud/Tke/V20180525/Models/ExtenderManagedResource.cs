@@ -25,10 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 自定义资源的名称
+        /// <p>自定义资源的名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>调度器是否忽略该资源的默认处理</p>
+        /// </summary>
+        [JsonProperty("IgnoredByScheduler")]
+        public bool? IgnoredByScheduler{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "IgnoredByScheduler", this.IgnoredByScheduler);
         }
     }
 }

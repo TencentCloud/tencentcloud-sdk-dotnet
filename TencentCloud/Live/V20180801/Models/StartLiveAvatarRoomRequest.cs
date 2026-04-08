@@ -25,28 +25,34 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间 ID。
+        /// <p>数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 目标地址描述。
+        /// <p>目标地址描述。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 推流目标地址。
+        /// <p>推流目标地址。</p>
         /// </summary>
         [JsonProperty("ToUrl")]
         public string ToUrl{ get; set; }
 
         /// <summary>
-        /// 操作者。
+        /// <p>操作者。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
+
+        /// <summary>
+        /// <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public string RoomType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1403";
 
         /// <summary>
         /// Client constructor.
@@ -2101,6 +2101,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 创建流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorFilterRulesResponse"/></returns>
+        public Task<CreateTrafficMirrorFilterRulesResponse> CreateTrafficMirrorFilterRules(CreateTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorFilterRulesResponse>(req, "CreateTrafficMirrorFilterRules");
+        }
+
+        /// <summary>
+        /// 创建流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorFilterRulesResponse"/></returns>
+        public CreateTrafficMirrorFilterRulesResponse CreateTrafficMirrorFilterRulesSync(CreateTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorFilterRulesResponse>(req, "CreateTrafficMirrorFilterRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (CreateTrafficPackages) 用于创建共享流量包。
         /// </summary>
         /// <param name="req"><see cref="CreateTrafficPackagesRequest"/></param>
@@ -3385,6 +3406,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteTrafficMirrorResponse DeleteTrafficMirrorSync(DeleteTrafficMirrorRequest req)
         {
             return InternalRequestAsync<DeleteTrafficMirrorResponse>(req, "DeleteTrafficMirror")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorFilterRulesResponse"/></returns>
+        public Task<DeleteTrafficMirrorFilterRulesResponse> DeleteTrafficMirrorFilterRules(DeleteTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorFilterRulesResponse>(req, "DeleteTrafficMirrorFilterRules");
+        }
+
+        /// <summary>
+        /// 删除流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorFilterRulesResponse"/></returns>
+        public DeleteTrafficMirrorFilterRulesResponse DeleteTrafficMirrorFilterRulesSync(DeleteTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorFilterRulesResponse>(req, "DeleteTrafficMirrorFilterRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5787,6 +5829,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeTenantCcnsResponse DescribeTenantCcnsSync(DescribeTenantCcnsRequest req)
         {
             return InternalRequestAsync<DescribeTenantCcnsResponse>(req, "DescribeTenantCcns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorFilterRulesResponse"/></returns>
+        public Task<DescribeTrafficMirrorFilterRulesResponse> DescribeTrafficMirrorFilterRules(DescribeTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorFilterRulesResponse>(req, "DescribeTrafficMirrorFilterRules");
+        }
+
+        /// <summary>
+        /// 查询流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorFilterRulesResponse"/></returns>
+        public DescribeTrafficMirrorFilterRulesResponse DescribeTrafficMirrorFilterRulesSync(DescribeTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorFilterRulesResponse>(req, "DescribeTrafficMirrorFilterRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8635,6 +8698,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttributeSync(ModifyTrafficMirrorAttributeRequest req)
         {
             return InternalRequestAsync<ModifyTrafficMirrorAttributeResponse>(req, "ModifyTrafficMirrorAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorFilterRulesResponse"/></returns>
+        public Task<ModifyTrafficMirrorFilterRulesResponse> ModifyTrafficMirrorFilterRules(ModifyTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorFilterRulesResponse>(req, "ModifyTrafficMirrorFilterRules");
+        }
+
+        /// <summary>
+        /// 修改流量镜像五元组过滤规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorFilterRulesRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorFilterRulesResponse"/></returns>
+        public ModifyTrafficMirrorFilterRulesResponse ModifyTrafficMirrorFilterRulesSync(ModifyTrafficMirrorFilterRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorFilterRulesResponse>(req, "ModifyTrafficMirrorFilterRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

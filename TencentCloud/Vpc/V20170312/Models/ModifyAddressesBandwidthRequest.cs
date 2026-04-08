@@ -25,26 +25,26 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+        /// <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }
 
         /// <summary>
-        /// 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+        /// <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 包月带宽起始时间(已废弃，输入无效)
+        /// <p>包月带宽起始时间(已废弃，输入无效)</p>
         /// </summary>
         [JsonProperty("StartTime")]
         [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 包月带宽结束时间(已废弃，输入无效)
+        /// <p>包月带宽结束时间(已废弃，输入无效)</p>
         /// </summary>
         [JsonProperty("EndTime")]
         [System.Obsolete]

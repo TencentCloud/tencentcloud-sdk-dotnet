@@ -25,19 +25,19 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间话术信息列表。
+        /// <p>数字人直播间话术信息列表。</p>
         /// </summary>
         [JsonProperty("InfoList")]
         public AvatarScriptInfo[] InfoList{ get; set; }
 
         /// <summary>
-        /// 限制可创建的数字人直播间话术总条数。
+        /// <p>限制可创建的数字人直播间话术总条数。</p>
         /// </summary>
         [JsonProperty("LimitCreateNum")]
         public long? LimitCreateNum{ get; set; }
 
         /// <summary>
-        /// 当前数字人直播间话术总条数。
+        /// <p>当前数字人直播间话术总条数。</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }

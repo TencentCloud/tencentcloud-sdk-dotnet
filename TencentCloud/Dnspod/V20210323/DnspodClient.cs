@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1393";
+       private const string sdkVersion = "SDK_NET_3.0.1403";
 
         /// <summary>
         /// Client constructor.
@@ -1813,6 +1813,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifyRecordBatchResponse ModifyRecordBatchSync(ModifyRecordBatchRequest req)
         {
             return InternalRequestAsync<ModifyRecordBatchResponse>(req, "ModifyRecordBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordBatchV3Request"/></param>
+        /// <returns><see cref="ModifyRecordBatchV3Response"/></returns>
+        public Task<ModifyRecordBatchV3Response> ModifyRecordBatchV3(ModifyRecordBatchV3Request req)
+        {
+            return InternalRequestAsync<ModifyRecordBatchV3Response>(req, "ModifyRecordBatchV3");
+        }
+
+        /// <summary>
+        /// 批量修改记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordBatchV3Request"/></param>
+        /// <returns><see cref="ModifyRecordBatchV3Response"/></returns>
+        public ModifyRecordBatchV3Response ModifyRecordBatchV3Sync(ModifyRecordBatchV3Request req)
+        {
+            return InternalRequestAsync<ModifyRecordBatchV3Response>(req, "ModifyRecordBatchV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,28 +25,34 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间 ID。
+        /// <p>数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 数字人直播间话术 ID。
+        /// <p>数字人直播间话术 ID。</p>
         /// </summary>
         [JsonProperty("ScriptId")]
         public string ScriptId{ get; set; }
 
         /// <summary>
-        /// 分页查询的页数。
+        /// <p>分页查询的页数。</p>
         /// </summary>
         [JsonProperty("PageIndex")]
         public long? PageIndex{ get; set; }
 
         /// <summary>
-        /// 分页查询的每页个数。
+        /// <p>分页查询的每页个数。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>数字人该话术所属的产品 ID。</p>
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ScriptId", this.ScriptId);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

@@ -25,36 +25,40 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 话术标题。限制500字节。
+        /// <p>话术标题。限制500字节。</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+        /// <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 话术所属的数字人直播间 ID。
+        /// <p>话术所属的数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 话术插入时，可根据已有话术位置，指定新话术插入位置。
-        /// 如已有三条话术100，200，300。
-        /// 新话术可选择150插入到第一条和第二条中间。
+        /// <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
         /// </summary>
         [JsonProperty("SpecifyPosition")]
         public long? SpecifyPosition{ get; set; }
 
         /// <summary>
-        /// 操作者。
+        /// <p>操作者。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
+
+        /// <summary>
+        /// <p>话术所属的数字人产品 ID。</p>
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "SpecifyPosition", this.SpecifyPosition);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

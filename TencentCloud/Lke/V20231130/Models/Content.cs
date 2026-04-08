@@ -25,112 +25,121 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 消息内容类型
-        /// text：文本
-        /// image：图片
-        /// file：文件
-        /// option_cards：选项卡
-        /// custom_params：用户自定义业务参数
-        /// sandbox：云桌面
-        /// custom_variables：自定义输入参数
-        /// web_search: 网页搜索内容
-        /// file_collection：文件收集信息
-        /// widget：widget信息
-        /// widget_action：用户端widget动作信息
+        /// <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 文本内容
+        /// <p>文本内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 引用信息
+        /// <p>引用信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuoteInfos")]
         public QuoteInfo[] QuoteInfos{ get; set; }
 
         /// <summary>
-        /// 参考文献信息
+        /// <p>参考文献信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("References")]
         public ContentReference[] References{ get; set; }
 
         /// <summary>
-        /// 图片信息
+        /// <p>图片信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Image")]
         public ImageInfoContent Image{ get; set; }
 
         /// <summary>
-        /// 文件信息
+        /// <p>文件信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("File")]
         public FileInfoContent File{ get; set; }
 
         /// <summary>
-        /// 选项卡信息
+        /// <p>选项卡信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptionCards")]
         public string[] OptionCards{ get; set; }
 
         /// <summary>
-        /// 用户自定义业务参数信息
+        /// <p>用户自定义业务参数信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomParams")]
         public string[] CustomParams{ get; set; }
 
         /// <summary>
-        /// 自定义变量
+        /// <p>自定义变量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomVariables")]
         public string[] CustomVariables{ get; set; }
 
         /// <summary>
-        /// 沙盒信息
+        /// <p>沙盒信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sandbox")]
         public SandboxContent Sandbox{ get; set; }
 
         /// <summary>
-        /// 网页搜索内容
+        /// <p>网页搜索内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebSearch")]
         public WebSearchContent WebSearch{ get; set; }
 
         /// <summary>
-        /// 文件收集信息
+        /// <p>文件收集信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileCollection")]
         public FileCollection FileCollection{ get; set; }
 
         /// <summary>
-        /// Widget信息
+        /// <p>Widget信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Widget")]
         public Widget Widget{ get; set; }
 
         /// <summary>
-        /// Widget动作信息
+        /// <p>Widget动作信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WidgetAction")]
         public WidgetAction WidgetAction{ get; set; }
+
+        /// <summary>
+        /// <p>任务列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public AgentTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// <p>问卷信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Questionnaire")]
+        public Questionnaire Questionnaire{ get; set; }
+
+        /// <summary>
+        /// <p>选项卡模式</p>
+        /// </summary>
+        [JsonProperty("OptionMode")]
+        public long? OptionMode{ get; set; }
 
 
         /// <summary>
@@ -152,6 +161,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "FileCollection.", this.FileCollection);
             this.SetParamObj(map, prefix + "Widget.", this.Widget);
             this.SetParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamObj(map, prefix + "Questionnaire.", this.Questionnaire);
+            this.SetParamSimple(map, prefix + "OptionMode", this.OptionMode);
         }
     }
 }

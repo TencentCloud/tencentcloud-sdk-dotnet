@@ -25,76 +25,76 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间 ID。
+        /// <p>数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 直播间名称。
+        /// <p>直播间名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数字人形象KEY。
+        /// <p>数字人形象KEY。</p>
         /// </summary>
         [JsonProperty("AvatarKey")]
         public string AvatarKey{ get; set; }
 
         /// <summary>
-        /// 音色KEY。
+        /// <p>音色KEY。</p>
         /// </summary>
         [JsonProperty("TimbreKey")]
         public string TimbreKey{ get; set; }
 
         /// <summary>
-        /// 背景图片URL。
+        /// <p>背景图片URL。</p>
         /// </summary>
         [JsonProperty("BackgroundUrl")]
         public string BackgroundUrl{ get; set; }
 
         /// <summary>
-        /// 主播大小，默认1.00。
-        /// 取值范围(0, 15.00]。
-        /// 精度：使用小数点后两位。
+        /// <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p>
         /// </summary>
         [JsonProperty("AnchorScale")]
         public float? AnchorScale{ get; set; }
 
         /// <summary>
-        /// 主播纵向位置。默认-1贴底部。
-        /// 左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-        /// 即该纵向位置最大为：数字人分辨率的高 - 形象高。
+        /// <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p>
         /// </summary>
         [JsonProperty("AnchorVerticalPos")]
         public long? AnchorVerticalPos{ get; set; }
 
         /// <summary>
-        /// 主播横向位置。默认-1居中。
-        /// 左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-        /// 即最大值为：数字人分辨率的宽 - 形象宽。
+        /// <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p>
         /// </summary>
         [JsonProperty("AnchorHorizontalPos")]
         public long? AnchorHorizontalPos{ get; set; }
 
         /// <summary>
-        /// 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。
+        /// <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p>
         /// </summary>
         [JsonProperty("SpeechSpeed")]
         public float? SpeechSpeed{ get; set; }
 
         /// <summary>
-        /// 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。
+        /// <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p>
         /// </summary>
         [JsonProperty("SpeechVolume")]
         public long? SpeechVolume{ get; set; }
 
         /// <summary>
-        /// 操作者。
+        /// <p>操作者。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
+
+        /// <summary>
+        /// <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public string RoomType{ get; set; }
 
 
         /// <summary>
@@ -113,6 +113,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
             this.SetParamSimple(map, prefix + "SpeechVolume", this.SpeechVolume);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 话术 ID。
+        /// <p>话术 ID。</p>
         /// </summary>
         [JsonProperty("ScriptId")]
         public string ScriptId{ get; set; }

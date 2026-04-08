@@ -47,7 +47,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 认证方法。取值有：
         /// <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-        /// <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+        /// <li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+        /// <li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
         /// </summary>
         [JsonProperty("AttesterSource")]
         public string AttesterSource{ get; set; }
@@ -75,6 +76,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("TCCaptchaOption")]
         public TCCaptchaOption TCCaptchaOption{ get; set; }
 
+        /// <summary>
+        /// TC-EO-CAPTCHA 认证的配置信息。
+        /// <li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+        /// </summary>
+        [JsonProperty("TCEOCaptchaOption")]
+        public TCEOCaptchaOption TCEOCaptchaOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +96,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AttesterDuration", this.AttesterDuration);
             this.SetParamObj(map, prefix + "TCRCEOption.", this.TCRCEOption);
             this.SetParamObj(map, prefix + "TCCaptchaOption.", this.TCCaptchaOption);
+            this.SetParamObj(map, prefix + "TCEOCaptchaOption.", this.TCEOCaptchaOption);
         }
     }
 }

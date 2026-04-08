@@ -25,34 +25,46 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 过滤阶段接口
+        /// <p>过滤阶段接口</p>
         /// </summary>
         [JsonProperty("FilterVerb")]
         public string FilterVerb{ get; set; }
 
         /// <summary>
-        /// 打分阶段扩展接口
+        /// <p>打分阶段扩展接口</p>
         /// </summary>
         [JsonProperty("PrioritizeVerb")]
         public string PrioritizeVerb{ get; set; }
 
         /// <summary>
-        /// 打分阶段节点分数的权重,取值范围限定(0,2】
+        /// <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 扩展调度器(Extender)管理的扩展资源
+        /// <p>扩展调度器(Extender)管理的扩展资源</p>
         /// </summary>
         [JsonProperty("ManagedResources")]
         public ExtenderManagedResource[] ManagedResources{ get; set; }
 
         /// <summary>
-        /// extender客户端配置
+        /// <p>extender客户端配置</p>
         /// </summary>
         [JsonProperty("ExtenderClientConfig")]
         public ExtenderClientConfig ExtenderClientConfig{ get; set; }
+
+        /// <summary>
+        /// <p>抢占接口</p>
+        /// </summary>
+        [JsonProperty("PreemptVerb")]
+        public string PreemptVerb{ get; set; }
+
+        /// <summary>
+        /// <p>节点缓存能力</p>
+        /// </summary>
+        [JsonProperty("NodeCacheCapable")]
+        public bool? NodeCacheCapable{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamArrayObj(map, prefix + "ManagedResources.", this.ManagedResources);
             this.SetParamObj(map, prefix + "ExtenderClientConfig.", this.ExtenderClientConfig);
+            this.SetParamSimple(map, prefix + "PreemptVerb", this.PreemptVerb);
+            this.SetParamSimple(map, prefix + "NodeCacheCapable", this.NodeCacheCapable);
         }
     }
 }

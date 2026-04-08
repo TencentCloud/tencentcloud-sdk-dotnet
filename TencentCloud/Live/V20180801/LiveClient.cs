@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1402";
+       private const string sdkVersion = "SDK_NET_3.0.1403";
 
         /// <summary>
         /// Client constructor.
@@ -505,7 +505,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于创建数字人直播间话术。
+        /// 调用该接口，用于创建数字人直播间/AIGC直播间话术。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveAvatarScriptRequest"/></param>
         /// <returns><see cref="CreateLiveAvatarScriptResponse"/></returns>
@@ -515,7 +515,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于创建数字人直播间话术。
+        /// 调用该接口，用于创建数字人直播间/AIGC直播间话术。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveAvatarScriptRequest"/></param>
         /// <returns><see cref="CreateLiveAvatarScriptResponse"/></returns>
@@ -2302,7 +2302,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，查询数字人直播间话术信息列表。
+        /// 调用该接口，查询数字人直播间话术信息列表。新增产品ID参数
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveAvatarScriptsRequest"/></param>
         /// <returns><see cref="DescribeLiveAvatarScriptsResponse"/></returns>
@@ -2312,7 +2312,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，查询数字人直播间话术信息列表。
+        /// 调用该接口，查询数字人直播间话术信息列表。新增产品ID参数
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveAvatarScriptsRequest"/></param>
         /// <returns><see cref="DescribeLiveAvatarScriptsResponse"/></returns>
@@ -4258,7 +4258,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于修改数字人直播间。
+        /// 调用该接口，用于修改数字人(包括AIGC数字人)直播间。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveAvatarRoomRequest"/></param>
         /// <returns><see cref="ModifyLiveAvatarRoomResponse"/></returns>
@@ -4268,7 +4268,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于修改数字人直播间。
+        /// 调用该接口，用于修改数字人(包括AIGC数字人)直播间。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveAvatarRoomRequest"/></param>
         /// <returns><see cref="ModifyLiveAvatarRoomResponse"/></returns>
@@ -4757,7 +4757,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于启动数字人直播间。
+        /// 调用该接口，用于启动数字人（包括AIGC数字人）直播间。
         /// </summary>
         /// <param name="req"><see cref="StartLiveAvatarRoomRequest"/></param>
         /// <returns><see cref="StartLiveAvatarRoomResponse"/></returns>
@@ -4767,7 +4767,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 调用该接口，用于启动数字人直播间。
+        /// 调用该接口，用于启动数字人（包括AIGC数字人）直播间。
         /// </summary>
         /// <param name="req"><see cref="StartLiveAvatarRoomRequest"/></param>
         /// <returns><see cref="StartLiveAvatarRoomResponse"/></returns>

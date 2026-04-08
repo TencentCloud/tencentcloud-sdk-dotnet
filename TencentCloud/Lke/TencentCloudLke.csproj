@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1401</VersionPrefix>
+    <VersionPrefix>3.0.1403</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,7 @@
     <Compile Include="V20231130\Models\AgentProcedure.cs" />
     <Compile Include="V20231130\Models\AgentProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\AgentReference.cs" />
+    <Compile Include="V20231130\Models\AgentTask.cs" />
     <Compile Include="V20231130\Models\AgentThought.cs" />
     <Compile Include="V20231130\Models\AgentToolInfo.cs" />
     <Compile Include="V20231130\Models\AgentToolReqParam.cs" />
@@ -347,6 +348,10 @@
     <Compile Include="V20231130\Models\QAList.cs" />
     <Compile Include="V20231130\Models\QAQuery.cs" />
     <Compile Include="V20231130\Models\QaReference.cs" />
+    <Compile Include="V20231130\Models\QuestionOption.cs" />
+    <Compile Include="V20231130\Models\Questionnaire.cs" />
+    <Compile Include="V20231130\Models\QuestionnaireQuestion.cs" />
+    <Compile Include="V20231130\Models\QuestionnaireQuestionAnswer.cs" />
     <Compile Include="V20231130\Models\QuoteInfo.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordRequest.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordResponse.cs" />

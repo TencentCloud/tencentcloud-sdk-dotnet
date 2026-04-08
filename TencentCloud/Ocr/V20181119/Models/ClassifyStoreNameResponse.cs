@@ -25,10 +25,16 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 门头照标签
+        /// <p>门头照标签</p>
         /// </summary>
         [JsonProperty("StoreLabel")]
         public string[] StoreLabel{ get; set; }
+
+        /// <summary>
+        /// <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "StoreLabel.", this.StoreLabel);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

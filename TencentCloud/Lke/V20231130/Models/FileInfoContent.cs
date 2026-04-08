@@ -25,54 +25,54 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 实时文档解析接口返回的 DocBizId
+        /// <p>实时文档解析接口返回的 DocBizId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocBizId")]
         [System.Obsolete]
-        public ulong? DocBizId{ get; set; }
+        public string DocBizId{ get; set; }
 
         /// <summary>
-        /// 文件名称
+        /// <p>文件名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件类型
+        /// <p>文件类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// <p>文件大小，单位为Byte</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
-        public ulong? FileSize{ get; set; }
+        public string FileSize{ get; set; }
 
         /// <summary>
-        /// 文件 URL
+        /// <p>文件 URL</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 实时文档解析接口返回的 doc_id。
+        /// <p>实时文档解析接口返回的 doc_id。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocId")]
-        public ulong? DocId{ get; set; }
+        public string DocId{ get; set; }
 
         /// <summary>
-        /// 文件创建时间
+        /// <p>文件创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
+        public string CreateTime{ get; set; }
 
 
         /// <summary>

@@ -25,52 +25,52 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 插件id
+        /// <p>插件id</p>
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 应用配置的插件header信息
+        /// <p>应用配置的插件header信息</p>
         /// </summary>
         [JsonProperty("Headers")]
         public AgentPluginHeader[] Headers{ get; set; }
 
         /// <summary>
-        /// 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+        /// <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Model")]
         public AgentModelInfo Model{ get; set; }
 
         /// <summary>
-        /// 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
+        /// <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
         /// </summary>
         [JsonProperty("PluginInfoType")]
         public ulong? PluginInfoType{ get; set; }
 
         /// <summary>
-        /// 知识库问答插件配置
+        /// <p>知识库问答插件配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KnowledgeQa")]
         public AgentKnowledgeQAPlugin KnowledgeQa{ get; set; }
 
         /// <summary>
-        /// 是否使用一键授权
+        /// <p>是否使用一键授权</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRoleAuth")]
         public bool? EnableRoleAuth{ get; set; }
 
         /// <summary>
-        /// 应用配置的插件query信息
+        /// <p>应用配置的插件query信息</p>
         /// </summary>
         [JsonProperty("Query")]
         public AgentPluginQuery[] Query{ get; set; }
 
         /// <summary>
-        /// MCP类型
+        /// <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
         /// </summary>
         [JsonProperty("McpType")]
         public ulong? McpType{ get; set; }

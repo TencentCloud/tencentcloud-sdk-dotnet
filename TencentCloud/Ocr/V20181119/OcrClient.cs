@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1397";
+       private const string sdkVersion = "SDK_NET_3.0.1403";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,27 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 图像切边矫正增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度，可以作为所有识别场景的图像预处理原子能力，从而提升识别效果。
+        /// </summary>
+        /// <param name="req"><see cref="CropEnhanceImageOCRRequest"/></param>
+        /// <returns><see cref="CropEnhanceImageOCRResponse"/></returns>
+        public Task<CropEnhanceImageOCRResponse> CropEnhanceImageOCR(CropEnhanceImageOCRRequest req)
+        {
+            return InternalRequestAsync<CropEnhanceImageOCRResponse>(req, "CropEnhanceImageOCR");
+        }
+
+        /// <summary>
+        /// 图像切边矫正增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度，可以作为所有识别场景的图像预处理原子能力，从而提升识别效果。
+        /// </summary>
+        /// <param name="req"><see cref="CropEnhanceImageOCRRequest"/></param>
+        /// <returns><see cref="CropEnhanceImageOCRResponse"/></returns>
+        public CropEnhanceImageOCRResponse CropEnhanceImageOCRSync(CropEnhanceImageOCRRequest req)
+        {
+            return InternalRequestAsync<CropEnhanceImageOCRResponse>(req, "CropEnhanceImageOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
         /// </summary>
         /// <param name="req"><see cref="DescribeExtractDocAgentJobRequest"/></param>
@@ -514,6 +535,27 @@ namespace TencentCloud.Ocr.V20181119
         public EnterpriseLicenseOCRResponse EnterpriseLicenseOCRSync(EnterpriseLicenseOCRRequest req)
         {
             return InternalRequestAsync<EnterpriseLicenseOCRResponse>(req, "EnterpriseLicenseOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本功能可自动清除试卷图片中的手写与批改痕迹，并输出洁净的空白试卷。也可以配合集成图像切边矫正技术，能自动定位、拉平试卷区域，从而在最优预处理基础上实现更佳的擦除效果。
+        /// </summary>
+        /// <param name="req"><see cref="EraseHandwrittenImageOCRRequest"/></param>
+        /// <returns><see cref="EraseHandwrittenImageOCRResponse"/></returns>
+        public Task<EraseHandwrittenImageOCRResponse> EraseHandwrittenImageOCR(EraseHandwrittenImageOCRRequest req)
+        {
+            return InternalRequestAsync<EraseHandwrittenImageOCRResponse>(req, "EraseHandwrittenImageOCR");
+        }
+
+        /// <summary>
+        /// 本功能可自动清除试卷图片中的手写与批改痕迹，并输出洁净的空白试卷。也可以配合集成图像切边矫正技术，能自动定位、拉平试卷区域，从而在最优预处理基础上实现更佳的擦除效果。
+        /// </summary>
+        /// <param name="req"><see cref="EraseHandwrittenImageOCRRequest"/></param>
+        /// <returns><see cref="EraseHandwrittenImageOCRResponse"/></returns>
+        public EraseHandwrittenImageOCRResponse EraseHandwrittenImageOCRSync(EraseHandwrittenImageOCRRequest req)
+        {
+            return InternalRequestAsync<EraseHandwrittenImageOCRResponse>(req, "EraseHandwrittenImageOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

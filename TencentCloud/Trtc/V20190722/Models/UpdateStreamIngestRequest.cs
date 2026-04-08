@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string StreamUrl{ get; set; }
 
         /// <summary>
-        /// 音量，取值范围[0, 100]，默认100，表示原音量。
+        /// 音量，取值范围[0, 200]，默认100，表示原音量。
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
