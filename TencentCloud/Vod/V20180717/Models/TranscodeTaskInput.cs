@@ -25,64 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频转码模板 ID。
+        /// <p>视频转码模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+        /// <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 溯源水印。
+        /// <p>溯源水印。</p>
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 版权水印。
+        /// <p>版权水印。</p>
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// 数字水印。
+        /// <p>数字水印。</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// 马赛克列表，最大可支持 10 张。
+        /// <p>马赛克列表，最大可支持 10 张。</p>
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+        /// <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
         /// </summary>
         [JsonProperty("HeadTailSet")]
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// 转码后的视频的起始时间偏移，单位：秒。
-        /// <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-        /// <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-        /// <li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+        /// <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 转码后视频的终止时间偏移，单位：秒。
-        /// <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-        /// <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-        /// <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+        /// <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
+        /// <p>字幕压制信息列表。最大可支持 2 个。</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfoSet")]
+        public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
 
         /// <summary>
@@ -99,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
         }
     }
 }

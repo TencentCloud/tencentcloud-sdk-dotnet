@@ -25,32 +25,31 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 目标标签ID
+        /// <p>目标标签ID</p>
         /// </summary>
         [JsonProperty("TargetId")]
         public long? TargetId{ get; set; }
 
         /// <summary>
-        /// 目标描述
+        /// <p>目标描述</p>
         /// </summary>
         [JsonProperty("TargetDesc")]
         public string TargetDesc{ get; set; }
 
         /// <summary>
-        /// 1:演练场景
-        /// 2:演练目标
+        /// <p>1:演练场景<br>2:演练目标</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 1:平台 2:用户个人
+        /// <p>1:平台 2:用户个人</p>
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
-        /// 目标标签是否已被删除
+        /// <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
         /// </summary>
         [JsonProperty("TargetStatus")]
         public long? TargetStatus{ get; set; }

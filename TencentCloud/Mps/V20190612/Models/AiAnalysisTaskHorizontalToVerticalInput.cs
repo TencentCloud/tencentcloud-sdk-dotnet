@@ -25,11 +25,17 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频智能横转竖模板 ID
+        /// <p>视频智能横转竖模板 ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数。</p>
+        /// </summary>
+        [JsonProperty("ExtendedParameter")]
+        public string ExtendedParameter{ get; set; }
 
 
         /// <summary>
@@ -38,6 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
         }
     }
 }

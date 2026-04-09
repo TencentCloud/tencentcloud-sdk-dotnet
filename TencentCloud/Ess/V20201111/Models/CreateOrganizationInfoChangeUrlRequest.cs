@@ -25,25 +25,28 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 企业信息变更类型，可选类型如下：
-        /// <ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+        /// <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
         /// </summary>
         [JsonProperty("ChangeType")]
         public ulong? ChangeType{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p>
+        /// </summary>
+        [JsonProperty("UnifiedSocialCreditCode")]
+        public string UnifiedSocialCreditCode{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ChangeType", this.ChangeType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
         }
     }
 }

@@ -25,24 +25,30 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 关联产品的实例ID
+        /// <p>关联产品的实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }
 
         /// <summary>
-        /// 关联关系状态：1（启用）、2（不启用）、3（已失效）
+        /// <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// CKafka消息主题
+        /// <p>CKafka消息主题</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
+
+        /// <summary>
+        /// <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+        /// </summary>
+        [JsonProperty("MetricTopic")]
+        public string MetricTopic{ get; set; }
 
 
         /// <summary>
@@ -53,6 +59,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "PeerId", this.PeerId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
         }
     }
 }

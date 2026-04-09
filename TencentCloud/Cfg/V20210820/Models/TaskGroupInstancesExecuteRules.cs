@@ -25,19 +25,19 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 实例选取模式
+        /// <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecuteMode")]
         public long? TaskGroupInstancesExecuteMode{ get; set; }
 
         /// <summary>
-        /// 按比例选取模式下选取比例
+        /// <p>按比例选取模式下选取比例</p>
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecutePercent")]
         public long? TaskGroupInstancesExecutePercent{ get; set; }
 
         /// <summary>
-        /// 按数量选取模式下选取数量
+        /// <p>按数量选取模式下选取数量</p>
         /// </summary>
         [JsonProperty("TaskGroupInstancesExecuteNum")]
         public long? TaskGroupInstancesExecuteNum{ get; set; }

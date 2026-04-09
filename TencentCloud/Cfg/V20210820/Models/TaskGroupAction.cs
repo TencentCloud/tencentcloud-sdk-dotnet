@@ -25,127 +25,127 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 任务分组动作ID
+        /// <p>任务分组动作ID</p>
         /// </summary>
         [JsonProperty("TaskGroupActionId")]
         public long? TaskGroupActionId{ get; set; }
 
         /// <summary>
-        /// 任务分组动作实例列表
+        /// <p>任务分组动作实例列表</p>
         /// </summary>
         [JsonProperty("TaskGroupInstances")]
         public TaskGroupInstance[] TaskGroupInstances{ get; set; }
 
         /// <summary>
-        /// 动作ID
+        /// <p>动作ID</p>
         /// </summary>
         [JsonProperty("ActionId")]
         public long? ActionId{ get; set; }
 
         /// <summary>
-        /// 分组动作顺序
+        /// <p>分组动作顺序</p>
         /// </summary>
         [JsonProperty("TaskGroupActionOrder")]
         public long? TaskGroupActionOrder{ get; set; }
 
         /// <summary>
-        /// 分组动作通用配置
+        /// <p>分组动作通用配置</p>
         /// </summary>
         [JsonProperty("TaskGroupActionGeneralConfiguration")]
         public string TaskGroupActionGeneralConfiguration{ get; set; }
 
         /// <summary>
-        /// 分组动作自定义配置
+        /// <p>分组动作自定义配置</p>
         /// </summary>
         [JsonProperty("TaskGroupActionCustomConfiguration")]
         public string TaskGroupActionCustomConfiguration{ get; set; }
 
         /// <summary>
-        /// 分组动作状态
+        /// <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul>
         /// </summary>
         [JsonProperty("TaskGroupActionStatus")]
         public long? TaskGroupActionStatus{ get; set; }
 
         /// <summary>
-        /// 动作分组创建时间
+        /// <p>动作分组创建时间</p>
         /// </summary>
         [JsonProperty("TaskGroupActionCreateTime")]
         public string TaskGroupActionCreateTime{ get; set; }
 
         /// <summary>
-        /// 动作分组更新时间
+        /// <p>动作分组更新时间</p>
         /// </summary>
         [JsonProperty("TaskGroupActionUpdateTime")]
         public string TaskGroupActionUpdateTime{ get; set; }
 
         /// <summary>
-        /// 动作名称
+        /// <p>动作名称</p>
         /// </summary>
         [JsonProperty("ActionTitle")]
         public string ActionTitle{ get; set; }
 
         /// <summary>
-        /// 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
+        /// <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
         /// </summary>
         [JsonProperty("TaskGroupActionStatusType")]
         public long? TaskGroupActionStatusType{ get; set; }
 
         /// <summary>
-        /// RandomId
+        /// <p>RandomId</p>
         /// </summary>
         [JsonProperty("TaskGroupActionRandomId")]
         public long? TaskGroupActionRandomId{ get; set; }
 
         /// <summary>
-        /// RecoverId
+        /// <p>RecoverId</p>
         /// </summary>
         [JsonProperty("TaskGroupActionRecoverId")]
         public long? TaskGroupActionRecoverId{ get; set; }
 
         /// <summary>
-        /// ExecuteId
+        /// <p>ExecuteId</p>
         /// </summary>
         [JsonProperty("TaskGroupActionExecuteId")]
         public long? TaskGroupActionExecuteId{ get; set; }
 
         /// <summary>
-        /// 调用api类型，0:tat, 1:云api
+        /// <p>调用api类型，0:tat, 1:云api</p>
         /// </summary>
         [JsonProperty("ActionApiType")]
         public long? ActionApiType{ get; set; }
 
         /// <summary>
-        /// 1:故障，2:恢复
+        /// <p>1:故障，2:恢复</p>
         /// </summary>
         [JsonProperty("ActionAttribute")]
         public long? ActionAttribute{ get; set; }
 
         /// <summary>
-        /// 动作类型：平台、自定义
+        /// <p>动作类型：平台、自定义</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 是否可重试
+        /// <p>是否可重试</p>
         /// </summary>
         [JsonProperty("IsExecuteRedo")]
         public bool? IsExecuteRedo{ get; set; }
 
         /// <summary>
-        /// 动作风险级别
+        /// <p>动作风险级别</p>
         /// </summary>
         [JsonProperty("ActionRisk")]
         public string ActionRisk{ get; set; }
 
         /// <summary>
-        /// 动作运行时间
+        /// <p>动作运行时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("TaskGroupActionExecuteTime")]
         public long? TaskGroupActionExecuteTime{ get; set; }
 
         /// <summary>
-        /// 动作开始执行时间
+        /// <p>动作开始执行时间</p>
         /// </summary>
         [JsonProperty("TaskGroupActionStartTime")]
         public string TaskGroupActionStartTime{ get; set; }

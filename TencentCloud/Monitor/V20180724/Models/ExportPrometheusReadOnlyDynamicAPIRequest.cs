@@ -24,12 +24,54 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class ExportPrometheusReadOnlyDynamicAPIRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Prometheus 实例 ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// HTTP 方法名 GET/POST/PUT/DELETE 等
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// HTTP 路径（包括 query string）
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// HTTP 请求体，任何数据
+        /// </summary>
+        [JsonProperty("RequestBody")]
+        public string RequestBody{ get; set; }
+
+        /// <summary>
+        /// HTTP 请求头
+        /// </summary>
+        [JsonProperty("Headers")]
+        public PrometheusStringKeyValuePair[] Headers{ get; set; }
+
+        /// <summary>
+        /// 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+        /// </summary>
+        [JsonProperty("SelfMonitor")]
+        public bool? SelfMonitor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "RequestBody", this.RequestBody);
+            this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "SelfMonitor", this.SelfMonitor);
         }
     }
 }

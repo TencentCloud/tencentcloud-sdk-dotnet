@@ -25,55 +25,55 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceId")]
         public long? TaskGroupInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceObjectId")]
         public string TaskGroupInstanceObjectId{ get; set; }
 
         /// <summary>
-        /// 实例动作执行状态
+        /// <p>实例动作执行状态</p><p>枚举值：</p><ul><li>3001： 未开始</li><li>3002： 执行中</li><li>3003： 执行结束</li><li>3004： 准备中</li></ul>
         /// </summary>
         [JsonProperty("TaskGroupInstanceStatus")]
         public long? TaskGroupInstanceStatus{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceCreateTime")]
         public string TaskGroupInstanceCreateTime{ get; set; }
 
         /// <summary>
-        /// 实例更新时间
+        /// <p>实例更新时间</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceUpdateTime")]
         public string TaskGroupInstanceUpdateTime{ get; set; }
 
         /// <summary>
-        /// 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
+        /// <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceStatusType")]
         public long? TaskGroupInstanceStatusType{ get; set; }
 
         /// <summary>
-        /// 执行开始时间
+        /// <p>执行开始时间</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceStartTime")]
         public string TaskGroupInstanceStartTime{ get; set; }
 
         /// <summary>
-        /// 执行结束时间
+        /// <p>执行结束时间</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceEndTime")]
         public string TaskGroupInstanceEndTime{ get; set; }
 
         /// <summary>
-        /// 实例动作执行日志
+        /// <p>实例动作执行日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupInstanceExecuteLog")]
@@ -81,13 +81,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         public string TaskGroupInstanceExecuteLog{ get; set; }
 
         /// <summary>
-        /// 实例是否可重试
+        /// <p>实例是否可重试</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceIsRedo")]
         public bool? TaskGroupInstanceIsRedo{ get; set; }
 
         /// <summary>
-        /// 动作实例执行时间
+        /// <p>动作实例执行时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("TaskGroupInstanceExecuteTime")]
         public long? TaskGroupInstanceExecuteTime{ get; set; }

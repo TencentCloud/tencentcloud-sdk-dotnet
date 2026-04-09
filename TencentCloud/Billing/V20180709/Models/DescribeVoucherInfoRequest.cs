@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+        /// <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

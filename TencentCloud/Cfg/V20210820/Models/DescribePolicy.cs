@@ -25,25 +25,25 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 保护策略ID列表
+        /// <p>保护策略ID列表</p>
         /// </summary>
         [JsonProperty("TaskPolicyIdList")]
         public string[] TaskPolicyIdList{ get; set; }
 
         /// <summary>
-        /// 保护策略状态
+        /// <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
         /// </summary>
         [JsonProperty("TaskPolicyStatus")]
         public string TaskPolicyStatus{ get; set; }
 
         /// <summary>
-        /// 策略规则
+        /// <p>策略规则</p>
         /// </summary>
         [JsonProperty("TaskPolicyRule")]
         public string TaskPolicyRule{ get; set; }
 
         /// <summary>
-        /// 护栏策略生效处理策略 1:顺序执行，2:暂停
+        /// <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
         /// </summary>
         [JsonProperty("TaskPolicyDealType")]
         public long? TaskPolicyDealType{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Record")]
         public string Record{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IncludeRecordInReport")]
+        public long? IncludeRecordInReport{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
             this.SetParamSimple(map, prefix + "Issue", this.Issue);
             this.SetParamSimple(map, prefix + "Record", this.Record);
+            this.SetParamSimple(map, prefix + "IncludeRecordInReport", this.IncludeRecordInReport);
         }
     }
 }

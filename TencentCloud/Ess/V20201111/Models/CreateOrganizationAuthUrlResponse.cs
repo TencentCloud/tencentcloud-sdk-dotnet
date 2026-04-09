@@ -25,15 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 生成的认证链接。
-        /// 
-        /// 注： `链接有效期统一30天`
+        /// <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
         /// </summary>
         [JsonProperty("AuthUrl")]
         public string AuthUrl{ get; set; }
 
         /// <summary>
-        /// 链接过期时间，格式为Unix标准时间戳（秒）
+        /// <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

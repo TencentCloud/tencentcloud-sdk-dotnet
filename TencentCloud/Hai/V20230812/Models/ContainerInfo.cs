@@ -25,34 +25,40 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 镜像相关信息
+        /// <p>镜像相关信息</p>
         /// </summary>
         [JsonProperty("Image")]
         public ImageInfo Image{ get; set; }
 
         /// <summary>
-        /// 服务监听端口
+        /// <p>服务监听端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 启动命令
+        /// <p>启动命令</p>
         /// </summary>
         [JsonProperty("Scripts")]
         public string[] Scripts{ get; set; }
 
         /// <summary>
-        /// 环境变量列表
+        /// <p>环境变量列表</p>
         /// </summary>
         [JsonProperty("Envs")]
         public EnvParam[] Envs{ get; set; }
 
         /// <summary>
-        /// 存储挂载配置
+        /// <p>存储挂载配置</p>
         /// </summary>
         [JsonProperty("Storages")]
         public StorageInfo[] Storages{ get; set; }
+
+        /// <summary>
+        /// <p>探针信息</p>
+        /// </summary>
+        [JsonProperty("Probe")]
+        public ProbeInfo Probe{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamArraySimple(map, prefix + "Scripts.", this.Scripts);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamArrayObj(map, prefix + "Storages.", this.Storages);
+            this.SetParamObj(map, prefix + "Probe.", this.Probe);
         }
     }
 }

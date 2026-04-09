@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 创建的企业信息变更链接。
+        /// <p>创建的企业信息变更链接。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 链接过期时间。链接7天有效。
+        /// <p>链接过期时间。链接7天有效。</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

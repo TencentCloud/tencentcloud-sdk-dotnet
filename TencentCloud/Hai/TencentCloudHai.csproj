@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A7008F4E-5673-33C5-B938-C6F9D4CCFECA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1394</VersionPrefix>
+    <VersionPrefix>3.0.1404</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,7 @@
     <Compile Include="V20230812\Models\EnvParam.cs" />
     <Compile Include="V20230812\Models\Filter.cs" />
     <Compile Include="V20230812\Models\HiCacheInfo.cs" />
+    <Compile Include="V20230812\Models\HttpConfig.cs" />
     <Compile Include="V20230812\Models\HyperParam.cs" />
     <Compile Include="V20230812\Models\ImageInfo.cs" />
     <Compile Include="V20230812\Models\InquirePriceRunInstancesRequest.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="V20230812\Models\NetworkSetting.cs" />
     <Compile Include="V20230812\Models\NetworkStatus.cs" />
     <Compile Include="V20230812\Models\Price.cs" />
+    <Compile Include="V20230812\Models\ProbeConfig.cs" />
+    <Compile Include="V20230812\Models\ProbeInfo.cs" />
     <Compile Include="V20230812\Models\RegionInfo.cs" />
     <Compile Include="V20230812\Models\ResetInstancesPasswordRequest.cs" />
     <Compile Include="V20230812\Models\ResetInstancesPasswordResponse.cs" />

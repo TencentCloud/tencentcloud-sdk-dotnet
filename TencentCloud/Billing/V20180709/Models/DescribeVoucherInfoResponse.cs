@@ -43,6 +43,12 @@ namespace TencentCloud.Billing.V20180709.Models
         public VoucherInfos[] VoucherInfos{ get; set; }
 
         /// <summary>
+        /// <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "TotalBalance", this.TotalBalance);
             this.SetParamArrayObj(map, prefix + "VoucherInfos.", this.VoucherInfos);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

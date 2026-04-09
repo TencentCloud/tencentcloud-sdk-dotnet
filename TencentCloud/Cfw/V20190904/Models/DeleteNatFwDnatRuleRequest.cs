@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Organization.V20210331.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOrganizationMemberResponse : AbstractModel
+    public class DeleteNatFwDnatRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>成员Uin。</p>
+        /// 0：cfw新增模式，1：cfw接入模式。
         /// </summary>
-        [JsonProperty("Uin")]
-        public long? Uin{ get; set; }
+        [JsonProperty("Mode")]
+        public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 防火墙实例id，该字段必须传递。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("CfwInstance")]
+        public string CfwInstance{ get; set; }
+
+        /// <summary>
+        /// 添加或删除操作的Dnat规则列表。
+        /// </summary>
+        [JsonProperty("DnatRules")]
+        public CfwNatDnatRule[] DnatRules{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "CfwInstance", this.CfwInstance);
+            this.SetParamArrayObj(map, prefix + "DnatRules.", this.DnatRules);
         }
     }
 }

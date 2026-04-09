@@ -25,40 +25,46 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 转自适应码流模板 ID。
+        /// <p>转自适应码流模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+        /// <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 溯源水印。
+        /// <p>溯源水印。</p>
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 版权水印。
+        /// <p>版权水印。</p>
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// 数字水印。
+        /// <p>数字水印。</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+        /// <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public string[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// <p>字幕压制信息列表。最大可支持 2 个。</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfoSet")]
+        public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
             this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
+            this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
         }
     }
 }

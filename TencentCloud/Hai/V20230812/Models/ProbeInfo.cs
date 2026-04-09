@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Organization.V20210331.Models
+namespace TencentCloud.Hai.V20230812.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOrganizationMemberResponse : AbstractModel
+    public class ProbeInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>成员Uin。</p>
+        /// <p>存活探针</p>
         /// </summary>
-        [JsonProperty("Uin")]
-        public long? Uin{ get; set; }
+        [JsonProperty("LivenessProbe")]
+        public ProbeConfig LivenessProbe{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>就绪探针</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ReadinessProbe")]
+        public ProbeConfig ReadinessProbe{ get; set; }
+
+        /// <summary>
+        /// <p>启动探针</p>
+        /// </summary>
+        [JsonProperty("StartupProbe")]
+        public ProbeConfig StartupProbe{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
+            this.SetParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
+            this.SetParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
         }
     }
 }

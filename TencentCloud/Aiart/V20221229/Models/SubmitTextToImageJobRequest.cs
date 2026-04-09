@@ -31,7 +31,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+        /// <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul>
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
+        /// <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p>
         /// </summary>
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }

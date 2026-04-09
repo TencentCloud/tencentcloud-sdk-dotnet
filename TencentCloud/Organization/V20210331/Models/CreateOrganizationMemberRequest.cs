@@ -25,67 +25,67 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+        /// <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 关系策略。取值：Financial
+        /// <p>关系策略。取值：Financial</p>
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
+        /// <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }
 
         /// <summary>
-        /// 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+        /// <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+        /// <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 备注。
+        /// <p>备注。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 成员创建记录ID。创建异常重试时需要
+        /// <p>成员创建记录ID。创建异常重试时需要</p>
         /// </summary>
         [JsonProperty("RecordId")]
         public long? RecordId{ get; set; }
 
         /// <summary>
-        /// 代付者Uin。成员代付费时需要
+        /// <p>代付者Uin。成员代付费时需要</p>
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
-        /// 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+        /// <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
         /// </summary>
         [JsonProperty("IdentityRoleID")]
         public ulong?[] IdentityRoleID{ get; set; }
 
         /// <summary>
-        /// 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+        /// <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
         /// </summary>
         [JsonProperty("AuthRelationId")]
         public long? AuthRelationId{ get; set; }
 
         /// <summary>
-        /// 成员标签列表。最大10个
+        /// <p>成员标签列表。最大10个</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

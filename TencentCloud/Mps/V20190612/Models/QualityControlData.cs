@@ -25,37 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 为true时表示视频无音频轨。
+        /// <p>为true时表示视频无音频轨。</p>
         /// </summary>
         [JsonProperty("NoAudio")]
         public bool? NoAudio{ get; set; }
 
         /// <summary>
-        /// 为true时表示视频无视频轨。
+        /// <p>为true时表示视频无视频轨。</p>
         /// </summary>
         [JsonProperty("NoVideo")]
         public bool? NoVideo{ get; set; }
 
         /// <summary>
-        /// 视频无参考质量评分，百分制。
+        /// <p>视频无参考质量评分，百分制。</p>
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// 视频无参考质量评分，MOS分数。
+        /// <p>视频无参考质量评分，MOS分数。</p>
         /// </summary>
         [JsonProperty("QualityEvaluationMeanOpinionScore")]
         public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
-        /// 内容质检检出异常项。
+        /// <p>视频美学评分，范围：[0,100]。</p>
+        /// </summary>
+        [JsonProperty("AestheticEvaluationScore")]
+        public long? AestheticEvaluationScore{ get; set; }
+
+        /// <summary>
+        /// <p>内容质检检出异常项。</p>
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// 格式诊断检出异常项。
+        /// <p>格式诊断检出异常项。</p>
         /// </summary>
         [JsonProperty("ContainerDiagnoseResultSet")]
         public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
@@ -70,6 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
             this.SetParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+            this.SetParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
             this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }

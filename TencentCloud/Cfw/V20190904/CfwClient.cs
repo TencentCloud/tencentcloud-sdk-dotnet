@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1404";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatFwDnatRuleResponse"/></returns>
+        public Task<CreateNatFwDnatRuleResponse> CreateNatFwDnatRule(CreateNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<CreateNatFwDnatRuleResponse>(req, "CreateNatFwDnatRule");
+        }
+
+        /// <summary>
+        /// 创建Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatFwDnatRuleResponse"/></returns>
+        public CreateNatFwDnatRuleResponse CreateNatFwDnatRuleSync(CreateNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<CreateNatFwDnatRuleResponse>(req, "CreateNatFwDnatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建NAT防火墙实例（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>
@@ -491,6 +512,27 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNewSync(DeleteBlockIgnoreRuleNewRequest req)
         {
             return InternalRequestAsync<DeleteBlockIgnoreRuleNewResponse>(req, "DeleteBlockIgnoreRuleNew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatFwDnatRuleResponse"/></returns>
+        public Task<DeleteNatFwDnatRuleResponse> DeleteNatFwDnatRule(DeleteNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteNatFwDnatRuleResponse>(req, "DeleteNatFwDnatRule");
+        }
+
+        /// <summary>
+        /// 删除Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatFwDnatRuleResponse"/></returns>
+        public DeleteNatFwDnatRuleResponse DeleteNatFwDnatRuleSync(DeleteNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteNatFwDnatRuleResponse>(req, "DeleteNatFwDnatRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

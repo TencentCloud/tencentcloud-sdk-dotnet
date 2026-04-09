@@ -25,56 +25,58 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 账号组ID
+        /// <p>账号组ID</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 合规包名称
+        /// <p>合规包名称</p>
         /// </summary>
         [JsonProperty("CompliancePackName")]
         public string CompliancePackName{ get; set; }
 
         /// <summary>
-        /// 风险等级
-        /// 1：高风险。
-        /// 2：中风险。
-        /// 3：低风险。
+        /// <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// 合规包状态 ACTIVE、NO_ACTIVE
+        /// <p>合规包状态 ACTIVE、NO_ACTIVE</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 评估状态合规： 'COMPLIANT'
-        /// 不合规： 'NON_COMPLIANT'
+        /// <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string[] ComplianceResult{ get; set; }
 
         /// <summary>
-        /// 排序类型, 倒序：desc，顺序：asc
+        /// <p>排序类型, 倒序：desc，顺序：asc</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
+
+        /// <summary>
+        /// <p>包含合规包结果定义</p><p>枚举值：</p><ul><li>NO： 不包含</li></ul><p>默认值：空</p><p>此字段为新增，因此不传或者传了YES都会默认返回包含合规结果数据，其他枚举值后面视情况丰富</p>
+        /// </summary>
+        [JsonProperty("IncludeCompliancePackRuleResult")]
+        public string IncludeCompliancePackRuleResult{ get; set; }
 
 
         /// <summary>
@@ -90,6 +92,7 @@ namespace TencentCloud.Config.V20220802.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "ComplianceResult.", this.ComplianceResult);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamSimple(map, prefix + "IncludeCompliancePackRuleResult", this.IncludeCompliancePackRuleResult);
         }
     }
 }

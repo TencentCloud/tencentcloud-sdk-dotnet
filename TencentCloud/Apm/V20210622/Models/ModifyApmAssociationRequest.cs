@@ -25,34 +25,40 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 关联的产品名，当前只支持Prometheus、CKafka
+        /// <p>关联的产品名，当前只支持Prometheus、CKafka</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+        /// <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// <p>业务系统ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 关联的产品实例ID
+        /// <p>关联的产品实例ID</p>
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }
 
         /// <summary>
-        /// CKafka消息主题
+        /// <p>CKafka消息主题</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
+
+        /// <summary>
+        /// <p>Ckafka消息主题</p>
+        /// </summary>
+        [JsonProperty("MetricTopic")]
+        public string MetricTopic{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PeerId", this.PeerId);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
         }
     }
 }

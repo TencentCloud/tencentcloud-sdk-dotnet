@@ -25,37 +25,37 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 模版ID
+        /// <p>模版ID</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 副本数
+        /// <p>副本数</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 付费方式，POSTPAID_BY_HOUR按量后付费
+        /// <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
         /// </summary>
         [JsonProperty("ServiceChargeType")]
         public string ServiceChargeType{ get; set; }
 
         /// <summary>
-        /// 描述了服务的超参数配置
+        /// <p>描述了服务的超参数配置</p>
         /// </summary>
         [JsonProperty("HyperParam")]
         public HyperParam HyperParam{ get; set; }
 
         /// <summary>
-        /// 网络设置
+        /// <p>网络设置</p>
         /// </summary>
         [JsonProperty("NetworkSetting")]
         public NetworkSetting NetworkSetting{ get; set; }
