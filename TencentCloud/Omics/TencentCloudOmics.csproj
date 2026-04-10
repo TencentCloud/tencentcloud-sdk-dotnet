@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03F46F93-2F0A-340C-A860-01D9CA0C0BCB}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1401</VersionPrefix>
+    <VersionPrefix>3.0.1405</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20221128\OmicsClient.cs" />
+    <Compile Include="V20221128\Models\Application.cs" />
     <Compile Include="V20221128\Models\ApplicationVersion.cs" />
     <Compile Include="V20221128\Models\CVMOption.cs" />
     <Compile Include="V20221128\Models\CacheInfo.cs" />
@@ -65,12 +66,20 @@
     <Compile Include="V20221128\Models\DeleteVolumeDataResponse.cs" />
     <Compile Include="V20221128\Models\DeleteVolumeRequest.cs" />
     <Compile Include="V20221128\Models\DeleteVolumeResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeApplicationVersionsRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeApplicationVersionsResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeApplicationsRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="V20221128\Models\DescribeEnvironmentsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeHPCClustersRequest.cs" />
     <Compile Include="V20221128\Models\DescribeHPCClustersResponse.cs" />
     <Compile Include="V20221128\Models\DescribeHPCNodesRequest.cs" />
     <Compile Include="V20221128\Models\DescribeHPCNodesResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeInputTemplatesRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeInputTemplatesResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeProjectsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeRunGroupsRequest.cs" />
     <Compile Include="V20221128\Models\DescribeRunGroupsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeRunsRequest.cs" />
@@ -86,6 +95,8 @@
     <Compile Include="V20221128\Models\EnvironmentRuntimeConfig.cs" />
     <Compile Include="V20221128\Models\ExecutionTime.cs" />
     <Compile Include="V20221128\Models\Filter.cs" />
+    <Compile Include="V20221128\Models\GetInputTemplateFileRequest.cs" />
+    <Compile Include="V20221128\Models\GetInputTemplateFileResponse.cs" />
     <Compile Include="V20221128\Models\GetRunCallsRequest.cs" />
     <Compile Include="V20221128\Models\GetRunCallsResponse.cs" />
     <Compile Include="V20221128\Models\GetRunMetadataFileRequest.cs" />
@@ -99,14 +110,18 @@
     <Compile Include="V20221128\Models\HPCInstance.cs" />
     <Compile Include="V20221128\Models\HPCInternetInfo.cs" />
     <Compile Include="V20221128\Models\HPCNode.cs" />
+    <Compile Include="V20221128\Models\ImportCommonApplicationRequest.cs" />
+    <Compile Include="V20221128\Models\ImportCommonApplicationResponse.cs" />
     <Compile Include="V20221128\Models\ImportTableFileRequest.cs" />
     <Compile Include="V20221128\Models\ImportTableFileResponse.cs" />
+    <Compile Include="V20221128\Models\InputTemplate.cs" />
     <Compile Include="V20221128\Models\LimitRange.cs" />
     <Compile Include="V20221128\Models\ModifyVolumeRequest.cs" />
     <Compile Include="V20221128\Models\ModifyVolumeResponse.cs" />
     <Compile Include="V20221128\Models\NFOption.cs" />
     <Compile Include="V20221128\Models\NextflowConfig.cs" />
     <Compile Include="V20221128\Models\NotificationType.cs" />
+    <Compile Include="V20221128\Models\Project.cs" />
     <Compile Include="V20221128\Models\RebootHPCNodesRequest.cs" />
     <Compile Include="V20221128\Models\RebootHPCNodesResponse.cs" />
     <Compile Include="V20221128\Models\ResourceIds.cs" />
@@ -116,6 +131,7 @@
     <Compile Include="V20221128\Models\Run.cs" />
     <Compile Include="V20221128\Models\RunApplicationRequest.cs" />
     <Compile Include="V20221128\Models\RunApplicationResponse.cs" />
+    <Compile Include="V20221128\Models\RunConstraints.cs" />
     <Compile Include="V20221128\Models\RunGroup.cs" />
     <Compile Include="V20221128\Models\RunGroupNotification.cs" />
     <Compile Include="V20221128\Models\RunGroupResultNotification.cs" />

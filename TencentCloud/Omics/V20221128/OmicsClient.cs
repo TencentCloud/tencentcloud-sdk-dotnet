@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1401";
+       private const string sdkVersion = "SDK_NET_3.0.1405";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,48 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 查询应用版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationVersionsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationVersionsResponse"/></returns>
+        public Task<DescribeApplicationVersionsResponse> DescribeApplicationVersions(DescribeApplicationVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationVersionsResponse>(req, "DescribeApplicationVersions");
+        }
+
+        /// <summary>
+        /// 查询应用版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationVersionsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationVersionsResponse"/></returns>
+        public DescribeApplicationVersionsResponse DescribeApplicationVersionsSync(DescribeApplicationVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationVersionsResponse>(req, "DescribeApplicationVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询项目应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public Task<DescribeApplicationsResponse> DescribeApplications(DescribeApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationsResponse>(req, "DescribeApplications");
+        }
+
+        /// <summary>
+        /// 查询项目应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationsResponse>(req, "DescribeApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询环境列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
@@ -218,6 +260,48 @@ namespace TencentCloud.Omics.V20221128
         public DescribeHPCNodesResponse DescribeHPCNodesSync(DescribeHPCNodesRequest req)
         {
             return InternalRequestAsync<DescribeHPCNodesResponse>(req, "DescribeHPCNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询运行参数模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInputTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeInputTemplatesResponse"/></returns>
+        public Task<DescribeInputTemplatesResponse> DescribeInputTemplates(DescribeInputTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeInputTemplatesResponse>(req, "DescribeInputTemplates");
+        }
+
+        /// <summary>
+        /// 查询运行参数模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInputTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeInputTemplatesResponse"/></returns>
+        public DescribeInputTemplatesResponse DescribeInputTemplatesSync(DescribeInputTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeInputTemplatesResponse>(req, "DescribeInputTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectsResponse>(req, "DescribeProjects");
+        }
+
+        /// <summary>
+        /// 查询项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectsResponse>(req, "DescribeProjects")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,6 +411,27 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 查询运行参数模板内容
+        /// </summary>
+        /// <param name="req"><see cref="GetInputTemplateFileRequest"/></param>
+        /// <returns><see cref="GetInputTemplateFileResponse"/></returns>
+        public Task<GetInputTemplateFileResponse> GetInputTemplateFile(GetInputTemplateFileRequest req)
+        {
+            return InternalRequestAsync<GetInputTemplateFileResponse>(req, "GetInputTemplateFile");
+        }
+
+        /// <summary>
+        /// 查询运行参数模板内容
+        /// </summary>
+        /// <param name="req"><see cref="GetInputTemplateFileRequest"/></param>
+        /// <returns><see cref="GetInputTemplateFileResponse"/></returns>
+        public GetInputTemplateFileResponse GetInputTemplateFileSync(GetInputTemplateFileRequest req)
+        {
+            return InternalRequestAsync<GetInputTemplateFileResponse>(req, "GetInputTemplateFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询作业详情。
         /// </summary>
         /// <param name="req"><see cref="GetRunCallsRequest"/></param>
@@ -386,6 +491,27 @@ namespace TencentCloud.Omics.V20221128
         public GetRunStatusResponse GetRunStatusSync(GetRunStatusRequest req)
         {
             return InternalRequestAsync<GetRunStatusResponse>(req, "GetRunStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导入公共应用到项目
+        /// </summary>
+        /// <param name="req"><see cref="ImportCommonApplicationRequest"/></param>
+        /// <returns><see cref="ImportCommonApplicationResponse"/></returns>
+        public Task<ImportCommonApplicationResponse> ImportCommonApplication(ImportCommonApplicationRequest req)
+        {
+            return InternalRequestAsync<ImportCommonApplicationResponse>(req, "ImportCommonApplication");
+        }
+
+        /// <summary>
+        /// 导入公共应用到项目
+        /// </summary>
+        /// <param name="req"><see cref="ImportCommonApplicationRequest"/></param>
+        /// <returns><see cref="ImportCommonApplicationResponse"/></returns>
+        public ImportCommonApplicationResponse ImportCommonApplicationSync(ImportCommonApplicationRequest req)
+        {
+            return InternalRequestAsync<ImportCommonApplicationResponse>(req, "ImportCommonApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
