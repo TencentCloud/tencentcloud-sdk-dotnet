@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li>
+        /// <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
+        /// <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string KeepOriginalSound{ get; set; }
 
         /// <summary>
-        /// <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul>
+        /// <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
         /// </summary>
         [JsonProperty("Usage")]
         public string Usage{ get; set; }

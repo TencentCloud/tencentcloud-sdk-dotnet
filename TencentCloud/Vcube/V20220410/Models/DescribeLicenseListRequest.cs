@@ -24,12 +24,33 @@ namespace TencentCloud.Vcube.V20220410.Models
     public class DescribeLicenseListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>页码，从0开始</p>
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// <p>每页数据量</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>pc端还是mobile端</p>
+        /// </summary>
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
         }
     }
 }

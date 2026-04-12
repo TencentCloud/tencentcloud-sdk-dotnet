@@ -25,63 +25,64 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体处理的文件输入信息。
+        /// <p>媒体处理的文件输入信息。</p>
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo[] InputInfo{ get; set; }
 
         /// <summary>
-        /// 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-        /// 注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
+        /// <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-        /// 如果不填，表示与 InputInfo 中文件所在的目录一致。
+        /// <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// 智能字幕
+        /// <p>智能字幕</p>
         /// </summary>
         [JsonProperty("SmartSubtitlesTask")]
         public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
 
         /// <summary>
-        /// 任务的事件通知信息，不填代表不获取事件通知。
+        /// <p>任务的事件通知信息，不填代表不获取事件通知。</p>
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+        /// <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+        /// <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+        /// <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 是否跳过元信息获取，可选值： 
-        /// 0：表示不跳过 
-        /// 1：表示跳过 
-        /// 默认值：0	
+        /// <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p>
         /// </summary>
         [JsonProperty("SkipMateData")]
         public long? SkipMateData{ get; set; }
+
+        /// <summary>
+        /// <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。
+        /// </summary>
+        [JsonProperty("TaskMode")]
+        public string TaskMode{ get; set; }
 
 
         /// <summary>
@@ -98,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
+            this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
         }
     }
 }

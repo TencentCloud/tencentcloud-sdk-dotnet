@@ -108,6 +108,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("K8sNamespaceName")]
         public string K8sNamespaceName{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
             this.SetParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
             this.SetParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }
 }

@@ -25,23 +25,40 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 题目的题干信息 
-        /// 
+        /// <p>题目的题干信息</p>
         /// </summary>
         [JsonProperty("MarkItemTitle")]
         public string MarkItemTitle{ get; set; }
 
         /// <summary>
-        /// 批改答案列表（每个小题存在多个答案，比如多个填空区域答案，循序按照从左到右，从上到下排列）
+        /// <p>批改答案列表（每个小题存在多个答案，比如多个填空区域答案，循序按照从左到右，从上到下排列）</p>
         /// </summary>
         [JsonProperty("AnswerInfos")]
         public AnswerInfo[] AnswerInfos{ get; set; }
 
         /// <summary>
-        /// 嵌套题目结构（如果有多层嵌套则会返回子题信息，如果没有嵌套题目则返回空）
+        /// <p>嵌套题目结构（如果有多层嵌套则会返回子题信息，如果没有嵌套题目则返回空）</p>
         /// </summary>
         [JsonProperty("MarkInfos")]
         public MarkInfo[] MarkInfos{ get; set; }
+
+        /// <summary>
+        /// <p>题干坐标</p><p>单位：px</p>
+        /// </summary>
+        [JsonProperty("QuestionPositions")]
+        public long?[] QuestionPositions{ get; set; }
+
+        /// <summary>
+        /// <p>题干插图坐标列表，每个元素包含一张插图的4个角点坐标</p>
+        /// </summary>
+        [JsonProperty("QuestionImagePositions")]
+        public Positions[] QuestionImagePositions{ get; set; }
+
+        /// <summary>
+        /// <p>题目级正确答案（步骤批改时使用，包含完整解题步骤）</p>
+        /// </summary>
+        [JsonProperty("RightAnswer")]
+        public string RightAnswer{ get; set; }
 
 
         /// <summary>
@@ -52,6 +69,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "MarkItemTitle", this.MarkItemTitle);
             this.SetParamArrayObj(map, prefix + "AnswerInfos.", this.AnswerInfos);
             this.SetParamArrayObj(map, prefix + "MarkInfos.", this.MarkInfos);
+            this.SetParamArraySimple(map, prefix + "QuestionPositions.", this.QuestionPositions);
+            this.SetParamArrayObj(map, prefix + "QuestionImagePositions.", this.QuestionImagePositions);
+            this.SetParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
         }
     }
 }

@@ -25,55 +25,55 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 数据源类型英文名
+        /// <p>数据源类型英文名</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数据源所属存储实例ID
+        /// <p>数据源所属存储实例ID</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// 数据源所属存储实例名称
+        /// <p>数据源所属存储实例名称</p>
         /// </summary>
         [JsonProperty("StorageName")]
         public string StorageName{ get; set; }
 
         /// <summary>
-        /// 限制开关是否开启，只有开启时才有限制
+        /// <p>限制开关是否开启，只有开启时才有限制</p>
         /// </summary>
         [JsonProperty("LimitMount")]
         public bool? LimitMount{ get; set; }
 
         /// <summary>
-        /// 创建者uin
+        /// <p>创建者uin</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建者名称
+        /// <p>创建者名称</p>
         /// </summary>
         [JsonProperty("CreatorName")]
         public string CreatorName{ get; set; }
 
         /// <summary>
-        /// 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
+        /// <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
+        /// <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 额外配置
+        /// <p>额外配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraConf")]

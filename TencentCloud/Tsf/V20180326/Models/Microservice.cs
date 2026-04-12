@@ -25,60 +25,74 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 微服务ID
+        /// <p>微服务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
         /// <summary>
-        /// 微服务名称
+        /// <p>微服务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceName")]
         public string MicroserviceName{ get; set; }
 
         /// <summary>
-        /// 微服务描述
+        /// <p>微服务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceDesc")]
         public string MicroserviceDesc{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 命名空间ID
+        /// <p>命名空间ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 微服务的运行实例数目
+        /// <p>微服务的运行实例数目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
-        /// 微服务的离线实例数目
+        /// <p>微服务的离线实例数目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CriticalInstanceCount")]
         public long? CriticalInstanceCount{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁用删除按钮，true：是；false：否。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteDisabled")]
+        public bool? DeleteDisabled{ get; set; }
+
+        /// <summary>
+        /// <p>禁用删除原因。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteDisabledReason")]
+        public string DeleteDisabledReason{ get; set; }
 
 
         /// <summary>
@@ -94,6 +108,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "RunInstanceCount", this.RunInstanceCount);
             this.SetParamSimple(map, prefix + "CriticalInstanceCount", this.CriticalInstanceCount);
+            this.SetParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+            this.SetParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
         }
     }
 }

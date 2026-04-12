@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03F46F93-2F0A-340C-A860-01D9CA0C0BCB}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1405</VersionPrefix>
+    <VersionPrefix>3.0.1406</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20221128\Models\DescribeInputTemplatesResponse.cs" />
     <Compile Include="V20221128\Models\DescribeProjectsRequest.cs" />
     <Compile Include="V20221128\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20221128\Models\DescribePublicApplicationsRequest.cs" />
+    <Compile Include="V20221128\Models\DescribePublicApplicationsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeRunGroupsRequest.cs" />
     <Compile Include="V20221128\Models\DescribeRunGroupsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeRunsRequest.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="V20221128\Models\NextflowConfig.cs" />
     <Compile Include="V20221128\Models\NotificationType.cs" />
     <Compile Include="V20221128\Models\Project.cs" />
+    <Compile Include="V20221128\Models\PublicApplication.cs" />
     <Compile Include="V20221128\Models\RebootHPCNodesRequest.cs" />
     <Compile Include="V20221128\Models\RebootHPCNodesResponse.cs" />
     <Compile Include="V20221128\Models\ResourceIds.cs" />
@@ -149,6 +152,7 @@
     <Compile Include="V20221128\Models\Tag.cs" />
     <Compile Include="V20221128\Models\TerminateRunGroupRequest.cs" />
     <Compile Include="V20221128\Models\TerminateRunGroupResponse.cs" />
+    <Compile Include="V20221128\Models\ToolRepoTag.cs" />
     <Compile Include="V20221128\Models\VPCOption.cs" />
     <Compile Include="V20221128\Models\Volume.cs" />
     <Compile Include="V20221128\Models\VolumeAutoScaleUpRule.cs" />

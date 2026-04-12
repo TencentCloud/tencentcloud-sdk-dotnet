@@ -25,61 +25,75 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务类型，目前取值有：
-        /// <li>WorkflowTask：工作流处理任务。</li>
+        /// <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务状态，取值：
-        /// <li>WAITING：等待中；</li>
-        /// <li>PROCESSING：处理中；</li>
-        /// <li>FINISH：已完成。</li>
+        /// <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务失败时的错误码。
+        /// <p>任务失败时的错误码。</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+        /// <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 任务异常Message。
+        /// <p>任务异常Message。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 图片处理任务的执行状态与结果。
+        /// <p>图片处理任务的执行状态与结果。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageProcessTaskResultSet")]
         public ImageProcessTaskResult[] ImageProcessTaskResultSet{ get; set; }
 
         /// <summary>
-        /// 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// <p>模板唯一标识。</p>
+        /// </summary>
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
+
+        /// <summary>
+        /// <p>任务发起参数。</p>
+        /// </summary>
+        [JsonProperty("ImageTask")]
+        public ImageTaskInput ImageTask{ get; set; }
+
+        /// <summary>
+        /// <p>图片任务输入信息。</p>
+        /// </summary>
+        [JsonProperty("InputInfo")]
+        public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -101,6 +115,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
+            this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

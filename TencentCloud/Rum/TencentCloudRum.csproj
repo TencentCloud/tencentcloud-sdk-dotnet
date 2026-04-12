@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1387</VersionPrefix>
+    <VersionPrefix>3.0.1406</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20210622\RumClient.cs" />
+    <Compile Include="V20210622\Models\CompareCondition.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileRequest.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileResponse.cs" />
     <Compile Include="V20210622\Models\CreateStarProjectRequest.cs" />
@@ -72,6 +73,10 @@
     <Compile Include="V20210622\Models\DescribeAppSingleCaseDetailListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeAppSingleCaseListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeAppSingleCaseListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeApplicationExitReportDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeApplicationExitReportDetailResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeApplicationExitReportListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeApplicationExitReportListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataBridgeUrlV2Request.cs" />
     <Compile Include="V20210622\Models\DescribeDataBridgeUrlV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeDataCustomUrlRequest.cs" />
@@ -134,6 +139,34 @@
     <Compile Include="V20210622\Models\DescribeDataWebVitalsPageV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="V20210622\Models\DescribeErrorResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeExceptionDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeExceptionDetailResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeExceptionReportListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeExceptionReportListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocProblemDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocProblemDetailResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocProblemListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocProblemListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocReportListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMMallocReportListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMProblemDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMProblemDetailResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMProblemListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMProblemListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMReportListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFOOMReportListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesDistributionRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesDistributionResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesStatisticsTrendRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeIssuesStatisticsTrendResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemAccountDetailRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemAccountDetailResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemFeatureAccountsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemFeatureAccountsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeLagANRProblemListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectsRequest.cs" />
@@ -162,11 +195,16 @@
     <Compile Include="V20210622\Models\DescribeTawAreasResponse.cs" />
     <Compile Include="V20210622\Models\DescribeTawInstancesRequest.cs" />
     <Compile Include="V20210622\Models\DescribeTawInstancesResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeTokenRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeTokenResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeTopIssuesRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeTopIssuesResponse.cs" />
     <Compile Include="V20210622\Models\DescribeUvListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeUvListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeWhitelistsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeWhitelistsResponse.cs" />
     <Compile Include="V20210622\Models\Filter.cs" />
+    <Compile Include="V20210622\Models\Filters.cs" />
     <Compile Include="V20210622\Models\Kafka.cs" />
     <Compile Include="V20210622\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20210622\Models\ModifyInstanceResponse.cs" />

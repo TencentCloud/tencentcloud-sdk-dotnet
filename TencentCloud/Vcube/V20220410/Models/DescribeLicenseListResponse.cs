@@ -25,25 +25,25 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
-        /// 临期license数量
+        /// <p>临期license数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 正式license总览统计数据
+        /// <p>正式license总览统计数据</p>
         /// </summary>
         [JsonProperty("Overview")]
         public Overview Overview{ get; set; }
 
         /// <summary>
-        /// 临期license列表
+        /// <p>临期license列表</p>
         /// </summary>
         [JsonProperty("LicenseList")]
         public OverviewLicense[] LicenseList{ get; set; }
 
         /// <summary>
-        /// 测试license总览统计数据
+        /// <p>测试license总览统计数据</p>
         /// </summary>
         [JsonProperty("TrialOverview")]
         public Overview TrialOverview{ get; set; }

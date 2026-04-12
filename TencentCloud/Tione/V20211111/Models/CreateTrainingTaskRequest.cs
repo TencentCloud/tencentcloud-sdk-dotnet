@@ -25,155 +25,160 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+        /// <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 计费模式，eg：PREPAID 包年包月（资源组）;
-        /// POSTPAID_BY_HOUR 按量计费
+        /// <p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
+        /// <p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
         /// </summary>
         [JsonProperty("ResourceConfigInfos")]
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
-        /// 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
+        /// <p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
         /// </summary>
         [JsonProperty("FrameworkName")]
         public string FrameworkName{ get; set; }
 
         /// <summary>
-        /// 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+        /// <p>训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9</p>
         /// </summary>
         [JsonProperty("FrameworkVersion")]
         public string FrameworkVersion{ get; set; }
 
         /// <summary>
-        /// 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+        /// <p>训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu</p>
         /// </summary>
         [JsonProperty("FrameworkEnvironment")]
         public string FrameworkEnvironment{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
+        /// <p>预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 标签配置
+        /// <p>标签配置</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 自定义镜像信息
+        /// <p>自定义镜像信息</p>
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// COS代码包路径
+        /// <p>COS代码包路径</p>
         /// </summary>
         [JsonProperty("CodePackagePath")]
         public CosPathInfo CodePackagePath{ get; set; }
 
         /// <summary>
-        /// 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
+        /// <p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
         /// </summary>
         [JsonProperty("StartCmdInfo")]
         public StartCmdInfo StartCmdInfo{ get; set; }
 
         /// <summary>
-        /// 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// <p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
         /// </summary>
         [JsonProperty("TrainingMode")]
         public string TrainingMode{ get; set; }
 
         /// <summary>
-        /// 数据配置，依赖DataSource字段，数量不超过10个
+        /// <p>数据配置，依赖DataSource字段，数量不超过10个</p>
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
 
         /// <summary>
-        /// VPC Id
+        /// <p>VPC Id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网Id
+        /// <p>子网Id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// COS训练输出路径
+        /// <p>COS训练输出路径</p>
         /// </summary>
         [JsonProperty("Output")]
         public CosPathInfo Output{ get; set; }
 
         /// <summary>
-        /// CLS日志配置
+        /// <p>CLS日志配置</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// 调优参数，不超过2048个字符
+        /// <p>调优参数，不超过2048个字符</p>
         /// </summary>
         [JsonProperty("TuningParameters")]
         public string TuningParameters{ get; set; }
 
         /// <summary>
-        /// 是否上报日志
+        /// <p>是否上报日志</p>
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 备注，不超过1024个字符
+        /// <p>备注，不超过1024个字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
+        /// <p>数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx</p>
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+        /// <p>回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&amp;内容详见：<a href="https://cloud.tencent.com/document/product/851/84292">[TI-ONE接口回调说明]</a></p>
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+        /// <p>编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效</p>
         /// </summary>
         [JsonProperty("EncodedStartCmdInfo")]
         public EncodedStartCmdInfo EncodedStartCmdInfo{ get; set; }
 
         /// <summary>
-        /// 代码仓库配置
+        /// <p>代码仓库配置</p>
         /// </summary>
         [JsonProperty("CodeRepos")]
         public CodeRepoConfig[] CodeRepos{ get; set; }
 
         /// <summary>
-        /// 网络暴露配置
+        /// <p>网络暴露配置</p>
         /// </summary>
         [JsonProperty("ExposeNetworkConfig")]
         public ExposeNetworkConfig ExposeNetworkConfig{ get; set; }
+
+        /// <summary>
+        /// <p>环境变量</p>
+        /// </summary>
+        [JsonProperty("Envs")]
+        public EnvVar[] Envs{ get; set; }
 
 
         /// <summary>
@@ -206,6 +211,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
             this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
             this.SetParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
+            this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
         }
     }
 }

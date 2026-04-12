@@ -25,19 +25,19 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 任务唯一ID。由服务端生成.
+        /// <p>任务唯一ID。由服务端生成.</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
+        /// <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
         /// </summary>
         [JsonProperty("QuestionInfo")]
         public QuestionInfo[] QuestionInfo{ get; set; }
 
         /// <summary>
-        /// 题目切题数量，作为计费题目数总量
+        /// <p>题目切题数量，作为计费题目数总量</p>
         /// </summary>
         [JsonProperty("QuestionCount")]
         public string QuestionCount{ get; set; }

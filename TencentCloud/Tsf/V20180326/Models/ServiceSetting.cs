@@ -25,136 +25,142 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
+        /// <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// 容器端口映射
+        /// <p>容器端口映射</p>
         /// </summary>
         [JsonProperty("ProtocolPorts")]
         public ProtocolPort[] ProtocolPorts{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 是否创建 k8s service，默认为 false
+        /// <p>是否创建 k8s service，默认为 false</p>
         /// </summary>
         [JsonProperty("DisableService")]
         public bool? DisableService{ get; set; }
 
         /// <summary>
-        /// service 是否为 headless 类型
+        /// <p>service 是否为 headless 类型</p>
         /// </summary>
         [JsonProperty("HeadlessService")]
         public bool? HeadlessService{ get; set; }
 
         /// <summary>
-        /// 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+        /// <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
         /// </summary>
         [JsonProperty("AllowDeleteService")]
         public bool? AllowDeleteService{ get; set; }
 
         /// <summary>
-        /// 开启SessionAffinity，true为开启，false为不开启，默认为false
+        /// <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
         /// </summary>
         [JsonProperty("OpenSessionAffinity")]
         public bool? OpenSessionAffinity{ get; set; }
 
         /// <summary>
-        /// SessionAffinity会话时间，默认10800
+        /// <p>SessionAffinity会话时间，默认10800</p>
         /// </summary>
         [JsonProperty("SessionAffinityTimeoutSeconds")]
         public long? SessionAffinityTimeoutSeconds{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 外部流量策略
+        /// <p>外部流量策略</p>
         /// </summary>
         [JsonProperty("ExternalTrafficStrategy")]
         public string ExternalTrafficStrategy{ get; set; }
 
         /// <summary>
-        /// 外部流量策略
+        /// <p>外部流量策略</p>
         /// </summary>
         [JsonProperty("ExternalTrafficPolicy")]
         public string ExternalTrafficPolicy{ get; set; }
 
         /// <summary>
-        /// 负载均衡提供者
+        /// <p>负载均衡提供者</p>
         /// </summary>
         [JsonProperty("LoadBalancerProvisioner")]
         public string LoadBalancerProvisioner{ get; set; }
 
         /// <summary>
-        /// 负载均衡类型，Intranet表示内网，Internet表示外网
+        /// <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
         /// </summary>
         [JsonProperty("LoadBalancingType")]
         public string LoadBalancingType{ get; set; }
 
         /// <summary>
-        /// k8s负载均衡内网vip
+        /// <p>k8s负载均衡内网vip</p>
         /// </summary>
         [JsonProperty("ClusterIp")]
         public string ClusterIp{ get; set; }
 
         /// <summary>
-        /// 禁用服务Int记录
+        /// <p>禁用服务Int记录</p>
         /// </summary>
         [JsonProperty("DisableServiceInt")]
         public ulong? DisableServiceInt{ get; set; }
 
         /// <summary>
-        /// 开启SessionAffinity Int记录
+        /// <p>开启SessionAffinity Int记录</p>
         /// </summary>
         [JsonProperty("OpenSessionAffinityInt")]
         public ulong? OpenSessionAffinityInt{ get; set; }
 
         /// <summary>
-        /// 开启HeadlessService int记录
+        /// <p>开启HeadlessService int记录</p>
         /// </summary>
         [JsonProperty("HeadlessServiceInt")]
         public ulong? HeadlessServiceInt{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// VPC网络ID
+        /// <p>VPC网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 负载均衡VIP
+        /// <p>负载均衡VIP</p>
         /// </summary>
         [JsonProperty("LoadBalancingIp")]
         public string LoadBalancingIp{ get; set; }
 
         /// <summary>
-        /// 负载均衡id
+        /// <p>负载均衡id</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 已存在的负载均衡id
+        /// <p>已存在的负载均衡id</p>
         /// </summary>
         [JsonProperty("ExistingLoadBalancerId")]
         public string ExistingLoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// <p>是否为全局服务（仅TCS环境使用）</p>
+        /// </summary>
+        [JsonProperty("EnableGlobalService")]
+        public bool? EnableGlobalService{ get; set; }
 
 
         /// <summary>
@@ -184,6 +190,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "LoadBalancingIp", this.LoadBalancingIp);
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ExistingLoadBalancerId", this.ExistingLoadBalancerId);
+            this.SetParamSimple(map, prefix + "EnableGlobalService", this.EnableGlobalService);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MaxQps")]
         public long? MaxQps{ get; set; }
 
+        /// <summary>
+        /// 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+        /// </summary>
+        [JsonProperty("UsePathAndMethodFormat")]
+        public bool? UsePathAndMethodFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
             this.SetParamSimple(map, prefix + "UsableStatus", this.UsableStatus);
             this.SetParamSimple(map, prefix + "MaxQps", this.MaxQps);
+            this.SetParamSimple(map, prefix + "UsePathAndMethodFormat", this.UsePathAndMethodFormat);
         }
     }
 }

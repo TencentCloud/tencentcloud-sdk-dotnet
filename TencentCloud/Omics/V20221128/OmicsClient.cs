@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1405";
+       private const string sdkVersion = "SDK_NET_3.0.1406";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Omics.V20221128
         public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
         {
             return InternalRequestAsync<DescribeProjectsResponse>(req, "DescribeProjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询公共应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicApplicationsRequest"/></param>
+        /// <returns><see cref="DescribePublicApplicationsResponse"/></returns>
+        public Task<DescribePublicApplicationsResponse> DescribePublicApplications(DescribePublicApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribePublicApplicationsResponse>(req, "DescribePublicApplications");
+        }
+
+        /// <summary>
+        /// 查询公共应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicApplicationsRequest"/></param>
+        /// <returns><see cref="DescribePublicApplicationsResponse"/></returns>
+        public DescribePublicApplicationsResponse DescribePublicApplicationsSync(DescribePublicApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribePublicApplicationsResponse>(req, "DescribePublicApplications")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

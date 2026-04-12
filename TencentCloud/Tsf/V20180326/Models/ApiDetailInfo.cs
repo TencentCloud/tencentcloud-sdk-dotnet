@@ -25,186 +25,198 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// API ID
+        /// <p>API ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiId")]
         public string ApiId{ get; set; }
 
         /// <summary>
-        /// 命名空间ID
+        /// <p>命名空间ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 命名空间名称
+        /// <p>命名空间名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroserviceName")]
         public string MicroserviceName{ get; set; }
 
         /// <summary>
-        /// API 请求路径
+        /// <p>API 请求路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Api 映射路径
+        /// <p>Api 映射路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathMapping")]
         public string PathMapping{ get; set; }
 
         /// <summary>
-        /// 请求方法
+        /// <p>请求方法</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 所属分组ID
+        /// <p>所属分组ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 是否禁用
+        /// <p>是否禁用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsableStatus")]
         public string UsableStatus{ get; set; }
 
         /// <summary>
-        /// 发布状态
+        /// <p>发布状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseStatus")]
         public string ReleaseStatus{ get; set; }
 
         /// <summary>
-        /// 开启限流
+        /// <p>开启限流</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitStatus")]
         public string RateLimitStatus{ get; set; }
 
         /// <summary>
-        /// 是否开启mock
+        /// <p>是否开启mock</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MockStatus")]
         public string MockStatus{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 发布时间
+        /// <p>发布时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleasedTime")]
         public string ReleasedTime{ get; set; }
 
         /// <summary>
-        /// 所属分组名称
+        /// <p>所属分组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// API 超时，单位毫秒
+        /// <p>API 超时，单位毫秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// Api所在服务host
+        /// <p>Api所在服务host</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// API类型。 ms ： 微服务API； external :外部服务Api
+        /// <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiType")]
         public string ApiType{ get; set; }
 
         /// <summary>
-        /// Api描述信息
+        /// <p>Api描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// API路径匹配类型。normal：普通API；wildcard：通配API。
+        /// <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiMatchType")]
         public string ApiMatchType{ get; set; }
 
         /// <summary>
-        /// RPC 额外信息
+        /// <p>RPC 额外信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RpcExt")]
         public string RpcExt{ get; set; }
 
         /// <summary>
-        /// 部署组id
+        /// <p>部署组id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayDeployGroupId")]
         public string GatewayDeployGroupId{ get; set; }
 
         /// <summary>
-        /// md5
+        /// <p>md5</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// RPC 类型
+        /// <p>RPC 类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RpcType")]
         public string RpcType{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁用短路径访问开关</p>
+        /// </summary>
+        [JsonProperty("PathMappingUnsupported")]
+        public bool? PathMappingUnsupported{ get; set; }
+
+        /// <summary>
+        /// <p>禁用短路径访问开关原因</p>
+        /// </summary>
+        [JsonProperty("PathMappingUnsupportedMsg")]
+        public string PathMappingUnsupportedMsg{ get; set; }
 
 
         /// <summary>
@@ -238,6 +250,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamSimple(map, prefix + "RpcType", this.RpcType);
+            this.SetParamSimple(map, prefix + "PathMappingUnsupported", this.PathMappingUnsupported);
+            this.SetParamSimple(map, prefix + "PathMappingUnsupportedMsg", this.PathMappingUnsupportedMsg);
         }
     }
 }

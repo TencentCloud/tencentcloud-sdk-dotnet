@@ -25,31 +25,31 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 类型英文名
+        /// <p>类型英文名</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 存储实例ID
+        /// <p>存储实例ID</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// 存储实例名称
+        /// <p>存储实例名称</p>
         /// </summary>
         [JsonProperty("StorageName")]
         public string StorageName{ get; set; }
 
         /// <summary>
-        /// 状态，0可挂载 1不可挂载(挂载限制)
+        /// <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 额外配置
+        /// <p>额外配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraConf")]

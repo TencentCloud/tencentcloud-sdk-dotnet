@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1403";
+       private const string sdkVersion = "SDK_NET_3.0.1406";
 
         /// <summary>
         /// Client constructor.
@@ -3480,7 +3480,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。该功能仅支持标准版和企业版套餐站点使用。
+        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>
@@ -3490,7 +3490,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。该功能仅支持标准版和企业版套餐站点使用。
+        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>

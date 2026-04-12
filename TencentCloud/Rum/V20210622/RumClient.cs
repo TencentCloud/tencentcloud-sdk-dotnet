@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1406";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,48 @@ namespace TencentCloud.Rum.V20210622
         public DescribeAppSingleCaseListResponse DescribeAppSingleCaseListSync(DescribeAppSingleCaseListRequest req)
         {
             return InternalRequestAsync<DescribeAppSingleCaseListResponse>(req, "DescribeAppSingleCaseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取应用退出个例上报详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationExitReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeApplicationExitReportDetailResponse"/></returns>
+        public Task<DescribeApplicationExitReportDetailResponse> DescribeApplicationExitReportDetail(DescribeApplicationExitReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationExitReportDetailResponse>(req, "DescribeApplicationExitReportDetail");
+        }
+
+        /// <summary>
+        /// 获取应用退出个例上报详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationExitReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeApplicationExitReportDetailResponse"/></returns>
+        public DescribeApplicationExitReportDetailResponse DescribeApplicationExitReportDetailSync(DescribeApplicationExitReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationExitReportDetailResponse>(req, "DescribeApplicationExitReportDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取应用退出个例上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationExitReportListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationExitReportListResponse"/></returns>
+        public Task<DescribeApplicationExitReportListResponse> DescribeApplicationExitReportList(DescribeApplicationExitReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationExitReportListResponse>(req, "DescribeApplicationExitReportList");
+        }
+
+        /// <summary>
+        /// 获取应用退出个例上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationExitReportListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationExitReportListResponse"/></returns>
+        public DescribeApplicationExitReportListResponse DescribeApplicationExitReportListSync(DescribeApplicationExitReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationExitReportListResponse>(req, "DescribeApplicationExitReportList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -961,6 +1003,300 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取异常问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExceptionDetailRequest"/></param>
+        /// <returns><see cref="DescribeExceptionDetailResponse"/></returns>
+        public Task<DescribeExceptionDetailResponse> DescribeExceptionDetail(DescribeExceptionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeExceptionDetailResponse>(req, "DescribeExceptionDetail");
+        }
+
+        /// <summary>
+        /// 获取异常问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExceptionDetailRequest"/></param>
+        /// <returns><see cref="DescribeExceptionDetailResponse"/></returns>
+        public DescribeExceptionDetailResponse DescribeExceptionDetailSync(DescribeExceptionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeExceptionDetailResponse>(req, "DescribeExceptionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取异常个例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExceptionReportListRequest"/></param>
+        /// <returns><see cref="DescribeExceptionReportListResponse"/></returns>
+        public Task<DescribeExceptionReportListResponse> DescribeExceptionReportList(DescribeExceptionReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeExceptionReportListResponse>(req, "DescribeExceptionReportList");
+        }
+
+        /// <summary>
+        /// 获取异常个例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExceptionReportListRequest"/></param>
+        /// <returns><see cref="DescribeExceptionReportListResponse"/></returns>
+        public DescribeExceptionReportListResponse DescribeExceptionReportListSync(DescribeExceptionReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeExceptionReportListResponse>(req, "DescribeExceptionReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocProblemDetailRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocProblemDetailResponse"/></returns>
+        public Task<DescribeFOOMMallocProblemDetailResponse> DescribeFOOMMallocProblemDetail(DescribeFOOMMallocProblemDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocProblemDetailResponse>(req, "DescribeFOOMMallocProblemDetail");
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocProblemDetailRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocProblemDetailResponse"/></returns>
+        public DescribeFOOMMallocProblemDetailResponse DescribeFOOMMallocProblemDetailSync(DescribeFOOMMallocProblemDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocProblemDetailResponse>(req, "DescribeFOOMMallocProblemDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocProblemListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocProblemListResponse"/></returns>
+        public Task<DescribeFOOMMallocProblemListResponse> DescribeFOOMMallocProblemList(DescribeFOOMMallocProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocProblemListResponse>(req, "DescribeFOOMMallocProblemList");
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocProblemListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocProblemListResponse"/></returns>
+        public DescribeFOOMMallocProblemListResponse DescribeFOOMMallocProblemListSync(DescribeFOOMMallocProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocProblemListResponse>(req, "DescribeFOOMMallocProblemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocReportListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocReportListResponse"/></returns>
+        public Task<DescribeFOOMMallocReportListResponse> DescribeFOOMMallocReportList(DescribeFOOMMallocReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocReportListResponse>(req, "DescribeFOOMMallocReportList");
+        }
+
+        /// <summary>
+        /// 获取FOOM内存分配问题上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMMallocReportListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMMallocReportListResponse"/></returns>
+        public DescribeFOOMMallocReportListResponse DescribeFOOMMallocReportListSync(DescribeFOOMMallocReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMMallocReportListResponse>(req, "DescribeFOOMMallocReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMProblemDetailRequest"/></param>
+        /// <returns><see cref="DescribeFOOMProblemDetailResponse"/></returns>
+        public Task<DescribeFOOMProblemDetailResponse> DescribeFOOMProblemDetail(DescribeFOOMProblemDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMProblemDetailResponse>(req, "DescribeFOOMProblemDetail");
+        }
+
+        /// <summary>
+        /// 获取FOOM问题详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMProblemDetailRequest"/></param>
+        /// <returns><see cref="DescribeFOOMProblemDetailResponse"/></returns>
+        public DescribeFOOMProblemDetailResponse DescribeFOOMProblemDetailSync(DescribeFOOMProblemDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMProblemDetailResponse>(req, "DescribeFOOMProblemDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMProblemListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMProblemListResponse"/></returns>
+        public Task<DescribeFOOMProblemListResponse> DescribeFOOMProblemList(DescribeFOOMProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMProblemListResponse>(req, "DescribeFOOMProblemList");
+        }
+
+        /// <summary>
+        /// 获取FOOM问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMProblemListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMProblemListResponse"/></returns>
+        public DescribeFOOMProblemListResponse DescribeFOOMProblemListSync(DescribeFOOMProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMProblemListResponse>(req, "DescribeFOOMProblemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取FOOM问题上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMReportListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMReportListResponse"/></returns>
+        public Task<DescribeFOOMReportListResponse> DescribeFOOMReportList(DescribeFOOMReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMReportListResponse>(req, "DescribeFOOMReportList");
+        }
+
+        /// <summary>
+        /// 获取FOOM问题上报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFOOMReportListRequest"/></param>
+        /// <returns><see cref="DescribeFOOMReportListResponse"/></returns>
+        public DescribeFOOMReportListResponse DescribeFOOMReportListSync(DescribeFOOMReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeFOOMReportListResponse>(req, "DescribeFOOMReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取问题分布数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesDistributionRequest"/></param>
+        /// <returns><see cref="DescribeIssuesDistributionResponse"/></returns>
+        public Task<DescribeIssuesDistributionResponse> DescribeIssuesDistribution(DescribeIssuesDistributionRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesDistributionResponse>(req, "DescribeIssuesDistribution");
+        }
+
+        /// <summary>
+        /// 获取问题分布数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesDistributionRequest"/></param>
+        /// <returns><see cref="DescribeIssuesDistributionResponse"/></returns>
+        public DescribeIssuesDistributionResponse DescribeIssuesDistributionSync(DescribeIssuesDistributionRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesDistributionResponse>(req, "DescribeIssuesDistribution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesListRequest"/></param>
+        /// <returns><see cref="DescribeIssuesListResponse"/></returns>
+        public Task<DescribeIssuesListResponse> DescribeIssuesList(DescribeIssuesListRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesListResponse>(req, "DescribeIssuesList");
+        }
+
+        /// <summary>
+        /// 获取问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesListRequest"/></param>
+        /// <returns><see cref="DescribeIssuesListResponse"/></returns>
+        public DescribeIssuesListResponse DescribeIssuesListSync(DescribeIssuesListRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesListResponse>(req, "DescribeIssuesList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取问题趋势数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesStatisticsTrendRequest"/></param>
+        /// <returns><see cref="DescribeIssuesStatisticsTrendResponse"/></returns>
+        public Task<DescribeIssuesStatisticsTrendResponse> DescribeIssuesStatisticsTrend(DescribeIssuesStatisticsTrendRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesStatisticsTrendResponse>(req, "DescribeIssuesStatisticsTrend");
+        }
+
+        /// <summary>
+        /// 获取问题趋势数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIssuesStatisticsTrendRequest"/></param>
+        /// <returns><see cref="DescribeIssuesStatisticsTrendResponse"/></returns>
+        public DescribeIssuesStatisticsTrendResponse DescribeIssuesStatisticsTrendSync(DescribeIssuesStatisticsTrendRequest req)
+        {
+            return InternalRequestAsync<DescribeIssuesStatisticsTrendResponse>(req, "DescribeIssuesStatisticsTrend")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题用户详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemAccountDetailRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemAccountDetailResponse"/></returns>
+        public Task<DescribeLagANRProblemAccountDetailResponse> DescribeLagANRProblemAccountDetail(DescribeLagANRProblemAccountDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemAccountDetailResponse>(req, "DescribeLagANRProblemAccountDetail");
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题用户详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemAccountDetailRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemAccountDetailResponse"/></returns>
+        public DescribeLagANRProblemAccountDetailResponse DescribeLagANRProblemAccountDetailSync(DescribeLagANRProblemAccountDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemAccountDetailResponse>(req, "DescribeLagANRProblemAccountDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemFeatureAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemFeatureAccountsResponse"/></returns>
+        public Task<DescribeLagANRProblemFeatureAccountsResponse> DescribeLagANRProblemFeatureAccounts(DescribeLagANRProblemFeatureAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemFeatureAccountsResponse>(req, "DescribeLagANRProblemFeatureAccounts");
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemFeatureAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemFeatureAccountsResponse"/></returns>
+        public DescribeLagANRProblemFeatureAccountsResponse DescribeLagANRProblemFeatureAccountsSync(DescribeLagANRProblemFeatureAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemFeatureAccountsResponse>(req, "DescribeLagANRProblemFeatureAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemListRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemListResponse"/></returns>
+        public Task<DescribeLagANRProblemListResponse> DescribeLagANRProblemList(DescribeLagANRProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemListResponse>(req, "DescribeLagANRProblemList");
+        }
+
+        /// <summary>
+        /// 获取卡顿ANR问题列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLagANRProblemListRequest"/></param>
+        /// <returns><see cref="DescribeLagANRProblemListResponse"/></returns>
+        public DescribeLagANRProblemListResponse DescribeLagANRProblemListSync(DescribeLagANRProblemListRequest req)
+        {
+            return InternalRequestAsync<DescribeLagANRProblemListResponse>(req, "DescribeLagANRProblemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取应用上报抽样信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectLimitsRequest"/></param>
@@ -1251,6 +1587,48 @@ namespace TencentCloud.Rum.V20210622
         public DescribeTawInstancesResponse DescribeTawInstancesSync(DescribeTawInstancesRequest req)
         {
             return InternalRequestAsync<DescribeTawInstancesResponse>(req, "DescribeTawInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询令牌
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken");
+        }
+
+        /// <summary>
+        /// 查询令牌
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public DescribeTokenResponse DescribeTokenSync(DescribeTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询top问题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopIssuesRequest"/></param>
+        /// <returns><see cref="DescribeTopIssuesResponse"/></returns>
+        public Task<DescribeTopIssuesResponse> DescribeTopIssues(DescribeTopIssuesRequest req)
+        {
+            return InternalRequestAsync<DescribeTopIssuesResponse>(req, "DescribeTopIssues");
+        }
+
+        /// <summary>
+        /// 查询top问题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopIssuesRequest"/></param>
+        /// <returns><see cref="DescribeTopIssuesResponse"/></returns>
+        public DescribeTopIssuesResponse DescribeTopIssuesSync(DescribeTopIssuesRequest req)
+        {
+            return InternalRequestAsync<DescribeTopIssuesResponse>(req, "DescribeTopIssues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
