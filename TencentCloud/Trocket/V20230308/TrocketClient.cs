@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Trocket.V20230308
         public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
         {
             return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建元数据迁移上云任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public Task<CreateMigrationTaskResponse> CreateMigrationTask(CreateMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMigrationTaskResponse>(req, "CreateMigrationTask");
+        }
+
+        /// <summary>
+        /// 创建元数据迁移上云任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public CreateMigrationTaskResponse CreateMigrationTaskSync(CreateMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMigrationTaskResponse>(req, "CreateMigrationTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

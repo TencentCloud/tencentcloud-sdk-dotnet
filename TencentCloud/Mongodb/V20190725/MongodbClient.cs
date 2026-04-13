@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -1490,6 +1490,27 @@ namespace TencentCloud.Mongodb.V20190725
         public RestartNodesResponse RestartNodesSync(RestartNodesRequest req)
         {
             return InternalRequestAsync<RestartNodesResponse>(req, "RestartNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(RestoreDBInstance)用于回档数据库实例到指定时间点。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceResponse"/></returns>
+        public Task<RestoreDBInstanceResponse> RestoreDBInstance(RestoreDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceResponse>(req, "RestoreDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口(RestoreDBInstance)用于回档数据库实例到指定时间点。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceResponse"/></returns>
+        public RestoreDBInstanceResponse RestoreDBInstanceSync(RestoreDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceResponse>(req, "RestoreDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

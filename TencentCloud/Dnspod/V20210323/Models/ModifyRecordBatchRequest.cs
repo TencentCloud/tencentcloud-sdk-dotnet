@@ -25,31 +25,31 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
+        /// <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p>
         /// </summary>
         [JsonProperty("RecordIdList")]
         public ulong?[] RecordIdList{ get; set; }
 
         /// <summary>
-        /// 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
+        /// <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p>
         /// </summary>
         [JsonProperty("Change")]
         public string Change{ get; set; }
 
         /// <summary>
-        /// 修改为，具体依赖 change 字段，必填参数。
+        /// <p>修改为，具体依赖 change 字段，必填参数。</p>
         /// </summary>
         [JsonProperty("ChangeTo")]
         public string ChangeTo{ get; set; }
 
         /// <summary>
-        /// 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
+        /// <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+        /// <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p>
         /// </summary>
         [JsonProperty("MX")]
         public string MX{ get; set; }

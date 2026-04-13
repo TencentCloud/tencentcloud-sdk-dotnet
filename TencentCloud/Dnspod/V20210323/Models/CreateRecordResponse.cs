@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 记录ID
+        /// <p>记录ID</p>
         /// </summary>
         [JsonProperty("RecordId")]
         public ulong? RecordId{ get; set; }

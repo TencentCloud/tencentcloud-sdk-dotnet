@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1402";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -1296,6 +1296,27 @@ namespace TencentCloud.Tcb.V20180608
         public DestroyStaticStoreResponse DestroyStaticStoreSync(DestroyStaticStoreRequest req)
         {
             return InternalRequestAsync<DestroyStaticStoreResponse>(req, "DestroyStaticStore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在Postgres数据库上执行SQL
+        /// </summary>
+        /// <param name="req"><see cref="ExecutePGSqlRequest"/></param>
+        /// <returns><see cref="ExecutePGSqlResponse"/></returns>
+        public Task<ExecutePGSqlResponse> ExecutePGSql(ExecutePGSqlRequest req)
+        {
+            return InternalRequestAsync<ExecutePGSqlResponse>(req, "ExecutePGSql");
+        }
+
+        /// <summary>
+        /// 在Postgres数据库上执行SQL
+        /// </summary>
+        /// <param name="req"><see cref="ExecutePGSqlRequest"/></param>
+        /// <returns><see cref="ExecutePGSqlResponse"/></returns>
+        public ExecutePGSqlResponse ExecutePGSqlSync(ExecutePGSqlRequest req)
+        {
+            return InternalRequestAsync<ExecutePGSqlResponse>(req, "ExecutePGSql")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

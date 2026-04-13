@@ -25,26 +25,26 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// cfs的配置信息
+        /// <p>cfs的配置信息</p>
         /// </summary>
         [JsonProperty("CFSConfig")]
         public CFSConfig CFSConfig{ get; set; }
 
         /// <summary>
-        /// 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+        /// <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
 
         /// <summary>
-        /// 自定义容器内挂载路径
+        /// <p>自定义容器内挂载路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountPath")]
         public string MountPath{ get; set; }
 
         /// <summary>
-        /// 挂载数据源时的配置信息
+        /// <p>挂载数据源时的配置信息</p>
         /// </summary>
         [JsonProperty("PublicDataSource")]
         public PublicDataSourceFS PublicDataSource{ get; set; }

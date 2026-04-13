@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1404";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Config.V20220802
         public AddAggregateConfigRuleResponse AddAggregateConfigRuleSync(AddAggregateConfigRuleRequest req)
         {
             return InternalRequestAsync<AddAggregateConfigRuleResponse>(req, "AddAggregateConfigRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增告警监控规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAlarmPolicyRequest"/></param>
+        /// <returns><see cref="AddAlarmPolicyResponse"/></returns>
+        public Task<AddAlarmPolicyResponse> AddAlarmPolicy(AddAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<AddAlarmPolicyResponse>(req, "AddAlarmPolicy");
+        }
+
+        /// <summary>
+        /// 新增告警监控规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAlarmPolicyRequest"/></param>
+        /// <returns><see cref="AddAlarmPolicyResponse"/></returns>
+        public AddAlarmPolicyResponse AddAlarmPolicySync(AddAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<AddAlarmPolicyResponse>(req, "AddAlarmPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -281,6 +302,27 @@ namespace TencentCloud.Config.V20220802
         public DeleteAggregateConfigRuleResponse DeleteAggregateConfigRuleSync(DeleteAggregateConfigRuleRequest req)
         {
             return InternalRequestAsync<DeleteAggregateConfigRuleResponse>(req, "DeleteAggregateConfigRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAlarmPolicyResponse"/></returns>
+        public Task<DeleteAlarmPolicyResponse> DeleteAlarmPolicy(DeleteAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmPolicyResponse>(req, "DeleteAlarmPolicy");
+        }
+
+        /// <summary>
+        /// 删除告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAlarmPolicyResponse"/></returns>
+        public DeleteAlarmPolicyResponse DeleteAlarmPolicySync(DeleteAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmPolicyResponse>(req, "DeleteAlarmPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -747,6 +789,27 @@ namespace TencentCloud.Config.V20220802
         }
 
         /// <summary>
+        /// 告警规则列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAlarmPolicyRequest"/></param>
+        /// <returns><see cref="ListAlarmPolicyResponse"/></returns>
+        public Task<ListAlarmPolicyResponse> ListAlarmPolicy(ListAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<ListAlarmPolicyResponse>(req, "ListAlarmPolicy");
+        }
+
+        /// <summary>
+        /// 告警规则列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAlarmPolicyRequest"/></param>
+        /// <returns><see cref="ListAlarmPolicyResponse"/></returns>
+        public ListAlarmPolicyResponse ListAlarmPolicySync(ListAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<ListAlarmPolicyResponse>(req, "ListAlarmPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取合规包列表
         /// </summary>
         /// <param name="req"><see cref="ListCompliancePacksRequest"/></param>
@@ -1163,6 +1226,27 @@ namespace TencentCloud.Config.V20220802
         public UpdateAggregateConfigRuleResponse UpdateAggregateConfigRuleSync(UpdateAggregateConfigRuleRequest req)
         {
             return InternalRequestAsync<UpdateAggregateConfigRuleResponse>(req, "UpdateAggregateConfigRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新告警规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlarmPolicyRequest"/></param>
+        /// <returns><see cref="UpdateAlarmPolicyResponse"/></returns>
+        public Task<UpdateAlarmPolicyResponse> UpdateAlarmPolicy(UpdateAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateAlarmPolicyResponse>(req, "UpdateAlarmPolicy");
+        }
+
+        /// <summary>
+        /// 更新告警规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlarmPolicyRequest"/></param>
+        /// <returns><see cref="UpdateAlarmPolicyResponse"/></returns>
+        public UpdateAlarmPolicyResponse UpdateAlarmPolicySync(UpdateAlarmPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateAlarmPolicyResponse>(req, "UpdateAlarmPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

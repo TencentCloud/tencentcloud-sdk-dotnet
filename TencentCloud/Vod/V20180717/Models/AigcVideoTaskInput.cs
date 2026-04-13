@@ -102,6 +102,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
+        /// <summary>
+        /// <p>模型随机种子。</p>
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
         }
     }
 }

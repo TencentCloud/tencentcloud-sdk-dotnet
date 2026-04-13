@@ -25,186 +25,169 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 服务组id
+        /// <p>服务组id</p>
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
         /// <summary>
-        /// 服务组名
+        /// <p>服务组名</p>
         /// </summary>
         [JsonProperty("ServiceGroupName")]
         public string ServiceGroupName{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// <p>创建者</p>
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 主账号
+        /// <p>主账号</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 服务组下服务总数
+        /// <p>服务组下服务总数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceCount")]
         public ulong? ServiceCount{ get; set; }
 
         /// <summary>
-        /// 服务组下在运行的服务数量
+        /// <p>服务组下在运行的服务数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningServiceCount")]
         public ulong? RunningServiceCount{ get; set; }
 
         /// <summary>
-        /// 服务描述
+        /// <p>服务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Services")]
         public Service[] Services{ get; set; }
 
         /// <summary>
-        /// 服务组状态，与服务一致
-        ///  CREATING 创建中
-        ///      CREATE_FAILED 创建失败
-        ///      Normal	正常运行中
-        ///      Stopped  已停止
-        ///      Stopping 停止中
-        ///      Abnormal 异常
-        ///      Pending 启动中
-        ///      Waiting 就绪中
+        /// <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 服务组标签
+        /// <p>服务组标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 服务组下最高版本
+        /// <p>服务组下最高版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestVersion")]
         public string LatestVersion{ get; set; }
 
         /// <summary>
-        /// 服务的业务状态
-        /// CREATING 创建中
-        ///      CREATE_FAILED 创建失败
-        ///      ARREARS_STOP 因欠费被强制停止
-        ///      BILLING 计费中
-        ///      WHITELIST_USING 白名单试用中
-        ///      WHITELIST_STOP 白名单额度不足
+        /// <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessStatus")]
         public string BusinessStatus{ get; set; }
 
         /// <summary>
-        /// 服务的计费信息
+        /// <p>服务的计费信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }
 
         /// <summary>
-        /// 服务的创建来源
+        /// <p>服务的创建来源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateSource")]
         public string CreateSource{ get; set; }
 
         /// <summary>
-        /// 服务组的权重更新状态 
-        /// UPDATING 更新中
-        ///      UPDATED 更新成功
-        ///      UPDATE_FAILED 更新失败
+        /// <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeightUpdateStatus")]
         public string WeightUpdateStatus{ get; set; }
 
         /// <summary>
-        /// 服务组下运行的pod数量
+        /// <p>服务组下运行的pod数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicasCount")]
         public ulong? ReplicasCount{ get; set; }
 
         /// <summary>
-        /// 服务组下期望的pod数
+        /// <p>服务组下期望的pod数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableReplicasCount")]
         public ulong? AvailableReplicasCount{ get; set; }
 
         /// <summary>
-        /// 服务组的subuin
+        /// <p>服务组的subuin</p>
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// 服务组的app_id
+        /// <p>服务组的app_id</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 是否开启鉴权
+        /// <p>是否开启鉴权</p>
         /// </summary>
         [JsonProperty("AuthorizationEnable")]
         public bool? AuthorizationEnable{ get; set; }
 
         /// <summary>
-        /// 限流鉴权 token 列表
+        /// <p>限流鉴权 token 列表</p>
         /// </summary>
         [JsonProperty("AuthTokens")]
         public AuthToken[] AuthTokens{ get; set; }
 
         /// <summary>
-        /// 用于监控的创建来源字段
+        /// <p>用于监控的创建来源字段</p>
         /// </summary>
         [JsonProperty("MonitorSource")]
         public string MonitorSource{ get; set; }
 
         /// <summary>
-        /// 子用户的 nickname
+        /// <p>子用户的 nickname</p>
         /// </summary>
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
         /// <summary>
-        /// 网关日志投递相关配置
+        /// <p>网关日志投递相关配置</p>
         /// </summary>
         [JsonProperty("GatewayLogConfig")]
         public LogConfig GatewayLogConfig{ get; set; }
 
         /// <summary>
-        /// 网关路由相关配置
+        /// <p>网关路由相关配置</p>
         /// </summary>
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }

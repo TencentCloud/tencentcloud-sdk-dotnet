@@ -25,14 +25,14 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 分页的游标
+        /// <p>分页的游标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 日志数组
+        /// <p>日志数组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]

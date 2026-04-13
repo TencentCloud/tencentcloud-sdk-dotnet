@@ -25,52 +25,58 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 模型名称。
+        /// <p>模型名称。</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型版本。
+        /// <p>模型版本。</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// AIGC生图任务输入文件信息。
+        /// <p>AIGC生图任务输入文件信息。</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+        /// <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 要阻止模型生成图片的提示词。最大支持1000字符。
+        /// <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+        /// <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+        /// <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
         /// </summary>
         [JsonProperty("GenerationMode")]
         public string GenerationMode{ get; set; }
 
         /// <summary>
-        /// AIGC 生图输出结果文件输出。
+        /// <p>AIGC 生图输出结果文件输出。</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcImageOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// <p>模型随机种子。</p>
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
         }
     }
 }

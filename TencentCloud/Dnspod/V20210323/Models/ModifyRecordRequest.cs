@@ -25,85 +25,85 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
+        /// <p>记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。</p>
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
+        /// <p>记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。</p>
         /// </summary>
         [JsonProperty("RecordLine")]
         public string RecordLine{ get; set; }
 
         /// <summary>
-        /// 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
+        /// <p>记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+        /// <p>记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
         /// </summary>
         [JsonProperty("RecordId")]
         public ulong? RecordId{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+        /// <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
 
         /// <summary>
-        /// 主机记录，如 www，如果不传，默认为 @。
+        /// <p>主机记录，如 www，如果不传，默认为 @。</p>
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+        /// <p>线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
         /// </summary>
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+        /// <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p><p>取值范围：[0, 65535]</p>
         /// </summary>
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }
 
         /// <summary>
-        /// TTL，范围1-604800，不同等级域名最小值不同。
+        /// <p>TTL，范围1-604800，不同等级域名最小值不同。</p>
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
 
         /// <summary>
-        /// 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
+        /// <p>权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。</p>
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
+        /// <p>记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 记录的备注信息。传空删除备注。
+        /// <p>记录的备注信息。传空删除备注。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 开启DNSSEC时，强制将其它记录修改为CNAME/URL记录
+        /// <p>开启DNSSEC时，强制将其它记录修改为CNAME/URL记录</p>
         /// </summary>
         [JsonProperty("DnssecConflictMode")]
         public string DnssecConflictMode{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 日志推送CLS的配置。
+        /// <p>日志推送CLS的配置。</p>
         /// </summary>
         [JsonProperty("CLSConfig")]
         public CLSConfig CLSConfig{ get; set; }

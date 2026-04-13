@@ -79,6 +79,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string InputRegion{ get; set; }
 
         /// <summary>
+        /// <p>模型随机种子。</p>
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
+
+        /// <summary>
         /// <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
         /// </summary>
         [JsonProperty("SessionId")]
@@ -117,6 +123,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

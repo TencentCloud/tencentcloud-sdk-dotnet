@@ -156,6 +156,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("TrxId")]
         public long? TrxId{ get; set; }
 
+        /// <summary>
+        /// 客户端端口
+        /// </summary>
+        [JsonProperty("ClientPort")]
+        public long? ClientPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
             this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
             this.SetParamSimple(map, prefix + "TrxId", this.TrxId);
+            this.SetParamSimple(map, prefix + "ClientPort", this.ClientPort);
         }
     }
 }

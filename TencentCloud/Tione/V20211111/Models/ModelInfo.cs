@@ -25,85 +25,84 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-        /// 自动学习类型的模型填写自动学习的任务id
+        /// <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
         /// </summary>
         [JsonProperty("ModelVersionId")]
         public string ModelVersionId{ get; set; }
 
         /// <summary>
-        /// 模型id
+        /// <p>模型id</p>
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 模型名
+        /// <p>模型名</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型版本
+        /// <p>模型版本</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 模型来源
+        /// <p>模型来源</p>
         /// </summary>
         [JsonProperty("ModelSource")]
         public string ModelSource{ get; set; }
 
         /// <summary>
-        /// cos路径信息
+        /// <p>cos路径信息</p>
         /// </summary>
         [JsonProperty("CosPathInfo")]
         public CosPathInfo CosPathInfo{ get; set; }
 
         /// <summary>
-        /// GooseFSx的配置，ModelSource为GooseFSx时有效
+        /// <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GooseFSx")]
         public GooseFSx GooseFSx{ get; set; }
 
         /// <summary>
-        /// 模型对应的算法框架，预留
+        /// <p>模型对应的算法框架，预留</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlgorithmFramework")]
         public string AlgorithmFramework{ get; set; }
 
         /// <summary>
-        /// 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+        /// <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelType")]
         public string ModelType{ get; set; }
 
         /// <summary>
-        /// 模型格式
+        /// <p>模型格式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelFormat")]
         public string ModelFormat{ get; set; }
 
         /// <summary>
-        /// 是否为私有化大模型
+        /// <p>是否为私有化大模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPrivateModel")]
         public bool? IsPrivateModel{ get; set; }
 
         /// <summary>
-        /// 模型的类别 多模态MultiModal, 文本大模型 LLM
+        /// <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
         /// </summary>
         [JsonProperty("ModelCategory")]
         public string ModelCategory{ get; set; }
 
         /// <summary>
-        /// 数据源的配置
+        /// <p>数据源的配置</p>
         /// </summary>
         [JsonProperty("PublicDataSource")]
         public PublicDataSourceFS PublicDataSource{ get; set; }

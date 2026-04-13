@@ -25,162 +25,154 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 期望运行的Pod数量，停止状态是0
-        /// 不同计费模式和调节模式下对应关系如下
-        /// PREPAID 和 POSTPAID_BY_HOUR:
-        /// 手动调节模式下对应 实例数量
-        /// 自动调节模式下对应 基于时间的默认策略的实例数量
-        /// HYBRID_PAID:
-        /// 后付费实例手动调节模式下对应 实例数量
-        /// 后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+        /// <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 镜像信息
+        /// <p>镜像信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 环境变量
+        /// <p>环境变量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Env")]
         public EnvVar[] Env{ get; set; }
 
         /// <summary>
-        /// 资源信息
+        /// <p>资源信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo Resources{ get; set; }
 
         /// <summary>
-        /// 后付费实例对应的机型规格
+        /// <p>后付费实例对应的机型规格</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 模型信息
+        /// <p>模型信息</p>
         /// </summary>
         [JsonProperty("ModelInfo")]
         public ModelInfo ModelInfo{ get; set; }
 
         /// <summary>
-        /// 是否启用日志
+        /// <p>是否启用日志</p>
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 日志配置
+        /// <p>日志配置</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启鉴权
+        /// <p>是否开启鉴权</p>
         /// </summary>
         [JsonProperty("AuthorizationEnable")]
         public bool? AuthorizationEnable{ get; set; }
 
         /// <summary>
-        /// hpa配置
+        /// <p>hpa配置</p>
         /// </summary>
         [JsonProperty("HorizontalPodAutoscaler")]
         public HorizontalPodAutoscaler HorizontalPodAutoscaler{ get; set; }
 
         /// <summary>
-        /// 服务的状态描述
+        /// <p>服务的状态描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public WorkloadStatus Status{ get; set; }
 
         /// <summary>
-        /// 权重
+        /// <p>权重</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 资源总量
+        /// <p>资源总量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceTotal")]
         public ResourceInfo ResourceTotal{ get; set; }
 
         /// <summary>
-        /// 历史实例数
+        /// <p>历史实例数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldReplicas")]
         public long? OldReplicas{ get; set; }
 
         /// <summary>
-        /// 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+        /// <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HybridBillingPrepaidReplicas")]
         public long? HybridBillingPrepaidReplicas{ get; set; }
 
         /// <summary>
-        /// 历史 HYBRID_PAID 时的实例数，用户恢复服务
+        /// <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldHybridBillingPrepaidReplicas")]
         public long? OldHybridBillingPrepaidReplicas{ get; set; }
 
         /// <summary>
-        /// 是否开启模型的热更新。默认不开启
+        /// <p>是否开启模型的热更新。默认不开启</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelHotUpdateEnable")]
         public bool? ModelHotUpdateEnable{ get; set; }
 
         /// <summary>
-        /// 服务的规格别名
+        /// <p>服务的规格别名</p>
         /// </summary>
         [JsonProperty("InstanceAlias")]
         public string InstanceAlias{ get; set; }
 
         /// <summary>
-        /// 实例数量调节方式,默认为手动
-        /// 支持：自动 - "AUTO", 手动 - "MANUAL"
+        /// <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleMode")]
         public string ScaleMode{ get; set; }
 
         /// <summary>
-        /// 定时伸缩任务
+        /// <p>定时伸缩任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronScaleJobs")]
         public CronScaleJob[] CronScaleJobs{ get; set; }
 
         /// <summary>
-        /// 定时伸缩策略
+        /// <p>定时伸缩策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleStrategy")]
         public string ScaleStrategy{ get; set; }
 
         /// <summary>
-        /// 定时停止的配置
+        /// <p>定时停止的配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduledAction")]
         public ScheduledAction ScheduledAction{ get; set; }
 
         /// <summary>
-        /// 实例列表
+        /// <p>实例列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodList")]
@@ -188,7 +180,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string[] PodList{ get; set; }
 
         /// <summary>
-        /// Pod列表信息
+        /// <p>Pod列表信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pods")]
@@ -196,111 +188,111 @@ namespace TencentCloud.Tione.V20211111.Models
         public Pod Pods{ get; set; }
 
         /// <summary>
-        /// Pod列表信息
+        /// <p>Pod列表信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodInfos")]
         public Pod[] PodInfos{ get; set; }
 
         /// <summary>
-        /// 服务限速限流相关配置
+        /// <p>服务限速限流相关配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceLimit")]
         public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+        /// <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelTurboEnable")]
         public bool? ModelTurboEnable{ get; set; }
 
         /// <summary>
-        /// 挂载
+        /// <p>挂载</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeMount")]
         public VolumeMount VolumeMount{ get; set; }
 
         /// <summary>
-        /// 推理代码信息
+        /// <p>推理代码信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InferCodeInfo")]
         public InferCodeInfo InferCodeInfo{ get; set; }
 
         /// <summary>
-        /// 服务的启动命令
+        /// <p>服务的启动命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 开启TIONE内网访问外部设置
+        /// <p>开启TIONE内网访问外部设置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceEIP")]
         public ServiceEIP ServiceEIP{ get; set; }
 
         /// <summary>
-        /// 服务端口，默认为8501
+        /// <p>服务端口，默认为8501</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServicePort")]
         public long? ServicePort{ get; set; }
 
         /// <summary>
-        /// 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+        /// <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
         /// </summary>
         [JsonProperty("TerminationGracePeriodSeconds")]
         public long? TerminationGracePeriodSeconds{ get; set; }
 
         /// <summary>
-        /// 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+        /// <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
         /// </summary>
         [JsonProperty("PreStopCommand")]
         public string[] PreStopCommand{ get; set; }
 
         /// <summary>
-        /// 是否启用grpc端口
+        /// <p>是否启用grpc端口</p>
         /// </summary>
         [JsonProperty("GrpcEnable")]
         public bool? GrpcEnable{ get; set; }
 
         /// <summary>
-        /// 健康探针
+        /// <p>健康探针</p>
         /// </summary>
         [JsonProperty("HealthProbe")]
         public HealthProbe HealthProbe{ get; set; }
 
         /// <summary>
-        /// 滚动更新配置
+        /// <p>滚动更新配置</p>
         /// </summary>
         [JsonProperty("RollingUpdate")]
         public RollingUpdate RollingUpdate{ get; set; }
 
         /// <summary>
-        /// 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+        /// <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
         /// </summary>
         [JsonProperty("InstancePerReplicas")]
         public long? InstancePerReplicas{ get; set; }
 
         /// <summary>
-        /// 批量数据盘挂载配置
+        /// <p>批量数据盘挂载配置</p>
         /// </summary>
         [JsonProperty("VolumeMounts")]
         public VolumeMount[] VolumeMounts{ get; set; }
 
         /// <summary>
-        /// 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+        /// <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
         /// </summary>
         [JsonProperty("SchedulingStrategy")]
         public string SchedulingStrategy{ get; set; }
 
         /// <summary>
-        /// 服务实际运行的节点数
+        /// <p>服务实际运行的节点数</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }

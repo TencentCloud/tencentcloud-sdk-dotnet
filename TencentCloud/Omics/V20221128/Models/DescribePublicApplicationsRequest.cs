@@ -25,16 +25,28 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>父应用ID</p>
+        /// </summary>
+        [JsonProperty("ParentAppId")]
+        public string ParentAppId{ get; set; }
+
+        /// <summary>
+        /// <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Omics.V20221128.Models
         {
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "ParentAppId", this.ParentAppId);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
         }
     }
 }

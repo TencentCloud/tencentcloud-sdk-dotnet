@@ -156,6 +156,16 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 服务的业务状态
+        /// CREATING 创建中
+        /// CREATE_FAILED 创建失败
+        /// CREATE_SUCCEED 创建成功
+        /// ARREARS_STOP 因欠费停止
+        /// WHITELIST_STOP 白名单额度不足
+        /// RELEASE_FAILED 资源释放失败
+        /// WHITELIST_RELEASE_FAILED 白名单资源释放失败
+        /// TIMEOUT_EXCEPTION 创建超时异常
+        /// BILLING 计费中
+        /// WHITELIST_USING 白名单试用中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessStatus")]
@@ -186,8 +196,9 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 服务状态
         /// CREATING 创建中
         /// CREATE_FAILED 创建失败
-        /// Normal	正常运行中
-        /// Stopped  已停止
+        /// TIMEOUT_EXCEPTION 创建超时异常
+        /// Normal 正常运行中
+        /// Stopped 已停止
         /// Stopping 停止中
         /// Abnormal 异常
         /// Pending 启动中

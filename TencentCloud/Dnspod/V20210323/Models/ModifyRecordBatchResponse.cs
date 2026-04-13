@@ -25,13 +25,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 批量任务ID
+        /// <p>批量任务ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public ulong? JobId{ get; set; }
 
         /// <summary>
-        /// 见ModifyRecordBatchDetail
+        /// <p>见ModifyRecordBatchDetail</p>
         /// </summary>
         [JsonProperty("DetailList")]
         public ModifyRecordBatchDetail[] DetailList{ get; set; }

@@ -25,294 +25,271 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 新增版本时需要填写
+        /// <p>新增版本时需要填写</p>
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
         /// <summary>
-        /// 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
+        /// <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
         /// </summary>
         [JsonProperty("ServiceGroupName")]
         public string ServiceGroupName{ get; set; }
 
         /// <summary>
-        /// 模型服务的描述
+        /// <p>模型服务的描述</p>
         /// </summary>
         [JsonProperty("ServiceDescription")]
         public string ServiceDescription{ get; set; }
 
         /// <summary>
-        /// 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
+        /// <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 预付费模式下所属的资源组id，同服务组下唯一
+        /// <p>预付费模式下所属的资源组id，同服务组下唯一</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 模型信息，需要挂载模型时填写
+        /// <p>模型信息，需要挂载模型时填写</p>
         /// </summary>
         [JsonProperty("ModelInfo")]
         public ModelInfo ModelInfo{ get; set; }
 
         /// <summary>
-        /// 镜像信息，配置服务运行所需的镜像地址等信息
+        /// <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 环境变量，可选参数，用于配置容器中的环境变量
+        /// <p>环境变量，可选参数，用于配置容器中的环境变量</p>
         /// </summary>
         [JsonProperty("Env")]
         public EnvVar[] Env{ get; set; }
 
         /// <summary>
-        /// 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
+        /// <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p>
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo Resources{ get; set; }
 
         /// <summary>
-        /// 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-        /// TI.S.MEDIUM.POST	2C4G
-        /// TI.S.LARGE.POST	4C8G
-        /// TI.S.2XLARGE16.POST	8C16G
-        /// TI.S.2XLARGE32.POST	8C32G
-        /// TI.S.4XLARGE32.POST	16C32G
-        /// TI.S.4XLARGE64.POST	16C64G
-        /// TI.S.6XLARGE48.POST	24C48G
-        /// TI.S.6XLARGE96.POST	24C96G
-        /// TI.S.8XLARGE64.POST	32C64G
-        /// TI.S.8XLARGE128.POST 32C128G
-        /// TI.GN7.LARGE20.POST	4C20G T4*1/4
-        /// TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-        /// TI.GN7.2XLARGE32.POST	8C32G T4*1
-        /// TI.GN7.5XLARGE80.POST	20C80G T4*1
-        /// TI.GN7.8XLARGE128.POST	32C128G T4*1
-        /// TI.GN7.10XLARGE160.POST	40C160G T4*2
-        /// TI.GN7.20XLARGE320.POST	80C320G T4*4
+        /// <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL
+        /// <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p>
         /// </summary>
         [JsonProperty("ScaleMode")]
         public string ScaleMode{ get; set; }
 
         /// <summary>
-        /// 实例数量, 不同计费模式和调节模式下对应关系如下
-        /// PREPAID 和 POSTPAID_BY_HOUR:
-        /// 手动调节模式下对应 实例数量
-        /// 自动调节模式下对应 基于时间的默认策略的实例数量
-        /// HYBRID_PAID:
-        /// 后付费实例手动调节模式下对应 实例数量
-        /// 后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+        /// <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 自动伸缩信息
+        /// <p>自动伸缩信息</p>
         /// </summary>
         [JsonProperty("HorizontalPodAutoscaler")]
         public HorizontalPodAutoscaler HorizontalPodAutoscaler{ get; set; }
 
         /// <summary>
-        /// 是否开启日志投递，开启后需填写配置投递到指定cls
+        /// <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 日志配置，需要投递服务日志到指定cls时填写
+        /// <p>日志配置，需要投递服务日志到指定cls时填写</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权
+        /// <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p>
         /// </summary>
         [JsonProperty("AuthorizationEnable")]
         public bool? AuthorizationEnable{ get; set; }
 
         /// <summary>
-        /// 腾讯云标签
+        /// <p>腾讯云标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否新增版本
+        /// <p>是否新增版本</p>
         /// </summary>
         [JsonProperty("NewVersion")]
         public bool? NewVersion{ get; set; }
 
         /// <summary>
-        /// 定时任务配置，使用定时策略时填写
+        /// <p>定时任务配置，使用定时策略时填写</p>
         /// </summary>
         [JsonProperty("CronScaleJobs")]
         public CronScaleJob[] CronScaleJobs{ get; set; }
 
         /// <summary>
-        /// 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
+        /// <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
         /// </summary>
         [JsonProperty("ScaleStrategy")]
         public string ScaleStrategy{ get; set; }
 
         /// <summary>
-        /// 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数
+        /// <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p>
         /// </summary>
         [JsonProperty("HybridBillingPrepaidReplicas")]
         public long? HybridBillingPrepaidReplicas{ get; set; }
 
         /// <summary>
-        /// [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]
+        /// <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p>
         /// </summary>
         [JsonProperty("CreateSource")]
         public string CreateSource{ get; set; }
 
         /// <summary>
-        /// 是否开启模型的热更新。默认不开启
+        /// <p>是否开启模型的热更新。默认不开启</p>
         /// </summary>
         [JsonProperty("ModelHotUpdateEnable")]
         public bool? ModelHotUpdateEnable{ get; set; }
 
         /// <summary>
-        /// 定时停止配置
+        /// <p>定时停止配置</p>
         /// </summary>
         [JsonProperty("ScheduledAction")]
         public ScheduledAction ScheduledAction{ get; set; }
 
         /// <summary>
-        /// 挂载配置，目前只支持CFS
+        /// <p>挂载配置，目前只支持CFS</p>
         /// </summary>
         [JsonProperty("VolumeMount")]
         public VolumeMount VolumeMount{ get; set; }
 
         /// <summary>
-        /// 服务限速限流相关配置
+        /// <p>服务限速限流相关配置</p>
         /// </summary>
         [JsonProperty("ServiceLimit")]
         public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+        /// <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p>
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+        /// <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
         /// </summary>
         [JsonProperty("ModelTurboEnable")]
         public bool? ModelTurboEnable{ get; set; }
 
         /// <summary>
-        /// 服务分类
+        /// <p>服务分类</p>
         /// </summary>
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
 
         /// <summary>
-        /// 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+        /// <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+        /// <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
         /// </summary>
         [JsonProperty("ServiceEIP")]
         public ServiceEIP ServiceEIP{ get; set; }
 
         /// <summary>
-        /// 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+        /// <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
         /// </summary>
         [JsonProperty("CommandBase64")]
         public string CommandBase64{ get; set; }
 
         /// <summary>
-        /// 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+        /// <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
         /// </summary>
         [JsonProperty("ServicePort")]
         public long? ServicePort{ get; set; }
 
         /// <summary>
-        /// 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+        /// <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul>
         /// </summary>
         [JsonProperty("DeployType")]
         public string DeployType{ get; set; }
 
         /// <summary>
-        /// 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+        /// <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
         /// </summary>
         [JsonProperty("InstancePerReplicas")]
         public long? InstancePerReplicas{ get; set; }
 
         /// <summary>
-        /// 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+        /// <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
         /// </summary>
         [JsonProperty("TerminationGracePeriodSeconds")]
         public long? TerminationGracePeriodSeconds{ get; set; }
 
         /// <summary>
-        /// 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+        /// <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
         /// </summary>
         [JsonProperty("PreStopCommand")]
         public string[] PreStopCommand{ get; set; }
 
         /// <summary>
-        /// 是否启用 grpc 端口
+        /// <p>是否启用 grpc 端口</p>
         /// </summary>
         [JsonProperty("GrpcEnable")]
         public bool? GrpcEnable{ get; set; }
 
         /// <summary>
-        /// 健康探针
+        /// <p>健康探针</p>
         /// </summary>
         [JsonProperty("HealthProbe")]
         public HealthProbe HealthProbe{ get; set; }
 
         /// <summary>
-        /// 滚动更新策略
+        /// <p>滚动更新策略</p>
         /// </summary>
         [JsonProperty("RollingUpdate")]
         public RollingUpdate RollingUpdate{ get; set; }
 
         /// <summary>
-        /// sidecar配置
+        /// <p>sidecar配置</p>
         /// </summary>
         [JsonProperty("Sidecar")]
         public SidecarSpec Sidecar{ get; set; }
 
         /// <summary>
-        /// 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+        /// <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
         /// </summary>
         [JsonProperty("VolumeMounts")]
         public VolumeMount[] VolumeMounts{ get; set; }
 
         /// <summary>
-        /// 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+        /// <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
         /// </summary>
         [JsonProperty("SchedulingStrategy")]
         public string SchedulingStrategy{ get; set; }
 
         /// <summary>
-        /// 网关日志投递相关配置
+        /// <p>网关日志投递相关配置</p>
         /// </summary>
         [JsonProperty("GatewayLogConfig")]
         public LogConfig GatewayLogConfig{ get; set; }
 
         /// <summary>
-        /// 网关相关配置
+        /// <p>网关相关配置</p>
         /// </summary>
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
