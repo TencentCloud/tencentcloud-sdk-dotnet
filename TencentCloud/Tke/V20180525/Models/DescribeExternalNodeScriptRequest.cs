@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID
+        /// 注册节点池ID
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }

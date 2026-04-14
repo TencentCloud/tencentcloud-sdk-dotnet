@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1405";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -642,7 +642,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建第三方节点池
+        /// 创建注册节点池
         /// </summary>
         /// <param name="req"><see cref="CreateExternalNodePoolRequest"/></param>
         /// <returns><see cref="CreateExternalNodePoolResponse"/></returns>
@@ -652,7 +652,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建第三方节点池
+        /// 创建注册节点池
         /// </summary>
         /// <param name="req"><see cref="CreateExternalNodePoolRequest"/></param>
         /// <returns><see cref="CreateExternalNodePoolResponse"/></returns>
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除第三方节点
+        /// 删除注册节点
         /// </summary>
         /// <param name="req"><see cref="DeleteExternalNodeRequest"/></param>
         /// <returns><see cref="DeleteExternalNodeResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除第三方节点
+        /// 删除注册节点
         /// </summary>
         /// <param name="req"><see cref="DeleteExternalNodeRequest"/></param>
         /// <returns><see cref="DeleteExternalNodeResponse"/></returns>
@@ -1356,7 +1356,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除第三方节点池
+        /// 删除注册节点池
         /// </summary>
         /// <param name="req"><see cref="DeleteExternalNodePoolRequest"/></param>
         /// <returns><see cref="DeleteExternalNodePoolResponse"/></returns>
@@ -1366,7 +1366,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除第三方节点池
+        /// 删除注册节点池
         /// </summary>
         /// <param name="req"><see cref="DeleteExternalNodePoolRequest"/></param>
         /// <returns><see cref="DeleteExternalNodePoolResponse"/></returns>
@@ -2847,7 +2847,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看第三方节点列表
+        /// 查看注册节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeResponse"/></returns>
@@ -2857,7 +2857,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看第三方节点列表
+        /// 查看注册节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeResponse"/></returns>
@@ -2868,7 +2868,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看第三方节点池列表
+        /// 查看注册节点池列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodePoolsRequest"/></param>
         /// <returns><see cref="DescribeExternalNodePoolsResponse"/></returns>
@@ -2878,7 +2878,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看第三方节点池列表
+        /// 查看注册节点池列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodePoolsRequest"/></param>
         /// <returns><see cref="DescribeExternalNodePoolsResponse"/></returns>
@@ -2889,7 +2889,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取第三方节点添加脚本
+        /// 获取注册节点初始化脚本
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeScriptRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeScriptResponse"/></returns>
@@ -2899,7 +2899,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取第三方节点添加脚本
+        /// 获取注册节点初始化脚本
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeScriptRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeScriptResponse"/></returns>
@@ -2910,7 +2910,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看开启第三方节点池配置信息
+        /// 查看开启注册节点池配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
@@ -2920,7 +2920,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看开启第三方节点池配置信息
+        /// 查看开启注册节点池配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
         /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
@@ -4149,7 +4149,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 驱逐第三方节点
+        /// 驱逐注册节点
         /// </summary>
         /// <param name="req"><see cref="DrainExternalNodeRequest"/></param>
         /// <returns><see cref="DrainExternalNodeResponse"/></returns>
@@ -4159,7 +4159,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 驱逐第三方节点
+        /// 驱逐注册节点
         /// </summary>
         /// <param name="req"><see cref="DrainExternalNodeRequest"/></param>
         /// <returns><see cref="DrainExternalNodeResponse"/></returns>
@@ -4296,7 +4296,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 开启第三方节点池支持
+        /// 开启注册节点池支持
         /// </summary>
         /// <param name="req"><see cref="EnableExternalNodeSupportRequest"/></param>
         /// <returns><see cref="EnableExternalNodeSupportResponse"/></returns>
@@ -4306,7 +4306,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 开启第三方节点池支持
+        /// 开启注册节点池支持
         /// </summary>
         /// <param name="req"><see cref="EnableExternalNodeSupportRequest"/></param>
         /// <returns><see cref="EnableExternalNodeSupportResponse"/></returns>
@@ -4884,7 +4884,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改第三方节点池
+        /// 修改注册节点池
         /// </summary>
         /// <param name="req"><see cref="ModifyExternalNodePoolRequest"/></param>
         /// <returns><see cref="ModifyExternalNodePoolResponse"/></returns>
@@ -4894,7 +4894,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改第三方节点池
+        /// 修改注册节点池
         /// </summary>
         /// <param name="req"><see cref="ModifyExternalNodePoolRequest"/></param>
         /// <returns><see cref="ModifyExternalNodePoolResponse"/></returns>

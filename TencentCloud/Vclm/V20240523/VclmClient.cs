@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -415,6 +415,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitImageToVideoGeneralJobResponse SubmitImageToVideoGeneralJobSync(SubmitImageToVideoGeneralJobRequest req)
         {
             return InternalRequestAsync<SubmitImageToVideoGeneralJobResponse>(req, "SubmitImageToVideoGeneralJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交Vidu图生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoViduJobResponse"/></returns>
+        public Task<SubmitImageToVideoViduJobResponse> SubmitImageToVideoViduJob(SubmitImageToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoViduJobResponse>(req, "SubmitImageToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 提交Vidu图生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoViduJobResponse"/></returns>
+        public SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJobSync(SubmitImageToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoViduJobResponse>(req, "SubmitImageToVideoViduJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

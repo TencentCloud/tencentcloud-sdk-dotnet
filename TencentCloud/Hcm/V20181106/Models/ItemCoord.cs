@@ -25,25 +25,25 @@ namespace TencentCloud.Hcm.V20181106.Models
     {
         
         /// <summary>
-        /// 算式高度
+        /// <p>算式高度（单位：px）</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 算式宽度
+        /// <p>算式宽度（单位：px）</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 算式图的左上角横坐标
+        /// <p>算式图的左上角横坐标</p>
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 算式图的左上角纵坐标
+        /// <p>算式图的左上角纵坐标</p>
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }

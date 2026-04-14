@@ -216,6 +216,13 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 原生节点云标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +258,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "OsImage", this.OsImage);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

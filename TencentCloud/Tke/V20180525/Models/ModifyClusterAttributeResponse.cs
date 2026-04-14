@@ -25,52 +25,58 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群所属项目
+        /// <p>集群所属项目</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群描述
+        /// <p>集群描述</p>
         /// </summary>
         [JsonProperty("ClusterDesc")]
         public string ClusterDesc{ get; set; }
 
         /// <summary>
-        /// 集群等级
+        /// <p>集群等级</p>
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// 自动变配集群等级
+        /// <p>自动变配集群等级</p>
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
-        /// 是否开启QGPU共享
+        /// <p>是否开启QGPU共享</p>
         /// </summary>
         [JsonProperty("QGPUShareEnable")]
         public bool? QGPUShareEnable{ get; set; }
 
         /// <summary>
-        /// 集群属性
+        /// <p>集群属性</p>
         /// </summary>
         [JsonProperty("ClusterProperty")]
         public ClusterProperty ClusterProperty{ get; set; }
 
         /// <summary>
-        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+        /// <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
         /// </summary>
         [JsonProperty("IsHighAvailability")]
         public bool? IsHighAvailability{ get; set; }
+
+        /// <summary>
+        /// <p>集群安全模式配置</p>
+        /// </summary>
+        [JsonProperty("SecurityModeConfig")]
+        public SecurityModeConfig SecurityModeConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +98,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
             this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+            this.SetParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

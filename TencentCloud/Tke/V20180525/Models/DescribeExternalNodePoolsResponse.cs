@@ -32,7 +32,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 第三方节点池列表
+        /// 注册节点池列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodePoolSet")]

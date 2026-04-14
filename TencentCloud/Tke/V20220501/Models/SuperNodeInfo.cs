@@ -122,6 +122,24 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("InstanceAttribute")]
         public string InstanceAttribute{ get; set; }
 
+        /// <summary>
+        /// 节点名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// 包销时长
+        /// </summary>
+        [JsonProperty("Duration")]
+        public string Duration{ get; set; }
+
+        /// <summary>
+        /// 预付费资源ID
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +160,9 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "ExpireAt", this.ExpireAt);
             this.SetParamSimple(map, prefix + "MaxCPUScheduledPod", this.MaxCPUScheduledPod);
             this.SetParamSimple(map, prefix + "InstanceAttribute", this.InstanceAttribute);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

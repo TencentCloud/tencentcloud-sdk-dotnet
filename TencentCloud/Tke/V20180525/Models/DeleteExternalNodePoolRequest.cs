@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 第三方节点池ID列表
+        /// 注册节点池ID列表
         /// </summary>
         [JsonProperty("NodePoolIds")]
         public string[] NodePoolIds{ get; set; }
 
         /// <summary>
-        /// 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+        /// 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

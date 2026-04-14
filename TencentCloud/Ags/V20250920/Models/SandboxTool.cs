@@ -55,6 +55,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// <p>是否常驻沙箱</p>
+        /// </summary>
+        [JsonProperty("Persistent")]
+        public bool? Persistent{ get; set; }
+
+        /// <summary>
         /// <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
         /// </summary>
         [JsonProperty("DefaultTimeoutSeconds")]
@@ -125,6 +131,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "ToolType", this.ToolType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Persistent", this.Persistent);
             this.SetParamSimple(map, prefix + "DefaultTimeoutSeconds", this.DefaultTimeoutSeconds);
             this.SetParamObj(map, prefix + "NetworkConfiguration.", this.NetworkConfiguration);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

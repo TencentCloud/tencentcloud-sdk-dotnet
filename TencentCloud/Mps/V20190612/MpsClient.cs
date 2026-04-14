@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1406";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -478,6 +478,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateProcessImageTemplateResponse CreateProcessImageTemplateSync(CreateProcessImageTemplateRequest req)
         {
             return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 剧集项目创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject");
+        }
+
+        /// <summary>
+        /// 剧集项目创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1248,6 +1269,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteProcessImageTemplateResponse DeleteProcessImageTemplateSync(DeleteProcessImageTemplateRequest req)
         {
             return InternalRequestAsync<DeleteProcessImageTemplateResponse>(req, "DeleteProcessImageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 剧集项目删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public Task<DeleteProjectResponse> DeleteProject(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject");
+        }
+
+        /// <summary>
+        /// 剧集项目删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4152,6 +4194,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 剧集项目查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryProjectRequest"/></param>
+        /// <returns><see cref="QueryProjectResponse"/></returns>
+        public Task<QueryProjectResponse> QueryProject(QueryProjectRequest req)
+        {
+            return InternalRequestAsync<QueryProjectResponse>(req, "QueryProject");
+        }
+
+        /// <summary>
+        /// 剧集项目查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryProjectRequest"/></param>
+        /// <returns><see cref="QueryProjectResponse"/></returns>
+        public QueryProjectResponse QueryProjectSync(QueryProjectRequest req)
+        {
+            return InternalRequestAsync<QueryProjectResponse>(req, "QueryProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 同步接口，返回语音识别结果
         /// </summary>
         /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
@@ -4337,6 +4400,27 @@ namespace TencentCloud.Mps.V20190612
         public TextTranslationResponse TextTranslationSync(TextTranslationRequest req)
         {
             return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 剧集项目更新
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public Task<UpdateProjectResponse> UpdateProject(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject");
+        }
+
+        /// <summary>
+        /// 剧集项目更新
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

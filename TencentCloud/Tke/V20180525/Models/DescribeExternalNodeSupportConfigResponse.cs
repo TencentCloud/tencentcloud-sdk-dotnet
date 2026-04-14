@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterCIDR{ get; set; }
 
         /// <summary>
-        /// 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
+        /// 集群网络插件类型，支持：CiliumOverlay、HostNetwork
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 是否开启第三方节点专线连接支持
+        /// 是否开启注册节点专线连接支持
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string SwitchIP{ get; set; }
 
         /// <summary>
-        /// 开启第三方节点池状态
+        /// 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -85,14 +85,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Proxy{ get; set; }
 
         /// <summary>
-        /// 用于记录开启第三方节点的过程进行到哪一步了
+        /// 开启注册节点能力的进度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public Step[] Progress{ get; set; }
 
         /// <summary>
-        /// 是否开启第三方节点公网连接支持
+        /// 是否开启注册节点公网连接支持
         /// </summary>
         [JsonProperty("EnabledPublicConnect")]
         public bool? EnabledPublicConnect{ get; set; }

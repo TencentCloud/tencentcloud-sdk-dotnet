@@ -55,6 +55,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("SortBy")]
         public SortBy SortBy{ get; set; }
 
+        /// <summary>
+        /// 是否返回节点云标签
+        /// </summary>
+        [JsonProperty("NeedTags")]
+        public bool? NeedTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamObj(map, prefix + "SortBy.", this.SortBy);
+            this.SetParamSimple(map, prefix + "NeedTags", this.NeedTags);
         }
     }
 }

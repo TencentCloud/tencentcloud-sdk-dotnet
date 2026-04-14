@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1406";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -2528,6 +2528,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateGroupResponse UpdateGroupSync(UpdateGroupRequest req)
         {
             return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新新建ip白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateIPWhitelistResponse"/></returns>
+        public Task<UpdateIPWhitelistResponse> UpdateIPWhitelist(UpdateIPWhitelistRequest req)
+        {
+            return InternalRequestAsync<UpdateIPWhitelistResponse>(req, "UpdateIPWhitelist");
+        }
+
+        /// <summary>
+        /// 更新新建ip白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateIPWhitelistResponse"/></returns>
+        public UpdateIPWhitelistResponse UpdateIPWhitelistSync(UpdateIPWhitelistRequest req)
+        {
+            return InternalRequestAsync<UpdateIPWhitelistResponse>(req, "UpdateIPWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

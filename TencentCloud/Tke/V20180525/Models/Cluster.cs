@@ -25,161 +25,167 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群描述
+        /// <p>集群描述</p>
         /// </summary>
         [JsonProperty("ClusterDescription")]
         public string ClusterDescription{ get; set; }
 
         /// <summary>
-        /// 集群版本（默认值为1.10.5）
+        /// <p>集群版本（默认值为1.10.5）</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+        /// <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p>
         /// </summary>
         [JsonProperty("ClusterOs")]
         public string ClusterOs{ get; set; }
 
         /// <summary>
-        /// 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+        /// <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群网络相关参数
+        /// <p>集群网络相关参数</p>
         /// </summary>
         [JsonProperty("ClusterNetworkSettings")]
         public ClusterNetworkSettings ClusterNetworkSettings{ get; set; }
 
         /// <summary>
-        /// 集群当前node数量
+        /// <p>集群当前node数量</p>
         /// </summary>
         [JsonProperty("ClusterNodeNum")]
         public ulong? ClusterNodeNum{ get; set; }
 
         /// <summary>
-        /// 集群所属的项目ID
+        /// <p>集群所属的项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 标签描述列表。
+        /// <p>标签描述列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+        /// <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+        /// <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p>
         /// </summary>
         [JsonProperty("Property")]
         public string Property{ get; set; }
 
         /// <summary>
-        /// 集群当前master数量
+        /// <p>集群当前master数量</p>
         /// </summary>
         [JsonProperty("ClusterMaterNodeNum")]
         public ulong? ClusterMaterNodeNum{ get; set; }
 
         /// <summary>
-        /// 集群使用镜像id
+        /// <p>集群使用镜像id</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// OsCustomizeType 系统定制类型
+        /// <p>OsCustomizeType 系统定制类型</p>
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// 集群运行环境docker或container
+        /// <p>集群运行环境docker或container</p>
         /// </summary>
         [JsonProperty("ContainerRuntime")]
         public string ContainerRuntime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 集群删除保护开关，打开：true，关闭：false
+        /// <p>集群删除保护开关，打开：true，关闭：false</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// 集群是否开启第三方节点支持，开启：true，关闭：false
+        /// <p>集群是否开启第三方节点支持，开启：true，关闭：false</p>
         /// </summary>
         [JsonProperty("EnableExternalNode")]
         public bool? EnableExternalNode{ get; set; }
 
         /// <summary>
-        /// 集群等级，针对托管集群生效
+        /// <p>集群等级，针对托管集群生效</p>
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+        /// <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p>
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
-        /// 是否开启QGPU共享，开启：true，关闭：false
+        /// <p>是否开启QGPU共享，开启：true，关闭：false</p>
         /// </summary>
         [JsonProperty("QGPUShareEnable")]
         public bool? QGPUShareEnable{ get; set; }
 
         /// <summary>
-        /// 运行时版本
+        /// <p>运行时版本</p>
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 集群当前etcd数量
+        /// <p>集群当前etcd数量</p>
         /// </summary>
         [JsonProperty("ClusterEtcdNodeNum")]
         public ulong? ClusterEtcdNodeNum{ get; set; }
 
         /// <summary>
-        /// 本地专用集群Id
+        /// <p>本地专用集群Id</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+        /// <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
         /// </summary>
         [JsonProperty("IsHighAvailability")]
         public bool? IsHighAvailability{ get; set; }
+
+        /// <summary>
+        /// <p>开启后会下发Gatekeeper和网络策略</p>
+        /// </summary>
+        [JsonProperty("SecurityModeConfig")]
+        public SecurityModeConfig SecurityModeConfig{ get; set; }
 
 
         /// <summary>
@@ -213,6 +219,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+            this.SetParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
         }
     }
 }

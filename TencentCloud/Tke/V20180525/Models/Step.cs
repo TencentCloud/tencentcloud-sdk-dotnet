@@ -32,12 +32,14 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }
 
         /// <summary>
         /// 结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndAt")]
         public string EndAt{ get; set; }
@@ -54,6 +56,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 错误详情
+        /// </summary>
+        [JsonProperty("Detail")]
+        public string Detail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EndAt", this.EndAt);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Detail", this.Detail);
         }
     }
 }

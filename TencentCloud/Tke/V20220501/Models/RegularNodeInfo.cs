@@ -38,6 +38,13 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("AutoscalingGroupId")]
         public string AutoscalingGroupId{ get; set; }
 
+        /// <summary>
+        /// 普通节点云标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tke.V20220501.Models
         {
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

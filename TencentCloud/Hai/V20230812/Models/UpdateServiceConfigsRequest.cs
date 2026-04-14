@@ -25,16 +25,22 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 期望副本数
+        /// <p>期望副本数</p>
         /// </summary>
         [JsonProperty("TargetReplicas")]
         public long? TargetReplicas{ get; set; }
+
+        /// <summary>
+        /// <p>启动参数、环境变量等参数</p>
+        /// </summary>
+        [JsonProperty("DeploymentConfigs")]
+        public DeploymentConfig[] DeploymentConfigs{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Hai.V20230812.Models
         {
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
+            this.SetParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
         }
     }
 }

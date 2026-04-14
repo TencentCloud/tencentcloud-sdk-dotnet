@@ -25,52 +25,52 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 第三方节点名称
+        /// <p>注册节点名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 第三方节点所属节点池
+        /// <p>注册节点所属节点池</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 第三方IP地址
+        /// <p>注册节点IP地址</p>
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// 第三方地域
+        /// <p>注册节点地域</p>
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// 第三方节点状态
+        /// <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 异常原因
+        /// <p>异常原因</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 是否封锁。true表示已封锁，false表示未封锁
+        /// <p>是否封锁。true表示已封锁，false表示未封锁</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unschedulable")]

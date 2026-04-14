@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 第三方节点池ID
+        /// 注册节点池ID
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 第三方节点池名称
+        /// 注册节点池名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,27 +55,27 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 第三方节点Runtime配置
+        /// 注册节点运行时配置
         /// </summary>
         [JsonProperty("RuntimeConfig")]
         public RuntimeConfig RuntimeConfig{ get; set; }
 
         /// <summary>
-        /// 第三方节点label
+        /// 注册节点标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 第三方节点taint
+        /// 注册节点污点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 第三方节点高级设置
+        /// 注册节点高级设置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceAdvancedSettings")]
@@ -87,6 +87,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// 注册节点类型
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
 
 
         /// <summary>
@@ -104,6 +110,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }

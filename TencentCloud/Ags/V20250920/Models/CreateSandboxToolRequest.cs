@@ -90,6 +90,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("LogConfiguration")]
         public LogConfiguration LogConfiguration{ get; set; }
 
+        /// <summary>
+        /// <p>常驻沙箱标识</p>
+        /// </summary>
+        [JsonProperty("Persistent")]
+        public bool? Persistent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
             this.SetParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
+            this.SetParamSimple(map, prefix + "Persistent", this.Persistent);
         }
     }
 }

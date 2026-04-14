@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+        /// 容器网络类型，支持：HostNetwork、CiliumBGP
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -37,14 +37,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Pod CIDR
+        /// 集群CIDR，网络模式HostNetwork 时无需填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterCIDR")]
         public string ClusterCIDR{ get; set; }
 
         /// <summary>
-        /// 是否开启第三方节点池支持
+        /// 【已废弃】是否开启专线连接能力
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

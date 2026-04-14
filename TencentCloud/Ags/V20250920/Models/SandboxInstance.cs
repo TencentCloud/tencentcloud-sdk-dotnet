@@ -49,6 +49,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// <p>是否常驻实例</p>
+        /// </summary>
+        [JsonProperty("Persistent")]
+        public bool? Persistent{ get; set; }
+
+        /// <summary>
         /// <p>超时时间（秒），null 表示无超时设置</p>
         /// </summary>
         [JsonProperty("TimeoutSeconds")]
@@ -112,6 +118,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "ToolId", this.ToolId);
             this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Persistent", this.Persistent);
             this.SetParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
             this.SetParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);

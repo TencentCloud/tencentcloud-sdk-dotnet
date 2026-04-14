@@ -43,13 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 第三方节点label
+        /// 注册节点标签
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 第三方节点taint
+        /// 注册节点污点
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }

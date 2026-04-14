@@ -68,7 +68,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? SkipPreCheck{ get; set; }
 
         /// <summary>
-        /// 最大可容忍的不可用Pod比例
+        /// 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
         /// </summary>
         [JsonProperty("MaxNotReadyPercent")]
         public float? MaxNotReadyPercent{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("UpgradeRunTime")]
         public bool? UpgradeRunTime{ get; set; }
+
+        /// <summary>
+        /// 支持多个节点并行升级，默认值为 1，最大并行数为15
+        /// </summary>
+        [JsonProperty("Concurrent")]
+        public long? Concurrent{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
             this.SetParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
             this.SetParamSimple(map, prefix + "UpgradeRunTime", this.UpgradeRunTime);
+            this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
         }
     }
 }

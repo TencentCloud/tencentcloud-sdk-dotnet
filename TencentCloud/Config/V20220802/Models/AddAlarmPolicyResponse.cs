@@ -25,7 +25,7 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 告警策略唯一id
+        /// <p>告警策略唯一id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmPolicyId")]

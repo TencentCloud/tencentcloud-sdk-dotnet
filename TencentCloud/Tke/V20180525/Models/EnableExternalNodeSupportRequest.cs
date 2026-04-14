@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 开启第三方节点池支持配置信息
+        /// 开启注册节点池支持配置信息
         /// </summary>
         [JsonProperty("ClusterExternalConfig")]
         public ClusterExternalConfig ClusterExternalConfig{ get; set; }

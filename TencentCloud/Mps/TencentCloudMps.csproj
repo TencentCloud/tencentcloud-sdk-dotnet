@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1406</VersionPrefix>
+    <VersionPrefix>3.0.1408</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -313,6 +313,8 @@
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\CreateProcessImageTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateProcessImageTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20190612\Models\CreateProjectResponse.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
@@ -382,6 +384,8 @@
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteProcessImageTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteProcessImageTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
@@ -859,6 +863,7 @@
     <Compile Include="V20190612\Models\ProhibitedConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\Project.cs" />
     <Compile Include="V20190612\Models\PureSubtitleTransResult.cs" />
     <Compile Include="V20190612\Models\PureSubtitleTransResultOutput.cs" />
     <Compile Include="V20190612\Models\QualityControlData.cs" />
@@ -867,6 +872,8 @@
     <Compile Include="V20190612\Models\QualityControlResult.cs" />
     <Compile Include="V20190612\Models\QualityControlStrategy.cs" />
     <Compile Include="V20190612\Models\QualityControlTemplate.cs" />
+    <Compile Include="V20190612\Models\QueryProjectRequest.cs" />
+    <Compile Include="V20190612\Models\QueryProjectResponse.cs" />
     <Compile Include="V20190612\Models\RTMPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />
@@ -945,6 +952,7 @@
     <Compile Include="V20190612\Models\SourceLocationInfo.cs" />
     <Compile Include="V20190612\Models\SourcePackageConf.cs" />
     <Compile Include="V20190612\Models\SourceTag.cs" />
+    <Compile Include="V20190612\Models\Speakers.cs" />
     <Compile Include="V20190612\Models\SpecificationDataItem.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />
     <Compile Include="V20190612\Models\SpliceInsertInfo.cs" />
@@ -984,6 +992,7 @@
     <Compile Include="V20190612\Models\TaskSimpleInfo.cs" />
     <Compile Include="V20190612\Models\TaskStatData.cs" />
     <Compile Include="V20190612\Models\TaskStatDataItem.cs" />
+    <Compile Include="V20190612\Models\TermBase.cs" />
     <Compile Include="V20190612\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20190612\Models\TerrorismConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\TerrorismImgReviewTemplateInfo.cs" />
@@ -1004,6 +1013,8 @@
     <Compile Include="V20190612\Models\TranslateConfigureInfo.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UnattachSecurityGroupInOutInfo.cs" />
+    <Compile Include="V20190612\Models\UpdateProjectRequest.cs" />
+    <Compile Include="V20190612\Models\UpdateProjectResponse.cs" />
     <Compile Include="V20190612\Models\UpdateSmartErasePrivacyConfig.cs" />
     <Compile Include="V20190612\Models\UpdateSmartEraseSubtitleConfig.cs" />
     <Compile Include="V20190612\Models\UpdateSmartEraseWatermarkConfig.cs" />

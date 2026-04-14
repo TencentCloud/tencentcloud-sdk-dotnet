@@ -25,49 +25,55 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 告警策略名
+        /// <p>告警策略名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 事件范围  1：当前账号  2：多账号
+        /// <p>事件类型 1：资源不合规事件</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// <p>事件范围  1：当前账号  2：多账号</p>
         /// </summary>
         [JsonProperty("EventScope")]
         public long?[] EventScope{ get; set; }
 
         /// <summary>
-        /// 风险等级 1：高风险  2：中风险 3：低风险
+        /// <p>风险等级 1：高风险  2：中风险 3：低风险</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// 通知时间段
+        /// <p>通知时间段</p>
         /// </summary>
         [JsonProperty("NoticeTime")]
         public string NoticeTime{ get; set; }
 
         /// <summary>
-        /// 通知机制
+        /// <p>通知机制</p>
         /// </summary>
         [JsonProperty("NotificationMechanism")]
         public string NotificationMechanism{ get; set; }
 
         /// <summary>
-        /// 状态 1：启用 2：停用
+        /// <p>状态 1：启用 2：停用</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 通知周期
+        /// <p>通知周期</p>
         /// </summary>
         [JsonProperty("NoticePeriod")]
         public long?[] NoticePeriod{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// <p>策略描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -79,6 +85,7 @@ namespace TencentCloud.Config.V20220802.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "EventScope.", this.EventScope);
             this.SetParamArraySimple(map, prefix + "RiskLevel.", this.RiskLevel);
             this.SetParamSimple(map, prefix + "NoticeTime", this.NoticeTime);

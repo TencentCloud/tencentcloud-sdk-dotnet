@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -415,6 +415,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQGroupV2Response CreateRocketMQGroupV2Sync(CreateRocketMQGroupV2Request req)
         {
             return InternalRequestAsync<CreateRocketMQGroupV2Response>(req, "CreateRocketMQGroupV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建RocketMQ元数据迁移任务，用于批量创建主题和消费组数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateRocketMQMigrationTaskResponse"/></returns>
+        public Task<CreateRocketMQMigrationTaskResponse> CreateRocketMQMigrationTask(CreateRocketMQMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQMigrationTaskResponse>(req, "CreateRocketMQMigrationTask");
+        }
+
+        /// <summary>
+        /// 创建RocketMQ元数据迁移任务，用于批量创建主题和消费组数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateRocketMQMigrationTaskResponse"/></returns>
+        public CreateRocketMQMigrationTaskResponse CreateRocketMQMigrationTaskSync(CreateRocketMQMigrationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQMigrationTaskResponse>(req, "CreateRocketMQMigrationTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
