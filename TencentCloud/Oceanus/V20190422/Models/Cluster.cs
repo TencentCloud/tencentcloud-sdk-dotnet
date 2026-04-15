@@ -25,387 +25,400 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 集群 ID
+        /// <p>集群 ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 用户 AppID
+        /// <p>用户 AppID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 主账号 UIN
+        /// <p>主账号 UIN</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 创建者 UIN
+        /// <p>创建者 UIN</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 集群状态, 1 未初始化,3 初始化中，2 运行中
+        /// <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 集群创建时间
+        /// <p>集群创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后一次操作集群的时间
+        /// <p>最后一次操作集群的时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// CU 数量
+        /// <p>CU 数量</p>
         /// </summary>
         [JsonProperty("CuNum")]
         public ulong? CuNum{ get; set; }
 
         /// <summary>
-        /// CU 内存规格
+        /// <p>CU 内存规格</p>
         /// </summary>
         [JsonProperty("CuMem")]
         public ulong? CuMem{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 状态描述
+        /// <p>状态描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 网络
+        /// <p>网络</p>
         /// </summary>
         [JsonProperty("CCNs")]
         public CCN[] CCNs{ get; set; }
 
         /// <summary>
-        /// 网络
+        /// <p>网络</p>
         /// </summary>
         [JsonProperty("NetEnvironmentType")]
         public ulong? NetEnvironmentType{ get; set; }
 
         /// <summary>
-        /// 空闲 CU
+        /// <p>空闲 CU</p>
         /// </summary>
         [JsonProperty("FreeCuNum")]
         public long? FreeCuNum{ get; set; }
 
         /// <summary>
-        /// 集群绑定的标签
+        /// <p>集群绑定的标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 集群隔离时间; 没隔离时间，则为 -
+        /// <p>集群隔离时间; 没隔离时间，则为 -</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
 
         /// <summary>
-        /// 集群过期时间; 没过期概念，则为 -
+        /// <p>集群过期时间; 没过期概念，则为 -</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 距离过期还有多少秒; 没过期概念，则为 -
+        /// <p>距离过期还有多少秒; 没过期概念，则为 -</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondsUntilExpiry")]
         public string SecondsUntilExpiry{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 集群的默认 COS 存储桶
+        /// <p>集群的默认 COS 存储桶</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultCOSBucket")]
         public string DefaultCOSBucket{ get; set; }
 
         /// <summary>
-        /// 集群的CLS 日志集 LogSet
+        /// <p>集群的CLS 日志集 LogSet</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLSLogSet")]
         public string CLSLogSet{ get; set; }
 
         /// <summary>
-        /// 集群的CLS 日志主题 TopicId
+        /// <p>集群的CLS 日志主题 TopicId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLSTopicId")]
         public string CLSTopicId{ get; set; }
 
         /// <summary>
-        /// 集群的CLS 日志集  名字
+        /// <p>集群的CLS 日志集  名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLSLogName")]
         public string CLSLogName{ get; set; }
 
         /// <summary>
-        /// 集群的CLS 日志主题  名字
+        /// <p>集群的CLS 日志主题  名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLSTopicName")]
         public string CLSTopicName{ get; set; }
 
         /// <summary>
-        /// 集群的版本信息
+        /// <p>集群的版本信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public ClusterVersion Version{ get; set; }
 
         /// <summary>
-        /// 细粒度资源下的空闲CU
+        /// <p>细粒度资源下的空闲CU</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeCu")]
         public float? FreeCu{ get; set; }
 
         /// <summary>
-        /// 集群的默认日志采集配置
+        /// <p>集群的默认日志采集配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultLogCollectConf")]
         public string DefaultLogCollectConf{ get; set; }
 
         /// <summary>
-        /// 取值：0-没有设置，1-已设置，2-不允许设置
+        /// <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomizedDNSEnabled")]
         public long? CustomizedDNSEnabled{ get; set; }
 
         /// <summary>
-        /// 空间信息
+        /// <p>空间信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Correlations")]
         public WorkSpaceClusterItem[] Correlations{ get; set; }
 
         /// <summary>
-        /// 运行CU
+        /// <p>运行CU</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCu")]
         public float? RunningCu{ get; set; }
 
         /// <summary>
-        /// 0 后付费,1 预付费
+        /// <p>0 后付费,1 预付费</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+        /// <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNeedManageNode")]
         public long? IsNeedManageNode{ get; set; }
 
         /// <summary>
-        /// session集群信息
+        /// <p>session集群信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterSessions")]
         public ClusterSession[] ClusterSessions{ get; set; }
 
         /// <summary>
-        /// V3版本 = 2
+        /// <p>V3版本 = 2</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchGeneration")]
         public ulong? ArchGeneration{ get; set; }
 
         /// <summary>
-        /// 0:TKE, 1:EKS
+        /// <p>0:TKE, 1:EKS</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
 
         /// <summary>
-        /// 订单信息
+        /// <p>订单信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Orders")]
         public Order[] Orders{ get; set; }
 
         /// <summary>
-        /// Gateway信息
+        /// <p>Gateway信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlGateways")]
         public SqlGatewayItem[] SqlGateways{ get; set; }
 
         /// <summary>
-        /// 0 公网访问 // 1 内网访问	
+        /// <p>0 公网访问 // 1 内网访问</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebUIType")]
         public long? WebUIType{ get; set; }
 
         /// <summary>
-        /// 2 独享集群
+        /// <p>2 独享集群</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 子eks集群
+        /// <p>子eks集群</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubEks")]
         public SubEks SubEks{ get; set; }
 
         /// <summary>
-        /// 上级集群
+        /// <p>上级集群</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentSerialId")]
         public string AgentSerialId{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// <p>资源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingResourceMode")]
         public string BillingResourceMode{ get; set; }
 
         /// <summary>
-        /// Cu比例
+        /// <p>Cu比例</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemRatio")]
         public long? MemRatio{ get; set; }
 
         /// <summary>
-        /// 是否开启跨租户弹性网卡
+        /// <p>是否开启跨租户弹性网卡</p>
         /// </summary>
         [JsonProperty("CrossTenantEniMode")]
         public long? CrossTenantEniMode{ get; set; }
 
         /// <summary>
-        /// 总的CPU
+        /// <p>总的CPU</p>
         /// </summary>
         [JsonProperty("TotalCpu")]
         public float? TotalCpu{ get; set; }
 
         /// <summary>
-        /// 总的内存
+        /// <p>总的内存</p>
         /// </summary>
         [JsonProperty("TotalMem")]
         public float? TotalMem{ get; set; }
 
         /// <summary>
-        /// 运行的CPU
+        /// <p>运行的CPU</p>
         /// </summary>
         [JsonProperty("RunningCpu")]
         public float? RunningCpu{ get; set; }
 
         /// <summary>
-        /// 运行的内存
+        /// <p>运行的内存</p>
         /// </summary>
         [JsonProperty("RunningMem")]
         public float? RunningMem{ get; set; }
 
         /// <summary>
-        /// setats集群
+        /// <p>setats集群</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Setats")]
         public Setats Setats{ get; set; }
 
         /// <summary>
-        /// []
+        /// <p>[]</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Yarns")]
         public HadoopYarnItem[] Yarns{ get; set; }
 
         /// <summary>
-        /// 0 单可用区 1多可用区
+        /// <p>0 单可用区 1多可用区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeploymentMode")]
         public long? DeploymentMode{ get; set; }
 
         /// <summary>
-        /// 备可用区
+        /// <p>备可用区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZones")]
         public SlaveZone[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// 集群的日志cos存储
+        /// <p>集群的日志cos存储</p>
         /// </summary>
         [JsonProperty("LogCOSBucket")]
         public string LogCOSBucket{ get; set; }
 
         /// <summary>
-        /// Cdc集群Id
+        /// <p>Cdc集群Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
+
+        /// <summary>
+        /// <p>集群进度</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterProcessMsg")]
+        public string ClusterProcessMsg{ get; set; }
+
+        /// <summary>
+        /// <p>单作业最大可配置 CU 数</p>
+        /// </summary>
+        [JsonProperty("MaxCuPerJob")]
+        public long? MaxCuPerJob{ get; set; }
 
 
         /// <summary>
@@ -471,6 +484,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "ClusterProcessMsg", this.ClusterProcessMsg);
+            this.SetParamSimple(map, prefix + "MaxCuPerJob", this.MaxCuPerJob);
         }
     }
 }

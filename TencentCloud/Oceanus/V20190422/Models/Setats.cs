@@ -132,6 +132,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ImageVersion")]
         public string ImageVersion{ get; set; }
 
+        /// <summary>
+        /// <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("WebUIType")]
+        public long? WebUIType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +160,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
             this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+            this.SetParamSimple(map, prefix + "WebUIType", this.WebUIType);
         }
     }
 }

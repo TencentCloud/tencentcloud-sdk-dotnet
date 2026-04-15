@@ -25,113 +25,91 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份方式。
-        /// - 0：逻辑备份。
-        /// - 1：物理备份。
-        /// - 3：快照备份。
-        /// **说明**:
-        /// 1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-        /// 2. 实例开通存储加密，则备份方式不能为物理备份。
+        /// <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
 
         /// <summary>
-        /// 设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
+        /// <p>设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。</p>
         /// </summary>
         [JsonProperty("BackupTime")]
         public ulong? BackupTime{ get; set; }
 
         /// <summary>
-        /// 指定每日自动备份频率。
-        /// - 12: 每日备份2次，间隔约12小时。
-        /// - 24: 每日备份1次（默认），间隔约24小时。
+        /// <p>指定每日自动备份频率。</p><ul><li>12: 每日备份2次，间隔约12小时。</li><li>24: 每日备份1次（默认），间隔约24小时。</li></ul>
         /// </summary>
         [JsonProperty("BackupFrequency")]
         public ulong? BackupFrequency{ get; set; }
 
         /// <summary>
-        /// 设置自动备份发生错误时，是否发送失败告警。
-        /// - true：发送。
-        /// - false：不发送。
+        /// <p>设置自动备份发生错误时，是否发送失败告警。</p><ul><li>true：发送。</li><li>false：不发送。</li></ul>
         /// </summary>
         [JsonProperty("Notify")]
         public bool? Notify{ get; set; }
 
         /// <summary>
-        /// 指定备份数据保留时长。
-        /// - 单位：天，默认为 7 天。
-        /// - 取值范围：[7,365]。
+        /// <p>指定备份数据保留时长。</p><ul><li>单位：天，默认为 7 天。</li><li>取值范围：[7,365]。</li></ul>
         /// </summary>
         [JsonProperty("BackupRetentionPeriod")]
         public ulong? BackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 指定每周内执行自动备份的具体日期。
-        /// - 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
-        /// - 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
-        /// - 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
+        /// <p>指定每周内执行自动备份的具体日期。</p><ul><li>格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。</li><li>示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。</li><li>默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。</li></ul>
         /// </summary>
         [JsonProperty("ActiveWeekdays")]
         public string ActiveWeekdays{ get; set; }
 
         /// <summary>
-        /// 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
+        /// <p>长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval</p>
         /// </summary>
         [JsonProperty("LongTermUnit")]
         public string LongTermUnit{ get; set; }
 
         /// <summary>
-        /// 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-        /// - 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
-        /// - 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
+        /// <p>指定用于长期保留的具体备份日期。此设置仅在 <strong>LongTermUnit</strong> 被设为<strong>weekly</strong> 或 <strong>monthly</strong> 时生效。</p><ul><li>按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。</li><li>按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。</li></ul>
         /// </summary>
         [JsonProperty("LongTermActiveDays")]
         public string LongTermActiveDays{ get; set; }
 
         /// <summary>
-        /// 长期备份保留时长。取值范围[30,1075]。
+        /// <p>长期备份保留时长。取值范围[30,1075]。</p>
         /// </summary>
         [JsonProperty("LongTermExpiredDays")]
         public long? LongTermExpiredDays{ get; set; }
 
         /// <summary>
-        /// 增量备份保留时长。
-        /// - 单位：天。
-        /// - 默认值：7天。
-        /// - 取值范围：[7,365]。
+        /// <p>增量备份保留时长。</p><ul><li>单位：天。</li><li>默认值：7天。</li><li>取值范围：[7,365]。</li></ul>
         /// </summary>
         [JsonProperty("OplogExpiredDays")]
         public long? OplogExpiredDays{ get; set; }
 
         /// <summary>
-        /// 指定备份版本。
-        /// - 旧版本备份：0。
-        /// - 开启高级备份：1。
+        /// <p>指定备份版本。</p><ul><li>旧版本备份：0。</li><li>开启高级备份：1。</li></ul>
         /// </summary>
         [JsonProperty("BackupVersion")]
         public long? BackupVersion{ get; set; }
 
         /// <summary>
-        /// 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
+        /// <p>设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold</p>
         /// </summary>
         [JsonProperty("AlarmWaterLevel")]
         public long? AlarmWaterLevel{ get; set; }
 
         /// <summary>
-        /// 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+        /// <p>长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。</p>
         /// </summary>
         [JsonProperty("LongTermInterval")]
         public string LongTermInterval{ get; set; }
 
         /// <summary>
-        /// 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+        /// <p>设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。</p>
         /// </summary>
         [JsonProperty("AlertThreshold")]
         public long? AlertThreshold{ get; set; }

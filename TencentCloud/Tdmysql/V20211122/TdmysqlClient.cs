@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DescribeDBParametersResponse DescribeDBParametersSync(DescribeDBParametersRequest req)
         {
             return InternalRequestAsync<DescribeDBParametersResponse>(req, "DescribeDBParameters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例归档日志列表 DescribeDBSArchiveLogs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSArchiveLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSArchiveLogsResponse"/></returns>
+        public Task<DescribeDBSArchiveLogsResponse> DescribeDBSArchiveLogs(DescribeDBSArchiveLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSArchiveLogsResponse>(req, "DescribeDBSArchiveLogs");
+        }
+
+        /// <summary>
+        /// 查询实例归档日志列表 DescribeDBSArchiveLogs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSArchiveLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSArchiveLogsResponse"/></returns>
+        public DescribeDBSArchiveLogsResponse DescribeDBSArchiveLogsSync(DescribeDBSArchiveLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSArchiveLogsResponse>(req, "DescribeDBSArchiveLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

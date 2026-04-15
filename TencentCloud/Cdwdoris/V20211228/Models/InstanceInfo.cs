@@ -400,6 +400,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SyncerIp")]
         public string SyncerIp{ get; set; }
 
+        /// <summary>
+        /// 是否支持sql convertor
+        /// </summary>
+        [JsonProperty("EnableSqlConv")]
+        public long? EnableSqlConv{ get; set; }
+
+        /// <summary>
+        /// 集群时区，默认+08:00
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -467,6 +479,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
             this.SetParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
             this.SetParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
+            this.SetParamSimple(map, prefix + "EnableSqlConv", this.EnableSqlConv);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

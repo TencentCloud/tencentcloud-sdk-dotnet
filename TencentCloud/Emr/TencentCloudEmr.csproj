@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1402</VersionPrefix>
+    <VersionPrefix>3.0.1409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,9 @@
     <Compile Include="V20190103\Models\DescribeAutoScaleRecordsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleStrategiesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleStrategiesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeBootScriptRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeBootScriptResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeBootScriptRsp.cs" />
     <Compile Include="V20190103\Models\DescribeClusterFlowStatusDetailRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterFlowStatusDetailResponse.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
@@ -259,6 +262,8 @@
     <Compile Include="V20190103\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyBootScriptRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyBootScriptResponse.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigRequest.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigResponse.cs" />
     <Compile Include="V20190103\Models\ModifyInspectionSettingsRequest.cs" />
@@ -332,6 +337,7 @@
     <Compile Include="V20190103\Models\PodSpecInfo.cs" />
     <Compile Include="V20190103\Models\PodState.cs" />
     <Compile Include="V20190103\Models\PodVolume.cs" />
+    <Compile Include="V20190103\Models\PreExecuteFileSetting.cs" />
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="V20190103\Models\PrePaySetting.cs" />
     <Compile Include="V20190103\Models\PreferredSchedulingTerm.cs" />

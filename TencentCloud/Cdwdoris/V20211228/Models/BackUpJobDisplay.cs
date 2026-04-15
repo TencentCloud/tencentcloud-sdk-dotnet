@@ -198,6 +198,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("EncryptionEnabled")]
         public bool? EncryptionEnabled{ get; set; }
 
+        /// <summary>
+        /// 任务调度id
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

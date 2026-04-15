@@ -114,6 +114,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("LogoAdd")]
         public string LogoAdd{ get; set; }
 
+        /// <summary>
+        /// <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+        /// </summary>
+        [JsonProperty("EnableBGM")]
+        public string EnableBGM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "OffPeak", this.OffPeak);
             this.SetParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamSimple(map, prefix + "EnableBGM", this.EnableBGM);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1402";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -434,6 +434,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategiesSync(DescribeAutoScaleStrategiesRequest req)
         {
             return InternalRequestAsync<DescribeAutoScaleStrategiesResponse>(req, "DescribeAutoScaleStrategies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取引导脚本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBootScriptRequest"/></param>
+        /// <returns><see cref="DescribeBootScriptResponse"/></returns>
+        public Task<DescribeBootScriptResponse> DescribeBootScript(DescribeBootScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeBootScriptResponse>(req, "DescribeBootScript");
+        }
+
+        /// <summary>
+        /// 获取引导脚本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBootScriptRequest"/></param>
+        /// <returns><see cref="DescribeBootScriptResponse"/></returns>
+        public DescribeBootScriptResponse DescribeBootScriptSync(DescribeBootScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeBootScriptResponse>(req, "DescribeBootScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1425,6 +1446,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategySync(ModifyAutoScaleStrategyRequest req)
         {
             return InternalRequestAsync<ModifyAutoScaleStrategyResponse>(req, "ModifyAutoScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改引导脚本
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBootScriptRequest"/></param>
+        /// <returns><see cref="ModifyBootScriptResponse"/></returns>
+        public Task<ModifyBootScriptResponse> ModifyBootScript(ModifyBootScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyBootScriptResponse>(req, "ModifyBootScript");
+        }
+
+        /// <summary>
+        /// 修改引导脚本
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBootScriptRequest"/></param>
+        /// <returns><see cref="ModifyBootScriptResponse"/></returns>
+        public ModifyBootScriptResponse ModifyBootScriptSync(ModifyBootScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyBootScriptResponse>(req, "ModifyBootScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

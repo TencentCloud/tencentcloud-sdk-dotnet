@@ -25,22 +25,28 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 资源组信息
+        /// <p>资源组信息</p>
         /// </summary>
         [JsonProperty("WorkloadGroups")]
         public WorkloadGroupConfig[] WorkloadGroups{ get; set; }
 
         /// <summary>
-        /// 是否开启资源组：开启-open、关闭-close
+        /// <p>是否开启资源组：开启-open、关闭-close</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启监控，0：未开启，1：开启</p>
+        /// </summary>
+        [JsonProperty("MonitorStatus")]
+        public long? MonitorStatus{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +63,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArrayObj(map, prefix + "WorkloadGroups.", this.WorkloadGroups);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

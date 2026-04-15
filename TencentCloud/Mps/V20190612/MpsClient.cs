@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -4383,7 +4383,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 文本翻译
+        /// 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>
@@ -4393,7 +4393,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 文本翻译
+        /// 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>

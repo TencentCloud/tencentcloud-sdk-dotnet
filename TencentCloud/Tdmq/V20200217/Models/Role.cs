@@ -25,40 +25,58 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 角色名称。
+        /// <p>角色名称。</p>
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 角色token值。
+        /// <p>角色token值。</p>
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// 备注说明。
+        /// <p>备注说明。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// <p>更新时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+        /// <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
         /// </summary>
         [JsonProperty("PermType")]
         public string PermType{ get; set; }
+
+        /// <summary>
+        /// <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+        /// </summary>
+        [JsonProperty("TokenType")]
+        public string TokenType{ get; set; }
+
+        /// <summary>
+        /// <p>SSM 唯一 ID</p>
+        /// </summary>
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
+
+        /// <summary>
+        /// <p>轮转周期</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("RotateFreq")]
+        public ulong? RotateFreq{ get; set; }
 
 
         /// <summary>
@@ -72,6 +90,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "PermType", this.PermType);
+            this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "RotateFreq", this.RotateFreq);
         }
     }
 }

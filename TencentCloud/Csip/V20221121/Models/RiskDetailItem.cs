@@ -102,6 +102,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AppID")]
+        public ulong? AppID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskId", this.RiskId);
             this.SetParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
         }
     }
 }

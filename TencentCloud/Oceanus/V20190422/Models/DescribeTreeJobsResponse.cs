@@ -25,35 +25,35 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 父节点ID
+        /// <p>父节点ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public string ParentId{ get; set; }
 
         /// <summary>
-        /// 当前文件夹ID
+        /// <p>当前文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 当前文件夹名
+        /// <p>当前文件夹名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 当前文件夹下的作业列表
+        /// <p>当前文件夹下的作业列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobSet")]
         public TreeJobSets[] JobSet{ get; set; }
 
         /// <summary>
-        /// 迭代子目录
+        /// <p>迭代子目录</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Children")]

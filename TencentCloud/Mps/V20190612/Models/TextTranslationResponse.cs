@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 翻译后的文本
+        /// <p>翻译后的文本</p>
         /// </summary>
         [JsonProperty("TargetText")]
         public string TargetText{ get; set; }
 
         /// <summary>
-        /// 源语言，详见入参Source
+        /// <p>源语言，详见入参Source</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 目标语言，详见入参Target
+        /// <p>目标语言，详见入参Target</p>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 子订单号
+        /// <p>子订单号</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 订单号
+        /// <p>订单号</p>
         /// </summary>
         [JsonProperty("BigDealId")]
         public string BigDealId{ get; set; }
 
         /// <summary>
-        /// 集群Id
+        /// <p>集群Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

@@ -25,89 +25,79 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份方式。
-        /// - 0：自动备份。
-        /// - 1：手动备份。
+        /// <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }
 
         /// <summary>
-        /// 备份文件名称。
+        /// <p>备份文件名称。</p>
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 备份任务备注信息。
+        /// <p>备份任务备注信息。</p>
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
 
         /// <summary>
-        /// 备份文件大小，单位：KB。
+        /// <p>备份文件大小，单位：KB。</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public ulong? BackupSize{ get; set; }
 
         /// <summary>
-        /// 备份开始时间。
+        /// <p>备份开始时间。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 备份结束时间。
+        /// <p>备份结束时间。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备份状态。
-        /// - 1：备份中。
-        /// - 2：备份成功。
+        /// <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 备份方式。
-        /// - 0：逻辑备份。
-        /// - 1：物理备份。
-        /// - 3：快照备份。
-        /// **说明:**
-        /// - 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-        /// - 实例开通存储加密，则备份方式不能为物理备份。
+        /// <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
 
         /// <summary>
-        /// 备份记录 ID。
+        /// <p>备份记录 ID。</p>
         /// </summary>
         [JsonProperty("BackId")]
         public long? BackId{ get; set; }
 
         /// <summary>
-        /// 备份删除时间。
+        /// <p>备份删除时间。</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// 异地备份地域。
+        /// <p>异地备份地域。</p>
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// 备份支持的回档时间。
+        /// <p>备份支持的回档时间。</p>
         /// </summary>
         [JsonProperty("RestoreTime")]
         public string RestoreTime{ get; set; }

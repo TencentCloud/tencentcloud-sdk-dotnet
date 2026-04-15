@@ -55,6 +55,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string By{ get; set; }
 
         /// <summary>
+        /// blocklist 封禁列表
+        /// whitelist 白名单列表
+        /// </summary>
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
+
+        /// <summary>
         /// 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
         /// </summary>
         [JsonProperty("SearchValue")]
@@ -65,13 +72,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("RuleType")]
         public ulong? RuleType{ get; set; }
-
-        /// <summary>
-        /// blocklist 封禁列表
-        /// whitelist 白名单列表
-        /// </summary>
-        [JsonProperty("ShowType")]
-        public string ShowType{ get; set; }
 
 
         /// <summary>
@@ -84,9 +84,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
-            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }

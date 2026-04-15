@@ -25,29 +25,34 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 资源所属地域。
-        /// 当前支持ap-shanghai
+        /// <p>资源所属地域。<br>当前支持ap-shanghai</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 桶名，存储资源的唯一标识
+        /// <p>桶名，存储资源的唯一标识</p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// cdn 域名
+        /// <p>cdn 域名</p>
         /// </summary>
         [JsonProperty("CdnDomain")]
         public string CdnDomain{ get; set; }
 
         /// <summary>
-        /// 资源所属用户的腾讯云appId
+        /// <p>资源所属用户的腾讯云appId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
+
+        /// <summary>
+        /// <p>外部存储介质相关信息。</p>
+        /// </summary>
+        [JsonProperty("ExternalStorage")]
+        public ExternalStorage ExternalStorage{ get; set; }
 
 
         /// <summary>
@@ -59,6 +64,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
             this.SetParamSimple(map, prefix + "CdnDomain", this.CdnDomain);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
         }
     }
 }

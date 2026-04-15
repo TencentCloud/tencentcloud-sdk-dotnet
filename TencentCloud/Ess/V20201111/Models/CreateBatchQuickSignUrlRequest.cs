@@ -25,145 +25,106 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
-        /// <ul>
-        /// <li>若为个人参与方：ApproverType=1</li>
-        /// <li>若为企业参与方：ApproverType=0。同时 OrganizationName 参数需传入参与方企业名称。 </li>
-        /// </ul>
-        /// 注:
-        /// `1. 暂不支持签署人拖动签署控件功能，以及签批控件。`
-        /// `2. 当需要通过短信验证码签署时，手机号ApproverMobile需要与发起合同时填写的用户手机号一致。`
+        /// <p>批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。</p><ul><li>若为个人参与方：ApproverType=1</li><li>若为企业参与方：ApproverType=0。同时 OrganizationName 参数需传入参与方企业名称。 </li></ul>注:<code>1. 暂不支持签署人拖动签署控件功能，以及签批控件。</code><code>2. 当需要通过短信验证码签署时，手机号ApproverMobile需要与发起合同时填写的用户手机号一致。</code>
         /// </summary>
         [JsonProperty("FlowApproverInfo")]
         public FlowCreateApprover FlowApproverInfo{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId(子企业的组织ID)为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId(子企业的组织ID)为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 执行本接口操作的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 批量签署的合同流程ID数组。
-        /// 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+        /// <p>批量签署的合同流程ID数组。<br>注: <code>在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。</code></p>
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 合同组编号
-        /// 注：`该参数和合同流程ID数组必须二选一`
+        /// <p>合同组编号<br>注：<code>该参数和合同流程ID数组必须二选一</code></p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+        /// <p>签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)</p>
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
 
         /// <summary>
-        /// 指定批量签署合同的签名类型，可传递以下值：
-        /// <ul><li>**0**：手写签名(默认)</li>
-        /// <li>**1**：OCR楷体</li>
-        /// <li>**2**：姓名印章</li>
-        /// <li>**3**：图片印章</li>
-        /// <li>**4**：系统签名</li>
-        /// <li>**5**：长效手写签名（包含手写签名）</li></ul>
-        /// 注：
-        /// <ul><li>默认情况下，签名类型为手写签名</li>
-        /// <li>您可以传递多种值，表示可用多种签名类型。</li>
-        /// <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-        /// <li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
-        /// </ul>
+        /// <p>指定批量签署合同的签名类型，可传递以下值：</p><ul><li>**0**：手写签名(默认)</li><li>**1**：OCR楷体</li><li>**2**：姓名印章</li><li>**3**：图片印章</li><li>**4**：系统签名</li><li>**5**：长效手写签名（包含手写签名）</li></ul>注：<ul><li>默认情况下，签名类型为手写签名</li><li>您可以传递多种值，表示可用多种签名类型。</li><li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li><li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li></ul>
         /// </summary>
         [JsonProperty("SignatureTypes")]
         public long?[] SignatureTypes{ get; set; }
 
         /// <summary>
-        /// 指定批量签署合同的认证校验方式，可传递以下值：
-        /// <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
-        /// <li>**2**：密码认证(默认)，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署</li>
-        /// <li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>
-        /// 注：
-        /// <ul><li>默认情况下，认证校验方式为人脸和密码认证</li>
-        /// <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+        /// <p>指定批量签署合同的认证校验方式，可传递以下值：</p><ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li><li>**2**：密码认证(默认)，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署</li><li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>注：<ul><li>默认情况下，认证校验方式为人脸和密码认证</li><li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
 
         /// <summary>
-        /// 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
-        /// <ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
-        /// <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
-        /// 注：
-        /// `不指定该值时，默认为签署方自行选择。`
+        /// <p>生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：</p><ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li><li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>注：<code>不指定该值时，默认为签署方自行选择。</code>
         /// </summary>
         [JsonProperty("SignTypeSelector")]
         public ulong? SignTypeSelector{ get; set; }
 
         /// <summary>
-        /// 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
-        /// 
-        /// 注: `若签署方为企业员工，暂不支持通过H5端进行动态签署人的补充`
+        /// <p>批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。    </p><p>注: <code>若签署方为企业员工，暂不支持通过H5端进行动态签署人的补充</code></p>
         /// </summary>
         [JsonProperty("FlowBatchUrlInfo")]
         public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
 
         /// <summary>
-        /// <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。  您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。 
-        /// 
-        ///  注意： 
-        /// 1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
-        /// 2. 使用视频认证时，<b>生成H5签署链接的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。 
-        /// 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelDescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+        /// <p><b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。  您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。 </p><p> 注意： </p><ol><li>视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。</li><li>使用视频认证时，<b>生成H5签署链接的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。 </li><li>签署完成后，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelDescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。</li></ol>
         /// </summary>
         [JsonProperty("Intention")]
         public Intention Intention{ get; set; }
 
         /// <summary>
-        /// 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+        /// <p>用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。</p>
         /// </summary>
         [JsonProperty("VideoVerifyTimesLimit")]
         public long? VideoVerifyTimesLimit{ get; set; }
 
         /// <summary>
-        /// 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
-        /// 
-        /// 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
+        /// <p>缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。</p><p>注: <code>若参与方为企业员工时，暂不支持对参与方信息进行缓存</code></p>
         /// </summary>
         [JsonProperty("CacheApproverInfo")]
         public bool? CacheApproverInfo{ get; set; }
 
         /// <summary>
-        /// 是否允许此链接中签署方批量拒签。
-        ///  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
-        /// 
-        /// 注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+        /// <p>是否允许此链接中签署方批量拒签。<br> <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul></p><p>注：<code>当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。</code></p>
         /// </summary>
         [JsonProperty("CanBatchReject")]
         public bool? CanBatchReject{ get; set; }
 
         /// <summary>
-        /// 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+        /// <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
         /// </summary>
         [JsonProperty("PresetApproverInfo")]
         public PresetApproverInfo PresetApproverInfo{ get; set; }
 
         /// <summary>
-        /// 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+        /// <p>是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：<code>1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。</code></p>
         /// </summary>
         [JsonProperty("CanSkipReadFlow")]
         public bool? CanSkipReadFlow{ get; set; }
+
+        /// <summary>
+        /// <p>链接的有效时间，单位为秒。取值范围为 30分钟（1800）-90天（7776000）。如果不传，默认有效期为30分钟。 </p><p>注意： </p><ol><li><code>出于安全性考虑，若有效期大于30分钟，同设备24小时内点击链接查看合同需要进行手机验证码校验。</code> </li><li><code>动态签署方链接暂不支持修改过期时间。</code></li></ol>
+        /// </summary>
+        [JsonProperty("ExpiredOn")]
+        public long? ExpiredOn{ get; set; }
 
 
         /// <summary>
@@ -187,6 +148,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
             this.SetParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);
             this.SetParamSimple(map, prefix + "CanSkipReadFlow", this.CanSkipReadFlow);
+            this.SetParamSimple(map, prefix + "ExpiredOn", this.ExpiredOn);
         }
     }
 }

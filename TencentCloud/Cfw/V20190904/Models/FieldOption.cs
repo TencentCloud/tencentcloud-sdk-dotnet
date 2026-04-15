@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OnlineDDL : AbstractModel
+    public class FieldOption : AbstractModel
     {
         
         /// <summary>
-        /// 状态，ON-启用，OFF-不启用。
+        /// 字段展示值
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
+        /// 字段存储值
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

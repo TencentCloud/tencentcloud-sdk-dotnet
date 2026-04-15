@@ -39,6 +39,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("EncryptionFilters")]
         public long?[] EncryptionFilters{ get; set; }
 
+        /// <summary>
+        /// 调度任务id过滤
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

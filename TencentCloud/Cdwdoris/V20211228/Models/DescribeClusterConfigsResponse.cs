@@ -55,6 +55,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public ClusterConfigsInfoFromEMR[] ExistingJarConfList{ get; set; }
 
         /// <summary>
+        /// ipdb的文件大小 byte
+        /// </summary>
+        [JsonProperty("IPDBFileSizeLimit")]
+        public string IPDBFileSizeLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "HasCN", this.HasCN);
             this.SetParamArrayObj(map, prefix + "ExistingJarConfList.", this.ExistingJarConfList);
+            this.SetParamSimple(map, prefix + "IPDBFileSizeLimit", this.IPDBFileSizeLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

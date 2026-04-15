@@ -25,64 +25,64 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 多可用区部署选择三个可用区，示例[200002,200003,200004]
-        /// 
-        /// 单可用区部署选择一个可用区，示例[200002]
+        /// <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 集群规格代号
-        /// 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+        /// <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 1: true，开启自动按月续费
-        /// 
-        /// 0: false，关闭自动按月续费
+        /// <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 购买时长，取值范围：1～50
+        /// <p>购买时长，取值范围：1～50</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+        /// <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 是否自动选择代金券 1是 0否 默认为0
+        /// <p>是否自动选择代金券 1是 0否 默认为0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 存储规格
-        /// 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+        /// <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
         /// <summary>
-        /// vpc网络标签
+        /// <p>vpc网络标签</p>
         /// </summary>
         [JsonProperty("Vpc")]
         public VpcInfo Vpc{ get; set; }
 
         /// <summary>
-        /// 集群的标签列表(已废弃)
+        /// <p>集群的标签列表(已废弃)</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>集群版本信息</p>
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public string InstanceVersion{ get; set; }
 
 
         /// <summary>
@@ -99,6 +99,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamObj(map, prefix + "Vpc.", this.Vpc);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

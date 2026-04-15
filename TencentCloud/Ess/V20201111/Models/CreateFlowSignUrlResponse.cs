@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署人签署链接信息
+        /// <p>签署人签署链接信息</p>
         /// </summary>
         [JsonProperty("FlowApproverUrlInfos")]
         public FlowApproverUrlInfo[] FlowApproverUrlInfos{ get; set; }

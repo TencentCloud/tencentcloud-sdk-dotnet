@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1404";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -1209,6 +1209,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeLogsResponse DescribeLogsSync(DescribeLogsRequest req)
         {
             return InternalRequestAsync<DescribeLogsResponse>(req, "DescribeLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNDRAssetIdentificationListRequest"/></param>
+        /// <returns><see cref="DescribeNDRAssetIdentificationListResponse"/></returns>
+        public Task<DescribeNDRAssetIdentificationListResponse> DescribeNDRAssetIdentificationList(DescribeNDRAssetIdentificationListRequest req)
+        {
+            return InternalRequestAsync<DescribeNDRAssetIdentificationListResponse>(req, "DescribeNDRAssetIdentificationList");
+        }
+
+        /// <summary>
+        /// DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNDRAssetIdentificationListRequest"/></param>
+        /// <returns><see cref="DescribeNDRAssetIdentificationListResponse"/></returns>
+        public DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationListSync(DescribeNDRAssetIdentificationListRequest req)
+        {
+            return InternalRequestAsync<DescribeNDRAssetIdentificationListResponse>(req, "DescribeNDRAssetIdentificationList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

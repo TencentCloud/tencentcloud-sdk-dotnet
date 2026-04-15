@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1404</VersionPrefix>
+    <VersionPrefix>3.0.1409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -182,6 +182,8 @@
     <Compile Include="V20190904\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="V20190904\Models\DescribeLogsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeLogsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNDRAssetIdentificationListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNDRAssetIdentificationListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwDnatRuleRequest.cs" />
@@ -234,6 +236,7 @@
     <Compile Include="V20190904\Models\EnterpriseSecurityGroupRuleRuleInfo.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalResponse.cs" />
+    <Compile Include="V20190904\Models\FieldOption.cs" />
     <Compile Include="V20190904\Models\FwCidrInfo.cs" />
     <Compile Include="V20190904\Models\FwDeploy.cs" />
     <Compile Include="V20190904\Models\FwGateway.cs" />
@@ -324,6 +327,9 @@
     <Compile Include="V20190904\Models\ModifyVpcFwSequenceRulesRequest.cs" />
     <Compile Include="V20190904\Models\ModifyVpcFwSequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\MultiTopicSearchInformation.cs" />
+    <Compile Include="V20190904\Models\NDRAssetCategoryStats.cs" />
+    <Compile Include="V20190904\Models\NDRAssetServiceInfo.cs" />
+    <Compile Include="V20190904\Models\NDRAssetServiceStats.cs" />
     <Compile Include="V20190904\Models\NatFwEipsInfo.cs" />
     <Compile Include="V20190904\Models\NatFwFilter.cs" />
     <Compile Include="V20190904\Models\NatFwInstance.cs" />
@@ -331,6 +337,7 @@
     <Compile Include="V20190904\Models\NatSwitchListData.cs" />
     <Compile Include="V20190904\Models\NetInstancesInfo.cs" />
     <Compile Include="V20190904\Models\NewModeItems.cs" />
+    <Compile Include="V20190904\Models\OperatorFilter.cs" />
     <Compile Include="V20190904\Models\RegionCidrConfig.cs" />
     <Compile Include="V20190904\Models\RegionFwStatus.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />

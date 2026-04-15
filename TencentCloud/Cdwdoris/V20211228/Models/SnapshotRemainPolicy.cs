@@ -42,6 +42,15 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("RemainLatestNum")]
         public long? RemainLatestNum{ get; set; }
 
+        /// <summary>
+        /// 天数单位
+        /// 0：天
+        /// 1：季度
+        /// 2：年
+        /// </summary>
+        [JsonProperty("RemainDaysUnit")]
+        public long? RemainDaysUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +60,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RemainDays", this.RemainDays);
             this.SetParamSimple(map, prefix + "RemainLatestNum", this.RemainLatestNum);
+            this.SetParamSimple(map, prefix + "RemainDaysUnit", this.RemainDaysUnit);
         }
     }
 }

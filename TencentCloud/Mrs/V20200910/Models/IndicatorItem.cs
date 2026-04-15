@@ -25,94 +25,101 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 英文缩写
+        /// <p>英文缩写</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 标准缩写
+        /// <p>标准缩写</p>
         /// </summary>
         [JsonProperty("Scode")]
         public string Scode{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标准名
+        /// <p>标准名</p>
         /// </summary>
         [JsonProperty("Sname")]
         public string Sname{ get; set; }
 
         /// <summary>
-        /// 结果
+        /// <p>结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// <p>单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 参考范围
+        /// <p>参考范围</p>
         /// </summary>
         [JsonProperty("Range")]
         public string Range{ get; set; }
 
         /// <summary>
-        /// 上下箭头
+        /// <p>上下箭头</p>
         /// </summary>
         [JsonProperty("Arrow")]
         public string Arrow{ get; set; }
 
         /// <summary>
-        /// 是否正常
+        /// <p>是否正常</p>
         /// </summary>
         [JsonProperty("Normal")]
         public bool? Normal{ get; set; }
 
         /// <summary>
-        /// 项目原文
+        /// <p>项目原文</p>
         /// </summary>
         [JsonProperty("ItemString")]
         public string ItemString{ get; set; }
 
         /// <summary>
-        /// 指标项ID
+        /// <p>指标项ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 指标项坐标位置
+        /// <p>指标项坐标位置</p>
         /// </summary>
         [JsonProperty("Coords")]
+        [System.Obsolete]
         public Coordinate Coords{ get; set; }
 
         /// <summary>
-        /// 推测结果是否异常
+        /// <p>推测结果是否异常</p>
         /// </summary>
         [JsonProperty("InferNormal")]
         public string InferNormal{ get; set; }
 
         /// <summary>
-        /// 标本
+        /// <p>标本</p>
         /// </summary>
         [JsonProperty("Sample")]
         public string Sample{ get; set; }
 
         /// <summary>
-        /// 检测方法
+        /// <p>检测方法</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
+
+        /// <summary>
+        /// <p>检验指标项坐标信息</p>
+        /// </summary>
+        [JsonProperty("ItemCoords")]
+        public ItemCoordinate ItemCoords{ get; set; }
 
 
         /// <summary>
@@ -135,6 +142,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "InferNormal", this.InferNormal);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamObj(map, prefix + "ItemCoords.", this.ItemCoords);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,48 @@ namespace TencentCloud.Tcbr.V20220217
         public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
         {
             return InternalRequestAsync<SearchClsLogResponse>(req, "SearchClsLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动版本实例
+        /// </summary>
+        /// <param name="req"><see cref="StartVersionInstanceRequest"/></param>
+        /// <returns><see cref="StartVersionInstanceResponse"/></returns>
+        public Task<StartVersionInstanceResponse> StartVersionInstance(StartVersionInstanceRequest req)
+        {
+            return InternalRequestAsync<StartVersionInstanceResponse>(req, "StartVersionInstance");
+        }
+
+        /// <summary>
+        /// 启动版本实例
+        /// </summary>
+        /// <param name="req"><see cref="StartVersionInstanceRequest"/></param>
+        /// <returns><see cref="StartVersionInstanceResponse"/></returns>
+        public StartVersionInstanceResponse StartVersionInstanceSync(StartVersionInstanceRequest req)
+        {
+            return InternalRequestAsync<StartVersionInstanceResponse>(req, "StartVersionInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止版本实例
+        /// </summary>
+        /// <param name="req"><see cref="StopVersionInstanceRequest"/></param>
+        /// <returns><see cref="StopVersionInstanceResponse"/></returns>
+        public Task<StopVersionInstanceResponse> StopVersionInstance(StopVersionInstanceRequest req)
+        {
+            return InternalRequestAsync<StopVersionInstanceResponse>(req, "StopVersionInstance");
+        }
+
+        /// <summary>
+        /// 停止版本实例
+        /// </summary>
+        /// <param name="req"><see cref="StopVersionInstanceRequest"/></param>
+        /// <returns><see cref="StopVersionInstanceResponse"/></returns>
+        public StopVersionInstanceResponse StopVersionInstanceSync(StopVersionInstanceRequest req)
+        {
+            return InternalRequestAsync<StopVersionInstanceResponse>(req, "StopVersionInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

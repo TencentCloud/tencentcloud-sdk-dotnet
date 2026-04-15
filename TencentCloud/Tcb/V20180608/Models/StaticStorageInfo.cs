@@ -25,34 +25,46 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 静态CDN域名
+        /// <p>静态CDN域名</p>
         /// </summary>
         [JsonProperty("StaticDomain")]
         public string StaticDomain{ get; set; }
 
         /// <summary>
-        /// 静态CDN默认文件夹，当前为根目录
+        /// <p>静态CDN默认文件夹，当前为根目录</p>
         /// </summary>
         [JsonProperty("DefaultDirName")]
         public string DefaultDirName{ get; set; }
 
         /// <summary>
-        /// 资源状态(process/online/offline/init)
+        /// <p>资源状态(process/online/offline/init)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// cos所属区域
+        /// <p>cos所属区域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// bucket信息
+        /// <p>bucket信息</p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
+
+        /// <summary>
+        /// <p>到期时间（秒级时间戳）</p>
+        /// </summary>
+        [JsonProperty("AccessExpire")]
+        public long? AccessExpire{ get; set; }
+
+        /// <summary>
+        /// <p>外部存储。</p>
+        /// </summary>
+        [JsonProperty("ExternalStorage")]
+        public ExternalStorage ExternalStorage{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "AccessExpire", this.AccessExpire);
+            this.SetParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
         }
     }
 }

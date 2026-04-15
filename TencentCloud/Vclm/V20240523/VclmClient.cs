@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,69 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 用于查询视频特效任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoJobResponse"/></returns>
+        public Task<DescribeImageToVideoJobResponse> DescribeImageToVideoJob(DescribeImageToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoJobResponse>(req, "DescribeImageToVideoJob");
+        }
+
+        /// <summary>
+        /// 用于查询视频特效任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoJobResponse"/></returns>
+        public DescribeImageToVideoJobResponse DescribeImageToVideoJobSync(DescribeImageToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoJobResponse>(req, "DescribeImageToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Vidu图生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoViduJobResponse"/></returns>
+        public Task<DescribeImageToVideoViduJobResponse> DescribeImageToVideoViduJob(DescribeImageToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoViduJobResponse>(req, "DescribeImageToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 查询Vidu图生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeImageToVideoViduJobResponse"/></returns>
+        public DescribeImageToVideoViduJobResponse DescribeImageToVideoViduJobSync(DescribeImageToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeImageToVideoViduJobResponse>(req, "DescribeImageToVideoViduJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Kling动作控制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMotionControlKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeMotionControlKlingJobResponse"/></returns>
+        public Task<DescribeMotionControlKlingJobResponse> DescribeMotionControlKlingJob(DescribeMotionControlKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeMotionControlKlingJobResponse>(req, "DescribeMotionControlKlingJob");
+        }
+
+        /// <summary>
+        /// 查询Kling动作控制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMotionControlKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeMotionControlKlingJobResponse"/></returns>
+        public DescribeMotionControlKlingJobResponse DescribeMotionControlKlingJobSync(DescribeMotionControlKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeMotionControlKlingJobResponse>(req, "DescribeMotionControlKlingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询图片唱演任务。
         /// 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
         /// </summary>
@@ -199,6 +262,27 @@ namespace TencentCloud.Vclm.V20240523
         public DescribePortraitSingJobResponse DescribePortraitSingJobSync(DescribePortraitSingJobRequest req)
         {
             return InternalRequestAsync<DescribePortraitSingJobResponse>(req, "DescribePortraitSingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Vidu参考生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReferenceToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeReferenceToVideoViduJobResponse"/></returns>
+        public Task<DescribeReferenceToVideoViduJobResponse> DescribeReferenceToVideoViduJob(DescribeReferenceToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeReferenceToVideoViduJobResponse>(req, "DescribeReferenceToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 查询Vidu参考生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReferenceToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeReferenceToVideoViduJobResponse"/></returns>
+        public DescribeReferenceToVideoViduJobResponse DescribeReferenceToVideoViduJobSync(DescribeReferenceToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeReferenceToVideoViduJobResponse>(req, "DescribeReferenceToVideoViduJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -224,6 +308,48 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 用于查询文生视频任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeTextToVideoJobResponse"/></returns>
+        public Task<DescribeTextToVideoJobResponse> DescribeTextToVideoJob(DescribeTextToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToVideoJobResponse>(req, "DescribeTextToVideoJob");
+        }
+
+        /// <summary>
+        /// 用于查询文生视频任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToVideoJobRequest"/></param>
+        /// <returns><see cref="DescribeTextToVideoJobResponse"/></returns>
+        public DescribeTextToVideoJobResponse DescribeTextToVideoJobSync(DescribeTextToVideoJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToVideoJobResponse>(req, "DescribeTextToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Vidu文生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeTextToVideoViduJobResponse"/></returns>
+        public Task<DescribeTextToVideoViduJobResponse> DescribeTextToVideoViduJob(DescribeTextToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToVideoViduJobResponse>(req, "DescribeTextToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 查询Vidu文生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToVideoViduJobRequest"/></param>
+        /// <returns><see cref="DescribeTextToVideoViduJobResponse"/></returns>
+        public DescribeTextToVideoViduJobResponse DescribeTextToVideoViduJobSync(DescribeTextToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToVideoViduJobResponse>(req, "DescribeTextToVideoViduJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoEditJobRequest"/></param>
@@ -241,6 +367,48 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeVideoEditJobResponse DescribeVideoEditJobSync(DescribeVideoEditJobRequest req)
         {
             return InternalRequestAsync<DescribeVideoEditJobResponse>(req, "DescribeVideoEditJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Kling多模态编辑任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEditKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoEditKlingJobResponse"/></returns>
+        public Task<DescribeVideoEditKlingJobResponse> DescribeVideoEditKlingJob(DescribeVideoEditKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoEditKlingJobResponse>(req, "DescribeVideoEditKlingJob");
+        }
+
+        /// <summary>
+        /// 查询Kling多模态编辑任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEditKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoEditKlingJobResponse"/></returns>
+        public DescribeVideoEditKlingJobResponse DescribeVideoEditKlingJobSync(DescribeVideoEditKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoEditKlingJobResponse>(req, "DescribeVideoEditKlingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询视频延长任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoExtendKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoExtendKlingJobResponse"/></returns>
+        public Task<DescribeVideoExtendKlingJobResponse> DescribeVideoExtendKlingJob(DescribeVideoExtendKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoExtendKlingJobResponse>(req, "DescribeVideoExtendKlingJob");
+        }
+
+        /// <summary>
+        /// 查询视频延长任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoExtendKlingJobRequest"/></param>
+        /// <returns><see cref="DescribeVideoExtendKlingJobResponse"/></returns>
+        public DescribeVideoExtendKlingJobResponse DescribeVideoExtendKlingJobSync(DescribeVideoExtendKlingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoExtendKlingJobResponse>(req, "DescribeVideoExtendKlingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -419,6 +587,27 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoJobResponse"/></returns>
+        public Task<SubmitImageToVideoJobResponse> SubmitImageToVideoJob(SubmitImageToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoJobResponse>(req, "SubmitImageToVideoJob");
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitImageToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitImageToVideoJobResponse"/></returns>
+        public SubmitImageToVideoJobResponse SubmitImageToVideoJobSync(SubmitImageToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitImageToVideoJobResponse>(req, "SubmitImageToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 提交Vidu图生视频任务接口
         /// </summary>
         /// <param name="req"><see cref="SubmitImageToVideoViduJobRequest"/></param>
@@ -436,6 +625,27 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJobSync(SubmitImageToVideoViduJobRequest req)
         {
             return InternalRequestAsync<SubmitImageToVideoViduJobResponse>(req, "SubmitImageToVideoViduJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交动作控制(Kling)任务并发
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMotionControlKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitMotionControlKlingJobResponse"/></returns>
+        public Task<SubmitMotionControlKlingJobResponse> SubmitMotionControlKlingJob(SubmitMotionControlKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMotionControlKlingJobResponse>(req, "SubmitMotionControlKlingJob");
+        }
+
+        /// <summary>
+        /// 提交动作控制(Kling)任务并发
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMotionControlKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitMotionControlKlingJobResponse"/></returns>
+        public SubmitMotionControlKlingJobResponse SubmitMotionControlKlingJobSync(SubmitMotionControlKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMotionControlKlingJobResponse>(req, "SubmitMotionControlKlingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -463,6 +673,27 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 提交Vidu参考生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitReferenceToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitReferenceToVideoViduJobResponse"/></returns>
+        public Task<SubmitReferenceToVideoViduJobResponse> SubmitReferenceToVideoViduJob(SubmitReferenceToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitReferenceToVideoViduJobResponse>(req, "SubmitReferenceToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 提交Vidu参考生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitReferenceToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitReferenceToVideoViduJobResponse"/></returns>
+        public SubmitReferenceToVideoViduJobResponse SubmitReferenceToVideoViduJobSync(SubmitReferenceToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitReferenceToVideoViduJobResponse>(req, "SubmitReferenceToVideoViduJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 提交视频特效任务接口
         /// </summary>
         /// <param name="req"><see cref="SubmitTemplateToVideoJobRequest"/></param>
@@ -484,6 +715,48 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 通过提交对视频内容的描述文本生成一个短视频。文生视频为异步处理任务，成功提交任务后返回任务的JobId。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTextToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitTextToVideoJobResponse"/></returns>
+        public Task<SubmitTextToVideoJobResponse> SubmitTextToVideoJob(SubmitTextToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTextToVideoJobResponse>(req, "SubmitTextToVideoJob");
+        }
+
+        /// <summary>
+        /// 通过提交对视频内容的描述文本生成一个短视频。文生视频为异步处理任务，成功提交任务后返回任务的JobId。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTextToVideoJobRequest"/></param>
+        /// <returns><see cref="SubmitTextToVideoJobResponse"/></returns>
+        public SubmitTextToVideoJobResponse SubmitTextToVideoJobSync(SubmitTextToVideoJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTextToVideoJobResponse>(req, "SubmitTextToVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交Vidu文生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTextToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitTextToVideoViduJobResponse"/></returns>
+        public Task<SubmitTextToVideoViduJobResponse> SubmitTextToVideoViduJob(SubmitTextToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTextToVideoViduJobResponse>(req, "SubmitTextToVideoViduJob");
+        }
+
+        /// <summary>
+        /// 提交Vidu文生视频任务接口
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTextToVideoViduJobRequest"/></param>
+        /// <returns><see cref="SubmitTextToVideoViduJobResponse"/></returns>
+        public SubmitTextToVideoViduJobResponse SubmitTextToVideoViduJobSync(SubmitTextToVideoViduJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTextToVideoViduJobResponse>(req, "SubmitTextToVideoViduJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
         /// </summary>
         /// <param name="req"><see cref="SubmitVideoEditJobRequest"/></param>
@@ -501,6 +774,48 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitVideoEditJobResponse SubmitVideoEditJobSync(SubmitVideoEditJobRequest req)
         {
             return InternalRequestAsync<SubmitVideoEditJobResponse>(req, "SubmitVideoEditJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交Kling多模态编辑任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoEditKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoEditKlingJobResponse"/></returns>
+        public Task<SubmitVideoEditKlingJobResponse> SubmitVideoEditKlingJob(SubmitVideoEditKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoEditKlingJobResponse>(req, "SubmitVideoEditKlingJob");
+        }
+
+        /// <summary>
+        /// 提交Kling多模态编辑任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoEditKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoEditKlingJobResponse"/></returns>
+        public SubmitVideoEditKlingJobResponse SubmitVideoEditKlingJobSync(SubmitVideoEditKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoEditKlingJobResponse>(req, "SubmitVideoEditKlingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于提交视频延长任务接口。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoExtendKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoExtendKlingJobResponse"/></returns>
+        public Task<SubmitVideoExtendKlingJobResponse> SubmitVideoExtendKlingJob(SubmitVideoExtendKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoExtendKlingJobResponse>(req, "SubmitVideoExtendKlingJob");
+        }
+
+        /// <summary>
+        /// 用于提交视频延长任务接口。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoExtendKlingJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoExtendKlingJobResponse"/></returns>
+        public SubmitVideoExtendKlingJobResponse SubmitVideoExtendKlingJobSync(SubmitVideoExtendKlingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoExtendKlingJobResponse>(req, "SubmitVideoExtendKlingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,10 +25,16 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>每页展示数量</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Config.V20220802.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

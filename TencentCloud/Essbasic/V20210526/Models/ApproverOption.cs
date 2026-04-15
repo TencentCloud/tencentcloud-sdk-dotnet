@@ -60,6 +60,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ForbidAddSignDate")]
         public bool? ForbidAddSignDate{ get; set; }
 
+        /// <summary>
+        /// <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+        /// </summary>
+        [JsonProperty("ApproverMobileMode")]
+        public string ApproverMobileMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
             this.SetParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
+            this.SetParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
         }
     }
 }

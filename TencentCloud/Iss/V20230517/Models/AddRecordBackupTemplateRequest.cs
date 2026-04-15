@@ -25,28 +25,34 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
+        /// <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+        /// <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
         /// </summary>
         [JsonProperty("TimeSections")]
         public RecordTemplateTimeSections[] TimeSections{ get; set; }
 
         /// <summary>
-        /// 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+        /// <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
         /// </summary>
         [JsonProperty("DevTimeSections")]
         public RecordTemplateTimeSections[] DevTimeSections{ get; set; }
 
         /// <summary>
-        /// 上云倍速（支持1，2，4倍速）
+        /// <p>上云倍速（支持1，2，4倍速）</p>
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
+
+        /// <summary>
+        /// <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("DayOffset")]
+        public long? DayOffset{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamArrayObj(map, prefix + "TimeSections.", this.TimeSections);
             this.SetParamArrayObj(map, prefix + "DevTimeSections.", this.DevTimeSections);
             this.SetParamSimple(map, prefix + "Scale", this.Scale);
+            this.SetParamSimple(map, prefix + "DayOffset", this.DayOffset);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1403";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -8108,6 +8108,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyLocalGatewayResponse ModifyLocalGatewaySync(ModifyLocalGatewayRequest req)
         {
             return InternalRequestAsync<ModifyLocalGatewayResponse>(req, "ModifyLocalGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNatGatewayAdvancedAttribute）用于修改NAT网关的高级属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewayAdvancedAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewayAdvancedAttributeResponse"/></returns>
+        public Task<ModifyNatGatewayAdvancedAttributeResponse> ModifyNatGatewayAdvancedAttribute(ModifyNatGatewayAdvancedAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyNatGatewayAdvancedAttributeResponse>(req, "ModifyNatGatewayAdvancedAttribute");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNatGatewayAdvancedAttribute）用于修改NAT网关的高级属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewayAdvancedAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewayAdvancedAttributeResponse"/></returns>
+        public ModifyNatGatewayAdvancedAttributeResponse ModifyNatGatewayAdvancedAttributeSync(ModifyNatGatewayAdvancedAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyNatGatewayAdvancedAttributeResponse>(req, "ModifyNatGatewayAdvancedAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

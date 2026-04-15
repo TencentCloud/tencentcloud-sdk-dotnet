@@ -25,13 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 返回记录的数量
+        /// <p>返回记录的数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 告警策略返回值
+        /// <p>告警策略返回值</p>
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public AlarmPolicyRsp[] AlarmPolicyList{ get; set; }

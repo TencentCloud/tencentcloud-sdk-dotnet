@@ -25,13 +25,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+        /// <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 工作空间 Serialid
+        /// <p>工作空间 Serialid</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }

@@ -43,6 +43,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string[] AvailableWhiteListNames{ get; set; }
 
         /// <summary>
+        /// 隔离天数
+        /// </summary>
+        [JsonProperty("IsolationDays")]
+        public long? IsolationDays{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamArrayObj(map, prefix + "FrontEndRules.", this.FrontEndRules);
             this.SetParamArraySimple(map, prefix + "AvailableWhiteListNames.", this.AvailableWhiteListNames);
+            this.SetParamSimple(map, prefix + "IsolationDays", this.IsolationDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

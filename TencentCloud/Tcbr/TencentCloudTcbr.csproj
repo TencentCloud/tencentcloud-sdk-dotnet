@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{25391A9F-618E-3816-A469-8C56C7E1A59C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1399</VersionPrefix>
+    <VersionPrefix>3.0.1409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -106,7 +106,11 @@
     <Compile Include="V20220217\Models\ServerBaseInfo.cs" />
     <Compile Include="V20220217\Models\ServerManageTaskInfo.cs" />
     <Compile Include="V20220217\Models\SimpleVersion.cs" />
+    <Compile Include="V20220217\Models\StartVersionInstanceRequest.cs" />
+    <Compile Include="V20220217\Models\StartVersionInstanceResponse.cs" />
     <Compile Include="V20220217\Models\StaticStorageInfo.cs" />
+    <Compile Include="V20220217\Models\StopVersionInstanceRequest.cs" />
+    <Compile Include="V20220217\Models\StopVersionInstanceResponse.cs" />
     <Compile Include="V20220217\Models\StorageInfo.cs" />
     <Compile Include="V20220217\Models\SubmitServerRollbackRequest.cs" />
     <Compile Include="V20220217\Models\SubmitServerRollbackResponse.cs" />

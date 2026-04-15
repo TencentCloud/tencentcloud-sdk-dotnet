@@ -78,6 +78,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("OutputComplianceCheck")]
         public string OutputComplianceCheck{ get; set; }
 
+        /// <summary>
+        /// <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+        /// </summary>
+        [JsonProperty("OutputImageCount")]
+        public ulong? OutputImageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "PersonGeneration", this.PersonGeneration);
             this.SetParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
             this.SetParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
+            this.SetParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
         }
     }
 }
