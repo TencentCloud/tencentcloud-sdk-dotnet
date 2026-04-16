@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1410";
 
         /// <summary>
         /// Client constructor.
@@ -463,6 +463,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口用于查询一致性校验任务中，不一致数据块的详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompareDiffItemsRequest"/></param>
+        /// <returns><see cref="DescribeCompareDiffItemsResponse"/></returns>
+        public Task<DescribeCompareDiffItemsResponse> DescribeCompareDiffItems(DescribeCompareDiffItemsRequest req)
+        {
+            return InternalRequestAsync<DescribeCompareDiffItemsResponse>(req, "DescribeCompareDiffItems");
+        }
+
+        /// <summary>
+        /// 本接口用于查询一致性校验任务中，不一致数据块的详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompareDiffItemsRequest"/></param>
+        /// <returns><see cref="DescribeCompareDiffItemsResponse"/></returns>
+        public DescribeCompareDiffItemsResponse DescribeCompareDiffItemsSync(DescribeCompareDiffItemsRequest req)
+        {
+            return InternalRequestAsync<DescribeCompareDiffItemsResponse>(req, "DescribeCompareDiffItems")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询一致性校验任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCompareReportRequest"/></param>
@@ -744,6 +765,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeSubscribeReturnableResponse DescribeSubscribeReturnableSync(DescribeSubscribeReturnableRequest req)
         {
             return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询一致性校验任务中，不一致数据块的详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareDiffItemsRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareDiffItemsResponse"/></returns>
+        public Task<DescribeSyncCompareDiffItemsResponse> DescribeSyncCompareDiffItems(DescribeSyncCompareDiffItemsRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareDiffItemsResponse>(req, "DescribeSyncCompareDiffItems");
+        }
+
+        /// <summary>
+        /// 本接口用于查询一致性校验任务中，不一致数据块的详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncCompareDiffItemsRequest"/></param>
+        /// <returns><see cref="DescribeSyncCompareDiffItemsResponse"/></returns>
+        public DescribeSyncCompareDiffItemsResponse DescribeSyncCompareDiffItemsSync(DescribeSyncCompareDiffItemsRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncCompareDiffItemsResponse>(req, "DescribeSyncCompareDiffItems")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

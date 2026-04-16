@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1410";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Live.V20180801
         public CancelCommonMixStreamResponse CancelCommonMixStreamSync(CancelCommonMixStreamRequest req)
         {
             return InternalRequestAsync<CancelCommonMixStreamResponse>(req, "CancelCommonMixStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于关闭回源客户源站功能
+        /// </summary>
+        /// <param name="req"><see cref="CloseSourceStreamRequest"/></param>
+        /// <returns><see cref="CloseSourceStreamResponse"/></returns>
+        public Task<CloseSourceStreamResponse> CloseSourceStream(CloseSourceStreamRequest req)
+        {
+            return InternalRequestAsync<CloseSourceStreamResponse>(req, "CloseSourceStream");
+        }
+
+        /// <summary>
+        /// 用于关闭回源客户源站功能
+        /// </summary>
+        /// <param name="req"><see cref="CloseSourceStreamRequest"/></param>
+        /// <returns><see cref="CloseSourceStreamResponse"/></returns>
+        public CloseSourceStreamResponse CloseSourceStreamSync(CloseSourceStreamRequest req)
+        {
+            return InternalRequestAsync<CloseSourceStreamResponse>(req, "CloseSourceStream")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3511,6 +3532,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 获取直播源站配置信息，支持直播原站格式。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginStreamInfoRequest"/></param>
+        /// <returns><see cref="DescribeOriginStreamInfoResponse"/></returns>
+        public Task<DescribeOriginStreamInfoResponse> DescribeOriginStreamInfo(DescribeOriginStreamInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginStreamInfoResponse>(req, "DescribeOriginStreamInfo");
+        }
+
+        /// <summary>
+        /// 获取直播源站配置信息，支持直播原站格式。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginStreamInfoRequest"/></param>
+        /// <returns><see cref="DescribeOriginStreamInfoResponse"/></returns>
+        public DescribeOriginStreamInfoResponse DescribeOriginStreamInfoSync(DescribeOriginStreamInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginStreamInfoResponse>(req, "DescribeOriginStreamInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
         /// 查询下行播放错误码信息，某段时间内1分钟粒度的各http错误码出现的次数，包括4xx，5xx。
         /// </summary>
@@ -4575,6 +4617,27 @@ namespace TencentCloud.Live.V20180801
         public ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplateSync(ModifyLiveTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<ModifyLiveTranscodeTemplateResponse>(req, "ModifyLiveTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变更直播源站配置，支持直播原站格式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginStreamInfoRequest"/></param>
+        /// <returns><see cref="ModifyOriginStreamInfoResponse"/></returns>
+        public Task<ModifyOriginStreamInfoResponse> ModifyOriginStreamInfo(ModifyOriginStreamInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyOriginStreamInfoResponse>(req, "ModifyOriginStreamInfo");
+        }
+
+        /// <summary>
+        /// 变更直播源站配置，支持直播原站格式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginStreamInfoRequest"/></param>
+        /// <returns><see cref="ModifyOriginStreamInfoResponse"/></returns>
+        public ModifyOriginStreamInfoResponse ModifyOriginStreamInfoSync(ModifyOriginStreamInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyOriginStreamInfoResponse>(req, "ModifyOriginStreamInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

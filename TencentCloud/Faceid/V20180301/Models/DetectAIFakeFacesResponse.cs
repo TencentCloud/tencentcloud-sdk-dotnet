@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public AttackRiskDetail[] AttackRiskDetailList{ get; set; }
 
         /// <summary>
-        /// <p>返回额外信息（包括命中模版的详细信息）。</p>
+        /// <p>返回额外信息（包括命中模板的详细信息）。</p>
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }

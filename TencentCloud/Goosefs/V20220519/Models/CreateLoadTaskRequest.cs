@@ -25,13 +25,13 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 集群 ID
+        /// <p>集群 ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 创建预热任务参数
+        /// <p>创建预热任务参数</p>
         /// </summary>
         [JsonProperty("LoadTaskCreationAttrs")]
         public LoadTaskCreationAttrs LoadTaskCreationAttrs{ get; set; }

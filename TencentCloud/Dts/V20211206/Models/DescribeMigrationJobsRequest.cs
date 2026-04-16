@@ -25,97 +25,97 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据迁移任务ID，如：dts-amm1jw5q
+        /// <p>数据迁移任务ID，如：dts-amm1jw5q</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 数据迁移任务名称
+        /// <p>数据迁移任务名称</p>
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)
+        /// <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// 源实例ID，格式如：cdb-c1nl9rpv
+        /// <p>源实例ID，格式如：cdb-c1nl9rpv</p>
         /// </summary>
         [JsonProperty("SrcInstanceId")]
         public string SrcInstanceId{ get; set; }
 
         /// <summary>
-        /// 源实例地域，如：ap-guangzhou
+        /// <p>源实例地域，如：ap-guangzhou</p>
         /// </summary>
         [JsonProperty("SrcRegion")]
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+        /// <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string[] SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+        /// <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string[] SrcAccessType{ get; set; }
 
         /// <summary>
-        /// 目标实例ID，格式如：cdb-c1nl9rpv
+        /// <p>目标实例ID，格式如：cdb-c1nl9rpv</p>
         /// </summary>
         [JsonProperty("DstInstanceId")]
         public string DstInstanceId{ get; set; }
 
         /// <summary>
-        /// 目标实例地域，如：ap-guangzhou
+        /// <p>目标实例地域，如：ap-guangzhou</p>
         /// </summary>
         [JsonProperty("DstRegion")]
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+        /// <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string[] DstDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+        /// <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string[] DstAccessType{ get; set; }
 
         /// <summary>
-        /// 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
+        /// <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p>
         /// </summary>
         [JsonProperty("RunMode")]
         public string RunMode{ get; set; }
 
         /// <summary>
-        /// 排序方式，可能取值为asc、desc，默认按照创建时间倒序
+        /// <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p>
         /// </summary>
         [JsonProperty("OrderSeq")]
         public string OrderSeq{ get; set; }
 
         /// <summary>
-        /// 返回实例数量，默认20，有效区间[1,100]
+        /// <p>返回实例数量，默认20，有效区间[1,100]</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 标签过滤
+        /// <p>标签过滤</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }

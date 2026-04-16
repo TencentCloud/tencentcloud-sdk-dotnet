@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1409</VersionPrefix>
+    <VersionPrefix>3.0.1410</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,6 +109,8 @@
     <Compile Include="V20211206\Models\DeleteSyncCompareTaskResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareDiffItemsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareDiffItemsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCompareReportRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCompareTasksRequest.cs" />
@@ -135,6 +137,8 @@
     <Compile Include="V20211206\Models\DescribeSubscribeJobsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSubscribeReturnableRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSubscribeReturnableResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareDiffItemsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncCompareDiffItemsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncCompareReportRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncCompareTasksRequest.cs" />
@@ -148,6 +152,7 @@
     <Compile Include="V20211206\Models\DestroySyncJobRequest.cs" />
     <Compile Include="V20211206\Models\DestroySyncJobResponse.cs" />
     <Compile Include="V20211206\Models\DetailCheckItem.cs" />
+    <Compile Include="V20211206\Models\DiffChunkItem.cs" />
     <Compile Include="V20211206\Models\DifferenceAdvancedObjectsDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceData.cs" />
     <Compile Include="V20211206\Models\DifferenceDataDetail.cs" />

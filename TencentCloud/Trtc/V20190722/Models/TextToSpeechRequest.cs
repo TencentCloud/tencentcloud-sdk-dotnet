@@ -75,6 +75,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
+        /// <summary>
+        /// 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+        /// </summary>
+        [JsonProperty("PronunciationDict")]
+        public PronunciationDict[] PronunciationDict{ get; set; }
+
+        /// <summary>
+        /// 默认为0，0表示不生成字幕，1表示生成字幕
+        /// </summary>
+        [JsonProperty("AlignmentMode")]
+        public ulong? AlignmentMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +100,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
+            this.SetParamSimple(map, prefix + "AlignmentMode", this.AlignmentMode);
         }
     }
 }

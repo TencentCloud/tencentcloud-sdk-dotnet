@@ -31,6 +31,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string Audio{ get; set; }
 
         /// <summary>
+        /// 字幕对齐数据
+        /// </summary>
+        [JsonProperty("Alignments")]
+        public AlignmentItem[] Alignments{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Audio", this.Audio);
+            this.SetParamArrayObj(map, prefix + "Alignments.", this.Alignments);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

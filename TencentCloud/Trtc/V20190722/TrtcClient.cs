@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1403";
+       private const string sdkVersion = "SDK_NET_3.0.1410";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Trtc.V20190722
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 异步语音合成
+        /// </summary>
+        /// <param name="req"><see cref="AsyncTextToSpeechRequest"/></param>
+        /// <returns><see cref="AsyncTextToSpeechResponse"/></returns>
+        public Task<AsyncTextToSpeechResponse> AsyncTextToSpeech(AsyncTextToSpeechRequest req)
+        {
+            return InternalRequestAsync<AsyncTextToSpeechResponse>(req, "AsyncTextToSpeech");
+        }
+
+        /// <summary>
+        /// 异步语音合成
+        /// </summary>
+        /// <param name="req"><see cref="AsyncTextToSpeechRequest"/></param>
+        /// <returns><see cref="AsyncTextToSpeechResponse"/></returns>
+        public AsyncTextToSpeechResponse AsyncTextToSpeechSync(AsyncTextToSpeechRequest req)
+        {
+            return InternalRequestAsync<AsyncTextToSpeechResponse>(req, "AsyncTextToSpeech")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -434,6 +455,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeAITranscriptionResponse DescribeAITranscriptionSync(DescribeAITranscriptionRequest req)
         {
             return InternalRequestAsync<DescribeAITranscriptionResponse>(req, "DescribeAITranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询异步语音合成状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncTextToSpeechRequest"/></param>
+        /// <returns><see cref="DescribeAsyncTextToSpeechResponse"/></returns>
+        public Task<DescribeAsyncTextToSpeechResponse> DescribeAsyncTextToSpeech(DescribeAsyncTextToSpeechRequest req)
+        {
+            return InternalRequestAsync<DescribeAsyncTextToSpeechResponse>(req, "DescribeAsyncTextToSpeech");
+        }
+
+        /// <summary>
+        /// 查询异步语音合成状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncTextToSpeechRequest"/></param>
+        /// <returns><see cref="DescribeAsyncTextToSpeechResponse"/></returns>
+        public DescribeAsyncTextToSpeechResponse DescribeAsyncTextToSpeechSync(DescribeAsyncTextToSpeechRequest req)
+        {
+            return InternalRequestAsync<DescribeAsyncTextToSpeechResponse>(req, "DescribeAsyncTextToSpeech")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -30,6 +30,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("CLSConfig")]
         public CLSConfig CLSConfig{ get; set; }
 
+        /// <summary>
+        /// <p>日志源配置</p>
+        /// </summary>
+        [JsonProperty("LogSources")]
+        public LogSources LogSources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "CLSConfig.", this.CLSConfig);
+            this.SetParamObj(map, prefix + "LogSources.", this.LogSources);
         }
     }
 }

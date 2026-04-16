@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1410";
 
         /// <summary>
         /// Client constructor.
@@ -2008,6 +2008,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询配音相关任务（异步）结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
+        /// <returns><see cref="DescribeDesignTaskResponse"/></returns>
+        public Task<DescribeDesignTaskResponse> DescribeDesignTask(DescribeDesignTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignTaskResponse>(req, "DescribeDesignTask");
+        }
+
+        /// <summary>
+        /// 查询配音相关任务（异步）结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
+        /// <returns><see cref="DescribeDesignTaskResponse"/></returns>
+        public DescribeDesignTaskResponse DescribeDesignTaskSync(DescribeDesignTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignTaskResponse>(req, "DescribeDesignTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据安全组反差关联的Flow信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupAttachFlowsByIdRequest"/></param>
@@ -3167,6 +3188,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeWorkflowsResponse DescribeWorkflowsSync(DescribeWorkflowsRequest req)
         {
             return InternalRequestAsync<DescribeWorkflowsResponse>(req, "DescribeWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public Task<DesignVoiceAsyncResponse> DesignVoiceAsync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

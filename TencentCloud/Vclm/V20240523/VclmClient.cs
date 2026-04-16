@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1410";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,69 @@ namespace TencentCloud.Vclm.V20240523
         public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
         {
             return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcElementRequest"/></param>
+        /// <returns><see cref="CreateAigcElementResponse"/></returns>
+        public Task<CreateAigcElementResponse> CreateAigcElement(CreateAigcElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcElementResponse>(req, "CreateAigcElement");
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcElementRequest"/></param>
+        /// <returns><see cref="CreateAigcElementResponse"/></returns>
+        public CreateAigcElementResponse CreateAigcElementSync(CreateAigcElementRequest req)
+        {
+            return InternalRequestAsync<CreateAigcElementResponse>(req, "CreateAigcElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除主体库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcElementRequest"/></param>
+        /// <returns><see cref="DeleteAigcElementResponse"/></returns>
+        public Task<DeleteAigcElementResponse> DeleteAigcElement(DeleteAigcElementRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcElementResponse>(req, "DeleteAigcElement");
+        }
+
+        /// <summary>
+        /// 删除主体库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcElementRequest"/></param>
+        /// <returns><see cref="DeleteAigcElementResponse"/></returns>
+        public DeleteAigcElementResponse DeleteAigcElementSync(DeleteAigcElementRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcElementResponse>(req, "DeleteAigcElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcElementRequest"/></param>
+        /// <returns><see cref="DescribeAigcElementResponse"/></returns>
+        public Task<DescribeAigcElementResponse> DescribeAigcElement(DescribeAigcElementRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcElementResponse>(req, "DescribeAigcElement");
+        }
+
+        /// <summary>
+        /// 提交视频特效任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcElementRequest"/></param>
+        /// <returns><see cref="DescribeAigcElementResponse"/></returns>
+        public DescribeAigcElementResponse DescribeAigcElementSync(DescribeAigcElementRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcElementResponse>(req, "DescribeAigcElement")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

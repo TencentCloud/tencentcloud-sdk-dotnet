@@ -34,6 +34,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// - TextToSpeech 非流式接口
         /// 
         ///  支持 pcm,wav,mp3,  默认: pcm
+        /// 
+        /// - AsyncTextToSpeech
+        /// 支持pcm,mp3, 默认：mp3
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

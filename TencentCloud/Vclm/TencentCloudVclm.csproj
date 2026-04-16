@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1409</VersionPrefix>
+    <VersionPrefix>3.0.1410</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,12 @@
     <Compile Include="V20240523\Models\CameraControlConfig.cs" />
     <Compile Include="V20240523\Models\CheckAnimateImageJobRequest.cs" />
     <Compile Include="V20240523\Models\CheckAnimateImageJobResponse.cs" />
+    <Compile Include="V20240523\Models\CreateAigcElementRequest.cs" />
+    <Compile Include="V20240523\Models\CreateAigcElementResponse.cs" />
+    <Compile Include="V20240523\Models\DeleteAigcElementRequest.cs" />
+    <Compile Include="V20240523\Models\DeleteAigcElementResponse.cs" />
+    <Compile Include="V20240523\Models\DescribeAigcElementRequest.cs" />
+    <Compile Include="V20240523\Models\DescribeAigcElementResponse.cs" />
     <Compile Include="V20240523\Models\DescribeAigcVideoJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeAigcVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobRequest.cs" />
@@ -92,6 +98,7 @@
     <Compile Include="V20240523\Models\DescribeVideoVoiceJobResponse.cs" />
     <Compile Include="V20240523\Models\DynamicMask.cs" />
     <Compile Include="V20240523\Models\Element.cs" />
+    <Compile Include="V20240523\Models\ElementImageList.cs" />
     <Compile Include="V20240523\Models\ExtraParam.cs" />
     <Compile Include="V20240523\Models\FaceMergeInfo.cs" />
     <Compile Include="V20240523\Models\FaceRect.cs" />
@@ -101,6 +108,8 @@
     <Compile Include="V20240523\Models\LogoParam.cs" />
     <Compile Include="V20240523\Models\LogoRect.cs" />
     <Compile Include="V20240523\Models\MultiPrompt.cs" />
+    <Compile Include="V20240523\Models\ProviderDetail.cs" />
+    <Compile Include="V20240523\Models\ReferImageItem.cs" />
     <Compile Include="V20240523\Models\ReferVideoInfo.cs" />
     <Compile Include="V20240523\Models\ReferenceSubject.cs" />
     <Compile Include="V20240523\Models\SubmitAigcVideoJobRequest.cs" />
@@ -141,6 +150,7 @@
     <Compile Include="V20240523\Models\SubmitVideoStylizationJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoVoiceJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoVoiceJobResponse.cs" />
+    <Compile Include="V20240523\Models\TagList.cs" />
     <Compile Include="V20240523\Models\Trajectory.cs" />
     <Compile Include="V20240523\Models\VideoEditParam.cs" />
     <Compile Include="V20240523\Models\Voice.cs" />
