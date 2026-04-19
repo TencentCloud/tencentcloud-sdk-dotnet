@@ -25,46 +25,52 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+        /// <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+        /// <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+        /// <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }
 
         /// <summary>
-        /// 可用区(与子网同可用区)
+        /// <p>可用区(与子网同可用区)</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例的标签
+        /// <p>实例的标签</p>
         /// </summary>
         [JsonProperty("TagSpecification")]
         public PrometheusTag[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 需要关联的 Grafana 实例
+        /// <p>需要关联的 Grafana 实例</p>
         /// </summary>
         [JsonProperty("GrafanaInstanceId")]
         public string GrafanaInstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+        /// </summary>
+        [JsonProperty("InstanceAttributes")]
+        public PrometheusRuleKV[] InstanceAttributes{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
+            this.SetParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
         }
     }
 }

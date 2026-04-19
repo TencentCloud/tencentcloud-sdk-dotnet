@@ -25,12 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-        /// </summary>
-        [JsonProperty("BotRatings")]
-        public BotRatings BotRatings{ get; set; }
-
-        /// <summary>
         /// Bot 智能分析的具体配置开关。取值有：
         /// 
         /// on：开启；
@@ -39,14 +33,27 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
+        /// <summary>
+        /// Bot 智能分析的规则 ID，仅作为出参返回。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+        /// </summary>
+        [JsonProperty("BotRatings")]
+        public BotRatings BotRatings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BotRatings.", this.BotRatings);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "BotRatings.", this.BotRatings);
         }
     }
 }

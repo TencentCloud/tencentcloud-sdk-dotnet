@@ -25,30 +25,34 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 用户 Id。
+        /// <p>用户 Id。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户手机号码。
+        /// <p>用户手机号码。</p>
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户昵称。
+        /// <p>用户昵称。</p>
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// 账号状态，取值：
-        /// <li>Normal：有效；</li>
-        /// <li>Stopped：无效。</li>
+        /// <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1410";
+       private const string sdkVersion = "SDK_NET_3.0.1411";
 
         /// <summary>
         /// Client constructor.
@@ -2008,7 +2008,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 查询配音相关任务（异步）结果
+        /// 查询音色设计任务（异步）结果
         /// </summary>
         /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
         /// <returns><see cref="DescribeDesignTaskResponse"/></returns>
@@ -2018,7 +2018,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 查询配音相关任务（异步）结果
+        /// 查询音色设计任务（异步）结果
         /// </summary>
         /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
         /// <returns><see cref="DescribeDesignTaskResponse"/></returns>

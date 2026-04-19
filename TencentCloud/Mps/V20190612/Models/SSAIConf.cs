@@ -25,10 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>广告决策服务器URL(ADS)。</p>
+        /// <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
         /// </summary>
         [JsonProperty("AdsUrl")]
         public string AdsUrl{ get; set; }
+
+        /// <summary>
+        /// <p>广告决策服务器URL数组(ADS)</p>
+        /// </summary>
+        [JsonProperty("AdsUrls")]
+        public string[] AdsUrls{ get; set; }
 
         /// <summary>
         /// <p>参数配置。</p>
@@ -95,10 +101,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AdCDNPrefix{ get; set; }
 
         /// <summary>
-        /// <p>预加载广告决策服务地址。</p>
+        /// <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
         /// </summary>
         [JsonProperty("PreRollAdsUrl")]
         public string PreRollAdsUrl{ get; set; }
+
+        /// <summary>
+        /// <p>预加载广告决策服务地址数组</p>
+        /// </summary>
+        [JsonProperty("PreRollAdsUrls")]
+        public string[] PreRollAdsUrls{ get; set; }
 
         /// <summary>
         /// <p>预加载广告最大允许时长，0-3600。</p>
@@ -119,6 +131,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AdsUrl", this.AdsUrl);
+            this.SetParamArraySimple(map, prefix + "AdsUrls.", this.AdsUrls);
             this.SetParamArrayObj(map, prefix + "ConfigAliases.", this.ConfigAliases);
             this.SetParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
             this.SetParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
@@ -130,6 +143,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
             this.SetParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
             this.SetParamSimple(map, prefix + "PreRollAdsUrl", this.PreRollAdsUrl);
+            this.SetParamArraySimple(map, prefix + "PreRollAdsUrls.", this.PreRollAdsUrls);
             this.SetParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
             this.SetParamSimple(map, prefix + "MultiRequest", this.MultiRequest);
         }

@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 过滤器的名称
+        /// <p>过滤器的名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 过滤器的值数组
+        /// <p>过滤器的值数组</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

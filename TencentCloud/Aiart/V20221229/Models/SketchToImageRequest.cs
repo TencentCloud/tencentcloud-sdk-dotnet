@@ -25,48 +25,37 @@ namespace TencentCloud.Aiart.V20221229.Models
     {
         
         /// <summary>
-        /// 用于线稿生图的文本描述。
-        /// 最多支持200个 utf-8 字符。
-        /// 建议格式：线稿中的主体对象+画面场景+配色/材质/元素/风格等
+        /// <p>用于线稿生图的文本描述。<br>最多支持200个 utf-8 字符。<br>建议格式：线稿中的主体对象+画面场景+配色/材质/元素/风格等</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 线稿图 Base64 数据。
-        /// Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-        /// 图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+        /// <p>线稿图 Base64 数据。<br>Base64 和 Url 必须提供一个，如果都提供以Url 为准。<br>图片限制：黑白线稿图片，单边分辨率小于5000px且大于128px（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
         /// </summary>
         [JsonProperty("InputImage")]
         public string InputImage{ get; set; }
 
         /// <summary>
-        /// 线稿图 Url。
-        /// Base64 和 Url 必须提供一个，如果都提供以Url 为准。
-        /// 图片限制：黑白线稿图片，单边分辨率小于5000且大于128（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+        /// <p>线稿图 Url。<br>Base64 和 Url 必须提供一个，如果都提供以Url 为准。<br>图片限制：黑白线稿图片，单边分辨率小于5000px且大于128px（分辨率过小会导致效果受损），转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
         /// </summary>
         [JsonProperty("InputUrl")]
         public string InputUrl{ get; set; }
 
         /// <summary>
-        /// 为生成结果图添加标识的开关，默认为1。
-        /// 1：添加标识。
-        /// 0：不添加标识。
-        /// 其他数值：默认按1处理。
-        /// 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+        /// <p>为生成结果图添加标识的开关，默认为1。<br>1：添加标识。<br>0：不添加标识。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
         /// </summary>
         [JsonProperty("LogoAdd")]
         public long? LogoAdd{ get; set; }
 
         /// <summary>
-        /// 标识内容设置。
-        /// 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。<br>示例值：{&quot;LogoUrl&quot;: &quot;https://cos.ap-guangzhou.myqcloud.com/logo.jpg&quot;, &quot;LogoRect&quot;: {&quot;X&quot;: 10, &quot;Y&quot;: 10, &quot;Width&quot;: 20, &quot;Height&quot;: 20}}</p>
         /// </summary>
         [JsonProperty("LogoParam")]
         public LogoParam LogoParam{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。
+        /// <p>返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。</p>
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }

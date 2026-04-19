@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Enabled{ get; set; }
 
         /// <summary>
+        /// 高频扫描防护的规则 ID，仅作为出参返回。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 高频扫描防护的处置动作。 当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Deny：拦截，响应拦截页面；</li><li>Monitor：观察，不处理请求记录安全事件到日志中；</li><li>JSChallenge：JavaScript 挑战，响应 JavaScript 挑战页面。</li>
         /// </summary>
         [JsonProperty("Action")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamObj(map, prefix + "Action.", this.Action);
             this.SetParamSimple(map, prefix + "CountBy", this.CountBy);
             this.SetParamSimple(map, prefix + "BlockThreshold", this.BlockThreshold);

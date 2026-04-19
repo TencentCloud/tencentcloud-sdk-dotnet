@@ -25,22 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+        /// <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }
+
+        /// <summary>
+        /// <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+        /// </summary>
+        [JsonProperty("InstanceAttributes")]
+        public PrometheusRuleKV[] InstanceAttributes{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "DataRetentionTime", this.DataRetentionTime);
+            this.SetParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
         }
     }
 }

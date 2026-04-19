@@ -25,102 +25,94 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 为客户分配的唯一的资产项的ID。
+        /// <p>为客户分配的唯一的资产项的ID。</p>
         /// </summary>
         [JsonProperty("CustomerAssetId")]
         public ulong? CustomerAssetId{ get; set; }
 
         /// <summary>
-        /// 资产项的名称。
+        /// <p>资产项的名称。</p>
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 资产项的类型
+        /// <p>资产项的类型</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// 检测状态
-        /// 
-        /// CHECK_INIT, 待检测
-        /// 
-        /// CHECK_RUNNING, 检测中
-        /// 
-        /// CHECK_FINISHED, 检测完成
-        /// 
-        /// CHECK_FAILED, 检测失败
+        /// <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// 节点名称。
+        /// <p>节点名称。</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-        /// 
-        /// 如果没有检测过，此处为”0000-00-00 00:00:00“。
+        /// <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p>
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
-        /// 检测结果。取值为：
-        /// 
-        /// RESULT_FAILED: 未通过
-        /// 
-        /// RESULT_PASSED: 通过
+        /// <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p>
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
-        /// 主机IP
+        /// <p>主机IP</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// 镜像的tag
+        /// <p>镜像的tag</p>
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// 检查项验证信息
+        /// <p>检查项验证信息</p>
         /// </summary>
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }
 
         /// <summary>
-        /// 主机实例id
+        /// <p>主机实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像仓库信息
+        /// <p>镜像仓库信息</p>
         /// </summary>
         [JsonProperty("ImageRegistryInfo")]
         public ImageRegistryInfo ImageRegistryInfo{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>资产唯一ID</p><p>默认值：-</p>
+        /// </summary>
+        [JsonProperty("AssetUniqueID")]
+        public string AssetUniqueID{ get; set; }
 
 
         /// <summary>
@@ -142,6 +134,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1411";
 
         /// <summary>
         /// Client constructor.
@@ -4922,6 +4922,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusionsSync(ModifyGlobalMaintenanceWindowAndExclusionsRequest req)
         {
             return InternalRequestAsync<ModifyGlobalMaintenanceWindowAndExclusionsResponse>(req, "ModifyGlobalMaintenanceWindowAndExclusions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogConfigResponse"/></returns>
+        public Task<ModifyLogConfigResponse> ModifyLogConfig(ModifyLogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLogConfigResponse>(req, "ModifyLogConfig");
+        }
+
+        /// <summary>
+        /// 修改日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogConfigResponse"/></returns>
+        public ModifyLogConfigResponse ModifyLogConfigSync(ModifyLogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLogConfigResponse>(req, "ModifyLogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

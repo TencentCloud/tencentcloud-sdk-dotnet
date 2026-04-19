@@ -31,14 +31,16 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string DataSourceId{ get; set; }
 
         /// <summary>
-        /// 回收的项目id，与UserUin参数只能填一个
+        /// 回收的项目id，与RevokeUser参数只能选填一个，或者都不传当RevokeProjectId与RevokeUser都不传时，表示回收当前数据源所有权限（数据源为项目共享时，不回收当前数据源创建项目下所有用户对该数据源的权限，当数据源为个人和项目管理员共享时，不回收当前数据源创建项目下数据源创建用户和管理员的权限）
         /// </summary>
         [JsonProperty("RevokeProjectId")]
         public string RevokeProjectId{ get; set; }
 
         /// <summary>
         /// 回收项目下用户列表，格式为：项目id_用户id
-        /// 与RevokeProjectId参数只能填一个
+        /// 与RevokeProjectId参数只能选填一个，或者都不传
+        /// 当RevokeProjectId与RevokeUser都不传时，表示回收当前数据源所有权限（
+        /// 数据源为项目共享时，不回收当前数据源创建项目下所有用户对该数据源的权限，当数据源为个人和项目管理员共享时，不回收当前数据源创建项目下数据源创建用户和管理员的权限）
         /// 
         /// </summary>
         [JsonProperty("RevokeUser")]

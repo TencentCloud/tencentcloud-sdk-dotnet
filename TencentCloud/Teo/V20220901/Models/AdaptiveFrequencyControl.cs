@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Enabled{ get; set; }
 
         /// <summary>
+        /// 自适应频控的规则 ID，仅作为出参返回。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 自适应频控的限制等级，当 Enabled 为 on 时，此字段必填。取值有：<li>Loose：宽松；</li><li>Moderate：适中；</li><li>Strict：严格。</li>
         /// </summary>
         [JsonProperty("Sensitivity")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Sensitivity", this.Sensitivity);
             this.SetParamObj(map, prefix + "Action.", this.Action);
         }

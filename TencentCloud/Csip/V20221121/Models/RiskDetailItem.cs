@@ -25,85 +25,85 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 首次发现时间
+        /// <p>首次发现时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 风险状态
+        /// <p>风险状态</p>
         /// </summary>
         [JsonProperty("RiskStatus")]
         public long? RiskStatus{ get; set; }
 
         /// <summary>
-        /// 风险内容
+        /// <p>风险内容</p>
         /// </summary>
         [JsonProperty("RiskContent")]
         public string RiskContent{ get; set; }
 
         /// <summary>
-        /// 云厂商
+        /// <p>云厂商</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// 云厂商名称
+        /// <p>云厂商名称</p>
         /// </summary>
         [JsonProperty("ProviderName")]
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// 云账号
+        /// <p>云账号</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// 云账号名称
+        /// <p>云账号名称</p>
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 风险ID
+        /// <p>风险ID</p>
         /// </summary>
         [JsonProperty("RiskId")]
         public ulong? RiskId{ get; set; }
 
         /// <summary>
-        /// 风险规则ID
+        /// <p>风险规则ID</p>
         /// </summary>
         [JsonProperty("RiskRuleId")]
         public string RiskRuleId{ get; set; }
 
         /// <summary>
-        /// 风险验证状态
+        /// <p>风险验证状态</p>
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>用户AppID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }

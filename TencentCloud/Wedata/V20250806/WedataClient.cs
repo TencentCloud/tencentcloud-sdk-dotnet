@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1411";
 
         /// <summary>
         /// Client constructor.
@@ -2849,6 +2849,27 @@ namespace TencentCloud.Wedata.V20250806
         public ListTenantRolesResponse ListTenantRolesSync(ListTenantRolesRequest req)
         {
             return InternalRequestAsync<ListTenantRolesResponse>(req, "ListTenantRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流运行
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskRunsResponse"/></returns>
+        public Task<ListTriggerTaskRunsResponse> ListTriggerTaskRuns(ListTriggerTaskRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskRunsResponse>(req, "ListTriggerTaskRuns");
+        }
+
+        /// <summary>
+        /// 查询工作流运行
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskRunsResponse"/></returns>
+        public ListTriggerTaskRunsResponse ListTriggerTaskRunsSync(ListTriggerTaskRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskRunsResponse>(req, "ListTriggerTaskRuns")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

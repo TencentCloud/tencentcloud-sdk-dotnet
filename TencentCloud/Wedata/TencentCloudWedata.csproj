@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1407</VersionPrefix>
+    <VersionPrefix>3.0.1411</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -429,6 +429,10 @@
     <Compile Include="V20250806\Models\ListTenantRolesRequest.cs" />
     <Compile Include="V20250806\Models\ListTenantRolesResponse.cs" />
     <Compile Include="V20250806\Models\ListTriggerTaskInfo.cs" />
+    <Compile Include="V20250806\Models\ListTriggerTaskRunBrief.cs" />
+    <Compile Include="V20250806\Models\ListTriggerTaskRunResult.cs" />
+    <Compile Include="V20250806\Models\ListTriggerTaskRunsRequest.cs" />
+    <Compile Include="V20250806\Models\ListTriggerTaskRunsResponse.cs" />
     <Compile Include="V20250806\Models\ListTriggerTaskVersions.cs" />
     <Compile Include="V20250806\Models\ListTriggerTaskVersionsRequest.cs" />
     <Compile Include="V20250806\Models\ListTriggerTaskVersionsResponse.cs" />

@@ -25,215 +25,197 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 周期类型：默认为 DAY_CYCLE
-        /// 
-        /// 支持的类型为 
-        /// 
-        /// * ONEOFF_CYCLE: 一次性
-        /// * YEAR_CYCLE: 年
-        /// * MONTH_CYCLE: 月
-        /// * WEEK_CYCLE: 周
-        /// * DAY_CYCLE: 天
-        /// * HOUR_CYCLE: 小时
-        /// * MINUTE_CYCLE: 分钟
-        /// * CRONTAB_CYCLE: crontab表达式类型
+        /// <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// 时区，默认为 UTC+8
+        /// <p>时区，默认为 UTC+8</p>
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// Cron表达式，默认为 0 0 0 * * ? * 
+        /// <p>Cron表达式，默认为 0 0 0 * * ? *</p>
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// 生效日期，默认为当前日期的 00:00:00
+        /// <p>生效日期，默认为当前日期的 00:00:00</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束日期，默认为 2099-12-31 23:59:59
+        /// <p>结束日期，默认为 2099-12-31 23:59:59</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 执行时间 左闭区间，默认 00:00
+        /// <p>执行时间 左闭区间，默认 00:00</p>
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 执行时间 右闭区间，默认 23:59
+        /// <p>执行时间 右闭区间，默认 23:59</p>
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+        /// <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
         /// </summary>
         [JsonProperty("CalendarOpen")]
         public string CalendarOpen{ get; set; }
 
         /// <summary>
-        /// 日历调度 日历 ID
+        /// <p>日历调度 日历 ID</p>
         /// </summary>
         [JsonProperty("CalendarId")]
         public string CalendarId{ get; set; }
 
         /// <summary>
-        /// 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+        /// <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
         /// </summary>
         [JsonProperty("SelfDepend")]
         public string SelfDepend{ get; set; }
 
         /// <summary>
-        /// 上游依赖数组
+        /// <p>上游依赖数组</p>
         /// </summary>
         [JsonProperty("UpstreamDependencyConfigList")]
         public DependencyTaskBrief[] UpstreamDependencyConfigList{ get; set; }
 
         /// <summary>
-        /// 事件数组
+        /// <p>事件数组</p>
         /// </summary>
         [JsonProperty("EventListenerList")]
         public EventListener[] EventListenerList{ get; set; }
 
         /// <summary>
-        /// 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+        /// <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
         /// </summary>
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
         /// <summary>
-        /// 输出参数数组
+        /// <p>输出参数数组</p>
         /// </summary>
         [JsonProperty("ParamTaskOutList")]
         public OutTaskParameter[] ParamTaskOutList{ get; set; }
 
         /// <summary>
-        /// 输入参数数组
+        /// <p>输入参数数组</p>
         /// </summary>
         [JsonProperty("ParamTaskInList")]
         public InTaskParameter[] ParamTaskInList{ get; set; }
 
         /// <summary>
-        /// 产出登记
+        /// <p>产出登记</p>
         /// </summary>
         [JsonProperty("TaskOutputRegistryList")]
         public TaskDataRegistry[] TaskOutputRegistryList{ get; set; }
 
         /// <summary>
-        /// **实例生成策略**
-        /// * T_PLUS_0: T+0生成,默认策略
-        /// * T_PLUS_1: T+1生成
+        /// <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
         /// </summary>
         [JsonProperty("InitStrategy")]
         public string InitStrategy{ get; set; }
 
         /// <summary>
-        /// 调度类型: 0 正常调度 1 空跑调度，默认为 0
+        /// <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
         /// </summary>
         [JsonProperty("ScheduleRunType")]
         [System.Obsolete]
         public string ScheduleRunType{ get; set; }
 
         /// <summary>
-        /// 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+        /// <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
         /// </summary>
         [JsonProperty("RunPriority")]
         [System.Obsolete]
         public string RunPriority{ get; set; }
 
         /// <summary>
-        /// 重试策略 重试等待时间,单位分钟: 默认: 5
+        /// <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
         /// </summary>
         [JsonProperty("RetryWait")]
         [System.Obsolete]
         public string RetryWait{ get; set; }
 
         /// <summary>
-        /// 重试策略 最大尝试次数, 默认: 4
+        /// <p>重试策略 最大尝试次数, 默认: 4</p>
         /// </summary>
         [JsonProperty("MaxRetryAttempts")]
         [System.Obsolete]
         public string MaxRetryAttempts{ get; set; }
 
         /// <summary>
-        /// 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+        /// <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
         /// </summary>
         [JsonProperty("ExecutionTTL")]
         [System.Obsolete]
         public string ExecutionTTL{ get; set; }
 
         /// <summary>
-        /// 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+        /// <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
         /// </summary>
         [JsonProperty("WaitExecutionTotalTTL")]
         [System.Obsolete]
         public string WaitExecutionTotalTTL{ get; set; }
 
         /// <summary>
-        /// 调度类型: 0 正常调度 1 空跑调度，默认为 0
+        /// <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
         /// </summary>
         [JsonProperty("ScheduleType")]
         public long? ScheduleType{ get; set; }
 
         /// <summary>
-        /// 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+        /// <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
         /// </summary>
         [JsonProperty("RunPriorityType")]
         public long? RunPriorityType{ get; set; }
 
         /// <summary>
-        /// 重试策略 重试等待时间,单位分钟: 默认: 5
+        /// <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
         /// </summary>
         [JsonProperty("RetryWaitMinute")]
         public long? RetryWaitMinute{ get; set; }
 
         /// <summary>
-        /// 重试策略 最大尝试次数, 默认: 4
+        /// <p>重试策略 最大尝试次数, 默认: 4</p>
         /// </summary>
         [JsonProperty("MaxRetryNumber")]
         public long? MaxRetryNumber{ get; set; }
 
         /// <summary>
-        /// 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+        /// <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
         /// </summary>
         [JsonProperty("ExecutionTTLMinute")]
         public long? ExecutionTTLMinute{ get; set; }
 
         /// <summary>
-        /// 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+        /// <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
         /// </summary>
         [JsonProperty("WaitExecutionTotalTTLMinute")]
         public long? WaitExecutionTotalTTLMinute{ get; set; }
 
         /// <summary>
-        /// - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-        /// - ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-        /// - ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-        /// - ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-        /// - ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-        /// - ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-        /// - ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-        /// - ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-        /// - ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-        /// - NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-        /// - ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-        /// - NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-        /// - ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+        /// <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
         /// </summary>
         [JsonProperty("DependencyTriggerPolicy")]
         public string DependencyTriggerPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("AllowDownstreamDependency")]
+        [System.Obsolete]
+        public long? AllowDownstreamDependency{ get; set; }
 
 
         /// <summary>
@@ -271,6 +253,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
             this.SetParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
             this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+            this.SetParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
         }
     }
 }

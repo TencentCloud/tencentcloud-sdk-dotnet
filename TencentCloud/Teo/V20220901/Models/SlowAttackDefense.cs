@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Enabled{ get; set; }
 
         /// <summary>
+        /// 慢速攻击防护的规则 ID，仅作为出参返回。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 慢速攻击防护的处置方式，当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Monitor：观察；</li><li>Deny：拦截；</li>
         /// </summary>
         [JsonProperty("Action")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamObj(map, prefix + "Action.", this.Action);
             this.SetParamObj(map, prefix + "MinimalRequestBodyTransferRate.", this.MinimalRequestBodyTransferRate);
             this.SetParamObj(map, prefix + "RequestBodyTransferTimeout.", this.RequestBodyTransferTimeout);

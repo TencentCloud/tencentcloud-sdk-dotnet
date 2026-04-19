@@ -37,66 +37,7 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数据源类型:枚举值
-        /// 
-        /// - MYSQL
-        /// - TENCENT_MYSQL
-        /// - POSTGRE
-        /// - ORACLE
-        /// - SQLSERVER
-        /// - FTP
-        /// - HIVE
-        /// - HUDI
-        /// - HDFS
-        /// - ICEBERG
-        /// - KAFKA
-        /// - DTS_KAFKA
-        /// - HBASE
-        /// - SPARK
-        /// - TBASE
-        /// - DB2
-        /// - DM
-        /// - GAUSSDB
-        /// - GBASE
-        /// - IMPALA
-        /// - ES
-        /// - TENCENT_ES
-        /// - GREENPLUM
-        /// - SAP_HANA
-        /// - SFTP
-        /// - OCEANBASE
-        /// - CLICKHOUSE
-        /// - KUDU
-        /// - VERTICA
-        /// - REDIS
-        /// - COS
-        /// - DLC
-        /// - DORIS
-        /// - CKAFKA
-        /// - S3_DATAINSIGHT
-        /// - TDSQL
-        /// - TDSQL_MYSQL
-        /// - MONGODB
-        /// - TENCENT_MONGODB
-        /// - REST_API
-        /// - TiDB
-        /// - StarRocks
-        /// - Trino
-        /// - Kyuubi
-        /// - TCHOUSE_X
-        /// - TCHOUSE_P
-        /// - TCHOUSE_C
-        /// - TCHOUSE_D
-        /// - INFLUXDB
-        /// - BIG_QUERY
-        /// - SSH
-        /// - BLOB
-        /// - TDSQL_POSTGRE
-        /// - GDB
-        /// - TDENGINE
-        /// - TDSQLC
-        /// - FileSystem
-        /// - TCLake
+        /// 数据源类型:枚举值- MYSQL- TENCENT_MYSQL- POSTGRE- ORACLE- SQLSERVER- FTP- HIVE- HUDI- HDFS- ICEBERG- KAFKA- DTS_KAFKA- HBASE- SPARK- TBASE- DB2- DM- GAUSSDB- GBASE- IMPALA- ES- TENCENT_ES- GREENPLUM- SAP_HANA- SFTP- OCEANBASE- CLICKHOUSE- KUDU- VERTICA- REDIS- COS- DLC- DORIS- CKAFKA- S3_DATAINSIGHT- TDSQL- TDSQL_MYSQL- MONGODB- TENCENT_MONGODB- REST_API- TiDB- StarRocks- Trino- Kyuubi- TCHOUSE_X- TCHOUSE_P- TCHOUSE_C- TCHOUSE_D- INFLUXDB- BIG_QUERY- SSH- BLOB- TDSQL_POSTGRE- GDB- TDENGINE- TDSQLC- FileSystem- TCLake- TDSQL_BOUNDLESS
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

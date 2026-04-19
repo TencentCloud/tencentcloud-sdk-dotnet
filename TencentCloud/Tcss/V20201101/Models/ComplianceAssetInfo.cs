@@ -25,104 +25,100 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 客户资产的ID。
+        /// <p>客户资产的ID。</p>
         /// </summary>
         [JsonProperty("CustomerAssetId")]
         public ulong? CustomerAssetId{ get; set; }
 
         /// <summary>
-        /// 资产类别。
+        /// <p>资产类别。</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// 资产的名称。
+        /// <p>资产的名称。</p>
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 当资产为镜像时，这个字段为镜像Tag。
+        /// <p>当资产为镜像时，这个字段为镜像Tag。</p>
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// 资产所在的主机IP。
+        /// <p>资产所在的主机IP。</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// 资产所属的节点的名称
+        /// <p>资产所属的节点的名称</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 检测状态
-        /// 
-        /// CHECK_INIT, 待检测
-        /// 
-        /// CHECK_RUNNING, 检测中
-        /// 
-        /// CHECK_FINISHED, 检测完成
-        /// 
-        /// CHECK_FAILED, 检测失败
+        /// <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// 此类资产通过的检测项的数目。
+        /// <p>此类资产通过的检测项的数目。</p>
         /// </summary>
         [JsonProperty("PassedPolicyItemCount")]
         public ulong? PassedPolicyItemCount{ get; set; }
 
         /// <summary>
-        /// 此类资产未通过的检测的数目。
+        /// <p>此类资产未通过的检测的数目。</p>
         /// </summary>
         [JsonProperty("FailedPolicyItemCount")]
         public ulong? FailedPolicyItemCount{ get; set; }
 
         /// <summary>
-        /// 上次检测的时间。
+        /// <p>上次检测的时间。</p>
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
-        /// 检测结果：
-        /// RESULT_FAILED: 未通过。
-        /// RESULT_PASSED: 通过。
+        /// <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
-        /// 主机节点的实例id
+        /// <p>主机节点的实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像仓库信息
+        /// <p>镜像仓库信息</p>
         /// </summary>
         [JsonProperty("ImageRegistryInfo")]
         public ImageRegistryInfo ImageRegistryInfo{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>资产唯一ID</p><p>默认值：-</p>
+        /// </summary>
+        [JsonProperty("AssetUniqueID")]
+        public string AssetUniqueID{ get; set; }
 
 
         /// <summary>
@@ -145,6 +141,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
         }
     }
 }
