@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// channel信息。
+        /// <p>channel信息。</p>
         /// </summary>
         [JsonProperty("Info")]
         public LinearAssemblyProgramInfo Info{ get; set; }

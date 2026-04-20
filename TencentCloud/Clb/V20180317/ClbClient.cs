@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1411";
+       private const string sdkVersion = "SDK_NET_3.0.1412";
 
         /// <summary>
         /// Client constructor.
@@ -1692,7 +1692,6 @@ namespace TencentCloud.Clb.V20180317
         /// <summary>
         /// 本接口（ModifyLoadBalancerSla）用于调整按量计费模式实例的性能容量型规格，如共享型升级性能容量型，性能容量型实例规格调整。<br/>
         /// 限制条件：
-        /// - 本接口只支持调整按量计费的CLB实例，包年包月的CLB实例升级请通过控制台进行调整。
         /// - 共享型升级为性能容量型实例后，不支持再回退到共享型实例。
         /// - 传统型负载均衡实例不支持升级为性能容量型实例。
         /// </summary>
@@ -1706,7 +1705,6 @@ namespace TencentCloud.Clb.V20180317
         /// <summary>
         /// 本接口（ModifyLoadBalancerSla）用于调整按量计费模式实例的性能容量型规格，如共享型升级性能容量型，性能容量型实例规格调整。<br/>
         /// 限制条件：
-        /// - 本接口只支持调整按量计费的CLB实例，包年包月的CLB实例升级请通过控制台进行调整。
         /// - 共享型升级为性能容量型实例后，不支持再回退到共享型实例。
         /// - 传统型负载均衡实例不支持升级为性能容量型实例。
         /// </summary>

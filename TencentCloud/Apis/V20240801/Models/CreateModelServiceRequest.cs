@@ -25,118 +25,130 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例
+        /// <p>实例</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 模型服务名称
+        /// <p>模型服务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 访问路径
+        /// <p>访问路径</p>
         /// </summary>
         [JsonProperty("PubPath")]
         public string PubPath{ get; set; }
 
         /// <summary>
-        /// 模型ID列表
+        /// <p>模型ID列表</p>
         /// </summary>
         [JsonProperty("TargetModels")]
         public TargetModelDTO[] TargetModels{ get; set; }
 
         /// <summary>
-        /// 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;
+        /// <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p>
         /// </summary>
         [JsonProperty("PathMatchType")]
         public string PathMatchType{ get; set; }
 
         /// <summary>
-        /// 是否开启限流
+        /// <p>是否开启限流</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
-        /// 限流配置
+        /// <p>限流配置</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启token控制
+        /// <p>是否开启token控制</p>
         /// </summary>
         [JsonProperty("TokenLimitStatus")]
         public bool? TokenLimitStatus{ get; set; }
 
         /// <summary>
-        /// token控制
+        /// <p>token控制</p>
         /// </summary>
         [JsonProperty("TokenLimitConfig")]
         public TokenLimitConfigDTO TokenLimitConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启内容安全
+        /// <p>是否开启内容安全</p>
         /// </summary>
         [JsonProperty("TmsStatus")]
         public bool? TmsStatus{ get; set; }
 
         /// <summary>
-        /// 内容安全配置
+        /// <p>内容安全配置</p>
         /// </summary>
         [JsonProperty("TmsConfig")]
         public TmsConfigDTO TmsConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启IP白名单
+        /// <p>是否开启IP白名单</p>
         /// </summary>
         [JsonProperty("IpWhiteStatus")]
         public bool? IpWhiteStatus{ get; set; }
 
         /// <summary>
-        /// IP白名单
+        /// <p>IP白名单</p>
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// IP黑名单
+        /// <p>IP黑名单</p>
         /// </summary>
         [JsonProperty("IpBlackList")]
         public string[] IpBlackList{ get; set; }
 
         /// <summary>
-        /// 插件配置
+        /// <p>插件配置</p>
         /// </summary>
         [JsonProperty("PluginConfigs")]
         public PluginConfigDTO[] PluginConfigs{ get; set; }
 
         /// <summary>
-        /// 超时配置，秒
+        /// <p>超时配置，秒</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// 是否开启提示词安全检测
+        /// <p>是否开启提示词安全检测</p>
         /// </summary>
         [JsonProperty("PromptModerateStatus")]
         public bool? PromptModerateStatus{ get; set; }
 
         /// <summary>
-        /// 提示词安全检测配置
+        /// <p>提示词安全检测配置</p>
         /// </summary>
         [JsonProperty("PromptModerateConfig")]
         public PromptModerateConfigDTO PromptModerateConfig{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启敏感数据检测</p>
+        /// </summary>
+        [JsonProperty("SensitiveDataCheckStatus")]
+        public bool? SensitiveDataCheckStatus{ get; set; }
+
+        /// <summary>
+        /// <p>敏感数据检测配置</p>
+        /// </summary>
+        [JsonProperty("SensitiveDataCheckConfig")]
+        public SensitiveDataCheckConfigDTO SensitiveDataCheckConfig{ get; set; }
 
 
         /// <summary>
@@ -163,6 +175,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
             this.SetParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
+            this.SetParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
+            this.SetParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
         }
     }
 }

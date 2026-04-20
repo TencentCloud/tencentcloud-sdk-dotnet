@@ -25,27 +25,25 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// <p>图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// <p>图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// FRONT：有照片的一面（人像面），
-        /// BACK：无照片的一面（国徽面），
-        /// 该参数如果不填或填错，将为您自动判断正反面。
+        /// <p>FRONT：有照片的一面（人像面），<br>BACK：无照片的一面（国徽面），<br>该参数如果不填或填错，将为您自动判断正反面。</p>
         /// </summary>
         [JsonProperty("CardSide")]
         public string CardSide{ get; set; }
 
         /// <summary>
-        /// 是否返回头像和位置坐标
+        /// <p>是否返回头像和位置坐标</p>
         /// </summary>
         [JsonProperty("CropPortrait")]
         public bool? CropPortrait{ get; set; }

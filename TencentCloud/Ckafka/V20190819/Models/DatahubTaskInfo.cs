@@ -25,82 +25,100 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务Id
+        /// <p>任务Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型，SOURCE数据接入，SINK数据流出
+        /// <p>任务类型，SOURCE数据接入，SINK数据流出</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+        /// <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 数据源
+        /// <p>数据源</p>
         /// </summary>
         [JsonProperty("SourceResource")]
         public DatahubResource SourceResource{ get; set; }
 
         /// <summary>
-        /// 数据目标
+        /// <p>数据目标</p>
         /// </summary>
         [JsonProperty("TargetResource")]
         public DatahubResource TargetResource{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 异常信息
+        /// <p>异常信息</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 创建进度百分比
+        /// <p>创建进度百分比</p>
         /// </summary>
         [JsonProperty("TaskProgress")]
         public float? TaskProgress{ get; set; }
 
         /// <summary>
-        /// 任务当前处于的步骤
+        /// <p>任务当前处于的步骤</p>
         /// </summary>
         [JsonProperty("TaskCurrentStep")]
         public string TaskCurrentStep{ get; set; }
 
         /// <summary>
-        /// Datahub转储Id
+        /// <p>Datahub转储Id</p>
         /// </summary>
         [JsonProperty("DatahubId")]
         public string DatahubId{ get; set; }
 
         /// <summary>
-        /// 步骤列表
+        /// <p>步骤列表</p>
         /// </summary>
         [JsonProperty("StepList")]
         public string[] StepList{ get; set; }
 
         /// <summary>
-        /// 任务描述信息
+        /// <p>任务描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>任务并发数</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("TaskMax")]
+        public long? TaskMax{ get; set; }
+
+        /// <summary>
+        /// <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+        /// </summary>
+        [JsonProperty("SyncThrottleLimit")]
+        public long? SyncThrottleLimit{ get; set; }
+
+        /// <summary>
+        /// <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+        /// </summary>
+        [JsonProperty("AutoExpandFlag")]
+        public bool? AutoExpandFlag{ get; set; }
 
 
         /// <summary>
@@ -121,6 +139,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DatahubId", this.DatahubId);
             this.SetParamArraySimple(map, prefix + "StepList.", this.StepList);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "TaskMax", this.TaskMax);
+            this.SetParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+            this.SetParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
         }
     }
 }

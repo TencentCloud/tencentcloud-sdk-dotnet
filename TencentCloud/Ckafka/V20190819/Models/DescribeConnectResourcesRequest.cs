@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 连接源类型
+        /// <p>连接源类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 连接源名称的关键字查询,支持模糊匹配
+        /// <p>连接源名称的关键字查询,支持模糊匹配</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认为0
+        /// <p>分页偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+        /// <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+        /// <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

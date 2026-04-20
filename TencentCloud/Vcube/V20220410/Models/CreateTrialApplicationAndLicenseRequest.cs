@@ -25,79 +25,85 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
-        /// 应用名
+        /// <p>应用名</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// 包名
+        /// <p>包名</p>
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// 功能 id 数组
+        /// <p>鸿蒙包包名</p>
+        /// </summary>
+        [JsonProperty("BundleName")]
+        public string BundleName{ get; set; }
+
+        /// <summary>
+        /// <p>功能 id 数组</p>
         /// </summary>
         [JsonProperty("FeatureIds")]
         public long?[] FeatureIds{ get; set; }
 
         /// <summary>
-        /// 是否要开通优图功能
+        /// <p>是否要开通优图功能</p>
         /// </summary>
         [JsonProperty("XMagic")]
         public bool? XMagic{ get; set; }
 
         /// <summary>
-        /// 营业执照
+        /// <p>营业执照</p>
         /// </summary>
         [JsonProperty("CompanyPermit")]
         public string CompanyPermit{ get; set; }
 
         /// <summary>
-        /// 公司类型
+        /// <p>公司类型</p>
         /// </summary>
         [JsonProperty("CompanyType")]
         public string CompanyType{ get; set; }
 
         /// <summary>
-        /// 公司名称
+        /// <p>公司名称</p>
         /// </summary>
         [JsonProperty("CompanyName")]
         public string CompanyName{ get; set; }
 
         /// <summary>
-        /// 要开通的测试功能名称，基础套餐只能有一个
+        /// <p>要开通的测试功能名称，基础套餐只能有一个</p>
         /// </summary>
         [JsonProperty("PlanList")]
         public string[] PlanList{ get; set; }
 
         /// <summary>
-        /// Mac 进程名
+        /// <p>Mac 进程名</p>
         /// </summary>
         [JsonProperty("MacBundleId")]
         public string MacBundleId{ get; set; }
 
         /// <summary>
-        /// Windows 进程名
+        /// <p>Windows 进程名</p>
         /// </summary>
         [JsonProperty("WinProcessName")]
         public string WinProcessName{ get; set; }
 
         /// <summary>
-        /// 要创建到哪个平台，web、mobile、pc，默认mobile
+        /// <p>要创建到哪个平台，web、mobile、pc，默认mobile</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 授权域名列表
+        /// <p>授权域名列表</p>
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }
@@ -111,6 +117,7 @@ namespace TencentCloud.Vcube.V20220410.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamSimple(map, prefix + "BundleName", this.BundleName);
             this.SetParamArraySimple(map, prefix + "FeatureIds.", this.FeatureIds);
             this.SetParamSimple(map, prefix + "XMagic", this.XMagic);
             this.SetParamSimple(map, prefix + "CompanyPermit", this.CompanyPermit);

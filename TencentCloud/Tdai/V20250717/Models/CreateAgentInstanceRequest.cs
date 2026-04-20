@@ -54,6 +54,36 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("Skills")]
+        public string[] Skills{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("SoulId")]
+        public long? SoulId{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArrayObj(map, prefix + "Parameters.", this.Parameters);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamArraySimple(map, prefix + "Skills.", this.Skills);
+            this.SetParamSimple(map, prefix + "SoulId", this.SoulId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

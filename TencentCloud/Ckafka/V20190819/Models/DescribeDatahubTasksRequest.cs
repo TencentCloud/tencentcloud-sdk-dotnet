@@ -25,43 +25,43 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为20，最大值为100 (超过100限制为100)
+        /// <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认为0
+        /// <p>分页偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件，按照 TaskName 过滤，支持模糊查询
+        /// <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 转储的目标类型
+        /// <p>转储的目标类型</p>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 任务类型，SOURCE数据接入，SINK数据流出
+        /// <p>任务类型，SOURCE数据接入，SINK数据流出</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 转储的源类型
+        /// <p>转储的源类型</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 转储的资源
+        /// <p>转储的资源</p>
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 连接源的Id
+        /// <p>连接源的Id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

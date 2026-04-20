@@ -25,25 +25,25 @@ namespace TencentCloud.Aiart.V20221229.Models
     {
         
         /// <summary>
-        /// 人脸框左上角横坐标。
+        /// <p>人脸框左上角横坐标。</p>
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 人脸框左上角纵坐标。
+        /// <p>人脸框左上角纵坐标。</p>
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// 人脸框宽度。
+        /// <p>人脸框宽度。<br>单位：px</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 人脸框高度。
+        /// <p>人脸框高度。<br>单位：px</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

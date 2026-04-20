@@ -40,8 +40,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>当 OriginType = IPDomain 时，该参数请填写 IPV4、IPV6 地址或域名；</li>
         /// <li>当 OriginType = COS 时，该参数请填写 COS 桶的访问域名；</li>
         /// <li>当 OriginType = AWSS3，该参数请填写 S3 桶的访问域名；</li>
-        /// <li>当 OriginType = OriginGroup 时，该参数请填写源站组 ID；</li>
-        /// <li>当 OriginType = LoadBalance 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放。</li>
+        /// <li>当 OriginType = OriginGroup 时，该参数请填写源站组 ID；当为出参的时候，如果引用了其它站点的源站组，格式为{源站组 ID}@{ZoneID}。例如：og-testorigin@zone-38moq1z10wwwy；</li>
+        /// <li>当 OriginType = LoadBalance 时，该参数请填写负载均衡实例 ID，该功能当前仅白名单开放；当为出参的时候，如果引用了其它站点的负载均衡，格式为{负载均衡 ID}@{ZoneID}。例如：lb-2rxpamcyqfzg@zone-38moq1z10wwwy。</li>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }

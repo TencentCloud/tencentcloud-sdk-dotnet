@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 弹性topic名称
+        /// <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 消息保留时间，单位：ms，当前最小值为60000ms。
+        /// <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+        /// <p>主题备注</p><p>入参限制：不超过64个字符</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

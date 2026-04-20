@@ -25,39 +25,45 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 后备索引名
+        /// <p>后备索引名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 后备索引状态
+        /// <p>后备索引状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
-        /// 后备索引存储大小
+        /// <p>后备索引存储大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexStorage")]
         public long? IndexStorage{ get; set; }
 
         /// <summary>
-        /// 后备索引当前生命周期
+        /// <p>后备索引当前生命周期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexPhrase")]
         public string IndexPhrase{ get; set; }
 
         /// <summary>
-        /// 后备索引创建时间
+        /// <p>后备索引创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexCreateTime")]
         public string IndexCreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>索引Uuid</p>
+        /// </summary>
+        [JsonProperty("IndexUuid")]
+        public string IndexUuid{ get; set; }
 
 
         /// <summary>
@@ -70,6 +76,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
             this.SetParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
             this.SetParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);
+            this.SetParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
         }
     }
 }

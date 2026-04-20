@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1412";
 
         /// <summary>
         /// Client constructor.
@@ -374,6 +374,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcSubjectResponse CreateAigcSubjectSync(CreateAigcSubjectRequest req)
         {
             return InternalRequestAsync<CreateAigcSubjectResponse>(req, "CreateAigcSubject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoRedrawTaskResponse"/></returns>
+        public Task<CreateAigcVideoRedrawTaskResponse> CreateAigcVideoRedrawTask(CreateAigcVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoRedrawTaskResponse>(req, "CreateAigcVideoRedrawTask");
+        }
+
+        /// <summary>
+        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoRedrawTaskResponse"/></returns>
+        public CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTaskSync(CreateAigcVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoRedrawTaskResponse>(req, "CreateAigcVideoRedrawTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

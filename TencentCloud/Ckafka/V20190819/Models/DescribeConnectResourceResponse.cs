@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 连接源数据信息
+        /// <p>连接源数据信息</p>
         /// </summary>
         [JsonProperty("Result")]
         public DescribeConnectResourceResp Result{ get; set; }

@@ -25,24 +25,34 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题Id。
-        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+        /// <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }
 
         /// <summary>
-        /// 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+        /// <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
         /// <summary>
-        /// kafka协议消费数据格式
+        /// <p>kafka协议消费数据格式</p>
         /// </summary>
         [JsonProperty("ConsumerContent")]
         public KafkaConsumerContent ConsumerContent{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// <p>消费范围类型，0:最新，1:历史+最新</p>
+        /// </summary>
+        [JsonProperty("ScopeType")]
+        public ulong? ScopeType{ get; set; }
 
 
         /// <summary>
@@ -53,6 +63,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "ScopeType", this.ScopeType);
         }
     }
 }

@@ -25,46 +25,52 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Program Id。
+        /// <p>Program Id。</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 修改后的名称。
+        /// <p>修改后的名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+        /// <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 关联的source location。	
+        /// <p>关联的source location。</p>
         /// </summary>
         [JsonProperty("SourceLocationId")]
         public string SourceLocationId{ get; set; }
 
         /// <summary>
-        /// 关联的直播or点播，source名称，location下全局唯一。
+        /// <p>关联的直播or点播，source名称，location下全局唯一。</p>
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
-        /// PlaybackConf。
+        /// <p>PlaybackConf。</p>
         /// </summary>
         [JsonProperty("PlaybackConf")]
         public PlaybackInfoReq PlaybackConf{ get; set; }
 
         /// <summary>
-        /// AdBreaks。
+        /// <p>AdBreaks。</p>
         /// </summary>
         [JsonProperty("AdBreaks")]
         public AdBreakInfo[] AdBreaks{ get; set; }
+
+        /// <summary>
+        /// <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+        /// </summary>
+        [JsonProperty("VodAcquisitionMethod")]
+        public string VodAcquisitionMethod{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamObj(map, prefix + "PlaybackConf.", this.PlaybackConf);
             this.SetParamArrayObj(map, prefix + "AdBreaks.", this.AdBreaks);
+            this.SetParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
         }
     }
 }

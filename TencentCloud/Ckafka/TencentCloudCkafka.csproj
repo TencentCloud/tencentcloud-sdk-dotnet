@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1399</VersionPrefix>
+    <VersionPrefix>3.0.1412</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -169,6 +169,8 @@
     <Compile Include="V20190819\Models\DescModifyType.cs" />
     <Compile Include="V20190819\Models\DescribeACLRequest.cs" />
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeAccessPolicyRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeAccessPolicyResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleRequest.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaVersionRequest.cs" />
@@ -257,6 +259,7 @@
     <Compile Include="V20190819\Models\EsParam.cs" />
     <Compile Include="V20190819\Models\EsRecordMapping.cs" />
     <Compile Include="V20190819\Models\EventBusParam.cs" />
+    <Compile Include="V20190819\Models\ExternalAccessInfoWrapper.cs" />
     <Compile Include="V20190819\Models\FailureParam.cs" />
     <Compile Include="V20190819\Models\FetchDatahubMessageByOffsetRequest.cs" />
     <Compile Include="V20190819\Models\FetchDatahubMessageByOffsetResponse.cs" />
@@ -313,6 +316,8 @@
     <Compile Include="V20190819\Models\MariaDBConnectParam.cs" />
     <Compile Include="V20190819\Models\MariaDBModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\MariaDBParam.cs" />
+    <Compile Include="V20190819\Models\ModifyAccessPolicyRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyAccessPolicyResponse.cs" />
     <Compile Include="V20190819\Models\ModifyAclRuleRequest.cs" />
     <Compile Include="V20190819\Models\ModifyAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\ModifyConnectResourceRequest.cs" />

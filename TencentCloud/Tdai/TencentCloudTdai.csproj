@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{73128B93-D54A-364A-B830-AF3B57F8D1EA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1380</VersionPrefix>
+    <VersionPrefix>3.0.1412</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20250717\Models\AgentInstance.cs" />
     <Compile Include="V20250717\Models\ChatBrief.cs" />
     <Compile Include="V20250717\Models\ChatDetail.cs" />
+    <Compile Include="V20250717\Models\ClawConfigInfo.cs" />
+    <Compile Include="V20250717\Models\ClawDeployInfo.cs" />
     <Compile Include="V20250717\Models\CodeRepo.cs" />
     <Compile Include="V20250717\Models\ContinueAgentWorkRequest.cs" />
     <Compile Include="V20250717\Models\ContinueAgentWorkResponse.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="V20250717\Models\SqlAgentParameter.cs" />
     <Compile Include="V20250717\Models\StartAgentTaskRequest.cs" />
     <Compile Include="V20250717\Models\StartAgentTaskResponse.cs" />
+    <Compile Include="V20250717\Models\StatusItem.cs" />
     <Compile Include="V20250717\Models\TagFilter.cs" />
     <Compile Include="V20250717\Models\TagItem.cs" />
     <Compile Include="V20250717\Models\TerminateAgentInstanceRequest.cs" />

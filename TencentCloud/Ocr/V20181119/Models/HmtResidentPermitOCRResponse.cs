@@ -25,68 +25,67 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 证件姓名
+        /// <p>证件姓名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// <p>性别</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// <p>出生日期</p>
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// <p>身份证号</p>
         /// </summary>
         [JsonProperty("IdCardNo")]
         public string IdCardNo{ get; set; }
 
         /// <summary>
-        /// 0-正面
-        /// 1-反面
+        /// <p>0-正面<br>1-反面</p>
         /// </summary>
         [JsonProperty("CardType")]
         public long? CardType{ get; set; }
 
         /// <summary>
-        /// 证件有效期限
+        /// <p>证件有效期限</p>
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// 签发机关
+        /// <p>签发机关</p>
         /// </summary>
         [JsonProperty("Authority")]
         public string Authority{ get; set; }
 
         /// <summary>
-        /// 签发次数
+        /// <p>签发次数</p>
         /// </summary>
         [JsonProperty("VisaNum")]
         public string VisaNum{ get; set; }
 
         /// <summary>
-        /// 通行证号码
+        /// <p>通行证号码</p>
         /// </summary>
         [JsonProperty("PassNo")]
         public string PassNo{ get; set; }
 
         /// <summary>
-        /// 头像和坐标信息
+        /// <p>头像和坐标信息</p>
         /// </summary>
         [JsonProperty("PortraitImageInfo")]
         public PortraitImageInfo PortraitImageInfo{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// cos 存储桶名称
+        /// <p>cos 存储桶名称</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 地域代码
+        /// <p>地域代码</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 对象名称
+        /// <p>对象名称</p>
         /// </summary>
         [JsonProperty("ObjectKey")]
         public string ObjectKey{ get; set; }
 
         /// <summary>
-        /// 汇聚消息量的大小（单位：MB)
+        /// <p>汇聚消息量的大小（单位：MB)</p>
         /// </summary>
         [JsonProperty("AggregateBatchSize")]
         public ulong? AggregateBatchSize{ get; set; }
 
         /// <summary>
-        /// 汇聚的时间间隔（单位：小时）
+        /// <p>汇聚的时间间隔（单位：小时）</p>
         /// </summary>
         [JsonProperty("AggregateInterval")]
         public ulong? AggregateInterval{ get; set; }
 
         /// <summary>
-        /// 消息汇聚后的文件格式（支持csv, json）
+        /// <p>消息汇聚后的文件格式（支持csv, json）</p>
         /// </summary>
         [JsonProperty("FormatOutputType")]
         public string FormatOutputType{ get; set; }
 
         /// <summary>
-        /// 转储的对象目录前缀
+        /// <p>转储的对象目录前缀</p>
         /// </summary>
         [JsonProperty("ObjectKeyPrefix")]
         public string ObjectKeyPrefix{ get; set; }
 
         /// <summary>
-        /// 根据strptime 时间格式化的分区格式
+        /// <p>根据strptime 时间格式化的分区格式</p>
         /// </summary>
         [JsonProperty("DirectoryTimeFormat")]
         public string DirectoryTimeFormat{ get; set; }

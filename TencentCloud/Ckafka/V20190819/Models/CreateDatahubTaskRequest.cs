@@ -25,68 +25,68 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+        /// <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型，SOURCE数据接入，SINK数据流出
+        /// <p>任务类型，SOURCE数据接入，SINK数据流出</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 数据源
+        /// <p>数据源</p>
         /// </summary>
         [JsonProperty("SourceResource")]
         public DatahubResource SourceResource{ get; set; }
 
         /// <summary>
-        /// 数据目标
+        /// <p>数据目标</p>
         /// </summary>
         [JsonProperty("TargetResource")]
         public DatahubResource TargetResource{ get; set; }
 
         /// <summary>
-        /// 数据处理规则
+        /// <p>数据处理规则</p>
         /// </summary>
         [JsonProperty("TransformParam")]
         public TransformParam TransformParam{ get; set; }
 
         /// <summary>
-        /// 实例连接参数【已废弃】
+        /// <p>实例连接参数【已废弃】</p>
         /// </summary>
         [JsonProperty("PrivateLinkParam")]
         [System.Obsolete]
         public PrivateLinkParam PrivateLinkParam{ get; set; }
 
         /// <summary>
-        /// 选择所要绑定的SchemaId
+        /// <p>选择所要绑定的SchemaId</p>
         /// </summary>
         [JsonProperty("SchemaId")]
         public string SchemaId{ get; set; }
 
         /// <summary>
-        /// 数据处理规则
+        /// <p>数据处理规则</p>
         /// </summary>
         [JsonProperty("TransformsParam")]
         public TransformsParam TransformsParam{ get; set; }
 
         /// <summary>
-        /// 任务Id
+        /// <p>任务Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 任务描述信息
+        /// <p>任务描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

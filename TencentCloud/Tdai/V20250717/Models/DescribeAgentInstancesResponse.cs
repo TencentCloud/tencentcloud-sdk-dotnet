@@ -31,10 +31,16 @@ namespace TencentCloud.Tdai.V20250717.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 智能体实例列表
+        /// <p>智能体实例列表</p>
         /// </summary>
         [JsonProperty("Items")]
         public AgentInstance[] Items{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("StatusCounts")]
+        public StatusItem[] StatusCounts{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Tdai.V20250717.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "StatusCounts.", this.StatusCounts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,88 +25,94 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 连接源名称
+        /// <p>连接源名称</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 连接源类型
+        /// <p>连接源类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 连接源描述
+        /// <p>连接源描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Dts配置，Type为DTS时必填
+        /// <p>Dts配置，Type为DTS时必填</p>
         /// </summary>
         [JsonProperty("DtsConnectParam")]
         public DtsConnectParam DtsConnectParam{ get; set; }
 
         /// <summary>
-        /// MongoDB配置，Type为MONGODB时必填
+        /// <p>MongoDB配置，Type为MONGODB时必填</p>
         /// </summary>
         [JsonProperty("MongoDBConnectParam")]
         public MongoDBConnectParam MongoDBConnectParam{ get; set; }
 
         /// <summary>
-        /// Es配置，Type为ES时必填
+        /// <p>Es配置，Type为ES时必填</p>
         /// </summary>
         [JsonProperty("EsConnectParam")]
         public EsConnectParam EsConnectParam{ get; set; }
 
         /// <summary>
-        /// ClickHouse配置，Type为CLICKHOUSE时必填
+        /// <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
         /// </summary>
         [JsonProperty("ClickHouseConnectParam")]
         public ClickHouseConnectParam ClickHouseConnectParam{ get; set; }
 
         /// <summary>
-        /// MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
+        /// <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
         /// </summary>
         [JsonProperty("MySQLConnectParam")]
         public MySQLConnectParam MySQLConnectParam{ get; set; }
 
         /// <summary>
-        /// PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+        /// <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
         /// </summary>
         [JsonProperty("PostgreSQLConnectParam")]
         public PostgreSQLConnectParam PostgreSQLConnectParam{ get; set; }
 
         /// <summary>
-        /// MariaDB配置，Type为MARIADB时必填
+        /// <p>MariaDB配置，Type为MARIADB时必填</p>
         /// </summary>
         [JsonProperty("MariaDBConnectParam")]
         public MariaDBConnectParam MariaDBConnectParam{ get; set; }
 
         /// <summary>
-        /// SQLServer配置，Type为SQLSERVER时必填
+        /// <p>SQLServer配置，Type为SQLSERVER时必填</p>
         /// </summary>
         [JsonProperty("SQLServerConnectParam")]
         public SQLServerConnectParam SQLServerConnectParam{ get; set; }
 
         /// <summary>
-        /// Doris 配置，Type为 DORIS 时必填
+        /// <p>Doris 配置，Type为 DORIS 时必填</p>
         /// </summary>
         [JsonProperty("DorisConnectParam")]
         public DorisConnectParam DorisConnectParam{ get; set; }
 
         /// <summary>
-        /// Kafka配置，Type为 KAFKA 时必填
+        /// <p>Kafka配置，Type为 KAFKA 时必填</p>
         /// </summary>
         [JsonProperty("KafkaConnectParam")]
         public KafkaConnectParam KafkaConnectParam{ get; set; }
 
         /// <summary>
-        /// MQTT配置，Type为 MQTT 时必填
+        /// <p>MQTT配置，Type为 MQTT 时必填</p>
         /// </summary>
         [JsonProperty("MqttConnectParam")]
         public MqttConnectParam MqttConnectParam{ get; set; }
+
+        /// <summary>
+        /// <p>标签列表</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
             this.SetParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
             this.SetParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -52,6 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
         /// <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
         /// <li>UpstreamRequest：回源请求参数；</li>
+        /// <li>Shield：源站卸载配置；</li>
         /// <li>TLSConfig：SSL/TLS 安全；</li>
         /// <li>ModifyOrigin：修改源站；</li>
         /// <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -251,6 +252,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public UpstreamRequestParameters UpstreamRequestParameters{ get; set; }
 
         /// <summary>
+        /// 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShieldParameters")]
+        public ShieldParameters ShieldParameters{ get; set; }
+
+        /// <summary>
         /// SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -365,6 +373,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ClientIPCountryParameters.", this.ClientIPCountryParameters);
             this.SetParamObj(map, prefix + "UpstreamFollowRedirectParameters.", this.UpstreamFollowRedirectParameters);
             this.SetParamObj(map, prefix + "UpstreamRequestParameters.", this.UpstreamRequestParameters);
+            this.SetParamObj(map, prefix + "ShieldParameters.", this.ShieldParameters);
             this.SetParamObj(map, prefix + "TLSConfigParameters.", this.TLSConfigParameters);
             this.SetParamObj(map, prefix + "ModifyOriginParameters.", this.ModifyOriginParameters);
             this.SetParamObj(map, prefix + "HTTPUpstreamTimeoutParameters.", this.HTTPUpstreamTimeoutParameters);

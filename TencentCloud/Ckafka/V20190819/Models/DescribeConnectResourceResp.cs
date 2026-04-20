@@ -25,143 +25,149 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 连接源的Id
+        /// <p>连接源的Id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 连接源名称
+        /// <p>连接源名称</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 连接源描述
+        /// <p>连接源描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 连接源类型
+        /// <p>连接源类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+        /// <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 连接源的创建时间
+        /// <p>连接源的创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 连接源的异常信息
+        /// <p>连接源的异常信息</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 连接源的当前所处步骤
+        /// <p>连接源的当前所处步骤</p>
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
 
         /// <summary>
-        /// 步骤列表
+        /// <p>步骤列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepList")]
         public string[] StepList{ get; set; }
 
         /// <summary>
-        /// MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+        /// <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MySQLConnectParam")]
         public MySQLConnectParam MySQLConnectParam{ get; set; }
 
         /// <summary>
-        /// PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+        /// <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostgreSQLConnectParam")]
         public PostgreSQLConnectParam PostgreSQLConnectParam{ get; set; }
 
         /// <summary>
-        /// Dts配置，Type为DTS时返回
+        /// <p>Dts配置，Type为DTS时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DtsConnectParam")]
         public DtsConnectParam DtsConnectParam{ get; set; }
 
         /// <summary>
-        /// MongoDB配置，Type为MONGODB时返回
+        /// <p>MongoDB配置，Type为MONGODB时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoDBConnectParam")]
         public MongoDBConnectParam MongoDBConnectParam{ get; set; }
 
         /// <summary>
-        /// Es配置，Type为ES时返回
+        /// <p>Es配置，Type为ES时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsConnectParam")]
         public EsConnectParam EsConnectParam{ get; set; }
 
         /// <summary>
-        /// ClickHouse配置，Type为CLICKHOUSE时返回
+        /// <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClickHouseConnectParam")]
         public ClickHouseConnectParam ClickHouseConnectParam{ get; set; }
 
         /// <summary>
-        /// MariaDB配置，Type为MARIADB时返回
+        /// <p>MariaDB配置，Type为MARIADB时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MariaDBConnectParam")]
         public MariaDBConnectParam MariaDBConnectParam{ get; set; }
 
         /// <summary>
-        /// SQLServer配置，Type为SQLSERVER时返回
+        /// <p>SQLServer配置，Type为SQLSERVER时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SQLServerConnectParam")]
         public SQLServerConnectParam SQLServerConnectParam{ get; set; }
 
         /// <summary>
-        /// Ctsdb配置，Type为CTSDB时返回
+        /// <p>Ctsdb配置，Type为CTSDB时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CtsdbConnectParam")]
         public CtsdbConnectParam CtsdbConnectParam{ get; set; }
 
         /// <summary>
-        /// Doris 配置，Type 为 DORIS 时返回
+        /// <p>Doris 配置，Type 为 DORIS 时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DorisConnectParam")]
         public DorisConnectParam DorisConnectParam{ get; set; }
 
         /// <summary>
-        /// Kafka配置，Type 为 KAFKA 时返回
+        /// <p>Kafka配置，Type 为 KAFKA 时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaConnectParam")]
         public KafkaConnectParam KafkaConnectParam{ get; set; }
 
         /// <summary>
-        /// MQTT配置，Type 为 MQTT 时返回
+        /// <p>MQTT配置，Type 为 MQTT 时返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MqttConnectParam")]
         public MqttConnectParam MqttConnectParam{ get; set; }
+
+        /// <summary>
+        /// <p>标签列表</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -190,6 +196,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
             this.SetParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
             this.SetParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1412";
 
         /// <summary>
         /// Client constructor.
@@ -243,7 +243,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub连接源
+        /// 创建连接器连接
         /// </summary>
         /// <param name="req"><see cref="CreateConnectResourceRequest"/></param>
         /// <returns><see cref="CreateConnectResourceResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub连接源
+        /// 创建连接器连接
         /// </summary>
         /// <param name="req"><see cref="CreateConnectResourceRequest"/></param>
         /// <returns><see cref="CreateConnectResourceResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建DIP转储任务
+        /// 创建连接器任务
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
         /// <returns><see cref="CreateDatahubTaskResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建DIP转储任务
+        /// 创建连接器任务
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
         /// <returns><see cref="CreateDatahubTaskResponse"/></returns>
@@ -558,7 +558,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub连接源
+        /// 删除连接器连接
         /// </summary>
         /// <param name="req"><see cref="DeleteConnectResourceRequest"/></param>
         /// <returns><see cref="DeleteConnectResourceResponse"/></returns>
@@ -568,7 +568,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub连接源
+        /// 删除连接器连接
         /// </summary>
         /// <param name="req"><see cref="DeleteConnectResourceRequest"/></param>
         /// <returns><see cref="DeleteConnectResourceResponse"/></returns>
@@ -579,7 +579,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Dip任务
+        /// 删除连接器任务
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTaskRequest"/></param>
         /// <returns><see cref="DeleteDatahubTaskResponse"/></returns>
@@ -589,7 +589,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Dip任务
+        /// 删除连接器任务
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTaskRequest"/></param>
         /// <returns><see cref="DeleteDatahubTaskResponse"/></returns>
@@ -831,6 +831,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 查询实例公网IP白名单列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAccessPolicyResponse"/></returns>
+        public Task<DescribeAccessPolicyResponse> DescribeAccessPolicy(DescribeAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPolicyResponse>(req, "DescribeAccessPolicy");
+        }
+
+        /// <summary>
+        /// 查询实例公网IP白名单列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAccessPolicyResponse"/></returns>
+        public DescribeAccessPolicyResponse DescribeAccessPolicySync(DescribeAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPolicyResponse>(req, "DescribeAccessPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询ACL规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAclRuleRequest"/></param>
@@ -894,7 +915,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub连接源
+        /// 查询连接器连接详情
         /// </summary>
         /// <param name="req"><see cref="DescribeConnectResourceRequest"/></param>
         /// <returns><see cref="DescribeConnectResourceResponse"/></returns>
@@ -904,7 +925,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub连接源
+        /// 查询连接器连接详情
         /// </summary>
         /// <param name="req"><see cref="DescribeConnectResourceRequest"/></param>
         /// <returns><see cref="DescribeConnectResourceResponse"/></returns>
@@ -915,7 +936,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub连接源列表
+        /// 查询连接器连接列表
         /// </summary>
         /// <param name="req"><see cref="DescribeConnectResourcesRequest"/></param>
         /// <returns><see cref="DescribeConnectResourcesResponse"/></returns>
@@ -925,7 +946,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub连接源列表
+        /// 查询连接器连接列表
         /// </summary>
         /// <param name="req"><see cref="DescribeConnectResourcesRequest"/></param>
         /// <returns><see cref="DescribeConnectResourcesResponse"/></returns>
@@ -999,7 +1020,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务信息
+        /// 查询连接器任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTaskRequest"/></param>
         /// <returns><see cref="DescribeDatahubTaskResponse"/></returns>
@@ -1009,7 +1030,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务信息
+        /// 查询连接器任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTaskRequest"/></param>
         /// <returns><see cref="DescribeDatahubTaskResponse"/></returns>
@@ -1020,7 +1041,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务列表
+        /// 查询连接器任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTasksRequest"/></param>
         /// <returns><see cref="DescribeDatahubTasksResponse"/></returns>
@@ -1030,7 +1051,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务列表
+        /// 查询连接器任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTasksRequest"/></param>
         /// <returns><see cref="DescribeDatahubTasksResponse"/></returns>
@@ -1673,6 +1694,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 修改实例公网IP白名单列表接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAccessPolicyResponse"/></returns>
+        public Task<ModifyAccessPolicyResponse> ModifyAccessPolicy(ModifyAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessPolicyResponse>(req, "ModifyAccessPolicy");
+        }
+
+        /// <summary>
+        /// 修改实例公网IP白名单列表接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAccessPolicyResponse"/></returns>
+        public ModifyAccessPolicyResponse ModifyAccessPolicySync(ModifyAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessPolicyResponse>(req, "ModifyAccessPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
@@ -1694,7 +1736,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 编辑Datahub连接源
+        /// 编辑连接器连接
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectResourceRequest"/></param>
         /// <returns><see cref="ModifyConnectResourceResponse"/></returns>
@@ -1704,7 +1746,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 编辑Datahub连接源
+        /// 编辑连接器连接
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectResourceRequest"/></param>
         /// <returns><see cref="ModifyConnectResourceResponse"/></returns>
@@ -1715,7 +1757,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改Datahub任务
+        /// 修改连接器任务
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTaskRequest"/></param>
         /// <returns><see cref="ModifyDatahubTaskResponse"/></returns>
@@ -1725,7 +1767,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改Datahub任务
+        /// 修改连接器任务
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTaskRequest"/></param>
         /// <returns><see cref="ModifyDatahubTaskResponse"/></returns>
@@ -1883,7 +1925,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 暂停Dip任务
+        /// 暂停连接器任务
         /// </summary>
         /// <param name="req"><see cref="PauseDatahubTaskRequest"/></param>
         /// <returns><see cref="PauseDatahubTaskResponse"/></returns>
@@ -1893,7 +1935,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 暂停Dip任务
+        /// 暂停连接器任务
         /// </summary>
         /// <param name="req"><see cref="PauseDatahubTaskRequest"/></param>
         /// <returns><see cref="PauseDatahubTaskResponse"/></returns>
@@ -1925,7 +1967,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// Datahub任务异常时，重启Datahub任务
+        /// 连接器任务异常时，重启连接器任务
         /// </summary>
         /// <param name="req"><see cref="RestartDatahubTaskRequest"/></param>
         /// <returns><see cref="RestartDatahubTaskResponse"/></returns>
@@ -1935,7 +1977,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// Datahub任务异常时，重启Datahub任务
+        /// 连接器任务异常时，重启连接器任务
         /// </summary>
         /// <param name="req"><see cref="RestartDatahubTaskRequest"/></param>
         /// <returns><see cref="RestartDatahubTaskResponse"/></returns>
@@ -1946,7 +1988,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 恢复Dip任务
+        /// 恢复连接器任务
         /// </summary>
         /// <param name="req"><see cref="ResumeDatahubTaskRequest"/></param>
         /// <returns><see cref="ResumeDatahubTaskResponse"/></returns>
@@ -1956,7 +1998,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 恢复Dip任务
+        /// 恢复连接器任务
         /// </summary>
         /// <param name="req"><see cref="ResumeDatahubTaskRequest"/></param>
         /// <returns><see cref="ResumeDatahubTaskResponse"/></returns>

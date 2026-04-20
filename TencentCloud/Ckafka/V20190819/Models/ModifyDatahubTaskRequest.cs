@@ -25,22 +25,40 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务描述信息
+        /// <p>任务描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>任务并发上限</p>
+        /// </summary>
+        [JsonProperty("TasksMax")]
+        public long? TasksMax{ get; set; }
+
+        /// <summary>
+        /// <p>数据同步限流值上限</p>单位：MB/s
+        /// </summary>
+        [JsonProperty("SyncThrottleLimit")]
+        public long? SyncThrottleLimit{ get; set; }
+
+        /// <summary>
+        /// <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+        /// </summary>
+        [JsonProperty("AutoExpandFlag")]
+        public bool? AutoExpandFlag{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "TasksMax", this.TasksMax);
+            this.SetParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+            this.SetParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
         }
     }
 }

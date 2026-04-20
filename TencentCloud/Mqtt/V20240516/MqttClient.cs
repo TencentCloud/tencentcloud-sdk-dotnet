@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1412";
 
         /// <summary>
         /// Client constructor.
@@ -1005,6 +1005,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeProductSKUListResponse DescribeProductSKUListSync(DescribeProductSKUListRequest req)
         {
             return InternalRequestAsync<DescribeProductSKUListResponse>(req, "DescribeProductSKUList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群下共享订阅组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsResponse"/></returns>
+        public Task<DescribeSharedSubscriptionGroupsResponse> DescribeSharedSubscriptionGroups(DescribeSharedSubscriptionGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsResponse>(req, "DescribeSharedSubscriptionGroups");
+        }
+
+        /// <summary>
+        /// 查询集群下共享订阅组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsResponse"/></returns>
+        public DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroupsSync(DescribeSharedSubscriptionGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsResponse>(req, "DescribeSharedSubscriptionGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

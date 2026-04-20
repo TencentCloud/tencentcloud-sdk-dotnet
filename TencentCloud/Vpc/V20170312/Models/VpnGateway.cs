@@ -25,130 +25,136 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 网关实例ID。
+        /// <p>网关实例ID。</p>
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// VPC实例ID。
+        /// <p>VPC实例ID。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 网关实例名称。
+        /// <p>网关实例名称。</p>
         /// </summary>
         [JsonProperty("VpnGatewayName")]
         public string VpnGatewayName{ get; set; }
 
         /// <summary>
-        /// 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
+        /// <p>网关实例类型</p><p>枚举值：</p><ul><li>IPSEC： IPSEC VPC类型VPN</li><li>SSL： SSL VPC类型VPN</li><li>CCN： IPSEC CCN类型VPN</li><li>SSL_CCN： SSL CCN类型VPN</li></ul><p>默认值：IPSEC</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
+        /// <p>网关实例状态。</p><p>枚举值：</p><ul><li>PENDING： 生产中</li><li>PENDING_ERROR： 生产失败</li><li>DELETING： 删除中</li><li>DELETING_ERROR： 生产失败</li><li>AVAILABLE： 运行中</li></ul>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 网关公网IP。
+        /// <p>网关公网IP。</p>
         /// </summary>
         [JsonProperty("PublicIpAddress")]
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
-        /// 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+        /// <p>网关续费类型：&#39;NOTIFY_AND_MANUAL_RENEW&#39;：手动续费，&#39;NOTIFY_AND_AUTO_RENEW&#39;：自动续费，&#39;NOT_NOTIFY_AND_NOT_RENEW&#39;：到期不续费。</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
+        /// <p>网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 网关出带宽，单位：Mbps。
+        /// <p>网关出带宽</p><p>单位：Mbps</p>
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 预付费网关过期时间。
+        /// <p>预付费网关过期时间。</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 公网IP是否被封堵。
+        /// <p>公网IP是否被封堵。</p>
         /// </summary>
         [JsonProperty("IsAddressBlocked")]
         public bool? IsAddressBlocked{ get; set; }
 
         /// <summary>
-        /// 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+        /// <p>计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。</p>
         /// </summary>
         [JsonProperty("NewPurchasePlan")]
         public string NewPurchasePlan{ get; set; }
 
         /// <summary>
-        /// 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+        /// <p>网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。</p>
         /// </summary>
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
         /// <summary>
-        /// 可用区，如：ap-guangzhou-2。
+        /// <p>可用区，如：ap-guangzhou-2。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 网关带宽配额信息。
+        /// <p>网关带宽配额信息。</p>
         /// </summary>
         [JsonProperty("VpnGatewayQuotaSet")]
         public VpnGatewayQuota[] VpnGatewayQuotaSet{ get; set; }
 
         /// <summary>
-        /// 网关实例版本信息。
+        /// <p>网关实例版本信息。</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Type值为CCN时，该值表示云联网实例ID。
+        /// <p>Type值为CCN/SSL_CCN时，该值表示云联网实例ID。</p>
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
 
         /// <summary>
-        /// CDC 实例ID。
+        /// <p>CDC 实例ID。</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN 客户端连接数。
+        /// <p>SSL-VPN 客户端连接数。</p>
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
         /// <summary>
-        /// Bgp ASN
+        /// <p>Bgp ASN</p>
         /// </summary>
         [JsonProperty("BgpAsn")]
         public ulong? BgpAsn{ get; set; }
+
+        /// <summary>
+        /// <p>标签列表</p>
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
 
 
         /// <summary>
@@ -177,6 +183,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
             this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

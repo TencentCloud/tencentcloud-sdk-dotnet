@@ -25,76 +25,118 @@ namespace TencentCloud.Tdai.V20250717.Models
     {
         
         /// <summary>
-        /// 智能体实例ID
+        /// <p>智能体实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 智能体实例名称
+        /// <p>智能体实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 智能体ID
+        /// <p>智能体ID</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 智能体名称
+        /// <p>智能体名称</p>
         /// </summary>
         [JsonProperty("AgentName")]
         public string AgentName{ get; set; }
 
         /// <summary>
-        /// 智能体类型
+        /// <p>智能体类型</p>
         /// </summary>
         [JsonProperty("AgentInternalName")]
         public string AgentInternalName{ get; set; }
 
         /// <summary>
-        /// 智能体服务模式
+        /// <p>智能体服务模式</p>
         /// </summary>
         [JsonProperty("AgentType")]
         public string AgentType{ get; set; }
 
         /// <summary>
-        /// 智能体版本
+        /// <p>智能体版本</p>
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// 智能体实例状态
+        /// <p>智能体实例状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 智能体实例参数列表
+        /// <p>智能体实例参数列表</p>
         /// </summary>
         [JsonProperty("Parameters")]
         public Parameter[] Parameters{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 资源绑定Tag列表
+        /// <p>资源绑定Tag列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>部署位置,intranet-共享版，userVpc-专享版</p>
+        /// </summary>
+        [JsonProperty("DeployPlace")]
+        public string DeployPlace{ get; set; }
+
+        /// <summary>
+        /// <p>关联的告警策略ID。</p>
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("ClawConfig")]
+        public ClawConfigInfo ClawConfig{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("AllowedActions")]
+        public string[] AllowedActions{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("LastActiveTime")]
+        public string LastActiveTime{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -114,6 +156,13 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DeployPlace", this.DeployPlace);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamObj(map, prefix + "ClawConfig.", this.ClawConfig);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "AllowedActions.", this.AllowedActions);
+            this.SetParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

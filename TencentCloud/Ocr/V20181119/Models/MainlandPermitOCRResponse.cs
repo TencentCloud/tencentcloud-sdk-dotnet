@@ -25,79 +25,79 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 中文姓名
+        /// <p>中文姓名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// <p>英文姓名</p>
         /// </summary>
         [JsonProperty("EnglishName")]
         public string EnglishName{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// <p>性别</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// <p>出生日期</p>
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 签发机关
+        /// <p>签发机关</p>
         /// </summary>
         [JsonProperty("IssueAuthority")]
         public string IssueAuthority{ get; set; }
 
         /// <summary>
-        /// 有效期限
+        /// <p>有效期限</p>
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// 证件号
+        /// <p>证件号</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 签发地点
+        /// <p>签发地点</p>
         /// </summary>
         [JsonProperty("IssueAddress")]
         public string IssueAddress{ get; set; }
 
         /// <summary>
-        /// 签发次数
+        /// <p>签发次数</p>
         /// </summary>
         [JsonProperty("IssueNumber")]
         public string IssueNumber{ get; set; }
 
         /// <summary>
-        /// 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+        /// <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// RetProfile为True时返回头像字段， Base64编码
+        /// <p>RetProfile为True时返回头像字段， Base64编码</p>
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// 国籍
+        /// <p>国籍</p>
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 背面字段信息
+        /// <p>背面字段信息</p>
         /// </summary>
         [JsonProperty("MainlandTravelPermitBackInfos")]
         public MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos{ get; set; }

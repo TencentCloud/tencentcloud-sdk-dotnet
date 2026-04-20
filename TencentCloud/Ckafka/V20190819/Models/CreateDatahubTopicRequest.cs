@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Partition个数，大于0
+        /// <p>Partition个数，最大值为500，大于0</p>
         /// </summary>
         [JsonProperty("PartitionNum")]
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// 消息保留时间，单位ms，当前最小值为60000ms
+        /// <p>消息保留时间，单位ms，当前最小值为60000ms</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

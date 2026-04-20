@@ -25,108 +25,126 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型，SOURCE数据接入，SINK数据流出
+        /// <p>任务类型，SOURCE数据接入，SINK数据流出</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+        /// <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 数据源
+        /// <p>数据源</p>
         /// </summary>
         [JsonProperty("SourceResource")]
         public DatahubResource SourceResource{ get; set; }
 
         /// <summary>
-        /// 数据目标
+        /// <p>数据目标</p>
         /// </summary>
         [JsonProperty("TargetResource")]
         public DatahubResource TargetResource{ get; set; }
 
         /// <summary>
-        /// Connection列表
+        /// <p>Connection列表</p>
         /// </summary>
         [JsonProperty("Connections")]
         public Connection[] Connections{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 消息处理规则
+        /// <p>消息处理规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransformParam")]
         public TransformParam TransformParam{ get; set; }
 
         /// <summary>
-        /// 数据接入ID
+        /// <p>数据接入ID</p>
         /// </summary>
         [JsonProperty("DatahubId")]
         public string DatahubId{ get; set; }
 
         /// <summary>
-        /// 绑定的SchemaId
+        /// <p>绑定的SchemaId</p>
         /// </summary>
         [JsonProperty("SchemaId")]
         public string SchemaId{ get; set; }
 
         /// <summary>
-        /// 绑定的Schema名称
+        /// <p>绑定的Schema名称</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 数据处理规则
+        /// <p>数据处理规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransformsParam")]
         public TransformsParam TransformsParam{ get; set; }
 
         /// <summary>
-        /// 异常信息
+        /// <p>异常信息</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 任务标签列表
+        /// <p>任务标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 任务描述信息	
+        /// <p>任务描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 1:正常 2:隔离中
+        /// <p>1:正常 2:隔离中</p>
         /// </summary>
         [JsonProperty("IsolateStatus")]
         public long? IsolateStatus{ get; set; }
+
+        /// <summary>
+        /// <p>并发数</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("TaskMax")]
+        public long? TaskMax{ get; set; }
+
+        /// <summary>
+        /// <p>并发流量预估参考上限，MB/s</p>
+        /// </summary>
+        [JsonProperty("SyncThrottleLimit")]
+        public long? SyncThrottleLimit{ get; set; }
+
+        /// <summary>
+        /// <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+        /// </summary>
+        [JsonProperty("AutoExpandFlag")]
+        public bool? AutoExpandFlag{ get; set; }
 
 
         /// <summary>
@@ -151,6 +169,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsolateStatus", this.IsolateStatus);
+            this.SetParamSimple(map, prefix + "TaskMax", this.TaskMax);
+            this.SetParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+            this.SetParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
         }
     }
 }

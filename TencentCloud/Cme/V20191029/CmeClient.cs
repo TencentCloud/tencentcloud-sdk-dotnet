@@ -28,7 +28,7 @@ namespace TencentCloud.Cme.V20191029
 
        private const string endpoint = "cme.tencentcloudapi.com";
        private const string version = "2019-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1411";
+       private const string sdkVersion = "SDK_NET_3.0.1412";
 
         /// <summary>
         /// Client constructor.
@@ -209,6 +209,27 @@ namespace TencentCloud.Cme.V20191029
         public CreateVideoEncodingPresetResponse CreateVideoEncodingPresetSync(CreateVideoEncodingPresetRequest req)
         {
             return InternalRequestAsync<CreateVideoEncodingPresetResponse>(req, "CreateVideoEncodingPreset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除平台归属的账户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount");
+        }
+
+        /// <summary>
+        /// 删除平台归属的账户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -773,6 +794,27 @@ namespace TencentCloud.Cme.V20191029
         public FlattenListMediaResponse FlattenListMediaSync(FlattenListMediaRequest req)
         {
             return InternalRequestAsync<FlattenListMediaResponse>(req, "FlattenListMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 禁用账号。
+        /// </summary>
+        /// <param name="req"><see cref="ForbidAccountRequest"/></param>
+        /// <returns><see cref="ForbidAccountResponse"/></returns>
+        public Task<ForbidAccountResponse> ForbidAccount(ForbidAccountRequest req)
+        {
+            return InternalRequestAsync<ForbidAccountResponse>(req, "ForbidAccount");
+        }
+
+        /// <summary>
+        /// 禁用账号。
+        /// </summary>
+        /// <param name="req"><see cref="ForbidAccountRequest"/></param>
+        /// <returns><see cref="ForbidAccountResponse"/></returns>
+        public ForbidAccountResponse ForbidAccountSync(ForbidAccountRequest req)
+        {
+            return InternalRequestAsync<ForbidAccountResponse>(req, "ForbidAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,28 +25,40 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka协议消费是否打开
+        /// <p>Kafka协议消费是否打开</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// KafkaConsumer 消费时使用的Topic参数
+        /// <p>KafkaConsumer 消费时使用的Topic参数</p>
         /// </summary>
         [JsonProperty("TopicID")]
         public string TopicID{ get; set; }
 
         /// <summary>
-        /// 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+        /// <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
         /// <summary>
-        /// kafka协议消费数据格式
+        /// <p>kafka协议消费数据格式</p>
         /// </summary>
         [JsonProperty("ConsumerContent")]
         public KafkaConsumerContent ConsumerContent{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// <p>消费范围类型，0:最新，1:历史+最新</p>
+        /// </summary>
+        [JsonProperty("ScopeType")]
+        public ulong? ScopeType{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +76,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicID", this.TopicID);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "ScopeType", this.ScopeType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

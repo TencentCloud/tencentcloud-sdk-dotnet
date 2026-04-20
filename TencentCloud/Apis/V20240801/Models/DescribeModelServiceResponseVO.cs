@@ -25,185 +25,199 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 腾讯云AppID
+        /// <p>腾讯云AppID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 腾讯云Uin
+        /// <p>腾讯云Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 访问路径
+        /// <p>访问路径</p>
         /// </summary>
         [JsonProperty("PubPath")]
         public string PubPath{ get; set; }
 
         /// <summary>
-        /// 路径匹配方式：absolute，prefix，regex
+        /// <p>路径匹配方式：absolute，prefix，regex</p>
         /// </summary>
         [JsonProperty("PathMatchType")]
         public string PathMatchType{ get; set; }
 
         /// <summary>
-        /// 目标模型列表
+        /// <p>目标模型列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetModels")]
         public TargetModelDTO[] TargetModels{ get; set; }
 
         /// <summary>
-        /// 模板模型的名称列表
+        /// <p>模板模型的名称列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelNames")]
         public string[] ModelNames{ get; set; }
 
         /// <summary>
-        /// 是否开启限流
+        /// <p>是否开启限流</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
-        /// 限流配置
+        /// <p>限流配置</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改时间
+        /// <p>最后修改时间</p>
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
 
         /// <summary>
-        /// 是否开启token控制
+        /// <p>是否开启token控制</p>
         /// </summary>
         [JsonProperty("TokenLimitStatus")]
         public bool? TokenLimitStatus{ get; set; }
 
         /// <summary>
-        /// token控制
+        /// <p>token控制</p>
         /// </summary>
         [JsonProperty("TokenLimitConfig")]
         public TokenLimitConfigDTO TokenLimitConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启tms配置
+        /// <p>是否开启tms配置</p>
         /// </summary>
         [JsonProperty("TmsStatus")]
         public bool? TmsStatus{ get; set; }
 
         /// <summary>
-        /// tms配置
+        /// <p>tms配置</p>
         /// </summary>
         [JsonProperty("TmsConfig")]
         public TmsConfigDTO TmsConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启IP白名单
+        /// <p>是否开启IP白名单</p>
         /// </summary>
         [JsonProperty("IpWhiteStatus")]
         public bool? IpWhiteStatus{ get; set; }
 
         /// <summary>
-        /// IP白名单列表
+        /// <p>IP白名单列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// 是否开启IP黑名单
+        /// <p>是否开启IP黑名单</p>
         /// </summary>
         [JsonProperty("IpBlackStatus")]
         public bool? IpBlackStatus{ get; set; }
 
         /// <summary>
-        /// IP黑名单列表
+        /// <p>IP黑名单列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpBlackList")]
         public string[] IpBlackList{ get; set; }
 
         /// <summary>
-        /// 插件配置
+        /// <p>插件配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PluginConfigs")]
         public PluginConfigDTO[] PluginConfigs{ get; set; }
 
         /// <summary>
-        /// 超时配置，单位秒
+        /// <p>超时配置，单位秒</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// 状态：normal，disabled
+        /// <p>状态：normal，disabled</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 关联应用数
+        /// <p>关联应用数</p>
         /// </summary>
         [JsonProperty("RelateAgentAppNum")]
         public long? RelateAgentAppNum{ get; set; }
 
         /// <summary>
-        /// 请求路径
+        /// <p>请求路径</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 是否开启提示词安全检测
+        /// <p>是否开启提示词安全检测</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PromptModerateStatus")]
         public bool? PromptModerateStatus{ get; set; }
 
         /// <summary>
-        /// 提示词安全检测配置
+        /// <p>提示词安全检测配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PromptModerateConfig")]
         public PromptModerateConfigDTO PromptModerateConfig{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启敏感数据检测</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SensitiveDataCheckStatus")]
+        public bool? SensitiveDataCheckStatus{ get; set; }
+
+        /// <summary>
+        /// <p>敏感数据检测配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SensitiveDataCheckConfig")]
+        public SensitiveDataCheckConfigDTO SensitiveDataCheckConfig{ get; set; }
 
 
         /// <summary>
@@ -240,6 +254,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
             this.SetParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
+            this.SetParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
+            this.SetParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
         }
     }
 }

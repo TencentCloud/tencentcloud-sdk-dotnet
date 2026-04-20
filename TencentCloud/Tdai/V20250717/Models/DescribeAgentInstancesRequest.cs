@@ -37,46 +37,52 @@ namespace TencentCloud.Tdai.V20250717.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
+        /// <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
+        /// <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
+        /// <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
+        /// <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
         /// </summary>
         [JsonProperty("AgentName")]
         public string AgentName{ get; set; }
 
         /// <summary>
-        /// 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
+        /// <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
         /// </summary>
         [JsonProperty("AgentInternalName")]
         public string AgentInternalName{ get; set; }
 
         /// <summary>
-        /// 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
+        /// <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 标签过滤信息
+        /// <p>标签过滤信息</p>
         /// </summary>
         [JsonProperty("TagFilter")]
         public TagFilter[] TagFilter{ get; set; }
+
+        /// <summary>
+        /// <p>实例类型</p>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "AgentInternalName", this.AgentInternalName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "TagFilter.", this.TagFilter);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

@@ -25,53 +25,71 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireMaxAge")]
         public string ExpireMaxAge{ get; set; }
 
         /// <summary>
-        /// 过期大小
+        /// <p>过期大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireMaxSize")]
         public string ExpireMaxSize{ get; set; }
 
         /// <summary>
-        /// 滚动周期
+        /// <p>滚动周期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RolloverMaxAge")]
         public string RolloverMaxAge{ get; set; }
 
         /// <summary>
-        /// 是否开启动态滚动
+        /// <p>是否开启动态滚动</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RolloverDynamic")]
         public string RolloverDynamic{ get; set; }
 
         /// <summary>
-        /// 是否开启动态分片
+        /// <p>是否开启动态分片</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShardNumDynamic")]
         public string ShardNumDynamic{ get; set; }
 
         /// <summary>
-        /// 时间分区字段
+        /// <p>时间分区字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimestampField")]
         public string TimestampField{ get; set; }
 
         /// <summary>
-        /// 写入模式
+        /// <p>写入模式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteMode")]
         public string WriteMode{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul>
+        /// </summary>
+        [JsonProperty("FullOffloadedEnable")]
+        public string FullOffloadedEnable{ get; set; }
+
+        /// <summary>
+        /// <p>完全卸载生命周期</p>
+        /// </summary>
+        [JsonProperty("FullOffloadedMaxAge")]
+        public string FullOffloadedMaxAge{ get; set; }
+
+        /// <summary>
+        /// <p>完全卸载后备索引取回后生命周期</p>
+        /// </summary>
+        [JsonProperty("FullOffloadedRetrieveMaxAge")]
+        public string FullOffloadedRetrieveMaxAge{ get; set; }
 
 
         /// <summary>
@@ -86,6 +104,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ShardNumDynamic", this.ShardNumDynamic);
             this.SetParamSimple(map, prefix + "TimestampField", this.TimestampField);
             this.SetParamSimple(map, prefix + "WriteMode", this.WriteMode);
+            this.SetParamSimple(map, prefix + "FullOffloadedEnable", this.FullOffloadedEnable);
+            this.SetParamSimple(map, prefix + "FullOffloadedMaxAge", this.FullOffloadedMaxAge);
+            this.SetParamSimple(map, prefix + "FullOffloadedRetrieveMaxAge", this.FullOffloadedRetrieveMaxAge);
         }
     }
 }

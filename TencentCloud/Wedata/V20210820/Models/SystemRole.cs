@@ -25,66 +25,80 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 角色id
+        /// <p>角色id</p>
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }
 
         /// <summary>
-        /// 角色名称
+        /// <p>角色名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 角色昵称
+        /// <p>角色昵称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameCn")]
         public string NameCn{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 角色权限
+        /// <p>角色权限</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Privileges")]
         public RolePrivilege[] Privileges{ get; set; }
 
         /// <summary>
-        /// 方法路径
+        /// <p>方法路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MethodPaths")]
         public string[] MethodPaths{ get; set; }
 
         /// <summary>
-        /// 角色类型, 分为System,Tenant,Project,Commercial
+        /// <p>角色类型, 分为System,Tenant,Project,Commercial</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleType")]
         public string RoleType{ get; set; }
 
         /// <summary>
-        /// 是否系统默认
+        /// <p>是否系统默认</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemInit")]
         public bool? SystemInit{ get; set; }
 
         /// <summary>
-        /// 自定义参数
+        /// <p>自定义参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Params")]
         public string Params{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTimeStr")]
+        public string CreateTimeStr{ get; set; }
+
+        /// <summary>
+        /// <p>创建人</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
 
 
         /// <summary>
@@ -101,6 +115,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
             this.SetParamSimple(map, prefix + "SystemInit", this.SystemInit);
             this.SetParamSimple(map, prefix + "Params", this.Params);
+            this.SetParamSimple(map, prefix + "CreateTimeStr", this.CreateTimeStr);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
         }
     }
 }

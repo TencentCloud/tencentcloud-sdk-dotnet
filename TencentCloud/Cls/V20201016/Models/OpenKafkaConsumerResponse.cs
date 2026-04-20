@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// KafkaConsumer 消费时使用的Topic参数
+        /// <p>KafkaConsumer 消费时使用的Topic参数</p>
         /// </summary>
         [JsonProperty("TopicID")]
         public string TopicID{ get; set; }
