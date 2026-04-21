@@ -43,6 +43,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string NegativePrompt{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExternalTaskId")]
+        public string ExternalTaskId{ get; set; }
+
+        /// <summary>
         /// <p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
         /// </summary>
         [JsonProperty("CfgScale")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+            this.SetParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
             this.SetParamSimple(map, prefix + "CfgScale", this.CfgScale);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);

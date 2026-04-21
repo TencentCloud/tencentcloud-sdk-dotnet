@@ -25,10 +25,22 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// tcr仓库地址
+        /// <p>tcr仓库地址</p>
         /// </summary>
         [JsonProperty("ImageRegistryUrl")]
         public string ImageRegistryUrl{ get; set; }
+
+        /// <summary>
+        /// <p>仓库用户名</p>
+        /// </summary>
+        [JsonProperty("ImageRegistryUsername")]
+        public string ImageRegistryUsername{ get; set; }
+
+        /// <summary>
+        /// <p>仓库密码</p>
+        /// </summary>
+        [JsonProperty("ImageRegistryPassword")]
+        public string ImageRegistryPassword{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Hai.V20230812.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ImageRegistryUrl", this.ImageRegistryUrl);
+            this.SetParamSimple(map, prefix + "ImageRegistryUsername", this.ImageRegistryUsername);
+            this.SetParamSimple(map, prefix + "ImageRegistryPassword", this.ImageRegistryPassword);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 所修改分账单元ID
+        /// <p>所修改分账单元ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 修改后分账单元名称
+        /// <p>修改后分账单元名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 修改后分账单元源组织名称
+        /// <p>修改后分账单元源组织名称</p>
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
-        /// 修改后分账单元源组织ID
+        /// <p>修改后分账单元源组织ID</p>
         /// </summary>
         [JsonProperty("SourceId")]
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 分账单元备注说明
+        /// <p>分账单元备注说明</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 月份，不传默认当前月
+        /// <p>月份，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

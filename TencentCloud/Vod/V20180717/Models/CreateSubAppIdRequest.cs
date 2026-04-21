@@ -25,40 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 应用名称，长度限制：40个字符。
+        /// <p>应用名称，长度限制：40个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+        /// <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+        /// <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 此应用的模式，可选值为：
-        /// - fileid：仅FileID模式
-        /// - fileid+path：FileID & Path模式
-        /// 留空时默认选择仅FileID模式
+        /// <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 存储地域
+        /// <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 此应用需要绑定的tag
+        /// <p>此应用需要绑定的tag</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }

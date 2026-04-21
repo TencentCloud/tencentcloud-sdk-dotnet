@@ -30,6 +30,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+        /// </summary>
+        [JsonProperty("EnableTrace")]
+        public bool? EnableTrace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "EnableTrace", this.EnableTrace);
         }
     }
 }

@@ -25,131 +25,121 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数量，最大值为1000
+        /// <p>数量，最大值为1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+        /// <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 账单月份，格式为2024-02，不传默认当前月
+        /// <p>账单月份，格式为2024-02，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 分账单元唯一标识，用作筛选
+        /// <p>分账单元唯一标识，用作筛选</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKeys")]
         public string[] TreeNodeUniqKeys{ get; set; }
 
         /// <summary>
-        /// 排序字段，枚举值如下：
-        /// RiTimeSpan - 预留实例抵扣时长
-        /// ExtendPayAmount1 - 预留实例抵扣组件原价
-        /// RealCost - 折后总价
-        /// CashPayAmount - 现金金额
-        /// VoucherPayAmount - 代金券金额
-        /// IncentivePayAmount - 赠送金金额
-        /// TransferPayAmount -分成金金额
-        /// Cost - 组件原价
+        /// <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 排序类型，枚举值如下：
-        /// asc - 升序
-        /// desc - 降序
+        /// <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 产品编码，用作筛选
+        /// <p>产品编码，用作筛选</p>
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string[] BusinessCodes{ get; set; }
 
         /// <summary>
-        /// 使用者UIN，用作筛选
+        /// <p>使用者UIN，用作筛选</p>
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string[] OwnerUins{ get; set; }
 
         /// <summary>
-        /// 操作者UIN，用作筛选
+        /// <p>操作者UIN，用作筛选</p>
         /// </summary>
         [JsonProperty("OperateUins")]
         public string[] OperateUins{ get; set; }
 
         /// <summary>
-        /// 计费模式编码，用作筛选
+        /// <p>计费模式编码，用作筛选</p>
         /// </summary>
         [JsonProperty("PayModes")]
         public string[] PayModes{ get; set; }
 
         /// <summary>
-        /// 交易类型编码，用作筛选
+        /// <p>交易类型编码，用作筛选</p>
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string[] ActionTypes{ get; set; }
 
         /// <summary>
-        /// 子产品编码，用作筛选
+        /// <p>子产品编码，用作筛选</p>
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string[] ProductCodes{ get; set; }
 
         /// <summary>
-        /// 地域ID，用作筛选
+        /// <p>地域ID，用作筛选</p>
         /// </summary>
         [JsonProperty("RegionIds")]
         public string[] RegionIds{ get; set; }
 
         /// <summary>
-        /// 可用区ID，用作筛选
+        /// <p>可用区ID，用作筛选</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 实例类型编码，用作筛选
+        /// <p>实例类型编码，用作筛选</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 标签，用作筛选
+        /// <p>标签，用作筛选</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
-        /// 组件类型编码，用作筛选
+        /// <p>组件类型编码，用作筛选</p>
         /// </summary>
         [JsonProperty("ComponentCodes")]
         public string[] ComponentCodes{ get; set; }
 
         /// <summary>
-        /// 组件名称编码，用作筛选
+        /// <p>组件名称编码，用作筛选</p>
         /// </summary>
         [JsonProperty("ItemCodes")]
         public string[] ItemCodes{ get; set; }
 
         /// <summary>
-        /// 模糊搜索：支持标签、资源id、资源别名
+        /// <p>模糊搜索：支持标签、资源id、资源别名</p>
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 项目ID，用作筛选
+        /// <p>项目ID，用作筛选</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }

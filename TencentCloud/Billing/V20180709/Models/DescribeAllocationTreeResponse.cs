@@ -25,25 +25,25 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 分账单元ID
+        /// <p>分账单元ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 分账单元名称
+        /// <p>分账单元名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分账单元唯一标识
+        /// <p>分账单元唯一标识</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKey")]
         public string TreeNodeUniqKey{ get; set; }
 
         /// <summary>
-        /// 子树
+        /// <p>子树</p>
         /// </summary>
         [JsonProperty("Children")]
         public AllocationTree[] Children{ get; set; }

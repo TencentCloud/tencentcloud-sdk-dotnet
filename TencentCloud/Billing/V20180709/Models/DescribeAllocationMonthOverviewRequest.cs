@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单月份，格式为2024-02，不传默认当前月
+        /// <p>账单月份，格式为2024-02，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

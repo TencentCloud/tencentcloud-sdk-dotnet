@@ -25,39 +25,39 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+        /// <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+        /// <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 实例可用区信息，格式如 "ap-shanghai-2"。
+        /// <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 备库的配置信息。
+        /// <p>备库的配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveConfig")]
         public SlaveConfig SlaveConfig{ get; set; }
 
         /// <summary>
-        /// 强同步实例第二备库的配置信息。
+        /// <p>强同步实例第二备库的配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupConfig")]
         public BackupConfig BackupConfig{ get; set; }
 
         /// <summary>
-        /// 是否切换备库。
+        /// <p>是否切换备库。</p>
         /// </summary>
         [JsonProperty("Switched")]
         public bool? Switched{ get; set; }

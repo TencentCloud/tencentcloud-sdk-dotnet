@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 计费子订单 ID。
+        /// <p>计费子订单 ID。</p>
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
 
         /// <summary>
-        /// 实例 ID 列表。
+        /// <p>实例 ID 列表。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

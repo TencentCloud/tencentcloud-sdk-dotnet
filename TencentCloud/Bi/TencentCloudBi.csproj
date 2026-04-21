@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1383</VersionPrefix>
+    <VersionPrefix>3.0.1413</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,10 @@
     <Compile Include="V20220105\Models\CreatePermissionRanksResponse.cs" />
     <Compile Include="V20220105\Models\CreateProjectRequest.cs" />
     <Compile Include="V20220105\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20220105\Models\CreateUserGroupMemberRequest.cs" />
+    <Compile Include="V20220105\Models\CreateUserGroupMemberResponse.cs" />
+    <Compile Include="V20220105\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20220105\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleRequest.cs" />
@@ -77,6 +81,10 @@
     <Compile Include="V20220105\Models\DeleteDatasourceResponse.cs" />
     <Compile Include="V20220105\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20220105\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20220105\Models\DeleteUserGroupMemberRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteUserGroupMemberResponse.cs" />
+    <Compile Include="V20220105\Models\DeleteUserGroupRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteUserGroupResponse.cs" />
     <Compile Include="V20220105\Models\DeleteUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\DeleteUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\DeleteUserRoleRequest.cs" />
@@ -95,6 +103,14 @@
     <Compile Include="V20220105\Models\DescribeProjectInfoResponse.cs" />
     <Compile Include="V20220105\Models\DescribeProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeProjectListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeResourceUserGroupPageListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeResourceUserGroupPageListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupInfoRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupInfoResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupMemberListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupMemberListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupTreeListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeUserGroupTreeListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeUserProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeUserProjectListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeUserRoleListRequest.cs" />
@@ -112,6 +128,14 @@
     <Compile Include="V20220105\Models\ModifyDatasourceResponse.cs" />
     <Compile Include="V20220105\Models\ModifyProjectRequest.cs" />
     <Compile Include="V20220105\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyUserDetailInfoRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyUserDetailInfoResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyUserGroupRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyUserGroupResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleRequest.cs" />
@@ -124,17 +148,29 @@
     <Compile Include="V20220105\Models\ProjectConfigList.cs" />
     <Compile Include="V20220105\Models\ProjectConfigResult.cs" />
     <Compile Include="V20220105\Models\ProjectListData.cs" />
+    <Compile Include="V20220105\Models\QueryUserGroupMemberRequest.cs" />
+    <Compile Include="V20220105\Models\QueryUserGroupMemberResponse.cs" />
     <Compile Include="V20220105\Models\RankInfo.cs" />
+    <Compile Include="V20220105\Models\ResourceDTO.cs" />
+    <Compile Include="V20220105\Models\ResourceItem.cs" />
+    <Compile Include="V20220105\Models\ResourceListDTO.cs" />
+    <Compile Include="V20220105\Models\ResourceTagValue.cs" />
     <Compile Include="V20220105\Models\Role.cs" />
     <Compile Include="V20220105\Models\RowColumnConfig.cs" />
     <Compile Include="V20220105\Models\RowColumnStatus.cs" />
     <Compile Include="V20220105\Models\RowColumnTagValue.cs" />
     <Compile Include="V20220105\Models\UserGroupDTO.cs" />
+    <Compile Include="V20220105\Models\UserGroupPageTreeVO.cs" />
+    <Compile Include="V20220105\Models\UserGroupTreeNodeDTO.cs" />
+    <Compile Include="V20220105\Models\UserGroupTreeVO.cs" />
+    <Compile Include="V20220105\Models\UserGroupUpdateDTO.cs" />
     <Compile Include="V20220105\Models\UserIdAndUserName.cs" />
     <Compile Include="V20220105\Models\UserInfo.cs" />
+    <Compile Include="V20220105\Models\UserResourceDTO.cs" />
     <Compile Include="V20220105\Models\UserRoleListData.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataRoleInfo.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataUserRoleInfo.cs" />
+    <Compile Include="V20220105\Models\UserVO.cs" />
     <Compile Include="V20220105\Models\WidgetListVO.cs" />
     <Compile Include="V20220105\Models\WidgetVO.cs" />
   </ItemGroup>

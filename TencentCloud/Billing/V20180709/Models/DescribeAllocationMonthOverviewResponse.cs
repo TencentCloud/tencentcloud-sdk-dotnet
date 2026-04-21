@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 分账账单月概览详情
+        /// <p>分账账单月概览详情</p>
         /// </summary>
         [JsonProperty("Detail")]
         public AllocationOverviewNode[] Detail{ get; set; }
 
         /// <summary>
-        /// 分账账单概览金额汇总
+        /// <p>分账账单概览金额汇总</p>
         /// </summary>
         [JsonProperty("Total")]
         public AllocationOverviewTotal Total{ get; set; }

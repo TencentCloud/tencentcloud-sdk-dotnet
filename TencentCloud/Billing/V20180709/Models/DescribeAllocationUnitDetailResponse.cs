@@ -25,55 +25,55 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 分账单元ID
+        /// <p>分账单元ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 分账单元所属UIN
+        /// <p>分账单元所属UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 分账单元名称
+        /// <p>分账单元名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分账单元父节点ID
+        /// <p>分账单元父节点ID</p>
         /// </summary>
         [JsonProperty("ParentId")]
         public ulong? ParentId{ get; set; }
 
         /// <summary>
-        /// 源组织名称
+        /// <p>源组织名称</p>
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
-        /// 源组织ID
+        /// <p>源组织ID</p>
         /// </summary>
         [JsonProperty("SourceId")]
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 备注说明
+        /// <p>备注说明</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 分账单元标识
+        /// <p>分账单元标识</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKey")]
         public string TreeNodeUniqKey{ get; set; }
 
         /// <summary>
-        /// 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+        /// <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }

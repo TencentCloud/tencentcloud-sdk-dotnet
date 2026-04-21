@@ -67,6 +67,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string FinalUnitDeduction{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExternalTaskId")]
+        public string ExternalTaskId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "FinalUnitDeduction", this.FinalUnitDeduction);
+            this.SetParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

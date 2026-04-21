@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 新增公摊规则ID
+        /// <p>新增公摊规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }

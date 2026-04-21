@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 所编辑归集规则ID
+        /// <p>所编辑归集规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 所编辑分账规则详情
+        /// <p>所编辑分账规则详情</p>
         /// </summary>
         [JsonProperty("RuleDetail")]
         public AllocationRuleExpression RuleDetail{ get; set; }
 
         /// <summary>
-        /// 月份，不传默认当前月
+        /// <p>月份，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

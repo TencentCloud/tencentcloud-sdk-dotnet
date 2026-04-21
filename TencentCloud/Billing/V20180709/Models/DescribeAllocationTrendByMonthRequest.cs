@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单月份，格式为2024-02，不传默认当前月
+        /// <p>账单月份，格式为2024-02，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 分账单元唯一标识
+        /// <p>分账单元唯一标识</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKey")]
         public string TreeNodeUniqKey{ get; set; }
 
         /// <summary>
-        /// 产品编码，用作筛选
+        /// <p>产品编码，用作筛选</p>
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }

@@ -25,131 +25,136 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
+        /// <p>该字段用于返回审核内容是否命中审核模型；取值：0（<strong>未命中</strong>）、1（<strong>命中</strong>）。</p>
         /// </summary>
         [JsonProperty("HitFlag")]
         public long? HitFlag{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+        /// <p>该字段用于返回检测结果所对应的恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告，<strong>Custom</strong>：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。</p>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
-        /// 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+        /// <p>该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br><br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
+        /// <p>该字段用于返回当前标签下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容。</p>
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
+        /// <p>该字段用于返回音频文件经ASR识别后的文本信息。最长可识别<strong>5小时</strong>的音频文件，若超出时长限制，接口将会报错。</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
+        /// <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频文件的时长，单位为毫秒。
+        /// <p>该字段用于返回音频文件的时长，单位为毫秒。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
+        /// <p>该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。</p>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+        /// <p>该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。</p>
         /// </summary>
         [JsonProperty("TextResults")]
         public AudioResultDetailTextResult[] TextResults{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
+        /// <p>该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。</p>
         /// </summary>
         [JsonProperty("MoanResults")]
         public AudioResultDetailMoanResult[] MoanResults{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+        /// <p>该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。</p>
         /// </summary>
         [JsonProperty("LanguageResults")]
         public AudioResultDetailLanguageResult[] LanguageResults{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回当前标签（Lable）下的二级标签。
+        /// <p>该字段用于返回当前标签（Lable）下的二级标签。</p>
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// 识别类标签结果信息列表
+        /// <p>识别类标签结果信息列表</p>
         /// </summary>
         [JsonProperty("RecognitionResults")]
         public RecognitionResult[] RecognitionResults{ get; set; }
 
         /// <summary>
-        /// 说话人结果
+        /// <p>说话人结果</p>
         /// </summary>
         [JsonProperty("SpeakerResults")]
         public SpeakerResults[] SpeakerResults{ get; set; }
 
         /// <summary>
-        /// 歌曲识别结果
+        /// <p>歌曲识别结果</p>
         /// </summary>
         [JsonProperty("LabelResults")]
         public LabelResults[] LabelResults{ get; set; }
 
         /// <summary>
-        /// 出行结果
+        /// <p>出行结果</p>
         /// </summary>
         [JsonProperty("TravelResults")]
         public TravelResults[] TravelResults{ get; set; }
 
         /// <summary>
-        /// 三级标签
+        /// <p>三级标签</p>
         /// </summary>
         [JsonProperty("SubTag")]
         public string SubTag{ get; set; }
 
         /// <summary>
-        /// 三级标签码
+        /// <p>三级标签码</p>
         /// </summary>
         [JsonProperty("SubTagCode")]
         public string SubTagCode{ get; set; }
 
         /// <summary>
-        /// 审核检测类型
+        /// <p>审核检测类型</p>
         /// </summary>
         [JsonProperty("HitType")]
         public string HitType{ get; set; }
 
         /// <summary>
-        /// ASR句子的起止时间
+        /// <p>ASR句子的起止时间</p>
         /// </summary>
         [JsonProperty("Sentences")]
         public Sentence[] Sentences{ get; set; }
 
         /// <summary>
-        /// 切片请求ID
+        /// <p>切片请求ID</p>
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
+
+        /// <summary>
+        /// <p>AIGC音频片段审核结果</p>
+        /// </summary>
+        [JsonProperty("AIGCRecognitionResults")]
+        public AIGCRecognitionResult[] AIGCRecognitionResults{ get; set; }
 
 
         /// <summary>
@@ -178,6 +183,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamSimple(map, prefix + "HitType", this.HitType);
             this.SetParamArrayObj(map, prefix + "Sentences.", this.Sentences);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "AIGCRecognitionResults.", this.AIGCRecognitionResults);
         }
     }
 }

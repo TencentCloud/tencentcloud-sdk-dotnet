@@ -25,40 +25,37 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 公摊规则ID
+        /// <p>公摊规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 公摊规则所属UIN
+        /// <p>公摊规则所属UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 公摊规则名称
+        /// <p>公摊规则名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 公摊策略类型，枚举值如下：
-        /// 1 - 自定义分摊占比 
-        /// 2 - 等比分摊 
-        /// 3 - 按占比分摊
+        /// <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 公摊规则表达式
+        /// <p>公摊规则表达式</p>
         /// </summary>
         [JsonProperty("RuleDetail")]
         public AllocationRuleExpression RuleDetail{ get; set; }
 
         /// <summary>
-        /// 公摊比例表达式，Type为1和2时返回
+        /// <p>公摊比例表达式，Type为1和2时返回</p>
         /// </summary>
         [JsonProperty("RatioDetail")]
         public AllocationRationExpression[] RatioDetail{ get; set; }

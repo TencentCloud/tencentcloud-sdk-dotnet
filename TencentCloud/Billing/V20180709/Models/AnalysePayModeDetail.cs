@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 计费模式code
+        /// <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 计费模式Name
+        /// <p>计费模式Name</p>
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }

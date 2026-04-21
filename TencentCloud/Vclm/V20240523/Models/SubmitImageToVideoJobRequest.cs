@@ -144,6 +144,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("VoiceList")]
         public Voice[] VoiceList{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExternalTaskId")]
+        public string ExternalTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamObj(map, prefix + "CameraControl.", this.CameraControl);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamArrayObj(map, prefix + "VoiceList.", this.VoiceList);
+            this.SetParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         }
     }
 }

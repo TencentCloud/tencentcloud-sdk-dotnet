@@ -25,40 +25,46 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES集群ID
+        /// <p>ES集群ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 删除的索引类型。auto：自治索引；normal：普通索引
+        /// <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// 删除的索引名
+        /// <p>删除的索引名</p>
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 集群访问用户名
+        /// <p>集群访问用户名</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 集群访问密码
+        /// <p>集群访问密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 后备索引名
+        /// <p>后备索引名</p>
         /// </summary>
         [JsonProperty("BackingIndexName")]
         public string BackingIndexName{ get; set; }
+
+        /// <summary>
+        /// <p>索引生命阶段</p>
+        /// </summary>
+        [JsonProperty("IndexPhrase")]
+        public string IndexPhrase{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
+            this.SetParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
         }
     }
 }

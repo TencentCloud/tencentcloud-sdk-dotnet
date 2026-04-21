@@ -25,35 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 每次获取数据量，最大值1000
+        /// <p>每次获取数据量，最大值1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量
+        /// <p>分页偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 月份，不传默认当前月
+        /// <p>月份，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 公摊策略类型，用于筛选。
-        /// 枚举值如下： 
-        /// 1 - 自定义分摊占比 
-        /// 2 - 等比分摊 
-        /// 3 - 按占比分摊
+        /// <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 公摊规则名称或分账单元名称，用于模糊筛选。
+        /// <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

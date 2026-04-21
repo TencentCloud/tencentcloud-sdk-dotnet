@@ -25,25 +25,25 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 归集规则ID
+        /// <p>归集规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 归集规则所属UIN
+        /// <p>归集规则所属UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 归集规则最后更新时间
+        /// <p>归集规则最后更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 归集规则详情
+        /// <p>归集规则详情</p>
         /// </summary>
         [JsonProperty("RuleDetail")]
         public AllocationRuleExpression RuleDetail{ get; set; }

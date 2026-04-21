@@ -25,58 +25,64 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 敏捷上云名称
+        /// <p>敏捷上云名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 需要接入敏捷上云的IDC的地址
+        /// <p>需要接入敏捷上云的IDC的地址</p>
         /// </summary>
         [JsonProperty("IdcAddress")]
         public string IdcAddress{ get; set; }
 
         /// <summary>
-        /// 需要接入敏捷上云的IDC的互联网服务提供商类型
+        /// <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
         /// </summary>
         [JsonProperty("IdcType")]
         public string IdcType{ get; set; }
 
         /// <summary>
-        /// 敏捷上云的带宽，单位为MB
+        /// <p>敏捷上云的带宽，单位为MB</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 联系电话
+        /// <p>联系电话</p>
         /// </summary>
         [JsonProperty("Telephone")]
         public string Telephone{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remarks")]
         public string Remarks{ get; set; }
 
         /// <summary>
-        /// 接入地域
+        /// <p>接入地域</p>
         /// </summary>
         [JsonProperty("ArRegion")]
         public string ArRegion{ get; set; }
 
         /// <summary>
-        /// IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+        /// <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
         /// </summary>
         [JsonProperty("IdcPointType")]
         public string IdcPointType{ get; set; }
 
         /// <summary>
-        /// 运营商链路是否有保护
+        /// <p>运营商链路是否有保护</p>
         /// </summary>
         [JsonProperty("BIapLinkProtected")]
         public bool? BIapLinkProtected{ get; set; }
+
+        /// <summary>
+        /// <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "ArRegion", this.ArRegion);
             this.SetParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
             this.SetParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

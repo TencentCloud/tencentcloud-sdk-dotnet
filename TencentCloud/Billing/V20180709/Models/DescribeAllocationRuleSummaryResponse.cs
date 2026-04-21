@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 公摊规则表达式
+        /// <p>公摊规则表达式</p>
         /// </summary>
         [JsonProperty("RuleList")]
         public AllocationRuleOverview[] RuleList{ get; set; }
 
         /// <summary>
-        /// 规则总数
+        /// <p>规则总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

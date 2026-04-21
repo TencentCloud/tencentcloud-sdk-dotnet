@@ -25,69 +25,49 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数量，最大值为1000
+        /// <p>数量，最大值为1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+        /// <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 账单月份，格式为2024-02，不传默认当前月
+        /// <p>账单月份，格式为2024-02，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 统计周期，枚举值如下
-        /// month - 月
-        /// day - 日
+        /// <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
         /// </summary>
         [JsonProperty("PeriodType")]
         public string PeriodType{ get; set; }
 
         /// <summary>
-        /// 分账单元唯一标识，用作筛选
+        /// <p>分账单元唯一标识，用作筛选</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKeys")]
         public string[] TreeNodeUniqKeys{ get; set; }
 
         /// <summary>
-        /// 排序字段，枚举值如下： 
-        /// GatherCashPayAmount - 归集费用(现金)
-        /// GatherVoucherPayAmount- 归集费用(优惠券)
-        /// GatherIncentivePayAmount -  归集费用(赠送金)
-        /// GatherTransferPayAmount - 归集费用(分成金)
-        /// AllocateCashPayAmount - 分摊费用(现金)
-        /// AllocateVoucherPayAmount - 分摊费用(优惠券)
-        /// AllocateIncentivePayAmount - 分摊费用(赠送金)
-        /// AllocateTransferPayAmount - 分摊费用(分成金)
-        /// TotalCashPayAmount - 合计费用(现金)
-        /// TotalVoucherPayAmount - 合计费用(优惠券)
-        /// TotalIncentivePayAmount - 合计费用(赠送金)
-        /// TotalTransferPayAmount - 合计费用(分成金)
-        /// GatherRealCost - 归集费用(折后总额)
-        /// AllocateRealCost - 分摊费用(折后总额)
-        /// RealTotalCost - 合计费用(折后总额)
-        /// Ratio  - 占比(折后总额)
+        /// <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount -  归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>Ratio  - 占比(折后总额)</p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 排序类型，枚举值如下：
-        /// asc - 升序
-        /// desc - 降序
+        /// <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 日期，用作筛选
+        /// <p>日期，用作筛选</p>
         /// </summary>
         [JsonProperty("BillDates")]
         public string[] BillDates{ get; set; }

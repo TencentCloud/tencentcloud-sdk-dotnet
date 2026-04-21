@@ -25,115 +25,115 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 只支持6和12两个值
+        /// <p>只支持6个月和12个月两个值</p>
         /// </summary>
         [JsonProperty("TimeRange")]
         public ulong? TimeRange{ get; set; }
 
         /// <summary>
-        /// 产品名称代码
+        /// <p>产品名称代码</p>
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 付费模式，可选prePay和postPay
+        /// <p>付费模式，可选prePay和postPay</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 资源关键字
+        /// <p>资源关键字</p>
         /// </summary>
         [JsonProperty("ResourceKeyword")]
         public string ResourceKeyword{ get; set; }
 
         /// <summary>
-        /// 产品名称代码
+        /// <p>产品名称代码</p>
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string[] BusinessCodes{ get; set; }
 
         /// <summary>
-        /// 子产品名称代码
+        /// <p>子产品名称代码</p>
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string[] ProductCodes{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionIds")]
         public long?[] RegionIds{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 付费模式，可选prePay和postPay
+        /// <p>付费模式，可选prePay和postPay</p>
         /// </summary>
         [JsonProperty("PayModes")]
         public string[] PayModes{ get; set; }
 
         /// <summary>
-        /// 交易类型
+        /// <p>交易类型</p>
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string[] ActionTypes{ get; set; }
 
         /// <summary>
-        /// 是否隐藏0元流水
+        /// <p>是否隐藏0元流水</p>
         /// </summary>
         [JsonProperty("HideFreeCost")]
         public long? HideFreeCost{ get; set; }
 
         /// <summary>
-        /// 排序规则，可选desc和asc
+        /// <p>排序规则，可选desc和asc</p>
         /// </summary>
         [JsonProperty("OrderByCost")]
         public string OrderByCost{ get; set; }
 
         /// <summary>
-        /// 交易ID
+        /// <p>交易ID</p>
         /// </summary>
         [JsonProperty("BillIds")]
         public string[] BillIds{ get; set; }
 
         /// <summary>
-        /// 组件编码
+        /// <p>组件编码</p>
         /// </summary>
         [JsonProperty("ComponentCodes")]
         public string[] ComponentCodes{ get; set; }
 
         /// <summary>
-        /// 文件ID
+        /// <p>文件ID</p>
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 文件类型
+        /// <p>文件类型</p>
         /// </summary>
         [JsonProperty("FileTypes")]
         public string[] FileTypes{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }

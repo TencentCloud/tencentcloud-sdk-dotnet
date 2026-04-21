@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+        /// <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
+        /// <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+        /// <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }

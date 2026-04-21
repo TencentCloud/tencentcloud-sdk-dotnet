@@ -25,172 +25,170 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
+        /// <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
-        /// 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
+        /// <p>如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。<br>说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。</p>
         /// </summary>
         [JsonProperty("SpecifiedRollbackTime")]
         public string SpecifiedRollbackTime{ get; set; }
 
         /// <summary>
-        /// 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-        /// 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
+        /// <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
         /// </summary>
         [JsonProperty("SpecifiedBackupId")]
         public long? SpecifiedBackupId{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
+        /// <p>私有网络 ID，请使用 <a href="/document/api/215/15778">查询私有网络列表</a>。</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+        /// <p>私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 <a href="/document/api/215/15784">查询子网列表</a>。</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。
+        /// <p>实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。
+        /// <p>实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。</p>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 新产生的克隆实例名称。支持输入最大60个字符。
+        /// <p>新产生的克隆实例名称。支持输入最大60个字符。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
+        /// <p>安全组参数，可使用 <a href="https://cloud.tencent.com/document/api/236/15850">查询项目安全组信息</a> 接口查询某个项目的安全组详情。</p>
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 实例标签信息。
+        /// <p>实例标签信息。</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public TagInfo[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
+        /// <p>实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+        /// <p>数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
+        /// <p>多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。
+        /// <p>新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。</p>
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// 备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。
+        /// <p>备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。</p>
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
+        /// <p>克隆实例类型。支持值包括：&quot;UNIVERSAL&quot; - 通用型实例，&quot;EXCLUSIVE&quot; - 独享型实例，&quot;CLOUD_NATIVE_CLUSTER&quot; - 云盘版标准型，&quot;CLOUD_NATIVE_CLUSTER_EXCLUSIVE&quot; - 云盘版加强型。不指定则默认为通用型。</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+        /// <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
         /// <summary>
-        /// 置放群组 ID。
+        /// <p>置放群组 ID。</p>
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+        /// <p>是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。</p>
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 金融围拢 ID 。
+        /// <p>金融围拢 ID 。</p>
         /// </summary>
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
         /// <summary>
-        /// 项目ID，默认项目ID0
+        /// <p>项目ID，默认项目ID0</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+        /// <p>付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费</p>
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
-        /// 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+        /// <p>实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 云盘版节点拓扑配置。
+        /// <p>云盘版节点拓扑配置。</p>
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
 
         /// <summary>
-        /// 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+        /// <p>原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou</p>
         /// </summary>
         [JsonProperty("SrcRegion")]
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 异地数据备份id
+        /// <p>异地数据备份id</p>
         /// </summary>
         [JsonProperty("SpecifiedSubBackupId")]
         public long? SpecifiedSubBackupId{ get; set; }
 
         /// <summary>
-        /// 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+        /// <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         [System.Obsolete]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+        /// <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

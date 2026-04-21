@@ -25,109 +25,109 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单月份，格式为2024-02，不传默认当前月
+        /// <p>账单月份，格式为2024-02，不传默认当前月</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 分账单元唯一标识，用作筛选
+        /// <p>分账单元唯一标识，用作筛选</p>
         /// </summary>
         [JsonProperty("TreeNodeUniqKeys")]
         public string[] TreeNodeUniqKeys{ get; set; }
 
         /// <summary>
-        /// 日期
+        /// <p>日期</p>
         /// </summary>
         [JsonProperty("BillDates")]
         public string[] BillDates{ get; set; }
 
         /// <summary>
-        /// 产品编码
+        /// <p>产品编码</p>
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string[] BusinessCodes{ get; set; }
 
         /// <summary>
-        /// 使用者UIN
+        /// <p>使用者UIN</p>
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string[] OwnerUins{ get; set; }
 
         /// <summary>
-        /// 操作者UIN
+        /// <p>操作者UIN</p>
         /// </summary>
         [JsonProperty("OperateUins")]
         public string[] OperateUins{ get; set; }
 
         /// <summary>
-        /// 计费模式编码
+        /// <p>计费模式编码</p>
         /// </summary>
         [JsonProperty("PayModes")]
         public string[] PayModes{ get; set; }
 
         /// <summary>
-        /// 交易类型编码
+        /// <p>交易类型编码</p>
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string[] ActionTypes{ get; set; }
 
         /// <summary>
-        /// 子产品编码
+        /// <p>子产品编码</p>
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string[] ProductCodes{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionIds")]
         public string[] RegionIds{ get; set; }
 
         /// <summary>
-        /// 可用区ID
+        /// <p>可用区ID</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 实例类型编码
+        /// <p>实例类型编码</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
-        /// 组件类型编码
+        /// <p>组件类型编码</p>
         /// </summary>
         [JsonProperty("ComponentCodes")]
         public string[] ComponentCodes{ get; set; }
 
         /// <summary>
-        /// 组件名称编码
+        /// <p>组件名称编码</p>
         /// </summary>
         [JsonProperty("ItemCodes")]
         public string[] ItemCodes{ get; set; }
 
         /// <summary>
-        /// 模糊搜索条件
+        /// <p>模糊搜索条件</p>
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 费用归集类型
+        /// <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
         /// </summary>
         [JsonProperty("AllocationType")]
         public long?[] AllocationType{ get; set; }

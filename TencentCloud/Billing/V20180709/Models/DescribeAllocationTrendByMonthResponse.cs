@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 当月费用信息
+        /// <p>当月费用信息</p>
         /// </summary>
         [JsonProperty("Current")]
         public AllocationBillTrendDetail Current{ get; set; }
 
         /// <summary>
-        /// 之前月份费用信息
+        /// <p>之前月份费用信息</p>
         /// </summary>
         [JsonProperty("Previous")]
         public AllocationBillTrendDetail[] Previous{ get; set; }
 
         /// <summary>
-        /// 费用统计信息
+        /// <p>费用统计信息</p>
         /// </summary>
         [JsonProperty("Stat")]
         public AllocationStat Stat{ get; set; }

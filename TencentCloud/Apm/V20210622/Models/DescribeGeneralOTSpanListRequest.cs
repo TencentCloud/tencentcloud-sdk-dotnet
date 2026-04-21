@@ -25,59 +25,49 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统 ID
+        /// <p>业务系统 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Span 查询开始时间戳（单位：秒）
+        /// <p>Span 查询开始时间戳（单位：秒）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Span 查询结束时间戳（单位：秒）
+        /// <p>Span 查询结束时间戳（单位：秒）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 通用过滤参数
+        /// <p>通用过滤参数 支持的过滤key如service.name</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序
-        /// 现支持的 Key 有：
-        /// 
-        /// - startTime(开始时间)
-        /// - endTime(结束时间)
-        /// - duration(响应时间)
-        /// 
-        /// 现支持的 Value 有：
-        /// 
-        /// - desc(降序排序)
-        /// - asc(升序排序)
+        /// <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public OrderBy OrderBy{ get; set; }
 
         /// <summary>
-        /// 业务自身服务名，控制台用户请填写taw
+        /// <p>业务自身服务名，控制台用户请填写taw</p>
         /// </summary>
         [JsonProperty("BusinessName")]
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// 单页项目个数，默认为10000，合法取值范围为0～10000
+        /// <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// <p>分页</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

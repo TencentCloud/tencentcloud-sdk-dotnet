@@ -25,91 +25,91 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品
+        /// <p>产品</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public string[] Business{ get; set; }
 
         /// <summary>
-        /// 计费模式
+        /// <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string[] PayMode{ get; set; }
 
         /// <summary>
-        /// 子产品
+        /// <p>子产品</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string[] ProductCodes{ get; set; }
 
         /// <summary>
-        /// 组件编码
+        /// <p>组件编码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentCodes")]
         public string[] ComponentCodes{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionIds")]
         public string[] RegionIds{ get; set; }
 
         /// <summary>
-        /// 项目
+        /// <p>项目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public string[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 交易类型
+        /// <p>交易类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string[] ActionTypes{ get; set; }
 
         /// <summary>
-        /// 消耗类型
+        /// <p>消耗类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumptionTypes")]
         public string[] ConsumptionTypes{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagsForm[] Tags{ get; set; }
 
         /// <summary>
-        ///  末级分账单元
+        /// <p>末级分账单元</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayerUins")]
         public string[] PayerUins{ get; set; }
 
         /// <summary>
-        /// 主用户Uin
+        /// <p>主用户Uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string[] OwnerUins{ get; set; }
 
         /// <summary>
-        ///  末级分账单元唯一键
+        /// <p>末级分账单元唯一键</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreeNodeUniqKeys")]

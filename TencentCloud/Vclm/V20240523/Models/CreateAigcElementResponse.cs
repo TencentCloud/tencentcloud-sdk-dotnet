@@ -31,25 +31,25 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>主体Id</p>
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>任务状态</p><p>默认值：任务状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>厂商</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string[] Provider{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }

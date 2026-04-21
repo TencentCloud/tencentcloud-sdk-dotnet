@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1383";
+       private const string sdkVersion = "SDK_NET_3.0.1413";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,48 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// CreateUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
+        /// <returns><see cref="CreateUserGroupResponse"/></returns>
+        public Task<CreateUserGroupResponse> CreateUserGroup(CreateUserGroupRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupResponse>(req, "CreateUserGroup");
+        }
+
+        /// <summary>
+        /// CreateUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
+        /// <returns><see cref="CreateUserGroupResponse"/></returns>
+        public CreateUserGroupResponse CreateUserGroupSync(CreateUserGroupRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupResponse>(req, "CreateUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CreateUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupMemberRequest"/></param>
+        /// <returns><see cref="CreateUserGroupMemberResponse"/></returns>
+        public Task<CreateUserGroupMemberResponse> CreateUserGroupMember(CreateUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupMemberResponse>(req, "CreateUserGroupMember");
+        }
+
+        /// <summary>
+        /// CreateUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupMemberRequest"/></param>
+        /// <returns><see cref="CreateUserGroupMemberResponse"/></returns>
+        public CreateUserGroupMemberResponse CreateUserGroupMemberSync(CreateUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupMemberResponse>(req, "CreateUserGroupMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户角色
         /// </summary>
         /// <param name="req"><see cref="CreateUserRoleRequest"/></param>
@@ -281,6 +323,48 @@ namespace TencentCloud.Bi.V20220105
         public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
         {
             return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DeleteUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupResponse"/></returns>
+        public Task<DeleteUserGroupResponse> DeleteUserGroup(DeleteUserGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupResponse>(req, "DeleteUserGroup");
+        }
+
+        /// <summary>
+        /// DeleteUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupResponse"/></returns>
+        public DeleteUserGroupResponse DeleteUserGroupSync(DeleteUserGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupResponse>(req, "DeleteUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DeleteUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupMemberRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupMemberResponse"/></returns>
+        public Task<DeleteUserGroupMemberResponse> DeleteUserGroupMember(DeleteUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupMemberResponse>(req, "DeleteUserGroupMember");
+        }
+
+        /// <summary>
+        /// DeleteUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupMemberRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupMemberResponse"/></returns>
+        public DeleteUserGroupMemberResponse DeleteUserGroupMemberSync(DeleteUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupMemberResponse>(req, "DeleteUserGroupMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +558,90 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 用户组资源权限查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUserGroupPageListRequest"/></param>
+        /// <returns><see cref="DescribeResourceUserGroupPageListResponse"/></returns>
+        public Task<DescribeResourceUserGroupPageListResponse> DescribeResourceUserGroupPageList(DescribeResourceUserGroupPageListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceUserGroupPageListResponse>(req, "DescribeResourceUserGroupPageList");
+        }
+
+        /// <summary>
+        /// 用户组资源权限查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUserGroupPageListRequest"/></param>
+        /// <returns><see cref="DescribeResourceUserGroupPageListResponse"/></returns>
+        public DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageListSync(DescribeResourceUserGroupPageListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceUserGroupPageListResponse>(req, "DescribeResourceUserGroupPageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeUserGroupInfo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupInfoResponse"/></returns>
+        public Task<DescribeUserGroupInfoResponse> DescribeUserGroupInfo(DescribeUserGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupInfoResponse>(req, "DescribeUserGroupInfo");
+        }
+
+        /// <summary>
+        /// DescribeUserGroupInfo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupInfoResponse"/></returns>
+        public DescribeUserGroupInfoResponse DescribeUserGroupInfoSync(DescribeUserGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupInfoResponse>(req, "DescribeUserGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeUserGroupMemberList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupMemberListRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupMemberListResponse"/></returns>
+        public Task<DescribeUserGroupMemberListResponse> DescribeUserGroupMemberList(DescribeUserGroupMemberListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupMemberListResponse>(req, "DescribeUserGroupMemberList");
+        }
+
+        /// <summary>
+        /// DescribeUserGroupMemberList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupMemberListRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupMemberListResponse"/></returns>
+        public DescribeUserGroupMemberListResponse DescribeUserGroupMemberListSync(DescribeUserGroupMemberListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupMemberListResponse>(req, "DescribeUserGroupMemberList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户组数查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupTreeListRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupTreeListResponse"/></returns>
+        public Task<DescribeUserGroupTreeListResponse> DescribeUserGroupTreeList(DescribeUserGroupTreeListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupTreeListResponse>(req, "DescribeUserGroupTreeList");
+        }
+
+        /// <summary>
+        /// 用户组数查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupTreeListRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupTreeListResponse"/></returns>
+        public DescribeUserGroupTreeListResponse DescribeUserGroupTreeListSync(DescribeUserGroupTreeListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupTreeListResponse>(req, "DescribeUserGroupTreeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 项目内-用户接口
         /// </summary>
         /// <param name="req"><see cref="DescribeUserProjectListRequest"/></param>
@@ -621,6 +789,90 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 更新用户组权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResponse"/></returns>
+        public Task<ModifyResourceUserGroupResponse> ModifyResourceUserGroup(ModifyResourceUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResponse>(req, "ModifyResourceUserGroup");
+        }
+
+        /// <summary>
+        /// 更新用户组权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResponse"/></returns>
+        public ModifyResourceUserGroupResponse ModifyResourceUserGroupSync(ModifyResourceUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResponse>(req, "ModifyResourceUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按资源 - 更新用户组权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResourceResponse"/></returns>
+        public Task<ModifyResourceUserGroupResourceResponse> ModifyResourceUserGroupResource(ModifyResourceUserGroupResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResourceResponse>(req, "ModifyResourceUserGroupResource");
+        }
+
+        /// <summary>
+        /// 按资源 - 更新用户组权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResourceResponse"/></returns>
+        public ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResourceSync(ModifyResourceUserGroupResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResourceResponse>(req, "ModifyResourceUserGroupResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserDetailInfoRequest"/></param>
+        /// <returns><see cref="ModifyUserDetailInfoResponse"/></returns>
+        public Task<ModifyUserDetailInfoResponse> ModifyUserDetailInfo(ModifyUserDetailInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyUserDetailInfoResponse>(req, "ModifyUserDetailInfo");
+        }
+
+        /// <summary>
+        /// 修改用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserDetailInfoRequest"/></param>
+        /// <returns><see cref="ModifyUserDetailInfoResponse"/></returns>
+        public ModifyUserDetailInfoResponse ModifyUserDetailInfoSync(ModifyUserDetailInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyUserDetailInfoResponse>(req, "ModifyUserDetailInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ModifyUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public Task<ModifyUserGroupResponse> ModifyUserGroup(ModifyUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupResponse>(req, "ModifyUserGroup");
+        }
+
+        /// <summary>
+        /// ModifyUserGroup
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public ModifyUserGroupResponse ModifyUserGroupSync(ModifyUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupResponse>(req, "ModifyUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户角色信息
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRoleRequest"/></param>
@@ -659,6 +911,27 @@ namespace TencentCloud.Bi.V20220105
         public ModifyUserRoleProjectResponse ModifyUserRoleProjectSync(ModifyUserRoleProjectRequest req)
         {
             return InternalRequestAsync<ModifyUserRoleProjectResponse>(req, "ModifyUserRoleProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// QueryUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserGroupMemberRequest"/></param>
+        /// <returns><see cref="QueryUserGroupMemberResponse"/></returns>
+        public Task<QueryUserGroupMemberResponse> QueryUserGroupMember(QueryUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<QueryUserGroupMemberResponse>(req, "QueryUserGroupMember");
+        }
+
+        /// <summary>
+        /// QueryUserGroupMember
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserGroupMemberRequest"/></param>
+        /// <returns><see cref="QueryUserGroupMemberResponse"/></returns>
+        public QueryUserGroupMemberResponse QueryUserGroupMemberSync(QueryUserGroupMemberRequest req)
+        {
+            return InternalRequestAsync<QueryUserGroupMemberResponse>(req, "QueryUserGroupMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

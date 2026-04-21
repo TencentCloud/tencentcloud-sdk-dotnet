@@ -25,20 +25,20 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("RecordNum")]
         public long? RecordNum{ get; set; }
 
         /// <summary>
-        /// 资源归集汇总
+        /// <p>资源归集汇总</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatherResourceSummary")]
         public GatherResourceSummary[] GatherResourceSummary{ get; set; }
 
         /// <summary>
-        /// 数据更新时间
+        /// <p>数据更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]

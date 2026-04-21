@@ -30,6 +30,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExternalTaskId")]
+        public string ExternalTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         }
     }
 }

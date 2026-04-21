@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1413";
 
         /// <summary>
         /// Client constructor.
@@ -1081,6 +1081,48 @@ namespace TencentCloud.Es.V20180416
         public QueryIpTraceLogResponse QueryIpTraceLogSync(QueryIpTraceLogRequest req)
         {
             return InternalRequestAsync<QueryIpTraceLogResponse>(req, "QueryIpTraceLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 请求集群实例
+        /// </summary>
+        /// <param name="req"><see cref="RequestInstancesRequest"/></param>
+        /// <returns><see cref="RequestInstancesResponse"/></returns>
+        public Task<RequestInstancesResponse> RequestInstances(RequestInstancesRequest req)
+        {
+            return InternalRequestAsync<RequestInstancesResponse>(req, "RequestInstances");
+        }
+
+        /// <summary>
+        /// 请求集群实例
+        /// </summary>
+        /// <param name="req"><see cref="RequestInstancesRequest"/></param>
+        /// <returns><see cref="RequestInstancesResponse"/></returns>
+        public RequestInstancesResponse RequestInstancesSync(RequestInstancesRequest req)
+        {
+            return InternalRequestAsync<RequestInstancesResponse>(req, "RequestInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// GET请求集群实例
+        /// </summary>
+        /// <param name="req"><see cref="RequestInstancesByGetRequest"/></param>
+        /// <returns><see cref="RequestInstancesByGetResponse"/></returns>
+        public Task<RequestInstancesByGetResponse> RequestInstancesByGet(RequestInstancesByGetRequest req)
+        {
+            return InternalRequestAsync<RequestInstancesByGetResponse>(req, "RequestInstancesByGet");
+        }
+
+        /// <summary>
+        /// GET请求集群实例
+        /// </summary>
+        /// <param name="req"><see cref="RequestInstancesByGetRequest"/></param>
+        /// <returns><see cref="RequestInstancesByGetResponse"/></returns>
+        public RequestInstancesByGetResponse RequestInstancesByGetSync(RequestInstancesByGetRequest req)
+        {
+            return InternalRequestAsync<RequestInstancesByGetResponse>(req, "RequestInstancesByGet")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

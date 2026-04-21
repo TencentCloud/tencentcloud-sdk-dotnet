@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }
 
         /// <summary>
-        /// 分账账单概览金额汇总
+        /// <p>分账账单概览金额汇总</p>
         /// </summary>
         [JsonProperty("Total")]
         public AllocationOverviewTotal Total{ get; set; }
 
         /// <summary>
-        /// 分账账单按产品汇总明细
+        /// <p>分账账单按产品汇总明细</p>
         /// </summary>
         [JsonProperty("Detail")]
         public AllocationSummaryByBusiness[] Detail{ get; set; }
