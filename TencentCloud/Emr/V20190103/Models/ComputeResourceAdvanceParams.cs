@@ -50,6 +50,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }
 
+        /// <summary>
+        /// <p>节点组Id</p>
+        /// </summary>
+        [JsonProperty("TkeClusterNodePool")]
+        public string TkeClusterNodePool{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
+            this.SetParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
         }
     }
 }

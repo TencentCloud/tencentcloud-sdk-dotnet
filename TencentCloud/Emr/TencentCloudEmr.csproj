@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1411</VersionPrefix>
+    <VersionPrefix>3.0.1414</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,11 +75,13 @@
     <Compile Include="V20190103\Models\ClusterRelationMeta.cs" />
     <Compile Include="V20190103\Models\ClusterSetting.cs" />
     <Compile Include="V20190103\Models\ComponentBasicRestartInfo.cs" />
+    <Compile Include="V20190103\Models\ComponentDeployInfo.cs" />
     <Compile Include="V20190103\Models\ComputeResourceAdvanceParams.cs" />
     <Compile Include="V20190103\Models\ConfigModifyInfoV2.cs" />
     <Compile Include="V20190103\Models\ConfigSetInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
     <Compile Include="V20190103\Models\ConfigurationItem.cs" />
+    <Compile Include="V20190103\Models\ContainerExtraConf.cs" />
     <Compile Include="V20190103\Models\ConvertPreToPostClusterRequest.cs" />
     <Compile Include="V20190103\Models\ConvertPreToPostClusterResponse.cs" />
     <Compile Include="V20190103\Models\CreateCloudInstanceRequest.cs" />
@@ -244,6 +246,8 @@
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InsightResult.cs" />
     <Compile Include="V20190103\Models\InspectionTaskSettings.cs" />
+    <Compile Include="V20190103\Models\InstallSoftwareRequest.cs" />
+    <Compile Include="V20190103\Models\InstallSoftwareResponse.cs" />
     <Compile Include="V20190103\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20190103\Models\Item.cs" />
     <Compile Include="V20190103\Models\ItemSeq.cs" />
@@ -252,6 +256,8 @@
     <Compile Include="V20190103\Models\JobResult.cs" />
     <Compile Include="V20190103\Models\KeyValue.cs" />
     <Compile Include="V20190103\Models\KyuubiQueryInfo.cs" />
+    <Compile Include="V20190103\Models\LabelSelector.cs" />
+    <Compile Include="V20190103\Models\LabelSelectorRequirement.cs" />
     <Compile Include="V20190103\Models\LoadAutoScaleStrategy.cs" />
     <Compile Include="V20190103\Models\LoadMetricsCondition.cs" />
     <Compile Include="V20190103\Models\LoadMetricsConditions.cs" />
@@ -329,6 +335,8 @@
     <Compile Include="V20190103\Models\Period.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
+    <Compile Include="V20190103\Models\PodAffinitySpec.cs" />
+    <Compile Include="V20190103\Models\PodAffinityTerm.cs" />
     <Compile Include="V20190103\Models\PodNewParameter.cs" />
     <Compile Include="V20190103\Models\PodNewSpec.cs" />
     <Compile Include="V20190103\Models\PodParameter.cs" />
@@ -372,6 +380,7 @@
     <Compile Include="V20190103\Models\ScriptBootstrapActionConfig.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
     <Compile Include="V20190103\Models\ServiceBasicRestartInfo.cs" />
+    <Compile Include="V20190103\Models\ServiceDeployInfo.cs" />
     <Compile Include="V20190103\Models\ServiceNodeDetailInfo.cs" />
     <Compile Include="V20190103\Models\ServiceProcessFunctionInfo.cs" />
     <Compile Include="V20190103\Models\SetNodeResourceConfigDefaultRequest.cs" />
@@ -388,6 +397,7 @@
     <Compile Include="V20190103\Models\StopParams.cs" />
     <Compile Include="V20190103\Models\StorageSummaryDistribution.cs" />
     <Compile Include="V20190103\Models\StrategyConfig.cs" />
+    <Compile Include="V20190103\Models\StringMap.cs" />
     <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\SyncPodStateRequest.cs" />
     <Compile Include="V20190103\Models\SyncPodStateResponse.cs" />
@@ -408,6 +418,7 @@
     <Compile Include="V20190103\Models\TkeLabel.cs" />
     <Compile Include="V20190103\Models\Toleration.cs" />
     <Compile Include="V20190103\Models\TopologyInfo.cs" />
+    <Compile Include="V20190103\Models\TopologySpreadConstraint.cs" />
     <Compile Include="V20190103\Models\TriggerCondition.cs" />
     <Compile Include="V20190103\Models\TrinoQueryInfo.cs" />
     <Compile Include="V20190103\Models\UpdateInstanceSettings.cs" />
@@ -419,6 +430,7 @@
     <Compile Include="V20190103\Models\VirtualPrivateCloud.cs" />
     <Compile Include="V20190103\Models\VolumeSetting.cs" />
     <Compile Include="V20190103\Models\WeekRepeatStrategy.cs" />
+    <Compile Include="V20190103\Models\WeightedPodAffinityTerm.cs" />
     <Compile Include="V20190103\Models\YarnApplication.cs" />
     <Compile Include="V20190103\Models\ZoneDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\ZoneResourceConfiguration.cs" />

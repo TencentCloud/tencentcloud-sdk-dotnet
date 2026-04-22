@@ -25,61 +25,61 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 产品Id
+        /// <p>产品Id</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+        /// <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
         /// </summary>
         [JsonProperty("FormListString")]
         public string FormListString{ get; set; }
 
         /// <summary>
-        /// 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+        /// <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
         /// </summary>
         [JsonProperty("ParamToken")]
         public string ParamToken{ get; set; }
 
         /// <summary>
-        /// 特征
+        /// <p>特征</p>
         /// </summary>
         [JsonProperty("Feature")]
         public string Feature{ get; set; }
 
         /// <summary>
-        /// 当前页码
+        /// <p>当前页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页展示最大数量
+        /// <p>每页展示最大数量</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序类型
+        /// <p>排序类型</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 拓展数据
+        /// <p>拓展数据</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
         /// <summary>
-        /// 请求头
+        /// <p>请求头</p>
         /// </summary>
         [JsonProperty("RequestHeader")]
         public string RequestHeader{ get; set; }

@@ -25,55 +25,55 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 产品Id
+        /// <p>产品Id</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 需要对比的查询条件，没有则不填
+        /// <p>需要对比的查询条件，没有则不填</p>
         /// </summary>
         [JsonProperty("Compare")]
         public CompareCondition Compare{ get; set; }
 
         /// <summary>
-        /// 查询条件
+        /// <p>查询条件</p>
         /// </summary>
         [JsonProperty("Condition")]
         public CompareCondition Condition{ get; set; }
 
         /// <summary>
-        /// 问题类型
+        /// <p>问题类型</p>
         /// </summary>
         [JsonProperty("IssueType")]
         public long? IssueType{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// <p>排序方式</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// topN
+        /// <p>topN</p>
         /// </summary>
         [JsonProperty("TopNum")]
         public long? TopNum{ get; set; }
 
         /// <summary>
-        /// 拓展字段
+        /// <p>拓展字段</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
         /// <summary>
-        /// 请求头
+        /// <p>请求头</p>
         /// </summary>
         [JsonProperty("RequestHeader")]
         public string RequestHeader{ get; set; }

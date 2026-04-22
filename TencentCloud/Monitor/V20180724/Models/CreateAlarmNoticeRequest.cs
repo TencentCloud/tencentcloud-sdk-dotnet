@@ -25,58 +25,64 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模块名，这里填“monitor”
+        /// <p>模块名，这里填“monitor”</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 通知模板名称 60字符以内
+        /// <p>通知模板名称 60字符以内</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
+        /// <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
         /// </summary>
         [JsonProperty("NoticeType")]
         public string NoticeType{ get; set; }
 
         /// <summary>
-        /// 通知语言 zh-CN=中文 en-US=英文
+        /// <p>通知语言 zh-CN=中文 en-US=英文</p>
         /// </summary>
         [JsonProperty("NoticeLanguage")]
         public string NoticeLanguage{ get; set; }
 
         /// <summary>
-        /// 用户通知 最多5个
+        /// <p>用户通知 最多5个</p>
         /// </summary>
         [JsonProperty("UserNotices")]
         public UserNotice[] UserNotices{ get; set; }
 
         /// <summary>
-        /// 回调通知 最多6个
+        /// <p>回调通知 最多6个</p>
         /// </summary>
         [JsonProperty("URLNotices")]
         public URLNotice[] URLNotices{ get; set; }
 
         /// <summary>
-        /// 推送CLS日志服务的操作 最多1个
+        /// <p>推送CLS日志服务的操作 最多1个</p>
         /// </summary>
         [JsonProperty("CLSNotices")]
         public CLSNotice[] CLSNotices{ get; set; }
 
         /// <summary>
-        /// 模板绑定的标签
+        /// <p>模板绑定的标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否免登录，0-否，1-是
+        /// <p>是否免登录，0-否，1-是</p>
         /// </summary>
         [JsonProperty("IsLoginFree")]
         public long? IsLoginFree{ get; set; }
+
+        /// <summary>
+        /// <p>IANA 时区名</p>
+        /// </summary>
+        [JsonProperty("TimeZoneName")]
+        public string TimeZoneName{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
+            this.SetParamSimple(map, prefix + "TimeZoneName", this.TimeZoneName);
         }
     }
 }

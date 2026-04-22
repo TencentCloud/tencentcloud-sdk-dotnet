@@ -25,23 +25,28 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同流程的详细信息。
-        /// 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+        /// <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
         /// </summary>
         [JsonProperty("FlowDetailInfos")]
         public FlowDetailInfo[] FlowDetailInfos{ get; set; }
 
         /// <summary>
-        /// 合同组ID，只有在查询合同组信息时才会返回。
+        /// <p>合同组ID，只有在查询合同组信息时才会返回。</p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 合同组名称，只有在查询合同组信息时才会返回。
+        /// <p>合同组名称，只有在查询合同组信息时才会返回。</p>
         /// </summary>
         [JsonProperty("FlowGroupName")]
         public string FlowGroupName{ get; set; }
+
+        /// <summary>
+        /// <p>合同组合同备注列表</p>
+        /// </summary>
+        [JsonProperty("FlowGroupRemarks")]
+        public string[] FlowGroupRemarks{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,6 +63,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "FlowDetailInfos.", this.FlowDetailInfos);
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
+            this.SetParamArraySimple(map, prefix + "FlowGroupRemarks.", this.FlowGroupRemarks);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

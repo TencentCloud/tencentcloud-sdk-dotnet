@@ -25,40 +25,75 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 慢SQL 语句
+        /// <p>慢SQL 语句</p>
         /// </summary>
         [JsonProperty("RawQuery")]
         public string RawQuery{ get; set; }
 
         /// <summary>
-        /// 慢SQL 查询的数据库
+        /// <p>慢SQL 查询的数据库</p>
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 慢SQL执行 耗时
+        /// <p>慢SQL执行 耗时</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 执行慢SQL的客户端
+        /// <p>执行慢SQL的客户端</p>
         /// </summary>
         [JsonProperty("ClientAddr")]
         public string ClientAddr{ get; set; }
 
         /// <summary>
-        /// 执行慢SQL的用户名
+        /// <p>执行慢SQL的用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 慢SQL执行的开始时间
+        /// <p>慢SQL执行的开始时间</p>
         /// </summary>
         [JsonProperty("SessionStartTime")]
         public string SessionStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>执行慢SQL的进程ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProcessId")]
+        public long? ProcessId{ get; set; }
+
+        /// <summary>
+        /// <p>执行慢SQL的会话ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>执行慢SQL的事务ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VirtualTransactionId")]
+        public string VirtualTransactionId{ get; set; }
+
+        /// <summary>
+        /// <p>执行慢SQL的状态码</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SqlStateCode")]
+        public string SqlStateCode{ get; set; }
+
+        /// <summary>
+        /// <p>执行慢SQL的客户端名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
 
 
         /// <summary>
@@ -72,6 +107,11 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ClientAddr", this.ClientAddr);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "SessionStartTime", this.SessionStartTime);
+            this.SetParamSimple(map, prefix + "ProcessId", this.ProcessId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "VirtualTransactionId", this.VirtualTransactionId);
+            this.SetParamSimple(map, prefix + "SqlStateCode", this.SqlStateCode);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

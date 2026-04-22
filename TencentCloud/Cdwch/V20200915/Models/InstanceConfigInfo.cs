@@ -102,6 +102,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("AbnormalParam")]
         public string AbnormalParam{ get; set; }
 
+        /// <summary>
+        /// <p>是否生效</p>
+        /// </summary>
+        [JsonProperty("ConfigEffective")]
+        public string ConfigEffective{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "ValueRange", this.ValueRange);
             this.SetParamSimple(map, prefix + "AbnormalParam", this.AbnormalParam);
+            this.SetParamSimple(map, prefix + "ConfigEffective", this.ConfigEffective);
         }
     }
 }

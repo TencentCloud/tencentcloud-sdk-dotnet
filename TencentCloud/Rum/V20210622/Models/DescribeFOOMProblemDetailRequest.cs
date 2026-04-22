@@ -25,43 +25,43 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 产品Id
+        /// <p>产品Id</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 消息唯一标识
+        /// <p>消息唯一标识</p>
         /// </summary>
         [JsonProperty("ClientIdentify")]
         public string ClientIdentify{ get; set; }
 
         /// <summary>
-        /// 特征
+        /// <p>特征</p>
         /// </summary>
         [JsonProperty("Feature")]
         public string Feature{ get; set; }
 
         /// <summary>
-        /// 事件开始时间
+        /// <p>事件开始时间</p>
         /// </summary>
         [JsonProperty("StartEventTime")]
         public long? StartEventTime{ get; set; }
 
         /// <summary>
-        /// 事件结束时间
+        /// <p>事件结束时间</p>
         /// </summary>
         [JsonProperty("EndEventTime")]
         public long? EndEventTime{ get; set; }
 
         /// <summary>
-        /// 拓展数据
+        /// <p>拓展数据</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
         /// <summary>
-        /// 请求头
+        /// <p>请求头</p>
         /// </summary>
         [JsonProperty("RequestHeader")]
         public string RequestHeader{ get; set; }

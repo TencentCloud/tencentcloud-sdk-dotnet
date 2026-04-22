@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1401";
+       private const string sdkVersion = "SDK_NET_3.0.1414";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,48 @@ namespace TencentCloud.Waf.V20180125
         public AddAttackWhiteRuleResponse AddAttackWhiteRuleSync(AddAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<AddAttackWhiteRuleResponse>(req, "AddAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量新增自定义规则接口
+        /// </summary>
+        /// <param name="req"><see cref="AddBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="AddBatchCustomRuleResponse"/></returns>
+        public Task<AddBatchCustomRuleResponse> AddBatchCustomRule(AddBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<AddBatchCustomRuleResponse>(req, "AddBatchCustomRule");
+        }
+
+        /// <summary>
+        /// 批量新增自定义规则接口
+        /// </summary>
+        /// <param name="req"><see cref="AddBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="AddBatchCustomRuleResponse"/></returns>
+        public AddBatchCustomRuleResponse AddBatchCustomRuleSync(AddBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<AddBatchCustomRuleResponse>(req, "AddBatchCustomRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 增加批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="AddBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddBatchCustomWhiteRuleResponse"/></returns>
+        public Task<AddBatchCustomWhiteRuleResponse> AddBatchCustomWhiteRule(AddBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<AddBatchCustomWhiteRuleResponse>(req, "AddBatchCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// 增加批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="AddBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddBatchCustomWhiteRuleResponse"/></returns>
+        public AddBatchCustomWhiteRuleResponse AddBatchCustomWhiteRuleSync(AddBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<AddBatchCustomWhiteRuleResponse>(req, "AddBatchCustomWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +516,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 新建防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectGroupRequest"/></param>
+        /// <returns><see cref="CreateProtectGroupResponse"/></returns>
+        public Task<CreateProtectGroupResponse> CreateProtectGroup(CreateProtectGroupRequest req)
+        {
+            return InternalRequestAsync<CreateProtectGroupResponse>(req, "CreateProtectGroup");
+        }
+
+        /// <summary>
+        /// 新建防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectGroupRequest"/></param>
+        /// <returns><see cref="CreateProtectGroupResponse"/></returns>
+        public CreateProtectGroupResponse CreateProtectGroupSync(CreateProtectGroupRequest req)
+        {
+            return InternalRequestAsync<CreateProtectGroupResponse>(req, "CreateProtectGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建限流规则
         /// </summary>
         /// <param name="req"><see cref="CreateRateLimitV2Request"/></param>
@@ -596,6 +659,48 @@ namespace TencentCloud.Waf.V20180125
         public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRuleSync(DeleteAttackWhiteRuleRequest req)
         {
             return InternalRequestAsync<DeleteAttackWhiteRuleResponse>(req, "DeleteAttackWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// [自定义规则]-批量删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="DeleteBatchCustomRuleResponse"/></returns>
+        public Task<DeleteBatchCustomRuleResponse> DeleteBatchCustomRule(DeleteBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchCustomRuleResponse>(req, "DeleteBatchCustomRule");
+        }
+
+        /// <summary>
+        /// [自定义规则]-批量删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="DeleteBatchCustomRuleResponse"/></returns>
+        public DeleteBatchCustomRuleResponse DeleteBatchCustomRuleSync(DeleteBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchCustomRuleResponse>(req, "DeleteBatchCustomRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteBatchCustomWhiteRuleResponse"/></returns>
+        public Task<DeleteBatchCustomWhiteRuleResponse> DeleteBatchCustomWhiteRule(DeleteBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchCustomWhiteRuleResponse>(req, "DeleteBatchCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// 删除批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteBatchCustomWhiteRuleResponse"/></returns>
+        public DeleteBatchCustomWhiteRuleResponse DeleteBatchCustomWhiteRuleSync(DeleteBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBatchCustomWhiteRuleResponse>(req, "DeleteBatchCustomWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -848,6 +953,48 @@ namespace TencentCloud.Waf.V20180125
         public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRuleSync(DeleteOwaspWhiteRuleRequest req)
         {
             return InternalRequestAsync<DeleteOwaspWhiteRuleResponse>(req, "DeleteOwaspWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectGroupRequest"/></param>
+        /// <returns><see cref="DeleteProtectGroupResponse"/></returns>
+        public Task<DeleteProtectGroupResponse> DeleteProtectGroup(DeleteProtectGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectGroupResponse>(req, "DeleteProtectGroup");
+        }
+
+        /// <summary>
+        /// 删除防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectGroupRequest"/></param>
+        /// <returns><see cref="DeleteProtectGroupResponse"/></returns>
+        public DeleteProtectGroupResponse DeleteProtectGroupSync(DeleteProtectGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectGroupResponse>(req, "DeleteProtectGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解除防护对象组中的域名绑定
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectGroupDomainRequest"/></param>
+        /// <returns><see cref="DeleteProtectGroupDomainResponse"/></returns>
+        public Task<DeleteProtectGroupDomainResponse> DeleteProtectGroupDomain(DeleteProtectGroupDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectGroupDomainResponse>(req, "DeleteProtectGroupDomain");
+        }
+
+        /// <summary>
+        /// 解除防护对象组中的域名绑定
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectGroupDomainRequest"/></param>
+        /// <returns><see cref="DeleteProtectGroupDomainResponse"/></returns>
+        public DeleteProtectGroupDomainResponse DeleteProtectGroupDomainSync(DeleteProtectGroupDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectGroupDomainResponse>(req, "DeleteProtectGroupDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1268,6 +1415,48 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAutoDenyIPResponse DescribeAutoDenyIPSync(DescribeAutoDenyIPRequest req)
         {
             return InternalRequestAsync<DescribeAutoDenyIPResponse>(req, "DescribeAutoDenyIP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量自定义规则列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchCustomRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBatchCustomRuleListResponse"/></returns>
+        public Task<DescribeBatchCustomRuleListResponse> DescribeBatchCustomRuleList(DescribeBatchCustomRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchCustomRuleListResponse>(req, "DescribeBatchCustomRuleList");
+        }
+
+        /// <summary>
+        /// 批量自定义规则列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchCustomRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBatchCustomRuleListResponse"/></returns>
+        public DescribeBatchCustomRuleListResponse DescribeBatchCustomRuleListSync(DescribeBatchCustomRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchCustomRuleListResponse>(req, "DescribeBatchCustomRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取批量精准白名单的规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchCustomWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeBatchCustomWhiteRulesResponse"/></returns>
+        public Task<DescribeBatchCustomWhiteRulesResponse> DescribeBatchCustomWhiteRules(DescribeBatchCustomWhiteRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchCustomWhiteRulesResponse>(req, "DescribeBatchCustomWhiteRules");
+        }
+
+        /// <summary>
+        /// 获取批量精准白名单的规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchCustomWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeBatchCustomWhiteRulesResponse"/></returns>
+        public DescribeBatchCustomWhiteRulesResponse DescribeBatchCustomWhiteRulesSync(DescribeBatchCustomWhiteRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchCustomWhiteRulesResponse>(req, "DescribeBatchCustomWhiteRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2150,6 +2339,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribePostCLSFlowsResponse DescribePostCLSFlowsSync(DescribePostCLSFlowsRequest req)
         {
             return InternalRequestAsync<DescribePostCLSFlowsResponse>(req, "DescribePostCLSFlows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取防护对象组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectGroupRequest"/></param>
+        /// <returns><see cref="DescribeProtectGroupResponse"/></returns>
+        public Task<DescribeProtectGroupResponse> DescribeProtectGroup(DescribeProtectGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectGroupResponse>(req, "DescribeProtectGroup");
+        }
+
+        /// <summary>
+        /// 获取防护对象组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectGroupRequest"/></param>
+        /// <returns><see cref="DescribeProtectGroupResponse"/></returns>
+        public DescribeProtectGroupResponse DescribeProtectGroupSync(DescribeProtectGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectGroupResponse>(req, "DescribeProtectGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3061,6 +3271,90 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 批量编辑自定义规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomRuleResponse"/></returns>
+        public Task<ModifyBatchCustomRuleResponse> ModifyBatchCustomRule(ModifyBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomRuleResponse>(req, "ModifyBatchCustomRule");
+        }
+
+        /// <summary>
+        /// 批量编辑自定义规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomRuleRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomRuleResponse"/></returns>
+        public ModifyBatchCustomRuleResponse ModifyBatchCustomRuleSync(ModifyBatchCustomRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomRuleResponse>(req, "ModifyBatchCustomRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量自定义规则开关接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomRuleStatusResponse"/></returns>
+        public Task<ModifyBatchCustomRuleStatusResponse> ModifyBatchCustomRuleStatus(ModifyBatchCustomRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomRuleStatusResponse>(req, "ModifyBatchCustomRuleStatus");
+        }
+
+        /// <summary>
+        /// 批量自定义规则开关接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomRuleStatusResponse"/></returns>
+        public ModifyBatchCustomRuleStatusResponse ModifyBatchCustomRuleStatusSync(ModifyBatchCustomRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomRuleStatusResponse>(req, "ModifyBatchCustomRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomWhiteRuleResponse"/></returns>
+        public Task<ModifyBatchCustomWhiteRuleResponse> ModifyBatchCustomWhiteRule(ModifyBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomWhiteRuleResponse>(req, "ModifyBatchCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// 修改批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomWhiteRuleResponse"/></returns>
+        public ModifyBatchCustomWhiteRuleResponse ModifyBatchCustomWhiteRuleSync(ModifyBatchCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomWhiteRuleResponse>(req, "ModifyBatchCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomWhiteRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomWhiteRuleStatusResponse"/></returns>
+        public Task<ModifyBatchCustomWhiteRuleStatusResponse> ModifyBatchCustomWhiteRuleStatus(ModifyBatchCustomWhiteRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomWhiteRuleStatusResponse>(req, "ModifyBatchCustomWhiteRuleStatus");
+        }
+
+        /// <summary>
+        /// 更新批量精准白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBatchCustomWhiteRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyBatchCustomWhiteRuleStatusResponse"/></returns>
+        public ModifyBatchCustomWhiteRuleStatusResponse ModifyBatchCustomWhiteRuleStatusSync(ModifyBatchCustomWhiteRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBatchCustomWhiteRuleStatusResponse>(req, "ModifyBatchCustomWhiteRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量IP黑白名单新增接口
         /// </summary>
         /// <param name="req"><see cref="ModifyBatchIpAccessControlRequest"/></param>
@@ -3731,6 +4025,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRuleSync(ModifyOwaspWhiteRuleRequest req)
         {
             return InternalRequestAsync<ModifyOwaspWhiteRuleResponse>(req, "ModifyOwaspWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectGroupRequest"/></param>
+        /// <returns><see cref="ModifyProtectGroupResponse"/></returns>
+        public Task<ModifyProtectGroupResponse> ModifyProtectGroup(ModifyProtectGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectGroupResponse>(req, "ModifyProtectGroup");
+        }
+
+        /// <summary>
+        /// 编辑防护对象组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectGroupRequest"/></param>
+        /// <returns><see cref="ModifyProtectGroupResponse"/></returns>
+        public ModifyProtectGroupResponse ModifyProtectGroupSync(ModifyProtectGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectGroupResponse>(req, "ModifyProtectGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

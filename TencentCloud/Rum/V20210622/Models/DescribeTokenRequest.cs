@@ -25,31 +25,31 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 筛选条件
+        /// <p>筛选条件</p>
         /// </summary>
         [JsonProperty("FormListString")]
         public string FormListString{ get; set; }
 
         /// <summary>
-        /// 仅对比模式下填写，筛选条件A
+        /// <p>仅对比模式下填写，筛选条件A</p>
         /// </summary>
         [JsonProperty("FormListAString")]
         public string FormListAString{ get; set; }
 
         /// <summary>
-        /// 仅对比模式下填写，筛选条件B
+        /// <p>仅对比模式下填写，筛选条件B</p>
         /// </summary>
         [JsonProperty("FormListBString")]
         public string FormListBString{ get; set; }
 
         /// <summary>
-        /// 请求头
+        /// <p>请求头</p>
         /// </summary>
         [JsonProperty("RequestHeader")]
         public string RequestHeader{ get; set; }
 
         /// <summary>
-        /// 拓展字段
+        /// <p>拓展字段</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }

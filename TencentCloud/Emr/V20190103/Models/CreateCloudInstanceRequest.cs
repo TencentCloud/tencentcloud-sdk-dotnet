@@ -25,129 +25,124 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例名称。
-        /// <li>长度限制为6-36个字符。</li>
-        /// <li>只允许包含中文、字母、数字、-、_。</li>
+        /// <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 容器集群类型，取值范围
-        /// <li>EMR容器集群实例: EMR-TKE</li>
+        /// <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
         /// </summary>
         [JsonProperty("ClusterClass")]
         public string ClusterClass{ get; set; }
 
         /// <summary>
-        /// 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+        /// <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// 容器平台类型，取值范围
-        /// <li>EMR容器集群实例: tke</li>
+        /// <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li>
         /// </summary>
         [JsonProperty("PlatFormType")]
         public string PlatFormType{ get; set; }
 
         /// <summary>
-        /// cos存储桶
+        /// <p>cos存储桶</p>
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
         /// <summary>
-        /// 容器集群id
+        /// <p>容器集群id</p>
         /// </summary>
         [JsonProperty("EksClusterId")]
         public string EksClusterId{ get; set; }
 
         /// <summary>
-        /// 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-        /// <li>60:表示EMR-TKE-V1.1.0</li>
-        /// <li>55:表示EMR-TKE-V1.0.1</li>
-        /// <li>52:表示EMR-TKE-V1.0.0</li>
+        /// <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li>
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-        /// 示例值：a9a90aa6fae36063280
+        /// <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+        /// <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p>
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// 所有组件角色及其对应的Pod资源请求信息
+        /// <p>所有组件角色及其对应的Pod资源请求信息</p>
         /// </summary>
         [JsonProperty("CloudResources")]
         public CloudResource[] CloudResources{ get; set; }
 
         /// <summary>
-        /// 安全组Id，为空默认创建新的安全组
+        /// <p>安全组Id，为空默认创建新的安全组</p>
         /// </summary>
         [JsonProperty("SgId")]
         public string SgId{ get; set; }
 
         /// <summary>
-        /// 元数据库信息
-        /// MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-        /// 当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-        /// 当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+        /// <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
         /// </summary>
         [JsonProperty("MetaDBInfo")]
         public CustomMetaDBInfo MetaDBInfo{ get; set; }
 
         /// <summary>
-        /// 标签信息
+        /// <p>标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 登录密码，LoginSettings中的Password字段
+        /// <p>登录密码，LoginSettings中的Password字段</p>
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// 共享服务信息
+        /// <p>共享服务信息</p>
         /// </summary>
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
         /// <summary>
-        /// 可用区id
+        /// <p>可用区id</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DefaultMetaVersion")]
         public string DefaultMetaVersion{ get; set; }
 
         /// <summary>
-        /// 是否开通审计
+        /// <p>是否开通审计</p>
         /// </summary>
         [JsonProperty("NeedCdbAudit")]
         public long? NeedCdbAudit{ get; set; }
 
         /// <summary>
-        /// 安全组来源IP
+        /// <p>安全组来源IP</p>
         /// </summary>
         [JsonProperty("SgIP")]
         public string SgIP{ get; set; }
+
+        /// <summary>
+        /// <p>额外容器相关配置</p>
+        /// </summary>
+        [JsonProperty("ContainerExtraConf")]
+        public ContainerExtraConf ContainerExtraConf{ get; set; }
 
 
         /// <summary>
@@ -174,6 +169,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
             this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
+            this.SetParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
         }
     }
 }

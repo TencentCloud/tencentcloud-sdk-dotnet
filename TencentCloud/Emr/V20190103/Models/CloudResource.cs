@@ -25,69 +25,99 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 组件角色名
+        /// <p>组件角色名</p>
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// pod请求数量
+        /// <p>pod请求数量</p>
         /// </summary>
         [JsonProperty("PodNumber")]
         public long? PodNumber{ get; set; }
 
         /// <summary>
-        /// Cpu请求数量最大值
+        /// <p>Cpu请求数量最大值</p>
         /// </summary>
         [JsonProperty("LimitCpu")]
         public long? LimitCpu{ get; set; }
 
         /// <summary>
-        /// 内存请求数量最大值
+        /// <p>内存请求数量最大值</p>
         /// </summary>
         [JsonProperty("LimitMemory")]
         public long? LimitMemory{ get; set; }
 
         /// <summary>
-        /// 服务名称，如HIVE
+        /// <p>服务名称，如HIVE</p>
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// 数据卷目录设置
+        /// <p>数据卷目录设置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeDir")]
         public VolumeSetting VolumeDir{ get; set; }
 
         /// <summary>
-        /// 组件外部访问设置
+        /// <p>组件外部访问设置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalAccess")]
         public ExternalAccess ExternalAccess{ get; set; }
 
         /// <summary>
-        /// 节点亲和性设置
+        /// <p>节点亲和性设置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Affinity")]
         public NodeAffinity Affinity{ get; set; }
 
         /// <summary>
-        /// 所选数据盘信息
+        /// <p>所选数据盘信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Disks")]
         public Disk[] Disks{ get; set; }
 
         /// <summary>
-        /// 容忍
+        /// <p>容忍</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tolerations")]
         public Toleration[] Tolerations{ get; set; }
+
+        /// <summary>
+        /// <p>pod亲和性</p>
+        /// </summary>
+        [JsonProperty("PodAffinity")]
+        public PodAffinitySpec PodAffinity{ get; set; }
+
+        /// <summary>
+        /// <p>pod反亲和性</p>
+        /// </summary>
+        [JsonProperty("PodAntiAffinity")]
+        public PodAffinitySpec PodAntiAffinity{ get; set; }
+
+        /// <summary>
+        /// <p>拓扑分布约束</p>
+        /// </summary>
+        [JsonProperty("TopologySpreadConstraints")]
+        public TopologySpreadConstraint[] TopologySpreadConstraints{ get; set; }
+
+        /// <summary>
+        /// <p>pod标签</p>
+        /// </summary>
+        [JsonProperty("PodLabels")]
+        public StringMap[] PodLabels{ get; set; }
+
+        /// <summary>
+        /// <p>是否创建默认raycluster</p>
+        /// </summary>
+        [JsonProperty("EnableDefaultRayCluster")]
+        public bool? EnableDefaultRayCluster{ get; set; }
 
 
         /// <summary>
@@ -105,6 +135,11 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "Affinity.", this.Affinity);
             this.SetParamArrayObj(map, prefix + "Disks.", this.Disks);
             this.SetParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
+            this.SetParamObj(map, prefix + "PodAffinity.", this.PodAffinity);
+            this.SetParamObj(map, prefix + "PodAntiAffinity.", this.PodAntiAffinity);
+            this.SetParamArrayObj(map, prefix + "TopologySpreadConstraints.", this.TopologySpreadConstraints);
+            this.SetParamArrayObj(map, prefix + "PodLabels.", this.PodLabels);
+            this.SetParamSimple(map, prefix + "EnableDefaultRayCluster", this.EnableDefaultRayCluster);
         }
     }
 }

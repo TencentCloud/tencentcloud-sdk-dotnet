@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1401</VersionPrefix>
+    <VersionPrefix>3.0.1414</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,10 @@
     <Compile Include="V20180125\Models\AddAreaBanAreasResponse.cs" />
     <Compile Include="V20180125\Models\AddAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddBatchCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\AddBatchCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddBatchCustomWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\AddBatchCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddBypassAllRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddBypassAllRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddCustomRuleRequest.cs" />
@@ -98,6 +102,9 @@
     <Compile Include="V20180125\Models\AreaBanRule.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
+    <Compile Include="V20180125\Models\BatchCustomRuleListData.cs" />
+    <Compile Include="V20180125\Models\BatchCustomRuleListItem.cs" />
+    <Compile Include="V20180125\Models\BatchCustomWhiteRule.cs" />
     <Compile Include="V20180125\Models\BatchDomainResult.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
@@ -154,6 +161,8 @@
     <Compile Include="V20180125\Models\CreatePostCKafkaFlowResponse.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowRequest.cs" />
     <Compile Include="V20180125\Models\CreatePostCLSFlowResponse.cs" />
+    <Compile Include="V20180125\Models\CreateProtectGroupRequest.cs" />
+    <Compile Include="V20180125\Models\CreateProtectGroupResponse.cs" />
     <Compile Include="V20180125\Models\CreateRateLimitV2Request.cs" />
     <Compile Include="V20180125\Models\CreateRateLimitV2Response.cs" />
     <Compile Include="V20180125\Models\CronJob.cs" />
@@ -169,6 +178,10 @@
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchCustomWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteBatchCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteBatchIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DeleteBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteBotSceneUCBRuleRequest.cs" />
@@ -193,6 +206,10 @@
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteProtectGroupDomainRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteProtectGroupDomainResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteProtectGroupRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteProtectGroupResponse.cs" />
     <Compile Include="V20180125\Models\DeleteRateLimitsV2Request.cs" />
     <Compile Include="V20180125\Models\DeleteRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
@@ -236,6 +253,10 @@
     <Compile Include="V20180125\Models\DescribeAttackWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchCustomRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchCustomRuleListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchCustomWhiteRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchCustomWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeBatchIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DescribeBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeBotIdRuleRequest.cs" />
@@ -322,6 +343,8 @@
     <Compile Include="V20180125\Models\DescribePostCKafkaFlowsResponse.cs" />
     <Compile Include="V20180125\Models\DescribePostCLSFlowsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePostCLSFlowsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeProtectGroupRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeProtectGroupResponse.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeRateLimitsV2Request.cs" />
@@ -412,6 +435,7 @@
     <Compile Include="V20180125\Models\ImportIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\InOutputBotUCBRule.cs" />
     <Compile Include="V20180125\Models\InOutputUCBRuleEntry.cs" />
+    <Compile Include="V20180125\Models\InstanceBriefInfo.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
@@ -465,6 +489,14 @@
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomWhiteRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBatchCustomWhiteRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBatchIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBatchIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotIdRuleRequest.cs" />
@@ -529,6 +561,8 @@
     <Compile Include="V20180125\Models\ModifyOwaspRuleTypeStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyOwaspWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyOwaspWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectGroupRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectGroupResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionLevelRequest.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionLevelResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
@@ -568,6 +602,8 @@
     <Compile Include="V20180125\Models\PostCLSFlowInfo.cs" />
     <Compile Include="V20180125\Models\ProductInfo.cs" />
     <Compile Include="V20180125\Models\PromptDetectResult.cs" />
+    <Compile Include="V20180125\Models\ProtectGroupDomainInfo.cs" />
+    <Compile Include="V20180125\Models\ProtectGroupInfo.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\QueryBypassAllStatusRequest.cs" />

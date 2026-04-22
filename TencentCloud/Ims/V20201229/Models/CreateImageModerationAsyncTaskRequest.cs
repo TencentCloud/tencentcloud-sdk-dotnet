@@ -84,6 +84,18 @@ namespace TencentCloud.Ims.V20201229.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+        /// </summary>
+        [JsonProperty("FileUrlList")]
+        public string[] FileUrlList{ get; set; }
+
+        /// <summary>
+        /// <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+        /// </summary>
+        [JsonProperty("TextContent")]
+        public string TextContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamObj(map, prefix + "User.", this.User);
             this.SetParamObj(map, prefix + "Device.", this.Device);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "FileUrlList.", this.FileUrlList);
+            this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
         }
     }
 }

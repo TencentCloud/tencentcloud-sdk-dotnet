@@ -25,28 +25,34 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 销毁节点ID。该参数为预留参数，用户无需配置。
+        /// <p>销毁节点ID。该参数为预留参数，用户无需配置。</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+        /// <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// 计算资源ID
+        /// <p>计算资源ID</p>
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>保留计算资源关联的TKE集群</p>
+        /// </summary>
+        [JsonProperty("RetainTkeCluster")]
+        public bool? RetainTkeCluster{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamSimple(map, prefix + "RetainTkeCluster", this.RetainTkeCluster);
         }
     }
 }

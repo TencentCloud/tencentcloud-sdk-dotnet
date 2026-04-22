@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 查询到的日志数量，最大值为10000条。
+        /// <p>查询到的日志数量，最大值为10000条。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 错误日志详细信息集合。
+        /// <p>错误日志详细信息集合。</p>
         /// </summary>
         [JsonProperty("Details")]
         public ErrLogDetail[] Details{ get; set; }

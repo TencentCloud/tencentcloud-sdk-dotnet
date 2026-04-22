@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通知模板ID
+        /// <p>告警通知模板ID</p>
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }

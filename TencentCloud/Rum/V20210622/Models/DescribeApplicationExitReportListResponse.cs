@@ -25,19 +25,19 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 返回值
+        /// <p>返回值</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 消息
+        /// <p>消息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

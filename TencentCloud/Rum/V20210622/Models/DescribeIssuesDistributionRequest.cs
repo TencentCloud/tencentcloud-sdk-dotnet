@@ -25,103 +25,103 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 产品Id
+        /// <p>产品Id</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+        /// <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
         /// </summary>
         [JsonProperty("FormListString")]
         public string FormListString{ get; set; }
 
         /// <summary>
-        /// 分布维度是自定义维度时，填‘user_custom’
+        /// <p>分布维度是自定义维度时，填‘user_custom’</p>
         /// </summary>
         [JsonProperty("DimType")]
         public string DimType{ get; set; }
 
         /// <summary>
-        /// 维度，e.g. os_version, app_version, model等
+        /// <p>维度，e.g. os_version, app_version, model等</p>
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }
 
         /// <summary>
-        /// 数字类型字段的区间范围
+        /// <p>数字类型字段的区间范围</p>
         /// </summary>
         [JsonProperty("Intervals")]
         public long?[] Intervals{ get; set; }
 
         /// <summary>
-        /// 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+        /// <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
         /// </summary>
         [JsonProperty("ParamToken")]
         public string ParamToken{ get; set; }
 
         /// <summary>
-        /// 问题Id
+        /// <p>问题Id</p>
         /// </summary>
         [JsonProperty("IssueId")]
         public string IssueId{ get; set; }
 
         /// <summary>
-        /// 问题类型
+        /// <p>问题类型</p>
         /// </summary>
         [JsonProperty("IssueType")]
         public long? IssueType{ get; set; }
 
         /// <summary>
-        /// 限制返回的个数，默认返回所有值
+        /// <p>限制返回的个数，默认返回所有值</p>
         /// </summary>
         [JsonProperty("ParamLimit")]
         public long? ParamLimit{ get; set; }
 
         /// <summary>
-        /// 键
+        /// <p>键</p>
         /// </summary>
         [JsonProperty("MapKey")]
         public string MapKey{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("MapName")]
         public string MapName{ get; set; }
 
         /// <summary>
-        /// 指标类型
+        /// <p>指标类型</p>
         /// </summary>
         [JsonProperty("MetricType")]
         public long? MetricType{ get; set; }
 
         /// <summary>
-        /// 每页数目
+        /// <p>每页数目</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 用户自定义维度key
+        /// <p>用户自定义维度key</p>
         /// </summary>
         [JsonProperty("UserCustomKey")]
         public string UserCustomKey{ get; set; }
 
         /// <summary>
-        /// 拓展字段
+        /// <p>拓展字段</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
         /// <summary>
-        /// 请求头
+        /// <p>请求头</p>
         /// </summary>
         [JsonProperty("RequestHeader")]
         public string RequestHeader{ get; set; }

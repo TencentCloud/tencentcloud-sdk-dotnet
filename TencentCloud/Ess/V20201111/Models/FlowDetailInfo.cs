@@ -25,94 +25,82 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同流程ID，为32位字符串。
+        /// <p>合同流程ID，为32位字符串。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// <p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 合同流程的类别分类（如销售合同/入职合同等）。
-        /// 该字段将被废弃，不建议使用。	
+        /// <p>合同流程的类别分类（如销售合同/入职合同等）。<br>该字段将被废弃，不建议使用。</p>
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 合同流程当前的签署状态, 会存在下列的状态值 
-        /// <ul>
-        /// <li> **0** : 未开启流程(合同中不存在填写环节)</li> 
-        /// <li> **1** : 待签署</li>
-        ///  <li> **2** : 部分签署</li>
-        ///  <li> **3** : 已拒签</li>
-        ///  <li> **4** : 已签署</li> 
-        /// <li> **5** : 已过期</li>
-        ///  <li> **6** : 已撤销</li> 
-        /// <li> **7** : 未开启流程(合同中存在填写环节)</li>
-        ///  <li> **8** : 等待填写</li>
-        ///  <li> **9** : 部分填写</li>
-        ///  <li> **10** : 已拒填</li> 
-        /// <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li>
-        ///  <li> **21** : 已解除</li></ul>	
+        /// <p>合同流程当前的签署状态, 会存在下列的状态值 </p><ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li> <li> **21** : 已解除</li></ul>
         /// </summary>
         [JsonProperty("FlowStatus")]
         public long? FlowStatus{ get; set; }
 
         /// <summary>
-        /// 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
+        /// <p>当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。</p>
         /// </summary>
         [JsonProperty("FlowMessage")]
         public string FlowMessage{ get; set; }
 
         /// <summary>
-        /// 合同流程描述信息。	
+        /// <p>合同流程描述信息。</p>
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	
+        /// <p>合同流程的创建时间戳，格式为Unix标准时间戳（秒）。</p>
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 合同流程的签署方数组
+        /// <p>合同流程的签署方数组</p>
         /// </summary>
         [JsonProperty("FlowApproverInfos")]
         public FlowApproverDetail[] FlowApproverInfos{ get; set; }
 
         /// <summary>
-        /// 合同流程的关注方信息数组
+        /// <p>合同流程的关注方信息数组</p>
         /// </summary>
         [JsonProperty("CcInfos")]
         public FlowApproverDetail[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
+        /// <p>合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 用户合同的自定义分类。
-        /// 
-        /// 自定义合同类型的位置，在下图所示地方:
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png)
+        /// <p>用户合同的自定义分类。</p><p>自定义合同类型的位置，在下图所示地方:<br><img src="https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png" alt="image"></p>
         /// </summary>
         [JsonProperty("UserFlowType")]
         public UserFlowType UserFlowType{ get; set; }
 
         /// <summary>
-        /// 发起模板时,使用的模板Id
+        /// <p>发起模板时,使用的模板Id</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// <p>合同备注列表</p>
+        /// </summary>
+        [JsonProperty("FlowRemarks")]
+        public string[] FlowRemarks{ get; set; }
 
 
         /// <summary>
@@ -132,6 +120,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamArraySimple(map, prefix + "FlowRemarks.", this.FlowRemarks);
         }
     }
 }

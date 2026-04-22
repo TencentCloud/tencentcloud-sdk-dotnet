@@ -31,7 +31,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string DomainInstanceId{ get; set; }
 
         /// <summary>
-        /// 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）
+        /// <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p>
         /// </summary>
         [JsonProperty("QueryID")]
         public string QueryID{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1411";
+       private const string sdkVersion = "SDK_NET_3.0.1414";
 
         /// <summary>
         /// Client constructor.
@@ -1402,6 +1402,27 @@ namespace TencentCloud.Emr.V20190103
         public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstanceSync(InquiryPriceUpdateInstanceRequest req)
         {
             return InternalRequestAsync<InquiryPriceUpdateInstanceResponse>(req, "InquiryPriceUpdateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 安装组件。对于依赖元数据库的组件，有可能会需要下单一个cdb。可根据InstallSoftWareInfo查看当前集群可安装的组件，以及哪些组件有可能需要cdb。
+        /// </summary>
+        /// <param name="req"><see cref="InstallSoftwareRequest"/></param>
+        /// <returns><see cref="InstallSoftwareResponse"/></returns>
+        public Task<InstallSoftwareResponse> InstallSoftware(InstallSoftwareRequest req)
+        {
+            return InternalRequestAsync<InstallSoftwareResponse>(req, "InstallSoftware");
+        }
+
+        /// <summary>
+        /// 安装组件。对于依赖元数据库的组件，有可能会需要下单一个cdb。可根据InstallSoftWareInfo查看当前集群可安装的组件，以及哪些组件有可能需要cdb。
+        /// </summary>
+        /// <param name="req"><see cref="InstallSoftwareRequest"/></param>
+        /// <returns><see cref="InstallSoftwareResponse"/></returns>
+        public InstallSoftwareResponse InstallSoftwareSync(InstallSoftwareRequest req)
+        {
+            return InternalRequestAsync<InstallSoftwareResponse>(req, "InstallSoftware")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
