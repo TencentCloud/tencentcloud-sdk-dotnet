@@ -25,28 +25,10 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 参数名称
+        /// AnyOf类型参数
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 参数描述
-        /// </summary>
-        [JsonProperty("Desc")]
-        public string Desc{ get; set; }
-
-        /// <summary>
-        /// 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
-        /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
-
-        /// <summary>
-        /// 参数是否必填
-        /// </summary>
-        [JsonProperty("IsRequired")]
-        public bool? IsRequired{ get; set; }
+        [JsonProperty("AnyOf")]
+        public PluginToolReqParam[] AnyOf{ get; set; }
 
         /// <summary>
         /// 参数默认值
@@ -55,10 +37,10 @@ namespace TencentCloud.Lke.V20231130.Models
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+        /// 参数描述
         /// </summary>
-        [JsonProperty("SubParams")]
-        public PluginToolReqParam[] SubParams{ get; set; }
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
 
         /// <summary>
         /// 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
@@ -67,16 +49,34 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? GlobalHidden{ get; set; }
 
         /// <summary>
+        /// 参数是否必填
+        /// </summary>
+        [JsonProperty("IsRequired")]
+        public bool? IsRequired{ get; set; }
+
+        /// <summary>
+        /// 参数名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// OneOf类型参数
         /// </summary>
         [JsonProperty("OneOf")]
         public PluginToolReqParam[] OneOf{ get; set; }
 
         /// <summary>
-        /// AnyOf类型参数
+        /// 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
         /// </summary>
-        [JsonProperty("AnyOf")]
-        public PluginToolReqParam[] AnyOf{ get; set; }
+        [JsonProperty("SubParams")]
+        public PluginToolReqParam[] SubParams{ get; set; }
+
+        /// <summary>
+        /// 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
 
 
         /// <summary>
@@ -84,15 +84,15 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Desc", this.Desc);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "IsRequired", this.IsRequired);
-            this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
-            this.SetParamArrayObj(map, prefix + "SubParams.", this.SubParams);
-            this.SetParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
-            this.SetParamArrayObj(map, prefix + "OneOf.", this.OneOf);
             this.SetParamArrayObj(map, prefix + "AnyOf.", this.AnyOf);
+            this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
+            this.SetParamSimple(map, prefix + "IsRequired", this.IsRequired);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "OneOf.", this.OneOf);
+            this.SetParamArrayObj(map, prefix + "SubParams.", this.SubParams);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

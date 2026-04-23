@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -3020,6 +3020,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询异步语音合成任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToSpeechAsyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeTextToSpeechAsyncTaskResponse"/></returns>
+        public Task<DescribeTextToSpeechAsyncTaskResponse> DescribeTextToSpeechAsyncTask(DescribeTextToSpeechAsyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToSpeechAsyncTaskResponse>(req, "DescribeTextToSpeechAsyncTask");
+        }
+
+        /// <summary>
+        /// 查询异步语音合成任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToSpeechAsyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeTextToSpeechAsyncTaskResponse"/></returns>
+        public DescribeTextToSpeechAsyncTaskResponse DescribeTextToSpeechAsyncTaskSync(DescribeTextToSpeechAsyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToSpeechAsyncTaskResponse>(req, "DescribeTextToSpeechAsyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeTemplatesRequest"/></param>
@@ -4421,6 +4442,27 @@ namespace TencentCloud.Mps.V20190612
         public SyncDubbingResponse SyncDubbingSync(SyncDubbingRequest req)
         {
             return InternalRequestAsync<SyncDubbingResponse>(req, "SyncDubbing")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 异步语音合成接口，支持长文本转语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public Task<TextToSpeechAsyncResponse> TextToSpeechAsync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync");
+        }
+
+        /// <summary>
+        /// 异步语音合成接口，支持长文本转语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public TextToSpeechAsyncResponse TextToSpeechAsyncSync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

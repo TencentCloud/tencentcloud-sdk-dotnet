@@ -25,62 +25,67 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// <p>作业ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 作业名称
+        /// <p>作业名称</p>
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 作业描述
+        /// <p>作业描述</p>
         /// </summary>
         [JsonProperty("JobDescription")]
         public string JobDescription{ get; set; }
 
         /// <summary>
-        /// 作业优先级
+        /// <p>作业创建者</p>
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
+        /// <summary>
+        /// <p>作业优先级</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-        /// FAILED
+        /// <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p>
         /// </summary>
         [JsonProperty("JobState")]
         public string JobState{ get; set; }
 
         /// <summary>
-        /// 作业所属集群ID
+        /// <p>作业所属集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 作业所属队列名称
+        /// <p>作业所属队列名称</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 完成作业任务所需资源
+        /// <p>完成作业任务所需资源</p>
         /// </summary>
         [JsonProperty("OccupyResources")]
         public string OccupyResources{ get; set; }
 
         /// <summary>
-        /// 作业任务创建时间
+        /// <p>作业任务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 作业任务结束时间
+        /// <p>作业任务结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -94,6 +99,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "JobDescription", this.JobDescription);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "JobState", this.JobState);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);

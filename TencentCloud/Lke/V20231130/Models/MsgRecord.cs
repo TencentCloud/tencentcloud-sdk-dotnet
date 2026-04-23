@@ -25,207 +25,199 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 内容
+        /// <p>内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 当前记录所对应的 Session ID
+        /// <p>当前记录所对应的 Session ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 记录ID
+        /// <p>记录ID</p>
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 关联记录ID
+        /// <p>关联记录ID</p>
         /// </summary>
         [JsonProperty("RelatedRecordId")]
         public string RelatedRecordId{ get; set; }
 
         /// <summary>
-        /// 是否来自自己
+        /// <p>是否来自自己</p>
         /// </summary>
         [JsonProperty("IsFromSelf")]
         public bool? IsFromSelf{ get; set; }
 
         /// <summary>
-        /// 发送者名称
+        /// <p>发送者名称</p>
         /// </summary>
         [JsonProperty("FromName")]
         public string FromName{ get; set; }
 
         /// <summary>
-        /// 发送者头像
+        /// <p>发送者头像</p>
         /// </summary>
         [JsonProperty("FromAvatar")]
         public string FromAvatar{ get; set; }
 
         /// <summary>
-        /// 时间戳
+        /// <p>时间戳</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
 
         /// <summary>
-        /// 是否已读
+        /// <p>是否已读</p>
         /// </summary>
         [JsonProperty("HasRead")]
         public bool? HasRead{ get; set; }
 
         /// <summary>
-        /// 评价
+        /// <p>评价</p>
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// 是否评分
+        /// <p>是否评分</p>
         /// </summary>
         [JsonProperty("CanRating")]
         public bool? CanRating{ get; set; }
 
         /// <summary>
-        /// 是否展示反馈按钮
+        /// <p>是否展示反馈按钮</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanFeedback")]
         public bool? CanFeedback{ get; set; }
 
         /// <summary>
-        /// 记录类型
+        /// <p>记录类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 引用来源
+        /// <p>引用来源</p>
         /// </summary>
         [JsonProperty("References")]
         public MsgRecordReference[] References{ get; set; }
 
         /// <summary>
-        /// 评价原因
+        /// <p>评价原因</p>
         /// </summary>
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
         /// <summary>
-        /// 是否大模型
+        /// <p>是否大模型</p>
         /// </summary>
         [JsonProperty("IsLlmGenerated")]
         public bool? IsLlmGenerated{ get; set; }
 
         /// <summary>
-        /// 图片链接，可公有读
+        /// <p>图片链接，可公有读</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrls")]
         public string[] ImageUrls{ get; set; }
 
         /// <summary>
-        /// 当次 token 统计信息
+        /// <p>当次 token 统计信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TokenStat")]
         public TokenStat TokenStat{ get; set; }
 
         /// <summary>
-        /// 回复方式
-        /// 1:大模型直接回复;
-        /// 2:保守回复, 未知问题回复;
-        /// 3:拒答问题回复;
-        /// 4:敏感回复;
-        /// 5:问答对直接回复, 已采纳问答对优先回复;
-        /// 6:欢迎语回复;
-        /// 7:并发超限回复;
-        /// 8:全局干预知识;
-        /// 9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-        /// 10:任务流程答案回复;
-        /// 11:搜索引擎回复;
-        /// 12:知识润色后回复;
-        /// 13:图片理解回复;
-        /// 14:实时文档回复;
+        /// <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplyMethod")]
         public ulong? ReplyMethod{ get; set; }
 
         /// <summary>
-        /// 选项卡, 用于多轮对话
+        /// <p>选项卡, 用于多轮对话</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptionCards")]
         public string[] OptionCards{ get; set; }
 
         /// <summary>
-        /// 任务信息
+        /// <p>任务信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskFlow")]
         public TaskFlowInfo TaskFlow{ get; set; }
 
         /// <summary>
-        /// 用户传入的文件信息
+        /// <p>用户传入的文件信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileInfos")]
         public FileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 参考来源引用位置信息
+        /// <p>参考来源引用位置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuoteInfos")]
         public QuoteInfo[] QuoteInfos{ get; set; }
 
         /// <summary>
-        /// Agent的思考过程信息
+        /// <p>Agent的思考过程信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentThought")]
         public AgentThought AgentThought{ get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// <p>扩展信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 工作流信息
+        /// <p>工作流信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkFlow")]
         public WorkflowInfo WorkFlow{ get; set; }
 
         /// <summary>
-        /// Widget信息
+        /// <p>Widget信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Widgets")]
         public Widget[] Widgets{ get; set; }
 
         /// <summary>
-        /// Widget动作信息
+        /// <p>Widget动作信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WidgetAction")]
         public WidgetAction WidgetAction{ get; set; }
 
         /// <summary>
-        /// 音频信息
+        /// <p>音频信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Audios")]
         public Audio[] Audios{ get; set; }
+
+        /// <summary>
+        /// <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+        /// </summary>
+        [JsonProperty("OptionMode")]
+        public long? OptionMode{ get; set; }
 
 
         /// <summary>
@@ -262,6 +254,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Widgets.", this.Widgets);
             this.SetParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
             this.SetParamArrayObj(map, prefix + "Audios.", this.Audios);
+            this.SetParamSimple(map, prefix + "OptionMode", this.OptionMode);
         }
     }
 }

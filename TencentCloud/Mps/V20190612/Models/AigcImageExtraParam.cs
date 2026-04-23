@@ -25,24 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 指定所生成视频的宽高比。
-        /// 
-        /// 不同模型支持的宽高比:
-        /// 1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-        /// 
-        /// 注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。
+        /// <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 指定图片输出分辨率。
-        /// 
-        /// 支持该参数的模型：
-        /// 支持选择: 720P, 1080P, 2K, 4K。
+        /// <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
+
+        /// <summary>
+        /// <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public long? LogoAdd{ get; set; }
 
 
         /// <summary>
@@ -52,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("LoginSubAccountUin")]
         public string LoginSubAccountUin{ get; set; }
 
+        /// <summary>
+        /// 查询内容
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
         }
     }
 }

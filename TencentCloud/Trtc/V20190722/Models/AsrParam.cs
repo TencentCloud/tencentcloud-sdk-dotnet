@@ -95,6 +95,27 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VadLevel")]
         public ulong? VadLevel{ get; set; }
 
+        /// <summary>
+        /// 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+        /// 0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+        /// </summary>
+        [JsonProperty("FilterDirty")]
+        public ulong? FilterDirty{ get; set; }
+
+        /// <summary>
+        /// 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+        /// 0：不过滤语气词；1：部分过滤；2：严格过滤。
+        /// </summary>
+        [JsonProperty("FilterModal")]
+        public ulong? FilterModal{ get; set; }
+
+        /// <summary>
+        /// 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+        /// 0：不过滤句末的句号；1：过滤句末的句号。
+        /// </summary>
+        [JsonProperty("FilterPunc")]
+        public ulong? FilterPunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +127,9 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "HotWordList", this.HotWordList);
             this.SetParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
             this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
+            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
+            this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
         }
     }
 }

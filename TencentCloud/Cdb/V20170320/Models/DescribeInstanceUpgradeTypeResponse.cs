@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+        /// <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p>
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

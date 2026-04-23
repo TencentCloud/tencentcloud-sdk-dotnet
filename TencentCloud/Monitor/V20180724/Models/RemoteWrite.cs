@@ -25,27 +25,27 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 多写url
+        /// <p>多写url</p>
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
-        /// RelabelConfig
+        /// <p>RelabelConfig</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URLRelabelConfig")]
         public string URLRelabelConfig{ get; set; }
 
         /// <summary>
-        /// 鉴权
+        /// <p>鉴权</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicAuth")]
         public BasicAuth BasicAuth{ get; set; }
 
         /// <summary>
-        /// 最大block
+        /// <p>最大block</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxBlockSize")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string MaxBlockSize{ get; set; }
 
         /// <summary>
-        /// Label
+        /// <p>Label</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
@@ -61,11 +61,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// HTTP 额外添加的头
+        /// <p>HTTP 额外添加的头</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public RemoteWriteHeader[] Headers{ get; set; }
+
+        /// <summary>
+        /// <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteWriteType")]
+        public long? RemoteWriteType{ get; set; }
 
 
         /// <summary>
@@ -79,6 +86,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "MaxBlockSize", this.MaxBlockSize);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "RemoteWriteType", this.RemoteWriteType);
         }
     }
 }

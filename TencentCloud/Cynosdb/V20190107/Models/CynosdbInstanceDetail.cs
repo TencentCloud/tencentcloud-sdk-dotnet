@@ -25,223 +25,220 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 用户Uin
+        /// <p>用户Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 用户AppId
+        /// <p>用户AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例状态
-        /// creating：创建中
-        /// running：运行中
-        /// isolating：隔离中
-        /// isolated：已隔离
-        /// activating：恢复中
-        /// offlining：下线中
-        /// offlined：已下线
+        /// <p>实例状态<br>creating：创建中<br>running：运行中<br>isolating：隔离中<br>isolated：已隔离<br>activating：恢复中<br>offlining：下线中<br>offlined：已下线</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例状态中文描述
+        /// <p>实例状态中文描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// serverless实例状态, 可能值：
-        /// resume
-        /// pause
+        /// <p>serverless实例状态, 可能值：<br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 数据库类型
+        /// <p>数据库类型</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Cpu，单位：核
+        /// <p>Cpu，单位：核</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存，单位：GB
+        /// <p>内存，单位：GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 存储量，单位：GB
+        /// <p>存储量，单位：GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例当前角色
+        /// <p>实例当前角色</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例过期时间
+        /// <p>实例过期时间</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// <p>网络类型</p>
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// VPC网络ID
+        /// <p>VPC网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例内网IP
+        /// <p>实例内网IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 实例内网端口
+        /// <p>实例内网端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 实例外网域名
+        /// <p>实例外网域名</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 字符集
+        /// <p>字符集</p>
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
 
         /// <summary>
-        /// Cynos内核版本
+        /// <p>Cynos内核版本</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// <p>续费标志</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// serverless实例cpu下限
+        /// <p>serverless实例cpu下限</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// serverless实例cpu上限
+        /// <p>serverless实例cpu上限</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+        /// <p>Db类型:<li>NORMAL</li><li>SERVERLESS</li></p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
+
+        /// <summary>
+        /// <p>集群的读写实例所在可用区</p>
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
 
 
         /// <summary>
@@ -284,6 +281,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
         }
     }
 }

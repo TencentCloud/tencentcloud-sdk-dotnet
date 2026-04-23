@@ -25,42 +25,42 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 首Token耗时
+        /// <p>首Token耗时</p><p>单位：ms</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTokenCost")]
         public ulong? FirstTokenCost{ get; set; }
 
         /// <summary>
-        /// 总耗时
+        /// <p>总耗时</p><p>单位：ms</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
         public ulong? TotalCost{ get; set; }
 
         /// <summary>
-        /// 输入Token数量
+        /// <p>输入Token数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputTokens")]
         public ulong? InputTokens{ get; set; }
 
         /// <summary>
-        /// 输出Token数量
+        /// <p>输出Token数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputTokens")]
         public ulong? OutputTokens{ get; set; }
 
         /// <summary>
-        /// 总Token数量
+        /// <p>总Token数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTokens")]

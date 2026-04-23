@@ -25,43 +25,55 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 频道ID，全局唯一标识。
+        /// <p>频道ID，全局唯一标识。</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 频道名称。
+        /// <p>频道名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 广告源信息。
+        /// <p>广告源信息。</p>
         /// </summary>
         [JsonProperty("ContentSource")]
         public string ContentSource{ get; set; }
 
         /// <summary>
-        /// 播放地址。
+        /// <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
         /// </summary>
         [JsonProperty("PlaybackPrefix")]
         public string PlaybackPrefix{ get; set; }
 
         /// <summary>
-        /// 广告插入SSAI配置信息。
+        /// <p>hls播放地址</p>
+        /// </summary>
+        [JsonProperty("HlsPlaybackPrefix")]
+        public string HlsPlaybackPrefix{ get; set; }
+
+        /// <summary>
+        /// <p>dash播放地址</p>
+        /// </summary>
+        [JsonProperty("DashPlaybackPrefix")]
+        public string DashPlaybackPrefix{ get; set; }
+
+        /// <summary>
+        /// <p>广告插入SSAI配置信息。</p>
         /// </summary>
         [JsonProperty("SSAIInfo")]
         public SSAIConf SSAIInfo{ get; set; }
 
         /// <summary>
-        /// 地域信息。
+        /// <p>地域信息。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 用于clickthrough地址
+        /// <p>用于clickthrough地址</p>
         /// </summary>
         [JsonProperty("SessionInitPrefix")]
         public string SessionInitPrefix{ get; set; }
@@ -76,6 +88,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ContentSource", this.ContentSource);
             this.SetParamSimple(map, prefix + "PlaybackPrefix", this.PlaybackPrefix);
+            this.SetParamSimple(map, prefix + "HlsPlaybackPrefix", this.HlsPlaybackPrefix);
+            this.SetParamSimple(map, prefix + "DashPlaybackPrefix", this.DashPlaybackPrefix);
             this.SetParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "SessionInitPrefix", this.SessionInitPrefix);

@@ -25,106 +25,130 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 任务起始时间戳，Unix 秒级时间戳
+        /// <p>任务起始时间戳，Unix 秒级时间戳</p>
         /// </summary>
         [JsonProperty("NotBefore")]
         public long? NotBefore{ get; set; }
 
         /// <summary>
-        /// 被叫号码列表
+        /// <p>被叫号码列表</p>
         /// </summary>
         [JsonProperty("Callees")]
         public string[] Callees{ get; set; }
 
         /// <summary>
-        /// 主叫号码列表
+        /// <p>主叫号码列表</p>
         /// </summary>
         [JsonProperty("Callers")]
         public string[] Callers{ get; set; }
 
         /// <summary>
-        /// 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+        /// <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
         /// </summary>
         [JsonProperty("IvrId")]
         public ulong? IvrId{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// <p>任务描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 任务停止时间戳，Unix 秒级时间戳
+        /// <p>任务停止时间戳，Unix 秒级时间戳</p>
         /// </summary>
         [JsonProperty("NotAfter")]
         public long? NotAfter{ get; set; }
 
         /// <summary>
-        /// 最大尝试次数，1-3 次
+        /// <p>最大尝试次数，1-3 次</p>
         /// </summary>
         [JsonProperty("Tries")]
         public ulong? Tries{ get; set; }
 
         /// <summary>
-        /// 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+        /// <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
         /// </summary>
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
         /// <summary>
-        /// 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+        /// <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
-        /// 被叫属性
+        /// <p>被叫属性</p>
         /// </summary>
         [JsonProperty("CalleeAttributes")]
         public CalleeAttribute[] CalleeAttributes{ get; set; }
 
         /// <summary>
-        /// IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+        /// <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// 可用时间段
+        /// <p>可用时间段</p>
         /// </summary>
         [JsonProperty("AvailableTime")]
         public TimeRange[] AvailableTime{ get; set; }
 
         /// <summary>
-        /// 智能体 ID，不填写时需要填写 IvrId
+        /// <p>智能体 ID，不填写时需要填写 IvrId</p>
         /// </summary>
         [JsonProperty("AIAgentId")]
         public long? AIAgentId{ get; set; }
 
         /// <summary>
-        /// 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+        /// <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
         /// </summary>
         [JsonProperty("RetryInterval")]
         public long? RetryInterval{ get; set; }
 
         /// <summary>
-        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
         /// </summary>
         [JsonProperty("MaxRingTimeoutSecond")]
         public long? MaxRingTimeoutSecond{ get; set; }
+
+        /// <summary>
+        /// <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+        /// </summary>
+        [JsonProperty("RetryHangupTypes")]
+        public string[] RetryHangupTypes{ get; set; }
+
+        /// <summary>
+        /// <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+        /// </summary>
+        [JsonProperty("RetryTags")]
+        public RetryTagItem[] RetryTags{ get; set; }
+
+        /// <summary>
+        /// <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+        /// </summary>
+        [JsonProperty("AvailableWorkTimeConfig")]
+        public AvailableTimeConfig[] AvailableWorkTimeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>触发策略</p>
+        /// </summary>
+        [JsonProperty("TriggerStrategy")]
+        public TriggerStrategyItem[] TriggerStrategy{ get; set; }
 
 
         /// <summary>
@@ -149,6 +173,10 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+            this.SetParamArraySimple(map, prefix + "RetryHangupTypes.", this.RetryHangupTypes);
+            this.SetParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
+            this.SetParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
+            this.SetParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
         }
     }
 }

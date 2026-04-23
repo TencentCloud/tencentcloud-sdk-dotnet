@@ -25,169 +25,169 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型描述
+        /// <p>模型描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelDesc")]
         public string ModelDesc{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
-        /// 资源状态 1：资源可用；2：资源已用尽
+        /// <p>资源状态 1：资源可用；2：资源已用尽</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceStatus")]
         public ulong? ResourceStatus{ get; set; }
 
         /// <summary>
-        /// 提示词内容字符限制
+        /// <p>提示词内容字符限制</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PromptWordsLimit")]
         public string PromptWordsLimit{ get; set; }
 
         /// <summary>
-        /// 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+        /// <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopP")]
         public ModelParameter TopP{ get; set; }
 
         /// <summary>
-        /// 温度控制随机性
+        /// <p>温度控制随机性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Temperature")]
         public ModelParameter Temperature{ get; set; }
 
         /// <summary>
-        /// 最多能生成的token数量
+        /// <p>最多能生成的token数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxTokens")]
         public ModelParameter MaxTokens{ get; set; }
 
         /// <summary>
-        /// 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+        /// <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 模型图标
+        /// <p>模型图标</p>
         /// </summary>
         [JsonProperty("Icon")]
         public string Icon{ get; set; }
 
         /// <summary>
-        /// 是否免费
+        /// <p>是否免费</p>
         /// </summary>
         [JsonProperty("IsFree")]
         public bool? IsFree{ get; set; }
 
         /// <summary>
-        /// 模型对话框可输入的上限
+        /// <p>模型对话框可输入的上限</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputLenLimit")]
         public ulong? InputLenLimit{ get; set; }
 
         /// <summary>
-        /// 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+        /// <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportWorkflowStatus")]
         public ulong? SupportWorkflowStatus{ get; set; }
 
         /// <summary>
-        /// 模型类别 generate：生成模型，thought：思考模型
+        /// <p>模型类别 generate：生成模型，thought：思考模型</p>
         /// </summary>
         [JsonProperty("ModelCategory")]
         public string ModelCategory{ get; set; }
 
         /// <summary>
-        /// 是否默认模型
+        /// <p>是否默认模型</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 角色提示词输入长度限制
+        /// <p>角色提示词输入长度限制</p>
         /// </summary>
         [JsonProperty("RoleLenLimit")]
         public ulong? RoleLenLimit{ get; set; }
 
         /// <summary>
-        /// 是否专属并发模型
+        /// <p>是否专属并发模型</p>
         /// </summary>
         [JsonProperty("IsExclusive")]
         public bool? IsExclusive{ get; set; }
 
         /// <summary>
-        /// 模型支持智能通话效果
+        /// <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
         /// </summary>
         [JsonProperty("SupportAiCallStatus")]
         public ulong? SupportAiCallStatus{ get; set; }
 
         /// <summary>
-        /// 专属并发数
+        /// <p>专属并发数</p>
         /// </summary>
         [JsonProperty("Concurrency")]
         public ulong? Concurrency{ get; set; }
 
         /// <summary>
-        /// 模型标签
+        /// <p>模型标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelTags")]
         public string[] ModelTags{ get; set; }
 
         /// <summary>
-        /// 模型超参定义
+        /// <p>模型超参定义</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelParams")]
         public ModelParameter[] ModelParams{ get; set; }
 
         /// <summary>
-        /// 提供商名称
+        /// <p>提供商名称</p>
         /// </summary>
         [JsonProperty("ProviderName")]
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// 提供商别名
+        /// <p>提供商别名</p>
         /// </summary>
         [JsonProperty("ProviderAliasName")]
         public string ProviderAliasName{ get; set; }
 
         /// <summary>
-        /// 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+        /// <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
         /// </summary>
         [JsonProperty("ProviderType")]
         public string ProviderType{ get; set; }
 
         /// <summary>
-        /// 是否关闭模型超参
+        /// <p>是否关闭模型超参</p>
         /// </summary>
         [JsonProperty("IsCloseModelParams")]
         public bool? IsCloseModelParams{ get; set; }
 
         /// <summary>
-        /// 是否支持深度思考
+        /// <p>是否支持深度思考</p>
         /// </summary>
         [JsonProperty("IsDeepThinking")]
         public bool? IsDeepThinking{ get; set; }

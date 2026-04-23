@@ -25,74 +25,72 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 温度
-        /// </summary>
-        [JsonProperty("Temperature")]
-        public float? Temperature{ get; set; }
-
-        /// <summary>
-        /// Top_P
-        /// </summary>
-        [JsonProperty("TopP")]
-        public float? TopP{ get; set; }
-
-        /// <summary>
-        /// 随机种子
-        /// </summary>
-        [JsonProperty("Seed")]
-        public long? Seed{ get; set; }
-
-        /// <summary>
-        /// 存在惩罚
-        /// </summary>
-        [JsonProperty("PresencePenalty")]
-        public float? PresencePenalty{ get; set; }
-
-        /// <summary>
-        /// 频率惩罚
-        /// </summary>
-        [JsonProperty("FrequencyPenalty")]
-        public float? FrequencyPenalty{ get; set; }
-
-        /// <summary>
-        /// 重复惩罚
-        /// </summary>
-        [JsonProperty("RepetitionPenalty")]
-        public float? RepetitionPenalty{ get; set; }
-
-        /// <summary>
-        /// 最大输出长度
-        /// </summary>
-        [JsonProperty("MaxTokens")]
-        public long? MaxTokens{ get; set; }
-
-        /// <summary>
-        /// 停止序列
-        /// </summary>
-        [JsonProperty("StopSequences")]
-        public string[] StopSequences{ get; set; }
-
-        /// <summary>
-        /// 输出格式
-        /// </summary>
-        [JsonProperty("ReplyFormat")]
-        public string ReplyFormat{ get; set; }
-
-        /// <summary>
-        /// 深度思考值
-        /// disabled
-        /// enabled
+        /// <p>深度思考值<br>disabled<br>enabled</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeepThinking")]
         public string DeepThinking{ get; set; }
 
         /// <summary>
-        /// 效果 disabled low medium high
+        /// <p>频率惩罚</p>
+        /// </summary>
+        [JsonProperty("FrequencyPenalty")]
+        public float? FrequencyPenalty{ get; set; }
+
+        /// <summary>
+        /// <p>最大输出长度</p>
+        /// </summary>
+        [JsonProperty("MaxTokens")]
+        public long? MaxTokens{ get; set; }
+
+        /// <summary>
+        /// <p>存在惩罚</p>
+        /// </summary>
+        [JsonProperty("PresencePenalty")]
+        public float? PresencePenalty{ get; set; }
+
+        /// <summary>
+        /// <p>效果 disabled low medium high</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReasoningEffort")]
         public string ReasoningEffort{ get; set; }
+
+        /// <summary>
+        /// <p>重复惩罚</p>
+        /// </summary>
+        [JsonProperty("RepetitionPenalty")]
+        public float? RepetitionPenalty{ get; set; }
+
+        /// <summary>
+        /// <p>输出格式</p>
+        /// </summary>
+        [JsonProperty("ReplyFormat")]
+        public string ReplyFormat{ get; set; }
+
+        /// <summary>
+        /// <p>随机种子</p>
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
+
+        /// <summary>
+        /// <p>停止序列</p>
+        /// </summary>
+        [JsonProperty("StopSequences")]
+        public string[] StopSequences{ get; set; }
+
+        /// <summary>
+        /// <p>温度</p>
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public float? Temperature{ get; set; }
+
+        /// <summary>
+        /// <p>Top_P</p>
+        /// </summary>
+        [JsonProperty("TopP")]
+        public float? TopP{ get; set; }
 
 
         /// <summary>
@@ -100,17 +98,17 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
+            this.SetParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
+            this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
+            this.SetParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
+            this.SetParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
+            this.SetParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
+            this.SetParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
-            this.SetParamSimple(map, prefix + "Seed", this.Seed);
-            this.SetParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
-            this.SetParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
-            this.SetParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
-            this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
-            this.SetParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
-            this.SetParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
-            this.SetParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
-            this.SetParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
         }
     }
 }

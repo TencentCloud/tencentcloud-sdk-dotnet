@@ -86,6 +86,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
             this.SetParamSimple(map, prefix + "IsAllowDelete", this.IsAllowDelete);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

@@ -25,46 +25,46 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 超参名称
+        /// <p>超参名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 枚举值
+        /// <p>枚举值</p>
         /// </summary>
         [JsonProperty("EnumValues")]
         public string[] EnumValues{ get; set; }
 
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Default")]
         public float? Default{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// <p>最小值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// <p>最大值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]

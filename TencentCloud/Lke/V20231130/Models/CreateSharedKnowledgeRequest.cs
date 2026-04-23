@@ -25,29 +25,35 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 共享知识库名称，字符数量范围：[1, 50]
+        /// <p>共享知识库名称，字符数量范围：[1, 50]</p>
         /// </summary>
         [JsonProperty("KnowledgeName")]
         public string KnowledgeName{ get; set; }
 
         /// <summary>
-        /// 共享知识库描述，字符数量上限2000
+        /// <p>共享知识库描述，字符数量上限2000</p>
         /// </summary>
         [JsonProperty("KnowledgeDescription")]
         public string KnowledgeDescription{ get; set; }
 
         /// <summary>
-        /// Embedding模型，字符数量上限128
+        /// <p>Embedding模型，字符数量上限128</p>
         /// </summary>
         [JsonProperty("EmbeddingModel")]
         [System.Obsolete]
         public string EmbeddingModel{ get; set; }
 
         /// <summary>
-        /// 共享知识库类型，0普通，1公众号
+        /// <p>共享知识库类型，0普通，1公众号</p>
         /// </summary>
         [JsonProperty("KnowledgeType")]
         public long? KnowledgeType{ get; set; }
+
+        /// <summary>
+        /// <p>ES存储配置</p>
+        /// </summary>
+        [JsonProperty("EsConfig")]
+        public ESConfig EsConfig{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
             this.SetParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
             this.SetParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
+            this.SetParamObj(map, prefix + "EsConfig.", this.EsConfig);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1413</VersionPrefix>
+    <VersionPrefix>3.0.1415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -168,6 +168,8 @@
     <Compile Include="V20201016\Models\CreateRebuildIndexTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
+    <Compile Include="V20201016\Models\CreateSearchViewRequest.cs" />
+    <Compile Include="V20201016\Models\CreateSearchViewResponse.cs" />
     <Compile Include="V20201016\Models\CreateShipperRequest.cs" />
     <Compile Include="V20201016\Models\CreateShipperResponse.cs" />
     <Compile Include="V20201016\Models\CreateSplunkDeliverRequest.cs" />
@@ -246,6 +248,8 @@
     <Compile Include="V20201016\Models\DeleteNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteSearchViewRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteSearchViewResponse.cs" />
     <Compile Include="V20201016\Models\DeleteShipperRequest.cs" />
     <Compile Include="V20201016\Models\DeleteShipperResponse.cs" />
     <Compile Include="V20201016\Models\DeleteSplunkDeliverRequest.cs" />
@@ -352,6 +356,8 @@
     <Compile Include="V20201016\Models\DescribeRebuildIndexTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeSearchViewsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeSearchViewsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeShipperTasksRequest.cs" />
     <Compile Include="V20201016\Models\DescribeShipperTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeShippersRequest.cs" />
@@ -493,6 +499,8 @@
     <Compile Include="V20201016\Models\ModifyNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
+    <Compile Include="V20201016\Models\ModifySearchViewRequest.cs" />
+    <Compile Include="V20201016\Models\ModifySearchViewResponse.cs" />
     <Compile Include="V20201016\Models\ModifyShipperRequest.cs" />
     <Compile Include="V20201016\Models\ModifyShipperResponse.cs" />
     <Compile Include="V20201016\Models\ModifySplunkDeliverRequest.cs" />
@@ -547,6 +555,7 @@
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="V20201016\Models\SearchLogResponse.cs" />
     <Compile Include="V20201016\Models\SearchLogTopics.cs" />
+    <Compile Include="V20201016\Models\SearchViewInfo.cs" />
     <Compile Include="V20201016\Models\SendConsumerHeartbeatRequest.cs" />
     <Compile Include="V20201016\Models\SendConsumerHeartbeatResponse.cs" />
     <Compile Include="V20201016\Models\ShipperInfo.cs" />
@@ -566,6 +575,7 @@
     <Compile Include="V20201016\Models\UploadLogResponse.cs" />
     <Compile Include="V20201016\Models\UserKafkaMeta.cs" />
     <Compile Include="V20201016\Models\ValueInfo.cs" />
+    <Compile Include="V20201016\Models\ViewSearchTopic.cs" />
     <Compile Include="V20201016\Models\WebCallback.cs" />
     <Compile Include="V20201016\Models\WebCallbackInfo.cs" />
   </ItemGroup>

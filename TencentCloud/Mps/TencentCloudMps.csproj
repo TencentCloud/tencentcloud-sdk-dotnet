@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1412</VersionPrefix>
+    <VersionPrefix>3.0.1415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -575,6 +575,8 @@
     <Compile Include="V20190612\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeTextToSpeechAsyncTaskRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeTextToSpeechAsyncTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeUsageDataRequest.cs" />
@@ -1003,6 +1005,8 @@
     <Compile Include="V20190612\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\TerrorismOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\TextToSpeechAsyncRequest.cs" />
+    <Compile Include="V20190612\Models\TextToSpeechAsyncResponse.cs" />
     <Compile Include="V20190612\Models\TextTranslationRequest.cs" />
     <Compile Include="V20190612\Models\TextTranslationResponse.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInput.cs" />

@@ -124,6 +124,30 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("MultiRequest")]
         public bool? MultiRequest{ get; set; }
 
+        /// <summary>
+        /// <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+        /// </summary>
+        [JsonProperty("DashOriginManifestType")]
+        public string DashOriginManifestType{ get; set; }
+
+        /// <summary>
+        /// <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+        /// </summary>
+        [JsonProperty("SlateOnEmptyVast")]
+        public bool? SlateOnEmptyVast{ get; set; }
+
+        /// <summary>
+        /// <p>SCTE marker duration，默认180，范围0-3600</p>
+        /// </summary>
+        [JsonProperty("SCTEMarkerDuration")]
+        public long? SCTEMarkerDuration{ get; set; }
+
+        /// <summary>
+        /// <p>安全组Id</p>
+        /// </summary>
+        [JsonProperty("SecurityGroupId")]
+        public string SecurityGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +170,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "PreRollAdsUrls.", this.PreRollAdsUrls);
             this.SetParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
             this.SetParamSimple(map, prefix + "MultiRequest", this.MultiRequest);
+            this.SetParamSimple(map, prefix + "DashOriginManifestType", this.DashOriginManifestType);
+            this.SetParamSimple(map, prefix + "SlateOnEmptyVast", this.SlateOnEmptyVast);
+            this.SetParamSimple(map, prefix + "SCTEMarkerDuration", this.SCTEMarkerDuration);
+            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         }
     }
 }

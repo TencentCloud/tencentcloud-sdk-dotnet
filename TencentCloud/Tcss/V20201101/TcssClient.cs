@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1411";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -406,6 +406,48 @@ namespace TencentCloud.Tcss.V20201101
         public AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetailSync(AddNetworkFirewallPolicyYamlDetailRequest req)
         {
             return InternalRequestAsync<AddNetworkFirewallPolicyYamlDetailResponse>(req, "AddNetworkFirewallPolicyYamlDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 增加或修改恶意外连的白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="AddOrModifyMaliciousConnectionWhiteListResponse"/></returns>
+        public Task<AddOrModifyMaliciousConnectionWhiteListResponse> AddOrModifyMaliciousConnectionWhiteList(AddOrModifyMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyMaliciousConnectionWhiteListResponse>(req, "AddOrModifyMaliciousConnectionWhiteList");
+        }
+
+        /// <summary>
+        /// 增加或修改恶意外连的白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="AddOrModifyMaliciousConnectionWhiteListResponse"/></returns>
+        public AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteListSync(AddOrModifyMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyMaliciousConnectionWhiteListResponse>(req, "AddOrModifyMaliciousConnectionWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增或修改木马白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="AddOrModifyVirusWhiteListRuleResponse"/></returns>
+        public Task<AddOrModifyVirusWhiteListRuleResponse> AddOrModifyVirusWhiteListRule(AddOrModifyVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyVirusWhiteListRuleResponse>(req, "AddOrModifyVirusWhiteListRule");
+        }
+
+        /// <summary>
+        /// 新增或修改木马白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="AddOrModifyVirusWhiteListRuleResponse"/></returns>
+        public AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRuleSync(AddOrModifyVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyVirusWhiteListRuleResponse>(req, "AddOrModifyVirusWhiteListRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1700,6 +1742,27 @@ namespace TencentCloud.Tcss.V20201101
         public DeleteSearchTemplateResponse DeleteSearchTemplateSync(DeleteSearchTemplateRequest req)
         {
             return InternalRequestAsync<DeleteSearchTemplateResponse>(req, "DeleteSearchTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除木马白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="DeleteVirusWhiteListRuleResponse"/></returns>
+        public Task<DeleteVirusWhiteListRuleResponse> DeleteVirusWhiteListRule(DeleteVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteVirusWhiteListRuleResponse>(req, "DeleteVirusWhiteListRule");
+        }
+
+        /// <summary>
+        /// 删除木马白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="DeleteVirusWhiteListRuleResponse"/></returns>
+        public DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRuleSync(DeleteVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteVirusWhiteListRuleResponse>(req, "DeleteVirusWhiteListRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5675,6 +5738,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 运行时查询文件查杀实时监控设置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusMonitorConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusMonitorConfigResponse"/></returns>
+        public Task<DescribeVirusMonitorConfigResponse> DescribeVirusMonitorConfig(DescribeVirusMonitorConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusMonitorConfigResponse>(req, "DescribeVirusMonitorConfig");
+        }
+
+        /// <summary>
+        /// 运行时查询文件查杀实时监控设置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusMonitorConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusMonitorConfigResponse"/></returns>
+        public DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfigSync(DescribeVirusMonitorConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusMonitorConfigResponse>(req, "DescribeVirusMonitorConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 运行时查询文件查杀实时监控设置
         /// </summary>
         /// <param name="req"><see cref="DescribeVirusMonitorSettingRequest"/></param>
@@ -5713,6 +5797,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrlSync(DescribeVirusSampleDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeVirusSampleDownloadUrlResponse>(req, "DescribeVirusSampleDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 运行时查询文件查杀新设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusScanConfigResponse"/></returns>
+        public Task<DescribeVirusScanConfigResponse> DescribeVirusScanConfig(DescribeVirusScanConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusScanConfigResponse>(req, "DescribeVirusScanConfig");
+        }
+
+        /// <summary>
+        /// 运行时查询文件查杀新设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusScanConfigResponse"/></returns>
+        public DescribeVirusScanConfigResponse DescribeVirusScanConfigSync(DescribeVirusScanConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusScanConfigResponse>(req, "DescribeVirusScanConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5818,6 +5923,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeVirusTaskListResponse DescribeVirusTaskListSync(DescribeVirusTaskListRequest req)
         {
             return InternalRequestAsync<DescribeVirusTaskListResponse>(req, "DescribeVirusTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询木马白名单规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeVirusWhiteListRulesResponse"/></returns>
+        public Task<DescribeVirusWhiteListRulesResponse> DescribeVirusWhiteListRules(DescribeVirusWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusWhiteListRulesResponse>(req, "DescribeVirusWhiteListRules");
+        }
+
+        /// <summary>
+        /// 查询木马白名单规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeVirusWhiteListRulesResponse"/></returns>
+        public DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRulesSync(DescribeVirusWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusWhiteListRulesResponse>(req, "DescribeVirusWhiteListRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

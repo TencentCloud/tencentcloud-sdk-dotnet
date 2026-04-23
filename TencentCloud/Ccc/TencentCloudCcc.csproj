@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1402</VersionPrefix>
+    <VersionPrefix>3.0.1415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,9 @@
     <Compile Include="V20200210\Models\AudioFileInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskCalleeInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskInfo.cs" />
+    <Compile Include="V20200210\Models\AvailableTimeConfig.cs" />
+    <Compile Include="V20200210\Models\BasicAuth.cs" />
+    <Compile Include="V20200210\Models\BearerAuth.cs" />
     <Compile Include="V20200210\Models\BindNumberCallInInterfaceRequest.cs" />
     <Compile Include="V20200210\Models\BindNumberCallInInterfaceResponse.cs" />
     <Compile Include="V20200210\Models\BindNumberCallOutSkillGroupRequest.cs" />
@@ -205,6 +208,9 @@
     <Compile Include="V20200210\Models\ForwardingTarget.cs" />
     <Compile Include="V20200210\Models\HangUpCallRequest.cs" />
     <Compile Include="V20200210\Models\HangUpCallResponse.cs" />
+    <Compile Include="V20200210\Models\HeaderParams.cs" />
+    <Compile Include="V20200210\Models\HttpCallbackConfig.cs" />
+    <Compile Include="V20200210\Models\HttpParams.cs" />
     <Compile Include="V20200210\Models\IMCdrInfo.cs" />
     <Compile Include="V20200210\Models\IMSatisfaction.cs" />
     <Compile Include="V20200210\Models\IVRKeyPressedElement.cs" />
@@ -223,6 +229,7 @@
     <Compile Include="V20200210\Models\ModifyStaffRequest.cs" />
     <Compile Include="V20200210\Models\ModifyStaffResponse.cs" />
     <Compile Include="V20200210\Models\NumberInfo.cs" />
+    <Compile Include="V20200210\Models\OauthConfig.cs" />
     <Compile Include="V20200210\Models\OwnNumberApplyDetailItem.cs" />
     <Compile Include="V20200210\Models\PSTNSession.cs" />
     <Compile Include="V20200210\Models\PSTNSessionInfo.cs" />
@@ -242,6 +249,8 @@
     <Compile Include="V20200210\Models\ResumeAutoCalloutTaskResponse.cs" />
     <Compile Include="V20200210\Models\ResumePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\ResumePredictiveDialingCampaignResponse.cs" />
+    <Compile Include="V20200210\Models\RetryTagItem.cs" />
+    <Compile Include="V20200210\Models\ReturnKey.cs" />
     <Compile Include="V20200210\Models\SdkAppIdBuyInfo.cs" />
     <Compile Include="V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="V20200210\Models\ServeParticipant.cs" />
@@ -266,6 +275,7 @@
     <Compile Include="V20200210\Models\ToneWordInfo.cs" />
     <Compile Include="V20200210\Models\TransferToManualRequest.cs" />
     <Compile Include="V20200210\Models\TransferToManualResponse.cs" />
+    <Compile Include="V20200210\Models\TriggerStrategyItem.cs" />
     <Compile Include="V20200210\Models\UnbindNumberCallOutSkillGroupRequest.cs" />
     <Compile Include="V20200210\Models\UnbindNumberCallOutSkillGroupResponse.cs" />
     <Compile Include="V20200210\Models\UnbindStaffSkillGroupListRequest.cs" />

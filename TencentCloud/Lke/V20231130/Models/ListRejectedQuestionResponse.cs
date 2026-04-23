@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 拒答问题列表
+        /// <p>拒答问题列表</p>
         /// </summary>
         [JsonProperty("List")]
         public RejectedQuestion[] List{ get; set; }

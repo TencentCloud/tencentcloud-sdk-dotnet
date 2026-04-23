@@ -25,53 +25,59 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 工作流运行ID
+        /// <p>工作流运行ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowRunId")]
         public string WorkflowRunId{ get; set; }
 
         /// <summary>
-        /// 选项卡
+        /// <p>选项卡</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptionCards")]
         public string[] OptionCards{ get; set; }
 
         /// <summary>
-        /// 多气泡的输出结果
+        /// <p>多气泡的输出结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Outputs")]
         public string[] Outputs{ get; set; }
 
         /// <summary>
-        /// 工作流发布时间，unix时间戳
+        /// <p>工作流发布时间，unix时间戳</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowReleaseTime")]
         public string WorkflowReleaseTime{ get; set; }
 
         /// <summary>
-        /// 工作流多气泡输出
+        /// <p>工作流多气泡输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contents")]
         public Content[] Contents{ get; set; }
+
+        /// <summary>
+        /// <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+        /// </summary>
+        [JsonProperty("OptionMode")]
+        public long? OptionMode{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "Outputs.", this.Outputs);
             this.SetParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
             this.SetParamArrayObj(map, prefix + "Contents.", this.Contents);
+            this.SetParamSimple(map, prefix + "OptionMode", this.OptionMode);
         }
     }
 }

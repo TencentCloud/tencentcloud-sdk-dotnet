@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -329,6 +329,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// **发信域名删除接口仅限于企业用户使用**
         /// 删除发信域名，删除后，将不可再使用该域名进行发信
         /// </summary>
         /// <param name="req"><see cref="DeleteEmailIdentityRequest"/></param>
@@ -339,6 +340,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// **发信域名删除接口仅限于企业用户使用**
         /// 删除发信域名，删除后，将不可再使用该域名进行发信
         /// </summary>
         /// <param name="req"><see cref="DeleteEmailIdentityRequest"/></param>

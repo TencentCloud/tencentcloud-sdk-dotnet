@@ -25,30 +25,34 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+        /// <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 拒答问题
-        /// 
+        /// <p>拒答问题</p>
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+        /// <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
         /// </summary>
         [JsonProperty("BusinessSource")]
         public ulong? BusinessSource{ get; set; }
 
         /// <summary>
-        /// 拒答问题来源的数据源唯一id
-        /// 
+        /// <p>拒答问题来源的数据源唯一id</p>
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }
+
+        /// <summary>
+        /// <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
 
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Question", this.Question);
             this.SetParamSimple(map, prefix + "BusinessSource", this.BusinessSource);
             this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 共享知识库业务ID
+        /// <p>共享知识库业务ID</p>
         /// </summary>
         [JsonProperty("KnowledgeBizId")]
         public string KnowledgeBizId{ get; set; }

@@ -25,147 +25,157 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 主机id
+        /// <p>主机id</p>
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
-        /// 主机ip即内网ip
+        /// <p>主机ip即内网ip</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// <p>主机名称</p>
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 业务组
+        /// <p>业务组</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// docker 版本
+        /// <p>docker 版本</p>
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// docker 文件系统类型
+        /// <p>docker 文件系统类型</p>
         /// </summary>
         [JsonProperty("DockerFileSystemDriver")]
         public string DockerFileSystemDriver{ get; set; }
 
         /// <summary>
-        /// 镜像个数
+        /// <p>镜像个数</p>
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
 
         /// <summary>
-        /// 容器个数
+        /// <p>容器个数</p>
         /// </summary>
         [JsonProperty("ContainerCnt")]
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// agent运行状态
+        /// <p>agent运行状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 是否是Containerd
+        /// <p>是否是Containerd</p>
         /// </summary>
         [JsonProperty("IsContainerd")]
         public bool? IsContainerd{ get; set; }
 
         /// <summary>
-        /// 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+        /// <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 外网ip
+        /// <p>外网ip</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 主机uuid
+        /// <p>主机uuid</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 主机实例ID
+        /// <p>主机实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionID")]
         public long? RegionID{ get; set; }
 
         /// <summary>
-        /// 所属项目
+        /// <p>所属项目</p>
         /// </summary>
         [JsonProperty("Project")]
         public ProjectInfo Project{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群接入状态
+        /// <p>集群接入状态</p>
         /// </summary>
         [JsonProperty("ClusterAccessedStatus")]
         public string ClusterAccessedStatus{ get; set; }
 
         /// <summary>
-        /// 计费核数
+        /// <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+        /// </summary>
+        [JsonProperty("ClusterAccessedSubStatus")]
+        public string ClusterAccessedSubStatus{ get; set; }
+
+        /// <summary>
+        /// <p>失败具体原因描述</p>
+        /// </summary>
+        [JsonProperty("ClusterAccessedErrorReason")]
+        public string ClusterAccessedErrorReason{ get; set; }
+
+        /// <summary>
+        /// <p>计费核数</p>
         /// </summary>
         [JsonProperty("ChargeCoresCnt")]
         public ulong? ChargeCoresCnt{ get; set; }
 
         /// <summary>
-        /// 防护状态:
-        /// 已防护: Defended
-        /// 未防护: UnDefended
+        /// <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
         /// </summary>
         [JsonProperty("DefendStatus")]
         public string DefendStatus{ get; set; }
 
         /// <summary>
-        /// 核数
+        /// <p>核数</p>
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
         /// <summary>
-        /// 最近在线时间
+        /// <p>最近在线时间</p>
         /// </summary>
         [JsonProperty("LastOnlineTime")]
         public string LastOnlineTime{ get; set; }
@@ -196,6 +206,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+            this.SetParamSimple(map, prefix + "ClusterAccessedSubStatus", this.ClusterAccessedSubStatus);
+            this.SetParamSimple(map, prefix + "ClusterAccessedErrorReason", this.ClusterAccessedErrorReason);
             this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
             this.SetParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);

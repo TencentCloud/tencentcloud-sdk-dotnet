@@ -28,7 +28,7 @@ namespace TencentCloud.Sms.V20210111
 
        private const string endpoint = "sms.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -393,6 +393,27 @@ namespace TencentCloud.Sms.V20210111
         public ReportConversionResponse ReportConversionSync(ReportConversionRequest req)
         {
             return InternalRequestAsync<ReportConversionResponse>(req, "ReportConversion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (SendMultiGlobalSms) 用于批量发送国际/港澳台短信，相比 SendSms 接口，支持在单次请求中向多个手机号发送不同内容的短信，并支持指定不同的SenderId。
+        /// </summary>
+        /// <param name="req"><see cref="SendMultiGlobalSmsRequest"/></param>
+        /// <returns><see cref="SendMultiGlobalSmsResponse"/></returns>
+        public Task<SendMultiGlobalSmsResponse> SendMultiGlobalSms(SendMultiGlobalSmsRequest req)
+        {
+            return InternalRequestAsync<SendMultiGlobalSmsResponse>(req, "SendMultiGlobalSms");
+        }
+
+        /// <summary>
+        /// 本接口 (SendMultiGlobalSms) 用于批量发送国际/港澳台短信，相比 SendSms 接口，支持在单次请求中向多个手机号发送不同内容的短信，并支持指定不同的SenderId。
+        /// </summary>
+        /// <param name="req"><see cref="SendMultiGlobalSmsRequest"/></param>
+        /// <returns><see cref="SendMultiGlobalSmsResponse"/></returns>
+        public SendMultiGlobalSmsResponse SendMultiGlobalSmsSync(SendMultiGlobalSmsRequest req)
+        {
+            return InternalRequestAsync<SendMultiGlobalSmsResponse>(req, "SendMultiGlobalSms")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

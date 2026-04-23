@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1413";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -861,6 +861,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 新建查询视图
+        /// </summary>
+        /// <param name="req"><see cref="CreateSearchViewRequest"/></param>
+        /// <returns><see cref="CreateSearchViewResponse"/></returns>
+        public Task<CreateSearchViewResponse> CreateSearchView(CreateSearchViewRequest req)
+        {
+            return InternalRequestAsync<CreateSearchViewResponse>(req, "CreateSearchView");
+        }
+
+        /// <summary>
+        /// 新建查询视图
+        /// </summary>
+        /// <param name="req"><see cref="CreateSearchViewRequest"/></param>
+        /// <returns><see cref="CreateSearchViewResponse"/></returns>
+        public CreateSearchViewResponse CreateSearchViewSync(CreateSearchViewRequest req)
+        {
+            return InternalRequestAsync<CreateSearchViewResponse>(req, "CreateSearchView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
@@ -1550,6 +1571,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteScheduledSqlResponse DeleteScheduledSqlSync(DeleteScheduledSqlRequest req)
         {
             return InternalRequestAsync<DeleteScheduledSqlResponse>(req, "DeleteScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除查询视图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSearchViewRequest"/></param>
+        /// <returns><see cref="DeleteSearchViewResponse"/></returns>
+        public Task<DeleteSearchViewResponse> DeleteSearchView(DeleteSearchViewRequest req)
+        {
+            return InternalRequestAsync<DeleteSearchViewResponse>(req, "DeleteSearchView");
+        }
+
+        /// <summary>
+        /// 删除查询视图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSearchViewRequest"/></param>
+        /// <returns><see cref="DeleteSearchViewResponse"/></returns>
+        public DeleteSearchViewResponse DeleteSearchViewSync(DeleteSearchViewRequest req)
+        {
+            return InternalRequestAsync<DeleteSearchViewResponse>(req, "DeleteSearchView")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2648,6 +2690,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取查询视图列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchViewsRequest"/></param>
+        /// <returns><see cref="DescribeSearchViewsResponse"/></returns>
+        public Task<DescribeSearchViewsResponse> DescribeSearchViews(DescribeSearchViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchViewsResponse>(req, "DescribeSearchViews");
+        }
+
+        /// <summary>
+        /// 获取查询视图列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchViewsRequest"/></param>
+        /// <returns><see cref="DescribeSearchViewsResponse"/></returns>
+        public DescribeSearchViewsResponse DescribeSearchViewsSync(DescribeSearchViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchViewsResponse>(req, "DescribeSearchViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取投递任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeShipperTasksRequest"/></param>
@@ -3486,6 +3549,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyScheduledSqlResponse ModifyScheduledSqlSync(ModifyScheduledSqlRequest req)
         {
             return InternalRequestAsync<ModifyScheduledSqlResponse>(req, "ModifyScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改查询视图
+        /// </summary>
+        /// <param name="req"><see cref="ModifySearchViewRequest"/></param>
+        /// <returns><see cref="ModifySearchViewResponse"/></returns>
+        public Task<ModifySearchViewResponse> ModifySearchView(ModifySearchViewRequest req)
+        {
+            return InternalRequestAsync<ModifySearchViewResponse>(req, "ModifySearchView");
+        }
+
+        /// <summary>
+        /// 修改查询视图
+        /// </summary>
+        /// <param name="req"><see cref="ModifySearchViewRequest"/></param>
+        /// <returns><see cref="ModifySearchViewResponse"/></returns>
+        public ModifySearchViewResponse ModifySearchViewSync(ModifySearchViewRequest req)
+        {
+            return InternalRequestAsync<ModifySearchViewResponse>(req, "ModifySearchView")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

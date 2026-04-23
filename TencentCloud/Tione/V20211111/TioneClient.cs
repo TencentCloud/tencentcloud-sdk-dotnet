@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -539,6 +539,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeBillingResourceGroupResponse DescribeBillingResourceGroupSync(DescribeBillingResourceGroupRequest req)
         {
             return InternalRequestAsync<DescribeBillingResourceGroupResponse>(req, "DescribeBillingResourceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源组关联的工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceGroupAttachedWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceGroupAttachedWorkspacesResponse"/></returns>
+        public Task<DescribeBillingResourceGroupAttachedWorkspacesResponse> DescribeBillingResourceGroupAttachedWorkspaces(DescribeBillingResourceGroupAttachedWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingResourceGroupAttachedWorkspacesResponse>(req, "DescribeBillingResourceGroupAttachedWorkspaces");
+        }
+
+        /// <summary>
+        /// 查询资源组关联的工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceGroupAttachedWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceGroupAttachedWorkspacesResponse"/></returns>
+        public DescribeBillingResourceGroupAttachedWorkspacesResponse DescribeBillingResourceGroupAttachedWorkspacesSync(DescribeBillingResourceGroupAttachedWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingResourceGroupAttachedWorkspacesResponse>(req, "DescribeBillingResourceGroupAttachedWorkspaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

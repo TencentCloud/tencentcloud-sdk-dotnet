@@ -25,61 +25,61 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// id
+        /// <p>id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 链接
+        /// <p>链接</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 来源文档ID
+        /// <p>来源文档ID</p>
         /// </summary>
         [JsonProperty("DocId")]
         public string DocId{ get; set; }
 
         /// <summary>
-        /// 知识库名称
+        /// <p>知识库名称</p>
         /// </summary>
         [JsonProperty("KnowledgeName")]
         public string KnowledgeName{ get; set; }
 
         /// <summary>
-        /// 知识库业务id
+        /// <p>知识库业务id</p>
         /// </summary>
         [JsonProperty("KnowledgeBizId")]
         public string KnowledgeBizId{ get; set; }
 
         /// <summary>
-        /// 文档业务id
+        /// <p>文档业务id</p>
         /// </summary>
         [JsonProperty("DocBizId")]
         public string DocBizId{ get; set; }
 
         /// <summary>
-        /// 问答业务id
+        /// <p>问答业务id</p>
         /// </summary>
         [JsonProperty("QaBizId")]
         public string QaBizId{ get; set; }
 
         /// <summary>
-        /// 文档索引id
+        /// <p>文档索引id</p>
         /// </summary>
         [JsonProperty("Index")]
         public ulong? Index{ get; set; }

@@ -25,28 +25,28 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// <p>模型别名</p>
         /// </summary>
-        [JsonProperty("ModelName")]
-        public string ModelName{ get; set; }
+        [JsonProperty("AliasName")]
+        public string AliasName{ get; set; }
 
         /// <summary>
-        /// 模型参数
-        /// </summary>
-        [JsonProperty("ModelParams")]
-        public ModelParams ModelParams{ get; set; }
-
-        /// <summary>
-        /// 限制
+        /// <p>限制</p>
         /// </summary>
         [JsonProperty("HistoryLimit")]
         public ulong? HistoryLimit{ get; set; }
 
         /// <summary>
-        /// 模型别名
+        /// <p>模型名称</p>
         /// </summary>
-        [JsonProperty("AliasName")]
-        public string AliasName{ get; set; }
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
+        /// <summary>
+        /// <p>模型参数</p>
+        /// </summary>
+        [JsonProperty("ModelParams")]
+        public ModelParams ModelParams{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
+            this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamObj(map, prefix + "ModelParams.", this.ModelParams);
-            this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
-            this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
         }
     }
 }

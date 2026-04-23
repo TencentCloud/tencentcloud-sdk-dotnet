@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 订单 ID。
+        /// <p>订单 ID。</p>
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
 
         /// <summary>
-        /// 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+        /// <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }
