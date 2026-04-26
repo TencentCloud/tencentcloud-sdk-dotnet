@@ -25,50 +25,50 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// <p>识别出的文本行内容</p>
+        /// <p>识别出的文本行内容。</p>
         /// </summary>
         [JsonProperty("DetectedText")]
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// <p>置信度 0 ~100</p>
+        /// <p>置信度 0 ~100。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// <p>文本行坐标，以四个顶点坐标表示</p>
+        /// <p>文本行坐标，以四个顶点坐标表示。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]
         public Coord[] Polygon{ get; set; }
 
         /// <summary>
-        /// <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+        /// <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+        /// <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p>
         /// </summary>
         [JsonProperty("ItemPolygon")]
         public ItemCoord ItemPolygon{ get; set; }
 
         /// <summary>
-        /// <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+        /// <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
         /// </summary>
         [JsonProperty("Words")]
         public DetectedWords[] Words{ get; set; }
 
         /// <summary>
-        /// <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+        /// <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
         /// </summary>
         [JsonProperty("WordCoordPoint")]
         public DetectedWordCoordPoint[] WordCoordPoint{ get; set; }
 
         /// <summary>
-        /// <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+        /// <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p>
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

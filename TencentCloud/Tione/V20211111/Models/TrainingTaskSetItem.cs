@@ -207,6 +207,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Envs")]
         public EnvVar[] Envs{ get; set; }
 
+        /// <summary>
+        /// <p>操作者信息</p>
+        /// </summary>
+        [JsonProperty("LatestOperatorInfo")]
+        public OperatorInfo LatestOperatorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
         }
     }
 }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSearchViewsResponse : AbstractModel
+    public class RegionQps : AbstractModel
     {
         
         /// <summary>
-        /// <p>查询视图详细信息</p>
+        /// <p>地域</p>
         /// </summary>
-        [JsonProperty("Infos")]
-        public SearchViewInfo[] Infos{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// <p>符合条件的任务总数。</p>
+        /// <p>qps的大小</p>
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Qps")]
+        public ulong? Qps{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
         }
     }
 }

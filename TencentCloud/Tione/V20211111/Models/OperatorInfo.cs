@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSearchViewsResponse : AbstractModel
+    public class OperatorInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>查询视图详细信息</p>
+        /// <p>操作者子账号 UIN</p>
         /// </summary>
-        [JsonProperty("Infos")]
-        public SearchViewInfo[] Infos{ get; set; }
+        [JsonProperty("SubUin")]
+        public string SubUin{ get; set; }
 
         /// <summary>
-        /// <p>符合条件的任务总数。</p>
+        /// <p>操作者子账号名称</p>
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>是否为平台操作</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("IsPlatformOperator")]
+        public bool? IsPlatformOperator{ get; set; }
+
+        /// <summary>
+        /// <p>操作类型</p>
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamSimple(map, prefix + "IsPlatformOperator", this.IsPlatformOperator);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
         }
     }
 }

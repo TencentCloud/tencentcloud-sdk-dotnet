@@ -25,163 +25,157 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// notebook id
+        /// <p>notebook id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+        /// <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// （不允许修改）计算资源付费模式 ，可选值为：
-        /// PREPAID：预付费，即包年包月
-        /// POSTPAID_BY_HOUR：按小时后付费
+        /// <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 计算资源配置
+        /// <p>计算资源配置</p>
         /// </summary>
         [JsonProperty("ResourceConf")]
         public ResourceConf ResourceConf{ get; set; }
 
         /// <summary>
-        /// 是否自动停止
+        /// <p>是否自动停止</p>
         /// </summary>
         [JsonProperty("AutoStopping")]
         public bool? AutoStopping{ get; set; }
 
         /// <summary>
-        /// 是否访问公网
+        /// <p>是否访问公网</p>
         /// </summary>
         [JsonProperty("DirectInternetAccess")]
         public bool? DirectInternetAccess{ get; set; }
 
         /// <summary>
-        /// 是否ROOT权限
+        /// <p>是否ROOT权限</p>
         /// </summary>
         [JsonProperty("RootAccess")]
         public bool? RootAccess{ get; set; }
 
         /// <summary>
-        /// 是否上报日志
+        /// <p>是否上报日志</p>
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 资源组ID(for预付费)
+        /// <p>资源组ID(for预付费)</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// （不允许修改）Vpc-Id
+        /// <p>（不允许修改）Vpc-Id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// （不允许修改）子网Id
+        /// <p>（不允许修改）子网Id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 存储卷大小，单位GB
+        /// <p>存储卷大小，单位GB</p>
         /// </summary>
         [JsonProperty("VolumeSizeInGB")]
         public ulong? VolumeSizeInGB{ get; set; }
 
         /// <summary>
-        /// （不允许修改）存储的类型。取值包含： 
-        ///     FREE:    预付费的免费存储
-        ///     CLOUD_PREMIUM： 高性能云硬盘
-        ///     CLOUD_SSD： SSD云硬盘
-        ///     CFS:     CFS存储，包含NFS和turbo
+        /// <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
 
         /// <summary>
-        /// （不允许修改）CFS存储的配置
+        /// <p>（不允许修改）CFS存储的配置</p>
         /// </summary>
         [JsonProperty("VolumeSourceCFS")]
         public CFSConfig VolumeSourceCFS{ get; set; }
 
         /// <summary>
-        /// 日志配置
+        /// <p>日志配置</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// 生命周期脚本的ID
+        /// <p>生命周期脚本的ID</p>
         /// </summary>
         [JsonProperty("LifecycleScriptId")]
         public string LifecycleScriptId{ get; set; }
 
         /// <summary>
-        /// 默认GIT存储库的ID
+        /// <p>默认GIT存储库的ID</p>
         /// </summary>
         [JsonProperty("DefaultCodeRepoId")]
         public string DefaultCodeRepoId{ get; set; }
 
         /// <summary>
-        /// 其他GIT存储库的ID，最多3个
+        /// <p>其他GIT存储库的ID，最多3个</p>
         /// </summary>
         [JsonProperty("AdditionalCodeRepoIds")]
         public string[] AdditionalCodeRepoIds{ get; set; }
 
         /// <summary>
-        /// 自动停止时间，单位小时
+        /// <p>自动停止时间，单位小时</p>
         /// </summary>
         [JsonProperty("AutomaticStopTime")]
         public long? AutomaticStopTime{ get; set; }
 
         /// <summary>
-        /// 标签配置
+        /// <p>标签配置</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 数据配置，只支持WEDATA_HDFS
+        /// <p>数据配置，只支持WEDATA_HDFS</p>
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
 
         /// <summary>
-        /// 镜像信息
+        /// <p>镜像信息</p>
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 镜像类型，包括SYSTEM、TCR、CCR
+        /// <p>镜像类型，包括SYSTEM、TCR、CCR</p>
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
         /// <summary>
-        /// SSH配置
+        /// <p>SSH配置</p>
         /// </summary>
         [JsonProperty("SSHConfig")]
         public SSHConfig SSHConfig{ get; set; }
 
         /// <summary>
-        /// 自定义环境变量
+        /// <p>自定义环境变量</p>
         /// </summary>
         [JsonProperty("Envs")]
         public EnvVar[] Envs{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

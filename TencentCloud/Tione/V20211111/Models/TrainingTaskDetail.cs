@@ -25,281 +25,287 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 训练任务ID
+        /// <p>训练任务ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 训练任务名称
+        /// <p>训练任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 主账号uin
+        /// <p>主账号uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 子账号uin
+        /// <p>子账号uin</p>
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// 创建者名称
+        /// <p>创建者名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+        /// <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameworkName")]
         public string FrameworkName{ get; set; }
 
         /// <summary>
-        /// 训练框架版本
+        /// <p>训练框架版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameworkVersion")]
         public string FrameworkVersion{ get; set; }
 
         /// <summary>
-        /// 框架运行环境
+        /// <p>框架运行环境</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameworkEnvironment")]
         public string FrameworkEnvironment{ get; set; }
 
         /// <summary>
-        /// 计费模式
+        /// <p>计费模式</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组
+        /// <p>预付费专用资源组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 资源配置
+        /// <p>资源配置</p>
         /// </summary>
         [JsonProperty("ResourceConfigInfos")]
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainingMode")]
         public string TrainingMode{ get; set; }
 
         /// <summary>
-        /// 代码包
+        /// <p>代码包</p>
         /// </summary>
         [JsonProperty("CodePackagePath")]
         public CosPathInfo CodePackagePath{ get; set; }
 
         /// <summary>
-        /// 启动命令信息
+        /// <p>启动命令信息</p>
         /// </summary>
         [JsonProperty("StartCmdInfo")]
         public StartCmdInfo StartCmdInfo{ get; set; }
 
         /// <summary>
-        /// 数据来源，eg：DATASET、COS
+        /// <p>数据来源，eg：DATASET、COS</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// 数据配置
+        /// <p>数据配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
 
         /// <summary>
-        /// 调优参数
+        /// <p>调优参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TuningParameters")]
         public string TuningParameters{ get; set; }
 
         /// <summary>
-        /// 训练输出
+        /// <p>训练输出</p>
         /// </summary>
         [JsonProperty("Output")]
         public CosPathInfo Output{ get; set; }
 
         /// <summary>
-        /// 是否上报日志
+        /// <p>是否上报日志</p>
         /// </summary>
         [JsonProperty("LogEnable")]
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 日志配置
+        /// <p>日志配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogConfig")]
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 自定义镜像信息
+        /// <p>自定义镜像信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 运行时长
+        /// <p>运行时长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeInSeconds")]
         public ulong? RuntimeInSeconds{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 训练开始时间
+        /// <p>训练开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+        /// <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public string ChargeStatus{ get; set; }
 
         /// <summary>
-        /// 最近一次实例ID
+        /// <p>最近一次实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestInstanceId")]
         public string LatestInstanceId{ get; set; }
 
         /// <summary>
-        /// TensorBoard ID
+        /// <p>TensorBoard ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TensorBoardId")]
         public string TensorBoardId{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 失败原因
+        /// <p>失败原因</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 训练结束时间
+        /// <p>训练结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 计费金额信息，eg：2.00元/小时 (按量计费)
+        /// <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组名称
+        /// <p>预付费专用资源组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 任务信息
+        /// <p>任务信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+        /// <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 回调地址
+        /// <p>回调地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 任务关联的代码仓库配置
+        /// <p>任务关联的代码仓库配置</p>
         /// </summary>
         [JsonProperty("CodeRepos")]
         public CodeRepoConfig[] CodeRepos{ get; set; }
 
         /// <summary>
-        /// 暴露网络配置
+        /// <p>暴露网络配置</p>
         /// </summary>
         [JsonProperty("ExposeNetworkConfig")]
         public ExposeNetworkConfig ExposeNetworkConfig{ get; set; }
+
+        /// <summary>
+        /// <p>操作者信息</p>
+        /// </summary>
+        [JsonProperty("OperatorInfo")]
+        public OperatorInfo OperatorInfo{ get; set; }
 
 
         /// <summary>
@@ -349,6 +355,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
             this.SetParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
+            this.SetParamObj(map, prefix + "OperatorInfo.", this.OperatorInfo);
         }
     }
 }

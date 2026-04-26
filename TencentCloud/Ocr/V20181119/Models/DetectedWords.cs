@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 置信度 0 ~100
+        /// <p>置信度 0 ~100。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 候选字Character
+        /// <p>候选字Character。</p>
         /// </summary>
         [JsonProperty("Character")]
         public string Character{ get; set; }

@@ -25,90 +25,89 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 映射路径
+        /// <p>映射路径</p>
         /// </summary>
         [JsonProperty("MappingPath")]
         public string MappingPath{ get; set; }
 
         /// <summary>
-        /// 存储用途
-        /// 可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+        /// <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceUsage")]
         public string DataSourceUsage{ get; set; }
 
         /// <summary>
-        /// DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+        /// <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
 
         /// <summary>
-        /// 来自数据集的数据
+        /// <p>来自数据集的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSetSource")]
         public DataSetConfig DataSetSource{ get; set; }
 
         /// <summary>
-        /// 来自cos的数据
+        /// <p>来自cos的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("COSSource")]
         public CosPathInfo COSSource{ get; set; }
 
         /// <summary>
-        /// 来自CFS的数据
+        /// <p>来自CFS的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFSSource")]
         public CFSConfig CFSSource{ get; set; }
 
         /// <summary>
-        /// 来自HDFS的数据
+        /// <p>来自HDFS的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HDFSSource")]
         public HDFSConfig HDFSSource{ get; set; }
 
         /// <summary>
-        /// 配置GooseFS的数据
+        /// <p>配置GooseFS的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GooseFSSource")]
         public GooseFS GooseFSSource{ get; set; }
 
         /// <summary>
-        /// 配置TurboFS的数据
+        /// <p>配置TurboFS的数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFSTurboSource")]
         public CFSTurbo CFSTurboSource{ get; set; }
 
         /// <summary>
-        /// 来自本地磁盘的信息
+        /// <p>来自本地磁盘的信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDiskSource")]
         public LocalDisk LocalDiskSource{ get; set; }
 
         /// <summary>
-        /// CBS配置信息
+        /// <p>CBS配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CBSSource")]
         public CBSConfig CBSSource{ get; set; }
 
         /// <summary>
-        /// 主机路径信息
+        /// <p>主机路径信息</p>
         /// </summary>
         [JsonProperty("HostPathSource")]
         public HostPath HostPathSource{ get; set; }
 
         /// <summary>
-        /// 公有云数据源
+        /// <p>公有云数据源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDataSource")]

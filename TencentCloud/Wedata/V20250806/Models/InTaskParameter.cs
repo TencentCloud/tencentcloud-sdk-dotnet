@@ -25,32 +25,39 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 参数名
+        /// <p>参数名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamKey")]
         public string ParamKey{ get; set; }
 
         /// <summary>
-        /// 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+        /// <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamDesc")]
         public string ParamDesc{ get; set; }
 
         /// <summary>
-        /// 父任务ID
+        /// <p>父任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FromTaskId")]
         public string FromTaskId{ get; set; }
 
         /// <summary>
-        /// 父任务参数key
+        /// <p>父任务参数key</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FromParamKey")]
         public string FromParamKey{ get; set; }
+
+        /// <summary>
+        /// <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -62,6 +69,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ParamDesc", this.ParamDesc);
             this.SetParamSimple(map, prefix + "FromTaskId", this.FromTaskId);
             this.SetParamSimple(map, prefix + "FromParamKey", this.FromParamKey);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

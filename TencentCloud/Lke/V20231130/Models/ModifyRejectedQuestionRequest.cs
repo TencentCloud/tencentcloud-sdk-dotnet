@@ -45,6 +45,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("RejectedBizId")]
         public string RejectedBizId{ get; set; }
 
+        /// <summary>
+        /// 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+        /// </summary>
+        [JsonProperty("EnableScope")]
+        public long? EnableScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
             this.SetParamSimple(map, prefix + "Question", this.Question);
             this.SetParamSimple(map, prefix + "RejectedBizId", this.RejectedBizId);
+            this.SetParamSimple(map, prefix + "EnableScope", this.EnableScope);
         }
     }
 }

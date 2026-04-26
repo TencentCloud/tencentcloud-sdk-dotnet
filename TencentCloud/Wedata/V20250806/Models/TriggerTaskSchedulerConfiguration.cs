@@ -108,6 +108,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("AllowDownstreamDependency")]
         public long? AllowDownstreamDependency{ get; set; }
 
+        /// <summary>
+        /// <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleType")]
+        public long? ScheduleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
             this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
             this.SetParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
+            this.SetParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
         }
     }
 }

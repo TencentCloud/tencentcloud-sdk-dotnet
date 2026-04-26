@@ -108,6 +108,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("Metadata")]
         public MetadataVar[] Metadata{ get; set; }
 
+        /// <summary>
+        /// <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
+        /// </summary>
+        [JsonProperty("AuthMode")]
+        public string AuthMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
+            this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
         }
     }
 }

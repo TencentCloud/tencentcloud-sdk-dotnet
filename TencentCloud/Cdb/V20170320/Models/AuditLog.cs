@@ -144,6 +144,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TrxId")]
         public long? TrxId{ get; set; }
 
+        /// <summary>
+        /// 端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientPort")]
+        public long? ClientPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +177,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
             this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
             this.SetParamSimple(map, prefix + "TrxId", this.TrxId);
+            this.SetParamSimple(map, prefix + "ClientPort", this.ClientPort);
         }
     }
 }

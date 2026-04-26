@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 横坐标
+        /// <p>横坐标。</p>
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 纵坐标
+        /// <p>纵坐标。</p>
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+        /// <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
@@ -43,28 +43,28 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+        /// <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
         /// </summary>
         [JsonProperty("ViewType")]
         public string ViewType{ get; set; }
 
         /// <summary>
-        /// <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+        /// <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
         /// </summary>
         [JsonProperty("Topics")]
         public ViewSearchTopic[] Topics{ get; set; }
 
         /// <summary>
-        /// <p>配置描述信息</p>
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+        /// <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
         /// </summary>
         [JsonProperty("ViewIdPrefix")]
         public string ViewIdPrefix{ get; set; }
+
+        /// <summary>
+        /// <p>描述信息</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -77,8 +77,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
             this.SetParamSimple(map, prefix + "ViewType", this.ViewType);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ViewIdPrefix", this.ViewIdPrefix);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -25,67 +25,67 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 不满意回复ID
+        /// <p>不满意回复ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplyBizId")]
         public string ReplyBizId{ get; set; }
 
         /// <summary>
-        /// 消息记录ID
+        /// <p>消息记录ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordBizId")]
         public string RecordBizId{ get; set; }
 
         /// <summary>
-        /// 用户问题
+        /// <p>用户问题</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 问题回复
+        /// <p>问题回复</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Answer")]
         public string Answer{ get; set; }
 
         /// <summary>
-        /// 错误类型
+        /// <p>错误类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reasons")]
         public string[] Reasons{ get; set; }
 
         /// <summary>
-        /// 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+        /// <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒级时间戳
+        /// <p>创建时间，秒级时间戳</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间,秒级时间戳
+        /// <p>更新时间,秒级时间戳</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 操作人
+        /// <p>操作人</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 自定义反馈
+        /// <p>自定义反馈</p>
         /// </summary>
         [JsonProperty("FeedbackContent")]
         public string FeedbackContent{ get; set; }

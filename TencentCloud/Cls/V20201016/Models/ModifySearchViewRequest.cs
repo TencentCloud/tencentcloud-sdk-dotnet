@@ -37,19 +37,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
+        /// <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
         /// </summary>
         [JsonProperty("ViewType")]
         public string ViewType{ get; set; }
 
         /// <summary>
-        /// <p>视图主题配置信息</p>
+        /// <p>查询视图中包含的主题，最大可包含10个主题</p>
         /// </summary>
         [JsonProperty("Topics")]
         public ViewSearchTopic[] Topics{ get; set; }
 
         /// <summary>
-        /// <p>配置描述信息</p>
+        /// <p>描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
