@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// <p>固定主体输入信息。</p>
+        /// <p>主体输入信息。</p>
         /// </summary>
         [JsonProperty("SubjectInfos")]
         public AigcVideoTaskInputSubjectInfo[] SubjectInfos{ get; set; }

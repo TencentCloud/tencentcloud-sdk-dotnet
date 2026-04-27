@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElementTask：创建自定义主体任务</li><li>CreateAigcCustomVoiceTask：创建自定义音色任务</li><li>CreateAigcSubjectTask：创建主体任务</li></p>
+        /// <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElementTask：创建自定义主体任务</li><li>CreateAigcCustomVoiceTask：创建自定义音色任务</li><li>CreateAigcSubjectTask：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -275,6 +275,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateAigcSubjectTask CreateAigcSubjectTask{ get; set; }
 
         /// <summary>
+        /// <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("AigcVideoRedrawTask")]
+        public AigcVideoRedrawTask AigcVideoRedrawTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -324,6 +330,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CreateAigcAdvancedCustomElementTask.", this.CreateAigcAdvancedCustomElementTask);
             this.SetParamObj(map, prefix + "CreateAigcCustomVoiceTask.", this.CreateAigcCustomVoiceTask);
             this.SetParamObj(map, prefix + "CreateAigcSubjectTask.", this.CreateAigcSubjectTask);
+            this.SetParamObj(map, prefix + "AigcVideoRedrawTask.", this.AigcVideoRedrawTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

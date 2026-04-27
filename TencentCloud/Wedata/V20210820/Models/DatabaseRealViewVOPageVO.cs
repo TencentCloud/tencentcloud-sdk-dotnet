@@ -59,6 +59,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Rows")]
         public DatabaseRealViewVO[] Rows{ get; set; }
 
+        /// <summary>
+        /// 分页快照id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "TotalPageNumber", this.TotalPageNumber);
             this.SetParamArrayObj(map, prefix + "Rows.", this.Rows);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         }
     }
 }

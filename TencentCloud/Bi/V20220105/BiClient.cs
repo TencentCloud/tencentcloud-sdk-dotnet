@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1413";
+       private const string sdkVersion = "SDK_NET_3.0.1417";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Bi.V20220105
         public ClearEmbedTokenResponse ClearEmbedTokenSync(ClearEmbedTokenRequest req)
         {
             return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuthApiKeyRequest"/></param>
+        /// <returns><see cref="CreateAuthApiKeyResponse"/></returns>
+        public Task<CreateAuthApiKeyResponse> CreateAuthApiKey(CreateAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateAuthApiKeyResponse>(req, "CreateAuthApiKey");
+        }
+
+        /// <summary>
+        /// 创建ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuthApiKeyRequest"/></param>
+        /// <returns><see cref="CreateAuthApiKeyResponse"/></returns>
+        public CreateAuthApiKeyResponse CreateAuthApiKeySync(CreateAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateAuthApiKeyResponse>(req, "CreateAuthApiKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,6 +306,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 删除ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuthApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteAuthApiKeyResponse"/></returns>
+        public Task<DeleteAuthApiKeyResponse> DeleteAuthApiKey(DeleteAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteAuthApiKeyResponse>(req, "DeleteAuthApiKey");
+        }
+
+        /// <summary>
+        /// 删除ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuthApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteAuthApiKeyResponse"/></returns>
+        public DeleteAuthApiKeyResponse DeleteAuthApiKeySync(DeleteAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteAuthApiKeyResponse>(req, "DeleteAuthApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除数据源
         /// </summary>
         /// <param name="req"><see cref="DeleteDatasourceRequest"/></param>
@@ -407,6 +449,48 @@ namespace TencentCloud.Bi.V20220105
         public DeleteUserRoleProjectResponse DeleteUserRoleProjectSync(DeleteUserRoleProjectRequest req)
         {
             return InternalRequestAsync<DeleteUserRoleProjectResponse>(req, "DeleteUserRoleProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ApiKey信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthApiKeyInfoRequest"/></param>
+        /// <returns><see cref="DescribeAuthApiKeyInfoResponse"/></returns>
+        public Task<DescribeAuthApiKeyInfoResponse> DescribeAuthApiKeyInfo(DescribeAuthApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAuthApiKeyInfoResponse>(req, "DescribeAuthApiKeyInfo");
+        }
+
+        /// <summary>
+        /// ApiKey信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthApiKeyInfoRequest"/></param>
+        /// <returns><see cref="DescribeAuthApiKeyInfoResponse"/></returns>
+        public DescribeAuthApiKeyInfoResponse DescribeAuthApiKeyInfoSync(DescribeAuthApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAuthApiKeyInfoResponse>(req, "DescribeAuthApiKeyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ApiKey列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeAuthApiKeyListResponse"/></returns>
+        public Task<DescribeAuthApiKeyListResponse> DescribeAuthApiKeyList(DescribeAuthApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuthApiKeyListResponse>(req, "DescribeAuthApiKeyList");
+        }
+
+        /// <summary>
+        /// ApiKey列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeAuthApiKeyListResponse"/></returns>
+        public DescribeAuthApiKeyListResponse DescribeAuthApiKeyListSync(DescribeAuthApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuthApiKeyListResponse>(req, "DescribeAuthApiKeyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -722,6 +806,27 @@ namespace TencentCloud.Bi.V20220105
         public ExportScreenPageResponse ExportScreenPageSync(ExportScreenPageRequest req)
         {
             return InternalRequestAsync<ExportScreenPageResponse>(req, "ExportScreenPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuthApiKeyRequest"/></param>
+        /// <returns><see cref="ModifyAuthApiKeyResponse"/></returns>
+        public Task<ModifyAuthApiKeyResponse> ModifyAuthApiKey(ModifyAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyAuthApiKeyResponse>(req, "ModifyAuthApiKey");
+        }
+
+        /// <summary>
+        /// 更新ApiKey
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuthApiKeyRequest"/></param>
+        /// <returns><see cref="ModifyAuthApiKeyResponse"/></returns>
+        public ModifyAuthApiKeyResponse ModifyAuthApiKeySync(ModifyAuthApiKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyAuthApiKeyResponse>(req, "ModifyAuthApiKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

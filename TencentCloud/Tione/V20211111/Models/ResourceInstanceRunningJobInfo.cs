@@ -25,28 +25,28 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// pod名称
+        /// <p>pod名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务自定义名称
+        /// <p>任务自定义名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]

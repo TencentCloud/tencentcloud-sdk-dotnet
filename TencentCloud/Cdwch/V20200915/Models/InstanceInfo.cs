@@ -366,6 +366,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("EnableConfigKeyValue")]
         public string EnableConfigKeyValue{ get; set; }
 
+        /// <summary>
+        /// <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+        /// </summary>
+        [JsonProperty("HttpsEnabled")]
+        public bool? HttpsEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -429,6 +435,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "ShowRip", this.ShowRip);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "EnableConfigKeyValue", this.EnableConfigKeyValue);
+            this.SetParamSimple(map, prefix + "HttpsEnabled", this.HttpsEnabled);
         }
     }
 }

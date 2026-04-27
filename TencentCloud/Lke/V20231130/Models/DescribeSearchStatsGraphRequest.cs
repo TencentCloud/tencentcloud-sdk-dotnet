@@ -37,13 +37,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// uin列表
+        /// 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
         /// </summary>
         [JsonProperty("UinAccount")]
         public string[] UinAccount{ get; set; }
 
         /// <summary>
-        /// 子业务类型
+        /// 子业务类型，用于筛选不同业务场景的调用统计
         /// </summary>
         [JsonProperty("SubBizType")]
         public string SubBizType{ get; set; }
@@ -58,12 +58,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// 开始时间戳, 单位为秒(废弃)
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间戳, 单位为秒(废弃)
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
@@ -73,19 +75,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] AppBizIds{ get; set; }
 
         /// <summary>
-        /// 空间id
+        /// 空间ID，用于限定查询范围。不填时查询所有空间的数据
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 开始时间戳, 单位为秒
+        /// 开始时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatStartTime")]
         public long? StatStartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳, 单位为秒
+        /// 结束时间。Unix 时间戳，单位是秒，默认为空。
         /// </summary>
         [JsonProperty("StatEndTime")]
         public long? StatEndTime{ get; set; }

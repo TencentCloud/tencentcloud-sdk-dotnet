@@ -25,18 +25,24 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 推理服务组数量。
+        /// <p>推理服务组数量。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 服务组信息
+        /// <p>服务组信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceGroups")]
         public ServiceGroup[] ServiceGroups{ get; set; }
+
+        /// <summary>
+        /// <p>当前uin和region下全量服务组数量</p>
+        /// </summary>
+        [JsonProperty("GlobalTotalCount")]
+        public long? GlobalTotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,6 +58,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "ServiceGroups.", this.ServiceGroups);
+            this.SetParamSimple(map, prefix + "GlobalTotalCount", this.GlobalTotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,42 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频转动图模板 ID。
+        /// <p>视频转动图模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 动图在视频中的开始时间，单位为秒。
+        /// <p>动图在视频中的开始时间，单位为秒。</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 动图在视频中的结束时间，单位为秒。
+        /// <p>动图在视频中的结束时间，单位为秒。</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+        /// <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-        /// 若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-        /// 相对路径示例：
-        /// <li>文件名_{变量名}.{format}</li>
-        /// <li>文件名.{format}</li>
-        /// 绝对路径示例：
-        /// <li>/自定义路径/文件名_{变量名}.{format}</li>
-        /// 如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+        /// <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数。</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
 
         /// <summary>
@@ -73,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

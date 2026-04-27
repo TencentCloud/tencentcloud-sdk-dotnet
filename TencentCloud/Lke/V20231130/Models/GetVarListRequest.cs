@@ -25,49 +25,49 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 变量ID数组
+        /// <p>变量ID数组</p>
         /// </summary>
         [JsonProperty("VarIds")]
         public string[] VarIds{ get; set; }
 
         /// <summary>
-        /// 按变量名称关键词搜索
+        /// <p>按变量名称关键词搜索</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 起始偏移量（默认0）
+        /// <p>起始偏移量（默认0），取值范围 &gt; 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限定数量（默认15）
+        /// <p>限定数量（默认15），取值范围 1-200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+        /// <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p>
         /// </summary>
         [JsonProperty("VarType")]
         public string VarType{ get; set; }
 
         /// <summary>
-        /// 是否需要内部变量(默认false)
+        /// <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul>
         /// </summary>
         [JsonProperty("NeedInternalVar")]
         public bool? NeedInternalVar{ get; set; }
 
         /// <summary>
-        /// 变量类型
+        /// <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("VarModuleType")]
         public long? VarModuleType{ get; set; }

@@ -25,73 +25,73 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 密钥信息
+        /// <p>密钥信息</p>
         /// </summary>
         [JsonProperty("Credentials")]
         public Credentials Credentials{ get; set; }
 
         /// <summary>
-        /// 失效时间
+        /// <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 对象存储桶
+        /// <p>对象存储桶</p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 对象存储可用区
+        /// <p>对象存储可用区</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 文件存储目录
+        /// <p>文件存储目录</p>
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// 存储类型
+        /// <p>存储类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 企业主账号
+        /// <p>企业主账号</p>
         /// </summary>
         [JsonProperty("CorpUin")]
         public string CorpUin{ get; set; }
 
         /// <summary>
-        /// 图片存储目录
+        /// <p>图片存储目录</p>
         /// </summary>
         [JsonProperty("ImagePath")]
         public string ImagePath{ get; set; }
 
         /// <summary>
-        /// 上传存储路径，到具体文件
+        /// <p>上传存储路径，到具体文件</p>
         /// </summary>
         [JsonProperty("UploadPath")]
         public string UploadPath{ get; set; }
 
         /// <summary>
-        /// 文件上传地址，使用put请求上传文件到该地址
+        /// <p>文件上传地址，使用put请求上传文件到该地址</p>
         /// </summary>
         [JsonProperty("UploadUrl")]
         public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// 文件的预签名地址，支持下载
+        /// <p>文件的预签名地址，支持下载</p>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }

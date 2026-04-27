@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1414";
+       private const string sdkVersion = "SDK_NET_3.0.1417";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 关闭数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService");
+        }
+
+        /// <summary>
+        /// 关闭数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateAccountResponse CreateAccountSync(CreateAccountRequest req)
         {
             return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile");
+        }
+
+        /// <summary>
+        /// 创建审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -373,6 +415,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 删除审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile");
+        }
+
+        /// <summary>
+        /// 删除审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除备份策略
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupPlanRequest"/></param>
@@ -558,6 +621,69 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
         {
             return InternalRequestAsync<DescribeAccountsResponse>(req, "DescribeAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询审计实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList");
+        }
+
+        /// <summary>
+        /// 查询审计实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles");
+        }
+
+        /// <summary>
+        /// 查询审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据库审计日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public Task<DescribeAuditLogsResponse> DescribeAuditLogs(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs");
+        }
+
+        /// <summary>
+        /// 查询数据库审计日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public DescribeAuditLogsResponse DescribeAuditLogsSync(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1534,6 +1660,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 修改数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService");
+        }
+
+        /// <summary>
+        /// 修改数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载限制。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
@@ -1975,6 +2122,27 @@ namespace TencentCloud.Postgres.V20170312
         public OpenAccountCAMResponse OpenAccountCAMSync(OpenAccountCAMRequest req)
         {
             return InternalRequestAsync<OpenAccountCAMResponse>(req, "OpenAccountCAM")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService");
+        }
+
+        /// <summary>
+        /// 开启数据库实例的审计功能
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

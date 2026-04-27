@@ -72,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
+        /// <summary>
+        /// <p>图片检测结果</p>
+        /// </summary>
+        [JsonProperty("ImageResult")]
+        public ImageResult[] ImageResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
         }
     }
 }

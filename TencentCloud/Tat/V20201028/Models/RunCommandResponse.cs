@@ -25,13 +25,13 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 命令ID。
+        /// <p>命令ID。</p>
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// 执行活动ID。
+        /// <p>执行活动ID。</p>
         /// </summary>
         [JsonProperty("InvocationId")]
         public string InvocationId{ get; set; }

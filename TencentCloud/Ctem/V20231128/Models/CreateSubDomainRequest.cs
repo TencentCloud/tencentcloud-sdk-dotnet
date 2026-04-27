@@ -25,52 +25,64 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 企业Id
+        /// <p>企业Id</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
 
         /// <summary>
-        /// 子域名
+        /// <p>子域名</p>
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Ip
+        /// <p>Ip</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 国家
+        /// <p>国家</p>
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
-        /// 省
+        /// <p>省</p>
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
-        /// 城市
+        /// <p>城市</p>
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// Isp
+        /// <p>Isp</p>
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 子公司
+        /// <p>子公司</p>
         /// </summary>
         [JsonProperty("EnterpriseUid")]
         public string EnterpriseUid{ get; set; }
+
+        /// <summary>
+        /// <p>DNS解析类型。A、AAAA、CNAME等</p>
+        /// </summary>
+        [JsonProperty("DnsType")]
+        public string DnsType{ get; set; }
+
+        /// <summary>
+        /// <p>DNS解析值。域名或者ip</p>
+        /// </summary>
+        [JsonProperty("DnsValue")]
+        public string DnsValue{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamSimple(map, prefix + "EnterpriseUid", this.EnterpriseUid);
+            this.SetParamSimple(map, prefix + "DnsType", this.DnsType);
+            this.SetParamSimple(map, prefix + "DnsValue", this.DnsValue);
         }
     }
 }

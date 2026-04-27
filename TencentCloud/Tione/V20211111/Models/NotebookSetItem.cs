@@ -25,222 +25,224 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// notebook ID
+        /// <p>notebook ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// notebook 名称
+        /// <p>notebook 名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 计费模式
+        /// <p>计费模式</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 资源配置
+        /// <p>资源配置</p>
         /// </summary>
         [JsonProperty("ResourceConf")]
         public ResourceConf ResourceConf{ get; set; }
 
         /// <summary>
-        /// 预付费资源组
+        /// <p>预付费资源组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 存储卷大小
+        /// <p>存储卷大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeSizeInGB")]
         public ulong? VolumeSizeInGB{ get; set; }
 
         /// <summary>
-        /// 计费金额信息，eg：2.00元/小时 (for后付费)
+        /// <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingInfos")]
         public string[] BillingInfos{ get; set; }
 
         /// <summary>
-        /// 标签配置
+        /// <p>标签配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 启动时间
+        /// <p>启动时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 运行时间
+        /// <p>运行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeInSeconds")]
         public ulong? RuntimeInSeconds{ get; set; }
 
         /// <summary>
-        /// 计费状态
+        /// <p>计费状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public string ChargeStatus{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误原因
+        /// <p>错误原因</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Pod名称
+        /// <p>Pod名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// 后付费资源规格名称
+        /// <p>后付费资源规格名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTypeAlias")]
         public string InstanceTypeAlias{ get; set; }
 
         /// <summary>
-        /// 预付费资源组名称
+        /// <p>预付费资源组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 是否自动终止
+        /// <p>是否自动终止</p>
         /// </summary>
         [JsonProperty("AutoStopping")]
         public bool? AutoStopping{ get; set; }
 
         /// <summary>
-        /// 自动停止时间
+        /// <p>自动停止时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutomaticStopTime")]
         public ulong? AutomaticStopTime{ get; set; }
 
         /// <summary>
-        /// 存储的类型。取值包含： 
-        ///     FREE:        预付费的免费存储
-        ///     CLOUD_PREMIUM： 高性能云硬盘
-        ///     CLOUD_SSD： SSD云硬盘
-        ///     CFS:     CFS存储，包含NFS和turbo
+        /// <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
 
         /// <summary>
-        /// CFS存储的配置
+        /// <p>CFS存储的配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeSourceCFS")]
         public CFSConfig VolumeSourceCFS{ get; set; }
 
         /// <summary>
-        /// notebook 信息
+        /// <p>notebook 信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// notebook用户类型
+        /// <p>notebook用户类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserTypes")]
         public string[] UserTypes{ get; set; }
 
         /// <summary>
-        /// SSH配置
+        /// <p>SSH配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSHConfig")]
         public SSHConfig SSHConfig{ get; set; }
 
         /// <summary>
-        /// GooseFS存储配置
+        /// <p>GooseFS存储配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeSourceGooseFS")]
         public GooseFS VolumeSourceGooseFS{ get; set; }
 
         /// <summary>
-        /// 子用户ID
+        /// <p>子用户ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// 子用户名称
+        /// <p>子用户名称</p>
         /// </summary>
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
         /// <summary>
-        /// AppId
+        /// <p>AppId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 容器服务暴露端口配置
+        /// <p>容器服务暴露端口配置</p>
         /// </summary>
         [JsonProperty("ExposePortConfig")]
         public ExposePortConfig ExposePortConfig{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>操作者信息</p>
+        /// </summary>
+        [JsonProperty("LatestOperatorInfo")]
+        public OperatorInfo LatestOperatorInfo{ get; set; }
 
 
         /// <summary>
@@ -280,6 +282,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 实体唯一ID
+        /// <p>实体唯一ID</p>
         /// </summary>
         [JsonProperty("ResourceUniqueId")]
         public string ResourceUniqueId{ get; set; }
 
         /// <summary>
-        /// 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
+        /// <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 血缘方向 INPUT｜OUTPUT
+        /// <p>血缘方向 INPUT｜OUTPUT</p>
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 来源：WEDATA|THIRD 默认WEDATA
+        /// <p>来源：WEDATA|THIRD 默认WEDATA</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

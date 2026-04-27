@@ -25,25 +25,25 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID，参数非必填不代表不需要填写，下面不同的参数组合会获取到不同的权限，具体请参考 https://cloud.tencent.com/document/product/1759/116238
+        /// <p>应用ID，参数非必填不代表不需要填写，下面不同的参数组合会获取到不同的权限，具体请参考 https://cloud.tencent.com/document/product/1759/116238</p>
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+        /// <p>文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
+        /// <p>IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false</p>
         /// </summary>
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
 
         /// <summary>
-        /// 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+        /// <p>存储类型: offline:离线文件，realtime:实时文件；为空默认为offline</p>
         /// </summary>
         [JsonProperty("TypeKey")]
         public string TypeKey{ get; set; }

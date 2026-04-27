@@ -24,12 +24,19 @@ namespace TencentCloud.Tione.V20211111.Models
     public class DescribeBillingResourceGroupAttachedWorkspacesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         }
     }
 }

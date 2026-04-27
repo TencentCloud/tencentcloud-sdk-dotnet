@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>模型名称。取值：</p><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+        /// <p>模型名称。取值：</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// <p>模型版本。取值：</p><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni、O1；</li>
+        /// <p>模型版本。取值：</p><li>当 ModelName 是 OG，可选值为 image2_low、image2_medium、image2_high；</li><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni、O1；</li>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }

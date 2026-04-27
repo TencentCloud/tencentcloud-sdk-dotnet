@@ -25,7 +25,7 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 命令ID。
+        /// <p>命令ID。</p>
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }

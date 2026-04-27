@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 变量ID
+        /// <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p>
         /// </summary>
         [JsonProperty("VarId")]
         public string VarId{ get; set; }
 
         /// <summary>
-        /// 参数类型
+        /// <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("VarModuleType")]
         public ulong? VarModuleType{ get; set; }

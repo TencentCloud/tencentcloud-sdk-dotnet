@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 分页数据
+        /// <p>分页数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public ListLineagePage Data{ get; set; }

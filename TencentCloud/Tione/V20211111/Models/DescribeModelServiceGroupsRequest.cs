@@ -25,44 +25,49 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// <p>返回数量，默认为20，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+        /// <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+        /// <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 分页参数，支持的分页过滤Name包括：
-        /// ["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
+        /// <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 标签过滤参数
+        /// <p>标签过滤参数</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 服务分类
+        /// <p>服务分类</p>
         /// </summary>
         [JsonProperty("ServiceCategory")]
         [System.Obsolete]
@@ -74,6 +79,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Order", this.Order);

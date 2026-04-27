@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1414";
+       private const string sdkVersion = "SDK_NET_3.0.1417";
 
         /// <summary>
         /// Client constructor.
@@ -2910,6 +2910,27 @@ namespace TencentCloud.Waf.V20180125
         public GenerateDealsAndPayNewResponse GenerateDealsAndPayNewSync(GenerateDealsAndPayNewRequest req)
         {
             return InternalRequestAsync<GenerateDealsAndPayNewResponse>(req, "GenerateDealsAndPayNew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateLLMSecAnswerRequest"/></param>
+        /// <returns><see cref="GenerateLLMSecAnswerResponse"/></returns>
+        public Task<GenerateLLMSecAnswerResponse> GenerateLLMSecAnswer(GenerateLLMSecAnswerRequest req)
+        {
+            return InternalRequestAsync<GenerateLLMSecAnswerResponse>(req, "GenerateLLMSecAnswer");
+        }
+
+        /// <summary>
+        /// 大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateLLMSecAnswerRequest"/></param>
+        /// <returns><see cref="GenerateLLMSecAnswerResponse"/></returns>
+        public GenerateLLMSecAnswerResponse GenerateLLMSecAnswerSync(GenerateLLMSecAnswerRequest req)
+        {
+            return InternalRequestAsync<GenerateLLMSecAnswerResponse>(req, "GenerateLLMSecAnswer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

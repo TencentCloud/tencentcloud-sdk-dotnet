@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 文档数量
+        /// <p>文档数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 文档列表
+        /// <p>文档列表</p>
         /// </summary>
         [JsonProperty("List")]
         public ListDocItem[] List{ get; set; }

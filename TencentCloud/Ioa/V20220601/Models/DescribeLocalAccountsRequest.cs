@@ -25,6 +25,12 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
+        /// 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+        /// </summary>
+        [JsonProperty("DomainInstanceId")]
+        public string DomainInstanceId{ get; set; }
+
+        /// <summary>
         /// 查询条件：过滤或排序
         /// 1、UserName，string类型，姓名
         /// 是否必填：否
@@ -35,6 +41,10 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// 过滤支持：是，支持eq、like、ilike
         /// 排序支持：否
         /// 3、Phone，string类型，手机号
+        /// 是否必填：否
+        /// 过滤支持：是，支持eq、like、ilike
+        /// 排序支持：否
+        /// 4、Email，string类型，邮箱
         /// 是否必填：否
         /// 过滤支持：是，支持eq、like、ilike
         /// 排序支持：否
@@ -60,6 +70,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
             this.SetParamSimple(map, prefix + "ShowFlag", this.ShowFlag);

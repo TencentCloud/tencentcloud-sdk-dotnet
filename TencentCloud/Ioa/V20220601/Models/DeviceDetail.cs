@@ -25,307 +25,307 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 设备ID
+        /// <p>设备ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 设备唯一标识码，在ioa中每个设备有唯一标识码
+        /// <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
         /// </summary>
         [JsonProperty("Mid")]
         public string Mid{ get; set; }
 
         /// <summary>
-        /// 终端名（设备名）
+        /// <p>终端名（设备名）</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备所在分组ID
+        /// <p>设备所在分组ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
+        /// <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p>
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
-        /// 设备IP地址（出口IP）
+        /// <p>设备IP地址（出口IP）</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 在线状态，2：在线、0或者1:离线
+        /// <p>在线状态，2：在线、0或者1:离线</p>
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// 客户端版本号-大整数
+        /// <p>客户端版本号-大整数</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 客户端版本号-点分字符串
+        /// <p>客户端版本号-点分字符串</p>
         /// </summary>
         [JsonProperty("StrVersion")]
         public string StrVersion{ get; set; }
 
         /// <summary>
-        /// 首次在线时间
+        /// <p>首次在线时间</p>
         /// </summary>
         [JsonProperty("Itime")]
         public string Itime{ get; set; }
 
         /// <summary>
-        /// 最后一次在线时间
+        /// <p>最后一次在线时间</p>
         /// </summary>
         [JsonProperty("ConnActiveTime")]
         public string ConnActiveTime{ get; set; }
 
         /// <summary>
-        /// 设备是否加锁 ，1：锁定 0或者2：未锁定。
+        /// <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p>
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
-        /// 设备本地IP列表, 包括IP
+        /// <p>设备本地IP列表, 包括IP</p>
         /// </summary>
         [JsonProperty("LocalIpList")]
         public string LocalIpList{ get; set; }
 
         /// <summary>
-        /// 宿主机id（需要宿主机也安装iOA才能显示）
+        /// <p>宿主机id（需要宿主机也安装iOA才能显示）</p>
         /// </summary>
         [JsonProperty("HostId")]
         public long? HostId{ get; set; }
 
         /// <summary>
-        /// 设备所属分组名
+        /// <p>设备所属分组名</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 设备所属分组路径
+        /// <p>设备所属分组路径</p>
         /// </summary>
         [JsonProperty("GroupNamePath")]
         public string GroupNamePath{ get; set; }
 
         /// <summary>
-        /// 未修复高危漏洞数(只支持32位)
+        /// <p>未修复高危漏洞数(只支持32位)</p>
         /// </summary>
         [JsonProperty("CriticalVulListCount")]
         public long? CriticalVulListCount{ get; set; }
 
         /// <summary>
-        /// 操作系统名称
+        /// <p>操作系统名称</p>
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
         /// <summary>
-        /// 操作系统位数
+        /// <p>操作系统位数</p>
         /// </summary>
         [JsonProperty("OsBits")]
         public long? OsBits{ get; set; }
 
         /// <summary>
-        /// 操作系统版本
+        /// <p>操作系统版本</p>
         /// </summary>
         [JsonProperty("OsVersion")]
         public string OsVersion{ get; set; }
 
         /// <summary>
-        /// 操作系统语言
+        /// <p>操作系统语言</p>
         /// </summary>
         [JsonProperty("OsLanguage")]
         public string OsLanguage{ get; set; }
 
         /// <summary>
-        /// 操作系统安装时间
+        /// <p>操作系统安装时间</p>
         /// </summary>
         [JsonProperty("OsInstallDate")]
         public string OsInstallDate{ get; set; }
 
         /// <summary>
-        /// 设备名，和Name相同
+        /// <p>设备名，和Name相同</p>
         /// </summary>
         [JsonProperty("ComputerName")]
         public string ComputerName{ get; set; }
 
         /// <summary>
-        /// 登录域名
+        /// <p>登录域名</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// MAC地址
+        /// <p>MAC地址</p>
         /// </summary>
         [JsonProperty("MacAddr")]
         public string MacAddr{ get; set; }
 
         /// <summary>
-        /// 漏洞数
+        /// <p>漏洞数</p>
         /// </summary>
         [JsonProperty("VulCount")]
         public long? VulCount{ get; set; }
 
         /// <summary>
-        /// 病毒风险数
+        /// <p>病毒风险数</p>
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }
 
         /// <summary>
-        /// 病毒库版本
+        /// <p>病毒库版本</p>
         /// </summary>
         [JsonProperty("VirusVer")]
         public string VirusVer{ get; set; }
 
         /// <summary>
-        /// 漏洞库版本
+        /// <p>漏洞库版本</p>
         /// </summary>
         [JsonProperty("VulVersion")]
         public string VulVersion{ get; set; }
 
         /// <summary>
-        /// 系统修复引擎版本
+        /// <p>系统修复引擎版本</p>
         /// </summary>
         [JsonProperty("SysRepVersion")]
         public string SysRepVersion{ get; set; }
 
         /// <summary>
-        /// 高危补丁列表
+        /// <p>高危补丁列表</p>
         /// </summary>
         [JsonProperty("VulCriticalList")]
         public string[] VulCriticalList{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
 
         /// <summary>
-        /// 终端用户名
+        /// <p>终端用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 防火墙状态，不等于0表示开启
+        /// <p>防火墙状态，不等于0表示开启</p>
         /// </summary>
         [JsonProperty("FirewallStatus")]
         public long? FirewallStatus{ get; set; }
 
         /// <summary>
-        /// SN序列号
+        /// <p>SN序列号</p>
         /// </summary>
         [JsonProperty("SerialNum")]
         public string SerialNum{ get; set; }
 
         /// <summary>
-        /// 设备管控策略版本
+        /// <p>设备管控策略版本</p>
         /// </summary>
         [JsonProperty("DeviceStrategyVer")]
         public string DeviceStrategyVer{ get; set; }
 
         /// <summary>
-        /// NGN策略版本
+        /// <p>NGN策略版本</p>
         /// </summary>
         [JsonProperty("NGNStrategyVer")]
         public string NGNStrategyVer{ get; set; }
 
         /// <summary>
-        /// 最近登录账户的账号(账号系统用户账号)
+        /// <p>最近登录账户的账号(账号系统用户账号)</p>
         /// </summary>
         [JsonProperty("IOAUserName")]
         public string IOAUserName{ get; set; }
 
         /// <summary>
-        /// 设备管控新策略
+        /// <p>设备管控新策略</p>
         /// </summary>
         [JsonProperty("DeviceNewStrategyVer")]
         public string DeviceNewStrategyVer{ get; set; }
 
         /// <summary>
-        /// NGN策略新版本
+        /// <p>NGN策略新版本</p>
         /// </summary>
         [JsonProperty("NGNNewStrategyVer")]
         public string NGNNewStrategyVer{ get; set; }
 
         /// <summary>
-        /// 宿主机名称（需要宿主机也安装iOA才能显示）
+        /// <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 主板序列号
+        /// <p>主板序列号</p>
         /// </summary>
         [JsonProperty("BaseBoardSn")]
         public string BaseBoardSn{ get; set; }
 
         /// <summary>
-        /// 绑定账户名称
+        /// <p>绑定账户名称</p>
         /// </summary>
         [JsonProperty("AccountUsers")]
         public string AccountUsers{ get; set; }
 
         /// <summary>
-        /// 身份策略版本
+        /// <p>身份策略版本</p>
         /// </summary>
         [JsonProperty("IdentityStrategyVer")]
         public string IdentityStrategyVer{ get; set; }
 
         /// <summary>
-        /// 身份策略新版本
+        /// <p>身份策略新版本</p>
         /// </summary>
         [JsonProperty("IdentityNewStrategyVer")]
         public string IdentityNewStrategyVer{ get; set; }
 
         /// <summary>
-        /// 最近登录账号部门
+        /// <p>最近登录账号部门</p>
         /// </summary>
         [JsonProperty("AccountGroupName")]
         public string AccountGroupName{ get; set; }
 
         /// <summary>
-        /// 最近登录账户的姓名(账号系统用户姓名)
+        /// <p>最近登录账户的姓名(账号系统用户姓名)</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 账号组id
+        /// <p>账号组id</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+        /// <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
         /// </summary>
         [JsonProperty("ScreenRecordingPermission")]
         public long? ScreenRecordingPermission{ get; set; }
 
         /// <summary>
-        /// 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+        /// <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
         /// </summary>
         [JsonProperty("DiskAccessPermission")]
         public long? DiskAccessPermission{ get; set; }
 
         /// <summary>
-        /// 终端备注名
+        /// <p>终端备注名</p>
         /// </summary>
         [JsonProperty("RemarkName")]
         public string RemarkName{ get; set; }

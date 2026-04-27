@@ -25,37 +25,37 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 问答数量
+        /// <p>问答数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 待校验问答数量
+        /// <p>待校验问答数量</p>
         /// </summary>
         [JsonProperty("WaitVerifyTotal")]
         public string WaitVerifyTotal{ get; set; }
 
         /// <summary>
-        /// 未采纳问答数量
+        /// <p>未采纳问答数量</p>
         /// </summary>
         [JsonProperty("NotAcceptedTotal")]
         public string NotAcceptedTotal{ get; set; }
 
         /// <summary>
-        /// 已采纳问答数量
+        /// <p>已采纳问答数量</p>
         /// </summary>
         [JsonProperty("AcceptedTotal")]
         public string AcceptedTotal{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 问答详情
+        /// <p>问答详情</p>
         /// </summary>
         [JsonProperty("List")]
         public ListQaItem[] List{ get; set; }

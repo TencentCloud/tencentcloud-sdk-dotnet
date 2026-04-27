@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1414</VersionPrefix>
+    <VersionPrefix>3.0.1417</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -411,6 +411,8 @@
     <Compile Include="V20180125\Models\FreshAntiFakeUrlResponse.cs" />
     <Compile Include="V20180125\Models\GenerateDealsAndPayNewRequest.cs" />
     <Compile Include="V20180125\Models\GenerateDealsAndPayNewResponse.cs" />
+    <Compile Include="V20180125\Models\GenerateLLMSecAnswerRequest.cs" />
+    <Compile Include="V20180125\Models\GenerateLLMSecAnswerResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsRequest.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackHistogramRequest.cs" />
@@ -431,6 +433,7 @@
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />
     <Compile Include="V20180125\Models\HybridPkg.cs" />
+    <Compile Include="V20180125\Models\ImageResult.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\InOutputBotUCBRule.cs" />
@@ -620,6 +623,7 @@
     <Compile Include="V20180125\Models\Rule.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
     <Compile Include="V20180125\Models\RuleType.cs" />
+    <Compile Include="V20180125\Models\SSEClientMessage.cs" />
     <Compile Include="V20180125\Models\ScanIpInfo.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />

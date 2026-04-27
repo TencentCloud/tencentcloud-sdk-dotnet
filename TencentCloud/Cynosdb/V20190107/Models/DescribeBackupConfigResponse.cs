@@ -25,53 +25,59 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+        /// <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+        /// <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+        /// <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+        /// <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// 备份方式，logic-逻辑备份，snapshot-快照备份
+        /// <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 跨地域逻辑备份配置修改时间
+        /// <p>跨地域逻辑备份配置修改时间</p>
         /// </summary>
         [JsonProperty("LogicCrossRegionsConfigUpdateTime")]
         public string LogicCrossRegionsConfigUpdateTime{ get; set; }
 
         /// <summary>
-        /// 自动逻辑备份配置
+        /// <p>自动逻辑备份配置</p>
         /// </summary>
         [JsonProperty("LogicBackupConfig")]
         public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
-        /// 二级快照备份配置信息
+        /// <p>二级快照备份配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotSecondaryBackupConfig")]
         public BackupConfigInfo SnapshotSecondaryBackupConfig{ get; set; }
+
+        /// <summary>
+        /// <p>稀疏备份配置</p>
+        /// </summary>
+        [JsonProperty("SparseBackupConfig")]
+        public SparseBackupConfigRsp SparseBackupConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -93,6 +99,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
             this.SetParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
             this.SetParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
+            this.SetParamObj(map, prefix + "SparseBackupConfig.", this.SparseBackupConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

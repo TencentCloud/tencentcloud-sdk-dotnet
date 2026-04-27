@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 变量总数
+        /// <p>变量总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 变量信息列表
+        /// <p>变量信息列表</p>
         /// </summary>
         [JsonProperty("List")]
         public TaskFLowVar[] List{ get; set; }

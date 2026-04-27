@@ -58,6 +58,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }
 
+        /// <summary>
+        /// 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// 注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

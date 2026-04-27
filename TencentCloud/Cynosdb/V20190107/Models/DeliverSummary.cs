@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DeliverConsumerName")]
         public string DeliverConsumerName{ get; set; }
 
+        /// <summary>
+        /// 投递异常错误
+        /// </summary>
+        [JsonProperty("DeliverError")]
+        public string DeliverError{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DeliverSubType", this.DeliverSubType);
             this.SetParamSimple(map, prefix + "DeliverConsumer", this.DeliverConsumer);
             this.SetParamSimple(map, prefix + "DeliverConsumerName", this.DeliverConsumerName);
+            this.SetParamSimple(map, prefix + "DeliverError", this.DeliverError);
         }
     }
 }

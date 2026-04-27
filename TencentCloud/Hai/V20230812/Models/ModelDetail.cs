@@ -25,49 +25,49 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 应用描述	
+        /// <p>应用描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 官方社区链接	
+        /// <p>官方社区链接</p>
         /// </summary>
         [JsonProperty("CommunityUrl")]
         public string CommunityUrl{ get; set; }
 
         /// <summary>
-        /// 最佳实践链接
+        /// <p>最佳实践链接</p>
         /// </summary>
         [JsonProperty("GuideUrl")]
         public string GuideUrl{ get; set; }
 
         /// <summary>
-        /// 模型状态
+        /// <p>模型状态</p>
         /// </summary>
         [JsonProperty("ModelState")]
         public string ModelState{ get; set; }
 
         /// <summary>
-        /// 应用对应的标签，如机器学习
+        /// <p>应用对应的标签，如机器学习</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 配置环境
+        /// <p>配置环境</p>
         /// </summary>
         [JsonProperty("ConfigEnvironment")]
         public string ConfigEnvironment{ get; set; }

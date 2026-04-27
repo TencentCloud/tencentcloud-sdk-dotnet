@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 变量ID
+        /// <p>变量ID</p>
         /// </summary>
         [JsonProperty("VarId")]
         public string VarId{ get; set; }

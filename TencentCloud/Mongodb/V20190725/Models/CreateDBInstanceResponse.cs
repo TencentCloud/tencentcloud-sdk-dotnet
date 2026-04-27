@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 订单ID
+        /// <p>订单ID</p>
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 创建的实例ID列表
+        /// <p>创建的实例ID列表</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 价格
+        /// <p>价格</p>
         /// </summary>
         [JsonProperty("Price")]
         public DBInstancePrice Price{ get; set; }

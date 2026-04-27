@@ -89,6 +89,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleEmbedId")]
         public long? SubtitleEmbedId{ get; set; }
 
+        /// <summary>
+        /// <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+        /// </summary>
+        [JsonProperty("SpeakerMode")]
+        public long? SpeakerMode{ get; set; }
+
+        /// <summary>
+        /// <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+        /// </summary>
+        [JsonProperty("SpeakerLabel")]
+        public long? SpeakerLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +117,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
             this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
             this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+            this.SetParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+            this.SetParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
         }
     }
 }

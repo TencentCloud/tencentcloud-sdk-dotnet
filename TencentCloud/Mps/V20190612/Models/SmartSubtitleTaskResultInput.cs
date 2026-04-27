@@ -25,18 +25,23 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 智能字幕模板 ID。
+        /// <p>智能字幕模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 智能字幕自定义参数，当 Definition 填 0 时有效。
-        /// 该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+        /// <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawSmartSubtitleParameter RawParameter{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数。</p>
+        /// </summary>
+        [JsonProperty("UserExtPara")]
+        public string UserExtPara{ get; set; }
 
 
         /// <summary>
@@ -46,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
         }
     }
 }

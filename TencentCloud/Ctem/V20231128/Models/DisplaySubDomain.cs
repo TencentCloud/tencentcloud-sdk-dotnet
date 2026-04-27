@@ -25,94 +25,106 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 子域名
+        /// <p>子域名</p>
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Ip
+        /// <p>Ip</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 国家
+        /// <p>国家</p>
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
-        /// 省份
+        /// <p>省份</p>
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
-        /// 城市
+        /// <p>城市</p>
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// 互联网服务提供商
+        /// <p>互联网服务提供商</p>
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// 是否为云资产：0-非云资产 1-是云资产
+        /// <p>是否为云资产：0-非云资产 1-是云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产是否下线：-1-已下线 0-正常
+        /// <p>云资产是否下线：-1-已下线 0-正常</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
 
         /// <summary>
-        /// 可用率（百分比）
+        /// <p>可用率（百分比）</p>
         /// </summary>
         [JsonProperty("AvailabilityRate")]
         public long? AvailabilityRate{ get; set; }
 
         /// <summary>
-        /// 可用状态 1:异常 0:正常
+        /// <p>可用状态 1:异常 0:正常</p>
         /// </summary>
         [JsonProperty("AvailabilityState")]
         public long? AvailabilityState{ get; set; }
 
         /// <summary>
-        /// 域名解析状态 1:异常 0:正常
+        /// <p>域名解析状态 1:异常 0:正常</p>
         /// </summary>
         [JsonProperty("AnalysisState")]
         public long? AnalysisState{ get; set; }
 
         /// <summary>
-        /// 平均时延：单位ms
+        /// <p>平均时延：单位ms</p>
         /// </summary>
         [JsonProperty("AverageDelay")]
         public long? AverageDelay{ get; set; }
 
         /// <summary>
-        /// 丢包率（百分比）
+        /// <p>丢包率（百分比）</p>
         /// </summary>
         [JsonProperty("LossRate")]
         public long? LossRate{ get; set; }
+
+        /// <summary>
+        /// <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+        /// </summary>
+        [JsonProperty("DnsType")]
+        public string DnsType{ get; set; }
+
+        /// <summary>
+        /// <p>DNS解析值</p>
+        /// </summary>
+        [JsonProperty("DnsValue")]
+        public string DnsValue{ get; set; }
 
 
         /// <summary>
@@ -135,6 +147,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
             this.SetParamSimple(map, prefix + "AverageDelay", this.AverageDelay);
             this.SetParamSimple(map, prefix + "LossRate", this.LossRate);
+            this.SetParamSimple(map, prefix + "DnsType", this.DnsType);
+            this.SetParamSimple(map, prefix + "DnsValue", this.DnsValue);
         }
     }
 }

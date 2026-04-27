@@ -25,31 +25,31 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 任务唯一ID
+        /// <p>任务唯一ID</p>
         /// </summary>
         [JsonProperty("ProcessId")]
         public string ProcessId{ get; set; }
 
         /// <summary>
-        /// 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE
+        /// <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p>
         /// </summary>
         [JsonProperty("ProcessType")]
         public string ProcessType{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 来源：WEDATA|THIRD 默认WEDATA
+        /// <p>来源：WEDATA|THIRD 默认WEDATA</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

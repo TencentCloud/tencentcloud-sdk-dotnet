@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1415";
+       private const string sdkVersion = "SDK_NET_3.0.1417";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Monitor.V20180724
         public BindingPolicyTagResponse BindingPolicyTagSync(BindingPolicyTagRequest req)
         {
             return InternalRequestAsync<BindingPolicyTagResponse>(req, "BindingPolicyTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查用户地址联通性
+        /// </summary>
+        /// <param name="req"><see cref="CheckAddressByPrometheusRequest"/></param>
+        /// <returns><see cref="CheckAddressByPrometheusResponse"/></returns>
+        public Task<CheckAddressByPrometheusResponse> CheckAddressByPrometheus(CheckAddressByPrometheusRequest req)
+        {
+            return InternalRequestAsync<CheckAddressByPrometheusResponse>(req, "CheckAddressByPrometheus");
+        }
+
+        /// <summary>
+        /// 检查用户地址联通性
+        /// </summary>
+        /// <param name="req"><see cref="CheckAddressByPrometheusRequest"/></param>
+        /// <returns><see cref="CheckAddressByPrometheusResponse"/></returns>
+        public CheckAddressByPrometheusResponse CheckAddressByPrometheusSync(CheckAddressByPrometheusRequest req)
+        {
+            return InternalRequestAsync<CheckAddressByPrometheusResponse>(req, "CheckAddressByPrometheus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
