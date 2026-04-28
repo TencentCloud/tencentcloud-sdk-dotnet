@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.
@@ -1788,6 +1788,39 @@ namespace TencentCloud.Cvm.V20170312
         public ModifyChcAttributeResponse ModifyChcAttributeSync(ModifyChcAttributeRequest req)
         {
             return InternalRequestAsync<ModifyChcAttributeResponse>(req, "ModifyChcAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ModifyChcNetworkMode接口用于切换CHC物理服务器的网络模式，适用于客户使用自建pxe环境装机，调用此接口切换部署网络和业务网络。**调用此接口会影响到业务网络，请明确使用方法后再调用**。
+        /// - 切换部署网络：传入参数NetworkMode=DEPLOY。只有当CHC服务器状态为“可生产”或“已生产”，并且配置了部署网络才可以切换，否则API直接报错。
+        /// - 切换业务网络：传入参数NetworkMode=BUSINESS。只有当CHC服务器状态为“已生产”时才可以切换，否则API直接报错。
+        /// 
+        /// 切换网络模式是一个异步操作，可以通过DescribeChcHosts轮询查询设备的NetworkMode和操作状态来判断是否切换成功
+        /// - 切换部署网络：chc物理服务器如下参数值为以下值是判断切换成功：NetworkMode=DEPLOY，LatestOperation=SwitchChcDeployNetwork, LatestOperationState=SUCCESS。
+        /// - 切换业务网络：chc物理服务器如下参数值为以下值是判断切换成功：NetworkMode=BUSINESS，LatestOperation=SwitchChcBusinessNetwork, LatestOperationState=SUCCESS。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcNetworkModeRequest"/></param>
+        /// <returns><see cref="ModifyChcNetworkModeResponse"/></returns>
+        public Task<ModifyChcNetworkModeResponse> ModifyChcNetworkMode(ModifyChcNetworkModeRequest req)
+        {
+            return InternalRequestAsync<ModifyChcNetworkModeResponse>(req, "ModifyChcNetworkMode");
+        }
+
+        /// <summary>
+        /// ModifyChcNetworkMode接口用于切换CHC物理服务器的网络模式，适用于客户使用自建pxe环境装机，调用此接口切换部署网络和业务网络。**调用此接口会影响到业务网络，请明确使用方法后再调用**。
+        /// - 切换部署网络：传入参数NetworkMode=DEPLOY。只有当CHC服务器状态为“可生产”或“已生产”，并且配置了部署网络才可以切换，否则API直接报错。
+        /// - 切换业务网络：传入参数NetworkMode=BUSINESS。只有当CHC服务器状态为“已生产”时才可以切换，否则API直接报错。
+        /// 
+        /// 切换网络模式是一个异步操作，可以通过DescribeChcHosts轮询查询设备的NetworkMode和操作状态来判断是否切换成功
+        /// - 切换部署网络：chc物理服务器如下参数值为以下值是判断切换成功：NetworkMode=DEPLOY，LatestOperation=SwitchChcDeployNetwork, LatestOperationState=SUCCESS。
+        /// - 切换业务网络：chc物理服务器如下参数值为以下值是判断切换成功：NetworkMode=BUSINESS，LatestOperation=SwitchChcBusinessNetwork, LatestOperationState=SUCCESS。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcNetworkModeRequest"/></param>
+        /// <returns><see cref="ModifyChcNetworkModeResponse"/></returns>
+        public ModifyChcNetworkModeResponse ModifyChcNetworkModeSync(ModifyChcNetworkModeRequest req)
+        {
+            return InternalRequestAsync<ModifyChcNetworkModeResponse>(req, "ModifyChcNetworkMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

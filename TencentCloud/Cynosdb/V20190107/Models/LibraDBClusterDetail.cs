@@ -25,178 +25,185 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 状态描述
+        /// <p>状态描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 存储大小
+        /// <p>存储大小</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// VPC名称
+        /// <p>VPC名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// vpc唯一id
+        /// <p>vpc唯一id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网名称
+        /// <p>子网名称</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// 使用容量
+        /// <p>使用容量</p>
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
 
         /// <summary>
-        /// vip地址
+        /// <p>vip地址</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// vport端口
+        /// <p>vport端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 集群只读实例的vip地址和vport端口
+        /// <p>集群只读实例的vip地址和vport端口</p>
         /// </summary>
         [JsonProperty("RoAddr")]
         public RoAddr[] RoAddr{ get; set; }
 
         /// <summary>
-        /// cynos版本
+        /// <p>cynos版本</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// 是否冻结
+        /// <p>是否冻结</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// 任务列表
+        /// <p>任务列表</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// 主可用区
+        /// <p>主可用区</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// 实例集合
+        /// <p>实例集合</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public InstanceSet[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// <p>到期时间</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 自动续费标识
+        /// <p>自动续费标识</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 版本标签
+        /// <p>版本标签</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
+        /// <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
         /// </summary>
         [JsonProperty("NoSupportAddRo")]
         public string NoSupportAddRo{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 物理可用区
+        /// <p>物理可用区</p>
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// <p>版本升级灰度信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnalysisUpgradeVersionInfo")]
+        public UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo{ get; set; }
 
 
         /// <summary>
@@ -233,6 +240,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NoSupportAddRo", this.NoSupportAddRo);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
         }
     }
 }

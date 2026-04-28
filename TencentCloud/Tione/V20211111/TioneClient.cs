@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.
@@ -518,6 +518,27 @@ namespace TencentCloud.Tione.V20211111
         public DeleteTrainingTaskResponse DeleteTrainingTaskSync(DeleteTrainingTaskRequest req)
         {
             return InternalRequestAsync<DeleteTrainingTaskResponse>(req, "DeleteTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAnnotatedTaskList）用于查询用户标注任务详细信息列表；支持各种过滤条件；
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotatedTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAnnotatedTaskListResponse"/></returns>
+        public Task<DescribeAnnotatedTaskListResponse> DescribeAnnotatedTaskList(DescribeAnnotatedTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotatedTaskListResponse>(req, "DescribeAnnotatedTaskList");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAnnotatedTaskList）用于查询用户标注任务详细信息列表；支持各种过滤条件；
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotatedTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAnnotatedTaskListResponse"/></returns>
+        public DescribeAnnotatedTaskListResponse DescribeAnnotatedTaskListSync(DescribeAnnotatedTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotatedTaskListResponse>(req, "DescribeAnnotatedTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1236,6 +1257,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeTrainingTasksResponse DescribeTrainingTasksSync(DescribeTrainingTasksRequest req)
         {
             return InternalRequestAsync<DescribeTrainingTasksResponse>(req, "DescribeTrainingTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
+        public Task<DescribeWorkspacesResponse> DescribeWorkspaces(DescribeWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces");
+        }
+
+        /// <summary>
+        /// 查询工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
+        public DescribeWorkspacesResponse DescribeWorkspacesSync(DescribeWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

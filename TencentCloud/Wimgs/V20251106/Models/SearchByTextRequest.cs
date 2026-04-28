@@ -25,7 +25,7 @@ namespace TencentCloud.Wimgs.V20251106.Models
     {
         
         /// <summary>
-        /// 查询词
+        /// <p>查询词</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

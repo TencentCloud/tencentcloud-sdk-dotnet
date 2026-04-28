@@ -43,6 +43,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// <p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
         /// </summary>
         [JsonProperty("FrameworkName")]
@@ -189,6 +195,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
             this.SetParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);

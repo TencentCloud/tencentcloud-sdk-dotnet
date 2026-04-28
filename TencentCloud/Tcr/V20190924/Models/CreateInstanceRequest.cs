@@ -25,52 +25,58 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 企业版实例名称
+        /// <p>企业版实例名称</p>
         /// </summary>
         [JsonProperty("RegistryName")]
         public string RegistryName{ get; set; }
 
         /// <summary>
-        /// 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+        /// <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// 云标签描述
+        /// <p>云标签描述</p>
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+        /// <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
         /// </summary>
         [JsonProperty("RegistryChargeType")]
         public long? RegistryChargeType{ get; set; }
 
         /// <summary>
-        /// 预付费自动续费标识和购买时长
+        /// <p>预付费自动续费标识和购买时长</p>
         /// </summary>
         [JsonProperty("RegistryChargePrepaid")]
         public RegistryChargePrepaid RegistryChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 是否同步TCR云标签至生成的COS Bucket
+        /// <p>是否同步TCR云标签至生成的COS Bucket</p>
         /// </summary>
         [JsonProperty("SyncTag")]
         public bool? SyncTag{ get; set; }
 
         /// <summary>
-        /// 是否开启Cos桶多AZ特性
+        /// <p>是否开启Cos桶多AZ特性</p>
         /// </summary>
         [JsonProperty("EnableCosMAZ")]
         public bool? EnableCosMAZ{ get; set; }
 
         /// <summary>
-        /// 是否开启实例删除保护
+        /// <p>是否开启实例删除保护</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启cos桶多版本控制</p>
+        /// </summary>
+        [JsonProperty("EnableCosVersioning")]
+        public bool? EnableCosVersioning{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
             this.SetParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
         }
     }
 }

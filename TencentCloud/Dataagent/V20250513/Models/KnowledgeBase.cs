@@ -25,46 +25,52 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 知识库id
+        /// <p>知识库id</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 知识库名称
+        /// <p>知识库名称</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseName")]
         public string KnowledgeBaseName{ get; set; }
 
         /// <summary>
-        /// 知识库描述
+        /// <p>知识库描述</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseDesc")]
         public string KnowledgeBaseDesc{ get; set; }
 
         /// <summary>
-        /// 创建者subuin
+        /// <p>创建者subuin</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 文件数量
+        /// <p>文件数量</p>
         /// </summary>
         [JsonProperty("FileNum")]
         public long? FileNum{ get; set; }
 
         /// <summary>
-        /// 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展
+        /// <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p>
         /// </summary>
         [JsonProperty("DatasourceIds")]
         public string[] DatasourceIds{ get; set; }
+
+        /// <summary>
+        /// <p>知识库任务配置</p>
+        /// </summary>
+        [JsonProperty("Config")]
+        public KnowledgeTaskConfig Config{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FileNum", this.FileNum);
             this.SetParamArraySimple(map, prefix + "DatasourceIds.", this.DatasourceIds);
+            this.SetParamObj(map, prefix + "Config.", this.Config);
         }
     }
 }

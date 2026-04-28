@@ -131,7 +131,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string DashOriginManifestType{ get; set; }
 
         /// <summary>
-        /// <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+        /// <p>广告为空时是否插入Slate，默认开启(true)</p>
         /// </summary>
         [JsonProperty("SlateOnEmptyVast")]
         public bool? SlateOnEmptyVast{ get; set; }

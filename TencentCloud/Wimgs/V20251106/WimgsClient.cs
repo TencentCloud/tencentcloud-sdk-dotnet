@@ -28,7 +28,7 @@ namespace TencentCloud.Wimgs.V20251106
 
        private const string endpoint = "wimgs.tencentcloudapi.com";
        private const string version = "2025-11-06";
-       private const string sdkVersion = "SDK_NET_3.0.1374";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.

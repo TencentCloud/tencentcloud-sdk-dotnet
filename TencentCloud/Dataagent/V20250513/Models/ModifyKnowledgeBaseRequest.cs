@@ -25,46 +25,52 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 操作类型：Create，Update，Delete
+        /// <p>操作类型：Create，Update，Delete</p>
         /// </summary>
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }
 
         /// <summary>
-        /// 知识库id，update和delete时必填
+        /// <p>知识库id，update和delete时必填</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
+        /// <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseName")]
         public string KnowledgeBaseName{ get; set; }
 
         /// <summary>
-        /// 知识库描述，create和update时必填
+        /// <p>知识库描述，create和update时必填</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseDesc")]
         public string KnowledgeBaseDesc{ get; set; }
 
         /// <summary>
-        /// 1仅自己使用，2指定用户，0全员
+        /// <p>1仅自己使用，2指定用户，0全员</p>
         /// </summary>
         [JsonProperty("UseScope")]
         public long? UseScope{ get; set; }
 
         /// <summary>
-        /// 可使用用户列表
+        /// <p>可使用用户列表</p>
         /// </summary>
         [JsonProperty("AuthorityUins")]
         public string[] AuthorityUins{ get; set; }
+
+        /// <summary>
+        /// <p>知识库任务配置</p>
+        /// </summary>
+        [JsonProperty("Config")]
+        public KnowledgeTaskConfig Config{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "KnowledgeBaseDesc", this.KnowledgeBaseDesc);
             this.SetParamSimple(map, prefix + "UseScope", this.UseScope);
             this.SetParamArraySimple(map, prefix + "AuthorityUins.", this.AuthorityUins);
+            this.SetParamObj(map, prefix + "Config.", this.Config);
         }
     }
 }

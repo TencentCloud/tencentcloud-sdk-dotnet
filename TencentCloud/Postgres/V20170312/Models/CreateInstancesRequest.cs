@@ -25,12 +25,6 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
         /// <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
         /// </summary>
         [JsonProperty("SpecCode")]
@@ -71,6 +65,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
+
+        /// <summary>
+        /// <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
         /// <p>PostgreSQL大版本号（该参数当前必传），版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。目前支持10，11，12，13，14，15这几个大版本，详情见<a href="https://cloud.tencent.com/document/product/409/67018">内核版本概述</a>。<br>输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。</p>
@@ -228,7 +228,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
@@ -236,6 +235,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Charset", this.Charset);
             this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);

@@ -25,23 +25,13 @@ namespace TencentCloud.Wimgs.V20251106.Models
     {
         
         /// <summary>
-        /// 原始查询词
+        /// <p>原始查询词</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 搜索结果图片列表，格式为json字符串。
-        /// 
-        /// - thumbnailUrl：缩略图地址。
-        /// - thumbnailWidth：缩略图宽度。
-        /// - thumbnailHeight：缩略图高度。
-        /// - origPicUrl：原图地址。
-        /// -  origPicWidth：原图宽度。
-        /// - siteUrl：站点地址，原图来源网页URL。
-        /// - siteName：站点名称。
-        /// - title：标题，原图标题或原图来源网页标题。
-        /// - date：内容发布时间。
+        /// <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul>
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }

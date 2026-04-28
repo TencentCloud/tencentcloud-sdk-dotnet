@@ -127,6 +127,18 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("AIFeature")]
         public bool? AIFeature{ get; set; }
 
+        /// <summary>
+        /// <p>cos桶是否开启多AZ特性</p>
+        /// </summary>
+        [JsonProperty("EnableCosMAZ")]
+        public bool? EnableCosMAZ{ get; set; }
+
+        /// <summary>
+        /// <p>cos桶是否开启版本控制</p>
+        /// </summary>
+        [JsonProperty("EnableCosVersioning")]
+        public bool? EnableCosVersioning{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +162,8 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "AIFeature", this.AIFeature);
+            this.SetParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
+            this.SetParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
         }
     }
 }

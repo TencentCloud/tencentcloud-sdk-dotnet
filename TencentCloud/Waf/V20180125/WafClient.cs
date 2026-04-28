@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.
@@ -2914,7 +2914,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+        /// 大模型安全代答生成接口。当用户输入命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
         /// </summary>
         /// <param name="req"><see cref="GenerateLLMSecAnswerRequest"/></param>
         /// <returns><see cref="GenerateLLMSecAnswerResponse"/></returns>
@@ -2924,7 +2924,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+        /// 大模型安全代答生成接口。当用户输入命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
         /// </summary>
         /// <param name="req"><see cref="GenerateLLMSecAnswerRequest"/></param>
         /// <returns><see cref="GenerateLLMSecAnswerResponse"/></returns>

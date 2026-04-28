@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1416</VersionPrefix>
+    <VersionPrefix>3.0.1418</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,8 +86,6 @@
     <Compile Include="V20181119\Models\ConfigAdvanced.cs" />
     <Compile Include="V20181119\Models\ContentInfo.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
-    <Compile Include="V20181119\Models\CropEnhanceImageOCRRequest.cs" />
-    <Compile Include="V20181119\Models\CropEnhanceImageOCRResponse.cs" />
     <Compile Include="V20181119\Models\CustomsDeclaration.cs" />
     <Compile Include="V20181119\Models\CustomsPaymentReceipt.cs" />
     <Compile Include="V20181119\Models\DescribeExtractDocAgentJobRequest.cs" />
@@ -121,8 +119,6 @@
     <Compile Include="V20181119\Models\EnterpriseLicenseInfo.cs" />
     <Compile Include="V20181119\Models\EnterpriseLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\EnterpriseLicenseOCRResponse.cs" />
-    <Compile Include="V20181119\Models\EraseHandwrittenImageOCRRequest.cs" />
-    <Compile Include="V20181119\Models\EraseHandwrittenImageOCRResponse.cs" />
     <Compile Include="V20181119\Models\EstateCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\EstateCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\ExtractDocAgentRequest.cs" />

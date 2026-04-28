@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 企业版实例Id
+        /// <p>企业版实例Id</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }

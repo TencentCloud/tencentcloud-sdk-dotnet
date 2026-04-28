@@ -25,64 +25,70 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 场景ID
+        /// <p>场景ID</p>
         /// </summary>
         [JsonProperty("SceneId")]
         public string SceneId{ get; set; }
 
         /// <summary>
-        /// 场景名称
+        /// <p>场景名称</p>
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
-        /// 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
+        /// <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
         /// </summary>
         [JsonProperty("Skills")]
         public string[] Skills{ get; set; }
 
         /// <summary>
-        /// 提示词文本
+        /// <p>提示词文本</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 检索配置
+        /// <p>检索配置</p>
         /// </summary>
         [JsonProperty("SearchConfig")]
         public SearchConfig SearchConfig{ get; set; }
 
         /// <summary>
-        /// 示例问答列表
+        /// <p>示例问答列表</p>
         /// </summary>
         [JsonProperty("ExampleQAList")]
         public ExampleQA[] ExampleQAList{ get; set; }
 
         /// <summary>
-        /// 记录的创建时间
+        /// <p>记录的创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 记录的最后更新时间
+        /// <p>记录的最后更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建者Uin
+        /// <p>创建者Uin</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
+
+        /// <summary>
+        /// <p>知识</p>
+        /// </summary>
+        [JsonProperty("Knowledge")]
+        public string Knowledge{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
+            this.SetParamSimple(map, prefix + "Knowledge", this.Knowledge);
         }
     }
 }

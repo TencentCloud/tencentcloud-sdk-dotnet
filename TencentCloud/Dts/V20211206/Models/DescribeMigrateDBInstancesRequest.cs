@@ -25,61 +25,61 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
+        /// <p>数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。</p>
         /// </summary>
         [JsonProperty("DatabaseType")]
         public string DatabaseType{ get; set; }
 
         /// <summary>
-        /// 实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
+        /// <p>实例作为迁移的源还是目标,src(表示源)，dst(表示目标)</p>
         /// </summary>
         [JsonProperty("MigrateRole")]
         public string MigrateRole{ get; set; }
 
         /// <summary>
-        /// 云数据库实例ID，可通过对应业务实例列表获取实例信息。
+        /// <p>云数据库实例ID，可通过对应业务实例列表获取实例信息。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 云数据库名称，可通过对应业务实例列表获取实例信息。
+        /// <p>云数据库名称，可通过对应业务实例列表获取实例信息。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 返回数量限制
+        /// <p>返回数量限制</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
+        /// <p>资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)</p>
         /// </summary>
         [JsonProperty("AccountMode")]
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+        /// <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+        /// <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+        /// <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
         /// </summary>
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }

@@ -150,6 +150,36 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("SensitiveDataCheckConfig")]
         public SensitiveDataCheckConfigDTO SensitiveDataCheckConfig{ get; set; }
 
+        /// <summary>
+        /// <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+        /// </summary>
+        [JsonProperty("TargetSelect")]
+        public string TargetSelect{ get; set; }
+
+        /// <summary>
+        /// <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+        /// </summary>
+        [JsonProperty("FindHostKeyMethod")]
+        public string FindHostKeyMethod{ get; set; }
+
+        /// <summary>
+        /// <p>会话判断header名称</p>
+        /// </summary>
+        [JsonProperty("HostKeyHeaderName")]
+        public string HostKeyHeaderName{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启备份模型</p>
+        /// </summary>
+        [JsonProperty("FallbackStatus")]
+        public bool? FallbackStatus{ get; set; }
+
+        /// <summary>
+        /// <p>备份模型</p>
+        /// </summary>
+        [JsonProperty("FallbackModels")]
+        public TargetModelDTO[] FallbackModels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +207,11 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
             this.SetParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
             this.SetParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
+            this.SetParamSimple(map, prefix + "TargetSelect", this.TargetSelect);
+            this.SetParamSimple(map, prefix + "FindHostKeyMethod", this.FindHostKeyMethod);
+            this.SetParamSimple(map, prefix + "HostKeyHeaderName", this.HostKeyHeaderName);
+            this.SetParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
+            this.SetParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
         }
     }
 }

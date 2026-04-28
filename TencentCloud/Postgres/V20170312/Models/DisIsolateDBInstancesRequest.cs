@@ -25,30 +25,25 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+        /// <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月。
-        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-        /// <li>后付费：该参数不生效</li>
+        /// <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 是否使用代金券：
-        /// <li>true：使用</li>
-        /// <li>false：不使用</li>
-        /// 默认值：false
+        /// <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券id列表。
+        /// <p>代金券id列表。</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1416";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.
@@ -1688,6 +1688,27 @@ namespace TencentCloud.Organization.V20210331
         public GetGroupResponse GetGroupSync(GetGroupRequest req)
         {
             return InternalRequestAsync<GetGroupResponse>(req, "GetGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取CIC的ip白名单
+        /// </summary>
+        /// <param name="req"><see cref="GetIPWhitelistRequest"/></param>
+        /// <returns><see cref="GetIPWhitelistResponse"/></returns>
+        public Task<GetIPWhitelistResponse> GetIPWhitelist(GetIPWhitelistRequest req)
+        {
+            return InternalRequestAsync<GetIPWhitelistResponse>(req, "GetIPWhitelist");
+        }
+
+        /// <summary>
+        /// 获取CIC的ip白名单
+        /// </summary>
+        /// <param name="req"><see cref="GetIPWhitelistRequest"/></param>
+        /// <returns><see cref="GetIPWhitelistResponse"/></returns>
+        public GetIPWhitelistResponse GetIPWhitelistSync(GetIPWhitelistRequest req)
+        {
+            return InternalRequestAsync<GetIPWhitelistResponse>(req, "GetIPWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,64 +25,70 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
+        /// <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// <p>私有网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络名称
+        /// <p>私有网络名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 公网IP
+        /// <p>公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 内网IP
+        /// <p>内网IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 关联安全组数量
+        /// <p>关联安全组数量</p>
         /// </summary>
         [JsonProperty("SecurityGroupCount")]
         public ulong? SecurityGroupCount{ get; set; }
 
         /// <summary>
-        /// 关联安全组规则数量
+        /// <p>关联安全组规则数量</p>
         /// </summary>
         [JsonProperty("SecurityGroupRuleCount")]
         public ulong? SecurityGroupRuleCount{ get; set; }
 
         /// <summary>
-        /// 关联数据库代理Id
+        /// <p>关联数据库代理Id</p>
         /// </summary>
         [JsonProperty("CdbId")]
         public string CdbId{ get; set; }
+
+        /// <summary>
+        /// <p>容器服务集群ID</p>
+        /// </summary>
+        [JsonProperty("TkeClusterId")]
+        public string TkeClusterId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "SecurityGroupCount", this.SecurityGroupCount);
             this.SetParamSimple(map, prefix + "SecurityGroupRuleCount", this.SecurityGroupRuleCount);
             this.SetParamSimple(map, prefix + "CdbId", this.CdbId);
+            this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
         }
     }
 }

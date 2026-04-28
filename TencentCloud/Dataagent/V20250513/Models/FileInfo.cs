@@ -102,6 +102,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("WebUrl")]
         public string WebUrl{ get; set; }
 
+        /// <summary>
+        /// <p>文件能力标识列表</p>
+        /// </summary>
+        [JsonProperty("Capabilities")]
+        public string[] Capabilities{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "IsShowCase", this.IsShowCase);
             this.SetParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
             this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
+            this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
         }
     }
 }

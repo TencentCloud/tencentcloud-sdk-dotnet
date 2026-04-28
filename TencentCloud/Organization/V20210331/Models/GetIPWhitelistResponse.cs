@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EraseHandwrittenImageOCRResponse : AbstractModel
+    public class GetIPWhitelistResponse : AbstractModel
     {
         
         /// <summary>
-        /// 图像处理后的jpg图片，base64格式
+        /// ip白名单
         /// </summary>
-        [JsonProperty("Image")]
-        public string Image{ get; set; }
+        [JsonProperty("IpWhitelist")]
+        public string[] IpWhitelist{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Image", this.Image);
+            this.SetParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
