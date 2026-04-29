@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 基于搜索结果的总结
+        /// 根据视频内容生成的关键词
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }

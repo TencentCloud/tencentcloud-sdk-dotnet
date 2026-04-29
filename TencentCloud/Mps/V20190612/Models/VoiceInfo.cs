@@ -55,6 +55,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Gender{ get; set; }
 
         /// <summary>
+        /// <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+        /// </summary>
+        [JsonProperty("Age")]
+        public string Age{ get; set; }
+
+        /// <summary>
         /// <p>支持语种列表</p><p>如：en</p>
         /// </summary>
         [JsonProperty("Languages")]
@@ -89,6 +95,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);

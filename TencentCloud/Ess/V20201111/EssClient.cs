@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1416";
+       private const string sdkVersion = "SDK_NET_3.0.1419";
 
         /// <summary>
         /// Client constructor.
@@ -3531,6 +3531,27 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（DescribeContractReviewChecklist）用于获取已有的合同风险审查清单详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistResponse"/></returns>
+        public Task<DescribeContractReviewChecklistResponse> DescribeContractReviewChecklist(DescribeContractReviewChecklistRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistResponse>(req, "DescribeContractReviewChecklist");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeContractReviewChecklist）用于获取已有的合同风险审查清单详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContractReviewChecklistRequest"/></param>
+        /// <returns><see cref="DescribeContractReviewChecklistResponse"/></returns>
+        public DescribeContractReviewChecklistResponse DescribeContractReviewChecklistSync(DescribeContractReviewChecklistRequest req)
+        {
+            return InternalRequestAsync<DescribeContractReviewChecklistResponse>(req, "DescribeContractReviewChecklist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
         /// 
         /// 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -4703,6 +4724,27 @@ namespace TencentCloud.Ess.V20201111
         public GetTaskResultApiResponse GetTaskResultApiSync(GetTaskResultApiRequest req)
         {
             return InternalRequestAsync<GetTaskResultApiResponse>(req, "GetTaskResultApi")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（ImportRiskIdentificationChecklist）用于创建或更新合同审查清单。
+        /// </summary>
+        /// <param name="req"><see cref="ImportContractReviewChecklistRequest"/></param>
+        /// <returns><see cref="ImportContractReviewChecklistResponse"/></returns>
+        public Task<ImportContractReviewChecklistResponse> ImportContractReviewChecklist(ImportContractReviewChecklistRequest req)
+        {
+            return InternalRequestAsync<ImportContractReviewChecklistResponse>(req, "ImportContractReviewChecklist");
+        }
+
+        /// <summary>
+        /// 此接口（ImportRiskIdentificationChecklist）用于创建或更新合同审查清单。
+        /// </summary>
+        /// <param name="req"><see cref="ImportContractReviewChecklistRequest"/></param>
+        /// <returns><see cref="ImportContractReviewChecklistResponse"/></returns>
+        public ImportContractReviewChecklistResponse ImportContractReviewChecklistSync(ImportContractReviewChecklistRequest req)
+        {
+            return InternalRequestAsync<ImportContractReviewChecklistResponse>(req, "ImportContractReviewChecklist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

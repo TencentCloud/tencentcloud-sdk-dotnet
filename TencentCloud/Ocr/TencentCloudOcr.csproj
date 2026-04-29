@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1418</VersionPrefix>
+    <VersionPrefix>3.0.1419</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20181119\Models\ConfigAdvanced.cs" />
     <Compile Include="V20181119\Models\ContentInfo.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\CoordList.cs" />
     <Compile Include="V20181119\Models\CustomsDeclaration.cs" />
     <Compile Include="V20181119\Models\CustomsPaymentReceipt.cs" />
     <Compile Include="V20181119\Models\DescribeExtractDocAgentJobRequest.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="V20181119\Models\ExtractDocMultiProResponse.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiRequest.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiResponse.cs" />
+    <Compile Include="V20181119\Models\FieldsInfo.cs" />
     <Compile Include="V20181119\Models\FinanBillInfo.cs" />
     <Compile Include="V20181119\Models\FinanBillOCRRequest.cs" />
     <Compile Include="V20181119\Models\FinanBillOCRResponse.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="V20181119\Models\LicensePlateOCRRequest.cs" />
     <Compile Include="V20181119\Models\LicensePlateOCRResponse.cs" />
     <Compile Include="V20181119\Models\LineInfo.cs" />
+    <Compile Include="V20181119\Models\ListInfo.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
@@ -252,6 +255,8 @@
     <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\RailwayTicketInfo.cs" />
+    <Compile Include="V20181119\Models\RecognizeAgentRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeAgentResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRRequest.cs" />
@@ -292,6 +297,8 @@
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\SaleInventory.cs" />
+    <Compile Include="V20181119\Models\SceneWarnInfo.cs" />
+    <Compile Include="V20181119\Models\SchemaList.cs" />
     <Compile Include="V20181119\Models\SealInfo.cs" />
     <Compile Include="V20181119\Models\SealOCRRequest.cs" />
     <Compile Include="V20181119\Models\SealOCRResponse.cs" />
@@ -306,6 +313,7 @@
     <Compile Include="V20181119\Models\SmartStructuralOCRResponse.cs" />
     <Compile Include="V20181119\Models\StoreInfo.cs" />
     <Compile Include="V20181119\Models\StructuralItem.cs" />
+    <Compile Include="V20181119\Models\SubItemGroup.cs" />
     <Compile Include="V20181119\Models\SubmitExtractDocAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\SubmitExtractDocAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\SubmitMarkEssayAgentJobRequest.cs" />
@@ -376,6 +384,8 @@
     <Compile Include="V20181119\Models\VerifyBizLicenseEnterprise4Response.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VerifyScenePhotoRequest.cs" />
+    <Compile Include="V20181119\Models\VerifyScenePhotoResponse.cs" />
     <Compile Include="V20181119\Models\VinOCRRequest.cs" />
     <Compile Include="V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="V20181119\Models\WaybillOCRRequest.cs" />

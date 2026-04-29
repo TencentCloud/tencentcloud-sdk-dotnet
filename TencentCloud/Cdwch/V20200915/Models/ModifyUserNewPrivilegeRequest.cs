@@ -25,37 +25,37 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// cluster名称
+        /// <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 是否所有数据库表
+        /// <p>是否所有数据库表</p>
         /// </summary>
         [JsonProperty("AllDatabase")]
         public bool? AllDatabase{ get; set; }
 
         /// <summary>
-        /// 全局权限
+        /// <p>全局权限</p>
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库表权限
+        /// <p>数据库表权限</p>
         /// </summary>
         [JsonProperty("DatabasePrivilegeList")]
         public DatabasePrivilegeInfo[] DatabasePrivilegeList{ get; set; }

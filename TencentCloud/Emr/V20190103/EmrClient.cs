@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1414";
+       private const string sdkVersion = "SDK_NET_3.0.1419";
 
         /// <summary>
         /// Client constructor.
@@ -199,6 +199,27 @@ namespace TencentCloud.Emr.V20190103
         public CreateClusterResponse CreateClusterSync(CreateClusterRequest req)
         {
             return InternalRequestAsync<CreateClusterResponse>(req, "CreateCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicInstanceRequest"/></param>
+        /// <returns><see cref="CreateDynamicInstanceResponse"/></returns>
+        public Task<CreateDynamicInstanceResponse> CreateDynamicInstance(CreateDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicInstanceResponse>(req, "CreateDynamicInstance");
+        }
+
+        /// <summary>
+        /// 创建容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicInstanceRequest"/></param>
+        /// <returns><see cref="CreateDynamicInstanceResponse"/></returns>
+        public CreateDynamicInstanceResponse CreateDynamicInstanceSync(CreateDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicInstanceResponse>(req, "CreateDynamicInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -539,6 +560,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeDAGInfoResponse DescribeDAGInfoSync(DescribeDAGInfoRequest req)
         {
             return InternalRequestAsync<DescribeDAGInfoResponse>(req, "DescribeDAGInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 描述容器EMR-TKE集群DynamicInstance列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceListResponse"/></returns>
+        public Task<DescribeDynamicInstanceListResponse> DescribeDynamicInstanceList(DescribeDynamicInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceListResponse>(req, "DescribeDynamicInstanceList");
+        }
+
+        /// <summary>
+        /// 描述容器EMR-TKE集群DynamicInstance列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceListResponse"/></returns>
+        public DescribeDynamicInstanceListResponse DescribeDynamicInstanceListSync(DescribeDynamicInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceListResponse>(req, "DescribeDynamicInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1492,6 +1534,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 更新容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDynamicInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDynamicInstanceResponse"/></returns>
+        public Task<ModifyDynamicInstanceResponse> ModifyDynamicInstance(ModifyDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDynamicInstanceResponse>(req, "ModifyDynamicInstance");
+        }
+
+        /// <summary>
+        /// 更新容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDynamicInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDynamicInstanceResponse"/></returns>
+        public ModifyDynamicInstanceResponse ModifyDynamicInstanceSync(ModifyDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDynamicInstanceResponse>(req, "ModifyDynamicInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改YARN资源调度的全局配置
         /// </summary>
         /// <param name="req"><see cref="ModifyGlobalConfigRequest"/></param>
@@ -2029,6 +2092,27 @@ namespace TencentCloud.Emr.V20190103
         public TerminateClusterNodesResponse TerminateClusterNodesSync(TerminateClusterNodesRequest req)
         {
             return InternalRequestAsync<TerminateClusterNodesResponse>(req, "TerminateClusterNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDynamicInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDynamicInstancesResponse"/></returns>
+        public Task<TerminateDynamicInstancesResponse> TerminateDynamicInstances(TerminateDynamicInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDynamicInstancesResponse>(req, "TerminateDynamicInstances");
+        }
+
+        /// <summary>
+        /// 销毁容器EMR-TKE集群DynamicInstance
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDynamicInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDynamicInstancesResponse"/></returns>
+        public TerminateDynamicInstancesResponse TerminateDynamicInstancesSync(TerminateDynamicInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDynamicInstancesResponse>(req, "TerminateDynamicInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

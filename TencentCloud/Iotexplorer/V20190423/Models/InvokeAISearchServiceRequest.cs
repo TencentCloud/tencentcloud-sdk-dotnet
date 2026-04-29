@@ -115,6 +115,16 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("VectorSearchTopK")]
         public long? VectorSearchTopK{ get; set; }
 
+        /// <summary>
+        /// 搜索结果的排序方式，可选值：
+        /// 
+        /// - `CORRELATION`：按相关性（默认）
+        /// - `TIME_ASC`：按时间升序
+        /// - `TIME_DESC`：按时间降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +144,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
             this.SetParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

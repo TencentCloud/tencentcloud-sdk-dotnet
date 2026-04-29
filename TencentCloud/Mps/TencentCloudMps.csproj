@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1418</VersionPrefix>
+    <VersionPrefix>3.0.1419</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1045,6 +1045,7 @@
     <Compile Include="V20190612\Models\VideoTemplateInfo.cs" />
     <Compile Include="V20190612\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\VoiceInfo.cs" />
+    <Compile Include="V20190612\Models\VoiceProfile.cs" />
     <Compile Include="V20190612\Models\VolumeBalanceConfig.cs" />
     <Compile Include="V20190612\Models\WatermarkInput.cs" />
     <Compile Include="V20190612\Models\WatermarkTemplate.cs" />

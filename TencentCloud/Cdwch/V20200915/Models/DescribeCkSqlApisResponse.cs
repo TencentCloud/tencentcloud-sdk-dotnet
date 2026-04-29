@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 返回的查询数据，大部分情况是list，也可能是bool
+        /// <p>返回的查询数据，大部分情况是list，也可能是bool</p>
         /// </summary>
         [JsonProperty("ReturnData")]
         public string ReturnData{ get; set; }

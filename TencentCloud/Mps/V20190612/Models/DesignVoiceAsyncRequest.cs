@@ -31,6 +31,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Prompt{ get; set; }
 
         /// <summary>
+        /// <p>音色属性</p>
+        /// </summary>
+        [JsonProperty("VoiceProfile")]
+        public VoiceProfile VoiceProfile{ get; set; }
+
+        /// <summary>
         /// <p>扩展参数，json字符串</p>
         /// </summary>
         [JsonProperty("ExtParam")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

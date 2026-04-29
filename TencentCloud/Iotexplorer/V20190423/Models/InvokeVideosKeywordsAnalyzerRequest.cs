@@ -57,10 +57,16 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? EndTimeMs{ get; set; }
 
         /// <summary>
-        /// 返回的关键字最大数量，默认为5；最大不能超过10
+        /// 返回的关键词的最大数量，默认为5；最大不能超过10
         /// </summary>
         [JsonProperty("KeywordsMaxNum")]
         public ulong? KeywordsMaxNum{ get; set; }
+
+        /// <summary>
+        /// 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+        /// </summary>
+        [JsonProperty("KeywordsLang")]
+        public string KeywordsLang{ get; set; }
 
 
         /// <summary>
@@ -73,6 +79,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
             this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
             this.SetParamSimple(map, prefix + "KeywordsMaxNum", this.KeywordsMaxNum);
+            this.SetParamSimple(map, prefix + "KeywordsLang", this.KeywordsLang);
         }
     }
 }

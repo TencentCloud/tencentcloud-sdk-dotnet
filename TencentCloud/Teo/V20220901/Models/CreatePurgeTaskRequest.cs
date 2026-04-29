@@ -63,7 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? EncodeUrl{ get; set; }
 
         /// <summary>
-        /// 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+        /// 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。
         /// </summary>
         [JsonProperty("CacheTag")]
         public CacheTag CacheTag{ get; set; }

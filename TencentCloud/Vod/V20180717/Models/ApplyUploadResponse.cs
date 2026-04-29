@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 存储桶，用于上传接口 URL 的 bucket_name。
+        /// <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
         /// </summary>
         [JsonProperty("StorageBucket")]
         public string StorageBucket{ get; set; }
 
         /// <summary>
-        /// 存储园区，用于上传接口 Host 的 Region。
+        /// <p>存储园区，用于上传接口 Host 的 Region。</p>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 点播会话，用于确认上传接口的参数 VodSessionKey。
+        /// <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
         /// </summary>
         [JsonProperty("VodSessionKey")]
         public string VodSessionKey{ get; set; }
 
         /// <summary>
-        /// 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+        /// <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }
 
         /// <summary>
-        /// 封面存储路径，用于上传接口存储封面的对象键（Key）。
+        /// <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
         /// </summary>
         [JsonProperty("CoverStoragePath")]
         public string CoverStoragePath{ get; set; }
 
         /// <summary>
-        /// 临时凭证，用于上传接口的权限验证。
+        /// <p>临时凭证，用于上传接口的权限验证。</p>
         /// </summary>
         [JsonProperty("TempCertificate")]
         public TempCertificate TempCertificate{ get; set; }

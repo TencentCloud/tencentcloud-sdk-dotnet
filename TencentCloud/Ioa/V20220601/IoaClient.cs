@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1419";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ioa.V20220601
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessResourceRequest"/></param>
+        /// <returns><see cref="CreateBusinessResourceResponse"/></returns>
+        public Task<CreateBusinessResourceResponse> CreateBusinessResource(CreateBusinessResourceRequest req)
+        {
+            return InternalRequestAsync<CreateBusinessResourceResponse>(req, "CreateBusinessResource");
+        }
+
+        /// <summary>
+        /// 创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessResourceRequest"/></param>
+        /// <returns><see cref="CreateBusinessResourceResponse"/></returns>
+        public CreateBusinessResourceResponse CreateBusinessResourceSync(CreateBusinessResourceRequest req)
+        {
+            return InternalRequestAsync<CreateBusinessResourceResponse>(req, "CreateBusinessResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -239,6 +260,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceListSync(DescribeAggrSoftDeviceListRequest req)
         {
             return InternalRequestAsync<DescribeAggrSoftDeviceListResponse>(req, "DescribeAggrSoftDeviceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取业务资源列表,支持分页，如果分页信息不传递会有默认分页，支持排序，不传排序字段，按业务资源创建时间排序,私有化调用path为：capi/GatewayResource/DescribeBusinessResources
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBusinessResourcesResponse"/></returns>
+        public Task<DescribeBusinessResourcesResponse> DescribeBusinessResources(DescribeBusinessResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeBusinessResourcesResponse>(req, "DescribeBusinessResources");
+        }
+
+        /// <summary>
+        /// 获取业务资源列表,支持分页，如果分页信息不传递会有默认分页，支持排序，不传排序字段，按业务资源创建时间排序,私有化调用path为：capi/GatewayResource/DescribeBusinessResources
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBusinessResourcesResponse"/></returns>
+        public DescribeBusinessResourcesResponse DescribeBusinessResourcesSync(DescribeBusinessResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeBusinessResourcesResponse>(req, "DescribeBusinessResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,6 +495,27 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectAccountGroupResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDirectAccountGroupResourcesResponse"/></returns>
+        public Task<DescribeDirectAccountGroupResourcesResponse> DescribeDirectAccountGroupResources(DescribeDirectAccountGroupResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDirectAccountGroupResourcesResponse>(req, "DescribeDirectAccountGroupResources");
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectAccountGroupResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDirectAccountGroupResourcesResponse"/></returns>
+        public DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResourcesSync(DescribeDirectAccountGroupResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDirectAccountGroupResourcesResponse>(req, "DescribeDirectAccountGroupResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
         /// </summary>
         /// <param name="req"><see cref="DescribeLocalAccountsRequest"/></param>
@@ -470,6 +533,69 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeLocalAccountsResponse DescribeLocalAccountsSync(DescribeLocalAccountsRequest req)
         {
             return InternalRequestAsync<DescribeLocalAccountsResponse>(req, "DescribeLocalAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedAccountGroupsResponse"/></returns>
+        public Task<DescribeResourceGrantedAccountGroupsResponse> DescribeResourceGrantedAccountGroups(DescribeResourceGrantedAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedAccountGroupsResponse>(req, "DescribeResourceGrantedAccountGroups");
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedAccountGroupsResponse"/></returns>
+        public DescribeResourceGrantedAccountGroupsResponse DescribeResourceGrantedAccountGroupsSync(DescribeResourceGrantedAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedAccountGroupsResponse>(req, "DescribeResourceGrantedAccountGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedAccountsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedAccountsResponse"/></returns>
+        public Task<DescribeResourceGrantedAccountsResponse> DescribeResourceGrantedAccounts(DescribeResourceGrantedAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedAccountsResponse>(req, "DescribeResourceGrantedAccounts");
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedAccountsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedAccountsResponse"/></returns>
+        public DescribeResourceGrantedAccountsResponse DescribeResourceGrantedAccountsSync(DescribeResourceGrantedAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedAccountsResponse>(req, "DescribeResourceGrantedAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedVirtualGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedVirtualGroupsResponse"/></returns>
+        public Task<DescribeResourceGrantedVirtualGroupsResponse> DescribeResourceGrantedVirtualGroups(DescribeResourceGrantedVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedVirtualGroupsResponse>(req, "DescribeResourceGrantedVirtualGroups");
+        }
+
+        /// <summary>
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedVirtualGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGrantedVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGrantedVirtualGroupsResponse"/></returns>
+        public DescribeResourceGrantedVirtualGroupsResponse DescribeResourceGrantedVirtualGroupsSync(DescribeResourceGrantedVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGrantedVirtualGroupsResponse>(req, "DescribeResourceGrantedVirtualGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -596,6 +722,90 @@ namespace TencentCloud.Ioa.V20220601
         public ExportSoftwareInformationListResponse ExportSoftwareInformationListSync(ExportSoftwareInformationListRequest req)
         {
             return InternalRequestAsync<ExportSoftwareInformationListResponse>(req, "ExportSoftwareInformationList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByAccountGroupsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByAccountGroupsResponse"/></returns>
+        public Task<GrantResourcesByAccountGroupsResponse> GrantResourcesByAccountGroups(GrantResourcesByAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByAccountGroupsResponse>(req, "GrantResourcesByAccountGroups");
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByAccountGroupsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByAccountGroupsResponse"/></returns>
+        public GrantResourcesByAccountGroupsResponse GrantResourcesByAccountGroupsSync(GrantResourcesByAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByAccountGroupsResponse>(req, "GrantResourcesByAccountGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByAccountsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByAccountsResponse"/></returns>
+        public Task<GrantResourcesByAccountsResponse> GrantResourcesByAccounts(GrantResourcesByAccountsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByAccountsResponse>(req, "GrantResourcesByAccounts");
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByAccountsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByAccountsResponse"/></returns>
+        public GrantResourcesByAccountsResponse GrantResourcesByAccountsSync(GrantResourcesByAccountsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByAccountsResponse>(req, "GrantResourcesByAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByVirtualGroupsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByVirtualGroupsResponse"/></returns>
+        public Task<GrantResourcesByVirtualGroupsResponse> GrantResourcesByVirtualGroups(GrantResourcesByVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByVirtualGroupsResponse>(req, "GrantResourcesByVirtualGroups");
+        }
+
+        /// <summary>
+        /// 添加资源授权到账号组
+        /// </summary>
+        /// <param name="req"><see cref="GrantResourcesByVirtualGroupsRequest"/></param>
+        /// <returns><see cref="GrantResourcesByVirtualGroupsResponse"/></returns>
+        public GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroupsSync(GrantResourcesByVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<GrantResourcesByVirtualGroupsResponse>(req, "GrantResourcesByVirtualGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceTrustStatusRequest"/></param>
+        /// <returns><see cref="ModifyDeviceTrustStatusResponse"/></returns>
+        public Task<ModifyDeviceTrustStatusResponse> ModifyDeviceTrustStatus(ModifyDeviceTrustStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceTrustStatusResponse>(req, "ModifyDeviceTrustStatus");
+        }
+
+        /// <summary>
+        /// 给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceTrustStatusRequest"/></param>
+        /// <returns><see cref="ModifyDeviceTrustStatusResponse"/></returns>
+        public ModifyDeviceTrustStatusResponse ModifyDeviceTrustStatusSync(ModifyDeviceTrustStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceTrustStatusResponse>(req, "ModifyDeviceTrustStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
