@@ -25,14 +25,14 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppBizId")]
         public string AppBizId{ get; set; }
 
         /// <summary>
-        /// 判断账户应用列表权限是否是自定义的，用户交互提示
+        /// <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCustomList")]

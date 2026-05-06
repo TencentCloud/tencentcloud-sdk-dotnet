@@ -25,13 +25,13 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 实付金额（单位：分）
+        /// <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p>
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public long? RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 原始金额（不含折扣，单位：分）
+        /// <p>原始金额（不含折扣）</p><p>单位：分</p>
         /// </summary>
         [JsonProperty("OriginalTotalCost")]
         public long? OriginalTotalCost{ get; set; }

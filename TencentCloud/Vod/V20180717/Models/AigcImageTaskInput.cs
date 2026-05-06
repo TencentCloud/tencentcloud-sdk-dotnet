@@ -78,6 +78,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }
 
+        /// <summary>
+        /// <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

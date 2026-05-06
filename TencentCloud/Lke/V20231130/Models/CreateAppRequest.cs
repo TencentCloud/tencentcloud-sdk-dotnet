@@ -25,25 +25,25 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用类型；knowledge_qa-知识问答管理
+        /// <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// 应用基础配置
+        /// <p>应用基础配置</p>
         /// </summary>
         [JsonProperty("BaseConfig")]
         public BaseConfig BaseConfig{ get; set; }
 
         /// <summary>
-        /// 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+        /// <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
         /// </summary>
         [JsonProperty("AgentType")]
         public string AgentType{ get; set; }
