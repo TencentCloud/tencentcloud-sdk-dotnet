@@ -89,7 +89,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+        /// 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }

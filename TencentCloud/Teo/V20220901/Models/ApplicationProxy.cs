@@ -91,7 +91,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// 会话保持时间。
+        /// 会话保持时间，单位为秒。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }

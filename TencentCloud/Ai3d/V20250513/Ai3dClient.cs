@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1397";
+       private const string sdkVersion = "SDK_NET_3.0.1421";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ai3d.V20250513
         public Convert3DFormatResponse Convert3DFormatSync(Convert3DFormatRequest req)
         {
             return InternalRequestAsync<Convert3DFormatResponse>(req, "Convert3DFormat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询组件生成任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanTo3DMotionJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanTo3DMotionJobResponse"/></returns>
+        public Task<DescribeHunyuanTo3DMotionJobResponse> DescribeHunyuanTo3DMotionJob(DescribeHunyuanTo3DMotionJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanTo3DMotionJobResponse>(req, "DescribeHunyuanTo3DMotionJob");
+        }
+
+        /// <summary>
+        /// 查询组件生成任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanTo3DMotionJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanTo3DMotionJobResponse"/></returns>
+        public DescribeHunyuanTo3DMotionJobResponse DescribeHunyuanTo3DMotionJobSync(DescribeHunyuanTo3DMotionJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanTo3DMotionJobResponse>(req, "DescribeHunyuanTo3DMotionJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -249,6 +270,29 @@ namespace TencentCloud.Ai3d.V20250513
         public SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJobSync(SubmitHunyuan3DPartJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuan3DPartJobResponse>(req, "SubmitHunyuan3DPartJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 输入文本后，可根据文本描述生成对应的 3D人物 动作数据，输出带动画数据的FBX文件。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DMotionJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DMotionJobResponse"/></returns>
+        public Task<SubmitHunyuanTo3DMotionJobResponse> SubmitHunyuanTo3DMotionJob(SubmitHunyuanTo3DMotionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DMotionJobResponse>(req, "SubmitHunyuanTo3DMotionJob");
+        }
+
+        /// <summary>
+        /// 输入文本后，可根据文本描述生成对应的 3D人物 动作数据，输出带动画数据的FBX文件。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DMotionJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DMotionJobResponse"/></returns>
+        public SubmitHunyuanTo3DMotionJobResponse SubmitHunyuanTo3DMotionJobSync(SubmitHunyuanTo3DMotionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DMotionJobResponse>(req, "SubmitHunyuanTo3DMotionJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

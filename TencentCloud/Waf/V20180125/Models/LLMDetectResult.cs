@@ -78,6 +78,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ImageResult")]
         public ImageResult[] ImageResult{ get; set; }
 
+        /// <summary>
+        /// <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+        /// </summary>
+        [JsonProperty("MsgID")]
+        public string MsgID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Payload", this.Payload);
             this.SetParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
+            this.SetParamSimple(map, prefix + "MsgID", this.MsgID);
         }
     }
 }

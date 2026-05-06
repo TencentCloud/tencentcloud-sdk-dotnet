@@ -36,6 +36,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UserIP")]
         public string UserIP{ get; set; }
 
+        /// <summary>
+        /// 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+        /// </summary>
+        [JsonProperty("ExpirationDuration")]
+        public string ExpirationDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gs.V20191118.Models
         {
             this.SetParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
             this.SetParamSimple(map, prefix + "UserIP", this.UserIP);
+            this.SetParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
         }
     }
 }
