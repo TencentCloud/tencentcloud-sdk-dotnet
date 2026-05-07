@@ -25,19 +25,28 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// 签名 ID 数组。
-        /// 注：默认数组最大长度100。
+        /// <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+        /// </summary>
+        [JsonProperty("International")]
+        public ulong? International{ get; set; }
+
+        /// <summary>
+        /// <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
         /// </summary>
         [JsonProperty("SignIdSet")]
         public ulong?[] SignIdSet{ get; set; }
 
         /// <summary>
-        /// 是否国际/港澳台短信：
-        /// 0：表示国内短信。
-        /// 1：表示国际/港澳台短信。
+        /// <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
         /// </summary>
-        [JsonProperty("International")]
-        public ulong? International{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -45,8 +54,10 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
             this.SetParamSimple(map, prefix + "International", this.International);
+            this.SetParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

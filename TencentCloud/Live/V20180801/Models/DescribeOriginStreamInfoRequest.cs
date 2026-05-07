@@ -24,12 +24,19 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeOriginStreamInfoRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>域名。</p>
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
         }
     }
 }

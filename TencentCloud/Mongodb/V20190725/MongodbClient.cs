@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -1024,6 +1024,27 @@ namespace TencentCloud.Mongodb.V20190725
         public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryptionSync(EnableTransparentDataEncryptionRequest req)
         {
             return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(OpenWanService)用于开启当前实例的外网访问地址。
+        /// </summary>
+        /// <param name="req"><see cref="EnableWanServiceRequest"/></param>
+        /// <returns><see cref="EnableWanServiceResponse"/></returns>
+        public Task<EnableWanServiceResponse> EnableWanService(EnableWanServiceRequest req)
+        {
+            return InternalRequestAsync<EnableWanServiceResponse>(req, "EnableWanService");
+        }
+
+        /// <summary>
+        /// 本接口(OpenWanService)用于开启当前实例的外网访问地址。
+        /// </summary>
+        /// <param name="req"><see cref="EnableWanServiceRequest"/></param>
+        /// <returns><see cref="EnableWanServiceResponse"/></returns>
+        public EnableWanServiceResponse EnableWanServiceSync(EnableWanServiceRequest req)
+        {
+            return InternalRequestAsync<EnableWanServiceResponse>(req, "EnableWanService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

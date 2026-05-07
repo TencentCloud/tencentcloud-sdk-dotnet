@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Bh.V20230418
         public AddUserGroupMembersResponse AddUserGroupMembersSync(AddUserGroupMembersRequest req)
         {
             return InternalRequestAsync<AddUserGroupMembersResponse>(req, "AddUserGroupMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定容器账号凭据
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountKubeconfigRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountKubeconfigResponse"/></returns>
+        public Task<BindDeviceAccountKubeconfigResponse> BindDeviceAccountKubeconfig(BindDeviceAccountKubeconfigRequest req)
+        {
+            return InternalRequestAsync<BindDeviceAccountKubeconfigResponse>(req, "BindDeviceAccountKubeconfig");
+        }
+
+        /// <summary>
+        /// 绑定容器账号凭据
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountKubeconfigRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountKubeconfigResponse"/></returns>
+        public BindDeviceAccountKubeconfigResponse BindDeviceAccountKubeconfigSync(BindDeviceAccountKubeconfigRequest req)
+        {
+            return InternalRequestAsync<BindDeviceAccountKubeconfigResponse>(req, "BindDeviceAccountKubeconfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

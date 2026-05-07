@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1413";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -722,6 +722,27 @@ namespace TencentCloud.Apm.V20210622
         public ModifyApmSampleConfigResponse ModifyApmSampleConfigSync(ModifyApmSampleConfigRequest req)
         {
             return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改apm应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmServiceRequest"/></param>
+        /// <returns><see cref="ModifyApmServiceResponse"/></returns>
+        public Task<ModifyApmServiceResponse> ModifyApmService(ModifyApmServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyApmServiceResponse>(req, "ModifyApmService");
+        }
+
+        /// <summary>
+        /// 修改apm应用信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmServiceRequest"/></param>
+        /// <returns><see cref="ModifyApmServiceResponse"/></returns>
+        public ModifyApmServiceResponse ModifyApmServiceSync(ModifyApmServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyApmServiceResponse>(req, "ModifyApmService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 资源类型及数量
+        /// <p>资源类型及数量</p>
         /// </summary>
         [JsonProperty("ComputeResources")]
         public ComputeResource[] ComputeResources{ get; set; }
 
         /// <summary>
-        /// 副本数
+        /// <p>副本数</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }

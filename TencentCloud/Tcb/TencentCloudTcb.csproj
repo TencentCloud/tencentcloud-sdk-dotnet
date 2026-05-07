@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1412</VersionPrefix>
+    <VersionPrefix>3.0.1422</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,9 @@
 
   <ItemGroup>
     <Compile Include="V20180608\TcbClient.cs" />
+    <Compile Include="V20180608\Models\AIModel.cs" />
+    <Compile Include="V20180608\Models\AIModelGroup.cs" />
+    <Compile Include="V20180608\Models\AIModelSecret.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
     <Compile Include="V20180608\Models\ApiKeyToken.cs" />
@@ -58,6 +61,8 @@
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
+    <Compile Include="V20180608\Models\CreateAIModelRequest.cs" />
+    <Compile Include="V20180608\Models\CreateAIModelResponse.cs" />
     <Compile Include="V20180608\Models\CreateApiKeyRequest.cs" />
     <Compile Include="V20180608\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20180608\Models\CreateAuthDomainRequest.cs" />
@@ -90,6 +95,8 @@
     <Compile Include="V20180608\Models\CustomLogConfig.cs" />
     <Compile Include="V20180608\Models\DatabasesInfo.cs" />
     <Compile Include="V20180608\Models\DbInstance.cs" />
+    <Compile Include="V20180608\Models\DeleteAIModelRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteAIModelResponse.cs" />
     <Compile Include="V20180608\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="V20180608\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20180608\Models\DeleteAuthDomainRequest.cs" />
@@ -105,6 +112,8 @@
     <Compile Include="V20180608\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20180608\Models\DeleteVmInstanceRequest.cs" />
     <Compile Include="V20180608\Models\DeleteVmInstanceResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeAIModelsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeAIModelsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeApiKeyListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeApiKeyListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeAuthDomainsRequest.cs" />
@@ -140,6 +149,8 @@
     <Compile Include="V20180608\Models\DescribeHostingDomainTaskResponse.cs" />
     <Compile Include="V20180608\Models\DescribeLoginConfigRequest.cs" />
     <Compile Include="V20180608\Models\DescribeLoginConfigResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeManagedAIModelListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeManagedAIModelListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLClusterDetailRequest.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLClusterDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLTaskStatusRequest.cs" />
@@ -207,6 +218,10 @@
     <Compile Include="V20180608\Models\LogResObject.cs" />
     <Compile Include="V20180608\Models\LogServiceInfo.cs" />
     <Compile Include="V20180608\Models\MFALoginConfig.cs" />
+    <Compile Include="V20180608\Models\ManagedAIModel.cs" />
+    <Compile Include="V20180608\Models\ManagedAIModelChargingInfo.cs" />
+    <Compile Include="V20180608\Models\ManagedAIModelGroup.cs" />
+    <Compile Include="V20180608\Models\ManagedAIModelSpec.cs" />
     <Compile Include="V20180608\Models\MessageLocalized.cs" />
     <Compile Include="V20180608\Models\MgoCommandParam.cs" />
     <Compile Include="V20180608\Models\MgoIndexKeys.cs" />
@@ -258,6 +273,8 @@
     <Compile Include="V20180608\Models\TableInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
     <Compile Include="V20180608\Models\TkeClusterInfo.cs" />
+    <Compile Include="V20180608\Models\UpdateAIModelRequest.cs" />
+    <Compile Include="V20180608\Models\UpdateAIModelResponse.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />

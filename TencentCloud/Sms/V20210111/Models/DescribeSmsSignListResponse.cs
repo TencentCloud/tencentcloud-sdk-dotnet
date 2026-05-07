@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// 获取签名信息响应
+        /// <p>获取签名信息响应</p>
         /// </summary>
         [JsonProperty("DescribeSignListStatusSet")]
         public DescribeSignListStatus[] DescribeSignListStatusSet{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -562,7 +562,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(UpdateServiceConfigs)用于更新服务配置
+        /// 本接口(UpdateServiceConfigs)用于更新服务配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceConfigsRequest"/></param>
         /// <returns><see cref="UpdateServiceConfigsResponse"/></returns>
@@ -572,7 +572,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(UpdateServiceConfigs)用于更新服务配置
+        /// 本接口(UpdateServiceConfigs)用于更新服务配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceConfigsRequest"/></param>
         /// <returns><see cref="UpdateServiceConfigsResponse"/></returns>

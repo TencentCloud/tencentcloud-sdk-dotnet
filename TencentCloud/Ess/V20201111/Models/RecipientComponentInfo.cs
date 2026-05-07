@@ -25,34 +25,34 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
+        /// <p>签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方</p>
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与方填写状态
-        /// <ul>
-        /// <li>**空值** : 此参与方没有填写控件</li>
-        /// <li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
-        /// <li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+        /// <p>参与方填写状态</p><ul><li>**空值** : 此参与方没有填写控件</li><li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li><li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
         /// </summary>
         [JsonProperty("RecipientFillStatus")]
         public string RecipientFillStatus{ get; set; }
 
         /// <summary>
-        /// 是否为发起方
-        /// <ul><li>true-发起方</li>
-        /// <li>false-参与方</li></ul>
+        /// <p>是否为发起方</p><ul><li>true-发起方</li><li>false-参与方</li></ul>
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 改参与方填写控件信息列表
+        /// <p>该参与方填写控件信息列表</p>
         /// </summary>
         [JsonProperty("Components")]
         public FilledComponent[] Components{ get; set; }
+
+        /// <summary>
+        /// <p>该参与方签批控件信息</p>
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public FilledComponent[] SignComponents{ get; set; }
 
 
         /// <summary>
@@ -64,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RecipientFillStatus", this.RecipientFillStatus);
             this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         }
     }
 }

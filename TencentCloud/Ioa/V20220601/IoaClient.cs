@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1419";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Ioa.V20220601
         public GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroupsSync(GrantResourcesByVirtualGroupsRequest req)
         {
             return InternalRequestAsync<GrantResourcesByVirtualGroupsResponse>(req, "GrantResourcesByVirtualGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBusinessResourceRequest"/></param>
+        /// <returns><see cref="ModifyBusinessResourceResponse"/></returns>
+        public Task<ModifyBusinessResourceResponse> ModifyBusinessResource(ModifyBusinessResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyBusinessResourceResponse>(req, "ModifyBusinessResource");
+        }
+
+        /// <summary>
+        /// 修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBusinessResourceRequest"/></param>
+        /// <returns><see cref="ModifyBusinessResourceResponse"/></returns>
+        public ModifyBusinessResourceResponse ModifyBusinessResourceSync(ModifyBusinessResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyBusinessResourceResponse>(req, "ModifyBusinessResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。
+        /// <p>一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。</p>
         /// </summary>
         [JsonProperty("QrCode")]
         public SignQrCode QrCode{ get; set; }
 
         /// <summary>
-        /// 一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
+        /// <p>一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。</p>
         /// </summary>
         [JsonProperty("SignUrls")]
         public SignUrl SignUrls{ get; set; }

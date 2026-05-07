@@ -1,0 +1,92 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Vod.V20180717.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AigcAudioTaskInput : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>模型名称。</p>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
+        /// <summary>
+        /// <p>模型版本。</p>
+        /// </summary>
+        [JsonProperty("ModelVersion")]
+        public string ModelVersion{ get; set; }
+
+        /// <summary>
+        /// <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
+
+        /// <summary>
+        /// <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+        /// </summary>
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
+
+        /// <summary>
+        /// <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
+        /// </summary>
+        [JsonProperty("NegativePrompt")]
+        public string NegativePrompt{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+        /// </summary>
+        [JsonProperty("EnhancePrompt")]
+        public bool? EnhancePrompt{ get; set; }
+
+        /// <summary>
+        /// <p>AIGC 生图输出结果文件输出。</p>
+        /// </summary>
+        [JsonProperty("OutputConfig")]
+        public AigcAudioOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// <p>额外参数</p>
+        /// </summary>
+        [JsonProperty("AdditionalParameters")]
+        public string AdditionalParameters{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
+            this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+            this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
+            this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
+        }
+    }
+}
+

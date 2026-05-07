@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -3532,7 +3532,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取直播源站配置信息，支持直播原站格式。
+        /// 获取直播源站配置信息，支持直播源站格式。
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginStreamInfoRequest"/></param>
         /// <returns><see cref="DescribeOriginStreamInfoResponse"/></returns>
@@ -3542,7 +3542,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取直播源站配置信息，支持直播原站格式。
+        /// 获取直播源站配置信息，支持直播源站格式。
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginStreamInfoRequest"/></param>
         /// <returns><see cref="DescribeOriginStreamInfoResponse"/></returns>
@@ -4621,7 +4621,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 变更直播源站配置，支持直播原站格式。
+        /// 变更直播源站配置，支持直播源站格式。
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginStreamInfoRequest"/></param>
         /// <returns><see cref="ModifyOriginStreamInfoResponse"/></returns>
@@ -4631,7 +4631,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 变更直播源站配置，支持直播原站格式。
+        /// 变更直播源站配置，支持直播源站格式。
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginStreamInfoRequest"/></param>
         /// <returns><see cref="ModifyOriginStreamInfoResponse"/></returns>
