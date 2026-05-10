@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 容器配置
+        /// <p>容器配置</p>
         /// </summary>
         [JsonProperty("Container")]
         public ContainerInfo Container{ get; set; }
 
         /// <summary>
-        /// 容器数量
+        /// <p>容器数量</p>
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }

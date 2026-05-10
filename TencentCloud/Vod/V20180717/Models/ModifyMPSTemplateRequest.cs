@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>Transcode： 转码模板，目前仅支持修改增强参数</li><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+        /// <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
@@ -42,6 +42,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("MPSModifyTemplateParams")]
         public string MPSModifyTemplateParams{ get; set; }
 
+        /// <summary>
+        /// <p>智能分析模板参数，MPSModifyTemplateParams为空时有效。</p>
+        /// </summary>
+        [JsonProperty("AIAnalysisTemplate")]
+        public MPSAIAnalysisTemplateForUpdate AIAnalysisTemplate{ get; set; }
+
+        /// <summary>
+        /// <p>智能字幕模板参数，MPSModifyTemplateParams为空时有效。</p>
+        /// </summary>
+        [JsonProperty("SmartSubtitleTemplate")]
+        public MPSSmartSubtitleTemplateForUpdate SmartSubtitleTemplate{ get; set; }
+
+        /// <summary>
+        /// <p>智能擦除模板参数，MPSModifyTemplateParams为空时有效。</p>
+        /// </summary>
+        [JsonProperty("SmartEraseTemplate")]
+        public MPSSmartEraseTemplateForUpdate SmartEraseTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
             this.SetParamSimple(map, prefix + "MPSModifyTemplateParams", this.MPSModifyTemplateParams);
+            this.SetParamObj(map, prefix + "AIAnalysisTemplate.", this.AIAnalysisTemplate);
+            this.SetParamObj(map, prefix + "SmartSubtitleTemplate.", this.SmartSubtitleTemplate);
+            this.SetParamObj(map, prefix + "SmartEraseTemplate.", this.SmartEraseTemplate);
         }
     }
 }

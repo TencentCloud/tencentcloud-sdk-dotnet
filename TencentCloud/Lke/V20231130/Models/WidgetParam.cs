@@ -25,31 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 参数名称
+        /// <p>参数名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参数类型
+        /// <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 子参数
+        /// <p>子参数</p>
         /// </summary>
         [JsonProperty("SubParams")]
         public WidgetParam[] SubParams{ get; set; }
 
         /// <summary>
-        /// 默认值, Input未指定时，使用该值
+        /// <p>默认值, Input未指定时，使用该值</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 输入的值
+        /// <p>输入的值</p>
         /// </summary>
         [JsonProperty("Input")]
         public AgentInput Input{ get; set; }

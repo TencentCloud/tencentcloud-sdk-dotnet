@@ -37,6 +37,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string StorageId{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// 限制开关是否开启，只有开启时才有限制，默认关闭
         /// </summary>
         [JsonProperty("LimitMount")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "LimitMount", this.LimitMount);
         }
     }

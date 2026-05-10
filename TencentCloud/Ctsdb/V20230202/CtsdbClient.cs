@@ -28,7 +28,7 @@ namespace TencentCloud.Ctsdb.V20230202
 
        private const string endpoint = "ctsdb.tencentcloudapi.com";
        private const string version = "2023-02-02";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.

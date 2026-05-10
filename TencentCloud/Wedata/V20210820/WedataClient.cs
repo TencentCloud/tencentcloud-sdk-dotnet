@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -6206,6 +6206,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 接口已经废弃，调用会产生脏数据
+        /// 
         /// 提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
@@ -6216,6 +6218,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 接口已经废弃，调用会产生脏数据
+        /// 
         /// 提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>

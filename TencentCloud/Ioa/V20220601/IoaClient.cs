@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ioa.V20220601
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
+        /// </summary>
+        /// <param name="req"><see cref="BindBusinessResourceConnectorGroupRequest"/></param>
+        /// <returns><see cref="BindBusinessResourceConnectorGroupResponse"/></returns>
+        public Task<BindBusinessResourceConnectorGroupResponse> BindBusinessResourceConnectorGroup(BindBusinessResourceConnectorGroupRequest req)
+        {
+            return InternalRequestAsync<BindBusinessResourceConnectorGroupResponse>(req, "BindBusinessResourceConnectorGroup");
+        }
+
+        /// <summary>
+        /// saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
+        /// </summary>
+        /// <param name="req"><see cref="BindBusinessResourceConnectorGroupRequest"/></param>
+        /// <returns><see cref="BindBusinessResourceConnectorGroupResponse"/></returns>
+        public BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroupSync(BindBusinessResourceConnectorGroupRequest req)
+        {
+            return InternalRequestAsync<BindBusinessResourceConnectorGroupResponse>(req, "BindBusinessResourceConnectorGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

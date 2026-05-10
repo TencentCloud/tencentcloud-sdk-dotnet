@@ -264,6 +264,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("WebUiVersion")]
         public long? WebUiVersion{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p>
+        /// </summary>
+        [JsonProperty("CbsSysEncrypt")]
+        public long? CbsSysEncrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +316,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+            this.SetParamSimple(map, prefix + "CbsSysEncrypt", this.CbsSysEncrypt);
         }
     }
 }

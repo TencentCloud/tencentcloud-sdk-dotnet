@@ -25,145 +25,155 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 插件id
+        /// <p>插件id</p>
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 插件名称
+        /// <p>插件名称</p>
         /// </summary>
         [JsonProperty("PluginName")]
         public string PluginName{ get; set; }
 
         /// <summary>
-        /// 插件图标url
+        /// <p>插件图标url</p>
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
         /// <summary>
-        /// 0 自定义插件
-        /// 1 官方插件
-        /// 2 第三方插件 目前用于第三方实现的mcp server
+        /// <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
         /// </summary>
         [JsonProperty("PluginType")]
         public ulong? PluginType{ get; set; }
 
         /// <summary>
-        /// 工具id
+        /// <p>工具id</p>
         /// </summary>
         [JsonProperty("ToolId")]
         public string ToolId{ get; set; }
 
         /// <summary>
-        /// 工具名称
+        /// <p>工具名称</p>
         /// </summary>
         [JsonProperty("ToolName")]
         public string ToolName{ get; set; }
 
         /// <summary>
-        /// 工具描述
+        /// <p>工具描述</p>
         /// </summary>
         [JsonProperty("ToolDesc")]
         public string ToolDesc{ get; set; }
 
         /// <summary>
-        /// 输入参数
+        /// <p>输入参数</p>
         /// </summary>
         [JsonProperty("Inputs")]
         public AgentToolReqParam[] Inputs{ get; set; }
 
         /// <summary>
-        /// 输出参数
+        /// <p>输出参数</p>
         /// </summary>
         [JsonProperty("Outputs")]
         public AgentToolRspParam[] Outputs{ get; set; }
 
         /// <summary>
-        /// 创建方式，0:服务创建，1:代码创建，2:MCP创建	
+        /// <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
         /// </summary>
         [JsonProperty("CreateType")]
         public long? CreateType{ get; set; }
 
         /// <summary>
-        /// MCP插件的配置信息
+        /// <p>MCP插件的配置信息</p>
         /// </summary>
         [JsonProperty("McpServer")]
         public AgentMCPServerInfo McpServer{ get; set; }
 
         /// <summary>
-        /// 该工具是否和知识库绑定
+        /// <p>该工具是否和知识库绑定</p>
         /// </summary>
         [JsonProperty("IsBindingKnowledge")]
         public bool? IsBindingKnowledge{ get; set; }
 
         /// <summary>
-        /// 插件状态，1:可用，2:不可用	
+        /// <p>插件状态，1:可用，2:不可用</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// header信息
+        /// <p>header信息</p>
         /// </summary>
         [JsonProperty("Headers")]
         public AgentPluginHeader[] Headers{ get; set; }
 
         /// <summary>
-        /// NON_STREAMING: 非流式  STREAMIN: 流式
+        /// <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallingMethod")]
         public string CallingMethod{ get; set; }
 
         /// <summary>
-        /// query信息
+        /// <p>query信息</p>
         /// </summary>
         [JsonProperty("Query")]
         public AgentPluginQuery[] Query{ get; set; }
 
         /// <summary>
-        /// 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+        /// <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
         /// </summary>
         [JsonProperty("FinanceStatus")]
         public long? FinanceStatus{ get; set; }
 
         /// <summary>
-        /// 工具来源: 0-来自插件，1-来自工作流
+        /// <p>工具来源: 0-来自插件，1-来自工作流</p>
         /// </summary>
         [JsonProperty("ToolSource")]
         public ulong? ToolSource{ get; set; }
 
         /// <summary>
-        /// 计费状态；0-不计费，1-限时免费，2-官方收费
+        /// <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
         /// </summary>
         [JsonProperty("FinanceType")]
         public long? FinanceType{ get; set; }
 
         /// <summary>
-        /// 工具高级设置
+        /// <p>工具高级设置</p>
         /// </summary>
         [JsonProperty("ToolAdvanceConfig")]
         public ToolAdvanceConfig ToolAdvanceConfig{ get; set; }
 
         /// <summary>
-        /// 授权模式； 0-开发者授权；1-使用者授权
+        /// <p>授权模式； 0-开发者授权；1-使用者授权</p>
         /// </summary>
         [JsonProperty("AuthMode")]
         public long? AuthMode{ get; set; }
 
         /// <summary>
-        /// 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+        /// <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public long? AuthType{ get; set; }
 
         /// <summary>
-        /// 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+        /// <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
         /// </summary>
         [JsonProperty("AuthConfigStatus")]
         public long? AuthConfigStatus{ get; set; }
+
+        /// <summary>
+        /// <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+        /// </summary>
+        [JsonProperty("ToolAccessMode")]
+        public long? ToolAccessMode{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁用该工具</p>
+        /// </summary>
+        [JsonProperty("IsDisabled")]
+        public bool? IsDisabled{ get; set; }
 
 
         /// <summary>
@@ -194,6 +204,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "AuthConfigStatus", this.AuthConfigStatus);
+            this.SetParamSimple(map, prefix + "ToolAccessMode", this.ToolAccessMode);
+            this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         }
     }
 }

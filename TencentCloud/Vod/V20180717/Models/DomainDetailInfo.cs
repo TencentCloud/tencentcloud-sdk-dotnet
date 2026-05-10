@@ -25,65 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 域名名称。
+        /// <p>域名名称。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 加速地区信息。
+        /// <p>加速地区信息。</p>
         /// </summary>
         [JsonProperty("AccelerateAreaInfos")]
         public AccelerateAreaInfo[] AccelerateAreaInfos{ get; set; }
 
         /// <summary>
-        /// 部署状态，取值有：
-        /// <li>Online：上线；</li>
-        /// <li>Deploying：部署中；</li>
-        /// <li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+        /// <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
         /// </summary>
         [JsonProperty("DeployStatus")]
         public string DeployStatus{ get; set; }
 
         /// <summary>
-        /// HTTPS 配置信息。
+        /// <p>HTTPS 配置信息。</p>
         /// </summary>
         [JsonProperty("HTTPSConfig")]
         public DomainHTTPSConfig HTTPSConfig{ get; set; }
 
         /// <summary>
-        /// [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+        /// <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+        /// <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// 域名添加到腾讯云点播系统中的时间。
-        /// <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+        /// <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 域名 QUIC 配置信息。
+        /// <p>域名 QUIC 配置信息。</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// IP 访问限制配置信息。
+        /// <p>IP 访问限制配置信息。</p>
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }
 
         /// <summary>
-        /// 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+        /// <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

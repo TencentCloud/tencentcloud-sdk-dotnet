@@ -25,44 +25,43 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// <p>需要返回的数量，默认为10，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤字段
-        /// IsAuthorized是否授权，取值全部all，未授权0，已授权1
+        /// <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// 排序方式，asc，desc
+        /// <p>排序方式，asc，desc</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 是否仅展示各repository最新的镜像, 默认为false
+        /// <p>是否仅展示各repository最新的镜像, 默认为false</p>
         /// </summary>
         [JsonProperty("OnlyShowLatest")]
         public bool? OnlyShowLatest{ get; set; }
 
         /// <summary>
-        /// 是否仅展示运行中容器镜像
+        /// <p>是否仅展示运行中容器镜像</p>
         /// </summary>
         [JsonProperty("IsRunning")]
         public bool? IsRunning{ get; set; }

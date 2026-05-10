@@ -25,61 +25,61 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// <p>英文姓名</p>
         /// </summary>
         [JsonProperty("EnglishName")]
         public string EnglishName{ get; set; }
 
         /// <summary>
-        /// 证件号
+        /// <p>证件号</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// <p>性别</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 有效期限
+        /// <p>有效期限</p>
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// 签发机关
+        /// <p>签发机关</p>
         /// </summary>
         [JsonProperty("IssueAuthority")]
         public string IssueAuthority{ get; set; }
 
         /// <summary>
-        /// 签发地点
+        /// <p>签发地点</p>
         /// </summary>
         [JsonProperty("IssueAddress")]
         public string IssueAddress{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// <p>出生日期</p>
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 头像照片的base64
+        /// <p>头像照片的base64</p>
         /// </summary>
         [JsonProperty("PortraitImage")]
         public string PortraitImage{ get; set; }
 
         /// <summary>
-        /// 返回类型
+        /// <p>返回类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1416";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -840,6 +840,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleTaskResponse"/></returns>
+        public Task<CreateRecordingRuleTaskResponse> CreateRecordingRuleTask(CreateRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleTaskResponse>(req, "CreateRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// 创建指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleTaskResponse"/></returns>
+        public CreateRecordingRuleTaskResponse CreateRecordingRuleTaskSync(CreateRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleTaskResponse>(req, "CreateRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过yaml文件创建指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleYamlTaskResponse"/></returns>
+        public Task<CreateRecordingRuleYamlTaskResponse> CreateRecordingRuleYamlTask(CreateRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleYamlTaskResponse>(req, "CreateRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// 通过yaml文件创建指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleYamlTaskResponse"/></returns>
+        public CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTaskSync(CreateRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleYamlTaskResponse>(req, "CreateRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
@@ -1550,6 +1592,48 @@ namespace TencentCloud.Cls.V20201016
         public DeleteNoticeContentResponse DeleteNoticeContentSync(DeleteNoticeContentRequest req)
         {
             return InternalRequestAsync<DeleteNoticeContentResponse>(req, "DeleteNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除预聚合分析任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleTaskResponse"/></returns>
+        public Task<DeleteRecordingRuleTaskResponse> DeleteRecordingRuleTask(DeleteRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleTaskResponse>(req, "DeleteRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// 本接口用于删除预聚合分析任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleTaskResponse"/></returns>
+        public DeleteRecordingRuleTaskResponse DeleteRecordingRuleTaskSync(DeleteRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleTaskResponse>(req, "DeleteRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除yaml预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleYamlTaskResponse"/></returns>
+        public Task<DeleteRecordingRuleYamlTaskResponse> DeleteRecordingRuleYamlTask(DeleteRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleYamlTaskResponse>(req, "DeleteRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// 本接口用于删除yaml预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleYamlTaskResponse"/></returns>
+        public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTaskSync(DeleteRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleYamlTaskResponse>(req, "DeleteRecordingRuleYamlTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2669,6 +2753,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于获取预聚合任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleTaskResponse"/></returns>
+        public Task<DescribeRecordingRuleTaskResponse> DescribeRecordingRuleTask(DescribeRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleTaskResponse>(req, "DescribeRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// 本接口用于获取预聚合任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleTaskResponse"/></returns>
+        public DescribeRecordingRuleTaskResponse DescribeRecordingRuleTaskSync(DescribeRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleTaskResponse>(req, "DescribeRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于获取yaml预聚合任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleYamlTaskResponse"/></returns>
+        public Task<DescribeRecordingRuleYamlTaskResponse> DescribeRecordingRuleYamlTask(DescribeRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleYamlTaskResponse>(req, "DescribeRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// 本接口用于获取yaml预聚合任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleYamlTaskResponse"/></returns>
+        public DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTaskSync(DescribeRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleYamlTaskResponse>(req, "DescribeRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取定时SQL分析任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
@@ -3528,6 +3654,48 @@ namespace TencentCloud.Cls.V20201016
         public ModifyNoticeContentResponse ModifyNoticeContentSync(ModifyNoticeContentRequest req)
         {
             return InternalRequestAsync<ModifyNoticeContentResponse>(req, "ModifyNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改定时预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleTaskResponse"/></returns>
+        public Task<ModifyRecordingRuleTaskResponse> ModifyRecordingRuleTask(ModifyRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleTaskResponse>(req, "ModifyRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// 本接口用于修改定时预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleTaskResponse"/></returns>
+        public ModifyRecordingRuleTaskResponse ModifyRecordingRuleTaskSync(ModifyRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleTaskResponse>(req, "ModifyRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过yaml文件修改指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleYamlTaskResponse"/></returns>
+        public Task<ModifyRecordingRuleYamlTaskResponse> ModifyRecordingRuleYamlTask(ModifyRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleYamlTaskResponse>(req, "ModifyRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// 通过yaml文件修改指标预聚合任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleYamlTaskResponse"/></returns>
+        public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTaskSync(ModifyRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleYamlTaskResponse>(req, "ModifyRecordingRuleYamlTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

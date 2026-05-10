@@ -25,16 +25,22 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 检测结果
+        /// <p>检测结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 置信度
+        /// <p>置信度</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public ulong? Confidence{ get; set; }
+
+        /// <summary>
+        /// <p>检出类别</p>
+        /// </summary>
+        [JsonProperty("Category")]
+        public string[] Category{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamArraySimple(map, prefix + "Category.", this.Category);
         }
     }
 }

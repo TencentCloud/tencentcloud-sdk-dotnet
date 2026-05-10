@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 镜像仓库列表
+        /// <p>镜像仓库列表</p>
         /// </summary>
         [JsonProperty("List")]
         public ImageRepoInfo[] List{ get; set; }
 
         /// <summary>
-        /// 总数量
+        /// <p>总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

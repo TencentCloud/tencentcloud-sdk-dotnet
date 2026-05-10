@@ -25,320 +25,323 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+        /// <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// <p>可用区信息</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+        /// <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
         /// </summary>
         [JsonProperty("InitFlag")]
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+        /// <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
 
         /// <summary>
-        /// 内存容量，单位为 MB
+        /// <p>内存容量，单位为 MB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+        /// <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，例如：51102
+        /// <p>私有网络 ID，例如：51102</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 备机信息
+        /// <p>备机信息</p>
         /// </summary>
         [JsonProperty("SlaveInfo")]
         public SlaveInfo SlaveInfo{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 硬盘容量，单位为 GB
+        /// <p>硬盘容量，单位为 GB</p>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+        /// <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+        /// <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 只读组详细信息
+        /// <p>只读组详细信息</p>
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
 
         /// <summary>
-        /// 子网 ID，例如：2333
+        /// <p>子网 ID，例如：2333</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+        /// <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 项目 ID
+        /// <p>项目 ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// <p>地域信息</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例到期时间
+        /// <p>实例到期时间</p>
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+        /// <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+        /// <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// 主实例详细信息
+        /// <p>主实例详细信息</p>
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 内核版本
+        /// <p>内核版本</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 灾备实例详细信息
+        /// <p>灾备实例详细信息</p>
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }
 
         /// <summary>
-        /// 外网域名
+        /// <p>外网域名</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 外网端口号
+        /// <p>外网端口号</p>
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 付费类型，可能的返回值：0-包年包月；1-按量计费
+        /// <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例 IP
+        /// <p>实例 IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// <p>端口号</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+        /// <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
         /// </summary>
         [JsonProperty("CdbError")]
         public long? CdbError{ get; set; }
 
         /// <summary>
-        /// 私有网络描述符，例如：“vpc-5v8wn9mg”
+        /// <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 子网描述符，例如：“subnet-1typ0s7d”
+        /// <p>子网描述符，例如：“subnet-1typ0s7d”</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 物理 ID
+        /// <p>物理 ID</p>
         /// </summary>
         [JsonProperty("PhysicalId")]
         public string PhysicalId{ get; set; }
 
         /// <summary>
-        /// 核心数
+        /// <p>核心数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 每秒查询数量
+        /// <p>每秒查询数量</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// 可用区中文名称
+        /// <p>可用区中文名称</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 物理机型
+        /// <p>物理机型</p>
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// 置放群组 ID
+        /// <p>置放群组 ID</p>
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// 可用区 ID
+        /// <p>可用区 ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 节点数
+        /// <p>节点数</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfoItem[] TagList{ get; set; }
 
         /// <summary>
-        /// 引擎类型
+        /// <p>引擎类型</p>
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// 最大延迟阈值
+        /// <p>最大延迟阈值</p>
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
-        /// 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-        /// 说明：
-        /// 1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-        /// 2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-        /// 3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+        /// <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 当前扩容的CPU核心数。
+        /// <p>当前扩容的CPU核心数。</p>
         /// </summary>
         [JsonProperty("ExpandCpu")]
         public long? ExpandCpu{ get; set; }
 
         /// <summary>
-        /// 云盘版实例节点信息
+        /// <p>云盘版实例节点信息</p>
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
-        /// 分析引擎节点列表
+        /// <p>分析引擎节点列表</p>
         /// </summary>
         [JsonProperty("AnalysisNodeInfos")]
         public AnalysisNodeInfo[] AnalysisNodeInfos{ get; set; }
 
         /// <summary>
-        /// 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+        /// <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
         /// </summary>
         [JsonProperty("DeviceBandwidth")]
         public ulong? DeviceBandwidth{ get; set; }
 
         /// <summary>
-        /// 实例销毁保护状态，on表示开启保护，否则为关闭保护
+        /// <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
         /// </summary>
         [JsonProperty("DestroyProtect")]
         public string DestroyProtect{ get; set; }
 
         /// <summary>
-        /// TDSQL引擎参数
+        /// <p>TDSQL引擎参数</p>
         /// </summary>
         [JsonProperty("CpuModel")]
         public string CpuModel{ get; set; }
+
+        /// <summary>
+        /// <p>分析引擎实例版本升级信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnalysisUpgradeVersionInfo")]
+        public UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo{ get; set; }
 
 
         /// <summary>
@@ -398,6 +401,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
             this.SetParamSimple(map, prefix + "CpuModel", this.CpuModel);
+            this.SetParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
         }
     }
 }

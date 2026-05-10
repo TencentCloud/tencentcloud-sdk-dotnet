@@ -31,7 +31,7 @@ namespace TencentCloud.Smh.V20210712.Models
         public string LibraryId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>用于访问 SMH 的域名</p>
         /// </summary>
         [JsonProperty("AccessDomain")]
         public string AccessDomain{ get; set; }

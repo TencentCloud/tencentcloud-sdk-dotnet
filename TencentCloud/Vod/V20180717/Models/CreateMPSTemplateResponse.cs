@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+        /// <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

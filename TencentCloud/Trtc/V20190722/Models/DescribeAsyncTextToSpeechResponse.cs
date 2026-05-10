@@ -47,6 +47,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SubtitleDownloadUrl{ get; set; }
 
         /// <summary>
+        /// 音频时长
+        /// </summary>
+        [JsonProperty("TotalDurationMs")]
+        public ulong? TotalDurationMs{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -61,6 +67,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AudioDownloadUrl", this.AudioDownloadUrl);
             this.SetParamSimple(map, prefix + "SubtitleDownloadUrl", this.SubtitleDownloadUrl);
+            this.SetParamSimple(map, prefix + "TotalDurationMs", this.TotalDurationMs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

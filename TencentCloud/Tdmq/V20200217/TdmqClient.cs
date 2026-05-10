@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -482,6 +482,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQRoleResponse CreateRocketMQRoleSync(CreateRocketMQRoleRequest req)
         {
             return InternalRequestAsync<CreateRocketMQRoleResponse>(req, "CreateRocketMQRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建RocketMQ Router规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRouterRuleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRouterRuleResponse"/></returns>
+        public Task<CreateRocketMQRouterRuleResponse> CreateRocketMQRouterRule(CreateRocketMQRouterRuleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRouterRuleResponse>(req, "CreateRocketMQRouterRule");
+        }
+
+        /// <summary>
+        /// 创建RocketMQ Router规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRouterRuleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRouterRuleResponse"/></returns>
+        public CreateRocketMQRouterRuleResponse CreateRocketMQRouterRuleSync(CreateRocketMQRouterRuleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRouterRuleResponse>(req, "CreateRocketMQRouterRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

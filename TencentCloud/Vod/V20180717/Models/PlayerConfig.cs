@@ -25,96 +25,86 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 播放器配置名字。
+        /// <p>播放器配置名字。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 播放器配置类型，取值范围：
-        /// <li>Preset：系统预置配置；</li>
-        /// <li>Custom：用户自定义配置。</li>
+        /// <p>播放器配置类型，取值范围：</p><li>Preset：系统预置配置；</li><li>Custom：用户自定义配置。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 播放的音视频类型，可选值有：
-        /// <li>AdaptiveDynamicStream：自适应码流输出；</li>
-        /// <li>Transcode：转码输出；</li>
-        /// <li>Original：原始音视频。</li>
+        /// <p>播放的音视频类型，可选值有：</p><li>AdaptiveDynamicStream：自适应码流输出；</li><li>Transcode：转码输出；</li><li>Original：原始音视频。</li>
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// 播放 DRM 保护的自适应码流开关：
-        /// <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
-        /// <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
+        /// <p>播放 DRM 保护的自适应码流开关：</p><li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li><li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
 
         /// <summary>
-        /// 允许输出的未加密的自适应码流模板 ID。
+        /// <p>允许输出的未加密的自适应码流模板 ID。</p>
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// 允许输出的 DRM 自适应码流模板内容。
+        /// <p>允许输出的 DRM 自适应码流模板内容。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
 
         /// <summary>
-        /// 允许输出的转码模板 ID。
+        /// <p>允许输出的转码模板 ID。</p>
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// 允许输出的雪碧图模板 ID。
+        /// <p>允许输出的雪碧图模板 ID。</p>
         /// </summary>
         [JsonProperty("ImageSpriteDefinition")]
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// 播放器对不于不同分辨率的子流展示名字。
+        /// <p>播放器对不于不同分辨率的子流展示名字。</p>
         /// </summary>
         [JsonProperty("ResolutionNameSet")]
         public ResolutionNameInfo[] ResolutionNameSet{ get; set; }
 
         /// <summary>
-        /// 播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// <p>播放器配置创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// <p>播放器配置最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+        /// <p>播放时使用的域名。值为 Default，表示使用<a href="https://cloud.tencent.com/document/product/266/33373">默认分发配置</a>中的域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 播放时使用的 Scheme。取值范围：
-        /// <li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
-        /// <li>HTTP；</li>
-        /// <li>HTTPS。</li>
+        /// <p>播放时使用的 Scheme。取值范围：</p><li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li><li>HTTP；</li><li>HTTPS。</li>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 模板描述信息。
+        /// <p>模板描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

@@ -192,6 +192,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("WebUiVersion")]
         public long? WebUiVersion{ get; set; }
 
+        /// <summary>
+        /// <p>系统盘是否加密</p>
+        /// </summary>
+        [JsonProperty("EnableCbsSysEncryptFlag")]
+        public bool? EnableCbsSysEncryptFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+            this.SetParamSimple(map, prefix + "EnableCbsSysEncryptFlag", this.EnableCbsSysEncryptFlag);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -175,33 +175,6 @@ namespace TencentCloud.Ocr.V20181119
         public BizLicenseOCRResponse BizLicenseOCRSync(BizLicenseOCRRequest req)
         {
             return InternalRequestAsync<BizLicenseOCRResponse>(req, "BizLicenseOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持识别公路汽车客票关键字段的识别，包括发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市、开票日期、乘车地点、检票口、客票类型、车型、座位号、车次等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="BusInvoiceOCRRequest"/></param>
-        /// <returns><see cref="BusInvoiceOCRResponse"/></returns>
-        public Task<BusInvoiceOCRResponse> BusInvoiceOCR(BusInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<BusInvoiceOCRResponse>(req, "BusInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持识别公路汽车客票关键字段的识别，包括发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市、开票日期、乘车地点、检票口、客票类型、车型、座位号、车次等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="BusInvoiceOCRRequest"/></param>
-        /// <returns><see cref="BusInvoiceOCRResponse"/></returns>
-        public BusInvoiceOCRResponse BusInvoiceOCRSync(BusInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<BusInvoiceOCRResponse>(req, "BusInvoiceOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -416,33 +389,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="DutyPaidProofOCRRequest"/></param>
-        /// <returns><see cref="DutyPaidProofOCRResponse"/></returns>
-        public Task<DutyPaidProofOCRResponse> DutyPaidProofOCR(DutyPaidProofOCRRequest req)
-        {
-            return InternalRequestAsync<DutyPaidProofOCRResponse>(req, "DutyPaidProofOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="DutyPaidProofOCRRequest"/></param>
-        /// <returns><see cref="DutyPaidProofOCRResponse"/></returns>
-        public DutyPaidProofOCRResponse DutyPaidProofOCRSync(DutyPaidProofOCRRequest req)
-        {
-            return InternalRequestAsync<DutyPaidProofOCRResponse>(req, "DutyPaidProofOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号），公式返回格式为 Latex 格式文本。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -647,60 +593,6 @@ namespace TencentCloud.Ocr.V20181119
         public ExtractDocMultiProResponse ExtractDocMultiProSync(ExtractDocMultiProRequest req)
         {
             return InternalRequestAsync<ExtractDocMultiProResponse>(req, "ExtractDocMultiPro")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FinanBillOCRRequest"/></param>
-        /// <returns><see cref="FinanBillOCRResponse"/></returns>
-        public Task<FinanBillOCRResponse> FinanBillOCR(FinanBillOCRRequest req)
-        {
-            return InternalRequestAsync<FinanBillOCRResponse>(req, "FinanBillOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FinanBillOCRRequest"/></param>
-        /// <returns><see cref="FinanBillOCRResponse"/></returns>
-        public FinanBillOCRResponse FinanBillOCRSync(FinanBillOCRRequest req)
-        {
-            return InternalRequestAsync<FinanBillOCRResponse>(req, "FinanBillOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持常见银行票据的自动分类和识别。切片识别包括金融行业常见票据的重要切片字段识别，包括金额、账号、日期、凭证号码等。（金融票据切片：金融票据中待识别字段及其周围局部区域的裁剪图像。）
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FinanBillSliceOCRRequest"/></param>
-        /// <returns><see cref="FinanBillSliceOCRResponse"/></returns>
-        public Task<FinanBillSliceOCRResponse> FinanBillSliceOCR(FinanBillSliceOCRRequest req)
-        {
-            return InternalRequestAsync<FinanBillSliceOCRResponse>(req, "FinanBillSliceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持常见银行票据的自动分类和识别。切片识别包括金融行业常见票据的重要切片字段识别，包括金额、账号、日期、凭证号码等。（金融票据切片：金融票据中待识别字段及其周围局部区域的裁剪图像。）
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FinanBillSliceOCRRequest"/></param>
-        /// <returns><see cref="FinanBillSliceOCRResponse"/></returns>
-        public FinanBillSliceOCRResponse FinanBillSliceOCRSync(FinanBillSliceOCRRequest req)
-        {
-            return InternalRequestAsync<FinanBillSliceOCRResponse>(req, "FinanBillSliceOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1508,33 +1400,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对通用机打发票的发票代码、发票号码、日期、合计金额(小写)、合计金额(大写)、购买方识别号、销售方识别号、校验码、购买方名称、销售方名称、时间、种类、发票消费类型、省、市、是否有公司印章、发票名称、购买方地址、电话、销售方地址、电话、购买方开户行及账号、销售方开户行及账号、经办人取票用户、经办人支付信息、经办人商户号、经办人订单号、货物或应税劳务、服务名称、数量、单价、税率、税额、金额、单位、规格型号、合计税额、合计金额、备注、收款人、复核、开票人、密码区、行业分类等字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="InvoiceGeneralOCRRequest"/></param>
-        /// <returns><see cref="InvoiceGeneralOCRResponse"/></returns>
-        public Task<InvoiceGeneralOCRResponse> InvoiceGeneralOCR(InvoiceGeneralOCRRequest req)
-        {
-            return InternalRequestAsync<InvoiceGeneralOCRResponse>(req, "InvoiceGeneralOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对通用机打发票的发票代码、发票号码、日期、合计金额(小写)、合计金额(大写)、购买方识别号、销售方识别号、校验码、购买方名称、销售方名称、时间、种类、发票消费类型、省、市、是否有公司印章、发票名称、购买方地址、电话、销售方地址、电话、购买方开户行及账号、销售方开户行及账号、经办人取票用户、经办人支付信息、经办人商户号、经办人订单号、货物或应税劳务、服务名称、数量、单价、税率、税额、金额、单位、规格型号、合计税额、合计金额、备注、收款人、复核、开票人、密码区、行业分类等字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="InvoiceGeneralOCRRequest"/></param>
-        /// <returns><see cref="InvoiceGeneralOCRResponse"/></returns>
-        public InvoiceGeneralOCRResponse InvoiceGeneralOCRSync(InvoiceGeneralOCRRequest req)
-        {
-            return InternalRequestAsync<InvoiceGeneralOCRResponse>(req, "InvoiceGeneralOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。
         /// 
         /// 默认接口请求频率限制：10次/秒。
@@ -1833,33 +1698,6 @@ namespace TencentCloud.Ocr.V20181119
         public QuestionSplitOCRResponse QuestionSplitOCRSync(QuestionSplitOCRRequest req)
         {
             return InternalRequestAsync<QuestionSplitOCRResponse>(req, "QuestionSplitOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="QuotaInvoiceOCRRequest"/></param>
-        /// <returns><see cref="QuotaInvoiceOCRResponse"/></returns>
-        public Task<QuotaInvoiceOCRResponse> QuotaInvoiceOCR(QuotaInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<QuotaInvoiceOCRResponse>(req, "QuotaInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="QuotaInvoiceOCRRequest"/></param>
-        /// <returns><see cref="QuotaInvoiceOCRResponse"/></returns>
-        public QuotaInvoiceOCRResponse QuotaInvoiceOCRSync(QuotaInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<QuotaInvoiceOCRResponse>(req, "QuotaInvoiceOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2861,33 +2699,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价、始发地、目的地、姓名、时间、发票消费类型、省、市、币种字段。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="ShipInvoiceOCRRequest"/></param>
-        /// <returns><see cref="ShipInvoiceOCRResponse"/></returns>
-        public Task<ShipInvoiceOCRResponse> ShipInvoiceOCR(ShipInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<ShipInvoiceOCRResponse>(req, "ShipInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价、始发地、目的地、姓名、时间、发票消费类型、省、市、币种字段。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="ShipInvoiceOCRRequest"/></param>
-        /// <returns><see cref="ShipInvoiceOCRResponse"/></returns>
-        public ShipInvoiceOCRResponse ShipInvoiceOCRSync(ShipInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<ShipInvoiceOCRResponse>(req, "ShipInvoiceOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口支持识别并提取各类证照、票据、表单、合同等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -3063,33 +2874,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持过路过桥费发票关键字段的识别，包括发票代码、发票号码、日期、金额、入口、出口、时间、发票消费类型、高速标志等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="TollInvoiceOCRRequest"/></param>
-        /// <returns><see cref="TollInvoiceOCRResponse"/></returns>
-        public Task<TollInvoiceOCRResponse> TollInvoiceOCR(TollInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<TollInvoiceOCRResponse>(req, "TollInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持过路过桥费发票关键字段的识别，包括发票代码、发票号码、日期、金额、入口、出口、时间、发票消费类型、高速标志等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="TollInvoiceOCRRequest"/></param>
-        /// <returns><see cref="TollInvoiceOCRResponse"/></returns>
-        public TollInvoiceOCRResponse TollInvoiceOCRSync(TollInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<TollInvoiceOCRResponse>(req, "TollInvoiceOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口支持火车票全字段的识别，包括编号、出发站、到达站、出发时间、车次、座位号、姓名、票价、席别、身份证号、发票消费类型、序列号、加收票价、手续费、大写金额、售票站、原票价、发票类型、收据号码、是否仅供报销使用等字段的识别。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -3161,33 +2945,6 @@ namespace TencentCloud.Ocr.V20181119
         public VatInvoiceVerifyNewResponse VatInvoiceVerifyNewSync(VatInvoiceVerifyNewRequest req)
         {
             return InternalRequestAsync<VatInvoiceVerifyNewResponse>(req, "VatInvoiceVerifyNew")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对增值税发票（卷票）关键字段的识别，包括的发票代码、合计金额(小写)、合计金额(大写)、开票日期、发票号码、购买方识别号、销售方识别号、校验码、销售方名称、购买方名称、发票消费类型、省、市、是否有公司印章、单价、金额、数量、服务类型、品名、种类等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="VatRollInvoiceOCRRequest"/></param>
-        /// <returns><see cref="VatRollInvoiceOCRResponse"/></returns>
-        public Task<VatRollInvoiceOCRResponse> VatRollInvoiceOCR(VatRollInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<VatRollInvoiceOCRResponse>(req, "VatRollInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持对增值税发票（卷票）关键字段的识别，包括的发票代码、合计金额(小写)、合计金额(大写)、开票日期、发票号码、购买方识别号、销售方识别号、校验码、销售方名称、购买方名称、发票消费类型、省、市、是否有公司印章、单价、金额、数量、服务类型、品名、种类等。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="VatRollInvoiceOCRRequest"/></param>
-        /// <returns><see cref="VatRollInvoiceOCRResponse"/></returns>
-        public VatRollInvoiceOCRResponse VatRollInvoiceOCRSync(VatRollInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<VatRollInvoiceOCRResponse>(req, "VatRollInvoiceOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

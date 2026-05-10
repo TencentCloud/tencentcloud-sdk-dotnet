@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 第一备机信息
+        /// <p>第一备机信息</p>
         /// </summary>
         [JsonProperty("First")]
         public SlaveInstanceInfo First{ get; set; }
 
         /// <summary>
-        /// 第二备机信息
+        /// <p>第二备机信息</p>
         /// </summary>
         [JsonProperty("Second")]
         public SlaveInstanceInfo Second{ get; set; }

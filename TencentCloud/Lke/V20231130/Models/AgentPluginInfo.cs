@@ -75,6 +75,36 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("McpType")]
         public ulong? McpType{ get; set; }
 
+        /// <summary>
+        /// <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+        /// </summary>
+        [JsonProperty("AuthMode")]
+        public long? AuthMode{ get; set; }
+
+        /// <summary>
+        /// <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+        /// </summary>
+        [JsonProperty("AuthType")]
+        public long? AuthType{ get; set; }
+
+        /// <summary>
+        /// <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+        /// </summary>
+        [JsonProperty("AuthConfigStatus")]
+        public long? AuthConfigStatus{ get; set; }
+
+        /// <summary>
+        /// <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+        /// </summary>
+        [JsonProperty("PluginClass")]
+        public long? PluginClass{ get; set; }
+
+        /// <summary>
+        /// <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+        /// </summary>
+        [JsonProperty("PluginStatus")]
+        public long? PluginStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +119,11 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EnableRoleAuth", this.EnableRoleAuth);
             this.SetParamArrayObj(map, prefix + "Query.", this.Query);
             this.SetParamSimple(map, prefix + "McpType", this.McpType);
+            this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
+            this.SetParamSimple(map, prefix + "AuthConfigStatus", this.AuthConfigStatus);
+            this.SetParamSimple(map, prefix + "PluginClass", this.PluginClass);
+            this.SetParamSimple(map, prefix + "PluginStatus", this.PluginStatus);
         }
     }
 }

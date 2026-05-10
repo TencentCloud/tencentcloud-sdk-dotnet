@@ -24,12 +24,19 @@ namespace TencentCloud.Ctsdb.V20230202.Models
     public class DescribeClusterDetailRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
         }
     }
 }

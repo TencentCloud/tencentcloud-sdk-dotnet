@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1416</VersionPrefix>
+    <VersionPrefix>3.0.1423</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -166,6 +166,10 @@
     <Compile Include="V20201016\Models\CreateNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\CreateRebuildIndexTaskRequest.cs" />
     <Compile Include="V20201016\Models\CreateRebuildIndexTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateRecordingRuleTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateRecordingRuleTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\CreateSearchViewRequest.cs" />
@@ -246,6 +250,10 @@
     <Compile Include="V20201016\Models\DeleteNetworkApplicationResponse.cs" />
     <Compile Include="V20201016\Models\DeleteNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\DeleteNoticeContentResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteRecordingRuleTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteRecordingRuleTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\DeleteSearchViewRequest.cs" />
@@ -354,6 +362,10 @@
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeRebuildIndexTasksRequest.cs" />
     <Compile Include="V20201016\Models\DescribeRebuildIndexTasksResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeRecordingRuleTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeRecordingRuleTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeSearchViewsRequest.cs" />
@@ -497,6 +509,10 @@
     <Compile Include="V20201016\Models\ModifyNetworkApplicationResponse.cs" />
     <Compile Include="V20201016\Models\ModifyNoticeContentRequest.cs" />
     <Compile Include="V20201016\Models\ModifyNoticeContentResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyRecordingRuleTaskRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyRecordingRuleTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\ModifySearchViewRequest.cs" />
@@ -538,6 +554,8 @@
     <Compile Include="V20201016\Models\QueryRangeMetricRequest.cs" />
     <Compile Include="V20201016\Models\QueryRangeMetricResponse.cs" />
     <Compile Include="V20201016\Models\RebuildIndexTaskInfo.cs" />
+    <Compile Include="V20201016\Models\RecordingRuleTaskInfo.cs" />
+    <Compile Include="V20201016\Models\RecordingRuleYamlTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />

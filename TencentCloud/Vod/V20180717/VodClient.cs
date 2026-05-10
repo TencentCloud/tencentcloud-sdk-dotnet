@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -294,6 +294,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 调用该接口，用于创建AI生音频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
+        public Task<CreateAigcAudioTaskResponse> CreateAigcAudioTask(CreateAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioTaskResponse>(req, "CreateAigcAudioTask");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建AI生音频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
+        public CreateAigcAudioTaskResponse CreateAigcAudioTaskSync(CreateAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioTaskResponse>(req, "CreateAigcAudioTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调用该接口，针对指定模型进行主体创建。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcCustomElementRequest"/></param>
@@ -336,7 +357,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用，</b>请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
         /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
@@ -346,7 +367,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用，</b>请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
         /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
@@ -399,7 +420,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
         /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
@@ -409,7 +430,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+        /// 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
         /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
@@ -1246,6 +1267,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于删除 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcAdvancedCustomElementRequest"/></param>
+        /// <returns><see cref="DeleteAigcAdvancedCustomElementResponse"/></returns>
+        public Task<DeleteAigcAdvancedCustomElementResponse> DeleteAigcAdvancedCustomElement(DeleteAigcAdvancedCustomElementRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcAdvancedCustomElementResponse>(req, "DeleteAigcAdvancedCustomElement");
+        }
+
+        /// <summary>
+        /// 该接口用于删除 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcAdvancedCustomElementRequest"/></param>
+        /// <returns><see cref="DeleteAigcAdvancedCustomElementResponse"/></returns>
+        public DeleteAigcAdvancedCustomElementResponse DeleteAigcAdvancedCustomElementSync(DeleteAigcAdvancedCustomElementRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcAdvancedCustomElementResponse>(req, "DeleteAigcAdvancedCustomElement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除 AIGC API Token
         /// </summary>
         /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
@@ -1925,6 +1967,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于获取 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcAdvancedCustomElementsRequest"/></param>
+        /// <returns><see cref="DescribeAigcAdvancedCustomElementsResponse"/></returns>
+        public Task<DescribeAigcAdvancedCustomElementsResponse> DescribeAigcAdvancedCustomElements(DescribeAigcAdvancedCustomElementsRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcAdvancedCustomElementsResponse>(req, "DescribeAigcAdvancedCustomElements");
+        }
+
+        /// <summary>
+        /// 该接口用于获取 AIGC 高级自定义主体。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcAdvancedCustomElementsRequest"/></param>
+        /// <returns><see cref="DescribeAigcAdvancedCustomElementsResponse"/></returns>
+        public DescribeAigcAdvancedCustomElementsResponse DescribeAigcAdvancedCustomElementsSync(DescribeAigcAdvancedCustomElementsRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcAdvancedCustomElementsResponse>(req, "DescribeAigcAdvancedCustomElements")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeAigcApiTokensRequest"/></param>
@@ -2282,6 +2345,7 @@ namespace TencentCloud.Vod.V20180717
         /// * 可以查询最近一年的播放统计数据。
         /// * 结束日期和起始日期的时间跨度最大为90天。
         /// * 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
+        /// * 因数据存在延迟，建议您于第二天中午12点后查询前一天的用量数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeDailyMediaPlayStatRequest"/></param>
         /// <returns><see cref="DescribeDailyMediaPlayStatResponse"/></returns>
@@ -2295,6 +2359,7 @@ namespace TencentCloud.Vod.V20180717
         /// * 可以查询最近一年的播放统计数据。
         /// * 结束日期和起始日期的时间跨度最大为90天。
         /// * 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
+        /// * 因数据存在延迟，建议您于第二天中午12点后查询前一天的用量数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeDailyMediaPlayStatRequest"/></param>
         /// <returns><see cref="DescribeDailyMediaPlayStatResponse"/></returns>
@@ -4636,18 +4701,16 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用媒体处理服务（MPS）的媒体处理能力，对点播中的视频发起媒体处理，任务发起时需将 MPS 相关参数以 JSON 格式填入 MPSProcessMediaParams 参数中。具体任务参数配置请参考[媒体处理 ProcessMedia 接口](https://cloud.tencent.com/document/api/862/37578)。 
+        /// 使用媒体处理服务（MPS）的媒体处理能力，对点播中的视频发起媒体处理。
         /// 当前支持的 MPS 功能：
-        /// 1. [智能擦除](https://cloud.tencent.com/document/product/862/101530)：能够对视频画面中的 Logo、字幕、人脸和车牌等元素进行模糊、马赛克或无痕化处理，从而便于内容的传播和分享。该任务产生的新视频将生成新的 FileId 存储在点播平台的子应用中。
-        /// 2. [音视频增强](https://cloud.tencent.com/document/product/862/118703)：该功能支持分布式实时画质增强，包含视频去毛刺、降噪、色彩增强、细节增强、人脸增强、SDR2HDR、大模型增强等功能，可大幅提升音视频质量，广泛应用于 OTT、电商、赛事等场景，有效实现 QoE 与 QoS 双维度提升，创造显著业务价值。
-        /// 3. [智能字幕](https://cloud.tencent.com/document/product/862/89091)：该功能支持处理离线音频文件、视频文件及直播流，可通过 ASR 语音识别或 OCR 文本识别提取视频源语言字幕，并实现多语言翻译。
-        /// 4. [智能分析](https://cloud.tencent.com/document/product/862/113756)：该功能支持智能封面、智能高光、智能摘要、视频理解等功能。
+        /// 1.智能字幕：该功能支持处理离线音频文件、视频文件及直播流，可通过 ASR 语音识别或 OCR 文本识别提取视频源语言字幕，并实现多语言翻译。详情查看[接入指南](https://cloud.tencent.com/document/product/266/131210)。
+        /// 2.智能擦除：能够对视频画面中的 Logo、字幕、人脸和车牌等元素进行模糊、马赛克或无痕化处理，从而便于内容的传播和分享。该任务产生的新视频将生成新的 FileId 存储在点播平台的子应用中。详情查看[接入指南](https://cloud.tencent.com/document/product/266/131211)。
+        /// 3.智能分析：该功能支持[一站式译制](https://cloud.tencent.com/document/product/266/131212)、[精彩集锦](https://cloud.tencent.com/document/product/266/131213)、[大模型视频摘要](https://cloud.tencent.com/document/product/266/131214)、[大模型音视频理解](https://cloud.tencent.com/document/product/266/131215)、[智能拆条](https://cloud.tencent.com/document/product/266/131216)、[智能横转竖](https://cloud.tencent.com/document/product/266/131217)、[视频去重](https://cloud.tencent.com/document/product/266/131218)等功能。
         /// 
         /// 
         /// > 以该种方式发起的视频处理任务：
         /// > 1. 任务状态及结果的查询仍在点播平台中完成，使用 [DescribeTaskDetail](https://cloud.tencent.com/document/product/266/33431) 或 [DescribeTasks](https://cloud.tencent.com/document/product/266/33430) 查询任务。
-        /// > 2. 相关功能的用量及账单将在 MPS 平台给出，因此在使用该功能前，首先需要开通 MPS 服务。
-        /// > 3. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
+        /// > 2. 相关功能的用量及账单将在 MPS 平台给出，因此在使用该功能前，首先需要在控制台开通 MPS 服务。开通方式见接入文档的前置操作部分。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaByMPSRequest"/></param>
         /// <returns><see cref="ProcessMediaByMPSResponse"/></returns>
@@ -4657,18 +4720,16 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用媒体处理服务（MPS）的媒体处理能力，对点播中的视频发起媒体处理，任务发起时需将 MPS 相关参数以 JSON 格式填入 MPSProcessMediaParams 参数中。具体任务参数配置请参考[媒体处理 ProcessMedia 接口](https://cloud.tencent.com/document/api/862/37578)。 
+        /// 使用媒体处理服务（MPS）的媒体处理能力，对点播中的视频发起媒体处理。
         /// 当前支持的 MPS 功能：
-        /// 1. [智能擦除](https://cloud.tencent.com/document/product/862/101530)：能够对视频画面中的 Logo、字幕、人脸和车牌等元素进行模糊、马赛克或无痕化处理，从而便于内容的传播和分享。该任务产生的新视频将生成新的 FileId 存储在点播平台的子应用中。
-        /// 2. [音视频增强](https://cloud.tencent.com/document/product/862/118703)：该功能支持分布式实时画质增强，包含视频去毛刺、降噪、色彩增强、细节增强、人脸增强、SDR2HDR、大模型增强等功能，可大幅提升音视频质量，广泛应用于 OTT、电商、赛事等场景，有效实现 QoE 与 QoS 双维度提升，创造显著业务价值。
-        /// 3. [智能字幕](https://cloud.tencent.com/document/product/862/89091)：该功能支持处理离线音频文件、视频文件及直播流，可通过 ASR 语音识别或 OCR 文本识别提取视频源语言字幕，并实现多语言翻译。
-        /// 4. [智能分析](https://cloud.tencent.com/document/product/862/113756)：该功能支持智能封面、智能高光、智能摘要、视频理解等功能。
+        /// 1.智能字幕：该功能支持处理离线音频文件、视频文件及直播流，可通过 ASR 语音识别或 OCR 文本识别提取视频源语言字幕，并实现多语言翻译。详情查看[接入指南](https://cloud.tencent.com/document/product/266/131210)。
+        /// 2.智能擦除：能够对视频画面中的 Logo、字幕、人脸和车牌等元素进行模糊、马赛克或无痕化处理，从而便于内容的传播和分享。该任务产生的新视频将生成新的 FileId 存储在点播平台的子应用中。详情查看[接入指南](https://cloud.tencent.com/document/product/266/131211)。
+        /// 3.智能分析：该功能支持[一站式译制](https://cloud.tencent.com/document/product/266/131212)、[精彩集锦](https://cloud.tencent.com/document/product/266/131213)、[大模型视频摘要](https://cloud.tencent.com/document/product/266/131214)、[大模型音视频理解](https://cloud.tencent.com/document/product/266/131215)、[智能拆条](https://cloud.tencent.com/document/product/266/131216)、[智能横转竖](https://cloud.tencent.com/document/product/266/131217)、[视频去重](https://cloud.tencent.com/document/product/266/131218)等功能。
         /// 
         /// 
         /// > 以该种方式发起的视频处理任务：
         /// > 1. 任务状态及结果的查询仍在点播平台中完成，使用 [DescribeTaskDetail](https://cloud.tencent.com/document/product/266/33431) 或 [DescribeTasks](https://cloud.tencent.com/document/product/266/33430) 查询任务。
-        /// > 2. 相关功能的用量及账单将在 MPS 平台给出，因此在使用该功能前，首先需要开通 MPS 服务。
-        /// > 3. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
+        /// > 2. 相关功能的用量及账单将在 MPS 平台给出，因此在使用该功能前，首先需要在控制台开通 MPS 服务。开通方式见接入文档的前置操作部分。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaByMPSRequest"/></param>
         /// <returns><see cref="ProcessMediaByMPSResponse"/></returns>
@@ -5295,7 +5356,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 将点播视频发布到微信小程序，供微信小程序播放器播放。
-        /// 本接口支持发布原始视频和转码后视频，暂不支持发布自适应码流。
+        /// 本接口支持发布原始视频和转码后视频。
         /// </summary>
         /// <param name="req"><see cref="WeChatMiniProgramPublishRequest"/></param>
         /// <returns><see cref="WeChatMiniProgramPublishResponse"/></returns>
@@ -5306,7 +5367,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 将点播视频发布到微信小程序，供微信小程序播放器播放。
-        /// 本接口支持发布原始视频和转码后视频，暂不支持发布自适应码流。
+        /// 本接口支持发布原始视频和转码后视频。
         /// </summary>
         /// <param name="req"><see cref="WeChatMiniProgramPublishRequest"/></param>
         /// <returns><see cref="WeChatMiniProgramPublishResponse"/></returns>

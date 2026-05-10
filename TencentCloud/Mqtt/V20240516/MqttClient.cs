@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -1009,6 +1009,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询共享订阅组详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionClientRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionClientResponse"/></returns>
+        public Task<DescribeSharedSubscriptionClientResponse> DescribeSharedSubscriptionClient(DescribeSharedSubscriptionClientRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionClientResponse>(req, "DescribeSharedSubscriptionClient");
+        }
+
+        /// <summary>
+        /// 查询共享订阅组详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionClientRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionClientResponse"/></returns>
+        public DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClientSync(DescribeSharedSubscriptionClientRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionClientResponse>(req, "DescribeSharedSubscriptionClient")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询集群下共享订阅组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsRequest"/></param>
@@ -1047,6 +1068,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLagSync(DescribeSharedSubscriptionLagRequest req)
         {
             return InternalRequestAsync<DescribeSharedSubscriptionLagResponse>(req, "DescribeSharedSubscriptionLag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询共享订阅组订阅列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionsResponse"/></returns>
+        public Task<DescribeSharedSubscriptionsResponse> DescribeSharedSubscriptions(DescribeSharedSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionsResponse>(req, "DescribeSharedSubscriptions");
+        }
+
+        /// <summary>
+        /// 查询共享订阅组订阅列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionsResponse"/></returns>
+        public DescribeSharedSubscriptionsResponse DescribeSharedSubscriptionsSync(DescribeSharedSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionsResponse>(req, "DescribeSharedSubscriptions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

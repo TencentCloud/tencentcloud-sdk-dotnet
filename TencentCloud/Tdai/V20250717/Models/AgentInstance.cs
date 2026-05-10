@@ -138,6 +138,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>发货进度详情</p>
+        /// </summary>
+        [JsonProperty("CreatingProgress")]
+        public CreatingProgress CreatingProgress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamArraySimple(map, prefix + "AllowedActions.", this.AllowedActions);
             this.SetParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "CreatingProgress.", this.CreatingProgress);
         }
     }
 }

@@ -25,40 +25,58 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// 存储类型
+        /// <p>存储类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 对象存储桶名称
+        /// <p>对象存储桶名称</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 存储连接地址
+        /// <p>存储连接地址</p>
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 存储连接用户密码
+        /// <p>存储连接用户密码</p>
         /// </summary>
         [JsonProperty("KeyID")]
         public string KeyID{ get; set; }
 
         /// <summary>
-        /// 存储挂载目的目录
+        /// <p>存储挂载目的目录</p>
         /// </summary>
         [JsonProperty("DstPath")]
         public string DstPath{ get; set; }
 
         /// <summary>
-        /// 存储挂载源目录
+        /// <p>存储挂载源目录</p>
         /// </summary>
         [JsonProperty("SrcPath")]
         public string SrcPath{ get; set; }
+
+        /// <summary>
+        /// <p>cfs 实例ip</p>
+        /// </summary>
+        [JsonProperty("MountIP")]
+        public string MountIP{ get; set; }
+
+        /// <summary>
+        /// <p>默认读写</p>
+        /// </summary>
+        [JsonProperty("ReadOnly")]
+        public bool? ReadOnly{ get; set; }
+
+        /// <summary>
+        /// <p>CFS 实例 ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +90,9 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "KeyID", this.KeyID);
             this.SetParamSimple(map, prefix + "DstPath", this.DstPath);
             this.SetParamSimple(map, prefix + "SrcPath", this.SrcPath);
+            this.SetParamSimple(map, prefix + "MountIP", this.MountIP);
+            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
