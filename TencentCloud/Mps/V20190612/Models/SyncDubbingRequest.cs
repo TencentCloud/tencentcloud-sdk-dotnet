@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public VoiceProfile VoiceProfile{ get; set; }
 
         /// <summary>
-        /// <p>输出相关参数</p><p>可以指定输出形式等</p>
+        /// <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
         /// </summary>
         [JsonProperty("Output")]
         public SyncDubbingOutputOption Output{ get; set; }

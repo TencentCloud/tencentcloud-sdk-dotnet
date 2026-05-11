@@ -25,362 +25,358 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 用户Uin
+        /// <p>用户Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 用户AppId
+        /// <p>用户AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例状态中文描述
+        /// <p>实例状态中文描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 实例形态，是否为serverless实例
+        /// <p>实例形态，是否为serverless实例</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 数据库类型
+        /// <p>数据库类型</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Cpu，单位：核
+        /// <p>Cpu，单位：核</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存，单位：GB
+        /// <p>内存，单位：GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 存储量，单位：GB
+        /// <p>存储量，单位：GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例当前角色
+        /// <p>实例当前角色</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// VPC网络ID
+        /// <p>VPC网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例内网IP
+        /// <p>实例内网IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 实例内网端口
+        /// <p>实例内网端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例过期时间
+        /// <p>实例过期时间</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// 销毁期限
+        /// <p>销毁期限</p>
         /// </summary>
         [JsonProperty("DestroyDeadlineText")]
         public string DestroyDeadlineText{ get; set; }
 
         /// <summary>
-        /// 隔离时间
+        /// <p>隔离时间</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// <p>网络类型</p>
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// 外网域名
+        /// <p>外网域名</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 外网IP
+        /// <p>外网IP</p>
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// 外网端口
+        /// <p>外网端口</p>
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 外网状态
+        /// <p>外网状态</p>
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }
 
         /// <summary>
-        /// 实例销毁时间
+        /// <p>实例销毁时间</p>
         /// </summary>
         [JsonProperty("DestroyTime")]
         public string DestroyTime{ get; set; }
 
         /// <summary>
-        /// Cynos内核版本
+        /// <p>Cynos内核版本</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// 正在处理的任务
+        /// <p>正在处理的任务</p>
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// <p>续费标志</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// serverless实例cpu下限
+        /// <p>serverless实例cpu下限</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// serverless实例cpu上限
+        /// <p>serverless实例cpu上限</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// serverless实例状态, 可选值：
-        /// resume
-        /// pause
+        /// <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 预付费存储Id
+        /// <p>预付费存储Id</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// 存储付费类型
+        /// <p>存储付费类型</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// 物理区
+        /// <p>物理区</p>
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// 商业类型
+        /// <p>商业类型</p>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 任务
+        /// <p>任务</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// 是否冻结
+        /// <p>是否冻结</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// 资源标签
+        /// <p>资源标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 主可用区
+        /// <p>主可用区</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// 备可用区
+        /// <p>备可用区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// 实例网络信息
+        /// <p>实例网络信息</p>
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
 
         /// <summary>
-        /// 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+        /// <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+        /// <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
         /// </summary>
         [JsonProperty("InstanceIndexMode")]
         public string InstanceIndexMode{ get; set; }
 
         /// <summary>
-        /// 当前实例支持的能力
+        /// <p>当前实例支持的能力</p>
         /// </summary>
         [JsonProperty("InstanceAbility")]
         public InstanceAbility InstanceAbility{ get; set; }
 
         /// <summary>
-        /// 实例机器类型
-        /// 1. common，通用型。
-        /// 2. exclusive，独享型。
+        /// <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 实例存储类型
+        /// <p>实例存储类型</p>
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
 
         /// <summary>
-        /// 未知字段
+        /// <p>未知字段</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// libradb 节点信息
+        /// <p>libradb 节点信息</p>
         /// </summary>
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }
 
         /// <summary>
-        /// 全球数据库唯一标识
+        /// <p>全球数据库唯一标识</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }

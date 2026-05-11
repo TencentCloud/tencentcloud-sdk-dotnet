@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1423</VersionPrefix>
+    <VersionPrefix>3.0.1424</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -595,6 +595,8 @@
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
     <Compile Include="V20190612\Models\DesignVoiceAsyncRequest.cs" />
     <Compile Include="V20190612\Models\DesignVoiceAsyncResponse.cs" />
+    <Compile Include="V20190612\Models\DetectVideoSubtitleAreaRequest.cs" />
+    <Compile Include="V20190612\Models\DetectVideoSubtitleAreaResponse.cs" />
     <Compile Include="V20190612\Models\DiagnoseResult.cs" />
     <Compile Include="V20190612\Models\DiffusionEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
@@ -973,6 +975,7 @@
     <Compile Include="V20190612\Models\StreamLinkRegionInfo.cs" />
     <Compile Include="V20190612\Models\StreamSelector.cs" />
     <Compile Include="V20190612\Models\StreamUrlDetail.cs" />
+    <Compile Include="V20190612\Models\SubtitleArea.cs" />
     <Compile Include="V20190612\Models\SubtitleBoardConfig.cs" />
     <Compile Include="V20190612\Models\SubtitleEmbedConfig.cs" />
     <Compile Include="V20190612\Models\SubtitleEmbedTemplateItem.cs" />

@@ -25,76 +25,82 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 服务名。
+        /// <p>服务名。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 服务所属命名空间。
+        /// <p>服务所属命名空间。</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 服务描述信息。
+        /// <p>服务描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 服务元数据。
+        /// <p>服务元数据。</p>
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }
 
         /// <summary>
-        /// 服务所属部门。
+        /// <p>服务所属部门。</p>
         /// </summary>
         [JsonProperty("Department")]
         public string Department{ get; set; }
 
         /// <summary>
-        /// 服务所属业务。
+        /// <p>服务所属业务。</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// 被添加进来可以操作此命名空间的用户ID列表
+        /// <p>被添加进来可以操作此命名空间的用户ID列表</p>
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 被添加进来可以操作此命名空间的用户组ID列表
+        /// <p>被添加进来可以操作此命名空间的用户组ID列表</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 从操作此命名空间的用户组ID列表被移除的ID列表
+        /// <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
         /// </summary>
         [JsonProperty("RemoveUserIds")]
         public string[] RemoveUserIds{ get; set; }
 
         /// <summary>
-        /// 从可以操作此命名空间的用户组ID列表中被移除的ID列表
+        /// <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
         /// </summary>
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
         /// <summary>
-        /// 该服务对哪些命名空间可见
+        /// <p>该服务对哪些命名空间可见</p>
         /// </summary>
         [JsonProperty("ExportTo")]
         public string[] ExportTo{ get; set; }
 
         /// <summary>
-        /// 是否开启同步到全局注册中心
+        /// <p>是否开启同步到全局注册中心</p>
         /// </summary>
         [JsonProperty("SyncToGlobalRegistry")]
         public bool? SyncToGlobalRegistry{ get; set; }
+
+        /// <summary>
+        /// <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
             this.SetParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -25,87 +25,85 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// serverless集群id
+        /// <p>serverless集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群是否自动暂停，可选范围
-        /// <li>yes</li>
-        /// <li>no</li>
+        /// <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
+        /// <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// 该参数暂时无效
+        /// <p>该参数暂时无效</p>
         /// </summary>
         [JsonProperty("AutoScaleUpDelay")]
         public long? AutoScaleUpDelay{ get; set; }
 
         /// <summary>
-        /// 该参数暂时无效
+        /// <p>该参数暂时无效</p>
         /// </summary>
         [JsonProperty("AutoScaleDownDelay")]
         public long? AutoScaleDownDelay{ get; set; }
 
         /// <summary>
-        /// cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MinRoCpu")]
         public float? MinRoCpu{ get; set; }
 
         /// <summary>
-        /// 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }
 
         /// <summary>
-        /// 只读节点最小个数
+        /// <p>只读节点最小个数</p>
         /// </summary>
         [JsonProperty("MinRoCount")]
         public long? MinRoCount{ get; set; }
 
         /// <summary>
-        /// 只读节点最大个数
+        /// <p>只读节点最大个数</p>
         /// </summary>
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
         /// <summary>
-        /// 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+        /// <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
         /// <summary>
-        /// 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+        /// <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+        /// <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
         /// </summary>
         [JsonProperty("SecurityGroupIdsForNewRo")]
         public string[] SecurityGroupIdsForNewRo{ get; set; }

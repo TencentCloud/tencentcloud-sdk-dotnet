@@ -25,35 +25,38 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 已完成数量
+        /// <p>已完成数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Completed")]
         public long? Completed{ get; set; }
 
         /// <summary>
-        /// 剩余数量
+        /// <p>剩余数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remain")]
         public long? Remain{ get; set; }
 
         /// <summary>
-        /// 总数量
+        /// <p>总数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 任务类型：
-        /// 60：重启型任务
-        /// 70：分片迁移型任务
-        /// 80：节点变配任务
+        /// <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// <p>预估剩余时间</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("EstimatedTimeRemaining")]
+        public long? EstimatedTimeRemaining{ get; set; }
 
 
         /// <summary>
@@ -65,6 +68,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Remain", this.Remain);
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "EstimatedTimeRemaining", this.EstimatedTimeRemaining);
         }
     }
 }

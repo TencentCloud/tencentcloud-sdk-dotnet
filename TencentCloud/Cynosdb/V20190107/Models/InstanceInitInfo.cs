@@ -25,57 +25,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例cpu
+        /// <p>实例cpu</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例内存
+        /// <p>实例内存</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例类型 rw/ro
+        /// <p>实例类型 rw/ro</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例个数,范围[1,15]
+        /// <p>实例个数,范围[1,15]</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Serverless实例个数最小值，范围[1,15]
+        /// <p>Serverless实例个数最小值，范围[1,15]</p>
         /// </summary>
         [JsonProperty("MinRoCount")]
         public long? MinRoCount{ get; set; }
 
         /// <summary>
-        /// Serverless实例个数最大值，范围[1,15]
+        /// <p>Serverless实例个数最大值，范围[1,15]</p>
         /// </summary>
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
         /// <summary>
-        /// Serverless实例最小规格
+        /// <p>Serverless实例最小规格</p>
         /// </summary>
         [JsonProperty("MinRoCpu")]
         public float? MinRoCpu{ get; set; }
 
         /// <summary>
-        /// Serverless实例最大规格
+        /// <p>Serverless实例最大规格</p>
         /// </summary>
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }
 
         /// <summary>
-        /// 实例机器类型
-        /// 1. common，通用型。
-        /// 2. exclusive，独享型。
+        /// <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

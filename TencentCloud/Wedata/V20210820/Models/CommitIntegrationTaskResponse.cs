@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 操作成功与否标识
+        /// <p>操作成功与否标识</p>
         /// </summary>
         [JsonProperty("Data")]
         public bool? Data{ get; set; }
 
         /// <summary>
-        /// 数据结构
+        /// <p>数据结构</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDto")]

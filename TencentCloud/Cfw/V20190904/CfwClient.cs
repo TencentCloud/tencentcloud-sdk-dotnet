@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1418";
+       private const string sdkVersion = "SDK_NET_3.0.1424";
 
         /// <summary>
         /// Client constructor.
@@ -1482,6 +1482,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeSecurityGroupListResponse DescribeSecurityGroupListSync(DescribeSecurityGroupListRequest req)
         {
             return InternalRequestAsync<DescribeSecurityGroupListResponse>(req, "DescribeSecurityGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询串行防火墙地域带宽分配信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSerialRegionRequest"/></param>
+        /// <returns><see cref="DescribeSerialRegionResponse"/></returns>
+        public Task<DescribeSerialRegionResponse> DescribeSerialRegion(DescribeSerialRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeSerialRegionResponse>(req, "DescribeSerialRegion");
+        }
+
+        /// <summary>
+        /// 查询串行防火墙地域带宽分配信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSerialRegionRequest"/></param>
+        /// <returns><see cref="DescribeSerialRegionResponse"/></returns>
+        public DescribeSerialRegionResponse DescribeSerialRegionSync(DescribeSerialRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeSerialRegionResponse>(req, "DescribeSerialRegion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

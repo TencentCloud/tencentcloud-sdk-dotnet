@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1418</VersionPrefix>
+    <VersionPrefix>3.0.1424</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -208,6 +208,8 @@
     <Compile Include="V20190904\Models\DescribeRuleOverviewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSecurityGroupListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSecurityGroupListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSerialRegionRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSerialRegionResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSourceAssetRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSourceAssetResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchErrorRequest.cs" />
@@ -366,6 +368,7 @@
     <Compile Include="V20190904\Models\SecurityGroupRule.cs" />
     <Compile Include="V20190904\Models\SecurityGroupSimplifyRule.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
+    <Compile Include="V20190904\Models\SerialRegionInfo.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleResponse.cs" />
     <Compile Include="V20190904\Models\SetNatFwEipRequest.cs" />

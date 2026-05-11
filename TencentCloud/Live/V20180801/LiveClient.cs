@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1424";
 
         /// <summary>
         /// Client constructor.
@@ -1038,6 +1038,27 @@ namespace TencentCloud.Live.V20180801
         public CreateRecordTaskResponse CreateRecordTaskSync(CreateRecordTaskRequest req)
         {
             return InternalRequestAsync<CreateRecordTaskResponse>(req, "CreateRecordTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建场景化视频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneVideoTaskResponse"/></returns>
+        public Task<CreateSceneVideoTaskResponse> CreateSceneVideoTask(CreateSceneVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneVideoTaskResponse>(req, "CreateSceneVideoTask");
+        }
+
+        /// <summary>
+        /// 该接口用于创建场景化视频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneVideoTaskResponse"/></returns>
+        public CreateSceneVideoTaskResponse CreateSceneVideoTaskSync(CreateSceneVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneVideoTaskResponse>(req, "CreateSceneVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3754,6 +3775,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeRecordTaskResponse DescribeRecordTaskSync(DescribeRecordTaskRequest req)
         {
             return InternalRequestAsync<DescribeRecordTaskResponse>(req, "DescribeRecordTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询场景化视频任务进展及结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSceneVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeSceneVideoTaskResponse"/></returns>
+        public Task<DescribeSceneVideoTaskResponse> DescribeSceneVideoTask(DescribeSceneVideoTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeSceneVideoTaskResponse>(req, "DescribeSceneVideoTask");
+        }
+
+        /// <summary>
+        /// 该接口用于查询场景化视频任务进展及结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSceneVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeSceneVideoTaskResponse"/></returns>
+        public DescribeSceneVideoTaskResponse DescribeSceneVideoTaskSync(DescribeSceneVideoTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeSceneVideoTaskResponse>(req, "DescribeSceneVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

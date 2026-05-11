@@ -25,49 +25,50 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+        /// <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
         /// </summary>
         [JsonProperty("ProxyCount")]
+        [System.Obsolete]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// cpu核数
+        /// <p>cpu核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// <p>内存</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 连接池类型:SessionConnectionPool(会话级别连接池 )
+        /// <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池,yes-开启，no-不开启
+        /// <p>是否开启连接池,yes-开启，no-不开启</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池阈值:单位（秒）
+        /// <p>连接池阈值:单位（秒）</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// 描述说明
+        /// <p>描述说明</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+        /// <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

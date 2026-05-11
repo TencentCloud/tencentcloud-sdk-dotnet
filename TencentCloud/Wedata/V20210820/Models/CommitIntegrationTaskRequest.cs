@@ -25,52 +25,58 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
+        /// <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p>
         /// </summary>
         [JsonProperty("CommitType")]
         public long? CommitType{ get; set; }
 
         /// <summary>
-        /// 实时任务 201   离线任务 202  默认实时任务
+        /// <p>实时任务 201   离线任务 202  默认实时任务</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// 额外参数
+        /// <p>额外参数</p>
         /// </summary>
         [JsonProperty("ExtConfig")]
         public RecordField[] ExtConfig{ get; set; }
 
         /// <summary>
-        /// 提交版本描述
+        /// <p>提交版本描述</p>
         /// </summary>
         [JsonProperty("VersionDesc")]
         public string VersionDesc{ get; set; }
 
         /// <summary>
-        /// 提交版本号
+        /// <p>提交版本号</p>
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public long? InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 前端操作类型描述
+        /// <p>前端操作类型描述</p>
         /// </summary>
         [JsonProperty("EventDesc")]
         public string EventDesc{ get; set; }
+
+        /// <summary>
+        /// <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul>
+        /// </summary>
+        [JsonProperty("CurrentStatus")]
+        public long? CurrentStatus{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
             this.SetParamSimple(map, prefix + "EventDesc", this.EventDesc);
+            this.SetParamSimple(map, prefix + "CurrentStatus", this.CurrentStatus);
         }
     }
 }

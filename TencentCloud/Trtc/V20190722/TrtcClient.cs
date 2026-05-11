@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1423";
+       private const string sdkVersion = "SDK_NET_3.0.1424";
 
         /// <summary>
         /// Client constructor.
@@ -815,6 +815,60 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// AI 智能识别与对话用量查询（AI对话/语音转文本/实时翻译/实时语音合成）
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCAIRecognitionUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCAIRecognitionUsageResponse"/></returns>
+        public Task<DescribeTRTCAIRecognitionUsageResponse> DescribeTRTCAIRecognitionUsage(DescribeTRTCAIRecognitionUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCAIRecognitionUsageResponse>(req, "DescribeTRTCAIRecognitionUsage");
+        }
+
+        /// <summary>
+        /// AI 智能识别与对话用量查询（AI对话/语音转文本/实时翻译/实时语音合成）
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCAIRecognitionUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCAIRecognitionUsageResponse"/></returns>
+        public DescribeTRTCAIRecognitionUsageResponse DescribeTRTCAIRecognitionUsageSync(DescribeTRTCAIRecognitionUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCAIRecognitionUsageResponse>(req, "DescribeTRTCAIRecognitionUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// TRTC专属云网络加速用量查询
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCDedicatedCloudAccUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCDedicatedCloudAccUsageResponse"/></returns>
+        public Task<DescribeTRTCDedicatedCloudAccUsageResponse> DescribeTRTCDedicatedCloudAccUsage(DescribeTRTCDedicatedCloudAccUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCDedicatedCloudAccUsageResponse>(req, "DescribeTRTCDedicatedCloudAccUsage");
+        }
+
+        /// <summary>
+        /// TRTC专属云网络加速用量查询
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCDedicatedCloudAccUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCDedicatedCloudAccUsageResponse"/></returns>
+        public DescribeTRTCDedicatedCloudAccUsageResponse DescribeTRTCDedicatedCloudAccUsageSync(DescribeTRTCDedicatedCloudAccUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCDedicatedCloudAccUsageResponse>(req, "DescribeTRTCDedicatedCloudAccUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
         /// joinSuccessRate：加入频道成功率。
         /// joinSuccessIn5sRate：5s内加入频道成功率。
@@ -984,6 +1038,33 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleDataSync(DescribeTRTCRealTimeScaleDataRequest req)
         {
             return InternalRequestAsync<DescribeTRTCRealTimeScaleDataResponse>(req, "DescribeTRTCRealTimeScaleData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 切片截图与内容理解用量查询，支持查询音视频切片（云端切片场景）和 AI 内容理解（审核场景）两种业务类型
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCSegmentModerationUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCSegmentModerationUsageResponse"/></returns>
+        public Task<DescribeTRTCSegmentModerationUsageResponse> DescribeTRTCSegmentModerationUsage(DescribeTRTCSegmentModerationUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCSegmentModerationUsageResponse>(req, "DescribeTRTCSegmentModerationUsage");
+        }
+
+        /// <summary>
+        /// 切片截图与内容理解用量查询，支持查询音视频切片（云端切片场景）和 AI 内容理解（审核场景）两种业务类型
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCSegmentModerationUsageRequest"/></param>
+        /// <returns><see cref="DescribeTRTCSegmentModerationUsageResponse"/></returns>
+        public DescribeTRTCSegmentModerationUsageResponse DescribeTRTCSegmentModerationUsageSync(DescribeTRTCSegmentModerationUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCSegmentModerationUsageResponse>(req, "DescribeTRTCSegmentModerationUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

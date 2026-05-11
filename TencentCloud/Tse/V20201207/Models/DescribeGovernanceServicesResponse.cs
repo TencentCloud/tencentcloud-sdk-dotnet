@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 服务数总量。
+        /// <p>服务数总量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 服务信息详情。
+        /// <p>服务信息详情。</p>
         /// </summary>
         [JsonProperty("Content")]
         public GovernanceService[] Content{ get; set; }

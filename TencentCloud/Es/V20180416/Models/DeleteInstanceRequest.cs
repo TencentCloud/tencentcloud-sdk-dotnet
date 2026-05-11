@@ -25,10 +25,22 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("LockEnabled")]
+        public bool? LockEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("LockDuration")]
+        public long? LockDuration{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Es.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "LockEnabled", this.LockEnabled);
+            this.SetParamSimple(map, prefix + "LockDuration", this.LockDuration);
         }
     }
 }

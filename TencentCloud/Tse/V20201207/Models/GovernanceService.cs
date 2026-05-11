@@ -25,130 +25,136 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 服务名称。
+        /// <p>服务名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 命名空间名称。
+        /// <p>命名空间名称。</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 元数据信息数组。
+        /// <p>元数据信息数组。</p>
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }
 
         /// <summary>
-        /// 描述信息。
+        /// <p>描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间。
+        /// <p>修改时间。</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 服务所属部门。
+        /// <p>服务所属部门。</p>
         /// </summary>
         [JsonProperty("Department")]
         public string Department{ get; set; }
 
         /// <summary>
-        /// 服务所属业务。
+        /// <p>服务所属业务。</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// 健康服务实例数
+        /// <p>健康服务实例数</p>
         /// </summary>
         [JsonProperty("HealthyInstanceCount")]
         public ulong? HealthyInstanceCount{ get; set; }
 
         /// <summary>
-        /// 服务实例总数
+        /// <p>服务实例总数</p>
         /// </summary>
         [JsonProperty("TotalInstanceCount")]
         public ulong? TotalInstanceCount{ get; set; }
 
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 是否可以编辑
+        /// <p>是否可以编辑</p>
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
-        /// 可以编辑该资源的用户ID
+        /// <p>可以编辑该资源的用户ID</p>
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 可以编辑该资源的用户组ID
+        /// <p>可以编辑该资源的用户组ID</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 移除可以编辑该资源的用户ID
+        /// <p>移除可以编辑该资源的用户ID</p>
         /// </summary>
         [JsonProperty("RemoveUserIds")]
         public string[] RemoveUserIds{ get; set; }
 
         /// <summary>
-        /// 移除可以编辑该资源的用户组ID
+        /// <p>移除可以编辑该资源的用户组ID</p>
         /// </summary>
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
         /// <summary>
-        /// 该服务对哪些命名空间可见	
+        /// <p>该服务对哪些命名空间可见</p>
         /// </summary>
         [JsonProperty("ExportTo")]
         public string[] ExportTo{ get; set; }
 
         /// <summary>
-        /// 该服务信息摘要签名
+        /// <p>该服务信息摘要签名</p>
         /// </summary>
         [JsonProperty("Revision")]
         public string Revision{ get; set; }
 
         /// <summary>
-        /// 是否开启同步到全局注册中心
+        /// <p>是否开启同步到全局注册中心</p>
         /// </summary>
         [JsonProperty("SyncToGlobalRegistry")]
         public bool? SyncToGlobalRegistry{ get; set; }
 
         /// <summary>
-        /// 隔离实例数
+        /// <p>隔离实例数</p>
         /// </summary>
         [JsonProperty("IsolateInstanceCount")]
         public ulong? IsolateInstanceCount{ get; set; }
 
         /// <summary>
-        /// 服务健康状态
+        /// <p>服务健康状态</p>
         /// </summary>
         [JsonProperty("ServiceStatus")]
         public long? ServiceStatus{ get; set; }
+
+        /// <summary>
+        /// <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
 
 
         /// <summary>
@@ -177,6 +183,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
             this.SetParamSimple(map, prefix + "IsolateInstanceCount", this.IsolateInstanceCount);
             this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

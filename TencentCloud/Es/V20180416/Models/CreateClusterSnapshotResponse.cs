@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]

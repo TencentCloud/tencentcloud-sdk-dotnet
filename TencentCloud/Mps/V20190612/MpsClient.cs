@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1423";
+       private const string sdkVersion = "SDK_NET_3.0.1424";
 
         /// <summary>
         /// Client constructor.
@@ -3213,7 +3213,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 音色设计，根据prompt生成音色ID
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
         /// </summary>
         /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
         /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
@@ -3223,13 +3223,34 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 音色设计，根据prompt生成音色ID
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
         /// </summary>
         /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
         /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
         public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
         {
             return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 快速探测视频文件的硬字幕区域
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoSubtitleAreaRequest"/></param>
+        /// <returns><see cref="DetectVideoSubtitleAreaResponse"/></returns>
+        public Task<DetectVideoSubtitleAreaResponse> DetectVideoSubtitleArea(DetectVideoSubtitleAreaRequest req)
+        {
+            return InternalRequestAsync<DetectVideoSubtitleAreaResponse>(req, "DetectVideoSubtitleArea");
+        }
+
+        /// <summary>
+        /// 快速探测视频文件的硬字幕区域
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoSubtitleAreaRequest"/></param>
+        /// <returns><see cref="DetectVideoSubtitleAreaResponse"/></returns>
+        public DetectVideoSubtitleAreaResponse DetectVideoSubtitleAreaSync(DetectVideoSubtitleAreaRequest req)
+        {
+            return InternalRequestAsync<DetectVideoSubtitleAreaResponse>(req, "DetectVideoSubtitleArea")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4425,7 +4446,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 同步接口，返回克隆音色Id或合成音频结果
+        /// 同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
         /// </summary>
         /// <param name="req"><see cref="SyncDubbingRequest"/></param>
         /// <returns><see cref="SyncDubbingResponse"/></returns>
@@ -4435,7 +4456,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 同步接口，返回克隆音色Id或合成音频结果
+        /// 同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
         /// </summary>
         /// <param name="req"><see cref="SyncDubbingRequest"/></param>
         /// <returns><see cref="SyncDubbingResponse"/></returns>

@@ -25,22 +25,28 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 模糊查询数据集ID，数据集名称，不传入时查询全量
+        /// <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认值20
+        /// <p>每页数量，默认值20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 起始偏移量，默认值0
+        /// <p>起始偏移量，默认值0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>模糊查询，传递模糊查询字段和对应的值</p>
+        /// </summary>
+        [JsonProperty("SearchFilters")]
+        public SearchFiltersProgram SearchFilters{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamObj(map, prefix + "SearchFilters.", this.SearchFilters);
         }
     }
 }

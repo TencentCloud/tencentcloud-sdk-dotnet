@@ -25,649 +25,668 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 用户UIN
+        /// <p>用户UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 实例所属VPC的UID
+        /// <p>实例所属VPC的UID</p>
         /// </summary>
         [JsonProperty("VpcUid")]
         public string VpcUid{ get; set; }
 
         /// <summary>
-        /// 实例所属子网的UID
+        /// <p>实例所属子网的UID</p>
         /// </summary>
         [JsonProperty("SubnetUid")]
         public string SubnetUid{ get; set; }
 
         /// <summary>
-        /// 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+        /// <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。取值范围：
-        /// RENEW_FLAG_AUTO：自动续费  
-        /// RENEW_FLAG_MANUAL：不自动续费
-        /// 默认取值：
-        /// RENEW_FLAG_DEFAULT：不自动续费
-        /// 若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+        /// <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+        /// <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 包年包月购买时长,单位:月
+        /// <p>包年包月购买时长,单位:月</p>
         /// </summary>
         [JsonProperty("ChargePeriod")]
         public ulong? ChargePeriod{ get; set; }
 
         /// <summary>
-        /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 节点个数
+        /// <p>节点个数</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 节点CPU核数
+        /// <p>节点CPU核数</p>
         /// </summary>
         [JsonProperty("CpuNum")]
         public ulong? CpuNum{ get; set; }
 
         /// <summary>
-        /// 节点内存大小，单位GB
+        /// <p>节点内存大小，单位GB</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 节点磁盘类型
+        /// <p>节点磁盘类型</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 节点磁盘大小，单位GB
+        /// <p>节点磁盘大小，单位GB</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// ES域名
+        /// <p>ES域名</p>
         /// </summary>
         [JsonProperty("EsDomain")]
         public string EsDomain{ get; set; }
 
         /// <summary>
-        /// ES VIP
+        /// <p>ES VIP</p>
         /// </summary>
         [JsonProperty("EsVip")]
         public string EsVip{ get; set; }
 
         /// <summary>
-        /// ES端口
+        /// <p>ES端口</p>
         /// </summary>
         [JsonProperty("EsPort")]
         public ulong? EsPort{ get; set; }
 
         /// <summary>
-        /// Kibana访问url
+        /// <p>Kibana访问url</p>
         /// </summary>
         [JsonProperty("KibanaUrl")]
         public string KibanaUrl{ get; set; }
 
         /// <summary>
-        /// ES版本号
+        /// <p>ES版本号</p>
         /// </summary>
         [JsonProperty("EsVersion")]
         public string EsVersion{ get; set; }
 
         /// <summary>
-        /// ES配置项
+        /// <p>ES配置项</p>
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
 
         /// <summary>
-        /// Kibana访问控制配置
+        /// <p>Kibana访问控制配置</p>
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例最后修改操作时间
+        /// <p>实例最后修改操作时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 实例到期时间
+        /// <p>实例到期时间</p>
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }
 
         /// <summary>
-        /// 实例类型（实例类型标识，当前只有1,2两种）
+        /// <p>实例类型（实例类型标识，当前只有1,2两种）</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// Ik分词器配置
+        /// <p>Ik分词器配置</p>
         /// </summary>
         [JsonProperty("IkConfig")]
         public EsDictionaryInfo IkConfig{ get; set; }
 
         /// <summary>
-        /// 专用主节点配置
+        /// <p>专用主节点配置</p>
         /// </summary>
         [JsonProperty("MasterNodeInfo")]
         public MasterNodeInfo MasterNodeInfo{ get; set; }
 
         /// <summary>
-        /// cos自动备份配置
+        /// <p>cos自动备份配置</p>
         /// </summary>
         [JsonProperty("CosBackup")]
         public CosBackup CosBackup{ get; set; }
 
         /// <summary>
-        /// 是否允许cos自动备份
+        /// <p>是否允许cos自动备份</p>
         /// </summary>
         [JsonProperty("AllowCosBackup")]
         public bool? AllowCosBackup{ get; set; }
 
         /// <summary>
-        /// 实例拥有的标签列表
+        /// <p>实例拥有的标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
         /// <summary>
-        /// License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+        /// <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
         /// </summary>
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
         /// <summary>
-        /// 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+        /// <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableHotWarmMode")]
         public bool? EnableHotWarmMode{ get; set; }
 
         /// <summary>
-        /// 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmNodeType")]
         public string WarmNodeType{ get; set; }
 
         /// <summary>
-        /// 温节点个数
+        /// <p>温节点个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmNodeNum")]
         public ulong? WarmNodeNum{ get; set; }
 
         /// <summary>
-        /// 温节点CPU核数
+        /// <p>温节点CPU核数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmCpuNum")]
         public ulong? WarmCpuNum{ get; set; }
 
         /// <summary>
-        /// 温节点内存内存大小，单位GB
+        /// <p>温节点内存内存大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmMemSize")]
         public ulong? WarmMemSize{ get; set; }
 
         /// <summary>
-        /// 温节点磁盘类型
+        /// <p>温节点磁盘类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmDiskType")]
         public string WarmDiskType{ get; set; }
 
         /// <summary>
-        /// 温节点磁盘大小，单位GB
+        /// <p>温节点磁盘大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmDiskSize")]
         public ulong? WarmDiskSize{ get; set; }
 
         /// <summary>
-        /// 集群节点信息列表
+        /// <p>集群节点信息列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeInfoList")]
         public NodeInfo[] NodeInfoList{ get; set; }
 
         /// <summary>
-        /// Es公网地址
+        /// <p>Es公网地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsPublicUrl")]
         public string EsPublicUrl{ get; set; }
 
         /// <summary>
-        /// 多可用区网络信息
+        /// <p>多可用区网络信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiZoneInfo")]
         public ZoneDetail[] MultiZoneInfo{ get; set; }
 
         /// <summary>
-        /// 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+        /// <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMode")]
         public ulong? DeployMode{ get; set; }
 
         /// <summary>
-        /// ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+        /// <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccess")]
         public string PublicAccess{ get; set; }
 
         /// <summary>
-        /// ES公网访问控制配置
+        /// <p>ES公网访问控制配置</p>
         /// </summary>
         [JsonProperty("EsPublicAcl")]
         public EsAcl EsPublicAcl{ get; set; }
 
         /// <summary>
-        /// Kibana内网地址
+        /// <p>Kibana内网地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPrivateUrl")]
         public string KibanaPrivateUrl{ get; set; }
 
         /// <summary>
-        /// Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+        /// <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPublicAccess")]
         public string KibanaPublicAccess{ get; set; }
 
         /// <summary>
-        /// Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+        /// <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+        /// <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityType")]
         public ulong? SecurityType{ get; set; }
 
         /// <summary>
-        /// 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+        /// <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneType")]
         public long? SceneType{ get; set; }
 
         /// <summary>
-        /// Kibana配置项
+        /// <p>Kibana配置项</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaConfig")]
         public string KibanaConfig{ get; set; }
 
         /// <summary>
-        /// Kibana节点信息
+        /// <p>Kibana节点信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaNodeInfo")]
         public KibanaNodeInfo KibanaNodeInfo{ get; set; }
 
         /// <summary>
-        /// 可视化节点配置
+        /// <p>可视化节点配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebNodeTypeInfo")]
         public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
 
         /// <summary>
-        /// JDK类型，oracle或kona
+        /// <p>JDK类型，oracle或kona</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Jdk")]
         public string Jdk{ get; set; }
 
         /// <summary>
-        /// 集群网络通讯协议
+        /// <p>集群网络通讯协议</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 安全组id
+        /// <p>安全组id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
-        /// 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdNodeType")]
         public string ColdNodeType{ get; set; }
 
         /// <summary>
-        /// 冷节点个数
+        /// <p>冷节点个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdNodeNum")]
         public ulong? ColdNodeNum{ get; set; }
 
         /// <summary>
-        /// 冷节点CPU核数
+        /// <p>冷节点CPU核数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdCpuNum")]
         public ulong? ColdCpuNum{ get; set; }
 
         /// <summary>
-        /// 冷节点内存大小，单位GB
+        /// <p>冷节点内存大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdMemSize")]
         public ulong? ColdMemSize{ get; set; }
 
         /// <summary>
-        /// 冷节点磁盘类型
+        /// <p>冷节点磁盘类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdDiskType")]
         public string ColdDiskType{ get; set; }
 
         /// <summary>
-        /// 冷节点磁盘大小，单位GB
+        /// <p>冷节点磁盘大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColdDiskSize")]
         public ulong? ColdDiskSize{ get; set; }
 
         /// <summary>
-        /// 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenNodeType")]
         public string FrozenNodeType{ get; set; }
 
         /// <summary>
-        /// 冻节点个数
+        /// <p>冻节点个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenNodeNum")]
         public ulong? FrozenNodeNum{ get; set; }
 
         /// <summary>
-        /// 冻节点CPU核数
+        /// <p>冻节点CPU核数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenCpuNum")]
         public ulong? FrozenCpuNum{ get; set; }
 
         /// <summary>
-        /// 冻节点内存大小，单位GB
+        /// <p>冻节点内存大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenMemSize")]
         public ulong? FrozenMemSize{ get; set; }
 
         /// <summary>
-        /// 冻节点磁盘类型
+        /// <p>冻节点磁盘类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenDiskType")]
         public string FrozenDiskType{ get; set; }
 
         /// <summary>
-        /// 冻节点磁盘大小，单位GB
+        /// <p>冻节点磁盘大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrozenDiskSize")]
         public ulong? FrozenDiskSize{ get; set; }
 
         /// <summary>
-        /// 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+        /// <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthStatus")]
         public long? HealthStatus{ get; set; }
 
         /// <summary>
-        /// https集群内网url
+        /// <p>https集群内网url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsPrivateUrl")]
         public string EsPrivateUrl{ get; set; }
 
         /// <summary>
-        /// https集群内网域名
+        /// <p>https集群内网域名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsPrivateDomain")]
         public string EsPrivateDomain{ get; set; }
 
         /// <summary>
-        /// 集群的配置组信息
+        /// <p>集群的配置组信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsConfigSets")]
         public EsConfigSetInfo[] EsConfigSets{ get; set; }
 
         /// <summary>
-        /// 集群可维护时间段
+        /// <p>集群可维护时间段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationDuration")]
         public OperationDuration OperationDuration{ get; set; }
 
         /// <summary>
-        /// web节点列表
+        /// <p>web节点列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptionalWebServiceInfos")]
         public OptionalWebServiceInfo[] OptionalWebServiceInfos{ get; set; }
 
         /// <summary>
-        /// 自治索引开关
+        /// <p>自治索引开关</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoIndexEnabled")]
         public bool? AutoIndexEnabled{ get; set; }
 
         /// <summary>
-        /// 是否支持存储计算分离
+        /// <p>是否支持存储计算分离</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableHybridStorage")]
         public bool? EnableHybridStorage{ get; set; }
 
         /// <summary>
-        /// 流程进度
+        /// <p>流程进度</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessPercent")]
         public float? ProcessPercent{ get; set; }
 
         /// <summary>
-        /// Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+        /// <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }
 
         /// <summary>
-        /// 本月是否有内核可以更新：false-无，true-有
+        /// <p>本月是否有内核可以更新：false-无，true-有</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasKernelUpgrade")]
         public bool? HasKernelUpgrade{ get; set; }
 
         /// <summary>
-        /// cdcId，使用cdc子网时传递
+        /// <p>cdcId，使用cdc子网时传递</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// kibana内网vip
+        /// <p>kibana内网vip</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPrivateVip")]
         public string KibanaPrivateVip{ get; set; }
 
         /// <summary>
-        /// 自定义kibana内网url
+        /// <p>自定义kibana内网url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomKibanaPrivateUrl")]
         public string CustomKibanaPrivateUrl{ get; set; }
 
         /// <summary>
-        /// 节点出站访问详细信息
+        /// <p>节点出站访问详细信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutboundPublicAcls")]
         public OutboundPublicAcl[] OutboundPublicAcls{ get; set; }
 
         /// <summary>
-        /// 网络连接方案
+        /// <p>网络连接方案</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetConnectScheme")]
         public string NetConnectScheme{ get; set; }
 
         /// <summary>
-        /// 置放群组相关参数
+        /// <p>置放群组相关参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupAffinity")]
         public ulong? DisasterRecoverGroupAffinity{ get; set; }
 
         /// <summary>
-        /// 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+        /// <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
-        /// 存算分离cos用量，单位M
+        /// <p>存算分离cos用量，单位M</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosBucketStorageSize")]
         public ulong? CosBucketStorageSize{ get; set; }
 
         /// <summary>
-        /// 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+        /// <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadWriteMode")]
         public long? ReadWriteMode{ get; set; }
 
         /// <summary>
-        /// 是否有置放群组异步调度任务
+        /// <p>是否有置放群组异步调度任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableScheduleRecoverGroup")]
         public bool? EnableScheduleRecoverGroup{ get; set; }
 
         /// <summary>
-        /// 异步调度任务的时间
+        /// <p>异步调度任务的时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableScheduleOperationDuration")]
         public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
 
         /// <summary>
-        /// 开启集群保护：OPEN-开启，CLOSE-关闭
+        /// <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableDestroyProtection")]
         public string EnableDestroyProtection{ get; set; }
 
         /// <summary>
-        /// kibana内网访问地址
+        /// <p>kibana内网访问地址</p>
         /// </summary>
         [JsonProperty("ShowKibanaIpPort")]
         public string ShowKibanaIpPort{ get; set; }
 
         /// <summary>
-        /// 是否为CDZLite可用区
+        /// <p>是否为CDZLite可用区</p>
         /// </summary>
         [JsonProperty("IsCdzLite")]
         public bool? IsCdzLite{ get; set; }
 
         /// <summary>
-        /// 集群内网tcp地址
+        /// <p>集群内网tcp地址</p>
         /// </summary>
         [JsonProperty("EsPrivateTcpUrl")]
         public string EsPrivateTcpUrl{ get; set; }
+
+        /// <summary>
+        /// <p>是否在回收站内</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("IsInRecycleBin")]
+        public bool? IsInRecycleBin{ get; set; }
+
+        /// <summary>
+        /// <p>回收站内是否锁定</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("RecycleLockEnabled")]
+        public bool? RecycleLockEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+        /// </summary>
+        [JsonProperty("MayDestroyPoint")]
+        public string MayDestroyPoint{ get; set; }
+
+        /// <summary>
+        /// <p>延迟销毁的时间</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("DelayDestroyInterval")]
+        public long? DelayDestroyInterval{ get; set; }
 
 
         /// <summary>
@@ -772,6 +791,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
             this.SetParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
             this.SetParamSimple(map, prefix + "EsPrivateTcpUrl", this.EsPrivateTcpUrl);
+            this.SetParamSimple(map, prefix + "IsInRecycleBin", this.IsInRecycleBin);
+            this.SetParamSimple(map, prefix + "RecycleLockEnabled", this.RecycleLockEnabled);
+            this.SetParamSimple(map, prefix + "MayDestroyPoint", this.MayDestroyPoint);
+            this.SetParamSimple(map, prefix + "DelayDestroyInterval", this.DelayDestroyInterval);
         }
     }
 }

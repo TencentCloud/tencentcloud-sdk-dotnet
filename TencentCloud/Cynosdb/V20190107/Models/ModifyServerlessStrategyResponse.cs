@@ -25,14 +25,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 异步流程id
+        /// <p>异步流程id</p>
         /// </summary>
         [JsonProperty("FlowId")]
         [System.Obsolete]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

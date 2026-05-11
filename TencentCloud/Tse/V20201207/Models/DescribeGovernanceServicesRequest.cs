@@ -25,76 +25,82 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 按照服务名过滤，精确匹配。
+        /// <p>按照服务名过滤，精确匹配。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 按照命名空间过滤，精确匹配。
+        /// <p>按照命名空间过滤，精确匹配。</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
+        /// <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// tse 实例 id。
+        /// <p>tse 实例 id。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 服务所属部门。
+        /// <p>服务所属部门。</p>
         /// </summary>
         [JsonProperty("Department")]
         public string Department{ get; set; }
 
         /// <summary>
-        /// 服务所属业务。
+        /// <p>服务所属业务。</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// 服务中实例的ip，用来过滤服务。
+        /// <p>服务中实例的ip，用来过滤服务。</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 是否只查询存在健康实例的服务
+        /// <p>是否只查询存在健康实例的服务</p>
         /// </summary>
         [JsonProperty("OnlyExistHealthyInstance")]
         public bool? OnlyExistHealthyInstance{ get; set; }
 
         /// <summary>
-        /// 是否开启同步到全局注册中心	
+        /// <p>是否开启同步到全局注册中心</p>
         /// </summary>
         [JsonProperty("SyncToGlobalRegistry")]
         public string SyncToGlobalRegistry{ get; set; }
 
         /// <summary>
-        /// 过滤筛选条件
+        /// <p>过滤筛选条件</p>
         /// </summary>
         [JsonProperty("StatusFilter")]
         public Filter[] StatusFilter{ get; set; }
+
+        /// <summary>
+        /// <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
             this.SetParamArrayObj(map, prefix + "StatusFilter.", this.StatusFilter);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

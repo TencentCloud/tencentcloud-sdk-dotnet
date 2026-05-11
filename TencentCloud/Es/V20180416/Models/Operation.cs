@@ -25,65 +25,71 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 操作唯一id
+        /// <p>操作唯一id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 操作开始时间
+        /// <p>操作开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 操作类型
+        /// <p>操作类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 操作详情
+        /// <p>操作详情</p>
         /// </summary>
         [JsonProperty("Detail")]
         public OperationDetail Detail{ get; set; }
 
         /// <summary>
-        /// 操作结果
+        /// <p>操作结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 流程任务信息
+        /// <p>流程任务信息</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public TaskDetail[] Tasks{ get; set; }
 
         /// <summary>
-        /// 操作进度
+        /// <p>操作进度</p>
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// 回滚标记， 0未回滚 ，1回滚中，2已回滚
+        /// <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
         /// </summary>
         [JsonProperty("RollbackTag")]
         public long? RollbackTag{ get; set; }
 
         /// <summary>
-        /// 操作者Uin
+        /// <p>操作者Uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
-        /// 自动扩容标识：0-非自动，1-自动
+        /// <p>自动扩容标识：0-非自动，1-自动</p>
         /// </summary>
         [JsonProperty("AutoScaleTag")]
         public ulong? AutoScaleTag{ get; set; }
+
+        /// <summary>
+        /// <p>流程异常原因</p>
+        /// </summary>
+        [JsonProperty("SuspendedReason")]
+        public string SuspendedReason{ get; set; }
 
 
         /// <summary>
@@ -101,6 +107,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
+            this.SetParamSimple(map, prefix + "SuspendedReason", this.SuspendedReason);
         }
     }
 }

@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// cpu最小值
+        /// <p>cpu最小值</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// cpu最大值
+        /// <p>cpu最大值</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// 最大存储空间
+        /// <p>最大存储空间</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// 是否为默认规格
+        /// <p>是否为默认规格</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 是否有库存
+        /// <p>是否有库存</p>
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
         /// <summary>
-        /// 库存数量
+        /// <p>库存数量</p>
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }
 
         /// <summary>
-        /// 可用区库存信息
+        /// <p>可用区库存信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
