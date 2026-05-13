@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1422</VersionPrefix>
+    <VersionPrefix>3.0.1426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,7 +53,11 @@
     <Compile Include="V20180608\Models\AIModelSecret.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
+    <Compile Include="V20180608\Models\AllocateEnvRequest.cs" />
+    <Compile Include="V20180608\Models\AllocateEnvResponse.cs" />
     <Compile Include="V20180608\Models\ApiKeyToken.cs" />
+    <Compile Include="V20180608\Models\AssumeRoleForAllocatedEnvRequest.cs" />
+    <Compile Include="V20180608\Models\AssumeRoleForAllocatedEnvResponse.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
     <Compile Include="V20180608\Models\BanConfig.cs" />
@@ -259,6 +263,8 @@
     <Compile Include="V20180608\Models\ProviderConfig.cs" />
     <Compile Include="V20180608\Models\ProviderRequestParametersMap.cs" />
     <Compile Include="V20180608\Models\ProviderResponseParametersMap.cs" />
+    <Compile Include="V20180608\Models\ReleaseEnvRequest.cs" />
+    <Compile Include="V20180608\Models\ReleaseEnvResponse.cs" />
     <Compile Include="V20180608\Models\RenewEnvRequest.cs" />
     <Compile Include="V20180608\Models\RenewEnvResponse.cs" />
     <Compile Include="V20180608\Models\RunCommandsRequest.cs" />

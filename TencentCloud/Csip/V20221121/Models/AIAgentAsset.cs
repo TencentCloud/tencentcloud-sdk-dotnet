@@ -96,6 +96,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("SkillState")]
         public SkillState SkillState{ get; set; }
 
+        /// <summary>
+        /// <p>流量沙箱插件状态</p>
+        /// </summary>
+        [JsonProperty("TrafficPluginState")]
+        public TrafficPluginState TrafficPluginState{ get; set; }
+
+        /// <summary>
+        /// <p>流量沙箱规则状态</p>
+        /// </summary>
+        [JsonProperty("TrafficRuleState")]
+        public TrafficRuleState[] TrafficRuleState{ get; set; }
+
+        /// <summary>
+        /// <p>命令沙箱插件状态</p>
+        /// </summary>
+        [JsonProperty("CommandPluginState")]
+        public CommandPluginState CommandPluginState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +132,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ExposureStatus", this.ExposureStatus);
             this.SetParamSimple(map, prefix + "MetadataRiskURL", this.MetadataRiskURL);
             this.SetParamObj(map, prefix + "SkillState.", this.SkillState);
+            this.SetParamObj(map, prefix + "TrafficPluginState.", this.TrafficPluginState);
+            this.SetParamArrayObj(map, prefix + "TrafficRuleState.", this.TrafficRuleState);
+            this.SetParamObj(map, prefix + "CommandPluginState.", this.CommandPluginState);
         }
     }
 }

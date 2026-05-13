@@ -25,67 +25,61 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 封装格式，可选值：mp4、flv、hls、ts、webm、mkv、mxf、mov、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+        /// <p>封装格式，可选值：mp4、flv、hls、ts、webm、mkv、mxf、mov、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 转码模板名称，长度限制：64 个字符。
+        /// <p>转码模板名称，长度限制：64 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述信息，长度限制：256 个字符。
+        /// <p>模板描述信息，长度限制：256 个字符。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 是否去除视频数据，可选值：
-        /// <li>0：保留</li>
-        /// <li>1：去除</li>
-        /// 默认值：0。
+        /// <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 是否去除音频数据，可选值：
-        /// <li>0：保留</li>
-        /// <li>1：去除</li>
-        /// 默认值：0。
+        /// <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
+        /// <p>视频流配置参数，当 RemoveVideo 为 0，该字段必填。</p>
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+        /// <p>音频流配置参数，当 RemoveAudio 为 0，该字段必填。</p>
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 极速高清转码参数。
+        /// <p>极速高清转码参数。</p>
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// 音视频增强配置。
+        /// <p>音视频增强配置。</p>
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 扩展参数，序列化的 json 字符串。
+        /// <p>扩展参数，序列化的 json 字符串。</p>
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

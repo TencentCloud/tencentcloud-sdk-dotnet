@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1381</VersionPrefix>
+    <VersionPrefix>3.0.1426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -110,6 +110,8 @@
     <Compile Include="V20210119\Models\GetGroupDetailResponse.cs" />
     <Compile Include="V20210119\Models\GetGroupListRequest.cs" />
     <Compile Include="V20210119\Models\GetGroupListResponse.cs" />
+    <Compile Include="V20210119\Models\GetHardwareInfoRequest.cs" />
+    <Compile Include="V20210119\Models\GetHardwareInfoResponse.cs" />
     <Compile Include="V20210119\Models\GetHardwareListRequest.cs" />
     <Compile Include="V20210119\Models\GetHardwareListResponse.cs" />
     <Compile Include="V20210119\Models\GetL3ConnListRequest.cs" />

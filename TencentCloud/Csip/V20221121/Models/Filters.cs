@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 过滤条件名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例ID内容
+        /// 过滤条件值列表
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 模糊匹配
+        /// 是否精确匹配：1 精确匹配；默认模糊匹配
         /// </summary>
         [JsonProperty("ExactMatch")]
         public string ExactMatch{ get; set; }

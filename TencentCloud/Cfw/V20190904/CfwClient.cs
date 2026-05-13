@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -978,6 +978,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeDefenseSwitchResponse DescribeDefenseSwitchSync(DescribeDefenseSwitchRequest req)
         {
             return InternalRequestAsync<DescribeDefenseSwitchResponse>(req, "DescribeDefenseSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 互联网边界防火墙开关列表(轻量)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeIpSimpleRequest"/></param>
+        /// <returns><see cref="DescribeEdgeIpSimpleResponse"/></returns>
+        public Task<DescribeEdgeIpSimpleResponse> DescribeEdgeIpSimple(DescribeEdgeIpSimpleRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeIpSimpleResponse>(req, "DescribeEdgeIpSimple");
+        }
+
+        /// <summary>
+        /// 互联网边界防火墙开关列表(轻量)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeIpSimpleRequest"/></param>
+        /// <returns><see cref="DescribeEdgeIpSimpleResponse"/></returns>
+        public DescribeEdgeIpSimpleResponse DescribeEdgeIpSimpleSync(DescribeEdgeIpSimpleRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeIpSimpleResponse>(req, "DescribeEdgeIpSimple")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

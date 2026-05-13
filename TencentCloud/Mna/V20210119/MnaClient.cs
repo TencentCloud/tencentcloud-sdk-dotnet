@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1381";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -596,6 +596,27 @@ namespace TencentCloud.Mna.V20210119
         public GetGroupListResponse GetGroupListSync(GetGroupListRequest req)
         {
             return InternalRequestAsync<GetGroupListResponse>(req, "GetGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取硬件设备信息
+        /// </summary>
+        /// <param name="req"><see cref="GetHardwareInfoRequest"/></param>
+        /// <returns><see cref="GetHardwareInfoResponse"/></returns>
+        public Task<GetHardwareInfoResponse> GetHardwareInfo(GetHardwareInfoRequest req)
+        {
+            return InternalRequestAsync<GetHardwareInfoResponse>(req, "GetHardwareInfo");
+        }
+
+        /// <summary>
+        /// 获取硬件设备信息
+        /// </summary>
+        /// <param name="req"><see cref="GetHardwareInfoRequest"/></param>
+        /// <returns><see cref="GetHardwareInfoResponse"/></returns>
+        public GetHardwareInfoResponse GetHardwareInfoSync(GetHardwareInfoRequest req)
+        {
+            return InternalRequestAsync<GetHardwareInfoResponse>(req, "GetHardwareInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

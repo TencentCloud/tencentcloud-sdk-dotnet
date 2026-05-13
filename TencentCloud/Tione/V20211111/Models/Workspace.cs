@@ -52,6 +52,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// <p>绑定的资源组信息</p>
         /// </summary>
         [JsonProperty("ResourceGroups")]
+        [System.Obsolete]
         public ResourceGroupInWorkspace[] ResourceGroups{ get; set; }
 
         /// <summary>

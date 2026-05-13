@@ -25,28 +25,34 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 标识模型命中还是关键词命中
+        /// <p>标识模型命中还是关键词命中</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 命中关键词
+        /// <p>命中关键词</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 自定义词库名称
+        /// <p>自定义词库名称</p>
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
 
         /// <summary>
-        /// 位置信息
+        /// <p>位置信息</p>
         /// </summary>
         [JsonProperty("Positions")]
         public Positions[] Positions{ get; set; }
+
+        /// <summary>
+        /// <p>命中标签</p>
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "LibName", this.LibName);
             this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

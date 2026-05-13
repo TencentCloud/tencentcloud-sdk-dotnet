@@ -25,134 +25,146 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 规格
+        /// <p>规格</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 4
+        /// <p>4</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 8，单位G
+        /// <p>8，单位G</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 排序，越小排的越前
+        /// <p>排序，越小排的越前</p>
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }
 
         /// <summary>
-        /// 售罄原因
+        /// <p>售罄原因</p>
         /// </summary>
         [JsonProperty("SellOutReason")]
         public string SellOutReason{ get; set; }
 
         /// <summary>
-        /// 系统盘
+        /// <p>系统盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemDisk")]
         public NodeSpecDisk[] SystemDisk{ get; set; }
 
         /// <summary>
-        /// 数据盘
+        /// <p>数据盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisk")]
         public NodeSpecDisk[] DataDisk{ get; set; }
 
         /// <summary>
-        /// 本地数据盘
+        /// <p>本地数据盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDataDisk")]
         public NodeSpecDisk[] LocalDataDisk{ get; set; }
 
         /// <summary>
-        /// 售罄原因
+        /// <p>售罄原因</p>
         /// </summary>
         [JsonProperty("SoldOutReason")]
         public string SoldOutReason{ get; set; }
 
         /// <summary>
-        /// 机型类别
+        /// <p>机型类别</p>
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// <p>节点名称</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 类别
+        /// <p>类别</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 类别名称
+        /// <p>类别名称</p>
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// 类别分类
+        /// <p>类别分类</p>
         /// </summary>
         [JsonProperty("FamilyName")]
         public string FamilyName{ get; set; }
 
         /// <summary>
-        /// cpu类型
+        /// <p>cpu类型</p>
         /// </summary>
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
         /// <summary>
-        /// 售罄 RunOut、库存少 Less、充足 Enough
+        /// <p>售罄 RunOut、库存少 Less、充足 Enough</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 原价
+        /// <p>原价</p>
         /// </summary>
         [JsonProperty("OriginPrice")]
         public float? OriginPrice{ get; set; }
 
         /// <summary>
-        /// 包销计费机型支持的购买时长
+        /// <p>包销计费机型支持的购买时长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepaidUnderwritePeriods")]
         public long?[] PrepaidUnderwritePeriods{ get; set; }
 
         /// <summary>
-        /// GPU信息
+        /// <p>GPU信息</p>
         /// </summary>
         [JsonProperty("GpuDesc")]
         public string GpuDesc{ get; set; }
+
+        /// <summary>
+        /// <p>配额数量</p>
+        /// </summary>
+        [JsonProperty("QuotaNum")]
+        public long? QuotaNum{ get; set; }
+
+        /// <summary>
+        /// <p>配额单位</p>
+        /// </summary>
+        [JsonProperty("QuotaUnit")]
+        public string QuotaUnit{ get; set; }
 
 
         /// <summary>
@@ -181,6 +193,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
             this.SetParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+            this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+            this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
         }
     }
 }

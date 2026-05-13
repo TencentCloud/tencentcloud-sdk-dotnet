@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,48 @@ namespace TencentCloud.Tcb.V20180608
         public AddProviderResponse AddProviderSync(AddProviderRequest req)
         {
             return InternalRequestAsync<AddProviderResponse>(req, "AddProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从环境池里立即取出1个环境
+        /// </summary>
+        /// <param name="req"><see cref="AllocateEnvRequest"/></param>
+        /// <returns><see cref="AllocateEnvResponse"/></returns>
+        public Task<AllocateEnvResponse> AllocateEnv(AllocateEnvRequest req)
+        {
+            return InternalRequestAsync<AllocateEnvResponse>(req, "AllocateEnv");
+        }
+
+        /// <summary>
+        /// 从环境池里立即取出1个环境
+        /// </summary>
+        /// <param name="req"><see cref="AllocateEnvRequest"/></param>
+        /// <returns><see cref="AllocateEnvResponse"/></returns>
+        public AllocateEnvResponse AllocateEnvSync(AllocateEnvRequest req)
+        {
+            return InternalRequestAsync<AllocateEnvResponse>(req, "AllocateEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 白名单接口，申请Tcb角色临时凭证
+        /// </summary>
+        /// <param name="req"><see cref="AssumeRoleForAllocatedEnvRequest"/></param>
+        /// <returns><see cref="AssumeRoleForAllocatedEnvResponse"/></returns>
+        public Task<AssumeRoleForAllocatedEnvResponse> AssumeRoleForAllocatedEnv(AssumeRoleForAllocatedEnvRequest req)
+        {
+            return InternalRequestAsync<AssumeRoleForAllocatedEnvResponse>(req, "AssumeRoleForAllocatedEnv");
+        }
+
+        /// <summary>
+        /// 白名单接口，申请Tcb角色临时凭证
+        /// </summary>
+        /// <param name="req"><see cref="AssumeRoleForAllocatedEnvRequest"/></param>
+        /// <returns><see cref="AssumeRoleForAllocatedEnvResponse"/></returns>
+        public AssumeRoleForAllocatedEnvResponse AssumeRoleForAllocatedEnvSync(AssumeRoleForAllocatedEnvRequest req)
+        {
+            return InternalRequestAsync<AssumeRoleForAllocatedEnvResponse>(req, "AssumeRoleForAllocatedEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1742,6 +1784,27 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
         {
             return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从环境池里立即取出1个环境
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseEnvRequest"/></param>
+        /// <returns><see cref="ReleaseEnvResponse"/></returns>
+        public Task<ReleaseEnvResponse> ReleaseEnv(ReleaseEnvRequest req)
+        {
+            return InternalRequestAsync<ReleaseEnvResponse>(req, "ReleaseEnv");
+        }
+
+        /// <summary>
+        /// 从环境池里立即取出1个环境
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseEnvRequest"/></param>
+        /// <returns><see cref="ReleaseEnvResponse"/></returns>
+        public ReleaseEnvResponse ReleaseEnvSync(ReleaseEnvRequest req)
+        {
+            return InternalRequestAsync<ReleaseEnvResponse>(req, "ReleaseEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -114,6 +114,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ModifyTs")]
         public ulong? ModifyTs{ get; set; }
 
+        /// <summary>
+        /// 基础配额信息
+        /// </summary>
+        [JsonProperty("Quota")]
+        public RabbitMQVHostBaseQuota Quota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
             this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
             this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+            this.SetParamObj(map, prefix + "Quota.", this.Quota);
         }
     }
 }

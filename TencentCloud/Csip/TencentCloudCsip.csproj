@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1425</VersionPrefix>
+    <VersionPrefix>3.0.1426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
+    <Compile Include="V20221121\Models\CommandPluginState.cs" />
     <Compile Include="V20221121\Models\CreateAccessKeyCheckTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateAccessKeyCheckTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateAccessKeySyncTaskRequest.cs" />
@@ -114,6 +115,8 @@
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateSkillScanRequest.cs" />
+    <Compile Include="V20221121\Models\CreateSkillScanResponse.cs" />
     <Compile Include="V20221121\Models\CredentialEffectScope.cs" />
     <Compile Include="V20221121\Models\CsipRiskCenterStatistics.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
@@ -339,6 +342,8 @@
     <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanResultRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanResultResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubUserInfoRequest.cs" />
@@ -507,6 +512,11 @@
     <Compile Include="V20221121\Models\ServerRisk.cs" />
     <Compile Include="V20221121\Models\ServerRiskSuggestion.cs" />
     <Compile Include="V20221121\Models\ServiceSupport.cs" />
+    <Compile Include="V20221121\Models\SkillCapabilityTag.cs" />
+    <Compile Include="V20221121\Models\SkillRuleCatalogItem.cs" />
+    <Compile Include="V20221121\Models\SkillScanEngineResult.cs" />
+    <Compile Include="V20221121\Models\SkillScanItem.cs" />
+    <Compile Include="V20221121\Models\SkillScanRuleHit.cs" />
     <Compile Include="V20221121\Models\SkillState.cs" />
     <Compile Include="V20221121\Models\SourceIPAsset.cs" />
     <Compile Include="V20221121\Models\SourceIPVpcInfo.cs" />
@@ -533,6 +543,8 @@
     <Compile Include="V20221121\Models\TaskIdListKey.cs" />
     <Compile Include="V20221121\Models\TaskLogInfo.cs" />
     <Compile Include="V20221121\Models\TaskLogURL.cs" />
+    <Compile Include="V20221121\Models\TrafficPluginState.cs" />
+    <Compile Include="V20221121\Models\TrafficRuleState.cs" />
     <Compile Include="V20221121\Models\UebaCustomRule.cs" />
     <Compile Include="V20221121\Models\UebaEventContent.cs" />
     <Compile Include="V20221121\Models\UebaRule.cs" />

@@ -90,6 +90,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FeedbackContent")]
         public string FeedbackContent{ get; set; }
 
+        /// <summary>
+        /// <p>用户</p>
+        /// </summary>
+        [JsonProperty("Visitor")]
+        public string Visitor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +112,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
+            this.SetParamSimple(map, prefix + "Visitor", this.Visitor);
         }
     }
 }

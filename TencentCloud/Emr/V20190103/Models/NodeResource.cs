@@ -25,48 +25,60 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 配置Id
+        /// <p>配置Id</p>
         /// </summary>
         [JsonProperty("ResourceConfigId")]
         public ulong? ResourceConfigId{ get; set; }
 
         /// <summary>
-        /// Resource
+        /// <p>Resource</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 是否默认配置,DEFAULT,BACKUP
+        /// <p>是否默认配置,DEFAULT,BACKUP</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }
 
         /// <summary>
-        /// 该类型剩余
+        /// <p>该类型剩余</p>
         /// </summary>
         [JsonProperty("MaxResourceNum")]
         public ulong? MaxResourceNum{ get; set; }
 
         /// <summary>
-        /// 支持的包销时长
+        /// <p>支持的包销时长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepaidUnderwritePeriods")]
         public long?[] PrepaidUnderwritePeriods{ get; set; }
+
+        /// <summary>
+        /// <p>配额数量</p>
+        /// </summary>
+        [JsonProperty("QuotaNum")]
+        public long? QuotaNum{ get; set; }
+
+        /// <summary>
+        /// <p>配额单位</p>
+        /// </summary>
+        [JsonProperty("QuotaUnit")]
+        public string QuotaUnit{ get; set; }
 
 
         /// <summary>
@@ -81,6 +93,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "MaxResourceNum", this.MaxResourceNum);
             this.SetParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
+            this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+            this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
         }
     }
 }

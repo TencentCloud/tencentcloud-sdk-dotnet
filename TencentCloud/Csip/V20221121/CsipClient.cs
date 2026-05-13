@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1425";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTaskSync(CreateRiskCenterScanTaskRequest req)
         {
             return InternalRequestAsync<CreateRiskCenterScanTaskResponse>(req, "CreateRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillScanRequest"/></param>
+        /// <returns><see cref="CreateSkillScanResponse"/></returns>
+        public Task<CreateSkillScanResponse> CreateSkillScan(CreateSkillScanRequest req)
+        {
+            return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan");
+        }
+
+        /// <summary>
+        /// 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillScanRequest"/></param>
+        /// <returns><see cref="CreateSkillScanResponse"/></returns>
+        public CreateSkillScanResponse CreateSkillScanSync(CreateSkillScanRequest req)
+        {
+            return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2696,6 +2717,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
         {
             return InternalRequestAsync<DescribeSearchBugInfoResponse>(req, "DescribeSearchBugInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测结果。调用 CreateSkillScan 成功后使用返回的 ContentHash + EngineVersion 轮询本接口获取结果。上传成功后建议5分钟后首次轮询，如未检测完成之后每隔1分钟轮询一次。响应通过 Status 字段区分四种状态：检测完成（SUCCESS）、检测中（SCANNING）、无记录（NOT_FOUND）、检测失败（FAILED）。注意：检测结果保留90天，超期后将返回 NOT_FOUND。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanResultResponse"/></returns>
+        public Task<DescribeSkillScanResultResponse> DescribeSkillScanResult(DescribeSkillScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanResultResponse>(req, "DescribeSkillScanResult");
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测结果。调用 CreateSkillScan 成功后使用返回的 ContentHash + EngineVersion 轮询本接口获取结果。上传成功后建议5分钟后首次轮询，如未检测完成之后每隔1分钟轮询一次。响应通过 Status 字段区分四种状态：检测完成（SUCCESS）、检测中（SCANNING）、无记录（NOT_FOUND）、检测失败（FAILED）。注意：检测结果保留90天，超期后将返回 NOT_FOUND。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanResultResponse"/></returns>
+        public DescribeSkillScanResultResponse DescribeSkillScanResultSync(DescribeSkillScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanResultResponse>(req, "DescribeSkillScanResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
