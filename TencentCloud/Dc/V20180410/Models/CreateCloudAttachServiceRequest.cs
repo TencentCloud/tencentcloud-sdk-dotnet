@@ -25,10 +25,16 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 创建敏捷上云入参
+        /// <p>创建敏捷上云入参</p>
         /// </summary>
         [JsonProperty("Data")]
         public CreateCasInput Data{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

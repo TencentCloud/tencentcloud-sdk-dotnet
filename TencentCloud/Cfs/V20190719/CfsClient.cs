@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -955,6 +955,27 @@ namespace TencentCloud.Cfs.V20190719
         public ModifyLifecyclePolicyResponse ModifyLifecyclePolicySync(ModifyLifecyclePolicyRequest req)
         {
             return InternalRequestAsync<ModifyLifecyclePolicyResponse>(req, "ModifyLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（OverrideCfsRules）用于批量覆盖式创建权限组规则。
+        /// </summary>
+        /// <param name="req"><see cref="OverrideCfsRulesRequest"/></param>
+        /// <returns><see cref="OverrideCfsRulesResponse"/></returns>
+        public Task<OverrideCfsRulesResponse> OverrideCfsRules(OverrideCfsRulesRequest req)
+        {
+            return InternalRequestAsync<OverrideCfsRulesResponse>(req, "OverrideCfsRules");
+        }
+
+        /// <summary>
+        /// 本接口（OverrideCfsRules）用于批量覆盖式创建权限组规则。
+        /// </summary>
+        /// <param name="req"><see cref="OverrideCfsRulesRequest"/></param>
+        /// <returns><see cref="OverrideCfsRulesResponse"/></returns>
+        public OverrideCfsRulesResponse OverrideCfsRulesSync(OverrideCfsRulesRequest req)
+        {
+            return InternalRequestAsync<OverrideCfsRulesResponse>(req, "OverrideCfsRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

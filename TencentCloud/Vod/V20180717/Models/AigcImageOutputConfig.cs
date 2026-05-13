@@ -84,6 +84,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("OutputImageCount")]
         public ulong? OutputImageCount{ get; set; }
 
+        /// <summary>
+        /// <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul>
+        /// </summary>
+        [JsonProperty("OutputFormat")]
+        public string OutputFormat{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul>
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public string LogoAdd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
             this.SetParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
             this.SetParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
+            this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         }
     }
 }

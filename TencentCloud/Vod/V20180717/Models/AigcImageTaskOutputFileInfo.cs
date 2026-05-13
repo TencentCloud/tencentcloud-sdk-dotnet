@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
+        /// <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p>
         /// </summary>
         [JsonProperty("StorageMode")]
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+        /// <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
+        /// <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 文件类型，例如 mp4、flv 等。
+        /// <p>文件类型，例如 png、jpg 等。</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 媒体文件播放地址。
+        /// <p>媒体文件播放地址。</p>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+        /// <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+        /// <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

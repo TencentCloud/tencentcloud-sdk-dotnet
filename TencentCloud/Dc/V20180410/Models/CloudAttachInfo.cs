@@ -171,6 +171,18 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("BIapLinkProtected")]
         public bool? BIapLinkProtected{ get; set; }
 
+        /// <summary>
+        /// 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
+        /// VLAN范围
+        /// </summary>
+        [JsonProperty("VlanRange")]
+        public string VlanRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +212,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "IapCode", this.IapCode);
             this.SetParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
             this.SetParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "VlanRange", this.VlanRange);
         }
     }
 }

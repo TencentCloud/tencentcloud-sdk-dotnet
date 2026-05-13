@@ -25,18 +25,14 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 磁盘类型
-        /// CLOUD_BSSD
-        /// CLOUD_SSD
-        /// CLOUD_HSSD
-        /// CLOUD_PREMIUM
+        /// <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小
+        /// <p>磁盘大小</p><p>单位：GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]

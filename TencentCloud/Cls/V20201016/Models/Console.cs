@@ -132,6 +132,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Menus")]
         public string[] Menus{ get; set; }
 
+        /// <summary>
+        /// <p>公网访问域名</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>内网访问域名</p>
+        /// </summary>
+        [JsonProperty("IntranetDomain")]
+        public string IntranetDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +166,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "AccessControlRules.", this.AccessControlRules);
             this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
             this.SetParamArraySimple(map, prefix + "Menus.", this.Menus);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "IntranetDomain", this.IntranetDomain);
         }
     }
 }

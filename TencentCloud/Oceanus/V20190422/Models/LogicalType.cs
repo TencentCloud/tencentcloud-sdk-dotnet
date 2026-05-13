@@ -25,21 +25,21 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 是否允许为空
+        /// <p>是否允许为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NullAble")]
         public bool? NullAble{ get; set; }
 
         /// <summary>
-        /// 长度
+        /// <p>长度</p><p>单位：字符数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Length")]

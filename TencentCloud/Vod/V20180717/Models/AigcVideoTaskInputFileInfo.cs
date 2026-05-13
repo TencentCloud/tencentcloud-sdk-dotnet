@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>参考类型，GV模型适用。<br>注意：<br>当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；<br>当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。</p>
+        /// <p>参考类型，GV、Kling、PixVerse模型适用。<br>注意：<br>当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；<br>当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频；<br>当使用 PixVerse 模型时，可用于多图（主体）参考生模式，可选值：subject 表示主体、background 表示背景；</p>
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Usage")]
         public string Usage{ get; set; }
 
+        /// <summary>
+        /// <p><strong>仅 PixVerse 模型的多图（主体）参考生模式生效</strong>，针对图片指定名字, 用来更精准效果。用法：当本字段值为“小猫”，在 Prompt 中使用 @小猫 精确描述场景。@Text 后必须有空格，如 @小猫 跑步。Prompt 中引用的名称必须与本字段完全一致。</p>
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamSimple(map, prefix + "KeepOriginalSound", this.KeepOriginalSound);
             this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

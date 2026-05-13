@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -2389,6 +2389,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 是否成功开通TCLake
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTCLakeMetaInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTCLakeMetaInstanceResponse"/></returns>
+        public Task<DescribeTCLakeMetaInstanceResponse> DescribeTCLakeMetaInstance(DescribeTCLakeMetaInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeTCLakeMetaInstanceResponse>(req, "DescribeTCLakeMetaInstance");
+        }
+
+        /// <summary>
+        /// 是否成功开通TCLake
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTCLakeMetaInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTCLakeMetaInstanceResponse"/></returns>
+        public DescribeTCLakeMetaInstanceResponse DescribeTCLakeMetaInstanceSync(DescribeTCLakeMetaInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeTCLakeMetaInstanceResponse>(req, "DescribeTCLakeMetaInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeTable），用于查询单个表的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
@@ -3099,6 +3120,27 @@ namespace TencentCloud.Dlc.V20210125
         public GrantDLCCatalogAccessResponse GrantDLCCatalogAccessSync(GrantDLCCatalogAccessRequest req)
         {
             return InternalRequestAsync<GrantDLCCatalogAccessResponse>(req, "GrantDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通TCLake
+        /// </summary>
+        /// <param name="req"><see cref="InitializeTCLakeRequest"/></param>
+        /// <returns><see cref="InitializeTCLakeResponse"/></returns>
+        public Task<InitializeTCLakeResponse> InitializeTCLake(InitializeTCLakeRequest req)
+        {
+            return InternalRequestAsync<InitializeTCLakeResponse>(req, "InitializeTCLake");
+        }
+
+        /// <summary>
+        /// 开通TCLake
+        /// </summary>
+        /// <param name="req"><see cref="InitializeTCLakeRequest"/></param>
+        /// <returns><see cref="InitializeTCLakeResponse"/></returns>
+        public InitializeTCLakeResponse InitializeTCLakeSync(InitializeTCLakeRequest req)
+        {
+            return InternalRequestAsync<InitializeTCLakeResponse>(req, "InitializeTCLake")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

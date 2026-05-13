@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1415</VersionPrefix>
+    <VersionPrefix>3.0.1425</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,9 +53,14 @@
     <Compile Include="V20200210\Models\AICallExtractConfigElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultElement.cs" />
     <Compile Include="V20200210\Models\AICallExtractResultInfo.cs" />
+    <Compile Include="V20200210\Models\AICallInteractionRound.cs" />
+    <Compile Include="V20200210\Models\AICallLatencyMetrics.cs" />
     <Compile Include="V20200210\Models\AILatencyDetail.cs" />
     <Compile Include="V20200210\Models\AILatencyStatistics.cs" />
     <Compile Include="V20200210\Models\AILatencyStatisticsInfo.cs" />
+    <Compile Include="V20200210\Models\AIRoundMessage.cs" />
+    <Compile Include="V20200210\Models\AIRoundPath.cs" />
+    <Compile Include="V20200210\Models\AISpeakEvent.cs" />
     <Compile Include="V20200210\Models\AITransferItem.cs" />
     <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignResponse.cs" />
@@ -131,6 +136,8 @@
     <Compile Include="V20200210\Models\DescribeAIAnalysisResultResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultRequest.cs" />
     <Compile Include="V20200210\Models\DescribeAICallExtractResultResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeAICallInteractionRecordsRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeAICallInteractionRecordsResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAILatencyRequest.cs" />
     <Compile Include="V20200210\Models\DescribeAILatencyResponse.cs" />
     <Compile Include="V20200210\Models\DescribeActiveCarrierPrivilegeNumberRequest.cs" />
@@ -288,6 +295,7 @@
     <Compile Include="V20200210\Models\UploadIvrAudioFailedInfo.cs" />
     <Compile Include="V20200210\Models\UploadIvrAudioRequest.cs" />
     <Compile Include="V20200210\Models\UploadIvrAudioResponse.cs" />
+    <Compile Include="V20200210\Models\UserReplyEvent.cs" />
     <Compile Include="V20200210\Models\Variable.cs" />
     <Compile Include="V20200210\Models\ZHToneWordsInfo.cs" />
   </ItemGroup>

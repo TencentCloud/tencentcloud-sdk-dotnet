@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1411";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Csip.V20221121
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 添加资产管理员
+        /// </summary>
+        /// <param name="req"><see cref="AddDspmAssetManagerRequest"/></param>
+        /// <returns><see cref="AddDspmAssetManagerResponse"/></returns>
+        public Task<AddDspmAssetManagerResponse> AddDspmAssetManager(AddDspmAssetManagerRequest req)
+        {
+            return InternalRequestAsync<AddDspmAssetManagerResponse>(req, "AddDspmAssetManager");
+        }
+
+        /// <summary>
+        /// 添加资产管理员
+        /// </summary>
+        /// <param name="req"><see cref="AddDspmAssetManagerRequest"/></param>
+        /// <returns><see cref="AddDspmAssetManagerResponse"/></returns>
+        public AddDspmAssetManagerResponse AddDspmAssetManagerSync(AddDspmAssetManagerRequest req)
+        {
+            return InternalRequestAsync<AddDspmAssetManagerResponse>(req, "AddDspmAssetManager")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -138,6 +159,216 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建Dspm访问记录导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAccessExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAccessExportJobResponse"/></returns>
+        public Task<CreateDspmAccessExportJobResponse> CreateDspmAccessExportJob(CreateDspmAccessExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAccessExportJobResponse>(req, "CreateDspmAccessExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm访问记录导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAccessExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAccessExportJobResponse"/></returns>
+        public CreateDspmAccessExportJobResponse CreateDspmAccessExportJobSync(CreateDspmAccessExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAccessExportJobResponse>(req, "CreateDspmAccessExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm申请单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmApplyOrderRequest"/></param>
+        /// <returns><see cref="CreateDspmApplyOrderResponse"/></returns>
+        public Task<CreateDspmApplyOrderResponse> CreateDspmApplyOrder(CreateDspmApplyOrderRequest req)
+        {
+            return InternalRequestAsync<CreateDspmApplyOrderResponse>(req, "CreateDspmApplyOrder");
+        }
+
+        /// <summary>
+        /// 创建Dspm申请单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmApplyOrderRequest"/></param>
+        /// <returns><see cref="CreateDspmApplyOrderResponse"/></returns>
+        public CreateDspmApplyOrderResponse CreateDspmApplyOrderSync(CreateDspmApplyOrderRequest req)
+        {
+            return InternalRequestAsync<CreateDspmApplyOrderResponse>(req, "CreateDspmApplyOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm审批历史导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmApproveHistoryExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmApproveHistoryExportJobResponse"/></returns>
+        public Task<CreateDspmApproveHistoryExportJobResponse> CreateDspmApproveHistoryExportJob(CreateDspmApproveHistoryExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmApproveHistoryExportJobResponse>(req, "CreateDspmApproveHistoryExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm审批历史导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmApproveHistoryExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmApproveHistoryExportJobResponse"/></returns>
+        public CreateDspmApproveHistoryExportJobResponse CreateDspmApproveHistoryExportJobSync(CreateDspmApproveHistoryExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmApproveHistoryExportJobResponse>(req, "CreateDspmApproveHistoryExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm资产访问拓扑导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetAccessTopologyExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetAccessTopologyExportJobResponse"/></returns>
+        public Task<CreateDspmAssetAccessTopologyExportJobResponse> CreateDspmAssetAccessTopologyExportJob(CreateDspmAssetAccessTopologyExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetAccessTopologyExportJobResponse>(req, "CreateDspmAssetAccessTopologyExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm资产访问拓扑导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetAccessTopologyExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetAccessTopologyExportJobResponse"/></returns>
+        public CreateDspmAssetAccessTopologyExportJobResponse CreateDspmAssetAccessTopologyExportJobSync(CreateDspmAssetAccessTopologyExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetAccessTopologyExportJobResponse>(req, "CreateDspmAssetAccessTopologyExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetsExportJobResponse"/></returns>
+        public Task<CreateDspmAssetsExportJobResponse> CreateDspmAssetsExportJob(CreateDspmAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetsExportJobResponse>(req, "CreateDspmAssetsExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetsExportJobResponse"/></returns>
+        public CreateDspmAssetsExportJobResponse CreateDspmAssetsExportJobSync(CreateDspmAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetsExportJobResponse>(req, "CreateDspmAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建日志导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmExportTaskRequest"/></param>
+        /// <returns><see cref="CreateDspmExportTaskResponse"/></returns>
+        public Task<CreateDspmExportTaskResponse> CreateDspmExportTask(CreateDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDspmExportTaskResponse>(req, "CreateDspmExportTask");
+        }
+
+        /// <summary>
+        /// 创建日志导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmExportTaskRequest"/></param>
+        /// <returns><see cref="CreateDspmExportTaskResponse"/></returns>
+        public CreateDspmExportTaskResponse CreateDspmExportTaskSync(CreateDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDspmExportTaskResponse>(req, "CreateDspmExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm身份列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyInfoListExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyInfoListExportJobResponse"/></returns>
+        public Task<CreateDspmIdentifyInfoListExportJobResponse> CreateDspmIdentifyInfoListExportJob(CreateDspmIdentifyInfoListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyInfoListExportJobResponse>(req, "CreateDspmIdentifyInfoListExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm身份列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyInfoListExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyInfoListExportJobResponse"/></returns>
+        public CreateDspmIdentifyInfoListExportJobResponse CreateDspmIdentifyInfoListExportJobSync(CreateDspmIdentifyInfoListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyInfoListExportJobResponse>(req, "CreateDspmIdentifyInfoListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="CreateDspmPersonalIdentifyResponse"/></returns>
+        public Task<CreateDspmPersonalIdentifyResponse> CreateDspmPersonalIdentify(CreateDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmPersonalIdentifyResponse>(req, "CreateDspmPersonalIdentify");
+        }
+
+        /// <summary>
+        /// 创建Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="CreateDspmPersonalIdentifyResponse"/></returns>
+        public CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentifySync(CreateDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmPersonalIdentifyResponse>(req, "CreateDspmPersonalIdentify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmRiskExportJobResponse"/></returns>
+        public Task<CreateDspmRiskExportJobResponse> CreateDspmRiskExportJob(CreateDspmRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmRiskExportJobResponse>(req, "CreateDspmRiskExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmRiskExportJobResponse"/></returns>
+        public CreateDspmRiskExportJobResponse CreateDspmRiskExportJobSync(CreateDspmRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmRiskExportJobResponse>(req, "CreateDspmRiskExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmWhitelistStrategyResponse"/></returns>
+        public Task<CreateDspmWhitelistStrategyResponse> CreateDspmWhitelistStrategy(CreateDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmWhitelistStrategyResponse>(req, "CreateDspmWhitelistStrategy");
+        }
+
+        /// <summary>
+        /// 创建Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmWhitelistStrategyResponse"/></returns>
+        public CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategySync(CreateDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmWhitelistStrategyResponse>(req, "CreateDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建风险中心扫描任务
         /// </summary>
         /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
@@ -176,6 +407,153 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDomainAndIpResponse DeleteDomainAndIpSync(DeleteDomainAndIpRequest req)
         {
             return InternalRequestAsync<DeleteDomainAndIpResponse>(req, "DeleteDomainAndIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Dspm申请单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmApplyOrderRequest"/></param>
+        /// <returns><see cref="DeleteDspmApplyOrderResponse"/></returns>
+        public Task<DeleteDspmApplyOrderResponse> DeleteDspmApplyOrder(DeleteDspmApplyOrderRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmApplyOrderResponse>(req, "DeleteDspmApplyOrder");
+        }
+
+        /// <summary>
+        /// 删除Dspm申请单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmApplyOrderRequest"/></param>
+        /// <returns><see cref="DeleteDspmApplyOrderResponse"/></returns>
+        public DeleteDspmApplyOrderResponse DeleteDspmApplyOrderSync(DeleteDspmApplyOrderRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmApplyOrderResponse>(req, "DeleteDspmApplyOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Dspm资产账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="DeleteDspmAssetAccountResponse"/></returns>
+        public Task<DeleteDspmAssetAccountResponse> DeleteDspmAssetAccount(DeleteDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmAssetAccountResponse>(req, "DeleteDspmAssetAccount");
+        }
+
+        /// <summary>
+        /// 删除Dspm资产账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="DeleteDspmAssetAccountResponse"/></returns>
+        public DeleteDspmAssetAccountResponse DeleteDspmAssetAccountSync(DeleteDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmAssetAccountResponse>(req, "DeleteDspmAssetAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除备份日志
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmBackupLogListRequest"/></param>
+        /// <returns><see cref="DeleteDspmBackupLogListResponse"/></returns>
+        public Task<DeleteDspmBackupLogListResponse> DeleteDspmBackupLogList(DeleteDspmBackupLogListRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmBackupLogListResponse>(req, "DeleteDspmBackupLogList");
+        }
+
+        /// <summary>
+        /// 删除备份日志
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmBackupLogListRequest"/></param>
+        /// <returns><see cref="DeleteDspmBackupLogListResponse"/></returns>
+        public DeleteDspmBackupLogListResponse DeleteDspmBackupLogListSync(DeleteDspmBackupLogListRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmBackupLogListResponse>(req, "DeleteDspmBackupLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除导出任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteDspmExportTaskResponse"/></returns>
+        public Task<DeleteDspmExportTaskResponse> DeleteDspmExportTask(DeleteDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmExportTaskResponse>(req, "DeleteDspmExportTask");
+        }
+
+        /// <summary>
+        /// 删除导出任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmExportTaskRequest"/></param>
+        /// <returns><see cref="DeleteDspmExportTaskResponse"/></returns>
+        public DeleteDspmExportTaskResponse DeleteDspmExportTaskSync(DeleteDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmExportTaskResponse>(req, "DeleteDspmExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="DeleteDspmPersonalIdentifyResponse"/></returns>
+        public Task<DeleteDspmPersonalIdentifyResponse> DeleteDspmPersonalIdentify(DeleteDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmPersonalIdentifyResponse>(req, "DeleteDspmPersonalIdentify");
+        }
+
+        /// <summary>
+        /// 删除Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="DeleteDspmPersonalIdentifyResponse"/></returns>
+        public DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentifySync(DeleteDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmPersonalIdentifyResponse>(req, "DeleteDspmPersonalIdentify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除恢复日志
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmRestoreLogListRequest"/></param>
+        /// <returns><see cref="DeleteDspmRestoreLogListResponse"/></returns>
+        public Task<DeleteDspmRestoreLogListResponse> DeleteDspmRestoreLogList(DeleteDspmRestoreLogListRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmRestoreLogListResponse>(req, "DeleteDspmRestoreLogList");
+        }
+
+        /// <summary>
+        /// 删除恢复日志
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmRestoreLogListRequest"/></param>
+        /// <returns><see cref="DeleteDspmRestoreLogListResponse"/></returns>
+        public DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogListSync(DeleteDspmRestoreLogListRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmRestoreLogListResponse>(req, "DeleteDspmRestoreLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmWhitelistStrategyResponse"/></returns>
+        public Task<DeleteDspmWhitelistStrategyResponse> DeleteDspmWhitelistStrategy(DeleteDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmWhitelistStrategyResponse>(req, "DeleteDspmWhitelistStrategy");
+        }
+
+        /// <summary>
+        /// 删除Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmWhitelistStrategyResponse"/></returns>
+        public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategySync(DeleteDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmWhitelistStrategyResponse>(req, "DeleteDspmWhitelistStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -495,6 +873,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询是否绑定角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssumeRoleRequest"/></param>
+        /// <returns><see cref="DescribeAssumeRoleResponse"/></returns>
+        public Task<DescribeAssumeRoleResponse> DescribeAssumeRole(DescribeAssumeRoleRequest req)
+        {
+            return InternalRequestAsync<DescribeAssumeRoleResponse>(req, "DescribeAssumeRole");
+        }
+
+        /// <summary>
+        /// 查询是否绑定角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssumeRoleRequest"/></param>
+        /// <returns><see cref="DescribeAssumeRoleResponse"/></returns>
+        public DescribeAssumeRoleResponse DescribeAssumeRoleSync(DescribeAssumeRoleRequest req)
+        {
+            return InternalRequestAsync<DescribeAssumeRoleResponse>(req, "DescribeAssumeRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 云防资产中心统计数据
         /// </summary>
         /// <param name="req"><see cref="DescribeCFWAssetStatisticsRequest"/></param>
@@ -743,6 +1142,909 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDomainAssetsResponse DescribeDomainAssetsSync(DescribeDomainAssetsRequest req)
         {
             return InternalRequestAsync<DescribeDomainAssetsResponse>(req, "DescribeDomainAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm访问记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessRecordRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessRecordResponse"/></returns>
+        public Task<DescribeDspmAccessRecordResponse> DescribeDspmAccessRecord(DescribeDspmAccessRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessRecordResponse>(req, "DescribeDspmAccessRecord");
+        }
+
+        /// <summary>
+        /// 查询Dspm访问记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessRecordRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessRecordResponse"/></returns>
+        public DescribeDspmAccessRecordResponse DescribeDspmAccessRecordSync(DescribeDspmAccessRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessRecordResponse>(req, "DescribeDspmAccessRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyAccountsResponse"/></returns>
+        public Task<DescribeDspmAccessTopologyAccountsResponse> DescribeDspmAccessTopologyAccounts(DescribeDspmAccessTopologyAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyAccountsResponse>(req, "DescribeDspmAccessTopologyAccounts");
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyAccountsResponse"/></returns>
+        public DescribeDspmAccessTopologyAccountsResponse DescribeDspmAccessTopologyAccountsSync(DescribeDspmAccessTopologyAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyAccountsResponse>(req, "DescribeDspmAccessTopologyAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyAssetsResponse"/></returns>
+        public Task<DescribeDspmAccessTopologyAssetsResponse> DescribeDspmAccessTopologyAssets(DescribeDspmAccessTopologyAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyAssetsResponse>(req, "DescribeDspmAccessTopologyAssets");
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyAssetsResponse"/></returns>
+        public DescribeDspmAccessTopologyAssetsResponse DescribeDspmAccessTopologyAssetsSync(DescribeDspmAccessTopologyAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyAssetsResponse>(req, "DescribeDspmAccessTopologyAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyIpsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyIpsResponse"/></returns>
+        public Task<DescribeDspmAccessTopologyIpsResponse> DescribeDspmAccessTopologyIps(DescribeDspmAccessTopologyIpsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyIpsResponse>(req, "DescribeDspmAccessTopologyIps");
+        }
+
+        /// <summary>
+        /// 查询Dspm访问拓扑ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologyIpsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologyIpsResponse"/></returns>
+        public DescribeDspmAccessTopologyIpsResponse DescribeDspmAccessTopologyIpsSync(DescribeDspmAccessTopologyIpsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologyIpsResponse>(req, "DescribeDspmAccessTopologyIps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm申请历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApplyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmApplyHistoryResponse"/></returns>
+        public Task<DescribeDspmApplyHistoryResponse> DescribeDspmApplyHistory(DescribeDspmApplyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApplyHistoryResponse>(req, "DescribeDspmApplyHistory");
+        }
+
+        /// <summary>
+        /// 查询Dspm申请历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApplyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmApplyHistoryResponse"/></returns>
+        public DescribeDspmApplyHistoryResponse DescribeDspmApplyHistorySync(DescribeDspmApplyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApplyHistoryResponse>(req, "DescribeDspmApplyHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm申请单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApplyOrderListRequest"/></param>
+        /// <returns><see cref="DescribeDspmApplyOrderListResponse"/></returns>
+        public Task<DescribeDspmApplyOrderListResponse> DescribeDspmApplyOrderList(DescribeDspmApplyOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApplyOrderListResponse>(req, "DescribeDspmApplyOrderList");
+        }
+
+        /// <summary>
+        /// 查询Dspm申请单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApplyOrderListRequest"/></param>
+        /// <returns><see cref="DescribeDspmApplyOrderListResponse"/></returns>
+        public DescribeDspmApplyOrderListResponse DescribeDspmApplyOrderListSync(DescribeDspmApplyOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApplyOrderListResponse>(req, "DescribeDspmApplyOrderList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm审批历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApproveHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmApproveHistoryResponse"/></returns>
+        public Task<DescribeDspmApproveHistoryResponse> DescribeDspmApproveHistory(DescribeDspmApproveHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApproveHistoryResponse>(req, "DescribeDspmApproveHistory");
+        }
+
+        /// <summary>
+        /// 查询Dspm审批历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApproveHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmApproveHistoryResponse"/></returns>
+        public DescribeDspmApproveHistoryResponse DescribeDspmApproveHistorySync(DescribeDspmApproveHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApproveHistoryResponse>(req, "DescribeDspmApproveHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm审批单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApproveOrderListRequest"/></param>
+        /// <returns><see cref="DescribeDspmApproveOrderListResponse"/></returns>
+        public Task<DescribeDspmApproveOrderListResponse> DescribeDspmApproveOrderList(DescribeDspmApproveOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApproveOrderListResponse>(req, "DescribeDspmApproveOrderList");
+        }
+
+        /// <summary>
+        /// 查询Dspm审批单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmApproveOrderListRequest"/></param>
+        /// <returns><see cref="DescribeDspmApproveOrderListResponse"/></returns>
+        public DescribeDspmApproveOrderListResponse DescribeDspmApproveOrderListSync(DescribeDspmApproveOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmApproveOrderListResponse>(req, "DescribeDspmApproveOrderList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产访问拓扑
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccessTopologyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccessTopologyResponse"/></returns>
+        public Task<DescribeDspmAssetAccessTopologyResponse> DescribeDspmAssetAccessTopology(DescribeDspmAssetAccessTopologyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccessTopologyResponse>(req, "DescribeDspmAssetAccessTopology");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产访问拓扑
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccessTopologyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccessTopologyResponse"/></returns>
+        public DescribeDspmAssetAccessTopologyResponse DescribeDspmAssetAccessTopologySync(DescribeDspmAssetAccessTopologyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccessTopologyResponse>(req, "DescribeDspmAssetAccessTopology")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号身份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountIdentifyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountIdentifyResponse"/></returns>
+        public Task<DescribeDspmAssetAccountIdentifyResponse> DescribeDspmAssetAccountIdentify(DescribeDspmAssetAccountIdentifyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountIdentifyResponse>(req, "DescribeDspmAssetAccountIdentify");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号身份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountIdentifyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountIdentifyResponse"/></returns>
+        public DescribeDspmAssetAccountIdentifyResponse DescribeDspmAssetAccountIdentifySync(DescribeDspmAssetAccountIdentifyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountIdentifyResponse>(req, "DescribeDspmAssetAccountIdentify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号预设特权信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountPresetPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountPresetPrivilegesResponse"/></returns>
+        public Task<DescribeDspmAssetAccountPresetPrivilegesResponse> DescribeDspmAssetAccountPresetPrivileges(DescribeDspmAssetAccountPresetPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountPresetPrivilegesResponse>(req, "DescribeDspmAssetAccountPresetPrivileges");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号预设特权信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountPresetPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountPresetPrivilegesResponse"/></returns>
+        public DescribeDspmAssetAccountPresetPrivilegesResponse DescribeDspmAssetAccountPresetPrivilegesSync(DescribeDspmAssetAccountPresetPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountPresetPrivilegesResponse>(req, "DescribeDspmAssetAccountPresetPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号回收后特权信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountRecycledPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountRecycledPrivilegesResponse"/></returns>
+        public Task<DescribeDspmAssetAccountRecycledPrivilegesResponse> DescribeDspmAssetAccountRecycledPrivileges(DescribeDspmAssetAccountRecycledPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountRecycledPrivilegesResponse>(req, "DescribeDspmAssetAccountRecycledPrivileges");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号回收后特权信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountRecycledPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountRecycledPrivilegesResponse"/></returns>
+        public DescribeDspmAssetAccountRecycledPrivilegesResponse DescribeDspmAssetAccountRecycledPrivilegesSync(DescribeDspmAssetAccountRecycledPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountRecycledPrivilegesResponse>(req, "DescribeDspmAssetAccountRecycledPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountsResponse"/></returns>
+        public Task<DescribeDspmAssetAccountsResponse> DescribeDspmAssetAccounts(DescribeDspmAssetAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountsResponse>(req, "DescribeDspmAssetAccounts");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetAccountsResponse"/></returns>
+        public DescribeDspmAssetAccountsResponse DescribeDspmAssetAccountsSync(DescribeDspmAssetAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetAccountsResponse>(req, "DescribeDspmAssetAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资产数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetDatabaseListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetDatabaseListResponse"/></returns>
+        public Task<DescribeDspmAssetDatabaseListResponse> DescribeDspmAssetDatabaseList(DescribeDspmAssetDatabaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetDatabaseListResponse>(req, "DescribeDspmAssetDatabaseList");
+        }
+
+        /// <summary>
+        /// 查询资产数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetDatabaseListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetDatabaseListResponse"/></returns>
+        public DescribeDspmAssetDatabaseListResponse DescribeDspmAssetDatabaseListSync(DescribeDspmAssetDatabaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetDatabaseListResponse>(req, "DescribeDspmAssetDatabaseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetDatabasesResponse"/></returns>
+        public Task<DescribeDspmAssetDatabasesResponse> DescribeDspmAssetDatabases(DescribeDspmAssetDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetDatabasesResponse>(req, "DescribeDspmAssetDatabases");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetDatabasesResponse"/></returns>
+        public DescribeDspmAssetDatabasesResponse DescribeDspmAssetDatabasesSync(DescribeDspmAssetDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetDatabasesResponse>(req, "DescribeDspmAssetDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm资产字段信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetFieldListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetFieldListResponse"/></returns>
+        public Task<DescribeDspmAssetFieldListResponse> DescribeDspmAssetFieldList(DescribeDspmAssetFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetFieldListResponse>(req, "DescribeDspmAssetFieldList");
+        }
+
+        /// <summary>
+        /// 查询dspm资产字段信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetFieldListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetFieldListResponse"/></returns>
+        public DescribeDspmAssetFieldListResponse DescribeDspmAssetFieldListSync(DescribeDspmAssetFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetFieldListResponse>(req, "DescribeDspmAssetFieldList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetIdsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetIdsResponse"/></returns>
+        public Task<DescribeDspmAssetIdsResponse> DescribeDspmAssetIds(DescribeDspmAssetIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetIdsResponse>(req, "DescribeDspmAssetIds");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetIdsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetIdsResponse"/></returns>
+        public DescribeDspmAssetIdsResponse DescribeDspmAssetIdsSync(DescribeDspmAssetIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetIdsResponse>(req, "DescribeDspmAssetIds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产登录凭据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetLoginCredentialRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetLoginCredentialResponse"/></returns>
+        public Task<DescribeDspmAssetLoginCredentialResponse> DescribeDspmAssetLoginCredential(DescribeDspmAssetLoginCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetLoginCredentialResponse>(req, "DescribeDspmAssetLoginCredential");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产登录凭据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetLoginCredentialRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetLoginCredentialResponse"/></returns>
+        public DescribeDspmAssetLoginCredentialResponse DescribeDspmAssetLoginCredentialSync(DescribeDspmAssetLoginCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetLoginCredentialResponse>(req, "DescribeDspmAssetLoginCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产安全分析状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetSecurityAnalyseStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetSecurityAnalyseStatusResponse"/></returns>
+        public Task<DescribeDspmAssetSecurityAnalyseStatusResponse> DescribeDspmAssetSecurityAnalyseStatus(DescribeDspmAssetSecurityAnalyseStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetSecurityAnalyseStatusResponse>(req, "DescribeDspmAssetSecurityAnalyseStatus");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产安全分析状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetSecurityAnalyseStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetSecurityAnalyseStatusResponse"/></returns>
+        public DescribeDspmAssetSecurityAnalyseStatusResponse DescribeDspmAssetSecurityAnalyseStatusSync(DescribeDspmAssetSecurityAnalyseStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetSecurityAnalyseStatusResponse>(req, "DescribeDspmAssetSecurityAnalyseStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产支持的权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetSupportedPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetSupportedPrivilegesResponse"/></returns>
+        public Task<DescribeDspmAssetSupportedPrivilegesResponse> DescribeDspmAssetSupportedPrivileges(DescribeDspmAssetSupportedPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetSupportedPrivilegesResponse>(req, "DescribeDspmAssetSupportedPrivileges");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产支持的权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetSupportedPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetSupportedPrivilegesResponse"/></returns>
+        public DescribeDspmAssetSupportedPrivilegesResponse DescribeDspmAssetSupportedPrivilegesSync(DescribeDspmAssetSupportedPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetSupportedPrivilegesResponse>(req, "DescribeDspmAssetSupportedPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资产表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetTableListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetTableListResponse"/></returns>
+        public Task<DescribeDspmAssetTableListResponse> DescribeDspmAssetTableList(DescribeDspmAssetTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetTableListResponse>(req, "DescribeDspmAssetTableList");
+        }
+
+        /// <summary>
+        /// 查询资产表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetTableListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetTableListResponse"/></returns>
+        public DescribeDspmAssetTableListResponse DescribeDspmAssetTableListSync(DescribeDspmAssetTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetTableListResponse>(req, "DescribeDspmAssetTableList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetsResponse"/></returns>
+        public Task<DescribeDspmAssetsResponse> DescribeDspmAssets(DescribeDspmAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetsResponse>(req, "DescribeDspmAssets");
+        }
+
+        /// <summary>
+        /// 查询Dspm资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetsResponse"/></returns>
+        public DescribeDspmAssetsResponse DescribeDspmAssetsSync(DescribeDspmAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetsResponse>(req, "DescribeDspmAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询备份日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmBackupLogListRequest"/></param>
+        /// <returns><see cref="DescribeDspmBackupLogListResponse"/></returns>
+        public Task<DescribeDspmBackupLogListResponse> DescribeDspmBackupLogList(DescribeDspmBackupLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmBackupLogListResponse>(req, "DescribeDspmBackupLogList");
+        }
+
+        /// <summary>
+        /// 查询备份日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmBackupLogListRequest"/></param>
+        /// <returns><see cref="DescribeDspmBackupLogListResponse"/></returns>
+        public DescribeDspmBackupLogListResponse DescribeDspmBackupLogListSync(DescribeDspmBackupLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmBackupLogListResponse>(req, "DescribeDspmBackupLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志备份配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmBackupSettingRequest"/></param>
+        /// <returns><see cref="DescribeDspmBackupSettingResponse"/></returns>
+        public Task<DescribeDspmBackupSettingResponse> DescribeDspmBackupSetting(DescribeDspmBackupSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmBackupSettingResponse>(req, "DescribeDspmBackupSetting");
+        }
+
+        /// <summary>
+        /// 查询日志备份配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmBackupSettingRequest"/></param>
+        /// <returns><see cref="DescribeDspmBackupSettingResponse"/></returns>
+        public DescribeDspmBackupSettingResponse DescribeDspmBackupSettingSync(DescribeDspmBackupSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmBackupSettingResponse>(req, "DescribeDspmBackupSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm字典信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeDspmDictionaryListResponse"/></returns>
+        public Task<DescribeDspmDictionaryListResponse> DescribeDspmDictionaryList(DescribeDspmDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmDictionaryListResponse>(req, "DescribeDspmDictionaryList");
+        }
+
+        /// <summary>
+        /// 查询dspm字典信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeDspmDictionaryListResponse"/></returns>
+        public DescribeDspmDictionaryListResponse DescribeDspmDictionaryListSync(DescribeDspmDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmDictionaryListResponse>(req, "DescribeDspmDictionaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询导出任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeDspmExportTaskResponse"/></returns>
+        public Task<DescribeDspmExportTaskResponse> DescribeDspmExportTask(DescribeDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmExportTaskResponse>(req, "DescribeDspmExportTask");
+        }
+
+        /// <summary>
+        /// 查询导出任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeDspmExportTaskResponse"/></returns>
+        public DescribeDspmExportTaskResponse DescribeDspmExportTaskSync(DescribeDspmExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmExportTaskResponse>(req, "DescribeDspmExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm身份id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyIdListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyIdListResponse"/></returns>
+        public Task<DescribeDspmIdentifyIdListResponse> DescribeDspmIdentifyIdList(DescribeDspmIdentifyIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyIdListResponse>(req, "DescribeDspmIdentifyIdList");
+        }
+
+        /// <summary>
+        /// 查询Dspm身份id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyIdListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyIdListResponse"/></returns>
+        public DescribeDspmIdentifyIdListResponse DescribeDspmIdentifyIdListSync(DescribeDspmIdentifyIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyIdListResponse>(req, "DescribeDspmIdentifyIdList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm身份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyInfoRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyInfoResponse"/></returns>
+        public Task<DescribeDspmIdentifyInfoResponse> DescribeDspmIdentifyInfo(DescribeDspmIdentifyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyInfoResponse>(req, "DescribeDspmIdentifyInfo");
+        }
+
+        /// <summary>
+        /// 查询Dspm身份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyInfoRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyInfoResponse"/></returns>
+        public DescribeDspmIdentifyInfoResponse DescribeDspmIdentifyInfoSync(DescribeDspmIdentifyInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyInfoResponse>(req, "DescribeDspmIdentifyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm身份信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyInfoListResponse"/></returns>
+        public Task<DescribeDspmIdentifyInfoListResponse> DescribeDspmIdentifyInfoList(DescribeDspmIdentifyInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyInfoListResponse>(req, "DescribeDspmIdentifyInfoList");
+        }
+
+        /// <summary>
+        /// 查询Dspm身份信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyInfoListResponse"/></returns>
+        public DescribeDspmIdentifyInfoListResponse DescribeDspmIdentifyInfoListSync(DescribeDspmIdentifyInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyInfoListResponse>(req, "DescribeDspmIdentifyInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogListRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogListResponse"/></returns>
+        public Task<DescribeDspmLogListResponse> DescribeDspmLogList(DescribeDspmLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogListResponse>(req, "DescribeDspmLogList");
+        }
+
+        /// <summary>
+        /// 查询日志列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogListRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogListResponse"/></returns>
+        public DescribeDspmLogListResponse DescribeDspmLogListSync(DescribeDspmLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogListResponse>(req, "DescribeDspmLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取已购Dspm订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeDspmPayInfoResponse"/></returns>
+        public Task<DescribeDspmPayInfoResponse> DescribeDspmPayInfo(DescribeDspmPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPayInfoResponse>(req, "DescribeDspmPayInfo");
+        }
+
+        /// <summary>
+        /// 获取已购Dspm订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeDspmPayInfoResponse"/></returns>
+        public DescribeDspmPayInfoResponse DescribeDspmPayInfoSync(DescribeDspmPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPayInfoResponse>(req, "DescribeDspmPayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm访客申请记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPersonApplyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmPersonApplyHistoryResponse"/></returns>
+        public Task<DescribeDspmPersonApplyHistoryResponse> DescribeDspmPersonApplyHistory(DescribeDspmPersonApplyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPersonApplyHistoryResponse>(req, "DescribeDspmPersonApplyHistory");
+        }
+
+        /// <summary>
+        /// 查询Dspm访客申请记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPersonApplyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDspmPersonApplyHistoryResponse"/></returns>
+        public DescribeDspmPersonApplyHistoryResponse DescribeDspmPersonApplyHistorySync(DescribeDspmPersonApplyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPersonApplyHistoryResponse>(req, "DescribeDspmPersonApplyHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm个人身份信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPersonalIdentifyListRequest"/></param>
+        /// <returns><see cref="DescribeDspmPersonalIdentifyListResponse"/></returns>
+        public Task<DescribeDspmPersonalIdentifyListResponse> DescribeDspmPersonalIdentifyList(DescribeDspmPersonalIdentifyListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPersonalIdentifyListResponse>(req, "DescribeDspmPersonalIdentifyList");
+        }
+
+        /// <summary>
+        /// 查询Dspm个人身份信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmPersonalIdentifyListRequest"/></param>
+        /// <returns><see cref="DescribeDspmPersonalIdentifyListResponse"/></returns>
+        public DescribeDspmPersonalIdentifyListResponse DescribeDspmPersonalIdentifyListSync(DescribeDspmPersonalIdentifyListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmPersonalIdentifyListResponse>(req, "DescribeDspmPersonalIdentifyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm风险记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskResponse"/></returns>
+        public Task<DescribeDspmRiskResponse> DescribeDspmRisk(DescribeDspmRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskResponse>(req, "DescribeDspmRisk");
+        }
+
+        /// <summary>
+        /// 查询Dspm风险记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskResponse"/></returns>
+        public DescribeDspmRiskResponse DescribeDspmRiskSync(DescribeDspmRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskResponse>(req, "DescribeDspmRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskDetailResponse"/></returns>
+        public Task<DescribeDspmRiskDetailResponse> DescribeDspmRiskDetail(DescribeDspmRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskDetailResponse>(req, "DescribeDspmRiskDetail");
+        }
+
+        /// <summary>
+        /// 查询Dspm风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskDetailResponse"/></returns>
+        public DescribeDspmRiskDetailResponse DescribeDspmRiskDetailSync(DescribeDspmRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskDetailResponse>(req, "DescribeDspmRiskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm风险策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskStrategyResponse"/></returns>
+        public Task<DescribeDspmRiskStrategyResponse> DescribeDspmRiskStrategy(DescribeDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskStrategyResponse>(req, "DescribeDspmRiskStrategy");
+        }
+
+        /// <summary>
+        /// 查询Dspm风险策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskStrategyResponse"/></returns>
+        public DescribeDspmRiskStrategyResponse DescribeDspmRiskStrategySync(DescribeDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskStrategyResponse>(req, "DescribeDspmRiskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm风险分组策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskStrategyGroupRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskStrategyGroupResponse"/></returns>
+        public Task<DescribeDspmRiskStrategyGroupResponse> DescribeDspmRiskStrategyGroup(DescribeDspmRiskStrategyGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskStrategyGroupResponse>(req, "DescribeDspmRiskStrategyGroup");
+        }
+
+        /// <summary>
+        /// 查询Dspm风险分组策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskStrategyGroupRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskStrategyGroupResponse"/></returns>
+        public DescribeDspmRiskStrategyGroupResponse DescribeDspmRiskStrategyGroupSync(DescribeDspmRiskStrategyGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskStrategyGroupResponse>(req, "DescribeDspmRiskStrategyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm风险趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskTendencyRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskTendencyResponse"/></returns>
+        public Task<DescribeDspmRiskTendencyResponse> DescribeDspmRiskTendency(DescribeDspmRiskTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskTendencyResponse>(req, "DescribeDspmRiskTendency");
+        }
+
+        /// <summary>
+        /// 查询Dspm风险趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmRiskTendencyRequest"/></param>
+        /// <returns><see cref="DescribeDspmRiskTendencyResponse"/></returns>
+        public DescribeDspmRiskTendencyResponse DescribeDspmRiskTendencySync(DescribeDspmRiskTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmRiskTendencyResponse>(req, "DescribeDspmRiskTendency")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDspmStatisticsResponse"/></returns>
+        public Task<DescribeDspmStatisticsResponse> DescribeDspmStatistics(DescribeDspmStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmStatisticsResponse>(req, "DescribeDspmStatistics");
+        }
+
+        /// <summary>
+        /// 查询Dspm统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDspmStatisticsResponse"/></returns>
+        public DescribeDspmStatisticsResponse DescribeDspmStatisticsSync(DescribeDspmStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmStatisticsResponse>(req, "DescribeDspmStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm支持的资产类型信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSupportedAssetTypeRequest"/></param>
+        /// <returns><see cref="DescribeDspmSupportedAssetTypeResponse"/></returns>
+        public Task<DescribeDspmSupportedAssetTypeResponse> DescribeDspmSupportedAssetType(DescribeDspmSupportedAssetTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSupportedAssetTypeResponse>(req, "DescribeDspmSupportedAssetType");
+        }
+
+        /// <summary>
+        /// 查询Dspm支持的资产类型信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSupportedAssetTypeRequest"/></param>
+        /// <returns><see cref="DescribeDspmSupportedAssetTypeResponse"/></returns>
+        public DescribeDspmSupportedAssetTypeResponse DescribeDspmSupportedAssetTypeSync(DescribeDspmSupportedAssetTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSupportedAssetTypeResponse>(req, "DescribeDspmSupportedAssetType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm同步资产状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSyncAssetsStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmSyncAssetsStatusResponse"/></returns>
+        public Task<DescribeDspmSyncAssetsStatusResponse> DescribeDspmSyncAssetsStatus(DescribeDspmSyncAssetsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSyncAssetsStatusResponse>(req, "DescribeDspmSyncAssetsStatus");
+        }
+
+        /// <summary>
+        /// 查询Dspm同步资产状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSyncAssetsStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmSyncAssetsStatusResponse"/></returns>
+        public DescribeDspmSyncAssetsStatusResponse DescribeDspmSyncAssetsStatusSync(DescribeDspmSyncAssetsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSyncAssetsStatusResponse>(req, "DescribeDspmSyncAssetsStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm同步用户状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSyncUsersStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmSyncUsersStatusResponse"/></returns>
+        public Task<DescribeDspmSyncUsersStatusResponse> DescribeDspmSyncUsersStatus(DescribeDspmSyncUsersStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSyncUsersStatusResponse>(req, "DescribeDspmSyncUsersStatus");
+        }
+
+        /// <summary>
+        /// 查询Dspm同步用户状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSyncUsersStatusRequest"/></param>
+        /// <returns><see cref="DescribeDspmSyncUsersStatusResponse"/></returns>
+        public DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatusSync(DescribeDspmSyncUsersStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSyncUsersStatusResponse>(req, "DescribeDspmSyncUsersStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmWhitelistStrategyResponse"/></returns>
+        public Task<DescribeDspmWhitelistStrategyResponse> DescribeDspmWhitelistStrategy(DescribeDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmWhitelistStrategyResponse>(req, "DescribeDspmWhitelistStrategy");
+        }
+
+        /// <summary>
+        /// 查询Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmWhitelistStrategyResponse"/></returns>
+        public DescribeDspmWhitelistStrategyResponse DescribeDspmWhitelistStrategySync(DescribeDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmWhitelistStrategyResponse>(req, "DescribeDspmWhitelistStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1566,6 +2868,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取账号dspm信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDspmInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserDspmInfoListResponse"/></returns>
+        public Task<DescribeUserDspmInfoListResponse> DescribeUserDspmInfoList(DescribeUserDspmInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDspmInfoListResponse>(req, "DescribeUserDspmInfoList");
+        }
+
+        /// <summary>
+        /// 获取账号dspm信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDspmInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserDspmInfoListResponse"/></returns>
+        public DescribeUserDspmInfoListResponse DescribeUserDspmInfoListSync(DescribeUserDspmInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDspmInfoListResponse>(req, "DescribeUserDspmInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新安全中心风险中心-漏洞列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVULListRequest"/></param>
@@ -1692,6 +3015,342 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 下载导出日志
+        /// </summary>
+        /// <param name="req"><see cref="DownloadDspmExportLogRequest"/></param>
+        /// <returns><see cref="DownloadDspmExportLogResponse"/></returns>
+        public Task<DownloadDspmExportLogResponse> DownloadDspmExportLog(DownloadDspmExportLogRequest req)
+        {
+            return InternalRequestAsync<DownloadDspmExportLogResponse>(req, "DownloadDspmExportLog");
+        }
+
+        /// <summary>
+        /// 下载导出日志
+        /// </summary>
+        /// <param name="req"><see cref="DownloadDspmExportLogRequest"/></param>
+        /// <returns><see cref="DownloadDspmExportLogResponse"/></returns>
+        public DownloadDspmExportLogResponse DownloadDspmExportLogSync(DownloadDspmExportLogRequest req)
+        {
+            return InternalRequestAsync<DownloadDspmExportLogResponse>(req, "DownloadDspmExportLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm访问管理信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAccessRecordRequest"/></param>
+        /// <returns><see cref="ModifyDspmAccessRecordResponse"/></returns>
+        public Task<ModifyDspmAccessRecordResponse> ModifyDspmAccessRecord(ModifyDspmAccessRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAccessRecordResponse>(req, "ModifyDspmAccessRecord");
+        }
+
+        /// <summary>
+        /// 修改Dspm访问管理信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAccessRecordRequest"/></param>
+        /// <returns><see cref="ModifyDspmAccessRecordResponse"/></returns>
+        public ModifyDspmAccessRecordResponse ModifyDspmAccessRecordSync(ModifyDspmAccessRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAccessRecordResponse>(req, "ModifyDspmAccessRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm审批单状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmApproveStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmApproveStatusResponse"/></returns>
+        public Task<ModifyDspmApproveStatusResponse> ModifyDspmApproveStatus(ModifyDspmApproveStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmApproveStatusResponse>(req, "ModifyDspmApproveStatus");
+        }
+
+        /// <summary>
+        /// 修改Dspm审批单状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmApproveStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmApproveStatusResponse"/></returns>
+        public ModifyDspmApproveStatusResponse ModifyDspmApproveStatusSync(ModifyDspmApproveStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmApproveStatusResponse>(req, "ModifyDspmApproveStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm资产账号信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetAccountResponse"/></returns>
+        public Task<ModifyDspmAssetAccountResponse> ModifyDspmAssetAccount(ModifyDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetAccountResponse>(req, "ModifyDspmAssetAccount");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产账号信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetAccountResponse"/></returns>
+        public ModifyDspmAssetAccountResponse ModifyDspmAssetAccountSync(ModifyDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetAccountResponse>(req, "ModifyDspmAssetAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm资产账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetAccountPrivilegesResponse"/></returns>
+        public Task<ModifyDspmAssetAccountPrivilegesResponse> ModifyDspmAssetAccountPrivileges(ModifyDspmAssetAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetAccountPrivilegesResponse>(req, "ModifyDspmAssetAccountPrivileges");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetAccountPrivilegesResponse"/></returns>
+        public ModifyDspmAssetAccountPrivilegesResponse ModifyDspmAssetAccountPrivilegesSync(ModifyDspmAssetAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetAccountPrivilegesResponse>(req, "ModifyDspmAssetAccountPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm资产数据扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetDataScanTaskRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetDataScanTaskResponse"/></returns>
+        public Task<ModifyDspmAssetDataScanTaskResponse> ModifyDspmAssetDataScanTask(ModifyDspmAssetDataScanTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetDataScanTaskResponse>(req, "ModifyDspmAssetDataScanTask");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产数据扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetDataScanTaskRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetDataScanTaskResponse"/></returns>
+        public ModifyDspmAssetDataScanTaskResponse ModifyDspmAssetDataScanTaskSync(ModifyDspmAssetDataScanTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetDataScanTaskResponse>(req, "ModifyDspmAssetDataScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm资产日志投递开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetLogDeliverySwitchRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetLogDeliverySwitchResponse"/></returns>
+        public Task<ModifyDspmAssetLogDeliverySwitchResponse> ModifyDspmAssetLogDeliverySwitch(ModifyDspmAssetLogDeliverySwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetLogDeliverySwitchResponse>(req, "ModifyDspmAssetLogDeliverySwitch");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产日志投递开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetLogDeliverySwitchRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetLogDeliverySwitchResponse"/></returns>
+        public ModifyDspmAssetLogDeliverySwitchResponse ModifyDspmAssetLogDeliverySwitchSync(ModifyDspmAssetLogDeliverySwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetLogDeliverySwitchResponse>(req, "ModifyDspmAssetLogDeliverySwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm资产日志投递开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetSecurityAnalysisSwitchRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetSecurityAnalysisSwitchResponse"/></returns>
+        public Task<ModifyDspmAssetSecurityAnalysisSwitchResponse> ModifyDspmAssetSecurityAnalysisSwitch(ModifyDspmAssetSecurityAnalysisSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetSecurityAnalysisSwitchResponse>(req, "ModifyDspmAssetSecurityAnalysisSwitch");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产日志投递开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetSecurityAnalysisSwitchRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetSecurityAnalysisSwitchResponse"/></returns>
+        public ModifyDspmAssetSecurityAnalysisSwitchResponse ModifyDspmAssetSecurityAnalysisSwitchSync(ModifyDspmAssetSecurityAnalysisSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetSecurityAnalysisSwitchResponse>(req, "ModifyDspmAssetSecurityAnalysisSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改日志备份设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmBackupSettingRequest"/></param>
+        /// <returns><see cref="ModifyDspmBackupSettingResponse"/></returns>
+        public Task<ModifyDspmBackupSettingResponse> ModifyDspmBackupSetting(ModifyDspmBackupSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmBackupSettingResponse>(req, "ModifyDspmBackupSetting");
+        }
+
+        /// <summary>
+        /// 修改日志备份设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmBackupSettingRequest"/></param>
+        /// <returns><see cref="ModifyDspmBackupSettingResponse"/></returns>
+        public ModifyDspmBackupSettingResponse ModifyDspmBackupSettingSync(ModifyDspmBackupSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmBackupSettingResponse>(req, "ModifyDspmBackupSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm身份信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyInfoResponse"/></returns>
+        public Task<ModifyDspmIdentifyInfoResponse> ModifyDspmIdentifyInfo(ModifyDspmIdentifyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyInfoResponse>(req, "ModifyDspmIdentifyInfo");
+        }
+
+        /// <summary>
+        /// 修改Dspm身份信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyInfoResponse"/></returns>
+        public ModifyDspmIdentifyInfoResponse ModifyDspmIdentifyInfoSync(ModifyDspmIdentifyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyInfoResponse>(req, "ModifyDspmIdentifyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改DspmIp信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIpInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIpInfoResponse"/></returns>
+        public Task<ModifyDspmIpInfoResponse> ModifyDspmIpInfo(ModifyDspmIpInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIpInfoResponse>(req, "ModifyDspmIpInfo");
+        }
+
+        /// <summary>
+        /// 修改DspmIp信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIpInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIpInfoResponse"/></returns>
+        public ModifyDspmIpInfoResponse ModifyDspmIpInfoSync(ModifyDspmIpInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIpInfoResponse>(req, "ModifyDspmIpInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="ModifyDspmPersonalIdentifyResponse"/></returns>
+        public Task<ModifyDspmPersonalIdentifyResponse> ModifyDspmPersonalIdentify(ModifyDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmPersonalIdentifyResponse>(req, "ModifyDspmPersonalIdentify");
+        }
+
+        /// <summary>
+        /// 修改Dspm个人身份id
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmPersonalIdentifyRequest"/></param>
+        /// <returns><see cref="ModifyDspmPersonalIdentifyResponse"/></returns>
+        public ModifyDspmPersonalIdentifyResponse ModifyDspmPersonalIdentifySync(ModifyDspmPersonalIdentifyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmPersonalIdentifyResponse>(req, "ModifyDspmPersonalIdentify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复备份日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRestoreLogTaskRequest"/></param>
+        /// <returns><see cref="ModifyDspmRestoreLogTaskResponse"/></returns>
+        public Task<ModifyDspmRestoreLogTaskResponse> ModifyDspmRestoreLogTask(ModifyDspmRestoreLogTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRestoreLogTaskResponse>(req, "ModifyDspmRestoreLogTask");
+        }
+
+        /// <summary>
+        /// 恢复备份日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRestoreLogTaskRequest"/></param>
+        /// <returns><see cref="ModifyDspmRestoreLogTaskResponse"/></returns>
+        public ModifyDspmRestoreLogTaskResponse ModifyDspmRestoreLogTaskSync(ModifyDspmRestoreLogTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRestoreLogTaskResponse>(req, "ModifyDspmRestoreLogTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm风险信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRiskInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmRiskInfoResponse"/></returns>
+        public Task<ModifyDspmRiskInfoResponse> ModifyDspmRiskInfo(ModifyDspmRiskInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRiskInfoResponse>(req, "ModifyDspmRiskInfo");
+        }
+
+        /// <summary>
+        /// 修改Dspm风险信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRiskInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmRiskInfoResponse"/></returns>
+        public ModifyDspmRiskInfoResponse ModifyDspmRiskInfoSync(ModifyDspmRiskInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRiskInfoResponse>(req, "ModifyDspmRiskInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm风险策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmRiskStrategyResponse"/></returns>
+        public Task<ModifyDspmRiskStrategyResponse> ModifyDspmRiskStrategy(ModifyDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRiskStrategyResponse>(req, "ModifyDspmRiskStrategy");
+        }
+
+        /// <summary>
+        /// 修改Dspm风险策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmRiskStrategyResponse"/></returns>
+        public ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategySync(ModifyDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmRiskStrategyResponse>(req, "ModifyDspmRiskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmWhitelistStrategyResponse"/></returns>
+        public Task<ModifyDspmWhitelistStrategyResponse> ModifyDspmWhitelistStrategy(ModifyDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmWhitelistStrategyResponse>(req, "ModifyDspmWhitelistStrategy");
+        }
+
+        /// <summary>
+        /// 修改Dspm白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmWhitelistStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmWhitelistStrategyResponse"/></returns>
+        public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategySync(ModifyDspmWhitelistStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmWhitelistStrategyResponse>(req, "ModifyDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改集团账号状态
         /// </summary>
         /// <param name="req"><see cref="ModifyOrganizationAccountStatusRequest"/></param>
@@ -1776,6 +3435,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 重置Dspm资产账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDspmAssetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetDspmAssetAccountPasswordResponse"/></returns>
+        public Task<ResetDspmAssetAccountPasswordResponse> ResetDspmAssetAccountPassword(ResetDspmAssetAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetDspmAssetAccountPasswordResponse>(req, "ResetDspmAssetAccountPassword");
+        }
+
+        /// <summary>
+        /// 重置Dspm资产账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDspmAssetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetDspmAssetAccountPasswordResponse"/></returns>
+        public ResetDspmAssetAccountPasswordResponse ResetDspmAssetAccountPasswordSync(ResetDspmAssetAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetDspmAssetAccountPasswordResponse>(req, "ResetDspmAssetAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// RetryExportLog
+        /// </summary>
+        /// <param name="req"><see cref="RetryDspmExportLogRequest"/></param>
+        /// <returns><see cref="RetryDspmExportLogResponse"/></returns>
+        public Task<RetryDspmExportLogResponse> RetryDspmExportLog(RetryDspmExportLogRequest req)
+        {
+            return InternalRequestAsync<RetryDspmExportLogResponse>(req, "RetryDspmExportLog");
+        }
+
+        /// <summary>
+        /// RetryExportLog
+        /// </summary>
+        /// <param name="req"><see cref="RetryDspmExportLogRequest"/></param>
+        /// <returns><see cref="RetryDspmExportLogResponse"/></returns>
+        public RetryDspmExportLogResponse RetryDspmExportLogSync(RetryDspmExportLogRequest req)
+        {
+            return InternalRequestAsync<RetryDspmExportLogResponse>(req, "RetryDspmExportLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复Dspm资产账号
+        /// </summary>
+        /// <param name="req"><see cref="RevertDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="RevertDspmAssetAccountResponse"/></returns>
+        public Task<RevertDspmAssetAccountResponse> RevertDspmAssetAccount(RevertDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<RevertDspmAssetAccountResponse>(req, "RevertDspmAssetAccount");
+        }
+
+        /// <summary>
+        /// 恢复Dspm资产账号
+        /// </summary>
+        /// <param name="req"><see cref="RevertDspmAssetAccountRequest"/></param>
+        /// <returns><see cref="RevertDspmAssetAccountResponse"/></returns>
+        public RevertDspmAssetAccountResponse RevertDspmAssetAccountSync(RevertDspmAssetAccountRequest req)
+        {
+            return InternalRequestAsync<RevertDspmAssetAccountResponse>(req, "RevertDspmAssetAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发送Dspm资产访问验证码
+        /// </summary>
+        /// <param name="req"><see cref="SendDspmAssetLoginSmsCodeRequest"/></param>
+        /// <returns><see cref="SendDspmAssetLoginSmsCodeResponse"/></returns>
+        public Task<SendDspmAssetLoginSmsCodeResponse> SendDspmAssetLoginSmsCode(SendDspmAssetLoginSmsCodeRequest req)
+        {
+            return InternalRequestAsync<SendDspmAssetLoginSmsCodeResponse>(req, "SendDspmAssetLoginSmsCode");
+        }
+
+        /// <summary>
+        /// 发送Dspm资产访问验证码
+        /// </summary>
+        /// <param name="req"><see cref="SendDspmAssetLoginSmsCodeRequest"/></param>
+        /// <returns><see cref="SendDspmAssetLoginSmsCodeResponse"/></returns>
+        public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCodeSync(SendDspmAssetLoginSmsCodeRequest req)
+        {
+            return InternalRequestAsync<SendDspmAssetLoginSmsCodeResponse>(req, "SendDspmAssetLoginSmsCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止扫风险中心扫描任务
         /// </summary>
         /// <param name="req"><see cref="StopRiskCenterTaskRequest"/></param>
@@ -1793,6 +3536,48 @@ namespace TencentCloud.Csip.V20221121
         public StopRiskCenterTaskResponse StopRiskCenterTaskSync(StopRiskCenterTaskRequest req)
         {
             return InternalRequestAsync<StopRiskCenterTaskResponse>(req, "StopRiskCenterTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步dspm支持的资产
+        /// </summary>
+        /// <param name="req"><see cref="SyncDspmAssetsRequest"/></param>
+        /// <returns><see cref="SyncDspmAssetsResponse"/></returns>
+        public Task<SyncDspmAssetsResponse> SyncDspmAssets(SyncDspmAssetsRequest req)
+        {
+            return InternalRequestAsync<SyncDspmAssetsResponse>(req, "SyncDspmAssets");
+        }
+
+        /// <summary>
+        /// 同步dspm支持的资产
+        /// </summary>
+        /// <param name="req"><see cref="SyncDspmAssetsRequest"/></param>
+        /// <returns><see cref="SyncDspmAssetsResponse"/></returns>
+        public SyncDspmAssetsResponse SyncDspmAssetsSync(SyncDspmAssetsRequest req)
+        {
+            return InternalRequestAsync<SyncDspmAssetsResponse>(req, "SyncDspmAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步dspm用户列表
+        /// </summary>
+        /// <param name="req"><see cref="SyncDspmUsersRequest"/></param>
+        /// <returns><see cref="SyncDspmUsersResponse"/></returns>
+        public Task<SyncDspmUsersResponse> SyncDspmUsers(SyncDspmUsersRequest req)
+        {
+            return InternalRequestAsync<SyncDspmUsersResponse>(req, "SyncDspmUsers");
+        }
+
+        /// <summary>
+        /// 同步dspm用户列表
+        /// </summary>
+        /// <param name="req"><see cref="SyncDspmUsersRequest"/></param>
+        /// <returns><see cref="SyncDspmUsersResponse"/></returns>
+        public SyncDspmUsersResponse SyncDspmUsersSync(SyncDspmUsersRequest req)
+        {
+            return InternalRequestAsync<SyncDspmUsersResponse>(req, "SyncDspmUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1856,6 +3641,27 @@ namespace TencentCloud.Csip.V20221121
         public UpdateAlertStatusListResponse UpdateAlertStatusListSync(UpdateAlertStatusListRequest req)
         {
             return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 验证Dspm资产登录验证码
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDspmAssetLoginCodeRequest"/></param>
+        /// <returns><see cref="VerifyDspmAssetLoginCodeResponse"/></returns>
+        public Task<VerifyDspmAssetLoginCodeResponse> VerifyDspmAssetLoginCode(VerifyDspmAssetLoginCodeRequest req)
+        {
+            return InternalRequestAsync<VerifyDspmAssetLoginCodeResponse>(req, "VerifyDspmAssetLoginCode");
+        }
+
+        /// <summary>
+        /// 验证Dspm资产登录验证码
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDspmAssetLoginCodeRequest"/></param>
+        /// <returns><see cref="VerifyDspmAssetLoginCodeResponse"/></returns>
+        public VerifyDspmAssetLoginCodeResponse VerifyDspmAssetLoginCodeSync(VerifyDspmAssetLoginCodeRequest req)
+        {
+            return InternalRequestAsync<VerifyDspmAssetLoginCodeResponse>(req, "VerifyDspmAssetLoginCode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

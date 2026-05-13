@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 各个云服务器已挂载和可挂载弹性云盘的数量。
+        /// <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
         /// </summary>
         [JsonProperty("AttachDetail")]
         public AttachDetail[] AttachDetail{ get; set; }

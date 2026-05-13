@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1415";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -679,6 +679,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeAICallExtractResultResponse DescribeAICallExtractResultSync(DescribeAICallExtractResultRequest req)
         {
             return InternalRequestAsync<DescribeAICallExtractResultResponse>(req, "DescribeAICallExtractResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取AI 会话交互事件流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAICallInteractionRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAICallInteractionRecordsResponse"/></returns>
+        public Task<DescribeAICallInteractionRecordsResponse> DescribeAICallInteractionRecords(DescribeAICallInteractionRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAICallInteractionRecordsResponse>(req, "DescribeAICallInteractionRecords");
+        }
+
+        /// <summary>
+        /// 获取AI 会话交互事件流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAICallInteractionRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAICallInteractionRecordsResponse"/></returns>
+        public DescribeAICallInteractionRecordsResponse DescribeAICallInteractionRecordsSync(DescribeAICallInteractionRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAICallInteractionRecordsResponse>(req, "DescribeAICallInteractionRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

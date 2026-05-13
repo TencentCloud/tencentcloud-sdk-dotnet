@@ -25,19 +25,19 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// <p>资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源版本数组
+        /// <p>资源版本数组</p>
         /// </summary>
         [JsonProperty("ResourceConfigVersions")]
         public long?[] ResourceConfigVersions{ get; set; }
 
         /// <summary>
-        /// 工作空间 SerialId
+        /// <p>工作空间 SerialId</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }

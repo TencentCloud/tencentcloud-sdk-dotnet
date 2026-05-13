@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -743,6 +743,27 @@ namespace TencentCloud.Oceanus.V20190422
         public DescribeVariablesResponse DescribeVariablesSync(DescribeVariablesRequest req)
         {
             return InternalRequestAsync<DescribeVariablesResponse>(req, "DescribeVariables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 工作空间用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkSpaceUsersRequest"/></param>
+        /// <returns><see cref="DescribeWorkSpaceUsersResponse"/></returns>
+        public Task<DescribeWorkSpaceUsersResponse> DescribeWorkSpaceUsers(DescribeWorkSpaceUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkSpaceUsersResponse>(req, "DescribeWorkSpaceUsers");
+        }
+
+        /// <summary>
+        /// 工作空间用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkSpaceUsersRequest"/></param>
+        /// <returns><see cref="DescribeWorkSpaceUsersResponse"/></returns>
+        public DescribeWorkSpaceUsersResponse DescribeWorkSpaceUsersSync(DescribeWorkSpaceUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkSpaceUsersResponse>(req, "DescribeWorkSpaceUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

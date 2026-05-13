@@ -25,31 +25,31 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业 id
+        /// <p>作业 id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 快照资源 id
+        /// <p>快照资源 id</p>
         /// </summary>
         [JsonProperty("SerialId")]
         public string SerialId{ get; set; }
 
         /// <summary>
-        /// 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+        /// <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
         /// </summary>
         [JsonProperty("RecordType")]
         public long? RecordType{ get; set; }
 
         /// <summary>
-        /// 快照路径，目前只支持 cos 路径
+        /// <p>快照路径，目前只支持 cos 路径</p>
         /// </summary>
         [JsonProperty("SavepointPath")]
         public string SavepointPath{ get; set; }
 
         /// <summary>
-        /// 工作空间 id
+        /// <p>工作空间 id</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }

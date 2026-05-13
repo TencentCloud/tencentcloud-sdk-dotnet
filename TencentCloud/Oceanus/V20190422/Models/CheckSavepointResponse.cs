@@ -25,13 +25,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 资源 id
+        /// <p>资源 id</p>
         /// </summary>
         [JsonProperty("SerialId")]
         public string SerialId{ get; set; }
 
         /// <summary>
-        /// 1=可用，2=不可用
+        /// <p>1=可用，2=不可用</p>
         /// </summary>
         [JsonProperty("SavepointStatus")]
         public long? SavepointStatus{ get; set; }

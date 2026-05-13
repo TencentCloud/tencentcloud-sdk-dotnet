@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+        /// <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
