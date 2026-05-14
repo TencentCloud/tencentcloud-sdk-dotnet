@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1414";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -1423,6 +1423,48 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 根据label 聚合分析日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogV2Request"/></param>
+        /// <returns><see cref="DescribeRumGroupLogV2Response"/></returns>
+        public Task<DescribeRumGroupLogV2Response> DescribeRumGroupLogV2(DescribeRumGroupLogV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumGroupLogV2Response>(req, "DescribeRumGroupLogV2");
+        }
+
+        /// <summary>
+        /// 根据label 聚合分析日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogV2Request"/></param>
+        /// <returns><see cref="DescribeRumGroupLogV2Response"/></returns>
+        public DescribeRumGroupLogV2Response DescribeRumGroupLogV2Sync(DescribeRumGroupLogV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumGroupLogV2Response>(req, "DescribeRumGroupLogV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogDetailsV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogDetailsV2Response"/></returns>
+        public Task<DescribeRumLogDetailsV2Response> DescribeRumLogDetailsV2(DescribeRumLogDetailsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogDetailsV2Response>(req, "DescribeRumLogDetailsV2");
+        }
+
+        /// <summary>
+        /// 查询日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogDetailsV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogDetailsV2Response"/></returns>
+        public DescribeRumLogDetailsV2Response DescribeRumLogDetailsV2Sync(DescribeRumLogDetailsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogDetailsV2Response>(req, "DescribeRumLogDetailsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取项目下的日志列表（实例创建的项目下的日志列表）
         /// </summary>
         /// <param name="req"><see cref="DescribeRumLogExportRequest"/></param>
@@ -1440,6 +1482,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeRumLogExportResponse DescribeRumLogExportSync(DescribeRumLogExportRequest req)
         {
             return InternalRequestAsync<DescribeRumLogExportResponse>(req, "DescribeRumLogExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建日志导出
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogExportV2Response"/></returns>
+        public Task<DescribeRumLogExportV2Response> DescribeRumLogExportV2(DescribeRumLogExportV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogExportV2Response>(req, "DescribeRumLogExportV2");
+        }
+
+        /// <summary>
+        /// 创建日志导出
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogExportV2Response"/></returns>
+        public DescribeRumLogExportV2Response DescribeRumLogExportV2Sync(DescribeRumLogExportV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogExportV2Response>(req, "DescribeRumLogExportV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1465,6 +1528,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogExportsV2Response"/></returns>
+        public Task<DescribeRumLogExportsV2Response> DescribeRumLogExportsV2(DescribeRumLogExportsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogExportsV2Response>(req, "DescribeRumLogExportsV2");
+        }
+
+        /// <summary>
+        /// 获取日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogExportsV2Response"/></returns>
+        public DescribeRumLogExportsV2Response DescribeRumLogExportsV2Sync(DescribeRumLogExportsV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogExportsV2Response>(req, "DescribeRumLogExportsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取项目下的日志列表（实例创建的项目下的日志列表）
         /// </summary>
         /// <param name="req"><see cref="DescribeRumLogListRequest"/></param>
@@ -1486,6 +1570,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 查询原始日志总量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogTotalV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogTotalV2Response"/></returns>
+        public Task<DescribeRumLogTotalV2Response> DescribeRumLogTotalV2(DescribeRumLogTotalV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogTotalV2Response>(req, "DescribeRumLogTotalV2");
+        }
+
+        /// <summary>
+        /// 查询原始日志总量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogTotalV2Request"/></param>
+        /// <returns><see cref="DescribeRumLogTotalV2Response"/></returns>
+        public DescribeRumLogTotalV2Response DescribeRumLogTotalV2Sync(DescribeRumLogTotalV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumLogTotalV2Response>(req, "DescribeRumLogTotalV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取项目下的日志列表，分钟级
         /// </summary>
         /// <param name="req"><see cref="DescribeRumStatsLogListRequest"/></param>
@@ -1503,6 +1608,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeRumStatsLogListResponse DescribeRumStatsLogListSync(DescribeRumStatsLogListRequest req)
         {
             return InternalRequestAsync<DescribeRumStatsLogListResponse>(req, "DescribeRumStatsLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志时间分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumStatsLogListV2Request"/></param>
+        /// <returns><see cref="DescribeRumStatsLogListV2Response"/></returns>
+        public Task<DescribeRumStatsLogListV2Response> DescribeRumStatsLogListV2(DescribeRumStatsLogListV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumStatsLogListV2Response>(req, "DescribeRumStatsLogListV2");
+        }
+
+        /// <summary>
+        /// 查询日志时间分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumStatsLogListV2Request"/></param>
+        /// <returns><see cref="DescribeRumStatsLogListV2Response"/></returns>
+        public DescribeRumStatsLogListV2Response DescribeRumStatsLogListV2Sync(DescribeRumStatsLogListV2Request req)
+        {
+            return InternalRequestAsync<DescribeRumStatsLogListV2Response>(req, "DescribeRumStatsLogListV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

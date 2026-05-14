@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1425";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -290,6 +290,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcApiTokenResponse CreateAigcApiTokenSync(CreateAigcApiTokenRequest req)
         {
             return InternalRequestAsync<CreateAigcApiTokenResponse>(req, "CreateAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 音色复刻。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioCloneRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioCloneResponse"/></returns>
+        public Task<CreateAigcAudioCloneResponse> CreateAigcAudioClone(CreateAigcAudioCloneRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioCloneResponse>(req, "CreateAigcAudioClone");
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 音色复刻。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioCloneRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioCloneResponse"/></returns>
+        public CreateAigcAudioCloneResponse CreateAigcAudioCloneSync(CreateAigcAudioCloneRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioCloneResponse>(req, "CreateAigcAudioClone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

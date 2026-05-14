@@ -25,31 +25,26 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 错误码，0 表示成功，非0表示失败错误码。
-        /// 0：成功
-        /// 1：错误
-        /// 1002：参数错误
-        /// 4300：未开通服务
-        /// 4301：后端未创建对应产品
+        /// <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// UTF-8编码，出错消息。
+        /// <p>UTF-8编码，出错消息。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 业务详情。
+        /// <p>业务详情。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public OutputManageMarketingRiskValue Value{ get; set; }
 
         /// <summary>
-        /// 控制台显示的req_id。
+        /// <p>控制台显示的req_id。</p>
         /// </summary>
         [JsonProperty("UUid")]
         public string UUid{ get; set; }

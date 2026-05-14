@@ -25,220 +25,232 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 云厂商
+        /// <p>云厂商</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// 云账号名称
+        /// <p>云账号名称</p>
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// 云账号
+        /// <p>云账号</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// IP
+        /// <p>IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 端口或者端口范围
+        /// <p>端口或者端口范围</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 开放
+        /// <p>开放</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 风险类型
+        /// <p>风险类型</p>
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// acl类型
+        /// <p>acl类型</p>
         /// </summary>
         [JsonProperty("AclType")]
         public string AclType{ get; set; }
 
         /// <summary>
-        /// acl列表
+        /// <p>acl列表</p>
         /// </summary>
         [JsonProperty("AclList")]
         public string AclList{ get; set; }
 
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 资产类型
+        /// <p>资产类型</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// 端口服务数量
+        /// <p>端口服务数量</p>
         /// </summary>
         [JsonProperty("PortServiceCount")]
         public ulong? PortServiceCount{ get; set; }
 
         /// <summary>
-        /// 高危端口数量
+        /// <p>高危端口数量</p>
         /// </summary>
         [JsonProperty("HighRiskPortServiceCount")]
         public ulong? HighRiskPortServiceCount{ get; set; }
 
         /// <summary>
-        /// web应用数量
+        /// <p>web应用数量</p>
         /// </summary>
         [JsonProperty("WebAppCount")]
         public ulong? WebAppCount{ get; set; }
 
         /// <summary>
-        /// 有风险web应用数量
+        /// <p>有风险web应用数量</p>
         /// </summary>
         [JsonProperty("RiskWebAppCount")]
         public ulong? RiskWebAppCount{ get; set; }
 
         /// <summary>
-        /// 弱口令数量
+        /// <p>弱口令数量</p>
         /// </summary>
         [JsonProperty("WeakPasswordCount")]
         public ulong? WeakPasswordCount{ get; set; }
 
         /// <summary>
-        /// 漏洞数量
+        /// <p>漏洞数量</p>
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
-        /// 首次发现时间
+        /// <p>首次发现时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间
+        /// <p>最近更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 实例类型名称
+        /// <p>实例类型名称</p>
         /// </summary>
         [JsonProperty("AssetTypeName")]
         public string AssetTypeName{ get; set; }
 
         /// <summary>
-        /// 开放状态
+        /// <p>开放状态</p>
         /// </summary>
         [JsonProperty("DisplayStatus")]
         public string DisplayStatus{ get; set; }
 
         /// <summary>
-        /// 端口状态
+        /// <p>端口状态</p>
         /// </summary>
         [JsonProperty("DisplayRiskType")]
         public string DisplayRiskType{ get; set; }
 
         /// <summary>
-        /// 扫描任务状态
+        /// <p>扫描任务状态</p>
         /// </summary>
         [JsonProperty("ScanTaskStatus")]
         public string ScanTaskStatus{ get; set; }
 
         /// <summary>
-        /// uuid
+        /// <p>uuid</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 是否进行过安全体检
+        /// <p>是否进行过安全体检</p>
         /// </summary>
         [JsonProperty("HasScan")]
         public string HasScan{ get; set; }
 
         /// <summary>
-        /// 租户ID
+        /// <p>租户ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 租户ID字符串
+        /// <p>租户ID字符串</p>
         /// </summary>
         [JsonProperty("AppIdStr")]
         public string AppIdStr{ get; set; }
 
         /// <summary>
-        /// 记录ID
+        /// <p>记录ID</p>
         /// </summary>
         [JsonProperty("ExposureID")]
         public ulong? ExposureID{ get; set; }
 
         /// <summary>
-        /// 端口开放数量
+        /// <p>端口开放数量</p>
         /// </summary>
         [JsonProperty("PortDetectCount")]
         public ulong? PortDetectCount{ get; set; }
 
         /// <summary>
-        /// 端口开放结果
+        /// <p>端口开放结果</p>
         /// </summary>
         [JsonProperty("PortDetectResult")]
         public string PortDetectResult{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 待治理风险数量
+        /// <p>待治理风险数量</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskCount")]
         public ulong? ToGovernedRiskCount{ get; set; }
 
         /// <summary>
-        /// 待治理风险内容
+        /// <p>待治理风险内容</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskContent")]
         public string ToGovernedRiskContent{ get; set; }
+
+        /// <summary>
+        /// <p>资产类型图标</p>
+        /// </summary>
+        [JsonProperty("AssetTypeIconURL")]
+        public string AssetTypeIconURL{ get; set; }
+
+        /// <summary>
+        /// <p>资产类型3D图标</p>
+        /// </summary>
+        [JsonProperty("AssetTypeIconSolidURL")]
+        public string AssetTypeIconSolidURL{ get; set; }
 
 
         /// <summary>
@@ -282,6 +294,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
             this.SetParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
+            this.SetParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+            this.SetParamSimple(map, prefix + "AssetTypeIconSolidURL", this.AssetTypeIconSolidURL);
         }
     }
 }

@@ -25,106 +25,112 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 租户ID
+        /// <p>租户ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 云厂商
+        /// <p>云厂商</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// 云厂商名称
+        /// <p>云厂商名称</p>
         /// </summary>
         [JsonProperty("ProviderName")]
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// 云账号名称
+        /// <p>云账号名称</p>
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// 云账号ID
+        /// <p>云账号ID</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 首次发现时间
+        /// <p>首次发现时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 风险状态
+        /// <p>风险状态</p>
         /// </summary>
         [JsonProperty("RiskStatus")]
         public long? RiskStatus{ get; set; }
 
         /// <summary>
-        /// 风险名称
+        /// <p>风险名称</p>
         /// </summary>
         [JsonProperty("RiskTitle")]
         public string RiskTitle{ get; set; }
 
         /// <summary>
-        /// 检查类型
+        /// <p>检查类型</p>
         /// </summary>
         [JsonProperty("CheckType")]
         public string CheckType{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// <p>风险等级</p>
         /// </summary>
         [JsonProperty("Severity")]
         public string Severity{ get; set; }
 
         /// <summary>
-        /// 风险规则ID
+        /// <p>风险规则ID</p>
         /// </summary>
         [JsonProperty("RiskRuleId")]
         public string RiskRuleId{ get; set; }
 
         /// <summary>
-        /// 处置分类
+        /// <p>处置分类</p>
         /// </summary>
         [JsonProperty("Classify")]
         public string Classify{ get; set; }
 
         /// <summary>
-        /// 等保合规
+        /// <p>等保合规</p>
         /// </summary>
         [JsonProperty("StandardTerms")]
         public StandardTerm[] StandardTerms{ get; set; }
 
         /// <summary>
-        /// 资产类型
+        /// <p>资产类型</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
+
+        /// <summary>
+        /// <p>资产类型图标</p>
+        /// </summary>
+        [JsonProperty("AssetTypeIconURL")]
+        public string AssetTypeIconURL{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Classify", this.Classify);
             this.SetParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
+            this.SetParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
         }
     }
 }

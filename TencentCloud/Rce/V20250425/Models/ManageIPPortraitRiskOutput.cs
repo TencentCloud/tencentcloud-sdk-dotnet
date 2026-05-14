@@ -25,19 +25,19 @@ namespace TencentCloud.Rce.V20250425.Models
     {
         
         /// <summary>
-        /// 返回码
+        /// <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 返回消息
+        /// <p>返回消息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 结果
+        /// <p>结果</p>
         /// </summary>
         [JsonProperty("Value")]
         public ManageIPPortraitRiskValueOutput Value{ get; set; }

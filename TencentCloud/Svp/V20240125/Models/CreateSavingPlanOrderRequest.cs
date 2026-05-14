@@ -25,58 +25,64 @@ namespace TencentCloud.Svp.V20240125.Models
     {
         
         /// <summary>
-        /// 地域编码
+        /// <p>地域编码</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域编码
+        /// <p>区域编码</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 预付费类型
+        /// <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
         /// </summary>
         [JsonProperty("PrePayType")]
         public string PrePayType{ get; set; }
 
         /// <summary>
-        /// 时长
+        /// <p>时长</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 时长单位
+        /// <p>时长单位</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 商品唯一标识
+        /// <p>商品唯一标识</p>
         /// </summary>
         [JsonProperty("CommodityCode")]
         public string CommodityCode{ get; set; }
 
         /// <summary>
-        /// 承诺时长内的小额金额（单位：元）
+        /// <p>承诺时长内的小额金额（单位：元）</p>
         /// </summary>
         [JsonProperty("PromiseUseAmount")]
         public long? PromiseUseAmount{ get; set; }
 
         /// <summary>
-        /// 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+        /// <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
         /// </summary>
         [JsonProperty("SpecifyEffectTime")]
         public string SpecifyEffectTime{ get; set; }
 
         /// <summary>
-        /// 可重入ID
+        /// <p>可重入ID</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+        /// </summary>
+        [JsonProperty("CommitmentPeriod")]
+        public long? CommitmentPeriod{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Svp.V20240125.Models
             this.SetParamSimple(map, prefix + "PromiseUseAmount", this.PromiseUseAmount);
             this.SetParamSimple(map, prefix + "SpecifyEffectTime", this.SpecifyEffectTime);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "CommitmentPeriod", this.CommitmentPeriod);
         }
     }
 }

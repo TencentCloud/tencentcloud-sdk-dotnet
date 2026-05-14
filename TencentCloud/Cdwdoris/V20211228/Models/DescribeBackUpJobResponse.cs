@@ -25,25 +25,25 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 任务列表
+        /// <p>任务列表</p>
         /// </summary>
         [JsonProperty("BackUpJobs")]
         public BackUpJobDisplay[] BackUpJobs{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 当前时间
+        /// <p>当前时间</p>
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }

@@ -84,6 +84,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("GeneralTaskParams")]
         public WorkflowGeneralTaskParam[] GeneralTaskParams{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TriggerWorkflowRunConfiguration")]
+        public WorkflowRunConfig TriggerWorkflowRunConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
             this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
             this.SetParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
+            this.SetParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
         }
     }
 }

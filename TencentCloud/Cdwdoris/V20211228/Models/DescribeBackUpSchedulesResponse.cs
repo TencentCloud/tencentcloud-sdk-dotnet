@@ -25,13 +25,37 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 当前系统时间
+        /// <p>备份是否开启</p>
+        /// </summary>
+        [JsonProperty("BackUpOpened")]
+        public bool? BackUpOpened{ get; set; }
+
+        /// <summary>
+        /// <p>备份桶</p>
+        /// </summary>
+        [JsonProperty("CosBucketName")]
+        public string CosBucketName{ get; set; }
+
+        /// <summary>
+        /// <p>备份的状态</p>
+        /// </summary>
+        [JsonProperty("BackUpStatus")]
+        public long? BackUpStatus{ get; set; }
+
+        /// <summary>
+        /// <p>备份、迁移任务信息</p>
+        /// </summary>
+        [JsonProperty("BackupScheduleInfos")]
+        public BackupScheduleInfo[] BackupScheduleInfos{ get; set; }
+
+        /// <summary>
+        /// <p>当前系统时间</p>
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }
 
         /// <summary>
-        /// 桶加密状态信息
+        /// <p>桶加密状态信息</p>
         /// </summary>
         [JsonProperty("BucketEncryption")]
         public BucketEncryptionInfo BucketEncryption{ get; set; }
@@ -48,6 +72,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BackUpOpened", this.BackUpOpened);
+            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "BackUpStatus", this.BackUpStatus);
+            this.SetParamArrayObj(map, prefix + "BackupScheduleInfos.", this.BackupScheduleInfos);
             this.SetParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
             this.SetParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -25,20 +25,20 @@ namespace TencentCloud.Ciam.V20220331.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 分页对象
+        /// <p>分页对象</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pageable")]
         public Pageable Pageable{ get; set; }
 
         /// <summary>
-        /// 用户列表
+        /// <p>用户列表</p>
         /// </summary>
         [JsonProperty("Content")]
         public User[] Content{ get; set; }

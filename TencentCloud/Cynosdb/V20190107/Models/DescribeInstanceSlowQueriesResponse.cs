@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢查询记录
+        /// <p>慢查询记录</p>
         /// </summary>
         [JsonProperty("SlowQueries")]
         public SlowQueriesItem[] SlowQueries{ get; set; }

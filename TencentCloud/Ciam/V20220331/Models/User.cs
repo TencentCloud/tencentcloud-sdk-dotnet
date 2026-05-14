@@ -25,288 +25,309 @@ namespace TencentCloud.Ciam.V20220331.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// <p>手机号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// <p>邮箱</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 上次登录时间
+        /// <p>上次登录时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastSignOn")]
         public long? LastSignOn{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedDate")]
         public long? CreatedDate{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 用户来源
+        /// <p>用户来源</p>
         /// </summary>
         [JsonProperty("UserDataSourceEnum")]
         public string UserDataSourceEnum{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// <p>昵称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 生日
+        /// <p>生日</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Birthdate")]
         public long? Birthdate{ get; set; }
 
         /// <summary>
-        /// 用户组ID
+        /// <p>用户组ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroups")]
         public string[] UserGroups{ get; set; }
 
         /// <summary>
-        /// 上次修改时间
+        /// <p>用户组名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserGroupNames")]
+        public string[] UserGroupNames{ get; set; }
+
+        /// <summary>
+        /// <p>上次修改时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifiedDate")]
         public long? LastModifiedDate{ get; set; }
 
         /// <summary>
-        /// 自定义属性
+        /// <p>自定义属性</p>
         /// </summary>
         [JsonProperty("CustomAttributes")]
         public MemberMap[] CustomAttributes{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// <p>身份证号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResidentIdentityCard")]
         public string ResidentIdentityCard{ get; set; }
 
         /// <summary>
-        /// QQ的OpenId
+        /// <p>QQ的OpenId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QqOpenId")]
         public string QqOpenId{ get; set; }
 
         /// <summary>
-        /// QQ的UnionId
+        /// <p>QQ的UnionId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QqUnionId")]
         public string QqUnionId{ get; set; }
 
         /// <summary>
-        /// 微信的WechatOpenId
+        /// <p>微信的WechatOpenId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatOpenId")]
         public string WechatOpenId{ get; set; }
 
         /// <summary>
-        /// 微信的WechatUnionId
+        /// <p>微信的WechatUnionId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatUnionId")]
         public string WechatUnionId{ get; set; }
 
         /// <summary>
-        /// 支付宝的AlipayUserId
+        /// <p>支付宝的AlipayUserId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlipayUserId")]
         public string AlipayUserId{ get; set; }
 
         /// <summary>
-        /// 企业微信的WeComUserId
+        /// <p>企业微信的WeComUserId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeComUserId")]
         public string WeComUserId{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 坐标
+        /// <p>坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locale")]
         public string Locale{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// <p>性别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }
 
         /// <summary>
-        /// 实名核验方式
+        /// <p>实名核验方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityVerificationMethod")]
         public string IdentityVerificationMethod{ get; set; }
 
         /// <summary>
-        /// 是否已经实名核验
+        /// <p>是否已经实名核验</p>
         /// </summary>
         [JsonProperty("IdentityVerified")]
         public bool? IdentityVerified{ get; set; }
 
         /// <summary>
-        /// 工作
+        /// <p>工作</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Job")]
         public string Job{ get; set; }
 
         /// <summary>
-        /// 国家
+        /// <p>国家</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 是否主账号（进行过账号融合后，主账号为true，从账号为false）
+        /// <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
         /// </summary>
         [JsonProperty("Primary")]
         public bool? Primary{ get; set; }
 
         /// <summary>
-        /// 时区
+        /// <p>时区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 是否已经首次登录
+        /// <p>是否已经首次登录</p>
         /// </summary>
         [JsonProperty("AlreadyFirstLogin")]
         public bool? AlreadyFirstLogin{ get; set; }
 
         /// <summary>
-        /// 租户id
+        /// <p>租户id</p>
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
-        /// 用户目录id
+        /// <p>用户目录id</p>
         /// </summary>
         [JsonProperty("UserStoreId")]
         public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// <p>版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// 锁定类型（分为管理员锁定，和登录策略锁定）
+        /// <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockType")]
         public string LockType{ get; set; }
 
         /// <summary>
-        /// 锁定时间点
+        /// <p>锁定时间点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockTime")]
         public long? LockTime{ get; set; }
 
         /// <summary>
-        /// 索引字段1
+        /// <p>索引字段1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedAttribute1")]
         public string IndexedAttribute1{ get; set; }
 
         /// <summary>
-        /// 索引字段2
+        /// <p>索引字段2</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedAttribute2")]
         public string IndexedAttribute2{ get; set; }
 
         /// <summary>
-        /// 索引字段3
+        /// <p>索引字段3</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedAttribute3")]
         public string IndexedAttribute3{ get; set; }
 
         /// <summary>
-        /// 索引字段4
+        /// <p>索引字段4</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedAttribute4")]
         public string IndexedAttribute4{ get; set; }
 
         /// <summary>
-        /// 索引字段5
+        /// <p>索引字段5</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexedAttribute5")]
         public string IndexedAttribute5{ get; set; }
+
+        /// <summary>
+        /// <p>用户所属组织机构ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserOrgs")]
+        public string[] UserOrgs{ get; set; }
+
+        /// <summary>
+        /// <p>用户所属企业微信组织机构</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WeComUserOrgs")]
+        public long?[] WeComUserOrgs{ get; set; }
 
 
         /// <summary>
@@ -326,6 +347,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "Birthdate", this.Birthdate);
             this.SetParamArraySimple(map, prefix + "UserGroups.", this.UserGroups);
+            this.SetParamArraySimple(map, prefix + "UserGroupNames.", this.UserGroupNames);
             this.SetParamSimple(map, prefix + "LastModifiedDate", this.LastModifiedDate);
             this.SetParamArrayObj(map, prefix + "CustomAttributes.", this.CustomAttributes);
             this.SetParamSimple(map, prefix + "ResidentIdentityCard", this.ResidentIdentityCard);
@@ -356,6 +378,8 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
             this.SetParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
             this.SetParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
+            this.SetParamArraySimple(map, prefix + "UserOrgs.", this.UserOrgs);
+            this.SetParamArraySimple(map, prefix + "WeComUserOrgs.", this.WeComUserOrgs);
         }
     }
 }

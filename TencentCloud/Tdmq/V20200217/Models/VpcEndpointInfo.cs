@@ -25,37 +25,37 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// vpc的id
+        /// <p>vpc的id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网id
+        /// <p>子网id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// vpc接入点信息
+        /// <p>vpc接入点信息</p>
         /// </summary>
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
 
         /// <summary>
-        /// vpc接入点状态 OFF/ON/CREATING/DELETING
+        /// <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
         /// </summary>
         [JsonProperty("VpcDataStreamEndpointStatus")]
         public string VpcDataStreamEndpointStatus{ get; set; }
 
         /// <summary>
-        /// TLS加密的数据流接入点
+        /// <p>TLS加密的数据流接入点</p>
         /// </summary>
         [JsonProperty("VpcTlsEndpoint")]
         public string VpcTlsEndpoint{ get; set; }
 
         /// <summary>
-        /// VPC 接入点操作失败的错误信息
+        /// <p>VPC 接入点操作失败的错误信息</p>
         /// </summary>
         [JsonProperty("VpcErrorMessage")]
         public string VpcErrorMessage{ get; set; }

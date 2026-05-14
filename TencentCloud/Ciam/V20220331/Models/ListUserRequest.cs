@@ -25,28 +25,25 @@ namespace TencentCloud.Ciam.V20220331.Models
     {
         
         /// <summary>
-        /// 用户目录ID
+        /// <p>用户目录ID</p>
         /// </summary>
         [JsonProperty("UserStoreId")]
         public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// 分页数据
+        /// <p>分页数据</p>
         /// </summary>
         [JsonProperty("Pageable")]
         public Pageable Pageable{ get; set; }
 
         /// <summary>
-        /// Key可选值为condition、userGroupId
-        /// 
-        /// <li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-        /// <li> **userGroupId** </li>	Values = 用户组ID
+        /// <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 返回信息是否为原文
+        /// <p>返回信息是否为原文</p>
         /// </summary>
         [JsonProperty("Original")]
         public bool? Original{ get; set; }

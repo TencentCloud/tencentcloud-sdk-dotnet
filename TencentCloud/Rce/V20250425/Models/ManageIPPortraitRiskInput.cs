@@ -25,13 +25,13 @@ namespace TencentCloud.Rce.V20250425.Models
     {
         
         /// <summary>
-        /// 用户公网ip（仅支持IPv4）
+        /// <p>用户公网ip（仅支持IPv4）</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 渠道号
+        /// <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
         /// </summary>
         [JsonProperty("Channel")]
         public long? Channel{ get; set; }

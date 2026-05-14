@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1426";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -2717,6 +2717,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
         {
             return InternalRequestAsync<DescribeSearchBugInfoResponse>(req, "DescribeSearchBugInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
+        public Task<DescribeSkillScanPayInfoResponse> DescribeSkillScanPayInfo(DescribeSkillScanPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanPayInfoResponse>(req, "DescribeSkillScanPayInfo");
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
+        public DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfoSync(DescribeSkillScanPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanPayInfoResponse>(req, "DescribeSkillScanPayInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

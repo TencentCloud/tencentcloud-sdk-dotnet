@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public VoiceProfile VoiceProfile{ get; set; }
 
         /// <summary>
+        /// <p>试听音频文本。长度不超过500</p>
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
         /// <p>扩展参数，json字符串</p>
         /// </summary>
         [JsonProperty("ExtParam")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

@@ -25,407 +25,414 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// <p>任务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 同步类型1.解决方案(整库迁移),2.单表同步
+        /// <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
         /// </summary>
         [JsonProperty("SyncType")]
         public long? SyncType{ get; set; }
 
         /// <summary>
-        /// 201.实时,202.离线
+        /// <p>201.实时,202.离线</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 任务所属工作流id
+        /// <p>任务所属工作流id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务调度id(oceanus or us等作业id)，非填项
+        /// <p>任务调度id(oceanus or us等作业id)，非填项</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTaskId")]
         public string ScheduleTaskId{ get; set; }
 
         /// <summary>
-        /// inlong任务id
+        /// <p>inlong任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupId")]
         public string TaskGroupId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 创建人uin
+        /// <p>创建人uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 操作人uin
+        /// <p>操作人uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorUin")]
         public string OperatorUin{ get; set; }
 
         /// <summary>
-        /// owner uin
+        /// <p>owner uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// <p>应用id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+        /// <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 节点列表
+        /// <p>节点列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nodes")]
         public IntegrationNodeInfo[] Nodes{ get; set; }
 
         /// <summary>
-        /// 执行资源id
+        /// <p>执行资源id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorId")]
         public string ExecutorId{ get; set; }
 
         /// <summary>
-        /// 任务配置信息
+        /// <p>任务配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public RecordField[] Config{ get; set; }
 
         /// <summary>
-        /// 任务扩展配置信息
+        /// <p>任务扩展配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtConfig")]
         public RecordField[] ExtConfig{ get; set; }
 
         /// <summary>
-        /// 任务执行context信息
+        /// <p>任务执行context信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteContext")]
         public RecordField[] ExecuteContext{ get; set; }
 
         /// <summary>
-        /// 节点映射
+        /// <p>节点映射</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mappings")]
         public IntegrationNodeMapping[] Mappings{ get; set; }
 
         /// <summary>
-        /// 任务配置模式，0:画布 1:表单 3:脚本
+        /// <p>任务配置模式，0:画布 1:表单 3:脚本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskMode")]
         public string TaskMode{ get; set; }
 
         /// <summary>
-        /// 责任人
+        /// <p>责任人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Incharge")]
         public string Incharge{ get; set; }
 
         /// <summary>
-        /// 离线新增参数
+        /// <p>离线新增参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineTaskAddEntity")]
         public OfflineTaskAddParam OfflineTaskAddEntity{ get; set; }
 
         /// <summary>
-        /// group name
+        /// <p>group name</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorGroupName")]
         public string ExecutorGroupName{ get; set; }
 
         /// <summary>
-        /// inlong manager url
+        /// <p>inlong manager url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InLongManagerUrl")]
         public string InLongManagerUrl{ get; set; }
 
         /// <summary>
-        /// stream id
+        /// <p>stream id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InLongStreamId")]
         public string InLongStreamId{ get; set; }
 
         /// <summary>
-        /// version
+        /// <p>version</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InLongManagerVersion")]
         public string InLongManagerVersion{ get; set; }
 
         /// <summary>
-        /// inlong dataproxy url
+        /// <p>inlong dataproxy url</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataProxyUrl")]
         public string[] DataProxyUrl{ get; set; }
 
         /// <summary>
-        /// 任务版本是否已提交运维
+        /// <p>任务版本是否已提交运维</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Submit")]
         public bool? Submit{ get; set; }
 
         /// <summary>
-        /// 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+        /// <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputDatasourceType")]
         public string InputDatasourceType{ get; set; }
 
         /// <summary>
-        /// 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+        /// <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputDatasourceType")]
         public string OutputDatasourceType{ get; set; }
 
         /// <summary>
-        /// 读取条数
+        /// <p>读取条数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumRecordsIn")]
         public long? NumRecordsIn{ get; set; }
 
         /// <summary>
-        /// 写入条数
+        /// <p>写入条数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumRecordsOut")]
         public long? NumRecordsOut{ get; set; }
 
         /// <summary>
-        /// 读取延迟
+        /// <p>读取延迟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReaderDelay")]
         public float? ReaderDelay{ get; set; }
 
         /// <summary>
-        /// 重启次数
+        /// <p>重启次数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumRestarts")]
         public long? NumRestarts{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务更新时间
+        /// <p>任务更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 任务最后一次运行时间
+        /// <p>任务最后一次运行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastRunTime")]
         public string LastRunTime{ get; set; }
 
         /// <summary>
-        /// 任务停止时间
+        /// <p>任务停止时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopTime")]
         public string StopTime{ get; set; }
 
         /// <summary>
-        /// 作业是否已提交
+        /// <p>作业是否已提交</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasVersion")]
         public bool? HasVersion{ get; set; }
 
         /// <summary>
-        /// 任务是否被锁定
+        /// <p>任务是否被锁定</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locked")]
         public bool? Locked{ get; set; }
 
         /// <summary>
-        /// 任务锁定人
+        /// <p>任务锁定人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locker")]
         public string Locker{ get; set; }
 
         /// <summary>
-        /// 耗费资源量
+        /// <p>耗费资源量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCu")]
         public float? RunningCu{ get; set; }
 
         /// <summary>
-        /// 该任务关联的告警规则
+        /// <p>该任务关联的告警规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskAlarmRegularList")]
         public string[] TaskAlarmRegularList{ get; set; }
 
         /// <summary>
-        /// 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+        /// <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchResource")]
         public long? SwitchResource{ get; set; }
 
         /// <summary>
-        /// 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+        /// <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadPhase")]
         public long? ReadPhase{ get; set; }
 
         /// <summary>
-        /// 实时任务版本号
+        /// <p>实时任务版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public long? InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 离线任务导入到编排空间的任务id
+        /// <p>离线任务导入到编排空间的任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArrangeSpaceTaskId")]
         public string ArrangeSpaceTaskId{ get; set; }
 
         /// <summary>
-        /// 离线任务状态区分1.未提交2.已提交3.已导出
+        /// <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineTaskStatus")]
         public long? OfflineTaskStatus{ get; set; }
 
         /// <summary>
-        /// 导入到编排空间配置
+        /// <p>导入到编排空间配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskImportInfo")]
         public TaskImportInfo TaskImportInfo{ get; set; }
 
         /// <summary>
-        /// 业务延迟
+        /// <p>业务延迟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessLatency")]
         public long? BusinessLatency{ get; set; }
 
         /// <summary>
-        /// 当前同步位点
+        /// <p>当前同步位点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentSyncPosition")]
         public long? CurrentSyncPosition{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public IntegrationTag[] TagList{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 任务子状态
+        /// <p>任务子状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskSubType")]
         public long? TaskSubType{ get; set; }
 
         /// <summary>
-        /// 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+        /// <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotExistsCheckPoint")]
         public long? NotExistsCheckPoint{ get; set; }
 
         /// <summary>
-        /// savepiontPath
+        /// <p>savepiontPath</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SavePointId")]
         public string SavePointId{ get; set; }
 
         /// <summary>
-        /// savepiontId
+        /// <p>savepiontId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SavePointPath")]
         public string SavePointPath{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次操作信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastOperateInfo")]
+        public LastOperateInfo LastOperateInfo{ get; set; }
 
 
         /// <summary>
@@ -491,6 +498,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "NotExistsCheckPoint", this.NotExistsCheckPoint);
             this.SetParamSimple(map, prefix + "SavePointId", this.SavePointId);
             this.SetParamSimple(map, prefix + "SavePointPath", this.SavePointPath);
+            this.SetParamObj(map, prefix + "LastOperateInfo.", this.LastOperateInfo);
         }
     }
 }

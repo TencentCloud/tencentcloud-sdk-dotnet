@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1426</VersionPrefix>
+    <VersionPrefix>3.0.1427</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -342,6 +342,8 @@
     <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanPayInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanPayInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSkillScanResultRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSkillScanResultResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetRequest.cs" />

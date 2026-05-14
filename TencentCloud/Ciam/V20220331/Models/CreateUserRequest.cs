@@ -25,94 +25,100 @@ namespace TencentCloud.Ciam.V20220331.Models
     {
         
         /// <summary>
-        /// 用户目录ID
+        /// <p>用户目录ID</p>
         /// </summary>
         [JsonProperty("UserStoreId")]
         public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// 手机号码
+        /// <p>手机号码</p>
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// <p>邮箱</p>
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// <p>密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// <p>昵称</p>
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 用户组ID
+        /// <p>用户组ID</p>
         /// </summary>
         [JsonProperty("UserGroup")]
         public string[] UserGroup{ get; set; }
 
         /// <summary>
-        /// 生日
+        /// <p>生日</p>
         /// </summary>
         [JsonProperty("Birthdate")]
         public long? Birthdate{ get; set; }
 
         /// <summary>
-        /// 自定义属性
+        /// <p>自定义属性</p>
         /// </summary>
         [JsonProperty("CustomizationAttributes")]
         public MemberMap[] CustomizationAttributes{ get; set; }
 
         /// <summary>
-        /// 索引字段1
+        /// <p>索引字段1</p>
         /// </summary>
         [JsonProperty("IndexedAttribute1")]
         public string IndexedAttribute1{ get; set; }
 
         /// <summary>
-        /// 索引字段2
+        /// <p>索引字段2</p>
         /// </summary>
         [JsonProperty("IndexedAttribute2")]
         public string IndexedAttribute2{ get; set; }
 
         /// <summary>
-        /// 索引字段3
+        /// <p>索引字段3</p>
         /// </summary>
         [JsonProperty("IndexedAttribute3")]
         public string IndexedAttribute3{ get; set; }
 
         /// <summary>
-        /// 索引字段4
+        /// <p>索引字段4</p>
         /// </summary>
         [JsonProperty("IndexedAttribute4")]
         public string IndexedAttribute4{ get; set; }
 
         /// <summary>
-        /// 索引字段5
+        /// <p>索引字段5</p>
         /// </summary>
         [JsonProperty("IndexedAttribute5")]
         public string IndexedAttribute5{ get; set; }
+
+        /// <summary>
+        /// <p>用户所属组织机构ID</p>
+        /// </summary>
+        [JsonProperty("UserOrg")]
+        public string[] UserOrg{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
             this.SetParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
             this.SetParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
+            this.SetParamArraySimple(map, prefix + "UserOrg.", this.UserOrg);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ciam.V20220331.Models
     {
         
         /// <summary>
-        /// 创建的用户信息
+        /// <p>创建的用户信息</p>
         /// </summary>
         [JsonProperty("User")]
         public User User{ get; set; }

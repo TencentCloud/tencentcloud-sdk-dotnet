@@ -25,58 +25,70 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产实例id
+        /// <p>资产实例id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// schema名
+        /// <p>schema名</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 表名
+        /// <p>表名</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 字段名
+        /// <p>字段名</p>
         /// </summary>
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }
 
         /// <summary>
-        /// 数据项id集合
+        /// <p>数据项id集合</p>
         /// </summary>
         [JsonProperty("RuleIds")]
         public ulong?[] RuleIds{ get; set; }
 
         /// <summary>
-        /// 数据项名称集合
+        /// <p>数据项名称集合</p>
         /// </summary>
         [JsonProperty("RuleNames")]
         public string[] RuleNames{ get; set; }
 
         /// <summary>
-        /// 分类id集合
+        /// <p>分类id集合</p>
         /// </summary>
         [JsonProperty("CategoryIds")]
         public ulong?[] CategoryIds{ get; set; }
 
         /// <summary>
-        /// 分类名称集合
+        /// <p>分类名称集合</p>
         /// </summary>
         [JsonProperty("CategoryNames")]
         public string[] CategoryNames{ get; set; }
+
+        /// <summary>
+        /// <p>分类详情</p>
+        /// </summary>
+        [JsonProperty("CategoryDetails")]
+        public DspmIdentifyCategoryDetail[] CategoryDetails{ get; set; }
+
+        /// <summary>
+        /// <p>字段注释</p>
+        /// </summary>
+        [JsonProperty("FieldComment")]
+        public string FieldComment{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "RuleNames.", this.RuleNames);
             this.SetParamArraySimple(map, prefix + "CategoryIds.", this.CategoryIds);
             this.SetParamArraySimple(map, prefix + "CategoryNames.", this.CategoryNames);
+            this.SetParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+            this.SetParamSimple(map, prefix + "FieldComment", this.FieldComment);
         }
     }
 }

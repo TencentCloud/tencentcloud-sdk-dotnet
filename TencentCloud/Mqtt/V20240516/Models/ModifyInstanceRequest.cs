@@ -55,14 +55,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// API：手动通过API注册
         /// </summary>
         [JsonProperty("DeviceCertificateProvisionType")]
-        [System.Obsolete]
         public string DeviceCertificateProvisionType{ get; set; }
 
         /// <summary>
         /// 自动注册证书是否自动激活
         /// </summary>
         [JsonProperty("AutomaticActivation")]
-        [System.Obsolete]
         public bool? AutomaticActivation{ get; set; }
 
         /// <summary>

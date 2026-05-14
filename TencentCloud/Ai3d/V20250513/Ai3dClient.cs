@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1421";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,29 @@ namespace TencentCloud.Ai3d.V20250513
         public Convert3DFormatResponse Convert3DFormatSync(Convert3DFormatRequest req)
         {
             return InternalRequestAsync<Convert3DFormatResponse>(req, "Convert3DFormat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="DescribeAutoRiggingJobResponse"/></returns>
+        public Task<DescribeAutoRiggingJobResponse> DescribeAutoRiggingJob(DescribeAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoRiggingJobResponse>(req, "DescribeAutoRiggingJob");
+        }
+
+        /// <summary>
+        /// 3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="DescribeAutoRiggingJobResponse"/></returns>
+        public DescribeAutoRiggingJobResponse DescribeAutoRiggingJobSync(DescribeAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoRiggingJobResponse>(req, "DescribeAutoRiggingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -249,6 +272,29 @@ namespace TencentCloud.Ai3d.V20250513
         public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJobSync(QueryHunyuanTo3DRapidJobRequest req)
         {
             return InternalRequestAsync<QueryHunyuanTo3DRapidJobResponse>(req, "QueryHunyuanTo3DRapidJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="SubmitAutoRiggingJobResponse"/></returns>
+        public Task<SubmitAutoRiggingJobResponse> SubmitAutoRiggingJob(SubmitAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAutoRiggingJobResponse>(req, "SubmitAutoRiggingJob");
+        }
+
+        /// <summary>
+        /// 3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="SubmitAutoRiggingJobResponse"/></returns>
+        public SubmitAutoRiggingJobResponse SubmitAutoRiggingJobSync(SubmitAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAutoRiggingJobResponse>(req, "SubmitAutoRiggingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

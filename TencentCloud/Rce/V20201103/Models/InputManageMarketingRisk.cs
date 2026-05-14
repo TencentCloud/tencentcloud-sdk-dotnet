@@ -25,153 +25,139 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-        /// 1：QQ开放账号
-        /// 2：微信开放账号
-        /// 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-        /// 10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
+        /// <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
         /// </summary>
         [JsonProperty("Account")]
         public AccountInfo Account{ get; set; }
 
         /// <summary>
-        /// 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-        /// 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-        /// 活动防刷默认场景码：e_activity_antirush 
-        /// 登录保护默认场景码：e_login_protection
-        /// 注册保护默认场景码：e_register_protection
+        /// <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
         /// </summary>
         [JsonProperty("SceneCode")]
         public string SceneCode{ get; set; }
 
         /// <summary>
-        /// 用户外网ip（传入用户非外网ip会影响判断结果）。
+        /// <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 用户操作时间戳，精确到秒。
+        /// <p>用户操作时间戳，精确到秒。</p>
         /// </summary>
         [JsonProperty("PostTime")]
         public ulong? PostTime{ get; set; }
 
         /// <summary>
-        /// 业务平台用户唯一标识，支持自定义。
+        /// <p>业务平台用户唯一标识，支持自定义。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+        /// <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }
 
         /// <summary>
-        /// 设备指纹 BusinessId。
+        /// <p>设备指纹 BusinessId。</p>
         /// </summary>
         [JsonProperty("DeviceBusinessId")]
         public long? DeviceBusinessId{ get; set; }
 
         /// <summary>
-        /// 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
+        /// <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
         /// </summary>
         [JsonProperty("BusinessId")]
         public ulong? BusinessId{ get; set; }
 
         /// <summary>
-        /// 昵称，UTF-8 编码。
+        /// <p>昵称，UTF-8 编码。</p>
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 用户邮箱地址。
+        /// <p>用户邮箱地址。</p>
         /// </summary>
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }
 
         /// <summary>
-        /// 是否识别设备异常：
-        /// 0：不识别。
-        /// 1：识别。
+        /// <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
         /// </summary>
         [JsonProperty("CheckDevice")]
         public long? CheckDevice{ get; set; }
 
         /// <summary>
-        /// 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
+        /// <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
         /// </summary>
         [JsonProperty("CookieHash")]
         public string CookieHash{ get; set; }
 
         /// <summary>
-        /// 用户HTTP请求的Referer值。
+        /// <p>用户HTTP请求的Referer值。</p>
         /// </summary>
         [JsonProperty("Referer")]
         public string Referer{ get; set; }
 
         /// <summary>
-        /// 用户HTTP请求的User-Agent值。
+        /// <p>用户HTTP请求的User-Agent值。</p>
         /// </summary>
         [JsonProperty("UserAgent")]
         public string UserAgent{ get; set; }
 
         /// <summary>
-        /// 用户HTTP请求的X-Forwarded-For值。
+        /// <p>用户HTTP请求的X-Forwarded-For值。</p>
         /// </summary>
         [JsonProperty("XForwardedFor")]
         public string XForwardedFor{ get; set; }
 
         /// <summary>
-        /// MAC地址或设备唯一标识。
+        /// <p>MAC地址或设备唯一标识。</p>
         /// </summary>
         [JsonProperty("MacAddress")]
         public string MacAddress{ get; set; }
 
         /// <summary>
-        /// 手机制造商ID，如果手机注册，请带上此信息。
+        /// <p>手机制造商ID，如果手机注册，请带上此信息。</p>
         /// </summary>
         [JsonProperty("VendorId")]
         public string VendorId{ get; set; }
 
         /// <summary>
-        /// 设备类型(已不推荐使用)。
+        /// <p>设备类型(已不推荐使用)。</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }
 
         /// <summary>
-        /// 扩展字段。
+        /// <p>扩展字段。</p>
         /// </summary>
         [JsonProperty("Details")]
         public InputDetails[] Details{ get; set; }
 
         /// <summary>
-        /// 邀请助力场景相关信息。
+        /// <p>邀请助力场景相关信息。</p>
         /// </summary>
         [JsonProperty("Sponsor")]
         public SponsorInfo Sponsor{ get; set; }
 
         /// <summary>
-        /// 详情请跳转至OnlineScamInfo查看。
+        /// <p>详情请跳转至OnlineScamInfo查看。</p>
         /// </summary>
         [JsonProperty("OnlineScam")]
         public OnlineScamInfo OnlineScam{ get; set; }
 
         /// <summary>
-        /// 1：Android
-        /// 2：iOS
-        /// 3：H5
-        /// 4：小程序
+        /// <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 数据授权信息。
-        /// 注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+        /// <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
         /// </summary>
         [JsonProperty("DataAuthorization")]
         public DataAuthorizationInfo DataAuthorization{ get; set; }

@@ -25,7 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 图片路径。
+        /// <p>图片类型。</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// <p>图片路径。</p>
         /// </summary>
         [JsonProperty("Image")]
         public MediaInputInfo Image{ get; set; }
@@ -36,6 +42,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Image.", this.Image);
         }
     }
