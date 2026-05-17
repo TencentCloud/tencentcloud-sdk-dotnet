@@ -25,58 +25,64 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例
+        /// <p>实例</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// <p>分页参数</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页限制
+        /// <p>分页限制</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// ID列表
+        /// <p>ID列表</p>
         /// </summary>
         [JsonProperty("IDs")]
         public string[] IDs{ get; set; }
 
         /// <summary>
-        /// 排除的ID列表
+        /// <p>排除的ID列表</p>
         /// </summary>
         [JsonProperty("NotIDs")]
         public string[] NotIDs{ get; set; }
 
         /// <summary>
-        /// 状态：normal，disabled
+        /// <p>状态：normal，disabled</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 关键词
+        /// <p>关键词</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ModelID")]
         public string ModelID{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// <p>排序</p>
         /// </summary>
         [JsonProperty("Sort")]
         public DescribeModelServicesSort Sort{ get; set; }
+
+        /// <summary>
+        /// <p>模型类型，OpenAI或Anthropic</p>
+        /// </summary>
+        [JsonProperty("ModelProtocol")]
+        public string ModelProtocol{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "ModelID", this.ModelID);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
+            this.SetParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
         }
     }
 }

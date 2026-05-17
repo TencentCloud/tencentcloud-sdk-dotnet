@@ -25,56 +25,56 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 地域中文
+        /// <p>地域中文</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 是否国外
+        /// <p>是否境外</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Foreign")]
         public long? Foreign{ get; set; }
 
         /// <summary>
-        /// 地域码
+        /// <p>地域码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 是否自驾云
+        /// <p>是否自驾云</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAutoDriveCloud")]
         public long? IsAutoDriveCloud{ get; set; }
 
         /// <summary>
-        /// 是否支持nat
+        /// <p>是否支持nat</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportNat")]
         public long? IsSupportNat{ get; set; }
 
         /// <summary>
-        /// 地区信息
+        /// <p>地区信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionArea")]
         public string RegionArea{ get; set; }
 
         /// <summary>
-        /// 地域英文
+        /// <p>地域英文</p>
         /// </summary>
         [JsonProperty("RegionNameEN")]
         public string RegionNameEN{ get; set; }

@@ -25,94 +25,106 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 腾讯云AppID
+        /// <p>腾讯云AppID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 腾讯云Uin
+        /// <p>腾讯云Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 凭据ID
+        /// <p>凭据ID</p>
         /// </summary>
         [JsonProperty("CredentialID")]
         public string CredentialID{ get; set; }
 
         /// <summary>
-        /// 凭据名称
+        /// <p>凭据名称</p>
         /// </summary>
         [JsonProperty("CredentialName")]
         public string CredentialName{ get; set; }
 
         /// <summary>
-        /// http协议类型
+        /// <p>http协议类型</p>
         /// </summary>
         [JsonProperty("HttpProtocolType")]
         public string HttpProtocolType{ get; set; }
 
         /// <summary>
-        /// https时，是否校验目标证书
+        /// <p>https时，是否校验目标证书</p>
         /// </summary>
         [JsonProperty("CheckTargetCertsError")]
         public bool? CheckTargetCertsError{ get; set; }
 
         /// <summary>
-        /// http协议版本：1.1/2.0
+        /// <p>http协议版本：1.1/2.0</p>
         /// </summary>
         [JsonProperty("HttpProtocolVersion")]
         public string HttpProtocolVersion{ get; set; }
 
         /// <summary>
-        /// 目标路径
+        /// <p>目标路径</p>
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// 目标器列表
+        /// <p>目标器列表</p>
         /// </summary>
         [JsonProperty("TargetHosts")]
         public TargetHostDTO[] TargetHosts{ get; set; }
 
         /// <summary>
-        /// 被模型服务使用的个数
+        /// <p>被模型服务使用的个数</p>
         /// </summary>
         [JsonProperty("ModelServiceCount")]
         public long? ModelServiceCount{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改时间
+        /// <p>最后修改时间</p>
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>model ID</p>
+        /// </summary>
+        [JsonProperty("ModelID")]
+        public string ModelID{ get; set; }
+
+        /// <summary>
+        /// <p>描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -135,6 +147,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "ModelServiceCount", this.ModelServiceCount);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+            this.SetParamSimple(map, prefix + "ModelID", this.ModelID);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

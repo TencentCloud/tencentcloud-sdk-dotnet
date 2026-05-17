@@ -25,49 +25,49 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// pod名
+        /// <p>pod名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// pod的唯一id
+        /// <p>pod的唯一id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
         /// <summary>
-        /// 服务付费模式
+        /// <p>服务付费模式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// pod的状态
+        /// <p>pod的状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
-        /// pod的IP
+        /// <p>pod的IP</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// pod的创建时间
+        /// <p>pod的创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 容器列表
+        /// <p>容器列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Containers")]
@@ -75,63 +75,63 @@ namespace TencentCloud.Tione.V20211111.Models
         public Container Containers{ get; set; }
 
         /// <summary>
-        /// 容器列表
+        /// <p>容器列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerInfos")]
         public Container[] ContainerInfos{ get; set; }
 
         /// <summary>
-        /// 容器调用信息
+        /// <p>容器调用信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossTenantENIInfo")]
         public CrossTenantENIInfo CrossTenantENIInfo{ get; set; }
 
         /// <summary>
-        /// 实例的状态信息
+        /// <p>实例的状态信息</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例的开始调度时间
+        /// <p>实例的开始调度时间</p>
         /// </summary>
         [JsonProperty("StartScheduleTime")]
         public string StartScheduleTime{ get; set; }
 
         /// <summary>
-        /// 实例状态的补充信息
+        /// <p>实例状态的补充信息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 当前实例所在的节点 IP
+        /// <p>当前实例所在的节点 IP</p>
         /// </summary>
         [JsonProperty("NodeIP")]
         public string NodeIP{ get; set; }
 
         /// <summary>
-        /// 当前实例所在节点id
+        /// <p>当前实例所在节点id</p>
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 当时实例所属资源组 id
+        /// <p>当时实例所属资源组 id</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 资源组名称
+        /// <p>资源组名称</p>
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 实例的资源占用信息
+        /// <p>实例的资源占用信息</p>
         /// </summary>
         [JsonProperty("ResourceInfo")]
         public ResourceInfo ResourceInfo{ get; set; }

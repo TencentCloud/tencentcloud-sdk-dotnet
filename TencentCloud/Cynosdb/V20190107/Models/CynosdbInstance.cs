@@ -127,7 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// <p>实例类型</p>
+        /// <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

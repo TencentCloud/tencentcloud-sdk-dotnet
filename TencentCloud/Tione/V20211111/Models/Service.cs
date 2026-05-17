@@ -25,278 +25,268 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 服务组id
+        /// <p>服务组id</p>
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
         /// <summary>
-        /// 服务id
+        /// <p>服务id</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 服务组名
+        /// <p>服务组名</p>
         /// </summary>
         [JsonProperty("ServiceGroupName")]
         public string ServiceGroupName{ get; set; }
 
         /// <summary>
-        /// 服务描述
+        /// <p>服务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceDescription")]
         public string ServiceDescription{ get; set; }
 
         /// <summary>
-        /// 服务的详细信息
+        /// <p>服务的详细信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceInfo")]
         public ServiceInfo ServiceInfo{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 命名空间
+        /// <p>命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 付费类型
+        /// <p>付费类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 包年包月服务的资源组id，按量计费的服务为空
+        /// <p>包年包月服务的资源组id，按量计费的服务为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 包年包月服务对应的资源组名字
+        /// <p>包年包月服务对应的资源组名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 服务的标签
+        /// <p>服务的标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 服务所在的 ingress 的 name
+        /// <p>服务所在的 ingress 的 name</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IngressName")]
         public string IngressName{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// <p>创建者</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 主账号
+        /// <p>主账号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 子账号
+        /// <p>子账号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// app_id
+        /// <p>app_id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 服务的业务状态
-        /// CREATING 创建中
-        /// CREATE_FAILED 创建失败
-        /// CREATE_SUCCEED 创建成功
-        /// ARREARS_STOP 因欠费停止
-        /// WHITELIST_STOP 白名单额度不足
-        /// RELEASE_FAILED 资源释放失败
-        /// WHITELIST_RELEASE_FAILED 白名单资源释放失败
-        /// TIMEOUT_EXCEPTION 创建超时异常
-        /// BILLING 计费中
-        /// WHITELIST_USING 白名单试用中
+        /// <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessStatus")]
         public string BusinessStatus{ get; set; }
 
         /// <summary>
-        /// 已废弃,以ServiceInfo中的对应为准
+        /// <p>已废弃,以ServiceInfo中的对应为准</p>
         /// </summary>
         [JsonProperty("ServiceLimit")]
         [System.Obsolete]
         public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 已废弃,以ServiceInfo中的对应为准
+        /// <p>已废弃,以ServiceInfo中的对应为准</p>
         /// </summary>
         [JsonProperty("ScheduledAction")]
         [System.Obsolete]
         public ScheduledAction ScheduledAction{ get; set; }
 
         /// <summary>
-        /// 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+        /// <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateFailedReason")]
         public string CreateFailedReason{ get; set; }
 
         /// <summary>
-        /// 服务状态
-        /// CREATING 创建中
-        /// CREATE_FAILED 创建失败
-        /// TIMEOUT_EXCEPTION 创建超时异常
-        /// Normal 正常运行中
-        /// Stopped 已停止
-        /// Stopping 停止中
-        /// Abnormal 异常
-        /// Pending 启动中
-        /// Waiting 就绪中
+        /// <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 费用信息
+        /// <p>费用信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }
 
         /// <summary>
-        /// 模型权重
+        /// <p>模型权重</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 服务的创建来源
-        /// AUTO_ML: 来自自动学习的一键发布
-        /// DEFAULT: 其他来源
+        /// <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateSource")]
         public string CreateSource{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 服务组下服务的最高版本号
+        /// <p>服务组下服务的最高版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestVersion")]
         public string LatestVersion{ get; set; }
 
         /// <summary>
-        /// 资源组类别 托管 NORMAL，纳管 SW
+        /// <p>资源组类别 托管 NORMAL，纳管 SW</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupSWType")]
         public string ResourceGroupSWType{ get; set; }
 
         /// <summary>
-        /// 服务的归档状态  Waiting 等待归档中，Archived 已归档
+        /// <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchiveStatus")]
         public string ArchiveStatus{ get; set; }
 
         /// <summary>
-        /// 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+        /// <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployType")]
         public string DeployType{ get; set; }
 
         /// <summary>
-        /// 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+        /// <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancePerReplicas")]
         public string InstancePerReplicas{ get; set; }
 
         /// <summary>
-        /// 用于监控查询的Source
-        /// 枚举值，部分情况下与CreateSource不同，通过该字段兼容
+        /// <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
         /// </summary>
         [JsonProperty("MonitorSource")]
         public string MonitorSource{ get; set; }
 
         /// <summary>
-        /// 服务创建者的子账号名称
+        /// <p>服务创建者的子账号名称</p>
         /// </summary>
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
         /// <summary>
-        /// 服务的调度策略
+        /// <p>服务的调度策略</p>
         /// </summary>
         [JsonProperty("SchedulingPolicy")]
         public SchedulingPolicy SchedulingPolicy{ get; set; }
 
         /// <summary>
-        /// 外部的资源组信息，表示借调了哪些资源组的资源
+        /// <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
         /// </summary>
         [JsonProperty("ExternalResourceGroups")]
         public ResourceGroupInfo[] ExternalResourceGroups{ get; set; }
+
+        /// <summary>
+        /// <p>变更服务的子账户</p>
+        /// </summary>
+        [JsonProperty("Changer")]
+        public string Changer{ get; set; }
+
+        /// <summary>
+        /// <p>变更服务的子账户名称</p>
+        /// </summary>
+        [JsonProperty("ChangerName")]
+        public string ChangerName{ get; set; }
 
 
         /// <summary>
@@ -341,6 +331,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
             this.SetParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
+            this.SetParamSimple(map, prefix + "Changer", this.Changer);
+            this.SetParamSimple(map, prefix + "ChangerName", this.ChangerName);
         }
     }
 }

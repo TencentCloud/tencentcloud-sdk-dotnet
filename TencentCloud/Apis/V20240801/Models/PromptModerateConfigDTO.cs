@@ -25,18 +25,25 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 执行动作
+        /// <p>执行动作</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 响应拦截内容
+        /// <p>响应拦截内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InterceptMessage")]
         public string InterceptMessage{ get; set; }
+
+        /// <summary>
+        /// <p>检测上下文</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContextScope")]
+        public string ContextScope{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Apis.V20240801.Models
         {
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
+            this.SetParamSimple(map, prefix + "ContextScope", this.ContextScope);
         }
     }
 }

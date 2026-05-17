@@ -192,6 +192,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
 
+        /// <summary>
+        /// <p>变更服务的子账户</p>
+        /// </summary>
+        [JsonProperty("Changer")]
+        public string Changer{ get; set; }
+
+        /// <summary>
+        /// <p>变更服务的子账户名称</p>
+        /// </summary>
+        [JsonProperty("ChangerName")]
+        public string ChangerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +236,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+            this.SetParamSimple(map, prefix + "Changer", this.Changer);
+            this.SetParamSimple(map, prefix + "ChangerName", this.ChangerName);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealId{ get; set; }
 
         /// <summary>
+        /// <p>电子印章预览链接地址，地址默认失效时间为24小时。</p>
+        /// </summary>
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
+
+        /// <summary>
         /// <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
         /// </summary>
         [JsonProperty("SealOperatorVerifyPath")]
@@ -43,13 +49,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealOperatorVerifyQrcodeUrl{ get; set; }
 
         /// <summary>
-        /// <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+        /// <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
         /// </summary>
         [JsonProperty("PreviewFileUrl")]
         public string PreviewFileUrl{ get; set; }
 
         /// <summary>
-        /// <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+        /// <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
         /// </summary>
         [JsonProperty("PreviewPdfUrl")]
         public string PreviewPdfUrl{ get; set; }
@@ -67,6 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "SealOperatorVerifyPath", this.SealOperatorVerifyPath);
             this.SetParamSimple(map, prefix + "SealOperatorVerifyQrcodeUrl", this.SealOperatorVerifyQrcodeUrl);
             this.SetParamSimple(map, prefix + "PreviewFileUrl", this.PreviewFileUrl);

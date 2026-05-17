@@ -25,109 +25,93 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 资源组节点id
+        /// <p>资源组节点id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 节点已用资源
+        /// <p>节点已用资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedResource")]
         public ResourceInfo UsedResource{ get; set; }
 
         /// <summary>
-        /// 节点总资源
+        /// <p>节点总资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalResource")]
         public ResourceInfo TotalResource{ get; set; }
 
         /// <summary>
-        /// 节点状态 
-        /// 注意：此字段为枚举值
-        /// 说明: 
-        /// DEPLOYING: 部署中
-        /// RUNNING: 运行中 
-        /// DEPLOY_FAILED: 部署失败
-        /// RELEASING 释放中 
-        /// RELEASED：已释放 
-        /// EXCEPTION：异常
-        /// DEBT_OR_EXPIRED: 欠费过期
+        /// <p>节点状态<br>注意：此字段为枚举值<br>说明:<br>DEPLOYING: 部署中<br>RUNNING: 运行中<br>DEPLOY_FAILED: 部署失败<br>RELEASING 释放中<br>RELEASED：已释放<br>EXCEPTION：异常<br>DEBT_OR_EXPIRED: 欠费过期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// 创建时间: 
-        /// 注意：北京时间，比如: 2021-12-01 12:00:00
+        /// <p>创建时间:<br>注意：北京时间，比如: 2021-12-01 12:00:00</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
-        /// 注意：北京时间，比如：2021-12-11 12:00:00
+        /// <p>到期时间<br>注意：北京时间，比如：2021-12-11 12:00:00</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标识
-        /// 注意：此字段为枚举值
-        /// 说明：
-        /// NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期通知
-        /// NOTIFY_AND_AUTO_RENEW：自动续费且到期通知
-        /// DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不通知
+        /// <p>自动续费标识<br>注意：此字段为枚举值<br>说明：<br>NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期通知<br>NOTIFY_AND_AUTO_RENEW：自动续费且到期通知<br>DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不通知</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public string AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 计费项ID
+        /// <p>计费项ID</p>
         /// </summary>
         [JsonProperty("SpecId")]
         public string SpecId{ get; set; }
 
         /// <summary>
-        /// 计费项别名
+        /// <p>计费项别名</p>
         /// </summary>
         [JsonProperty("SpecAlias")]
         public string SpecAlias{ get; set; }
 
         /// <summary>
-        /// 计费项特性列表
+        /// <p>计费项特性列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecFeatures")]
         public string[] SpecFeatures{ get; set; }
 
         /// <summary>
-        /// 纳管cvmid
+        /// <p>纳管cvmid</p>
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
         /// <summary>
-        /// 部署失败错误码
+        /// <p>部署失败错误码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
 
         /// <summary>
-        /// 部署失败错误信息
+        /// <p>部署失败错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMsg")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 符合过滤条件的记录总数。
+        /// <p>符合过滤条件的记录总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务流模板详情列表。
+        /// <p>任务流模板详情列表。</p>
         /// </summary>
         [JsonProperty("ProcedureTemplateSet")]
         public ProcedureTemplate[] ProcedureTemplateSet{ get; set; }

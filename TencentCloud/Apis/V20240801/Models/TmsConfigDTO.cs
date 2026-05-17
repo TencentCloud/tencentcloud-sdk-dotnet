@@ -25,46 +25,53 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 检测范围,请求/响应
+        /// <p>检测范围,请求/响应</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scope")]
         public string[] Scope{ get; set; }
 
         /// <summary>
-        /// 检测形式
+        /// <p>检测形式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 执行动作
+        /// <p>执行动作</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 合并请求检测event数，联动Mode字段sync
+        /// <p>合并请求检测event数，联动Mode字段sync</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MergeCount")]
         public ulong? MergeCount{ get; set; }
 
         /// <summary>
-        /// 风控策略
+        /// <p>风控策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 响应拦截内容
+        /// <p>响应拦截内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InterceptMessage")]
         public string InterceptMessage{ get; set; }
+
+        /// <summary>
+        /// <p>检测上下文</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContextScope")]
+        public string ContextScope{ get; set; }
 
 
         /// <summary>
@@ -78,6 +85,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "MergeCount", this.MergeCount);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
+            this.SetParamSimple(map, prefix + "ContextScope", this.ContextScope);
         }
     }
 }

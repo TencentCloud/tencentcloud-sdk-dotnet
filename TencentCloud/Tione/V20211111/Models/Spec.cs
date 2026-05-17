@@ -25,58 +25,58 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 计费项标签
+        /// <p>计费项标签</p>
         /// </summary>
         [JsonProperty("SpecId")]
         public string SpecId{ get; set; }
 
         /// <summary>
-        /// 计费项名称
+        /// <p>计费项名称</p>
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 计费项显示名称
+        /// <p>计费项显示名称</p>
         /// </summary>
         [JsonProperty("SpecAlias")]
         public string SpecAlias{ get; set; }
 
         /// <summary>
-        /// 是否售罄
+        /// <p>是否售罄</p>
         /// </summary>
         [JsonProperty("Available")]
         public bool? Available{ get; set; }
 
         /// <summary>
-        /// 当前资源售罄时，可用的区域有哪些
+        /// <p>当前资源售罄时，可用的区域有哪些</p>
         /// </summary>
         [JsonProperty("AvailableRegion")]
         public string[] AvailableRegion{ get; set; }
 
         /// <summary>
-        /// 当前计费项支持的特性
+        /// <p>当前计费项支持的特性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecFeatures")]
         public string[] SpecFeatures{ get; set; }
 
         /// <summary>
-        /// 计费项类型
+        /// <p>计费项类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecType")]
         public string SpecType{ get; set; }
 
         /// <summary>
-        /// GPU类型
+        /// <p>GPU类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
         /// <summary>
-        /// 计费项CategoryId
+        /// <p>计费项CategoryId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]

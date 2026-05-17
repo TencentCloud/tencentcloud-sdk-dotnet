@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1428";
 
         /// <summary>
         /// Client constructor.
@@ -146,9 +146,9 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// 支持自定义类型（custom）：用户自行提供模型服务地址（baseUrl）和访问密钥，分组名可自由命名，适用于接入第三方或自建模型服务。
         /// 
-        /// 注意：内置类型（builtin）分组由云开发平台统一创建和管理，不支持通过此接口创建。如需修改内置分组的模型列表或启用状态，请使用 [UpdateAIModel]() 接口。
+        /// 注意：内置类型（builtin）分组由云开发平台统一创建和管理，不支持通过此接口创建。如需修改内置分组的模型列表或启用状态，请使用 [UpdateAIModel](https://cloud.tencent.com/document/product/876/131316) 接口。
         /// 
-        /// 创建成功后，可通过 [DescribeAIModelList]() 接口查询分组信息，并在云开发 AI+ 功能中使用所配置的模型。
+        /// 创建成功后，可通过 [DescribeAIModels](https://cloud.tencent.com/document/product/876/131318) 接口查询分组信息，并在云开发 AI+ 功能中使用所配置的模型。
         /// </summary>
         /// <param name="req"><see cref="CreateAIModelRequest"/></param>
         /// <returns><see cref="CreateAIModelResponse"/></returns>
@@ -162,9 +162,9 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// 支持自定义类型（custom）：用户自行提供模型服务地址（baseUrl）和访问密钥，分组名可自由命名，适用于接入第三方或自建模型服务。
         /// 
-        /// 注意：内置类型（builtin）分组由云开发平台统一创建和管理，不支持通过此接口创建。如需修改内置分组的模型列表或启用状态，请使用 [UpdateAIModel]() 接口。
+        /// 注意：内置类型（builtin）分组由云开发平台统一创建和管理，不支持通过此接口创建。如需修改内置分组的模型列表或启用状态，请使用 [UpdateAIModel](https://cloud.tencent.com/document/product/876/131316) 接口。
         /// 
-        /// 创建成功后，可通过 [DescribeAIModelList]() 接口查询分组信息，并在云开发 AI+ 功能中使用所配置的模型。
+        /// 创建成功后，可通过 [DescribeAIModels](https://cloud.tencent.com/document/product/876/131318) 接口查询分组信息，并在云开发 AI+ 功能中使用所配置的模型。
         /// </summary>
         /// <param name="req"><see cref="CreateAIModelRequest"/></param>
         /// <returns><see cref="CreateAIModelResponse"/></returns>
@@ -1144,7 +1144,7 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// 通常在以下场景中使用：
         /// 
-        /// 开通托管模型前：通过本接口查询平台支持的托管模型及其规格，结合 [CreateAIModel]() 接口完成模型开通。
+        /// 开通托管模型前：通过本接口查询平台支持的托管模型及其规格，结合 [UpdateAIModel](https://cloud.tencent.com/document/product/876/131316) 接口完成模型配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeManagedAIModelListRequest"/></param>
         /// <returns><see cref="DescribeManagedAIModelListResponse"/></returns>
@@ -1160,7 +1160,7 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// 通常在以下场景中使用：
         /// 
-        /// 开通托管模型前：通过本接口查询平台支持的托管模型及其规格，结合 [CreateAIModel]() 接口完成模型开通。
+        /// 开通托管模型前：通过本接口查询平台支持的托管模型及其规格，结合 [UpdateAIModel](https://cloud.tencent.com/document/product/876/131316) 接口完成模型配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeManagedAIModelListRequest"/></param>
         /// <returns><see cref="DescribeManagedAIModelListResponse"/></returns>
@@ -1918,9 +1918,9 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// (2) custom → builtin（自定义恢复内置托管）
         /// 仅当分组的原始类型（OriginType）为 builtin 时，支持将分组恢复为内置托管类型。将 BaseUrl 传入固定值 http://default.tcb，且不传入 Secret，系统将自动将该分组转换回内置托管类型（Type = builtin），平台重新接管其服务地址和访问密钥。
-        /// 若 OriginType 为 CUSTOM（即用户通过 CreateAIModel 接口自行创建的自定义分组），不支持恢复为内置托管类型。
+        /// 若 OriginType 为 CUSTOM（即用户通过 [CreateAIModel](https://cloud.tencent.com/document/product/876/131320) 接口自行创建的自定义分组），不支持恢复为内置托管类型。
         /// 
-        /// 更新成功后，可通过 [DescribeAIModelList]() 接口查询最新分组配置。
+        /// 更新成功后，可通过 [DescribeAIModels](https://cloud.tencent.com/document/product/876/131318) 接口查询最新分组配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateAIModelRequest"/></param>
         /// <returns><see cref="UpdateAIModelResponse"/></returns>
@@ -1943,9 +1943,9 @@ namespace TencentCloud.Tcb.V20180608
         /// 
         /// (2) custom → builtin（自定义恢复内置托管）
         /// 仅当分组的原始类型（OriginType）为 builtin 时，支持将分组恢复为内置托管类型。将 BaseUrl 传入固定值 http://default.tcb，且不传入 Secret，系统将自动将该分组转换回内置托管类型（Type = builtin），平台重新接管其服务地址和访问密钥。
-        /// 若 OriginType 为 CUSTOM（即用户通过 CreateAIModel 接口自行创建的自定义分组），不支持恢复为内置托管类型。
+        /// 若 OriginType 为 CUSTOM（即用户通过 [CreateAIModel](https://cloud.tencent.com/document/product/876/131320) 接口自行创建的自定义分组），不支持恢复为内置托管类型。
         /// 
-        /// 更新成功后，可通过 [DescribeAIModelList]() 接口查询最新分组配置。
+        /// 更新成功后，可通过 [DescribeAIModels](https://cloud.tencent.com/document/product/876/131318) 接口查询最新分组配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateAIModelRequest"/></param>
         /// <returns><see cref="UpdateAIModelResponse"/></returns>

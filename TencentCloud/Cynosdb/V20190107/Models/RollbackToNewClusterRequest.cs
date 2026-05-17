@@ -25,184 +25,175 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 回档时，传入源集群ID，用于查找源poolId
+        /// <p>回档时，传入源集群ID，用于查找源poolId</p>
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// 所属VPC网络ID
+        /// <p>所属VPC网络ID</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 所属子网ID
+        /// <p>所属子网ID</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+        /// <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+        /// <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// 时间点回档，指定时间；快照回档，快照时间
+        /// <p>时间点回档，指定时间；快照回档，快照时间</p>
         /// </summary>
         [JsonProperty("ExpectTime")]
         public string ExpectTime{ get; set; }
 
         /// <summary>
-        /// 是否自动选择代金券 1是 0否 默认为0
+        /// <p>是否自动选择代金券 1是 0否 默认为0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 集群创建需要绑定的tag数组信息
+        /// <p>集群创建需要绑定的tag数组信息</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Db类型
-        /// 当DbType为MYSQL时可选(默认NORMAL)：
-        /// <li>NORMAL</li>
-        /// <li>SERVERLESS</li>
+        /// <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时必填
-        /// cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时必填：
-        /// cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-        /// <li>yes</li>
-        /// <li>no</li>
-        /// 默认值:yes
+        /// <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-        /// 默认值:600
+        /// <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// 安全组id数组
+        /// <p>安全组id数组</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 告警策略Id数组
+        /// <p>告警策略Id数组</p>
         /// </summary>
         [JsonProperty("AlarmPolicyIds")]
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+        /// <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
 
         /// <summary>
-        /// 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+        /// <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 实例初始化配置信息，主要用于购买集群时选不同规格实例
+        /// <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
 
         /// <summary>
-        /// 0-下单并支付 1-下单
+        /// <p>0-下单并支付 1-下单</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// 计算节点付费模式：0-按量计费，1-预付费
+        /// <p>计算节点付费模式：0-按量计费，1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 时间
+        /// <p>时间</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// <p>单位</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 回档库信息
+        /// <p>回档库信息</p>
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// 回档表信息
+        /// <p>回档表信息</p>
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }
 
         /// <summary>
-        /// 原ro实例信息
+        /// <p>原ro实例信息</p>
         /// </summary>
         [JsonProperty("OriginalROInstanceList")]
         public string[] OriginalROInstanceList{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+        /// <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
         /// <summary>
-        /// 是否从保存备份中恢复
+        /// <p>是否从保存备份中恢复</p>
         /// </summary>
         [JsonProperty("FromSaveBackup")]
         public bool? FromSaveBackup{ get; set; }

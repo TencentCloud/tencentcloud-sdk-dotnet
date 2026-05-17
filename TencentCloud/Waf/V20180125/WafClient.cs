@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1428";
 
         /// <summary>
         /// Client constructor.
@@ -3962,6 +3962,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyObjectsResponse ModifyObjectsSync(ModifyObjectsRequest req)
         {
             return InternalRequestAsync<ModifyObjectsResponse>(req, "ModifyObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改域名新规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspDomainUpdateStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspDomainUpdateStatusResponse"/></returns>
+        public Task<ModifyOwaspDomainUpdateStatusResponse> ModifyOwaspDomainUpdateStatus(ModifyOwaspDomainUpdateStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspDomainUpdateStatusResponse>(req, "ModifyOwaspDomainUpdateStatus");
+        }
+
+        /// <summary>
+        /// 修改域名新规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwaspDomainUpdateStatusRequest"/></param>
+        /// <returns><see cref="ModifyOwaspDomainUpdateStatusResponse"/></returns>
+        public ModifyOwaspDomainUpdateStatusResponse ModifyOwaspDomainUpdateStatusSync(ModifyOwaspDomainUpdateStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOwaspDomainUpdateStatusResponse>(req, "ModifyOwaspDomainUpdateStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

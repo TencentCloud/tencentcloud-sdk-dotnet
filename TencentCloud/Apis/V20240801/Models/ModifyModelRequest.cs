@@ -25,58 +25,70 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例
+        /// <p>实例</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 协议类型：http/https
+        /// <p>协议类型：http/https</p>
         /// </summary>
         [JsonProperty("HttpProtocolType")]
         public string HttpProtocolType{ get; set; }
 
         /// <summary>
-        /// 目标路径
+        /// <p>目标路径</p>
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// 目标服务器
+        /// <p>目标服务器</p>
         /// </summary>
         [JsonProperty("TargetHosts")]
         public TargetHostDTO[] TargetHosts{ get; set; }
 
         /// <summary>
-        /// 凭据ID
+        /// <p>凭据ID</p>
         /// </summary>
         [JsonProperty("CredentialID")]
         public string CredentialID{ get; set; }
 
         /// <summary>
-        /// https时，是否检查证书合法
+        /// <p>https时，是否检查证书合法</p>
         /// </summary>
         [JsonProperty("CheckTargetCertsError")]
         public bool? CheckTargetCertsError{ get; set; }
 
         /// <summary>
-        /// http协议版本：1.1/2.0
+        /// <p>http协议版本：1.1/2.0</p>
         /// </summary>
         [JsonProperty("HttpProtocolVersion")]
         public string HttpProtocolVersion{ get; set; }
+
+        /// <summary>
+        /// <p>model ID</p>
+        /// </summary>
+        [JsonProperty("ModelID")]
+        public string ModelID{ get; set; }
+
+        /// <summary>
+        /// <p>描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
             this.SetParamSimple(map, prefix + "CheckTargetCertsError", this.CheckTargetCertsError);
             this.SetParamSimple(map, prefix + "HttpProtocolVersion", this.HttpProtocolVersion);
+            this.SetParamSimple(map, prefix + "ModelID", this.ModelID);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

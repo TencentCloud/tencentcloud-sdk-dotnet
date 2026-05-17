@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1428";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,90 @@ namespace TencentCloud.Csip.V20221121
         public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTaskSync(CreateAccessKeySyncTaskRequest req)
         {
             return InternalRequestAsync<CreateAccessKeySyncTaskResponse>(req, "CreateAccessKeySyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCosAssetSyncTaskResponse"/></returns>
+        public Task<CreateCosAssetSyncTaskResponse> CreateCosAssetSyncTask(CreateCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosAssetSyncTaskResponse>(req, "CreateCosAssetSyncTask");
+        }
+
+        /// <summary>
+        /// 创建资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCosAssetSyncTaskResponse"/></returns>
+        public CreateCosAssetSyncTaskResponse CreateCosAssetSyncTaskSync(CreateCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosAssetSyncTaskResponse>(req, "CreateCosAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建cos病毒扫描、敏感数据识别任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosObjectScanTaskResponse"/></returns>
+        public Task<CreateCosObjectScanTaskResponse> CreateCosObjectScanTask(CreateCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosObjectScanTaskResponse>(req, "CreateCosObjectScanTask");
+        }
+
+        /// <summary>
+        /// 创建cos病毒扫描、敏感数据识别任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosObjectScanTaskResponse"/></returns>
+        public CreateCosObjectScanTaskResponse CreateCosObjectScanTaskSync(CreateCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosObjectScanTaskResponse>(req, "CreateCosObjectScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加cos告警策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosPolicyRequest"/></param>
+        /// <returns><see cref="CreateCosPolicyResponse"/></returns>
+        public Task<CreateCosPolicyResponse> CreateCosPolicy(CreateCosPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCosPolicyResponse>(req, "CreateCosPolicy");
+        }
+
+        /// <summary>
+        /// 添加cos告警策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosPolicyRequest"/></param>
+        /// <returns><see cref="CreateCosPolicyResponse"/></returns>
+        public CreateCosPolicyResponse CreateCosPolicySync(CreateCosPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCosPolicyResponse>(req, "CreateCosPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建风险监测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosRiskScanTaskResponse"/></returns>
+        public Task<CreateCosRiskScanTaskResponse> CreateCosRiskScanTask(CreateCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosRiskScanTaskResponse>(req, "CreateCosRiskScanTask");
+        }
+
+        /// <summary>
+        /// 创建风险监测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosRiskScanTaskResponse"/></returns>
+        public CreateCosRiskScanTaskResponse CreateCosRiskScanTaskSync(CreateCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosRiskScanTaskResponse>(req, "CreateCosRiskScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +491,48 @@ namespace TencentCloud.Csip.V20221121
         public CreateSkillScanResponse CreateSkillScanSync(CreateSkillScanRequest req)
         {
             return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除已删除的cos ak资产
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosAkAssetRequest"/></param>
+        /// <returns><see cref="DeleteCosAkAssetResponse"/></returns>
+        public Task<DeleteCosAkAssetResponse> DeleteCosAkAsset(DeleteCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DeleteCosAkAssetResponse>(req, "DeleteCosAkAsset");
+        }
+
+        /// <summary>
+        /// 删除已删除的cos ak资产
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosAkAssetRequest"/></param>
+        /// <returns><see cref="DeleteCosAkAssetResponse"/></returns>
+        public DeleteCosAkAssetResponse DeleteCosAkAssetSync(DeleteCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DeleteCosAkAssetResponse>(req, "DeleteCosAkAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCosPolicyResponse"/></returns>
+        public Task<DeleteCosPolicyResponse> DeleteCosPolicy(DeleteCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteCosPolicyResponse>(req, "DeleteCosPolicy");
+        }
+
+        /// <summary>
+        /// 删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCosPolicyResponse"/></returns>
+        public DeleteCosPolicyResponse DeleteCosPolicySync(DeleteCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteCosPolicyResponse>(req, "DeleteCosPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +1041,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查看存储桶调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeBucketInvokeIpListResponse"/></returns>
+        public Task<DescribeBucketInvokeIpListResponse> DescribeBucketInvokeIpList(DescribeBucketInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeBucketInvokeIpListResponse>(req, "DescribeBucketInvokeIpList");
+        }
+
+        /// <summary>
+        /// 查看存储桶调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeBucketInvokeIpListResponse"/></returns>
+        public DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpListSync(DescribeBucketInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeBucketInvokeIpListResponse>(req, "DescribeBucketInvokeIpList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 云防资产中心统计数据
         /// </summary>
         /// <param name="req"><see cref="DescribeCFWAssetStatisticsRequest"/></param>
@@ -1100,6 +1247,573 @@ namespace TencentCloud.Csip.V20221121
         public DescribeConfigCheckRulesResponse DescribeConfigCheckRulesSync(DescribeConfigCheckRulesRequest req)
         {
             return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看cos桶访问权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionResponse"/></returns>
+        public Task<DescribeCosAccessPermissionResponse> DescribeCosAccessPermission(DescribeCosAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionResponse>(req, "DescribeCosAccessPermission");
+        }
+
+        /// <summary>
+        /// 查看cos桶访问权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionResponse"/></returns>
+        public DescribeCosAccessPermissionResponse DescribeCosAccessPermissionSync(DescribeCosAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionResponse>(req, "DescribeCosAccessPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看对象存储访问权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionsResponse"/></returns>
+        public Task<DescribeCosAccessPermissionsResponse> DescribeCosAccessPermissions(DescribeCosAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionsResponse>(req, "DescribeCosAccessPermissions");
+        }
+
+        /// <summary>
+        /// 查看对象存储访问权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionsResponse"/></returns>
+        public DescribeCosAccessPermissionsResponse DescribeCosAccessPermissionsSync(DescribeCosAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionsResponse>(req, "DescribeCosAccessPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看COS接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosActionListResponse"/></returns>
+        public Task<DescribeCosActionListResponse> DescribeCosActionList(DescribeCosActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosActionListResponse>(req, "DescribeCosActionList");
+        }
+
+        /// <summary>
+        /// 查看COS接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosActionListResponse"/></returns>
+        public DescribeCosActionListResponse DescribeCosActionListSync(DescribeCosActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosActionListResponse>(req, "DescribeCosActionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看ak资产列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAkAssetResponse"/></returns>
+        public Task<DescribeCosAkAssetResponse> DescribeCosAkAsset(DescribeCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkAssetResponse>(req, "DescribeCosAkAsset");
+        }
+
+        /// <summary>
+        /// 查看ak资产列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAkAssetResponse"/></returns>
+        public DescribeCosAkAssetResponse DescribeCosAkAssetSync(DescribeCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkAssetResponse>(req, "DescribeCosAkAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看存储桶调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeCosAkInvokeIpListResponse"/></returns>
+        public Task<DescribeCosAkInvokeIpListResponse> DescribeCosAkInvokeIpList(DescribeCosAkInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkInvokeIpListResponse>(req, "DescribeCosAkInvokeIpList");
+        }
+
+        /// <summary>
+        /// 查看存储桶调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeCosAkInvokeIpListResponse"/></returns>
+        public DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpListSync(DescribeCosAkInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkInvokeIpListResponse>(req, "DescribeCosAkInvokeIpList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmListRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmListResponse"/></returns>
+        public Task<DescribeCosAlarmListResponse> DescribeCosAlarmList(DescribeCosAlarmListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmListResponse>(req, "DescribeCosAlarmList");
+        }
+
+        /// <summary>
+        /// 查看告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmListRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmListResponse"/></returns>
+        public DescribeCosAlarmListResponse DescribeCosAlarmListSync(DescribeCosAlarmListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmListResponse>(req, "DescribeCosAlarmList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 每日告警新增数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmTrendDataResponse"/></returns>
+        public Task<DescribeCosAlarmTrendDataResponse> DescribeCosAlarmTrendData(DescribeCosAlarmTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmTrendDataResponse>(req, "DescribeCosAlarmTrendData");
+        }
+
+        /// <summary>
+        /// 每日告警新增数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmTrendDataResponse"/></returns>
+        public DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendDataSync(DescribeCosAlarmTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmTrendDataResponse>(req, "DescribeCosAlarmTrendData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看cos资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetResponse"/></returns>
+        public Task<DescribeCosAssetResponse> DescribeCosAsset(DescribeCosAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetResponse>(req, "DescribeCosAsset");
+        }
+
+        /// <summary>
+        /// 查看cos资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetResponse"/></returns>
+        public DescribeCosAssetResponse DescribeCosAssetSync(DescribeCosAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetResponse>(req, "DescribeCosAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取对应appid对应的当前正在扫描的taskid
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetSyncTaskResponse"/></returns>
+        public Task<DescribeCosAssetSyncTaskResponse> DescribeCosAssetSyncTask(DescribeCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetSyncTaskResponse>(req, "DescribeCosAssetSyncTask");
+        }
+
+        /// <summary>
+        /// 获取对应appid对应的当前正在扫描的taskid
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetSyncTaskResponse"/></returns>
+        public DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTaskSync(DescribeCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetSyncTaskResponse>(req, "DescribeCosAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看该appid下已购买的appid集合
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditAppIdListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditAppIdListResponse"/></returns>
+        public Task<DescribeCosAuditAppIdListResponse> DescribeCosAuditAppIdList(DescribeCosAuditAppIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditAppIdListResponse>(req, "DescribeCosAuditAppIdList");
+        }
+
+        /// <summary>
+        /// 查看该appid下已购买的appid集合
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditAppIdListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditAppIdListResponse"/></returns>
+        public DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdListSync(DescribeCosAuditAppIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditAppIdListResponse>(req, "DescribeCosAuditAppIdList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询cos审计字典信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditDictionaryListResponse"/></returns>
+        public Task<DescribeCosAuditDictionaryListResponse> DescribeCosAuditDictionaryList(DescribeCosAuditDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditDictionaryListResponse>(req, "DescribeCosAuditDictionaryList");
+        }
+
+        /// <summary>
+        /// 查询cos审计字典信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditDictionaryListResponse"/></returns>
+        public DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryListSync(DescribeCosAuditDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditDictionaryListResponse>(req, "DescribeCosAuditDictionaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取审计支付信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditPayInfoResponse"/></returns>
+        public Task<DescribeCosAuditPayInfoResponse> DescribeCosAuditPayInfo(DescribeCosAuditPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditPayInfoResponse>(req, "DescribeCosAuditPayInfo");
+        }
+
+        /// <summary>
+        /// 获取审计支付信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditPayInfoResponse"/></returns>
+        public DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfoSync(DescribeCosAuditPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditPayInfoResponse>(req, "DescribeCosAuditPayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取存储桶计费信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketBillingInfoResponse"/></returns>
+        public Task<DescribeCosBucketBillingInfoResponse> DescribeCosBucketBillingInfo(DescribeCosBucketBillingInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketBillingInfoResponse>(req, "DescribeCosBucketBillingInfo");
+        }
+
+        /// <summary>
+        /// 获取存储桶计费信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketBillingInfoResponse"/></returns>
+        public DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfoSync(DescribeCosBucketBillingInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketBillingInfoResponse>(req, "DescribeCosBucketBillingInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取存储桶信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketListRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketListResponse"/></returns>
+        public Task<DescribeCosBucketListResponse> DescribeCosBucketList(DescribeCosBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketListResponse>(req, "DescribeCosBucketList");
+        }
+
+        /// <summary>
+        /// 获取存储桶信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketListRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketListResponse"/></returns>
+        public DescribeCosBucketListResponse DescribeCosBucketListSync(DescribeCosBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketListResponse>(req, "DescribeCosBucketList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看风险资产视角
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketRiskRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketRiskResponse"/></returns>
+        public Task<DescribeCosBucketRiskResponse> DescribeCosBucketRisk(DescribeCosBucketRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketRiskResponse>(req, "DescribeCosBucketRisk");
+        }
+
+        /// <summary>
+        /// 查看风险资产视角
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketRiskRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketRiskResponse"/></returns>
+        public DescribeCosBucketRiskResponse DescribeCosBucketRiskSync(DescribeCosBucketRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketRiskResponse>(req, "DescribeCosBucketRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询cos文件数据识别结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIdentifyFileListRequest"/></param>
+        /// <returns><see cref="DescribeCosIdentifyFileListResponse"/></returns>
+        public Task<DescribeCosIdentifyFileListResponse> DescribeCosIdentifyFileList(DescribeCosIdentifyFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIdentifyFileListResponse>(req, "DescribeCosIdentifyFileList");
+        }
+
+        /// <summary>
+        /// 查询cos文件数据识别结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIdentifyFileListRequest"/></param>
+        /// <returns><see cref="DescribeCosIdentifyFileListResponse"/></returns>
+        public DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileListSync(DescribeCosIdentifyFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIdentifyFileListResponse>(req, "DescribeCosIdentifyFileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看调用记录关联的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosInvokeUaRequest"/></param>
+        /// <returns><see cref="DescribeCosInvokeUaResponse"/></returns>
+        public Task<DescribeCosInvokeUaResponse> DescribeCosInvokeUa(DescribeCosInvokeUaRequest req)
+        {
+            return InternalRequestAsync<DescribeCosInvokeUaResponse>(req, "DescribeCosInvokeUa");
+        }
+
+        /// <summary>
+        /// 查看调用记录关联的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosInvokeUaRequest"/></param>
+        /// <returns><see cref="DescribeCosInvokeUaResponse"/></returns>
+        public DescribeCosInvokeUaResponse DescribeCosInvokeUaSync(DescribeCosInvokeUaRequest req)
+        {
+            return InternalRequestAsync<DescribeCosInvokeUaResponse>(req, "DescribeCosInvokeUa")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看cos调用日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeLogRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeLogResponse"/></returns>
+        public Task<DescribeCosIpInvokeLogResponse> DescribeCosIpInvokeLog(DescribeCosIpInvokeLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeLogResponse>(req, "DescribeCosIpInvokeLog");
+        }
+
+        /// <summary>
+        /// 查看cos调用日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeLogRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeLogResponse"/></returns>
+        public DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLogSync(DescribeCosIpInvokeLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeLogResponse>(req, "DescribeCosIpInvokeLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看调用记录关联的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeRecordFileRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeRecordFileResponse"/></returns>
+        public Task<DescribeCosIpInvokeRecordFileResponse> DescribeCosIpInvokeRecordFile(DescribeCosIpInvokeRecordFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeRecordFileResponse>(req, "DescribeCosIpInvokeRecordFile");
+        }
+
+        /// <summary>
+        /// 查看调用记录关联的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeRecordFileRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeRecordFileResponse"/></returns>
+        public DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFileSync(DescribeCosIpInvokeRecordFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeRecordFileResponse>(req, "DescribeCosIpInvokeRecordFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// cos概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCosOverviewResponse"/></returns>
+        public Task<DescribeCosOverviewResponse> DescribeCosOverview(DescribeCosOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCosOverviewResponse>(req, "DescribeCosOverview");
+        }
+
+        /// <summary>
+        /// cos概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCosOverviewResponse"/></returns>
+        public DescribeCosOverviewResponse DescribeCosOverviewSync(DescribeCosOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCosOverviewResponse>(req, "DescribeCosOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取策略列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCosPolicyResponse"/></returns>
+        public Task<DescribeCosPolicyResponse> DescribeCosPolicy(DescribeCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeCosPolicyResponse>(req, "DescribeCosPolicy");
+        }
+
+        /// <summary>
+        /// 获取策略列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCosPolicyResponse"/></returns>
+        public DescribeCosPolicyResponse DescribeCosPolicySync(DescribeCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeCosPolicyResponse>(req, "DescribeCosPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 风险接口列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskActionListResponse"/></returns>
+        public Task<DescribeCosRiskActionListResponse> DescribeCosRiskActionList(DescribeCosRiskActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskActionListResponse>(req, "DescribeCosRiskActionList");
+        }
+
+        /// <summary>
+        /// 风险接口列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskActionListResponse"/></returns>
+        public DescribeCosRiskActionListResponse DescribeCosRiskActionListSync(DescribeCosRiskActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskActionListResponse>(req, "DescribeCosRiskActionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看风险证据以及描述
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskEvidenceRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskEvidenceResponse"/></returns>
+        public Task<DescribeCosRiskEvidenceResponse> DescribeCosRiskEvidence(DescribeCosRiskEvidenceRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskEvidenceResponse>(req, "DescribeCosRiskEvidence");
+        }
+
+        /// <summary>
+        /// 查看风险证据以及描述
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskEvidenceRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskEvidenceResponse"/></returns>
+        public DescribeCosRiskEvidenceResponse DescribeCosRiskEvidenceSync(DescribeCosRiskEvidenceRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskEvidenceResponse>(req, "DescribeCosRiskEvidence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看存储桶扫描任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskScanTaskResponse"/></returns>
+        public Task<DescribeCosRiskScanTaskResponse> DescribeCosRiskScanTask(DescribeCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskScanTaskResponse>(req, "DescribeCosRiskScanTask");
+        }
+
+        /// <summary>
+        /// 查看存储桶扫描任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskScanTaskResponse"/></returns>
+        public DescribeCosRiskScanTaskResponse DescribeCosRiskScanTaskSync(DescribeCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskScanTaskResponse>(req, "DescribeCosRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看cos桶访问权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionResponse"/></returns>
+        public Task<DescribeCosRoleAccessPermissionResponse> DescribeCosRoleAccessPermission(DescribeCosRoleAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionResponse>(req, "DescribeCosRoleAccessPermission");
+        }
+
+        /// <summary>
+        /// 查看cos桶访问权限信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionResponse"/></returns>
+        public DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermissionSync(DescribeCosRoleAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionResponse>(req, "DescribeCosRoleAccessPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取存储桶角色权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionsResponse"/></returns>
+        public Task<DescribeCosRoleAccessPermissionsResponse> DescribeCosRoleAccessPermissions(DescribeCosRoleAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionsResponse>(req, "DescribeCosRoleAccessPermissions");
+        }
+
+        /// <summary>
+        /// 获取存储桶角色权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionsResponse"/></returns>
+        public DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissionsSync(DescribeCosRoleAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionsResponse>(req, "DescribeCosRoleAccessPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosSourceIpRequest"/></param>
+        /// <returns><see cref="DescribeCosSourceIpResponse"/></returns>
+        public Task<DescribeCosSourceIpResponse> DescribeCosSourceIp(DescribeCosSourceIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCosSourceIpResponse>(req, "DescribeCosSourceIp");
+        }
+
+        /// <summary>
+        /// 调用源ip列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosSourceIpRequest"/></param>
+        /// <returns><see cref="DescribeCosSourceIpResponse"/></returns>
+        public DescribeCosSourceIpResponse DescribeCosSourceIpSync(DescribeCosSourceIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCosSourceIpResponse>(req, "DescribeCosSourceIp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2175,6 +2889,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 对象存储异常检测调用记录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordResponse"/></returns>
+        public Task<DescribeIpInvokeRecordResponse> DescribeIpInvokeRecord(DescribeIpInvokeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordResponse>(req, "DescribeIpInvokeRecord");
+        }
+
+        /// <summary>
+        /// 对象存储异常检测调用记录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordResponse"/></returns>
+        public DescribeIpInvokeRecordResponse DescribeIpInvokeRecordSync(DescribeIpInvokeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordResponse>(req, "DescribeIpInvokeRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ip访问列表详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordDetailResponse"/></returns>
+        public Task<DescribeIpInvokeRecordDetailResponse> DescribeIpInvokeRecordDetail(DescribeIpInvokeRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordDetailResponse>(req, "DescribeIpInvokeRecordDetail");
+        }
+
+        /// <summary>
+        /// ip访问列表详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordDetailResponse"/></returns>
+        public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetailSync(DescribeIpInvokeRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordDetailResponse>(req, "DescribeIpInvokeRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
         /// </summary>
         /// <param name="req"><see cref="DescribeKeySandboxCredentialRequest"/></param>
@@ -2322,6 +3078,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 按日期查看策略命中详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyHitDataRequest"/></param>
+        /// <returns><see cref="DescribePolicyHitDataResponse"/></returns>
+        public Task<DescribePolicyHitDataResponse> DescribePolicyHitData(DescribePolicyHitDataRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyHitDataResponse>(req, "DescribePolicyHitData");
+        }
+
+        /// <summary>
+        /// 按日期查看策略命中详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyHitDataRequest"/></param>
+        /// <returns><see cref="DescribePolicyHitDataResponse"/></returns>
+        public DescribePolicyHitDataResponse DescribePolicyHitDataSync(DescribePolicyHitDataRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyHitDataResponse>(req, "DescribePolicyHitData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// ip公网列表
         /// </summary>
         /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>
@@ -2360,6 +3137,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssetsSync(DescribeRepositoryImageAssetsRequest req)
         {
             return InternalRequestAsync<DescribeRepositoryImageAssetsResponse>(req, "DescribeRepositoryImageAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看风险关联的存储桶信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskBucketListRequest"/></param>
+        /// <returns><see cref="DescribeRiskBucketListResponse"/></returns>
+        public Task<DescribeRiskBucketListResponse> DescribeRiskBucketList(DescribeRiskBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskBucketListResponse>(req, "DescribeRiskBucketList");
+        }
+
+        /// <summary>
+        /// 查看风险关联的存储桶信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskBucketListRequest"/></param>
+        /// <returns><see cref="DescribeRiskBucketListResponse"/></returns>
+        public DescribeRiskBucketListResponse DescribeRiskBucketListSync(DescribeRiskBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskBucketListResponse>(req, "DescribeRiskBucketList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2595,6 +3393,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取风险项视角列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskItemListRequest"/></param>
+        /// <returns><see cref="DescribeRiskItemListResponse"/></returns>
+        public Task<DescribeRiskItemListResponse> DescribeRiskItemList(DescribeRiskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskItemListResponse>(req, "DescribeRiskItemList");
+        }
+
+        /// <summary>
+        /// 获取风险项视角列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskItemListRequest"/></param>
+        /// <returns><see cref="DescribeRiskItemListResponse"/></returns>
+        public DescribeRiskItemListResponse DescribeRiskItemListSync(DescribeRiskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskItemListResponse>(req, "DescribeRiskItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询风险规则详情示例
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskRuleDetailRequest"/></param>
@@ -2633,6 +3452,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeRiskRulesResponse DescribeRiskRulesSync(DescribeRiskRulesRequest req)
         {
             return InternalRequestAsync<DescribeRiskRulesResponse>(req, "DescribeRiskRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看风险趋势图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeRiskTrendDataResponse"/></returns>
+        public Task<DescribeRiskTrendDataResponse> DescribeRiskTrendData(DescribeRiskTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskTrendDataResponse>(req, "DescribeRiskTrendData");
+        }
+
+        /// <summary>
+        /// 查看风险趋势图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeRiskTrendDataResponse"/></returns>
+        public DescribeRiskTrendDataResponse DescribeRiskTrendDataSync(DescribeRiskTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskTrendDataResponse>(req, "DescribeRiskTrendData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3099,6 +3939,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改或者更改处置状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmRiskStatusResponse"/></returns>
+        public Task<ModifyAlarmRiskStatusResponse> ModifyAlarmRiskStatus(ModifyAlarmRiskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus");
+        }
+
+        /// <summary>
+        /// 修改或者更改处置状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmRiskStatusResponse"/></returns>
+        public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatusSync(ModifyAlarmRiskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改cos审计监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditMonitorAccountRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditMonitorAccountResponse"/></returns>
+        public Task<ModifyCosAuditMonitorAccountResponse> ModifyCosAuditMonitorAccount(ModifyCosAuditMonitorAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditMonitorAccountResponse>(req, "ModifyCosAuditMonitorAccount");
+        }
+
+        /// <summary>
+        /// 修改cos审计监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditMonitorAccountRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditMonitorAccountResponse"/></returns>
+        public ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccountSync(ModifyCosAuditMonitorAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditMonitorAccountResponse>(req, "ModifyCosAuditMonitorAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改对象存储备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosMarkInfoRequest"/></param>
+        /// <returns><see cref="ModifyCosMarkInfoResponse"/></returns>
+        public Task<ModifyCosMarkInfoResponse> ModifyCosMarkInfo(ModifyCosMarkInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCosMarkInfoResponse>(req, "ModifyCosMarkInfo");
+        }
+
+        /// <summary>
+        /// 修改对象存储备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosMarkInfoRequest"/></param>
+        /// <returns><see cref="ModifyCosMarkInfoResponse"/></returns>
+        public ModifyCosMarkInfoResponse ModifyCosMarkInfoSync(ModifyCosMarkInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCosMarkInfoResponse>(req, "ModifyCosMarkInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改Dspm访问管理信息
         /// </summary>
         /// <param name="req"><see cref="ModifyDspmAccessRecordRequest"/></param>
@@ -3431,6 +4334,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatusSync(ModifyOrganizationAccountStatusRequest req)
         {
             return InternalRequestAsync<ModifyOrganizationAccountStatusResponse>(req, "ModifyOrganizationAccountStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改策略状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyPolicyStatusResponse"/></returns>
+        public Task<ModifyPolicyStatusResponse> ModifyPolicyStatus(ModifyPolicyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyPolicyStatusResponse>(req, "ModifyPolicyStatus");
+        }
+
+        /// <summary>
+        /// 修改策略状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyPolicyStatusResponse"/></returns>
+        public ModifyPolicyStatusResponse ModifyPolicyStatusSync(ModifyPolicyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyPolicyStatusResponse>(req, "ModifyPolicyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

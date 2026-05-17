@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 计费项列表
+        /// <p>计费项列表</p>
         /// </summary>
         [JsonProperty("Specs")]
         public Spec[] Specs{ get; set; }

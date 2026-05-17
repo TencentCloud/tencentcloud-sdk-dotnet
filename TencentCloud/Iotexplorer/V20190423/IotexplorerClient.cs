@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1419";
+       private const string sdkVersion = "SDK_NET_3.0.1428";
 
         /// <summary>
         /// Client constructor.
@@ -2129,6 +2129,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeInstanceResponse DescribeInstanceSync(DescribeInstanceRequest req)
         {
             return InternalRequestAsync<DescribeInstanceResponse>(req, "DescribeInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例概览详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseOverviewRequest"/></param>
+        /// <returns><see cref="DescribeLicenseOverviewResponse"/></returns>
+        public Task<DescribeLicenseOverviewResponse> DescribeLicenseOverview(DescribeLicenseOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeLicenseOverviewResponse>(req, "DescribeLicenseOverview");
+        }
+
+        /// <summary>
+        /// 查询实例概览详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseOverviewRequest"/></param>
+        /// <returns><see cref="DescribeLicenseOverviewResponse"/></returns>
+        public DescribeLicenseOverviewResponse DescribeLicenseOverviewSync(DescribeLicenseOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeLicenseOverviewResponse>(req, "DescribeLicenseOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,19 +25,25 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+        /// <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+        /// <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -49,6 +55,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }

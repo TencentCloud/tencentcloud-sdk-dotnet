@@ -25,7 +25,7 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 结果集
+        /// <p>结果集</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResultIDVO Data{ get; set; }

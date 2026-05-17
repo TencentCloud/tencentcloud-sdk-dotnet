@@ -180,6 +180,12 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("FallbackModels")]
         public TargetModelDTO[] FallbackModels{ get; set; }
 
+        /// <summary>
+        /// <p>模型协议</p>
+        /// </summary>
+        [JsonProperty("ModelProtocol")]
+        public string ModelProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "HostKeyHeaderName", this.HostKeyHeaderName);
             this.SetParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
             this.SetParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
+            this.SetParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
         }
     }
 }
