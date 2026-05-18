@@ -25,109 +25,109 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 设备类型：field或remote
+        /// <p>设备类型：field或remote</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 起始点位时间，单位：秒
+        /// <p>起始点位时间，单位：秒</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束点位时间，单位：秒
+        /// <p>结束点位时间，单位：秒</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 会话ID
+        /// <p>会话ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 码率，单位：kbps
+        /// <p>码率，单位：kbps</p>
         /// </summary>
         [JsonProperty("Rate")]
         public long?[] Rate{ get; set; }
 
         /// <summary>
-        /// 帧率
+        /// <p>帧率</p>
         /// </summary>
         [JsonProperty("Fps")]
         public long?[] Fps{ get; set; }
 
         /// <summary>
-        /// 丢包率，单位：%
+        /// <p>丢包率，单位：%</p>
         /// </summary>
         [JsonProperty("Lost")]
         public float?[] Lost{ get; set; }
 
         /// <summary>
-        /// 网络时延，单位：ms
+        /// <p>网络时延，单位：ms</p>
         /// </summary>
         [JsonProperty("NetworkLatency")]
         public long?[] NetworkLatency{ get; set; }
 
         /// <summary>
-        /// 视频时延，单位：ms
+        /// <p>视频时延，单位：ms</p>
         /// </summary>
         [JsonProperty("VideoLatency")]
         public long?[] VideoLatency{ get; set; }
 
         /// <summary>
-        /// CPU使用率，单位：%
+        /// <p>CPU使用率，单位：%</p>
         /// </summary>
         [JsonProperty("CpuUsed")]
         public float?[] CpuUsed{ get; set; }
 
         /// <summary>
-        /// 内存使用率，单位：%
+        /// <p>内存使用率，单位：%</p>
         /// </summary>
         [JsonProperty("MemUsed")]
         public float?[] MemUsed{ get; set; }
 
         /// <summary>
-        /// 时间偏移量，单位：秒
+        /// <p>时间偏移量，单位：秒</p>
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong?[] TimeOffset{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 设备ID
+        /// <p>设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// sdk版本
+        /// <p>sdk版本</p>
         /// </summary>
         [JsonProperty("Ver")]
         public string Ver{ get; set; }
 
         /// <summary>
-        /// 模式(p2p/server)
+        /// <p>模式(p2p/server)</p>
         /// </summary>
         [JsonProperty("SdkMode")]
         public string SdkMode{ get; set; }
 
         /// <summary>
-        /// 解码耗时，单位：ms
+        /// <p>解码耗时，单位：ms</p>
         /// </summary>
         [JsonProperty("DecodeCost")]
         public long?[] DecodeCost{ get; set; }
 
         /// <summary>
-        /// 【已废弃，使用RenderCost】
+        /// <p>【已废弃，使用RenderCost】</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenderConst")]
@@ -135,112 +135,118 @@ namespace TencentCloud.Trro.V20220325.Models
         public long?[] RenderConst{ get; set; }
 
         /// <summary>
-        /// 卡顿k100
+        /// <p>卡顿k100</p>
         /// </summary>
         [JsonProperty("K100")]
         public float?[] K100{ get; set; }
 
         /// <summary>
-        /// 卡顿k150
+        /// <p>卡顿k150</p>
         /// </summary>
         [JsonProperty("K150")]
         public float?[] K150{ get; set; }
 
         /// <summary>
-        /// nack请求数
+        /// <p>nack请求数</p>
         /// </summary>
         [JsonProperty("NACK")]
         public long?[] NACK{ get; set; }
 
         /// <summary>
-        /// 服务端调控码率,单位：kbps
+        /// <p>服务端调控码率,单位：kbps</p>
         /// </summary>
         [JsonProperty("BitRateEstimate")]
         public long?[] BitRateEstimate{ get; set; }
 
         /// <summary>
-        /// 宽度
+        /// <p>宽度</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 高度
+        /// <p>高度</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 编码耗时，单位：ms
+        /// <p>编码耗时，单位：ms</p>
         /// </summary>
         [JsonProperty("EncodeCost")]
         public long?[] EncodeCost{ get; set; }
 
         /// <summary>
-        /// 采集耗时，单位：ms
+        /// <p>采集耗时，单位：ms</p>
         /// </summary>
         [JsonProperty("CaptureCost")]
         public long?[] CaptureCost{ get; set; }
 
         /// <summary>
-        /// 渲染耗时，单位：ms
+        /// <p>渲染耗时，单位：ms</p>
         /// </summary>
         [JsonProperty("RenderCost")]
         public long?[] RenderCost{ get; set; }
 
         /// <summary>
-        /// 配置宽度
+        /// <p>配置宽度</p>
         /// </summary>
         [JsonProperty("ConfigWidth")]
         public long? ConfigWidth{ get; set; }
 
         /// <summary>
-        /// 配置高度
+        /// <p>配置高度</p>
         /// </summary>
         [JsonProperty("ConfigHeight")]
         public long? ConfigHeight{ get; set; }
 
         /// <summary>
-        /// 平均帧间隔
+        /// <p>平均帧间隔</p>
         /// </summary>
         [JsonProperty("FrameDelta")]
         public long?[] FrameDelta{ get; set; }
 
         /// <summary>
-        /// 最大帧间隔
+        /// <p>最大帧间隔</p>
         /// </summary>
         [JsonProperty("MaxFrameDelta")]
         public long?[] MaxFrameDelta{ get; set; }
 
         /// <summary>
-        /// 总码率评估,单位：kbps
+        /// <p>总码率评估,单位：kbps</p>
         /// </summary>
         [JsonProperty("TotalBitrateEstimate")]
         public long?[] TotalBitrateEstimate{ get; set; }
 
         /// <summary>
-        /// 帧间隔大于100ms的卡顿时长
+        /// <p>帧间隔大于100ms的卡顿时长</p>
         /// </summary>
         [JsonProperty("Lag100Duration")]
         public long?[] Lag100Duration{ get; set; }
 
         /// <summary>
-        /// 帧间隔大于150ms的卡顿时长
+        /// <p>帧间隔大于150ms的卡顿时长</p>
         /// </summary>
         [JsonProperty("Lag150Duration")]
         public long?[] Lag150Duration{ get; set; }
 
         /// <summary>
-        /// 是否开启多网：0 单网，1 多网
+        /// <p>是否开启多网：0 单网，1 多网</p>
         /// </summary>
         [JsonProperty("MultiMode")]
         public long? MultiMode{ get; set; }
 
         /// <summary>
-        /// 多网卡信息
+        /// <p>多网卡信息</p>
         /// </summary>
         [JsonProperty("MultiNet")]
         public MultiNet[] MultiNet{ get; set; }
+
+        /// <summary>
+        /// <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p>
+        /// </summary>
+        [JsonProperty("ControlLatency")]
+        public long?[] ControlLatency{ get; set; }
 
 
         /// <summary>
@@ -284,6 +290,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamArraySimple(map, prefix + "Lag150Duration.", this.Lag150Duration);
             this.SetParamSimple(map, prefix + "MultiMode", this.MultiMode);
             this.SetParamArrayObj(map, prefix + "MultiNet.", this.MultiNet);
+            this.SetParamArraySimple(map, prefix + "ControlLatency.", this.ControlLatency);
         }
     }
 }

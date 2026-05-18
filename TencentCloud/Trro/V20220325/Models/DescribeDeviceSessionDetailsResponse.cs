@@ -25,7 +25,7 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 按设备区分的会话详细数据
+        /// <p>按设备区分的会话详细数据</p>
         /// </summary>
         [JsonProperty("Details")]
         public SessionDeviceDetail[] Details{ get; set; }

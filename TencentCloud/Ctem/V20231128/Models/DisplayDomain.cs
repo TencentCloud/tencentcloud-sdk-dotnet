@@ -25,55 +25,55 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 主域名
+        /// <p>主域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// ICP
+        /// <p>ICP</p>
         /// </summary>
         [JsonProperty("ICP")]
         public string ICP{ get; set; }
 
         /// <summary>
-        /// 注册时间
+        /// <p>注册时间</p>
         /// </summary>
         [JsonProperty("RegisteredTime")]
         public string RegisteredTime{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 公司
+        /// <p>公司</p>
         /// </summary>
         [JsonProperty("Company")]
         public string Company{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// 是否为云资产
+        /// <p>是否为云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产状态，-1为下线
+        /// <p>云资产状态，-1为下线</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }

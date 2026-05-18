@@ -25,116 +25,123 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 试运行记录id
+        /// <p>试运行记录id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public long? RecordId{ get; set; }
 
         /// <summary>
-        /// 开发侧提交的jobid
+        /// <p>开发侧提交的jobid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public long? JobId{ get; set; }
 
         /// <summary>
-        /// 执行平台jobid
+        /// <p>执行平台jobid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionJobId")]
         public string ExecutionJobId{ get; set; }
 
         /// <summary>
-        /// 试运行记录名称
+        /// <p>试运行记录名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordName")]
         public string RecordName{ get; set; }
 
         /// <summary>
-        /// 脚本内容
+        /// <p>脚本内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptContent")]
         public string ScriptContent{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 耗时
+        /// <p>耗时</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeCost")]
         public long? TimeCost{ get; set; }
 
         /// <summary>
-        /// 用户uin
+        /// <p>用户uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserUin")]
         public string UserUin{ get; set; }
 
         /// <summary>
-        /// 主账户uin
+        /// <p>主账户uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 子记录信息
+        /// <p>子记录信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubRecordList")]
         public TestRunningSubRecord[] SubRecordList{ get; set; }
 
         /// <summary>
-        /// 结果或日志地域
+        /// <p>结果或日志地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 结果或日志桶名
+        /// <p>结果或日志桶名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
+
+        /// <summary>
+        /// <p>脚本内容是否被截断</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScriptContentTruncated")]
+        public bool? ScriptContentTruncated{ get; set; }
 
 
         /// <summary>
@@ -158,6 +165,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "ScriptContentTruncated", this.ScriptContentTruncated);
         }
     }
 }

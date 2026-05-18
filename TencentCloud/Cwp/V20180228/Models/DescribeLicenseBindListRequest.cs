@@ -25,39 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 授权ID
+        /// <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
         /// </summary>
         [JsonProperty("LicenseId")]
         public ulong? LicenseId{ get; set; }
 
         /// <summary>
-        /// 授权类型
+        /// <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }
 
         /// <summary>
-        /// 资源ID
+        /// <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <li>InstanceID、IP、
-        /// 
-        /// MachineName 模糊查询</li>
+        /// <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// 限制条数,默认10.
+        /// <p>限制条数,默认10.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量,默认0.
+        /// <p>偏移量,默认0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

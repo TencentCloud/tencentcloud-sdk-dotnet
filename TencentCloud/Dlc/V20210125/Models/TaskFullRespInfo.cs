@@ -472,6 +472,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ActiveCore")]
         public long? ActiveCore{ get; set; }
 
+        /// <summary>
+        /// <p>排队时间</p><p>单位：毫秒</p>
+        /// </summary>
+        [JsonProperty("QueueTime")]
+        public long? QueueTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -548,6 +554,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "GpuExecutorSize", this.GpuExecutorSize);
             this.SetParamSimple(map, prefix + "ShuffleWriteBytesSum", this.ShuffleWriteBytesSum);
             this.SetParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
+            this.SetParamSimple(map, prefix + "QueueTime", this.QueueTime);
         }
     }
 }

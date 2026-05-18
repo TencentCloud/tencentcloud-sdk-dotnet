@@ -25,82 +25,88 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 设备唯一ID
+        /// <p>设备唯一ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 设备创建的时间，单位：ms
+        /// <p>设备创建的时间，单位：ms</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 设备最后在线时间，单位：ms
+        /// <p>设备最后在线时间，单位：ms</p>
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
-        /// 设备的备注
+        /// <p>设备的备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+        /// <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
         /// </summary>
         [JsonProperty("AccessScope")]
         public long? AccessScope{ get; set; }
 
         /// <summary>
-        /// license授权有效期 0：月度授权 1：永久授权
+        /// <p>license授权有效期 0：月度授权 1：永久授权</p>
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }
 
         /// <summary>
-        /// 付费方 0：厂商付费 1：客户付费
+        /// <p>付费方 0：厂商付费 1：客户付费</p>
         /// </summary>
         [JsonProperty("Payer")]
         public long? Payer{ get; set; }
 
         /// <summary>
-        /// 设备分组ID
+        /// <p>设备分组ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 设备分组名称
+        /// <p>设备分组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 设备无流量包处理方式，0: 按量付费，1: 截断加速
+        /// <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
         /// </summary>
         [JsonProperty("FlowTrunc")]
         public long? FlowTrunc{ get; set; }
 
         /// <summary>
-        /// 设备sn
+        /// <p>设备sn</p>
         /// </summary>
         [JsonProperty("Sn")]
         public string Sn{ get; set; }
 
         /// <summary>
-        /// 厂商
+        /// <p>厂商</p>
         /// </summary>
         [JsonProperty("Vendor")]
         public string Vendor{ get; set; }
+
+        /// <summary>
+        /// <p>可接入地域列表。</p>
+        /// </summary>
+        [JsonProperty("AllowedRegions")]
+        public string[] AllowedRegions{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
             this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
+            this.SetParamArraySimple(map, prefix + "AllowedRegions.", this.AllowedRegions);
         }
     }
 }

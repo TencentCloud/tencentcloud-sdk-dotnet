@@ -25,46 +25,52 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否扫描全部镜像
+        /// <p>是否扫描全部镜像</p>
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 扫描的镜像列表
+        /// <p>扫描的镜像列表</p>
         /// </summary>
         [JsonProperty("Images")]
         public ImageInfo[] Images{ get; set; }
 
         /// <summary>
-        /// 扫描类型数组
+        /// <p>扫描类型数组</p>
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }
 
         /// <summary>
-        /// 扫描的镜像列表
+        /// <p>扫描的镜像列表</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// <p>过滤条件</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 不需要扫描的镜像列表, 与Filters配合使用
+        /// <p>不需要扫描的镜像列表, 与Filters配合使用</p>
         /// </summary>
         [JsonProperty("ExcludeImageList")]
         public ulong?[] ExcludeImageList{ get; set; }
 
         /// <summary>
-        /// 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+        /// <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
         /// </summary>
         [JsonProperty("OnlyScanLatest")]
         public bool? OnlyScanLatest{ get; set; }
+
+        /// <summary>
+        /// <p>任务超时时长</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
             this.SetParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

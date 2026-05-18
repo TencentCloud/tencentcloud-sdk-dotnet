@@ -72,6 +72,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ImageEncode")]
         public string ImageEncode{ get; set; }
 
+        /// <summary>
+        /// <p>tool_call 场景工具名称</p>
+        /// </summary>
+        [JsonProperty("ToolName")]
+        public string ToolName{ get; set; }
+
+        /// <summary>
+        /// <p>tool_call 场景工具参数</p>
+        /// </summary>
+        [JsonProperty("ToolArgs")]
+        public string ToolArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "TokenUsage", this.TokenUsage);
             this.SetParamSimple(map, prefix + "ImageEncode", this.ImageEncode);
+            this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
+            this.SetParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1418</VersionPrefix>
+    <VersionPrefix>3.0.1429</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,8 @@
     <Compile Include="V20250513\Models\GetSessionDetailsResponse.cs" />
     <Compile Include="V20250513\Models\GetUploadJobDetailsRequest.cs" />
     <Compile Include="V20250513\Models\GetUploadJobDetailsResponse.cs" />
+    <Compile Include="V20250513\Models\GetUserInstanceListRequest.cs" />
+    <Compile Include="V20250513\Models\GetUserInstanceListResponse.cs" />
     <Compile Include="V20250513\Models\KnowledgeBase.cs" />
     <Compile Include="V20250513\Models\KnowledgeTaskConfig.cs" />
     <Compile Include="V20250513\Models\ModelUserAuthority.cs" />

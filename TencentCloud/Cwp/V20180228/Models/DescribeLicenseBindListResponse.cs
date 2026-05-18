@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 绑定机器列表信息
+        /// <p>绑定机器列表信息</p>
         /// </summary>
         [JsonProperty("List")]
         public LicenseBindDetail[] List{ get; set; }

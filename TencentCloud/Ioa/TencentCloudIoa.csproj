@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1423</VersionPrefix>
+    <VersionPrefix>3.0.1429</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20220601\Models\CreateBusinessResourceData.cs" />
     <Compile Include="V20220601\Models\CreateBusinessResourceRequest.cs" />
     <Compile Include="V20220601\Models\CreateBusinessResourceResponse.cs" />
+    <Compile Include="V20220601\Models\CreateCompanyDirectoryConfigRequest.cs" />
+    <Compile Include="V20220601\Models\CreateCompanyDirectoryConfigResponse.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectTaskData.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectTaskRequest.cs" />
     <Compile Include="V20220601\Models\CreateDLPFileDetectTaskResponse.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="V20220601\Models\DescribeBusinessResourcePageRsp.cs" />
     <Compile Include="V20220601\Models\DescribeBusinessResourcesRequest.cs" />
     <Compile Include="V20220601\Models\DescribeBusinessResourcesResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeCompanyDirectoryConfigRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeCompanyDirectoryConfigResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDLPEdgeNodeGroupsRspData.cs" />
@@ -159,6 +163,8 @@
     <Compile Include="V20220601\Models\DeviceProcessInfo.cs" />
     <Compile Include="V20220601\Models\DeviceServiceInfo.cs" />
     <Compile Include="V20220601\Models\DeviceVirtualDeviceGroupsDetail.cs" />
+    <Compile Include="V20220601\Models\DirectoryConfigData.cs" />
+    <Compile Include="V20220601\Models\DirectoryConfigResultData.cs" />
     <Compile Include="V20220601\Models\ExportDeviceDownloadTaskRequest.cs" />
     <Compile Include="V20220601\Models\ExportDeviceDownloadTaskResponse.cs" />
     <Compile Include="V20220601\Models\ExportSoftwareDownloadUrlRspData.cs" />
@@ -181,6 +187,8 @@
     <Compile Include="V20220601\Models\GrantedVirtualGroupItem.cs" />
     <Compile Include="V20220601\Models\ModifyBusinessResourceRequest.cs" />
     <Compile Include="V20220601\Models\ModifyBusinessResourceResponse.cs" />
+    <Compile Include="V20220601\Models\ModifyCompanyDirectoryConfigRequest.cs" />
+    <Compile Include="V20220601\Models\ModifyCompanyDirectoryConfigResponse.cs" />
     <Compile Include="V20220601\Models\ModifyDeviceTrustStatusRequest.cs" />
     <Compile Include="V20220601\Models\ModifyDeviceTrustStatusResponse.cs" />
     <Compile Include="V20220601\Models\ModifyVirtualDeviceGroupsReqItem.cs" />

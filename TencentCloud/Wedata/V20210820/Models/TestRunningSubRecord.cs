@@ -25,130 +25,144 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 开发时间
+        /// <p>开发时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 执行平台执行id
+        /// <p>执行平台执行id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionJobId")]
         public string ExecutionJobId{ get; set; }
 
         /// <summary>
-        /// 执行平台子执行jobid
+        /// <p>执行平台子执行jobid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionSubJobId")]
         public string ExecutionSubJobId{ get; set; }
 
         /// <summary>
-        /// 开发侧提交的jobid
+        /// <p>开发侧提交的jobid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 子记录id
+        /// <p>子记录id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailId")]
         public long? DetailId{ get; set; }
 
         /// <summary>
-        /// 试运行记录id
+        /// <p>试运行记录id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public long? RecordId{ get; set; }
 
         /// <summary>
-        /// 脚本内容
+        /// <p>脚本内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptContent")]
         public string ScriptContent{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 耗时
+        /// <p>耗时</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeCost")]
         public long? TimeCost{ get; set; }
 
         /// <summary>
-        /// 结果总行数
+        /// <p>结果总行数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultTotalCount")]
         public long? ResultTotalCount{ get; set; }
 
         /// <summary>
-        /// 预览结果行数
+        /// <p>预览结果行数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultPreviewCount")]
         public long? ResultPreviewCount{ get; set; }
 
         /// <summary>
-        /// 结果文件路径
+        /// <p>结果文件路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultFilePath")]
         public string ResultFilePath{ get; set; }
 
         /// <summary>
-        /// 预览结果文件路径
+        /// <p>预览结果文件路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultPreviewFilePath")]
         public string ResultPreviewFilePath{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 序号
+        /// <p>序号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sequence")]
         public string Sequence{ get; set; }
 
         /// <summary>
-        /// 日志路径
+        /// <p>日志路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogFilePath")]
         public string LogFilePath{ get; set; }
 
         /// <summary>
-        /// 是否包含子结果
+        /// <p>是否包含子结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasSubResultSet")]
         public bool? HasSubResultSet{ get; set; }
+
+        /// <summary>
+        /// <p>脚本内容是否被截断</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScriptContentTruncated")]
+        public bool? ScriptContentTruncated{ get; set; }
+
+        /// <summary>
+        /// <p>结果集表字符信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaInfoFilePath")]
+        public string SchemaInfoFilePath{ get; set; }
 
 
         /// <summary>
@@ -174,6 +188,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Sequence", this.Sequence);
             this.SetParamSimple(map, prefix + "LogFilePath", this.LogFilePath);
             this.SetParamSimple(map, prefix + "HasSubResultSet", this.HasSubResultSet);
+            this.SetParamSimple(map, prefix + "ScriptContentTruncated", this.ScriptContentTruncated);
+            this.SetParamSimple(map, prefix + "SchemaInfoFilePath", this.SchemaInfoFilePath);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1418";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Dataagent.V20250513
         public GetUploadJobDetailsResponse GetUploadJobDetailsSync(GetUploadJobDetailsRequest req)
         {
             return InternalRequestAsync<GetUploadJobDetailsResponse>(req, "GetUploadJobDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetUserInstanceListRequest"/></param>
+        /// <returns><see cref="GetUserInstanceListResponse"/></returns>
+        public Task<GetUserInstanceListResponse> GetUserInstanceList(GetUserInstanceListRequest req)
+        {
+            return InternalRequestAsync<GetUserInstanceListResponse>(req, "GetUserInstanceList");
+        }
+
+        /// <summary>
+        /// 获取实例信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetUserInstanceListRequest"/></param>
+        /// <returns><see cref="GetUserInstanceListResponse"/></returns>
+        public GetUserInstanceListResponse GetUserInstanceListSync(GetUserInstanceListRequest req)
+        {
+            return InternalRequestAsync<GetUserInstanceListResponse>(req, "GetUserInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,43 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Dataagent.V20250513.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeServiceDiscoveryRequest : AbstractModel
+    public class GetUserInstanceListRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Prometheus 实例 ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// <li>类型是 TKE，为对应的腾讯云容器服务集群 ID</li>
-        /// </summary>
-        [JsonProperty("KubeClusterId")]
-        public string KubeClusterId{ get; set; }
-
-        /// <summary>
-        /// 用户 Kubernetes 集群类型：
-        /// <li> 1 = 容器服务集群(TKE) </li>
-        /// </summary>
-        [JsonProperty("KubeType")]
-        public long? KubeType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "KubeClusterId", this.KubeClusterId);
-            this.SetParamSimple(map, prefix + "KubeType", this.KubeType);
         }
     }
 }

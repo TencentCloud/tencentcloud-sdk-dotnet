@@ -25,106 +25,112 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// 任务标题
+        /// <p>任务标题</p>
         /// </summary>
         [JsonProperty("TaskTitle")]
         public string TaskTitle{ get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// <p>任务描述</p>
         /// </summary>
         [JsonProperty("TaskDescription")]
         public string TaskDescription{ get; set; }
 
         /// <summary>
-        /// 任务标签
+        /// <p>任务标签</p>
         /// </summary>
         [JsonProperty("TaskTag")]
         public string TaskTag{ get; set; }
 
         /// <summary>
-        /// 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+        /// <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("TaskCreateTime")]
         public string TaskCreateTime{ get; set; }
 
         /// <summary>
-        /// 任务更新时间
+        /// <p>任务更新时间</p>
         /// </summary>
         [JsonProperty("TaskUpdateTime")]
         public string TaskUpdateTime{ get; set; }
 
         /// <summary>
-        /// 0--未开始，1--进行中，2--已完成
+        /// <p>0--未开始，1--进行中，2--已完成</p>
         /// </summary>
         [JsonProperty("TaskPreCheckStatus")]
         public long? TaskPreCheckStatus{ get; set; }
 
         /// <summary>
-        /// 环境检查是否通过
+        /// <p>环境检查是否通过</p>
         /// </summary>
         [JsonProperty("TaskPreCheckSuccess")]
         public bool? TaskPreCheckSuccess{ get; set; }
 
         /// <summary>
-        /// 演练是否符合预期 1-符合预期 2-不符合预期
+        /// <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
         /// </summary>
         [JsonProperty("TaskExpect")]
         public long? TaskExpect{ get; set; }
 
         /// <summary>
-        /// 关联应用ID
+        /// <p>关联应用ID</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 关联应用名称
+        /// <p>关联应用名称</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// 验证项ID
+        /// <p>验证项ID</p>
         /// </summary>
         [JsonProperty("VerifyId")]
         public ulong? VerifyId{ get; set; }
 
         /// <summary>
-        /// 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+        /// <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
         /// </summary>
         [JsonProperty("TaskStatusType")]
         public ulong? TaskStatusType{ get; set; }
 
         /// <summary>
-        /// 架构ID
+        /// <p>架构ID</p>
         /// </summary>
         [JsonProperty("ArchId")]
         public string ArchId{ get; set; }
 
         /// <summary>
-        /// 架构名称
+        /// <p>架构名称</p>
         /// </summary>
         [JsonProperty("ArchName")]
         public string ArchName{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// <p>来源</p>
         /// </summary>
         [JsonProperty("TaskSource")]
         public long? TaskSource{ get; set; }
+
+        /// <summary>
+        /// <p>云资源标签列表</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagWithDescribe[] Tags{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ArchId", this.ArchId);
             this.SetParamSimple(map, prefix + "ArchName", this.ArchName);
             this.SetParamSimple(map, prefix + "TaskSource", this.TaskSource);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

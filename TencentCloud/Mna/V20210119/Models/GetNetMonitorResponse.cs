@@ -25,17 +25,13 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 监控数据
+        /// <p>监控数据</p>
         /// </summary>
         [JsonProperty("MonitorData")]
         public MonitorData[] MonitorData{ get; set; }
 
         /// <summary>
-        /// 接入区域。取值范围：['MC','AP','EU','AM']
-        /// MC=中国大陆
-        /// AP=亚太
-        /// EU=欧洲
-        /// AM=美洲
+        /// <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 变量Id
+        /// <p>变量Id</p>
         /// </summary>
         [JsonProperty("VariableId")]
         public string VariableId{ get; set; }

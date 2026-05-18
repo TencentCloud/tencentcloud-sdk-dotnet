@@ -25,82 +25,88 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 子公司ID
+        /// <p>子公司ID</p>
         /// </summary>
         [JsonProperty("EnterpriseUid")]
         public string EnterpriseUid{ get; set; }
 
         /// <summary>
-        /// 子公司名称
+        /// <p>子公司名称</p>
         /// </summary>
         [JsonProperty("EnterpriseName")]
         public string EnterpriseName{ get; set; }
 
         /// <summary>
-        /// 主任务ID
+        /// <p>主任务ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public long? JobId{ get; set; }
 
         /// <summary>
-        /// 单任务ID
+        /// <p>单任务ID</p>
         /// </summary>
         [JsonProperty("JobStageId")]
         public long? JobStageId{ get; set; }
 
         /// <summary>
-        /// 是否忽略
+        /// <p>是否忽略</p>
         /// </summary>
         [JsonProperty("Ignored")]
         public bool? Ignored{ get; set; }
 
         /// <summary>
-        /// 子任务ID
+        /// <p>子任务ID</p>
         /// </summary>
         [JsonProperty("JobRecordId")]
         public long? JobRecordId{ get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
 
         /// <summary>
-        /// 企业名称
+        /// <p>企业名称</p>
         /// </summary>
         [JsonProperty("CustomerName")]
         public string CustomerName{ get; set; }
 
         /// <summary>
-        /// 详情
+        /// <p>详情</p>
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
         /// <summary>
-        /// Md5值
+        /// <p>Md5值</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateAt")]
         public string UpdateAt{ get; set; }
 
         /// <summary>
-        /// 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+        /// <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
+
+        /// <summary>
+        /// <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+        /// </summary>
+        [JsonProperty("IsPlainTextInDemo")]
+        public long? IsPlainTextInDemo{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
             this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
             this.SetParamSimple(map, prefix + "Labels", this.Labels);
+            this.SetParamSimple(map, prefix + "IsPlainTextInDemo", this.IsPlainTextInDemo);
         }
     }
 }

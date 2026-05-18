@@ -25,31 +25,31 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 设备id
+        /// <p>设备id</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+        /// <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
         /// </summary>
         [JsonProperty("Metrics")]
         public string Metrics{ get; set; }
 
         /// <summary>
-        /// 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+        /// <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
         /// </summary>
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }

@@ -138,6 +138,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WebUIType")]
         public long? WebUIType{ get; set; }
 
+        /// <summary>
+        /// <p>setats集群的名字</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>setats集群注释</p>
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +173,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
             this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
             this.SetParamSimple(map, prefix + "WebUIType", this.WebUIType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

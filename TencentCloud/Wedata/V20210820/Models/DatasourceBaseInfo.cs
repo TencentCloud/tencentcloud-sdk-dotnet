@@ -25,79 +25,93 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 若数据源列表为绑定数据库，则为db名称
+        /// <p>若数据源列表为绑定数据库，则为db名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseNames")]
         public string[] DatabaseNames{ get; set; }
 
         /// <summary>
-        /// 数据源描述信息
+        /// <p>数据源描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据源ID
+        /// <p>数据源ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// 数据源引擎的实例ID，如CDB实例ID
+        /// <p>数据源引擎的实例ID，如CDB实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Instance")]
         public string Instance{ get; set; }
 
         /// <summary>
-        /// 数据源名称，在相同SpaceName下，数据源名称不能为空
+        /// <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数据源引擎所属区域
+        /// <p>数据源引擎所属区域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 数据源类型:枚举值
+        /// <p>数据源类型:枚举值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数据源所属的集群id
+        /// <p>数据源所属的集群id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 数据源版本信息
+        /// <p>数据源版本信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 数据源附带参数信息Params json字符串
+        /// <p>数据源附带参数信息Params json字符串</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamsString")]
         public string ParamsString{ get; set; }
 
         /// <summary>
-        /// 区分数据源类型自定义源还是系统源
+        /// <p>区分数据源类型自定义源还是系统源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
+
+        /// <summary>
+        /// <p>数据实例ip</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
+        /// <summary>
+        /// <p>数据实例port</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Port")]
+        public string Port{ get; set; }
 
 
         /// <summary>
@@ -116,6 +130,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "ParamsString", this.ParamsString);
             this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

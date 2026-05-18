@@ -57,7 +57,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。
+        /// 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+        /// 不填默认为0，表示不开启自定义数据。
         /// </summary>
         [JsonProperty("SendCustomMode")]
         public ulong? SendCustomMode{ get; set; }

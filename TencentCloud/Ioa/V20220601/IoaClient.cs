@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1423";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreateBusinessResourceResponse CreateBusinessResourceSync(CreateBusinessResourceRequest req)
         {
             return InternalRequestAsync<CreateBusinessResourceResponse>(req, "CreateBusinessResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="CreateCompanyDirectoryConfigResponse"/></returns>
+        public Task<CreateCompanyDirectoryConfigResponse> CreateCompanyDirectoryConfig(CreateCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCompanyDirectoryConfigResponse>(req, "CreateCompanyDirectoryConfig");
+        }
+
+        /// <summary>
+        /// 创建企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="CreateCompanyDirectoryConfigResponse"/></returns>
+        public CreateCompanyDirectoryConfigResponse CreateCompanyDirectoryConfigSync(CreateCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCompanyDirectoryConfigResponse>(req, "CreateCompanyDirectoryConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -302,6 +323,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeBusinessResourcesResponse DescribeBusinessResourcesSync(DescribeBusinessResourcesRequest req)
         {
             return InternalRequestAsync<DescribeBusinessResourcesResponse>(req, "DescribeBusinessResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="DescribeCompanyDirectoryConfigResponse"/></returns>
+        public Task<DescribeCompanyDirectoryConfigResponse> DescribeCompanyDirectoryConfig(DescribeCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeCompanyDirectoryConfigResponse>(req, "DescribeCompanyDirectoryConfig");
+        }
+
+        /// <summary>
+        /// 获取企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="DescribeCompanyDirectoryConfigResponse"/></returns>
+        public DescribeCompanyDirectoryConfigResponse DescribeCompanyDirectoryConfigSync(DescribeCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeCompanyDirectoryConfigResponse>(req, "DescribeCompanyDirectoryConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -827,6 +869,27 @@ namespace TencentCloud.Ioa.V20220601
         public ModifyBusinessResourceResponse ModifyBusinessResourceSync(ModifyBusinessResourceRequest req)
         {
             return InternalRequestAsync<ModifyBusinessResourceResponse>(req, "ModifyBusinessResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="ModifyCompanyDirectoryConfigResponse"/></returns>
+        public Task<ModifyCompanyDirectoryConfigResponse> ModifyCompanyDirectoryConfig(ModifyCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCompanyDirectoryConfigResponse>(req, "ModifyCompanyDirectoryConfig");
+        }
+
+        /// <summary>
+        /// 编辑企业目录配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCompanyDirectoryConfigRequest"/></param>
+        /// <returns><see cref="ModifyCompanyDirectoryConfigResponse"/></returns>
+        public ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfigSync(ModifyCompanyDirectoryConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCompanyDirectoryConfigResponse>(req, "ModifyCompanyDirectoryConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

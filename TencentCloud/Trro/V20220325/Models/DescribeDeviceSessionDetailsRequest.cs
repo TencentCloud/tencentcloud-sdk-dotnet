@@ -25,10 +25,22 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 会话ID
+        /// <p>会话ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>查询指标开始时间</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>查询指标结束时间</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Trro.V20220325.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1425</VersionPrefix>
+    <VersionPrefix>3.0.1429</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -185,8 +185,6 @@
     <Compile Include="V20180724\Models\CreateRecordingRuleResponse.cs" />
     <Compile Include="V20180724\Models\CreateSSOAccountRequest.cs" />
     <Compile Include="V20180724\Models\CreateSSOAccountResponse.cs" />
-    <Compile Include="V20180724\Models\CreateServiceDiscoveryRequest.cs" />
-    <Compile Include="V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DataPoint.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmNoticesRequest.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmNoticesResponse.cs" />
@@ -389,8 +387,6 @@
     <Compile Include="V20180724\Models\DescribeRemoteWritesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeSSOAccountRequest.cs" />
     <Compile Include="V20180724\Models\DescribeSSOAccountResponse.cs" />
-    <Compile Include="V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
-    <Compile Include="V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DescribeStatisticDataRequest.cs" />
     <Compile Include="V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="V20180724\Models\DestroyPrometheusInstanceRequest.cs" />

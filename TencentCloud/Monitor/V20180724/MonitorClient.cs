@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1425";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -652,31 +652,6 @@ namespace TencentCloud.Monitor.V20180724
         public CreateSSOAccountResponse CreateSSOAccountSync(CreateSSOAccountRequest req)
         {
             return InternalRequestAsync<CreateSSOAccountResponse>(req, "CreateSSOAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 在腾讯云容器服务下创建 Prometheus 服务发现。
-        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-        /// </summary>
-        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
-        public Task<CreateServiceDiscoveryResponse> CreateServiceDiscovery(CreateServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<CreateServiceDiscoveryResponse>(req, "CreateServiceDiscovery");
-        }
-
-        /// <summary>
-        /// 在腾讯云容器服务下创建 Prometheus 服务发现。
-        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-        /// </summary>
-        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
-        public CreateServiceDiscoveryResponse CreateServiceDiscoverySync(CreateServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<CreateServiceDiscoveryResponse>(req, "CreateServiceDiscovery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2507,31 +2482,6 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeSSOAccountResponse DescribeSSOAccountSync(DescribeSSOAccountRequest req)
         {
             return InternalRequestAsync<DescribeSSOAccountResponse>(req, "DescribeSSOAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
-        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
-        public Task<DescribeServiceDiscoveryResponse> DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<DescribeServiceDiscoveryResponse>(req, "DescribeServiceDiscovery");
-        }
-
-        /// <summary>
-        /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
-        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
-        public DescribeServiceDiscoveryResponse DescribeServiceDiscoverySync(DescribeServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<DescribeServiceDiscoveryResponse>(req, "DescribeServiceDiscovery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

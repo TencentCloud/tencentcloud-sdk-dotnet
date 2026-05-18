@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1425";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -243,7 +243,7 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
-        /// 创建变量 
+        /// 创建变量
         /// </summary>
         /// <param name="req"><see cref="CreateVariableRequest"/></param>
         /// <returns><see cref="CreateVariableResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
-        /// 创建变量 
+        /// 创建变量
         /// </summary>
         /// <param name="req"><see cref="CreateVariableRequest"/></param>
         /// <returns><see cref="CreateVariableResponse"/></returns>

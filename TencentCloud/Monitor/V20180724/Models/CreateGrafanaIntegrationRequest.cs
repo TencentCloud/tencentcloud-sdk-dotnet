@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+        /// <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// 集成配置
+        /// <p>集成配置</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
