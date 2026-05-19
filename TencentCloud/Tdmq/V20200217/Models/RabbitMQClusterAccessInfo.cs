@@ -25,120 +25,125 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群公网接入地址
+        /// <p>集群公网接入地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// 集群控制台访问地址
+        /// <p>集群 Web 控制台公网访问地址</p>
         /// </summary>
         [JsonProperty("WebConsoleEndpoint")]
         public string WebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// 集群控制台登录用户名
+        /// <p>集群 Web 控制台登录用户名</p>
         /// </summary>
         [JsonProperty("WebConsoleUsername")]
         public string WebConsoleUsername{ get; set; }
 
         /// <summary>
-        /// 集群控制台登录密码
+        /// <p>集群 Web 控制台登录密码</p>
         /// </summary>
         [JsonProperty("WebConsolePassword")]
         public string WebConsolePassword{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// <p>已废弃</p>
         /// </summary>
         [JsonProperty("PublicAccessEndpointStatus")]
         public bool? PublicAccessEndpointStatus{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// <p>已废弃</p>
         /// </summary>
         [JsonProperty("PublicControlConsoleSwitchStatus")]
         public bool? PublicControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// <p>已废弃</p>
         /// </summary>
         [JsonProperty("VpcControlConsoleSwitchStatus")]
         public bool? VpcControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Vpc管控台访问地址，示例值，http://1.1.1.1:15672
+        /// <p>Web 管控台 VPC 访问地址</p>
         /// </summary>
         [JsonProperty("VpcWebConsoleEndpoint")]
         public string VpcWebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+        /// <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
         /// </summary>
         [JsonProperty("PublicWebConsoleSwitchStatus")]
         public string PublicWebConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Vpc管控台开关状态，示例值，
-        /// OFF/ON/CREATING/DELETING
+        /// <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
         /// </summary>
         [JsonProperty("VpcWebConsoleSwitchStatus")]
         public string VpcWebConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+        /// <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
         /// </summary>
         [JsonProperty("PublicDataStreamStatus")]
         public string PublicDataStreamStatus{ get; set; }
 
         /// <summary>
-        /// Prometheus信息
+        /// <p>Prometheus信息</p>
         /// </summary>
         [JsonProperty("PrometheusEndpointInfo")]
         public PrometheusEndpointInfo PrometheusEndpointInfo{ get; set; }
 
         /// <summary>
-        /// 公网域名接入点
+        /// <p>公网域名接入点</p>
         /// </summary>
         [JsonProperty("WebConsoleDomainEndpoint")]
         public string WebConsoleDomainEndpoint{ get; set; }
 
         /// <summary>
-        /// 控制面所使用的VPC信息
+        /// <p>控制面所使用的VPC信息</p>
         /// </summary>
         [JsonProperty("ControlPlaneEndpointInfo")]
         public VpcEndpointInfo ControlPlaneEndpointInfo{ get; set; }
 
         /// <summary>
-        /// TLS加密的数据流公网接入点
+        /// <p>TLS加密的数据流公网接入点</p>
         /// </summary>
         [JsonProperty("PublicTlsAccessEndpoint")]
         public string PublicTlsAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// 公网IP是否复用
+        /// <p>公网IP是否复用</p>
         /// </summary>
         [JsonProperty("PublicIpReused")]
         public bool? PublicIpReused{ get; set; }
 
         /// <summary>
-        /// 公网控制台接入点操作的错误信息
+        /// <p>Web 控制台公网访问操作的错误信息</p>
         /// </summary>
         [JsonProperty("PublicWebConsoleErrorMessage")]
         public string PublicWebConsoleErrorMessage{ get; set; }
 
         /// <summary>
-        /// 内网控制台接入点操作的错误信息
+        /// <p>Web 控制台 VPC 访问操作的错误信息</p>
         /// </summary>
         [JsonProperty("VpcWebConsoleErrorMessage")]
         public string VpcWebConsoleErrorMessage{ get; set; }
 
         /// <summary>
-        /// 公网接入点操作的错误信息
+        /// <p>公网接入点操作的错误信息</p>
         /// </summary>
         [JsonProperty("PublicDataStreamErrorMessage")]
         public string PublicDataStreamErrorMessage{ get; set; }
+
+        /// <summary>
+        /// <p>公网Stream接入点</p>
+        /// </summary>
+        [JsonProperty("PublicStreamAccessEndpoint")]
+        public string PublicStreamAccessEndpoint{ get; set; }
 
 
         /// <summary>
@@ -165,6 +170,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
             this.SetParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
             this.SetParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
+            this.SetParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
         }
     }
 }

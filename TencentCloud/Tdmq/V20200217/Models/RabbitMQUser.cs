@@ -25,78 +25,91 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+        /// <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户名，登录时使用
+        /// <p>用户名，登录时使用</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// 密码，登录时使用
+        /// <p>密码，登录时使用</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 用户描述
+        /// <p>用户描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
+        /// <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 用户创建时间
+        /// <p>用户创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 用户最后修改时间
+        /// <p>用户最后修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 用户类型，System：系统创建，User：用户创建
+        /// <p>用户类型，System：系统创建，User：用户创建</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 单个用户最大可用连接数
+        /// <p>单个用户最大可用连接数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConnections")]
         public long? MaxConnections{ get; set; }
 
         /// <summary>
-        /// 单个用户最大可用通道数
+        /// <p>单个用户最大可用通道数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }
 
         /// <summary>
-        /// 创建时间时间戳
+        /// <p>创建时间时间戳</p>
         /// </summary>
         [JsonProperty("CreateTs")]
         public ulong? CreateTs{ get; set; }
 
         /// <summary>
-        /// 修改时间时间戳
+        /// <p>修改时间时间戳</p>
         /// </summary>
         [JsonProperty("ModifyTs")]
         public ulong? ModifyTs{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启cam验证</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("CamAuthEnabled")]
+        public bool? CamAuthEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>cam凭据名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CamCredentialName")]
+        public string CamCredentialName{ get; set; }
 
 
         /// <summary>
@@ -116,6 +129,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
             this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
             this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+            this.SetParamSimple(map, prefix + "CamAuthEnabled", this.CamAuthEnabled);
+            this.SetParamSimple(map, prefix + "CamCredentialName", this.CamCredentialName);
         }
     }
 }

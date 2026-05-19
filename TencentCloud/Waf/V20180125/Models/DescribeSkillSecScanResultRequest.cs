@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAttributeLabelRequest : AbstractModel
+    public class DescribeSkillSecScanResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 知识库ID
+        /// <p>服务ID</p>
         /// </summary>
-        [JsonProperty("KnowledgeBaseId")]
-        public string KnowledgeBaseId{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 属性标识，最大40个英文字符，如style
+        /// <p>ZIP 文件的 SHA256 哈希值，格式为 sha256:hex_digest，请严格遵循文档中的zip打包规范</p>
         /// </summary>
-        [JsonProperty("AttributeKey")]
-        public string AttributeKey{ get; set; }
+        [JsonProperty("ContentHash")]
+        public string ContentHash{ get; set; }
 
         /// <summary>
-        /// 属性名称，最大80个英文字符，如风格
+        /// <p>返回语言。支持 zh / en，默认 zh</p>
         /// </summary>
-        [JsonProperty("AttributeName")]
-        public string AttributeName{ get; set; }
-
-        /// <summary>
-        /// 属性标签信息
-        /// </summary>
-        [JsonProperty("Labels")]
-        public AttributeLabelItem[] Labels{ get; set; }
+        [JsonProperty("Lang")]
+        public string Lang{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
-            this.SetParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
-            this.SetParamSimple(map, prefix + "AttributeName", this.AttributeName);
-            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "ContentHash", this.ContentHash);
+            this.SetParamSimple(map, prefix + "Lang", this.Lang);
         }
     }
 }

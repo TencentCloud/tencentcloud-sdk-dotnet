@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListDocsRequest : AbstractModel
+    public class UploadSkillSecScanResponse : AbstractModel
     {
         
         /// <summary>
-        /// 知识库ID
+        /// <p>上传结果</p>
         /// </summary>
-        [JsonProperty("KnowledgeBaseId")]
-        public string KnowledgeBaseId{ get; set; }
+        [JsonProperty("Data")]
+        public SkillScanUploadData Data{ get; set; }
 
         /// <summary>
-        /// 页码，默认1
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PageNumber")]
-        public long? PageNumber{ get; set; }
-
-        /// <summary>
-        /// 每页数目，最大50，默认20
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
-            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

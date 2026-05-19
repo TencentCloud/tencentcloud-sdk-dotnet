@@ -60,6 +60,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcErrorMessage")]
         public string VpcErrorMessage{ get; set; }
 
+        /// <summary>
+        /// <p>接入点ID</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// <p>vpc Stream接入点</p>
+        /// </summary>
+        [JsonProperty("VpcStreamEndpoint")]
+        public string VpcStreamEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
             this.SetParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
             this.SetParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "VpcStreamEndpoint", this.VpcStreamEndpoint);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteQAsRequest : AbstractModel
+    public class DescribeTrainingTaskPodUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// 知识库ID
+        /// Pod登录URL
         /// </summary>
-        [JsonProperty("KnowledgeBaseId")]
-        public string KnowledgeBaseId{ get; set; }
+        [JsonProperty("PodUrl")]
+        public string PodUrl{ get; set; }
 
         /// <summary>
-        /// 问答对ID列表。支持批量删除，数量不超过100
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("QaIds")]
-        public string[] QaIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
-            this.SetParamArraySimple(map, prefix + "QaIds.", this.QaIds);
+            this.SetParamSimple(map, prefix + "PodUrl", this.PodUrl);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

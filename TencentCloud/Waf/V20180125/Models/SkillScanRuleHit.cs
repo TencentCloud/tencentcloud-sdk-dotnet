@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateQARequest : AbstractModel
+    public class SkillScanRuleHit : AbstractModel
     {
         
         /// <summary>
-        /// 知识库ID
+        /// <p>规则唯一ID</p>
         /// </summary>
-        [JsonProperty("KnowledgeBaseId")]
-        public string KnowledgeBaseId{ get; set; }
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
 
         /// <summary>
-        /// 问题，最大1000个英文字符
+        /// <p>规则描述（命中原因说明）</p>
         /// </summary>
-        [JsonProperty("Question")]
-        public string Question{ get; set; }
-
-        /// <summary>
-        /// 答案，最大4000个英文字符
-        /// </summary>
-        [JsonProperty("Answer")]
-        public string Answer{ get; set; }
-
-        /// <summary>
-        /// 属性标签
-        /// </summary>
-        [JsonProperty("AttributeLabels")]
-        public AttributeLabelReferItem[] AttributeLabels{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
-            this.SetParamSimple(map, prefix + "Question", this.Question);
-            this.SetParamSimple(map, prefix + "Answer", this.Answer);
-            this.SetParamArrayObj(map, prefix + "AttributeLabels.", this.AttributeLabels);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

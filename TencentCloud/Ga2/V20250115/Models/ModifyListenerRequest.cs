@@ -25,85 +25,85 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 名称，最大长度不能超过60个字节。
+        /// <p>名称，最大长度不能超过60个字节。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述信息，最大长度不能超过100个字节。
+        /// <p>描述信息，最大长度不能超过100个字节。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 连接空闲等待时间。
+        /// <p>连接空闲等待时间。</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public ulong? IdleTimeout{ get; set; }
 
         /// <summary>
-        /// 是否开启会话保持。
+        /// <p>是否开启会话保持。</p>
         /// </summary>
         [JsonProperty("ClientAffinity")]
         public string ClientAffinity{ get; set; }
 
         /// <summary>
-        /// 会话保持时间。
+        /// <p>会话保持时间。</p>
         /// </summary>
         [JsonProperty("ClientAffinityTime")]
         public ulong? ClientAffinityTime{ get; set; }
 
         /// <summary>
-        /// 请求超时时间。
+        /// <p>请求超时时间。</p>
         /// </summary>
         [JsonProperty("RequestTimeout")]
         public ulong? RequestTimeout{ get; set; }
 
         /// <summary>
-        /// 是否打开七层获取源IP方式。
+        /// <p>是否打开七层获取源IP方式。</p>
         /// </summary>
         [JsonProperty("XForwardedForRealIp")]
         public bool? XForwardedForRealIp{ get; set; }
 
         /// <summary>
-        /// 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
+        /// <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
         /// </summary>
         [JsonProperty("CertificationType")]
         public string CertificationType{ get; set; }
 
         /// <summary>
-        /// 加密算法套件。
+        /// <p>加密算法套件。</p>
         /// </summary>
         [JsonProperty("CipherPolicyId")]
         public string CipherPolicyId{ get; set; }
 
         /// <summary>
-        /// 服务器证书。
+        /// <p>服务器证书。</p>
         /// </summary>
         [JsonProperty("ServerCertificates")]
         public string[] ServerCertificates{ get; set; }
 
         /// <summary>
-        /// 客户端证书。
+        /// <p>客户端证书。</p>
         /// </summary>
         [JsonProperty("ClientCaCertificates")]
         public string[] ClientCaCertificates{ get; set; }
 
         /// <summary>
-        /// 四层获取源IP方式。
+        /// <p>四层获取源IP方式。</p>
         /// </summary>
         [JsonProperty("GetRealIpType")]
         public string GetRealIpType{ get; set; }

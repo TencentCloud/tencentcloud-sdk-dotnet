@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例价格，单位：分。
+        /// <p>实例价格，单位：分。</p>
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }
 
         /// <summary>
-        /// 实例原价，单位：分。
+        /// <p>实例原价，单位：分。</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 货币单位。CNY-人民币，USD-美元。
+        /// <p>货币单位。CNY-人民币，USD-美元。</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

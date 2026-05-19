@@ -15,119 +15,107 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkillScanItem : AbstractModel
+    public class SkillScanQueryData : AbstractModel
     {
         
         /// <summary>
-        /// <p>Skill 名称</p>
+        /// <p>检测状态：success（检测完成，有结果）、scanning（检测进行中）、not_found（无记录）、failed（检测失败）</p><p>枚举值：</p><ul><li>success： 检测完成，有结果</li><li>scanning： 检测进行中</li><li>not_found： 无记录</li><li>failed： 检测失败</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>Skill 名称，用于页面展示、结果列表呈现和人工研判</p>
         /// </summary>
         [JsonProperty("SkillName")]
         public string SkillName{ get; set; }
 
         /// <summary>
-        /// <p>Skill 描述，帮助理解 Skill 的主要用途</p>
+        /// <p>Skill 描述，通常来自 Skill 元数据或说明信息，用于帮助调用方理解 Skill 的用途</p>
         /// </summary>
         [JsonProperty("SkillDescription")]
         public string SkillDescription{ get; set; }
 
         /// <summary>
-        /// <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
+        /// <p>ZIP 文件的 SHA256 哈希值，格式为 sha256:hex_digest</p>
         /// </summary>
         [JsonProperty("ContentHash")]
         public string ContentHash{ get; set; }
 
         /// <summary>
-        /// <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
-        /// </summary>
-        [JsonProperty("UploadFileCount")]
-        public long? UploadFileCount{ get; set; }
-
-        /// <summary>
-        /// <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
+        /// <p>风险等级：malicious（恶意）、suspicious（可疑）、benign（可信）</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
-        /// </summary>
-        [JsonProperty("PrimaryRuleID")]
-        public string PrimaryRuleID{ get; set; }
-
-        /// <summary>
-        /// <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
+        /// <p>综合处置建议字段，位于 data 顶层，用于给出本次检测结果的总体修复、缓解或人工处置建议</p>
         /// </summary>
         [JsonProperty("Mitigation")]
         public string Mitigation{ get; set; }
 
         /// <summary>
-        /// <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
-        /// </summary>
-        [JsonProperty("RiskDescription")]
-        public string RiskDescription{ get; set; }
-
-        /// <summary>
-        /// <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
+        /// <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
         /// </summary>
         [JsonProperty("SecurityScore")]
-        public long? SecurityScore{ get; set; }
+        public ulong? SecurityScore{ get; set; }
 
         /// <summary>
         /// <p>本次扫描使用的引擎版本号</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
-        public long? EngineVersion{ get; set; }
+        public ulong? EngineVersion{ get; set; }
 
         /// <summary>
-        /// <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
+        /// <p>Skill 的能力标签列表，对外固定返回格式为 [{id,name}]。该字段用于描述 Skill 具备的能力特征或适用场景，便于调用方做检索、展示或分类；不等同于风险标签，也不表示风险高低或命中规则结果。当 lang=en 时，仅 name 会切换为英文，id 保持不变</p>
         /// </summary>
         [JsonProperty("CapabilityTags")]
-        public SkillCapabilityTag[] CapabilityTags{ get; set; }
+        public SkillScanCapabilityTag[] CapabilityTags{ get; set; }
 
         /// <summary>
-        /// <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
+        /// <p>融合规则目录全集，key 为融合 rule_id（9xxxx），value 为风险类别名称；包含所有融合规则类别，调用方可据此展示分类标签，无需本地维护映射表。传 lang=en 时返回英文名称。该对象是名称映射表，不表达主标签优先级</p>
         /// </summary>
         [JsonProperty("RuleCatalog")]
         public SkillRuleCatalogItem[] RuleCatalog{ get; set; }
 
         /// <summary>
-        /// <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
+        /// <p>扫描结果详情，按子引擎分组，每个元素包含 scan_type（引擎类型）和 rule_list（命中的规则列表）；规则中的 rule_id 使用融合编码（9xxxx），可与 rule_catalog 交叉引用。传 lang=en 时，description 返回英文文本</p>
         /// </summary>
         [JsonProperty("ScanItems")]
-        public SkillScanEngineResult[] ScanItems{ get; set; }
+        public SkillScanItem[] ScanItems{ get; set; }
 
         /// <summary>
-        /// <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
+        /// <p>综合安全审计报告地址。调用方可通过 report_url_expire_hours 指定有效期，不传时默认返回 1 年有效期地址</p>
         /// </summary>
-        [JsonProperty("ReportURL")]
-        public string ReportURL{ get; set; }
+        [JsonProperty("ReportUrl")]
+        public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+        /// <p>扫描完成时间</p>
         /// </summary>
         [JsonProperty("ScannedAt")]
         public string ScannedAt{ get; set; }
 
         /// <summary>
-        /// <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+        /// <p>失败时间</p>
         /// </summary>
         [JsonProperty("FailedAt")]
         public string FailedAt{ get; set; }
 
         /// <summary>
-        /// <p>失败原因描述。仅 Status=FAILED 时有值</p>
+        /// <p>失败原因描述</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -138,20 +126,18 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SkillName", this.SkillName);
             this.SetParamSimple(map, prefix + "SkillDescription", this.SkillDescription);
             this.SetParamSimple(map, prefix + "ContentHash", this.ContentHash);
-            this.SetParamSimple(map, prefix + "UploadFileCount", this.UploadFileCount);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-            this.SetParamSimple(map, prefix + "PrimaryRuleID", this.PrimaryRuleID);
             this.SetParamSimple(map, prefix + "Mitigation", this.Mitigation);
-            this.SetParamSimple(map, prefix + "RiskDescription", this.RiskDescription);
             this.SetParamSimple(map, prefix + "SecurityScore", this.SecurityScore);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamArrayObj(map, prefix + "CapabilityTags.", this.CapabilityTags);
             this.SetParamArrayObj(map, prefix + "RuleCatalog.", this.RuleCatalog);
             this.SetParamArrayObj(map, prefix + "ScanItems.", this.ScanItems);
-            this.SetParamSimple(map, prefix + "ReportURL", this.ReportURL);
+            this.SetParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
             this.SetParamSimple(map, prefix + "ScannedAt", this.ScannedAt);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "FailedAt", this.FailedAt);

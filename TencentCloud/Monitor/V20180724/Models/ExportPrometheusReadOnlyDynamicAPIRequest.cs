@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID
+        /// <p>Prometheus 实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// HTTP 方法名 GET/POST/PUT/DELETE 等
+        /// <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// HTTP 路径（包括 query string）
+        /// <p>HTTP 路径（包括 query string）</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// HTTP 请求体，任何数据
+        /// <p>HTTP 请求体，任何数据</p>
         /// </summary>
         [JsonProperty("RequestBody")]
         public string RequestBody{ get; set; }
 
         /// <summary>
-        /// HTTP 请求头
+        /// <p>HTTP 请求头</p>
         /// </summary>
         [JsonProperty("Headers")]
         public PrometheusStringKeyValuePair[] Headers{ get; set; }
 
         /// <summary>
-        /// 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+        /// <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
         /// </summary>
         [JsonProperty("SelfMonitor")]
         public bool? SelfMonitor{ get; set; }

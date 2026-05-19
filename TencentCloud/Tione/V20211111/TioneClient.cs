@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1428";
+       private const string sdkVersion = "SDK_NET_3.0.1430";
 
         /// <summary>
         /// Client constructor.
@@ -1215,6 +1215,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeTrainingTaskResponse DescribeTrainingTaskSync(DescribeTrainingTaskRequest req)
         {
             return InternalRequestAsync<DescribeTrainingTaskResponse>(req, "DescribeTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取单个训练任务实例的登录链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingTaskPodUrlRequest"/></param>
+        /// <returns><see cref="DescribeTrainingTaskPodUrlResponse"/></returns>
+        public Task<DescribeTrainingTaskPodUrlResponse> DescribeTrainingTaskPodUrl(DescribeTrainingTaskPodUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingTaskPodUrlResponse>(req, "DescribeTrainingTaskPodUrl");
+        }
+
+        /// <summary>
+        /// 获取单个训练任务实例的登录链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingTaskPodUrlRequest"/></param>
+        /// <returns><see cref="DescribeTrainingTaskPodUrlResponse"/></returns>
+        public DescribeTrainingTaskPodUrlResponse DescribeTrainingTaskPodUrlSync(DescribeTrainingTaskPodUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingTaskPodUrlResponse>(req, "DescribeTrainingTaskPodUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

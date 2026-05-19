@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1430";
 
         /// <summary>
         /// Client constructor.
@@ -2490,6 +2490,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 根据文件Hash查询Skill安全检测结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillSecScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillSecScanResultResponse"/></returns>
+        public Task<DescribeSkillSecScanResultResponse> DescribeSkillSecScanResult(DescribeSkillSecScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillSecScanResultResponse>(req, "DescribeSkillSecScanResult");
+        }
+
+        /// <summary>
+        /// 根据文件Hash查询Skill安全检测结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillSecScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillSecScanResultResponse"/></returns>
+        public DescribeSkillSecScanResultResponse DescribeSkillSecScanResultSync(DescribeSkillSecScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillSecScanResultResponse>(req, "DescribeSkillSecScanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// waf斯巴达-获取防护域名信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSpartaProtectionInfoRequest"/></param>
@@ -4577,6 +4598,27 @@ namespace TencentCloud.Waf.V20180125
         public UpdateRateLimitV2Response UpdateRateLimitV2Sync(UpdateRateLimitV2Request req)
         {
             return InternalRequestAsync<UpdateRateLimitV2Response>(req, "UpdateRateLimitV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传Skill ZIP文件，触发异步安全检测
+        /// </summary>
+        /// <param name="req"><see cref="UploadSkillSecScanRequest"/></param>
+        /// <returns><see cref="UploadSkillSecScanResponse"/></returns>
+        public Task<UploadSkillSecScanResponse> UploadSkillSecScan(UploadSkillSecScanRequest req)
+        {
+            return InternalRequestAsync<UploadSkillSecScanResponse>(req, "UploadSkillSecScan");
+        }
+
+        /// <summary>
+        /// 上传Skill ZIP文件，触发异步安全检测
+        /// </summary>
+        /// <param name="req"><see cref="UploadSkillSecScanRequest"/></param>
+        /// <returns><see cref="UploadSkillSecScanResponse"/></returns>
+        public UploadSkillSecScanResponse UploadSkillSecScanSync(UploadSkillSecScanRequest req)
+        {
+            return InternalRequestAsync<UploadSkillSecScanResponse>(req, "UploadSkillSecScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

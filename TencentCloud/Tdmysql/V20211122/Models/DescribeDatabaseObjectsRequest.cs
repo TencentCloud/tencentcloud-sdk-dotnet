@@ -25,16 +25,34 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 实例 ID，形如：tdsql3-42f40429.
+        /// <p>实例 ID，形如：tdsql3-42f40429.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库名称，通过 DescribeDatabases 接口获取。
+        /// <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
+
+        /// <summary>
+        /// <p>分页索引</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>每页数量</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>数据表名称匹配表达式</p>
+        /// </summary>
+        [JsonProperty("TableRegexp")]
+        public string TableRegexp{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TableRegexp", this.TableRegexp);
         }
     }
 }

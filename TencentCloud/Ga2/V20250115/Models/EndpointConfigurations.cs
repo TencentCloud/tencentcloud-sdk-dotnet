@@ -25,25 +25,25 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 域名类型。可选值'Domain', 'PublicIp'。
+        /// <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
         /// </summary>
         [JsonProperty("EndpointType")]
         public string EndpointType{ get; set; }
 
         /// <summary>
-        /// 域名。
+        /// <p>域名。</p>
         /// </summary>
         [JsonProperty("EndpointService")]
         public string EndpointService{ get; set; }
 
         /// <summary>
-        /// 权重。
+        /// <p>权重。</p>
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+        /// <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
         /// </summary>
         [JsonProperty("HealthCheckStatus")]
         public string HealthCheckStatus{ get; set; }

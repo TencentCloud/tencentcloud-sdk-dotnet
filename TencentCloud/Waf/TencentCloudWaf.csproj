@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1429</VersionPrefix>
+    <VersionPrefix>3.0.1430</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -359,6 +359,8 @@
     <Compile Include="V20180125\Models\DescribeScanIpResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSessionRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeSkillSecScanResultRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeSkillSecScanResultResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeTlsVersionRequest.cs" />
@@ -642,6 +644,12 @@
     <Compile Include="V20180125\Models\SecretInfo.cs" />
     <Compile Include="V20180125\Models\SessionData.cs" />
     <Compile Include="V20180125\Models\SessionItem.cs" />
+    <Compile Include="V20180125\Models\SkillRuleCatalogItem.cs" />
+    <Compile Include="V20180125\Models\SkillScanCapabilityTag.cs" />
+    <Compile Include="V20180125\Models\SkillScanItem.cs" />
+    <Compile Include="V20180125\Models\SkillScanQueryData.cs" />
+    <Compile Include="V20180125\Models\SkillScanRuleHit.cs" />
+    <Compile Include="V20180125\Models\SkillScanUploadData.cs" />
     <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
     <Compile Include="V20180125\Models\StrategyForAntiInfoLeak.cs" />
@@ -668,6 +676,8 @@
     <Compile Include="V20180125\Models\UpdateProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\UpdateRateLimitV2Request.cs" />
     <Compile Include="V20180125\Models\UpdateRateLimitV2Response.cs" />
+    <Compile Include="V20180125\Models\UploadSkillSecScanRequest.cs" />
+    <Compile Include="V20180125\Models\UploadSkillSecScanResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusRequest.cs" />
     <Compile Include="V20180125\Models\UpsertCCAutoStatusResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />

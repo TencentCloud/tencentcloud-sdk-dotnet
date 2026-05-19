@@ -25,51 +25,51 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// <p>风险等级</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 入参
+        /// <p>入参</p>
         /// </summary>
         [JsonProperty("InputParameter")]
         public InputParameter[] InputParameter{ get; set; }
 
         /// <summary>
-        /// 规则身份标识
+        /// <p>规则身份标识</p>
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 预设规则身份标识
+        /// <p>预设规则身份标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagedRuleIdentifier")]
         public string ManagedRuleIdentifier{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("ConfigRuleId")]
         public string ConfigRuleId{ get; set; }
 
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompliancePackId")]

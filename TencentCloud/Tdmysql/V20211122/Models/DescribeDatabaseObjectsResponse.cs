@@ -25,40 +25,40 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 透传入参。
+        /// <p>透传入参。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库名称。
+        /// <p>数据库名称。</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 表列表。
+        /// <p>表列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tables")]
         public DatabaseTable[] Tables{ get; set; }
 
         /// <summary>
-        /// 视图列表。
+        /// <p>视图列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Views")]
         public DatabaseView[] Views{ get; set; }
 
         /// <summary>
-        /// 存储过程列表。
+        /// <p>存储过程列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Procs")]
         public DatabaseProcedure[] Procs{ get; set; }
 
         /// <summary>
-        /// 函数列表。
+        /// <p>函数列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Funcs")]

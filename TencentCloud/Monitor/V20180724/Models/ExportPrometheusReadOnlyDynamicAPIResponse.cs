@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// HTTP 响应数据
+        /// <p>HTTP 响应数据</p>
         /// </summary>
         [JsonProperty("HTTP")]
         public PrometheusDynamicAPIResponseHTTP HTTP{ get; set; }

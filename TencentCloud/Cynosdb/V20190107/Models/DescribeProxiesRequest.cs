@@ -25,42 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。
+        /// <p>集群 ID（该参数必传，例如 cynosdbmysql-2u2mh111）。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100
+        /// <p>返回数量，默认为 20，最大值为 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0
+        /// <p>记录偏移量，默认值为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序字段，取值范围：
-        /// <li> CREATETIME：创建时间</li>
-        /// <li> PERIODENDTIME：过期时间</li>
+        /// <p>排序字段，取值范围：</p><li> CREATETIME：创建时间</li><li> PERIODENDTIME：过期时间</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型，取值范围：
-        /// <li> ASC：升序排序 </li>
-        /// <li> DESC：降序排序 </li>
+        /// <p>排序类型，取值范围：</p><li> ASC：升序排序 </li><li> DESC：降序排序 </li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
-        /// 说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+        /// <p>搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。<br>说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryParamFilter[] Filters{ get; set; }

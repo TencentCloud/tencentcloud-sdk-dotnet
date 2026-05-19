@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lkeap.V20240522.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteDocsRequest : AbstractModel
+    public class SkillScanCapabilityTag : AbstractModel
     {
         
         /// <summary>
-        /// 知识库ID
+        /// <p>标签唯一ID</p>
         /// </summary>
-        [JsonProperty("KnowledgeBaseId")]
-        public string KnowledgeBaseId{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 文档ID列表。支持批量删除，数量不超过100
+        /// <p>标签名称（如 network_access、file_system 等）</p>
         /// </summary>
-        [JsonProperty("DocIds")]
-        public string[] DocIds{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
-            this.SetParamArraySimple(map, prefix + "DocIds.", this.DocIds);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

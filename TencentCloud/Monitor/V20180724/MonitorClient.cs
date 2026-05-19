@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1430";
 
         /// <summary>
         /// Client constructor.
@@ -2591,7 +2591,21 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// Prometheus 内部动态 api 代理，仅内部使用
+        /// Prometheus 内部只读动态 api 代理，支持以云api形式访问prometheus原生api
+        /// 支持以下api:
+        /// 
+        /// | path | method | 用途 |
+        /// | - | - | - |
+        /// | /api/v1/query | GET, POST | 点查询 |
+        /// | /api/v1/query_range | GET, POST |  范围查询 |
+        /// | /api/v1/series | GET, POST | series列表查询 |
+        /// | /api/v1/labels | GET, POST | label名查询 |
+        /// | /api/v1/label/{label_name}/values | GET | label值查询 |
+        /// | /api/v1/rules | GET | 告警，预聚合规则查询 |
+        /// | /api/v1/user_limits | GET | prometheus实例限制查询 |
+        /// | /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+        /// | /alertmanager/api/v2/silences | GET | 告警静默查询 |
+        /// | /alertmanager/api/v2/silence/{id} | GET | 告警静默详情查询 |
         /// </summary>
         /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
         /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>
@@ -2601,7 +2615,21 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// Prometheus 内部动态 api 代理，仅内部使用
+        /// Prometheus 内部只读动态 api 代理，支持以云api形式访问prometheus原生api
+        /// 支持以下api:
+        /// 
+        /// | path | method | 用途 |
+        /// | - | - | - |
+        /// | /api/v1/query | GET, POST | 点查询 |
+        /// | /api/v1/query_range | GET, POST |  范围查询 |
+        /// | /api/v1/series | GET, POST | series列表查询 |
+        /// | /api/v1/labels | GET, POST | label名查询 |
+        /// | /api/v1/label/{label_name}/values | GET | label值查询 |
+        /// | /api/v1/rules | GET | 告警，预聚合规则查询 |
+        /// | /api/v1/user_limits | GET | prometheus实例限制查询 |
+        /// | /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+        /// | /alertmanager/api/v2/silences | GET | 告警静默查询 |
+        /// | /alertmanager/api/v2/silence/{id} | GET | 告警静默详情查询 |
         /// </summary>
         /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
         /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>

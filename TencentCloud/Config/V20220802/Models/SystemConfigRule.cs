@@ -25,98 +25,98 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 规则标识
+        /// <p>规则标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// 规则名
+        /// <p>规则名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则参数
+        /// <p>规则参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputParameter")]
         public InputParameterForManage[] InputParameter{ get; set; }
 
         /// <summary>
-        /// 规则触发条件
+        /// <p>规则触发条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceCondition")]
         public SourceConditionForManage[] SourceCondition{ get; set; }
 
         /// <summary>
-        /// 支持的资源类型
+        /// <p>支持的资源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string[] ResourceType{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string[] Label{ get; set; }
 
         /// <summary>
-        /// 风险等级，1，2，3
+        /// <p>风险等级，1，2，3</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 对应的函数
+        /// <p>对应的函数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceFunction")]
         public string ServiceFunction{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 触发类型
+        /// <p>触发类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]
         public string[] TriggerType{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 使用次数
+        /// <p>使用次数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferenceCount")]
         public ulong? ReferenceCount{ get; set; }
 
         /// <summary>
-        /// 规则类型
+        /// <p>规则类型</p>
         /// </summary>
         [JsonProperty("IdentifierType")]
         public string IdentifierType{ get; set; }

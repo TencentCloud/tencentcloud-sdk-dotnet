@@ -25,58 +25,58 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 合规包状态
+        /// <p>合规包状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 合规包名称
+        /// <p>合规包名称</p>
         /// </summary>
         [JsonProperty("CompliancePackName")]
         public string CompliancePackName{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// <p>风险等级</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 评估结果
+        /// <p>评估结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string ComplianceResult{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 不合规规则名
+        /// <p>不合规规则名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoCompliantNames")]
         public string[] NoCompliantNames{ get; set; }
 
         /// <summary>
-        /// 合规包规则数
+        /// <p>合规包规则数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCount")]

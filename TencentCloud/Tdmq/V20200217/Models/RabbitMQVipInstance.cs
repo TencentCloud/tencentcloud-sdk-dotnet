@@ -25,154 +25,150 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例版本
+        /// <p>实例版本</p>
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 实例配置规格名称
+        /// <p>实例配置规格名称</p>
         /// </summary>
         [JsonProperty("ConfigDisplay")]
         public string ConfigDisplay{ get; set; }
 
         /// <summary>
-        /// 峰值TPS
+        /// <p>峰值TPS</p>
         /// </summary>
         [JsonProperty("MaxTps")]
         public ulong? MaxTps{ get; set; }
 
         /// <summary>
-        /// 峰值带宽，Mbps为单位
+        /// <p>峰值带宽，Mbps为单位</p>
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public ulong? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 存储容量，GB为单位
+        /// <p>存储容量，GB为单位</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+        /// <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 1 表示预付费，0 表示后付费
+        /// <p>1 表示预付费，0 表示后付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 集群的节点规格，对应的规格标识：
-        /// 2C8G：rabbit-vip-profession-2c8g
-        /// 4C16G：rabbit-vip-profession-4c16g
-        /// 8C32G：rabbit-vip-profession-8c32g
-        /// 16C32G：rabbit-vip-basic-4
-        /// 16C64G：rabbit-vip-profession-16c64g
-        /// 2C4G：rabbit-vip-basic-5
-        /// 4C8G：rabbit-vip-basic-1
-        /// 8C16G（已售罄）：rabbit-vip-basic-2
-        /// 不传默认为 4C8G：rabbit-vip-basic-1
+        /// <p>集群的节点规格，对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 集群异常信息
+        /// <p>集群异常信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-        /// 为了和计费区分开，额外开启一个状态位，用于显示。
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败<br>为了和计费区分开，额外开启一个状态位，用于显示。</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 公网接入点
+        /// <p>公网接入点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// VPC 接入点列表
+        /// <p>VPC 接入点列表</p>
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位。unix 时间戳
+        /// <p>创建时间，毫秒为单位。unix 时间戳</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例类型，0 托管版、1 Serverless 版
+        /// <p>实例类型</p><p>枚举值：</p><ul><li>0： 托管版实例</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 隔离时间，毫秒为单位。unix 时间戳
+        /// <p>隔离时间，毫秒为单位。unix 时间戳</p>
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public ulong? IsolatedTime{ get; set; }
 
         /// <summary>
-        /// 是否已开启删除保护
+        /// <p>是否已开启删除保护</p>
         /// </summary>
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>公有数据流Stream接入点</p>
+        /// </summary>
+        [JsonProperty("PublicStreamAccessEndpoint")]
+        public string PublicStreamAccessEndpoint{ get; set; }
 
 
         /// <summary>
@@ -203,6 +199,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
         }
     }
 }
