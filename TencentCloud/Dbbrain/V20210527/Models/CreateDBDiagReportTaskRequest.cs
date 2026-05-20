@@ -25,43 +25,43 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2020-11-08T14:00:00+08:00”。
+        /// <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，如“2020-11-09T14:00:00+08:00”。
+        /// <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 是否发送邮件: 0 - 否，1 - 是。
+        /// <p>是否发送邮件: 0 - 否，1 - 是。</p>
         /// </summary>
         [JsonProperty("SendMailFlag")]
         public long? SendMailFlag{ get; set; }
 
         /// <summary>
-        /// 接收邮件的联系人ID数组。
+        /// <p>接收邮件的联系人ID数组。</p>
         /// </summary>
         [JsonProperty("ContactPerson")]
         public long?[] ContactPerson{ get; set; }
 
         /// <summary>
-        /// 接收邮件的联系组ID数组。
+        /// <p>接收邮件的联系组ID数组。</p>
         /// </summary>
         [JsonProperty("ContactGroup")]
         public long?[] ContactGroup{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+        /// <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

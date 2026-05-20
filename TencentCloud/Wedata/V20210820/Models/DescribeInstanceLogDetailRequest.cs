@@ -25,67 +25,67 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 数据时间
+        /// <p>数据时间</p>
         /// </summary>
         [JsonProperty("CurRunDate")]
         public string CurRunDate{ get; set; }
 
         /// <summary>
-        /// 日志级别，Info/Debug/Warn/Error/All
+        /// <p>日志级别，Info/Debug/Warn/Error/All</p>
         /// </summary>
         [JsonProperty("LogLevelType")]
         public string LogLevelType{ get; set; }
 
         /// <summary>
-        /// 文件类型,Log/Code
+        /// <p>文件类型,Log/Code</p>
         /// </summary>
         [JsonProperty("ExecutionFileType")]
         public string ExecutionFileType{ get; set; }
 
         /// <summary>
-        /// 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+        /// <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
         /// </summary>
         [JsonProperty("ExecutionJobId")]
         public string ExecutionJobId{ get; set; }
 
         /// <summary>
-        /// 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+        /// <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
-        /// 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+        /// <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
         /// </summary>
         [JsonProperty("OriginFileName")]
         public string OriginFileName{ get; set; }
 
         /// <summary>
-        /// 起始行
+        /// <p>起始行</p>
         /// </summary>
         [JsonProperty("StartCount")]
         public long? StartCount{ get; set; }
 
         /// <summary>
-        /// 每次查询行数
+        /// <p>每次查询行数</p>
         /// </summary>
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
 
         /// <summary>
-        /// 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+        /// <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
@@ -97,31 +97,31 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string RequestFromSource{ get; set; }
 
         /// <summary>
-        /// 生命周期为基础数据进行日志匹配
+        /// <p>生命周期为基础数据进行日志匹配</p>
         /// </summary>
         [JsonProperty("InstanceLifeDetailDtoList")]
         public InstanceLifeDetailDto[] InstanceLifeDetailDtoList{ get; set; }
 
         /// <summary>
-        /// 当前生命周期
+        /// <p>当前生命周期</p>
         /// </summary>
         [JsonProperty("CurrentLifeRound")]
         public long? CurrentLifeRound{ get; set; }
 
         /// <summary>
-        /// 生命周期总数
+        /// <p>生命周期总数</p>
         /// </summary>
         [JsonProperty("MaxLifeRound")]
         public long? MaxLifeRound{ get; set; }
 
         /// <summary>
-        /// 当前生命周期重试次数
+        /// <p>当前生命周期重试次数</p>
         /// </summary>
         [JsonProperty("Tries")]
         public long? Tries{ get; set; }
 
         /// <summary>
-        /// 动态加载日志
+        /// <p>动态加载日志</p>
         /// </summary>
         [JsonProperty("Dynamic")]
         public bool? Dynamic{ get; set; }

@@ -25,28 +25,28 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// cos地域
+        /// <p>cos地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Token信息
+        /// <p>Token信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Token")]
         public CosTokenResponse Token{ get; set; }
 
         /// <summary>
-        /// 桶名
+        /// <p>桶名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 终止点（针对私有云环境）
+        /// <p>终止点（针对私有云环境）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndPoint")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1430</VersionPrefix>
+    <VersionPrefix>3.0.1431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20250115\Models\DescribeGlobalAcceleratorsResponse.cs" />
     <Compile Include="V20250115\Models\DescribeListenersRequest.cs" />
     <Compile Include="V20250115\Models\DescribeListenersResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20250115\Models\EndpointConfigurations.cs" />
     <Compile Include="V20250115\Models\EndpointGroupConfiguration.cs" />
     <Compile Include="V20250115\Models\EndpointGroupConfigurationSet.cs" />

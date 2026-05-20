@@ -67,7 +67,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? PrimaryLanguage{ get; set; }
 
         /// <summary>
-        /// <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+        /// <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }

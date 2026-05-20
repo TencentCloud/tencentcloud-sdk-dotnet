@@ -25,43 +25,43 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+        /// <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p>
         /// </summary>
         [JsonProperty("Advices")]
         public string Advices{ get; set; }
 
         /// <summary>
-        /// SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+        /// <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p>
         /// </summary>
         [JsonProperty("Comments")]
         public string Comments{ get; set; }
 
         /// <summary>
-        /// SQL语句。
+        /// <p>SQL语句。</p>
         /// </summary>
         [JsonProperty("SqlText")]
         public string SqlText{ get; set; }
 
         /// <summary>
-        /// 库名。
+        /// <p>库名。</p>
         /// </summary>
         [JsonProperty("Schema")]
         public string Schema{ get; set; }
 
         /// <summary>
-        /// 相关表的DDL信息，可解析为JSON数组。
+        /// <p>相关表的DDL信息，可解析为JSON数组。</p>
         /// </summary>
         [JsonProperty("Tables")]
         public string Tables{ get; set; }
 
         /// <summary>
-        /// SQL执行计划，可解析为JSON，无需优化时输出为空。
+        /// <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p>
         /// </summary>
         [JsonProperty("SqlPlan")]
         public string SqlPlan{ get; set; }
 
         /// <summary>
-        /// SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+        /// <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p>
         /// </summary>
         [JsonProperty("Cost")]
         public string Cost{ get; set; }

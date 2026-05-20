@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1424</VersionPrefix>
+    <VersionPrefix>3.0.1431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,14 @@
 
   <ItemGroup>
     <Compile Include="V20201207\TseClient.cs" />
+    <Compile Include="V20201207\Models\AIGWCrossServiceFallbackConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWFallbackServiceItem.cs" />
+    <Compile Include="V20201207\Models\AIGWKVMatch.cs" />
     <Compile Include="V20201207\Models\AccurateQpsThreshold.cs" />
+    <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerGroupAuthRequest.cs" />
+    <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerGroupAuthResponse.cs" />
+    <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerInGroupRequest.cs" />
+    <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerInGroupResponse.cs" />
     <Compile Include="V20201207\Models\ApolloEnvParam.cs" />
     <Compile Include="V20201207\Models\Argument.cs" />
     <Compile Include="V20201207\Models\ArgumentValue.cs" />
@@ -59,6 +66,13 @@
     <Compile Include="V20201207\Models\BindAutoScalerResourceStrategyToGroupsResponse.cs" />
     <Compile Include="V20201207\Models\BoundK8SInfo.cs" />
     <Compile Include="V20201207\Models\CLBMultiRegion.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwConsumer.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwConsumerGroup.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwConsumerGroupList.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwConsumerList.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwCreateCommonResult.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwSecretKey.cs" />
+    <Compile Include="V20201207\Models\CNAPIGwSecretKeyList.cs" />
     <Compile Include="V20201207\Models\CanaryPriorityRule.cs" />
     <Compile Include="V20201207\Models\CertificateInfo.cs" />
     <Compile Include="V20201207\Models\CloseWafProtectionRequest.cs" />
@@ -68,6 +82,13 @@
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRule.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRuleCondition.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayConfig.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelAPI.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelFallbackRule.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelParamCheckInfo.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelService.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelServiceRoute.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayNode.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayNodeConfig.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayRateLimitDetail.cs" />
@@ -94,6 +115,14 @@
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayPublicNetworkRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayPublicNetworkResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRequest.cs" />
@@ -103,6 +132,8 @@
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewaySecretKeyResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServerGroupResult.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
@@ -138,6 +169,7 @@
     <Compile Include="V20201207\Models\CreatePublicNetworkResult.cs" />
     <Compile Include="V20201207\Models\CreateWafDomainsRequest.cs" />
     <Compile Include="V20201207\Models\CreateWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DefaultKongRoute.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSRequest.cs" />
@@ -146,8 +178,16 @@
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayConsumerResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayIPRestrictionRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayIPRestrictionResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRequest.cs" />
@@ -157,6 +197,8 @@
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewaySecretKeyResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRequest.cs" />
@@ -206,10 +248,26 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerGroupListRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerGroupListResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerListRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerListResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConsumerResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayIPRestrictionRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelServicesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayLLMModelServicesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResult.cs" />
@@ -222,6 +280,12 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyListRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyListResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaySecretKeyValueResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesLightRequest.cs" />
@@ -347,6 +411,8 @@
     <Compile Include="V20201207\Models\Label.cs" />
     <Compile Include="V20201207\Models\LaneTrafficEntry.cs" />
     <Compile Include="V20201207\Models\LimitRule.cs" />
+    <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayLLMModelAPI.cs" />
+    <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayLLMModelService.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayResult.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyBindingGroupInfoResult.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyResult.cs" />
@@ -359,12 +425,22 @@
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCertificateRequest.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRequest.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRequest.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewaySecretKeyStatusRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewaySecretKeyStatusResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRequest.cs" />
@@ -411,6 +487,10 @@
     <Compile Include="V20201207\Models\QpsThreshold.cs" />
     <Compile Include="V20201207\Models\RateLimitResponse.cs" />
     <Compile Include="V20201207\Models\ReleaseVersion.cs" />
+    <Compile Include="V20201207\Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest.cs" />
+    <Compile Include="V20201207\Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse.cs" />
+    <Compile Include="V20201207\Models\RemoveCloudNativeAPIGatewayConsumerInGroupRequest.cs" />
+    <Compile Include="V20201207\Models\RemoveCloudNativeAPIGatewayConsumerInGroupResponse.cs" />
     <Compile Include="V20201207\Models\RestartSREInstanceRequest.cs" />
     <Compile Include="V20201207\Models\RestartSREInstanceResponse.cs" />
     <Compile Include="V20201207\Models\RollbackConfigFileReleasesRequest.cs" />

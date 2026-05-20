@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+        /// <p>异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。</p>
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public long? AsyncRequestId{ get; set; }

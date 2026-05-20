@@ -121,7 +121,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsSourceFrom{ get; set; }
 
         /// <summary>
-        /// <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul><p>默认值：0</p><p>通过接口调用时默认值为0，通过控制台调用时默认值为1</p>
+        /// <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public ulong? BillingMode{ get; set; }

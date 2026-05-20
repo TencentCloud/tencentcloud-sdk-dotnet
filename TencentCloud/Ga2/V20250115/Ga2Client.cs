@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1430";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Ga2.V20250115
         public DescribeListenersResponse DescribeListenersSync(DescribeListenersRequest req)
         {
             return InternalRequestAsync<DescribeListenersResponse>(req, "DescribeListeners")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询异步任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public Task<DescribeTaskResultResponse> DescribeTaskResult(DescribeTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult");
+        }
+
+        /// <summary>
+        /// 查询异步任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

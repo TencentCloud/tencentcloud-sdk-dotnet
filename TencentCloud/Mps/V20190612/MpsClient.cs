@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1430";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.
@@ -1710,6 +1710,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteTranscodeTemplateResponse DeleteTranscodeTemplateSync(DeleteTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<DeleteTranscodeTemplateResponse>(req, "DeleteTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除音色（通过音色克隆或设计创建的）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public Task<DeleteVoiceResponse> DeleteVoice(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice");
+        }
+
+        /// <summary>
+        /// 删除音色（通过音色克隆或设计创建的）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public DeleteVoiceResponse DeleteVoiceSync(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

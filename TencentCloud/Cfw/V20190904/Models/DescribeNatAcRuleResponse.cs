@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// nat访问控制列表数据
+        /// <p>nat访问控制列表数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescAcItem[] Data{ get; set; }
 
         /// <summary>
-        /// 未过滤的总条数
+        /// <p>未过滤的总条数</p>
         /// </summary>
         [JsonProperty("AllTotal")]
         public ulong? AllTotal{ get; set; }

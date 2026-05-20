@@ -59,6 +59,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TotalPageNumber")]
         public ulong? TotalPageNumber{ get; set; }
 
+        /// <summary>
+        /// 快照Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Rows.", this.Rows);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "TotalPageNumber", this.TotalPageNumber);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         }
     }
 }

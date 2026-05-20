@@ -25,31 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 文档ID
+        /// <p>文档ID</p>
         /// </summary>
         [JsonProperty("DocBizId")]
         public string DocBizId{ get; set; }
 
         /// <summary>
-        /// 导入错误信息
+        /// <p>导入错误信息</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 错误链接
+        /// <p>错误链接</p>
         /// </summary>
         [JsonProperty("ErrorLink")]
         public string ErrorLink{ get; set; }
 
         /// <summary>
-        /// 错误链接文本
+        /// <p>错误链接文本</p>
         /// </summary>
         [JsonProperty("ErrorLinkText")]
         public string ErrorLinkText{ get; set; }
 
         /// <summary>
-        /// 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+        /// <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
         /// </summary>
         [JsonProperty("DuplicateFileCheckType")]
         public ulong? DuplicateFileCheckType{ get; set; }

@@ -55,6 +55,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>Shield：源站卸载配置；</li>
         /// <li>TLSConfig：SSL/TLS 安全；</li>
         /// <li>ModifyOrigin：修改源站；</li>
+        /// <li> SiteFailover：源站故障转移；</li>
         /// <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
         /// <li>HttpResponse：HTTP 应答；</li>
         /// <li>ErrorPage：自定义错误页面；</li>
@@ -273,6 +274,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public ModifyOriginParameters ModifyOriginParameters{ get; set; }
 
         /// <summary>
+        /// 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SiteFailoverParameters")]
+        public SiteFailoverParameters SiteFailoverParameters{ get; set; }
+
+        /// <summary>
         /// 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -376,6 +384,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ShieldParameters.", this.ShieldParameters);
             this.SetParamObj(map, prefix + "TLSConfigParameters.", this.TLSConfigParameters);
             this.SetParamObj(map, prefix + "ModifyOriginParameters.", this.ModifyOriginParameters);
+            this.SetParamObj(map, prefix + "SiteFailoverParameters.", this.SiteFailoverParameters);
             this.SetParamObj(map, prefix + "HTTPUpstreamTimeoutParameters.", this.HTTPUpstreamTimeoutParameters);
             this.SetParamObj(map, prefix + "HttpResponseParameters.", this.HttpResponseParameters);
             this.SetParamObj(map, prefix + "ErrorPageParameters.", this.ErrorPageParameters);

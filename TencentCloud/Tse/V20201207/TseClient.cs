@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Tse.V20201207
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 添加消费者组授权
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
+        public Task<AddCloudNativeAPIGatewayConsumerGroupAuthResponse> AddCloudNativeAPIGatewayConsumerGroupAuth(AddCloudNativeAPIGatewayConsumerGroupAuthRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "AddCloudNativeAPIGatewayConsumerGroupAuth");
+        }
+
+        /// <summary>
+        /// 添加消费者组授权
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
+        public AddCloudNativeAPIGatewayConsumerGroupAuthResponse AddCloudNativeAPIGatewayConsumerGroupAuthSync(AddCloudNativeAPIGatewayConsumerGroupAuthRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "AddCloudNativeAPIGatewayConsumerGroupAuth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将消费者添加到指定的消费者组中
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public Task<AddCloudNativeAPIGatewayConsumerInGroupResponse> AddCloudNativeAPIGatewayConsumerInGroup(AddCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerInGroupResponse>(req, "AddCloudNativeAPIGatewayConsumerInGroup");
+        }
+
+        /// <summary>
+        /// 将消费者添加到指定的消费者组中
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public AddCloudNativeAPIGatewayConsumerInGroupResponse AddCloudNativeAPIGatewayConsumerInGroupSync(AddCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerInGroupResponse>(req, "AddCloudNativeAPIGatewayConsumerInGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -180,6 +222,90 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建云原生网关的消费者，支持多种密钥生成方式
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayConsumerResponse> CreateCloudNativeAPIGatewayConsumer(CreateCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayConsumerResponse>(req, "CreateCloudNativeAPIGatewayConsumer");
+        }
+
+        /// <summary>
+        /// 创建云原生网关的消费者，支持多种密钥生成方式
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public CreateCloudNativeAPIGatewayConsumerResponse CreateCloudNativeAPIGatewayConsumerSync(CreateCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayConsumerResponse>(req, "CreateCloudNativeAPIGatewayConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云原生网关的消费者组
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayConsumerGroupResponse> CreateCloudNativeAPIGatewayConsumerGroup(CreateCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayConsumerGroupResponse>(req, "CreateCloudNativeAPIGatewayConsumerGroup");
+        }
+
+        /// <summary>
+        /// 创建云原生网关的消费者组
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public CreateCloudNativeAPIGatewayConsumerGroupResponse CreateCloudNativeAPIGatewayConsumerGroupSync(CreateCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayConsumerGroupResponse>(req, "CreateCloudNativeAPIGatewayConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建AI网关模型 API
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayLLMModelAPIResponse> CreateCloudNativeAPIGatewayLLMModelAPI(CreateCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayLLMModelAPIResponse>(req, "CreateCloudNativeAPIGatewayLLMModelAPI");
+        }
+
+        /// <summary>
+        /// 创建AI网关模型 API
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public CreateCloudNativeAPIGatewayLLMModelAPIResponse CreateCloudNativeAPIGatewayLLMModelAPISync(CreateCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayLLMModelAPIResponse>(req, "CreateCloudNativeAPIGatewayLLMModelAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 LLM 模型服务。同一网关下 Name 唯一。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayLLMModelServiceResponse> CreateCloudNativeAPIGatewayLLMModelService(CreateCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayLLMModelServiceResponse>(req, "CreateCloudNativeAPIGatewayLLMModelService");
+        }
+
+        /// <summary>
+        /// 创建 LLM 模型服务。同一网关下 Name 唯一。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public CreateCloudNativeAPIGatewayLLMModelServiceResponse CreateCloudNativeAPIGatewayLLMModelServiceSync(CreateCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayLLMModelServiceResponse>(req, "CreateCloudNativeAPIGatewayLLMModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建公网网络配置
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayPublicNetworkRequest"/></param>
@@ -239,6 +365,27 @@ namespace TencentCloud.Tse.V20201207
         public CreateCloudNativeAPIGatewayRouteRateLimitResponse CreateCloudNativeAPIGatewayRouteRateLimitSync(CreateCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
             return InternalRequestAsync<CreateCloudNativeAPIGatewayRouteRateLimitResponse>(req, "CreateCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云原生网关密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewaySecretKeyResponse> CreateCloudNativeAPIGatewaySecretKey(CreateCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewaySecretKeyResponse>(req, "CreateCloudNativeAPIGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 创建云原生网关密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public CreateCloudNativeAPIGatewaySecretKeyResponse CreateCloudNativeAPIGatewaySecretKeySync(CreateCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewaySecretKeyResponse>(req, "CreateCloudNativeAPIGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -684,6 +831,48 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 删除指定的云原生网关消费者
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayConsumerResponse> DeleteCloudNativeAPIGatewayConsumer(DeleteCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayConsumerResponse>(req, "DeleteCloudNativeAPIGatewayConsumer");
+        }
+
+        /// <summary>
+        /// 删除指定的云原生网关消费者
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayConsumerResponse DeleteCloudNativeAPIGatewayConsumerSync(DeleteCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayConsumerResponse>(req, "DeleteCloudNativeAPIGatewayConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayConsumerGroupResponse> DeleteCloudNativeAPIGatewayConsumerGroup(DeleteCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayConsumerGroupResponse>(req, "DeleteCloudNativeAPIGatewayConsumerGroup");
+        }
+
+        /// <summary>
+        /// 删除云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayConsumerGroupResponse DeleteCloudNativeAPIGatewayConsumerGroupSync(DeleteCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayConsumerGroupResponse>(req, "DeleteCloudNativeAPIGatewayConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除云原生网关访问控制
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayIPRestrictionRequest"/></param>
@@ -701,6 +890,48 @@ namespace TencentCloud.Tse.V20201207
         public DeleteCloudNativeAPIGatewayIPRestrictionResponse DeleteCloudNativeAPIGatewayIPRestrictionSync(DeleteCloudNativeAPIGatewayIPRestrictionRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewayIPRestrictionResponse>(req, "DeleteCloudNativeAPIGatewayIPRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayLLMModelAPIResponse> DeleteCloudNativeAPIGatewayLLMModelAPI(DeleteCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayLLMModelAPIResponse>(req, "DeleteCloudNativeAPIGatewayLLMModelAPI");
+        }
+
+        /// <summary>
+        /// 删除 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayLLMModelAPIResponse DeleteCloudNativeAPIGatewayLLMModelAPISync(DeleteCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayLLMModelAPIResponse>(req, "DeleteCloudNativeAPIGatewayLLMModelAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 LLM 模型服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayLLMModelServiceResponse> DeleteCloudNativeAPIGatewayLLMModelService(DeleteCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayLLMModelServiceResponse>(req, "DeleteCloudNativeAPIGatewayLLMModelService");
+        }
+
+        /// <summary>
+        /// 删除 LLM 模型服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayLLMModelServiceResponse DeleteCloudNativeAPIGatewayLLMModelServiceSync(DeleteCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayLLMModelServiceResponse>(req, "DeleteCloudNativeAPIGatewayLLMModelService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -764,6 +995,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteCloudNativeAPIGatewayRouteRateLimitResponse DeleteCloudNativeAPIGatewayRouteRateLimitSync(DeleteCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewayRouteRateLimitResponse>(req, "DeleteCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云原生网关密钥
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewaySecretKeyResponse> DeleteCloudNativeAPIGatewaySecretKey(DeleteCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewaySecretKeyResponse>(req, "DeleteCloudNativeAPIGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 删除云原生网关密钥
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public DeleteCloudNativeAPIGatewaySecretKeyResponse DeleteCloudNativeAPIGatewaySecretKeySync(DeleteCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewaySecretKeyResponse>(req, "DeleteCloudNativeAPIGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1272,6 +1524,90 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询指定的云原生网关消费者
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayConsumerResponse> DescribeCloudNativeAPIGatewayConsumer(DescribeCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerResponse>(req, "DescribeCloudNativeAPIGatewayConsumer");
+        }
+
+        /// <summary>
+        /// 查询指定的云原生网关消费者
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayConsumerResponse DescribeCloudNativeAPIGatewayConsumerSync(DescribeCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerResponse>(req, "DescribeCloudNativeAPIGatewayConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayConsumerGroupResponse> DescribeCloudNativeAPIGatewayConsumerGroup(DescribeCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerGroupResponse>(req, "DescribeCloudNativeAPIGatewayConsumerGroup");
+        }
+
+        /// <summary>
+        /// 查看云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayConsumerGroupResponse DescribeCloudNativeAPIGatewayConsumerGroupSync(DescribeCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerGroupResponse>(req, "DescribeCloudNativeAPIGatewayConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取消费者组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayConsumerGroupListResponse> DescribeCloudNativeAPIGatewayConsumerGroupList(DescribeCloudNativeAPIGatewayConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerGroupListResponse>(req, "DescribeCloudNativeAPIGatewayConsumerGroupList");
+        }
+
+        /// <summary>
+        /// 获取消费者组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayConsumerGroupListResponse DescribeCloudNativeAPIGatewayConsumerGroupListSync(DescribeCloudNativeAPIGatewayConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerGroupListResponse>(req, "DescribeCloudNativeAPIGatewayConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关消费者列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayConsumerListResponse> DescribeCloudNativeAPIGatewayConsumerList(DescribeCloudNativeAPIGatewayConsumerListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerListResponse>(req, "DescribeCloudNativeAPIGatewayConsumerList");
+        }
+
+        /// <summary>
+        /// 查询云原生网关消费者列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayConsumerListResponse DescribeCloudNativeAPIGatewayConsumerListSync(DescribeCloudNativeAPIGatewayConsumerListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConsumerListResponse>(req, "DescribeCloudNativeAPIGatewayConsumerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询云原生网关访问控制
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayIPRestrictionRequest"/></param>
@@ -1310,6 +1646,90 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayInfoByIpResponse DescribeCloudNativeAPIGatewayInfoByIpSync(DescribeCloudNativeAPIGatewayInfoByIpRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayInfoByIpResponse>(req, "DescribeCloudNativeAPIGatewayInfoByIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayLLMModelAPIResponse> DescribeCloudNativeAPIGatewayLLMModelAPI(DescribeCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelAPIResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelAPI");
+        }
+
+        /// <summary>
+        /// 查询单个 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayLLMModelAPIResponse DescribeCloudNativeAPIGatewayLLMModelAPISync(DescribeCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelAPIResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 LLM 模型 API 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayLLMModelAPIsResponse> DescribeCloudNativeAPIGatewayLLMModelAPIs(DescribeCloudNativeAPIGatewayLLMModelAPIsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelAPIsResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelAPIs");
+        }
+
+        /// <summary>
+        /// 查询 LLM 模型 API 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIsSync(DescribeCloudNativeAPIGatewayLLMModelAPIsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelAPIsResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelAPIs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个 LLM 模型服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayLLMModelServiceResponse> DescribeCloudNativeAPIGatewayLLMModelService(DescribeCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelServiceResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelService");
+        }
+
+        /// <summary>
+        /// 查询单个 LLM 模型服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayLLMModelServiceResponse DescribeCloudNativeAPIGatewayLLMModelServiceSync(DescribeCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelServiceResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 LLM 模型服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayLLMModelServicesResponse> DescribeCloudNativeAPIGatewayLLMModelServices(DescribeCloudNativeAPIGatewayLLMModelServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelServicesResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelServices");
+        }
+
+        /// <summary>
+        /// 查询 LLM 模型服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayLLMModelServicesResponse DescribeCloudNativeAPIGatewayLLMModelServicesSync(DescribeCloudNativeAPIGatewayLLMModelServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayLLMModelServicesResponse>(req, "DescribeCloudNativeAPIGatewayLLMModelServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1394,6 +1814,69 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutesSync(DescribeCloudNativeAPIGatewayRoutesRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayRoutesResponse>(req, "DescribeCloudNativeAPIGatewayRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询密钥详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewaySecretKeyResponse> DescribeCloudNativeAPIGatewaySecretKey(DescribeCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyResponse>(req, "DescribeCloudNativeAPIGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 查询密钥详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public DescribeCloudNativeAPIGatewaySecretKeyResponse DescribeCloudNativeAPIGatewaySecretKeySync(DescribeCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyResponse>(req, "DescribeCloudNativeAPIGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewaySecretKeyListResponse> DescribeCloudNativeAPIGatewaySecretKeyList(DescribeCloudNativeAPIGatewaySecretKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyListResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyList");
+        }
+
+        /// <summary>
+        /// 获取密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewaySecretKeyListResponse DescribeCloudNativeAPIGatewaySecretKeyListSync(DescribeCloudNativeAPIGatewaySecretKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyListResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询密钥值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewaySecretKeyValueResponse> DescribeCloudNativeAPIGatewaySecretKeyValue(DescribeCloudNativeAPIGatewaySecretKeyValueRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyValueResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyValue");
+        }
+
+        /// <summary>
+        /// 查询密钥值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueResponse"/></returns>
+        public DescribeCloudNativeAPIGatewaySecretKeyValueResponse DescribeCloudNativeAPIGatewaySecretKeyValueSync(DescribeCloudNativeAPIGatewaySecretKeyValueRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyValueResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyValue")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2217,6 +2700,90 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 修改云原生网关消费者的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayConsumerResponse> ModifyCloudNativeAPIGatewayConsumer(ModifyCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayConsumerResponse>(req, "ModifyCloudNativeAPIGatewayConsumer");
+        }
+
+        /// <summary>
+        /// 修改云原生网关消费者的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayConsumerResponse ModifyCloudNativeAPIGatewayConsumerSync(ModifyCloudNativeAPIGatewayConsumerRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayConsumerResponse>(req, "ModifyCloudNativeAPIGatewayConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayConsumerGroupResponse> ModifyCloudNativeAPIGatewayConsumerGroup(ModifyCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayConsumerGroupResponse>(req, "ModifyCloudNativeAPIGatewayConsumerGroup");
+        }
+
+        /// <summary>
+        /// 修改云原生网关消费者组的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayConsumerGroupResponse ModifyCloudNativeAPIGatewayConsumerGroupSync(ModifyCloudNativeAPIGatewayConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayConsumerGroupResponse>(req, "ModifyCloudNativeAPIGatewayConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayLLMModelAPIResponse> ModifyCloudNativeAPIGatewayLLMModelAPI(ModifyCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayLLMModelAPIResponse>(req, "ModifyCloudNativeAPIGatewayLLMModelAPI");
+        }
+
+        /// <summary>
+        /// 修改 LLM 模型 API 信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayLLMModelAPIResponse ModifyCloudNativeAPIGatewayLLMModelAPISync(ModifyCloudNativeAPIGatewayLLMModelAPIRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayLLMModelAPIResponse>(req, "ModifyCloudNativeAPIGatewayLLMModelAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 LLM 模型服务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayLLMModelServiceResponse> ModifyCloudNativeAPIGatewayLLMModelService(ModifyCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayLLMModelServiceResponse>(req, "ModifyCloudNativeAPIGatewayLLMModelService");
+        }
+
+        /// <summary>
+        /// 修改 LLM 模型服务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayLLMModelServiceResponse ModifyCloudNativeAPIGatewayLLMModelServiceSync(ModifyCloudNativeAPIGatewayLLMModelServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayLLMModelServiceResponse>(req, "ModifyCloudNativeAPIGatewayLLMModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改云原生网关路由
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRouteRequest"/></param>
@@ -2255,6 +2822,27 @@ namespace TencentCloud.Tse.V20201207
         public ModifyCloudNativeAPIGatewayRouteRateLimitResponse ModifyCloudNativeAPIGatewayRouteRateLimitSync(ModifyCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
             return InternalRequestAsync<ModifyCloudNativeAPIGatewayRouteRateLimitResponse>(req, "ModifyCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改密钥状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewaySecretKeyStatusResponse> ModifyCloudNativeAPIGatewaySecretKeyStatus(ModifyCloudNativeAPIGatewaySecretKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewaySecretKeyStatusResponse>(req, "ModifyCloudNativeAPIGatewaySecretKeyStatus");
+        }
+
+        /// <summary>
+        /// 修改密钥状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusResponse"/></returns>
+        public ModifyCloudNativeAPIGatewaySecretKeyStatusResponse ModifyCloudNativeAPIGatewaySecretKeyStatusSync(ModifyCloudNativeAPIGatewaySecretKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewaySecretKeyStatusResponse>(req, "ModifyCloudNativeAPIGatewaySecretKeyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2612,6 +3200,48 @@ namespace TencentCloud.Tse.V20201207
         public PublishConfigFilesResponse PublishConfigFilesSync(PublishConfigFilesRequest req)
         {
             return InternalRequestAsync<PublishConfigFilesResponse>(req, "PublishConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云原生网关移除消费者组授权
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
+        public Task<RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse> RemoveCloudNativeAPIGatewayConsumerGroupAuth(RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "RemoveCloudNativeAPIGatewayConsumerGroupAuth");
+        }
+
+        /// <summary>
+        /// 云原生网关移除消费者组授权
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
+        public RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuthSync(RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "RemoveCloudNativeAPIGatewayConsumerGroupAuth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从指定的消费者组中移除消费者
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public Task<RemoveCloudNativeAPIGatewayConsumerInGroupResponse> RemoveCloudNativeAPIGatewayConsumerInGroup(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerInGroupResponse>(req, "RemoveCloudNativeAPIGatewayConsumerInGroup");
+        }
+
+        /// <summary>
+        /// 从指定的消费者组中移除消费者
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroupSync(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerInGroupResponse>(req, "RemoveCloudNativeAPIGatewayConsumerInGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

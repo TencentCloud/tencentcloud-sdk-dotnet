@@ -25,37 +25,37 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 请求域名
+        /// <p>请求域名</p>
         /// </summary>
         [JsonProperty("OriginDomain")]
         public string OriginDomain{ get; set; }
 
         /// <summary>
-        /// 是否需要跨域
+        /// <p>是否需要跨域</p>
         /// </summary>
         [JsonProperty("CrossFlag")]
         public bool? CrossFlag{ get; set; }
 
         /// <summary>
-        /// 桶名
+        /// <p>桶名</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 远程地址
+        /// <p>远程地址</p>
         /// </summary>
         [JsonProperty("RemotePath")]
         public string RemotePath{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("RemoteRegion")]
         public string RemoteRegion{ get; set; }

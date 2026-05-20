@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 实例数据时间
+        /// <p>实例数据时间</p>
         /// </summary>
         [JsonProperty("CurRunDate")]
         public string CurRunDate{ get; set; }
@@ -49,61 +49,61 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string RequestFromSource{ get; set; }
 
         /// <summary>
-        /// 执行机IP
+        /// <p>执行机IP</p>
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
-        /// 日志文件名
+        /// <p>日志文件名</p>
         /// </summary>
         [JsonProperty("OriginFileName")]
         public string OriginFileName{ get; set; }
 
         /// <summary>
-        /// 执行平台下发执行id
+        /// <p>执行平台下发执行id</p>
         /// </summary>
         [JsonProperty("ExecutionJobId")]
         public string ExecutionJobId{ get; set; }
 
         /// <summary>
-        /// 日志级别，Info/Debug/Warn/Error/All
+        /// <p>日志级别，Info/Debug/Warn/Error/All</p>
         /// </summary>
         [JsonProperty("LogLevelType")]
         public string LogLevelType{ get; set; }
 
         /// <summary>
-        /// 文件类型,Log/Code
+        /// <p>文件类型,Log/Code</p>
         /// </summary>
         [JsonProperty("ExecutionFileType")]
         public string ExecutionFileType{ get; set; }
 
         /// <summary>
-        /// 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+        /// <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
         /// </summary>
         [JsonProperty("InstanceLifeDetailDtoList")]
         public InstanceLifeDetailDto[] InstanceLifeDetailDtoList{ get; set; }
 
         /// <summary>
-        /// 当前生命周期数
+        /// <p>当前生命周期数</p>
         /// </summary>
         [JsonProperty("CurrentLifeRound")]
         public long? CurrentLifeRound{ get; set; }
 
         /// <summary>
-        /// 最大生命周期数
+        /// <p>最大生命周期数</p>
         /// </summary>
         [JsonProperty("MaxLifeRound")]
         public long? MaxLifeRound{ get; set; }
 
         /// <summary>
-        /// 当前生命周期重试次数
+        /// <p>当前生命周期重试次数</p>
         /// </summary>
         [JsonProperty("Tries")]
         public long? Tries{ get; set; }
 
         /// <summary>
-        /// 动态获取日志信息标识
+        /// <p>动态获取日志信息标识</p>
         /// </summary>
         [JsonProperty("Dynamic")]
         public bool? Dynamic{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1430</VersionPrefix>
+    <VersionPrefix>3.0.1431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -426,6 +426,8 @@
     <Compile Include="V20190612\Models\DeleteSubtitleEmbedTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteVoiceRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteVoiceResponse.cs" />
     <Compile Include="V20190612\Models\DeleteWatermarkTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteWordSamplesRequest.cs" />

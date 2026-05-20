@@ -25,13 +25,31 @@ namespace TencentCloud.Tdai.V20250717.Models
     {
         
         /// <summary>
-        /// 是否隐藏
+        /// <p>输入内容</p>
+        /// </summary>
+        [JsonProperty("InputContent")]
+        public string InputContent{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>对话窗口ID，空值表示新的会话</p>
+        /// </summary>
+        [JsonProperty("ChatId")]
+        public string ChatId{ get; set; }
+
+        /// <summary>
+        /// <p>是否隐藏</p>
         /// </summary>
         [JsonProperty("IsHidden")]
         public bool? IsHidden{ get; set; }
 
         /// <summary>
-        /// 是否隐藏会话
+        /// <p>是否隐藏会话</p>
         /// </summary>
         [JsonProperty("IsChatHidden")]
         public bool? IsChatHidden{ get; set; }
@@ -42,6 +60,9 @@ namespace TencentCloud.Tdai.V20250717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InputContent", this.InputContent);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ChatId", this.ChatId);
             this.SetParamSimple(map, prefix + "IsHidden", this.IsHidden);
             this.SetParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
         }

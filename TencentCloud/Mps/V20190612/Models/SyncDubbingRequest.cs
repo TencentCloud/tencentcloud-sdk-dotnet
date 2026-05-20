@@ -79,7 +79,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
+        /// <p>扩展参数，json字符串</p><p><strong>synExt</strong>    Object    语音合成扩展参数<br>  <strong>duration</strong>    Float    合成音频时长（单位秒），默认不控制时长。示例：5.2<br>  <strong>sampleRate</strong>    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,24000,32000,44100]<br>  <strong>pitch</strong>    Integer    音调，默认0原音色输出，取值[-12, 12]<br><strong>cloneExt</strong>    Object    音色克隆扩展参数<br>  <strong>timeRanges</strong>    Float[][]    指定克隆音频时间范围（单位秒），默认取音频前20s。示例：[[5.2, 10], [45, 59.8]]</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }

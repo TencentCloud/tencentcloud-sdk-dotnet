@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 数据源id
+        /// <p>数据源id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

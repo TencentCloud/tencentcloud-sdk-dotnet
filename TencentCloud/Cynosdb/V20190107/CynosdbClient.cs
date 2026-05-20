@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1430";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public AddInstancesResponse AddInstancesSync(AddInstancesRequest req)
         {
             return InternalRequestAsync<AddInstancesResponse>(req, "AddInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（AddLibraDBInstances）用于集群添加只读分析引擎
+        /// </summary>
+        /// <param name="req"><see cref="AddLibraDBInstancesRequest"/></param>
+        /// <returns><see cref="AddLibraDBInstancesResponse"/></returns>
+        public Task<AddLibraDBInstancesResponse> AddLibraDBInstances(AddLibraDBInstancesRequest req)
+        {
+            return InternalRequestAsync<AddLibraDBInstancesResponse>(req, "AddLibraDBInstances");
+        }
+
+        /// <summary>
+        /// 本接口（AddLibraDBInstances）用于集群添加只读分析引擎
+        /// </summary>
+        /// <param name="req"><see cref="AddLibraDBInstancesRequest"/></param>
+        /// <returns><see cref="AddLibraDBInstancesResponse"/></returns>
+        public AddLibraDBInstancesResponse AddLibraDBInstancesSync(AddLibraDBInstancesRequest req)
+        {
+            return InternalRequestAsync<AddLibraDBInstancesResponse>(req, "AddLibraDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

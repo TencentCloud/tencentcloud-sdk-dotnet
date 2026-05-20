@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 内网间访问控制列表数据
+        /// <p>内网间访问控制列表数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public VpcRuleItem[] Data{ get; set; }
