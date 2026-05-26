@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 操作类型:add,modify,remove
+        /// <p>操作类型:add,modify,remove</p>
         /// </summary>
         [JsonProperty("OpType")]
         public string OpType{ get; set; }
 
         /// <summary>
-        /// 配置 ID
+        /// <p>配置 ID</p>
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
-        /// 周期策略类型：weekly/monthly/yearly
+        /// <p>周期策略类型：weekly/monthly/yearly</p>
         /// </summary>
         [JsonProperty("SparsePeriodConfig")]
         public string SparsePeriodConfig{ get; set; }
 
         /// <summary>
-        /// 周期时间配置
+        /// <p>周期时间配置</p>
         /// </summary>
         [JsonProperty("SparsePeriodTime")]
         public SparsePeriodTime SparsePeriodTime{ get; set; }
 
         /// <summary>
-        /// 保留天数（7-7320天，最长20年）
+        /// <p>保留天数（7-7320天，最长20年）</p>
         /// </summary>
         [JsonProperty("SparseBackupSaveDays")]
         public long? SparseBackupSaveDays{ get; set; }

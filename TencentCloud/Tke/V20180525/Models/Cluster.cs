@@ -182,6 +182,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IsHighAvailability{ get; set; }
 
         /// <summary>
+        /// <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterCategory")]
+        public string ClusterCategory{ get; set; }
+
+        /// <summary>
         /// <p>开启后会下发Gatekeeper和网络策略</p>
         /// </summary>
         [JsonProperty("SecurityModeConfig")]
@@ -219,6 +226,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+            this.SetParamSimple(map, prefix + "ClusterCategory", this.ClusterCategory);
             this.SetParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
         }
     }

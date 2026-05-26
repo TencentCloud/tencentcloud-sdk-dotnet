@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 编辑的域名配置信息
+        /// <p>编辑的域名配置信息</p>
         /// </summary>
         [JsonProperty("Host")]
         public HostRecord Host{ get; set; }
 
         /// <summary>
-        /// 实例唯一ID
+        /// <p>实例唯一ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

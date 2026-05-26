@@ -25,22 +25,28 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 防护对象组名称
+        /// <p>防护对象组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 防护对象组的应用范围
+        /// <p>防护对象组的应用范围</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 防护对象组备注
+        /// <p>防护对象组备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

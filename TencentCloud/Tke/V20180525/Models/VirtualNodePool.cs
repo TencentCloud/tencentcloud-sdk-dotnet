@@ -25,46 +25,49 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 节点池ID
+        /// <p>节点池ID</p>
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 子网列表
+        /// <p>子网列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// <p>节点池名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 节点池生命周期
-        /// - creating：创建中
-        /// - normal：正常
-        /// - updating：更新中
+        /// <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
         /// </summary>
         [JsonProperty("LifeState")]
         public string LifeState{ get; set; }
 
         /// <summary>
-        /// 虚拟节点label
+        /// <p>虚拟节点label</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 虚拟节点taint
+        /// <p>虚拟节点taint</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
+
+        /// <summary>
+        /// <p>子网分配策略</p>
+        /// </summary>
+        [JsonProperty("SubnetAllocationPolicy")]
+        public SubnetAllocationPolicy SubnetAllocationPolicy{ get; set; }
 
 
         /// <summary>
@@ -78,6 +81,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "LifeState", this.LifeState);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
         }
     }
 }

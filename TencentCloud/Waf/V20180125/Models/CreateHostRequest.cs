@@ -25,16 +25,22 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+        /// <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
         /// </summary>
         [JsonProperty("Host")]
         public HostRecord Host{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamObj(map, prefix + "Host.", this.Host);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

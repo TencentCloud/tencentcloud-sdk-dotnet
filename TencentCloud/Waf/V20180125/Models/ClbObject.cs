@@ -25,172 +25,190 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 对象ID
+        /// <p>对象ID</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 精准域名列表
+        /// <p>精准域名列表</p>
         /// </summary>
         [JsonProperty("PreciseDomains")]
         public string[] PreciseDomains{ get; set; }
 
         /// <summary>
-        /// WAF功能开关状态，0关闭1开启
+        /// <p>WAF功能开关状态，0关闭1开启</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// WAF日志开关状态，0关闭1开启
+        /// <p>WAF日志开关状态，0关闭1开启</p>
         /// </summary>
         [JsonProperty("ClsStatus")]
         public long? ClsStatus{ get; set; }
 
         /// <summary>
-        /// CLB对象对应的虚拟域名
+        /// <p>CLB对象对应的虚拟域名</p>
         /// </summary>
         [JsonProperty("VirtualDomain")]
         public string VirtualDomain{ get; set; }
 
         /// <summary>
-        /// 对象名称
+        /// <p>对象名称</p>
         /// </summary>
         [JsonProperty("ObjectName")]
         public string ObjectName{ get; set; }
 
         /// <summary>
-        /// 公网地址
+        /// <p>公网地址</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string[] PublicIp{ get; set; }
 
         /// <summary>
-        /// 内网地址
+        /// <p>内网地址</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string[] PrivateIp{ get; set; }
 
         /// <summary>
-        /// VPC名称
+        /// <p>VPC名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("Vpc")]
         public string Vpc{ get; set; }
 
         /// <summary>
-        /// waf实例等级，如果未绑定实例为0
+        /// <p>waf实例等级，如果未绑定实例为0</p>
         /// </summary>
         [JsonProperty("InstanceLevel")]
         public long? InstanceLevel{ get; set; }
 
         /// <summary>
-        /// clb投递开关
+        /// <p>clb投递开关</p>
         /// </summary>
         [JsonProperty("PostCLSStatus")]
         public long? PostCLSStatus{ get; set; }
 
         /// <summary>
-        /// kafka投递开关
+        /// <p>kafka投递开关</p>
         /// </summary>
         [JsonProperty("PostCKafkaStatus")]
         public long? PostCKafkaStatus{ get; set; }
 
         /// <summary>
-        /// 对象类型：CLB:负载均衡器，TSE:云原生网关
+        /// <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 对象地域
+        /// <p>对象地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+        /// <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
         /// </summary>
         [JsonProperty("Proxy")]
         public ulong? Proxy{ get; set; }
 
         /// <summary>
-        /// 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+        /// <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// bot防护开关
+        /// <p>bot防护开关</p>
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
 
         /// <summary>
-        /// api防护开关
+        /// <p>api防护开关</p>
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }
 
         /// <summary>
-        /// 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+        /// <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
         /// </summary>
         [JsonProperty("ObjectFlowMode")]
         public long? ObjectFlowMode{ get; set; }
 
         /// <summary>
-        /// 数值形式的私有网络 ID
+        /// <p>数值形式的私有网络 ID</p>
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 跨账号时，表示成员账号的appid
+        /// <p>跨账号时，表示成员账号的appid</p>
         /// </summary>
         [JsonProperty("MemberAppId")]
         public ulong? MemberAppId{ get; set; }
 
         /// <summary>
-        /// 跨账号时，表示成员账号的uin
+        /// <p>跨账号时，表示成员账号的uin</p>
         /// </summary>
         [JsonProperty("MemberUin")]
         public string MemberUin{ get; set; }
 
         /// <summary>
-        /// 跨账号时，表示成员账号的昵称
+        /// <p>跨账号时，表示成员账号的昵称</p>
         /// </summary>
         [JsonProperty("MemberNickName")]
         public string MemberNickName{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("TagInfos")]
+        public TagInfo[] TagInfos{ get; set; }
+
+        /// <summary>
+        /// <p>精准域名信息</p>
+        /// </summary>
+        [JsonProperty("PreciseDomainDetails")]
+        public DomainInfo[] PreciseDomainDetails{ get; set; }
+
+        /// <summary>
+        /// <p>waf接入状态</p>
+        /// </summary>
+        [JsonProperty("WafAccessStatus")]
+        public long? WafAccessStatus{ get; set; }
 
 
         /// <summary>
@@ -226,6 +244,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
             this.SetParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
+            this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
+            this.SetParamArrayObj(map, prefix + "PreciseDomainDetails.", this.PreciseDomainDetails);
+            this.SetParamSimple(map, prefix + "WafAccessStatus", this.WafAccessStatus);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 新增防护域名ID
+        /// <p>新增防护域名ID</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }

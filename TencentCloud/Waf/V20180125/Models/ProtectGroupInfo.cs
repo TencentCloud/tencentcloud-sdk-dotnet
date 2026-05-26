@@ -25,46 +25,59 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 防护对象组ID
+        /// <p>防护对象组ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// 防护对象组名称
+        /// <p>防护对象组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 防护对象组备注
+        /// <p>防护对象组备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 防护对象组中绑定的域名详情
+        /// <p>防护对象组中绑定的域名详情</p>
         /// </summary>
         [JsonProperty("Domains")]
         public ProtectGroupDomainInfo[] Domains{ get; set; }
 
         /// <summary>
-        /// 关联的批量规则数
+        /// <p>关联的批量规则数</p>
         /// </summary>
         [JsonProperty("RuleNum")]
         public ulong? RuleNum{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("TagInfos")]
+        public TagInfo[] TagInfos{ get; set; }
+
+        /// <summary>
+        /// <p>是否绑定了模板</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BoundTemplate")]
+        public bool? BoundTemplate{ get; set; }
 
 
         /// <summary>
@@ -79,6 +92,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleNum", this.RuleNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
+            this.SetParamSimple(map, prefix + "BoundTemplate", this.BoundTemplate);
         }
     }
 }

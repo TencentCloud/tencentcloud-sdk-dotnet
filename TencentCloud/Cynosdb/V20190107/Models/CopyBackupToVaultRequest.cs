@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 目标保险箱ID，备份文件将复制到此保险箱
+        /// <p>目标保险箱ID，备份文件将复制到此保险箱</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// 备份文件ID列表，支持批量复制多个备份文件
+        /// <p>备份文件ID列表，支持批量复制多个备份文件</p>
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }

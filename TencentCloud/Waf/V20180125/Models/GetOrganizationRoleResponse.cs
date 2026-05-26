@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+        /// <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

@@ -25,46 +25,52 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 是否查询api提取规则策略，true表示查询
+        /// <p>是否查询api提取规则策略，true表示查询</p>
         /// </summary>
         [JsonProperty("IsQueryApiExtractRule")]
         public bool? IsQueryApiExtractRule{ get; set; }
 
         /// <summary>
-        /// 是否查询api鉴权规则
+        /// <p>是否查询api鉴权规则</p>
         /// </summary>
         [JsonProperty("IsQueryApiPrivilegeRule")]
         public bool? IsQueryApiPrivilegeRule{ get; set; }
 
         /// <summary>
-        /// 是否查询api场景规则
+        /// <p>是否查询api场景规则</p>
         /// </summary>
         [JsonProperty("IsQueryApiSceneRule")]
         public bool? IsQueryApiSceneRule{ get; set; }
 
         /// <summary>
-        /// 查询鉴权配置的时候，该rule只返回鉴权配置的规则
+        /// <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 是否查询api自定义事件规则
+        /// <p>是否查询api自定义事件规则</p>
         /// </summary>
         [JsonProperty("IsQueryApiCustomEventRule")]
         public bool? IsQueryApiCustomEventRule{ get; set; }
 
         /// <summary>
-        /// 是否查询无效api排除策略
+        /// <p>是否查询无效api排除策略</p>
         /// </summary>
         [JsonProperty("IsQueryApiExcludeRule")]
         public bool? IsQueryApiExcludeRule{ get; set; }
+
+        /// <summary>
+        /// <p>是否查询敏感数据加白规则</p>
+        /// </summary>
+        [JsonProperty("IsQueryApiSensitiveWhiteRule")]
+        public bool? IsQueryApiSensitiveWhiteRule{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "IsQueryApiCustomEventRule", this.IsQueryApiCustomEventRule);
             this.SetParamSimple(map, prefix + "IsQueryApiExcludeRule", this.IsQueryApiExcludeRule);
+            this.SetParamSimple(map, prefix + "IsQueryApiSensitiveWhiteRule", this.IsQueryApiSensitiveWhiteRule);
         }
     }
 }

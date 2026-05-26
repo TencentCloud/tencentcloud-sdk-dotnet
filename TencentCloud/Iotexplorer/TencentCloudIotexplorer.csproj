@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1428</VersionPrefix>
+    <VersionPrefix>3.0.1433</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,12 +133,18 @@
     <Compile Include="V20190423\Models\CreateStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdRequest.cs" />
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskWithFileRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskWithFileResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeServiceResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkAIBotRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkProductConfigRequest.cs" />
@@ -173,6 +179,8 @@
     <Compile Include="V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeeCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkAIBotRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Request.cs" />
@@ -293,10 +301,20 @@
     <Compile Include="V20190423\Models\DescribeStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\DescribeSubscribedTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\DescribeSubscribedTopicPolicyResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeePostPaidServiceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeePostPaidServiceResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeSubscriptionResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeTaskRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeTaskStatisticsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeTaskStatisticsResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkAIBotRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigRequest.cs" />
@@ -311,6 +329,8 @@
     <Compile Include="V20190423\Models\DescribeUnbindedDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeVideoLicenseRequest.cs" />
     <Compile Include="V20190423\Models\DescribeVideoLicenseResponse.cs" />
+    <Compile Include="V20190423\Models\DestroyTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\DestroyTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\DeviceActivationDetail.cs" />
     <Compile Include="V20190423\Models\DeviceActiveResult.cs" />
     <Compile Include="V20190423\Models\DeviceData.cs" />
@@ -389,6 +409,10 @@
     <Compile Include="V20190423\Models\IdleResponseInfo.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserResponse.cs" />
+    <Compile Include="V20190423\Models\InquireTWeSeeSubscriptionCreatePriceRequest.cs" />
+    <Compile Include="V20190423\Models\InquireTWeSeeSubscriptionCreatePriceResponse.cs" />
+    <Compile Include="V20190423\Models\InquireTWeSeeSubscriptionRenewPriceRequest.cs" />
+    <Compile Include="V20190423\Models\InquireTWeSeeSubscriptionRenewPriceResponse.cs" />
     <Compile Include="V20190423\Models\InstanceDetail.cs" />
     <Compile Include="V20190423\Models\InvokeAISearchServiceRequest.cs" />
     <Compile Include="V20190423\Models\InvokeAISearchServiceResponse.cs" />
@@ -396,6 +420,8 @@
     <Compile Include="V20190423\Models\InvokeCloudStorageAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskResponse.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeComprehensionRequest.cs" />
+    <Compile Include="V20190423\Models\InvokeTWeSeeComprehensionResponse.cs" />
     <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeTWeSeeRecognitionTaskWithFileRequest.cs" />
@@ -413,6 +439,10 @@
     <Compile Include="V20190423\Models\ListOtaModulesResponse.cs" />
     <Compile Include="V20190423\Models\ListProductOtaModulesRequest.cs" />
     <Compile Include="V20190423\Models\ListProductOtaModulesResponse.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeeCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeeCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeeTasksRequest.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeeTasksResponse.cs" />
     <Compile Include="V20190423\Models\ListTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\ListTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
@@ -446,8 +476,14 @@
     <Compile Include="V20190423\Models\ModifySpacePropertyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRenewFlagRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRenewFlagResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkAIBotRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigRequest.cs" />
@@ -487,6 +523,8 @@
     <Compile Include="V20190423\Models\ReleaseStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\RemoveUserByRoomIdFromTRTCRequest.cs" />
     <Compile Include="V20190423\Models\RemoveUserByRoomIdFromTRTCResponse.cs" />
+    <Compile Include="V20190423\Models\RenewTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\RenewTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\ResetCloudStorageAIServiceRequest.cs" />
     <Compile Include="V20190423\Models\ResetCloudStorageAIServiceResponse.cs" />
     <Compile Include="V20190423\Models\ResetCloudStorageEventRequest.cs" />
@@ -504,7 +542,15 @@
     <Compile Include="V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\SeeCallbackInfo.cs" />
+    <Compile Include="V20190423\Models\SeeCompHighlightConfig.cs" />
+    <Compile Include="V20190423\Models\SeeCompHighlightResult.cs" />
+    <Compile Include="V20190423\Models\SeeComprehensionConfig.cs" />
+    <Compile Include="V20190423\Models\SeeComprehensionResult.cs" />
     <Compile Include="V20190423\Models\SeeEventIdFilterConfig.cs" />
+    <Compile Include="V20190423\Models\SeeStatItem.cs" />
+    <Compile Include="V20190423\Models\SeeTaskInfo.cs" />
+    <Compile Include="V20190423\Models\SeeTaskMetadata.cs" />
     <Compile Include="V20190423\Models\SubscribedTopicItem.cs" />
     <Compile Include="V20190423\Models\TRTCParams.cs" />
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
@@ -525,6 +571,8 @@
     <Compile Include="V20190423\Models\TalkSTTConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkTTSConfigInfo.cs" />
     <Compile Include="V20190423\Models\TargetInfo.cs" />
+    <Compile Include="V20190423\Models\TerminateTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\TerminateTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />
     <Compile Include="V20190423\Models\TopicRule.cs" />

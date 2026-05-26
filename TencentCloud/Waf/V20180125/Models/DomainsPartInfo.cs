@@ -25,420 +25,371 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名唯一ID
+        /// <p>域名唯一ID</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 域名所属实例唯一ID
+        /// <p>域名所属实例唯一ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 域名所属实例类型
+        /// <p>域名所属实例类型</p>
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 域名所属实例名
+        /// <p>域名所属实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 证书
+        /// <p>证书</p>
         /// </summary>
         [JsonProperty("Cert")]
         public string Cert{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 规则引擎和AI引擎防护模式联合状态。
-        /// 1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
-        /// 10：规则引擎观察&&AI引擎关闭模式 
-        /// 11：规则引擎观察&&AI引擎观察模式 
-        /// 12：规则引擎观察&&AI引擎拦截模式 
-        /// 20：规则引擎拦截&&AI引擎关闭模式 
-        /// 21：规则引擎拦截&&AI引擎观察模式 
-        /// 22：规则引擎拦截&&AI引擎拦截模式
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// <p>规则引擎和AI引擎防护模式联合状态。<br>1:初始状态,规则引擎拦截&amp;&amp;AI引擎未操作开关状态<br>10：规则引擎观察&amp;&amp;AI引擎关闭模式<br>11：规则引擎观察&amp;&amp;AI引擎观察模式<br>12：规则引擎观察&amp;&amp;AI引擎拦截模式<br>20：规则引擎拦截&amp;&amp;AI引擎关闭模式<br>21：规则引擎拦截&amp;&amp;AI引擎观察模式<br>22：规则引擎拦截&amp;&amp;AI引擎拦截模式</p>
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
 
         /// <summary>
-        /// 是否开启HTTP强制跳转到HTTPS。
-        /// 0：不强制跳转
-        /// 1：开启强制跳转
+        /// <p>是否开启HTTP强制跳转到HTTPS。<br>0：不强制跳转<br>1：开启强制跳转</p>
         /// </summary>
         [JsonProperty("HttpsRewrite")]
         public ulong? HttpsRewrite{ get; set; }
 
         /// <summary>
-        /// HTTPS回源端口
+        /// <p>HTTPS回源端口</p>
         /// </summary>
         [JsonProperty("HttpsUpstreamPort")]
         public string HttpsUpstreamPort{ get; set; }
 
         /// <summary>
-        /// waf前是否部署有七层代理服务。
-        /// 0：没有部署代理服务
-        /// 1：有部署代理服务，waf将使用XFF获取客户端IP
-        /// 2：有部署代理服务，waf将使用remote_addr获取客户端IP
-        /// 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+        /// <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
         /// </summary>
         [JsonProperty("IsCdn")]
         public ulong? IsCdn{ get; set; }
 
         /// <summary>
-        /// 是否开启灰度。
+        /// <p>是否开启灰度。</p>
         /// </summary>
         [JsonProperty("IsGray")]
         [System.Obsolete]
         public ulong? IsGray{ get; set; }
 
         /// <summary>
-        /// 是否开启HTTP2，需要开启HTTPS协议支持。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>是否开启HTTP2，需要开启HTTPS协议支持。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("IsHttp2")]
         public ulong? IsHttp2{ get; set; }
 
         /// <summary>
-        /// 是否开启WebSocket支持。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("IsWebsocket")]
         public ulong? IsWebsocket{ get; set; }
 
         /// <summary>
-        /// 回源负载均衡策略。
-        /// 0：轮询
-        /// 1：IP hash
-        /// 2：加权轮询
+        /// <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p>
         /// </summary>
         [JsonProperty("LoadBalance")]
         public ulong? LoadBalance{ get; set; }
 
         /// <summary>
-        /// 防护模式。
-        /// 0：观察模式
-        /// 1：拦截模式
+        /// <p>防护模式。<br>0：观察模式<br>1：拦截模式</p>
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 自有证书的私钥
+        /// <p>自有证书的私钥</p>
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+        /// <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
         /// </summary>
         [JsonProperty("SSLId")]
         public string SSLId{ get; set; }
 
         /// <summary>
-        /// 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+        /// <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p>
         /// </summary>
         [JsonProperty("UpstreamDomain")]
         public string UpstreamDomain{ get; set; }
 
         /// <summary>
-        /// 回源类型。
-        /// 0：通过IP回源
-        /// 1：通过域名回源
+        /// <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p>
         /// </summary>
         [JsonProperty("UpstreamType")]
         public ulong? UpstreamType{ get; set; }
 
         /// <summary>
-        /// IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+        /// <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p>
         /// </summary>
         [JsonProperty("SrcList")]
         public string[] SrcList{ get; set; }
 
         /// <summary>
-        /// 域名端口配置
+        /// <p>域名端口配置</p>
         /// </summary>
         [JsonProperty("Ports")]
         public PortInfo[] Ports{ get; set; }
 
         /// <summary>
-        /// 证书类型。
-        /// 0：仅配置HTTP监听端口，没有证书
-        /// 1：证书来源为自有证书
-        /// 2：证书来源为托管证书
+        /// <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p>
         /// </summary>
         [JsonProperty("CertType")]
         public ulong? CertType{ get; set; }
 
         /// <summary>
-        /// 服务配置有HTTPS端口时，HTTPS的回源协议。
-        /// http：使用http协议回源，和HttpsUpstreamPort配合使用
-        /// https：使用https协议回源
+        /// <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
         /// </summary>
         [JsonProperty("UpstreamScheme")]
         public string UpstreamScheme{ get; set; }
 
         /// <summary>
-        /// 日志包是否开启。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>日志包是否开启。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("Cls")]
         public ulong? Cls{ get; set; }
 
         /// <summary>
-        /// 接入Cname，SaaS型域名使用此Cname进行接入
+        /// <p>接入Cname，SaaS型域名使用此Cname进行接入</p>
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接。
-        /// 0： 短连接
-        /// 1： 长连接
+        /// <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
         /// </summary>
         [JsonProperty("IsKeepAlive")]
         public ulong? IsKeepAlive{ get; set; }
 
         /// <summary>
-        /// 是否开启主动健康检测。
-        /// 0：不开启
-        /// 1：开启
+        /// <p>是否开启主动健康检测。<br>0：不开启<br>1：开启</p>
         /// </summary>
         [JsonProperty("ActiveCheck")]
         public ulong? ActiveCheck{ get; set; }
 
         /// <summary>
-        /// TLS版本信息
+        /// <p>TLS版本信息</p>
         /// </summary>
         [JsonProperty("TLSVersion")]
         public long? TLSVersion{ get; set; }
 
         /// <summary>
-        /// 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
+        /// <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p>
         /// </summary>
         [JsonProperty("Ciphers")]
         public long?[] Ciphers{ get; set; }
 
         /// <summary>
-        /// 加密套件模板。
-        /// 0：不支持选择，使用默认模板  
-        /// 1：通用型模板 
-        /// 2：安全型模板
-        /// 3：自定义模板
+        /// <p>加密套件模板。<br>0：不支持选择，使用默认模板<br>1：通用型模板<br>2：安全型模板<br>3：自定义模板</p>
         /// </summary>
         [JsonProperty("CipherTemplate")]
         public long? CipherTemplate{ get; set; }
 
         /// <summary>
-        /// WAF与源站的连接超时，默认10s。
+        /// <p>WAF与源站的连接超时，默认10s。</p>
         /// </summary>
         [JsonProperty("ProxyConnectTimeout")]
         public long? ProxyConnectTimeout{ get; set; }
 
         /// <summary>
-        /// WAF与源站的读超时时间，默认300s。
+        /// <p>WAF与源站的读超时时间，默认300s。</p>
         /// </summary>
         [JsonProperty("ProxyReadTimeout")]
         public long? ProxyReadTimeout{ get; set; }
 
         /// <summary>
-        /// WAF与源站的写超时时间，默认300s。
+        /// <p>WAF与源站的写超时时间，默认300s。</p>
         /// </summary>
         [JsonProperty("ProxySendTimeout")]
         public long? ProxySendTimeout{ get; set; }
 
         /// <summary>
-        /// WAF回源时的SNI类型。
-        /// 0：关闭SNI，不配置client_hello中的server_name
-        /// 1：开启SNI，client_hello中的server_name为防护域名
-        /// 2：开启SNI，SNI为域名回源时的源站域名
-        /// 3：开启SNI，SNI为自定义域名
+        /// <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p>
         /// </summary>
         [JsonProperty("SniType")]
         public long? SniType{ get; set; }
 
         /// <summary>
-        /// SniType为3时，需要填此参数，表示自定义的SNI；
+        /// <p>SniType为3时，需要填此参数，表示自定义的SNI；</p>
         /// </summary>
         [JsonProperty("SniHost")]
         public string SniHost{ get; set; }
 
         /// <summary>
-        /// 回源IP权重
+        /// <p>回源IP权重</p>
         /// </summary>
         [JsonProperty("Weights")]
         public string[] Weights{ get; set; }
 
         /// <summary>
-        /// IsCdn=3时，表示自定义header
+        /// <p>IsCdn=3时，表示自定义header</p>
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// 是否开启XFF重置。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>是否开启XFF重置。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("XFFReset")]
         public long? XFFReset{ get; set; }
 
         /// <summary>
-        /// 域名备注信息
+        /// <p>域名备注信息</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+        /// <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p>
         /// </summary>
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }
 
         /// <summary>
-        /// 防护规则
+        /// <p>防护规则</p>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 是否开启缓存 0-关闭 1-开启
+        /// <p>是否开启缓存 0-关闭 1-开启</p>
         /// </summary>
         [JsonProperty("ProxyBuffer")]
         public long? ProxyBuffer{ get; set; }
 
         /// <summary>
-        /// 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+        /// <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p>
         /// </summary>
         [JsonProperty("GmType")]
         public long? GmType{ get; set; }
 
         /// <summary>
-        /// 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+        /// <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p>
         /// </summary>
         [JsonProperty("GmCertType")]
         public long? GmCertType{ get; set; }
 
         /// <summary>
-        /// GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+        /// <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p>
         /// </summary>
         [JsonProperty("GmCert")]
         public string GmCert{ get; set; }
 
         /// <summary>
-        /// GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+        /// <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p>
         /// </summary>
         [JsonProperty("GmPrivateKey")]
         public string GmPrivateKey{ get; set; }
 
         /// <summary>
-        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+        /// <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
         /// </summary>
         [JsonProperty("GmEncCert")]
         public string GmEncCert{ get; set; }
 
         /// <summary>
-        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+        /// <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
         /// </summary>
         [JsonProperty("GmEncPrivateKey")]
         public string GmEncPrivateKey{ get; set; }
 
         /// <summary>
-        /// GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+        /// <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
         /// </summary>
         [JsonProperty("GmSSLId")]
         public string GmSSLId{ get; set; }
 
         /// <summary>
-        /// 域名标签
+        /// <p>域名标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// 拨测状态。 0: 禁用拨测, 1: 启用拨测
+        /// <p>拨测状态。 0: 禁用拨测, 1: 启用拨测</p>
         /// </summary>
         [JsonProperty("ProbeStatus")]
         public long? ProbeStatus{ get; set; }
 
         /// <summary>
-        /// 回源策略。
-        /// 0：负载均衡回源
-        /// 1：分流回源
+        /// <p>回源策略。<br>0：负载均衡回源<br>1：分流回源</p>
         /// </summary>
         [JsonProperty("UpstreamPolicy")]
         public long? UpstreamPolicy{ get; set; }
 
         /// <summary>
-        /// 分流回源策略
+        /// <p>分流回源策略</p>
         /// </summary>
         [JsonProperty("UpstreamRules")]
         public UpstreamRule[] UpstreamRules{ get; set; }
 
         /// <summary>
-        /// 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+        /// <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
         /// </summary>
         [JsonProperty("UseCase")]
         public long? UseCase{ get; set; }
 
         /// <summary>
-        /// gzip开关。0：关闭 1：默认值，打开。
+        /// <p>gzip开关。0：关闭 1：默认值，打开。</p>
         /// </summary>
         [JsonProperty("Gzip")]
         public long? Gzip{ get; set; }
 
         /// <summary>
-        /// SAAS型WAF域名状态：
-        /// -2：配置下发失败
-        /// -1：配置下发中
-        /// 0：DNS解析中
-        /// 1：无DNS解析记录，请接入WAF
-        /// 10：DNS解析未知，域名启用了代理
-        /// 11：DNS解析异常，使用A记录接入WAF IP
-        /// 200：检测源站不可达
-        /// 220：源站不支持长连接
-        /// 311：证书过期
-        /// 312：证书即将过期
-        /// 310：证书异常
-        /// 316：备案异常
-        /// 5：WAF回源已变更
-        /// 负载均衡型WAF域名LB监听器状态：
-        /// 0：操作成功 
-        /// 4：正在绑定LB 
-        /// 6：正在解绑LB 
-        /// 7：解绑LB失败 
-        /// 8：绑定LB失败 
-        /// 10：内部错误
+        /// <p>SAAS型WAF域名状态：<br>-2：配置下发失败<br>-1：配置下发中<br>0：DNS解析中<br>1：无DNS解析记录，请接入WAF<br>10：DNS解析未知，域名启用了代理<br>11：DNS解析异常，使用A记录接入WAF IP<br>200：检测源站不可达<br>220：源站不支持长连接<br>311：证书过期<br>312：证书即将过期<br>310：证书异常<br>316：备案异常<br>5：WAF回源已变更<br>负载均衡型WAF域名LB监听器状态：<br>0：操作成功<br>4：正在绑定LB<br>6：正在解绑LB<br>7：解绑LB失败<br>8：绑定LB失败<br>10：内部错误</p>
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
-        /// saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+        /// <p>saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中</p>
         /// </summary>
         [JsonProperty("PrivateVipStatus")]
         public long? PrivateVipStatus{ get; set; }
+
+        /// <summary>
+        /// <p>标签结构体</p>
+        /// </summary>
+        [JsonProperty("TagInfos")]
+        public TagInfo[] TagInfos{ get; set; }
+
+        /// <summary>
+        /// <p>ipv6开启状态</p><p>枚举值：</p><ul><li>1： ipv6开关打开</li><li>0： ipv6开关关闭</li></ul>
+        /// </summary>
+        [JsonProperty("Ipv6Status")]
+        public long? Ipv6Status{ get; set; }
 
 
         /// <summary>
@@ -453,6 +404,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Engine", this.Engine);
             this.SetParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
             this.SetParamSimple(map, prefix + "HttpsUpstreamPort", this.HttpsUpstreamPort);
@@ -504,6 +456,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Gzip", this.Gzip);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "PrivateVipStatus", this.PrivateVipStatus);
+            this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
+            this.SetParamSimple(map, prefix + "Ipv6Status", this.Ipv6Status);
         }
     }
 }

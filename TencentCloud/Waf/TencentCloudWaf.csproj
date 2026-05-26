@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1432</VersionPrefix>
+    <VersionPrefix>3.0.1433</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -99,6 +99,8 @@
     <Compile Include="V20180125\Models\ApiSecSceneRule.cs" />
     <Compile Include="V20180125\Models\ApiSecSceneRuleEntry.cs" />
     <Compile Include="V20180125\Models\ApiSecSensitiveRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecSensitiveWhiteField.cs" />
+    <Compile Include="V20180125\Models\ApiSecSensitiveWhiteRule.cs" />
     <Compile Include="V20180125\Models\Area.cs" />
     <Compile Include="V20180125\Models\AreaBanRule.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
@@ -660,6 +662,7 @@
     <Compile Include="V20180125\Models\TLSCiphers.cs" />
     <Compile Include="V20180125\Models\TLSVersion.cs" />
     <Compile Include="V20180125\Models\Tag.cs" />
+    <Compile Include="V20180125\Models\TagInfo.cs" />
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TigaMainClassMode.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
@@ -668,6 +671,7 @@
     <Compile Include="V20180125\Models\TokenRuleEntryValue.cs" />
     <Compile Include="V20180125\Models\TokenValidation.cs" />
     <Compile Include="V20180125\Models\TokenVerifyRule.cs" />
+    <Compile Include="V20180125\Models\ToolCallResult.cs" />
     <Compile Include="V20180125\Models\TopicExtendInfo.cs" />
     <Compile Include="V20180125\Models\TopicInfo.cs" />
     <Compile Include="V20180125\Models\UCBActionProportion.cs" />

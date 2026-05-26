@@ -25,14 +25,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 稀疏备份开关：ON/OFF
+        /// <p>稀疏备份开关：ON/OFF</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparseBackupSwitch")]
         public string SparseBackupSwitch{ get; set; }
 
         /// <summary>
-        /// 稀疏备份策略列表（1-3条）
+        /// <p>稀疏备份策略列表（1-3条）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparseBackupConfigInfos")]

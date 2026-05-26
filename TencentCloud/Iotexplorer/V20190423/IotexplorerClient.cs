@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1428";
+       private const string sdkVersion = "SDK_NET_3.0.1433";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeCallbackResponse"/></returns>
+        public Task<CreateTWeSeeCallbackResponse> CreateTWeSeeCallback(CreateTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeCallbackResponse>(req, "CreateTWeSeeCallback");
+        }
+
+        /// <summary>
+        /// 创建 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeCallbackResponse"/></returns>
+        public CreateTWeSeeCallbackResponse CreateTWeSeeCallbackSync(CreateTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeCallbackResponse>(req, "CreateTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeePostPaidServiceRequest"/></param>
+        /// <returns><see cref="CreateTWeSeePostPaidServiceResponse"/></returns>
+        public Task<CreateTWeSeePostPaidServiceResponse> CreateTWeSeePostPaidService(CreateTWeSeePostPaidServiceRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeePostPaidServiceResponse>(req, "CreateTWeSeePostPaidService");
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeePostPaidServiceRequest"/></param>
+        /// <returns><see cref="CreateTWeSeePostPaidServiceResponse"/></returns>
+        public CreateTWeSeePostPaidServiceResponse CreateTWeSeePostPaidServiceSync(CreateTWeSeePostPaidServiceRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeePostPaidServiceResponse>(req, "CreateTWeSeePostPaidService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建 TWeSee 语义理解任务
         /// </summary>
         /// <param name="req"><see cref="CreateTWeSeeRecognitionTaskRequest"/></param>
@@ -806,6 +848,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTWeSeeServiceResponse CreateTWeSeeServiceSync(CreateTWeSeeServiceRequest req)
         {
             return InternalRequestAsync<CreateTWeSeeServiceResponse>(req, "CreateTWeSeeService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeSubscriptionResponse"/></returns>
+        public Task<CreateTWeSeeSubscriptionResponse> CreateTWeSeeSubscription(CreateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeSubscriptionResponse>(req, "CreateTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 开通 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeSubscriptionResponse"/></returns>
+        public CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscriptionSync(CreateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeSubscriptionResponse>(req, "CreateTWeSeeSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1142,6 +1205,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteStudioProductResponse DeleteStudioProductSync(DeleteStudioProductRequest req)
         {
             return InternalRequestAsync<DeleteStudioProductResponse>(req, "DeleteStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeCallbackResponse"/></returns>
+        public Task<DeleteTWeSeeCallbackResponse> DeleteTWeSeeCallback(DeleteTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeCallbackResponse>(req, "DeleteTWeSeeCallback");
+        }
+
+        /// <summary>
+        /// 删除 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeCallbackResponse"/></returns>
+        public DeleteTWeSeeCallbackResponse DeleteTWeSeeCallbackSync(DeleteTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeCallbackResponse>(req, "DeleteTWeSeeCallback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2406,6 +2490,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询 TWeSee 回调目标详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeCallbackResponse"/></returns>
+        public Task<DescribeTWeSeeCallbackResponse> DescribeTWeSeeCallback(DescribeTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeCallbackResponse>(req, "DescribeTWeSeeCallback");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 回调目标详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeCallbackResponse"/></returns>
+        public DescribeTWeSeeCallbackResponse DescribeTWeSeeCallbackSync(DescribeTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeCallbackResponse>(req, "DescribeTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 拉取 TWeSee 配置
         /// </summary>
         /// <param name="req"><see cref="DescribeTWeSeeConfigRequest"/></param>
@@ -2427,6 +2532,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeePostPaidServiceRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeePostPaidServiceResponse"/></returns>
+        public Task<DescribeTWeSeePostPaidServiceResponse> DescribeTWeSeePostPaidService(DescribeTWeSeePostPaidServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeePostPaidServiceResponse>(req, "DescribeTWeSeePostPaidService");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 后付费服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeePostPaidServiceRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeePostPaidServiceResponse"/></returns>
+        public DescribeTWeSeePostPaidServiceResponse DescribeTWeSeePostPaidServiceSync(DescribeTWeSeePostPaidServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeePostPaidServiceResponse>(req, "DescribeTWeSeePostPaidService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 TWeSee 语义理解任务
         /// </summary>
         /// <param name="req"><see cref="DescribeTWeSeeRecognitionTaskRequest"/></param>
@@ -2444,6 +2570,69 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTaskSync(DescribeTWeSeeRecognitionTaskRequest req)
         {
             return InternalRequestAsync<DescribeTWeSeeRecognitionTaskResponse>(req, "DescribeTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeSubscriptionResponse"/></returns>
+        public Task<DescribeTWeSeeSubscriptionResponse> DescribeTWeSeeSubscription(DescribeTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeSubscriptionResponse>(req, "DescribeTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeSubscriptionResponse"/></returns>
+        public DescribeTWeSeeSubscriptionResponse DescribeTWeSeeSubscriptionSync(DescribeTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeSubscriptionResponse>(req, "DescribeTWeSeeSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeTaskRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeTaskResponse"/></returns>
+        public Task<DescribeTWeSeeTaskResponse> DescribeTWeSeeTask(DescribeTWeSeeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeTaskResponse>(req, "DescribeTWeSeeTask");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeTaskRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeTaskResponse"/></returns>
+        public DescribeTWeSeeTaskResponse DescribeTWeSeeTaskSync(DescribeTWeSeeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeTaskResponse>(req, "DescribeTWeSeeTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 TWeSee 任务统计数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeTaskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeTaskStatisticsResponse"/></returns>
+        public Task<DescribeTWeSeeTaskStatisticsResponse> DescribeTWeSeeTaskStatistics(DescribeTWeSeeTaskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeTaskStatisticsResponse>(req, "DescribeTWeSeeTaskStatistics");
+        }
+
+        /// <summary>
+        /// 获取 TWeSee 任务统计数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeTaskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeTaskStatisticsResponse"/></returns>
+        public DescribeTWeSeeTaskStatisticsResponse DescribeTWeSeeTaskStatisticsSync(DescribeTWeSeeTaskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeTaskStatisticsResponse>(req, "DescribeTWeSeeTaskStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2574,6 +2763,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// DescribeLicenseOverView代替
+        /// 
         /// 用于查询视频激活码统计概览
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoLicenseRequest"/></param>
@@ -2584,6 +2775,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// DescribeLicenseOverView代替
+        /// 
         /// 用于查询视频激活码统计概览
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoLicenseRequest"/></param>
@@ -2591,6 +2784,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeVideoLicenseResponse DescribeVideoLicenseSync(DescribeVideoLicenseRequest req)
         {
             return InternalRequestAsync<DescribeVideoLicenseResponse>(req, "DescribeVideoLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="DestroyTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="DestroyTWeSeeSubscriptionResponse"/></returns>
+        public Task<DestroyTWeSeeSubscriptionResponse> DestroyTWeSeeSubscription(DestroyTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DestroyTWeSeeSubscriptionResponse>(req, "DestroyTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 销毁 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="DestroyTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="DestroyTWeSeeSubscriptionResponse"/></returns>
+        public DestroyTWeSeeSubscriptionResponse DestroyTWeSeeSubscriptionSync(DestroyTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<DestroyTWeSeeSubscriptionResponse>(req, "DestroyTWeSeeSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3183,6 +3397,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询 TWeSee 预付费新购价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireTWeSeeSubscriptionCreatePriceRequest"/></param>
+        /// <returns><see cref="InquireTWeSeeSubscriptionCreatePriceResponse"/></returns>
+        public Task<InquireTWeSeeSubscriptionCreatePriceResponse> InquireTWeSeeSubscriptionCreatePrice(InquireTWeSeeSubscriptionCreatePriceRequest req)
+        {
+            return InternalRequestAsync<InquireTWeSeeSubscriptionCreatePriceResponse>(req, "InquireTWeSeeSubscriptionCreatePrice");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 预付费新购价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireTWeSeeSubscriptionCreatePriceRequest"/></param>
+        /// <returns><see cref="InquireTWeSeeSubscriptionCreatePriceResponse"/></returns>
+        public InquireTWeSeeSubscriptionCreatePriceResponse InquireTWeSeeSubscriptionCreatePriceSync(InquireTWeSeeSubscriptionCreatePriceRequest req)
+        {
+            return InternalRequestAsync<InquireTWeSeeSubscriptionCreatePriceResponse>(req, "InquireTWeSeeSubscriptionCreatePrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 预付费续费价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireTWeSeeSubscriptionRenewPriceRequest"/></param>
+        /// <returns><see cref="InquireTWeSeeSubscriptionRenewPriceResponse"/></returns>
+        public Task<InquireTWeSeeSubscriptionRenewPriceResponse> InquireTWeSeeSubscriptionRenewPrice(InquireTWeSeeSubscriptionRenewPriceRequest req)
+        {
+            return InternalRequestAsync<InquireTWeSeeSubscriptionRenewPriceResponse>(req, "InquireTWeSeeSubscriptionRenewPrice");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 预付费续费价格
+        /// </summary>
+        /// <param name="req"><see cref="InquireTWeSeeSubscriptionRenewPriceRequest"/></param>
+        /// <returns><see cref="InquireTWeSeeSubscriptionRenewPriceResponse"/></returns>
+        public InquireTWeSeeSubscriptionRenewPriceResponse InquireTWeSeeSubscriptionRenewPriceSync(InquireTWeSeeSubscriptionRenewPriceRequest req)
+        {
+            return InternalRequestAsync<InquireTWeSeeSubscriptionRenewPriceResponse>(req, "InquireTWeSeeSubscriptionRenewPrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 视频语义搜索
         /// </summary>
         /// <param name="req"><see cref="InvokeAISearchServiceRequest"/></param>
@@ -3242,6 +3498,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTaskSync(InvokeExternalSourceAIServiceTaskRequest req)
         {
             return InternalRequestAsync<InvokeExternalSourceAIServiceTaskResponse>(req, "InvokeExternalSourceAIServiceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用 TWeSee 视觉理解算法
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeComprehensionRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeComprehensionResponse"/></returns>
+        public Task<InvokeTWeSeeComprehensionResponse> InvokeTWeSeeComprehension(InvokeTWeSeeComprehensionRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeComprehensionResponse>(req, "InvokeTWeSeeComprehension");
+        }
+
+        /// <summary>
+        /// 调用 TWeSee 视觉理解算法
+        /// </summary>
+        /// <param name="req"><see cref="InvokeTWeSeeComprehensionRequest"/></param>
+        /// <returns><see cref="InvokeTWeSeeComprehensionResponse"/></returns>
+        public InvokeTWeSeeComprehensionResponse InvokeTWeSeeComprehensionSync(InvokeTWeSeeComprehensionRequest req)
+        {
+            return InternalRequestAsync<InvokeTWeSeeComprehensionResponse>(req, "InvokeTWeSeeComprehension")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3389,6 +3666,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ListProductOtaModulesResponse ListProductOtaModulesSync(ListProductOtaModulesRequest req)
         {
             return InternalRequestAsync<ListProductOtaModulesResponse>(req, "ListProductOtaModules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 回调目标列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="ListTWeSeeCallbackResponse"/></returns>
+        public Task<ListTWeSeeCallbackResponse> ListTWeSeeCallback(ListTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeeCallbackResponse>(req, "ListTWeSeeCallback");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 回调目标列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="ListTWeSeeCallbackResponse"/></returns>
+        public ListTWeSeeCallbackResponse ListTWeSeeCallbackSync(ListTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeeCallbackResponse>(req, "ListTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 短摘要列表查询
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeeTasksRequest"/></param>
+        /// <returns><see cref="ListTWeSeeTasksResponse"/></returns>
+        public Task<ListTWeSeeTasksResponse> ListTWeSeeTasks(ListTWeSeeTasksRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeeTasksResponse>(req, "ListTWeSeeTasks");
+        }
+
+        /// <summary>
+        /// 短摘要列表查询
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeeTasksRequest"/></param>
+        /// <returns><see cref="ListTWeSeeTasksResponse"/></returns>
+        public ListTWeSeeTasksResponse ListTWeSeeTasksSync(ListTWeSeeTasksRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeeTasksResponse>(req, "ListTWeSeeTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3708,6 +4027,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 修改 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeCallbackResponse"/></returns>
+        public Task<ModifyTWeSeeCallbackResponse> ModifyTWeSeeCallback(ModifyTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeCallbackResponse>(req, "ModifyTWeSeeCallback");
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 回调目标
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeCallbackRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeCallbackResponse"/></returns>
+        public ModifyTWeSeeCallbackResponse ModifyTWeSeeCallbackSync(ModifyTWeSeeCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeCallbackResponse>(req, "ModifyTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改 TWeSee 配置
         /// </summary>
         /// <param name="req"><see cref="ModifyTWeSeeConfigRequest"/></param>
@@ -3725,6 +4065,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyTWeSeeConfigResponse ModifyTWeSeeConfigSync(ModifyTWeSeeConfigRequest req)
         {
             return InternalRequestAsync<ModifyTWeSeeConfigResponse>(req, "ModifyTWeSeeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeSubscriptionResponse"/></returns>
+        public Task<ModifyTWeSeeSubscriptionResponse> ModifyTWeSeeSubscription(ModifyTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeSubscriptionResponse>(req, "ModifyTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeSubscriptionResponse"/></returns>
+        public ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscriptionSync(ModifyTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeSubscriptionResponse>(req, "ModifyTWeSeeSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 预付费订阅续费标识
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeSubscriptionRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeSubscriptionRenewFlagResponse"/></returns>
+        public Task<ModifyTWeSeeSubscriptionRenewFlagResponse> ModifyTWeSeeSubscriptionRenewFlag(ModifyTWeSeeSubscriptionRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeSubscriptionRenewFlagResponse>(req, "ModifyTWeSeeSubscriptionRenewFlag");
+        }
+
+        /// <summary>
+        /// 修改 TWeSee 预付费订阅续费标识
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeSubscriptionRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeSubscriptionRenewFlagResponse"/></returns>
+        public ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlagSync(ModifyTWeSeeSubscriptionRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeSubscriptionRenewFlagResponse>(req, "ModifyTWeSeeSubscriptionRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3989,6 +4371,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 续费 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="RenewTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="RenewTWeSeeSubscriptionResponse"/></returns>
+        public Task<RenewTWeSeeSubscriptionResponse> RenewTWeSeeSubscription(RenewTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<RenewTWeSeeSubscriptionResponse>(req, "RenewTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 续费 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="RenewTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="RenewTWeSeeSubscriptionResponse"/></returns>
+        public RenewTWeSeeSubscriptionResponse RenewTWeSeeSubscriptionSync(RenewTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<RenewTWeSeeSubscriptionResponse>(req, "RenewTWeSeeSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重置云存服务
         /// </summary>
         /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
@@ -4153,6 +4556,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public SearchTopicRuleResponse SearchTopicRuleSync(SearchTopicRuleRequest req)
         {
             return InternalRequestAsync<SearchTopicRuleResponse>(req, "SearchTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 退订 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="TerminateTWeSeeSubscriptionResponse"/></returns>
+        public Task<TerminateTWeSeeSubscriptionResponse> TerminateTWeSeeSubscription(TerminateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<TerminateTWeSeeSubscriptionResponse>(req, "TerminateTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 退订 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="TerminateTWeSeeSubscriptionResponse"/></returns>
+        public TerminateTWeSeeSubscriptionResponse TerminateTWeSeeSubscriptionSync(TerminateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<TerminateTWeSeeSubscriptionResponse>(req, "TerminateTWeSeeSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

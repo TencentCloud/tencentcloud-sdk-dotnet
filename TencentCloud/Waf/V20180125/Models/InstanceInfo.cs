@@ -25,351 +25,346 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 实例唯一ID
+        /// <p>实例唯一ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例对应资源ID，计费使用
+        /// <p>实例对应资源ID，计费使用</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// 实例所属地域
+        /// <p>实例所属地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>自动续费标识。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 弹性计费开关。
-        /// 0：关闭
-        /// 1：开启
+        /// <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 实例套餐版本。
-        /// 101：小微版
-        /// 102：超轻版
-        /// 2：高级版
-        /// 3：企业版
-        /// 4：旗舰版
-        /// 6：独享版
+        /// <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 实例过期时间
+        /// <p>实例过期时间</p>
         /// </summary>
         [JsonProperty("ValidTime")]
         public string ValidTime{ get; set; }
 
         /// <summary>
-        /// 实例开始时间
+        /// <p>实例开始时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 已配置域名个数
+        /// <p>已配置域名个数</p>
         /// </summary>
         [JsonProperty("DomainCount")]
         public ulong? DomainCount{ get; set; }
 
         /// <summary>
-        /// 域名数量上限
+        /// <p>域名数量上限</p>
         /// </summary>
         [JsonProperty("SubDomainLimit")]
         public ulong? SubDomainLimit{ get; set; }
 
         /// <summary>
-        /// 已配置主域名个数
+        /// <p>已配置主域名个数</p>
         /// </summary>
         [JsonProperty("MainDomainCount")]
         public ulong? MainDomainCount{ get; set; }
 
         /// <summary>
-        /// 主域名数量上限
+        /// <p>主域名数量上限</p>
         /// </summary>
         [JsonProperty("MainDomainLimit")]
         public ulong? MainDomainLimit{ get; set; }
 
         /// <summary>
-        /// 实例30天内QPS峰值
+        /// <p>实例30天内QPS峰值</p>
         /// </summary>
         [JsonProperty("MaxQPS")]
         public ulong? MaxQPS{ get; set; }
 
         /// <summary>
-        /// qps扩展包信息
+        /// <p>qps扩展包信息</p>
         /// </summary>
         [JsonProperty("QPS")]
         public QPSPackageNew QPS{ get; set; }
 
         /// <summary>
-        /// 域名扩展包信息
+        /// <p>域名扩展包信息</p>
         /// </summary>
         [JsonProperty("DomainPkg")]
         public DomainPackageNew DomainPkg{ get; set; }
 
         /// <summary>
-        /// 用户appid
+        /// <p>用户appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// clb或saas
+        /// <p>clb或saas</p>
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 业务安全包
+        /// <p>业务安全包</p>
         /// </summary>
         [JsonProperty("FraudPkg")]
         public FraudPkg FraudPkg{ get; set; }
 
         /// <summary>
-        /// Bot资源包
+        /// <p>Bot资源包</p>
         /// </summary>
         [JsonProperty("BotPkg")]
         public BotPkg BotPkg{ get; set; }
 
         /// <summary>
-        /// bot的qps详情
+        /// <p>bot的qps详情</p>
         /// </summary>
         [JsonProperty("BotQPS")]
         public BotQPS BotQPS{ get; set; }
 
         /// <summary>
-        /// qps弹性计费上限
+        /// <p>qps弹性计费上限</p>
         /// </summary>
         [JsonProperty("ElasticBilling")]
         public ulong? ElasticBilling{ get; set; }
 
         /// <summary>
-        /// 攻击日志投递开关
+        /// <p>攻击日志投递开关</p>
         /// </summary>
         [JsonProperty("AttackLogPost")]
         public long? AttackLogPost{ get; set; }
 
         /// <summary>
-        /// 带宽峰值，单位为B/s(字节每秒)
+        /// <p>带宽峰值，单位为B/s(字节每秒)</p>
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public ulong? MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// api安全是否购买
+        /// <p>api安全是否购买</p>
         /// </summary>
         [JsonProperty("APISecurity")]
         public ulong? APISecurity{ get; set; }
 
         /// <summary>
-        /// 购买的qps规格
+        /// <p>购买的qps规格</p>
         /// </summary>
         [JsonProperty("QpsStandard")]
         public ulong? QpsStandard{ get; set; }
 
         /// <summary>
-        /// 购买的带宽规格
+        /// <p>购买的带宽规格</p>
         /// </summary>
         [JsonProperty("BandwidthStandard")]
         public ulong? BandwidthStandard{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 实例沙箱qps值
+        /// <p>实例沙箱qps值</p>
         /// </summary>
         [JsonProperty("SandboxQps")]
         public ulong? SandboxQps{ get; set; }
 
         /// <summary>
-        /// 是否api 安全试用
+        /// <p>是否api 安全试用</p>
         /// </summary>
         [JsonProperty("IsAPISecurityTrial")]
         public ulong? IsAPISecurityTrial{ get; set; }
 
         /// <summary>
-        /// 重保包
+        /// <p>重保包</p>
         /// </summary>
         [JsonProperty("MajorEventsPkg")]
         public MajorEventsPkg MajorEventsPkg{ get; set; }
 
         /// <summary>
-        /// 混合云子节点包
+        /// <p>混合云子节点包</p>
         /// </summary>
         [JsonProperty("HybridPkg")]
         public HybridPkg HybridPkg{ get; set; }
 
         /// <summary>
-        /// API安全资源包
+        /// <p>API安全资源包</p>
         /// </summary>
         [JsonProperty("ApiPkg")]
         public ApiPkg ApiPkg{ get; set; }
 
         /// <summary>
-        /// 小程序安全加速包
+        /// <p>小程序安全加速包</p>
         /// </summary>
         [JsonProperty("MiniPkg")]
         public MiniPkg MiniPkg{ get; set; }
 
         /// <summary>
-        /// 小程序qps规格
+        /// <p>小程序qps规格</p>
         /// </summary>
         [JsonProperty("MiniQpsStandard")]
         public ulong? MiniQpsStandard{ get; set; }
 
         /// <summary>
-        /// 小程序qps峰值
+        /// <p>小程序qps峰值</p>
         /// </summary>
         [JsonProperty("MiniMaxQPS")]
         public ulong? MiniMaxQPS{ get; set; }
 
         /// <summary>
-        /// 最近一次超量时间
+        /// <p>最近一次超量时间</p>
         /// </summary>
         [JsonProperty("LastQpsExceedTime")]
         public string LastQpsExceedTime{ get; set; }
 
         /// <summary>
-        /// 小程序安全接入ID数量扩张包
+        /// <p>小程序安全接入ID数量扩张包</p>
         /// </summary>
         [JsonProperty("MiniExtendPkg")]
         public MiniExtendPkg MiniExtendPkg{ get; set; }
 
         /// <summary>
-        /// 计费项
+        /// <p>计费项</p>
         /// </summary>
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }
 
         /// <summary>
-        /// 实例延期释放标识
+        /// <p>实例延期释放标识</p>
         /// </summary>
         [JsonProperty("FreeDelayFlag")]
         public ulong? FreeDelayFlag{ get; set; }
 
         /// <summary>
-        /// 最近3天最大qps
+        /// <p>最近3天最大qps</p>
         /// </summary>
         [JsonProperty("Last3MaxQPS")]
         public ulong? Last3MaxQPS{ get; set; }
 
         /// <summary>
-        /// 最近3天最大带宽
+        /// <p>最近3天最大带宽</p>
         /// </summary>
         [JsonProperty("Last3MaxBandwidth")]
         public ulong? Last3MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// 重保增强包
+        /// <p>重保增强包</p>
         /// </summary>
         [JsonProperty("MajorEventsProPkg")]
         public MajorEventsProPkg MajorEventsProPkg{ get; set; }
 
         /// <summary>
-        /// 1是基础2025版本；0不是
+        /// <p>1是基础2025版本；0不是</p>
         /// </summary>
         [JsonProperty("BasicFlag")]
         public ulong? BasicFlag{ get; set; }
 
         /// <summary>
-        /// 实例的网络配置
+        /// <p>实例的网络配置</p>
         /// </summary>
         [JsonProperty("NetworkConfig")]
         public NetworkConfig NetworkConfig{ get; set; }
 
         /// <summary>
-        /// RCE设备安全信息包
+        /// <p>RCE设备安全信息包</p>
         /// </summary>
         [JsonProperty("RCEPkg")]
         public RCEPkg RCEPkg{ get; set; }
 
         /// <summary>
-        /// 超量策略。0：超量沙箱
-        /// 1：超量限流
+        /// <p>超量策略。0：超量沙箱<br>1：超量限流</p>
         /// </summary>
         [JsonProperty("ExceedPolicy")]
         public long? ExceedPolicy{ get; set; }
 
         /// <summary>
-        /// 大模型安全信息包
+        /// <p>大模型安全信息包</p>
         /// </summary>
         [JsonProperty("LLMPkg")]
         public LLMPkg LLMPkg{ get; set; }
 
         /// <summary>
-        /// 弹性资源Id
+        /// <p>弹性资源Id</p>
         /// </summary>
         [JsonProperty("ElasticResourceId")]
         public string ElasticResourceId{ get; set; }
 
         /// <summary>
-        /// 预付费大模型安全信息包
+        /// <p>预付费大模型安全信息包</p>
         /// </summary>
         [JsonProperty("LLMMonPkg")]
         public LLMMonPkg LLMMonPkg{ get; set; }
 
         /// <summary>
-        /// 地域id
+        /// <p>地域id</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// BOT安全护航信息
+        /// <p>BOT安全护航信息</p>
         /// </summary>
         [JsonProperty("BotSecurityPkg")]
         public BotSecurityPkg BotSecurityPkg{ get; set; }
 
         /// <summary>
-        /// BOT安全监测资源信息
+        /// <p>BOT安全监测资源信息</p>
         /// </summary>
         [JsonProperty("BotMonitorPkg")]
         public BotMonitorPkg BotMonitorPkg{ get; set; }
 
         /// <summary>
-        /// 独享ip资源信息
+        /// <p>独享ip资源信息</p>
         /// </summary>
         [JsonProperty("DedicatedIPPkg")]
         public DedicatedIPPkg DedicatedIPPkg{ get; set; }
 
         /// <summary>
-        /// 已经配置独享ip的数量
+        /// <p>已经配置独享ip的数量</p>
         /// </summary>
         [JsonProperty("DedicatedIPCount")]
         public long? DedicatedIPCount{ get; set; }
+
+        /// <summary>
+        /// <p>标签结构体</p>
+        /// </summary>
+        [JsonProperty("TagInfos")]
+        public TagInfo[] TagInfos{ get; set; }
 
 
         /// <summary>
@@ -433,6 +428,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
             this.SetParamObj(map, prefix + "DedicatedIPPkg.", this.DedicatedIPPkg);
             this.SetParamSimple(map, prefix + "DedicatedIPCount", this.DedicatedIPCount);
+            this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
         }
     }
 }

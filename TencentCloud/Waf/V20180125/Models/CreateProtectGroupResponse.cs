@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 防护对象组的ID
+        /// <p>防护对象组的ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

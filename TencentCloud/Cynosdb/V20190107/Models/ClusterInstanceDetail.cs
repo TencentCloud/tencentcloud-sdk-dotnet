@@ -25,116 +25,118 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 引擎类型
+        /// <p>引擎类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 实例状态描述
+        /// <p>实例状态描述</p>
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// cpu核数
+        /// <p>cpu核数</p>
         /// </summary>
         [JsonProperty("InstanceCpu")]
         public long? InstanceCpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// <p>内存</p>
         /// </summary>
         [JsonProperty("InstanceMemory")]
         public long? InstanceMemory{ get; set; }
 
         /// <summary>
-        /// 硬盘
+        /// <p>硬盘</p>
         /// </summary>
         [JsonProperty("InstanceStorage")]
         public long? InstanceStorage{ get; set; }
 
         /// <summary>
-        /// 实例角色
+        /// <p>实例角色</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 执行开始时间(距离0点的秒数)	
+        /// <p>执行开始时间(距离0点的秒数)</p>
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// 持续的时间(单位：秒)	
+        /// <p>持续的时间(单位：秒)</p>
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+        /// <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }
 
         /// <summary>
-        /// serverless实例子状态
+        /// <p>serverless实例子状态</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 实例任务信息
+        /// <p>实例任务信息</p>
         /// </summary>
         [JsonProperty("InstanceTasks")]
         public ObjectTask[] InstanceTasks{ get; set; }
 
         /// <summary>
-        /// 实例机器类型
-        /// 1. common，通用型。
-        /// 2. exclusive，独享型。
+        /// <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
         /// </summary>
         [JsonProperty("InstanceDeviceType")]
         public string InstanceDeviceType{ get; set; }
 
         /// <summary>
-        /// 实例存储类型
-        /// 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+        /// <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
 
         /// <summary>
-        /// 数据库类型
+        /// <p>数据库类型</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 节点列表
-        /// 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+        /// <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
         /// </summary>
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }
+
+        /// <summary>
+        /// <p>AI优化器状态</p>
+        /// </summary>
+        [JsonProperty("AIOptimizerStatus")]
+        public AIOptimizerStatus AIOptimizerStatus{ get; set; }
 
 
         /// <summary>
@@ -160,6 +162,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+            this.SetParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
         }
     }
 }

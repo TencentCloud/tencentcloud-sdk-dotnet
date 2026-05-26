@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{73128B93-D54A-364A-B830-AF3B57F8D1EA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1431</VersionPrefix>
+    <VersionPrefix>3.0.1433</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20250717\Models\CreateChatCompletionRequest.cs" />
     <Compile Include="V20250717\Models\CreateChatCompletionRes.cs" />
     <Compile Include="V20250717\Models\CreateChatCompletionResponse.cs" />
+    <Compile Include="V20250717\Models\CreateMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\CreateMemoryPlusSpaceResponse.cs" />
     <Compile Include="V20250717\Models\CreatingProgress.cs" />
     <Compile Include="V20250717\Models\CreatingStepInfo.cs" />
     <Compile Include="V20250717\Models\DescribeAgentDutyTaskDetailRequest.cs" />
@@ -79,23 +81,41 @@
     <Compile Include="V20250717\Models\DescribeChatDetailResponse.cs" />
     <Compile Include="V20250717\Models\DescribeChatsRequest.cs" />
     <Compile Include="V20250717\Models\DescribeChatsResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusRecordRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusRecordResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusSpaceResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusSpacesRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeMemoryPlusSpacesResponse.cs" />
     <Compile Include="V20250717\Models\DescribeReportUrlRequest.cs" />
     <Compile Include="V20250717\Models\DescribeReportUrlResponse.cs" />
+    <Compile Include="V20250717\Models\DescribeServiceAccessKeyRequest.cs" />
+    <Compile Include="V20250717\Models\DescribeServiceAccessKeyResponse.cs" />
+    <Compile Include="V20250717\Models\DestroyMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\DestroyMemoryPlusSpaceResponse.cs" />
     <Compile Include="V20250717\Models\ExtraInfo.cs" />
     <Compile Include="V20250717\Models\InstanceInfos.cs" />
     <Compile Include="V20250717\Models\IsolateAgentInstanceRequest.cs" />
     <Compile Include="V20250717\Models\IsolateAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\IsolateMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\IsolateMemoryPlusSpaceResponse.cs" />
+    <Compile Include="V20250717\Models\MemoryPlusInfo.cs" />
     <Compile Include="V20250717\Models\ModifyAgentInstanceParametersRequest.cs" />
     <Compile Include="V20250717\Models\ModifyAgentInstanceParametersResponse.cs" />
     <Compile Include="V20250717\Models\ModifyChatTitleRequest.cs" />
     <Compile Include="V20250717\Models\ModifyChatTitleResponse.cs" />
+    <Compile Include="V20250717\Models\ModifyMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\ModifyMemoryPlusSpaceResponse.cs" />
     <Compile Include="V20250717\Models\Parameter.cs" />
     <Compile Include="V20250717\Models\PauseAgentWorkRequest.cs" />
     <Compile Include="V20250717\Models\PauseAgentWorkResponse.cs" />
     <Compile Include="V20250717\Models\RecoverAgentInstanceRequest.cs" />
     <Compile Include="V20250717\Models\RecoverAgentInstanceResponse.cs" />
+    <Compile Include="V20250717\Models\RecoverMemoryPlusSpaceRequest.cs" />
+    <Compile Include="V20250717\Models\RecoverMemoryPlusSpaceResponse.cs" />
     <Compile Include="V20250717\Models\RemoveChatRequest.cs" />
     <Compile Include="V20250717\Models\RemoveChatResponse.cs" />
+    <Compile Include="V20250717\Models\ResourceTag.cs" />
     <Compile Include="V20250717\Models\SqlAgentParameter.cs" />
     <Compile Include="V20250717\Models\StartAgentTaskRequest.cs" />
     <Compile Include="V20250717\Models\StartAgentTaskResponse.cs" />
@@ -106,5 +126,7 @@
     <Compile Include="V20250717\Models\TerminateAgentInstanceResponse.cs" />
     <Compile Include="V20250717\Models\UploadChoice.cs" />
     <Compile Include="V20250717\Models\UploadDelta.cs" />
+    <Compile Include="V20250717\Models\VDBDocument.cs" />
+    <Compile Include="V20250717\Models\VDBFieldMap.cs" />
   </ItemGroup>
 </Project>

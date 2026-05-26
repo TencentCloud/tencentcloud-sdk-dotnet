@@ -25,94 +25,106 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 1表示开，0表示关，3表示删除
+        /// <p>1表示开，0表示关，3表示删除</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 客户自定义配置
-        /// </summary>
-        [JsonProperty("CustomRule")]
-        public ApiSecCustomSensitiveRule CustomRule{ get; set; }
-
-        /// <summary>
-        /// rulename列表，批量操作的时候填改值
+        /// <p>rulename列表，批量操作的时候填改值</p>
         /// </summary>
         [JsonProperty("RuleNameList")]
         public string[] RuleNameList{ get; set; }
 
         /// <summary>
-        /// api提取规则内容
+        /// <p>客户自定义配置</p>
         /// </summary>
-        [JsonProperty("CustomApiExtractRule")]
-        public ApiSecExtractRule CustomApiExtractRule{ get; set; }
+        [JsonProperty("CustomRule")]
+        public ApiSecCustomSensitiveRule CustomRule{ get; set; }
 
         /// <summary>
-        /// 批量操作的时候的api提取规则
+        /// <p>批量操作的时候的api提取规则</p>
         /// </summary>
         [JsonProperty("ApiExtractRuleName")]
         public string[] ApiExtractRuleName{ get; set; }
 
         /// <summary>
-        /// 自定义api鉴权规则
+        /// <p>api提取规则内容</p>
         /// </summary>
-        [JsonProperty("ApiSecPrivilegeRule")]
-        public ApiSecPrivilegeRule ApiSecPrivilegeRule{ get; set; }
+        [JsonProperty("CustomApiExtractRule")]
+        public ApiSecExtractRule CustomApiExtractRule{ get; set; }
 
         /// <summary>
-        /// 匹配操作时候的api鉴权规则
+        /// <p>匹配操作时候的api鉴权规则</p>
         /// </summary>
         [JsonProperty("ApiSecPrivilegeRuleName")]
         public string[] ApiSecPrivilegeRuleName{ get; set; }
 
         /// <summary>
-        /// 批量操作的时候的自定义场景列表
+        /// <p>自定义api鉴权规则</p>
+        /// </summary>
+        [JsonProperty("ApiSecPrivilegeRule")]
+        public ApiSecPrivilegeRule ApiSecPrivilegeRule{ get; set; }
+
+        /// <summary>
+        /// <p>批量操作的时候的自定义场景列表</p>
         /// </summary>
         [JsonProperty("ApiSecSceneRuleNameList")]
         public string[] ApiSecSceneRuleNameList{ get; set; }
 
         /// <summary>
-        /// 单条自定义api场景规则
+        /// <p>单条自定义api场景规则</p>
         /// </summary>
         [JsonProperty("ApiSecSceneRule")]
         public ApiSecSceneRule ApiSecSceneRule{ get; set; }
 
         /// <summary>
-        /// 批量操作的时候的自定义事件规则列表
+        /// <p>批量操作的时候的自定义事件规则列表</p>
         /// </summary>
         [JsonProperty("ApiSecCustomEventRuleNameList")]
         public string[] ApiSecCustomEventRuleNameList{ get; set; }
 
         /// <summary>
-        /// 自定义事件规则
+        /// <p>自定义事件规则</p>
         /// </summary>
         [JsonProperty("ApiSecCustomEventRuleRule")]
         public ApiSecCustomEventRule ApiSecCustomEventRuleRule{ get; set; }
 
         /// <summary>
-        /// 无效api排除规则
+        /// <p>批量操作的时候的无效api排除规则</p>
+        /// </summary>
+        [JsonProperty("ApiExcludeRuleName")]
+        public string[] ApiExcludeRuleName{ get; set; }
+
+        /// <summary>
+        /// <p>无效api排除规则</p>
         /// </summary>
         [JsonProperty("CustomApiExcludeRule")]
         public ApiSecExcludeRule CustomApiExcludeRule{ get; set; }
 
         /// <summary>
-        /// 批量操作的时候的无效api排除规则
+        /// <p>批量操作时的敏感数据加白规则名称列表</p>
         /// </summary>
-        [JsonProperty("ApiExcludeRuleName")]
-        public string[] ApiExcludeRuleName{ get; set; }
+        [JsonProperty("ApiSecSensitiveWhiteRuleNameList")]
+        public string[] ApiSecSensitiveWhiteRuleNameList{ get; set; }
+
+        /// <summary>
+        /// <p>敏感数据加白规则</p>
+        /// </summary>
+        [JsonProperty("ApiSecSensitiveWhiteRuleRule")]
+        public ApiSecSensitiveWhiteRule ApiSecSensitiveWhiteRuleRule{ get; set; }
 
 
         /// <summary>
@@ -123,18 +135,20 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
-            this.SetParamObj(map, prefix + "CustomRule.", this.CustomRule);
             this.SetParamArraySimple(map, prefix + "RuleNameList.", this.RuleNameList);
-            this.SetParamObj(map, prefix + "CustomApiExtractRule.", this.CustomApiExtractRule);
+            this.SetParamObj(map, prefix + "CustomRule.", this.CustomRule);
             this.SetParamArraySimple(map, prefix + "ApiExtractRuleName.", this.ApiExtractRuleName);
-            this.SetParamObj(map, prefix + "ApiSecPrivilegeRule.", this.ApiSecPrivilegeRule);
+            this.SetParamObj(map, prefix + "CustomApiExtractRule.", this.CustomApiExtractRule);
             this.SetParamArraySimple(map, prefix + "ApiSecPrivilegeRuleName.", this.ApiSecPrivilegeRuleName);
+            this.SetParamObj(map, prefix + "ApiSecPrivilegeRule.", this.ApiSecPrivilegeRule);
             this.SetParamArraySimple(map, prefix + "ApiSecSceneRuleNameList.", this.ApiSecSceneRuleNameList);
             this.SetParamObj(map, prefix + "ApiSecSceneRule.", this.ApiSecSceneRule);
             this.SetParamArraySimple(map, prefix + "ApiSecCustomEventRuleNameList.", this.ApiSecCustomEventRuleNameList);
             this.SetParamObj(map, prefix + "ApiSecCustomEventRuleRule.", this.ApiSecCustomEventRuleRule);
-            this.SetParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
             this.SetParamArraySimple(map, prefix + "ApiExcludeRuleName.", this.ApiExcludeRuleName);
+            this.SetParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
+            this.SetParamArraySimple(map, prefix + "ApiSecSensitiveWhiteRuleNameList.", this.ApiSecSensitiveWhiteRuleNameList);
+            this.SetParamObj(map, prefix + "ApiSecSensitiveWhiteRuleRule.", this.ApiSecSensitiveWhiteRuleRule);
         }
     }
 }

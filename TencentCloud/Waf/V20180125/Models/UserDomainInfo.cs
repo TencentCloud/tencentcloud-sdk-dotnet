@@ -25,82 +25,88 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 用户id
+        /// <p>用户id</p>
         /// </summary>
         [JsonProperty("Appid")]
         public ulong? Appid{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名id
+        /// <p>域名id</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// waf类型
+        /// <p>waf类型</p>
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// <p>版本</p>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 指定域名访问日志字段的开关
+        /// <p>指定域名访问日志字段的开关</p>
         /// </summary>
         [JsonProperty("WriteConfig")]
         public string WriteConfig{ get; set; }
 
         /// <summary>
-        /// 指定域名是否写cls的开关 1:写 0:不写
+        /// <p>指定域名是否写cls的开关 1:写 0:不写</p>
         /// </summary>
         [JsonProperty("Cls")]
         public ulong? Cls{ get; set; }
 
         /// <summary>
-        /// 标记是否是混合云接入。hybrid表示混合云接入域名
+        /// <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
         /// <summary>
-        /// 标记clbwaf类型
+        /// <p>标记clbwaf类型</p>
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
         /// <summary>
-        /// BOT开关状态
+        /// <p>BOT开关状态</p>
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
 
         /// <summary>
-        /// API开关状态
+        /// <p>API开关状态</p>
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }
+
+        /// <summary>
+        /// <p>是否是四层clbwaf域名</p>
+        /// </summary>
+        [JsonProperty("IsREIP")]
+        public long? IsREIP{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
             this.SetParamSimple(map, prefix + "BotStatus", this.BotStatus);
             this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+            this.SetParamSimple(map, prefix + "IsREIP", this.IsREIP);
         }
     }
 }

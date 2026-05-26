@@ -28,7 +28,7 @@ namespace TencentCloud.Tdai.V20250717
 
        private const string endpoint = "tdai.tencentcloudapi.com";
        private const string version = "2025-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1433";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Tdai.V20250717
         public CreateChatCompletionResponse CreateChatCompletionSync(CreateChatCompletionRequest req)
         {
             return InternalRequestAsync<CreateChatCompletionResponse>(req, "CreateChatCompletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateMemoryPlusSpace）用于创建正式版 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="CreateMemoryPlusSpaceResponse"/></returns>
+        public Task<CreateMemoryPlusSpaceResponse> CreateMemoryPlusSpace(CreateMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<CreateMemoryPlusSpaceResponse>(req, "CreateMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（CreateMemoryPlusSpace）用于创建正式版 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="CreateMemoryPlusSpaceResponse"/></returns>
+        public CreateMemoryPlusSpaceResponse CreateMemoryPlusSpaceSync(CreateMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<CreateMemoryPlusSpaceResponse>(req, "CreateMemoryPlusSpace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -264,6 +285,69 @@ namespace TencentCloud.Tdai.V20250717
         }
 
         /// <summary>
+        /// 本接口（DescribeMemoryPlusRecord）用于查询 Memory 实例的记忆数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusRecordRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusRecordResponse"/></returns>
+        public Task<DescribeMemoryPlusRecordResponse> DescribeMemoryPlusRecord(DescribeMemoryPlusRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusRecordResponse>(req, "DescribeMemoryPlusRecord");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMemoryPlusRecord）用于查询 Memory 实例的记忆数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusRecordRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusRecordResponse"/></returns>
+        public DescribeMemoryPlusRecordResponse DescribeMemoryPlusRecordSync(DescribeMemoryPlusRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusRecordResponse>(req, "DescribeMemoryPlusRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMemoryPlusSpace）用于查询 Memory 正式版实例详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusSpaceResponse"/></returns>
+        public Task<DescribeMemoryPlusSpaceResponse> DescribeMemoryPlusSpace(DescribeMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusSpaceResponse>(req, "DescribeMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMemoryPlusSpace）用于查询 Memory 正式版实例详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusSpaceResponse"/></returns>
+        public DescribeMemoryPlusSpaceResponse DescribeMemoryPlusSpaceSync(DescribeMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusSpaceResponse>(req, "DescribeMemoryPlusSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMemoryPlusSpaces）用于查询 Memory正式版实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusSpacesRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusSpacesResponse"/></returns>
+        public Task<DescribeMemoryPlusSpacesResponse> DescribeMemoryPlusSpaces(DescribeMemoryPlusSpacesRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusSpacesResponse>(req, "DescribeMemoryPlusSpaces");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMemoryPlusSpaces）用于查询 Memory正式版实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMemoryPlusSpacesRequest"/></param>
+        /// <returns><see cref="DescribeMemoryPlusSpacesResponse"/></returns>
+        public DescribeMemoryPlusSpacesResponse DescribeMemoryPlusSpacesSync(DescribeMemoryPlusSpacesRequest req)
+        {
+            return InternalRequestAsync<DescribeMemoryPlusSpacesResponse>(req, "DescribeMemoryPlusSpaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 智能体报告地址生成并下载
         /// </summary>
         /// <param name="req"><see cref="DescribeReportUrlRequest"/></param>
@@ -285,6 +369,48 @@ namespace TencentCloud.Tdai.V20250717
         }
 
         /// <summary>
+        /// 本接口（DescribeServiceAccessKey）用于查询服务访问密钥。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceAccessKeyRequest"/></param>
+        /// <returns><see cref="DescribeServiceAccessKeyResponse"/></returns>
+        public Task<DescribeServiceAccessKeyResponse> DescribeServiceAccessKey(DescribeServiceAccessKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceAccessKeyResponse>(req, "DescribeServiceAccessKey");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeServiceAccessKey）用于查询服务访问密钥。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceAccessKeyRequest"/></param>
+        /// <returns><see cref="DescribeServiceAccessKeyResponse"/></returns>
+        public DescribeServiceAccessKeyResponse DescribeServiceAccessKeySync(DescribeServiceAccessKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceAccessKeyResponse>(req, "DescribeServiceAccessKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DestroyMemoryPlusSpace）用于从回收站彻底销毁 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="DestroyMemoryPlusSpaceResponse"/></returns>
+        public Task<DestroyMemoryPlusSpaceResponse> DestroyMemoryPlusSpace(DestroyMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<DestroyMemoryPlusSpaceResponse>(req, "DestroyMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（DestroyMemoryPlusSpace）用于从回收站彻底销毁 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="DestroyMemoryPlusSpaceResponse"/></returns>
+        public DestroyMemoryPlusSpaceResponse DestroyMemoryPlusSpaceSync(DestroyMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<DestroyMemoryPlusSpaceResponse>(req, "DestroyMemoryPlusSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（IsolateAgentInstance）用于隔离智能体实例，通常在用户需要隔离智能体实例时使用。
         /// </summary>
         /// <param name="req"><see cref="IsolateAgentInstanceRequest"/></param>
@@ -302,6 +428,27 @@ namespace TencentCloud.Tdai.V20250717
         public IsolateAgentInstanceResponse IsolateAgentInstanceSync(IsolateAgentInstanceRequest req)
         {
             return InternalRequestAsync<IsolateAgentInstanceResponse>(req, "IsolateAgentInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（IsolateMemoryPlusSpace）用于将正式版 Memory 实例放入回收站隔离。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="IsolateMemoryPlusSpaceResponse"/></returns>
+        public Task<IsolateMemoryPlusSpaceResponse> IsolateMemoryPlusSpace(IsolateMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<IsolateMemoryPlusSpaceResponse>(req, "IsolateMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（IsolateMemoryPlusSpace）用于将正式版 Memory 实例放入回收站隔离。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="IsolateMemoryPlusSpaceResponse"/></returns>
+        public IsolateMemoryPlusSpaceResponse IsolateMemoryPlusSpaceSync(IsolateMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<IsolateMemoryPlusSpaceResponse>(req, "IsolateMemoryPlusSpace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +495,27 @@ namespace TencentCloud.Tdai.V20250717
         }
 
         /// <summary>
+        /// 本接口（ModifyMemoryPlusSpace）用于修改正式版 Memory 实例，可修改实例名称与描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="ModifyMemoryPlusSpaceResponse"/></returns>
+        public Task<ModifyMemoryPlusSpaceResponse> ModifyMemoryPlusSpace(ModifyMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyMemoryPlusSpaceResponse>(req, "ModifyMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyMemoryPlusSpace）用于修改正式版 Memory 实例，可修改实例名称与描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="ModifyMemoryPlusSpaceResponse"/></returns>
+        public ModifyMemoryPlusSpaceResponse ModifyMemoryPlusSpaceSync(ModifyMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyMemoryPlusSpaceResponse>(req, "ModifyMemoryPlusSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（PauseAgentWork）用于暂停智能体实例的值守任务，通常在用户需要暂停时使用。
         /// </summary>
         /// <param name="req"><see cref="PauseAgentWorkRequest"/></param>
@@ -386,6 +554,27 @@ namespace TencentCloud.Tdai.V20250717
         public RecoverAgentInstanceResponse RecoverAgentInstanceSync(RecoverAgentInstanceRequest req)
         {
             return InternalRequestAsync<RecoverAgentInstanceResponse>(req, "RecoverAgentInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RecoverMemoryPlusSpace）用于从回收站恢复 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="RecoverMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="RecoverMemoryPlusSpaceResponse"/></returns>
+        public Task<RecoverMemoryPlusSpaceResponse> RecoverMemoryPlusSpace(RecoverMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<RecoverMemoryPlusSpaceResponse>(req, "RecoverMemoryPlusSpace");
+        }
+
+        /// <summary>
+        /// 本接口（RecoverMemoryPlusSpace）用于从回收站恢复 Memory 实例。
+        /// </summary>
+        /// <param name="req"><see cref="RecoverMemoryPlusSpaceRequest"/></param>
+        /// <returns><see cref="RecoverMemoryPlusSpaceResponse"/></returns>
+        public RecoverMemoryPlusSpaceResponse RecoverMemoryPlusSpaceSync(RecoverMemoryPlusSpaceRequest req)
+        {
+            return InternalRequestAsync<RecoverMemoryPlusSpaceResponse>(req, "RecoverMemoryPlusSpace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

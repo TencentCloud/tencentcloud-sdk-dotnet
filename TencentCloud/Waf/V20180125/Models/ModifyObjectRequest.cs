@@ -25,52 +25,58 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 修改对象标识
+        /// <p>修改对象标识</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+        /// <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
         /// </summary>
         [JsonProperty("OpType")]
         public string OpType{ get; set; }
 
         /// <summary>
-        /// 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+        /// <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 新的实例ID，如果和已绑定的实例相同认为修改成功
+        /// <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+        /// <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
         /// </summary>
         [JsonProperty("Proxy")]
         public ulong? Proxy{ get; set; }
 
         /// <summary>
-        /// IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+        /// <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// 对象所属集团成员appid
+        /// <p>对象所属集团成员appid</p>
         /// </summary>
         [JsonProperty("MemberAppId")]
         public ulong? MemberAppId{ get; set; }
 
         /// <summary>
-        /// 对象所属集团成员uin
+        /// <p>对象所属集团成员uin</p>
         /// </summary>
         [JsonProperty("MemberUin")]
         public string MemberUin{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

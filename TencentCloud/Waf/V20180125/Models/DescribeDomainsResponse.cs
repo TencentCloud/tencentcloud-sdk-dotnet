@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// domain列表
+        /// <p>domain列表</p>
         /// </summary>
         [JsonProperty("Domains")]
         public DomainInfo[] Domains{ get; set; }

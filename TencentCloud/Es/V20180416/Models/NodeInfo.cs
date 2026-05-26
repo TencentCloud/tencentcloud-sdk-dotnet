@@ -25,80 +25,91 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 节点类型<li>hotData: 热数据节点</li>
-        /// <li>warmData: 冷数据节点</li>
-        /// <li>dedicatedMaster: 专用主节点</li>
-        /// 默认值为hotData
+        /// <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+        /// <p>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 节点磁盘容量（单位GB）
+        /// <p>节点磁盘容量（单位GB）</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 节点本地盘信息
+        /// <p>节点本地盘信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDiskInfo")]
         public LocalDiskInfo LocalDiskInfo{ get; set; }
 
         /// <summary>
-        /// 节点磁盘块数
+        /// <p>节点磁盘块数</p>
         /// </summary>
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+        /// <p>节点磁盘是否加密 0: 不加密，1: 加密；默认不加密</p>
         /// </summary>
         [JsonProperty("DiskEncrypt")]
         public ulong? DiskEncrypt{ get; set; }
 
         /// <summary>
-        /// cpu数目
+        /// <p>自定义加密密钥id</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>自定义加密密钥name</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsKeyName")]
+        public string KmsKeyName{ get; set; }
+
+        /// <summary>
+        /// <p>cpu数目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuNum")]
         public ulong? CpuNum{ get; set; }
 
         /// <summary>
-        /// 内存大小，单位GB
+        /// <p>内存大小，单位GB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// 硬盘额外性能
+        /// <p>硬盘额外性能</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskEnhance")]
         public long? DiskEnhance{ get; set; }
 
         /// <summary>
-        /// 节点Gpu信息
+        /// <p>节点Gpu信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuInfo")]
@@ -118,6 +129,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);

@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Iotexplorer.V20190423.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateTWeSeeSubscriptionRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 产品 ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 设备名称
+        /// </summary>
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 算法类型。可选值：
+        /// 
+        /// - `VID_COMP`：视频理解
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
+        /// 套餐规格。可选值：
+        /// 
+        /// - `BASIC`：包年包月基础版（适用于视频理解）
+        /// </summary>
+        [JsonProperty("ServiceTier")]
+        public string ServiceTier{ get; set; }
+
+        /// <summary>
+        /// 订阅购买时长，单位：月，支持 1-60
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
+        /// <summary>
+        /// 通道 ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
+        /// 自定义订单 ID
+        /// </summary>
+        [JsonProperty("CustomOrderId")]
+        public string CustomOrderId{ get; set; }
+
+        /// <summary>
+        /// 续费标识。可选值：
+        /// - `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
+        /// - `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
+        /// - `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ServiceTier", this.ServiceTier);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "CustomOrderId", this.CustomOrderId);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        }
+    }
+}
+

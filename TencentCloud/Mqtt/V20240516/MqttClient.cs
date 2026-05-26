@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1433";
 
         /// <summary>
         /// Client constructor.
@@ -1051,6 +1051,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询集群下共享订阅组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsWithSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsWithSubscriptionsResponse"/></returns>
+        public Task<DescribeSharedSubscriptionGroupsWithSubscriptionsResponse> DescribeSharedSubscriptionGroupsWithSubscriptions(DescribeSharedSubscriptionGroupsWithSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsWithSubscriptionsResponse>(req, "DescribeSharedSubscriptionGroupsWithSubscriptions");
+        }
+
+        /// <summary>
+        /// 查询集群下共享订阅组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsWithSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsWithSubscriptionsResponse"/></returns>
+        public DescribeSharedSubscriptionGroupsWithSubscriptionsResponse DescribeSharedSubscriptionGroupsWithSubscriptionsSync(DescribeSharedSubscriptionGroupsWithSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsWithSubscriptionsResponse>(req, "DescribeSharedSubscriptionGroupsWithSubscriptions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询共享订阅消息堆积量
         /// </summary>
         /// <param name="req"><see cref="DescribeSharedSubscriptionLagRequest"/></param>
@@ -1418,6 +1439,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
         {
             return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群X509配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyX509ConfigRequest"/></param>
+        /// <returns><see cref="ModifyX509ConfigResponse"/></returns>
+        public Task<ModifyX509ConfigResponse> ModifyX509Config(ModifyX509ConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyX509ConfigResponse>(req, "ModifyX509Config");
+        }
+
+        /// <summary>
+        /// 修改集群X509配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyX509ConfigRequest"/></param>
+        /// <returns><see cref="ModifyX509ConfigResponse"/></returns>
+        public ModifyX509ConfigResponse ModifyX509ConfigSync(ModifyX509ConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyX509ConfigResponse>(req, "ModifyX509Config")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

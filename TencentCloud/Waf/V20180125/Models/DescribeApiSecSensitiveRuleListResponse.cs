@@ -25,66 +25,72 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// api敏感规则列表
+        /// <p>api敏感规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ApiSecSensitiveRule[] Data{ get; set; }
 
         /// <summary>
-        /// 规则数量
+        /// <p>规则数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 自定义敏感检测规则总开关
+        /// <p>自定义敏感检测规则总开关</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 非内置规则的rulename列表
+        /// <p>非内置规则的rulename列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleNameList")]
         public string[] RuleNameList{ get; set; }
 
         /// <summary>
-        /// api提取规则列表
+        /// <p>api提取规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiExtractRule")]
         public ApiSecExtractRule[] ApiExtractRule{ get; set; }
 
         /// <summary>
-        /// api鉴权规则列表
+        /// <p>api鉴权规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiSecPrivilegeRule")]
         public ApiSecPrivilegeRule[] ApiSecPrivilegeRule{ get; set; }
 
         /// <summary>
-        /// api场景规则列表
+        /// <p>api场景规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiSecSceneRule")]
         public ApiSecSceneRule[] ApiSecSceneRule{ get; set; }
 
         /// <summary>
-        /// 自定义事件规则
+        /// <p>自定义事件规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiSecCustomEventRule")]
         public ApiSecCustomEventRule[] ApiSecCustomEventRule{ get; set; }
 
         /// <summary>
-        /// 无效api排除规则列表
+        /// <p>无效api排除规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiExcludeRule")]
         public ApiSecExcludeRule[] ApiExcludeRule{ get; set; }
+
+        /// <summary>
+        /// <p>敏感数据加白规则列表</p>
+        /// </summary>
+        [JsonProperty("ApiSecSensitiveWhiteRule")]
+        public ApiSecSensitiveWhiteRule[] ApiSecSensitiveWhiteRule{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -107,6 +113,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "ApiSecSceneRule.", this.ApiSecSceneRule);
             this.SetParamArrayObj(map, prefix + "ApiSecCustomEventRule.", this.ApiSecCustomEventRule);
             this.SetParamArrayObj(map, prefix + "ApiExcludeRule.", this.ApiExcludeRule);
+            this.SetParamArrayObj(map, prefix + "ApiSecSensitiveWhiteRule.", this.ApiSecSensitiveWhiteRule);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
