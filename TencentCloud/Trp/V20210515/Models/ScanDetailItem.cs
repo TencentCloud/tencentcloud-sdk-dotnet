@@ -78,6 +78,24 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
+        /// <summary>
+        /// <p>Uid扩展字段</p>
+        /// </summary>
+        [JsonProperty("ExtUid")]
+        public string ExtUid{ get; set; }
+
+        /// <summary>
+        /// <p>维度</p><p>取值范围：[-90, 90]</p>
+        /// </summary>
+        [JsonProperty("Latitude")]
+        public float? Latitude{ get; set; }
+
+        /// <summary>
+        /// <p>精度</p><p>取值范围：[-180, 180]</p>
+        /// </summary>
+        [JsonProperty("Longitude")]
+        public float? Longitude{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "ExtUid", this.ExtUid);
+            this.SetParamSimple(map, prefix + "Latitude", this.Latitude);
+            this.SetParamSimple(map, prefix + "Longitude", this.Longitude);
         }
     }
 }

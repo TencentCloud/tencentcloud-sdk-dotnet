@@ -49,6 +49,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] AssociatedInstanceIds{ get; set; }
 
         /// <summary>
+        /// 密钥对关联的实例列表。
+        /// </summary>
+        [JsonProperty("AssociatedInstanceSet")]
+        public AssociatedInstanceInfo[] AssociatedInstanceSet{ get; set; }
+
+        /// <summary>
         /// 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -78,6 +84,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
+            this.SetParamArrayObj(map, prefix + "AssociatedInstanceSet.", this.AssociatedInstanceSet);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

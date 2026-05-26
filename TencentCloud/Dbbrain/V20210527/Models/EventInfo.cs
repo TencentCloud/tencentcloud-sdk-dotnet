@@ -31,19 +31,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 诊断类型。
+        /// 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
         /// </summary>
         [JsonProperty("DiagType")]
         public string DiagType{ get; set; }
 
         /// <summary>
-        /// 开始时间。
+        /// 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

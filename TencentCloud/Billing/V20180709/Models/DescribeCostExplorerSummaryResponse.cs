@@ -25,31 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数据条数
+        /// <p>数据条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 表头信息
+        /// <p>表头信息</p>
         /// </summary>
         [JsonProperty("Header")]
         public AnalyseHeaderDetail Header{ get; set; }
 
         /// <summary>
-        /// 数据明细
+        /// <p>数据明细</p>
         /// </summary>
         [JsonProperty("Detail")]
         public AnalyseDetail[] Detail{ get; set; }
 
         /// <summary>
-        /// 数据总计
+        /// <p>数据总计</p>
         /// </summary>
         [JsonProperty("TotalDetail")]
         public AnalyseDetail TotalDetail{ get; set; }
 
         /// <summary>
-        /// 筛选框
+        /// <p>筛选框</p>
         /// </summary>
         [JsonProperty("ConditionValue")]
         public AnalyseConditionDetail ConditionValue{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 诊断事件的总数目。
+        /// <p>诊断事件的总数目。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 诊断事件的列表。
+        /// <p>诊断事件的列表。</p>
         /// </summary>
         [JsonProperty("Items")]
         public DiagHistoryEventItem[] Items{ get; set; }

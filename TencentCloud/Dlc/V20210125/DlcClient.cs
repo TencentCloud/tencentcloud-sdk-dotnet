@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -1062,6 +1062,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateUserResponse CreateUserSync(CreateUserRequest req)
         {
             return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用户角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRoleRequest"/></param>
+        /// <returns><see cref="CreateUserRoleResponse"/></returns>
+        public Task<CreateUserRoleResponse> CreateUserRole(CreateUserRoleRequest req)
+        {
+            return InternalRequestAsync<CreateUserRoleResponse>(req, "CreateUserRole");
+        }
+
+        /// <summary>
+        /// 创建用户角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRoleRequest"/></param>
+        /// <returns><see cref="CreateUserRoleResponse"/></returns>
+        public CreateUserRoleResponse CreateUserRoleSync(CreateUserRoleRequest req)
+        {
+            return InternalRequestAsync<CreateUserRoleResponse>(req, "CreateUserRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

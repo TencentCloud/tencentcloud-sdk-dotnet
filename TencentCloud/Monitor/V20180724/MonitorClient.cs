@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1430";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -2012,6 +2012,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取 Prometheus Alertmanager 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertmanagerConfigRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertmanagerConfigResponse"/></returns>
+        public Task<DescribePrometheusAlertmanagerConfigResponse> DescribePrometheusAlertmanagerConfig(DescribePrometheusAlertmanagerConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertmanagerConfigResponse>(req, "DescribePrometheusAlertmanagerConfig");
+        }
+
+        /// <summary>
+        /// 获取 Prometheus Alertmanager 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertmanagerConfigRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertmanagerConfigResponse"/></returns>
+        public DescribePrometheusAlertmanagerConfigResponse DescribePrometheusAlertmanagerConfigSync(DescribePrometheusAlertmanagerConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertmanagerConfigResponse>(req, "DescribePrometheusAlertmanagerConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取TMP实例关联集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusClusterAgentsRequest"/></param>
@@ -3099,6 +3120,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 替换 Prometheus Alertmanager 配置
+        /// </summary>
+        /// <param name="req"><see cref="ReplacePrometheusAlertmanagerConfigRequest"/></param>
+        /// <returns><see cref="ReplacePrometheusAlertmanagerConfigResponse"/></returns>
+        public Task<ReplacePrometheusAlertmanagerConfigResponse> ReplacePrometheusAlertmanagerConfig(ReplacePrometheusAlertmanagerConfigRequest req)
+        {
+            return InternalRequestAsync<ReplacePrometheusAlertmanagerConfigResponse>(req, "ReplacePrometheusAlertmanagerConfig");
+        }
+
+        /// <summary>
+        /// 替换 Prometheus Alertmanager 配置
+        /// </summary>
+        /// <param name="req"><see cref="ReplacePrometheusAlertmanagerConfigRequest"/></param>
+        /// <returns><see cref="ReplacePrometheusAlertmanagerConfigResponse"/></returns>
+        public ReplacePrometheusAlertmanagerConfigResponse ReplacePrometheusAlertmanagerConfigSync(ReplacePrometheusAlertmanagerConfigRequest req)
+        {
+            return InternalRequestAsync<ReplacePrometheusAlertmanagerConfigResponse>(req, "ReplacePrometheusAlertmanagerConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
         /// </summary>
         /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
@@ -3116,6 +3158,59 @@ namespace TencentCloud.Monitor.V20180724
         public ResumeGrafanaInstanceResponse ResumeGrafanaInstanceSync(ResumeGrafanaInstanceRequest req)
         {
             return InternalRequestAsync<ResumeGrafanaInstanceResponse>(req, "ResumeGrafanaInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Prometheus 内部动态 api 代理，支持以云api形式访问prometheus原生api
+        /// 支持以下api:
+        ///  
+        /// >! 读接口建议使用ExportPrometheusReadOnlyDynamicAPI调用，支持更长的查询时延与响应大小。同时便于权限管理
+        /// 
+        /// | path | method | 用途 |
+        /// | - | - | - |
+        /// | /api/v1/query | GET, POST | 点查询 |
+        /// | /api/v1/query_range | GET, POST |  范围查询 |
+        /// | /api/v1/series | GET, POST | series列表查询 |
+        /// | /api/v1/labels | GET, POST | label名查询 |
+        /// | /api/v1/label/{label_name}/values | GET | label值查询 |
+        /// | /api/v1/rules | GET | 告警，预聚合规则查询 |
+        /// | /api/v1/user_limits | GET | prometheus实例限制查询 |
+        /// | /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+        /// | /alertmanager/api/v2/silences | GET, POST | 告警静默查询/创建/修改 |
+        /// | /alertmanager/api/v2/silence/{id} | GET, DELETE | 告警静默详情查询/删除 |
+        /// </summary>
+        /// <param name="req"><see cref="RoutePrometheusDynamicAPIRequest"/></param>
+        /// <returns><see cref="RoutePrometheusDynamicAPIResponse"/></returns>
+        public Task<RoutePrometheusDynamicAPIResponse> RoutePrometheusDynamicAPI(RoutePrometheusDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<RoutePrometheusDynamicAPIResponse>(req, "RoutePrometheusDynamicAPI");
+        }
+
+        /// <summary>
+        /// Prometheus 内部动态 api 代理，支持以云api形式访问prometheus原生api
+        /// 支持以下api:
+        ///  
+        /// >! 读接口建议使用ExportPrometheusReadOnlyDynamicAPI调用，支持更长的查询时延与响应大小。同时便于权限管理
+        /// 
+        /// | path | method | 用途 |
+        /// | - | - | - |
+        /// | /api/v1/query | GET, POST | 点查询 |
+        /// | /api/v1/query_range | GET, POST |  范围查询 |
+        /// | /api/v1/series | GET, POST | series列表查询 |
+        /// | /api/v1/labels | GET, POST | label名查询 |
+        /// | /api/v1/label/{label_name}/values | GET | label值查询 |
+        /// | /api/v1/rules | GET | 告警，预聚合规则查询 |
+        /// | /api/v1/user_limits | GET | prometheus实例限制查询 |
+        /// | /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+        /// | /alertmanager/api/v2/silences | GET, POST | 告警静默查询/创建/修改 |
+        /// | /alertmanager/api/v2/silence/{id} | GET, DELETE | 告警静默详情查询/删除 |
+        /// </summary>
+        /// <param name="req"><see cref="RoutePrometheusDynamicAPIRequest"/></param>
+        /// <returns><see cref="RoutePrometheusDynamicAPIResponse"/></returns>
+        public RoutePrometheusDynamicAPIResponse RoutePrometheusDynamicAPISync(RoutePrometheusDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<RoutePrometheusDynamicAPIResponse>(req, "RoutePrometheusDynamicAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

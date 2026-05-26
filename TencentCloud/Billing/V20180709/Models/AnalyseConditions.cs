@@ -25,84 +25,79 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品名称代码
+        /// <p>产品名称代码</p>
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string BusinessCodes{ get; set; }
 
         /// <summary>
-        /// 子产品名称代码
+        /// <p>子产品名称代码</p>
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string ProductCodes{ get; set; }
 
         /// <summary>
-        /// 组件类型代码
+        /// <p>组件类型代码</p>
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
-        /// 可用区ID：资源所属可用区ID
+        /// <p>可用区ID：资源所属可用区ID</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string ZoneIds{ get; set; }
 
         /// <summary>
-        /// 地域ID:资源所属地域ID
+        /// <p>地域ID:资源所属地域ID</p>
         /// </summary>
         [JsonProperty("RegionIds")]
         public string RegionIds{ get; set; }
 
         /// <summary>
-        /// 项目ID:资源所属项目ID
+        /// <p>项目ID:资源所属项目ID</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public string ProjectIds{ get; set; }
 
         /// <summary>
-        /// 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
+        /// <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
         /// </summary>
         [JsonProperty("PayModes")]
         public string PayModes{ get; set; }
 
         /// <summary>
-        /// 交易类型，查询交易类型（请使用交易类型code入参）
+        /// <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string ActionTypes{ get; set; }
 
         /// <summary>
-        /// 分账标签键
+        /// <p>分账标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
 
         /// <summary>
-        /// 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-        /// cashPayAmount:现金 
-        /// incentivePayAmount:赠送金 
-        /// voucherPayAmount:优惠券 
-        /// tax:税金 
-        /// costBeforeTax:税前价
+        /// <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }
 
         /// <summary>
-        /// 查询成本分析数据的用户UIN
+        /// <p>查询成本分析数据的用户UIN</p>
         /// </summary>
         [JsonProperty("PayerUins")]
         public string PayerUins{ get; set; }
 
         /// <summary>
-        /// 使用资源的用户UIN
+        /// <p>使用资源的用户UIN</p>
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string OwnerUins{ get; set; }
 
         /// <summary>
-        /// 消耗类型，查询消耗类型（请使用消耗类型code入参）
+        /// <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
         /// </summary>
         [JsonProperty("ConsumptionTypes")]
         public string ConsumptionTypes{ get; set; }

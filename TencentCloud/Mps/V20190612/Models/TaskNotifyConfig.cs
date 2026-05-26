@@ -25,63 +25,56 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 通知类型，可选值：
-        /// <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-        /// <li>TDMQ-CMQ：消息队列</li>
-        /// <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-        /// <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-        /// <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-        /// <font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+        /// <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+        /// <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
         /// </summary>
         [JsonProperty("NotifyMode")]
         public string NotifyMode{ get; set; }
 
         /// <summary>
-        /// HTTP回调地址，NotifyType为URL时必填。
+        /// <p>HTTP回调地址，NotifyType为URL时必填。</p>
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+        /// <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+        /// <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+        /// <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+        /// <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-        /// 
+        /// <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }
 
         /// <summary>
-        /// 用于生成回调签名的key。
+        /// <p>用于生成回调签名的key。</p>
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

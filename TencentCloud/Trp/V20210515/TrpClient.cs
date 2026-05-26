@@ -28,7 +28,7 @@ namespace TencentCloud.Trp.V20210515
 
        private const string endpoint = "trp.tencentcloudapi.com";
        private const string version = "2021-05-15";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -646,6 +646,153 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse> DescribeFlavorKingCycleBrandImportantCityScanAnalysis(DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantCityScanAnalysis");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse DescribeFlavorKingCycleBrandImportantCityScanAnalysisSync(DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantCityScanAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse> DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis(DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisSync(DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse> DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis(DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisSync(DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse>(req, "DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse> DescribeFlavorKingCycleBrandProvinceCityScanAnalysis(DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandProvinceCityScanAnalysis");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceCityScanAnalysisSync(DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandProvinceCityScanAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse> DescribeFlavorKingCycleBrandProvinceScanAnalysis(DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandProvinceScanAnalysis");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceScanAnalysisSync(DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandProvinceScanAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计扫码次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandScanAnalysisResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandScanAnalysisResponse> DescribeFlavorKingCycleBrandScanAnalysis(DescribeFlavorKingCycleBrandScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandScanAnalysis");
+        }
+
+        /// <summary>
+        /// 统计扫码次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandScanAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandScanAnalysisResponse"/></returns>
+        public DescribeFlavorKingCycleBrandScanAnalysisResponse DescribeFlavorKingCycleBrandScanAnalysisSync(DescribeFlavorKingCycleBrandScanAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandScanAnalysisResponse>(req, "DescribeFlavorKingCycleBrandScanAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandScanMetricsRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandScanMetricsResponse"/></returns>
+        public Task<DescribeFlavorKingCycleBrandScanMetricsResponse> DescribeFlavorKingCycleBrandScanMetrics(DescribeFlavorKingCycleBrandScanMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandScanMetricsResponse>(req, "DescribeFlavorKingCycleBrandScanMetrics");
+        }
+
+        /// <summary>
+        /// 统计用户次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlavorKingCycleBrandScanMetricsRequest"/></param>
+        /// <returns><see cref="DescribeFlavorKingCycleBrandScanMetricsResponse"/></returns>
+        public DescribeFlavorKingCycleBrandScanMetricsResponse DescribeFlavorKingCycleBrandScanMetricsSync(DescribeFlavorKingCycleBrandScanMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeFlavorKingCycleBrandScanMetricsResponse>(req, "DescribeFlavorKingCycleBrandScanMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取异步任务的输出地址
         /// </summary>
         /// <param name="req"><see cref="DescribeJobFileUrlRequest"/></param>
@@ -959,6 +1106,27 @@ namespace TencentCloud.Trp.V20210515
         public DescribeTraceDataListResponse DescribeTraceDataListSync(DescribeTraceDataListRequest req)
         {
             return InternalRequestAsync<DescribeTraceDataListResponse>(req, "DescribeTraceDataList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 地理位置信息下载
+        /// </summary>
+        /// <param name="req"><see cref="DownloadGEORequest"/></param>
+        /// <returns><see cref="DownloadGEOResponse"/></returns>
+        public Task<DownloadGEOResponse> DownloadGEO(DownloadGEORequest req)
+        {
+            return InternalRequestAsync<DownloadGEOResponse>(req, "DownloadGEO");
+        }
+
+        /// <summary>
+        /// 地理位置信息下载
+        /// </summary>
+        /// <param name="req"><see cref="DownloadGEORequest"/></param>
+        /// <returns><see cref="DownloadGEOResponse"/></returns>
+        public DownloadGEOResponse DownloadGEOSync(DownloadGEORequest req)
+        {
+            return InternalRequestAsync<DownloadGEOResponse>(req, "DownloadGEO")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

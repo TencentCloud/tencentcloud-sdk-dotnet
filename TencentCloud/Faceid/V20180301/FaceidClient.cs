@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// NFC核验服务，获取NFC识别请求对应的Token信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
+        /// <returns><see cref="GetNFCTokenResponse"/></returns>
+        public Task<GetNFCTokenResponse> GetNFCToken(GetNFCTokenRequest req)
+        {
+            return InternalRequestAsync<GetNFCTokenResponse>(req, "GetNFCToken");
+        }
+
+        /// <summary>
+        /// NFC核验服务，获取NFC识别请求对应的Token信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
+        /// <returns><see cref="GetNFCTokenResponse"/></returns>
+        public GetNFCTokenResponse GetNFCTokenSync(GetNFCTokenRequest req)
+        {
+            return InternalRequestAsync<GetNFCTokenResponse>(req, "GetNFCToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
         /// </summary>
         /// <param name="req"><see cref="GetWeChatBillDetailsRequest"/></param>
@@ -512,6 +533,27 @@ namespace TencentCloud.Faceid.V20180301
         public GetWeChatBillDetailsResponse GetWeChatBillDetailsSync(GetWeChatBillDetailsRequest req)
         {
             return InternalRequestAsync<GetWeChatBillDetailsResponse>(req, "GetWeChatBillDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取到证件NFC数据，接口传入NFC SDK返回的Token（十分钟内有效），可返回对应NFC获取的证件信息。支持身份证类证件（二代身份证、港澳居住证、台湾居住证、外国人永居证）以及旅行类证件（港澳通行证、台湾通行证、台胞证、回乡证）的NFC识别及核验。
+        /// </summary>
+        /// <param name="req"><see cref="GetWxNFCResultRequest"/></param>
+        /// <returns><see cref="GetWxNFCResultResponse"/></returns>
+        public Task<GetWxNFCResultResponse> GetWxNFCResult(GetWxNFCResultRequest req)
+        {
+            return InternalRequestAsync<GetWxNFCResultResponse>(req, "GetWxNFCResult");
+        }
+
+        /// <summary>
+        /// 获取到证件NFC数据，接口传入NFC SDK返回的Token（十分钟内有效），可返回对应NFC获取的证件信息。支持身份证类证件（二代身份证、港澳居住证、台湾居住证、外国人永居证）以及旅行类证件（港澳通行证、台湾通行证、台胞证、回乡证）的NFC识别及核验。
+        /// </summary>
+        /// <param name="req"><see cref="GetWxNFCResultRequest"/></param>
+        /// <returns><see cref="GetWxNFCResultResponse"/></returns>
+        public GetWxNFCResultResponse GetWxNFCResultSync(GetWxNFCResultRequest req)
+        {
+            return InternalRequestAsync<GetWxNFCResultResponse>(req, "GetWxNFCResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

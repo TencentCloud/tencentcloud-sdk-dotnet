@@ -25,156 +25,160 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 资源Id
+        /// <p>资源Id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源名称
+        /// <p>资源名称</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源状态，1-正常，2-隔离，3-销毁
+        /// <p>资源状态，1-正常，2-隔离，3-销毁</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 资源IP
+        /// <p>资源IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 资源所属Vpc
+        /// <p>资源所属Vpc</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 资源所属子网
+        /// <p>资源所属子网</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 资源所属HSM规格
+        /// <p>资源所属HSM规格</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 云加密机类型id
+        /// <p>云加密机类型id</p>
         /// </summary>
         [JsonProperty("VsmType")]
         public long? VsmType{ get; set; }
 
         /// <summary>
-        /// 地域Id
+        /// <p>地域Id</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域Id
+        /// <p>区域Id</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 过期时间（Epoch Unix Timestamp）
+        /// <p>过期时间（Epoch Unix Timestamp）</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 地域名
+        /// <p>地域名</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 区域名
+        /// <p>区域名</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 实例的安全组列表
+        /// <p>实例的安全组列表</p>
         /// </summary>
         [JsonProperty("SgList")]
         public SgUnit[] SgList{ get; set; }
 
         /// <summary>
-        /// 子网名称
+        /// <p>子网名称</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 当前实例是否已经过期
+        /// <p>当前实例是否已经过期</p>
         /// </summary>
         [JsonProperty("Expired")]
         public bool? Expired{ get; set; }
 
         /// <summary>
-        /// 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
+        /// <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
         /// </summary>
         [JsonProperty("RemainSeconds")]
         public long? RemainSeconds{ get; set; }
 
         /// <summary>
-        /// Vpc名称
+        /// <p>Vpc名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 创建者Uin账号
+        /// <p>创建者Uin账号</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public string CreateUin{ get; set; }
 
         /// <summary>
-        /// 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+        /// <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 厂商
+        /// <p>厂商</p>
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
-        /// 告警状态，0：停用，1：启用
+        /// <p>告警状态，0：停用，1：启用</p>
         /// </summary>
         [JsonProperty("AlarmStatus")]
         public long? AlarmStatus{ get; set; }
 
         /// <summary>
-        /// 0不支持
-        /// 1关闭
-        /// 2开启
+        /// <p>0不支持<br>1关闭<br>2开启</p>
         /// </summary>
         [JsonProperty("PqcStatus")]
         public long? PqcStatus{ get; set; }
 
         /// <summary>
-        /// 0关闭，1开启
+        /// <p>0关闭，1开启</p>
         /// </summary>
         [JsonProperty("PqcFlag")]
         public long? PqcFlag{ get; set; }
+
+        /// <summary>
+        /// <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+        /// </summary>
+        [JsonProperty("DeployEnv")]
+        public string DeployEnv{ get; set; }
 
 
         /// <summary>
@@ -207,6 +211,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
             this.SetParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
             this.SetParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
+            this.SetParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
         }
     }
 }

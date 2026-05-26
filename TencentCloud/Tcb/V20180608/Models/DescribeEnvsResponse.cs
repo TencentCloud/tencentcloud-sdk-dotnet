@@ -25,13 +25,13 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境信息列表
+        /// <p>环境信息列表</p>
         /// </summary>
         [JsonProperty("EnvList")]
         public EnvInfo[] EnvList{ get; set; }
 
         /// <summary>
-        /// 环境个数
+        /// <p>环境个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

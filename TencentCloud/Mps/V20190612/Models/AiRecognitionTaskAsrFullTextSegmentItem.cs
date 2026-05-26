@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 识别片段置信度。取值：0~100。
+        /// <p>识别片段置信度。取值：0~100。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 识别片段起始的偏移时间，单位：秒。
+        /// <p>识别片段起始的偏移时间，单位：秒。</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 识别片段终止的偏移时间，单位：秒。
+        /// <p>识别片段终止的偏移时间，单位：秒。</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 识别文本。
+        /// <p>识别文本。</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 字词时间戳信息。
+        /// <p>字词时间戳信息。</p>
         /// </summary>
         [JsonProperty("Wordlist")]
         public WordResult[] Wordlist{ get; set; }

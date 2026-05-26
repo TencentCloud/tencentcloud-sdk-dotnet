@@ -25,48 +25,52 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+        /// <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 密钥对创建后所属的项目ID。
+        /// <p>密钥对创建后所属的项目ID。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 描述信息，用于详细描述用途等，最大支持2048字节。
+        /// <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 指定对凭据进行加密的KMS CMK。
-        /// 如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-        /// 您也可以指定在同region 下自行创建的KMS CMK进行加密。
+        /// <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// <p>标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+        /// <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p>
         /// </summary>
         [JsonProperty("SSHKeyName")]
         public string SSHKeyName{ get; set; }
 
         /// <summary>
-        /// KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+        /// <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
         /// </summary>
         [JsonProperty("KmsHsmClusterId")]
         public string KmsHsmClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public ulong? EncryptType{ get; set; }
 
 
         /// <summary>
@@ -81,6 +85,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
             this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
         }
     }
 }

@@ -103,6 +103,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SceneType{ get; set; }
 
         /// <summary>
+        /// <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+        /// </summary>
+        [JsonProperty("Procedure")]
+        public string Procedure{ get; set; }
+
+        /// <summary>
         /// <p>模型随机种子。</p>
         /// </summary>
         [JsonProperty("Seed")]
@@ -151,6 +157,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

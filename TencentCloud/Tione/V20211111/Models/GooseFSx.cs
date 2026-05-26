@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// goosefsx实例id
+        /// <p>goosefsx实例id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// GooseFSx实例需要挂载的路径
+        /// <p>GooseFSx实例需要挂载的路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

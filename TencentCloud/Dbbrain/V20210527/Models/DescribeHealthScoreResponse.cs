@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 健康得分以及异常扣分项。
+        /// <p>健康得分以及异常扣分项。</p>
         /// </summary>
         [JsonProperty("Data")]
         public HealthScoreInfo Data{ get; set; }

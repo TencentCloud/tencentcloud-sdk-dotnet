@@ -25,148 +25,154 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 资源Id
+        /// <p>资源Id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源名称
+        /// <p>资源名称</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源状态，1表示资源为正常，2表示资源处于隔离状态
+        /// <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 资源IP
+        /// <p>资源IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 资源所属Vpc
+        /// <p>资源所属Vpc</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 资源所属子网
+        /// <p>资源所属子网</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 资源所属HSM的规格
+        /// <p>资源所属HSM的规格</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+        /// <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
         /// </summary>
         [JsonProperty("VsmType")]
         public long? VsmType{ get; set; }
 
         /// <summary>
-        /// 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+        /// <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域Id，返回腾讯云每个地域的可用区代码
+        /// <p>区域Id，返回腾讯云每个地域的可用区代码</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 资源过期时间，以时间戳形式展示。
+        /// <p>资源过期时间，以时间戳形式展示。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 安全组详情信息,如果未配置字段返回null
+        /// <p>安全组详情信息,如果未配置字段返回null</p>
         /// </summary>
         [JsonProperty("SgList")]
         public UsgRuleDetail[] SgList{ get; set; }
 
         /// <summary>
-        /// 子网名
+        /// <p>子网名</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 地域名
+        /// <p>地域名</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 区域名
+        /// <p>区域名</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 实例是否已经过期
+        /// <p>实例是否已经过期</p>
         /// </summary>
         [JsonProperty("Expired")]
         public bool? Expired{ get; set; }
 
         /// <summary>
-        /// 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
+        /// <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
         /// </summary>
         [JsonProperty("RemainSeconds")]
         public long? RemainSeconds{ get; set; }
 
         /// <summary>
-        /// 私有虚拟网络名称
+        /// <p>私有虚拟网络名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// VPC的IPv4 CIDR
+        /// <p>VPC的IPv4 CIDR</p>
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
-        /// 子网的CIDR
+        /// <p>子网的CIDR</p>
         /// </summary>
         [JsonProperty("SubnetCidrBlock")]
         public string SubnetCidrBlock{ get; set; }
 
         /// <summary>
-        /// 资源所关联的标签Tag
+        /// <p>资源所关联的标签Tag</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 厂商
+        /// <p>厂商</p>
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
-        /// 0-关闭，1-开启
+        /// <p>0-关闭，1-开启</p>
         /// </summary>
         [JsonProperty("PqcFlag")]
         public long? PqcFlag{ get; set; }
+
+        /// <summary>
+        /// <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+        /// </summary>
+        [JsonProperty("DeployEnv")]
+        public string DeployEnv{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -204,6 +210,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
             this.SetParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
+            this.SetParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

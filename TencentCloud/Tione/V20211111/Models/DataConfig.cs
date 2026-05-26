@@ -113,6 +113,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PublicDataSource")]
         public PublicDataSourceFS PublicDataSource{ get; set; }
 
+        /// <summary>
+        /// <p>是否是只读存储</p>
+        /// </summary>
+        [JsonProperty("ReadOnly")]
+        public bool? ReadOnly{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +138,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "CBSSource.", this.CBSSource);
             this.SetParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
             this.SetParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
+            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         }
     }
 }

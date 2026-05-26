@@ -25,106 +25,118 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称。
+        /// <p>凭据名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 凭据描述信息。
+        /// <p>凭据描述信息。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用于加密的KMS CMK ID。
+        /// <p>用于加密的KMS CMK ID。</p>
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 创建者UIN。
+        /// <p>创建者UIN。</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
+        /// <p>凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 删除日期，uinx 时间戳，非计划删除状态的凭据为0。
+        /// <p>删除日期，uinx 时间戳，非计划删除状态的凭据为0。</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public ulong? DeleteTime{ get; set; }
 
         /// <summary>
-        /// 创建日期。
+        /// <p>创建日期。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
+        /// <p>0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。</p>
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
 
         /// <summary>
-        /// 云产品名称。
+        /// <p>云产品名称。</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 云产品实例ID。
+        /// <p>云产品实例ID。</p>
         /// </summary>
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
         /// <summary>
-        /// 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
+        /// <p>是否开启轮转：True -- 开启轮转；False -- 关闭轮转。</p>
         /// </summary>
         [JsonProperty("RotationStatus")]
         public bool? RotationStatus{ get; set; }
 
         /// <summary>
-        /// 轮转周期，默认以天为单位。
+        /// <p>轮转周期，默认以天为单位。</p>
         /// </summary>
         [JsonProperty("RotationFrequency")]
         public long? RotationFrequency{ get; set; }
 
         /// <summary>
-        /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+        /// <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+        /// <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+        /// <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
         /// </summary>
         [JsonProperty("AssociatedInstanceIDs")]
         public string[] AssociatedInstanceIDs{ get; set; }
 
         /// <summary>
-        /// 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+        /// <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。</p>
         /// </summary>
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
         /// <summary>
-        /// 凭据额外配置
+        /// <p>凭据额外配置</p>
         /// </summary>
         [JsonProperty("AdditionalConfig")]
         public string AdditionalConfig{ get; set; }
+
+        /// <summary>
+        /// <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public ulong? EncryptType{ get; set; }
+
+        /// <summary>
+        /// <p>凭据更新状态</p>
+        /// </summary>
+        [JsonProperty("EncryptSwitching")]
+        public bool? EncryptSwitching{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -155,6 +167,8 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
             this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
             this.SetParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

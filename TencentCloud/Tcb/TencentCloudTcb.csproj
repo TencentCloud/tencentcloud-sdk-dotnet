@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1431</VersionPrefix>
+    <VersionPrefix>3.0.1432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
     <Compile Include="V20180608\Models\BanConfig.cs" />
+    <Compile Include="V20180608\Models\BindStorageSourceRequest.cs" />
+    <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
@@ -248,6 +250,8 @@
     <Compile Include="V20180608\Models\ModifyProviderResponse.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleRequest.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyStorageSourceRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\ModifyUserRequest.cs" />
     <Compile Include="V20180608\Models\ModifyUserResp.cs" />
     <Compile Include="V20180608\Models\ModifyUserResponse.cs" />
@@ -259,6 +263,7 @@
     <Compile Include="V20180608\Models\Pager.cs" />
     <Compile Include="V20180608\Models\PasswordUpdateLoginConfig.cs" />
     <Compile Include="V20180608\Models\PermissionInfo.cs" />
+    <Compile Include="V20180608\Models\PostgreSQLInfo.cs" />
     <Compile Include="V20180608\Models\Provider.cs" />
     <Compile Include="V20180608\Models\ProviderConfig.cs" />
     <Compile Include="V20180608\Models\ProviderRequestParametersMap.cs" />
@@ -279,6 +284,8 @@
     <Compile Include="V20180608\Models\TableInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
     <Compile Include="V20180608\Models\TkeClusterInfo.cs" />
+    <Compile Include="V20180608\Models\UnbindStorageSourceRequest.cs" />
+    <Compile Include="V20180608\Models\UnbindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\UpdateAIModelRequest.cs" />
     <Compile Include="V20180608\Models\UpdateAIModelResponse.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />

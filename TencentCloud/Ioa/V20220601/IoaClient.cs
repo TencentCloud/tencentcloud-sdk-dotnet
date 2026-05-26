@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreatePrivilegeCodeResponse CreatePrivilegeCodeSync(CreatePrivilegeCodeRequest req)
         {
             return InternalRequestAsync<CreatePrivilegeCodeResponse>(req, "CreatePrivilegeCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceVirtualGroupRequest"/></param>
+        /// <returns><see cref="DeleteDeviceVirtualGroupResponse"/></returns>
+        public Task<DeleteDeviceVirtualGroupResponse> DeleteDeviceVirtualGroup(DeleteDeviceVirtualGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceVirtualGroupResponse>(req, "DeleteDeviceVirtualGroup");
+        }
+
+        /// <summary>
+        /// 删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceVirtualGroupRequest"/></param>
+        /// <returns><see cref="DeleteDeviceVirtualGroupResponse"/></returns>
+        public DeleteDeviceVirtualGroupResponse DeleteDeviceVirtualGroupSync(DeleteDeviceVirtualGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceVirtualGroupResponse>(req, "DeleteDeviceVirtualGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

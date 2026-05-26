@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -764,27 +764,6 @@ namespace TencentCloud.Ckafka.V20190819
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
             return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除主题IP白名单
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
-        /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
-        public Task<DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req)
-        {
-            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList");
-        }
-
-        /// <summary>
-        /// 删除主题IP白名单
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
-        /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
-        public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteListSync(DeleteTopicIpWhiteListRequest req)
-        {
-            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

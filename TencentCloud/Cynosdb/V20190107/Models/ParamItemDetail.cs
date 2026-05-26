@@ -25,79 +25,85 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 当前值
+        /// <p>当前值</p>
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// 参数的可选枚举值。如果为非枚举值，则为空
+        /// <p>参数的可选枚举值。如果为非枚举值，则为空</p>
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// 1：全局参数，0：非全局参数
+        /// <p>1：全局参数，0：非全局参数</p>
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// <p>最大值</p>
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// <p>最小值</p>
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// 修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。
+        /// <p>修改参数后，是否需要重启数据库以使参数生效。0-不需要重启，1-需要重启。</p>
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// 参数名称
+        /// <p>参数名称</p>
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 参数类型：integer，enum，float，string，func
+        /// <p>参数类型：integer，enum，float，string，func</p>
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
         /// <summary>
-        /// 参数描述
+        /// <p>参数是否可修改</p>
+        /// </summary>
+        [JsonProperty("ModifiableInfo")]
+        public ModifiableInfo ModifiableInfo{ get; set; }
+
+        /// <summary>
+        /// <p>参数描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 类型是否为公式
+        /// <p>类型是否为公式</p>
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// 参数配置公式
+        /// <p>参数配置公式</p>
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
-        /// 支持公式的参数的默认公式样式
+        /// <p>支持公式的参数的默认公式样式</p>
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }
@@ -117,6 +123,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NeedReboot", this.NeedReboot);
             this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
             this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);

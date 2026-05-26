@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteTopicIpWhiteListRequest : AbstractModel
+    public class User : AbstractModel
     {
         
         /// <summary>
-        /// ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+        /// 用户名
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
+        /// 主机
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// ip白名单列表
-        /// </summary>
-        [JsonProperty("IpWhiteList")]
-        public string[] IpWhiteList{ get; set; }
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
         }
     }
 }

@@ -25,288 +25,277 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群状态， 可选值如下:
-        /// creating: 创建中
-        /// running:运行中
-        /// isolating:隔离中
-        /// isolated:已隔离
-        /// activating:解隔离中
-        /// offlining:下线中
-        /// offlined:已下线
-        /// deleting:删除中
-        /// deleted:已删除
+        /// <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// <p>数据库版本</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 实例数
+        /// <p>实例数</p>
         /// </summary>
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// 用户uin
+        /// <p>用户uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 引擎类型
+        /// <p>引擎类型</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 用户appid
+        /// <p>用户appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 集群状态描述
+        /// <p>集群状态描述</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 集群创建时间
+        /// <p>集群创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 付费模式。0-按量计费，1-包年包月
+        /// <p>付费模式。0-按量计费，1-包年包月</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 截止时间
+        /// <p>截止时间</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// 集群读写vip
+        /// <p>集群读写vip</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 集群读写vport
+        /// <p>集群读写vport</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// <p>私有网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// cynos内核版本
+        /// <p>cynos内核版本</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// cynos版本标签
+        /// <p>cynos版本标签</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// 存储容量
+        /// <p>存储容量</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// <p>续费标志</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 正在处理的任务
+        /// <p>正在处理的任务</p>
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// 集群的任务数组
+        /// <p>集群的任务数组</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// 集群绑定的tag数组
+        /// <p>集群绑定的tag数组</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Db类型(NORMAL, SERVERLESS)
+        /// <p>Db类型(NORMAL, SERVERLESS)</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-        /// resume
-        /// pause
+        /// <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 集群预付费存储值大小
+        /// <p>集群预付费存储值大小</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 集群存储为预付费时的存储ID，用于预付费存储变配
+        /// <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// 集群存储付费模式。0-按量计费，1-包年包月
+        /// <p>集群存储付费模式。0-按量计费，1-包年包月</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// 集群计算规格对应的最小存储值
+        /// <p>集群计算规格对应的最小存储值</p>
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// 集群计算规格对应的最大存储值
+        /// <p>集群计算规格对应的最大存储值</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// 集群网络信息
+        /// <p>集群网络信息</p>
         /// </summary>
         [JsonProperty("NetAddrs")]
         public NetAddr[] NetAddrs{ get; set; }
 
         /// <summary>
-        /// 物理可用区
+        /// <p>物理可用区</p>
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// 主可用区
+        /// <p>主可用区</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// 是否有从可用区
+        /// <p>是否有从可用区</p>
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// 从可用区
+        /// <p>从可用区</p>
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// 商业类型
+        /// <p>商业类型</p>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 是否冻结
+        /// <p>是否冻结</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// 订单来源
+        /// <p>订单来源</p>
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// 能力
+        /// <p>能力</p>
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+        /// <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// 全球数据库唯一标识
+        /// <p>全球数据库唯一标识</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+        /// <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
         /// </summary>
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }

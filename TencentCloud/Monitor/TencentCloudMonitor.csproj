@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1430</VersionPrefix>
+    <VersionPrefix>3.0.1432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -343,6 +343,8 @@
     <Compile Include="V20180724\Models\DescribePrometheusAlertGroupsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusAlertPolicyRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusAlertPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAlertmanagerConfigRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAlertmanagerConfigResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusClusterAgentsRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusClusterAgentsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusConfigRequest.cs" />
@@ -497,6 +499,8 @@
     <Compile Include="V20180724\Models\PrometheusAlertManagerConfig.cs" />
     <Compile Include="V20180724\Models\PrometheusAlertPolicyItem.cs" />
     <Compile Include="V20180724\Models\PrometheusAlertRule.cs" />
+    <Compile Include="V20180724\Models\PrometheusAlertmanagerConfigInhibitRule.cs" />
+    <Compile Include="V20180724\Models\PrometheusAlertmanagerConfigV2.cs" />
     <Compile Include="V20180724\Models\PrometheusClusterAgentBasic.cs" />
     <Compile Include="V20180724\Models\PrometheusClusterAgentPodConfig.cs" />
     <Compile Include="V20180724\Models\PrometheusClusterScrapeStatistics.cs" />
@@ -528,8 +532,12 @@
     <Compile Include="V20180724\Models\RegionPolicyObjectCount.cs" />
     <Compile Include="V20180724\Models\RemoteWrite.cs" />
     <Compile Include="V20180724\Models\RemoteWriteHeader.cs" />
+    <Compile Include="V20180724\Models\ReplacePrometheusAlertmanagerConfigRequest.cs" />
+    <Compile Include="V20180724\Models\ReplacePrometheusAlertmanagerConfigResponse.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceResponse.cs" />
+    <Compile Include="V20180724\Models\RoutePrometheusDynamicAPIRequest.cs" />
+    <Compile Include="V20180724\Models\RoutePrometheusDynamicAPIResponse.cs" />
     <Compile Include="V20180724\Models\RunPrometheusInstanceRequest.cs" />
     <Compile Include="V20180724\Models\RunPrometheusInstanceResponse.cs" />
     <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />

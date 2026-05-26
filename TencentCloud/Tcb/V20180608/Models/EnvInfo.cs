@@ -174,6 +174,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Recycle")]
         public string Recycle{ get; set; }
 
+        /// <summary>
+        /// <p>环境meta信息列表</p>
+        /// </summary>
+        [JsonProperty("Meta")]
+        public KVPair[] Meta{ get; set; }
+
+        /// <summary>
+        /// <p>pg信息</p>
+        /// </summary>
+        [JsonProperty("PostgreSQL")]
+        public PostgreSQLInfo[] PostgreSQL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "ArchitectureType", this.ArchitectureType);
             this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
+            this.SetParamArrayObj(map, prefix + "Meta.", this.Meta);
+            this.SetParamArrayObj(map, prefix + "PostgreSQL.", this.PostgreSQL);
         }
     }
 }

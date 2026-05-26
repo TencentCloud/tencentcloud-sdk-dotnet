@@ -61,7 +61,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Mitigation{ get; set; }
 
         /// <summary>
-        /// <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+        /// <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
         /// </summary>
         [JsonProperty("SecurityScore")]
         public ulong? SecurityScore{ get; set; }

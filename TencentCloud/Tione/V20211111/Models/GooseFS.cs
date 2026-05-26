@@ -25,32 +25,38 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// goosefs实例id
+        /// <p>goosefs实例id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// GooseFS类型，包括GooseFS和GooseFSx
+        /// <p>GooseFS类型，包括GooseFS和GooseFSx</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// GooseFSx实例需要挂载的路径
+        /// <p>GooseFSx实例需要挂载的路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// GooseFS命名空间
+        /// <p>GooseFS命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }
+
+        /// <summary>
+        /// <p>客户端的挂载参数，逗号分隔的参数名</p>
+        /// </summary>
+        [JsonProperty("MountOptions")]
+        public string MountOptions{ get; set; }
 
 
         /// <summary>
@@ -62,6 +68,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
+            this.SetParamSimple(map, prefix + "MountOptions", this.MountOptions);
         }
     }
 }

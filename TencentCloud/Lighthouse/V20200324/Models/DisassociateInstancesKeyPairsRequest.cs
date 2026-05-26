@@ -36,6 +36,20 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 解绑定类型。可选值：
+        /// ONLINE - 在线解绑定，不需要关机。
+        /// OFFLINE - 离线解绑定，需要关机。
+        /// </summary>
+        [JsonProperty("DisassociateType")]
+        public string DisassociateType{ get; set; }
+
+        /// <summary>
+        /// 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "DisassociateType", this.DisassociateType);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

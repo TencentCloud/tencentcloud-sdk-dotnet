@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 导播台ID
+        /// <p>导播台ID</p>
         /// </summary>
         [JsonProperty("CasterId")]
         public ulong? CasterId{ get; set; }

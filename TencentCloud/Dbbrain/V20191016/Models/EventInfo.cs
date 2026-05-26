@@ -37,13 +37,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string DiagType{ get; set; }
 
         /// <summary>
-        /// 开始时间。
+        /// 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

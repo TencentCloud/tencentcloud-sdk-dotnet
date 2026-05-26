@@ -25,136 +25,154 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 总授权数 (包含隔离,过期等不可用状态)
+        /// <p>总授权数 (包含隔离,过期等不可用状态)</p>
         /// </summary>
         [JsonProperty("LicenseCnt")]
         public ulong? LicenseCnt{ get; set; }
 
         /// <summary>
-        /// 可用授权数
+        /// <p>可用授权数</p>
         /// </summary>
         [JsonProperty("AvailableLicenseCnt")]
         public ulong? AvailableLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 可用专业版授权数(包含后付费).
+        /// <p>可用专业版授权数(包含后付费).</p>
         /// </summary>
         [JsonProperty("AvailableProVersionLicenseCnt")]
         public ulong? AvailableProVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 可用旗舰版授权数
+        /// <p>可用旗舰版授权数</p>
         /// </summary>
         [JsonProperty("AvailableFlagshipVersionLicenseCnt")]
         public ulong? AvailableFlagshipVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 即将到期授权数 (15天内到期的)
+        /// <p>即将到期授权数 (15天内到期的)</p>
         /// </summary>
         [JsonProperty("NearExpiryLicenseCnt")]
         public ulong? NearExpiryLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 已到期授权数(不包含已删除的记录)
+        /// <p>已到期授权数(不包含已删除的记录)</p>
         /// </summary>
         [JsonProperty("ExpireLicenseCnt")]
         public ulong? ExpireLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 自动升级开关状态,默认 false,  true 开启, false 关闭
+        /// <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
         /// </summary>
         [JsonProperty("AutoOpenStatus")]
         public bool? AutoOpenStatus{ get; set; }
 
         /// <summary>
-        /// PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
+        /// <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
-        /// 历史是否开通过自动升级开关
+        /// <p>历史是否开通过自动升级开关</p>
         /// </summary>
         [JsonProperty("IsOpenStatusHistory")]
         public bool? IsOpenStatusHistory{ get; set; }
 
         /// <summary>
-        /// 已使用授权数
+        /// <p>已使用授权数</p>
         /// </summary>
         [JsonProperty("UsedLicenseCnt")]
         public ulong? UsedLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 未到期授权数
+        /// <p>未到期授权数</p>
         /// </summary>
         [JsonProperty("NotExpiredLicenseCnt")]
         public ulong? NotExpiredLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 旗舰版总授权数(有效订单)
+        /// <p>旗舰版总授权数(有效订单)</p>
         /// </summary>
         [JsonProperty("FlagshipVersionLicenseCnt")]
         public ulong? FlagshipVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 专业版总授权数(有效订单)
+        /// <p>专业版总授权数(有效订单)</p>
         /// </summary>
         [JsonProperty("ProVersionLicenseCnt")]
         public ulong? ProVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 轻量版总授权数(有效订单的授权数)
+        /// <p>轻量版总授权数(有效订单的授权数)</p>
         /// </summary>
         [JsonProperty("CwpVersionLicenseCnt")]
         public ulong? CwpVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 可用惠普版授权数
+        /// <p>可用惠普版授权数</p>
         /// </summary>
         [JsonProperty("AvailableLHLicenseCnt")]
         public ulong? AvailableLHLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 自动加购开关, true 开启, false 关闭
+        /// <p>自动加购开关, true 开启, false 关闭</p>
         /// </summary>
         [JsonProperty("AutoRepurchaseSwitch")]
         public bool? AutoRepurchaseSwitch{ get; set; }
 
         /// <summary>
-        /// 自动加购订单是否自动续费 ,true 开启, false 关闭
+        /// <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
         /// </summary>
         [JsonProperty("AutoRepurchaseRenewSwitch")]
         public bool? AutoRepurchaseRenewSwitch{ get; set; }
 
         /// <summary>
-        /// 已销毁订单数
+        /// <p>已销毁订单数</p>
         /// </summary>
         [JsonProperty("DestroyOrderNum")]
         public ulong? DestroyOrderNum{ get; set; }
 
         /// <summary>
-        /// 自动加购是否自动续费开关,true 开启,false 关闭
+        /// <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
         /// </summary>
         [JsonProperty("RepurchaseRenewSwitch")]
         public bool? RepurchaseRenewSwitch{ get; set; }
 
         /// <summary>
-        /// 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+        /// <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
         /// </summary>
         [JsonProperty("AutoBindRaspSwitch")]
         public bool? AutoBindRaspSwitch{ get; set; }
 
         /// <summary>
-        /// 是否自动新增机器开启rasp防护,false 关闭 true 开启
+        /// <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
         /// </summary>
         [JsonProperty("AutoOpenRaspSwitch")]
         public bool? AutoOpenRaspSwitch{ get; set; }
 
         /// <summary>
-        /// 是否自动缩容开关开启
+        /// <p>是否自动缩容开关开启</p>
         /// </summary>
         [JsonProperty("AutoDowngradeSwitch")]
         public bool? AutoDowngradeSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>可使用的AI防护版授权数</p>
+        /// </summary>
+        [JsonProperty("AvailableAISecurityLicenseCnt")]
+        public ulong? AvailableAISecurityLicenseCnt{ get; set; }
+
+        /// <summary>
+        /// <p>AI 防护版总授权数</p>
+        /// </summary>
+        [JsonProperty("AISecurityVersionLicenseCnt")]
+        public ulong? AISecurityVersionLicenseCnt{ get; set; }
+
+        /// <summary>
+        /// <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+        /// </summary>
+        [JsonProperty("ApplicationAvailableLicenseCnt")]
+        public ulong? ApplicationAvailableLicenseCnt{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -190,6 +208,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
             this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
             this.SetParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
+            this.SetParamSimple(map, prefix + "AvailableAISecurityLicenseCnt", this.AvailableAISecurityLicenseCnt);
+            this.SetParamSimple(map, prefix + "AISecurityVersionLicenseCnt", this.AISecurityVersionLicenseCnt);
+            this.SetParamSimple(map, prefix + "ApplicationAvailableLicenseCnt", this.ApplicationAvailableLicenseCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

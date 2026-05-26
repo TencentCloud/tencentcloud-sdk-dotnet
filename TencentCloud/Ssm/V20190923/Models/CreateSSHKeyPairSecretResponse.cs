@@ -25,31 +25,31 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 创建的凭据名称。
+        /// <p>创建的凭据名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 创建的SSH密钥ID。
+        /// <p>创建的SSH密钥ID。</p>
         /// </summary>
         [JsonProperty("SSHKeyID")]
         public string SSHKeyID{ get; set; }
 
         /// <summary>
-        /// 创建的SSH密钥名称。
+        /// <p>创建的SSH密钥名称。</p>
         /// </summary>
         [JsonProperty("SSHKeyName")]
         public string SSHKeyName{ get; set; }
 
         /// <summary>
-        /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+        /// <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// 标签操作的返回信息。
+        /// <p>标签操作的返回信息。</p>
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }

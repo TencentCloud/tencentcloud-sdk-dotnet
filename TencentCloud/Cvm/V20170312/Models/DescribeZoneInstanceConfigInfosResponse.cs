@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区机型配置列表。
+        /// <p>可用区机型配置列表。</p>
         /// </summary>
         [JsonProperty("InstanceTypeQuotaSet")]
         public InstanceTypeQuotaItem[] InstanceTypeQuotaSet{ get; set; }

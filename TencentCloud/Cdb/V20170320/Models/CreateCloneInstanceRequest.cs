@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SpecifiedRollbackTime{ get; set; }
 
         /// <summary>
-        /// <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+        /// <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
         /// </summary>
         [JsonProperty("SpecifiedBackupId")]
         public long? SpecifiedBackupId{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+        /// <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
@@ -193,6 +193,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+        /// </summary>
+        [JsonProperty("FourthZone")]
+        public string FourthZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
         }
     }
 }

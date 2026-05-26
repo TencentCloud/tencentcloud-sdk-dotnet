@@ -25,28 +25,34 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 旗舰版 配置信息
+        /// <p>旗舰版 配置信息</p>
         /// </summary>
         [JsonProperty("FlagShip")]
         public VersionWhiteConfig FlagShip{ get; set; }
 
         /// <summary>
-        /// 专业版 配置信息
+        /// <p>专业版 配置信息</p>
         /// </summary>
         [JsonProperty("Professional")]
         public VersionWhiteConfig Professional{ get; set; }
 
         /// <summary>
-        /// 轻量版 配置信息
+        /// <p>轻量版 配置信息</p>
         /// </summary>
         [JsonProperty("PrattWhitney")]
         public VersionWhiteConfig PrattWhitney{ get; set; }
 
         /// <summary>
-        /// 重保授权包 配置信息
+        /// <p>重保授权包 配置信息</p>
         /// </summary>
         [JsonProperty("RASP")]
         public VersionWhiteConfig RASP{ get; set; }
+
+        /// <summary>
+        /// <p>日志分析配置信息</p>
+        /// </summary>
+        [JsonProperty("LOG")]
+        public VersionWhiteConfig LOG{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +70,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "Professional.", this.Professional);
             this.SetParamObj(map, prefix + "PrattWhitney.", this.PrattWhitney);
             this.SetParamObj(map, prefix + "RASP.", this.RASP);
+            this.SetParamObj(map, prefix + "LOG.", this.LOG);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

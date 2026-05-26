@@ -114,6 +114,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PgmAudioBitRate")]
         public ulong? PgmAudioBitRate{ get; set; }
 
+        /// <summary>
+        /// <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+        /// </summary>
+        [JsonProperty("PgmVcodec")]
+        public string PgmVcodec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "FeeType", this.FeeType);
             this.SetParamSimple(map, prefix + "RecordTaskId", this.RecordTaskId);
             this.SetParamSimple(map, prefix + "PgmAudioBitRate", this.PgmAudioBitRate);
+            this.SetParamSimple(map, prefix + "PgmVcodec", this.PgmVcodec);
         }
     }
 }

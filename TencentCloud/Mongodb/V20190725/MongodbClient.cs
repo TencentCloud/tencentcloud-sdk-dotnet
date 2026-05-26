@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
         {
             return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除全量备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDBBackupsResponse"/></returns>
+        public Task<DeleteDBBackupsResponse> DeleteDBBackups(DeleteDBBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBBackupsResponse>(req, "DeleteDBBackups");
+        }
+
+        /// <summary>
+        /// 删除全量备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDBBackupsResponse"/></returns>
+        public DeleteDBBackupsResponse DeleteDBBackupsSync(DeleteDBBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBBackupsResponse>(req, "DeleteDBBackups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -816,6 +837,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 获取密码轮转状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePasswordRotationRequest"/></param>
+        /// <returns><see cref="DescribePasswordRotationResponse"/></returns>
+        public Task<DescribePasswordRotationResponse> DescribePasswordRotation(DescribePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<DescribePasswordRotationResponse>(req, "DescribePasswordRotation");
+        }
+
+        /// <summary>
+        /// 获取密码轮转状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePasswordRotationRequest"/></param>
+        /// <returns><see cref="DescribePasswordRotationResponse"/></returns>
+        public DescribePasswordRotationResponse DescribePasswordRotationSync(DescribePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<DescribePasswordRotationResponse>(req, "DescribePasswordRotation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeSRVConnectionDomain）用于查询MongoDB数据库当前的域名信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeSRVConnectionDomainRequest"/></param>
@@ -982,6 +1024,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DropDBInstanceParamTplResponse DropDBInstanceParamTplSync(DropDBInstanceParamTplRequest req)
         {
             return InternalRequestAsync<DropDBInstanceParamTplResponse>(req, "DropDBInstanceParamTpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="EnablePasswordRotationRequest"/></param>
+        /// <returns><see cref="EnablePasswordRotationResponse"/></returns>
+        public Task<EnablePasswordRotationResponse> EnablePasswordRotation(EnablePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<EnablePasswordRotationResponse>(req, "EnablePasswordRotation");
+        }
+
+        /// <summary>
+        /// 开启密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="EnablePasswordRotationRequest"/></param>
+        /// <returns><see cref="EnablePasswordRotationResponse"/></returns>
+        public EnablePasswordRotationResponse EnablePasswordRotationSync(EnablePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<EnablePasswordRotationResponse>(req, "EnablePasswordRotation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1236,6 +1299,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
         {
             return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改备份过期时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBackupExpireTimeResponse"/></returns>
+        public Task<ModifyBackupExpireTimeResponse> ModifyBackupExpireTime(ModifyBackupExpireTimeRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupExpireTimeResponse>(req, "ModifyBackupExpireTime");
+        }
+
+        /// <summary>
+        /// 修改备份过期时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBackupExpireTimeResponse"/></returns>
+        public ModifyBackupExpireTimeResponse ModifyBackupExpireTimeSync(ModifyBackupExpireTimeRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupExpireTimeResponse>(req, "ModifyBackupExpireTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

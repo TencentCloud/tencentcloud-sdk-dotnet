@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1416";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -2427,7 +2427,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看超级节点列表
+        /// 查看超级节点列表，仅支持TKE标准集群
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodeResponse"/></returns>
@@ -2437,7 +2437,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 查看超级节点列表
+        /// 查看超级节点列表，仅支持TKE标准集群
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodeResponse"/></returns>

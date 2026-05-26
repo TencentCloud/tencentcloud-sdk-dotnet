@@ -25,14 +25,21 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 单次请求上限，k
+        /// <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// <p>单次请求上限，k</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitRequestBody")]
         public ulong? LimitRequestBody{ get; set; }
 
         /// <summary>
-        /// 累次token总量消耗上限
+        /// <p>累次token总量消耗上限</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitWindows")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Apis.V20240801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "LimitRequestBody", this.LimitRequestBody);
             this.SetParamArrayObj(map, prefix + "LimitWindows.", this.LimitWindows);
         }

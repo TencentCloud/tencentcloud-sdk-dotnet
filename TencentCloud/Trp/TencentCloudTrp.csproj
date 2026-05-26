@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1388</VersionPrefix>
+    <VersionPrefix>3.0.1432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,20 @@
     <Compile Include="V20210515\Models\DescribeCustomRuleByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCustomRulesResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandScanAnalysisRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandScanMetricsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeFlavorKingCycleBrandScanMetricsResponse.cs" />
     <Compile Include="V20210515\Models\DescribeJobFileUrlRequest.cs" />
     <Compile Include="V20210515\Models\DescribeJobFileUrlResponse.cs" />
     <Compile Include="V20210515\Models\DescribeMerchantByIdRequest.cs" />
@@ -144,9 +158,25 @@
     <Compile Include="V20210515\Models\DescribeTraceDataByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeTraceDataListRequest.cs" />
     <Compile Include="V20210515\Models\DescribeTraceDataListResponse.cs" />
+    <Compile Include="V20210515\Models\DownloadGEORequest.cs" />
+    <Compile Include="V20210515\Models\DownloadGEOResponse.cs" />
     <Compile Include="V20210515\Models\EffectFeedbackRequest.cs" />
     <Compile Include="V20210515\Models\EffectFeedbackResponse.cs" />
     <Compile Include="V20210515\Models\Ext.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantCityScanAnalysisCityItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantCityScanAnalysisRegionItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantProvinceScanAnalysisCityItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantProvinceScanAnalysisProvinceItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantProvinceUserAnalysisCityItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandImportantProvinceUserAnalysisProvinceItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandProvinceCityScanAnalysisCityItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandProvinceCityScanAnalysisProvinceItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandProvinceCityScanAnalysisRegionItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandProvinceScanAnalysisDataItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandProvinceScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandScanAnalysisDataItem.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandScanAnalysisResponse.cs" />
+    <Compile Include="V20210515\Models\FlavorKingCycleBrandScanMetricsItem.cs" />
     <Compile Include="V20210515\Models\InputEncryptData.cs" />
     <Compile Include="V20210515\Models\Job.cs" />
     <Compile Include="V20210515\Models\Merchant.cs" />

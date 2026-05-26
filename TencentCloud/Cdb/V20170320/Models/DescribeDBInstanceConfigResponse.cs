@@ -37,20 +37,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+        /// <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>备库的配置信息。</p>
+        /// <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveConfig")]
         public SlaveConfig SlaveConfig{ get; set; }
 
         /// <summary>
-        /// <p>强同步实例第二备库的配置信息。</p>
+        /// <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupConfig")]
@@ -61,6 +61,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("Switched")]
         public bool? Switched{ get; set; }
+
+        /// <summary>
+        /// <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+        /// </summary>
+        [JsonProperty("FourthConfig")]
+        public BackupConfig FourthConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -80,6 +86,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "SlaveConfig.", this.SlaveConfig);
             this.SetParamObj(map, prefix + "BackupConfig.", this.BackupConfig);
             this.SetParamSimple(map, prefix + "Switched", this.Switched);
+            this.SetParamObj(map, prefix + "FourthConfig.", this.FourthConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

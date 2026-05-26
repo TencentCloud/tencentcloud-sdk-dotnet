@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1426</VersionPrefix>
+    <VersionPrefix>3.0.1432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20190103\Models\DescribeCvmQuotaResponse.cs" />
     <Compile Include="V20190103\Models\DescribeDAGInfoRequest.cs" />
     <Compile Include="V20190103\Models\DescribeDAGInfoResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeDynamicInstanceDetailRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeDynamicInstanceDetailResponse.cs" />
     <Compile Include="V20190103\Models\DescribeDynamicInstanceListRequest.cs" />
     <Compile Include="V20190103\Models\DescribeDynamicInstanceListResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEMREventListRequest.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="V20190103\Models\Dps.cs" />
     <Compile Include="V20190103\Models\DynamicInstanceForm.cs" />
     <Compile Include="V20190103\Models\DynamicInstanceGroup.cs" />
+    <Compile Include="V20190103\Models\DynamicInstanceGroupSpec.cs" />
     <Compile Include="V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="V20190103\Models\EMREventListItem.cs" />
     <Compile Include="V20190103\Models\EmrListInstance.cs" />
@@ -350,6 +353,7 @@
     <Compile Include="V20190103\Models\OverviewRow.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
     <Compile Include="V20190103\Models\Period.cs" />
+    <Compile Include="V20190103\Models\PersistentVolume.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
     <Compile Include="V20190103\Models\PodAffinitySpec.cs" />
@@ -371,6 +375,7 @@
     <Compile Include="V20190103\Models\PriceResult.cs" />
     <Compile Include="V20190103\Models\QuotaEntity.cs" />
     <Compile Include="V20190103\Models\RayCluster.cs" />
+    <Compile Include="V20190103\Models\RedisInstance.cs" />
     <Compile Include="V20190103\Models\RenewInstancesInfo.cs" />
     <Compile Include="V20190103\Models\RenewPriceDetail.cs" />
     <Compile Include="V20190103\Models\RepeatStrategy.cs" />
@@ -414,6 +419,7 @@
     <Compile Include="V20190103\Models\Step.cs" />
     <Compile Include="V20190103\Models\StopParams.cs" />
     <Compile Include="V20190103\Models\StorageSummaryDistribution.cs" />
+    <Compile Include="V20190103\Models\StorageVolumeDetail.cs" />
     <Compile Include="V20190103\Models\StrategyConfig.cs" />
     <Compile Include="V20190103\Models\StringMap.cs" />
     <Compile Include="V20190103\Models\SubnetInfo.cs" />

@@ -114,6 +114,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
+        /// <summary>
+        /// <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public ulong? EncryptType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
             this.SetParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
         }
     }
 }

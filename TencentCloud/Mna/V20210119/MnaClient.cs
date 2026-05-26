@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
         {
             return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询可接入地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessRegionsRequest"/></param>
+        /// <returns><see cref="DescribeAccessRegionsResponse"/></returns>
+        public Task<DescribeAccessRegionsResponse> DescribeAccessRegions(DescribeAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessRegionsResponse>(req, "DescribeAccessRegions");
+        }
+
+        /// <summary>
+        /// 查询可接入地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessRegionsRequest"/></param>
+        /// <returns><see cref="DescribeAccessRegionsResponse"/></returns>
+        public DescribeAccessRegionsResponse DescribeAccessRegionsSync(DescribeAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessRegionsResponse>(req, "DescribeAccessRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -869,6 +890,27 @@ namespace TencentCloud.Mna.V20210119
         public GroupDeleteDeviceResponse GroupDeleteDeviceSync(GroupDeleteDeviceRequest req)
         {
             return InternalRequestAsync<GroupDeleteDeviceResponse>(req, "GroupDeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改设备接入地域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessRegionsRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessRegionsResponse"/></returns>
+        public Task<ModifyDeviceAccessRegionsResponse> ModifyDeviceAccessRegions(ModifyDeviceAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessRegionsResponse>(req, "ModifyDeviceAccessRegions");
+        }
+
+        /// <summary>
+        /// 修改设备接入地域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessRegionsRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessRegionsResponse"/></returns>
+        public ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegionsSync(ModifyDeviceAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessRegionsResponse>(req, "ModifyDeviceAccessRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

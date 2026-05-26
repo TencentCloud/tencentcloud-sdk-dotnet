@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+        /// <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
+        /// <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p>
+        /// <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p>
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] AlarmPolicyList{ get; set; }
 
         /// <summary>
-        /// <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p>
+        /// <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
@@ -276,6 +276,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DestroyProtect")]
         public string DestroyProtect{ get; set; }
 
+        /// <summary>
+        /// <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+        /// </summary>
+        [JsonProperty("FourthZone")]
+        public string FourthZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +330,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+            this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
         }
     }
 }

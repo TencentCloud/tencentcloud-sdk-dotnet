@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1426";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -560,6 +560,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeDAGInfoResponse DescribeDAGInfoSync(DescribeDAGInfoRequest req)
         {
             return InternalRequestAsync<DescribeDAGInfoResponse>(req, "DescribeDAGInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 描述容器EMR-TKE集群DynamicInstance详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceDetailResponse"/></returns>
+        public Task<DescribeDynamicInstanceDetailResponse> DescribeDynamicInstanceDetail(DescribeDynamicInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceDetailResponse>(req, "DescribeDynamicInstanceDetail");
+        }
+
+        /// <summary>
+        /// 描述容器EMR-TKE集群DynamicInstance详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceDetailResponse"/></returns>
+        public DescribeDynamicInstanceDetailResponse DescribeDynamicInstanceDetailSync(DescribeDynamicInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceDetailResponse>(req, "DescribeDynamicInstanceDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p>
+        /// <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
+
+        /// <summary>
+        /// <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>
+        /// </summary>
+        [JsonProperty("Base64")]
+        public string Base64{ get; set; }
 
         /// <summary>
         /// <p>参考类型，GV、Kling、PixVerse模型适用。<br>注意：<br>当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；<br>当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频；<br>当使用 PixVerse 模型时，可用于多图（主体）参考生模式，可选值：subject 表示主体、background 表示背景；</p>
@@ -94,6 +100,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Base64", this.Base64);
             this.SetParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
             this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);

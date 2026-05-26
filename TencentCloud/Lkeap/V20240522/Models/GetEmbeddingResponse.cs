@@ -25,13 +25,13 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 特征
+        /// <p>特征</p>
         /// </summary>
         [JsonProperty("Data")]
         public EmbeddingObject[] Data{ get; set; }
 
         /// <summary>
-        /// 消耗量，返回TotalToken
+        /// <p>消耗量，返回TotalToken</p>
         /// </summary>
         [JsonProperty("Usage")]
         public Usage Usage{ get; set; }

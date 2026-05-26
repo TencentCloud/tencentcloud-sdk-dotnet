@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,31 @@ namespace TencentCloud.Tcb.V20180608
         public AssumeRoleForAllocatedEnvResponse AssumeRoleForAllocatedEnvSync(AssumeRoleForAllocatedEnvRequest req)
         {
             return InternalRequestAsync<AssumeRoleForAllocatedEnvResponse>(req, "AssumeRoleForAllocatedEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为云存储绑定外部云存储源。
+        /// 将一个用户自有的 COS桶 作为外部存储源绑定到指定云开发环境的云存储。绑定后，该环境的云存储文件操作将指向此桶，通过 BasePath 路径前缀实现与其他环境的数据隔离。
+        /// 每个环境仅允许绑定 1 个外部云存储源。
+        /// </summary>
+        /// <param name="req"><see cref="BindStorageSourceRequest"/></param>
+        /// <returns><see cref="BindStorageSourceResponse"/></returns>
+        public Task<BindStorageSourceResponse> BindStorageSource(BindStorageSourceRequest req)
+        {
+            return InternalRequestAsync<BindStorageSourceResponse>(req, "BindStorageSource");
+        }
+
+        /// <summary>
+        /// 为云存储绑定外部云存储源。
+        /// 将一个用户自有的 COS桶 作为外部存储源绑定到指定云开发环境的云存储。绑定后，该环境的云存储文件操作将指向此桶，通过 BasePath 路径前缀实现与其他环境的数据隔离。
+        /// 每个环境仅允许绑定 1 个外部云存储源。
+        /// </summary>
+        /// <param name="req"><see cref="BindStorageSourceRequest"/></param>
+        /// <returns><see cref="BindStorageSourceResponse"/></returns>
+        public BindStorageSourceResponse BindStorageSourceSync(BindStorageSourceRequest req)
+        {
+            return InternalRequestAsync<BindStorageSourceResponse>(req, "BindStorageSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1773,6 +1798,35 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改指定云开发环境已绑定的外部云存储源配置。
+        /// 修改之后，大约3~5分钟生效。
+        /// 
+        /// 注意⚠️
+        /// 本接口仅更新存储源绑定关系，不会迁移您的数据。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStorageSourceResponse"/></returns>
+        public Task<ModifyStorageSourceResponse> ModifyStorageSource(ModifyStorageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStorageSourceResponse>(req, "ModifyStorageSource");
+        }
+
+        /// <summary>
+        /// 修改指定云开发环境已绑定的外部云存储源配置。
+        /// 修改之后，大约3~5分钟生效。
+        /// 
+        /// 注意⚠️
+        /// 本接口仅更新存储源绑定关系，不会迁移您的数据。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStorageSourceResponse"/></returns>
+        public ModifyStorageSourceResponse ModifyStorageSourceSync(ModifyStorageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStorageSourceResponse>(req, "ModifyStorageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改tcb用户
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRequest"/></param>
@@ -1907,6 +1961,35 @@ namespace TencentCloud.Tcb.V20180608
         public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
         {
             return InternalRequestAsync<SearchClsLogResponse>(req, "SearchClsLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从指定云开发环境中解绑已绑定的外部云存储源。解绑后，该环境将不再关联外部 存储源，云存储功能恢复为未绑定状态。
+        /// 解绑操作仅移除 CloudBase 侧的绑定关系，不会删除桶本身及桶内数据，桶仍由用户自行管理。
+        /// 
+        /// 注意⚠️
+        /// 解绑之后，会导致云存储不可用，请谨慎操作。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindStorageSourceRequest"/></param>
+        /// <returns><see cref="UnbindStorageSourceResponse"/></returns>
+        public Task<UnbindStorageSourceResponse> UnbindStorageSource(UnbindStorageSourceRequest req)
+        {
+            return InternalRequestAsync<UnbindStorageSourceResponse>(req, "UnbindStorageSource");
+        }
+
+        /// <summary>
+        /// 从指定云开发环境中解绑已绑定的外部云存储源。解绑后，该环境将不再关联外部 存储源，云存储功能恢复为未绑定状态。
+        /// 解绑操作仅移除 CloudBase 侧的绑定关系，不会删除桶本身及桶内数据，桶仍由用户自行管理。
+        /// 
+        /// 注意⚠️
+        /// 解绑之后，会导致云存储不可用，请谨慎操作。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindStorageSourceRequest"/></param>
+        /// <returns><see cref="UnbindStorageSourceResponse"/></returns>
+        public UnbindStorageSourceResponse UnbindStorageSourceSync(UnbindStorageSourceRequest req)
+        {
+            return InternalRequestAsync<UnbindStorageSourceResponse>(req, "UnbindStorageSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

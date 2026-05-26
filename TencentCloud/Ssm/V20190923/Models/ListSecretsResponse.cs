@@ -25,13 +25,13 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 根据State和SearchSecretName 筛选的凭据总数。
+        /// <p>根据State和SearchSecretName 筛选的凭据总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 返回凭据信息列表。
+        /// <p>返回凭据信息列表。</p>
         /// </summary>
         [JsonProperty("SecretMetadatas")]
         public SecretMetadata[] SecretMetadatas{ get; set; }

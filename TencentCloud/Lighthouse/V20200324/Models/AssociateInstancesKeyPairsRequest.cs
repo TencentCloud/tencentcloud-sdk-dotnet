@@ -36,6 +36,20 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 绑定类型。可选值：
+        /// ONLINE - 在线绑定，不需要关机。
+        /// OFFLINE - 离线绑定，会对实例进行关机。
+        /// </summary>
+        [JsonProperty("AssociateType")]
+        public string AssociateType{ get; set; }
+
+        /// <summary>
+        /// 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "AssociateType", this.AssociateType);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

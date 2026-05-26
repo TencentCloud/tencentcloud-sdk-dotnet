@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1430";
+       private const string sdkVersion = "SDK_NET_3.0.1432";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,48 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// 本接口（CreateCloneInstance）提供创建克隆实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public Task<CreateCloneInstanceResponse> CreateCloneInstance(CreateCloneInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloneInstanceResponse>(req, "CreateCloneInstance");
+        }
+
+        /// <summary>
+        /// 本接口（CreateCloneInstance）提供创建克隆实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public CreateCloneInstanceResponse CreateCloneInstanceSync(CreateCloneInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloneInstanceResponse>(req, "CreateCloneInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBInstances）提供批量创建实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances");
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBInstances）提供批量创建实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建实例手工备份  CreateDBSBackup
         /// </summary>
         /// <param name="req"><see cref="CreateDBSBackupRequest"/></param>
@@ -113,6 +155,48 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteDBSBackupSetsResponse DeleteDBSBackupSetsSync(DeleteDBSBackupSetsRequest req)
         {
             return InternalRequestAsync<DeleteDBSBackupSetsResponse>(req, "DeleteDBSBackupSets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceDetail）提供查询实例详情功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceDetailResponse>(req, "DescribeDBInstanceDetail");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceDetail）提供查询实例详情功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public DescribeDBInstanceDetailResponse DescribeDBInstanceDetailSync(DescribeDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceDetailResponse>(req, "DescribeDBInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstances）提供查询实例列表功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstances）提供查询实例列表功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +264,90 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// 查询实例备份策略 DescribeDBSBackupPolicy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupPolicyResponse"/></returns>
+        public Task<DescribeDBSBackupPolicyResponse> DescribeDBSBackupPolicy(DescribeDBSBackupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupPolicyResponse>(req, "DescribeDBSBackupPolicy");
+        }
+
+        /// <summary>
+        /// 查询实例备份策略 DescribeDBSBackupPolicy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupPolicyResponse"/></returns>
+        public DescribeDBSBackupPolicyResponse DescribeDBSBackupPolicySync(DescribeDBSBackupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupPolicyResponse>(req, "DescribeDBSBackupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例备份集信息 DescribeDBSBackupSets
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupSetsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupSetsResponse"/></returns>
+        public Task<DescribeDBSBackupSetsResponse> DescribeDBSBackupSets(DescribeDBSBackupSetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupSetsResponse>(req, "DescribeDBSBackupSets");
+        }
+
+        /// <summary>
+        /// 查询实例备份集信息 DescribeDBSBackupSets
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupSetsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupSetsResponse"/></returns>
+        public DescribeDBSBackupSetsResponse DescribeDBSBackupSetsSync(DescribeDBSBackupSetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupSetsResponse>(req, "DescribeDBSBackupSets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例备份空间概览 DescribeDBSBackupStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsResponse"/></returns>
+        public Task<DescribeDBSBackupStatisticsResponse> DescribeDBSBackupStatistics(DescribeDBSBackupStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsResponse>(req, "DescribeDBSBackupStatistics");
+        }
+
+        /// <summary>
+        /// 查询实例备份空间概览 DescribeDBSBackupStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsResponse"/></returns>
+        public DescribeDBSBackupStatisticsResponse DescribeDBSBackupStatisticsSync(DescribeDBSBackupStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsResponse>(req, "DescribeDBSBackupStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询备份集统计详情 DescribeDBSBackupStatisticsDetail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsDetailResponse"/></returns>
+        public Task<DescribeDBSBackupStatisticsDetailResponse> DescribeDBSBackupStatisticsDetail(DescribeDBSBackupStatisticsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsDetailResponse>(req, "DescribeDBSBackupStatisticsDetail");
+        }
+
+        /// <summary>
+        /// 查询备份集统计详情 DescribeDBSBackupStatisticsDetail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsDetailResponse"/></returns>
+        public DescribeDBSBackupStatisticsDetailResponse DescribeDBSBackupStatisticsDetailSync(DescribeDBSBackupStatisticsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsDetailResponse>(req, "DescribeDBSBackupStatisticsDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询实例克隆列表 DescribeDBSCloneInstances
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSCloneInstancesRequest"/></param>
@@ -243,6 +411,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeFlow）用于查询异步任务流程状态
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>
@@ -264,6 +453,90 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// 本接口（DescribeSaleInfo）提供查询可用售卖地域功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleInfoResponse"/></returns>
+        public Task<DescribeSaleInfoResponse> DescribeSaleInfo(DescribeSaleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleInfoResponse>(req, "DescribeSaleInfo");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSaleInfo）提供查询可用售卖地域功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleInfoResponse"/></returns>
+        public DescribeSaleInfoResponse DescribeSaleInfoSync(DescribeSaleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleInfoResponse>(req, "DescribeSaleInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSpecs）提供查询售卖规格功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
+        /// <returns><see cref="DescribeSpecsResponse"/></returns>
+        public Task<DescribeSpecsResponse> DescribeSpecs(DescribeSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSpecs）提供查询售卖规格功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
+        /// <returns><see cref="DescribeSpecsResponse"/></returns>
+        public DescribeSpecsResponse DescribeSpecsSync(DescribeSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUserPrivileges）提供查询用户的权限功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeUserPrivilegesResponse"/></returns>
+        public Task<DescribeUserPrivilegesResponse> DescribeUserPrivileges(DescribeUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPrivilegesResponse>(req, "DescribeUserPrivileges");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUserPrivileges）提供查询用户的权限功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeUserPrivilegesResponse"/></returns>
+        public DescribeUserPrivilegesResponse DescribeUserPrivilegesSync(DescribeUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPrivilegesResponse>(req, "DescribeUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUsers）提供查询用户列表功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public Task<DescribeUsersResponse> DescribeUsers(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUsers）提供查询用户列表功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public DescribeUsersResponse DescribeUsersSync(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DestroyInstances）提供批量销毁实例功能
         /// </summary>
         /// <param name="req"><see cref="DestroyInstancesRequest"/></param>
@@ -281,6 +554,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DestroyInstancesResponse DestroyInstancesSync(DestroyInstancesRequest req)
         {
             return InternalRequestAsync<DestroyInstancesResponse>(req, "DestroyInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ExpandInstance）提供横向扩容实例功能
+        /// </summary>
+        /// <param name="req"><see cref="ExpandInstanceRequest"/></param>
+        /// <returns><see cref="ExpandInstanceResponse"/></returns>
+        public Task<ExpandInstanceResponse> ExpandInstance(ExpandInstanceRequest req)
+        {
+            return InternalRequestAsync<ExpandInstanceResponse>(req, "ExpandInstance");
+        }
+
+        /// <summary>
+        /// 本接口（ExpandInstance）提供横向扩容实例功能
+        /// </summary>
+        /// <param name="req"><see cref="ExpandInstanceRequest"/></param>
+        /// <returns><see cref="ExpandInstanceResponse"/></returns>
+        public ExpandInstanceResponse ExpandInstanceSync(ExpandInstanceRequest req)
+        {
+            return InternalRequestAsync<ExpandInstanceResponse>(req, "ExpandInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -428,6 +722,69 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
         {
             return InternalRequestAsync<ModifyInstanceNameResponse>(req, "ModifyInstanceName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyPrivileges)修改用户权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesResponse"/></returns>
+        public Task<ModifyUserPrivilegesResponse> ModifyUserPrivileges(ModifyUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyPrivileges)修改用户权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesResponse"/></returns>
+        public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RestartDBInstances）用于重启数据库实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
+        /// <returns><see cref="RestartDBInstancesResponse"/></returns>
+        public Task<RestartDBInstancesResponse> RestartDBInstances(RestartDBInstancesRequest req)
+        {
+            return InternalRequestAsync<RestartDBInstancesResponse>(req, "RestartDBInstances");
+        }
+
+        /// <summary>
+        /// 本接口（RestartDBInstances）用于重启数据库实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
+        /// <returns><see cref="RestartDBInstancesResponse"/></returns>
+        public RestartDBInstancesResponse RestartDBInstancesSync(RestartDBInstancesRequest req)
+        {
+            return InternalRequestAsync<RestartDBInstancesResponse>(req, "RestartDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeInstance）提供纵向扩容实例功能
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceResponse"/></returns>
+        public Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance");
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeInstance）提供纵向扩容实例功能
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceResponse"/></returns>
+        public UpgradeInstanceResponse UpgradeInstanceSync(UpgradeInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

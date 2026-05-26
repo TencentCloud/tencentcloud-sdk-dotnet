@@ -44,6 +44,11 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+        /// 其中：
+        /// HEALTH - 健康
+        /// SUB_HEALTH - 亚健康
+        /// RISK - 危险
+        /// HIGH_RISK - 高危
         /// </summary>
         [JsonProperty("HealthLevel")]
         public string HealthLevel{ get; set; }

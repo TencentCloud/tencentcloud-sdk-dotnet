@@ -25,118 +25,112 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 导播台ID
+        /// <p>导播台ID</p>
         /// </summary>
         [JsonProperty("CasterId")]
         public ulong? CasterId{ get; set; }
 
         /// <summary>
-        /// 导播台名称
+        /// <p>导播台名称</p>
         /// </summary>
         [JsonProperty("CasterName")]
         public string CasterName{ get; set; }
 
         /// <summary>
-        /// 导播台上一次启动pgm的时间，值为unix时间戳。
+        /// <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
         /// </summary>
         [JsonProperty("StartLiveTime")]
         public ulong? StartLiveTime{ get; set; }
 
         /// <summary>
-        /// 导播台的描述
+        /// <p>导播台的描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 导播台创建时间，值为unix时间戳。
+        /// <p>导播台创建时间，值为unix时间戳。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 导播台状态 
-        /// 0：停止状态，无预监，无主监
-        /// 1：无预监，有主监
-        /// 2：有预监，无主监
-        /// 3：有预监，有主监
+        /// <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 导播台的过期时间戳。值为-1或unix时间戳。 
-        /// 默认值为-1。 当值为-1时，表示该导播台永不过期。 
-        /// 当值为正常unix时间戳时，导播台将在该时间过期。 
-        /// 导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-        /// 点播、直播url将停止转拉，推流url需自行停止推流。
+        /// <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 导播台延时播放时间，单位为秒。 
+        /// <p>导播台延时播放时间，单位为秒。</p>
         /// </summary>
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出的宽度，单位为像素。
+        /// <p>导播台主监输出的宽度，单位为像素。</p>
         /// </summary>
         [JsonProperty("PgmWidth")]
         public ulong? PgmWidth{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出的高度，单位为像素。
+        /// <p>导播台主监输出的高度，单位为像素。</p>
         /// </summary>
         [JsonProperty("PgmHeight")]
         public ulong? PgmHeight{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出的帧率。
+        /// <p>导播台主监输出的帧率。</p>
         /// </summary>
         [JsonProperty("PgmFps")]
         public ulong? PgmFps{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出的码率，单位为kbps
+        /// <p>导播台主监输出的码率，单位为kbps</p>
         /// </summary>
         [JsonProperty("PgmBitRate")]
         public ulong? PgmBitRate{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出的音频码率，单位为kbps。
+        /// <p>导播台主监输出的音频码率，单位为kbps。</p>
         /// </summary>
         [JsonProperty("PgmAudioBitRate")]
         public ulong? PgmAudioBitRate{ get; set; }
 
         /// <summary>
-        /// 导播台的计费类型。 
-        /// 0 通用型 1 播单型。
-        /// 注： 本参数暂无作用。
+        /// <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
         /// </summary>
         [JsonProperty("FeeType")]
         public long? FeeType{ get; set; }
 
         /// <summary>
-        /// 录制模板id。
+        /// <p>录制模板id。</p>
         /// </summary>
         [JsonProperty("RecordTemplateId")]
         public ulong? RecordTemplateId{ get; set; }
 
         /// <summary>
-        /// 录制状态。 
-        /// 0：未录制 
-        /// 1：录制中
+        /// <p>录制状态。<br>0：未录制<br>1：录制中</p>
         /// </summary>
         [JsonProperty("RecordStatus")]
         public ulong? RecordStatus{ get; set; }
 
         /// <summary>
-        /// 录制接口返回的taskid
+        /// <p>录制接口返回的taskid</p>
         /// </summary>
         [JsonProperty("RecordTaskId")]
         public string RecordTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+        /// </summary>
+        [JsonProperty("PgmVcodec")]
+        public string PgmVcodec{ get; set; }
 
 
         /// <summary>
@@ -161,6 +155,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
             this.SetParamSimple(map, prefix + "RecordStatus", this.RecordStatus);
             this.SetParamSimple(map, prefix + "RecordTaskId", this.RecordTaskId);
+            this.SetParamSimple(map, prefix + "PgmVcodec", this.PgmVcodec);
         }
     }
 }

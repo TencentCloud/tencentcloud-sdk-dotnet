@@ -25,10 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// AIGC 生视频任务的输出文件信息。	
+        /// <p>AIGC 生视频任务的输出文件信息。</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcVideoTaskOutputFileInfo[] FileInfos{ get; set; }
+
+        /// <summary>
+        /// <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+        /// </summary>
+        [JsonProperty("ProcedureTaskIds")]
+        public string[] ProcedureTaskIds{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+            this.SetParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
         }
     }
 }
