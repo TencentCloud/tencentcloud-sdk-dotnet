@@ -25,46 +25,43 @@ namespace TencentCloud.Wsa.V20250508.Models
     {
         
         /// <summary>
-        /// 搜索词
+        /// <p>搜索词</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
+        /// <p>返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）</p>
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// 指定域名站内搜索（用于过滤自然检索结果）
-        /// 注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+        /// <p>指定域名站内搜索（用于过滤自然检索结果）<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
         /// </summary>
         [JsonProperty("Site")]
         public string Site{ get; set; }
 
         /// <summary>
-        /// 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
-        /// 注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+        /// <p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
         /// </summary>
         [JsonProperty("FromTime")]
         public long? FromTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
-        /// 注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+        /// <p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
         /// </summary>
         [JsonProperty("ToTime")]
         public long? ToTime{ get; set; }
 
         /// <summary>
-        /// cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+        /// <p>cnt=10/20/30/40/50，最多可支持返回50条搜索结果，<strong>仅限尊享版使用</strong></p>
         /// </summary>
         [JsonProperty("Cnt")]
         public ulong? Cnt{ get; set; }
 
         /// <summary>
-        /// Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，**仅限尊享版使用**
+        /// <p>Industry=gov/news/acad/finance，对应党政机关、权威媒体、学术（英文）、金融，<strong>仅限尊享版使用</strong></p>
         /// </summary>
         [JsonProperty("Industry")]
         public string Industry{ get; set; }

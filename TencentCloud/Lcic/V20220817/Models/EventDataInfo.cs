@@ -25,46 +25,52 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 事件发生的房间号。
+        /// <p>事件发生的房间号。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// 事件发生的用户。
+        /// <p>事件发生的用户。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+        /// <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p>
         /// </summary>
         [JsonProperty("Device")]
         public ulong? Device{ get; set; }
 
         /// <summary>
-        /// 录制时长。单位：秒
+        /// <p>录制时长。单位：秒</p>
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// 录制文件大小
+        /// <p>录制文件大小</p>
         /// </summary>
         [JsonProperty("RecordSize")]
         public ulong? RecordSize{ get; set; }
 
         /// <summary>
-        /// 录制url
+        /// <p>录制url</p>
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+        /// <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p>
         /// </summary>
         [JsonProperty("Reason")]
         public ulong? Reason{ get; set; }
+
+        /// <summary>
+        /// <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul>
+        /// </summary>
+        [JsonProperty("Role")]
+        public ulong? Role{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordSize", this.RecordSize);
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

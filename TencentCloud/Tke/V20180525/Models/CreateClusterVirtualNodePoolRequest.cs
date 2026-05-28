@@ -25,60 +25,70 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID，通过DescribeClusters接口获取
+        /// <p>集群ID，通过DescribeClusters接口获取</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// <p>节点池名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表
+        /// <p>安全组ID列表</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 子网ID列表
+        /// <p>子网ID列表</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 虚拟节点label
+        /// <p>虚拟节点label</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 虚拟节点taint
+        /// <p>虚拟节点taint</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 节点列表
+        /// <p>节点列表</p>
         /// </summary>
         [JsonProperty("VirtualNodes")]
         public VirtualNodeSpec[] VirtualNodes{ get; set; }
 
         /// <summary>
-        /// 删除保护开关，默认关闭
+        /// <p>删除保护开关，默认关闭</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// 节点池操作系统：
-        /// - linux（默认）
-        /// - windows
+        /// <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul>
         /// </summary>
         [JsonProperty("OS")]
         public string OS{ get; set; }
+
+        /// <summary>
+        /// <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p>
+        /// </summary>
+        [JsonProperty("SubnetAllocationPolicy")]
+        public SubnetAllocationPolicy SubnetAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p>
+        /// </summary>
+        [JsonProperty("AgentPlugin")]
+        public AgentPluginConfig AgentPlugin{ get; set; }
 
 
         /// <summary>
@@ -95,6 +105,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "VirtualNodes.", this.VirtualNodes);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "OS", this.OS);
+            this.SetParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
+            this.SetParamObj(map, prefix + "AgentPlugin.", this.AgentPlugin);
         }
     }
 }

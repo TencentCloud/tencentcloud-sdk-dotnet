@@ -25,34 +25,25 @@ namespace TencentCloud.Wsa.V20250508.Models
     {
         
         /// <summary>
-        /// 原始查询语
+        /// <p>原始查询语</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 搜索结果页面详情，格式为json字符串。
-        /// title：结果标题
-        /// date：内容发布时间
-        /// url：内容发布源url
-        /// passage：标准摘要
-        /// content：动态摘要 （尊享版字段）
-        /// site：网站名称，部分不知名站点结果可能为空
-        /// score：相关性得分，取值0～1，越靠近1表示越相关
-        /// images：图片列表
-        /// favicon：网站图标链接，部分不知名站点结果可能为空
+        /// <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p>
         /// </summary>
         [JsonProperty("Pages")]
         public string[] Pages{ get; set; }
 
         /// <summary>
-        /// 用户版本：standard/premium/lite
+        /// <p>用户版本：standard/premium/lite/flagship</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 提示信息
+        /// <p>提示信息</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

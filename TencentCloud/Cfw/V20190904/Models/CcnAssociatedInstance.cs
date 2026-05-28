@@ -25,35 +25,41 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InsType")]
         public string InsType{ get; set; }
 
         /// <summary>
-        /// 实例的网段列表
+        /// <p>实例的网段列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CidrLst")]
         public string[] CidrLst{ get; set; }
 
         /// <summary>
-        /// 实例所属地域
+        /// <p>实例所属地域</p>
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
+
+        /// <summary>
+        /// <p>是否跨账号</p>
+        /// </summary>
+        [JsonProperty("IsCrossInstance")]
+        public ulong? IsCrossInstance{ get; set; }
 
 
         /// <summary>
@@ -66,6 +72,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "InsType", this.InsType);
             this.SetParamArraySimple(map, prefix + "CidrLst.", this.CidrLst);
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
+            this.SetParamSimple(map, prefix + "IsCrossInstance", this.IsCrossInstance);
         }
     }
 }

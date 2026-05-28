@@ -28,7 +28,7 @@ namespace TencentCloud.Ig.V20210518
 
        private const string endpoint = "ig.tencentcloudapi.com";
        private const string version = "2021-05-18";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,111 @@ namespace TencentCloud.Ig.V20210518
         public DescribeIgOrderListResponse DescribeIgOrderListSync(DescribeIgOrderListRequest req)
         {
             return InternalRequestAsync<DescribeIgOrderListResponse>(req, "DescribeIgOrderList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型问药拍药盒
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisDrugRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisDrugResponse"/></returns>
+        public Task<GetLLMDiagnosisDrugResponse> GetLLMDiagnosisDrug(GetLLMDiagnosisDrugRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisDrugResponse>(req, "GetLLMDiagnosisDrug");
+        }
+
+        /// <summary>
+        /// 大模型问药拍药盒
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisDrugRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisDrugResponse"/></returns>
+        public GetLLMDiagnosisDrugResponse GetLLMDiagnosisDrugSync(GetLLMDiagnosisDrugRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisDrugResponse>(req, "GetLLMDiagnosisDrug")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型问药问答
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisDrugChatRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisDrugChatResponse"/></returns>
+        public Task<GetLLMDiagnosisDrugChatResponse> GetLLMDiagnosisDrugChat(GetLLMDiagnosisDrugChatRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisDrugChatResponse>(req, "GetLLMDiagnosisDrugChat");
+        }
+
+        /// <summary>
+        /// 大模型问药问答
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisDrugChatRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisDrugChatResponse"/></returns>
+        public GetLLMDiagnosisDrugChatResponse GetLLMDiagnosisDrugChatSync(GetLLMDiagnosisDrugChatRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisDrugChatResponse>(req, "GetLLMDiagnosisDrugChat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型健康自诊
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisHealthRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisHealthResponse"/></returns>
+        public Task<GetLLMDiagnosisHealthResponse> GetLLMDiagnosisHealth(GetLLMDiagnosisHealthRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisHealthResponse>(req, "GetLLMDiagnosisHealth");
+        }
+
+        /// <summary>
+        /// 大模型健康自诊
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMDiagnosisHealthRequest"/></param>
+        /// <returns><see cref="GetLLMDiagnosisHealthResponse"/></returns>
+        public GetLLMDiagnosisHealthResponse GetLLMDiagnosisHealthSync(GetLLMDiagnosisHealthRequest req)
+        {
+            return InternalRequestAsync<GetLLMDiagnosisHealthResponse>(req, "GetLLMDiagnosisHealth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 大模型报告解读
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMReportInterpretationRequest"/></param>
+        /// <returns><see cref="GetLLMReportInterpretationResponse"/></returns>
+        public Task<GetLLMReportInterpretationResponse> GetLLMReportInterpretation(GetLLMReportInterpretationRequest req)
+        {
+            return InternalRequestAsync<GetLLMReportInterpretationResponse>(req, "GetLLMReportInterpretation");
+        }
+
+        /// <summary>
+        /// 大模型报告解读
+        /// </summary>
+        /// <param name="req"><see cref="GetLLMReportInterpretationRequest"/></param>
+        /// <returns><see cref="GetLLMReportInterpretationResponse"/></returns>
+        public GetLLMReportInterpretationResponse GetLLMReportInterpretationSync(GetLLMReportInterpretationRequest req)
+        {
+            return InternalRequestAsync<GetLLMReportInterpretationResponse>(req, "GetLLMReportInterpretation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询药品说明书
+        /// </summary>
+        /// <param name="req"><see cref="QueryDrugInstructionsRequest"/></param>
+        /// <returns><see cref="QueryDrugInstructionsResponse"/></returns>
+        public Task<QueryDrugInstructionsResponse> QueryDrugInstructions(QueryDrugInstructionsRequest req)
+        {
+            return InternalRequestAsync<QueryDrugInstructionsResponse>(req, "QueryDrugInstructions");
+        }
+
+        /// <summary>
+        /// 查询药品说明书
+        /// </summary>
+        /// <param name="req"><see cref="QueryDrugInstructionsRequest"/></param>
+        /// <returns><see cref="QueryDrugInstructionsResponse"/></returns>
+        public QueryDrugInstructionsResponse QueryDrugInstructionsSync(QueryDrugInstructionsRequest req)
+        {
+            return InternalRequestAsync<QueryDrugInstructionsResponse>(req, "QueryDrugInstructions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

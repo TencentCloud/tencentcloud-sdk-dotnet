@@ -25,23 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 引流网络部署状态
-        /// 1. "NotDeployed"  防火墙集群未部署
-        /// 2. "Deployed"        防火墙集群已部署，但未创建引流网络
-        /// 3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-        /// 4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
+        /// <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 引流网络的cidr，如果没有部署引流网络则为空
+        /// <p>引流网络的cidr，如果没有部署引流网络则为空</p>
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }

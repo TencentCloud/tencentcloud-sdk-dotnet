@@ -25,22 +25,28 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 文件系统本地挂载路径。
+        /// <p>文件系统本地挂载路径。</p>
         /// </summary>
         [JsonProperty("LocalPath")]
         public string LocalPath{ get; set; }
 
         /// <summary>
-        /// 文件系统远程挂载路径。
+        /// <p>文件系统远程挂载路径。</p>
         /// </summary>
         [JsonProperty("RemotePath")]
         public string RemotePath{ get; set; }
 
         /// <summary>
-        /// 文件系统master的ip和端口。
+        /// <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
         /// </summary>
         [JsonProperty("Masters")]
         public string[] Masters{ get; set; }
+
+        /// <summary>
+        /// <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "LocalPath", this.LocalPath);
             this.SetParamSimple(map, prefix + "RemotePath", this.RemotePath);
             this.SetParamArraySimple(map, prefix + "Masters.", this.Masters);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         }
     }
 }

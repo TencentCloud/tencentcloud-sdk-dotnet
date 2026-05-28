@@ -25,79 +25,79 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 发送时间
+        /// <p>发送时间</p>
         /// </summary>
         [JsonProperty("DeliverTime")]
         public string DeliverTime{ get; set; }
 
         /// <summary>
-        /// 发信地址
+        /// <p>发信地址</p>
         /// </summary>
         [JsonProperty("OriginalMailFrom")]
         public string OriginalMailFrom{ get; set; }
 
         /// <summary>
-        /// 收信地址
+        /// <p>收信地址</p>
         /// </summary>
         [JsonProperty("OriginalRcptTo")]
         public string OriginalRcptTo{ get; set; }
 
         /// <summary>
-        /// 发信域名
+        /// <p>发信域名</p>
         /// </summary>
         [JsonProperty("FromDomain")]
         public string FromDomain{ get; set; }
 
         /// <summary>
-        /// 投诉时间
+        /// <p>投诉时间</p>
         /// </summary>
         [JsonProperty("ComplainTime")]
         public string ComplainTime{ get; set; }
 
         /// <summary>
-        /// 收信域名
+        /// <p>收信域名</p>
         /// </summary>
         [JsonProperty("Mta")]
         public string Mta{ get; set; }
 
         /// <summary>
-        /// 来源ip
+        /// <p>来源ip</p>
         /// </summary>
         [JsonProperty("SourceIp")]
         public string SourceIp{ get; set; }
 
         /// <summary>
-        /// 数据时间
+        /// <p>数据时间</p>
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// 模板id
+        /// <p>模板ID</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// bulkId
+        /// <p>bulkId</p>
         /// </summary>
         [JsonProperty("BulkId")]
         public string BulkId{ get; set; }
 
         /// <summary>
-        /// 邮件Message-Id
+        /// <p>邮件Message-Id</p>
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// 投诉时间
+        /// <p>投诉时间</p>
         /// </summary>
         [JsonProperty("AbuseTime")]
         public string AbuseTime{ get; set; }
 
         /// <summary>
-        /// 邮件主题
+        /// <p>邮件主题</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }

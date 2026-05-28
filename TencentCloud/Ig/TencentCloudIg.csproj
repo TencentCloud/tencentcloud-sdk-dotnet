@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CBBE8FB3-2079-30E3-BC85-377069927ADD}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1273</VersionPrefix>
+    <VersionPrefix>3.0.1435</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,5 +50,28 @@
     <Compile Include="V20210518\IgClient.cs" />
     <Compile Include="V20210518\Models\DescribeIgOrderListRequest.cs" />
     <Compile Include="V20210518\Models\DescribeIgOrderListResponse.cs" />
+    <Compile Include="V20210518\Models\DrugCardInfo.cs" />
+    <Compile Include="V20210518\Models\DrugInstructionInfo.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisDrugChatRequest.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisDrugChatResponse.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisDrugRequest.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisDrugResponse.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisHealthRequest.cs" />
+    <Compile Include="V20210518\Models\GetLLMDiagnosisHealthResponse.cs" />
+    <Compile Include="V20210518\Models\GetLLMReportInterpretationRequest.cs" />
+    <Compile Include="V20210518\Models\GetLLMReportInterpretationResponse.cs" />
+    <Compile Include="V20210518\Models\GuessQuestion.cs" />
+    <Compile Include="V20210518\Models\HealthFollowUpQuestion.cs" />
+    <Compile Include="V20210518\Models\HighlightWordInfo.cs" />
+    <Compile Include="V20210518\Models\LLMDiagnosisDrugData.cs" />
+    <Compile Include="V20210518\Models\LLMDiagnosisHealthData.cs" />
+    <Compile Include="V20210518\Models\LLMReportInterpretationData.cs" />
+    <Compile Include="V20210518\Models\QueryDrugInstructionsRequest.cs" />
+    <Compile Include="V20210518\Models\QueryDrugInstructionsResponse.cs" />
+    <Compile Include="V20210518\Models\ReferResourceInfo.cs" />
+    <Compile Include="V20210518\Models\ReportFileInfoReq.cs" />
+    <Compile Include="V20210518\Models\ReportFileInfoRsp.cs" />
+    <Compile Include="V20210518\Models\StandardDrugCardInfo.cs" />
+    <Compile Include="V20210518\Models\StandardDrugInstructionInfo.cs" />
   </ItemGroup>
 </Project>

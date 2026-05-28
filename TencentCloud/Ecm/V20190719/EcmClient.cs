@@ -28,7 +28,7 @@ namespace TencentCloud.Ecm.V20190719
 
        private const string endpoint = "ecm.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.
@@ -265,37 +265,6 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（AttachDisks）用于挂载云硬盘。
-        ///  
-        /// * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
-        /// * 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
-        /// </summary>
-        /// <param name="req"><see cref="AttachDisksRequest"/></param>
-        /// <returns><see cref="AttachDisksResponse"/></returns>
-        public Task<AttachDisksResponse> AttachDisks(AttachDisksRequest req)
-        {
-            return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（AttachDisks）用于挂载云硬盘。
-        ///  
-        /// * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
-        /// * 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
-        /// </summary>
-        /// <param name="req"><see cref="AttachDisksRequest"/></param>
-        /// <returns><see cref="AttachDisksResponse"/></returns>
-        public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
-        {
-            return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 弹性网卡绑定云主机
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
@@ -376,39 +345,6 @@ namespace TencentCloud.Ecm.V20190719
         public BatchRegisterTargetsResponse BatchRegisterTargetsSync(BatchRegisterTargetsRequest req)
         {
             return InternalRequestAsync<BatchRegisterTargetsResponse>(req, "BatchRegisterTargets")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（CreateDisks）用于创建云硬盘。
-        /// 
-        /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
-        /// * 本接口支持传入数据盘快照来创建云盘，实现将快照数据复制到新购云盘上。
-        /// * 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDisksRequest"/></param>
-        /// <returns><see cref="CreateDisksResponse"/></returns>
-        public Task<CreateDisksResponse> CreateDisks(CreateDisksRequest req)
-        {
-            return InternalRequestAsync<CreateDisksResponse>(req, "CreateDisks");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（CreateDisks）用于创建云硬盘。
-        /// 
-        /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
-        /// * 本接口支持传入数据盘快照来创建云盘，实现将快照数据复制到新购云盘上。
-        /// * 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDisksRequest"/></param>
-        /// <returns><see cref="CreateDisksResponse"/></returns>
-        public CreateDisksResponse CreateDisksSync(CreateDisksRequest req)
-        {
-            return InternalRequestAsync<CreateDisksResponse>(req, "CreateDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -947,37 +883,6 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DeleteSnapshots）用于删除快照。
-        /// 
-        /// * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
-        /// * 支持批量操作。如果多个快照存在无法删除的快照，则操作不执行，以返回特定的错误码返回。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
-        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
-        public Task<DeleteSnapshotsResponse> DeleteSnapshots(DeleteSnapshotsRequest req)
-        {
-            return InternalRequestAsync<DeleteSnapshotsResponse>(req, "DeleteSnapshots");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DeleteSnapshots）用于删除快照。
-        /// 
-        /// * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
-        /// * 支持批量操作。如果多个快照存在无法删除的快照，则操作不执行，以返回特定的错误码返回。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
-        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
-        public DeleteSnapshotsResponse DeleteSnapshotsSync(DeleteSnapshotsRequest req)
-        {
-            return InternalRequestAsync<DeleteSnapshotsResponse>(req, "DeleteSnapshots")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
@@ -1142,37 +1047,6 @@ namespace TencentCloud.Ecm.V20190719
         public DescribeDefaultSubnetResponse DescribeDefaultSubnetSync(DescribeDefaultSubnetRequest req)
         {
             return InternalRequestAsync<DescribeDefaultSubnetResponse>(req, "DescribeDefaultSubnet")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DescribeDisks）用于查询云硬盘列表。
-        /// 
-        /// * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘列表。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
-        /// <returns><see cref="DescribeDisksResponse"/></returns>
-        public Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest req)
-        {
-            return InternalRequestAsync<DescribeDisksResponse>(req, "DescribeDisks");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DescribeDisks）用于查询云硬盘列表。
-        /// 
-        /// * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘列表。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
-        /// <returns><see cref="DescribeDisksResponse"/></returns>
-        public DescribeDisksResponse DescribeDisksSync(DescribeDisksRequest req)
-        {
-            return InternalRequestAsync<DescribeDisksResponse>(req, "DescribeDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1723,37 +1597,6 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
-        /// 
-        /// * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        /// *  如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照列表。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
-        public Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest req)
-        {
-            return InternalRequestAsync<DescribeSnapshotsResponse>(req, "DescribeSnapshots");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
-        /// 
-        /// * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        /// *  如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照列表。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
-        public DescribeSnapshotsResponse DescribeSnapshotsSync(DescribeSnapshotsRequest req)
-        {
-            return InternalRequestAsync<DescribeSnapshotsResponse>(req, "DescribeSnapshots")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询子网列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetsRequest"/></param>
@@ -1876,37 +1719,6 @@ namespace TencentCloud.Ecm.V20190719
         public DescribeVpcsResponse DescribeVpcsSync(DescribeVpcsRequest req)
         {
             return InternalRequestAsync<DescribeVpcsResponse>(req, "DescribeVpcs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DetachDisks）用于卸载云硬盘。
-        /// 
-        /// * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
-        /// * 本接口为异步接口，当请求成功返回时，云盘并未立即从主机卸载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为卸载成功。
-        /// </summary>
-        /// <param name="req"><see cref="DetachDisksRequest"/></param>
-        /// <returns><see cref="DetachDisksResponse"/></returns>
-        public Task<DetachDisksResponse> DetachDisks(DetachDisksRequest req)
-        {
-            return InternalRequestAsync<DetachDisksResponse>(req, "DetachDisks");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（DetachDisks）用于卸载云硬盘。
-        /// 
-        /// * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
-        /// * 本接口为异步接口，当请求成功返回时，云盘并未立即从主机卸载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为卸载成功。
-        /// </summary>
-        /// <param name="req"><see cref="DetachDisksRequest"/></param>
-        /// <returns><see cref="DetachDisksResponse"/></returns>
-        public DetachDisksResponse DetachDisksSync(DetachDisksRequest req)
-        {
-            return InternalRequestAsync<DetachDisksResponse>(req, "DetachDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3040,39 +2852,6 @@ namespace TencentCloud.Ecm.V20190719
         public StopInstancesResponse StopInstancesSync(StopInstancesRequest req)
         {
             return InternalRequestAsync<StopInstancesResponse>(req, "StopInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（TerminateDisks）用于退还云硬盘。
-        /// 
-        /// * 不再使用的云盘，可通过本接口主动退还。
-        /// * 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
-        /// * 支持批量操作，每次请求批量云硬盘的上限为50。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
-        /// </summary>
-        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
-        /// <returns><see cref="TerminateDisksResponse"/></returns>
-        public Task<TerminateDisksResponse> TerminateDisks(TerminateDisksRequest req)
-        {
-            return InternalRequestAsync<TerminateDisksResponse>(req, "TerminateDisks");
-        }
-
-        /// <summary>
-        /// CBS在ECM早已下线
-        /// 
-        /// 本接口（TerminateDisks）用于退还云硬盘。
-        /// 
-        /// * 不再使用的云盘，可通过本接口主动退还。
-        /// * 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
-        /// * 支持批量操作，每次请求批量云硬盘的上限为50。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
-        /// </summary>
-        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
-        /// <returns><see cref="TerminateDisksResponse"/></returns>
-        public TerminateDisksResponse TerminateDisksSync(TerminateDisksRequest req)
-        {
-            return InternalRequestAsync<TerminateDisksResponse>(req, "TerminateDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

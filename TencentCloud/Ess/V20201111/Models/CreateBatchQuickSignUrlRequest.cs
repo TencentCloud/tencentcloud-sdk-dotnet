@@ -121,7 +121,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? CanSkipReadFlow{ get; set; }
 
         /// <summary>
-        /// <p>链接的有效时间，单位为秒。取值范围为 30分钟（1800）-90天（7776000）。如果不传，默认有效期为30分钟。 </p><p>注意： </p><ol><li><code>出于安全性考虑，若有效期大于30分钟，同设备24小时内点击链接查看合同需要进行手机验证码校验。</code> </li><li><code>动态签署方链接暂不支持修改过期时间。</code></li></ol>
+        /// <p>链接的有效时间，单位为秒。取值范围为 30分钟（1800）-90天（7776000）。如果不传，默认有效期为30分钟。 </p><p>注意： </p><ol><li><code>出于安全性考虑，若有效期大于30分钟，同设备24小时内点击链接查看合同需要进行手机验证码校验。此校验将会扣除短信份额，不建议通过设置此值来缓存签署链接，建议在用户需要签署的时候临时生成链接。</code></li><li><code>动态签署方链接暂不支持修改过期时间。</code></li></ol>
         /// </summary>
         [JsonProperty("ExpiredOn")]
         public long? ExpiredOn{ get; set; }

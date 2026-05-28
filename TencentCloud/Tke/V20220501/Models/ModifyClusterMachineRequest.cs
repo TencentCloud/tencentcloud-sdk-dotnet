@@ -25,37 +25,37 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 集群 ID
+        /// <p>集群 ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点名列表
+        /// <p>节点名列表</p>
         /// </summary>
         [JsonProperty("MachineNames")]
         public string[] MachineNames{ get; set; }
 
         /// <summary>
-        /// machine的display name
+        /// <p>machine的display name</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 系统盘的信息
+        /// <p>系统盘的信息</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 安全组列表
+        /// <p>安全组列表</p>
         /// </summary>
         [JsonProperty("SecurityGroupIDs")]
         public string[] SecurityGroupIDs{ get; set; }
 
         /// <summary>
-        /// 节点预付费信息
+        /// <p>节点预付费信息</p>
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }

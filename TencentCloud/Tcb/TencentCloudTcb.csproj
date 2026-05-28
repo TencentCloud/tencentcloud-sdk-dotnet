@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1434</VersionPrefix>
+    <VersionPrefix>3.0.1435</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -161,8 +161,13 @@
     <Compile Include="V20180608\Models\DescribeMySQLClusterDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLTaskStatusRequest.cs" />
     <Compile Include="V20180608\Models\DescribeMySQLTaskStatusResponse.cs" />
+    <Compile Include="V20180608\Models\DescribePGUserMigrationRequest.cs" />
+    <Compile Include="V20180608\Models\DescribePGUserMigrationResponse.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataRequest.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeResourcePermissionRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeResourcePermissionResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeResourcePermissionResult.cs" />
     <Compile Include="V20180608\Models\DescribeSafeRuleRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSafeRuleResponse.cs" />
     <Compile Include="V20180608\Models\DescribeStaticStoreRequest.cs" />
@@ -216,6 +221,8 @@
     <Compile Include="V20180608\Models\InquireVmPriceRequest.cs" />
     <Compile Include="V20180608\Models\InquireVmPriceResponse.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
+    <Compile Include="V20180608\Models\ListPGUserMigrationsRequest.cs" />
+    <Compile Include="V20180608\Models\ListPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\ListTablesRequest.cs" />
     <Compile Include="V20180608\Models\ListTablesResponse.cs" />
     <Compile Include="V20180608\Models\LocalizedMessage.cs" />
@@ -232,6 +239,10 @@
     <Compile Include="V20180608\Models\MgoCommandParam.cs" />
     <Compile Include="V20180608\Models\MgoIndexKeys.cs" />
     <Compile Include="V20180608\Models\MgoKeySchema.cs" />
+    <Compile Include="V20180608\Models\MigrationConflict.cs" />
+    <Compile Include="V20180608\Models\MigrationInput.cs" />
+    <Compile Include="V20180608\Models\MigrationPlanItem.cs" />
+    <Compile Include="V20180608\Models\MigrationSummary.cs" />
     <Compile Include="V20180608\Models\ModifyClientRequest.cs" />
     <Compile Include="V20180608\Models\ModifyClientResponse.cs" />
     <Compile Include="V20180608\Models\ModifyClsTopicRequest.cs" />
@@ -248,6 +259,9 @@
     <Compile Include="V20180608\Models\ModifyLoginConfigResponse.cs" />
     <Compile Include="V20180608\Models\ModifyProviderRequest.cs" />
     <Compile Include="V20180608\Models\ModifyProviderResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyResourcePermissionRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyResourcePermissionResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyResourcePermissionResult.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleRequest.cs" />
     <Compile Include="V20180608\Models\ModifySafeRuleResponse.cs" />
     <Compile Include="V20180608\Models\ModifyStorageSourceRequest.cs" />
@@ -264,14 +278,23 @@
     <Compile Include="V20180608\Models\PasswordUpdateLoginConfig.cs" />
     <Compile Include="V20180608\Models\PermissionInfo.cs" />
     <Compile Include="V20180608\Models\PostgreSQLInfo.cs" />
+    <Compile Include="V20180608\Models\PreviewPGUserMigrationsRequest.cs" />
+    <Compile Include="V20180608\Models\PreviewPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\Provider.cs" />
     <Compile Include="V20180608\Models\ProviderConfig.cs" />
     <Compile Include="V20180608\Models\ProviderRequestParametersMap.cs" />
     <Compile Include="V20180608\Models\ProviderResponseParametersMap.cs" />
+    <Compile Include="V20180608\Models\PushPGUserMigrationsRequest.cs" />
+    <Compile Include="V20180608\Models\PushPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\ReleaseEnvRequest.cs" />
     <Compile Include="V20180608\Models\ReleaseEnvResponse.cs" />
     <Compile Include="V20180608\Models\RenewEnvRequest.cs" />
     <Compile Include="V20180608\Models\RenewEnvResponse.cs" />
+    <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryRequest.cs" />
+    <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryResponse.cs" />
+    <Compile Include="V20180608\Models\ResourcePermission.cs" />
+    <Compile Include="V20180608\Models\RollbackPGUserMigrationsRequest.cs" />
+    <Compile Include="V20180608\Models\RollbackPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\RunCommandsRequest.cs" />
     <Compile Include="V20180608\Models\RunCommandsResponse.cs" />
     <Compile Include="V20180608\Models\RunSqlRequest.cs" />

@@ -42,6 +42,12 @@ namespace TencentCloud.Evt.V20250217.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// <p>插件ID</p>
+        /// </summary>
+        [JsonProperty("PluginId")]
+        public string PluginId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Evt.V20250217.Models
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
         }
     }
 }

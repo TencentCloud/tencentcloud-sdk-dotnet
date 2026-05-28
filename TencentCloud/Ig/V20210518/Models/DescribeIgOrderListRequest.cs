@@ -25,31 +25,31 @@ namespace TencentCloud.Ig.V20210518.Models
     {
         
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数目
+        /// <p>每页数目</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 产品类型
+        /// <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// 订单状态
+        /// <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("OrderStatus")]
         public long? OrderStatus{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// <p>搜索关键字</p>
         /// </summary>
         [JsonProperty("KeyWord")]
         public string KeyWord{ get; set; }

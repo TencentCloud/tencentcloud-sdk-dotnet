@@ -15,15 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSnapshotsResponse : AbstractModel
+    public class RollbackPGUserMigrationsResponse : AbstractModel
     {
         
+        /// <summary>
+        /// <p>任务ID</p><p>可通过DescribeTaskResult 接口查询进度</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// <p>已成功回滚并删除 history 的 migration</p>
+        /// </summary>
+        [JsonProperty("RolledBack")]
+        public MigrationSummary[] RolledBack{ get; set; }
+
+        /// <summary>
+        /// <p>未提供 Rollback SQL、视为成功并删除 history 的 migration</p>
+        /// </summary>
+        [JsonProperty("SkippedRollbackSql")]
+        public MigrationSummary[] SkippedRollbackSql{ get; set; }
+
+        /// <summary>
+        /// <p>执行 Rollback SQL 失败的 migration，可为空</p>
+        /// </summary>
+        [JsonProperty("Failed")]
+        public MigrationSummary Failed{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "RolledBack.", this.RolledBack);
+            this.SetParamArrayObj(map, prefix + "SkippedRollbackSql.", this.SkippedRollbackSql);
+            this.SetParamObj(map, prefix + "Failed.", this.Failed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

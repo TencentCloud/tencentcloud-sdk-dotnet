@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDisksResponse : AbstractModel
+    public class ResourcePermission : AbstractModel
     {
         
         /// <summary>
-        /// 符合条件的云硬盘数量。
+        /// 资源类型。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 云硬盘的详细信息列表。
+        /// 资源标识
         /// </summary>
-        [JsonProperty("DiskSet")]
-        public Disk[] DiskSet{ get; set; }
+        [JsonProperty("Resource")]
+        public string Resource{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Permission")]
+        public string Permission{ get; set; }
+
+        /// <summary>
+        /// 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。
+        /// </summary>
+        [JsonProperty("SecurityRule")]
+        public string SecurityRule{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "DiskSet.", this.DiskSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamSimple(map, prefix + "Permission", this.Permission);
+            this.SetParamSimple(map, prefix + "SecurityRule", this.SecurityRule);
         }
     }
 }

@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Ig.V20210518.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSnapshotsRequest : AbstractModel
+    public class QueryDrugInstructionsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
+        /// <p>合作方ID</p>
         /// </summary>
-        [JsonProperty("SnapshotIds")]
-        public string[] SnapshotIds{ get; set; }
+        [JsonProperty("PartnerId")]
+        public string PartnerId{ get; set; }
 
         /// <summary>
-        /// 是否强制删除快照关联的镜像
+        /// <p>合作方密钥</p>
         /// </summary>
-        [JsonProperty("DeleteBindImages")]
-        public bool? DeleteBindImages{ get; set; }
+        [JsonProperty("PartnerSecret")]
+        public string PartnerSecret{ get; set; }
+
+        /// <summary>
+        /// <p>医院应用ID</p>
+        /// </summary>
+        [JsonProperty("HospitalAppId")]
+        public string HospitalAppId{ get; set; }
+
+        /// <summary>
+        /// <p>本次问答用户输入的问题，（最大长度1000）</p>
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
-            this.SetParamSimple(map, prefix + "DeleteBindImages", this.DeleteBindImages);
+            this.SetParamSimple(map, prefix + "PartnerId", this.PartnerId);
+            this.SetParamSimple(map, prefix + "PartnerSecret", this.PartnerSecret);
+            this.SetParamSimple(map, prefix + "HospitalAppId", this.HospitalAppId);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 自定义内容。
+        /// <p>自定义内容。</p>
         /// </summary>
         [JsonProperty("CustomContent")]
         public AppCustomContent[] CustomContent{ get; set; }
 
         /// <summary>
-        /// 应用ID。
+        /// <p>应用ID。</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }

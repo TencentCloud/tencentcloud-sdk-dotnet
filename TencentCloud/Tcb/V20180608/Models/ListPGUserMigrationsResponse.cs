@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSnapshotsResponse : AbstractModel
+    public class ListPGUserMigrationsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 快照的数量。
+        /// <p>总数量</p>
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// 快照的详情列表。
+        /// <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p>
         /// </summary>
-        [JsonProperty("SnapshotSet")]
-        public Snapshot[] SnapshotSet{ get; set; }
+        [JsonProperty("LatestVersion")]
+        public string LatestVersion{ get; set; }
+
+        /// <summary>
+        /// <p>已应用migration列表</p>
+        /// </summary>
+        [JsonProperty("Migrations")]
+        public MigrationSummary[] Migrations{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +54,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
+            this.SetParamArrayObj(map, prefix + "Migrations.", this.Migrations);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

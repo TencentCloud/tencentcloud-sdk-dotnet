@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1434";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.
@@ -1248,6 +1248,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（DescribePGUserMigration）用于查询目标环境指定 migration 详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePGUserMigrationRequest"/></param>
+        /// <returns><see cref="DescribePGUserMigrationResponse"/></returns>
+        public Task<DescribePGUserMigrationResponse> DescribePGUserMigration(DescribePGUserMigrationRequest req)
+        {
+            return InternalRequestAsync<DescribePGUserMigrationResponse>(req, "DescribePGUserMigration");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePGUserMigration）用于查询目标环境指定 migration 详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePGUserMigrationRequest"/></param>
+        /// <returns><see cref="DescribePGUserMigrationResponse"/></returns>
+        public DescribePGUserMigrationResponse DescribePGUserMigrationSync(DescribePGUserMigrationRequest req)
+        {
+            return InternalRequestAsync<DescribePGUserMigrationResponse>(req, "DescribePGUserMigration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定指标的配额使用量
         /// </summary>
         /// <param name="req"><see cref="DescribeQuotaDataRequest"/></param>
@@ -1265,6 +1286,31 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeQuotaDataResponse DescribeQuotaDataSync(DescribeQuotaDataRequest req)
         {
             return InternalRequestAsync<DescribeQuotaDataResponse>(req, "DescribeQuotaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源基础权限。
+        /// 
+        /// 查询云函数、云存储和数据库表的基础权限配置。支持单个资源查询和批量查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePermissionRequest"/></param>
+        /// <returns><see cref="DescribeResourcePermissionResponse"/></returns>
+        public Task<DescribeResourcePermissionResponse> DescribeResourcePermission(DescribeResourcePermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePermissionResponse>(req, "DescribeResourcePermission");
+        }
+
+        /// <summary>
+        /// 查询资源基础权限。
+        /// 
+        /// 查询云函数、云存储和数据库表的基础权限配置。支持单个资源查询和批量查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePermissionRequest"/></param>
+        /// <returns><see cref="DescribeResourcePermissionResponse"/></returns>
+        public DescribeResourcePermissionResponse DescribeResourcePermissionSync(DescribeResourcePermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeResourcePermissionResponse>(req, "DescribeResourcePermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1570,6 +1616,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（ListPGUserMigrations）用于查询目标环境已应用的用户 migration 列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="ListPGUserMigrationsResponse"/></returns>
+        public Task<ListPGUserMigrationsResponse> ListPGUserMigrations(ListPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<ListPGUserMigrationsResponse>(req, "ListPGUserMigrations");
+        }
+
+        /// <summary>
+        /// 本接口（ListPGUserMigrations）用于查询目标环境已应用的用户 migration 列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="ListPGUserMigrationsResponse"/></returns>
+        public ListPGUserMigrationsResponse ListPGUserMigrationsSync(ListPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<ListPGUserMigrationsResponse>(req, "ListPGUserMigrations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
         /// 
         /// 该接口跟 [DescribeTables](https://cloud.tencent.com/document/api/876/127962) 接口功能一致，后续该接口可能会下线，请使用 [DescribeTable](https://cloud.tencent.com/document/api/876/127962)接口。
@@ -1775,6 +1842,31 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改资源基础权限。
+        /// 
+        /// 修改云函数、云存储和数据库表的基础权限配置。支持预定义权限级别和自定义安全规则两种方式配置资源访问权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePermissionRequest"/></param>
+        /// <returns><see cref="ModifyResourcePermissionResponse"/></returns>
+        public Task<ModifyResourcePermissionResponse> ModifyResourcePermission(ModifyResourcePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePermissionResponse>(req, "ModifyResourcePermission");
+        }
+
+        /// <summary>
+        /// 修改资源基础权限。
+        /// 
+        /// 修改云函数、云存储和数据库表的基础权限配置。支持预定义权限级别和自定义安全规则两种方式配置资源访问权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePermissionRequest"/></param>
+        /// <returns><see cref="ModifyResourcePermissionResponse"/></returns>
+        public ModifyResourcePermissionResponse ModifyResourcePermissionSync(ModifyResourcePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePermissionResponse>(req, "ModifyResourcePermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 设置数据库安全规则。
         /// 安全规则，用于控制C端用户的访问权限。详见 [安全规则介绍 ](https://cloud.tencent.com/document/product/876/123478)。
         /// </summary>
@@ -1848,6 +1940,48 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（PreviewPGUserMigrations）用于预览SQL migrations 在远端的执行计划，不实际执行SQL。
+        /// </summary>
+        /// <param name="req"><see cref="PreviewPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="PreviewPGUserMigrationsResponse"/></returns>
+        public Task<PreviewPGUserMigrationsResponse> PreviewPGUserMigrations(PreviewPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<PreviewPGUserMigrationsResponse>(req, "PreviewPGUserMigrations");
+        }
+
+        /// <summary>
+        /// 本接口（PreviewPGUserMigrations）用于预览SQL migrations 在远端的执行计划，不实际执行SQL。
+        /// </summary>
+        /// <param name="req"><see cref="PreviewPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="PreviewPGUserMigrationsResponse"/></returns>
+        public PreviewPGUserMigrationsResponse PreviewPGUserMigrationsSync(PreviewPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<PreviewPGUserMigrationsResponse>(req, "PreviewPGUserMigrations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（PushPGUserMigrations）用于批量应用Migrations。
+        /// </summary>
+        /// <param name="req"><see cref="PushPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="PushPGUserMigrationsResponse"/></returns>
+        public Task<PushPGUserMigrationsResponse> PushPGUserMigrations(PushPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<PushPGUserMigrationsResponse>(req, "PushPGUserMigrations");
+        }
+
+        /// <summary>
+        /// 本接口（PushPGUserMigrations）用于批量应用Migrations。
+        /// </summary>
+        /// <param name="req"><see cref="PushPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="PushPGUserMigrationsResponse"/></returns>
+        public PushPGUserMigrationsResponse PushPGUserMigrationsSync(PushPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<PushPGUserMigrationsResponse>(req, "PushPGUserMigrations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 从环境池里立即取出1个环境
         /// </summary>
         /// <param name="req"><see cref="ReleaseEnvRequest"/></param>
@@ -1890,6 +2024,48 @@ namespace TencentCloud.Tcb.V20180608
         public RenewEnvResponse RenewEnvSync(RenewEnvRequest req)
         {
             return InternalRequestAsync<RenewEnvResponse>(req, "RenewEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RepairPGUserMigrationHistory）用于受控修复 history，只修改 user_schema_migrations，不执行 SQL。
+        /// </summary>
+        /// <param name="req"><see cref="RepairPGUserMigrationHistoryRequest"/></param>
+        /// <returns><see cref="RepairPGUserMigrationHistoryResponse"/></returns>
+        public Task<RepairPGUserMigrationHistoryResponse> RepairPGUserMigrationHistory(RepairPGUserMigrationHistoryRequest req)
+        {
+            return InternalRequestAsync<RepairPGUserMigrationHistoryResponse>(req, "RepairPGUserMigrationHistory");
+        }
+
+        /// <summary>
+        /// 本接口（RepairPGUserMigrationHistory）用于受控修复 history，只修改 user_schema_migrations，不执行 SQL。
+        /// </summary>
+        /// <param name="req"><see cref="RepairPGUserMigrationHistoryRequest"/></param>
+        /// <returns><see cref="RepairPGUserMigrationHistoryResponse"/></returns>
+        public RepairPGUserMigrationHistoryResponse RepairPGUserMigrationHistorySync(RepairPGUserMigrationHistoryRequest req)
+        {
+            return InternalRequestAsync<RepairPGUserMigrationHistoryResponse>(req, "RepairPGUserMigrationHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RollbackPGUserMigrations）用于按最近 N 条已应用 migration 倒序执行 rollback。
+        /// </summary>
+        /// <param name="req"><see cref="RollbackPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="RollbackPGUserMigrationsResponse"/></returns>
+        public Task<RollbackPGUserMigrationsResponse> RollbackPGUserMigrations(RollbackPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<RollbackPGUserMigrationsResponse>(req, "RollbackPGUserMigrations");
+        }
+
+        /// <summary>
+        /// 本接口（RollbackPGUserMigrations）用于按最近 N 条已应用 migration 倒序执行 rollback。
+        /// </summary>
+        /// <param name="req"><see cref="RollbackPGUserMigrationsRequest"/></param>
+        /// <returns><see cref="RollbackPGUserMigrationsResponse"/></returns>
+        public RollbackPGUserMigrationsResponse RollbackPGUserMigrationsSync(RollbackPGUserMigrationsRequest req)
+        {
+            return InternalRequestAsync<RollbackPGUserMigrationsResponse>(req, "RollbackPGUserMigrations")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Ig.V20210518.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TerminateDisksRequest : AbstractModel
+    public class ReportFileInfoReq : AbstractModel
     {
         
         /// <summary>
-        /// 需退还的云盘ID列表。
+        /// <p>报告文件链接</p>
         /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
+        [JsonProperty("ReportFileUrl")]
+        public string ReportFileUrl{ get; set; }
+
+        /// <summary>
+        /// <p>报告文件类型，1:pdf，2:图片</p>
+        /// </summary>
+        [JsonProperty("ReportFileType")]
+        public long? ReportFileType{ get; set; }
+
+        /// <summary>
+        /// <p>报告id</p>
+        /// </summary>
+        [JsonProperty("ReportId")]
+        public string ReportId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamSimple(map, prefix + "ReportFileUrl", this.ReportFileUrl);
+            this.SetParamSimple(map, prefix + "ReportFileType", this.ReportFileType);
+            this.SetParamSimple(map, prefix + "ReportId", this.ReportId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+        /// 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
         /// </summary>
         [JsonProperty("ModerationType")]
         public ulong? ModerationType{ get; set; }
@@ -37,19 +37,20 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// 音频切片时长，默认15s 示例值：15
+        /// 音频切片时长，默认15s 示例值：15, 范围15-60s
         /// </summary>
         [JsonProperty("SliceAudio")]
         public ulong? SliceAudio{ get; set; }
 
         /// <summary>
-        /// 视频截帧间隔时长，默认5s
+        /// 视频截帧间隔时长，默认5s, 范围1-60s
         /// </summary>
         [JsonProperty("SliceVideo")]
         public ulong? SliceVideo{ get; set; }
 
         /// <summary>
         /// 供应商枚举，
+        /// trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
         /// tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
         /// ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
         /// shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
@@ -59,13 +60,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string ModerationSupplier{ get; set; }
 
         /// <summary>
-        /// 第三方审核商送审需要配置信息
+        /// 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
         /// </summary>
         [JsonProperty("ModerationSupplierParam")]
         public ModerationSupplierParam ModerationSupplierParam{ get; set; }
 
         /// <summary>
-        /// 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+        /// 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
         /// </summary>
         [JsonProperty("SaveModerationFile")]
         public ulong? SaveModerationFile{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Evt.V20250217
 
        private const string endpoint = "evt.tencentcloudapi.com";
        private const string version = "2025-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.

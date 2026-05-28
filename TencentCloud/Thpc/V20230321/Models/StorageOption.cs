@@ -25,22 +25,28 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群挂载CFS文件系统选项。
+        /// <p>集群挂载CFS文件系统选项。</p>
         /// </summary>
         [JsonProperty("CFSOptions")]
         public CFSOption[] CFSOptions{ get; set; }
 
         /// <summary>
-        /// 集群挂载GooseFS文件系统选项。
+        /// <p>集群挂载GooseFS文件系统选项。</p>
         /// </summary>
         [JsonProperty("GooseFSOptions")]
         public GooseFSOption[] GooseFSOptions{ get; set; }
 
         /// <summary>
-        /// 集群挂载GooseFSx文件系统选项。
+        /// <p>集群挂载GooseFSx文件系统选项。</p>
         /// </summary>
         [JsonProperty("GooseFSxOptions")]
         public GooseFSxOption[] GooseFSxOptions{ get; set; }
+
+        /// <summary>
+        /// <p>集群挂载COS文件系统选项。</p>
+        /// </summary>
+        [JsonProperty("CosOptions")]
+        public CosOption[] CosOptions{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamArrayObj(map, prefix + "CFSOptions.", this.CFSOptions);
             this.SetParamArrayObj(map, prefix + "GooseFSOptions.", this.GooseFSOptions);
             this.SetParamArrayObj(map, prefix + "GooseFSxOptions.", this.GooseFSxOptions);
+            this.SetParamArrayObj(map, prefix + "CosOptions.", this.CosOptions);
         }
     }
 }
