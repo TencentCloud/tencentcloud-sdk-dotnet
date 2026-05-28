@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1433";
+       private const string sdkVersion = "SDK_NET_3.0.1434";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public AddLibraDBInstancesResponse AddLibraDBInstancesSync(AddLibraDBInstancesRequest req)
         {
             return InternalRequestAsync<AddLibraDBInstancesResponse>(req, "AddLibraDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加serverless集群只读实例
+        /// </summary>
+        /// <param name="req"><see cref="AddServerlessRoInstancesRequest"/></param>
+        /// <returns><see cref="AddServerlessRoInstancesResponse"/></returns>
+        public Task<AddServerlessRoInstancesResponse> AddServerlessRoInstances(AddServerlessRoInstancesRequest req)
+        {
+            return InternalRequestAsync<AddServerlessRoInstancesResponse>(req, "AddServerlessRoInstances");
+        }
+
+        /// <summary>
+        /// 添加serverless集群只读实例
+        /// </summary>
+        /// <param name="req"><see cref="AddServerlessRoInstancesRequest"/></param>
+        /// <returns><see cref="AddServerlessRoInstancesResponse"/></returns>
+        public AddServerlessRoInstancesResponse AddServerlessRoInstancesSync(AddServerlessRoInstancesRequest req)
+        {
+            return InternalRequestAsync<AddServerlessRoInstancesResponse>(req, "AddServerlessRoInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2528,6 +2549,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRangeSync(DescribeRollbackTimeRangeRequest req)
         {
             return InternalRequestAsync<DescribeRollbackTimeRangeResponse>(req, "DescribeRollbackTimeRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSQLExecutionPlan)用于查询执行计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSQLExecutionPlanRequest"/></param>
+        /// <returns><see cref="DescribeSQLExecutionPlanResponse"/></returns>
+        public Task<DescribeSQLExecutionPlanResponse> DescribeSQLExecutionPlan(DescribeSQLExecutionPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeSQLExecutionPlanResponse>(req, "DescribeSQLExecutionPlan");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSQLExecutionPlan)用于查询执行计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSQLExecutionPlanRequest"/></param>
+        /// <returns><see cref="DescribeSQLExecutionPlanResponse"/></returns>
+        public DescribeSQLExecutionPlanResponse DescribeSQLExecutionPlanSync(DescribeSQLExecutionPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeSQLExecutionPlanResponse>(req, "DescribeSQLExecutionPlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

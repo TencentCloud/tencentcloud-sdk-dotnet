@@ -25,108 +25,114 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+        /// <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 计数标识
+        /// <p>计数标识</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 动作，40表示查询白名单，42表示查询黑名单
+        /// <p>动作，40表示查询白名单，42表示查询黑名单</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }
 
         /// <summary>
-        /// 最小有效时间的时间戳
+        /// <p>最小有效时间的时间戳</p>
         /// </summary>
         [JsonProperty("VtsMin")]
         [System.Obsolete]
         public ulong? VtsMin{ get; set; }
 
         /// <summary>
-        /// 最大有效时间的时间戳
+        /// <p>最大有效时间的时间戳</p>
         /// </summary>
         [JsonProperty("VtsMax")]
         [System.Obsolete]
         public ulong? VtsMax{ get; set; }
 
         /// <summary>
-        /// 最小创建时间的时间戳
+        /// <p>最小创建时间的时间戳</p>
         /// </summary>
         [JsonProperty("CtsMin")]
         public ulong? CtsMin{ get; set; }
 
         /// <summary>
-        /// 最大创建时间的时间戳
+        /// <p>最大创建时间的时间戳</p>
         /// </summary>
         [JsonProperty("CtsMax")]
         public ulong? CtsMax{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+        /// <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p>
         /// </summary>
         [JsonProperty("OffSet")]
         public ulong? OffSet{ get; set; }
 
         /// <summary>
-        /// 每页返回的数量，默认为20
+        /// <p>每页返回的数量，默认为20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+        /// <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 排序参数
+        /// <p>排序参数</p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// IP
+        /// <p>IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 生效状态，1表示生效中，2表示过期，0表示全部
+        /// <p>生效状态，1表示生效中，2表示过期，0表示全部</p>
         /// </summary>
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }
 
         /// <summary>
-        /// 最小有效时间的时间戳
+        /// <p>最小有效时间的时间戳</p>
         /// </summary>
         [JsonProperty("ValidTimeStampMin")]
         public string ValidTimeStampMin{ get; set; }
 
         /// <summary>
-        /// 最大有效时间的时间戳
+        /// <p>最大有效时间的时间戳</p>
         /// </summary>
         [JsonProperty("ValidTimeStampMax")]
         public string ValidTimeStampMax{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+        /// <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p>
         /// </summary>
         [JsonProperty("TimerType")]
         public long? TimerType{ get; set; }
+
+        /// <summary>
+        /// <p>查询的ip列表</p>
+        /// </summary>
+        [JsonProperty("IpList")]
+        public string[] IpList{ get; set; }
 
 
         /// <summary>
@@ -151,6 +157,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "TimerType", this.TimerType);
+            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
         }
     }
 }

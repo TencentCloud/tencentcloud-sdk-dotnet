@@ -25,67 +25,67 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+        /// <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
         /// </summary>
         [JsonProperty("IdlType")]
         public string IdlType{ get; set; }
 
         /// <summary>
-        /// 集群名称，可使用中文或英文字符，最大长度32个字符
+        /// <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+        /// <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+        /// <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+        /// <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 集群标签列表
+        /// <p>集群标签列表</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public TagInfoUnit[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 集群是否开启IPv6功能
+        /// <p>集群是否开启IPv6功能</p>
         /// </summary>
         [JsonProperty("Ipv6Enable")]
         public long? Ipv6Enable{ get; set; }
 
         /// <summary>
-        /// 独占集群占用的svr机器
+        /// <p>独占集群占用的svr机器</p>
         /// </summary>
         [JsonProperty("ServerList")]
         public MachineInfo[] ServerList{ get; set; }
 
         /// <summary>
-        /// 独占集群占用的proxy机器
+        /// <p>独占集群占用的proxy机器</p>
         /// </summary>
         [JsonProperty("ProxyList")]
         public MachineInfo[] ProxyList{ get; set; }
 
         /// <summary>
-        /// 集群类型1共享2独占
+        /// <p>集群类型1共享2独占</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 密码认证类型，0 静态认证， 1 签名认证
+        /// <p>密码认证类型，0 静态认证， 1 签名认证</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public long? AuthType{ get; set; }

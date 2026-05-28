@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Ga2.V20250115.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpAccessControlResponse : AbstractModel
+    public class DeleteForwardingPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>输出</p>
+        /// 全球加速实例ID。
         /// </summary>
-        [JsonProperty("Data")]
-        public IpAccessControlData Data{ get; set; }
+        [JsonProperty("GlobalAcceleratorId")]
+        public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// <p>已经使用的IP黑白名单的IP总数</p>
+        /// 监听器ID。
         /// </summary>
-        [JsonProperty("UsedTotal")]
-        public ulong? UsedTotal{ get; set; }
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 策略ID。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ForwardingPolicyId")]
+        public string ForwardingPolicyId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "UsedTotal", this.UsedTotal);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GlobalAcceleratorId", this.GlobalAcceleratorId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("SupportFunc")]
         public string[] SupportFunc{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RoleComputeSet")]
+        public ComputeDetail[] RoleComputeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArrayObj(map, prefix + "ComputeSet.", this.ComputeSet);
             this.SetParamArraySimple(map, prefix + "SupportFunc.", this.SupportFunc);
+            this.SetParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
         }
     }
 }

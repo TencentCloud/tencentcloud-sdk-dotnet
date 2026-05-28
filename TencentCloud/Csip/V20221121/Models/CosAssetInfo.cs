@@ -25,116 +25,136 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// appid
+        /// <p>appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// cos桶名
+        /// <p>cos桶名</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// cos region名
+        /// <p>cos region名</p>
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// 地域码值
+        /// <p>地域码值</p>
         /// </summary>
         [JsonProperty("BucketRegionCode")]
         public string BucketRegionCode{ get; set; }
 
         /// <summary>
-        /// cos桶备注
+        /// <p>cos桶备注</p>
         /// </summary>
         [JsonProperty("BucketMarker")]
         public string BucketMarker{ get; set; }
 
         /// <summary>
-        /// cos桶主账号所属者
+        /// <p>cos桶主账号所属者</p>
         /// </summary>
         [JsonProperty("BucketOwnerUin")]
         public string BucketOwnerUin{ get; set; }
 
         /// <summary>
-        /// cos主账号所属者昵称
+        /// <p>cos主账号所属者昵称</p>
         /// </summary>
         [JsonProperty("BucketOwnerNickName")]
         public string BucketOwnerNickName{ get; set; }
 
         /// <summary>
-        /// cos桶标签详情
+        /// <p>cos桶标签详情</p>
         /// </summary>
         [JsonProperty("BucketTagInfo")]
         public string BucketTagInfo{ get; set; }
 
         /// <summary>
-        /// 安全建议
-        /// 1 暂无异常
-        /// 2 建议加固
-        /// 3 立即处理
+        /// <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p>
         /// </summary>
         [JsonProperty("BucketSecuritySuggestion")]
         public long? BucketSecuritySuggestion{ get; set; }
 
         /// <summary>
-        /// 告警列表
+        /// <p>告警列表</p>
         /// </summary>
         [JsonProperty("BucketAlarmList")]
         public CosRiskAlarmInfo[] BucketAlarmList{ get; set; }
 
         /// <summary>
-        /// 风险列表
+        /// <p>风险列表</p>
         /// </summary>
         [JsonProperty("BucketRiskList")]
         public CosRiskAlarmInfo[] BucketRiskList{ get; set; }
 
         /// <summary>
-        /// 调用源ip数
+        /// <p>调用源ip数</p>
         /// </summary>
         [JsonProperty("BucketInvokeSourceIpCount")]
         public long? BucketInvokeSourceIpCount{ get; set; }
 
         /// <summary>
-        /// 访问策略
+        /// <p>访问策略</p>
         /// </summary>
         [JsonProperty("BucketAccessWay")]
         public CosBucketAccessWay BucketAccessWay{ get; set; }
 
         /// <summary>
-        /// 创建时间Unix时间单位毫秒
+        /// <p>创建时间Unix时间单位毫秒</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后访问时间Unix时间单位毫秒
+        /// <p>最后访问时间Unix时间单位毫秒</p>
         /// </summary>
         [JsonProperty("LastAccessTime")]
         public long? LastAccessTime{ get; set; }
 
         /// <summary>
-        /// 存储桶id
+        /// <p>存储桶id</p>
         /// </summary>
         [JsonProperty("BucketId")]
         public ulong? BucketId{ get; set; }
 
         /// <summary>
-        /// 0 关闭
-        /// 1 开启
+        /// <p>0 关闭<br>1 开启</p>
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public ulong? MonitorStatus{ get; set; }
 
         /// <summary>
-        /// 数据识别扫描信息
+        /// <p>数据识别扫描信息</p>
         /// </summary>
         [JsonProperty("DataScanInfo")]
         public CosAssetDataScanDetail DataScanInfo{ get; set; }
+
+        /// <summary>
+        /// <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul>
+        /// </summary>
+        [JsonProperty("BucketAzType")]
+        public string BucketAzType{ get; set; }
+
+        /// <summary>
+        /// <p>存储桶存储大小</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("BucketStorageSize")]
+        public long? BucketStorageSize{ get; set; }
+
+        /// <summary>
+        /// <p>存储桶对象个数</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("BucketObjectCount")]
+        public long? BucketObjectCount{ get; set; }
+
+        /// <summary>
+        /// <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("IdentifySampleRate")]
+        public float? IdentifySampleRate{ get; set; }
 
 
         /// <summary>
@@ -160,6 +180,10 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "BucketId", this.BucketId);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
             this.SetParamObj(map, prefix + "DataScanInfo.", this.DataScanInfo);
+            this.SetParamSimple(map, prefix + "BucketAzType", this.BucketAzType);
+            this.SetParamSimple(map, prefix + "BucketStorageSize", this.BucketStorageSize);
+            this.SetParamSimple(map, prefix + "BucketObjectCount", this.BucketObjectCount);
+            this.SetParamSimple(map, prefix + "IdentifySampleRate", this.IdentifySampleRate);
         }
     }
 }

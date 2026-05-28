@@ -15,26 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpAccessControlResponse : AbstractModel
+    public class AddServerlessRoInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>输出</p>
+        /// <p>冻结流水，一次开通一个冻结流水</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Data")]
-        public IpAccessControlData Data{ get; set; }
+        [JsonProperty("TranId")]
+        public string TranId{ get; set; }
 
         /// <summary>
-        /// <p>已经使用的IP黑白名单的IP总数</p>
+        /// <p>后付费订单号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UsedTotal")]
-        public ulong? UsedTotal{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// <p>发货资源id列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// <p>大订单号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +64,10 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "UsedTotal", this.UsedTotal);
+            this.SetParamSimple(map, prefix + "TranId", this.TranId);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

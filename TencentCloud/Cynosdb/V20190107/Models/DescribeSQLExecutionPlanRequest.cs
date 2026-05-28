@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpAccessControlResponse : AbstractModel
+    public class DescribeSQLExecutionPlanRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>输出</p>
+        /// <p>集群ID</p>
         /// </summary>
-        [JsonProperty("Data")]
-        public IpAccessControlData Data{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>已经使用的IP黑白名单的IP总数</p>
+        /// <p>实例ID</p>
         /// </summary>
-        [JsonProperty("UsedTotal")]
-        public ulong? UsedTotal{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>SQL模板ID</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TemplateID")]
+        public string TemplateID{ get; set; }
+
+        /// <summary>
+        /// <p>计划详情序列号</p>
+        /// </summary>
+        [JsonProperty("PlanDetailId")]
+        public long? PlanDetailId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "UsedTotal", this.UsedTotal);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TemplateID", this.TemplateID);
+            this.SetParamSimple(map, prefix + "PlanDetailId", this.PlanDetailId);
         }
     }
 }

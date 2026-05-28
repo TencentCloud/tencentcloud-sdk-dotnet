@@ -84,6 +84,24 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("HyperParam")]
         public HyperParam HyperParam{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SecurityType")]
+        public string SecurityType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RoleComputeSet")]
+        public ComputeDetail[] RoleComputeSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TargetReplicas")]
+        public ulong? TargetReplicas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
             this.SetParamObj(map, prefix + "HyperParam.", this.HyperParam);
+            this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
+            this.SetParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
+            this.SetParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
         }
     }
 }

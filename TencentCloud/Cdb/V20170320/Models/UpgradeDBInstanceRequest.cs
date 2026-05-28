@@ -144,6 +144,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DataCheckSensitive")]
         public string DataCheckSensitive{ get; set; }
 
+        /// <summary>
+        /// <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+        /// </summary>
+        [JsonProperty("FourthZone")]
+        public string FourthZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
             this.SetParamSimple(map, prefix + "DataCheckSensitive", this.DataCheckSensitive);
+            this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
         }
     }
 }

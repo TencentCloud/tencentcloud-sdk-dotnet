@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
 
+        /// <summary>
+        /// <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+        /// </summary>
+        [JsonProperty("DstFourthZone")]
+        public long? DstFourthZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DstZoneId", this.DstZoneId);
             this.SetParamObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+            this.SetParamSimple(map, prefix + "DstFourthZone", this.DstFourthZone);
         }
     }
 }

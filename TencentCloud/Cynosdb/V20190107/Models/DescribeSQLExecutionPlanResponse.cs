@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpAccessControlResponse : AbstractModel
+    public class DescribeSQLExecutionPlanResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>输出</p>
+        /// <p>执行计划详情</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Data")]
-        public IpAccessControlData Data{ get; set; }
-
-        /// <summary>
-        /// <p>已经使用的IP黑白名单的IP总数</p>
-        /// </summary>
-        [JsonProperty("UsedTotal")]
-        public ulong? UsedTotal{ get; set; }
+        [JsonProperty("PlanDetail")]
+        public ExecutionPlanDetail PlanDetail{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "UsedTotal", this.UsedTotal);
+            this.SetParamObj(map, prefix + "PlanDetail.", this.PlanDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

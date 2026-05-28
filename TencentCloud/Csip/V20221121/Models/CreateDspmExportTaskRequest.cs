@@ -25,187 +25,187 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
+        /// <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
         /// </summary>
         [JsonProperty("DangerLevel")]
         public long? DangerLevel{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 数据库端口
+        /// <p>数据库端口</p>
         /// </summary>
         [JsonProperty("DbPort")]
         public long? DbPort{ get; set; }
 
         /// <summary>
-        /// 数据库 IP
+        /// <p>数据库 IP</p>
         /// </summary>
         [JsonProperty("DbIp")]
         public string DbIp{ get; set; }
 
         /// <summary>
-        /// 资产 ID
+        /// <p>资产 ID</p>
         /// </summary>
         [JsonProperty("AssetsId")]
         public long? AssetsId{ get; set; }
 
         /// <summary>
-        /// 会话 ID
+        /// <p>会话 ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 客户端 IP
+        /// <p>客户端 IP</p>
         /// </summary>
         [JsonProperty("ClientSideIp")]
         public string ClientSideIp{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 命中规则
+        /// <p>命中规则</p>
         /// </summary>
         [JsonProperty("HitRule")]
         public long? HitRule{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 模糊查询
+        /// <p>模糊查询</p>
         /// </summary>
         [JsonProperty("FuzzySearch")]
         public string FuzzySearch{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 客户端
+        /// <p>客户端</p>
         /// </summary>
         [JsonProperty("ClientName")]
         public string ClientName{ get; set; }
 
         /// <summary>
-        /// 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
+        /// <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
         /// </summary>
         [JsonProperty("SourceTypes")]
         public string[] SourceTypes{ get; set; }
 
         /// <summary>
-        /// 表名，长度限制64，多个表名查询的话可以用空格连接	
+        /// <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 字段名，长度限制64，多个字段名查询的话可以用空格连接
+        /// <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
         /// </summary>
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }
 
         /// <summary>
-        /// SQL 主要类型，DDL, DML, DCL, TCL	
+        /// <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
         /// </summary>
         [JsonProperty("SqlMainTypes")]
         public string[] SqlMainTypes{ get; set; }
 
         /// <summary>
-        /// 操作类型	
+        /// <p>操作类型</p>
         /// </summary>
         [JsonProperty("SqlType")]
         public string SqlType{ get; set; }
 
         /// <summary>
-        /// 影响行数最小值	
+        /// <p>影响行数最小值</p>
         /// </summary>
         [JsonProperty("RowNumMin")]
         public long? RowNumMin{ get; set; }
 
         /// <summary>
-        /// 影响行数最大值	
+        /// <p>影响行数最大值</p>
         /// </summary>
         [JsonProperty("RowNumMax")]
         public long? RowNumMax{ get; set; }
 
         /// <summary>
-        /// 数据库类型	
+        /// <p>数据库类型</p>
         /// </summary>
         [JsonProperty("DbTypes")]
         public string[] DbTypes{ get; set; }
 
         /// <summary>
-        /// 返回码	
+        /// <p>返回码</p>
         /// </summary>
         [JsonProperty("RetNo")]
         public long? RetNo{ get; set; }
 
         /// <summary>
-        /// 客户端工具	
+        /// <p>客户端工具</p>
         /// </summary>
         [JsonProperty("ClientDriverName")]
         public string ClientDriverName{ get; set; }
 
         /// <summary>
-        /// 客户端端口	
+        /// <p>客户端端口</p>
         /// </summary>
         [JsonProperty("ClientPort")]
         public long? ClientPort{ get; set; }
 
         /// <summary>
-        /// 审计日志 ID
+        /// <p>审计日志 ID</p>
         /// </summary>
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
         /// <summary>
-        /// 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
+        /// <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
         /// </summary>
         [JsonProperty("DangerLevels")]
         public long?[] DangerLevels{ get; set; }
 
         /// <summary>
-        /// 字段分类
+        /// <p>字段分类</p>
         /// </summary>
         [JsonProperty("SensitiveCategoryRule")]
         public string SensitiveCategoryRule{ get; set; }
 
         /// <summary>
-        /// 字段分级
+        /// <p>字段分级</p>
         /// </summary>
         [JsonProperty("SensitiveLevelRisk")]
         public string SensitiveLevelRisk{ get; set; }
 
         /// <summary>
-        /// 事务Id
+        /// <p>事务Id</p>
         /// </summary>
         [JsonProperty("TrxId")]
         public long? TrxId{ get; set; }
 
         /// <summary>
-        /// clientMac
+        /// <p>clientMac</p>
         /// </summary>
         [JsonProperty("ClientMac")]
         public string ClientMac{ get; set; }

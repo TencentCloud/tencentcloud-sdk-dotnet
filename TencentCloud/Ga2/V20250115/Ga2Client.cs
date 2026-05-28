@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1434";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ga2.V20250115
         public CreateEndpointGroupResponse CreateEndpointGroupSync(CreateEndpointGroupRequest req)
         {
             return InternalRequestAsync<CreateEndpointGroupResponse>(req, "CreateEndpointGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateForwardingPolicyRequest"/></param>
+        /// <returns><see cref="CreateForwardingPolicyResponse"/></returns>
+        public Task<CreateForwardingPolicyResponse> CreateForwardingPolicy(CreateForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateForwardingPolicyResponse>(req, "CreateForwardingPolicy");
+        }
+
+        /// <summary>
+        /// 创建七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateForwardingPolicyRequest"/></param>
+        /// <returns><see cref="CreateForwardingPolicyResponse"/></returns>
+        public CreateForwardingPolicyResponse CreateForwardingPolicySync(CreateForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateForwardingPolicyResponse>(req, "CreateForwardingPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -197,6 +218,27 @@ namespace TencentCloud.Ga2.V20250115
         public DeleteEndpointGroupsResponse DeleteEndpointGroupsSync(DeleteEndpointGroupsRequest req)
         {
             return InternalRequestAsync<DeleteEndpointGroupsResponse>(req, "DeleteEndpointGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteForwardingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteForwardingPolicyResponse"/></returns>
+        public Task<DeleteForwardingPolicyResponse> DeleteForwardingPolicy(DeleteForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteForwardingPolicyResponse>(req, "DeleteForwardingPolicy");
+        }
+
+        /// <summary>
+        /// 删除七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteForwardingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteForwardingPolicyResponse"/></returns>
+        public DeleteForwardingPolicyResponse DeleteForwardingPolicySync(DeleteForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteForwardingPolicyResponse>(req, "DeleteForwardingPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +390,27 @@ namespace TencentCloud.Ga2.V20250115
         }
 
         /// <summary>
+        /// 查看七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardingPolicyRequest"/></param>
+        /// <returns><see cref="DescribeForwardingPolicyResponse"/></returns>
+        public Task<DescribeForwardingPolicyResponse> DescribeForwardingPolicy(DescribeForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardingPolicyResponse>(req, "DescribeForwardingPolicy");
+        }
+
+        /// <summary>
+        /// 查看七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardingPolicyRequest"/></param>
+        /// <returns><see cref="DescribeForwardingPolicyResponse"/></returns>
+        public DescribeForwardingPolicyResponse DescribeForwardingPolicySync(DescribeForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardingPolicyResponse>(req, "DescribeForwardingPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看七层转发规则
         /// </summary>
         /// <param name="req"><see cref="DescribeForwardingRuleRequest"/></param>
@@ -470,6 +533,27 @@ namespace TencentCloud.Ga2.V20250115
         public ModifyEndpointGroupResponse ModifyEndpointGroupSync(ModifyEndpointGroupRequest req)
         {
             return InternalRequestAsync<ModifyEndpointGroupResponse>(req, "ModifyEndpointGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyForwardingPolicyRequest"/></param>
+        /// <returns><see cref="ModifyForwardingPolicyResponse"/></returns>
+        public Task<ModifyForwardingPolicyResponse> ModifyForwardingPolicy(ModifyForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyForwardingPolicyResponse>(req, "ModifyForwardingPolicy");
+        }
+
+        /// <summary>
+        /// 修改七层转发策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyForwardingPolicyRequest"/></param>
+        /// <returns><see cref="ModifyForwardingPolicyResponse"/></returns>
+        public ModifyForwardingPolicyResponse ModifyForwardingPolicySync(ModifyForwardingPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyForwardingPolicyResponse>(req, "ModifyForwardingPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -49,7 +49,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public float? LastCycleRatio{ get; set; }
 
         /// <summary>
-        /// <p>上周期口味王牌市场份额</p>
+        /// <p>上周期口味王品牌市场份额</p>
         /// </summary>
         [JsonProperty("LastCycleMarketShare")]
         public float? LastCycleMarketShare{ get; set; }

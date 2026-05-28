@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>1: 敏感数据识别 2:恶意文件扫描</p>
+        /// <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
@@ -42,6 +42,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("BucketSet")]
         public string[] BucketSet{ get; set; }
 
+        /// <summary>
+        /// <p>任务参数</p>
+        /// </summary>
+        [JsonProperty("TaskArgs")]
+        public string TaskArgs{ get; set; }
+
+        /// <summary>
+        /// <p>是否全部扫描</p>
+        /// </summary>
+        [JsonProperty("IsScanAll")]
+        public bool? IsScanAll{ get; set; }
+
+        /// <summary>
+        /// <p>扫描时需要剔除的存储桶</p>
+        /// </summary>
+        [JsonProperty("DeleteBucketSet")]
+        public string[] DeleteBucketSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArraySimple(map, prefix + "BucketSet.", this.BucketSet);
+            this.SetParamSimple(map, prefix + "TaskArgs", this.TaskArgs);
+            this.SetParamSimple(map, prefix + "IsScanAll", this.IsScanAll);
+            this.SetParamArraySimple(map, prefix + "DeleteBucketSet.", this.DeleteBucketSet);
         }
     }
 }

@@ -25,142 +25,160 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// APPID
+        /// <p>APPID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期
+        /// <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p>
         /// </summary>
         [JsonProperty("OrderStatus")]
         public ulong? OrderStatus{ get; set; }
 
         /// <summary>
-        /// 已购对象存储数量
+        /// <p>已购对象存储数量</p>
         /// </summary>
         [JsonProperty("BucketNum")]
         public ulong? BucketNum{ get; set; }
 
         /// <summary>
-        /// 支付模式，0-后付费 1-预付费
+        /// <p>支付模式，0-后付费 1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 是否单独购买，1-单独购买，2-被其它账号共享
+        /// <p>是否单独购买，1-单独购买，2-被其它账号共享</p>
         /// </summary>
         [JsonProperty("IsSelfBuy")]
         public ulong? IsSelfBuy{ get; set; }
 
         /// <summary>
-        /// 订单开始时间
+        /// <p>订单开始时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 订单到期时间
+        /// <p>订单到期时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费
+        /// <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 订单时长
+        /// <p>订单时长</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 时长单位
+        /// <p>时长单位</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 资源id 
+        /// <p>资源id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 公测结束时间
+        /// <p>公测结束时间</p>
         /// </summary>
         [JsonProperty("BetaEndTime")]
         public string BetaEndTime{ get; set; }
 
         /// <summary>
-        /// 系统当前时间
+        /// <p>系统当前时间</p>
         /// </summary>
         [JsonProperty("TimeNow")]
         public string TimeNow{ get; set; }
 
         /// <summary>
-        /// 是否分享给其它账号，1-是，2-否
+        /// <p>是否分享给其它账号，1-是，2-否</p>
         /// </summary>
         [JsonProperty("IsShareToOther")]
         public ulong? IsShareToOther{ get; set; }
 
         /// <summary>
-        /// uin
+        /// <p>uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// <p>昵称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 共享的bucketIdSet 
+        /// <p>共享的bucketIdSet</p>
         /// </summary>
         [JsonProperty("BindBucket")]
         public CosBucketId[] BindBucket{ get; set; }
 
         /// <summary>
-        /// 共享的appid
+        /// <p>共享的appid</p>
         /// </summary>
         [JsonProperty("SharedAppIdSet")]
         public ulong?[] SharedAppIdSet{ get; set; }
 
         /// <summary>
-        /// 是否已经开启后付费
+        /// <p>是否已经开启后付费</p>
         /// </summary>
         [JsonProperty("PostPayStatus")]
         public ulong? PostPayStatus{ get; set; }
 
         /// <summary>
-        /// 0：未做过试用期试用   1 ：做过试用期试用
+        /// <p>0：未做过试用期试用   1 ：做过试用期试用</p>
         /// </summary>
         [JsonProperty("IsTestUser")]
         public ulong? IsTestUser{ get; set; }
 
         /// <summary>
-        /// 剩余可用数
+        /// <p>剩余可用数</p>
         /// </summary>
         [JsonProperty("AvailableBucketNum")]
         public ulong? AvailableBucketNum{ get; set; }
 
         /// <summary>
-        /// 已开启的监测存储桶数
+        /// <p>已开启的监测存储桶数</p>
         /// </summary>
         [JsonProperty("MonitorBucketNum")]
         public ulong? MonitorBucketNum{ get; set; }
 
         /// <summary>
-        /// 总的存储桶数
+        /// <p>总的存储桶数</p>
         /// </summary>
         [JsonProperty("TotalBucketNum")]
         public ulong? TotalBucketNum{ get; set; }
+
+        /// <summary>
+        /// <p>后付费产品开关状态</p>
+        /// </summary>
+        [JsonProperty("PostProductStatusList")]
+        public ulong?[] PostProductStatusList{ get; set; }
+
+        /// <summary>
+        /// <p>后付费产品购买状态</p>
+        /// </summary>
+        [JsonProperty("PostProductBuyStatusList")]
+        public ulong?[] PostProductBuyStatusList{ get; set; }
+
+        /// <summary>
+        /// <p>新后付费资源id</p>
+        /// </summary>
+        [JsonProperty("NewPostPayResourceId")]
+        public string NewPostPayResourceId{ get; set; }
 
 
         /// <summary>
@@ -191,6 +209,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AvailableBucketNum", this.AvailableBucketNum);
             this.SetParamSimple(map, prefix + "MonitorBucketNum", this.MonitorBucketNum);
             this.SetParamSimple(map, prefix + "TotalBucketNum", this.TotalBucketNum);
+            this.SetParamArraySimple(map, prefix + "PostProductStatusList.", this.PostProductStatusList);
+            this.SetParamArraySimple(map, prefix + "PostProductBuyStatusList.", this.PostProductBuyStatusList);
+            this.SetParamSimple(map, prefix + "NewPostPayResourceId", this.NewPostPayResourceId);
         }
     }
 }
