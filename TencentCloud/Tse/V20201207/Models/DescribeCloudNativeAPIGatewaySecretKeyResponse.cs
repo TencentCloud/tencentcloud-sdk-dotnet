@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 允许的操作
+        /// <p>密钥详情。</p>
         /// </summary>
         [JsonProperty("Result")]
         public CNAPIGwSecretKey Result{ get; set; }

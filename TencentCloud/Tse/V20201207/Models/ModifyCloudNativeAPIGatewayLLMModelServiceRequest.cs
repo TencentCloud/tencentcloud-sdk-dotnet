@@ -126,6 +126,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SNI")]
         public string SNI{ get; set; }
 
+        /// <summary>
+        /// <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+        /// </summary>
+        [JsonProperty("QuotaLimit")]
+        public AIGWLLMQuotaLimit QuotaLimit{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Retries", this.Retries);
             this.SetParamSimple(map, prefix + "UpstreamUrlMode", this.UpstreamUrlMode);
             this.SetParamSimple(map, prefix + "SNI", this.SNI);
+            this.SetParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
         }
     }
 }

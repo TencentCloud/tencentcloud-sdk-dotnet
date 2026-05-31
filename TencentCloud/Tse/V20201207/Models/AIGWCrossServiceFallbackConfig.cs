@@ -36,6 +36,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("FallbackServiceChain")]
         public AIGWFallbackServiceItem[] FallbackServiceChain{ get; set; }
 
+        /// <summary>
+        /// <p>额度降级触发配置</p>
+        /// </summary>
+        [JsonProperty("QuotaFallbackTrigger")]
+        public AIGWLLMQuotaFallbackTrigger QuotaFallbackTrigger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamArraySimple(map, prefix + "TriggerConditions.", this.TriggerConditions);
             this.SetParamArrayObj(map, prefix + "FallbackServiceChain.", this.FallbackServiceChain);
+            this.SetParamObj(map, prefix + "QuotaFallbackTrigger.", this.QuotaFallbackTrigger);
         }
     }
 }

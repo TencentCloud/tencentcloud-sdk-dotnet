@@ -25,22 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 上传成功文件数量
-        /// 注: `如果一个文件上传失败, 则全部文件皆上传失败`
+        /// <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 文件资源ID数组，每个文件资源ID为32位字符串。
-        /// 建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-        /// 注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+        /// <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 对应上传文件的下载链接，过期时间5分钟
+        /// <p>对应上传文件的下载链接，过期时间5分钟</p>
         /// </summary>
         [JsonProperty("FileUrls")]
         public string[] FileUrls{ get; set; }

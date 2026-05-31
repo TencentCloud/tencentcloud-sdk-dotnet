@@ -25,34 +25,40 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 指标匹配规则名
+        /// <p>指标匹配规则名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则生效的应用。作用全部应用就传空字符串
+        /// <p>规则生效的应用。作用全部应用就传空字符串</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+        /// <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
         /// </summary>
         [JsonProperty("MetricMatchType")]
         public long? MetricMatchType{ get; set; }
 
         /// <summary>
-        /// 客户定义的命中指标名规则。
+        /// <p>客户定义的命中指标名规则。</p>
         /// </summary>
         [JsonProperty("MetricNameRule")]
         public string MetricNameRule{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// <p>业务系统ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>是否追加资源属性</p>
+        /// </summary>
+        [JsonProperty("AppendResourceAttributes")]
+        public bool? AppendResourceAttributes{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
             this.SetParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
         }
     }
 }

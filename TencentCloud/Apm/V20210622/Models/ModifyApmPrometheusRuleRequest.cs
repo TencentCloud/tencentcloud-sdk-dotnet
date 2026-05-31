@@ -25,46 +25,52 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// <p>业务系统ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 所要修改的规则名
+        /// <p>所要修改的规则名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则状态：1(启用)、2（不启用）、3（删除）
+        /// <p>规则状态：1(启用)、2（不启用）、3（删除）</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）
+        /// <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）
+        /// <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
         /// </summary>
         [JsonProperty("MetricMatchType")]
         public long? MetricMatchType{ get; set; }
 
         /// <summary>
-        /// 客户定义的命中指标名规则。
+        /// <p>客户定义的命中指标名规则。</p>
         /// </summary>
         [JsonProperty("MetricNameRule")]
         public string MetricNameRule{ get; set; }
+
+        /// <summary>
+        /// <p>是否追加资源属性</p>
+        /// </summary>
+        [JsonProperty("AppendResourceAttributes")]
+        public bool? AppendResourceAttributes{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
             this.SetParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
+            this.SetParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
         }
     }
 }

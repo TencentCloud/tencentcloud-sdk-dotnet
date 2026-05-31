@@ -31,70 +31,82 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：最长60个字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
+        /// <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>选择业务场景,  选项：Chat（聊天）。</p>
+        /// <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
+        /// <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
         /// </summary>
         [JsonProperty("RequestProtocol")]
         public string RequestProtocol{ get; set; }
 
         /// <summary>
-        /// <p>初始化关联的模型服务列表。</p>
+        /// <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
         /// </summary>
         [JsonProperty("ListModelServiceId")]
         public string[] ListModelServiceId{ get; set; }
 
         /// <summary>
-        /// <p>路由列表</p>
+        /// <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
         /// </summary>
         [JsonProperty("RouteList")]
         public DefaultKongRoute[] RouteList{ get; set; }
 
         /// <summary>
-        /// <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+        /// <p>统一前缀路径（可选）。例如 /v1/openai。</p>
         /// </summary>
         [JsonProperty("BasePath")]
         public string BasePath{ get; set; }
 
         /// <summary>
-        /// <p>模型 API 的相关描述。</p>
+        /// <p>模型 API 描述。最长 200 字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>模型服务路由策略（是指如何路由到模型服务）</p>
+        /// <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
         /// </summary>
         [JsonProperty("ModelServiceRoute")]
         public CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute{ get; set; }
 
         /// <summary>
-        /// <p>路由 Header 匹配规则</p>
+        /// <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
         /// </summary>
         [JsonProperty("MatchHeaders")]
         public AIGWKVMatch[] MatchHeaders{ get; set; }
 
         /// <summary>
-        /// <p>跨服务 fallback 开关</p>
+        /// <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
         /// </summary>
         [JsonProperty("EnableCrossServiceFallback")]
         public bool? EnableCrossServiceFallback{ get; set; }
 
         /// <summary>
-        /// <p>跨服务 fallback 配置</p>
+        /// <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
         /// </summary>
         [JsonProperty("CrossServiceFallbackConfig")]
         public AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig{ get; set; }
+
+        /// <summary>
+        /// <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+        /// </summary>
+        [JsonProperty("TagFilter")]
+        public AIGWTagFilter TagFilter{ get; set; }
+
+        /// <summary>
+        /// <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public AIGWLogConfig LogConfig{ get; set; }
 
 
         /// <summary>
@@ -114,6 +126,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "MatchHeaders.", this.MatchHeaders);
             this.SetParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
             this.SetParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
+            this.SetParamObj(map, prefix + "TagFilter.", this.TagFilter);
+            this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
         }
     }
 }

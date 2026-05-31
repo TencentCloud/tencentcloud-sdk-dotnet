@@ -51,6 +51,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 算法类目。可能取值：
         /// 
         /// - `COMPREHENSION`：视觉理解
+        /// - `HIGHLIGHT`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
@@ -60,6 +61,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 
         /// - `VID_COMP`：视频理解
         /// - `IMG_COMP`：图片理解
+        /// - `COMP_HIGHLIGHT`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -84,6 +86,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         [JsonProperty("CompHighlightResult")]
         public SeeCompHighlightResult CompHighlightResult{ get; set; }
+
+        /// <summary>
+        /// 标签持续检测结果
+        /// </summary>
+        [JsonProperty("DetectContinuousResult")]
+        public SeeDetectContinuousResult DetectContinuousResult{ get; set; }
 
         /// <summary>
         /// 完成该任务所消耗的基础能力额度
@@ -135,6 +143,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ServiceTier", this.ServiceTier);
             this.SetParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
             this.SetParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
+            this.SetParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);

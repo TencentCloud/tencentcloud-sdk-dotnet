@@ -25,27 +25,25 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关实例id
+        /// <p>网关实例id</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 资源类型:
-        /// 
-        /// - ModelAPI: 模型API
+        /// <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 对应资源的id
+        /// <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源ID
+        /// <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
         /// </summary>
         [JsonProperty("ConsumerGroupIds")]
         public string[] ConsumerGroupIds{ get; set; }

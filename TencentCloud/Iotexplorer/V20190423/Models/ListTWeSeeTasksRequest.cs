@@ -37,8 +37,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 算法类目。可能取值：
+        /// 算法类目。可选值：
         /// - `COMPREHENSION`：视觉理解
+        /// - `HIGHLIGHT`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
@@ -54,6 +55,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 算法类型。
+        /// 
+        /// 当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+        /// - `VID_COMP`：视频理解
+        /// - `IMG_COMP`：图片理解
+        /// - `CONT_PERSON_MOTIONLESS`：静姿检测
+        /// 
+        /// 当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+        /// - `COMP_HIGHLIGHT`：视频浓缩
+        /// </summary>
+        [JsonProperty("ServiceTypes")]
+        public string[] ServiceTypes{ get; set; }
 
         /// <summary>
         /// 通道 ID
@@ -83,6 +98,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+        /// </summary>
+        [JsonProperty("FileURLExpireTime")]
+        public long? FileURLExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,10 +115,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArraySimple(map, prefix + "ServiceTypes.", this.ServiceTypes);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
             this.SetParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
         }
     }
 }

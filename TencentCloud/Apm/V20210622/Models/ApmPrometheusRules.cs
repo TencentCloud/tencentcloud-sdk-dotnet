@@ -25,45 +25,51 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 指标匹配规则ID
+        /// <p>指标匹配规则ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 指标匹配规则名
+        /// <p>指标匹配规则名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则生效的应用。生效于全部应用就传空字符串
+        /// <p>规则生效的应用。生效于全部应用就传空字符串</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 指标匹配规则状态：1(启用)、2（不启用）
+        /// <p>指标匹配规则状态：1(启用)、2（不启用）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 指标匹配规则
+        /// <p>指标匹配规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricNameRule")]
         public string MetricNameRule{ get; set; }
 
         /// <summary>
-        /// 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+        /// <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricMatchType")]
         public long? MetricMatchType{ get; set; }
+
+        /// <summary>
+        /// <p>是否追加资源属性</p>
+        /// </summary>
+        [JsonProperty("AppendResourceAttributes")]
+        public bool? AppendResourceAttributes{ get; set; }
 
 
         /// <summary>
@@ -77,6 +83,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
             this.SetParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
+            this.SetParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1432";
+       private const string sdkVersion = "SDK_NET_3.0.1436";
 
         /// <summary>
         /// Client constructor.
@@ -4547,6 +4547,27 @@ namespace TencentCloud.Mps.V20190612
         public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
         {
             return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新音色信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public Task<UpdateVoiceResponse> UpdateVoice(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice");
+        }
+
+        /// <summary>
+        /// 更新音色信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public UpdateVoiceResponse UpdateVoiceSync(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

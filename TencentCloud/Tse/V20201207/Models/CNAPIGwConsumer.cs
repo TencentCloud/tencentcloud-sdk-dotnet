@@ -25,38 +25,38 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 分组id
+        /// <p>消费者 ID。</p>
         /// </summary>
         [JsonProperty("ConsumerId")]
         public string ConsumerId{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// <p>名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间 yyyy-MM-dd hh:mm:ss
+        /// <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 消费者分组
+        /// <p>消费者分组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerGroups")]

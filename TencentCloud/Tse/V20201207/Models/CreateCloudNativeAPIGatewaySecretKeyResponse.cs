@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 允许的操作
+        /// <p>创建结果。包含成功标识与新建资源 ID。</p>
         /// </summary>
         [JsonProperty("Result")]
         public CNAPIGwCreateCommonResult Result{ get; set; }

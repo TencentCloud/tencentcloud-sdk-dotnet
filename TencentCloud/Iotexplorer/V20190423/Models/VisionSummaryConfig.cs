@@ -154,6 +154,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("CustomDetectQueries")]
         public VisionCustomDetectQuery[] CustomDetectQueries{ get; set; }
 
+        /// <summary>
+        /// 标签持续检测配置
+        /// </summary>
+        [JsonProperty("DetectContinuous")]
+        public SeeDetectContinuousConfig[] DetectContinuous{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "MultiCameraLayout", this.MultiCameraLayout);
             this.SetParamArraySimple(map, prefix + "DetectTypes.", this.DetectTypes);
             this.SetParamArrayObj(map, prefix + "CustomDetectQueries.", this.CustomDetectQueries);
+            this.SetParamArrayObj(map, prefix + "DetectContinuous.", this.DetectContinuous);
         }
     }
 }

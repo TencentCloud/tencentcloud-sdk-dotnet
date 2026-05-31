@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 模型服务id
+        /// <p>模型服务id</p>
         /// </summary>
         [JsonProperty("ModelServiceId")]
         public string ModelServiceId{ get; set; }
 
         /// <summary>
-        /// 权重值
+        /// <p>权重值</p>
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

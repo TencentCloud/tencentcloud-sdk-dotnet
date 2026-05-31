@@ -25,46 +25,52 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID，通过DescribeClusters接口获取
+        /// <p>集群ID，通过DescribeClusters接口获取</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID，通过DescribeNodePools接口获取
+        /// <p>节点池ID，通过DescribeNodePools接口获取</p>
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点池名称，必须修改至少一个参数
+        /// <p>节点池名称，必须修改至少一个参数</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表，必须修改至少一个参数
+        /// <p>安全组ID列表，必须修改至少一个参数</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 虚拟节点label，必须修改至少一个参数
+        /// <p>虚拟节点label，必须修改至少一个参数</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 虚拟节点taint，必须修改至少一个参数
+        /// <p>虚拟节点taint，必须修改至少一个参数</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 删除保护开关，必须修改至少一个参数
+        /// <p>删除保护开关，必须修改至少一个参数</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>子网分配策略</p>
+        /// </summary>
+        [JsonProperty("SubnetAllocationPolicy")]
+        public SubnetAllocationPolicy SubnetAllocationPolicy{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
         }
     }
 }

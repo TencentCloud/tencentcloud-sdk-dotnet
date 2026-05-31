@@ -25,22 +25,34 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
+        /// <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
         /// </summary>
         [JsonProperty("SelectedTypes")]
         public string[] SelectedTypes{ get; set; }
 
         /// <summary>
-        /// 权重路由配置，最多10个
+        /// <p>权重路由配置，最多10个</p>
         /// </summary>
         [JsonProperty("WeightedConfig")]
         public CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy[] WeightedConfig{ get; set; }
 
         /// <summary>
-        /// 模型名称路由配置，最多10个
+        /// <p>模型名称路由配置，最多10个</p>
         /// </summary>
         [JsonProperty("ModelNameConfig")]
         public CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy[] ModelNameConfig{ get; set; }
+
+        /// <summary>
+        /// <p>意图识别</p>
+        /// </summary>
+        [JsonProperty("IntentRouteConfig")]
+        public AIGWIntentRoute IntentRouteConfig{ get; set; }
+
+        /// <summary>
+        /// <p>延迟路由</p>
+        /// </summary>
+        [JsonProperty("LatencyPriorityConfig")]
+        public AIGWLatencyPriorityConfig LatencyPriorityConfig{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "SelectedTypes.", this.SelectedTypes);
             this.SetParamArrayObj(map, prefix + "WeightedConfig.", this.WeightedConfig);
             this.SetParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
+            this.SetParamObj(map, prefix + "IntentRouteConfig.", this.IntentRouteConfig);
+            this.SetParamObj(map, prefix + "LatencyPriorityConfig.", this.LatencyPriorityConfig);
         }
     }
 }

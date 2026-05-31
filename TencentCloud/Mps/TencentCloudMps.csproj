@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1432</VersionPrefix>
+    <VersionPrefix>3.0.1436</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1031,6 +1031,8 @@
     <Compile Include="V20190612\Models\UpdateSmartErasePrivacyConfig.cs" />
     <Compile Include="V20190612\Models\UpdateSmartEraseSubtitleConfig.cs" />
     <Compile Include="V20190612\Models\UpdateSmartEraseWatermarkConfig.cs" />
+    <Compile Include="V20190612\Models\UpdateVoiceRequest.cs" />
+    <Compile Include="V20190612\Models\UpdateVoiceResponse.cs" />
     <Compile Include="V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="V20190612\Models\UsageDetail.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
@@ -1051,6 +1053,7 @@
     <Compile Include="V20190612\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\VoiceInfo.cs" />
     <Compile Include="V20190612\Models\VoiceProfile.cs" />
+    <Compile Include="V20190612\Models\VoiceUpdateFields.cs" />
     <Compile Include="V20190612\Models\VolumeBalanceConfig.cs" />
     <Compile Include="V20190612\Models\WatermarkInput.cs" />
     <Compile Include="V20190612\Models\WatermarkTemplate.cs" />

@@ -150,6 +150,24 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SNI")]
         public string SNI{ get; set; }
 
+        /// <summary>
+        /// <p>配额限制</p>
+        /// </summary>
+        [JsonProperty("QuotaLimit")]
+        public AIGWLLMQuotaLimit QuotaLimit{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string Tags{ get; set; }
+
+        /// <summary>
+        /// <p>绑定的模型服务秘钥</p>
+        /// </summary>
+        [JsonProperty("SecretKeyIds")]
+        public string[] SecretKeyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +195,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Retries", this.Retries);
             this.SetParamSimple(map, prefix + "UpstreamUrlMode", this.UpstreamUrlMode);
             this.SetParamSimple(map, prefix + "SNI", this.SNI);
+            this.SetParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
+            this.SetParamSimple(map, prefix + "Tags", this.Tags);
+            this.SetParamArraySimple(map, prefix + "SecretKeyIds.", this.SecretKeyIds);
         }
     }
 }

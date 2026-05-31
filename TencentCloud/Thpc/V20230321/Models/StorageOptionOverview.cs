@@ -25,22 +25,28 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// CFS存储选项概览信息列表。
+        /// <p>CFS存储选项概览信息列表。</p>
         /// </summary>
         [JsonProperty("CFSOptions")]
         public CFSOptionOverview[] CFSOptions{ get; set; }
 
         /// <summary>
-        /// GooseFS存储选项概览信息列表。
+        /// <p>GooseFS存储选项概览信息列表。</p>
         /// </summary>
         [JsonProperty("GooseFSOptions")]
         public GooseFSOptionOverview[] GooseFSOptions{ get; set; }
 
         /// <summary>
-        /// GooseFSx存储选项概览信息列表。
+        /// <p>GooseFSx存储选项概览信息列表。</p>
         /// </summary>
         [JsonProperty("GooseFSxOptions")]
         public GooseFSxOptionOverview[] GooseFSxOptions{ get; set; }
+
+        /// <summary>
+        /// <p>COS存储选项概览信息列表。</p>
+        /// </summary>
+        [JsonProperty("CosOptions")]
+        public CosOptionOverview[] CosOptions{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamArrayObj(map, prefix + "CFSOptions.", this.CFSOptions);
             this.SetParamArrayObj(map, prefix + "GooseFSOptions.", this.GooseFSOptions);
             this.SetParamArrayObj(map, prefix + "GooseFSxOptions.", this.GooseFSxOptions);
+            this.SetParamArrayObj(map, prefix + "CosOptions.", this.CosOptions);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 消费者组ID
+        /// <p>消费者组 ID（以 cg- 开头）。</p>
         /// </summary>
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
 
         /// <summary>
-        /// 消费者ID列表
+        /// <p>消费者 ID 列表，长度 1-10。</p>
         /// </summary>
         [JsonProperty("ConsumerIds")]
         public string[] ConsumerIds{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 模型服务id
+        /// <p>模型服务id</p>
         /// </summary>
         [JsonProperty("ModelServiceId")]
         public string ModelServiceId{ get; set; }
 
         /// <summary>
-        /// 匹配模型服务
+        /// <p>匹配模型服务</p>
         /// </summary>
         [JsonProperty("MatchModelName")]
         public string MatchModelName{ get; set; }
 
         /// <summary>
-        /// 重写模型
+        /// <p>重写模型</p>
         /// </summary>
         [JsonProperty("RewriteModelName")]
         public string RewriteModelName{ get; set; }

@@ -126,6 +126,30 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("DescribeCloudNativeAPIGatewayLLMModelAPI")]
         public bool? DescribeCloudNativeAPIGatewayLLMModelAPI{ get; set; }
 
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("TagFilter")]
+        public AIGWTagFilter TagFilter{ get; set; }
+
+        /// <summary>
+        /// <p>日志显示相关开关</p>
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public AIGWLogConfig LogConfig{ get; set; }
+
+        /// <summary>
+        /// <p>日志脱敏规则</p>
+        /// </summary>
+        [JsonProperty("LogDesensitizeConfig")]
+        public AIGWLogDesensitizeConfig LogDesensitizeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>转发脱敏规则</p>
+        /// </summary>
+        [JsonProperty("ForwardDesensitizeConfig")]
+        public AIGWForwardDesensitizeConfig ForwardDesensitizeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +173,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
             this.SetParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
             this.SetParamSimple(map, prefix + "DescribeCloudNativeAPIGatewayLLMModelAPI", this.DescribeCloudNativeAPIGatewayLLMModelAPI);
+            this.SetParamObj(map, prefix + "TagFilter.", this.TagFilter);
+            this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
+            this.SetParamObj(map, prefix + "LogDesensitizeConfig.", this.LogDesensitizeConfig);
+            this.SetParamObj(map, prefix + "ForwardDesensitizeConfig.", this.ForwardDesensitizeConfig);
         }
     }
 }

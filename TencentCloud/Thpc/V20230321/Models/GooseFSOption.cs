@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string LocalPath{ get; set; }
 
         /// <summary>
-        /// <p>文件系统远程挂载路径。</p>
+        /// <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
         /// </summary>
         [JsonProperty("RemotePath")]
         public string RemotePath{ get; set; }

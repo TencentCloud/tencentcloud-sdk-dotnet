@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1436";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 添加消费者组授权
+        /// 为资源（模型 API / MCP Server）添加消费者组授权。
         /// </summary>
         /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
         /// <returns><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 添加消费者组授权
+        /// 为资源（模型 API / MCP Server）添加消费者组授权。
         /// </summary>
         /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
         /// <returns><see cref="AddCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 将消费者添加到指定的消费者组中
+        /// 将消费者添加到消费者组。
         /// </summary>
         /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
         /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 将消费者添加到指定的消费者组中
+        /// 将消费者添加到消费者组。
         /// </summary>
         /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
         /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关的消费者，支持多种密钥生成方式
+        /// 创建消费者。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关的消费者，支持多种密钥生成方式
+        /// 创建消费者。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关的消费者组
+        /// 创建消费者组。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关的消费者组
+        /// 创建消费者组。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建AI网关模型 API
+        /// 创建 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建AI网关模型 API
+        /// 创建 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关密钥
+        /// 创建消费者密钥。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建云原生网关密钥
+        /// 创建消费者密钥。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除指定的云原生网关消费者
+        /// 删除消费者（被绑定到消费者组/密钥时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除指定的云原生网关消费者
+        /// 删除消费者（被绑定到消费者组/密钥时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除云原生网关消费者组的信息
+        /// 删除消费者组（被授权资源占用时返回 CheckItems）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除云原生网关消费者组的信息
+        /// 删除消费者组（被授权资源占用时返回 CheckItems）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -894,7 +894,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除 LLM 模型 API 信息
+        /// 删除 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除 LLM 模型 API 信息
+        /// 删除 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除 LLM 模型服务信息
+        /// 删除 LLM 模型服务（被模型 API 绑定时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除 LLM 模型服务信息
+        /// 删除 LLM 模型服务（被模型 API 绑定时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
@@ -999,7 +999,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除云原生网关密钥
+        /// 删除消费者密钥（被绑定时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除云原生网关密钥
+        /// 删除消费者密钥（被绑定时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1524,7 +1524,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询指定的云原生网关消费者
+        /// 查询消费者详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -1534,7 +1534,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询指定的云原生网关消费者
+        /// 查询消费者详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -1545,7 +1545,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查看云原生网关消费者组的信息
+        /// 查询消费者组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -1555,7 +1555,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查看云原生网关消费者组的信息
+        /// 查询消费者组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -1566,7 +1566,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 获取消费者组列表
+        /// 查询消费者组列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListResponse"/></returns>
@@ -1576,7 +1576,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 获取消费者组列表
+        /// 查询消费者组列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupListResponse"/></returns>
@@ -1587,7 +1587,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询云原生网关消费者列表
+        /// 查询消费者列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerListResponse"/></returns>
@@ -1597,7 +1597,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询云原生网关消费者列表
+        /// 查询消费者列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerListResponse"/></returns>
@@ -1650,7 +1650,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询单个 LLM 模型 API 信息
+        /// 查询单个 LLM 模型 API 详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -1660,7 +1660,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询单个 LLM 模型 API 信息
+        /// 查询单个 LLM 模型 API 详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -1671,7 +1671,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询 LLM 模型 API 列表
+        /// 查询 LLM 模型 API 列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
@@ -1681,7 +1681,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询 LLM 模型 API 列表
+        /// 查询 LLM 模型 API 列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
@@ -1692,7 +1692,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询单个 LLM 模型服务列表
+        /// 查询单个 LLM 模型服务详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
@@ -1702,7 +1702,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询单个 LLM 模型服务列表
+        /// 查询单个 LLM 模型服务详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServiceResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询 LLM 模型服务列表
+        /// 查询 LLM 模型服务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesResponse"/></returns>
@@ -1723,7 +1723,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询 LLM 模型服务列表
+        /// 查询 LLM 模型服务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelServicesResponse"/></returns>
@@ -1818,7 +1818,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询密钥详情
+        /// 查询密钥详情（SecretValue 字段会被掩码）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1828,7 +1828,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询密钥详情
+        /// 查询密钥详情（SecretValue 字段会被掩码）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1839,7 +1839,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 获取密钥列表
+        /// 查询密钥列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
@@ -1849,7 +1849,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 获取密钥列表
+        /// 查询密钥列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
@@ -1860,7 +1860,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询密钥值
+        /// 查询密钥明文值（KMS 类型密钥不可获取）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueResponse"/></returns>
@@ -1870,7 +1870,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询密钥值
+        /// 查询密钥明文值（KMS 类型密钥不可获取）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueResponse"/></returns>
@@ -2700,7 +2700,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生网关消费者的信息
+        /// 修改消费者。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -2710,7 +2710,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生网关消费者的信息
+        /// 修改消费者。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -2721,7 +2721,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生网关消费者组的信息
+        /// 修改消费者组。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -2731,7 +2731,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改云原生网关消费者组的信息
+        /// 修改消费者组。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -2742,7 +2742,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改 LLM 模型 API 信息
+        /// 修改 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -2752,7 +2752,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改 LLM 模型 API 信息
+        /// 修改 LLM 模型 API。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayLLMModelAPIResponse"/></returns>
@@ -2826,7 +2826,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改密钥状态
+        /// 修改密钥启用状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusResponse"/></returns>
@@ -2836,7 +2836,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 修改密钥状态
+        /// 修改密钥启用状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyStatusResponse"/></returns>
@@ -3204,7 +3204,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 云原生网关移除消费者组授权
+        /// 从资源（模型 API / MCP Server）移除消费者组授权。
         /// </summary>
         /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
         /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
@@ -3214,7 +3214,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 云原生网关移除消费者组授权
+        /// 从资源（模型 API / MCP Server）移除消费者组授权。
         /// </summary>
         /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest"/></param>
         /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse"/></returns>
@@ -3225,7 +3225,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 从指定的消费者组中移除消费者
+        /// 将消费者从消费者组移除。
         /// </summary>
         /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
         /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
@@ -3235,7 +3235,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 从指定的消费者组中移除消费者
+        /// 将消费者从消费者组移除。
         /// </summary>
         /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
         /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>

@@ -25,140 +25,140 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 伸缩配置
+        /// <p>伸缩配置</p>
         /// </summary>
         [JsonProperty("Scaling")]
         public MachineSetScaling Scaling{ get; set; }
 
         /// <summary>
-        /// 子网列表
+        /// <p>子网列表</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 安全组列表
+        /// <p>安全组列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 自动升级配置
+        /// <p>自动升级配置</p>
         /// </summary>
         [JsonProperty("UpgradeSettings")]
         public MachineUpgradeSettings UpgradeSettings{ get; set; }
 
         /// <summary>
-        /// 是否开启自愈能力
+        /// <p>是否开启自愈能力</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRepair")]
         public bool? AutoRepair{ get; set; }
 
         /// <summary>
-        /// 节点计费类型
+        /// <p>节点计费类型</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 包年包月机型计费配置
+        /// <p>包年包月机型计费配置</p>
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 系统盘配置
+        /// <p>系统盘配置</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 密钥 ID 列表
+        /// <p>密钥 ID 列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// Machine 系统配置
+        /// <p>Machine 系统配置</p>
         /// </summary>
         [JsonProperty("Management")]
         public ManagementConfig Management{ get; set; }
 
         /// <summary>
-        /// 故障自愈规则名称
+        /// <p>故障自愈规则名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckPolicyName")]
         public string HealthCheckPolicyName{ get; set; }
 
         /// <summary>
-        /// 原生节点池hostName模式串
+        /// <p>原生节点池hostName模式串</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostNamePattern")]
         public string HostNamePattern{ get; set; }
 
         /// <summary>
-        /// kubelet 自定义参数
+        /// <p>kubelet 自定义参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KubeletArgs")]
         public string[] KubeletArgs{ get; set; }
 
         /// <summary>
-        /// 预定义脚本
+        /// <p>预定义脚本</p>
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifecycleConfig Lifecycle{ get; set; }
 
         /// <summary>
-        /// 运行时根目录
+        /// <p>运行时根目录</p>
         /// </summary>
         [JsonProperty("RuntimeRootDir")]
         public string RuntimeRootDir{ get; set; }
 
         /// <summary>
-        /// 是否开启弹性伸缩
+        /// <p>是否开启弹性伸缩</p>
         /// </summary>
         [JsonProperty("EnableAutoscaling")]
         public bool? EnableAutoscaling{ get; set; }
 
         /// <summary>
-        /// 机型列表
+        /// <p>机型列表</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 期望节点数
+        /// <p>期望节点数</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 就绪 Machine 个数
+        /// <p>就绪 Machine 个数</p>
         /// </summary>
         [JsonProperty("ReadyReplicas")]
         public long? ReadyReplicas{ get; set; }
 
         /// <summary>
-        /// 公网带宽设置
+        /// <p>公网带宽设置</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 原生节点池数据盘
+        /// <p>原生节点池数据盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// 原生节点机型 Native, NativeCVM
+        /// <p>原生节点机型 Native, NativeCVM</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

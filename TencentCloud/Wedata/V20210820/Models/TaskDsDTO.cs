@@ -529,7 +529,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// <p>创建者帐号</p>
+        /// <p>创建者账号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnId")]

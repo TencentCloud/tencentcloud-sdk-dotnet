@@ -25,155 +25,151 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 伸缩配置
+        /// <p>伸缩配置</p>
         /// </summary>
         [JsonProperty("Scaling")]
         public MachineSetScaling Scaling{ get; set; }
 
         /// <summary>
-        /// 子网列表
+        /// <p>子网列表</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 安全组列表
+        /// <p>安全组列表</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 自动升级配置
+        /// <p>自动升级配置</p>
         /// </summary>
         [JsonProperty("UpgradeSettings")]
         public MachineUpgradeSettings UpgradeSettings{ get; set; }
 
         /// <summary>
-        /// 是否开启自愈能力
+        /// <p>是否开启自愈能力</p>
         /// </summary>
         [JsonProperty("AutoRepair")]
         public bool? AutoRepair{ get; set; }
 
         /// <summary>
-        /// 节点计费类型变更
-        /// 当前仅支持按量计费转包年包月：
-        /// - PREPAID
+        /// <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 包年包月机型计费配置
+        /// <p>包年包月机型计费配置</p>
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 系统盘配置
+        /// <p>系统盘配置</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
-        /// Machine 系统配置
+        /// <p>Machine 系统配置</p>
         /// </summary>
         [JsonProperty("Management")]
         public ManagementConfig Management{ get; set; }
 
         /// <summary>
-        /// 故障自愈规则名称
+        /// <p>故障自愈规则名称</p>
         /// </summary>
         [JsonProperty("HealthCheckPolicyName")]
         public string HealthCheckPolicyName{ get; set; }
 
         /// <summary>
-        /// 原生节点池hostName模式串
+        /// <p>原生节点池hostName模式串</p>
         /// </summary>
         [JsonProperty("HostNamePattern")]
         public string HostNamePattern{ get; set; }
 
         /// <summary>
-        /// kubelet 自定义参数
+        /// <p>kubelet 自定义参数</p>
         /// </summary>
         [JsonProperty("KubeletArgs")]
         public string[] KubeletArgs{ get; set; }
 
         /// <summary>
-        /// 预定义脚本
+        /// <p>预定义脚本</p>
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifecycleConfig Lifecycle{ get; set; }
 
         /// <summary>
-        /// 运行时根目录
+        /// <p>运行时根目录</p>
         /// </summary>
         [JsonProperty("RuntimeRootDir")]
         public string RuntimeRootDir{ get; set; }
 
         /// <summary>
-        /// 是否开启弹性伸缩
+        /// <p>是否开启弹性伸缩</p>
         /// </summary>
         [JsonProperty("EnableAutoscaling")]
         public bool? EnableAutoscaling{ get; set; }
 
         /// <summary>
-        /// 机型列表
+        /// <p>机型列表</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 期望节点数
+        /// <p>期望节点数</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 是否更新存量节点MetaData(包括： metadata、annotation、label)
+        /// <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
         /// </summary>
         [JsonProperty("UpdateExistedNode")]
         public bool? UpdateExistedNode{ get; set; }
 
         /// <summary>
-        /// 数据盘列表
+        /// <p>数据盘列表</p>
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-        /// 
-        /// management包括：nameserver、host、kubelet、kernel参数
+        /// <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
         /// </summary>
         [JsonProperty("UpdateMachineManagement")]
         public string UpdateMachineManagement{ get; set; }
 
         /// <summary>
-        /// ssh公钥id数组
+        /// <p>ssh公钥id数组</p>
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+        /// <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
         /// </summary>
         [JsonProperty("DeletePolicy")]
         public string DeletePolicy{ get; set; }
 
         /// <summary>
-        /// 节点池 GPU 配置
+        /// <p>节点池 GPU 配置</p>
         /// </summary>
         [JsonProperty("GPUConfigs")]
         public GPUConfig[] GPUConfigs{ get; set; }
 
         /// <summary>
-        /// 原生节点池安装自动化助手开关状态
+        /// <p>原生节点池安装自动化助手开关状态</p>
         /// </summary>
         [JsonProperty("AutomationService")]
         public bool? AutomationService{ get; set; }
 
         /// <summary>
-        /// 原生节点池密码
+        /// <p>原生节点池密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

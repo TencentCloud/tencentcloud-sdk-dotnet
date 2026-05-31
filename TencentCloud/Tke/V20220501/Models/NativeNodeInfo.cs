@@ -25,199 +25,193 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 节点名称
+        /// <p>节点名称</p>
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Machine 状态
+        /// <p>Machine 状态</p>
         /// </summary>
         [JsonProperty("MachineState")]
         public string MachineState{ get; set; }
 
         /// <summary>
-        /// Machine 所在可用区
+        /// <p>Machine 所在可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
+        /// <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// Machine 登录状态
+        /// <p>Machine 登录状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoginStatus")]
         public string LoginStatus{ get; set; }
 
         /// <summary>
-        /// 是否开启缩容保护
+        /// <p>是否开启缩容保护</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsProtectedFromScaleIn")]
         public bool? IsProtectedFromScaleIn{ get; set; }
 
         /// <summary>
-        /// Machine 名字
+        /// <p>Machine 名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// CPU核数，单位：核
+        /// <p>CPU核数，单位：核</p>
         /// </summary>
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// GPU核数，单位：核
+        /// <p>GPU核数，单位：核</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPU")]
         public ulong? GPU{ get; set; }
 
         /// <summary>
-        /// 自动续费标识
+        /// <p>自动续费标识</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 节点计费模式
+        /// <p>节点计费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 节点内存容量，单位：`GB`
+        /// <p>节点内存容量，单位：<code>GB</code></p>
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 节点系统盘配置信息
+        /// <p>节点系统盘配置信息</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 公网带宽相关信息设置
+        /// <p>公网带宽相关信息设置</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 机型所属机型族
+        /// <p>机型所属机型族</p>
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// 节点内网 IP
+        /// <p>节点内网 IP</p>
         /// </summary>
         [JsonProperty("LanIp")]
         public string LanIp{ get; set; }
 
         /// <summary>
-        /// 机型
+        /// <p>机型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 包年包月节点计费过期时间
+        /// <p>包年包月节点计费过期时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 节点外网 IP
+        /// <p>节点外网 IP</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// 节点密钥 ID 列表
+        /// <p>节点密钥 ID 列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// 节点GPU相关配置
+        /// <p>节点GPU相关配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUParams")]
         public GPUParams GPUParams{ get; set; }
 
         /// <summary>
-        /// 数据盘列表
+        /// <p>数据盘列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// 安全组列表
+        /// <p>安全组列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIDs")]
         public string[] SecurityGroupIDs{ get; set; }
 
         /// <summary>
-        /// VPC 唯一 ID
+        /// <p>VPC 唯一 ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网唯一 ID
+        /// <p>子网唯一 ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// OS的名称
+        /// <p>OS的名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsImage")]
         public string OsImage{ get; set; }
 
         /// <summary>
-        /// **原生节点的 Machine 类型**
-        /// 
-        /// - Native 表示 CXM 类型的原生节点
-        /// - NativeCVM 表示 CVM 类型的原生节点
+        /// <p><strong>原生节点的 Machine 类型</strong></p><ul><li>Native 表示 CXM 类型的原生节点</li><li>NativeCVM 表示 CVM 类型的原生节点</li></ul>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// **原生节点对应的实例 ID**
-        /// 
-        /// - ins-q47ofw6 表示这个实例是一个 CVM 的实例
-        /// - eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+        /// <p><strong>原生节点对应的实例 ID</strong></p><ul><li>ins-q47ofw6 表示这个实例是一个 CVM 的实例</li><li>eks-f8mvyaep 表示这个实例是一个 CXM 的实例</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 原生节点云标签
+        /// <p>原生节点云标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]

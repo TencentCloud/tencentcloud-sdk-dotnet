@@ -25,7 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 指标匹配规则的ID
+        /// <p>指标匹配规则的ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 消费者ID
+        /// <p>消费者 ID。</p>
         /// </summary>
         [JsonProperty("ConsumerId")]
         public string ConsumerId{ get; set; }
 
         /// <summary>
-        /// 新的消费者名称
+        /// <p>消费者名称，最长 60 字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 新的消费者描述
+        /// <p>消费者描述。最长 200 字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

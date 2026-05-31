@@ -90,6 +90,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
+        /// <summary>
+        /// 标签信息。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

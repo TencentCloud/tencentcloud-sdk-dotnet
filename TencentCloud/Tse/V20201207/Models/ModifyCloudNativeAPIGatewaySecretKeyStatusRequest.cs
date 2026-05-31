@@ -25,19 +25,19 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 密钥名字
+        /// <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 密钥id
+        /// <p>密钥 ID（以 secret- 开头）。</p>
         /// </summary>
         [JsonProperty("SecretKeyId")]
         public string SecretKeyId{ get; set; }

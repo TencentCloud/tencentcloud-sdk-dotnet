@@ -37,52 +37,64 @@ namespace TencentCloud.Tse.V20201207.Models
         public string ModelAPIId{ get; set; }
 
         /// <summary>
-        /// <p>修改模型 API 名称</p>
+        /// <p>模型 API 名称，最长 60 字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+        /// <p>统一前缀路径（可选）。例如 /v1/openai。</p>
         /// </summary>
         [JsonProperty("BasePath")]
         public string BasePath{ get; set; }
 
         /// <summary>
-        /// <p>模型 API 的相关描述。</p>
+        /// <p>模型 API 描述。最长 200 字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>关联的模型服务列表（支持填多个模型服务）</p>
+        /// <p>关联的模型服务 ID 列表，长度 1-10。</p>
         /// </summary>
         [JsonProperty("ListModelServiceId")]
         public string[] ListModelServiceId{ get; set; }
 
         /// <summary>
-        /// <p>模型服务路由策略（是指如何路由到模型服务）</p>
+        /// <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
         /// </summary>
         [JsonProperty("ModelServiceRoute")]
         public CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute{ get; set; }
 
         /// <summary>
-        /// <p>headers 路由匹配</p>
+        /// <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
         /// </summary>
         [JsonProperty("MatchHeaders")]
         public AIGWKVMatch[] MatchHeaders{ get; set; }
 
         /// <summary>
-        /// <p>跨服务 fallback</p>
+        /// <p>是否启用跨服务 Fallback。</p>
         /// </summary>
         [JsonProperty("EnableCrossServiceFallback")]
         public bool? EnableCrossServiceFallback{ get; set; }
 
         /// <summary>
-        /// <p>跨服务 fallback 配置</p>
+        /// <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
         /// </summary>
         [JsonProperty("CrossServiceFallbackConfig")]
         public AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig{ get; set; }
+
+        /// <summary>
+        /// <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+        /// </summary>
+        [JsonProperty("TagFilter")]
+        public AIGWTagFilter TagFilter{ get; set; }
+
+        /// <summary>
+        /// <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public AIGWLogConfig LogConfig{ get; set; }
 
 
         /// <summary>
@@ -100,6 +112,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "MatchHeaders.", this.MatchHeaders);
             this.SetParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
             this.SetParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
+            this.SetParamObj(map, prefix + "TagFilter.", this.TagFilter);
+            this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
         }
     }
 }

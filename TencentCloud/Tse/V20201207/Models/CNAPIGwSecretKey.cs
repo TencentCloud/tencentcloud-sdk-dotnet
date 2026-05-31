@@ -25,93 +25,89 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 密钥id
+        /// <p>密钥id</p>
         /// </summary>
         [JsonProperty("SecretKeyId")]
         public string SecretKeyId{ get; set; }
 
         /// <summary>
-        /// 密钥名字
+        /// <p>密钥名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 密钥类型：ApiKey/JWT
+        /// <p>密钥协议类型。</p>
         /// </summary>
         [JsonProperty("SecretType")]
         public string SecretType{ get; set; }
 
         /// <summary>
-        /// 状态:
-        /// - Enable: 启用
-        /// - Disable: 禁用
+        /// <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 生成方式:KMS/System/Custom
+        /// <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// 密钥值
+        /// <p>密钥明文</p>
         /// </summary>
         [JsonProperty("SecretValue")]
         public string SecretValue{ get; set; }
 
         /// <summary>
-        /// KMS凭证名字
+        /// <p>KMS凭证名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KmsKeyName")]
         public string KmsKeyName{ get; set; }
 
         /// <summary>
-        /// KMS凭证版本
+        /// <p>KMS凭证版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KmsKeyVersion")]
         public string KmsKeyVersion{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 是否可以绑定
+        /// <p>是否可以绑定</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanBind")]
         public bool? CanBind{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 绑定数
+        /// <p>绑定数</p>
         /// </summary>
         [JsonProperty("BindCount")]
         public ulong? BindCount{ get; set; }
 
         /// <summary>
-        /// 资源类型：
-        /// - Consumer 消费者
-        /// - LLM 模型服务
+        /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

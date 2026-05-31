@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 消费者列表
+        /// <p>消费者列表</p>
         /// </summary>
         [JsonProperty("Result")]
         public CNAPIGwConsumerList Result{ get; set; }

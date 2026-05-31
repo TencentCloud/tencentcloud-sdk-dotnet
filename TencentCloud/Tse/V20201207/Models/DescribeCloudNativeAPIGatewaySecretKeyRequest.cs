@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 密钥id
+        /// <p>密钥id</p>
         /// </summary>
         [JsonProperty("SecretKeyId")]
         public string SecretKeyId{ get; set; }

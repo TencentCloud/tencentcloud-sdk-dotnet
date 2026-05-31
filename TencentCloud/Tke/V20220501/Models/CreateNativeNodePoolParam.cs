@@ -25,145 +25,145 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 节点池伸缩配置
+        /// <p>节点池伸缩配置</p>
         /// </summary>
         [JsonProperty("Scaling")]
         public MachineSetScaling Scaling{ get; set; }
 
         /// <summary>
-        /// 子网列表
+        /// <p>子网列表</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
+        /// <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 系统盘配置
+        /// <p>系统盘配置</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public Disk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 机型列表
+        /// <p>机型列表</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 安全组列表
+        /// <p>安全组列表</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 自动升级配置
+        /// <p>自动升级配置</p>
         /// </summary>
         [JsonProperty("UpgradeSettings")]
         public MachineUpgradeSettings UpgradeSettings{ get; set; }
 
         /// <summary>
-        /// 是否开启自愈能力
+        /// <p>是否开启自愈能力</p>
         /// </summary>
         [JsonProperty("AutoRepair")]
         public bool? AutoRepair{ get; set; }
 
         /// <summary>
-        /// 包年包月机型计费配置
+        /// <p>包年包月机型计费配置</p>
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 节点池 Management 参数设置
+        /// <p>节点池 Management 参数设置</p>
         /// </summary>
         [JsonProperty("Management")]
         public ManagementConfig Management{ get; set; }
 
         /// <summary>
-        /// 故障自愈规则名称
+        /// <p>故障自愈规则名称</p>
         /// </summary>
         [JsonProperty("HealthCheckPolicyName")]
         public string HealthCheckPolicyName{ get; set; }
 
         /// <summary>
-        /// 原生节点池hostName模式串
+        /// <p>原生节点池hostName模式串</p>
         /// </summary>
         [JsonProperty("HostNamePattern")]
         public string HostNamePattern{ get; set; }
 
         /// <summary>
-        /// kubelet 自定义参数
+        /// <p>kubelet 自定义参数</p>
         /// </summary>
         [JsonProperty("KubeletArgs")]
         public string[] KubeletArgs{ get; set; }
 
         /// <summary>
-        /// 预定义脚本
+        /// <p>预定义脚本</p>
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifecycleConfig Lifecycle{ get; set; }
 
         /// <summary>
-        /// 运行时根目录
+        /// <p>运行时根目录</p>
         /// </summary>
         [JsonProperty("RuntimeRootDir")]
         public string RuntimeRootDir{ get; set; }
 
         /// <summary>
-        /// 是否开启弹性伸缩
+        /// <p>是否开启弹性伸缩</p>
         /// </summary>
         [JsonProperty("EnableAutoscaling")]
         public bool? EnableAutoscaling{ get; set; }
 
         /// <summary>
-        /// 期望节点数
+        /// <p>期望节点数</p>
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 公网带宽设置
+        /// <p>公网带宽设置</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 原生节点池数据盘列表
+        /// <p>原生节点池数据盘列表</p>
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// qgpu开关
+        /// <p>qgpu开关</p>
         /// </summary>
         [JsonProperty("QGPUEnable")]
         public bool? QGPUEnable{ get; set; }
 
         /// <summary>
-        /// 节点池ssh公钥id数组
+        /// <p>节点池ssh公钥id数组</p>
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// 节点池类型
+        /// <p>节点池类型</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 原生节点池安装节点自动化助手开关
+        /// <p>原生节点池安装节点自动化助手开关</p>
         /// </summary>
         [JsonProperty("AutomationService")]
         public bool? AutomationService{ get; set; }
 
         /// <summary>
-        /// 原生节点池密码
+        /// <p>原生节点池密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

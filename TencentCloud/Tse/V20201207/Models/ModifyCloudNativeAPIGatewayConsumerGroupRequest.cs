@@ -31,27 +31,25 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 消费者组ID
+        /// <p>消费者组 ID（以 cg- 开头）。</p>
         /// </summary>
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
 
         /// <summary>
-        /// 新的消费者组名称
+        /// <p>消费者组名称，最长 60 字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 状态：
-        /// - Enable 启用
-        /// - Disable 禁用
+        /// <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 新的消费者组描述
+        /// <p>消费者组描述。最长 200 字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

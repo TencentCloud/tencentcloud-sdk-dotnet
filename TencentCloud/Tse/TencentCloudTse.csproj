@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1431</VersionPrefix>
+    <VersionPrefix>3.0.1436</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,8 +49,19 @@
   <ItemGroup>
     <Compile Include="V20201207\TseClient.cs" />
     <Compile Include="V20201207\Models\AIGWCrossServiceFallbackConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWCustomDesensitizeRule.cs" />
     <Compile Include="V20201207\Models\AIGWFallbackServiceItem.cs" />
+    <Compile Include="V20201207\Models\AIGWForwardDesensitizeConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWIntentRoute.cs" />
+    <Compile Include="V20201207\Models\AIGWIntentRouteRule.cs" />
     <Compile Include="V20201207\Models\AIGWKVMatch.cs" />
+    <Compile Include="V20201207\Models\AIGWLLMQuotaFallbackTrigger.cs" />
+    <Compile Include="V20201207\Models\AIGWLLMQuotaLimit.cs" />
+    <Compile Include="V20201207\Models\AIGWLatencyPriorityConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWLatencyPriorityRouteRule.cs" />
+    <Compile Include="V20201207\Models\AIGWLogConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWLogDesensitizeConfig.cs" />
+    <Compile Include="V20201207\Models\AIGWTagFilter.cs" />
     <Compile Include="V20201207\Models\AccurateQpsThreshold.cs" />
     <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerGroupAuthRequest.cs" />
     <Compile Include="V20201207\Models\AddCloudNativeAPIGatewayConsumerGroupAuthResponse.cs" />

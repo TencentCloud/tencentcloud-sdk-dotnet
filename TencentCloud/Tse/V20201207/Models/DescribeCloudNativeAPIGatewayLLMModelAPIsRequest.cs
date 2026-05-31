@@ -31,37 +31,37 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 10，最大值为 1000。
+        /// <p>每页条数，范围 [1, 1000]，默认 10。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0。
+        /// <p>起始位置，从 0 开始。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件，多个过滤条件之间是“与”的关系
+        /// <p>过滤条件。当前未启用具体字段。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，模糊匹配 name 和 description
+        /// <p>模糊匹配模型 API 名称。</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
+        /// <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
         /// </summary>
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
 
         /// <summary>
-        /// 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+        /// <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
         /// </summary>
         [JsonProperty("UseToBind")]
         public bool? UseToBind{ get; set; }
