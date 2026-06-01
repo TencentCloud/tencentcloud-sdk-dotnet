@@ -25,125 +25,131 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// Url
+        /// <p>Url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 报文长度
+        /// <p>报文长度</p>
         /// </summary>
         [JsonProperty("ContentLength")]
         public long? ContentLength{ get; set; }
 
         /// <summary>
-        /// 报文内容
+        /// <p>报文内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 截图缩略图URL
+        /// <p>截图缩略图URL</p>
         /// </summary>
         [JsonProperty("ScreenshotThumbUrl")]
         public string ScreenshotThumbUrl{ get; set; }
 
         /// <summary>
-        /// 截图URL
+        /// <p>截图URL</p>
         /// </summary>
         [JsonProperty("ScreenshotUrl")]
         public string ScreenshotUrl{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// Api地址
+        /// <p>Api地址</p>
         /// </summary>
         [JsonProperty("Api")]
         public string Api{ get; set; }
 
         /// <summary>
-        /// 解析的IP
+        /// <p>解析的IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 证书信息
+        /// <p>证书信息</p>
         /// </summary>
         [JsonProperty("Ssl")]
         public string Ssl{ get; set; }
 
         /// <summary>
-        /// ssl证书过期时间
+        /// <p>ssl证书过期时间</p>
         /// </summary>
         [JsonProperty("SslExpiredTime")]
         public string SslExpiredTime{ get; set; }
 
         /// <summary>
-        /// 资产是否发生变动
+        /// <p>资产是否发生变动</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsChange")]
         public bool? IsChange{ get; set; }
 
         /// <summary>
-        /// 是否为云资产：0-非云资产 1-是云资产
+        /// <p>是否为云资产：0-非云资产 1-是云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产是否下线：-1-已下线 0-正常
+        /// <p>云资产是否下线：-1-已下线 0-正常</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
 
         /// <summary>
-        /// 可用率（百分比）
+        /// <p>可用率（百分比）</p>
         /// </summary>
         [JsonProperty("AvailabilityRate")]
         public long? AvailabilityRate{ get; set; }
 
         /// <summary>
-        /// 可用状态 1:异常 0:正常
+        /// <p>可用状态 1:异常 0:正常</p>
         /// </summary>
         [JsonProperty("AvailabilityState")]
         public long? AvailabilityState{ get; set; }
 
         /// <summary>
-        /// 平均响应时间：单位ms
+        /// <p>平均响应时间：单位ms</p>
         /// </summary>
         [JsonProperty("ResponseTime")]
         public long? ResponseTime{ get; set; }
 
         /// <summary>
-        /// 域名解析状态 1:异常 0:正常
+        /// <p>域名解析状态 1:异常 0:正常</p>
         /// </summary>
         [JsonProperty("AnalysisState")]
         public long? AnalysisState{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -171,6 +177,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "AvailabilityState", this.AvailabilityState);
             this.SetParamSimple(map, prefix + "ResponseTime", this.ResponseTime);
             this.SetParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

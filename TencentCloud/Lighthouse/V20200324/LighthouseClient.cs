@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1432";
+       private const string sdkVersion = "SDK_NET_3.0.1437";
 
         /// <summary>
         /// Client constructor.
@@ -703,6 +703,27 @@ namespace TencentCloud.Lighthouse.V20200324
         public DescribeBlueprintsResponse DescribeBlueprintsSync(DescribeBlueprintsRequest req)
         {
             return InternalRequestAsync<DescribeBlueprintsResponse>(req, "DescribeBlueprints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBlueprintsShareAcrossAccountInfos）用于查询一个或多个镜像的跨账号共享信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintsShareAcrossAccountInfosRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintsShareAcrossAccountInfosResponse"/></returns>
+        public Task<DescribeBlueprintsShareAcrossAccountInfosResponse> DescribeBlueprintsShareAcrossAccountInfos(DescribeBlueprintsShareAcrossAccountInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeBlueprintsShareAcrossAccountInfosResponse>(req, "DescribeBlueprintsShareAcrossAccountInfos");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBlueprintsShareAcrossAccountInfos）用于查询一个或多个镜像的跨账号共享信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintsShareAcrossAccountInfosRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintsShareAcrossAccountInfosResponse"/></returns>
+        public DescribeBlueprintsShareAcrossAccountInfosResponse DescribeBlueprintsShareAcrossAccountInfosSync(DescribeBlueprintsShareAcrossAccountInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeBlueprintsShareAcrossAccountInfosResponse>(req, "DescribeBlueprintsShareAcrossAccountInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

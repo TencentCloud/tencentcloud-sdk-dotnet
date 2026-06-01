@@ -25,80 +25,88 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 租户应用ID
+        /// <p>租户应用ID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 租户ID
+        /// <p>租户ID</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 凭据ID
+        /// <p>凭据ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 凭据名称
+        /// <p>凭据名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 关联应用数
+        /// <p>关联应用数</p>
         /// </summary>
         [JsonProperty("RelateAgentAppNum")]
+        [System.Obsolete]
         public long? RelateAgentAppNum{ get; set; }
 
         /// <summary>
-        /// 关联mcp数
+        /// <p>关联mcp数</p>
         /// </summary>
         [JsonProperty("RelateMcpServerNum")]
         public long? RelateMcpServerNum{ get; set; }
 
         /// <summary>
-        /// 关联模型数
+        /// <p>关联模型数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelateModelNum")]
         public long? RelateModelNum{ get; set; }
 
         /// <summary>
-        /// 凭据内容
+        /// <p>关联服务数</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelateServiceNum")]
+        public long? RelateServiceNum{ get; set; }
+
+        /// <summary>
+        /// <p>凭据内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public AgentCredentialContentDTO Content{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -118,6 +126,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
             this.SetParamSimple(map, prefix + "RelateMcpServerNum", this.RelateMcpServerNum);
             this.SetParamSimple(map, prefix + "RelateModelNum", this.RelateModelNum);
+            this.SetParamSimple(map, prefix + "RelateServiceNum", this.RelateServiceNum);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);

@@ -24,12 +24,26 @@ namespace TencentCloud.Bi.V20220105.Models
     public class CreateUserGroupMemberRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>用户组id</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public ulong? GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>用户id集合</p>
+        /// </summary>
+        [JsonProperty("UserIdList")]
+        public string[] UserIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamArraySimple(map, prefix + "UserIdList.", this.UserIdList);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户组更新list
+        /// <p>用户组更新list</p>
         /// </summary>
         [JsonProperty("UpdateList")]
         public UserGroupUpdateDTO[] UpdateList{ get; set; }

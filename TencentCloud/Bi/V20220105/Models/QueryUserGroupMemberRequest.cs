@@ -25,49 +25,49 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户组id集合
+        /// <p>用户组id集合</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public long?[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// <p>搜索关键字</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 分页页码
+        /// <p>分页页码</p>
         /// </summary>
         [JsonProperty("PageNo")]
         public ulong? PageNo{ get; set; }
 
         /// <summary>
-        /// 是否需要分页
+        /// <p>是否需要分页</p>
         /// </summary>
         [JsonProperty("AllPage")]
         public bool? AllPage{ get; set; }
 
         /// <summary>
-        /// 用户组节点信息
+        /// <p>用户组节点信息</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public UserGroupTreeNodeDTO[] Nodes{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// <p>标签值</p>
         /// </summary>
         [JsonProperty("TagValueList")]
         public ResourceTagValue[] TagValueList{ get; set; }
 
         /// <summary>
-        /// 需要过滤的用户组
+        /// <p>需要过滤的用户组</p>
         /// </summary>
         [JsonProperty("FilterGroupIds")]
         public long?[] FilterGroupIds{ get; set; }

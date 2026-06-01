@@ -25,96 +25,108 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 租户appID
+        /// <p>租户appID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 租户ID
+        /// <p>租户ID</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 认证类型
+        /// <p>认证类型</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// apiKeys列表，脱敏
+        /// <p>apiKeys列表，脱敏</p>
         /// </summary>
         [JsonProperty("ApiKeys")]
         public string[] ApiKeys{ get; set; }
 
         /// <summary>
-        /// secretKey列表，脱敏
+        /// <p>secretKey列表，脱敏</p>
         /// </summary>
         [JsonProperty("SecretKeys")]
         public AgentAppSecretKeyVO[] SecretKeys{ get; set; }
 
         /// <summary>
-        /// OAuth2 Resource Server ID
+        /// <p>OAuth2 Resource Server ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OAuth2ResourceServerID")]
         public string OAuth2ResourceServerID{ get; set; }
 
         /// <summary>
-        /// 绑定mcpServer数量
+        /// <p>绑定mcpServer数量</p>
         /// </summary>
         [JsonProperty("McpServersNum")]
         public long? McpServersNum{ get; set; }
 
         /// <summary>
-        /// 绑定的模型服务数量
+        /// <p>绑定的模型服务数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelServicesNum")]
         public long? ModelServicesNum{ get; set; }
+
+        /// <summary>
+        /// <p>API认证列表</p>
+        /// </summary>
+        [JsonProperty("ConnectorIDs")]
+        public string[] ConnectorIDs{ get; set; }
+
+        /// <summary>
+        /// <p>关联API数量</p>
+        /// </summary>
+        [JsonProperty("ServicesNum")]
+        public long? ServicesNum{ get; set; }
 
 
         /// <summary>
@@ -137,6 +149,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "OAuth2ResourceServerID", this.OAuth2ResourceServerID);
             this.SetParamSimple(map, prefix + "McpServersNum", this.McpServersNum);
             this.SetParamSimple(map, prefix + "ModelServicesNum", this.ModelServicesNum);
+            this.SetParamArraySimple(map, prefix + "ConnectorIDs.", this.ConnectorIDs);
+            this.SetParamSimple(map, prefix + "ServicesNum", this.ServicesNum);
         }
     }
 }

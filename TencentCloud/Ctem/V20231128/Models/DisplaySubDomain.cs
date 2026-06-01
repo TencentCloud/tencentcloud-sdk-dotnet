@@ -126,6 +126,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("DnsValue")]
         public string DnsValue{ get; set; }
 
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "LossRate", this.LossRate);
             this.SetParamSimple(map, prefix + "DnsType", this.DnsType);
             this.SetParamSimple(map, prefix + "DnsValue", this.DnsValue);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

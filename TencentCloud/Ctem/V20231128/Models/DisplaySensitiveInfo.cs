@@ -25,46 +25,52 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键Id
+        /// <p>主键Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// <p>来源</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 值
+        /// <p>值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// 是否为云资产：0-非云资产 1-是云资产
+        /// <p>是否为云资产：0-非云资产 1-是云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产是否下线：-1-已下线 0-正常
+        /// <p>云资产是否下线：-1-已下线 0-正常</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
             this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
             this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

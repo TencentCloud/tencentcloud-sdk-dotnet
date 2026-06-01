@@ -25,13 +25,13 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户组id
+        /// <p>用户组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// 用户id集合
+        /// <p>用户id集合</p>
         /// </summary>
         [JsonProperty("UserIdList")]
         public string[] UserIdList{ get; set; }

@@ -25,19 +25,31 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户组名称
+        /// <p>组管理员</p>
+        /// </summary>
+        [JsonProperty("AdminUserId")]
+        public string AdminUserId{ get; set; }
+
+        /// <summary>
+        /// <p>描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>用户组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 位置
+        /// <p>位置</p>
         /// </summary>
         [JsonProperty("Location")]
         public long? Location{ get; set; }
 
         /// <summary>
-        /// 父用户组id
+        /// <p>父用户组id</p>
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }
@@ -48,6 +60,8 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AdminUserId", this.AdminUserId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "ParentId", this.ParentId);

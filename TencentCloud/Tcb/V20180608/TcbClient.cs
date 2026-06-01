@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1437";
 
         /// <summary>
         /// Client constructor.
@@ -849,7 +849,8 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 获取计费相关信息
+        /// 获取云开发环境的计费相关信息。
+        /// 包括环境的 状态、当前套餐、购买时间、到期时间 等。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingInfoRequest"/></param>
         /// <returns><see cref="DescribeBillingInfoResponse"/></returns>
@@ -859,7 +860,8 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 获取计费相关信息
+        /// 获取云开发环境的计费相关信息。
+        /// 包括环境的 状态、当前套餐、购买时间、到期时间 等。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingInfoRequest"/></param>
         /// <returns><see cref="DescribeBillingInfoResponse"/></returns>

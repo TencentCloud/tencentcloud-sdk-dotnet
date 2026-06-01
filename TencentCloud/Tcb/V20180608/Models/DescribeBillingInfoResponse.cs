@@ -25,10 +25,16 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境计费信息列表
+        /// <p>环境计费信息列表</p>
         /// </summary>
         [JsonProperty("EnvBillingInfoList")]
         public EnvBillingInfoItem[] EnvBillingInfoList{ get; set; }
+
+        /// <summary>
+        /// <p>总个数</p>
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "EnvBillingInfoList.", this.EnvBillingInfoList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

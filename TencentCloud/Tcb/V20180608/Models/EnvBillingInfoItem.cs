@@ -25,110 +25,103 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境ID
+        /// <p>环境ID</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// tcb产品套餐ID，参考DescribePackages接口的返回值。
+        /// <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// 自动续费标记
+        /// <p>自动续费标记</p>
         /// </summary>
         [JsonProperty("IsAutoRenew")]
         public bool? IsAutoRenew{ get; set; }
 
         /// <summary>
-        /// 状态。包含以下取值：
-        /// <li> 空字符串：初始化中</li>
-        /// <li> NORMAL：正常</li>
-        /// <li> ISOLATE：隔离</li>
+        /// <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 支付方式。包含以下取值：
-        /// <li> PREPAYMENT：预付费</li>
-        /// <li> POSTPAID：后付费</li>
+        /// <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 隔离时间，最近一次隔离的时间
+        /// <p>隔离时间，最近一次隔离的时间</p>
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
 
         /// <summary>
-        /// 过期时间，套餐即将到期的时间
+        /// <p>过期时间，套餐即将到期的时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 创建时间，第一次接入计费方案的时间。
+        /// <p>创建时间，第一次接入计费方案的时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间，计费信息最近一次更新的时间。
+        /// <p>更新时间，计费信息最近一次更新的时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// true表示从未升级过付费版。
+        /// <p>true表示从未升级过付费版。</p>
         /// </summary>
         [JsonProperty("IsAlwaysFree")]
         public bool? IsAlwaysFree{ get; set; }
 
         /// <summary>
-        /// 付费渠道。
-        /// <li> miniapp：小程序</li>
-        /// <li> qcloud：腾讯云</li>
+        /// <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li>
         /// </summary>
         [JsonProperty("PaymentChannel")]
         public string PaymentChannel{ get; set; }
 
         /// <summary>
-        /// 最新的订单信息
+        /// <p>最新的订单信息</p>
         /// </summary>
         [JsonProperty("OrderInfo")]
         public OrderInfo OrderInfo{ get; set; }
 
         /// <summary>
-        /// 免费配额信息。
+        /// <p>免费配额信息。</p>
         /// </summary>
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }
 
         /// <summary>
-        /// 是否开启 `超过套餐额度部分转按量付费`
+        /// <p>是否开启 <code>超过套餐额度部分转按量付费</code></p>
         /// </summary>
         [JsonProperty("EnableOverrun")]
         public bool? EnableOverrun{ get; set; }
 
         /// <summary>
-        /// 环境套餐类型
+        /// <p>环境套餐类型</p>
         /// </summary>
         [JsonProperty("ExtPackageType")]
         public string ExtPackageType{ get; set; }
 
         /// <summary>
-        /// 是否付费期环境，可取值：yes/no。
+        /// <p>是否付费期环境，可取值：yes/no。</p>
         /// </summary>
         [JsonProperty("EnvCharged")]
         public string EnvCharged{ get; set; }
 
         /// <summary>
-        /// 是否已激活，可取值：yes/no。
+        /// <p>是否已激活，可取值：yes/no。</p>
         /// </summary>
         [JsonProperty("EnvActivated")]
         public string EnvActivated{ get; set; }

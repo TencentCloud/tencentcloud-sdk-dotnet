@@ -25,70 +25,76 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// Url
+        /// <p>Url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// Icon
+        /// <p>Icon</p>
         /// </summary>
         [JsonProperty("Icon")]
         public string Icon{ get; set; }
 
         /// <summary>
-        /// 缩略图
+        /// <p>缩略图</p>
         /// </summary>
         [JsonProperty("Screenshot")]
         public string Screenshot{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 后台Host
+        /// <p>后台Host</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
+        /// <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 是否为云资产：0-非云资产 1-是云资产
+        /// <p>是否为云资产：0-非云资产 1-是云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产是否下线：-1-已下线 0-正常
+        /// <p>云资产是否下线：-1-已下线 0-正常</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
             this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

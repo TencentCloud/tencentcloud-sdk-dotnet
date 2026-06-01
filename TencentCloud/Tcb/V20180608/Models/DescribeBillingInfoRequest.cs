@@ -25,10 +25,28 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境ID
+        /// <p>环境ID</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
+
+        /// <summary>
+        /// <p>环境列表，当环境列表不为空时，查询的环境以该参数为准</p>
+        /// </summary>
+        [JsonProperty("EnvIds")]
+        public string[] EnvIds{ get; set; }
+
+        /// <summary>
+        /// <p>每页条数（用于拉取列表时分页）</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>偏移</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -37,6 +55,9 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamArraySimple(map, prefix + "EnvIds.", this.EnvIds);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

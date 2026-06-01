@@ -32,6 +32,27 @@ namespace TencentCloud.Bi.V20220105.Models
         public ErrorInfo ErrorInfo{ get; set; }
 
         /// <summary>
+        /// <p>额外信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
+        /// <summary>
+        /// <p>结果信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
+
+        /// <summary>
+        /// <p>数据</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public UserGroupVO[] Data{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +65,9 @@ namespace TencentCloud.Bi.V20220105.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

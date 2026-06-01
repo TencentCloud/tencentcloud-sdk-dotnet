@@ -25,70 +25,76 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// Url
+        /// <p>Url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Host地址
+        /// <p>Host地址</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Path路径
+        /// <p>Path路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 方法：POST、GET、DELETE等
+        /// <p>方法：POST、GET、DELETE等</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
+        /// <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 请求体
+        /// <p>请求体</p>
         /// </summary>
         [JsonProperty("Request")]
         public string Request{ get; set; }
 
         /// <summary>
-        /// 响应体
+        /// <p>响应体</p>
         /// </summary>
         [JsonProperty("Response")]
         public string Response{ get; set; }
 
         /// <summary>
-        /// 是否风险API
+        /// <p>是否风险API</p>
         /// </summary>
         [JsonProperty("IsRiskAPI")]
         public bool? IsRiskAPI{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Request", this.Request);
             this.SetParamSimple(map, prefix + "Response", this.Response);
             this.SetParamSimple(map, prefix + "IsRiskAPI", this.IsRiskAPI);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

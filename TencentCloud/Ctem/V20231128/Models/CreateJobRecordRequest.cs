@@ -25,34 +25,58 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
 
         /// <summary>
-        /// 任务类型：即时任务
+        /// <p>任务类型：即时任务</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+        /// <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
         /// </summary>
         [JsonProperty("ScanType")]
         public string ScanType{ get; set; }
 
         /// <summary>
-        /// qps设置
+        /// <p>qps设置</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// 是否包含完整扫描
+        /// <p>是否包含完整扫描</p>
         /// </summary>
         [JsonProperty("IsIncludeFullScan")]
         public bool? IsIncludeFullScan{ get; set; }
+
+        /// <summary>
+        /// <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p><p>默认值：100</p>
+        /// </summary>
+        [JsonProperty("PortScanQps")]
+        public long? PortScanQps{ get; set; }
+
+        /// <summary>
+        /// <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("SingleIPTaskLimit")]
+        public long? SingleIPTaskLimit{ get; set; }
+
+        /// <summary>
+        /// <p>任一速率超过保守值时必须为 true，否则参数错误</p>
+        /// </summary>
+        [JsonProperty("HighRiskAck")]
+        public bool? HighRiskAck{ get; set; }
+
+        /// <summary>
+        /// <p>知情同意勾选清单，用于审计回放</p>
+        /// </summary>
+        [JsonProperty("ScanRateAckChecklist")]
+        public string[] ScanRateAckChecklist{ get; set; }
 
 
         /// <summary>
@@ -65,6 +89,10 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "ScanType", this.ScanType);
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
             this.SetParamSimple(map, prefix + "IsIncludeFullScan", this.IsIncludeFullScan);
+            this.SetParamSimple(map, prefix + "PortScanQps", this.PortScanQps);
+            this.SetParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
+            this.SetParamSimple(map, prefix + "HighRiskAck", this.HighRiskAck);
+            this.SetParamArraySimple(map, prefix + "ScanRateAckChecklist.", this.ScanRateAckChecklist);
         }
     }
 }

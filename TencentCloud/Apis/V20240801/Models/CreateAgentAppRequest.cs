@@ -25,34 +25,40 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 认证类型
+        /// <p>认证类型</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// OAuth2资源服务器ID
+        /// <p>OAuth2资源服务器ID</p>
         /// </summary>
         [JsonProperty("OAuth2ResourceServerID")]
         public string OAuth2ResourceServerID{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>API认证列表</p>
+        /// </summary>
+        [JsonProperty("ConnectorIDs")]
+        public string[] ConnectorIDs{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "OAuth2ResourceServerID", this.OAuth2ResourceServerID);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "ConnectorIDs.", this.ConnectorIDs);
         }
     }
 }

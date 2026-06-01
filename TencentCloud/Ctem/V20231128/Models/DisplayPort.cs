@@ -25,88 +25,94 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// IP或域名地址
+        /// <p>IP或域名地址</p>
         /// </summary>
         [JsonProperty("Asset")]
         public string Asset{ get; set; }
 
         /// <summary>
-        /// 解析的IP
+        /// <p>解析的IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// <p>端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 是否高危
+        /// <p>是否高危</p>
         /// </summary>
         [JsonProperty("IsHighRisk")]
         public bool? IsHighRisk{ get; set; }
 
         /// <summary>
-        /// 组件名称
+        /// <p>组件名称</p>
         /// </summary>
         [JsonProperty("App")]
         public string App{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// 端口响应详情
+        /// <p>端口响应详情</p>
         /// </summary>
         [JsonProperty("Banner")]
         public string Banner{ get; set; }
 
         /// <summary>
-        /// 上次检测时间
+        /// <p>上次检测时间</p>
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
-        /// 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+        /// <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 是否为云资产：0-非云资产 1-是云资产
+        /// <p>是否为云资产：0-非云资产 1-是云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产是否下线：-1-已下线 0-正常
+        /// <p>云资产是否下线：-1-已下线 0-正常</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
 
         /// <summary>
-        /// 域名解析状态 1:异常 0:正常
+        /// <p>域名解析状态 1:异常 0:正常</p>
         /// </summary>
         [JsonProperty("AnalysisState")]
         public long? AnalysisState{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
             this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
             this.SetParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

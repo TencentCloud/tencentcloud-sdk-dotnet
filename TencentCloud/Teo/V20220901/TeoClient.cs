@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1437";
 
         /// <summary>
         /// Client constructor.
@@ -481,6 +481,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateFunctionResponse CreateFunctionSync(CreateFunctionRequest req)
         {
             return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建指定边缘函数的副本。创建副本后，当客户端请求匹配已配置的触发规则或默认域名时，您可以通过在请求头中添加 EO-Function-Replica-Name:[副本名称] 来访问特定的函数副本。每个函数默认支持创建两个副本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionReplicaRequest"/></param>
+        /// <returns><see cref="CreateFunctionReplicaResponse"/></returns>
+        public Task<CreateFunctionReplicaResponse> CreateFunctionReplica(CreateFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionReplicaResponse>(req, "CreateFunctionReplica");
+        }
+
+        /// <summary>
+        /// 本接口用于创建指定边缘函数的副本。创建副本后，当客户端请求匹配已配置的触发规则或默认域名时，您可以通过在请求头中添加 EO-Function-Replica-Name:[副本名称] 来访问特定的函数副本。每个函数默认支持创建两个副本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionReplicaRequest"/></param>
+        /// <returns><see cref="CreateFunctionReplicaResponse"/></returns>
+        public CreateFunctionReplicaResponse CreateFunctionReplicaSync(CreateFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionReplicaResponse>(req, "CreateFunctionReplica")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1208,6 +1229,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteFunctionResponse DeleteFunctionSync(DeleteFunctionRequest req)
         {
             return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除指定的边缘函数副本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionReplicaRequest"/></param>
+        /// <returns><see cref="DeleteFunctionReplicaResponse"/></returns>
+        public Task<DeleteFunctionReplicaResponse> DeleteFunctionReplica(DeleteFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionReplicaResponse>(req, "DeleteFunctionReplica");
+        }
+
+        /// <summary>
+        /// 本接口用于删除指定的边缘函数副本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionReplicaRequest"/></param>
+        /// <returns><see cref="DeleteFunctionReplicaResponse"/></returns>
+        public DeleteFunctionReplicaResponse DeleteFunctionReplicaSync(DeleteFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionReplicaResponse>(req, "DeleteFunctionReplica")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2052,6 +2094,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeFunctionComponentBindingsResponse DescribeFunctionComponentBindingsSync(DescribeFunctionComponentBindingsRequest req)
         {
             return InternalRequestAsync<DescribeFunctionComponentBindingsResponse>(req, "DescribeFunctionComponentBindings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询边缘函数的副本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionReplicasRequest"/></param>
+        /// <returns><see cref="DescribeFunctionReplicasResponse"/></returns>
+        public Task<DescribeFunctionReplicasResponse> DescribeFunctionReplicas(DescribeFunctionReplicasRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionReplicasResponse>(req, "DescribeFunctionReplicas");
+        }
+
+        /// <summary>
+        /// 本接口用于查询边缘函数的副本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionReplicasRequest"/></param>
+        /// <returns><see cref="DescribeFunctionReplicasResponse"/></returns>
+        public DescribeFunctionReplicasResponse DescribeFunctionReplicasSync(DescribeFunctionReplicasRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionReplicasResponse>(req, "DescribeFunctionReplicas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3815,6 +3878,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyFunctionComponentBindingsResponse ModifyFunctionComponentBindingsSync(ModifyFunctionComponentBindingsRequest req)
         {
             return InternalRequestAsync<ModifyFunctionComponentBindingsResponse>(req, "ModifyFunctionComponentBindings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改指定边缘函数副本的内容和描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionReplicaRequest"/></param>
+        /// <returns><see cref="ModifyFunctionReplicaResponse"/></returns>
+        public Task<ModifyFunctionReplicaResponse> ModifyFunctionReplica(ModifyFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionReplicaResponse>(req, "ModifyFunctionReplica");
+        }
+
+        /// <summary>
+        /// 本接口用于修改指定边缘函数副本的内容和描述。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionReplicaRequest"/></param>
+        /// <returns><see cref="ModifyFunctionReplicaResponse"/></returns>
+        public ModifyFunctionReplicaResponse ModifyFunctionReplicaSync(ModifyFunctionReplicaRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionReplicaResponse>(req, "ModifyFunctionReplica")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

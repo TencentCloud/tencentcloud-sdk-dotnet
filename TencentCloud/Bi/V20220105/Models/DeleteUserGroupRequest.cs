@@ -25,7 +25,7 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户组id
+        /// <p>用户组id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

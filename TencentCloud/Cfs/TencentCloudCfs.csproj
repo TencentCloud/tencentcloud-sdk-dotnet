@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1425</VersionPrefix>
+    <VersionPrefix>3.0.1437</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,8 @@
     <Compile Include="V20190719\Models\CreateCfsSnapshotResponse.cs" />
     <Compile Include="V20190719\Models\CreateDataFlowRequest.cs" />
     <Compile Include="V20190719\Models\CreateDataFlowResponse.cs" />
+    <Compile Include="V20190719\Models\CreateDataRetrievalRequest.cs" />
+    <Compile Include="V20190719\Models\CreateDataRetrievalResponse.cs" />
     <Compile Include="V20190719\Models\CreateLifecycleDataTaskRequest.cs" />
     <Compile Include="V20190719\Models\CreateLifecycleDataTaskResponse.cs" />
     <Compile Include="V20190719\Models\CreateLifecyclePolicyDownloadTaskRequest.cs" />
@@ -83,6 +85,8 @@
     <Compile Include="V20190719\Models\CreateMigrationTaskRequest.cs" />
     <Compile Include="V20190719\Models\CreateMigrationTaskResponse.cs" />
     <Compile Include="V20190719\Models\DataFlowInfo.cs" />
+    <Compile Include="V20190719\Models\DataRetrievalInfo.cs" />
+    <Compile Include="V20190719\Models\DataRetrievalTaskInfo.cs" />
     <Compile Include="V20190719\Models\DeleteAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20190719\Models\DeleteAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20190719\Models\DeleteCfsFileSystemRequest.cs" />
@@ -95,6 +99,8 @@
     <Compile Include="V20190719\Models\DeleteCfsSnapshotResponse.cs" />
     <Compile Include="V20190719\Models\DeleteDataFlowRequest.cs" />
     <Compile Include="V20190719\Models\DeleteDataFlowResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteDataRetrievalRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteDataRetrievalResponse.cs" />
     <Compile Include="V20190719\Models\DeleteLifecyclePolicyRequest.cs" />
     <Compile Include="V20190719\Models\DeleteLifecyclePolicyResponse.cs" />
     <Compile Include="V20190719\Models\DeleteMigrationTaskRequest.cs" />
@@ -123,6 +129,10 @@
     <Compile Include="V20190719\Models\DescribeCfsSnapshotsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeDataFlowRequest.cs" />
     <Compile Include="V20190719\Models\DescribeDataFlowResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeDataRetrievalRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeDataRetrievalResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeDataRetrievalTaskRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeDataRetrievalTaskResponse.cs" />
     <Compile Include="V20190719\Models\DescribeLifecycleDataTaskRequest.cs" />
     <Compile Include="V20190719\Models\DescribeLifecycleDataTaskResponse.cs" />
     <Compile Include="V20190719\Models\DescribeLifecyclePoliciesRequest.cs" />
@@ -149,6 +159,8 @@
     <Compile Include="V20190719\Models\MigrationTaskInfo.cs" />
     <Compile Include="V20190719\Models\ModifyDataFlowRequest.cs" />
     <Compile Include="V20190719\Models\ModifyDataFlowResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyDataRetrievalRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyDataRetrievalResponse.cs" />
     <Compile Include="V20190719\Models\ModifyFileSystemAutoScaleUpRuleRequest.cs" />
     <Compile Include="V20190719\Models\ModifyFileSystemAutoScaleUpRuleResponse.cs" />
     <Compile Include="V20190719\Models\ModifyLifecyclePolicyRequest.cs" />
@@ -160,6 +172,8 @@
     <Compile Include="V20190719\Models\PGroupInfo.cs" />
     <Compile Include="V20190719\Models\PGroupRuleInfo.cs" />
     <Compile Include="V20190719\Models\PathInfo.cs" />
+    <Compile Include="V20190719\Models\RunDataRetrievalTaskRequest.cs" />
+    <Compile Include="V20190719\Models\RunDataRetrievalTaskResponse.cs" />
     <Compile Include="V20190719\Models\ScaleUpFileSystemRequest.cs" />
     <Compile Include="V20190719\Models\ScaleUpFileSystemResponse.cs" />
     <Compile Include="V20190719\Models\SetUserQuotaRequest.cs" />

@@ -25,112 +25,118 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// Url
+        /// <p>Url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 报文长度
+        /// <p>报文长度</p>
         /// </summary>
         [JsonProperty("ContentLength")]
         public long? ContentLength{ get; set; }
 
         /// <summary>
-        /// 报文内容
+        /// <p>报文内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 截图缩略图URL
+        /// <p>截图缩略图URL</p>
         /// </summary>
         [JsonProperty("ScreenshotThumbUrl")]
         public string ScreenshotThumbUrl{ get; set; }
 
         /// <summary>
-        /// 截图URL
+        /// <p>截图URL</p>
         /// </summary>
         [JsonProperty("ScreenshotUrl")]
         public string ScreenshotUrl{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// Api
+        /// <p>Api</p>
         /// </summary>
         [JsonProperty("Api")]
         public string Api{ get; set; }
 
         /// <summary>
-        /// 解析的IP
+        /// <p>解析的IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 证书信息
+        /// <p>证书信息</p>
         /// </summary>
         [JsonProperty("Ssl")]
         public string Ssl{ get; set; }
 
         /// <summary>
-        /// ssl证书过期时间
+        /// <p>ssl证书过期时间</p>
         /// </summary>
         [JsonProperty("SslExpiredTime")]
         public string SslExpiredTime{ get; set; }
 
         /// <summary>
-        /// 来源类型
+        /// <p>来源类型</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 来源值
+        /// <p>来源值</p>
         /// </summary>
         [JsonProperty("SourceValue")]
         public string SourceValue{ get; set; }
 
         /// <summary>
-        /// 是否信任
+        /// <p>是否信任</p>
         /// </summary>
         [JsonProperty("Trusted")]
         public bool? Trusted{ get; set; }
 
         /// <summary>
-        /// 所属者
+        /// <p>所属者</p>
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 根域名
+        /// <p>根域名</p>
         /// </summary>
         [JsonProperty("RootDomain")]
         public string RootDomain{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Trusted", this.Trusted);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "RootDomain", this.RootDomain);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }

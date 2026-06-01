@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1425";
+       private const string sdkVersion = "SDK_NET_3.0.1437";
 
         /// <summary>
         /// Client constructor.
@@ -243,6 +243,27 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 创建数据检索
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataRetrievalRequest"/></param>
+        /// <returns><see cref="CreateDataRetrievalResponse"/></returns>
+        public Task<CreateDataRetrievalResponse> CreateDataRetrieval(CreateDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<CreateDataRetrievalResponse>(req, "CreateDataRetrieval");
+        }
+
+        /// <summary>
+        /// 创建数据检索
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataRetrievalRequest"/></param>
+        /// <returns><see cref="CreateDataRetrievalResponse"/></returns>
+        public CreateDataRetrievalResponse CreateDataRetrievalSync(CreateDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<CreateDataRetrievalResponse>(req, "CreateDataRetrieval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 支持主动沉降/预热接口
         /// </summary>
         /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
@@ -449,6 +470,31 @@ namespace TencentCloud.Cfs.V20190719
         public DeleteDataFlowResponse DeleteDataFlowSync(DeleteDataFlowRequest req)
         {
             return InternalRequestAsync<DeleteDataFlowResponse>(req, "DeleteDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据检索。
+        /// 
+        /// 删除指定的数据检索配置，不允许在存在关联任务时删除。调用接口后，若通过 DescribeDataRetrieval 接口查询不到对应的数据检索，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataRetrievalRequest"/></param>
+        /// <returns><see cref="DeleteDataRetrievalResponse"/></returns>
+        public Task<DeleteDataRetrievalResponse> DeleteDataRetrieval(DeleteDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DeleteDataRetrievalResponse>(req, "DeleteDataRetrieval");
+        }
+
+        /// <summary>
+        /// 删除数据检索。
+        /// 
+        /// 删除指定的数据检索配置，不允许在存在关联任务时删除。调用接口后，若通过 DescribeDataRetrieval 接口查询不到对应的数据检索，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataRetrievalRequest"/></param>
+        /// <returns><see cref="DeleteDataRetrievalResponse"/></returns>
+        public DeleteDataRetrievalResponse DeleteDataRetrievalSync(DeleteDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DeleteDataRetrievalResponse>(req, "DeleteDataRetrieval")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -747,6 +793,52 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 查询数据检索。
+        /// 
+        /// 查询数据检索列表，支持按文件系统 ID、数据检索 ID、名称等条件筛选。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRetrievalRequest"/></param>
+        /// <returns><see cref="DescribeDataRetrievalResponse"/></returns>
+        public Task<DescribeDataRetrievalResponse> DescribeDataRetrieval(DescribeDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRetrievalResponse>(req, "DescribeDataRetrieval");
+        }
+
+        /// <summary>
+        /// 查询数据检索。
+        /// 
+        /// 查询数据检索列表，支持按文件系统 ID、数据检索 ID、名称等条件筛选。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRetrievalRequest"/></param>
+        /// <returns><see cref="DescribeDataRetrievalResponse"/></returns>
+        public DescribeDataRetrievalResponse DescribeDataRetrievalSync(DescribeDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRetrievalResponse>(req, "DescribeDataRetrieval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据检索任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRetrievalTaskRequest"/></param>
+        /// <returns><see cref="DescribeDataRetrievalTaskResponse"/></returns>
+        public Task<DescribeDataRetrievalTaskResponse> DescribeDataRetrievalTask(DescribeDataRetrievalTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRetrievalTaskResponse>(req, "DescribeDataRetrievalTask");
+        }
+
+        /// <summary>
+        /// 查询数据检索任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRetrievalTaskRequest"/></param>
+        /// <returns><see cref="DescribeDataRetrievalTaskResponse"/></returns>
+        public DescribeDataRetrievalTaskResponse DescribeDataRetrievalTaskSync(DescribeDataRetrievalTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRetrievalTaskResponse>(req, "DescribeDataRetrievalTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
@@ -917,6 +1009,27 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 修改数据检索
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataRetrievalRequest"/></param>
+        /// <returns><see cref="ModifyDataRetrievalResponse"/></returns>
+        public Task<ModifyDataRetrievalResponse> ModifyDataRetrieval(ModifyDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<ModifyDataRetrievalResponse>(req, "ModifyDataRetrieval");
+        }
+
+        /// <summary>
+        /// 修改数据检索
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataRetrievalRequest"/></param>
+        /// <returns><see cref="ModifyDataRetrievalResponse"/></returns>
+        public ModifyDataRetrievalResponse ModifyDataRetrievalSync(ModifyDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<ModifyDataRetrievalResponse>(req, "ModifyDataRetrieval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用来设置文件系统扩容策略，该接口只支持turbo文件系统
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
@@ -976,6 +1089,31 @@ namespace TencentCloud.Cfs.V20190719
         public OverrideCfsRulesResponse OverrideCfsRulesSync(OverrideCfsRulesRequest req)
         {
             return InternalRequestAsync<OverrideCfsRulesResponse>(req, "OverrideCfsRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行数据检索任务。
+        /// 
+        /// 手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+        /// </summary>
+        /// <param name="req"><see cref="RunDataRetrievalTaskRequest"/></param>
+        /// <returns><see cref="RunDataRetrievalTaskResponse"/></returns>
+        public Task<RunDataRetrievalTaskResponse> RunDataRetrievalTask(RunDataRetrievalTaskRequest req)
+        {
+            return InternalRequestAsync<RunDataRetrievalTaskResponse>(req, "RunDataRetrievalTask");
+        }
+
+        /// <summary>
+        /// 执行数据检索任务。
+        /// 
+        /// 手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+        /// </summary>
+        /// <param name="req"><see cref="RunDataRetrievalTaskRequest"/></param>
+        /// <returns><see cref="RunDataRetrievalTaskResponse"/></returns>
+        public RunDataRetrievalTaskResponse RunDataRetrievalTaskSync(RunDataRetrievalTaskRequest req)
+        {
+            return InternalRequestAsync<RunDataRetrievalTaskResponse>(req, "RunDataRetrievalTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

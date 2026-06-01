@@ -25,7 +25,21 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 访问方式：public - 公网，internal - 内网
+        /// <p>网段或IP，支持IPv4或IPv6。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CidrBlocks")]
+        public string[] CidrBlocks{ get; set; }
+
+        /// <summary>
+        /// <p>ACCEPT 或 DROP。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
+        /// <p>访问方式：public - 公网，internal - 内网</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessMode")]
@@ -37,6 +51,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "CidrBlocks.", this.CidrBlocks);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
         }
     }

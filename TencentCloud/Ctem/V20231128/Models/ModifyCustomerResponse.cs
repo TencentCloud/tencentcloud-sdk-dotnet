@@ -25,7 +25,7 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

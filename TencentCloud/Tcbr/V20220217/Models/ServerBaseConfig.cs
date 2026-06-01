@@ -25,191 +25,197 @@ namespace TencentCloud.Tcbr.V20220217.Models
     {
         
         /// <summary>
-        /// 环境 Id
+        /// <p>环境 Id</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 服务名
+        /// <p>服务名</p>
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// 是否开启公网访问
+        /// <p>是否开启公网访问</p>
         /// </summary>
         [JsonProperty("OpenAccessTypes")]
         public string[] OpenAccessTypes{ get; set; }
 
         /// <summary>
-        /// Cpu 规格
+        /// <p>Cpu 规格</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// Mem 规格
+        /// <p>Mem 规格</p>
         /// </summary>
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
         /// <summary>
-        /// 最小副本数
+        /// <p>最小副本数</p>
         /// </summary>
         [JsonProperty("MinNum")]
         public ulong? MinNum{ get; set; }
 
         /// <summary>
-        /// 最大副本数
+        /// <p>最大副本数</p>
         /// </summary>
         [JsonProperty("MaxNum")]
         public ulong? MaxNum{ get; set; }
 
         /// <summary>
-        /// 扩缩容配置
+        /// <p>扩缩容配置</p>
         /// </summary>
         [JsonProperty("PolicyDetails")]
         public HpaPolicy[] PolicyDetails{ get; set; }
 
         /// <summary>
-        /// 日志采集路径
+        /// <p>日志采集路径</p>
         /// </summary>
         [JsonProperty("CustomLogs")]
         public string CustomLogs{ get; set; }
 
         /// <summary>
-        /// 环境变量
+        /// <p>环境变量</p>
         /// </summary>
         [JsonProperty("EnvParams")]
         public string EnvParams{ get; set; }
 
         /// <summary>
-        /// 延迟检测时间
+        /// <p>延迟检测时间</p>
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public ulong? InitialDelaySeconds{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 服务端口
+        /// <p>服务端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 是否有Dockerfile
+        /// <p>是否有Dockerfile</p>
         /// </summary>
         [JsonProperty("HasDockerfile")]
         public bool? HasDockerfile{ get; set; }
 
         /// <summary>
-        /// Dockerfile 文件名
+        /// <p>Dockerfile 文件名</p>
         /// </summary>
         [JsonProperty("Dockerfile")]
         public string Dockerfile{ get; set; }
 
         /// <summary>
-        /// 构建目录
+        /// <p>构建目录</p>
         /// </summary>
         [JsonProperty("BuildDir")]
         public string BuildDir{ get; set; }
 
         /// <summary>
-        /// 日志类型: none | default | custom
+        /// <p>日志类型: none | default | custom</p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// cls setId
+        /// <p>cls setId</p>
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// cls 主题id
+        /// <p>cls 主题id</p>
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
-        /// 解析类型：json ｜ line
+        /// <p>解析类型：json ｜ line</p>
         /// </summary>
         [JsonProperty("LogParseType")]
         public string LogParseType{ get; set; }
 
         /// <summary>
-        /// 服务标签, function: 函数托管
+        /// <p>服务标签, function: 函数托管</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 内网访问开关 close | open
+        /// <p>内网访问开关 close | open</p>
         /// </summary>
         [JsonProperty("InternalAccess")]
         public string InternalAccess{ get; set; }
 
         /// <summary>
-        /// 内网域名
+        /// <p>内网域名</p>
         /// </summary>
         [JsonProperty("InternalDomain")]
         public string InternalDomain{ get; set; }
 
         /// <summary>
-        /// 运行模式
+        /// <p>运行模式</p>
         /// </summary>
         [JsonProperty("OperationMode")]
         public string OperationMode{ get; set; }
 
         /// <summary>
-        /// 定时扩缩容配置
+        /// <p>定时扩缩容配置</p>
         /// </summary>
         [JsonProperty("TimerScale")]
         public TimerScale[] TimerScale{ get; set; }
 
         /// <summary>
-        /// Dockerfile EntryPoint 参数
+        /// <p>Dockerfile EntryPoint 参数</p>
         /// </summary>
         [JsonProperty("EntryPoint")]
         public string[] EntryPoint{ get; set; }
 
         /// <summary>
-        /// Dockerfile Cmd 参数
+        /// <p>Dockerfile Cmd 参数</p>
         /// </summary>
         [JsonProperty("Cmd")]
         public string[] Cmd{ get; set; }
 
         /// <summary>
-        /// 会话亲和性开关
+        /// <p>会话亲和性开关</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionAffinity")]
         public string SessionAffinity{ get; set; }
 
         /// <summary>
-        /// Vpc 配置参数
+        /// <p>Vpc 配置参数</p>
         /// </summary>
         [JsonProperty("VpcConf")]
         public VpcConf VpcConf{ get; set; }
 
         /// <summary>
-        /// 存储配置信息
+        /// <p>存储配置信息</p>
         /// </summary>
         [JsonProperty("VolumesConf")]
         public VolumeConf[] VolumesConf{ get; set; }
 
         /// <summary>
-        /// 关联镜像密钥
+        /// <p>关联镜像密钥</p>
         /// </summary>
         [JsonProperty("LinkImageRegistry")]
         public string LinkImageRegistry{ get; set; }
+
+        /// <summary>
+        /// <p>公网访问配置</p>
+        /// </summary>
+        [JsonProperty("PublicNetConf")]
+        public PublicNetConf PublicNetConf{ get; set; }
 
 
         /// <summary>
@@ -248,6 +254,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamObj(map, prefix + "VpcConf.", this.VpcConf);
             this.SetParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
             this.SetParamSimple(map, prefix + "LinkImageRegistry", this.LinkImageRegistry);
+            this.SetParamObj(map, prefix + "PublicNetConf.", this.PublicNetConf);
         }
     }
 }

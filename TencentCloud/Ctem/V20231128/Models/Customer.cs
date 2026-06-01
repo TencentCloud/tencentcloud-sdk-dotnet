@@ -25,143 +25,155 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 企业名称
+        /// <p>企业名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 股权占比
+        /// <p>股权占比</p>
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
 
         /// <summary>
-        /// 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+        /// <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
         /// </summary>
         [JsonProperty("ScanType")]
         public string ScanType{ get; set; }
 
         /// <summary>
-        /// 创建账号
+        /// <p>创建账号</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 腾讯云客户AppId
+        /// <p>腾讯云客户AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 腾讯云客户Uin
+        /// <p>腾讯云客户Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateAt")]
         public string UpdateAt{ get; set; }
 
         /// <summary>
-        /// 周期测绘时间
+        /// <p>周期测绘时间</p>
         /// </summary>
         [JsonProperty("ScanCron")]
         public string ScanCron{ get; set; }
 
         /// <summary>
-        /// 是否启用周期测绘
+        /// <p>是否启用周期测绘</p>
         /// </summary>
         [JsonProperty("EnableCron")]
         public bool? EnableCron{ get; set; }
 
         /// <summary>
-        /// 是否扫描子公司
+        /// <p>是否扫描子公司</p>
         /// </summary>
         [JsonProperty("EnableScanSubEnterprise")]
         public bool? EnableScanSubEnterprise{ get; set; }
 
         /// <summary>
-        /// 是否授权
+        /// <p>是否授权</p>
         /// </summary>
         [JsonProperty("EnableAuth")]
         public bool? EnableAuth{ get; set; }
 
         /// <summary>
-        /// 授权开始时间
+        /// <p>授权开始时间</p>
         /// </summary>
         [JsonProperty("AuthStartAt")]
         public string AuthStartAt{ get; set; }
 
         /// <summary>
-        /// 授权结束时间
+        /// <p>授权结束时间</p>
         /// </summary>
         [JsonProperty("AuthEndAt")]
         public string AuthEndAt{ get; set; }
 
         /// <summary>
-        /// 授权文件id
+        /// <p>授权文件id</p>
         /// </summary>
         [JsonProperty("AuthFile")]
         public string AuthFile{ get; set; }
 
         /// <summary>
-        /// 测绘时间配置项
+        /// <p>测绘时间配置项</p>
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
-        /// 图标
+        /// <p>图标</p>
         /// </summary>
         [JsonProperty("Icon")]
         public string Icon{ get; set; }
 
         /// <summary>
-        /// 关键字
+        /// <p>关键字</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public string Keywords{ get; set; }
 
         /// <summary>
-        /// Qps设置，10-500，默认100
+        /// <p>Qps设置，10-500，默认100</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// 子公司拓展层次
+        /// <p>子公司拓展层次</p>
         /// </summary>
         [JsonProperty("SubCompanyLevel")]
         public long? SubCompanyLevel{ get; set; }
 
         /// <summary>
-        /// 是否包含完整扫描
+        /// <p>是否包含完整扫描</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsIncludeFullScan")]
         public bool? IsIncludeFullScan{ get; set; }
 
         /// <summary>
-        /// 是否识别集团成员
+        /// <p>是否识别集团成员</p>
         /// </summary>
         [JsonProperty("EnableGroupMemberDiscovered")]
         public bool? EnableGroupMemberDiscovered{ get; set; }
+
+        /// <summary>
+        /// <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
+        /// </summary>
+        [JsonProperty("SingleIPTaskLimit")]
+        public long? SingleIPTaskLimit{ get; set; }
+
+        /// <summary>
+        /// <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+        /// </summary>
+        [JsonProperty("PortScanQps")]
+        public long? PortScanQps{ get; set; }
 
 
         /// <summary>
@@ -192,6 +204,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "SubCompanyLevel", this.SubCompanyLevel);
             this.SetParamSimple(map, prefix + "IsIncludeFullScan", this.IsIncludeFullScan);
             this.SetParamSimple(map, prefix + "EnableGroupMemberDiscovered", this.EnableGroupMemberDiscovered);
+            this.SetParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
+            this.SetParamSimple(map, prefix + "PortScanQps", this.PortScanQps);
         }
     }
 }

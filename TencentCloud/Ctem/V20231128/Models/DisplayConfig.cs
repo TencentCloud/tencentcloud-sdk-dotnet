@@ -25,82 +25,88 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键Id
+        /// <p>主键Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 站点标题
+        /// <p>站点标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// <p>状态码</p>
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// 响应长度
+        /// <p>响应长度</p>
         /// </summary>
         [JsonProperty("ContentLength")]
         public long? ContentLength{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// Ip数据
+        /// <p>Ip数据</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// AI评分
+        /// <p>AI评分</p>
         /// </summary>
         [JsonProperty("AIRating")]
         public long? AIRating{ get; set; }
 
         /// <summary>
-        /// AI分析
+        /// <p>AI分析</p>
         /// </summary>
         [JsonProperty("AIAnalysis")]
         public string AIAnalysis{ get; set; }
 
         /// <summary>
-        /// 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
+        /// <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 建议
+        /// <p>建议</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 是否为云资产
+        /// <p>是否为云资产</p>
         /// </summary>
         [JsonProperty("IsCloudAsset")]
         public long? IsCloudAsset{ get; set; }
 
         /// <summary>
-        /// 云资产状态，-1为下线
+        /// <p>云资产状态，-1为下线</p>
         /// </summary>
         [JsonProperty("CloudAssetStatus")]
         public long? CloudAssetStatus{ get; set; }
+
+        /// <summary>
+        /// <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+        /// </summary>
+        [JsonProperty("AggregationCount")]
+        public long? AggregationCount{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
             this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
             this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+            this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
         }
     }
 }
