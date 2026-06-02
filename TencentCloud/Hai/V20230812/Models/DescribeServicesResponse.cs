@@ -25,13 +25,13 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 服务列表
+        /// <p>服务列表</p>
         /// </summary>
         [JsonProperty("ServiceInfoSet")]
         public ServiceDetail[] ServiceInfoSet{ get; set; }

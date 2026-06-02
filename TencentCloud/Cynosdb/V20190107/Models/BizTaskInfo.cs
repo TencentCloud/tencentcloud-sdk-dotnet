@@ -25,158 +25,158 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 用户appid
+        /// <p>用户appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 延迟执行时间
+        /// <p>延迟执行时间</p>
         /// </summary>
         [JsonProperty("DelayTime")]
         public string DelayTime{ get; set; }
 
         /// <summary>
-        /// 任务失败信息
+        /// <p>任务失败信息</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 异步任务流id
+        /// <p>异步任务流id</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 任务输入信息
+        /// <p>任务输入信息</p>
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 实例组id
+        /// <p>实例组id</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// 实例组id
+        /// <p>实例组id</p>
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 任务操作对象id
+        /// <p>任务操作对象id</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 任务操作对象类型
+        /// <p>任务操作对象类型</p>
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
-        /// 操作者uin
+        /// <p>操作者uin</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 任务输出信息
+        /// <p>任务输出信息</p>
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 触发本任务的父任务ID
+        /// <p>触发本任务的父任务ID</p>
         /// </summary>
         [JsonProperty("TriggerTaskId")]
         public long? TriggerTaskId{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 任务开始时间
+        /// <p>任务开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务结束时间
+        /// <p>任务结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 任务进度
+        /// <p>任务进度</p>
         /// </summary>
         [JsonProperty("Process")]
         public long? Process{ get; set; }
 
         /// <summary>
-        /// 修改参数任务信息
+        /// <p>修改参数任务信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyParamsData")]
@@ -184,91 +184,97 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ModifyParamsData[] ModifyParamsData{ get; set; }
 
         /// <summary>
-        /// 创建集群任务信息
+        /// <p>创建集群任务信息</p>
         /// </summary>
         [JsonProperty("CreateClustersData")]
         public CreateClustersData CreateClustersData{ get; set; }
 
         /// <summary>
-        /// 集群回档任务信息
+        /// <p>集群回档任务信息</p>
         /// </summary>
         [JsonProperty("RollbackData")]
         public RollbackData RollbackData{ get; set; }
 
         /// <summary>
-        /// 实例变配任务信息
+        /// <p>实例变配任务信息</p>
         /// </summary>
         [JsonProperty("ModifyInstanceData")]
         public ModifyInstanceData ModifyInstanceData{ get; set; }
 
         /// <summary>
-        /// 手动备份任务信息
+        /// <p>手动备份任务信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManualBackupData")]
         public ManualBackupData ManualBackupData{ get; set; }
 
         /// <summary>
-        /// 修改内核版本任务信息
+        /// <p>修改内核版本任务信息</p>
         /// </summary>
         [JsonProperty("ModifyDbVersionData")]
         public ModifyDbVersionData ModifyDbVersionData{ get; set; }
 
         /// <summary>
-        /// 集群可用区信息
+        /// <p>集群可用区信息</p>
         /// </summary>
         [JsonProperty("ClusterSlaveData")]
         public ClusterSlaveData ClusterSlaveData{ get; set; }
 
         /// <summary>
-        /// 转换集群日志
+        /// <p>转换集群日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchClusterLogBin")]
         public SwitchClusterLogBin SwitchClusterLogBin{ get; set; }
 
         /// <summary>
-        /// 修改实例参数数据
+        /// <p>修改实例参数数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyInstanceParamsData")]
         public BizTaskModifyParamsData ModifyInstanceParamsData{ get; set; }
 
         /// <summary>
-        /// 维护时间
+        /// <p>维护时间</p>
         /// </summary>
         [JsonProperty("TaskMaintainInfo")]
         public TaskMaintainInfo TaskMaintainInfo{ get; set; }
 
         /// <summary>
-        /// 实例日志投递信息
+        /// <p>实例日志投递信息</p>
         /// </summary>
         [JsonProperty("InstanceCLSDeliveryInfos")]
         public InstanceCLSDeliveryInfo[] InstanceCLSDeliveryInfos{ get; set; }
 
         /// <summary>
-        /// 任务进度信息
+        /// <p>任务进度信息</p>
         /// </summary>
         [JsonProperty("TaskProgressInfo")]
         public TaskProgressInfo TaskProgressInfo{ get; set; }
 
         /// <summary>
-        /// 全球数据库网络任务
+        /// <p>全球数据库网络任务</p>
         /// </summary>
         [JsonProperty("GdnTaskInfo")]
         public GdnTaskInfo GdnTaskInfo{ get; set; }
 
         /// <summary>
-        /// 保险箱id
+        /// <p>保险箱id</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// 保险箱名称
+        /// <p>保险箱名称</p>
         /// </summary>
         [JsonProperty("VaultName")]
         public string VaultName{ get; set; }
+
+        /// <summary>
+        /// <p>AI优化器任务信息</p>
+        /// </summary>
+        [JsonProperty("AIOptimizerTaskData")]
+        public AIOptimizerTaskData AIOptimizerTaskData{ get; set; }
 
 
         /// <summary>
@@ -316,6 +322,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
             this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
             this.SetParamSimple(map, prefix + "VaultName", this.VaultName);
+            this.SetParamObj(map, prefix + "AIOptimizerTaskData.", this.AIOptimizerTaskData);
         }
     }
 }

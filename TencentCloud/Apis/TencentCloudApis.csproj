@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7944596E-C265-32BB-8E66-BB35988DF25C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1437</VersionPrefix>
+    <VersionPrefix>3.0.1438</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,10 +52,13 @@
     <Compile Include="V20240801\Models\AgentAppMcpServerVO.cs" />
     <Compile Include="V20240801\Models\AgentAppModelServiceDTO.cs" />
     <Compile Include="V20240801\Models\AgentAppSecretKeyVO.cs" />
+    <Compile Include="V20240801\Models\AgentAppServiceDTO.cs" />
+    <Compile Include="V20240801\Models\AgentAppServiceVO.cs" />
     <Compile Include="V20240801\Models\AgentCredentialContentDTO.cs" />
     <Compile Include="V20240801\Models\AgentCredentialContentHeaderDTO.cs" />
     <Compile Include="V20240801\Models\BindMcpSecurityRuleDTO.cs" />
     <Compile Include="V20240801\Models\BindMcpSecurityRuleVO.cs" />
+    <Compile Include="V20240801\Models\CompoundCondition.cs" />
     <Compile Include="V20240801\Models\CreateAgentAppMcpServersRequest.cs" />
     <Compile Include="V20240801\Models\CreateAgentAppMcpServersResponse.cs" />
     <Compile Include="V20240801\Models\CreateAgentAppModelServicesRequest.cs" />
@@ -63,6 +66,8 @@
     <Compile Include="V20240801\Models\CreateAgentAppRequest.cs" />
     <Compile Include="V20240801\Models\CreateAgentAppResp.cs" />
     <Compile Include="V20240801\Models\CreateAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppServicesRequest.cs" />
+    <Compile Include="V20240801\Models\CreateAgentAppServicesResponse.cs" />
     <Compile Include="V20240801\Models\CreateAgentCredentialRequest.cs" />
     <Compile Include="V20240801\Models\CreateAgentCredentialResponse.cs" />
     <Compile Include="V20240801\Models\CreateMcpServerRequest.cs" />
@@ -71,12 +76,17 @@
     <Compile Include="V20240801\Models\CreateModelResponse.cs" />
     <Compile Include="V20240801\Models\CreateModelServiceRequest.cs" />
     <Compile Include="V20240801\Models\CreateModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\CreateServiceRequest.cs" />
+    <Compile Include="V20240801\Models\CreateServiceResponse.cs" />
+    <Compile Include="V20240801\Models\CustomMatch.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppMcpServersRequest.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppMcpServersResponse.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppModelServicesRequest.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppModelServicesResponse.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppRequest.cs" />
     <Compile Include="V20240801\Models\DeleteAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteAgentAppServicesResponse.cs" />
     <Compile Include="V20240801\Models\DeleteAgentCredentialRequest.cs" />
     <Compile Include="V20240801\Models\DeleteAgentCredentialResponse.cs" />
     <Compile Include="V20240801\Models\DeleteMcpServerRequest.cs" />
@@ -85,6 +95,8 @@
     <Compile Include="V20240801\Models\DeleteModelResponse.cs" />
     <Compile Include="V20240801\Models\DeleteModelServiceRequest.cs" />
     <Compile Include="V20240801\Models\DeleteModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteServiceRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteServiceResponse.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppMcpServersRequest.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppMcpServersResp.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppMcpServersResponse.cs" />
@@ -93,6 +105,9 @@
     <Compile Include="V20240801\Models\DescribeAgentAppRequest.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppResp.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppServicesResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeAgentAppServicesVO.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppsRequest.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppsResp.cs" />
     <Compile Include="V20240801\Models\DescribeAgentAppsResponse.cs" />
@@ -122,6 +137,12 @@
     <Compile Include="V20240801\Models\DescribeModelsResponse.cs" />
     <Compile Include="V20240801\Models\DescribeModelsResponseVO.cs" />
     <Compile Include="V20240801\Models\DescribeModelsSort.cs" />
+    <Compile Include="V20240801\Models\DescribeServiceRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeServiceResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeServicesRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeServicesResponse.cs" />
+    <Compile Include="V20240801\Models\FieldValueDTO.cs" />
+    <Compile Include="V20240801\Models\HealthCheckConfigDTO.cs" />
     <Compile Include="V20240801\Models\IDNameVO.cs" />
     <Compile Include="V20240801\Models\InvokeLimitConfigDTO.cs" />
     <Compile Include="V20240801\Models\IpConfig.cs" />
@@ -144,18 +165,30 @@
     <Compile Include="V20240801\Models\ModifyModelResponse.cs" />
     <Compile Include="V20240801\Models\ModifyModelServiceRequest.cs" />
     <Compile Include="V20240801\Models\ModifyModelServiceResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyServiceRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyServiceResponse.cs" />
     <Compile Include="V20240801\Models\PluginConfigDTO.cs" />
     <Compile Include="V20240801\Models\PluginFormValueDTO.cs" />
     <Compile Include="V20240801\Models\PromptModerateConfigDTO.cs" />
     <Compile Include="V20240801\Models\ResultIDVO.cs" />
     <Compile Include="V20240801\Models\ResultIDsVO.cs" />
     <Compile Include="V20240801\Models\SensitiveDataCheckConfigDTO.cs" />
+    <Compile Include="V20240801\Models\ServiceDatabaseOrderParam.cs" />
+    <Compile Include="V20240801\Models\ServiceDatabaseReqParam.cs" />
+    <Compile Include="V20240801\Models\ServiceDatabaseRespParam.cs" />
+    <Compile Include="V20240801\Models\ServiceVO.cs" />
+    <Compile Include="V20240801\Models\SimpleCondition.cs" />
+    <Compile Include="V20240801\Models\SourceTypeConfigDTO.cs" />
+    <Compile Include="V20240801\Models\SqlTemplate.cs" />
     <Compile Include="V20240801\Models\StartEndTime.cs" />
     <Compile Include="V20240801\Models\TargetHostDTO.cs" />
     <Compile Include="V20240801\Models\TargetModelDTO.cs" />
+    <Compile Include="V20240801\Models\TargetServerGroupDTO.cs" />
     <Compile Include="V20240801\Models\TmsConfigDTO.cs" />
     <Compile Include="V20240801\Models\TokenLimitConfigDTO.cs" />
     <Compile Include="V20240801\Models\ToolConfigDTO.cs" />
     <Compile Include="V20240801\Models\ToolConfigVO.cs" />
+    <Compile Include="V20240801\Models\VersionDTO.cs" />
+    <Compile Include="V20240801\Models\WizardConfig.cs" />
   </ItemGroup>
 </Project>

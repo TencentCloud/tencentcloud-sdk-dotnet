@@ -28,7 +28,7 @@ namespace TencentCloud.Apis.V20240801
 
        private const string endpoint = "apis.tencentcloudapi.com";
        private const string version = "2024-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1437";
+       private const string sdkVersion = "SDK_NET_3.0.1438";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Apis.V20240801
         }
 
         /// <summary>
+        /// 应用关联API
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentAppServicesRequest"/></param>
+        /// <returns><see cref="CreateAgentAppServicesResponse"/></returns>
+        public Task<CreateAgentAppServicesResponse> CreateAgentAppServices(CreateAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<CreateAgentAppServicesResponse>(req, "CreateAgentAppServices");
+        }
+
+        /// <summary>
+        /// 应用关联API
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentAppServicesRequest"/></param>
+        /// <returns><see cref="CreateAgentAppServicesResponse"/></returns>
+        public CreateAgentAppServicesResponse CreateAgentAppServicesSync(CreateAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<CreateAgentAppServicesResponse>(req, "CreateAgentAppServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建Credential
         /// </summary>
         /// <param name="req"><see cref="CreateAgentCredentialRequest"/></param>
@@ -201,6 +222,27 @@ namespace TencentCloud.Apis.V20240801
         }
 
         /// <summary>
+        /// 创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceRequest"/></param>
+        /// <returns><see cref="CreateServiceResponse"/></returns>
+        public Task<CreateServiceResponse> CreateService(CreateServiceRequest req)
+        {
+            return InternalRequestAsync<CreateServiceResponse>(req, "CreateService");
+        }
+
+        /// <summary>
+        /// 创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceRequest"/></param>
+        /// <returns><see cref="CreateServiceResponse"/></returns>
+        public CreateServiceResponse CreateServiceSync(CreateServiceRequest req)
+        {
+            return InternalRequestAsync<CreateServiceResponse>(req, "CreateService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除app
         /// </summary>
         /// <param name="req"><see cref="DeleteAgentAppRequest"/></param>
@@ -260,6 +302,27 @@ namespace TencentCloud.Apis.V20240801
         public DeleteAgentAppModelServicesResponse DeleteAgentAppModelServicesSync(DeleteAgentAppModelServicesRequest req)
         {
             return InternalRequestAsync<DeleteAgentAppModelServicesResponse>(req, "DeleteAgentAppModelServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 应用API关联解除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentAppServicesRequest"/></param>
+        /// <returns><see cref="DeleteAgentAppServicesResponse"/></returns>
+        public Task<DeleteAgentAppServicesResponse> DeleteAgentAppServices(DeleteAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentAppServicesResponse>(req, "DeleteAgentAppServices");
+        }
+
+        /// <summary>
+        /// 应用API关联解除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentAppServicesRequest"/></param>
+        /// <returns><see cref="DeleteAgentAppServicesResponse"/></returns>
+        public DeleteAgentAppServicesResponse DeleteAgentAppServicesSync(DeleteAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentAppServicesResponse>(req, "DeleteAgentAppServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +411,27 @@ namespace TencentCloud.Apis.V20240801
         }
 
         /// <summary>
+        /// 删除服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceRequest"/></param>
+        /// <returns><see cref="DeleteServiceResponse"/></returns>
+        public Task<DeleteServiceResponse> DeleteService(DeleteServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteServiceResponse>(req, "DeleteService");
+        }
+
+        /// <summary>
+        /// 删除服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceRequest"/></param>
+        /// <returns><see cref="DeleteServiceResponse"/></returns>
+        public DeleteServiceResponse DeleteServiceSync(DeleteServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteServiceResponse>(req, "DeleteService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询app详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentAppRequest"/></param>
@@ -407,6 +491,27 @@ namespace TencentCloud.Apis.V20240801
         public DescribeAgentAppModelServicesResponse DescribeAgentAppModelServicesSync(DescribeAgentAppModelServicesRequest req)
         {
             return InternalRequestAsync<DescribeAgentAppModelServicesResponse>(req, "DescribeAgentAppModelServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建app
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentAppServicesRequest"/></param>
+        /// <returns><see cref="DescribeAgentAppServicesResponse"/></returns>
+        public Task<DescribeAgentAppServicesResponse> DescribeAgentAppServices(DescribeAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentAppServicesResponse>(req, "DescribeAgentAppServices");
+        }
+
+        /// <summary>
+        /// 创建app
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentAppServicesRequest"/></param>
+        /// <returns><see cref="DescribeAgentAppServicesResponse"/></returns>
+        public DescribeAgentAppServicesResponse DescribeAgentAppServicesSync(DescribeAgentAppServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentAppServicesResponse>(req, "DescribeAgentAppServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +705,48 @@ namespace TencentCloud.Apis.V20240801
         }
 
         /// <summary>
+        /// 查询服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceRequest"/></param>
+        /// <returns><see cref="DescribeServiceResponse"/></returns>
+        public Task<DescribeServiceResponse> DescribeService(DescribeServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceResponse>(req, "DescribeService");
+        }
+
+        /// <summary>
+        /// 查询服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceRequest"/></param>
+        /// <returns><see cref="DescribeServiceResponse"/></returns>
+        public DescribeServiceResponse DescribeServiceSync(DescribeServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceResponse>(req, "DescribeService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesRequest"/></param>
+        /// <returns><see cref="DescribeServicesResponse"/></returns>
+        public Task<DescribeServicesResponse> DescribeServices(DescribeServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesResponse>(req, "DescribeServices");
+        }
+
+        /// <summary>
+        /// 查询服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesRequest"/></param>
+        /// <returns><see cref="DescribeServicesResponse"/></returns>
+        public DescribeServicesResponse DescribeServicesSync(DescribeServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeServicesResponse>(req, "DescribeServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改app
         /// </summary>
         /// <param name="req"><see cref="ModifyAgentAppRequest"/></param>
@@ -722,6 +869,27 @@ namespace TencentCloud.Apis.V20240801
         public ModifyModelServiceResponse ModifyModelServiceSync(ModifyModelServiceRequest req)
         {
             return InternalRequestAsync<ModifyModelServiceResponse>(req, "ModifyModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceRequest"/></param>
+        /// <returns><see cref="ModifyServiceResponse"/></returns>
+        public Task<ModifyServiceResponse> ModifyService(ModifyServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceResponse>(req, "ModifyService");
+        }
+
+        /// <summary>
+        /// 修改服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceRequest"/></param>
+        /// <returns><see cref="ModifyServiceResponse"/></returns>
+        public ModifyServiceResponse ModifyServiceSync(ModifyServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceResponse>(req, "ModifyService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

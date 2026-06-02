@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1432";
+       private const string sdkVersion = "SDK_NET_3.0.1438";
 
         /// <summary>
         /// Client constructor.
@@ -579,7 +579,7 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectAccountGroupResourcesRequest"/></param>
         /// <returns><see cref="DescribeDirectAccountGroupResourcesResponse"/></returns>
@@ -589,7 +589,7 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+        /// 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectAccountGroupResourcesRequest"/></param>
         /// <returns><see cref="DescribeDirectAccountGroupResourcesResponse"/></returns>

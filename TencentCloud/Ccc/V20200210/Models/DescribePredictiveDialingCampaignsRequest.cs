@@ -25,34 +25,40 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 分页尺寸，最大为 100
+        /// <p>分页尺寸，最大为 100</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 分页页码，从 0 开始
+        /// <p>分页页码，从 0 开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 查询任务列表名称关键字
+        /// <p>查询任务列表名称关键字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 查询任务列表技能组 ID
+        /// <p>查询任务列表技能组 ID</p>
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>任务 ID</p>
+        /// </summary>
+        [JsonProperty("CampaignId")]
+        public long? CampaignId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+            this.SetParamSimple(map, prefix + "CampaignId", this.CampaignId);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        ///  
+        /// <p>授权信息</p>
         /// </summary>
         [JsonProperty("Items")]
         public GrantedAccountItem[] Items{ get; set; }

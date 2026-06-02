@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1438";
 
         /// <summary>
         /// Client constructor.
@@ -744,6 +744,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 历史接口，已经无用户调用
+        /// 
         /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
@@ -754,6 +756,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 历史接口，已经无用户调用
+        /// 
         /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiAppRequest"/></param>

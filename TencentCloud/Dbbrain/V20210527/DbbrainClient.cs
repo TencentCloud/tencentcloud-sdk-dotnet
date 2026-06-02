@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1438";
 
         /// <summary>
         /// Client constructor.
@@ -848,6 +848,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeDBSpaceStatusResponse DescribeDBSpaceStatusSync(DescribeDBSpaceStatusRequest req)
         {
             return InternalRequestAsync<DescribeDBSpaceStatusResponse>(req, "DescribeDBSpaceStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseAutonomyStatusRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseAutonomyStatusResponse"/></returns>
+        public Task<DescribeDatabaseAutonomyStatusResponse> DescribeDatabaseAutonomyStatus(DescribeDatabaseAutonomyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseAutonomyStatusResponse>(req, "DescribeDatabaseAutonomyStatus");
+        }
+
+        /// <summary>
+        /// 查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseAutonomyStatusRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseAutonomyStatusResponse"/></returns>
+        public DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatusSync(DescribeDatabaseAutonomyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseAutonomyStatusResponse>(req, "DescribeDatabaseAutonomyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1814,6 +1835,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public UpdateAgentSwitchResponse UpdateAgentSwitchSync(UpdateAgentSwitchRequest req)
         {
             return InternalRequestAsync<UpdateAgentSwitchResponse>(req, "UpdateAgentSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能的开启或关闭。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDatabaseAutonomyStatusRequest"/></param>
+        /// <returns><see cref="UpdateDatabaseAutonomyStatusResponse"/></returns>
+        public Task<UpdateDatabaseAutonomyStatusResponse> UpdateDatabaseAutonomyStatus(UpdateDatabaseAutonomyStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateDatabaseAutonomyStatusResponse>(req, "UpdateDatabaseAutonomyStatus");
+        }
+
+        /// <summary>
+        /// 设置数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能的开启或关闭。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDatabaseAutonomyStatusRequest"/></param>
+        /// <returns><see cref="UpdateDatabaseAutonomyStatusResponse"/></returns>
+        public UpdateDatabaseAutonomyStatusResponse UpdateDatabaseAutonomyStatusSync(UpdateDatabaseAutonomyStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateDatabaseAutonomyStatusResponse>(req, "UpdateDatabaseAutonomyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

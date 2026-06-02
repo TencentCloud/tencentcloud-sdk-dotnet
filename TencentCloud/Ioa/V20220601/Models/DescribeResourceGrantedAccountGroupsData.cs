@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        ///  
+        /// <p>授权信息</p>
         /// </summary>
         [JsonProperty("Items")]
         public GrantedAccountGroupItem[] Items{ get; set; }

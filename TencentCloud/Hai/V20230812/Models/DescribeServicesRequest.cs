@@ -25,19 +25,19 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 服务列表
+        /// <p>服务列表</p>
         /// </summary>
         [JsonProperty("ServiceIds")]
         public string[] ServiceIds{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

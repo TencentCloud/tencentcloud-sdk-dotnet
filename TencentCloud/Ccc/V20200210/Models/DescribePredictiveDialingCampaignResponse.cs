@@ -25,70 +25,94 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 任务 ID
+        /// <p>任务 ID</p>
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 被叫呼叫顺序 0 随机 1 顺序
+        /// <p>被叫呼叫顺序 0 随机 1 顺序</p>
         /// </summary>
         [JsonProperty("CallOrder")]
         public long? CallOrder{ get; set; }
 
         /// <summary>
-        /// 使用的座席技能组 ID
+        /// <p>使用的座席技能组 ID</p>
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// 指定的 IVR ID
+        /// <p>指定的 IVR ID</p>
         /// </summary>
         [JsonProperty("IVRId")]
         public long? IVRId{ get; set; }
 
         /// <summary>
-        /// 相同应用内多个任务运行优先级，从高到底 1 - 5
+        /// <p>相同应用内多个任务运行优先级，从高到底 1 - 5</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 预期呼损率，百分比，5 - 50
+        /// <p>预期呼损率，百分比，5 - 50</p>
         /// </summary>
         [JsonProperty("ExpectedAbandonRate")]
         public long? ExpectedAbandonRate{ get; set; }
 
         /// <summary>
-        /// 呼叫重试次数，0 - 2
+        /// <p>呼叫重试次数，0 - 2</p>
         /// </summary>
         [JsonProperty("RetryTimes")]
         public long? RetryTimes{ get; set; }
 
         /// <summary>
-        /// 呼叫重试间隔时间，单位秒，60 - 86400
+        /// <p>呼叫重试间隔时间，单位秒，60 - 86400</p>
         /// </summary>
         [JsonProperty("RetryInterval")]
         public long? RetryInterval{ get; set; }
 
         /// <summary>
-        /// 任务启动时间，Unix 时间戳，到此时间后会自动启动任务
+        /// <p>任务启动时间，Unix 时间戳，到此时间后会自动启动任务</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 任务结束时间，Unix 时间戳，到此时间后会自动终止任务
+        /// <p>任务结束时间，Unix 时间戳，到此时间后会自动终止任务</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>自定义变量</p>
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
+        /// <summary>
+        /// <p>UUI</p>
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
+
+        /// <summary>
+        /// <p>任务状态</p><p>枚举值：</p><ul><li>0： 待开始 </li><li>1： 进行中</li><li>2： 已暂停</li><li>3： 已终止</li><li>4： 已完成</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>任务状态原因 0 正常 1 手动结束 2 超时结束</p>
+        /// </summary>
+        [JsonProperty("StatusReason")]
+        public long? StatusReason{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -113,6 +137,10 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

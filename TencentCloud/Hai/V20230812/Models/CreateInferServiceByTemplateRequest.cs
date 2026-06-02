@@ -60,6 +60,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("NetworkSetting")]
         public NetworkSetting NetworkSetting{ get; set; }
 
+        /// <summary>
+        /// <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+        /// </summary>
+        [JsonProperty("SecurityType")]
+        public string SecurityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "ServiceChargeType", this.ServiceChargeType);
             this.SetParamObj(map, prefix + "HyperParam.", this.HyperParam);
             this.SetParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
+            this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
         }
     }
 }

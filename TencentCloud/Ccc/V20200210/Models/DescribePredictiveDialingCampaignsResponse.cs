@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 数据总量
+        /// <p>数据总量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 数据
+        /// <p>数据</p>
         /// </summary>
         [JsonProperty("CampaignList")]
         public DescribePredictiveDialingCampaignsElement[] CampaignList{ get; set; }
