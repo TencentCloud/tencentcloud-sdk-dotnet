@@ -66,6 +66,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ContainerDiagnoseResultSet")]
         public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
 
+        /// <summary>
+        /// <p>LLM大模型AIGC质量检测结果。</p>
+        /// </summary>
+        [JsonProperty("LLMDetectionReport")]
+        public LLMDetectionReport LLMDetectionReport{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
             this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+            this.SetParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
         }
     }
 }

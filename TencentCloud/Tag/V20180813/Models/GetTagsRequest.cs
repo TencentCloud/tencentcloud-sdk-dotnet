@@ -25,19 +25,19 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+        /// <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
         /// </summary>
         [JsonProperty("PaginationToken")]
         public string PaginationToken{ get; set; }
 
         /// <summary>
-        /// <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+        /// <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public ulong? MaxResults{ get; set; }
 
         /// <summary>
-        /// <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+        /// <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p>
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

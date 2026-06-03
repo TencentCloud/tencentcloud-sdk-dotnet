@@ -25,28 +25,34 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 检查视角下风险数量
+        /// <p>检查视角下风险数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 检查视角下风险列表
+        /// <p>检查视角下风险列表</p>
         /// </summary>
         [JsonProperty("CheckViewRiskList")]
         public CheckViewRiskItem[] CheckViewRiskList{ get; set; }
 
         /// <summary>
-        /// 检查视角下cspm规范标签列表
+        /// <p>检查视角下cspm规范标签列表</p>
         /// </summary>
         [JsonProperty("StandardNameList")]
         public StandardItem[] StandardNameList{ get; set; }
 
         /// <summary>
-        /// 资产类型集合
+        /// <p>资产类型集合</p>
         /// </summary>
         [JsonProperty("AssetTypeList")]
         public AttributeOptionSet[] AssetTypeList{ get; set; }
+
+        /// <summary>
+        /// <p>云厂商类型集合</p>
+        /// </summary>
+        [JsonProperty("ProviderList")]
+        public AttributeOptionSet[] ProviderList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +70,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "CheckViewRiskList.", this.CheckViewRiskList);
             this.SetParamArrayObj(map, prefix + "StandardNameList.", this.StandardNameList);
             this.SetParamArrayObj(map, prefix + "AssetTypeList.", this.AssetTypeList);
+            this.SetParamArrayObj(map, prefix + "ProviderList.", this.ProviderList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

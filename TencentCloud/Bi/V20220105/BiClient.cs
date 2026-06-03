@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1437";
+       private const string sdkVersion = "SDK_NET_3.0.1439";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateAuthApiKeyResponse CreateAuthApiKeySync(CreateAuthApiKeyRequest req)
         {
             return InternalRequestAsync<CreateAuthApiKeyResponse>(req, "CreateAuthApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加数据表
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTableRequest"/></param>
+        /// <returns><see cref="CreateDataTableResponse"/></returns>
+        public Task<CreateDataTableResponse> CreateDataTable(CreateDataTableRequest req)
+        {
+            return InternalRequestAsync<CreateDataTableResponse>(req, "CreateDataTable");
+        }
+
+        /// <summary>
+        /// 添加数据表
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTableRequest"/></param>
+        /// <returns><see cref="CreateDataTableResponse"/></returns>
+        public CreateDataTableResponse CreateDataTableSync(CreateDataTableRequest req)
+        {
+            return InternalRequestAsync<CreateDataTableResponse>(req, "CreateDataTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -659,6 +680,27 @@ namespace TencentCloud.Bi.V20220105
         public DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageListSync(DescribeResourceUserGroupPageListRequest req)
         {
             return InternalRequestAsync<DescribeResourceUserGroupPageListResponse>(req, "DescribeResourceUserGroupPageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 原始数据表字段接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceFieldListRequest"/></param>
+        /// <returns><see cref="DescribeSourceFieldListResponse"/></returns>
+        public Task<DescribeSourceFieldListResponse> DescribeSourceFieldList(DescribeSourceFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceFieldListResponse>(req, "DescribeSourceFieldList");
+        }
+
+        /// <summary>
+        /// 原始数据表字段接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceFieldListRequest"/></param>
+        /// <returns><see cref="DescribeSourceFieldListResponse"/></returns>
+        public DescribeSourceFieldListResponse DescribeSourceFieldListSync(DescribeSourceFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceFieldListResponse>(req, "DescribeSourceFieldList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

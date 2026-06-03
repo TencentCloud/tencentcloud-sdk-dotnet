@@ -25,31 +25,31 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
+        /// <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// 用户组列表。
+        /// <p>用户组列表。</p>
         /// </summary>
         [JsonProperty("Groups")]
         public GroupInfo[] Groups{ get; set; }
 
         /// <summary>
-        /// 每页的最大数据条数。
+        /// <p>每页的最大数据条数。</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// 符合请求参数条件的数据总条数。
+        /// <p>符合请求参数条件的数据总条数。</p>
         /// </summary>
         [JsonProperty("TotalCounts")]
         public long? TotalCounts{ get; set; }
 
         /// <summary>
-        /// 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+        /// <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
         /// </summary>
         [JsonProperty("IsTruncated")]
         public bool? IsTruncated{ get; set; }

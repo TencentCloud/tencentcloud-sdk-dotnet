@@ -31,31 +31,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 过滤内容
+        /// <p>过滤内容</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 排序类型
+        /// <p>排序类型</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

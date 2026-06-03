@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1438</VersionPrefix>
+    <VersionPrefix>3.0.1439</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,8 @@
     <Compile Include="V20201111\Models\ArchiveDynamicApproverData.cs" />
     <Compile Include="V20201111\Models\ArchiveDynamicFlowRequest.cs" />
     <Compile Include="V20201111\Models\ArchiveDynamicFlowResponse.cs" />
+    <Compile Include="V20201111\Models\ArchiveFlowApproverInfo.cs" />
+    <Compile Include="V20201111\Models\ArchiveFlowResult.cs" />
     <Compile Include="V20201111\Models\AuthInfoDetail.cs" />
     <Compile Include="V20201111\Models\AuthRecord.cs" />
     <Compile Include="V20201111\Models\AuthorizedUser.cs" />
@@ -87,6 +89,9 @@
     <Compile Include="V20201111\Models\ContractReviewWebUrlOption.cs" />
     <Compile Include="V20201111\Models\ContractSummary.cs" />
     <Compile Include="V20201111\Models\ContractSummaryInfo.cs" />
+    <Compile Include="V20201111\Models\CreateArchiveFlow.cs" />
+    <Compile Include="V20201111\Models\CreateArchiveFlowTaskRequest.cs" />
+    <Compile Include="V20201111\Models\CreateArchiveFlowTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchAdminChangeInvitationsRequest.cs" />
     <Compile Include="V20201111\Models\CreateBatchAdminChangeInvitationsResponse.cs" />
     <Compile Include="V20201111\Models\CreateBatchAdminChangeInvitationsUrlRequest.cs" />
@@ -247,6 +252,8 @@
     <Compile Include="V20201111\Models\DeleteSingleSignOnEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
     <Compile Include="V20201111\Models\Department.cs" />
+    <Compile Include="V20201111\Models\DescribeArchiveFlowTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeArchiveFlowTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationTasksRequest.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationTasksResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationUrlsRequest.cs" />

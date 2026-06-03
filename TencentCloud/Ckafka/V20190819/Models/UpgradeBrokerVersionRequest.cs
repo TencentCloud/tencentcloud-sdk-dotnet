@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1.平滑升配.2.垂直升配
+        /// <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// </summary>
         [JsonProperty("SourceVersion")]
         public string SourceVersion{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// </summary>
         [JsonProperty("TargetVersion")]
         public string TargetVersion{ get; set; }
 
         /// <summary>
-        /// 延迟时间
+        /// <p>延迟时间</p>
         /// </summary>
         [JsonProperty("DelayTimeStamp")]
         public string DelayTimeStamp{ get; set; }

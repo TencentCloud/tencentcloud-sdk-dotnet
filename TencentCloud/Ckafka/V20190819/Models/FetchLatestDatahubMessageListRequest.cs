@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 弹性topic名称
+        /// <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分区id
+        /// <p>分区id</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// 位点信息
+        /// <p>位点信息</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 最大查询条数，最小1，最大100
+        /// <p>最大查询条数</p><p>取值范围：[1, 100]</p>
         /// </summary>
         [JsonProperty("MessageCount")]
         public long? MessageCount{ get; set; }

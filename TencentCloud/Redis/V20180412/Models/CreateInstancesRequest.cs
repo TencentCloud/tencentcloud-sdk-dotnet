@@ -181,7 +181,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] AlarmPolicyList{ get; set; }
 
         /// <summary>
-        /// <p>是否加密密码</p>
+        /// <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
         /// </summary>
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }

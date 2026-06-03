@@ -25,55 +25,55 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 空间 ID。
+        /// <p>空间 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+        /// <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+        /// <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。
+        /// <p>过滤条件，用户组名称</p>
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
         /// <summary>
-        /// 用户组的类型  Manual：手动创建，Synchronized：外部导入。
+        /// <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 筛选的用户，该用户关联的用户组会返回IsSelected=1
+        /// <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p>
         /// </summary>
         [JsonProperty("FilterUsers")]
         public string[] FilterUsers{ get; set; }
 
         /// <summary>
-        /// 排序的字段，目前只支持CreateTime，默认是CreateTime字段
+        /// <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p>
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+        /// <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+        /// <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

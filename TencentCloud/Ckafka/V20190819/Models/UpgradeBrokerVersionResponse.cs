@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 升配结果
+        /// <p>升配结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public JgwOperateResponse Result{ get; set; }

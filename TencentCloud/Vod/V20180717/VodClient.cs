@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1438";
+       private const string sdkVersion = "SDK_NET_3.0.1439";
 
         /// <summary>
         /// Client constructor.
@@ -357,7 +357,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于创建 AIGC 自定义音色。
+        /// 该接口用于创建 AIGC 自定义音色。注意，调用本接口会产生创建自定义音色费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#5e5217e8-29fc-467e-ac2d-853648f988b7)。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
         /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>
@@ -367,7 +367,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于创建 AIGC 自定义音色。
+        /// 该接口用于创建 AIGC 自定义音色。注意，调用本接口会产生创建自定义音色费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#5e5217e8-29fc-467e-ac2d-853648f988b7)。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
         /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>

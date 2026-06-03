@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1438</VersionPrefix>
+    <VersionPrefix>3.0.1439</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1008,6 +1008,7 @@
     <Compile Include="V20180717\Models\RoundPlayInfo.cs" />
     <Compile Include="V20180717\Models\RoundPlayListItemInfo.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
+    <Compile Include="V20180717\Models\SPEKEDrm.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SceneAigcImageOutputConfig.cs" />
@@ -1080,6 +1081,7 @@
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="V20180717\Models\ThirdPartyDrmInfo.cs" />
     <Compile Include="V20180717\Models\TimeRange.cs" />
     <Compile Include="V20180717\Models\TraceWatermarkInput.cs" />
     <Compile Include="V20180717\Models\TranscodePlayInfo2017.cs" />

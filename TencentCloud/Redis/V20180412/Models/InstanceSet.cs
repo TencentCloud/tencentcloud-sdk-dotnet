@@ -25,386 +25,368 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
+        /// <p>用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。</p>
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
 
         /// <summary>
-        /// 项目 ID。
+        /// <p>项目 ID。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+        /// <p>地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul></p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域 ID。
+        /// <p>区域 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// vpc网络 ID，例如75101。
+        /// <p>vpc网络 ID，例如75101。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// vpc网络下子网ID，如：46315。
+        /// <p>vpc网络下子网ID，如：46315。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+        /// <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例 VIP。
+        /// <p>实例 VIP。</p>
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// 实例端口号。
+        /// <p>实例端口号。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例创建时间。格式如：2020-01-15 10:20:00。
+        /// <p>实例创建时间。格式如：2020-01-15 10:20:00。</p>
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// 实例内存容量大小。单位：MB，1MB=1024KB。
+        /// <p>实例内存容量大小。单位：MB，1MB=1024KB。</p>
         /// </summary>
         [JsonProperty("Size")]
         public float? Size{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+        /// <p>该字段已废弃。请使用腾讯云可观测平台API 接口 <a href="https://cloud.tencent.com/document/product/248/31014">GetMonitorData</a> 获取实例已使用的内存容量。</p>
         /// </summary>
         [JsonProperty("SizeUsed")]
         [System.Obsolete]
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// 实例类型。
-        /// - 2：Redis 2.8 内存版（标准架构）。
-        /// - 3：CKV 3.2 内存版（标准架构）。
-        /// - 4：CKV 3.2 内存版（集群架构）。
-        /// - 5：Redis 2.8 内存版（单机）。
-        /// - 6：Redis 4.0 内存版（标准架构）。
-        /// - 7：Redis 4.0 内存版（集群架构）。
-        /// - 8：Redis 5.0 内存版（标准架构）。
-        /// - 9：Redis 5.0 内存版（集群架构）。
-        /// - 15：Redis 6.2 内存版（标准架构）。
-        /// - 16：Redis 6.2 内存版（集群架构）。
-        /// - 17：Redis 7.0 内存版（标准架构）。
-        /// - 18：Redis 7.0 内存版（集群架构）。
-        /// - 200:Memcached 1.6 内存版（集群架构）。
+        /// <p>实例类型。</p><p>枚举值：</p><ul><li>2： Redis 2.8 内存版（标准架构）。</li><li>3： CKV 3.2 内存版（标准架构）。</li><li>4： CKV 3.2 内存版（集群架构）。</li><li>5： Redis 2.8 内存版（单机）。</li><li>6： Redis 4.0 内存版（标准架构）。</li><li>7： Redis 4.0 内存版（集群架构）。</li><li>8： Redis 5.0 内存版（标准架构）。</li><li>9： Redis 5.0 内存版（集群架构）。</li><li>15： Redis 6.2 内存版（标准架构）。</li><li>16： Redis 6.2 内存版（集群架构）。</li><li>17： Redis 7.0 内存版（标准架构）。</li><li>18： Redis 7.0 内存版（集群架构）。</li><li>19： Valkey 8.0 内存版（标准架构）。</li><li>20： Valkey 8.0 内存版（集群架构）。</li><li>200： Memcached 1.6 内存版（集群架构）。</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+        /// <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 包年包月计费实例到期的时间。
+        /// <p>包年包月计费实例到期的时间。</p>
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// 引擎：社区版Redis、腾讯云CKV。
+        /// <p>引擎：社区版Redis、腾讯云CKV。</p>
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+        /// <p>产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul></p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// vpc网络id，例如vpc-fk33jsf43kgv。
+        /// <p>vpc网络id，例如vpc-fk33jsf43kgv。</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+        /// <p>vpc网络下子网id，例如：subnet-fd3j6l35mm0。</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+        /// <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// 实例运行状态描述：如”实例运行中“。
+        /// <p>实例运行状态描述：如”实例运行中“。</p>
         /// </summary>
         [JsonProperty("InstanceTitle")]
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
+        /// <p>已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 流程中的实例返回的子状态。
-        /// - 0：磁盘读写状态。
-        /// - 1：磁盘超限只读状态。
+        /// <p>流程中的实例返回的子状态。</p><ul><li>0：磁盘读写状态。</li><li>1：磁盘超限只读状态。</li></ul>
         /// </summary>
         [JsonProperty("SubStatus")]
         public long? SubStatus{ get; set; }
 
         /// <summary>
-        /// 反亲和性标签。
+        /// <p>反亲和性标签。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例节点信息。
+        /// <p>实例节点信息。</p>
         /// </summary>
         [JsonProperty("InstanceNode")]
         public InstanceNode[] InstanceNode{ get; set; }
 
         /// <summary>
-        /// 分片大小。
+        /// <p>分片大小。</p>
         /// </summary>
         [JsonProperty("RedisShardSize")]
         public long? RedisShardSize{ get; set; }
 
         /// <summary>
-        /// 分片数量。
+        /// <p>分片数量。</p>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量。
+        /// <p>副本数量。</p>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 计费 ID。
+        /// <p>计费 ID。</p>
         /// </summary>
         [JsonProperty("PriceId")]
         public long? PriceId{ get; set; }
 
         /// <summary>
-        /// 实例隔离开始的时间。
+        /// <p>实例隔离开始的时间。</p>
         /// </summary>
         [JsonProperty("CloseTime")]
         public string CloseTime{ get; set; }
 
         /// <summary>
-        /// 从节点读取权重。
-        /// - 0：表示关闭副本只读。
-        /// - 100：表示开启副本只读。
+        /// <p>从节点读取权重。</p><ul><li>0：表示关闭副本只读。</li><li>100：表示开启副本只读。</li></ul>
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }
 
         /// <summary>
-        /// 实例关联的标签信息。
+        /// <p>实例关联的标签信息。</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// 项目名称。
+        /// <p>项目名称。</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
+        /// <p>是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// 客户端连接数。
+        /// <p>客户端连接数。</p>
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
-        /// DTS状态（内部参数，用户可忽略）。
+        /// <p>DTS状态（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
-        /// 分片带宽上限，单位MB。
+        /// <p>分片带宽上限，单位MB。</p>
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
-        /// 免密实例标识（内部参数，用户可忽略）。
+        /// <p>免密实例标识（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
-        /// 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
+        /// <p>该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }
 
         /// <summary>
-        /// 实例只读标识（内部参数，用户可忽略）。
+        /// <p>实例只读标识（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
-        /// Redis实例请忽略该参数。
+        /// <p>Redis实例请忽略该参数。</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
+        /// <p>监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/80653">云数据库 Redis 1分钟粒度下线公告</a>。</li><li>5s：5秒粒度监控。</li></ul></p>
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// 客户端最大连接数可设置的最小值。
+        /// <p>客户端最大连接数可设置的最小值。</p>
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
-        /// 客户端最大连接数可设置的最大值。
+        /// <p>客户端最大连接数可设置的最大值。</p>
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
-        /// 实例的节点详细信息。
-        /// 只有多可用区实例会返回。
+        /// <p>实例的节点详细信息。<br>只有多可用区实例会返回。</p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// 实例所在的地域信息，比如ap-guangzhou。
+        /// <p>实例所在的地域信息，比如ap-guangzhou。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 外网地址。
+        /// <p>外网地址。</p>
         /// </summary>
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// 北极星服务地址，内部使用。
+        /// <p>北极星服务地址，内部使用。</p>
         /// </summary>
         [JsonProperty("PolarisServer")]
         public string PolarisServer{ get; set; }
 
         /// <summary>
-        /// CDC Redis集群ID。
+        /// <p>CDC Redis集群ID。</p>
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }
 
         /// <summary>
-        /// CDC 集群ID。
+        /// <p>CDC 集群ID。</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+        /// <p>产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul></p>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// 实例当前Proxy版本。
+        /// <p>实例当前Proxy版本。</p>
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
+        /// <p>实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。</p>
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
-        /// 实例可升级Proxy版本。
+        /// <p>实例可升级Proxy版本。</p>
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// 实例可升级Cache小版本。
+        /// <p>实例可升级Cache小版本。</p>
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }
 
         /// <summary>
-        /// 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+        /// <p>备份模式。</p><ul><li>SecondLevelBackup：秒级备份。</li><li>NormalLevelBackup：普通备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
         /// <summary>
-        /// 删除保护开关，0关闭，1开启
+        /// <p>实例销毁保护开关。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
         /// </summary>
         [JsonProperty("DeleteProtectionSwitch")]
         public long? DeleteProtectionSwitch{ get; set; }

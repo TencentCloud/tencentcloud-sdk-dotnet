@@ -25,111 +25,103 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID，例如cynosdbmysql-asd123
+        /// <p>集群ID，例如cynosdbmysql-asd123</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+        /// <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
+        /// <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// 一致性超时时间。
-        /// 取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+        /// <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public string ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// 读写权重分配模式；系统自动分配："system"， 自定义："custom"
+        /// <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 实例只读权重。
+        /// <p>实例只读权重。</p>
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
+        /// <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 是否自动添加只读实例，取值："yes" , "no"
+        /// <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否打开读写分离。
-        /// 该参数已废弃，请通过RwType设置读写属性。
+        /// <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
 
         /// <summary>
-        /// 读写类型：
-        /// READWRITE,READONLY
+        /// <p>读写类型：<br>READWRITE,READONLY</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// 事务拆分。
-        /// 在一个事务中拆分读和写到不同的实例上去执行。
+        /// <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 连接模式：
-        /// nearby,balance
+        /// <p>连接模式：<br>nearby,balance</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// 是否打开连接池：
-        /// yes,no
+        /// <p>是否打开连接池：<br>yes,no</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池类型：
-        /// SessionConnectionPool
+        /// <p>连接池类型：<br>SessionConnectionPool</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 连接池时间。
-        /// 可选范围:0~300（秒）
+        /// <p>连接池时间。<br>可选范围:0~300（秒）</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// 是否将libra节点当作普通RO节点
+        /// <p>是否将libra节点当作普通RO节点</p>
         /// </summary>
         [JsonProperty("ApNodeAsRoNode")]
         public bool? ApNodeAsRoNode{ get; set; }
 
         /// <summary>
-        /// libra节点故障，是否转发给其他节点
+        /// <p>libra节点故障，是否转发给其他节点</p>
         /// </summary>
         [JsonProperty("ApQueryToOtherNode")]
         public bool? ApQueryToOtherNode{ get; set; }

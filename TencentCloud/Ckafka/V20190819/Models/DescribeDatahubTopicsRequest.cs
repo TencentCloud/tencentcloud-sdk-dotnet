@@ -25,37 +25,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 搜索词
+        /// <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 本次查询的偏移位置，默认为0
+        /// <p>本次查询的偏移位置，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 本次返回结果的最大个数，默认为50，最大值为50
+        /// <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否从连接查询topic列表
+        /// <p>是否从连接查询topic列表</p><p>默认值：false</p>
         /// </summary>
         [JsonProperty("QueryFromConnectResource")]
         public bool? QueryFromConnectResource{ get; set; }
 
         /// <summary>
-        /// 连接的ID
+        /// <p>连接的ID</p>
         /// </summary>
         [JsonProperty("ConnectResourceId")]
         public string ConnectResourceId{ get; set; }
 
         /// <summary>
-        /// topic资源表达式
+        /// <p>topic资源表达式</p>
         /// </summary>
         [JsonProperty("TopicRegularExpression")]
         public string TopicRegularExpression{ get; set; }

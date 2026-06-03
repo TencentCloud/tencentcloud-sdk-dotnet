@@ -61,7 +61,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// <p>是否展现项目标签。1:展示  0:不展示</p>
+        /// <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }

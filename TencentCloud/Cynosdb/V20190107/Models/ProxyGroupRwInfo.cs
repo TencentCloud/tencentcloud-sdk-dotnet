@@ -25,73 +25,73 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
+        /// <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// 一致性超时时间
+        /// <p>一致性超时时间</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// 权重模式 system-系统分配，custom-自定义
+        /// <p>权重模式 system-系统分配，custom-自定义</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移
+        /// <p>是否开启故障转移</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 是否自动添加只读实例，yes-是，no-不自动添加
+        /// <p>是否自动添加只读实例，yes-是，no-不自动添加</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 实例权重数组
+        /// <p>实例权重数组</p>
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// 是否开通读写节点，yse-是，no-否
+        /// <p>是否开通读写节点，yse-是，no-否</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
 
         /// <summary>
-        /// 读写属性，可选值：READWRITE,READONLY
+        /// <p>读写属性，可选值：READWRITE,READONLY</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// 事务拆分
+        /// <p>事务拆分</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 连接模式，可选值：balance，nearby
+        /// <p>连接模式，可选值：balance，nearby</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// 是否将libra节点当作普通RO节点
+        /// <p>是否将libra节点当作普通RO节点</p>
         /// </summary>
         [JsonProperty("ApNodeAsRoNode")]
         public bool? ApNodeAsRoNode{ get; set; }
 
         /// <summary>
-        /// libra节点故障，是否转发给其他节点
+        /// <p>libra节点故障，是否转发给其他节点</p>
         /// </summary>
         [JsonProperty("ApQueryToOtherNode")]
         public bool? ApQueryToOtherNode{ get; set; }

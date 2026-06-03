@@ -25,34 +25,40 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 风险规则ID
+        /// <p>风险规则ID</p>
         /// </summary>
         [JsonProperty("RiskRuleId")]
         public string RiskRuleId{ get; set; }
 
         /// <summary>
-        /// 云厂商
+        /// <p>云厂商</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// 风险名称
+        /// <p>风险名称</p>
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
-        /// 风险危害
+        /// <p>风险危害</p>
         /// </summary>
         [JsonProperty("RiskInfluence")]
         public string RiskInfluence{ get; set; }
 
         /// <summary>
-        /// 修复指引
+        /// <p>修复指引</p>
         /// </summary>
         [JsonProperty("RiskFixAdvice")]
         public string RiskFixAdvice{ get; set; }
+
+        /// <summary>
+        /// <p>资产类型</p>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +77,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskName", this.RiskName);
             this.SetParamSimple(map, prefix + "RiskInfluence", this.RiskInfluence);
             this.SetParamSimple(map, prefix + "RiskFixAdvice", this.RiskFixAdvice);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

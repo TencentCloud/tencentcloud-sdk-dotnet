@@ -25,49 +25,49 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 标签过滤数组，数量最多六个
+        /// <p>标签过滤数组，最多支持6组标签。</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 创建标签者uin
+        /// <p>创建标签者uin</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        /// <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为 15
+        /// <p>每页大小，默认为 15</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
+        /// <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p>
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// 资源唯一标记
+        /// <p>资源唯一标记</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+        /// <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+        /// <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

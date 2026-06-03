@@ -25,6 +25,30 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
+        /// 翻页上下文，传入下一次请求的 Context 参数继续翻页。
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
+
+        /// <summary>
+        /// 是否已到末尾，为 true 时无需继续翻页。
+        /// </summary>
+        [JsonProperty("ListOver")]
+        public bool? ListOver{ get; set; }
+
+        /// <summary>
+        /// 调用明细列表。
+        /// </summary>
+        [JsonProperty("List")]
+        public UsageDetailItem[] List{ get; set; }
+
+        /// <summary>
+        /// 	 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public string ProductType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

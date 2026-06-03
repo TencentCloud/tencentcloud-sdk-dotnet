@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1434";
+       private const string sdkVersion = "SDK_NET_3.0.1439";
 
         /// <summary>
         /// Client constructor.
@@ -344,6 +344,69 @@ namespace TencentCloud.Ckafka.V20190819
         public CreateInstancePreResponse CreateInstancePreSync(CreateInstancePreRequest req)
         {
             return InternalRequestAsync<CreateInstancePreResponse>(req, "CreateInstancePre")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-元数据、消息同步
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaAndDataSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaAndDataSyncDatahubTaskResponse"/></returns>
+        public Task<CreateMetaAndDataSyncDatahubTaskResponse> CreateMetaAndDataSyncDatahubTask(CreateMetaAndDataSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaAndDataSyncDatahubTaskResponse>(req, "CreateMetaAndDataSyncDatahubTask");
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-元数据、消息同步
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaAndDataSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaAndDataSyncDatahubTaskResponse"/></returns>
+        public CreateMetaAndDataSyncDatahubTaskResponse CreateMetaAndDataSyncDatahubTaskSync(CreateMetaAndDataSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaAndDataSyncDatahubTaskResponse>(req, "CreateMetaAndDataSyncDatahubTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-同步元数据、消息数据、消费微点
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDataAndOffsetSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaDataAndOffsetSyncDatahubTaskResponse"/></returns>
+        public Task<CreateMetaDataAndOffsetSyncDatahubTaskResponse> CreateMetaDataAndOffsetSyncDatahubTask(CreateMetaDataAndOffsetSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDataAndOffsetSyncDatahubTaskResponse>(req, "CreateMetaDataAndOffsetSyncDatahubTask");
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-同步元数据、消息数据、消费微点
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDataAndOffsetSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaDataAndOffsetSyncDatahubTaskResponse"/></returns>
+        public CreateMetaDataAndOffsetSyncDatahubTaskResponse CreateMetaDataAndOffsetSyncDatahubTaskSync(CreateMetaDataAndOffsetSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDataAndOffsetSyncDatahubTaskResponse>(req, "CreateMetaDataAndOffsetSyncDatahubTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-元数据同步
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaSyncDatahubTaskResponse"/></returns>
+        public Task<CreateMetaSyncDatahubTaskResponse> CreateMetaSyncDatahubTask(CreateMetaSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaSyncDatahubTaskResponse>(req, "CreateMetaSyncDatahubTask");
+        }
+
+        /// <summary>
+        /// 连接器实例同步任务-元数据同步
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaSyncDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateMetaSyncDatahubTaskResponse"/></returns>
+        public CreateMetaSyncDatahubTaskResponse CreateMetaSyncDatahubTaskSync(CreateMetaSyncDatahubTaskRequest req)
+        {
+            return InternalRequestAsync<CreateMetaSyncDatahubTaskResponse>(req, "CreateMetaSyncDatahubTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 主题列表
+        /// <p>主题列表</p>
         /// </summary>
         [JsonProperty("Result")]
         public DescribeDatahubTopicsResp Result{ get; set; }

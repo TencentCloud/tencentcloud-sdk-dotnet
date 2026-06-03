@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的 EIP 数量。
+        /// <p>符合条件的 EIP 数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// EIP 详细信息列表。
+        /// <p>EIP 详细信息列表。</p>
         /// </summary>
         [JsonProperty("AddressSet")]
         public Address[] AddressSet{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1436</VersionPrefix>
+    <VersionPrefix>3.0.1439</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -683,6 +683,9 @@
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\InputAddress.cs" />
+    <Compile Include="V20190612\Models\LLMDetectionIssue.cs" />
+    <Compile Include="V20190612\Models\LLMDetectionReport.cs" />
+    <Compile Include="V20190612\Models\LLMDetectionResultItem.cs" />
     <Compile Include="V20190612\Models\LinearAssemblyChannelInfo.cs" />
     <Compile Include="V20190612\Models\LinearAssemblyProgramInfo.cs" />
     <Compile Include="V20190612\Models\LiveActivityResItem.cs" />

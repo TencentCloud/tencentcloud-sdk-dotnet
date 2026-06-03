@@ -108,6 +108,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }
 
+        /// <summary>
+        /// <p>资产类型</p>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

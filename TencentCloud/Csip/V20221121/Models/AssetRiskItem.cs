@@ -132,6 +132,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AssetTypeIconURL")]
         public string AssetTypeIconURL{ get; set; }
 
+        /// <summary>
+        /// <p>资产类型</p>
+        /// </summary>
+        [JsonProperty("AssetTypeName")]
+        public string AssetTypeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+            this.SetParamSimple(map, prefix + "AssetTypeName", this.AssetTypeName);
         }
     }
 }

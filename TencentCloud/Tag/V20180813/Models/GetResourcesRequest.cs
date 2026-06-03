@@ -25,33 +25,25 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-        /// 例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-        /// 如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-        /// N取值范围：0~9
+        /// <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p>
         /// </summary>
         [JsonProperty("ResourceList")]
         public string[] ResourceList{ get; set; }
 
         /// <summary>
-        /// 标签键和标签值。
-        /// 指定多个标签，会查询同时绑定了该多个标签的资源。
-        /// N取值范围：0~5。
-        /// 每个TagFilters中的TagValue最多支持10个
+        /// <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 从上一页的响应中获取的下一页的Token值。
-        /// 如果是第一次请求，设置为空。
+        /// <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
         /// </summary>
         [JsonProperty("PaginationToken")]
         public string PaginationToken{ get; set; }
 
         /// <summary>
-        /// 每一页返回的数据最大条数，最大200。
-        /// 缺省值：50。
+        /// <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public ulong? MaxResults{ get; set; }

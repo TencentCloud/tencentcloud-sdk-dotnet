@@ -25,31 +25,31 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        /// <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        /// <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为 15，最大1000
+        /// <p>每页大小，默认为 15，最大1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否展现项目。1:展示  0:不展示
+        /// <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }
 
         /// <summary>
-        /// 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+        /// <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1438";
+       private const string sdkVersion = "SDK_NET_3.0.1439";
 
         /// <summary>
         /// Client constructor.
@@ -233,6 +233,49 @@ namespace TencentCloud.Ess.V20201111
         public CancelUserAutoSignEnableUrlResponse CancelUserAutoSignEnableUrlSync(CancelUserAutoSignEnableUrlRequest req)
         {
             return InternalRequestAsync<CancelUserAutoSignEnableUrlResponse>(req, "CancelUserAutoSignEnableUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建合同归档任务
+        /// 
+        /// 合同归档接口用于将外部系统生成的合同、线下签署完成的合同或历史存量合同归档至腾讯电子签系统，实现合同统一管理。
+        /// 
+        /// 调用方提交合同文件资源、合同基础信息、签署方信息等数据后，系统将异步创建归档任务进行处理。归档成功后，系统会生成唯一的归档合同 ID（ArchivedFlowId），用于后续合同查询和管理。
+        /// 
+        /// 合同归档流程：
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1c99715285540088b97a0435895736a1.png)
+        /// 1. 使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a> 上传文件返回resourceId
+        /// 2. 根据resourceId调用CreateArchiveFlowTask创建合同归档任务返回任务id
+        /// 3. 通过任务ID查询合同归档任务状态
+        /// </summary>
+        /// <param name="req"><see cref="CreateArchiveFlowTaskRequest"/></param>
+        /// <returns><see cref="CreateArchiveFlowTaskResponse"/></returns>
+        public Task<CreateArchiveFlowTaskResponse> CreateArchiveFlowTask(CreateArchiveFlowTaskRequest req)
+        {
+            return InternalRequestAsync<CreateArchiveFlowTaskResponse>(req, "CreateArchiveFlowTask");
+        }
+
+        /// <summary>
+        /// 创建合同归档任务
+        /// 
+        /// 合同归档接口用于将外部系统生成的合同、线下签署完成的合同或历史存量合同归档至腾讯电子签系统，实现合同统一管理。
+        /// 
+        /// 调用方提交合同文件资源、合同基础信息、签署方信息等数据后，系统将异步创建归档任务进行处理。归档成功后，系统会生成唯一的归档合同 ID（ArchivedFlowId），用于后续合同查询和管理。
+        /// 
+        /// 合同归档流程：
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/1c99715285540088b97a0435895736a1.png)
+        /// 1. 使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a> 上传文件返回resourceId
+        /// 2. 根据resourceId调用CreateArchiveFlowTask创建合同归档任务返回任务id
+        /// 3. 通过任务ID查询合同归档任务状态
+        /// </summary>
+        /// <param name="req"><see cref="CreateArchiveFlowTaskRequest"/></param>
+        /// <returns><see cref="CreateArchiveFlowTaskResponse"/></returns>
+        public CreateArchiveFlowTaskResponse CreateArchiveFlowTaskSync(CreateArchiveFlowTaskRequest req)
+        {
+            return InternalRequestAsync<CreateArchiveFlowTaskResponse>(req, "CreateArchiveFlowTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3364,6 +3407,27 @@ namespace TencentCloud.Ess.V20201111
         public DeleteSingleSignOnEmployeesResponse DeleteSingleSignOnEmployeesSync(DeleteSingleSignOnEmployeesRequest req)
         {
             return InternalRequestAsync<DeleteSingleSignOnEmployeesResponse>(req, "DeleteSingleSignOnEmployees")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询归档任务的执行结果， 用于获取合同归档任务的当前处理状态及执行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeArchiveFlowTaskRequest"/></param>
+        /// <returns><see cref="DescribeArchiveFlowTaskResponse"/></returns>
+        public Task<DescribeArchiveFlowTaskResponse> DescribeArchiveFlowTask(DescribeArchiveFlowTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeArchiveFlowTaskResponse>(req, "DescribeArchiveFlowTask");
+        }
+
+        /// <summary>
+        /// 查询归档任务的执行结果， 用于获取合同归档任务的当前处理状态及执行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeArchiveFlowTaskRequest"/></param>
+        /// <returns><see cref="DescribeArchiveFlowTaskResponse"/></returns>
+        public DescribeArchiveFlowTaskResponse DescribeArchiveFlowTaskSync(DescribeArchiveFlowTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeArchiveFlowTaskResponse>(req, "DescribeArchiveFlowTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

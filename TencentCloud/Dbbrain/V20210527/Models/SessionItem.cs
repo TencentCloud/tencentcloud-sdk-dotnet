@@ -25,22 +25,28 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 访问来源。
+        /// <p>访问来源。</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 当前访问来源活跃连接数
+        /// <p>当前访问来源活跃连接数</p>
         /// </summary>
         [JsonProperty("ActiveConn")]
         public string ActiveConn{ get; set; }
 
         /// <summary>
-        /// 当前访问来源总连接数
+        /// <p>当前访问来源总连接数</p>
         /// </summary>
         [JsonProperty("AllConn")]
         public long? AllConn{ get; set; }
+
+        /// <summary>
+        /// <p>是否为内网ip</p>
+        /// </summary>
+        [JsonProperty("IsInternalIp")]
+        public bool? IsInternalIp{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "ActiveConn", this.ActiveConn);
             this.SetParamSimple(map, prefix + "AllConn", this.AllConn);
+            this.SetParamSimple(map, prefix + "IsInternalIp", this.IsInternalIp);
         }
     }
 }

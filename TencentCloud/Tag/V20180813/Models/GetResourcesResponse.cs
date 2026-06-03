@@ -25,13 +25,13 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 获取的下一页的Token值
+        /// <p>获取的下一页的Token值</p>
         /// </summary>
         [JsonProperty("PaginationToken")]
         public string PaginationToken{ get; set; }
 
         /// <summary>
-        /// 资源及关联的标签(键和值)列表
+        /// <p>资源及关联的标签(键和值)列表</p>
         /// </summary>
         [JsonProperty("ResourceTagMappingList")]
         public ResourceTagMapping[] ResourceTagMappingList{ get; set; }

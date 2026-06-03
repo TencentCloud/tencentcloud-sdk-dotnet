@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string VideoId{ get; set; }
 
         /// <summary>
+        /// <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+        /// </summary>
+        [JsonProperty("DisableModeration")]
+        public string DisableModeration{ get; set; }
+
+        /// <summary>
         /// <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
         /// </summary>
         [JsonProperty("SessionId")]
@@ -76,6 +82,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);
             this.SetParamSimple(map, prefix + "VoiceUrl", this.VoiceUrl);
             this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
+            this.SetParamSimple(map, prefix + "DisableModeration", this.DisableModeration);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

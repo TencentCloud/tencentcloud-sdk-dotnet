@@ -28,7 +28,7 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1383";
+       private const string sdkVersion = "SDK_NET_3.0.1439";
 
         /// <summary>
         /// Client constructor.
@@ -306,7 +306,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 根据标签键获取资源标签
+        /// 根据标签键获取指定资源上的标签值
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
         /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 根据标签键获取资源标签
+        /// 根据标签键获取指定资源上的标签值
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
         /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
@@ -327,7 +327,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 通过标签查询资源列表
+        /// 通过标签查询资源列表，按TagKey取交集。
+        /// 举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。交集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，同时包含标签TagKey=k2且TagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByTagsRequest"/></param>
         /// <returns><see cref="DescribeResourcesByTagsResponse"/></returns>
@@ -337,7 +338,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 通过标签查询资源列表
+        /// 通过标签查询资源列表，按TagKey取交集。
+        /// 举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。交集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，同时包含标签TagKey=k2且TagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByTagsRequest"/></param>
         /// <returns><see cref="DescribeResourcesByTagsResponse"/></returns>
@@ -348,7 +350,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 通过标签查询资源列表并集
+        /// 通过标签查询资源列表，按TagKey取并集。
+        /// 举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。并集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，或者包含标签TagKey=k2且TagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByTagsUnionRequest"/></param>
         /// <returns><see cref="DescribeResourcesByTagsUnionResponse"/></returns>
@@ -358,7 +361,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 通过标签查询资源列表并集
+        /// 通过标签查询资源列表，按TagKey取并集。
+        /// 举例：TagFilters 为 [ {"TagKey": "k1", "TagValue":["v1","v2"]}, {"TagKey": "k2", "TagValue":["v3","v4"]} ]。并集查询逻辑：找出资源，其包含标签TagKey=k1且TagValue in (v1, v2)，或者包含标签TagKey=k2且TagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByTagsUnionRequest"/></param>
         /// <returns><see cref="DescribeResourcesByTagsUnionResponse"/></returns>
@@ -432,7 +436,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 用于查询已建立的标签列表。
+        /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsRequest"/></param>
         /// <returns><see cref="DescribeTagsResponse"/></returns>
@@ -442,7 +447,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 用于查询已建立的标签列表。
+        /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsRequest"/></param>
         /// <returns><see cref="DescribeTagsResponse"/></returns>
@@ -453,7 +459,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 用于查询已建立的标签列表。
+        /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsSeqRequest"/></param>
         /// <returns><see cref="DescribeTagsSeqResponse"/></returns>
@@ -463,7 +470,8 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 用于查询已建立的标签列表。
+        /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsSeqRequest"/></param>
         /// <returns><see cref="DescribeTagsSeqResponse"/></returns>
@@ -495,7 +503,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 查询绑定了标签的资源列表。
+        /// 查询资源标签列表。
         /// </summary>
         /// <param name="req"><see cref="GetResourcesRequest"/></param>
         /// <returns><see cref="GetResourcesResponse"/></returns>
@@ -505,7 +513,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 查询绑定了标签的资源列表。
+        /// 查询资源标签列表。
         /// </summary>
         /// <param name="req"><see cref="GetResourcesRequest"/></param>
         /// <returns><see cref="GetResourcesResponse"/></returns>
@@ -559,6 +567,7 @@ namespace TencentCloud.Tag.V20180813
 
         /// <summary>
         /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys 为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="GetTagsRequest"/></param>
         /// <returns><see cref="GetTagsResponse"/></returns>
@@ -569,6 +578,7 @@ namespace TencentCloud.Tag.V20180813
 
         /// <summary>
         /// 用于获取已建立的标签列表。
+        /// 举例：TagKeys 为["k1","k2"], TagValues为["v3","v4"], 查出标签，其标签键tagKey in (k1, k2)，同时标签值tagValue in (v3, v4)
         /// </summary>
         /// <param name="req"><see cref="GetTagsRequest"/></param>
         /// <returns><see cref="GetTagsResponse"/></returns>

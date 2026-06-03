@@ -25,25 +25,28 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 实例的规格,
-        /// 基础版：basic
-        /// 标准版：standard
-        /// 高级版：premium
+        /// <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p>
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// 实例删除保护，false为关闭
+        /// <p>实例删除保护，false为关闭</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>实例是否开启多版本控制，false为关闭</p>
+        /// </summary>
+        [JsonProperty("EnableCosVersioning")]
+        public bool? EnableCosVersioning{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
         }
     }
 }

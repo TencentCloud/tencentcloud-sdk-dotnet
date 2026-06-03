@@ -25,128 +25,109 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群 ID。
+        /// <p>集群 ID。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，默认与集群私有网络 ID 保持一致。
+        /// <p>私有网络 ID。</p>
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络子网 ID，默认与集群子网 ID 保持一致。
+        /// <p>私有网络子网 ID。</p>
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// 连接池类型：SessionConnectionPool（会话级别连接池）。
+        /// <p>连接池类型：SessionConnectionPool（会话级别连接池）。</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池。
-        /// yes：表示开启。
-        /// no：表示不开启。
+        /// <p>是否开启连接池。<br>yes：表示开启。<br>no：表示不开启。</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池阈值：单位（秒），可选范围：0 - 300秒。
+        /// <p>连接池阈值：单位（秒），可选范围：0 - 300秒。</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// 绑定的安全组 ID 数组。
+        /// <p>绑定的安全组 ID 数组。</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 描述说明。
+        /// <p>描述说明。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
+        /// <p>想要绑定的 vip 信息，需与 UniqueVpcId 对应。</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 权重模式：
-        /// system：系统分配。
-        /// custom：自定义。
+        /// <p>权重模式：<br>system：系统分配。<br>custom：自定义。</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 是否自动添加只读实例。
-        /// yes：表示自动添加只读实例。
-        /// no：表示不自动添加只读实例。
+        /// <p>是否自动添加只读实例。<br>yes：表示自动添加只读实例。<br>no：表示不自动添加只读实例。</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移。
-        /// yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
-        /// no：表示不开启。
-        /// 说明：
-        /// 仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
+        /// <p>是否开启故障转移。<br>yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。<br>no：表示不开启。<br>说明：<br>仅当 RwType 参数值为 READWRITE 时，才支持设置此项。</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 一致性类型：
-        /// eventual：最终一致性。
-        /// global：全局一致性。
-        /// session：会话一致性。
-        /// 说明：
-        /// 仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
+        /// <p>一致性类型：<br>eventual：最终一致性。<br>global：全局一致性。<br>session：会话一致性。<br>说明：<br>仅当 RwType 参数值为 READWRITE 时，才支持设置此项。</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// 读写属性：
-        /// READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
-        /// READONLY：表示只读。
+        /// <p>读写属性：<br>READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。<br>READONLY：表示只读。</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
+        /// <p>一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
+        /// <p>是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 接入模式：
-        /// nearby：就近访问。
-        /// balance：均衡分配。
+        /// <p>接入模式：<br>nearby：就近访问。<br>balance：均衡分配。</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// 实例权重。
+        /// <p>实例权重。</p>
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
