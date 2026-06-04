@@ -1,0 +1,244 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1440</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Adp</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260520\AdpClient.cs" />
+    <Compile Include="V20260520\Models\AICallConfig.cs" />
+    <Compile Include="V20260520\Models\AIOptimizeModel.cs" />
+    <Compile Include="V20260520\Models\AgentAdvancedConfig.cs" />
+    <Compile Include="V20260520\Models\AgentCollaborationConfig.cs" />
+    <Compile Include="V20260520\Models\AgentDetail.cs" />
+    <Compile Include="V20260520\Models\AgentInput.cs" />
+    <Compile Include="V20260520\Models\AgentModelConfig.cs" />
+    <Compile Include="V20260520\Models\AgentPlugin.cs" />
+    <Compile Include="V20260520\Models\AgentPluginConfig.cs" />
+    <Compile Include="V20260520\Models\AgentPluginParameter.cs" />
+    <Compile Include="V20260520\Models\AgentProfile.cs" />
+    <Compile Include="V20260520\Models\AgentRelease.cs" />
+    <Compile Include="V20260520\Models\AgentReleasePreview.cs" />
+    <Compile Include="V20260520\Models\AgentSkill.cs" />
+    <Compile Include="V20260520\Models\AgentSkillConfig.cs" />
+    <Compile Include="V20260520\Models\AgentSpec.cs" />
+    <Compile Include="V20260520\Models\AgentSystemVariable.cs" />
+    <Compile Include="V20260520\Models\AgentTool.cs" />
+    <Compile Include="V20260520\Models\AgentToolBasicConfig.cs" />
+    <Compile Include="V20260520\Models\AgentToolConfig.cs" />
+    <Compile Include="V20260520\Models\AgentToolInputParameter.cs" />
+    <Compile Include="V20260520\Models\AgentToolOutputParameter.cs" />
+    <Compile Include="V20260520\Models\AgentUserInputValue.cs" />
+    <Compile Include="V20260520\Models\ApiToolConfig.cs" />
+    <Compile Include="V20260520\Models\App.cs" />
+    <Compile Include="V20260520\Models\AppAdvancedConf.cs" />
+    <Compile Include="V20260520\Models\AppAppeal.cs" />
+    <Compile Include="V20260520\Models\AppAuxiliaryInfo.cs" />
+    <Compile Include="V20260520\Models\AppConfig.cs" />
+    <Compile Include="V20260520\Models\AppExperienceConfig.cs" />
+    <Compile Include="V20260520\Models\AppGreetingConfig.cs" />
+    <Compile Include="V20260520\Models\AppMemoryConfig.cs" />
+    <Compile Include="V20260520\Models\AppMetadata.cs" />
+    <Compile Include="V20260520\Models\AppModeConfig.cs" />
+    <Compile Include="V20260520\Models\AppModelConfig.cs" />
+    <Compile Include="V20260520\Models\AppOperation.cs" />
+    <Compile Include="V20260520\Models\AppSecretInfo.cs" />
+    <Compile Include="V20260520\Models\AppShareAccessControl.cs" />
+    <Compile Include="V20260520\Models\AppShareURLInfo.cs" />
+    <Compile Include="V20260520\Models\AppShareWhitelistItem.cs" />
+    <Compile Include="V20260520\Models\AppSharedKnowledgeInfo.cs" />
+    <Compile Include="V20260520\Models\AppStatusInfo.cs" />
+    <Compile Include="V20260520\Models\AppSubStatusInfo.cs" />
+    <Compile Include="V20260520\Models\AppSummary.cs" />
+    <Compile Include="V20260520\Models\AppToolConfig.cs" />
+    <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
+    <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
+    <Compile Include="V20260520\Models\AppealingStatus.cs" />
+    <Compile Include="V20260520\Models\BackgroundImage.cs" />
+    <Compile Include="V20260520\Models\CodeToolConfig.cs" />
+    <Compile Include="V20260520\Models\Conversation.cs" />
+    <Compile Include="V20260520\Models\ConversationAgentTask.cs" />
+    <Compile Include="V20260520\Models\ConversationContent.cs" />
+    <Compile Include="V20260520\Models\ConversationExperience.cs" />
+    <Compile Include="V20260520\Models\ConversationMessage.cs" />
+    <Compile Include="V20260520\Models\ConversationQuoteInfo.cs" />
+    <Compile Include="V20260520\Models\ConversationReference.cs" />
+    <Compile Include="V20260520\Models\ConversationWorkspace.cs" />
+    <Compile Include="V20260520\Models\CopyAppRequest.cs" />
+    <Compile Include="V20260520\Models\CopyAppResponse.cs" />
+    <Compile Include="V20260520\Models\CreateAgentRequest.cs" />
+    <Compile Include="V20260520\Models\CreateAgentResponse.cs" />
+    <Compile Include="V20260520\Models\CreateAppRequest.cs" />
+    <Compile Include="V20260520\Models\CreateAppResponse.cs" />
+    <Compile Include="V20260520\Models\CreateConversationRequest.cs" />
+    <Compile Include="V20260520\Models\CreateConversationResponse.cs" />
+    <Compile Include="V20260520\Models\CreateReleaseRequest.cs" />
+    <Compile Include="V20260520\Models\CreateReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\CreateSpaceRequest.cs" />
+    <Compile Include="V20260520\Models\CreateSpaceResponse.cs" />
+    <Compile Include="V20260520\Models\CreateVariableRequest.cs" />
+    <Compile Include="V20260520\Models\CreateVariableResponse.cs" />
+    <Compile Include="V20260520\Models\CreateWebSocketTokenRequest.cs" />
+    <Compile Include="V20260520\Models\CreateWebSocketTokenResponse.cs" />
+    <Compile Include="V20260520\Models\CreateWorkspaceCredentialRequest.cs" />
+    <Compile Include="V20260520\Models\CreateWorkspaceCredentialResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteAppRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteAppResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteConversationRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteConversationResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteSpaceRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteSpaceResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteVariableRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteVariableResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAgentDetailRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAgentDetailResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAgentReleasePreviewListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAgentReleasePreviewListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationMessageListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationMessageListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeConversationResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeLatestReleaseRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeLatestReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeModelListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeModelListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePluginRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePluginResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePluginSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePluginSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeReleaseListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeReleaseListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeReleaseSummaryRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeReleaseSummaryResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeSkillCategoryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeSkillCategoryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeSkillSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeSkillSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeSpaceListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeSpaceListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeSystemVariableListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeSystemVariableListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeVariableListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeVariableListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeVariableResponse.cs" />
+    <Compile Include="V20260520\Models\DigitalHumanConfig.cs" />
+    <Compile Include="V20260520\Models\FieldMask.cs" />
+    <Compile Include="V20260520\Models\FileParseModel.cs" />
+    <Compile Include="V20260520\Models\Filter.cs" />
+    <Compile Include="V20260520\Models\GenerateModel.cs" />
+    <Compile Include="V20260520\Models\InputBoxConfig.cs" />
+    <Compile Include="V20260520\Models\IntentAchievementInfo.cs" />
+    <Compile Include="V20260520\Models\MCPToolConfig.cs" />
+    <Compile Include="V20260520\Models\Model.cs" />
+    <Compile Include="V20260520\Models\ModelBadge.cs" />
+    <Compile Include="V20260520\Models\ModelBasic.cs" />
+    <Compile Include="V20260520\Models\ModelDetailInfo.cs" />
+    <Compile Include="V20260520\Models\ModelLimit.cs" />
+    <Compile Include="V20260520\Models\ModelParameter.cs" />
+    <Compile Include="V20260520\Models\ModelParams.cs" />
+    <Compile Include="V20260520\Models\ModelProperty.cs" />
+    <Compile Include="V20260520\Models\ModelProviderBasic.cs" />
+    <Compile Include="V20260520\Models\ModelStatus.cs" />
+    <Compile Include="V20260520\Models\ModifyAgentRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyAgentResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyAppRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyConversationRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyConversationResponse.cs" />
+    <Compile Include="V20260520\Models\ModifySpaceRequest.cs" />
+    <Compile Include="V20260520\Models\ModifySpaceResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyVariableRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyVariableResponse.cs" />
+    <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
+    <Compile Include="V20260520\Models\MultiModalQAModel.cs" />
+    <Compile Include="V20260520\Models\MultiModalUnderstandingModel.cs" />
+    <Compile Include="V20260520\Models\Plugin.cs" />
+    <Compile Include="V20260520\Models\PluginOperation.cs" />
+    <Compile Include="V20260520\Models\PluginProfile.cs" />
+    <Compile Include="V20260520\Models\PluginStatistics.cs" />
+    <Compile Include="V20260520\Models\PluginSummary.cs" />
+    <Compile Include="V20260520\Models\PluginUserState.cs" />
+    <Compile Include="V20260520\Models\PromptRewriteModel.cs" />
+    <Compile Include="V20260520\Models\ReleaseRecord.cs" />
+    <Compile Include="V20260520\Models\ReleaseSummary.cs" />
+    <Compile Include="V20260520\Models\RequestParam.cs" />
+    <Compile Include="V20260520\Models\ResetConversationRequest.cs" />
+    <Compile Include="V20260520\Models\ResetConversationResponse.cs" />
+    <Compile Include="V20260520\Models\ResponseParam.cs" />
+    <Compile Include="V20260520\Models\RetryReleaseRequest.cs" />
+    <Compile Include="V20260520\Models\RetryReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\RoleConfig.cs" />
+    <Compile Include="V20260520\Models\RollbackReleaseRequest.cs" />
+    <Compile Include="V20260520\Models\RollbackReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\SearchResourceStatusInfo.cs" />
+    <Compile Include="V20260520\Models\SingleWorkflowConfig.cs" />
+    <Compile Include="V20260520\Models\SkillAnalysisInfo.cs" />
+    <Compile Include="V20260520\Models\SkillCategory.cs" />
+    <Compile Include="V20260520\Models\SkillClassification.cs" />
+    <Compile Include="V20260520\Models\SkillProfile.cs" />
+    <Compile Include="V20260520\Models\SkillShare.cs" />
+    <Compile Include="V20260520\Models\SkillSummary.cs" />
+    <Compile Include="V20260520\Models\SkillVersion.cs" />
+    <Compile Include="V20260520\Models\Space.cs" />
+    <Compile Include="V20260520\Models\SpecialStatusInfo.cs" />
+    <Compile Include="V20260520\Models\SupportedFileType.cs" />
+    <Compile Include="V20260520\Models\SystemVariable.cs" />
+    <Compile Include="V20260520\Models\TemplatePublishInfo.cs" />
+    <Compile Include="V20260520\Models\ThinkModel.cs" />
+    <Compile Include="V20260520\Models\Tool.cs" />
+    <Compile Include="V20260520\Models\ToolBilling.cs" />
+    <Compile Include="V20260520\Models\ToolConfig.cs" />
+    <Compile Include="V20260520\Models\ToolExample.cs" />
+    <Compile Include="V20260520\Models\Variable.cs" />
+    <Compile Include="V20260520\Models\VoiceConfig.cs" />
+  </ItemGroup>
+</Project>

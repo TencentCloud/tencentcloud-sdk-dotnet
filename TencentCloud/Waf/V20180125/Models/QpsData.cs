@@ -25,34 +25,40 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 弹性qps默认值
+        /// <p>弹性qps默认值</p>
         /// </summary>
         [JsonProperty("ElasticBillingDefault")]
         public ulong? ElasticBillingDefault{ get; set; }
 
         /// <summary>
-        /// 弹性qps最小值
+        /// <p>弹性qps最小值</p>
         /// </summary>
         [JsonProperty("ElasticBillingMin")]
         public ulong? ElasticBillingMin{ get; set; }
 
         /// <summary>
-        /// 弹性qps最大值
+        /// <p>弹性qps最大值</p>
         /// </summary>
         [JsonProperty("ElasticBillingMax")]
         public ulong? ElasticBillingMax{ get; set; }
 
         /// <summary>
-        /// 业务扩展包最大qps
+        /// <p>业务扩展包最大qps</p>
         /// </summary>
         [JsonProperty("QPSExtendMax")]
         public ulong? QPSExtendMax{ get; set; }
 
         /// <summary>
-        /// 境外业务扩展包最大qps
+        /// <p>境外业务扩展包最大qps</p>
         /// </summary>
         [JsonProperty("QPSExtendIntlMax")]
         public ulong? QPSExtendIntlMax{ get; set; }
+
+        /// <summary>
+        /// <p>预付费/后付费QPS扩容比</p>
+        /// </summary>
+        [JsonProperty("ElasticPrepaidRatio")]
+        public float? ElasticPrepaidRatio{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ElasticBillingMax", this.ElasticBillingMax);
             this.SetParamSimple(map, prefix + "QPSExtendMax", this.QPSExtendMax);
             this.SetParamSimple(map, prefix + "QPSExtendIntlMax", this.QPSExtendIntlMax);
+            this.SetParamSimple(map, prefix + "ElasticPrepaidRatio", this.ElasticPrepaidRatio);
         }
     }
 }

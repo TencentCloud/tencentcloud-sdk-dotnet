@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1440";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Cfw.V20190904
         public AddVpcAcRuleResponse AddVpcAcRuleSync(AddVpcAcRuleRequest req)
         {
             return InternalRequestAsync<AddVpcAcRuleResponse>(req, "AddVpcAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭NAT CCN集群模式防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="CloseClusterNatFwSwitchResponse"/></returns>
+        public Task<CloseClusterNatFwSwitchResponse> CloseClusterNatFwSwitch(CloseClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<CloseClusterNatFwSwitchResponse>(req, "CloseClusterNatFwSwitch");
+        }
+
+        /// <summary>
+        /// 关闭NAT CCN集群模式防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="CloseClusterNatFwSwitchResponse"/></returns>
+        public CloseClusterNatFwSwitchResponse CloseClusterNatFwSwitchSync(CloseClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<CloseClusterNatFwSwitchResponse>(req, "CloseClusterNatFwSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -940,6 +961,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询NAT CCN集群模式防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNatCcnFwSwitchListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNatCcnFwSwitchListResponse"/></returns>
+        public Task<DescribeClusterNatCcnFwSwitchListResponse> DescribeClusterNatCcnFwSwitchList(DescribeClusterNatCcnFwSwitchListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNatCcnFwSwitchListResponse>(req, "DescribeClusterNatCcnFwSwitchList");
+        }
+
+        /// <summary>
+        /// 查询NAT CCN集群模式防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNatCcnFwSwitchListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNatCcnFwSwitchListResponse"/></returns>
+        public DescribeClusterNatCcnFwSwitchListResponse DescribeClusterNatCcnFwSwitchListSync(DescribeClusterNatCcnFwSwitchListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNatCcnFwSwitchListResponse>(req, "DescribeClusterNatCcnFwSwitchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询集群模式Vpc间防火墙开关
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVpcFwSwitchsRequest"/></param>
@@ -1272,6 +1314,48 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeNatAcRuleResponse DescribeNatAcRuleSync(DescribeNatAcRuleRequest req)
         {
             return InternalRequestAsync<DescribeNatAcRuleResponse>(req, "DescribeNatAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询NAT CCN防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatCcnFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeNatCcnFwSwitchResponse"/></returns>
+        public Task<DescribeNatCcnFwSwitchResponse> DescribeNatCcnFwSwitch(DescribeNatCcnFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeNatCcnFwSwitchResponse>(req, "DescribeNatCcnFwSwitch");
+        }
+
+        /// <summary>
+        /// 查询NAT CCN防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatCcnFwSwitchRequest"/></param>
+        /// <returns><see cref="DescribeNatCcnFwSwitchResponse"/></returns>
+        public DescribeNatCcnFwSwitchResponse DescribeNatCcnFwSwitchSync(DescribeNatCcnFwSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeNatCcnFwSwitchResponse>(req, "DescribeNatCcnFwSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定NAT所在地域是否有NAT防火墙引流集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwClusterRegionStatusRequest"/></param>
+        /// <returns><see cref="DescribeNatFwClusterRegionStatusResponse"/></returns>
+        public Task<DescribeNatFwClusterRegionStatusResponse> DescribeNatFwClusterRegionStatus(DescribeNatFwClusterRegionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwClusterRegionStatusResponse>(req, "DescribeNatFwClusterRegionStatus");
+        }
+
+        /// <summary>
+        /// 查询指定NAT所在地域是否有NAT防火墙引流集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwClusterRegionStatusRequest"/></param>
+        /// <returns><see cref="DescribeNatFwClusterRegionStatusResponse"/></returns>
+        public DescribeNatFwClusterRegionStatusResponse DescribeNatFwClusterRegionStatusSync(DescribeNatFwClusterRegionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwClusterRegionStatusResponse>(req, "DescribeNatFwClusterRegionStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1996,6 +2080,48 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 修改集群防火墙Bypass状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterFwBypassRequest"/></param>
+        /// <returns><see cref="ModifyClusterFwBypassResponse"/></returns>
+        public Task<ModifyClusterFwBypassResponse> ModifyClusterFwBypass(ModifyClusterFwBypassRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterFwBypassResponse>(req, "ModifyClusterFwBypass");
+        }
+
+        /// <summary>
+        /// 修改集群防火墙Bypass状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterFwBypassRequest"/></param>
+        /// <returns><see cref="ModifyClusterFwBypassResponse"/></returns>
+        public ModifyClusterFwBypassResponse ModifyClusterFwBypassSync(ModifyClusterFwBypassRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterFwBypassResponse>(req, "ModifyClusterFwBypass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改NAT CCN集群模式防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="ModifyClusterNatFwSwitchResponse"/></returns>
+        public Task<ModifyClusterNatFwSwitchResponse> ModifyClusterNatFwSwitch(ModifyClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterNatFwSwitchResponse>(req, "ModifyClusterNatFwSwitch");
+        }
+
+        /// <summary>
+        /// 修改NAT CCN集群模式防火墙开关配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="ModifyClusterNatFwSwitchResponse"/></returns>
+        public ModifyClusterNatFwSwitchResponse ModifyClusterNatFwSwitchSync(ModifyClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterNatFwSwitchResponse>(req, "ModifyClusterNatFwSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改集群模式VPC防火墙开关
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterVpcFwSwitchRequest"/></param>
@@ -2519,6 +2645,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyVpcFwSequenceRulesResponse ModifyVpcFwSequenceRulesSync(ModifyVpcFwSequenceRulesRequest req)
         {
             return InternalRequestAsync<ModifyVpcFwSequenceRulesResponse>(req, "ModifyVpcFwSequenceRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启NAT CCN集群模式防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="OpenClusterNatFwSwitchResponse"/></returns>
+        public Task<OpenClusterNatFwSwitchResponse> OpenClusterNatFwSwitch(OpenClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<OpenClusterNatFwSwitchResponse>(req, "OpenClusterNatFwSwitch");
+        }
+
+        /// <summary>
+        /// 开启NAT CCN集群模式防火墙开关
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterNatFwSwitchRequest"/></param>
+        /// <returns><see cref="OpenClusterNatFwSwitchResponse"/></returns>
+        public OpenClusterNatFwSwitchResponse OpenClusterNatFwSwitchSync(OpenClusterNatFwSwitchRequest req)
+        {
+            return InternalRequestAsync<OpenClusterNatFwSwitchResponse>(req, "OpenClusterNatFwSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

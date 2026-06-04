@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1436";
+       private const string sdkVersion = "SDK_NET_3.0.1440";
 
         /// <summary>
         /// Client constructor.
@@ -964,7 +964,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
         /// 1. 合同中当前状态为 **待签署** 的签署人是催办的对象
-        /// 2. **每个合同只能催办一次**
+        /// 2. **每个合同每个人只能催办一次**
         /// 
         /// **催办的效果**: 对方会收到如下的短信通知
         /// 
@@ -983,7 +983,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
         /// 1. 合同中当前状态为 **待签署** 的签署人是催办的对象
-        /// 2. **每个合同只能催办一次**
+        /// 2. **每个合同每个人只能催办一次**
         /// 
         /// **催办的效果**: 对方会收到如下的短信通知
         /// 

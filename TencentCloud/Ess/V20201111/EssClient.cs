@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1439";
+       private const string sdkVersion = "SDK_NET_3.0.1440";
 
         /// <summary>
         /// Client constructor.
@@ -1801,7 +1801,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 1. 发起合同时，**签署人的NotifyType需设置为sms**
         /// 2. 合同中当前状态为 **待签署** 的签署人是催办的对象
-        /// 3. **每个合同只能催办一次**
+        /// 3. **每个合同的每个签署方只能催办一次**
         /// 
         /// **催办的效果**: 对方会收到如下的短信通知
         /// 
@@ -1821,7 +1821,7 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// 1. 发起合同时，**签署人的NotifyType需设置为sms**
         /// 2. 合同中当前状态为 **待签署** 的签署人是催办的对象
-        /// 3. **每个合同只能催办一次**
+        /// 3. **每个合同的每个签署方只能催办一次**
         /// 
         /// **催办的效果**: 对方会收到如下的短信通知
         /// 

@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实时线程列表。
+        /// <p>实时线程列表。</p>
         /// </summary>
         [JsonProperty("ProcessList")]
         public MySqlProcess[] ProcessList{ get; set; }
 
         /// <summary>
-        /// sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+        /// <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p>
         /// </summary>
         [JsonProperty("Statistics")]
         public StatisticInfo[] Statistics{ get; set; }

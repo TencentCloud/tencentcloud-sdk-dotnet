@@ -25,74 +25,73 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<strong>其中 dcdb(即TDSQL MySQL) 的查询入参InstanceId特殊，需要使用 ClusterId + &amp; + InstanceId 来组合代替， 如：<code>tdsqlshard-s1230&amp;shard-abcd</code></strong></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 线程的ID，用于筛选线程列表。
+        /// <p>线程的ID，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// 线程的操作账号名，用于筛选线程列表。
+        /// <p>线程的操作账号名，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// 线程的操作主机地址，用于筛选线程列表。
+        /// <p>线程的操作主机地址，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 线程的操作数据库，用于筛选线程列表。
+        /// <p>线程的操作数据库，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("DB")]
         public string DB{ get; set; }
 
         /// <summary>
-        /// 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+        /// <p>线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+        /// <p>线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+        /// <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
         /// </summary>
         [JsonProperty("Time")]
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// 线程的操作语句，用于筛选线程列表。
+        /// <p>线程的操作语句，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20。
+        /// <p>返回数量，默认20。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
-        /// 
+        /// <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;mariadb&quot;-mariadb;&quot;cynosdb&quot;-TDSQL-C for MySQL ;&quot;dcdb&quot;-TDSQL MySQL 默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 会话统计的维度信息,可以多个维度。
+        /// <p>会话统计的维度信息,可以多个维度。</p>
         /// </summary>
         [JsonProperty("StatDimensions")]
         public StatDimension[] StatDimensions{ get; set; }
