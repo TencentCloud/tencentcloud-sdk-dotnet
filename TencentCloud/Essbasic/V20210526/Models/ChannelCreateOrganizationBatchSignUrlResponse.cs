@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
+        /// <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+        /// <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

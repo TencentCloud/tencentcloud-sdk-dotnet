@@ -25,7 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 异步FlowId
+        /// <p>任务id</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
+
+        /// <summary>
+        /// <p>异步FlowId</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
@@ -42,6 +48,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

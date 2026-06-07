@@ -25,40 +25,46 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 0 关闭网络攻击检测，1开启网络攻击检测
+        /// <p>0 关闭网络攻击检测，1开启网络攻击检测</p>
         /// </summary>
         [JsonProperty("NetAttackEnable")]
         public ulong? NetAttackEnable{ get; set; }
 
         /// <summary>
-        /// 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
+        /// <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p>
         /// </summary>
         [JsonProperty("NetAttackAlarmStatus")]
         public ulong? NetAttackAlarmStatus{ get; set; }
 
         /// <summary>
-        /// 1 全部旗舰版主机，0 Quuids列表主机
+        /// <p>1 全部旗舰版主机，0 Quuids列表主机</p>
         /// </summary>
         [JsonProperty("Scope")]
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// 自选主机
+        /// <p>自选主机</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 自选排除的主机
+        /// <p>自选排除的主机</p>
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }
 
         /// <summary>
-        /// 新增资产自动包含 0 不包含 1包含
+        /// <p>新增资产自动包含 0 不包含 1包含</p>
         /// </summary>
         [JsonProperty("AutoInclude")]
         public ulong? AutoInclude{ get; set; }
+
+        /// <summary>
+        /// <p>产品类型 0-主机安全 1-安全中心</p>
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public ulong? ProductType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
             this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
         }
     }
 }

@@ -24,12 +24,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class DescribeNetAttackSettingRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>产品类型 0-主机安全 1-安全中心</p>
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public ulong? ProductType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
         }
     }
 }

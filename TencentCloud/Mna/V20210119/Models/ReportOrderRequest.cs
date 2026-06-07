@@ -25,25 +25,25 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 订单编号唯一标识符
+        /// <p>订单编号唯一标识符</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 用量类型
+        /// <p>用量类型</p>
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 上报月份，默认当前月
+        /// <p>上报月份，默认当前月</p>
         /// </summary>
         [JsonProperty("ReportMonth")]
         public string ReportMonth{ get; set; }

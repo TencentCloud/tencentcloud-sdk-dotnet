@@ -25,91 +25,91 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 访问源示例： net：IP/CIDR(192.168.0.2)
+        /// <p>访问源示例： net：IP/CIDR(192.168.0.2)</p>
         /// </summary>
         [JsonProperty("SourceContent")]
         public string SourceContent{ get; set; }
 
         /// <summary>
-        /// 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
+        /// <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
+        /// <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p>
         /// </summary>
         [JsonProperty("TargetContent")]
         public string TargetContent{ get; set; }
 
         /// <summary>
-        /// 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
+        /// <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+        /// <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
+        /// <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p>
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
 
         /// <summary>
-        /// 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
+        /// <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 规则方向：1，入站；0，出站
+        /// <p>规则方向：1，入站；0，出站</p>
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// 规则序号
+        /// <p>规则序号</p>
         /// </summary>
         [JsonProperty("OrderIndex")]
         public long? OrderIndex{ get; set; }
 
         /// <summary>
-        /// 规则状态，true表示启用，false表示禁用
+        /// <p>规则状态，true表示启用，false表示禁用</p>
         /// </summary>
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
         /// <summary>
-        /// 规则对应的唯一id，创建规则时无需填写
+        /// <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public long? Uuid{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 端口协议组ID
+        /// <p>端口协议组ID</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 内部id
+        /// <p>内部id</p>
         /// </summary>
         [JsonProperty("InternalUuid")]
         public long? InternalUuid{ get; set; }
 
         /// <summary>
-        /// 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+        /// <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p>
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }

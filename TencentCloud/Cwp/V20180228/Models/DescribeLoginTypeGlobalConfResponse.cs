@@ -25,49 +25,49 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
+        /// <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }
 
         /// <summary>
-        /// 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
+        /// <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
         /// </summary>
         [JsonProperty("Scope")]
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// 正选主机配置数
+        /// <p>正选主机配置数</p>
         /// </summary>
         [JsonProperty("IncludeHostCount")]
         public ulong? IncludeHostCount{ get; set; }
 
         /// <summary>
-        /// 反选主机配置数
+        /// <p>反选主机配置数</p>
         /// </summary>
         [JsonProperty("ExcludeHostCount")]
         public ulong? ExcludeHostCount{ get; set; }
 
         /// <summary>
-        /// 正选quuid配置列表
+        /// <p>正选quuid配置列表</p>
         /// </summary>
         [JsonProperty("IncludeQuuid")]
         public string[] IncludeQuuid{ get; set; }
 
         /// <summary>
-        /// 反选quuid配置列表
+        /// <p>反选quuid配置列表</p>
         /// </summary>
         [JsonProperty("ExcludeQuuid")]
         public string[] ExcludeQuuid{ get; set; }
 
         /// <summary>
-        /// 已开启机器数
+        /// <p>已开启机器数</p>
         /// </summary>
         [JsonProperty("EnableCount")]
         public ulong? EnableCount{ get; set; }
 
         /// <summary>
-        /// 未启机器数
+        /// <p>未启机器数</p>
         /// </summary>
         [JsonProperty("DisableCount")]
         public ulong? DisableCount{ get; set; }

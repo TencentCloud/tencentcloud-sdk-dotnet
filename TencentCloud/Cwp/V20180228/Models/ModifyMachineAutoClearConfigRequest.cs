@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天
+        /// <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
         /// </summary>
         [JsonProperty("ClearRule")]
         public ulong? ClearRule{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// cpu 资源量
+        /// <p>cpu 资源量</p>
         /// </summary>
         [JsonProperty("CPU")]
         public string CPU{ get; set; }
 
         /// <summary>
-        /// 内存资源量
+        /// <p>内存资源量</p>
         /// </summary>
         [JsonProperty("Memory")]
         public string Memory{ get; set; }

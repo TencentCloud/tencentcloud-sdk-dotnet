@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 内网告警展示
+        /// <p>内网告警展示</p>
         /// </summary>
         [JsonProperty("InnerNetAlarmShow")]
         public bool? InnerNetAlarmShow{ get; set; }
 
         /// <summary>
-        /// 内网ip展示
+        /// <p>内网ip展示</p>
         /// </summary>
         [JsonProperty("InnerIPShow")]
         public bool? InnerIPShow{ get; set; }

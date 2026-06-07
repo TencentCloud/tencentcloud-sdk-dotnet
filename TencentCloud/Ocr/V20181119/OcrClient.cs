@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1438";
+       private const string sdkVersion = "SDK_NET_3.0.1441";
 
         /// <summary>
         /// Client constructor.
@@ -1196,31 +1196,6 @@ namespace TencentCloud.Ocr.V20181119
         public HandwritingEssayOCRResponse HandwritingEssayOCRSync(HandwritingEssayOCRRequest req)
         {
             return InternalRequestAsync<HandwritingEssayOCRResponse>(req, "HandwritingEssayOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证号、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息识别场景，例如银行开户、用户注册等。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
-        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
-        public Task<HmtResidentPermitOCRResponse> HmtResidentPermitOCR(HmtResidentPermitOCRRequest req)
-        {
-            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR");
-        }
-
-        /// <summary>
-        /// 港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证号、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息识别场景，例如银行开户、用户注册等。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
-        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
-        public HmtResidentPermitOCRResponse HmtResidentPermitOCRSync(HmtResidentPermitOCRRequest req)
-        {
-            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

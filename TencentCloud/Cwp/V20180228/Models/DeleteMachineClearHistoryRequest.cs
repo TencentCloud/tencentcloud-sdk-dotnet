@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 需要删除的记录id值,最大长度100个
+        /// <p>需要删除的记录id值,最大长度100个</p>
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

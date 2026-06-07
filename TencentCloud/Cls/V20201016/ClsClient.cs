@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1437";
+       private const string sdkVersion = "SDK_NET_3.0.1441";
 
         /// <summary>
         /// Client constructor.
@@ -3047,6 +3047,29 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 查询日志服务是否开通
+        /// API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
+        /// </summary>
+        /// <param name="req"><see cref="GetClsServiceRequest"/></param>
+        /// <returns><see cref="GetClsServiceResponse"/></returns>
+        public Task<GetClsServiceResponse> GetClsService(GetClsServiceRequest req)
+        {
+            return InternalRequestAsync<GetClsServiceResponse>(req, "GetClsService");
+        }
+
+        /// <summary>
+        /// 查询日志服务是否开通
+        /// API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
+        /// </summary>
+        /// <param name="req"><see cref="GetClsServiceRequest"/></param>
+        /// <returns><see cref="GetClsServiceResponse"/></returns>
+        public GetClsServiceResponse GetClsServiceSync(GetClsServiceRequest req)
+        {
+            return InternalRequestAsync<GetClsServiceResponse>(req, "GetClsService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取时序label values列表
         /// </summary>
         /// <param name="req"><see cref="GetMetricLabelValuesRequest"/></param>
@@ -3843,6 +3866,29 @@ namespace TencentCloud.Cls.V20201016
         public OpenClawServiceResponse OpenClawServiceSync(OpenClawServiceRequest req)
         {
             return InternalRequestAsync<OpenClawServiceResponse>(req, "OpenClawService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通日志服务
+        /// API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议使用广州(ap-guangzhou)
+        /// </summary>
+        /// <param name="req"><see cref="OpenClsServiceRequest"/></param>
+        /// <returns><see cref="OpenClsServiceResponse"/></returns>
+        public Task<OpenClsServiceResponse> OpenClsService(OpenClsServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClsServiceResponse>(req, "OpenClsService");
+        }
+
+        /// <summary>
+        /// 开通日志服务
+        /// API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议使用广州(ap-guangzhou)
+        /// </summary>
+        /// <param name="req"><see cref="OpenClsServiceRequest"/></param>
+        /// <returns><see cref="OpenClsServiceResponse"/></returns>
+        public OpenClsServiceResponse OpenClsServiceSync(OpenClsServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClsServiceResponse>(req, "OpenClsService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

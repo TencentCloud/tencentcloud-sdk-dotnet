@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+        /// <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 阻断时间，用于标准阻断模式
+        /// <p>阻断时间，用于标准阻断模式</p>
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }

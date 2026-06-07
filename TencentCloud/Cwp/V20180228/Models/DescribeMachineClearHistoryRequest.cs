@@ -25,35 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 筛选条件
-        /// 多个条件筛选时 Keywords,TimeBetween,取交集
-        /// <li> Keywords 实例名称/内网/公网IP</li>
-        /// <li> TimeBetween 时间区间</li>
+        /// <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// 限制条数,默认10 ,最大100
+        /// <p>限制条数,默认10 ,最大100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量,默认0
+        /// <p>偏移量,默认0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 正序, ASC , 倒序 DESC , 默认ASC
+        /// <p>正序, ASC , 倒序 DESC , 默认ASC</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// AgentLastOfflineTime 客户端最后离线时间
-        /// AutoClearTime 清理时间
+        /// <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

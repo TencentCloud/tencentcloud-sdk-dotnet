@@ -25,37 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+        /// <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 是否弹窗提示信息 false: 关闭，true: 开启
+        /// <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
         /// </summary>
         [JsonProperty("ShowTips")]
         public bool? ShowTips{ get; set; }
 
         /// <summary>
-        /// 是否开启智能过白模式
+        /// <p>是否开启智能过白模式</p>
         /// </summary>
         [JsonProperty("OpenSmartMode")]
         public bool? OpenSmartMode{ get; set; }
 
         /// <summary>
-        /// 是否开启情报IP阻断
+        /// <p>是否开启情报IP阻断</p>
         /// </summary>
         [JsonProperty("BanBlackIp")]
         public bool? BanBlackIp{ get; set; }
 
         /// <summary>
-        /// 是否开启漏洞IP阻断
+        /// <p>是否开启漏洞IP阻断</p>
         /// </summary>
         [JsonProperty("BanVulIp")]
         public bool? BanVulIp{ get; set; }
 
         /// <summary>
-        /// 是否开启规则阻断
+        /// <p>是否开启规则阻断</p>
         /// </summary>
         [JsonProperty("BanByRule")]
         public bool? BanByRule{ get; set; }

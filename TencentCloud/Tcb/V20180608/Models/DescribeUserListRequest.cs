@@ -25,46 +25,52 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境id
+        /// <p>环境id</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 页码，从1开始，默认1
+        /// <p>页码，从1开始，默认1</p>
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认20，最大100
+        /// <p>每页数量，默认20，最大100</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 用户名，模糊查询
+        /// <p>用户名，模糊查询</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户昵称，模糊查询
+        /// <p>用户昵称，模糊查询</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 手机号，模糊查询
+        /// <p>手机号，模糊查询</p>
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 邮箱，模糊查询
+        /// <p>邮箱，模糊查询</p>
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
+
+        /// <summary>
+        /// <p>用户id列表，根据id过滤用户</p>
+        /// </summary>
+        [JsonProperty("UidList")]
+        public string[] UidList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamArraySimple(map, prefix + "UidList.", this.UidList);
         }
     }
 }

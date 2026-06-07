@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SwitchClusterZoneRequest : AbstractModel
+    public class GetClsServiceResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>集群Id</p>
+        /// 账户服务开通状态，0:服务已开通，1:服务未开通
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>当前可用区</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("OldZone")]
-        public string OldZone{ get; set; }
-
-        /// <summary>
-        /// <p>要切换到的可用区</p>
-        /// </summary>
-        [JsonProperty("NewZone")]
-        public string NewZone{ get; set; }
-
-        /// <summary>
-        /// <p>维护期间执行-yes,立即执行-no</p>
-        /// </summary>
-        [JsonProperty("IsInMaintainPeriod")]
-        public string IsInMaintainPeriod{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "OldZone", this.OldZone);
-            this.SetParamSimple(map, prefix + "NewZone", this.NewZone);
-            this.SetParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

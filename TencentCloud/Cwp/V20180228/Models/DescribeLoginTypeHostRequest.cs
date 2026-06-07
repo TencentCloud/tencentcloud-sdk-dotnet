@@ -31,25 +31,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 限制条数,默认10,最大100
+        /// <p>限制条数,默认10,最大100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量,默认0
+        /// <p>偏移量,默认0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序方式: [ASC:升序|DESC:降序]
+        /// <p>排序方式: [ASC:升序|DESC:降序]</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 可选排序列: [Id]
+        /// <p>可选排序列: [Id]</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

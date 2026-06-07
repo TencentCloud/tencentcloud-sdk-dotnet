@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1439";
+       private const string sdkVersion = "SDK_NET_3.0.1441";
 
         /// <summary>
         /// Client constructor.
@@ -171,6 +171,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeApiKeyListResponse DescribeApiKeyListSync(DescribeApiKeyListRequest req)
         {
             return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型列表。
+        /// 
+        /// 支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelListRequest"/></param>
+        /// <returns><see cref="DescribeModelListResponse"/></returns>
+        public Task<DescribeModelListResponse> DescribeModelList(DescribeModelListRequest req)
+        {
+            return InternalRequestAsync<DescribeModelListResponse>(req, "DescribeModelList");
+        }
+
+        /// <summary>
+        /// 查询模型列表。
+        /// 
+        /// 支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelListRequest"/></param>
+        /// <returns><see cref="DescribeModelListResponse"/></returns>
+        public DescribeModelListResponse DescribeModelListSync(DescribeModelListRequest req)
+        {
+            return InternalRequestAsync<DescribeModelListResponse>(req, "DescribeModelList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

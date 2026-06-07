@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 订单信息
+        /// <p>订单信息</p>
         /// </summary>
         [JsonProperty("OrderInfo")]
         public OrderInfo OrderInfo{ get; set; }

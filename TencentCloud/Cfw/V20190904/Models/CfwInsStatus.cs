@@ -25,50 +25,49 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙实例id
+        /// <p>防火墙实例id</p>
         /// </summary>
         [JsonProperty("CfwInsId")]
         public string CfwInsId{ get; set; }
 
         /// <summary>
-        /// 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
+        /// <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
         /// <summary>
-        /// 实例所属地域
+        /// <p>实例所属地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
+        /// <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 事件时间
+        /// <p>事件时间</p>
         /// </summary>
         [JsonProperty("EventTime")]
         public string EventTime{ get; set; }
 
         /// <summary>
-        /// 恢复时间
+        /// <p>恢复时间</p>
         /// </summary>
         [JsonProperty("RecoverTime")]
         public string RecoverTime{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("CfwInsName")]
         public string CfwInsName{ get; set; }
 
         /// <summary>
-        /// Normal: 正常模式
-        /// OnlyRoute: 透明模式
+        /// <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
         /// </summary>
         [JsonProperty("TrafficMode")]
         public string TrafficMode{ get; set; }

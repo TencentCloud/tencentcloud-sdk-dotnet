@@ -54,6 +54,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("APIKey")]
         public string APIKey{ get; set; }
 
+        /// <summary>
+        /// <p>API Key</p>
+        /// </summary>
+        [JsonProperty("APIKeys")]
+        public string[] APIKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "AigcType", this.AigcType);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
+            this.SetParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
         }
     }
 }

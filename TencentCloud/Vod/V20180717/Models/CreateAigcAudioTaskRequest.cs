@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// <p>模型名称。</p>
         /// </summary>
         [JsonProperty("ModelName")]
@@ -37,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>指定场景，目前支持sfx（音效）。</p>
+        /// <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
@@ -78,6 +84,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);

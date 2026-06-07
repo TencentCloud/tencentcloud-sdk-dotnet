@@ -25,57 +25,46 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 机器所属专区类型 
-        /// CVM 云服务器
-        /// BM 黑石
-        /// ECM 边缘计算
-        /// LH 轻量应用服务器
-        /// Other 混合云专区
+        /// <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
+        /// <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p>
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// <p>返回数量，默认为10，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
-        /// <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
-        /// <li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li>
-        /// <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
-        /// <li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
-        /// 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询</li>
-        /// <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
-        /// <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
-        /// <li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
-        /// <li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li>
-        /// <li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
+        /// <p>过滤条件。</p><li>Ips - String - 是否必填：否 - 通过ip查询 </li><li>Names - String - 是否必填：否 - 通过实例名查询 </li><li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li><li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li><li>Risk - String 是否必填: 否 - 风险主机( yes ) </li><li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )每个过滤条件只支持一个值，暂不支持多个值“或”关系查询</li><li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li><li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li><li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li><li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li><li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 机器所属业务ID列表
+        /// <p>机器所属业务ID列表</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
+
+        /// <summary>
+        /// <p>机器对应的APPID</p>
+        /// </summary>
+        [JsonProperty("MachineAppId")]
+        public ulong? MachineAppId{ get; set; }
 
 
         /// <summary>
@@ -89,6 +78,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+            this.SetParamSimple(map, prefix + "MachineAppId", this.MachineAppId);
         }
     }
 }
