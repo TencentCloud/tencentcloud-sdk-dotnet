@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Base64编码的音频数据
+        /// <p>Base64编码的音频数据</p>
         /// </summary>
         [JsonProperty("Audio")]
         public string Audio{ get; set; }
 
         /// <summary>
-        /// 字幕对齐数据
+        /// <p>字幕对齐数据</p>
         /// </summary>
         [JsonProperty("Alignments")]
         public AlignmentItem[] Alignments{ get; set; }
 
         /// <summary>
-        /// 音频时长
+        /// <p>音频时长</p>
         /// </summary>
         [JsonProperty("TotalDurationMs")]
         public ulong? TotalDurationMs{ get; set; }

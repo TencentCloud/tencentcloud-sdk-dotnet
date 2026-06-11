@@ -25,13 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+        /// <p>云硬盘扩容后的大小，单位为GB，必须大于当前云硬盘大小。云盘大小取值范围参见云硬盘<a href="/document/product/362/2353">产品分类</a>的说明。</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
+        /// <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。该字段仅供单块云硬盘扩容时传入。</p>
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

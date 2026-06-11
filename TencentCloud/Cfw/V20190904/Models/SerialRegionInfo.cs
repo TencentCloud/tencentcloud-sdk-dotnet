@@ -25,44 +25,50 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 分配带宽值 单位Mbps
+        /// <p>分配带宽值 单位Mbps</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 弹性开关
+        /// <p>弹性开关</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticSwitch")]
         public long? ElasticSwitch{ get; set; }
 
         /// <summary>
-        /// 弹性带宽上限，单位Mbps
+        /// <p>弹性带宽上限，单位Mbps</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public long? ElasticBandwidth{ get; set; }
 
         /// <summary>
-        /// 七天入向峰值带宽，单位bps
+        /// <p>七天入向峰值带宽，单位bps</p>
         /// </summary>
         [JsonProperty("InFlowMax")]
         public long? InFlowMax{ get; set; }
 
         /// <summary>
-        /// 七天出向峰值带宽，单位bps
+        /// <p>七天出向峰值带宽，单位bps</p>
         /// </summary>
         [JsonProperty("OutFlowMax")]
         public long? OutFlowMax{ get; set; }
+
+        /// <summary>
+        /// <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ElasticTrafficSwitch")]
+        public long? ElasticTrafficSwitch{ get; set; }
 
 
         /// <summary>
@@ -76,6 +82,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
             this.SetParamSimple(map, prefix + "InFlowMax", this.InFlowMax);
             this.SetParamSimple(map, prefix + "OutFlowMax", this.OutFlowMax);
+            this.SetParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
         }
     }
 }

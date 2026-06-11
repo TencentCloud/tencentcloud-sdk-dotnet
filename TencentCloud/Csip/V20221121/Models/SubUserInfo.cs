@@ -25,112 +25,118 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 主键ID，无业务意义仅作为唯一键
+        /// <p>主键ID，无业务意义仅作为唯一键</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 子账号Appid
+        /// <p>子账号Appid</p>
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
-        /// 子账号UIn
+        /// <p>子账号UIn</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 子账号名称
+        /// <p>子账号名称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 主账号Appid
+        /// <p>主账号Appid</p>
         /// </summary>
         [JsonProperty("OwnerAppID")]
         public string OwnerAppID{ get; set; }
 
         /// <summary>
-        /// 主账号Uin
+        /// <p>主账号Uin</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 主账号名称
+        /// <p>主账号名称</p>
         /// </summary>
         [JsonProperty("OwnerNickName")]
         public string OwnerNickName{ get; set; }
 
         /// <summary>
-        /// 所属主账号memberId信息
+        /// <p>所属主账号memberId信息</p>
         /// </summary>
         [JsonProperty("OwnerMemberID")]
         public string OwnerMemberID{ get; set; }
 
         /// <summary>
-        /// 账户类型，0为腾讯云账户，1为AWS账户
+        /// <p>账户类型，0为腾讯云账户，1为AWS账户</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// 可访问服务数量
+        /// <p>可访问服务数量</p>
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// 可访问接口数量
+        /// <p>可访问接口数量</p>
         /// </summary>
         [JsonProperty("InterfaceCount")]
         public long? InterfaceCount{ get; set; }
 
         /// <summary>
-        /// 可访问资源数量
+        /// <p>可访问资源数量</p>
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
-        /// 访问/行为日志数量
+        /// <p>访问/行为日志数量</p>
         /// </summary>
         [JsonProperty("LogCount")]
         public long? LogCount{ get; set; }
 
         /// <summary>
-        /// 权限配置风险
+        /// <p>权限配置风险</p>
         /// </summary>
         [JsonProperty("ConfigRiskCount")]
         public long? ConfigRiskCount{ get; set; }
 
         /// <summary>
-        /// 危险行为告警
+        /// <p>危险行为告警</p>
         /// </summary>
         [JsonProperty("ActionRiskCount")]
         public long? ActionRiskCount{ get; set; }
 
         /// <summary>
-        /// 是否接入操作审计日志
+        /// <p>是否接入操作审计日志</p>
         /// </summary>
         [JsonProperty("IsAccessCloudAudit")]
         public bool? IsAccessCloudAudit{ get; set; }
 
         /// <summary>
-        /// 是否配置风险的安全体检
+        /// <p>是否配置风险的安全体检</p>
         /// </summary>
         [JsonProperty("IsAccessCheck")]
         public bool? IsAccessCheck{ get; set; }
 
         /// <summary>
-        /// 是否配置用户行为管理策略
+        /// <p>是否配置用户行为管理策略</p>
         /// </summary>
         [JsonProperty("IsAccessUeba")]
         public bool? IsAccessUeba{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间（Unix时间戳）</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IsAccessCloudAudit", this.IsAccessCloudAudit);
             this.SetParamSimple(map, prefix + "IsAccessCheck", this.IsAccessCheck);
             this.SetParamSimple(map, prefix + "IsAccessUeba", this.IsAccessUeba);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

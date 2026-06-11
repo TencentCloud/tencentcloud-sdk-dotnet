@@ -25,16 +25,16 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
-        /// </summary>
-        [JsonProperty("RuleMode")]
-        public string RuleMode{ get; set; }
-
-        /// <summary>
         /// <p>进程路径</p>
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
+
+        /// <summary>
+        /// <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+        /// </summary>
+        [JsonProperty("RuleMode")]
+        public string RuleMode{ get; set; }
 
         /// <summary>
         /// <p>被访问文件路径，仅仅在访问控制生效</p>
@@ -43,16 +43,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TargetFilePath{ get; set; }
 
         /// <summary>
-        /// <p>子策略id</p>
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
-
-        /// <summary>
         /// <p>命令行参数</p>
         /// </summary>
         [JsonProperty("CmdLine")]
         public string CmdLine{ get; set; }
+
+        /// <summary>
+        /// <p>子策略id</p>
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
+            this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "TargetFilePath", this.TargetFilePath);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "CmdLine", this.CmdLine);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

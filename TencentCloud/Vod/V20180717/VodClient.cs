@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1441";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -2047,6 +2047,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcFaceInfoResponse DescribeAigcFaceInfoSync(DescribeAigcFaceInfoRequest req)
         {
             return InternalRequestAsync<DescribeAigcFaceInfoResponse>(req, "DescribeAigcFaceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于异步获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoAsyncResponse"/></returns>
+        public Task<DescribeAigcFaceInfoAsyncResponse> DescribeAigcFaceInfoAsync(DescribeAigcFaceInfoAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync");
+        }
+
+        /// <summary>
+        /// 该接口用于异步获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoAsyncResponse"/></returns>
+        public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsyncSync(DescribeAigcFaceInfoAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

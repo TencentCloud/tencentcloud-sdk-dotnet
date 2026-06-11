@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+        /// <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+        /// <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -187,13 +187,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Egress{ get; set; }
 
         /// <summary>
-        /// <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+        /// <p>负载均衡实例的预付费相关属性</p>
         /// </summary>
         [JsonProperty("LBChargePrepaid")]
         public LBChargePrepaid LBChargePrepaid{ get; set; }
 
         /// <summary>
-        /// <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+        /// <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
         /// </summary>
         [JsonProperty("LBChargeType")]
         public string LBChargeType{ get; set; }
@@ -209,6 +209,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("AdvancedRoute")]
         public bool? AdvancedRoute{ get; set; }
+
+        /// <summary>
+        /// <p>可用区亲和信息</p>
+        /// </summary>
+        [JsonProperty("AvailableZoneAffinityInfo")]
+        public AvailableZoneAffinityInfo AvailableZoneAffinityInfo{ get; set; }
 
 
         /// <summary>
@@ -247,6 +253,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
             this.SetParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
             this.SetParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
+            this.SetParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
         }
     }
 }

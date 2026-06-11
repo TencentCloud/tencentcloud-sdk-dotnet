@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1440";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -1247,6 +1247,48 @@ namespace TencentCloud.Waf.V20180125
         public DescribeApiListVersionTwoResponse DescribeApiListVersionTwoSync(DescribeApiListVersionTwoRequest req)
         {
             return InternalRequestAsync<DescribeApiListVersionTwoResponse>(req, "DescribeApiListVersionTwo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// API安全事件详情查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiSecEventDetailResponse"/></returns>
+        public Task<DescribeApiSecEventDetailResponse> DescribeApiSecEventDetail(DescribeApiSecEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecEventDetailResponse>(req, "DescribeApiSecEventDetail");
+        }
+
+        /// <summary>
+        /// API安全事件详情查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiSecEventDetailResponse"/></returns>
+        public DescribeApiSecEventDetailResponse DescribeApiSecEventDetailSync(DescribeApiSecEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecEventDetailResponse>(req, "DescribeApiSecEventDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// api安全事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecEventListRequest"/></param>
+        /// <returns><see cref="DescribeApiSecEventListResponse"/></returns>
+        public Task<DescribeApiSecEventListResponse> DescribeApiSecEventList(DescribeApiSecEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecEventListResponse>(req, "DescribeApiSecEventList");
+        }
+
+        /// <summary>
+        /// api安全事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiSecEventListRequest"/></param>
+        /// <returns><see cref="DescribeApiSecEventListResponse"/></returns>
+        public DescribeApiSecEventListResponse DescribeApiSecEventListSync(DescribeApiSecEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiSecEventListResponse>(req, "DescribeApiSecEventList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

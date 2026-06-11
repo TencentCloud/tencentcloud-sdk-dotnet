@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1440</VersionPrefix>
+    <VersionPrefix>3.0.1442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,13 +85,16 @@
     <Compile Include="V20180125\Models\ApiAsset.cs" />
     <Compile Include="V20180125\Models\ApiDataFilter.cs" />
     <Compile Include="V20180125\Models\ApiDetailSampleHistory.cs" />
+    <Compile Include="V20180125\Models\ApiEvent.cs" />
     <Compile Include="V20180125\Models\ApiGuardContent.cs" />
     <Compile Include="V20180125\Models\ApiNameMethod.cs" />
     <Compile Include="V20180125\Models\ApiNameOp.cs" />
     <Compile Include="V20180125\Models\ApiParameterType.cs" />
     <Compile Include="V20180125\Models\ApiPkg.cs" />
+    <Compile Include="V20180125\Models\ApiSecAttackSource.cs" />
     <Compile Include="V20180125\Models\ApiSecCustomEventRule.cs" />
     <Compile Include="V20180125\Models\ApiSecCustomSensitiveRule.cs" />
+    <Compile Include="V20180125\Models\ApiSecEventChange.cs" />
     <Compile Include="V20180125\Models\ApiSecExcludeRule.cs" />
     <Compile Include="V20180125\Models\ApiSecExtractRule.cs" />
     <Compile Include="V20180125\Models\ApiSecKey.cs" />
@@ -240,6 +243,10 @@
     <Compile Include="V20180125\Models\DescribeApiDetailResponse.cs" />
     <Compile Include="V20180125\Models\DescribeApiListVersionTwoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeApiListVersionTwoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeApiSecEventDetailRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeApiSecEventDetailResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeApiSecEventListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeApiSecEventListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeApiSecSensitiveRuleListRequest.cs" />
     <Compile Include="V20180125\Models\DescribeApiSecSensitiveRuleListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasRequest.cs" />

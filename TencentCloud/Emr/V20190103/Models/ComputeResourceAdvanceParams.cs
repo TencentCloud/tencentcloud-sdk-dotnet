@@ -56,6 +56,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("TkeClusterNodePool")]
         public string TkeClusterNodePool{ get; set; }
 
+        /// <summary>
+        /// <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+        /// </summary>
+        [JsonProperty("NodePoolJoinMode")]
+        public string NodePoolJoinMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
             this.SetParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
+            this.SetParamSimple(map, prefix + "NodePoolJoinMode", this.NodePoolJoinMode);
         }
     }
 }

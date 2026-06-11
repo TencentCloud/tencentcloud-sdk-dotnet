@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 返回实例列表信息
+        /// <p>返回实例列表信息</p>
         /// </summary>
         [JsonProperty("Instances")]
         public InstanceInfo[] Instances{ get; set; }
 
         /// <summary>
-        /// 满足条件总数量
+        /// <p>满足条件总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

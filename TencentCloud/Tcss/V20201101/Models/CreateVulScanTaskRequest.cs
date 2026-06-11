@@ -25,58 +25,76 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
+        /// <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul>
         /// </summary>
         [JsonProperty("LocalImageScanType")]
         public string LocalImageScanType{ get; set; }
 
         /// <summary>
-        /// 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
+        /// <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p>
         /// </summary>
         [JsonProperty("LocalImageIDs")]
         public string[] LocalImageIDs{ get; set; }
 
         /// <summary>
-        /// 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
+        /// <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p>
         /// </summary>
         [JsonProperty("RegistryImageScanType")]
         public string RegistryImageScanType{ get; set; }
 
         /// <summary>
-        /// 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
+        /// <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p>
         /// </summary>
         [JsonProperty("RegistryImageIDs")]
         public ulong?[] RegistryImageIDs{ get; set; }
 
         /// <summary>
-        /// 本地镜像重新漏洞扫描时的任务ID
+        /// <p>本地镜像重新漏洞扫描时的任务ID</p>
         /// </summary>
         [JsonProperty("LocalTaskID")]
         public long? LocalTaskID{ get; set; }
 
         /// <summary>
-        /// 仓库镜像重新漏洞扫描时的任务ID
+        /// <p>仓库镜像重新漏洞扫描时的任务ID</p>
         /// </summary>
         [JsonProperty("RegistryTaskID")]
         public long? RegistryTaskID{ get; set; }
 
         /// <summary>
-        /// 本地镜像容器运行中
+        /// <p>本地镜像容器运行中</p>
         /// </summary>
         [JsonProperty("LocalImageContainerRunning")]
         public bool? LocalImageContainerRunning{ get; set; }
 
         /// <summary>
-        /// 仓库镜像容器运行中
+        /// <p>仓库镜像容器运行中</p>
         /// </summary>
         [JsonProperty("RegistryImageContainerRunning")]
         public bool? RegistryImageContainerRunning{ get; set; }
 
         /// <summary>
-        /// 仓库镜像是否是最新
+        /// <p>仓库镜像是否是最新</p>
         /// </summary>
         [JsonProperty("IsLatest")]
         public bool? IsLatest{ get; set; }
+
+        /// <summary>
+        /// <p>要剔除的本地镜像id</p>
+        /// </summary>
+        [JsonProperty("ExcludeLocalImageIDs")]
+        public string[] ExcludeLocalImageIDs{ get; set; }
+
+        /// <summary>
+        /// <p>要剔除的仓库镜像id</p>
+        /// </summary>
+        [JsonProperty("ExcludeRegistryImageIDs")]
+        public ulong?[] ExcludeRegistryImageIDs{ get; set; }
+
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("LocalClusterIDs")]
+        public string[] LocalClusterIDs{ get; set; }
 
 
         /// <summary>
@@ -93,6 +111,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
             this.SetParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
             this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
+            this.SetParamArraySimple(map, prefix + "ExcludeLocalImageIDs.", this.ExcludeLocalImageIDs);
+            this.SetParamArraySimple(map, prefix + "ExcludeRegistryImageIDs.", this.ExcludeRegistryImageIDs);
+            this.SetParamArraySimple(map, prefix + "LocalClusterIDs.", this.LocalClusterIDs);
         }
     }
 }

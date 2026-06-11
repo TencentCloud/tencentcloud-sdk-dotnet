@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1439";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -600,6 +600,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除指定模型版本（通过 tag 或 digest 引用）。调用 Harbor v2 API 删除 artifact。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIModelRequest"/></param>
+        /// <returns><see cref="DeleteAIModelResponse"/></returns>
+        public Task<DeleteAIModelResponse> DeleteAIModel(DeleteAIModelRequest req)
+        {
+            return InternalRequestAsync<DeleteAIModelResponse>(req, "DeleteAIModel");
+        }
+
+        /// <summary>
+        /// 删除指定模型版本（通过 tag 或 digest 引用）。调用 Harbor v2 API 删除 artifact。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIModelRequest"/></param>
+        /// <returns><see cref="DeleteAIModelResponse"/></returns>
+        public DeleteAIModelResponse DeleteAIModelSync(DeleteAIModelRequest req)
+        {
+            return InternalRequestAsync<DeleteAIModelResponse>(req, "DeleteAIModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于删除应用更新触发器
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationTriggerPersonalRequest"/></param>
@@ -1045,6 +1066,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除指定 Skill
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillRequest"/></param>
+        /// <returns><see cref="DeleteSkillResponse"/></returns>
+        public Task<DeleteSkillResponse> DeleteSkill(DeleteSkillRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillResponse>(req, "DeleteSkill");
+        }
+
+        /// <summary>
+        /// 删除指定 Skill
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillRequest"/></param>
+        /// <returns><see cref="DeleteSkillResponse"/></returns>
+        public DeleteSkillResponse DeleteSkillSync(DeleteSkillRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillResponse>(req, "DeleteSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除版本保留规则
         /// </summary>
         /// <param name="req"><see cref="DeleteTagRetentionRuleRequest"/></param>
@@ -1083,6 +1125,27 @@ namespace TencentCloud.Tcr.V20190924
         public DeleteWebhookTriggerResponse DeleteWebhookTriggerSync(DeleteWebhookTriggerRequest req)
         {
             return InternalRequestAsync<DeleteWebhookTriggerResponse>(req, "DeleteWebhookTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIModelVersionDetailResponse"/></returns>
+        public Task<DescribeAIModelVersionDetailResponse> DescribeAIModelVersionDetail(DescribeAIModelVersionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIModelVersionDetailResponse>(req, "DescribeAIModelVersionDetail");
+        }
+
+        /// <summary>
+        /// 查询模型详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIModelVersionDetailResponse"/></returns>
+        public DescribeAIModelVersionDetailResponse DescribeAIModelVersionDetailSync(DescribeAIModelVersionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIModelVersionDetailResponse>(req, "DescribeAIModelVersionDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1801,6 +1864,48 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询单个 Skill 的完整详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public Task<DescribeSkillDetailResponse> DescribeSkillDetail(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail");
+        }
+
+        /// <summary>
+        /// 查询单个 Skill 的完整详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public DescribeSkillDetailResponse DescribeSkillDetailSync(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回 Skill 下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDownloadInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillDownloadInfoResponse"/></returns>
+        public Task<DescribeSkillDownloadInfoResponse> DescribeSkillDownloadInfo(DescribeSkillDownloadInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDownloadInfoResponse>(req, "DescribeSkillDownloadInfo");
+        }
+
+        /// <summary>
+        /// 返回 Skill 下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDownloadInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillDownloadInfoResponse"/></returns>
+        public DescribeSkillDownloadInfoResponse DescribeSkillDownloadInfoSync(DescribeSkillDownloadInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDownloadInfoResponse>(req, "DescribeSkillDownloadInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询版本保留执行记录
         /// </summary>
         /// <param name="req"><see cref="DescribeTagRetentionExecutionRequest"/></param>
@@ -1986,6 +2091,90 @@ namespace TencentCloud.Tcr.V20190924
         public DuplicateImagePersonalResponse DuplicateImagePersonalSync(DuplicateImagePersonalRequest req)
         {
             return InternalRequestAsync<DuplicateImagePersonalResponse>(req, "DuplicateImagePersonal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定模型仓库的所有版本列表。调用 Harbor v2 API 获取 artifact 列表，从 extra_attrs 提取模型元数据（框架、任务类型、精度等），从 tags 判断是否为推荐版本。
+        /// </summary>
+        /// <param name="req"><see cref="ListAIModelVersionsRequest"/></param>
+        /// <returns><see cref="ListAIModelVersionsResponse"/></returns>
+        public Task<ListAIModelVersionsResponse> ListAIModelVersions(ListAIModelVersionsRequest req)
+        {
+            return InternalRequestAsync<ListAIModelVersionsResponse>(req, "ListAIModelVersions");
+        }
+
+        /// <summary>
+        /// 查询指定模型仓库的所有版本列表。调用 Harbor v2 API 获取 artifact 列表，从 extra_attrs 提取模型元数据（框架、任务类型、精度等），从 tags 判断是否为推荐版本。
+        /// </summary>
+        /// <param name="req"><see cref="ListAIModelVersionsRequest"/></param>
+        /// <returns><see cref="ListAIModelVersionsResponse"/></returns>
+        public ListAIModelVersionsResponse ListAIModelVersionsSync(ListAIModelVersionsRequest req)
+        {
+            return InternalRequestAsync<ListAIModelVersionsResponse>(req, "ListAIModelVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定实例下的 AI 模型列表。可按 namespace 和仓库名过滤。每条记录代表一个模型仓库，返回最新版本信息。
+        /// </summary>
+        /// <param name="req"><see cref="ListAIModelsRequest"/></param>
+        /// <returns><see cref="ListAIModelsResponse"/></returns>
+        public Task<ListAIModelsResponse> ListAIModels(ListAIModelsRequest req)
+        {
+            return InternalRequestAsync<ListAIModelsResponse>(req, "ListAIModels");
+        }
+
+        /// <summary>
+        /// 查询指定实例下的 AI 模型列表。可按 namespace 和仓库名过滤。每条记录代表一个模型仓库，返回最新版本信息。
+        /// </summary>
+        /// <param name="req"><see cref="ListAIModelsRequest"/></param>
+        /// <returns><see cref="ListAIModelsResponse"/></returns>
+        public ListAIModelsResponse ListAIModelsSync(ListAIModelsRequest req)
+        {
+            return InternalRequestAsync<ListAIModelsResponse>(req, "ListAIModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 Skill 的版本历史列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSkillVersionsRequest"/></param>
+        /// <returns><see cref="ListSkillVersionsResponse"/></returns>
+        public Task<ListSkillVersionsResponse> ListSkillVersions(ListSkillVersionsRequest req)
+        {
+            return InternalRequestAsync<ListSkillVersionsResponse>(req, "ListSkillVersions");
+        }
+
+        /// <summary>
+        /// 查询指定 Skill 的版本历史列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSkillVersionsRequest"/></param>
+        /// <returns><see cref="ListSkillVersionsResponse"/></returns>
+        public ListSkillVersionsResponse ListSkillVersionsSync(ListSkillVersionsRequest req)
+        {
+            return InternalRequestAsync<ListSkillVersionsResponse>(req, "ListSkillVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定实例下的 AI Skill 列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListSkillsRequest"/></param>
+        /// <returns><see cref="ListSkillsResponse"/></returns>
+        public Task<ListSkillsResponse> ListSkills(ListSkillsRequest req)
+        {
+            return InternalRequestAsync<ListSkillsResponse>(req, "ListSkills");
+        }
+
+        /// <summary>
+        /// 查询指定实例下的 AI Skill 列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListSkillsRequest"/></param>
+        /// <returns><see cref="ListSkillsResponse"/></returns>
+        public ListSkillsResponse ListSkillsSync(ListSkillsRequest req)
+        {
+            return InternalRequestAsync<ListSkillsResponse>(req, "ListSkills")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

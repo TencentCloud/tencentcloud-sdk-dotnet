@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -964,7 +964,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 创建k8sapi异常事件规则
+        /// 创建k8sapi异常事件规则。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。EventID参数已移除，事件加白请使用白名单接口ModifyK8sApiAbnormalWhitelist。
         /// </summary>
         /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -974,7 +974,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 创建k8sapi异常事件规则
+        /// 创建k8sapi异常事件规则。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。EventID参数已移除，事件加白请使用白名单接口ModifyK8sApiAbnormalWhitelist。
         /// </summary>
         /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -4098,7 +4098,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询k8sapi异常请求规则列表
+        /// 查询k8sapi异常请求规则列表。支持按集群名称（ClusterName）和集群ID（ClusterID）模糊查找规则，全集群规则（is_all=1）始终返回。响应新增RuleInfoList（子规则内容）、RuleActions（执行动作去重列表）、EffectAllCluster字段。
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
@@ -4108,7 +4108,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询k8sapi异常请求规则列表
+        /// 查询k8sapi异常请求规则列表。支持按集群名称（ClusterName）和集群ID（ClusterID）模糊查找规则，全集群规则（is_all=1）始终返回。响应新增RuleInfoList（子规则内容）、RuleActions（执行动作去重列表）、EffectAllCluster字段。
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
@@ -6809,7 +6809,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 修改k8sapi异常规则信息
+        /// 修改k8sapi异常规则信息。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。
         /// </summary>
         /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -6819,7 +6819,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 修改k8sapi异常规则信息
+        /// 修改k8sapi异常规则信息。RuleInfoList中的Action仅支持RULE_MODE_ALERT（告警），不再支持RULE_MODE_RELEASE/PASS（放行）。
         /// </summary>
         /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>

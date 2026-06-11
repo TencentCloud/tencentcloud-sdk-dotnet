@@ -25,10 +25,10 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// true: 默认策略，false:自定义策略
+        /// 编辑用户名称
         /// </summary>
-        [JsonProperty("IsDefault")]
-        public bool? IsDefault{ get; set; }
+        [JsonProperty("EditUserName")]
+        public string EditUserName{ get; set; }
 
         /// <summary>
         /// 策略生效镜像数量
@@ -37,16 +37,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? EffectImageCount{ get; set; }
 
         /// <summary>
+        /// true: 默认策略，false:自定义策略
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// 是否为全部镜像规则。true表示对所有镜像生效
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public bool? IsGlobal{ get; set; }
+
+        /// <summary>
+        /// true: 策略启用，false：策略禁用
+        /// </summary>
+        [JsonProperty("IsEnable")]
+        public bool? IsEnable{ get; set; }
+
+        /// <summary>
         /// 策略Id
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
-
-        /// <summary>
-        /// 策略更新时间, 存在为空的情况
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 策略名字
@@ -55,16 +67,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 编辑用户名称
+        /// 策略更新时间, 存在为空的情况
         /// </summary>
-        [JsonProperty("EditUserName")]
-        public string EditUserName{ get; set; }
-
-        /// <summary>
-        /// true: 策略启用，false：策略禁用
-        /// </summary>
-        [JsonProperty("IsEnable")]
-        public bool? IsEnable{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -72,13 +78,14 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
-            this.SetParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "EditUserName", this.EditUserName);
+            this.SetParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

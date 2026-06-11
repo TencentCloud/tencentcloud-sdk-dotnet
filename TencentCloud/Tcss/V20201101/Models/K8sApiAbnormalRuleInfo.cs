@@ -25,16 +25,16 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 规则名称
+        /// 是否所有集群生效
         /// </summary>
-        [JsonProperty("RuleName")]
-        public string RuleName{ get; set; }
+        [JsonProperty("EffectAllCluster")]
+        public bool? EffectAllCluster{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 生效集群IDSet
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("EffectClusterIDSet")]
+        public string[] EffectClusterIDSet{ get; set; }
 
         /// <summary>
         /// 规则信息列表
@@ -43,10 +43,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public K8sApiAbnormalRuleScopeInfo[] RuleInfoList{ get; set; }
 
         /// <summary>
-        /// 生效集群IDSet
+        /// 规则名称
         /// </summary>
-        [JsonProperty("EffectClusterIDSet")]
-        public string[] EffectClusterIDSet{ get; set; }
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
         /// <summary>
         /// 规则类型
@@ -57,10 +57,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 是否所有集群生效
+        /// 状态
         /// </summary>
-        [JsonProperty("EffectAllCluster")]
-        public bool? EffectAllCluster{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
         /// <summary>
         /// 规则ID
@@ -74,12 +74,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
-            this.SetParamArraySimple(map, prefix + "EffectClusterIDSet.", this.EffectClusterIDSet);
-            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+            this.SetParamArraySimple(map, prefix + "EffectClusterIDSet.", this.EffectClusterIDSet);
+            this.SetParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
         }
     }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 本地镜像重新漏洞扫描时的任务ID
+        /// <p>本地镜像重新漏洞扫描时的任务ID</p>
         /// </summary>
         [JsonProperty("LocalTaskID")]
         public long? LocalTaskID{ get; set; }
 
         /// <summary>
-        /// 仓库镜像重新漏洞扫描时的任务ID
+        /// <p>仓库镜像重新漏洞扫描时的任务ID</p>
         /// </summary>
         [JsonProperty("RegistryTaskID")]
         public long? RegistryTaskID{ get; set; }

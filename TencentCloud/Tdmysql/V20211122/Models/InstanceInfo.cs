@@ -436,6 +436,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("AnalysisRelationInfos")]
         public AnalysisRelationInfo[] AnalysisRelationInfos{ get; set; }
 
+        /// <summary>
+        /// <p>分析引擎实例信息</p>
+        /// </summary>
+        [JsonProperty("AnalysisInstanceInfo")]
+        public AnalysisInstanceInfo AnalysisInstanceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -504,6 +510,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
             this.SetParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
             this.SetParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
+            this.SetParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
         }
     }
 }

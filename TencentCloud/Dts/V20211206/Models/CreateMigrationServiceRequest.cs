@@ -25,49 +25,49 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+        /// <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+        /// <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源实例地域，如：ap-guangzhou
+        /// <p>源实例地域，如：ap-guangzhou</p>
         /// </summary>
         [JsonProperty("SrcRegion")]
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
+        /// <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p>
         /// </summary>
         [JsonProperty("DstRegion")]
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
+        /// <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p>
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
-        /// 购买数量，范围为[1,15]，默认为1
+        /// <p>购买数量，范围为[1,15]，默认为1</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 迁移服务名称，最大长度128
+        /// <p>迁移服务名称，最大长度128</p>
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 标签信息
+        /// <p>标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }

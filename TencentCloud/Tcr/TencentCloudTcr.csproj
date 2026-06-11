@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1439</VersionPrefix>
+    <VersionPrefix>3.0.1442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -105,6 +105,8 @@
     <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerResponse.cs" />
     <Compile Include="V20190924\Models\CustomizedDomainInfo.cs" />
+    <Compile Include="V20190924\Models\DeleteAIModelRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteAIModelResponse.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceRequest.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="V20190924\Models\DeleteInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInternalEndpointDnsRequest.cs" />
     <Compile Include="V20190924\Models\DeleteInternalEndpointDnsResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteModelItem.cs" />
     <Compile Include="V20190924\Models\DeleteMultipleSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteMultipleSecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\DeleteNamespacePersonalRequest.cs" />
@@ -147,10 +150,14 @@
     <Compile Include="V20190924\Models\DeleteServiceAccountResponse.cs" />
     <Compile Include="V20190924\Models\DeleteSignaturePolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteSignaturePolicyResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteSkillRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteSkillResponse.cs" />
     <Compile Include="V20190924\Models\DeleteTagRetentionRuleRequest.cs" />
     <Compile Include="V20190924\Models\DeleteTagRetentionRuleResponse.cs" />
     <Compile Include="V20190924\Models\DeleteWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\DeleteWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeAIModelVersionDetailRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeAIModelVersionDetailResponse.cs" />
     <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalResp.cs" />
     <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalResponse.cs" />
@@ -221,6 +228,10 @@
     <Compile Include="V20190924\Models\DescribeSecurityPoliciesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeServiceAccountsRequest.cs" />
     <Compile Include="V20190924\Models\DescribeServiceAccountsResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeSkillDetailRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeSkillDetailResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeSkillDownloadInfoRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeSkillDownloadInfoResponse.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionRequest.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionResponse.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionTaskRequest.cs" />
@@ -250,6 +261,14 @@
     <Compile Include="V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="V20190924\Models\KeyValueString.cs" />
     <Compile Include="V20190924\Models\Limit.cs" />
+    <Compile Include="V20190924\Models\ListAIModelVersionsRequest.cs" />
+    <Compile Include="V20190924\Models\ListAIModelVersionsResponse.cs" />
+    <Compile Include="V20190924\Models\ListAIModelsRequest.cs" />
+    <Compile Include="V20190924\Models\ListAIModelsResponse.cs" />
+    <Compile Include="V20190924\Models\ListSkillVersionsRequest.cs" />
+    <Compile Include="V20190924\Models\ListSkillVersionsResponse.cs" />
+    <Compile Include="V20190924\Models\ListSkillsRequest.cs" />
+    <Compile Include="V20190924\Models\ListSkillsResponse.cs" />
     <Compile Include="V20190924\Models\ManageExternalEndpointRequest.cs" />
     <Compile Include="V20190924\Models\ManageExternalEndpointResponse.cs" />
     <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalRequest.cs" />
@@ -258,6 +277,8 @@
     <Compile Include="V20190924\Models\ManageInternalEndpointResponse.cs" />
     <Compile Include="V20190924\Models\ManageReplicationRequest.cs" />
     <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
+    <Compile Include="V20190924\Models\ModelDetail.cs" />
+    <Compile Include="V20190924\Models\ModelList.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
@@ -321,6 +342,10 @@
     <Compile Include="V20190924\Models\SearchUserRepositoryResp.cs" />
     <Compile Include="V20190924\Models\SecurityPolicy.cs" />
     <Compile Include="V20190924\Models\ServiceAccount.cs" />
+    <Compile Include="V20190924\Models\Skill.cs" />
+    <Compile Include="V20190924\Models\SkillList.cs" />
+    <Compile Include="V20190924\Models\SkillType.cs" />
+    <Compile Include="V20190924\Models\SkillVersionList.cs" />
     <Compile Include="V20190924\Models\Tag.cs" />
     <Compile Include="V20190924\Models\TagInfo.cs" />
     <Compile Include="V20190924\Models\TagInfoResp.cs" />
@@ -341,6 +366,7 @@
     <Compile Include="V20190924\Models\ValidateNamespaceExistPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\VersionList.cs" />
     <Compile Include="V20190924\Models\VpcAndDomainInfo.cs" />
     <Compile Include="V20190924\Models\VpcPrivateDomainStatus.cs" />
     <Compile Include="V20190924\Models\WebhookTarget.cs" />

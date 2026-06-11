@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1432";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Monitor.V20180724
         public CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannelSync(CreateGrafanaNotificationChannelRequest req)
         {
             return InternalRequestAsync<CreateGrafanaNotificationChannelResponse>(req, "CreateGrafanaNotificationChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建值班表
+        /// </summary>
+        /// <param name="req"><see cref="CreateOnCallFormRequest"/></param>
+        /// <returns><see cref="CreateOnCallFormResponse"/></returns>
+        public Task<CreateOnCallFormResponse> CreateOnCallForm(CreateOnCallFormRequest req)
+        {
+            return InternalRequestAsync<CreateOnCallFormResponse>(req, "CreateOnCallForm");
+        }
+
+        /// <summary>
+        /// 创建值班表
+        /// </summary>
+        /// <param name="req"><see cref="CreateOnCallFormRequest"/></param>
+        /// <returns><see cref="CreateOnCallFormResponse"/></returns>
+        public CreateOnCallFormResponse CreateOnCallFormSync(CreateOnCallFormRequest req)
+        {
+            return InternalRequestAsync<CreateOnCallFormResponse>(req, "CreateOnCallForm")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -820,6 +841,27 @@ namespace TencentCloud.Monitor.V20180724
         public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannelSync(DeleteGrafanaNotificationChannelRequest req)
         {
             return InternalRequestAsync<DeleteGrafanaNotificationChannelResponse>(req, "DeleteGrafanaNotificationChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除值班表接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOnCallFormsRequest"/></param>
+        /// <returns><see cref="DeleteOnCallFormsResponse"/></returns>
+        public Task<DeleteOnCallFormsResponse> DeleteOnCallForms(DeleteOnCallFormsRequest req)
+        {
+            return InternalRequestAsync<DeleteOnCallFormsResponse>(req, "DeleteOnCallForms");
+        }
+
+        /// <summary>
+        /// 删除值班表接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOnCallFormsRequest"/></param>
+        /// <returns><see cref="DeleteOnCallFormsResponse"/></returns>
+        public DeleteOnCallFormsResponse DeleteOnCallFormsSync(DeleteOnCallFormsRequest req)
+        {
+            return InternalRequestAsync<DeleteOnCallFormsResponse>(req, "DeleteOnCallForms")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1756,6 +1798,48 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeNotificationContentTemplateSupportsResponse DescribeNotificationContentTemplateSupportsSync(DescribeNotificationContentTemplateSupportsRequest req)
         {
             return InternalRequestAsync<DescribeNotificationContentTemplateSupportsResponse>(req, "DescribeNotificationContentTemplateSupports")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询值班表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnCallFormRequest"/></param>
+        /// <returns><see cref="DescribeOnCallFormResponse"/></returns>
+        public Task<DescribeOnCallFormResponse> DescribeOnCallForm(DescribeOnCallFormRequest req)
+        {
+            return InternalRequestAsync<DescribeOnCallFormResponse>(req, "DescribeOnCallForm");
+        }
+
+        /// <summary>
+        /// 查询值班表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnCallFormRequest"/></param>
+        /// <returns><see cref="DescribeOnCallFormResponse"/></returns>
+        public DescribeOnCallFormResponse DescribeOnCallFormSync(DescribeOnCallFormRequest req)
+        {
+            return InternalRequestAsync<DescribeOnCallFormResponse>(req, "DescribeOnCallForm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询值班列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnCallFormsRequest"/></param>
+        /// <returns><see cref="DescribeOnCallFormsResponse"/></returns>
+        public Task<DescribeOnCallFormsResponse> DescribeOnCallForms(DescribeOnCallFormsRequest req)
+        {
+            return InternalRequestAsync<DescribeOnCallFormsResponse>(req, "DescribeOnCallForms");
+        }
+
+        /// <summary>
+        /// 查询值班列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnCallFormsRequest"/></param>
+        /// <returns><see cref="DescribeOnCallFormsResponse"/></returns>
+        public DescribeOnCallFormsResponse DescribeOnCallFormsSync(DescribeOnCallFormsRequest req)
+        {
+            return InternalRequestAsync<DescribeOnCallFormsResponse>(req, "DescribeOnCallForms")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3595,6 +3679,27 @@ namespace TencentCloud.Monitor.V20180724
         public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteListSync(UpdateGrafanaWhiteListRequest req)
         {
             return InternalRequestAsync<UpdateGrafanaWhiteListResponse>(req, "UpdateGrafanaWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改值班表
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOnCallFormRequest"/></param>
+        /// <returns><see cref="UpdateOnCallFormResponse"/></returns>
+        public Task<UpdateOnCallFormResponse> UpdateOnCallForm(UpdateOnCallFormRequest req)
+        {
+            return InternalRequestAsync<UpdateOnCallFormResponse>(req, "UpdateOnCallForm");
+        }
+
+        /// <summary>
+        /// 修改值班表
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOnCallFormRequest"/></param>
+        /// <returns><see cref="UpdateOnCallFormResponse"/></returns>
+        public UpdateOnCallFormResponse UpdateOnCallFormSync(UpdateOnCallFormRequest req)
+        {
+            return InternalRequestAsync<UpdateOnCallFormResponse>(req, "UpdateOnCallForm")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

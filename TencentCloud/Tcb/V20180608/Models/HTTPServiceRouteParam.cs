@@ -25,61 +25,61 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 路径
+        /// <p>路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+        /// <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
         /// </summary>
         [JsonProperty("UpstreamResourceType")]
         public string UpstreamResourceType{ get; set; }
 
         /// <summary>
-        /// 上游服务名。创建时必填，修改时可选填
+        /// <p>上游服务名。创建时必填，修改时可选填</p>
         /// </summary>
         [JsonProperty("UpstreamResourceName")]
         public string UpstreamResourceName{ get; set; }
 
         /// <summary>
-        /// 路径重写
+        /// <p>路径重写</p>
         /// </summary>
         [JsonProperty("PathRewrite")]
         public HTTPServicePathRewrite PathRewrite{ get; set; }
 
         /// <summary>
-        /// 是否开启安全域名。默认开启
+        /// <p>是否开启安全域名。默认开启</p>
         /// </summary>
         [JsonProperty("EnableSafeDomain")]
         public bool? EnableSafeDomain{ get; set; }
 
         /// <summary>
-        /// 是否开启身份认证。默认关闭
+        /// <p>是否开启身份认证。默认关闭</p>
         /// </summary>
         [JsonProperty("EnableAuth")]
         public bool? EnableAuth{ get; set; }
 
         /// <summary>
-        /// 是否开启路径透传。默认关闭
+        /// <p>是否开启路径透传。默认关闭</p>
         /// </summary>
         [JsonProperty("EnablePathTransmission")]
         public bool? EnablePathTransmission{ get; set; }
 
         /// <summary>
-        /// QPS限频策略
+        /// <p>QPS限频策略</p>
         /// </summary>
         [JsonProperty("QPSPolicy")]
         public HTTPServiceRouteQPSPolicy QPSPolicy{ get; set; }
 
         /// <summary>
-        /// 是否开启路由
+        /// <p>是否开启路由</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 扩展字段，内部包含headers处理等
+        /// <p>扩展字段，内部包含headers处理等</p>
         /// </summary>
         [JsonProperty("Extension")]
         public HTTPServiceExtension Extension{ get; set; }

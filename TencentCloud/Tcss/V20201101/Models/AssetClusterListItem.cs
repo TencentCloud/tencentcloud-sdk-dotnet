@@ -25,76 +25,68 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群状态
-        /// CSR_RUNNING: 运行中
-        /// CSR_EXCEPTION:异常
-        /// CSR_DEL:已经删除
+        /// <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 绑定规则名称
+        /// <p>绑定的集群ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindRuleID")]
+        public string BindRuleID{ get; set; }
+
+        /// <summary>
+        /// <p>绑定规则名称</p>
         /// </summary>
         [JsonProperty("BindRuleName")]
         public string BindRuleName{ get; set; }
 
         /// <summary>
-        /// 集群类型:
-        /// CT_TKE:TKE集群;
-        /// CT_USER_CREATE:用户自建集群;
-        /// CT_TKE_SERVERLESS:TKE Serverless集群;
+        /// <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群版本
+        /// <p>集群版本</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 内存量
+        /// <p>内存量</p>
         /// </summary>
         [JsonProperty("MemLimit")]
         public long? MemLimit{ get; set; }
 
         /// <summary>
-        /// cpu
+        /// <p>cpu</p>
         /// </summary>
         [JsonProperty("CpuLimit")]
         public long? CpuLimit{ get; set; }
 
         /// <summary>
-        /// 集群审计开关状态：
-        /// 已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+        /// <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
         /// </summary>
         [JsonProperty("ClusterAuditStatus")]
         public string ClusterAuditStatus{ get; set; }
 
         /// <summary>
-        /// 接入状态:
-        /// 未接入: AccessedNone
-        /// 已防护: AccessedDefended
-        /// 未防护: AccessedInstalled
-        /// 部分防护: AccessedPartialDefence
-        /// 接入异常: AccessedException
-        /// 卸载异常: AccessedUninstallException
-        /// 接入中: AccessedInstalling
-        /// 卸载中: AccessedUninstalling
+        /// <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
         /// </summary>
         [JsonProperty("AccessedStatus")]
         public string AccessedStatus{ get; set; }
@@ -108,6 +100,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BindRuleID", this.BindRuleID);
             this.SetParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);

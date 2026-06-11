@@ -25,25 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 白名单ID
+        /// <p>白名单ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 需要返回的数量，最大值为1000
+        /// <p>需要返回的数量，最大值为1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+        /// <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

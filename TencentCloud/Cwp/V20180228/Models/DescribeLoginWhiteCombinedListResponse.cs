@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 总数量
+        /// <p>总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 合并后的白名单列表
+        /// <p>合并后的白名单列表</p>
         /// </summary>
         [JsonProperty("LoginWhiteCombinedInfos")]
         public LoginWhiteCombinedInfo[] LoginWhiteCombinedInfos{ get; set; }

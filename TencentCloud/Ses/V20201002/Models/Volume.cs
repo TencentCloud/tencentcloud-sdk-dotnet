@@ -25,49 +25,49 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 日期
+        /// <p>日期</p>
         /// </summary>
         [JsonProperty("SendDate")]
         public string SendDate{ get; set; }
 
         /// <summary>
-        /// 邮件请求数量
+        /// <p>邮件请求数量</p>
         /// </summary>
         [JsonProperty("RequestCount")]
         public ulong? RequestCount{ get; set; }
 
         /// <summary>
-        /// 腾讯云通过数量
+        /// <p>腾讯云通过数量</p>
         /// </summary>
         [JsonProperty("AcceptedCount")]
         public ulong? AcceptedCount{ get; set; }
 
         /// <summary>
-        /// 送达数量
+        /// <p>送达数量</p>
         /// </summary>
         [JsonProperty("DeliveredCount")]
         public ulong? DeliveredCount{ get; set; }
 
         /// <summary>
-        /// 打开邮件的用户数量，根据收件人去重
+        /// <p>打开邮件总次数</p>
         /// </summary>
         [JsonProperty("OpenedCount")]
         public ulong? OpenedCount{ get; set; }
 
         /// <summary>
-        /// 点击了邮件中的链接数量用户数量
+        /// <p>点击了邮件中的链接数量用户数量</p>
         /// </summary>
         [JsonProperty("ClickedCount")]
         public ulong? ClickedCount{ get; set; }
 
         /// <summary>
-        /// 退信数量
+        /// <p>退信数量</p>
         /// </summary>
         [JsonProperty("BounceCount")]
         public ulong? BounceCount{ get; set; }
 
         /// <summary>
-        /// 取消订阅的用户数量
+        /// <p>取消订阅的用户数量</p>
         /// </summary>
         [JsonProperty("UnsubscribeCount")]
         public ulong? UnsubscribeCount{ get; set; }

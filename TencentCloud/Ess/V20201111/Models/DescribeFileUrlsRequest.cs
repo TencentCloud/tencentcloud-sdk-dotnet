@@ -25,76 +25,69 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
+        /// <p>文件对应的业务类型，目前支持：<ul><li><strong>FLOW</strong> : <font color="red">如需下载合同文件请选择此项</font></li><li><strong>TEMPLATE</strong> : 如需下载模板文件请选择此项</li><li><strong>DOCUMENT</strong>: 如需下载文档文件请选择此项</li><li><strong>SEAL</strong>: 如需下载印章图片请选择此项</li><li><strong>DIGITFILE</strong>: 如需下载加签文件请选择此项</li><li><strong>ARCHIVE</strong>: 如需下载合同归档文件请选择此项</li></ul></p><p>枚举值：</p><ul><li>FLOW： 如需下载合同文件请选择此项</li><li>TEMPLATE： 如需下载模板文件请选择此项</li><li>DOCUMENT： 如需下载文档文件请选择此项</li><li>SEAL： 如需下载印章图片请选择此项</li><li>DIGITFILE： 如需下载加签文件请选择此项</li><li>ARCHIVE： 如需下载合同归档文件请选择此项</li></ul>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
+        /// <p>业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul></p>
         /// </summary>
         [JsonProperty("BusinessIds")]
         public string[] BusinessIds{ get; set; }
 
         /// <summary>
-        /// 下载后的文件命名，只有FileType为zip的时候生效
+        /// <p>下载后的文件命名，只有FileType为zip的时候生效</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 要下载的文件类型，取值如下：
-        /// <ul>
-        /// <li>JPG</li>
-        /// <li>PDF</li>
-        /// <li>ZIP</li>
-        /// </ul>
+        /// <p>要下载的文件类型，取值如下：</p><ul><li>JPG</li><li>PDF</li><li>ZIP</li></ul>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
+        /// <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
+        /// <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
+        /// <p>下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)</p>
         /// </summary>
         [JsonProperty("UrlTtl")]
         public long? UrlTtl{ get; set; }
 
         /// <summary>
-        /// 暂不开放
+        /// <p>暂不开放</p>
         /// </summary>
         [JsonProperty("CcToken")]
         [System.Obsolete]
         public string CcToken{ get; set; }
 
         /// <summary>
-        /// 暂不开放
+        /// <p>暂不开放</p>
         /// </summary>
         [JsonProperty("Scene")]
         [System.Obsolete]
         public string Scene{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

@@ -139,13 +139,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public long? WebUIType{ get; set; }
 
         /// <summary>
-        /// <p>setats集群的名字</p>
+        /// <p>Setats集群名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>setats集群注释</p>
+        /// <p>Setats集群描述</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

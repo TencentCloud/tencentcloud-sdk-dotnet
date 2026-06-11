@@ -25,13 +25,13 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
+        /// <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
         /// </summary>
         [JsonProperty("LimitBy")]
         public string LimitBy{ get; set; }
 
         /// <summary>
-        /// 限制QPS值，每秒请求次数
+        /// <p>限制QPS值，每秒请求次数</p>
         /// </summary>
         [JsonProperty("LimitValue")]
         public long? LimitValue{ get; set; }

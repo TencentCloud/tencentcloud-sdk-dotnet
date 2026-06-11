@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1439</VersionPrefix>
+    <VersionPrefix>3.0.1442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,7 @@
     <Compile Include="V20221121\Models\BackupLog.cs" />
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CFGViewCFGRisk.cs" />
+    <Compile Include="V20221121\Models\CICDToken.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
     <Compile Include="V20221121\Models\CallRecord.cs" />
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
@@ -155,6 +156,12 @@
     <Compile Include="V20221121\Models\CreateDspmRiskExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\CreateIaCAccessTokenRequest.cs" />
+    <Compile Include="V20221121\Models\CreateIaCAccessTokenResponse.cs" />
+    <Compile Include="V20221121\Models\CreateIaCFileExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateIaCFileExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateIaCFileReScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\CreateIaCFileReScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateSkillScanRequest.cs" />
@@ -184,6 +191,10 @@
     <Compile Include="V20221121\Models\DeleteDspmRestoreLogListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\DeleteDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteIaCAccessTokenRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteIaCAccessTokenResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteIaCFileRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteIaCFileResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAIAgentAssetListRequest.cs" />
@@ -392,6 +403,14 @@
     <Compile Include="V20221121\Models\DescribeGatewayAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileOverviewRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileOverviewResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileReportRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCFileReportResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCTokenListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeIaCTokenListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordDetailRequest.cs" />
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordRequest.cs" />
@@ -551,10 +570,13 @@
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\HighBaseLineRiskItem.cs" />
     <Compile Include="V20221121\Models\HitRules.cs" />
+    <Compile Include="V20221121\Models\IaCFile.cs" />
+    <Compile Include="V20221121\Models\IaCFileRisk.cs" />
     <Compile Include="V20221121\Models\InquireInfo.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
     <Compile Include="V20221121\Models\KeySandboxCredential.cs" />
     <Compile Include="V20221121\Models\KeyValue.cs" />
+    <Compile Include="V20221121\Models\KeyValueInt.cs" />
     <Compile Include="V20221121\Models\Location.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusResponse.cs" />
@@ -592,6 +614,8 @@
     <Compile Include="V20221121\Models\ModifyDspmRiskStrategyResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyIaCTokenPeriodRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyIaCTokenPeriodResponse.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyPolicyStatusRequest.cs" />

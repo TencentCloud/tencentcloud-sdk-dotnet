@@ -25,43 +25,43 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 授权企业id
+        /// <p>授权企业id</p>
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 授权企业名称
+        /// <p>授权企业名称</p>
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 被授权企业id
+        /// <p>被授权企业id</p>
         /// </summary>
         [JsonProperty("AuthorizedOrganizationId")]
         public string AuthorizedOrganizationId{ get; set; }
 
         /// <summary>
-        /// 被授权企业名称
+        /// <p>被授权企业名称</p>
         /// </summary>
         [JsonProperty("AuthorizedOrganizationName")]
         public string AuthorizedOrganizationName{ get; set; }
 
         /// <summary>
-        /// 授权模板id（仅当授权方式为模板授权时有值）
+        /// <p>授权模板id（仅当授权方式为模板授权时有值）</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 授权模板名称（仅当授权方式为模板授权时有值）
+        /// <p>授权模板名称（仅当授权方式为模板授权时有值）</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 授权时间，格式为时间戳，单位s
+        /// <p>授权时间，格式为时间戳，单位s</p>
         /// </summary>
         [JsonProperty("AuthorizeTime")]
         public long? AuthorizeTime{ get; set; }

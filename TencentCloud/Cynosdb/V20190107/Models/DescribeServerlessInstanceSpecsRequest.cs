@@ -25,10 +25,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// <p>集群级别</p>
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -162,6 +162,27 @@ namespace TencentCloud.Cbs.V20170312
         public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
         {
             return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于挂载一个或多个弹性单副本SSD硬盘到指定的云服务器实例上。仅支持弹性盘类型。
+        /// </summary>
+        /// <param name="req"><see cref="AttachRemoteDisksRequest"/></param>
+        /// <returns><see cref="AttachRemoteDisksResponse"/></returns>
+        public Task<AttachRemoteDisksResponse> AttachRemoteDisks(AttachRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<AttachRemoteDisksResponse>(req, "AttachRemoteDisks");
+        }
+
+        /// <summary>
+        /// 本接口用于挂载一个或多个弹性单副本SSD硬盘到指定的云服务器实例上。仅支持弹性盘类型。
+        /// </summary>
+        /// <param name="req"><see cref="AttachRemoteDisksRequest"/></param>
+        /// <returns><see cref="AttachRemoteDisksResponse"/></returns>
+        public AttachRemoteDisksResponse AttachRemoteDisksSync(AttachRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<AttachRemoteDisksResponse>(req, "AttachRemoteDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -314,6 +335,27 @@ namespace TencentCloud.Cbs.V20170312
         public CreateDisksResponse CreateDisksSync(CreateDisksRequest req)
         {
             return InternalRequestAsync<CreateDisksResponse>(req, "CreateDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建弹性单副本SSD硬盘并自动挂载到指定实例。弹性盘在创建时就需要绑定目标实例，计费回调后由CBS自身完成装箱+挂载的全流程。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="CreateRemoteDisksResponse"/></returns>
+        public Task<CreateRemoteDisksResponse> CreateRemoteDisks(CreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteDisksResponse>(req, "CreateRemoteDisks");
+        }
+
+        /// <summary>
+        /// 本接口用于创建弹性单副本SSD硬盘并自动挂载到指定实例。弹性盘在创建时就需要绑定目标实例，计费回调后由CBS自身完成装箱+挂载的全流程。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="CreateRemoteDisksResponse"/></returns>
+        public CreateRemoteDisksResponse CreateRemoteDisksSync(CreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteDisksResponse>(req, "CreateRemoteDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -645,6 +687,69 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口用于查询单副本SSD硬盘机型搭配配额。可根据机型族、机型规格、可用区、付费方式等条件过滤查询结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDiskConfigQuotaRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDiskConfigQuotaResponse"/></returns>
+        public Task<DescribeRemoteDiskConfigQuotaResponse> DescribeRemoteDiskConfigQuota(DescribeRemoteDiskConfigQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDiskConfigQuotaResponse>(req, "DescribeRemoteDiskConfigQuota");
+        }
+
+        /// <summary>
+        /// 本接口用于查询单副本SSD硬盘机型搭配配额。可根据机型族、机型规格、可用区、付费方式等条件过滤查询结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDiskConfigQuotaRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDiskConfigQuotaResponse"/></returns>
+        public DescribeRemoteDiskConfigQuotaResponse DescribeRemoteDiskConfigQuotaSync(DescribeRemoteDiskConfigQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDiskConfigQuotaResponse>(req, "DescribeRemoteDiskConfigQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询已购买的单副本SSD硬盘列表。可根据单副本SSD硬盘ID、类型、状态等条件过滤查询结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDisksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDisksResponse"/></returns>
+        public Task<DescribeRemoteDisksResponse> DescribeRemoteDisks(DescribeRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDisksResponse>(req, "DescribeRemoteDisks");
+        }
+
+        /// <summary>
+        /// 本接口用于查询已购买的单副本SSD硬盘列表。可根据单副本SSD硬盘ID、类型、状态等条件过滤查询结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDisksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDisksResponse"/></returns>
+        public DescribeRemoteDisksResponse DescribeRemoteDisksSync(DescribeRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDisksResponse>(req, "DescribeRemoteDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询一个或多个单副本SSD硬盘的操作限制列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDisksDeniedActionsResponse"/></returns>
+        public Task<DescribeRemoteDisksDeniedActionsResponse> DescribeRemoteDisksDeniedActions(DescribeRemoteDisksDeniedActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDisksDeniedActionsResponse>(req, "DescribeRemoteDisksDeniedActions");
+        }
+
+        /// <summary>
+        /// 本接口用于查询一个或多个单副本SSD硬盘的操作限制列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeRemoteDisksDeniedActionsResponse"/></returns>
+        public DescribeRemoteDisksDeniedActionsResponse DescribeRemoteDisksDeniedActionsSync(DescribeRemoteDisksDeniedActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteDisksDeniedActionsResponse>(req, "DescribeRemoteDisksDeniedActions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeSnapshotGroups）用于查询快照组列表。
         /// * 可以根据快照组ID、快照组状态、快照组关联的快照ID等来查询快照组列表，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
         /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照组列表。
@@ -766,6 +871,27 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口用于从云服务器实例上卸载一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型。
+        /// </summary>
+        /// <param name="req"><see cref="DetachRemoteDisksRequest"/></param>
+        /// <returns><see cref="DetachRemoteDisksResponse"/></returns>
+        public Task<DetachRemoteDisksResponse> DetachRemoteDisks(DetachRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<DetachRemoteDisksResponse>(req, "DetachRemoteDisks");
+        }
+
+        /// <summary>
+        /// 本接口用于从云服务器实例上卸载一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型。
+        /// </summary>
+        /// <param name="req"><see cref="DetachRemoteDisksRequest"/></param>
+        /// <returns><see cref="DetachRemoteDisksResponse"/></returns>
+        public DetachRemoteDisksResponse DetachRemoteDisksSync(DetachRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<DetachRemoteDisksResponse>(req, "DetachRemoteDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
         /// 
         /// 获取快照概览信息
@@ -820,6 +946,27 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 该接口用于查询创建弹性单副本SSD硬盘的价格。支持预付费和后付费两种计费类型的询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateRemoteDisksResponse"/></returns>
+        public Task<InquirePriceCreateRemoteDisksResponse> InquirePriceCreateRemoteDisks(InquirePriceCreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateRemoteDisksResponse>(req, "InquirePriceCreateRemoteDisks");
+        }
+
+        /// <summary>
+        /// 该接口用于查询创建弹性单副本SSD硬盘的价格。支持预付费和后付费两种计费类型的询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateRemoteDisksResponse"/></returns>
+        public InquirePriceCreateRemoteDisksResponse InquirePriceCreateRemoteDisksSync(InquirePriceCreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateRemoteDisksResponse>(req, "InquirePriceCreateRemoteDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（InquirePricePriceModifyDiskBackupQuota）用于修改云硬盘备份点配额询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDiskBackupQuotaRequest"/></param>
@@ -858,6 +1005,27 @@ namespace TencentCloud.Cbs.V20170312
         public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformanceSync(InquirePriceModifyDiskExtraPerformanceRequest req)
         {
             return InternalRequestAsync<InquirePriceModifyDiskExtraPerformanceResponse>(req, "InquirePriceModifyDiskExtraPerformance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询续费弹性单副本SSD硬盘的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRemoteDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewRemoteDisksResponse"/></returns>
+        public Task<InquirePriceRenewRemoteDisksResponse> InquirePriceRenewRemoteDisks(InquirePriceRenewRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<InquirePriceRenewRemoteDisksResponse>(req, "InquirePriceRenewRemoteDisks");
+        }
+
+        /// <summary>
+        /// 该接口用于查询续费弹性单副本SSD硬盘的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRemoteDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewRemoteDisksResponse"/></returns>
+        public InquirePriceRenewRemoteDisksResponse InquirePriceRenewRemoteDisksSync(InquirePriceRenewRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<InquirePriceRenewRemoteDisksResponse>(req, "InquirePriceRenewRemoteDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1081,6 +1249,27 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口用于修改单副本SSD硬盘的属性，包括硬盘名称和项目ID。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteDiskAttributesRequest"/></param>
+        /// <returns><see cref="ModifyRemoteDiskAttributesResponse"/></returns>
+        public Task<ModifyRemoteDiskAttributesResponse> ModifyRemoteDiskAttributes(ModifyRemoteDiskAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteDiskAttributesResponse>(req, "ModifyRemoteDiskAttributes");
+        }
+
+        /// <summary>
+        /// 本接口用于修改单副本SSD硬盘的属性，包括硬盘名称和项目ID。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteDiskAttributesRequest"/></param>
+        /// <returns><see cref="ModifyRemoteDiskAttributesResponse"/></returns>
+        public ModifyRemoteDiskAttributesResponse ModifyRemoteDiskAttributesSync(ModifyRemoteDiskAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteDiskAttributesResponse>(req, "ModifyRemoteDiskAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
         /// 
         /// * 本接口支持修改快照名称及到期时间，以及将非永久快照修改为永久快照。
@@ -1168,6 +1357,27 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 该接口用于续费弹性单副本SSD硬盘。用户发起续费下单后，由计费系统完成扣费和到期时间更新。
+        /// </summary>
+        /// <param name="req"><see cref="RenewRemoteDiskRequest"/></param>
+        /// <returns><see cref="RenewRemoteDiskResponse"/></returns>
+        public Task<RenewRemoteDiskResponse> RenewRemoteDisk(RenewRemoteDiskRequest req)
+        {
+            return InternalRequestAsync<RenewRemoteDiskResponse>(req, "RenewRemoteDisk");
+        }
+
+        /// <summary>
+        /// 该接口用于续费弹性单副本SSD硬盘。用户发起续费下单后，由计费系统完成扣费和到期时间更新。
+        /// </summary>
+        /// <param name="req"><see cref="RenewRemoteDiskRequest"/></param>
+        /// <returns><see cref="RenewRemoteDiskResponse"/></returns>
+        public RenewRemoteDiskResponse RenewRemoteDiskSync(RenewRemoteDiskRequest req)
+        {
+            return InternalRequestAsync<RenewRemoteDiskResponse>(req, "RenewRemoteDisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ResizeDisk）用于扩容云硬盘。
         /// 
         /// * 只支持扩容弹性云盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。非弹性云硬盘需通过[ResizeInstanceDisks](/document/product/213/15731)接口扩容。
@@ -1191,6 +1401,48 @@ namespace TencentCloud.Cbs.V20170312
         public ResizeDiskResponse ResizeDiskSync(ResizeDiskRequest req)
         {
             return InternalRequestAsync<ResizeDiskResponse>(req, "ResizeDisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于获取创建弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于发货。创建时必须指定云服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchParameterCreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="SwitchParameterCreateRemoteDisksResponse"/></returns>
+        public Task<SwitchParameterCreateRemoteDisksResponse> SwitchParameterCreateRemoteDisks(SwitchParameterCreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<SwitchParameterCreateRemoteDisksResponse>(req, "SwitchParameterCreateRemoteDisks");
+        }
+
+        /// <summary>
+        /// 该接口用于获取创建弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于发货。创建时必须指定云服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchParameterCreateRemoteDisksRequest"/></param>
+        /// <returns><see cref="SwitchParameterCreateRemoteDisksResponse"/></returns>
+        public SwitchParameterCreateRemoteDisksResponse SwitchParameterCreateRemoteDisksSync(SwitchParameterCreateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<SwitchParameterCreateRemoteDisksResponse>(req, "SwitchParameterCreateRemoteDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于获取续费弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于续费。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchParameterRenewRemoteDisksRequest"/></param>
+        /// <returns><see cref="SwitchParameterRenewRemoteDisksResponse"/></returns>
+        public Task<SwitchParameterRenewRemoteDisksResponse> SwitchParameterRenewRemoteDisks(SwitchParameterRenewRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<SwitchParameterRenewRemoteDisksResponse>(req, "SwitchParameterRenewRemoteDisks");
+        }
+
+        /// <summary>
+        /// 该接口用于获取续费弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于续费。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchParameterRenewRemoteDisksRequest"/></param>
+        /// <returns><see cref="SwitchParameterRenewRemoteDisksResponse"/></returns>
+        public SwitchParameterRenewRemoteDisksResponse SwitchParameterRenewRemoteDisksSync(SwitchParameterRenewRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<SwitchParameterRenewRemoteDisksResponse>(req, "SwitchParameterRenewRemoteDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1220,6 +1472,27 @@ namespace TencentCloud.Cbs.V20170312
         public TerminateDisksResponse TerminateDisksSync(TerminateDisksRequest req)
         {
             return InternalRequestAsync<TerminateDisksResponse>(req, "TerminateDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于销毁一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型，且要求硬盘处于 INITED 或 UNINIT 状态。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateRemoteDisksRequest"/></param>
+        /// <returns><see cref="TerminateRemoteDisksResponse"/></returns>
+        public Task<TerminateRemoteDisksResponse> TerminateRemoteDisks(TerminateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<TerminateRemoteDisksResponse>(req, "TerminateRemoteDisks");
+        }
+
+        /// <summary>
+        /// 本接口用于销毁一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型，且要求硬盘处于 INITED 或 UNINIT 状态。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateRemoteDisksRequest"/></param>
+        /// <returns><see cref="TerminateRemoteDisksResponse"/></returns>
+        public TerminateRemoteDisksResponse TerminateRemoteDisksSync(TerminateRemoteDisksRequest req)
+        {
+            return InternalRequestAsync<TerminateRemoteDisksResponse>(req, "TerminateRemoteDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

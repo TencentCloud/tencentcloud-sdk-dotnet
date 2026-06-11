@@ -25,49 +25,49 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
+        /// <p>需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 文本转语音的声音配置
+        /// <p>文本转语音的声音配置</p>
         /// </summary>
         [JsonProperty("Voice")]
         public Voice Voice{ get; set; }
 
         /// <summary>
-        /// TRTC的SdkAppId
+        /// <p>TRTC的SdkAppId</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 文本转语音的输出音频的格式
+        /// <p>文本转语音的输出音频的格式</p>
         /// </summary>
         [JsonProperty("AudioFormat")]
         public AudioFormat AudioFormat{ get; set; }
 
         /// <summary>
-        /// TTS的模型，当前固定为：flow_01_turbo
+        /// <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+        /// <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
         /// </summary>
         [JsonProperty("PronunciationDict")]
         public PronunciationDict[] PronunciationDict{ get; set; }
 
         /// <summary>
-        /// 默认为0，0表示不生成字幕，1表示生成字幕
+        /// <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
         /// </summary>
         [JsonProperty("AlignmentMode")]
         public ulong? AlignmentMode{ get; set; }
 
         /// <summary>
-        /// 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+        /// <p>需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）</p>
         /// </summary>
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 表示第一页
+        /// <p>表示第一页</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 默认一页展示 10 条
+        /// <p>默认一页展示 10 条</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 知识库id
+        /// <p>知识库id</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }

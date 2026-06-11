@@ -25,31 +25,37 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 文件ID
+        /// <p>文件ID</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 切片ID
+        /// <p>切片ID</p>
         /// </summary>
         [JsonProperty("ChunkId")]
         public string ChunkId{ get; set; }
 
         /// <summary>
-        /// 编辑后的文本
+        /// <p>编辑后的文本</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 知识库id
+        /// <p>分段概要</p>
+        /// </summary>
+        [JsonProperty("Summary")]
+        public string Summary{ get; set; }
+
+        /// <summary>
+        /// <p>知识库id</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
@@ -64,6 +70,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "ChunkId", this.ChunkId);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Summary", this.Summary);
             this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         }
     }

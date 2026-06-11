@@ -25,37 +25,37 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 扩展服务类型，和入参一致
+        /// <p>扩展服务类型，和入参一致</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 扩展服务名称
+        /// <p>扩展服务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 授权员工列表
+        /// <p>授权员工列表</p>
         /// </summary>
         [JsonProperty("HasAuthUserList")]
         public HasAuthUser[] HasAuthUserList{ get; set; }
 
         /// <summary>
-        /// 授权企业列表（企业自动签时，该字段有值）
+        /// <p>授权企业列表（企业自动签时，该字段有值）</p>
         /// </summary>
         [JsonProperty("HasAuthOrganizationList")]
         public HasAuthOrganization[] HasAuthOrganizationList{ get; set; }
 
         /// <summary>
-        /// 授权员工列表总数
+        /// <p>授权员工列表总数</p>
         /// </summary>
         [JsonProperty("AuthUserTotal")]
         public long? AuthUserTotal{ get; set; }
 
         /// <summary>
-        /// 授权企业列表总数
+        /// <p>授权企业列表总数</p>
         /// </summary>
         [JsonProperty("AuthOrganizationTotal")]
         public long? AuthOrganizationTotal{ get; set; }

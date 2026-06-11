@@ -79,6 +79,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("EnableImageUnderstanding")]
         public long? EnableImageUnderstanding{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("EnableExtractDb")]
+        public long? EnableExtractDb{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "GenDocSummary", this.GenDocSummary);
             this.SetParamSimple(map, prefix + "GenParaSummary", this.GenParaSummary);
             this.SetParamSimple(map, prefix + "EnableImageUnderstanding", this.EnableImageUnderstanding);
+            this.SetParamSimple(map, prefix + "EnableExtractDb", this.EnableExtractDb);
         }
     }
 }

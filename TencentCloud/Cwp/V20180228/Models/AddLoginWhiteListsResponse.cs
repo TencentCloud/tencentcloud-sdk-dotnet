@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 重复添加的提示列表
+        /// <p>重复添加的提示列表</p>
         /// </summary>
         [JsonProperty("DuplicateHosts")]
         public DuplicateHosts[] DuplicateHosts{ get; set; }

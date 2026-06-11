@@ -25,28 +25,34 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 切片ID
+        /// <p>切片ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 切片内容
+        /// <p>切片内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 切片的字数
+        /// <p>切片的字数</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 切片概要
+        /// <p>切片概要</p>
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
+
+        /// <summary>
+        /// <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+        /// </summary>
+        [JsonProperty("ChunkSource")]
+        public long? ChunkSource{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamSimple(map, prefix + "ChunkSource", this.ChunkSource);
         }
     }
 }

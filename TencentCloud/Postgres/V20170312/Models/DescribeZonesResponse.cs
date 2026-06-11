@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 返回的结果数量。
+        /// <p>返回的结果数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 可用区信息集合。
+        /// <p>可用区信息集合。</p>
         /// </summary>
         [JsonProperty("ZoneSet")]
         public ZoneInfo[] ZoneSet{ get; set; }

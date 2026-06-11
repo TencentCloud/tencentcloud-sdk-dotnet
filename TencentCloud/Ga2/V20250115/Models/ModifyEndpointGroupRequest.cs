@@ -162,6 +162,12 @@ namespace TencentCloud.Ga2.V20250115.Models
         [JsonProperty("CipherPolicyId")]
         public string CipherPolicyId{ get; set; }
 
+        /// <summary>
+        /// <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+        /// </summary>
+        [JsonProperty("HttpVersion")]
+        public string HttpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
             this.SetParamArrayObj(map, prefix + "PortOverrides.", this.PortOverrides);
             this.SetParamSimple(map, prefix + "CipherPolicyId", this.CipherPolicyId);
+            this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1441</VersionPrefix>
+    <VersionPrefix>3.0.1442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -475,6 +475,11 @@
     <Compile Include="V20180717\Models\DescribeAigcAdvancedCustomElementsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAigcApiTokensRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAigcApiTokensResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncInput.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncOutput.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncTask.cs" />
     <Compile Include="V20180717\Models\DescribeAigcFaceInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAigcFaceInfoResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAigcUsageDataRequest.cs" />

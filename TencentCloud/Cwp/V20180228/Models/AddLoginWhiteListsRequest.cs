@@ -25,22 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 异地登录白名单实体
+        /// <p>异地登录白名单实体</p>
         /// </summary>
         [JsonProperty("HostLoginWhiteObj")]
         public HostLoginWhiteObj HostLoginWhiteObj{ get; set; }
 
         /// <summary>
-        /// 事件同步处理方式：
-        ///   "" -- 不操作
-        ///   "All" -- 将符合此配置的所有事件记录加白
-        ///   "Id" -- 将EventId对应的事件记录加白
+        /// <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
         /// </summary>
         [JsonProperty("ProcessType")]
         public string ProcessType{ get; set; }
 
         /// <summary>
-        /// 异地登录事件ID，当ProcessType为Id时此项必填
+        /// <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
         /// </summary>
         [JsonProperty("EventId")]
         public ulong? EventId{ get; set; }

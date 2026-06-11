@@ -25,55 +25,55 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 白名单用户（多个用户逗号隔开）
+        /// <p>白名单用户（多个用户逗号隔开）</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 更新后记录的白名单维度信息
+        /// <p>更新后记录的白名单维度信息</p>
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 是否对所有服务器生效，0-否，1-是
+        /// <p>是否对所有服务器生效，0-否，1-是</p>
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
-        /// 白名单ID
+        /// <p>白名单ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 服务器列表
+        /// <p>服务器列表</p>
         /// </summary>
         [JsonProperty("Hosts")]
         public HostInfo[] Hosts{ get; set; }
 
         /// <summary>
-        /// 地域列表
+        /// <p>地域列表</p>
         /// </summary>
         [JsonProperty("Places")]
         public Place[] Places{ get; set; }

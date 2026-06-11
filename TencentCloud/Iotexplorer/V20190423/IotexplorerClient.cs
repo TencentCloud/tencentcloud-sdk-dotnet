@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1439";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,28 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建设备SDP应答
+        /// 创建设备推流SDP应答，此接口调用前需要先调用CreateDeviceSDPAnswer接口以保证设备处于拉流状态，接口返回是另外一路webrtc推流SDP信息，可以用来进行标准的WHIP推流
+        /// </summary>
+        /// <param name="req"><see cref="CreateDevicePublishSDPAnswerRequest"/></param>
+        /// <returns><see cref="CreateDevicePublishSDPAnswerResponse"/></returns>
+        public Task<CreateDevicePublishSDPAnswerResponse> CreateDevicePublishSDPAnswer(CreateDevicePublishSDPAnswerRequest req)
+        {
+            return InternalRequestAsync<CreateDevicePublishSDPAnswerResponse>(req, "CreateDevicePublishSDPAnswer");
+        }
+
+        /// <summary>
+        /// 创建设备推流SDP应答，此接口调用前需要先调用CreateDeviceSDPAnswer接口以保证设备处于拉流状态，接口返回是另外一路webrtc推流SDP信息，可以用来进行标准的WHIP推流
+        /// </summary>
+        /// <param name="req"><see cref="CreateDevicePublishSDPAnswerRequest"/></param>
+        /// <returns><see cref="CreateDevicePublishSDPAnswerResponse"/></returns>
+        public CreateDevicePublishSDPAnswerResponse CreateDevicePublishSDPAnswerSync(CreateDevicePublishSDPAnswerRequest req)
+        {
+            return InternalRequestAsync<CreateDevicePublishSDPAnswerResponse>(req, "CreateDevicePublishSDPAnswer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建设备SDP应答，调用此接口后，后台会对传入参数的设备进行拉流，并返回webrtc answer SDP返回，可以进行WHEP协议拉流。
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceSDPAnswerRequest"/></param>
         /// <returns><see cref="CreateDeviceSDPAnswerResponse"/></returns>
@@ -484,7 +505,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 创建设备SDP应答
+        /// 创建设备SDP应答，调用此接口后，后台会对传入参数的设备进行拉流，并返回webrtc answer SDP返回，可以进行WHEP协议拉流。
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceSDPAnswerRequest"/></param>
         /// <returns><see cref="CreateDeviceSDPAnswerResponse"/></returns>
@@ -1016,6 +1037,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteDeviceResponse DeleteDeviceSync(DeleteDeviceRequest req)
         {
             return InternalRequestAsync<DeleteDeviceResponse>(req, "DeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除设备SDP应答，此接口调用是手动结束设备后台推拉流信息，快速响应挂断需求。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceSDPRequest"/></param>
+        /// <returns><see cref="DeleteDeviceSDPResponse"/></returns>
+        public Task<DeleteDeviceSDPResponse> DeleteDeviceSDP(DeleteDeviceSDPRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceSDPResponse>(req, "DeleteDeviceSDP");
+        }
+
+        /// <summary>
+        /// 删除设备SDP应答，此接口调用是手动结束设备后台推拉流信息，快速响应挂断需求。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceSDPRequest"/></param>
+        /// <returns><see cref="DeleteDeviceSDPResponse"/></returns>
+        public DeleteDeviceSDPResponse DeleteDeviceSDPSync(DeleteDeviceSDPRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceSDPResponse>(req, "DeleteDeviceSDP")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

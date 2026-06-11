@@ -144,6 +144,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("InstanceMode")]
         public string InstanceMode{ get; set; }
 
+        /// <summary>
+        /// <p>安全组id列表</p>
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "FullReplications", this.FullReplications);
             this.SetParamSimple(map, prefix + "InstanceMode", this.InstanceMode);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

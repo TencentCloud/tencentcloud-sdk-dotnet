@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1441";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.

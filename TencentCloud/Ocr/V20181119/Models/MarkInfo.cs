@@ -60,6 +60,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RightAnswer")]
         public string RightAnswer{ get; set; }
 
+        /// <summary>
+        /// <p>学科（如语文、数学、英语）</p>
+        /// </summary>
+        [JsonProperty("Subject")]
+        public string Subject{ get; set; }
+
+        /// <summary>
+        /// <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+        /// </summary>
+        [JsonProperty("QuestionType")]
+        public string QuestionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "QuestionPositions.", this.QuestionPositions);
             this.SetParamArrayObj(map, prefix + "QuestionImagePositions.", this.QuestionImagePositions);
             this.SetParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
+            this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamSimple(map, prefix + "QuestionType", this.QuestionType);
         }
     }
 }

@@ -25,79 +25,84 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群规格名称
+        /// <p>集群规格名称</p>
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 峰值tps
+        /// <p>峰值tps</p>
         /// </summary>
         [JsonProperty("MaxTps")]
         public ulong? MaxTps{ get; set; }
 
         /// <summary>
-        /// 峰值带宽。单位：mbps
+        /// <p>峰值带宽。单位：mbps</p>
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public ulong? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 最大命名空间个数
+        /// <p>最大命名空间个数</p>
         /// </summary>
         [JsonProperty("MaxNamespaces")]
         public ulong? MaxNamespaces{ get; set; }
 
         /// <summary>
-        /// 可以创建的最大主题数
+        /// <p>可以创建的最大主题数</p>
         /// </summary>
         [JsonProperty("MaxTopics")]
         public ulong? MaxTopics{ get; set; }
 
         /// <summary>
-        /// 规格外弹性TPS
+        /// <p>规格外弹性TPS</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalableTps")]
         public ulong? ScalableTps{ get; set; }
 
         /// <summary>
-        /// 32或者128
-        /// 当前集群topic的最大分区数
+        /// <p>32或者128<br>当前集群topic的最大分区数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxPartitions")]
         public ulong? MaxPartitions{ get; set; }
 
         /// <summary>
-        /// 最大延迟消息数量。0代表没有限制	
+        /// <p>最大延迟消息数量。0代表没有限制</p>
         /// </summary>
         [JsonProperty("MaxDelayedMessages")]
         public long? MaxDelayedMessages{ get; set; }
 
         /// <summary>
-        /// 可以创建的最大主题分区数
+        /// <p>可以创建的最大主题分区数</p>
         /// </summary>
         [JsonProperty("MaxTopicsPartitioned")]
         public long? MaxTopicsPartitioned{ get; set; }
 
         /// <summary>
-        /// 单broker最大链接数
+        /// <p>单broker最大链接数</p>
         /// </summary>
         [JsonProperty("BrokerMaxConnections")]
         public long? BrokerMaxConnections{ get; set; }
 
         /// <summary>
-        /// 单IP最大链接数
+        /// <p>单IP最大链接数</p>
         /// </summary>
         [JsonProperty("BrokerMaxConnectionsPerIp")]
         public long? BrokerMaxConnectionsPerIp{ get; set; }
 
         /// <summary>
-        /// 弹性存储集群最大存储规格；固定存储该值为0
+        /// <p>弹性存储集群最大存储规格；固定存储该值为0</p>
         /// </summary>
         [JsonProperty("MaximumElasticStorage")]
         public long? MaximumElasticStorage{ get; set; }
+
+        /// <summary>
+        /// <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+        /// </summary>
+        [JsonProperty("TotalTps")]
+        public long? TotalTps{ get; set; }
 
 
         /// <summary>
@@ -117,6 +122,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
             this.SetParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
             this.SetParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
+            this.SetParamSimple(map, prefix + "TotalTps", this.TotalTps);
         }
     }
 }

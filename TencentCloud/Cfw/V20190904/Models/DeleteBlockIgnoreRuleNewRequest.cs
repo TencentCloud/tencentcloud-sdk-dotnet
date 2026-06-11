@@ -31,6 +31,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? DeleteAll{ get; set; }
 
         /// <summary>
+        /// blocklist 封禁列表 whitelist 白名单列表
+        /// </summary>
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
+
+        /// <summary>
         /// 规则列表
         /// </summary>
         [JsonProperty("Rules")]
@@ -43,12 +49,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
-        /// <summary>
-        /// blocklist 封禁列表 whitelist 白名单列表
-        /// </summary>
-        [JsonProperty("ShowType")]
-        public string ShowType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,9 +56,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
-            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }

@@ -25,67 +25,65 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 需要转语音的文字内容，长度范围：[1, 255]
+        /// <p>需要转语音的文字内容，长度范围：[1, 255]</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 文本转语音的声音配置
+        /// <p>文本转语音的声音配置</p>
         /// </summary>
         [JsonProperty("Voice")]
         public Voice Voice{ get; set; }
 
         /// <summary>
-        /// TRTC的SdkAppId
+        /// <p>TRTC的SdkAppId</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 文本转语音的输出音频的格式
+        /// <p>文本转语音的输出音频的格式</p>
         /// </summary>
         [JsonProperty("AudioFormat")]
         public AudioFormat AudioFormat{ get; set; }
 
         /// <summary>
-        /// TTS的API密钥
+        /// <p>TTS的API密钥</p>
         /// </summary>
         [JsonProperty("APIKey")]
         [System.Obsolete]
         public string APIKey{ get; set; }
 
         /// <summary>
-        /// TTS的模型，当前固定为：flow_01_turbo
+        /// <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        ///  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-        /// - zh（中文）
-        /// - en（英文）
-        /// - yue（粤语）
-        /// - ja（日语）
-        /// - ko（韩语）
-        /// - ar（阿拉伯语）
-        /// - id（印尼语）
-        /// - th（泰语）
+        /// <p>需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+        /// <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
         /// </summary>
         [JsonProperty("PronunciationDict")]
         public PronunciationDict[] PronunciationDict{ get; set; }
 
         /// <summary>
-        /// 默认为0，0表示不生成字幕，1表示生成字幕
+        /// <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
         /// </summary>
         [JsonProperty("AlignmentMode")]
         public ulong? AlignmentMode{ get; set; }
+
+        /// <summary>
+        /// <p>json字符串，用于拓展用法</p>
+        /// </summary>
+        [JsonProperty("ExtraParams")]
+        public string ExtraParams{ get; set; }
 
 
         /// <summary>
@@ -102,6 +100,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
             this.SetParamSimple(map, prefix + "AlignmentMode", this.AlignmentMode);
+            this.SetParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
         }
     }
 }

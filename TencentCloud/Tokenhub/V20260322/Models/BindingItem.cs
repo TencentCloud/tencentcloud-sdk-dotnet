@@ -36,6 +36,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
+        /// <summary>
+        /// 资源状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         {
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

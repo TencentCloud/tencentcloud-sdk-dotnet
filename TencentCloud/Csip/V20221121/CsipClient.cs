@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1439";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -453,6 +453,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建IaC检测接入Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateIaCAccessTokenResponse"/></returns>
+        public Task<CreateIaCAccessTokenResponse> CreateIaCAccessToken(CreateIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateIaCAccessTokenResponse>(req, "CreateIaCAccessToken");
+        }
+
+        /// <summary>
+        /// 创建IaC检测接入Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateIaCAccessTokenResponse"/></returns>
+        public CreateIaCAccessTokenResponse CreateIaCAccessTokenSync(CreateIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateIaCAccessTokenResponse>(req, "CreateIaCAccessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建IaC检测文件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileExportJobRequest"/></param>
+        /// <returns><see cref="CreateIaCFileExportJobResponse"/></returns>
+        public Task<CreateIaCFileExportJobResponse> CreateIaCFileExportJob(CreateIaCFileExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileExportJobResponse>(req, "CreateIaCFileExportJob");
+        }
+
+        /// <summary>
+        /// 创建IaC检测文件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileExportJobRequest"/></param>
+        /// <returns><see cref="CreateIaCFileExportJobResponse"/></returns>
+        public CreateIaCFileExportJobResponse CreateIaCFileExportJobSync(CreateIaCFileExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileExportJobResponse>(req, "CreateIaCFileExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建IaC检测文件重新扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileReScanTaskRequest"/></param>
+        /// <returns><see cref="CreateIaCFileReScanTaskResponse"/></returns>
+        public Task<CreateIaCFileReScanTaskResponse> CreateIaCFileReScanTask(CreateIaCFileReScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileReScanTaskResponse>(req, "CreateIaCFileReScanTask");
+        }
+
+        /// <summary>
+        /// 创建IaC检测文件重新扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileReScanTaskRequest"/></param>
+        /// <returns><see cref="CreateIaCFileReScanTaskResponse"/></returns>
+        public CreateIaCFileReScanTaskResponse CreateIaCFileReScanTaskSync(CreateIaCFileReScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileReScanTaskResponse>(req, "CreateIaCFileReScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建风险中心扫描任务
         /// </summary>
         /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
@@ -701,6 +764,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategySync(DeleteDspmWhitelistStrategyRequest req)
         {
             return InternalRequestAsync<DeleteDspmWhitelistStrategyResponse>(req, "DeleteDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除IaC检测接入Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="DeleteIaCAccessTokenResponse"/></returns>
+        public Task<DeleteIaCAccessTokenResponse> DeleteIaCAccessToken(DeleteIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCAccessTokenResponse>(req, "DeleteIaCAccessToken");
+        }
+
+        /// <summary>
+        /// 删除IaC检测接入Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="DeleteIaCAccessTokenResponse"/></returns>
+        public DeleteIaCAccessTokenResponse DeleteIaCAccessTokenSync(DeleteIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCAccessTokenResponse>(req, "DeleteIaCAccessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除IaC检测文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCFileRequest"/></param>
+        /// <returns><see cref="DeleteIaCFileResponse"/></returns>
+        public Task<DeleteIaCFileResponse> DeleteIaCFile(DeleteIaCFileRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCFileResponse>(req, "DeleteIaCFile");
+        }
+
+        /// <summary>
+        /// 删除IaC检测文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCFileRequest"/></param>
+        /// <returns><see cref="DeleteIaCFileResponse"/></returns>
+        public DeleteIaCFileResponse DeleteIaCFileSync(DeleteIaCFileRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCFileResponse>(req, "DeleteIaCFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2889,6 +2994,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取IaC检测文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileListRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileListResponse"/></returns>
+        public Task<DescribeIaCFileListResponse> DescribeIaCFileList(DescribeIaCFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileListResponse>(req, "DescribeIaCFileList");
+        }
+
+        /// <summary>
+        /// 获取IaC检测文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileListRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileListResponse"/></returns>
+        public DescribeIaCFileListResponse DescribeIaCFileListSync(DescribeIaCFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileListResponse>(req, "DescribeIaCFileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取IaC检测文件概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileOverviewRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileOverviewResponse"/></returns>
+        public Task<DescribeIaCFileOverviewResponse> DescribeIaCFileOverview(DescribeIaCFileOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileOverviewResponse>(req, "DescribeIaCFileOverview");
+        }
+
+        /// <summary>
+        /// 获取IaC检测文件概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileOverviewRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileOverviewResponse"/></returns>
+        public DescribeIaCFileOverviewResponse DescribeIaCFileOverviewSync(DescribeIaCFileOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileOverviewResponse>(req, "DescribeIaCFileOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取IaC检测文件报告
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileReportRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileReportResponse"/></returns>
+        public Task<DescribeIaCFileReportResponse> DescribeIaCFileReport(DescribeIaCFileReportRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileReportResponse>(req, "DescribeIaCFileReport");
+        }
+
+        /// <summary>
+        /// 获取IaC检测文件报告
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileReportRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileReportResponse"/></returns>
+        public DescribeIaCFileReportResponse DescribeIaCFileReportSync(DescribeIaCFileReportRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileReportResponse>(req, "DescribeIaCFileReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取IaC检测接入Token列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCTokenListRequest"/></param>
+        /// <returns><see cref="DescribeIaCTokenListResponse"/></returns>
+        public Task<DescribeIaCTokenListResponse> DescribeIaCTokenList(DescribeIaCTokenListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCTokenListResponse>(req, "DescribeIaCTokenList");
+        }
+
+        /// <summary>
+        /// 获取IaC检测接入Token列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCTokenListRequest"/></param>
+        /// <returns><see cref="DescribeIaCTokenListResponse"/></returns>
+        public DescribeIaCTokenListResponse DescribeIaCTokenListSync(DescribeIaCTokenListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCTokenListResponse>(req, "DescribeIaCTokenList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 对象存储异常检测调用记录信息
         /// </summary>
         /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
@@ -4313,6 +4502,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategySync(ModifyDspmWhitelistStrategyRequest req)
         {
             return InternalRequestAsync<ModifyDspmWhitelistStrategyResponse>(req, "ModifyDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改IaC检测接入Token存储周期
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIaCTokenPeriodRequest"/></param>
+        /// <returns><see cref="ModifyIaCTokenPeriodResponse"/></returns>
+        public Task<ModifyIaCTokenPeriodResponse> ModifyIaCTokenPeriod(ModifyIaCTokenPeriodRequest req)
+        {
+            return InternalRequestAsync<ModifyIaCTokenPeriodResponse>(req, "ModifyIaCTokenPeriod");
+        }
+
+        /// <summary>
+        /// 修改IaC检测接入Token存储周期
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIaCTokenPeriodRequest"/></param>
+        /// <returns><see cref="ModifyIaCTokenPeriodResponse"/></returns>
+        public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriodSync(ModifyIaCTokenPeriodRequest req)
+        {
+            return InternalRequestAsync<ModifyIaCTokenPeriodResponse>(req, "ModifyIaCTokenPeriod")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

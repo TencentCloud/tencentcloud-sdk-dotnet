@@ -25,101 +25,112 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群Id。
+        /// <p>集群Id。</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称。
+        /// <p>集群名称。</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 说明信息。
+        /// <p>说明信息。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 集群状态，0:创建中，1:正常，2:隔离
+        /// <p>集群状态，0:创建中，1:正常，2:隔离</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 集群版本
+        /// <p>集群版本</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 节点分布情况
+        /// <p>节点分布情况</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeDistribution")]
         public InstanceNodeDistribution[] NodeDistribution{ get; set; }
 
         /// <summary>
-        /// 最大储存容量，单位：MB
+        /// <p>最大储存容量，单位：MB</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 是否可以修改路由
+        /// <p>是否可以修改路由</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanEditRoute")]
         public bool? CanEditRoute{ get; set; }
 
         /// <summary>
-        /// 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+        /// <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingLabelVersion")]
         public string BillingLabelVersion{ get; set; }
 
         /// <summary>
-        /// 实例到期时间戳，毫秒级精度。
+        /// <p>实例到期时间戳，毫秒级精度。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 是否开启自动创建主题
-        /// true就是开启了，false是关闭
+        /// <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoCreateTopicStatus")]
         public bool? AutoCreateTopicStatus{ get; set; }
 
         /// <summary>
-        /// 自动创建主题的默认分区数，如果没开启就是0
+        /// <p>自动创建主题的默认分区数，如果没开启就是0</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultPartitionNumber")]
         public long? DefaultPartitionNumber{ get; set; }
 
         /// <summary>
-        /// 用户自定义的租户别名，如果没有，会复用专业集群 ID
+        /// <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
         /// </summary>
         [JsonProperty("Tenant")]
         public string Tenant{ get; set; }
 
         /// <summary>
-        /// 删除保护开关标识
+        /// <p>删除保护开关标识</p>
         /// </summary>
         [JsonProperty("DeleteProtection")]
         public long? DeleteProtection{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+        /// </summary>
+        [JsonProperty("ElasticTpsEnabled")]
+        public long? ElasticTpsEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+        /// </summary>
+        [JsonProperty("EncryptionStatus")]
+        public long? EncryptionStatus{ get; set; }
 
 
         /// <summary>
@@ -142,6 +153,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
             this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
             this.SetParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
+            this.SetParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
+            this.SetParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
         }
     }
 }

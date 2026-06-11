@@ -25,10 +25,10 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 开关,true:开启，false:禁用
+        /// 用户策略的子策略数组
         /// </summary>
-        [JsonProperty("IsEnable")]
-        public bool? IsEnable{ get; set; }
+        [JsonProperty("ChildRules")]
+        public AccessControlChildRuleInfo[] ChildRules{ get; set; }
 
         /// <summary>
         /// 生效镜像id，空数组代表全部镜像
@@ -37,16 +37,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// 用户策略的子策略数组
+        /// 开关,true:开启，false:禁用
         /// </summary>
-        [JsonProperty("ChildRules")]
-        public AccessControlChildRuleInfo[] ChildRules{ get; set; }
+        [JsonProperty("IsEnable")]
+        public bool? IsEnable{ get; set; }
 
         /// <summary>
         /// 策略名字
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
+
+        /// <summary>
+        /// 是否是系统默认策略
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public bool? IsGlobal{ get; set; }
 
         /// <summary>
         /// 策略id
@@ -60,25 +72,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SystemChildRules")]
         public AccessControlSystemChildRuleInfo[] SystemChildRules{ get; set; }
 
-        /// <summary>
-        /// 是否是系统默认策略
-        /// </summary>
-        [JsonProperty("IsDefault")]
-        public bool? IsDefault{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
-            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
             this.SetParamArrayObj(map, prefix + "ChildRules.", this.ChildRules);
+            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
-            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

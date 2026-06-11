@@ -384,6 +384,18 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public MaintenanceWindowInfo MaintenanceWindow{ get; set; }
 
         /// <summary>
+        /// <p>是否开启透明加密，0：未开启；1：已开启</p>
+        /// </summary>
+        [JsonProperty("EncryptionEnable")]
+        public long? EncryptionEnable{ get; set; }
+
+        /// <summary>
+        /// <p>真实使用的kms地域，用于后续调用kms服务</p>
+        /// </summary>
+        [JsonProperty("EncryptionKmsRegion")]
+        public string EncryptionKmsRegion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -454,6 +466,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
             this.SetParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
             this.SetParamObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
+            this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
+            this.SetParamSimple(map, prefix + "EncryptionKmsRegion", this.EncryptionKmsRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

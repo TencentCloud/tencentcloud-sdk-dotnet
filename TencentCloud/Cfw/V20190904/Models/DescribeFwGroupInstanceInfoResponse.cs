@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙(组)详细信息
+        /// <p>防火墙(组)详细信息</p>
         /// </summary>
         [JsonProperty("VpcFwGroupLst")]
         public VpcFwGroupInfo[] VpcFwGroupLst{ get; set; }
 
         /// <summary>
-        /// 防火墙(组)个数
+        /// <p>防火墙(组)个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

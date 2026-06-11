@@ -25,13 +25,25 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 分片信息
+        /// <p>文档的自动分段数</p>
+        /// </summary>
+        [JsonProperty("AutoTotal")]
+        public long? AutoTotal{ get; set; }
+
+        /// <summary>
+        /// <p>文档的手动新建分段数</p>
+        /// </summary>
+        [JsonProperty("ManualTotal")]
+        public long? ManualTotal{ get; set; }
+
+        /// <summary>
+        /// <p>分片信息</p>
         /// </summary>
         [JsonProperty("Chunks")]
         public Chunk[] Chunks{ get; set; }
@@ -49,6 +61,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "AutoTotal", this.AutoTotal);
+            this.SetParamSimple(map, prefix + "ManualTotal", this.ManualTotal);
             this.SetParamArrayObj(map, prefix + "Chunks.", this.Chunks);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

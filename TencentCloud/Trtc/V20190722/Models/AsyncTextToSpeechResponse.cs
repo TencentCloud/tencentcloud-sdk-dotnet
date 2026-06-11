@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

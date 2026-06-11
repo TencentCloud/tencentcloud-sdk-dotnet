@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CopySrcRuleID{ get; set; }
 
         /// <summary>
-        /// 事件ID(适用于事件加白场景)
+        /// 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
         /// </summary>
         [JsonProperty("EventID")]
         public ulong? EventID{ get; set; }

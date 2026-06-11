@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1434";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.

@@ -204,6 +204,30 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("AutoScaleConfig")]
         public AutoScalingConfig AutoScaleConfig{ get; set; }
 
+        /// <summary>
+        /// <p>绑定安全组列表</p>
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// <p>dbaadmin密码</p>
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启透明加密，0：不开启，1：开启</p>
+        /// </summary>
+        [JsonProperty("EncryptionEnable")]
+        public long? EncryptionEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +264,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "SQLMode", this.SQLMode);
             this.SetParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
         }
     }
 }

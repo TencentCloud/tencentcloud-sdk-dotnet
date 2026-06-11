@@ -25,12 +25,6 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 策略唯一id
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
-
-        /// <summary>
         /// 镜像id, 在添加白名单的时候使用
         /// </summary>
         [JsonProperty("ImageId")]
@@ -48,16 +42,22 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 策略唯一id
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

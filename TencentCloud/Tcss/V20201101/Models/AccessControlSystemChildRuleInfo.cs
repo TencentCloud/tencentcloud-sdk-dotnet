@@ -25,6 +25,12 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
+        /// 子策略状态，true为开启，false为关闭
+        /// </summary>
+        [JsonProperty("IsEnable")]
+        public bool? IsEnable{ get; set; }
+
+        /// <summary>
         /// 子策略Id
         /// </summary>
         [JsonProperty("RuleId")]
@@ -37,12 +43,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("RuleMode")]
         public string RuleMode{ get; set; }
-
-        /// <summary>
-        /// 子策略状态，true为开启，false为关闭
-        /// </summary>
-        [JsonProperty("IsEnable")]
-        public bool? IsEnable{ get; set; }
 
         /// <summary>
         /// 子策略检测的入侵行为类型
@@ -59,9 +59,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
-            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
         }
     }

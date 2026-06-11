@@ -42,6 +42,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SDPOffer")]
         public string SDPOffer{ get; set; }
 
+        /// <summary>
+        /// 客户自定义拉流标识
+        /// </summary>
+        [JsonProperty("RequesterTag")]
+        public string RequesterTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "SDPOffer", this.SDPOffer);
+            this.SetParamSimple(map, prefix + "RequesterTag", this.RequesterTag);
         }
     }
 }

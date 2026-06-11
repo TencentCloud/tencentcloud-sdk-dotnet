@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 克隆出的音色ID，可以用此id进行语音合成
+        /// <p>克隆出的音色ID，可以用此id进行语音合成</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

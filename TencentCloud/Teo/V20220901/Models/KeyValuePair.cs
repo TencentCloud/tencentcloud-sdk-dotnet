@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+        /// 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

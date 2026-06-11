@@ -25,40 +25,46 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// nat：nat防火墙，ew：东西向防火墙
+        /// <p>nat：nat防火墙，ew：东西向防火墙</p>
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
         /// <summary>
-        /// 带宽值
+        /// <p>带宽值</p>
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id
+        /// <p>防火墙实例id</p>
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }
 
         /// <summary>
-        /// 弹性开关 1打开 0 关闭
+        /// <p>弹性开关 1打开 0 关闭</p>
         /// </summary>
         [JsonProperty("ElasticSwitch")]
         public long? ElasticSwitch{ get; set; }
 
         /// <summary>
-        /// 弹性带宽上限，单位Mbps
+        /// <p>弹性带宽上限，单位Mbps</p>
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public long? ElasticBandwidth{ get; set; }
 
         /// <summary>
-        /// 按量计费标签
+        /// <p>按量计费标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ElasticTrafficSwitch")]
+        public long? ElasticTrafficSwitch{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Service{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
         /// </summary>
         [JsonProperty("StartTime")]
@@ -97,6 +103,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Service", this.Service);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

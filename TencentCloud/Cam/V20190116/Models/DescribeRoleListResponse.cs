@@ -25,13 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 角色详情列表。
+        /// <p>角色详情列表。</p>
         /// </summary>
         [JsonProperty("List")]
         public RoleInfo[] List{ get; set; }
 
         /// <summary>
-        /// 角色总数
+        /// <p>角色总数</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }

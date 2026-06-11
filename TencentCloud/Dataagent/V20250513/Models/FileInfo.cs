@@ -67,6 +67,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
         /// <p>分片策略</p>
         /// </summary>
         [JsonProperty("ChunkConfig")]
@@ -121,6 +127,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateUser", this.CreateUser);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "ChunkConfig.", this.ChunkConfig);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);

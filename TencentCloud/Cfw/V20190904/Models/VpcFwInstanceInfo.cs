@@ -25,186 +25,190 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// VPC防火墙实例名称
+        /// <p>VPC防火墙实例名称</p>
         /// </summary>
         [JsonProperty("FwInsName")]
         public string FwInsName{ get; set; }
 
         /// <summary>
-        /// VPC防火墙实例ID
+        /// <p>VPC防火墙实例ID</p>
         /// </summary>
         [JsonProperty("FwInsId")]
         public string FwInsId{ get; set; }
 
         /// <summary>
-        /// VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
+        /// <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
         /// </summary>
         [JsonProperty("FwMode")]
         public long? FwMode{ get; set; }
 
         /// <summary>
-        /// VPC防火墙接入网络实例个数
+        /// <p>VPC防火墙接入网络实例个数</p>
         /// </summary>
         [JsonProperty("JoinInsNum")]
         public long? JoinInsNum{ get; set; }
 
         /// <summary>
-        /// VPC防火墙开关个数
+        /// <p>VPC防火墙开关个数</p>
         /// </summary>
         [JsonProperty("FwSwitchNum")]
         public long? FwSwitchNum{ get; set; }
 
         /// <summary>
-        /// VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
+        /// <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// VPC防火墙创建时间
+        /// <p>VPC防火墙创建时间</p>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// VPC 相关云联网ID列表
+        /// <p>VPC 相关云联网ID列表</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string[] CcnId{ get; set; }
 
         /// <summary>
-        /// VPC 相关云联网名称列表
+        /// <p>VPC 相关云联网名称列表</p>
         /// </summary>
         [JsonProperty("CcnName")]
         public string[] CcnName{ get; set; }
 
         /// <summary>
-        /// VPC 相关对等连接ID列表
+        /// <p>VPC 相关对等连接ID列表</p>
         /// </summary>
         [JsonProperty("PeerConnectionId")]
         public string[] PeerConnectionId{ get; set; }
 
         /// <summary>
-        /// VPC 相关对等连接名称列表
+        /// <p>VPC 相关对等连接名称列表</p>
         /// </summary>
         [JsonProperty("PeerConnectionName")]
         public string[] PeerConnectionName{ get; set; }
 
         /// <summary>
-        /// VPC防火墙CVM的列表
+        /// <p>VPC防火墙CVM的列表</p>
         /// </summary>
         [JsonProperty("FwCvmLst")]
         public VpcFwCvmInsInfo[] FwCvmLst{ get; set; }
 
         /// <summary>
-        /// VPC防火墙接入网络实例类型列表
+        /// <p>VPC防火墙接入网络实例类型列表</p>
         /// </summary>
         [JsonProperty("JoinInsLst")]
         public VpcFwJoinInstanceType[] JoinInsLst{ get; set; }
 
         /// <summary>
-        /// 防火墙网关信息
+        /// <p>防火墙网关信息</p>
         /// </summary>
         [JsonProperty("FwGateway")]
         public FwGateway[] FwGateway{ get; set; }
 
         /// <summary>
-        /// 防火墙(组)ID
+        /// <p>防火墙(组)ID</p>
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
-        /// 已使用规则数
+        /// <p>已使用规则数</p>
         /// </summary>
         [JsonProperty("RuleUsed")]
         public long? RuleUsed{ get; set; }
 
         /// <summary>
-        /// 最大规则数
+        /// <p>最大规则数</p>
         /// </summary>
         [JsonProperty("RuleMax")]
         public long? RuleMax{ get; set; }
 
         /// <summary>
-        /// 防火墙实例带宽
+        /// <p>防火墙实例带宽</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 用户VPC墙总带宽
+        /// <p>用户VPC墙总带宽</p>
         /// </summary>
         [JsonProperty("UserVpcWidth")]
         public long? UserVpcWidth{ get; set; }
 
         /// <summary>
-        /// 接入的vpc列表
+        /// <p>接入的vpc列表</p>
         /// </summary>
         [JsonProperty("JoinInsIdLst")]
         public string[] JoinInsIdLst{ get; set; }
 
         /// <summary>
-        /// 内网间峰值带宽 (单位 bps )
+        /// <p>内网间峰值带宽 (单位 bps )</p>
         /// </summary>
         [JsonProperty("FlowMax")]
         public long? FlowMax{ get; set; }
 
         /// <summary>
-        /// 实例引擎版本
+        /// <p>实例引擎版本</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 引擎是否可升级：0，不可升级；1，可升级
+        /// <p>引擎是否可升级：0，不可升级；1，可升级</p>
         /// </summary>
         [JsonProperty("UpdateEnable")]
         public long? UpdateEnable{ get; set; }
 
         /// <summary>
-        /// 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+        /// <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
         /// </summary>
         [JsonProperty("TrafficMode")]
         public string TrafficMode{ get; set; }
 
         /// <summary>
-        /// 引擎预约升级时间
+        /// <p>引擎预约升级时间</p>
         /// </summary>
         [JsonProperty("ReserveTime")]
         public string ReserveTime{ get; set; }
 
         /// <summary>
-        /// 预约引擎升级版本
+        /// <p>预约引擎升级版本</p>
         /// </summary>
         [JsonProperty("ReserveVersion")]
         public string ReserveVersion{ get; set; }
 
         /// <summary>
-        /// 引擎预约升级版本状态
+        /// <p>引擎预约升级版本状态</p>
         /// </summary>
         [JsonProperty("ReserveVersionState")]
         public string ReserveVersionState{ get; set; }
 
         /// <summary>
-        /// 弹性开关 1打开 0关闭
+        /// <p>弹性开关 1打开 0关闭</p>
         /// </summary>
         [JsonProperty("ElasticSwitch")]
         public long? ElasticSwitch{ get; set; }
 
         /// <summary>
-        /// 弹性带宽，单位Mbps
+        /// <p>弹性带宽，单位Mbps</p>
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public long? ElasticBandwidth{ get; set; }
 
         /// <summary>
-        /// 是否首次开通按量付费
-        /// 1 是
-        /// 0 不是
+        /// <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
         /// </summary>
         [JsonProperty("IsFirstAfterPay")]
         public long? IsFirstAfterPay{ get; set; }
+
+        /// <summary>
+        /// <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ElasticTrafficSwitch")]
+        public long? ElasticTrafficSwitch{ get; set; }
 
 
         /// <summary>
@@ -242,6 +246,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
             this.SetParamSimple(map, prefix + "IsFirstAfterPay", this.IsFirstAfterPay);
+            this.SetParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
         }
     }
 }

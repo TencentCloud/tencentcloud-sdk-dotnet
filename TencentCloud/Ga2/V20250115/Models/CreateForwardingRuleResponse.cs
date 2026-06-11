@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 异步任务ID。
+        /// <p>异步任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 七层转发规则ID。
+        /// <p>七层转发规则ID。</p>
         /// </summary>
         [JsonProperty("ForwardingRuleId")]
         public string ForwardingRuleId{ get; set; }

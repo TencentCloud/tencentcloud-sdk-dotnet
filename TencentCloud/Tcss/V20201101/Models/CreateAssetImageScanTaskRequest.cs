@@ -25,71 +25,77 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+        /// <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
         /// </summary>
         [JsonProperty("All")]
         [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+        /// <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// 扫描漏洞；漏洞，木马和风险需选其一
+        /// <p>扫描漏洞；漏洞，木马和风险需选其一</p>
         /// </summary>
         [JsonProperty("ScanVul")]
         public bool? ScanVul{ get; set; }
 
         /// <summary>
-        /// 扫描木马；漏洞，木马和风险需选其一
+        /// <p>扫描木马；漏洞，木马和风险需选其一</p>
         /// </summary>
         [JsonProperty("ScanVirus")]
         public bool? ScanVirus{ get; set; }
 
         /// <summary>
-        /// 扫描风险；漏洞，木马和风险需选其一
+        /// <p>扫描风险；漏洞，木马和风险需选其一</p>
         /// </summary>
         [JsonProperty("ScanRisk")]
         public bool? ScanRisk{ get; set; }
 
         /// <summary>
-        /// 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+        /// <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 根据过滤条件筛选出镜像，再排除个别镜像
+        /// <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
         /// </summary>
         [JsonProperty("ExcludeImageIds")]
         public string[] ExcludeImageIds{ get; set; }
 
         /// <summary>
-        /// 镜像是否存在运行中的容器
+        /// <p>镜像是否存在运行中的容器</p>
         /// </summary>
         [JsonProperty("ContainerRunning")]
         public bool? ContainerRunning{ get; set; }
 
         /// <summary>
-        /// 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+        /// <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
         /// </summary>
         [JsonProperty("ScanScope")]
         public ulong? ScanScope{ get; set; }
 
         /// <summary>
-        /// 任务超时时长单位秒，默认1小时
+        /// <p>任务超时时长单位秒，默认1小时</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// 一键扫描任务。默认false表示非一键扫描，true一键扫描
+        /// <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
         /// </summary>
         [JsonProperty("IsOneClickScanningTask")]
         public bool? IsOneClickScanningTask{ get; set; }
+
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterIDs")]
+        public string[] ClusterIDs{ get; set; }
 
 
         /// <summary>
@@ -108,6 +114,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
+            this.SetParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用于唯一标识转录任务，由腾讯云服务端生成，后续查询和停止请求都需要携带TaskID参数。
+        /// <p>用于唯一标识转录任务，由腾讯云服务端生成，后续查询和停止请求都需要携带TaskID参数。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

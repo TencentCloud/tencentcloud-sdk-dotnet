@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -1511,6 +1511,27 @@ namespace TencentCloud.Mongodb.V20190725
         public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
         {
             return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（PromoteDBInstanceToActive）用于灾备实例转正
+        /// </summary>
+        /// <param name="req"><see cref="PromoteDBInstanceToActiveRequest"/></param>
+        /// <returns><see cref="PromoteDBInstanceToActiveResponse"/></returns>
+        public Task<PromoteDBInstanceToActiveResponse> PromoteDBInstanceToActive(PromoteDBInstanceToActiveRequest req)
+        {
+            return InternalRequestAsync<PromoteDBInstanceToActiveResponse>(req, "PromoteDBInstanceToActive");
+        }
+
+        /// <summary>
+        /// 本接口（PromoteDBInstanceToActive）用于灾备实例转正
+        /// </summary>
+        /// <param name="req"><see cref="PromoteDBInstanceToActiveRequest"/></param>
+        /// <returns><see cref="PromoteDBInstanceToActiveResponse"/></returns>
+        public PromoteDBInstanceToActiveResponse PromoteDBInstanceToActiveSync(PromoteDBInstanceToActiveRequest req)
+        {
+            return InternalRequestAsync<PromoteDBInstanceToActiveResponse>(req, "PromoteDBInstanceToActive")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

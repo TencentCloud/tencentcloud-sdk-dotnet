@@ -25,19 +25,19 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 页码，从1开始
+        /// <p>页码，从1开始</p>
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 每页行数，不能大于200
+        /// <p>每页行数，不能大于200</p>
         /// </summary>
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
         /// <summary>
-        /// 标签筛选
+        /// <p>标签筛选</p>
         /// </summary>
         [JsonProperty("Tags")]
         public RoleTags[] Tags{ get; set; }

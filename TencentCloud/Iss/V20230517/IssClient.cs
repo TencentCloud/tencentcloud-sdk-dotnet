@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1414";
+       private const string sdkVersion = "SDK_NET_3.0.1442";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Iss.V20230517
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 添加AI任务
-        /// </summary>
-        /// <param name="req"><see cref="AddAITaskRequest"/></param>
-        /// <returns><see cref="AddAITaskResponse"/></returns>
-        public Task<AddAITaskResponse> AddAITask(AddAITaskRequest req)
-        {
-            return InternalRequestAsync<AddAITaskResponse>(req, "AddAITask");
-        }
-
-        /// <summary>
-        /// 添加AI任务
-        /// </summary>
-        /// <param name="req"><see cref="AddAITaskRequest"/></param>
-        /// <returns><see cref="AddAITaskResponse"/></returns>
-        public AddAITaskResponse AddAITaskSync(AddAITaskRequest req)
-        {
-            return InternalRequestAsync<AddAITaskResponse>(req, "AddAITask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -459,27 +438,6 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 删除AI任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAITaskRequest"/></param>
-        /// <returns><see cref="DeleteAITaskResponse"/></returns>
-        public Task<DeleteAITaskResponse> DeleteAITask(DeleteAITaskRequest req)
-        {
-            return InternalRequestAsync<DeleteAITaskResponse>(req, "DeleteAITask");
-        }
-
-        /// <summary>
-        /// 删除AI任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAITaskRequest"/></param>
-        /// <returns><see cref="DeleteAITaskResponse"/></returns>
-        public DeleteAITaskResponse DeleteAITaskSync(DeleteAITaskRequest req)
-        {
-            return InternalRequestAsync<DeleteAITaskResponse>(req, "DeleteAITask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于删除域名。
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainRequest"/></param>
@@ -686,48 +644,6 @@ namespace TencentCloud.Iss.V20230517
         public DeleteUserDeviceResponse DeleteUserDeviceSync(DeleteUserDeviceRequest req)
         {
             return InternalRequestAsync<DeleteUserDeviceResponse>(req, "DeleteUserDevice")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取AI任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAITaskRequest"/></param>
-        /// <returns><see cref="DescribeAITaskResponse"/></returns>
-        public Task<DescribeAITaskResponse> DescribeAITask(DescribeAITaskRequest req)
-        {
-            return InternalRequestAsync<DescribeAITaskResponse>(req, "DescribeAITask");
-        }
-
-        /// <summary>
-        /// 获取AI任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAITaskRequest"/></param>
-        /// <returns><see cref="DescribeAITaskResponse"/></returns>
-        public DescribeAITaskResponse DescribeAITaskSync(DescribeAITaskRequest req)
-        {
-            return InternalRequestAsync<DescribeAITaskResponse>(req, "DescribeAITask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取AI任务识别结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAITaskResultRequest"/></param>
-        /// <returns><see cref="DescribeAITaskResultResponse"/></returns>
-        public Task<DescribeAITaskResultResponse> DescribeAITaskResult(DescribeAITaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeAITaskResultResponse>(req, "DescribeAITaskResult");
-        }
-
-        /// <summary>
-        /// 获取AI任务识别结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAITaskResultRequest"/></param>
-        /// <returns><see cref="DescribeAITaskResultResponse"/></returns>
-        public DescribeAITaskResultResponse DescribeAITaskResultSync(DescribeAITaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeAITaskResultResponse>(req, "DescribeAITaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1280,27 +1196,6 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 获取AI任务列表
-        /// </summary>
-        /// <param name="req"><see cref="ListAITasksRequest"/></param>
-        /// <returns><see cref="ListAITasksResponse"/></returns>
-        public Task<ListAITasksResponse> ListAITasks(ListAITasksRequest req)
-        {
-            return InternalRequestAsync<ListAITasksResponse>(req, "ListAITasks");
-        }
-
-        /// <summary>
-        /// 获取AI任务列表
-        /// </summary>
-        /// <param name="req"><see cref="ListAITasksRequest"/></param>
-        /// <returns><see cref="ListAITasksResponse"/></returns>
-        public ListAITasksResponse ListAITasksSync(ListAITasksRequest req)
-        {
-            return InternalRequestAsync<ListAITasksResponse>(req, "ListAITasks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取设备抓拍结果列表
         /// </summary>
         /// <param name="req"><see cref="ListDeviceSnapshotsRequest"/></param>
@@ -1738,48 +1633,6 @@ namespace TencentCloud.Iss.V20230517
         public SetForbidPlayChannelsResponse SetForbidPlayChannelsSync(SetForbidPlayChannelsRequest req)
         {
             return InternalRequestAsync<SetForbidPlayChannelsResponse>(req, "SetForbidPlayChannels")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新AI任务
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAITaskRequest"/></param>
-        /// <returns><see cref="UpdateAITaskResponse"/></returns>
-        public Task<UpdateAITaskResponse> UpdateAITask(UpdateAITaskRequest req)
-        {
-            return InternalRequestAsync<UpdateAITaskResponse>(req, "UpdateAITask");
-        }
-
-        /// <summary>
-        /// 更新AI任务
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAITaskRequest"/></param>
-        /// <returns><see cref="UpdateAITaskResponse"/></returns>
-        public UpdateAITaskResponse UpdateAITaskSync(UpdateAITaskRequest req)
-        {
-            return InternalRequestAsync<UpdateAITaskResponse>(req, "UpdateAITask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新 AI 任务状态
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAITaskStatusRequest"/></param>
-        /// <returns><see cref="UpdateAITaskStatusResponse"/></returns>
-        public Task<UpdateAITaskStatusResponse> UpdateAITaskStatus(UpdateAITaskStatusRequest req)
-        {
-            return InternalRequestAsync<UpdateAITaskStatusResponse>(req, "UpdateAITaskStatus");
-        }
-
-        /// <summary>
-        /// 更新 AI 任务状态
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAITaskStatusRequest"/></param>
-        /// <returns><see cref="UpdateAITaskStatusResponse"/></returns>
-        public UpdateAITaskStatusResponse UpdateAITaskStatusSync(UpdateAITaskStatusRequest req)
-        {
-            return InternalRequestAsync<UpdateAITaskStatusResponse>(req, "UpdateAITaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

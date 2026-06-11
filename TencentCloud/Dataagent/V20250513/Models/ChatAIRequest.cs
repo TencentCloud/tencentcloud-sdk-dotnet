@@ -25,61 +25,61 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 会话ID
+        /// <p>会话ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 问题内容
+        /// <p>问题内容</p>
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 上下文
+        /// <p>上下文</p>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 模型
+        /// <p>模型</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 是否深度思考
+        /// <p>是否深度思考</p>
         /// </summary>
         [JsonProperty("DeepThinking")]
         public bool? DeepThinking{ get; set; }
 
         /// <summary>
-        /// 数据源id
+        /// <p>数据源id</p>
         /// </summary>
         [JsonProperty("DataSourceIds")]
         public string[] DataSourceIds{ get; set; }
 
         /// <summary>
-        /// agent类型
+        /// <p>agent类型</p>
         /// </summary>
         [JsonProperty("AgentType")]
         public string AgentType{ get; set; }
 
         /// <summary>
-        /// 需要重新生成答案的记录ID
+        /// <p>需要重新生成答案的记录ID</p>
         /// </summary>
         [JsonProperty("OldRecordId")]
         public string OldRecordId{ get; set; }
 
         /// <summary>
-        /// 知识库id列表
+        /// <p>知识库id列表</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseIds")]
         public string[] KnowledgeBaseIds{ get; set; }

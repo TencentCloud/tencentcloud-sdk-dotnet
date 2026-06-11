@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
+        /// <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集成容器服务中关联的集群ID
+        /// <p>集成容器服务中关联的集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 该参数未使用，不需要填写
+        /// <p>该参数未使用，不需要填写</p>
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }

@@ -25,28 +25,34 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        ///  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+        /// <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+        /// <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p>
         /// </summary>
         [JsonProperty("Speed")]
         public float? Speed{ get; set; }
 
         /// <summary>
-        ///  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+        /// <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
         /// </summary>
         [JsonProperty("Volume")]
         public float? Volume{ get; set; }
 
         /// <summary>
-        ///  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+        /// <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p>
         /// </summary>
         [JsonProperty("Pitch")]
         public long? Pitch{ get; set; }
+
+        /// <summary>
+        /// <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul>
+        /// </summary>
+        [JsonProperty("Emotion")]
+        public string Emotion{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Speed", this.Speed);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "Pitch", this.Pitch);
+            this.SetParamSimple(map, prefix + "Emotion", this.Emotion);
         }
     }
 }

@@ -25,16 +25,22 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况
+        /// <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 下载链接
+        /// <p>下载链接</p>
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
+
+        /// <summary>
+        /// <p>文件名称</p>
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

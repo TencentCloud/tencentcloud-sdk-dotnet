@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NodeCacheCapable")]
         public bool? NodeCacheCapable{ get; set; }
 
+        /// <summary>
+        /// <p>extender 是否可忽略</p>
+        /// </summary>
+        [JsonProperty("Ignorable")]
+        public bool? Ignorable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ExtenderClientConfig.", this.ExtenderClientConfig);
             this.SetParamSimple(map, prefix + "PreemptVerb", this.PreemptVerb);
             this.SetParamSimple(map, prefix + "NodeCacheCapable", this.NodeCacheCapable);
+            this.SetParamSimple(map, prefix + "Ignorable", this.Ignorable);
         }
     }
 }

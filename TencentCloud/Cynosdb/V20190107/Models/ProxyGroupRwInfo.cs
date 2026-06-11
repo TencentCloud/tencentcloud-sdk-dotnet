@@ -96,6 +96,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ApQueryToOtherNode")]
         public bool? ApQueryToOtherNode{ get; set; }
 
+        /// <summary>
+        /// <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+        /// </summary>
+        [JsonProperty("LoadBalanceMode")]
+        public string LoadBalanceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
             this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+            this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
         }
     }
 }

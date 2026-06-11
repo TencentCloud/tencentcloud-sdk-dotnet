@@ -132,6 +132,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
+        /// <summary>
+        /// <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+        /// </summary>
+        [JsonProperty("LoadBalanceMode")]
+        public string LoadBalanceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "TransSplit", this.TransSplit);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamArrayObj(map, prefix + "InstanceWeights.", this.InstanceWeights);
+            this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
         }
     }
 }

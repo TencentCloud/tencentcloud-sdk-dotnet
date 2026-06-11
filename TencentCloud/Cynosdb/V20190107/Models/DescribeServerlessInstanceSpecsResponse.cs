@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Serverless实例可选规格
+        /// <p>Serverless实例可选规格</p>
         /// </summary>
         [JsonProperty("Specs")]
         public ServerlessSpec[] Specs{ get; set; }

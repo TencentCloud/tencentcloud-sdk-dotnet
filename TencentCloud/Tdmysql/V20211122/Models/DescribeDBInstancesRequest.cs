@@ -25,22 +25,28 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 过滤参数
+        /// <p>过滤参数</p>
         /// </summary>
         [JsonProperty("Filters")]
         public InstanceFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 最大返回个数，默认为20，上限为100
+        /// <p>最大返回个数，默认为20，上限为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍
+        /// <p>偏移量，取Limit整数倍</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

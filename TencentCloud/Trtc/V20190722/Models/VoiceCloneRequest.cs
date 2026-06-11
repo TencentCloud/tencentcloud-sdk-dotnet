@@ -25,44 +25,44 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的SdkAppId
+        /// <p>TRTC的SdkAppId</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+        /// <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
         /// </summary>
         [JsonProperty("VoiceName")]
         public string VoiceName{ get; set; }
 
         /// <summary>
-        /// 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+        /// <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
         /// </summary>
         [JsonProperty("PromptAudio")]
         public string PromptAudio{ get; set; }
 
         /// <summary>
-        /// TTS的API密钥
+        /// <p>TTS的API密钥</p>
         /// </summary>
         [JsonProperty("APIKey")]
         [System.Obsolete]
         public string APIKey{ get; set; }
 
         /// <summary>
-        /// 声音克隆的参考文本，为参考音频对应的文字。
+        /// <p>声音克隆的参考文本，为参考音频对应的文字。</p>
         /// </summary>
         [JsonProperty("PromptText")]
         public string PromptText{ get; set; }
 
         /// <summary>
-        /// TTS的模型：flow_01_turbo，flow_01_ex
+        /// <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 语言参数，默认为空， 参考： (ISO 639-1) 
+        /// <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

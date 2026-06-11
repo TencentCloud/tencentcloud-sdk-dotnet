@@ -25,10 +25,42 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
+        /// 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效
+        /// </summary>
+        [JsonProperty("EffectAllCluster")]
+        public bool? EffectAllCluster{ get; set; }
+
+        /// <summary>
+        /// 受影响集群总数
+        /// </summary>
+        [JsonProperty("EffectClusterCount")]
+        public ulong? EffectClusterCount{ get; set; }
+
+        /// <summary>
+        /// 编辑账号
+        /// </summary>
+        [JsonProperty("OprUin")]
+        public string OprUin{ get; set; }
+
+        /// <summary>
+        /// 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleActions")]
+        public string[] RuleActions{ get; set; }
+
+        /// <summary>
         /// 规则ID
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
+
+        /// <summary>
+        /// 子规则内容列表，从 rule_details JSON 反序列化
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleInfoList")]
+        public K8sApiAbnormalRuleScopeInfo[] RuleInfoList{ get; set; }
 
         /// <summary>
         /// 规则名称
@@ -45,10 +77,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 受影响集群总数
+        /// 状态
         /// </summary>
-        [JsonProperty("EffectClusterCount")]
-        public ulong? EffectClusterCount{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
         /// <summary>
         /// 更新时间
@@ -56,31 +88,22 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
-        /// <summary>
-        /// 编辑账号
-        /// </summary>
-        [JsonProperty("OprUin")]
-        public string OprUin{ get; set; }
-
-        /// <summary>
-        /// 状态
-        /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+            this.SetParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
+            this.SetParamSimple(map, prefix + "OprUin", this.OprUin);
+            this.SetParamArraySimple(map, prefix + "RuleActions.", this.RuleActions);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
+            this.SetParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
-            this.SetParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "OprUin", this.OprUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

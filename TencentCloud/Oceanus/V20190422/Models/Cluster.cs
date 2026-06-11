@@ -79,7 +79,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>最后一次操作集群的时间</p>
+        /// <p>最后一次操作集群的时间</p><p>默认值：-</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -134,7 +134,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// <p>集群隔离时间; 没隔离时间，则为 -</p>
+        /// <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
@@ -420,6 +420,26 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("MaxCuPerJob")]
         public long? MaxCuPerJob{ get; set; }
 
+        /// <summary>
+        /// <p>元数据服务信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HiveMetastore")]
+        public HiveMetastoreInfo HiveMetastore{ get; set; }
+
+        /// <summary>
+        /// <p>安全组</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+        /// </summary>
+        [JsonProperty("NetEniType")]
+        public long? NetEniType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -486,6 +506,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "ClusterProcessMsg", this.ClusterProcessMsg);
             this.SetParamSimple(map, prefix + "MaxCuPerJob", this.MaxCuPerJob);
+            this.SetParamObj(map, prefix + "HiveMetastore.", this.HiveMetastore);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "NetEniType", this.NetEniType);
         }
     }
 }

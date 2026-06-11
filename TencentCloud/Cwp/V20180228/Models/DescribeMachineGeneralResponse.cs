@@ -25,126 +25,126 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 资产总数
+        /// <p>资产总数</p>
         /// </summary>
         [JsonProperty("MachineCnt")]
         public ulong? MachineCnt{ get; set; }
 
         /// <summary>
-        /// 腾讯云服务商机器数
+        /// <p>腾讯云服务商机器数</p>
         /// </summary>
         [JsonProperty("TencentCloudMachineCnt")]
         [System.Obsolete]
         public ulong? TencentCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// 阿里云服务商机器数
+        /// <p>阿里云服务商机器数</p>
         /// </summary>
         [JsonProperty("AliCloudMachineCnt")]
         [System.Obsolete]
         public ulong? AliCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// 百度云服务商机器数
+        /// <p>百度云服务商机器数</p>
         /// </summary>
         [JsonProperty("BaiduCloudMachineCnt")]
         [System.Obsolete]
         public ulong? BaiduCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// IDC机器数
+        /// <p>IDC机器数</p>
         /// </summary>
         [JsonProperty("IDCMachineCnt")]
         [System.Obsolete]
         public ulong? IDCMachineCnt{ get; set; }
 
         /// <summary>
-        /// 其他云服务商机器数
+        /// <p>其他云服务商机器数</p>
         /// </summary>
         [JsonProperty("OtherCloudMachineCnt")]
         [System.Obsolete]
         public ulong? OtherCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护机器数
+        /// <p>已防护机器数</p>
         /// </summary>
         [JsonProperty("ProtectMachineCnt")]
         public ulong? ProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护基础版机器数
+        /// <p>已防护基础版机器数</p>
         /// </summary>
         [JsonProperty("BaseMachineCnt")]
         public ulong? BaseMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护专业版机器数
+        /// <p>已防护专业版机器数</p>
         /// </summary>
         [JsonProperty("SpecialtyMachineCnt")]
         public ulong? SpecialtyMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护旗舰版机器数
+        /// <p>已防护旗舰版机器数</p>
         /// </summary>
         [JsonProperty("FlagshipMachineCnt")]
         public ulong? FlagshipMachineCnt{ get; set; }
 
         /// <summary>
-        /// 存在风险的机器数
+        /// <p>存在风险的机器数</p>
         /// </summary>
         [JsonProperty("RiskMachineCnt")]
         public ulong? RiskMachineCnt{ get; set; }
 
         /// <summary>
-        /// 比较昨日风险机器数
+        /// <p>比较昨日风险机器数</p>
         /// </summary>
         [JsonProperty("CompareYesterdayRiskMachineCnt")]
         public long? CompareYesterdayRiskMachineCnt{ get; set; }
 
         /// <summary>
-        /// 比较昨日未防护机器数
+        /// <p>比较昨日未防护机器数</p>
         /// </summary>
         [JsonProperty("CompareYesterdayNotProtectMachineCnt")]
         public long? CompareYesterdayNotProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// 比较昨日即将到期的机器数
+        /// <p>比较昨日即将到期的机器数</p>
         /// </summary>
         [JsonProperty("CompareYesterdayDeadlineMachineCnt")]
         public long? CompareYesterdayDeadlineMachineCnt{ get; set; }
 
         /// <summary>
-        /// 即将到期的机器数
+        /// <p>即将到期的机器数</p>
         /// </summary>
         [JsonProperty("DeadlineMachineCnt")]
         public ulong? DeadlineMachineCnt{ get; set; }
 
         /// <summary>
-        /// 未防护机器数
+        /// <p>未防护机器数</p>
         /// </summary>
         [JsonProperty("NotProtectMachineCnt")]
         public ulong? NotProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// 已防护轻量机器数（Lighthouse机器）
+        /// <p>已防护轻量机器数（Lighthouse机器）</p>
         /// </summary>
         [JsonProperty("LHGeneralDiscountCnt")]
         public ulong? LHGeneralDiscountCnt{ get; set; }
 
         /// <summary>
-        /// 比较昨日新增的主机数
+        /// <p>比较昨日新增的主机数</p>
         /// </summary>
         [JsonProperty("CompareYesterdayMachineCnt")]
         public long? CompareYesterdayMachineCnt{ get; set; }
 
         /// <summary>
-        /// 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+        /// <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p>
         /// </summary>
         [JsonProperty("MachineDestroyAfterOfflineHours")]
         public ulong? MachineDestroyAfterOfflineHours{ get; set; }
 
         /// <summary>
-        /// 云服务器类型数组
+        /// <p>云服务器类型数组</p>
         /// </summary>
         [JsonProperty("CloudFrom")]
         public CloudFromCnt[] CloudFrom{ get; set; }
