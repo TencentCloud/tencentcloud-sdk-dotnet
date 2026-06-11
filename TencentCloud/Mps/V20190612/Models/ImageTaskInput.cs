@@ -25,44 +25,50 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 图片编码配置。
+        /// <p>图片编码配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
-        /// 图片增强配置。
+        /// <p>图片增强配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 图片擦除配置。
+        /// <p>图片擦除配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EraseConfig")]
         public ImageEraseConfig EraseConfig{ get; set; }
 
         /// <summary>
-        /// 盲水印配置。
+        /// <p>盲水印配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlindWatermarkConfig")]
         public BlindWatermarkConfig BlindWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 美颜配置。
+        /// <p>美颜配置。</p>
         /// </summary>
         [JsonProperty("BeautyConfig")]
         public BeautyConfig BeautyConfig{ get; set; }
 
         /// <summary>
-        /// 图片基础转换能力。
+        /// <p>图片基础转换能力。</p>
         /// </summary>
         [JsonProperty("TransformConfig")]
         public ImageTransformConfig TransformConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai 换装配置。</p>
+        /// </summary>
+        [JsonProperty("AiTryOnConfig")]
+        public AiTryOnConfig AiTryOnConfig{ get; set; }
 
 
         /// <summary>
@@ -76,6 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
             this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
             this.SetParamObj(map, prefix + "TransformConfig.", this.TransformConfig);
+            this.SetParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
         }
     }
 }

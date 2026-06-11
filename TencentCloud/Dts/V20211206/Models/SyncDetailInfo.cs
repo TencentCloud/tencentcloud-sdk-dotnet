@@ -25,62 +25,62 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 总步骤数
+        /// <p>总步骤数</p>
         /// </summary>
         [JsonProperty("StepAll")]
         public ulong? StepAll{ get; set; }
 
         /// <summary>
-        /// 当前步骤
+        /// <p>当前步骤</p>
         /// </summary>
         [JsonProperty("StepNow")]
         public ulong? StepNow{ get; set; }
 
         /// <summary>
-        /// 总体进度
+        /// <p>总体进度</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+        /// <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public long? CurrentStepProgress{ get; set; }
 
         /// <summary>
-        /// 同步两端数据量差距
+        /// <p>同步两端数据量差距</p>
         /// </summary>
         [JsonProperty("MasterSlaveDistance")]
         public long? MasterSlaveDistance{ get; set; }
 
         /// <summary>
-        /// 同步两端时间差距
+        /// <p>同步两端时间差距</p>
         /// </summary>
         [JsonProperty("SecondsBehindMaster")]
         public long? SecondsBehindMaster{ get; set; }
 
         /// <summary>
-        /// 总体描述信息
+        /// <p>总体描述信息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 详细步骤信息
+        /// <p>详细步骤信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StepInfos")]
         public StepInfo[] StepInfos{ get; set; }
 
         /// <summary>
-        /// 不能发起内置校验的原因
+        /// <p>不能发起内置校验的原因</p>
         /// </summary>
         [JsonProperty("CauseOfCompareDisable")]
         public string CauseOfCompareDisable{ get; set; }
 
         /// <summary>
-        /// 任务的错误和解决方案信息
+        /// <p>任务的错误和解决方案信息</p>
         /// </summary>
         [JsonProperty("ErrInfo")]
         public ErrInfo ErrInfo{ get; set; }

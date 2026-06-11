@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 指标结果集
+        /// <p>指标结果集</p>
         /// </summary>
         [JsonProperty("Records")]
         public ApmMetricRecord[] Records{ get; set; }
 
         /// <summary>
-        /// 查询指标结果集条数
+        /// <p>查询指标结果集条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

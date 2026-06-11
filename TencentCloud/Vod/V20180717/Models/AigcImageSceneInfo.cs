@@ -25,19 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
+        /// <p>AI生图场景类型，可选值：</p><ul><li><code>ai_try_on</code>：AI 换装。</li><li><code>product_image</code>：AI 生商品图。</li><li><code>outpainting</code>: AI 扩图。</li></ul><p>下列 <code>Type</code> 已废弃，后续不再更新：</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+        /// <p>当 Type 为 ai_try_on 时必填，表示 AI 换装配置参数。</p>
+        /// </summary>
+        [JsonProperty("AiTryOnConfig")]
+        public AiTryOnConfig AiTryOnConfig{ get; set; }
+
+        /// <summary>
+        /// <p><strong>已废弃，请使用AiTryOnConfig。</strong>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
 
         /// <summary>
-        /// <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
+        /// <p>当 Type 为 product_image 时必填，表示AI 生商品图配置参数。</p>
         /// </summary>
         [JsonProperty("ProductImageConfig")]
         public ProductImageConfig ProductImageConfig{ get; set; }
@@ -49,6 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
             this.SetParamObj(map, prefix + "ChangeClothesConfig.", this.ChangeClothesConfig);
             this.SetParamObj(map, prefix + "ProductImageConfig.", this.ProductImageConfig);
         }

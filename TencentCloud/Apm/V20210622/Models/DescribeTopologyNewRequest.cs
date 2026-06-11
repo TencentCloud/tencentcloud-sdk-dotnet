@@ -25,106 +25,112 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统 ID
+        /// <p>业务系统 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间
+        /// <p>查询开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// <p>查询结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 应用名
+        /// <p>应用名</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 上游层级
+        /// <p>上游层级</p>
         /// </summary>
         [JsonProperty("UpLevel")]
         public long? UpLevel{ get; set; }
 
         /// <summary>
-        /// 应用实例信息
+        /// <p>应用实例信息</p>
         /// </summary>
         [JsonProperty("ServiceInstance")]
         public string ServiceInstance{ get; set; }
 
         /// <summary>
-        /// 下游层级
+        /// <p>下游层级</p>
         /// </summary>
         [JsonProperty("DownLevel")]
         public long? DownLevel{ get; set; }
 
         /// <summary>
-        /// 视角
+        /// <p>视角</p>
         /// </summary>
         [JsonProperty("View")]
         public string View{ get; set; }
 
         /// <summary>
-        /// 过滤器
+        /// <p>过滤器</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 表示Topic（MQ拓扑图用）
+        /// <p>表示Topic（MQ拓扑图用）</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 视图筛选列表
+        /// <p>视图筛选列表</p>
         /// </summary>
         [JsonProperty("Selectors")]
         public Selectors Selectors{ get; set; }
 
         /// <summary>
-        /// 视图ID
+        /// <p>视图ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// TraceID
+        /// <p>TraceID</p>
         /// </summary>
         [JsonProperty("TraceID")]
         public string TraceID{ get; set; }
 
         /// <summary>
-        /// 查询top5慢响应节点
+        /// <p>查询top5慢响应节点</p>
         /// </summary>
         [JsonProperty("IsSlowTopFive")]
         public bool? IsSlowTopFive{ get; set; }
 
         /// <summary>
-        /// 是否获取资源层信息
+        /// <p>是否获取资源层信息</p>
         /// </summary>
         [JsonProperty("GetResource")]
         public bool? GetResource{ get; set; }
 
         /// <summary>
-        /// 根据应用标签过滤
+        /// <p>根据应用标签过滤</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 不显示的节点类型
+        /// <p>不显示的节点类型</p>
         /// </summary>
         [JsonProperty("Hidden")]
         public Selectors Hidden{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启云资源关联</p>
+        /// </summary>
+        [JsonProperty("EnableResourceLink")]
+        public bool? EnableResourceLink{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "GetResource", this.GetResource);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "Hidden.", this.Hidden);
+            this.SetParamSimple(map, prefix + "EnableResourceLink", this.EnableResourceLink);
         }
     }
 }

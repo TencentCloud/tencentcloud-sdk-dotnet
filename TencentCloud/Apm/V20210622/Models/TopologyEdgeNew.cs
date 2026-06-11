@@ -110,6 +110,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("TargetComp")]
         public string TargetComp{ get; set; }
 
+        /// <summary>
+        /// 组件间调用次数
+        /// </summary>
+        [JsonProperty("ReqCnt")]
+        public long? ReqCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "SqlErrorRequestCount", this.SqlErrorRequestCount);
             this.SetParamSimple(map, prefix + "SourceComp", this.SourceComp);
             this.SetParamSimple(map, prefix + "TargetComp", this.TargetComp);
+            this.SetParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
         }
     }
 }

@@ -157,6 +157,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
+        /// <summary>
+        /// 调用次数
+        /// </summary>
+        [JsonProperty("ReqCnt")]
+        public long? ReqCnt{ get; set; }
+
+        /// <summary>
+        /// 消息队列消费者视角的调用次数
+        /// </summary>
+        [JsonProperty("ConsumerReqCnt")]
+        public long? ConsumerReqCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +195,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ConsumerErrRate", this.ConsumerErrRate);
             this.SetParamSimple(map, prefix + "ConsumerQps", this.ConsumerQps);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
+            this.SetParamSimple(map, prefix + "ConsumerReqCnt", this.ConsumerReqCnt);
         }
     }
 }

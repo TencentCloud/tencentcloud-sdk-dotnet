@@ -25,58 +25,64 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品名称代码
+        /// <p>产品名称代码</p>
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// <p>产品名称</p>
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 折后总价
+        /// <p>折后总价</p>
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 费用趋势
+        /// <p>费用趋势</p>
         /// </summary>
         [JsonProperty("Trend")]
         public ConsumptionSummaryTrend Trend{ get; set; }
 
         /// <summary>
-        /// 现金
+        /// <p>现金</p>
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送金
+        /// <p>赠送金</p>
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 代金券
+        /// <p>代金券</p>
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// 分成金
+        /// <p>分成金</p>
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// 地域名称（仅在地域汇总总展示）
+        /// <p>地域名称（仅在地域汇总中展示）</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
+
+        /// <summary>
+        /// <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+        /// </summary>
+        [JsonProperty("LeftRealTotalCost")]
+        public string LeftRealTotalCost{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "LeftRealTotalCost", this.LeftRealTotalCost);
         }
     }
 }

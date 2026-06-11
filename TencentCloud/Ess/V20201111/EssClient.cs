@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1444";
 
         /// <summary>
         /// Client constructor.
@@ -2871,7 +2871,7 @@ namespace TencentCloud.Ess.V20201111
 
         /// <summary>
         /// 发起解除协议的主要应用场景为：基于一份已经签署的合同（签署流程），进行解除操作。
-        /// 解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
+        /// 解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义，[点击查看解除协议模板示例PDF](https://qcloudimg.tencent-cloud.cn/raw/279b53002cf178ac89ba2c4f31b2dd8a.pdf)。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
         /// 
         /// 注意：
         /// <ul>
@@ -2896,7 +2896,7 @@ namespace TencentCloud.Ess.V20201111
 
         /// <summary>
         /// 发起解除协议的主要应用场景为：基于一份已经签署的合同（签署流程），进行解除操作。
-        /// 解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
+        /// 解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义，[点击查看解除协议模板示例PDF](https://qcloudimg.tencent-cloud.cn/raw/279b53002cf178ac89ba2c4f31b2dd8a.pdf)。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
         /// 
         /// 注意：
         /// <ul>

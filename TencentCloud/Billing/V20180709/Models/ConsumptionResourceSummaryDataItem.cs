@@ -25,244 +25,250 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// <p>资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源名称
+        /// <p>资源名称</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 折后总价
+        /// <p>折后总价</p>
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 现金花费
+        /// <p>现金花费</p>
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// <p>地域名称</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 付费模式名称
+        /// <p>付费模式名称</p>
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// 产品名称代码
+        /// <p>产品名称代码</p>
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// <p>产品名称</p>
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 消耗类型
+        /// <p>消耗类型</p>
         /// </summary>
         [JsonProperty("ConsumptionTypeName")]
         public string ConsumptionTypeName{ get; set; }
 
         /// <summary>
-        /// 折前价
+        /// <p>折前价</p>
         /// </summary>
         [JsonProperty("RealCost")]
         public string RealCost{ get; set; }
 
         /// <summary>
-        /// 费用起始时间
+        /// <p>费用起始时间</p>
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// 费用结束时间
+        /// <p>费用结束时间</p>
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
-        /// 天数
+        /// <p>天数</p>
         /// </summary>
         [JsonProperty("DayDiff")]
         public string DayDiff{ get; set; }
 
         /// <summary>
-        /// 每日消耗
+        /// <p>每日消耗</p>
         /// </summary>
         [JsonProperty("DailyTotalCost")]
         public string DailyTotalCost{ get; set; }
 
         /// <summary>
-        /// 订单号
+        /// <p>订单号</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 代金券
+        /// <p>代金券</p>
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送金
+        /// <p>赠送金</p>
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 分成金
+        /// <p>分成金</p>
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+        /// <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 使用者UIN：实际使用资源的账号 ID
+        /// <p>使用者UIN：实际使用资源的账号 ID</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+        /// <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 子产品编码
+        /// <p>子产品编码</p>
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+        /// <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// 地域类型
+        /// <p>地域类型</p>
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// 地域类型名称
+        /// <p>地域类型名称</p>
         /// </summary>
         [JsonProperty("RegionTypeName")]
         public string RegionTypeName{ get; set; }
 
         /// <summary>
-        /// 扩展字段1
+        /// <p>扩展字段1</p>
         /// </summary>
         [JsonProperty("Extend1")]
         public string Extend1{ get; set; }
 
         /// <summary>
-        /// 扩展字段2
+        /// <p>扩展字段2</p>
         /// </summary>
         [JsonProperty("Extend2")]
         public string Extend2{ get; set; }
 
         /// <summary>
-        /// 扩展字段3
+        /// <p>扩展字段3</p>
         /// </summary>
         [JsonProperty("Extend3")]
         public string Extend3{ get; set; }
 
         /// <summary>
-        /// 扩展字段4
+        /// <p>扩展字段4</p>
         /// </summary>
         [JsonProperty("Extend4")]
         public string Extend4{ get; set; }
 
         /// <summary>
-        /// 扩展字段5
+        /// <p>扩展字段5</p>
         /// </summary>
         [JsonProperty("Extend5")]
         public string Extend5{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例类型名称
+        /// <p>实例类型名称</p>
         /// </summary>
         [JsonProperty("InstanceTypeName")]
         public string InstanceTypeName{ get; set; }
 
         /// <summary>
-        /// 扣费时间：结算扣费时间
+        /// <p>扣费时间：结算扣费时间</p>
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// 可用区：资源所属可用区，如广州三区
+        /// <p>可用区：资源所属可用区，如广州三区</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 配置描述
+        /// <p>配置描述</p>
         /// </summary>
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
         /// <summary>
-        /// 标签信息
+        /// <p>标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
+
+        /// <summary>
+        /// <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+        /// </summary>
+        [JsonProperty("LeftRealTotalCost")]
+        public string LeftRealTotalCost{ get; set; }
 
 
         /// <summary>
@@ -310,6 +316,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
             this.SetParamSimple(map, prefix + "Tags", this.Tags);
+            this.SetParamSimple(map, prefix + "LeftRealTotalCost", this.LeftRealTotalCost);
         }
     }
 }

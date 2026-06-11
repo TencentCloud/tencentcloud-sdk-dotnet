@@ -25,52 +25,58 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+        /// <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例最早开始备份时间
+        /// <p>实例最早开始备份时间</p>
         /// </summary>
         [JsonProperty("MinBackupStartTime")]
         public string MinBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 实例最晚开始备份时间
+        /// <p>实例最晚开始备份时间</p>
         /// </summary>
         [JsonProperty("MaxBackupStartTime")]
         public string MaxBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 实例备份保留时长，取值范围为7-1830，单位是天
+        /// <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+        /// <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
         /// </summary>
         [JsonProperty("BackupPeriod")]
         public string[] BackupPeriod{ get; set; }
 
         /// <summary>
-        /// 实例日志备份保留时长，取值范围为7-1830，单位是天
+        /// <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
         /// </summary>
         [JsonProperty("LogBackupRetentionPeriod")]
         public ulong? LogBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+        /// <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// 要修改的备份计划名称。
+        /// <p>要修改的备份计划名称。</p>
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
+
+        /// <summary>
+        /// <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public string BackupMethod{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
             this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         }
     }
 }

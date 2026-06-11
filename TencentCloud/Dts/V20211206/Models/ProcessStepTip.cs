@@ -25,19 +25,19 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 提示信息
+        /// <p>提示信息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 解决方案
+        /// <p>解决方案</p>
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
-        /// 文档提示
+        /// <p>文档提示</p>
         /// </summary>
         [JsonProperty("HelpDoc")]
         public string HelpDoc{ get; set; }

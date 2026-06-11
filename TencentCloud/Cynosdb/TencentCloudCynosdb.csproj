@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1444</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20190107\Models\CLSInfo.cs" />
     <Compile Include="V20190107\Models\CalculateBackupSaveSecExpiresRequest.cs" />
     <Compile Include="V20190107\Models\CalculateBackupSaveSecExpiresResponse.cs" />
+    <Compile Include="V20190107\Models\CancelClusterServerlessScalePlanRequest.cs" />
+    <Compile Include="V20190107\Models\CancelClusterServerlessScalePlanResponse.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceRequest.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceResponse.cs" />
     <Compile Include="V20190107\Models\CheckItem.cs" />
@@ -116,7 +118,9 @@
     <Compile Include="V20190107\Models\CloseWanResponse.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\ClusterParamModifyLog.cs" />
+    <Compile Include="V20190107\Models\ClusterPeriodScalePolicy.cs" />
     <Compile Include="V20190107\Models\ClusterReadOnlyValue.cs" />
+    <Compile Include="V20190107\Models\ClusterServerlessScalePlan.cs" />
     <Compile Include="V20190107\Models\ClusterSlaveData.cs" />
     <Compile Include="V20190107\Models\ClusterTaskId.cs" />
     <Compile Include="V20190107\Models\CopyBackupToVaultRequest.cs" />
@@ -136,6 +140,8 @@
     <Compile Include="V20190107\Models\CreateCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\CreateClusterDatabaseRequest.cs" />
     <Compile Include="V20190107\Models\CreateClusterDatabaseResponse.cs" />
+    <Compile Include="V20190107\Models\CreateClusterPeriodScalePolicyRequest.cs" />
+    <Compile Include="V20190107\Models\CreateClusterPeriodScalePolicyResponse.cs" />
     <Compile Include="V20190107\Models\CreateClustersData.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
@@ -182,6 +188,8 @@
     <Compile Include="V20190107\Models\DeleteCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseRequest.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseResponse.cs" />
+    <Compile Include="V20190107\Models\DeleteClusterPeriodScalePolicyRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteClusterPeriodScalePolicyResponse.cs" />
     <Compile Include="V20190107\Models\DeleteClusterSaveBackupRequest.cs" />
     <Compile Include="V20190107\Models\DeleteClusterSaveBackupResponse.cs" />
     <Compile Include="V20190107\Models\DeleteLibraDBClusterAccountsRequest.cs" />
@@ -254,8 +262,12 @@
     <Compile Include="V20190107\Models\DescribeClusterParamsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterPasswordComplexityResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterPeriodScalePolicyRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterPeriodScalePolicyResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterReadOnlyRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterReadOnlyResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterServerlessScalePlansRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterServerlessScalePlansResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterTransparentEncryptInfoRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterTransparentEncryptInfoResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClustersRequest.cs" />
@@ -469,6 +481,8 @@
     <Compile Include="V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterPasswordComplexityResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterPeriodScalePolicyRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterPeriodScalePolicyResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterReadOnlyRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterReadOnlyResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterSlaveZoneRequest.cs" />
@@ -540,6 +554,8 @@
     <Compile Include="V20190107\Models\OfflineLibraDBInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineLibraDBInstanceResponse.cs" />
     <Compile Include="V20190107\Models\OldAddrInfo.cs" />
+    <Compile Include="V20190107\Models\OpenAIOptimizerRequest.cs" />
+    <Compile Include="V20190107\Models\OpenAIOptimizerResponse.cs" />
     <Compile Include="V20190107\Models\OpenAuditServiceRequest.cs" />
     <Compile Include="V20190107\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\OpenClusterPasswordComplexityRequest.cs" />

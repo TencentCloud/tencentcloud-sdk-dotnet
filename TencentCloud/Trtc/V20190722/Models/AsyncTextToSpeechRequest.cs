@@ -67,7 +67,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? AlignmentMode{ get; set; }
 
         /// <summary>
-        /// <p>需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）</p>
+        /// <p>需要合成的语言，默认为空，表示自动识别</p><p>枚举值：</p><ul><li>zh： 中文</li><li>en： 英文</li><li>ja： 日语</li><li>ko： 韩语</li><li>yue： 粤语</li><li>ms： 马来语</li><li>ar： 阿拉伯语</li><li>id： 印尼语</li><li>th： 泰语</li><li>vi： 越南语</li></ul>
         /// </summary>
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }

@@ -25,40 +25,46 @@ namespace TencentCloud.Vdb.V20230616.Models
     {
         
         /// <summary>
-        /// VpcId(VPC网络下有效)
+        /// <p>VpcId(VPC网络下有效)</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网Id(VPC网络下有效)。
+        /// <p>子网Id(VPC网络下有效)。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 内网访问IP。
+        /// <p>内网访问IP。</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 内网访问Port。
+        /// <p>内网访问Port。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 旧 ip 保留时长，单位天
+        /// <p>旧 ip 保留时长，单位天</p>
         /// </summary>
         [JsonProperty("PreserveDuration")]
         public long? PreserveDuration{ get; set; }
 
         /// <summary>
-        /// 旧 ip 到期时间
+        /// <p>旧 ip 到期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>是否是ssl网络</p>
+        /// </summary>
+        [JsonProperty("IsSSL")]
+        public bool? IsSSL{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "PreserveDuration", this.PreserveDuration);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "IsSSL", this.IsSSL);
         }
     }
 }

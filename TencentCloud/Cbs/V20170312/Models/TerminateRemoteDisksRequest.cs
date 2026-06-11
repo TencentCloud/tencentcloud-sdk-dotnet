@@ -24,12 +24,19 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class TerminateRemoteDisksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>一个或多个单副本SSD硬盘ID。</p>
+        /// </summary>
+        [JsonProperty("RemoteDiskIds")]
+        public string[] RemoteDiskIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
         }
     }
 }

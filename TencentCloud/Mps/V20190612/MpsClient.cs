@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1440";
+       private const string sdkVersion = "SDK_NET_3.0.1444";
 
         /// <summary>
         /// Client constructor.
@@ -241,6 +241,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建AI生音频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
+        public Task<CreateAigcAudioTaskResponse> CreateAigcAudioTask(CreateAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioTaskResponse>(req, "CreateAigcAudioTask");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建AI生音频任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
+        public CreateAigcAudioTaskResponse CreateAigcAudioTaskSync(CreateAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcAudioTaskResponse>(req, "CreateAigcAudioTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1857,6 +1878,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAdaptiveDynamicStreamingTemplatesResponse>(req, "DescribeAdaptiveDynamicStreamingTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcAudioTaskResponse"/></returns>
+        public Task<DescribeAigcAudioTaskResponse> DescribeAigcAudioTask(DescribeAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcAudioTaskResponse>(req, "DescribeAigcAudioTask");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcAudioTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcAudioTaskResponse"/></returns>
+        public DescribeAigcAudioTaskResponse DescribeAigcAudioTaskSync(DescribeAigcAudioTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcAudioTaskResponse>(req, "DescribeAigcAudioTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

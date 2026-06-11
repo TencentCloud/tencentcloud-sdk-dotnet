@@ -25,40 +25,70 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Tag 列表
+        /// <p>Tag 列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 按业务系统名过滤，支持模糊检索
+        /// <p>按业务系统名过滤，支持模糊检索</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 按业务系统 ID 过滤，支持模糊检索
+        /// <p>按业务系统 ID 过滤，支持模糊检索</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 按业务系统 ID 过滤
+        /// <p>按业务系统 ID 过滤</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+        /// <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
         /// </summary>
         [JsonProperty("DemoInstanceFlag")]
         public long? DemoInstanceFlag{ get; set; }
 
         /// <summary>
-        /// 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+        /// <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
         /// </summary>
         [JsonProperty("AllRegionsFlag")]
         public long? AllRegionsFlag{ get; set; }
+
+        /// <summary>
+        /// <p>页码，从1开始</p><p>单位：页</p>
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
+
+        /// <summary>
+        /// <p>每页数量，默认20，最大100</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// <p>排序类型：ASC | DESC</p>
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public string OrderDirection{ get; set; }
+
+        /// <summary>
+        /// <p>排序字段：ServiceCount / TotalCount</p>
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
 
 
         /// <summary>
@@ -72,6 +102,11 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
             this.SetParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

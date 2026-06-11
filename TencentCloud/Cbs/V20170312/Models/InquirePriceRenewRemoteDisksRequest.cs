@@ -24,12 +24,26 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class InquirePriceRenewRemoteDisksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。</p>
+        /// </summary>
+        [JsonProperty("DiskChargePrepaidSet")]
+        public RemoteDiskChargePrepaid[] DiskChargePrepaidSet{ get; set; }
+
+        /// <summary>
+        /// <p>一个或多个单副本SSD硬盘ID。</p>
+        /// </summary>
+        [JsonProperty("RemoteDiskIds")]
+        public string[] RemoteDiskIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "DiskChargePrepaidSet.", this.DiskChargePrepaidSet);
+            this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
         }
     }
 }

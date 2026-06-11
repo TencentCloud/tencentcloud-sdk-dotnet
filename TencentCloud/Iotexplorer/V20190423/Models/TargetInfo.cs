@@ -25,55 +25,55 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 视频唯一ID
+        /// <p>视频唯一ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 视频起始时间（毫秒级Unix时间戳）
+        /// <p>视频起始时间（毫秒级Unix时间戳）</p>
         /// </summary>
         [JsonProperty("StartTimeMs")]
         public long? StartTimeMs{ get; set; }
 
         /// <summary>
-        /// 视频结束时间（毫秒级Unix时间戳）
+        /// <p>视频结束时间（毫秒级Unix时间戳）</p>
         /// </summary>
         [JsonProperty("EndTimeMs")]
         public long? EndTimeMs{ get; set; }
 
         /// <summary>
-        /// 用户自定义事件ID，后续扩展使用
+        /// <p>用户自定义事件ID，后续扩展使用</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 视频内容摘要
+        /// <p>视频内容摘要</p>
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
 
         /// <summary>
-        /// 通道ID
+        /// <p>通道ID</p>
         /// </summary>
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
-        /// 缩略图路径
+        /// <p>缩略图路径</p>
         /// </summary>
         [JsonProperty("Thumbnail")]
         public string Thumbnail{ get; set; }

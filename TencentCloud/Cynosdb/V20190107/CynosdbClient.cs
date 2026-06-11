@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1444";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpiresSync(CalculateBackupSaveSecExpiresRequest req)
         {
             return InternalRequestAsync<CalculateBackupSaveSecExpiresResponse>(req, "CalculateBackupSaveSecExpires")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消Serverless集群的弹性计划
+        /// </summary>
+        /// <param name="req"><see cref="CancelClusterServerlessScalePlanRequest"/></param>
+        /// <returns><see cref="CancelClusterServerlessScalePlanResponse"/></returns>
+        public Task<CancelClusterServerlessScalePlanResponse> CancelClusterServerlessScalePlan(CancelClusterServerlessScalePlanRequest req)
+        {
+            return InternalRequestAsync<CancelClusterServerlessScalePlanResponse>(req, "CancelClusterServerlessScalePlan");
+        }
+
+        /// <summary>
+        /// 取消Serverless集群的弹性计划
+        /// </summary>
+        /// <param name="req"><see cref="CancelClusterServerlessScalePlanRequest"/></param>
+        /// <returns><see cref="CancelClusterServerlessScalePlanResponse"/></returns>
+        public CancelClusterServerlessScalePlanResponse CancelClusterServerlessScalePlanSync(CancelClusterServerlessScalePlanRequest req)
+        {
+            return InternalRequestAsync<CancelClusterServerlessScalePlanResponse>(req, "CancelClusterServerlessScalePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +621,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 创建集群的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="CreateClusterPeriodScalePolicyResponse"/></returns>
+        public Task<CreateClusterPeriodScalePolicyResponse> CreateClusterPeriodScalePolicy(CreateClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateClusterPeriodScalePolicyResponse>(req, "CreateClusterPeriodScalePolicy");
+        }
+
+        /// <summary>
+        /// 创建集群的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="CreateClusterPeriodScalePolicyResponse"/></returns>
+        public CreateClusterPeriodScalePolicyResponse CreateClusterPeriodScalePolicySync(CreateClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateClusterPeriodScalePolicyResponse>(req, "CreateClusterPeriodScalePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateClusters）用于新购集群。
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
@@ -932,6 +974,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteClusterDatabaseResponse DeleteClusterDatabaseSync(DeleteClusterDatabaseRequest req)
         {
             return InternalRequestAsync<DeleteClusterDatabaseResponse>(req, "DeleteClusterDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="DeleteClusterPeriodScalePolicyResponse"/></returns>
+        public Task<DeleteClusterPeriodScalePolicyResponse> DeleteClusterPeriodScalePolicy(DeleteClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterPeriodScalePolicyResponse>(req, "DeleteClusterPeriodScalePolicy");
+        }
+
+        /// <summary>
+        /// 删除周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="DeleteClusterPeriodScalePolicyResponse"/></returns>
+        public DeleteClusterPeriodScalePolicyResponse DeleteClusterPeriodScalePolicySync(DeleteClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterPeriodScalePolicyResponse>(req, "DeleteClusterPeriodScalePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1650,6 +1713,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询集群内所有的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="DescribeClusterPeriodScalePolicyResponse"/></returns>
+        public Task<DescribeClusterPeriodScalePolicyResponse> DescribeClusterPeriodScalePolicy(DescribeClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPeriodScalePolicyResponse>(req, "DescribeClusterPeriodScalePolicy");
+        }
+
+        /// <summary>
+        /// 查询集群内所有的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="DescribeClusterPeriodScalePolicyResponse"/></returns>
+        public DescribeClusterPeriodScalePolicyResponse DescribeClusterPeriodScalePolicySync(DescribeClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPeriodScalePolicyResponse>(req, "DescribeClusterPeriodScalePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterReadOnlyRequest"/></param>
@@ -1667,6 +1751,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterReadOnlyResponse DescribeClusterReadOnlySync(DescribeClusterReadOnlyRequest req)
         {
             return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Serverless弹性扩容计划
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterServerlessScalePlansRequest"/></param>
+        /// <returns><see cref="DescribeClusterServerlessScalePlansResponse"/></returns>
+        public Task<DescribeClusterServerlessScalePlansResponse> DescribeClusterServerlessScalePlans(DescribeClusterServerlessScalePlansRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterServerlessScalePlansResponse>(req, "DescribeClusterServerlessScalePlans");
+        }
+
+        /// <summary>
+        /// 查询Serverless弹性扩容计划
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterServerlessScalePlansRequest"/></param>
+        /// <returns><see cref="DescribeClusterServerlessScalePlansResponse"/></returns>
+        public DescribeClusterServerlessScalePlansResponse DescribeClusterServerlessScalePlansSync(DescribeClusterServerlessScalePlansRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterServerlessScalePlansResponse>(req, "DescribeClusterServerlessScalePlans")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3456,6 +3561,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 更新集群的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="ModifyClusterPeriodScalePolicyResponse"/></returns>
+        public Task<ModifyClusterPeriodScalePolicyResponse> ModifyClusterPeriodScalePolicy(ModifyClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterPeriodScalePolicyResponse>(req, "ModifyClusterPeriodScalePolicy");
+        }
+
+        /// <summary>
+        /// 更新集群的周期弹性策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPeriodScalePolicyRequest"/></param>
+        /// <returns><see cref="ModifyClusterPeriodScalePolicyResponse"/></returns>
+        public ModifyClusterPeriodScalePolicyResponse ModifyClusterPeriodScalePolicySync(ModifyClusterPeriodScalePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterPeriodScalePolicyResponse>(req, "ModifyClusterPeriodScalePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyClusterReadOnly）用于修改集群只读开关。
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterReadOnlyRequest"/></param>
@@ -4082,6 +4208,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public OfflineLibraDBInstanceResponse OfflineLibraDBInstanceSync(OfflineLibraDBInstanceRequest req)
         {
             return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(OpenAIOptimizer)用于开启实例的AI优化器开关。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAIOptimizerRequest"/></param>
+        /// <returns><see cref="OpenAIOptimizerResponse"/></returns>
+        public Task<OpenAIOptimizerResponse> OpenAIOptimizer(OpenAIOptimizerRequest req)
+        {
+            return InternalRequestAsync<OpenAIOptimizerResponse>(req, "OpenAIOptimizer");
+        }
+
+        /// <summary>
+        /// 本接口(OpenAIOptimizer)用于开启实例的AI优化器开关。
+        /// </summary>
+        /// <param name="req"><see cref="OpenAIOptimizerRequest"/></param>
+        /// <returns><see cref="OpenAIOptimizerResponse"/></returns>
+        public OpenAIOptimizerResponse OpenAIOptimizerSync(OpenAIOptimizerRequest req)
+        {
+            return InternalRequestAsync<OpenAIOptimizerResponse>(req, "OpenAIOptimizer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

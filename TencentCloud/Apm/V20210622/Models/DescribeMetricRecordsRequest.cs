@@ -25,98 +25,94 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统 ID
+        /// <p>业务系统 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 指标列表
+        /// <p>指标列表</p>
         /// </summary>
         [JsonProperty("Metrics")]
         public QueryMetricItem[] Metrics{ get; set; }
 
         /// <summary>
-        /// 开始时间（单位为秒）
+        /// <p>开始时间（单位为秒）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（单位为秒）
+        /// <p>结束时间（单位为秒）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 聚合维度
+        /// <p>聚合维度</p>
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// <p>过滤条件</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Or 过滤条件
+        /// <p>Or 过滤条件</p>
         /// </summary>
         [JsonProperty("OrFilters")]
         public Filter[] OrFilters{ get; set; }
 
         /// <summary>
-        /// 排序
-        /// 现支持的 Key 有：
-        /// 
-        /// - startTime(开始时间)
-        /// - endTime(结束时间)
-        /// - duration(响应时间)
-        /// 
-        /// 现支持的 Value 有：
-        /// 
-        /// - desc(降序排序)
-        /// - asc(升序排序)
+        /// <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public OrderBy OrderBy{ get; set; }
 
         /// <summary>
-        /// 业务名称，控制台用户请填写taw。
+        /// <p>业务名称，控制台用户请填写taw。</p>
         /// </summary>
         [JsonProperty("BusinessName")]
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// 特殊处理查询结果
+        /// <p>特殊处理查询结果</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为1000，合法取值范围为0~1000
+        /// <p>每页大小，默认为1000，合法取值范围为0~1000</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页起始点
+        /// <p>分页起始点</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageIndex")]
         public long? PageIndex{ get; set; }
 
         /// <summary>
-        /// 页长
+        /// <p>页长</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>应用Id</p>
+        /// </summary>
+        [JsonProperty("ServiceID")]
+        public string ServiceID{ get; set; }
 
 
         /// <summary>
@@ -138,6 +134,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ServiceID", this.ServiceID);
         }
     }
 }

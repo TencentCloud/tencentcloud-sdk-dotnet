@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+        /// <p>输出图片编码格式参数。</p>
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageSceneAigcEncodeConfig EncodeConfig{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ImageHeight{ get; set; }
 
         /// <summary>
-        /// <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+        /// <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

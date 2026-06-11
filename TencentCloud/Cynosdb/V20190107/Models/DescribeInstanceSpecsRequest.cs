@@ -25,23 +25,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 数据库类型，取值范围: 
-        /// <li> MYSQL </li>
+        /// <p>数据库类型，取值范围: </p><li> MYSQL </li>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 是否需要返回可用区信息
+        /// <p>是否需要返回可用区信息</p>
         /// </summary>
         [JsonProperty("IncludeZoneStocks")]
         public bool? IncludeZoneStocks{ get; set; }
 
         /// <summary>
-        /// 实例机器类型
+        /// <p>实例机器类型</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// <p>集群级别，可空。例如 P0, P1</p>
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
 
 
         /// <summary>
@@ -52,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         }
     }
 }

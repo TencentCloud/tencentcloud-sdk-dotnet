@@ -25,31 +25,31 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 总步骤数
+        /// <p>总步骤数</p>
         /// </summary>
         [JsonProperty("StepAll")]
         public ulong? StepAll{ get; set; }
 
         /// <summary>
-        /// 当前步骤
+        /// <p>当前步骤</p>
         /// </summary>
         [JsonProperty("StepNow")]
         public ulong? StepNow{ get; set; }
 
         /// <summary>
-        /// 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+        /// <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
         /// </summary>
         [JsonProperty("MasterSlaveDistance")]
         public long? MasterSlaveDistance{ get; set; }
 
         /// <summary>
-        /// 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+        /// <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
         /// </summary>
         [JsonProperty("SecondsBehindMaster")]
         public long? SecondsBehindMaster{ get; set; }
 
         /// <summary>
-        /// 步骤信息
+        /// <p>步骤信息</p>
         /// </summary>
         [JsonProperty("StepInfo")]
         public StepDetailInfo[] StepInfo{ get; set; }

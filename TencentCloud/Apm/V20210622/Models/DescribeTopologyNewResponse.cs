@@ -25,31 +25,38 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 节点集合
+        /// <p>节点集合</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nodes")]
         public TopologyNode[] Nodes{ get; set; }
 
         /// <summary>
-        /// 边集合
+        /// <p>边集合</p>
         /// </summary>
         [JsonProperty("Edges")]
         public TopologyEdgeNew[] Edges{ get; set; }
 
         /// <summary>
-        /// 拓扑图是否有修改
+        /// <p>拓扑图是否有修改</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopologyModifyFlag")]
         public long? TopologyModifyFlag{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Selectors")]
         public SelectorView Selectors{ get; set; }
+
+        /// <summary>
+        /// <p>节点状态</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OverviewStats")]
+        public OverviewStats OverviewStats{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -67,6 +74,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "Edges.", this.Edges);
             this.SetParamSimple(map, prefix + "TopologyModifyFlag", this.TopologyModifyFlag);
             this.SetParamObj(map, prefix + "Selectors.", this.Selectors);
+            this.SetParamObj(map, prefix + "OverviewStats.", this.OverviewStats);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

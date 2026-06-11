@@ -25,129 +25,124 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态.
-        /// init：未执行
-        /// running：执行中，finished：已完成
-        /// ,failed：失败
-        /// ,stopping：停止中,stopped：已停止
+        /// <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 任务结束时间
+        /// <p>任务结束时间</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 文件总数
+        /// <p>文件总数</p>
         /// </summary>
         [JsonProperty("FileTotalCount")]
         public ulong? FileTotalCount{ get; set; }
 
         /// <summary>
-        /// 处理成功文件数量
+        /// <p>处理成功文件数量</p>
         /// </summary>
         [JsonProperty("FileSuccessedCount")]
         public ulong? FileSuccessedCount{ get; set; }
 
         /// <summary>
-        /// 当前已经失败的文件数
+        /// <p>当前已经失败的文件数</p>
         /// </summary>
         [JsonProperty("FileFailedCount")]
         public ulong? FileFailedCount{ get; set; }
 
         /// <summary>
-        /// 文件容量，单位Byte
-        /// 
+        /// <p>文件容量，单位Byte</p>
         /// </summary>
         [JsonProperty("FileTotalSize")]
         public ulong? FileTotalSize{ get; set; }
 
         /// <summary>
-        /// 已处理完成的文件容量，单位Byte
-        /// 
+        /// <p>已处理完成的文件容量，单位Byte</p>
         /// </summary>
         [JsonProperty("FileSuccessedSize")]
         public ulong? FileSuccessedSize{ get; set; }
 
         /// <summary>
-        /// 已处理失败文件容量，单位Byte
+        /// <p>已处理失败文件容量，单位Byte</p>
         /// </summary>
         [JsonProperty("FileFailedSize")]
         public ulong? FileFailedSize{ get; set; }
 
         /// <summary>
-        /// 总文件列表
+        /// <p>总文件列表</p>
         /// </summary>
         [JsonProperty("FileTotalList")]
         public string FileTotalList{ get; set; }
 
         /// <summary>
-        /// 成功的文件列表
+        /// <p>成功的文件列表</p>
         /// </summary>
         [JsonProperty("FileSuccessedList")]
         public string FileSuccessedList{ get; set; }
 
         /// <summary>
-        /// 失败文件的列表
+        /// <p>失败文件的列表</p>
         /// </summary>
         [JsonProperty("FileFailedList")]
         public string FileFailedList{ get; set; }
 
         /// <summary>
-        /// FileSystemId
+        /// <p>FileSystemId</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务路径
+        /// <p>任务路径</p>
         /// </summary>
         [JsonProperty("TaskPath")]
         public string TaskPath{ get; set; }
 
         /// <summary>
-        /// 任务类型,archive:表示沉降任务，restore：表示拉取任务
+        /// <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数据流动Id
+        /// <p>数据流动Id</p>
         /// </summary>
         [JsonProperty("DataFlowId")]
         public string DataFlowId{ get; set; }
 
         /// <summary>
-        /// 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-        /// 
-        /// ture：覆盖
-        /// 
-        /// false：不覆盖（同时也不会释放热存数据）
-        /// 为空时，默认为false
+        /// <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p>
         /// </summary>
         [JsonProperty("IsOverwrite")]
         public bool? IsOverwrite{ get; set; }
+
+        /// <summary>
+        /// <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+        /// </summary>
+        [JsonProperty("ListPath")]
+        public string ListPath{ get; set; }
 
 
         /// <summary>
@@ -174,6 +169,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
             this.SetParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+            this.SetParamSimple(map, prefix + "ListPath", this.ListPath);
         }
     }
 }

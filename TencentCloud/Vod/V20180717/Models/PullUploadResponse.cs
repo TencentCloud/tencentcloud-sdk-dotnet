@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。
+        /// <p>拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

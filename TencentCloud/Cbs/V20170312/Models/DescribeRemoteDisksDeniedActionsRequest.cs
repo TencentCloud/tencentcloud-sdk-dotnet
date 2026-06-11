@@ -24,12 +24,19 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class DescribeRemoteDisksDeniedActionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p>
+        /// </summary>
+        [JsonProperty("RemoteDiskIds")]
+        public string[] RemoteDiskIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
         }
     }
 }

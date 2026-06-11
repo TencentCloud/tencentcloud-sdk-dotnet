@@ -25,51 +25,57 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 步骤编号
+        /// <p>步骤编号</p>
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
-        /// 步骤名
+        /// <p>步骤名</p>
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
-        /// 步骤标号
+        /// <p>步骤标号</p>
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
-        /// 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
+        /// <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 步骤开始时间，可能为空
+        /// <p>步骤开始时间，可能为空</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>完成时间</p>
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// <p>错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public StepTip[] Errors{ get; set; }
 
         /// <summary>
-        /// 警告信息
+        /// <p>警告信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warnings")]
         public StepTip[] Warnings{ get; set; }
 
         /// <summary>
-        /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+        /// <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -85,6 +91,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "StepId", this.StepId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamArrayObj(map, prefix + "Warnings.", this.Warnings);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);

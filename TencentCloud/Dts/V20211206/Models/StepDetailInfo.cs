@@ -25,55 +25,61 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 步骤序列
+        /// <p>步骤序列</p>
         /// </summary>
         [JsonProperty("StepNo")]
         public ulong? StepNo{ get; set; }
 
         /// <summary>
-        /// 步骤展现名称
+        /// <p>步骤展现名称</p>
         /// </summary>
         [JsonProperty("StepName")]
         public string StepName{ get; set; }
 
         /// <summary>
-        /// 步骤英文标识
+        /// <p>步骤英文标识</p>
         /// </summary>
         [JsonProperty("StepId")]
         public string StepId{ get; set; }
 
         /// <summary>
-        /// 步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted
+        /// <p>步骤状态:success(成功)、failed(失败)、running(执行中)、notStarted(未执行)、默认为notStarted</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>当前步骤开始的时间，格式为&quot;yyyy-mm-dd hh:mm:ss&quot;，该字段不存在或者为空是无意义 注意：此字段可能返回 null，表示取不到有效值。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 步骤错误信息
+        /// <p>完成时间</p>
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// <p>步骤错误信息</p>
         /// </summary>
         [JsonProperty("StepMessage")]
         public string StepMessage{ get; set; }
 
         /// <summary>
-        /// 执行进度
+        /// <p>执行进度</p>
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// </summary>
         [JsonProperty("Errors")]
         public ProcessStepTip[] Errors{ get; set; }
 
         /// <summary>
-        /// 告警提示
+        /// <p>告警提示</p>
         /// </summary>
         [JsonProperty("Warnings")]
         public ProcessStepTip[] Warnings{ get; set; }
@@ -89,6 +95,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "StepId", this.StepId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "StepMessage", this.StepMessage);
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);

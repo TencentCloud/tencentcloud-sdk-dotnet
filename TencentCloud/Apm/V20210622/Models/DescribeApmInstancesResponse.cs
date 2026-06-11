@@ -25,10 +25,28 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// APM 业务系统列表
+        /// <p>APM 业务系统列表</p>
         /// </summary>
         [JsonProperty("Instances")]
         public ApmInstanceDetail[] Instances{ get; set; }
+
+        /// <summary>
+        /// <p>总数</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>页码，从1开始 </p><p>单位：页</p>
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
+
+        /// <summary>
+        /// <p>每页数量，默认20，最大100</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +61,9 @@ namespace TencentCloud.Apm.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

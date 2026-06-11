@@ -25,79 +25,79 @@ namespace TencentCloud.Vdb.V20230616.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例自定义名称。
+        /// <p>实例自定义名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户APPID。
+        /// <p>用户APPID。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 地域。
+        /// <p>地域。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区。
+        /// <p>可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 产品。
+        /// <p>产品。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 网络信息。
+        /// <p>网络信息。</p>
         /// </summary>
         [JsonProperty("Networks")]
         public Network[] Networks{ get; set; }
 
         /// <summary>
-        /// 分片信息。
+        /// <p>分片信息。</p>
         /// </summary>
         [JsonProperty("ShardNum")]
         public ulong? ShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数。
+        /// <p>副本数。</p>
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public ulong? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// CPU.
+        /// <p>CPU.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存。
+        /// <p>内存。</p>
         /// </summary>
         [JsonProperty("Memory")]
         public float? Memory{ get; set; }
 
         /// <summary>
-        /// 磁盘。
+        /// <p>磁盘。</p>
         /// </summary>
         [JsonProperty("Disk")]
         public ulong? Disk{ get; set; }
 
         /// <summary>
-        /// 健康得分。
+        /// <p>健康得分。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthScore")]
@@ -105,7 +105,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         public float? HealthScore{ get; set; }
 
         /// <summary>
-        /// 异常告警。
+        /// <p>异常告警。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warning")]
@@ -113,7 +113,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         public long? Warning{ get; set; }
 
         /// <summary>
-        /// 所属项目。
+        /// <p>所属项目。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Project")]
@@ -121,112 +121,124 @@ namespace TencentCloud.Vdb.V20230616.Models
         public string Project{ get; set; }
 
         /// <summary>
-        /// 所属标签。
+        /// <p>所属标签。</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 资源状态。
+        /// <p>资源状态。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 引擎名称。
+        /// <p>引擎名称。</p>
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// 引擎版本。
+        /// <p>引擎版本。</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// api版本
+        /// <p>api版本</p>
         /// </summary>
         [JsonProperty("ApiVersion")]
         public string ApiVersion{ get; set; }
 
         /// <summary>
-        /// 计费模式。
+        /// <p>计费模式。</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 差异化扩展信息, json格式。
+        /// <p>差异化扩展信息, json格式。</p>
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
 
         /// <summary>
-        /// 过期时间。
+        /// <p>过期时间。</p>
         /// </summary>
         [JsonProperty("ExpiredAt")]
         public string ExpiredAt{ get; set; }
 
         /// <summary>
-        /// 是否不过期(永久)。
+        /// <p>是否不过期(永久)。</p>
         /// </summary>
         [JsonProperty("IsNoExpired")]
         public bool? IsNoExpired{ get; set; }
 
         /// <summary>
-        /// 产品版本，0-标准版，1-容量增强版
+        /// <p>产品版本，0-标准版，1-容量增强版</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 外网地址。
+        /// <p>外网地址。</p>
         /// </summary>
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// 隔离时间
+        /// <p>隔离时间</p>
         /// </summary>
         [JsonProperty("IsolateAt")]
         public string IsolateAt{ get; set; }
 
         /// <summary>
-        /// 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+        /// <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+        /// <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// 绑定的安全组id
+        /// <p>绑定的安全组id</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>可升级版本号</p>
+        /// </summary>
+        [JsonProperty("UpgradeVersion")]
+        public string UpgradeVersion{ get; set; }
+
+        /// <summary>
+        /// <p>是否为内部实例</p>
+        /// </summary>
+        [JsonProperty("IsInternal")]
+        public bool? IsInternal{ get; set; }
 
 
         /// <summary>
@@ -267,6 +279,8 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "UpgradeVersion", this.UpgradeVersion);
+            this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
         }
     }
 }

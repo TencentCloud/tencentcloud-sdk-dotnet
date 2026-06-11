@@ -25,349 +25,343 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统 ID
+        /// <p>业务系统 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 业务系统名
+        /// <p>业务系统名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 业务系统描述信息
+        /// <p>业务系统描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 业务系统状态。{
-        /// 1: 初始化中; 2: 运行中; 4: 限流}
+        /// <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 业务系统所属地域
+        /// <p>业务系统所属地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 业务系统 Tag 列表
+        /// <p>业务系统 Tag 列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// AppID 信息
+        /// <p>AppID 信息</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 创建人 Uin
+        /// <p>创建人 Uin</p>
         /// </summary>
         [JsonProperty("CreateUin")]
         public string CreateUin{ get; set; }
 
         /// <summary>
-        /// 存储使用量(单位：MB)
+        /// <p>存储使用量(单位：MB)</p>
         /// </summary>
         [JsonProperty("AmountOfUsedStorage")]
         public float? AmountOfUsedStorage{ get; set; }
 
         /// <summary>
-        /// 该业务系统服务端应用数量
+        /// <p>该业务系统服务端应用数量</p>
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// 日均上报 Span 数
+        /// <p>日均上报 Span 数</p>
         /// </summary>
         [JsonProperty("CountOfReportSpanPerDay")]
         public long? CountOfReportSpanPerDay{ get; set; }
 
         /// <summary>
-        /// Trace 数据保存时长（单位：天）
+        /// <p>Trace 数据保存时长（单位：天）</p>
         /// </summary>
         [JsonProperty("TraceDuration")]
         public long? TraceDuration{ get; set; }
 
         /// <summary>
-        /// 业务系统上报额度
+        /// <p>业务系统上报额度</p>
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public long? SpanDailyCounters{ get; set; }
 
         /// <summary>
-        /// 业务系统是否已开通计费（0=未开通，1=已开通）
+        /// <p>业务系统是否已开通计费（0=未开通，1=已开通）</p>
         /// </summary>
         [JsonProperty("BillingInstance")]
         public long? BillingInstance{ get; set; }
 
         /// <summary>
-        /// 错误警示线（单位：%）
+        /// <p>错误警示线（单位：%）</p>
         /// </summary>
         [JsonProperty("ErrRateThreshold")]
         public long? ErrRateThreshold{ get; set; }
 
         /// <summary>
-        /// 采样率（单位：%）
+        /// <p>采样率（单位：%）</p>
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 是否开启错误采样（0=关, 1=开）
+        /// <p>是否开启错误采样（0=关, 1=开）</p>
         /// </summary>
         [JsonProperty("ErrorSample")]
         public long? ErrorSample{ get; set; }
 
         /// <summary>
-        /// 采样慢调用保存阈值（单位：ms）
+        /// <p>采样慢调用保存阈值（单位：ms）</p>
         /// </summary>
         [JsonProperty("SlowRequestSavedThreshold")]
         public long? SlowRequestSavedThreshold{ get; set; }
 
         /// <summary>
-        /// CLS 日志所在地域
+        /// <p>CLS 日志所在地域</p>
         /// </summary>
         [JsonProperty("LogRegion")]
         public string LogRegion{ get; set; }
 
         /// <summary>
-        /// 日志源
+        /// <p>日志源</p>
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
-        /// 日志功能开关（0=关， 1=开）
+        /// <p>日志功能开关（0=关， 1=开）</p>
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// 日志主题 ID
+        /// <p>日志主题 ID</p>
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// 该业务系统客户端应用数量
+        /// <p>该业务系统客户端应用数量</p>
         /// </summary>
         [JsonProperty("ClientCount")]
         public long? ClientCount{ get; set; }
 
         /// <summary>
-        /// 该业务系统最近2天活跃应用数量
+        /// <p>该业务系统最近2天活跃应用数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// CLS 日志集
+        /// <p>CLS 日志集</p>
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// Metric 数据保存时长（单位：天）
+        /// <p>Metric 数据保存时长（单位：天）</p>
         /// </summary>
         [JsonProperty("MetricDuration")]
         public long? MetricDuration{ get; set; }
 
         /// <summary>
-        /// 用户自定义展示标签列表
+        /// <p>用户自定义展示标签列表</p>
         /// </summary>
         [JsonProperty("CustomShowTags")]
         public string[] CustomShowTags{ get; set; }
 
         /// <summary>
-        /// 业务系统计费模式（1为预付费，0为按量付费）
+        /// <p>业务系统计费模式（1为预付费，0为按量付费）</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 业务系统计费模式是否生效
+        /// <p>业务系统计费模式是否生效</p>
         /// </summary>
         [JsonProperty("PayModeEffective")]
         public bool? PayModeEffective{ get; set; }
 
         /// <summary>
-        /// 响应时间警示线（单位：ms）
+        /// <p>响应时间警示线（单位：ms）</p>
         /// </summary>
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
         /// <summary>
-        /// 是否免费（0=否，1=限额免费，2=完全免费），默认0
+        /// <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p>
         /// </summary>
         [JsonProperty("Free")]
         public long? Free{ get; set; }
 
         /// <summary>
-        /// 是否 TSF 默认业务系统（0=否，1=是）
+        /// <p>是否 TSF 默认业务系统（0=否，1=是）</p>
         /// </summary>
         [JsonProperty("DefaultTSF")]
         public long? DefaultTSF{ get; set; }
 
         /// <summary>
-        /// 是否关联 Dashboard（0=关, 1=开）
+        /// <p>是否关联 Dashboard（0=关, 1=开）</p>
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
         public long? IsRelatedDashboard{ get; set; }
 
         /// <summary>
-        /// 关联的 Dashboard ID
+        /// <p>关联的 Dashboard ID</p>
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
 
         /// <summary>
-        /// 是否开启组件漏洞检测（0=关， 1=开）
+        /// <p>是否开启组件漏洞检测（0=关， 1=开）</p>
         /// </summary>
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
         /// <summary>
-        /// 是否开启 SQL 注入分析（0=关， 1=开）
+        /// <p>是否开启 SQL 注入分析（0=关， 1=开）</p>
         /// </summary>
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 限流原因。{
-        /// 1: 正式版限额;
-        /// 2: 试用版限额;
-        /// 4: 试用版到期;
-        /// 8: 账号欠费
-        /// }
+        /// <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p>
         /// </summary>
         [JsonProperty("StopReason")]
         public long? StopReason{ get; set; }
 
         /// <summary>
-        /// 是否开远程命令执行检测（0=关， 1=开）
+        /// <p>是否开远程命令执行检测（0=关， 1=开）</p>
         /// </summary>
         [JsonProperty("IsRemoteCommandExecutionAnalysis")]
         public long? IsRemoteCommandExecutionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开内存马执行检测（0=关， 1=开）
+        /// <p>是否开内存马执行检测（0=关， 1=开）</p>
         /// </summary>
         [JsonProperty("IsMemoryHijackingAnalysis")]
         public long? IsMemoryHijackingAnalysis{ get; set; }
 
         /// <summary>
-        /// CLS索引类型(0=全文索引，1=键值索引)
+        /// <p>CLS索引类型(0=全文索引，1=键值索引)</p>
         /// </summary>
         [JsonProperty("LogIndexType")]
         public long? LogIndexType{ get; set; }
 
         /// <summary>
-        /// traceId的索引key: 当CLS索引类型为键值索引时生效
+        /// <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
         /// </summary>
         [JsonProperty("LogTraceIdKey")]
         public string LogTraceIdKey{ get; set; }
 
         /// <summary>
-        /// 是否开启删除任意文件检测（0-关闭，1-开启）
+        /// <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsDeleteAnyFileAnalysis")]
         public long? IsDeleteAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启读取任意文件检测（0-关闭，1-开启）
+        /// <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsReadAnyFileAnalysis")]
         public long? IsReadAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启上传任意文件检测（0-关闭，1-开启）
+        /// <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsUploadAnyFileAnalysis")]
         public long? IsUploadAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启包含任意文件检测（0-关闭，1-开启）
+        /// <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsIncludeAnyFileAnalysis")]
         public long? IsIncludeAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启目录遍历检测（0-关闭，1-开启）
+        /// <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsDirectoryTraversalAnalysis")]
         public long? IsDirectoryTraversalAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启模板引擎注入检测（0-关闭，1-开启）
+        /// <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsTemplateEngineInjectionAnalysis")]
         public long? IsTemplateEngineInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启脚本引擎注入检测（0-关闭，1-开启）
+        /// <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsScriptEngineInjectionAnalysis")]
         public long? IsScriptEngineInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启表达式注入检测（0-关闭，1-开启）
+        /// <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsExpressionInjectionAnalysis")]
         public long? IsExpressionInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启JNDI注入检测（0-关闭，1-开启）
+        /// <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsJNDIInjectionAnalysis")]
         public long? IsJNDIInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启JNI注入检测（0-关闭，1-开启）
+        /// <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsJNIInjectionAnalysis")]
         public long? IsJNIInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启Webshell后门检测（0-关闭，1-开启）
+        /// <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsWebshellBackdoorAnalysis")]
         public long? IsWebshellBackdoorAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启反序列化检测（0-关闭，1-开启）
+        /// <p>是否开启反序列化检测（0-关闭，1-开启）</p>
         /// </summary>
         [JsonProperty("IsDeserializationAnalysis")]
         public long? IsDeserializationAnalysis{ get; set; }
 
         /// <summary>
-        /// 业务系统鉴权 token
+        /// <p>业务系统鉴权 token</p>
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// URL长分段收敛阈值
+        /// <p>URL长分段收敛阈值</p>
         /// </summary>
         [JsonProperty("UrlLongSegmentThreshold")]
         public long? UrlLongSegmentThreshold{ get; set; }
 
         /// <summary>
-        /// URL数字分段收敛阈值
+        /// <p>URL数字分段收敛阈值</p>
         /// </summary>
         [JsonProperty("UrlNumberSegmentThreshold")]
         public long? UrlNumberSegmentThreshold{ get; set; }
 
         /// <summary>
-        /// spanId的索引key: 当CLS索引类型为键值索引时生效
+        /// <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
         /// </summary>
         [JsonProperty("LogSpanIdKey")]
         public string LogSpanIdKey{ get; set; }

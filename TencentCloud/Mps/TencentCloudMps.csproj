@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1440</VersionPrefix>
+    <VersionPrefix>3.0.1444</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -192,6 +192,12 @@
     <Compile Include="V20190612\Models\AiSampleTagOperation.cs" />
     <Compile Include="V20190612\Models\AiSampleWord.cs" />
     <Compile Include="V20190612\Models\AiSampleWordInfo.cs" />
+    <Compile Include="V20190612\Models\AiTryOnConfig.cs" />
+    <Compile Include="V20190612\Models\AigcAudioExtraParam.cs" />
+    <Compile Include="V20190612\Models\AigcAudioOutputAudioInfo.cs" />
+    <Compile Include="V20190612\Models\AigcAudioOutputVideoInfo.cs" />
+    <Compile Include="V20190612\Models\AigcAudioReferenceAudioInfo.cs" />
+    <Compile Include="V20190612\Models\AigcAudioReferenceVideoInfo.cs" />
     <Compile Include="V20190612\Models\AigcImageExtraParam.cs" />
     <Compile Include="V20190612\Models\AigcImageInfo.cs" />
     <Compile Include="V20190612\Models\AigcStoreCosParam.cs" />
@@ -276,6 +282,8 @@
     <Compile Include="V20190612\Models\CreateAIRecognitionTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateAdaptiveDynamicStreamingTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateAdaptiveDynamicStreamingTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateAigcAudioTaskRequest.cs" />
+    <Compile Include="V20190612\Models\CreateAigcAudioTaskResponse.cs" />
     <Compile Include="V20190612\Models\CreateAigcImageTaskRequest.cs" />
     <Compile Include="V20190612\Models\CreateAigcImageTaskResponse.cs" />
     <Compile Include="V20190612\Models\CreateAigcVideoTaskRequest.cs" />
@@ -440,6 +448,8 @@
     <Compile Include="V20190612\Models\DescribeAIRecognitionTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAdaptiveDynamicStreamingTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeAdaptiveDynamicStreamingTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeAigcAudioTaskRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeAigcAudioTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAigcImageTaskRequest.cs" />
     <Compile Include="V20190612\Models\DescribeAigcImageTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAigcVideoTaskRequest.cs" />

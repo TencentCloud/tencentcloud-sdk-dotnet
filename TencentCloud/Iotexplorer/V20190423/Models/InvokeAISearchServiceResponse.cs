@@ -25,19 +25,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 基于搜索结果的总结
+        /// <p>基于搜索结果的总结</p>
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
 
         /// <summary>
-        /// 视频结果集
+        /// <p>视频结果集</p>
         /// </summary>
         [JsonProperty("Targets")]
         public TargetInfo[] Targets{ get; set; }
 
         /// <summary>
-        /// 视频回放URL
+        /// <p>视频回放URL</p>
         /// </summary>
         [JsonProperty("VideoURL")]
         public string VideoURL{ get; set; }

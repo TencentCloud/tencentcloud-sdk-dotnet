@@ -24,12 +24,33 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class ModifyRemoteDiskAttributesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
+        /// </summary>
+        [JsonProperty("RemoteDiskIds")]
+        public string[] RemoteDiskIds{ get; set; }
+
+        /// <summary>
+        /// <p>新的单副本SSD硬盘名称</p>
+        /// </summary>
+        [JsonProperty("DiskName")]
+        public string DiskName{ get; set; }
+
+        /// <summary>
+        /// <p>新的单副本SSD硬盘项目ID。</p>
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
+            this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

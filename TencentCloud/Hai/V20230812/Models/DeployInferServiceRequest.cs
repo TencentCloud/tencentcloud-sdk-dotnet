@@ -25,34 +25,40 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 服务元数据信息，如服务名
+        /// <p>服务元数据信息，如服务名</p>
         /// </summary>
         [JsonProperty("ServiceMetaData")]
         public ServiceMetaData ServiceMetaData{ get; set; }
 
         /// <summary>
-        /// 资源相关信息
+        /// <p>资源相关信息</p>
         /// </summary>
         [JsonProperty("ComputeInfo")]
         public ComputeInfo ComputeInfo{ get; set; }
 
         /// <summary>
-        /// 服务部署信息
+        /// <p>服务部署信息</p>
         /// </summary>
         [JsonProperty("DeploymentConfigs")]
         public DeploymentConfig[] DeploymentConfigs{ get; set; }
 
         /// <summary>
-        /// 服务超参数配置
+        /// <p>服务超参数配置</p>
         /// </summary>
         [JsonProperty("HyperParam")]
         public HyperParam HyperParam{ get; set; }
 
         /// <summary>
-        /// 网络设置
+        /// <p>网络设置</p>
         /// </summary>
         [JsonProperty("NetworkSetting")]
         public NetworkSetting NetworkSetting{ get; set; }
+
+        /// <summary>
+        /// <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+        /// </summary>
+        [JsonProperty("SecurityType")]
+        public string SecurityType{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
             this.SetParamObj(map, prefix + "HyperParam.", this.HyperParam);
             this.SetParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
+            this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
         }
     }
 }

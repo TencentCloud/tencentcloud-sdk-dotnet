@@ -25,32 +25,32 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 剪辑后的视频播放 URL。
+        /// <p>剪辑后的视频播放 URL。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 剪辑固化后的视频的媒体文件的唯一标识。
+        /// <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 剪辑固化后的视频任务流 ID。
+        /// <p>剪辑固化后的视频任务流 ID。</p>
         /// </summary>
         [JsonProperty("VodTaskId")]
         public string VodTaskId{ get; set; }
 
         /// <summary>
-        /// 剪辑后的视频元信息。
+        /// <p>剪辑后的视频元信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// <span id="p_segmentset">剪辑后的视频片段信息。</span>
+        /// <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public LiveRealTimeClipMediaSegmentInfo[] SegmentSet{ get; set; }

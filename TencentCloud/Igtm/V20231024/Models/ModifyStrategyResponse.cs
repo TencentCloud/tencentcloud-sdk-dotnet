@@ -25,7 +25,7 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 是否成功
+        /// <p>是否成功</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

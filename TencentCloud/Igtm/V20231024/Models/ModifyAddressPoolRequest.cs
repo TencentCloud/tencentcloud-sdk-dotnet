@@ -25,34 +25,40 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 地址池id
+        /// <p>地址池id</p>
         /// </summary>
         [JsonProperty("PoolId")]
         public ulong? PoolId{ get; set; }
 
         /// <summary>
-        /// 地址池名称，不允许重复
+        /// <p>地址池名称，不允许重复</p>
         /// </summary>
         [JsonProperty("PoolName")]
         public string PoolName{ get; set; }
 
         /// <summary>
-        /// 流量策略: WEIGHT负载均衡，ALL解析全部
+        /// <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
         /// </summary>
         [JsonProperty("TrafficStrategy")]
         public string TrafficStrategy{ get; set; }
 
         /// <summary>
-        /// 监控器id，当监控器已关联策略时，此字段必传
+        /// <p>监控器id，当监控器已关联策略时，此字段必传</p>
         /// </summary>
         [JsonProperty("MonitorId")]
         public ulong? MonitorId{ get; set; }
 
         /// <summary>
-        /// 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+        /// <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
         /// </summary>
         [JsonProperty("AddressSet")]
         public Address[] AddressSet{ get; set; }
+
+        /// <summary>
+        /// <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+        /// </summary>
+        [JsonProperty("KeepResource")]
+        public bool? KeepResource{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Igtm.V20231024.Models
             this.SetParamSimple(map, prefix + "TrafficStrategy", this.TrafficStrategy);
             this.SetParamSimple(map, prefix + "MonitorId", this.MonitorId);
             this.SetParamArrayObj(map, prefix + "AddressSet.", this.AddressSet);
+            this.SetParamSimple(map, prefix + "KeepResource", this.KeepResource);
         }
     }
 }

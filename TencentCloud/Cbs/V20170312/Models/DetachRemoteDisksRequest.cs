@@ -24,12 +24,33 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class DetachRemoteDisksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>指定从特定CVM实例上卸载单副本SSD硬盘。</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>一个或多个将要卸载的单副本SSD硬盘ID。</p>
+        /// </summary>
+        [JsonProperty("RemoteDiskIds")]
+        public string[] RemoteDiskIds{ get; set; }
+
+        /// <summary>
+        /// <p>强制解挂，内部使用。</p>
+        /// </summary>
+        [JsonProperty("ForceDetach")]
+        public bool? ForceDetach{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
+            this.SetParamSimple(map, prefix + "ForceDetach", this.ForceDetach);
         }
     }
 }

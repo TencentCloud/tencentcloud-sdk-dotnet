@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 规格信息
+        /// <p>规格信息</p>
         /// </summary>
         [JsonProperty("InstanceSpecSet")]
         public InstanceSpec[] InstanceSpecSet{ get; set; }
