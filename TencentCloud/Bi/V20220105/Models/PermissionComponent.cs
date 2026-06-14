@@ -25,44 +25,35 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 权限值
+        /// <p>权限值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModuleId")]
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 可用性。
-        /// 取值范围：
-        /// 
-        /// - usable：可用
-        /// - visible：可见
-        /// - disabled：不可用
-        /// - hidden：隐藏
-        /// 
-        /// 默认值：disabled
-        /// 示例值：disabled
+        /// <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeType")]
         public string IncludeType{ get; set; }
 
         /// <summary>
-        /// 目标升级版本
+        /// <p>目标升级版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeVersionType")]
         public string UpgradeVersionType{ get; set; }
 
         /// <summary>
-        /// 补充信息
+        /// <p>补充信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// 补充信息的key值
+        /// <p>补充信息的key值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TipsKey")]

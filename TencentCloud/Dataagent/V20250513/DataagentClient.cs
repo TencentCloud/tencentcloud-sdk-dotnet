@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1445";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Dataagent.V20250513
         public AddSceneResponse AddSceneSync(AddSceneRequest req)
         {
             return InternalRequestAsync<AddSceneResponse>(req, "AddScene")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 追加文件
+        /// </summary>
+        /// <param name="req"><see cref="AppendKnowledgeTaskRequest"/></param>
+        /// <returns><see cref="AppendKnowledgeTaskResponse"/></returns>
+        public Task<AppendKnowledgeTaskResponse> AppendKnowledgeTask(AppendKnowledgeTaskRequest req)
+        {
+            return InternalRequestAsync<AppendKnowledgeTaskResponse>(req, "AppendKnowledgeTask");
+        }
+
+        /// <summary>
+        /// 追加文件
+        /// </summary>
+        /// <param name="req"><see cref="AppendKnowledgeTaskRequest"/></param>
+        /// <returns><see cref="AppendKnowledgeTaskResponse"/></returns>
+        public AppendKnowledgeTaskResponse AppendKnowledgeTaskSync(AppendKnowledgeTaskRequest req)
+        {
+            return InternalRequestAsync<AppendKnowledgeTaskResponse>(req, "AppendKnowledgeTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +428,27 @@ namespace TencentCloud.Dataagent.V20250513
         public QueryChunkListResponse QueryChunkListSync(QueryChunkListRequest req)
         {
             return InternalRequestAsync<QueryChunkListResponse>(req, "QueryChunkList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文件任务状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryKnowledgeTaskRequest"/></param>
+        /// <returns><see cref="QueryKnowledgeTaskResponse"/></returns>
+        public Task<QueryKnowledgeTaskResponse> QueryKnowledgeTask(QueryKnowledgeTaskRequest req)
+        {
+            return InternalRequestAsync<QueryKnowledgeTaskResponse>(req, "QueryKnowledgeTask");
+        }
+
+        /// <summary>
+        /// 查询文件任务状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryKnowledgeTaskRequest"/></param>
+        /// <returns><see cref="QueryKnowledgeTaskResponse"/></returns>
+        public QueryKnowledgeTaskResponse QueryKnowledgeTaskSync(QueryKnowledgeTaskRequest req)
+        {
+            return InternalRequestAsync<QueryKnowledgeTaskResponse>(req, "QueryKnowledgeTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

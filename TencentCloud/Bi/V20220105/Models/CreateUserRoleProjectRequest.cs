@@ -25,26 +25,26 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 角色ID列表
+        /// <p>角色ID列表</p>
         /// </summary>
         [JsonProperty("RoleIdList")]
         public long?[] RoleIdList{ get; set; }
 
         /// <summary>
-        /// 用户列表（废弃）
+        /// <p>用户列表（废弃）</p>
         /// </summary>
         [JsonProperty("UserList")]
         [System.Obsolete]
         public UserIdAndUserName[] UserList{ get; set; }
 
         /// <summary>
-        /// 用户列表（新）
+        /// <p>用户列表（新）</p>
         /// </summary>
         [JsonProperty("UserInfoList")]
         public UserInfo[] UserInfoList{ get; set; }

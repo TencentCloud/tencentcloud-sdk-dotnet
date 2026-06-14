@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1445";
 
         /// <summary>
         /// Client constructor.
@@ -262,6 +262,27 @@ namespace TencentCloud.Mongodb.V20190725
         public CreateLogDownloadTaskResponse CreateLogDownloadTaskSync(CreateLogDownloadTaskRequest req)
         {
             return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建慢日志统计下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSlowLogPatternDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateSlowLogPatternDownloadTaskResponse"/></returns>
+        public Task<CreateSlowLogPatternDownloadTaskResponse> CreateSlowLogPatternDownloadTask(CreateSlowLogPatternDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSlowLogPatternDownloadTaskResponse>(req, "CreateSlowLogPatternDownloadTask");
+        }
+
+        /// <summary>
+        /// 创建慢日志统计下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSlowLogPatternDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateSlowLogPatternDownloadTaskResponse"/></returns>
+        public CreateSlowLogPatternDownloadTaskResponse CreateSlowLogPatternDownloadTaskSync(CreateSlowLogPatternDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSlowLogPatternDownloadTaskResponse>(req, "CreateSlowLogPatternDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -598,6 +619,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeDBInstanceDealResponse DescribeDBInstanceDealSync(DescribeDBInstanceDealRequest req)
         {
             return InternalRequestAsync<DescribeDBInstanceDealResponse>(req, "DescribeDBInstanceDeal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取日志投递的相关配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public Task<DescribeDBInstanceLogToCLSResponse> DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceLogToCLSResponse>(req, "DescribeDBInstanceLogToCLS");
+        }
+
+        /// <summary>
+        /// 获取日志投递的相关配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLSSync(DescribeDBInstanceLogToCLSRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceLogToCLSResponse>(req, "DescribeDBInstanceLogToCLS")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1156,6 +1198,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 终止实例流程
+        /// </summary>
+        /// <param name="req"><see cref="IncreaseDBInstanceConnectionLimitRequest"/></param>
+        /// <returns><see cref="IncreaseDBInstanceConnectionLimitResponse"/></returns>
+        public Task<IncreaseDBInstanceConnectionLimitResponse> IncreaseDBInstanceConnectionLimit(IncreaseDBInstanceConnectionLimitRequest req)
+        {
+            return InternalRequestAsync<IncreaseDBInstanceConnectionLimitResponse>(req, "IncreaseDBInstanceConnectionLimit");
+        }
+
+        /// <summary>
+        /// 终止实例流程
+        /// </summary>
+        /// <param name="req"><see cref="IncreaseDBInstanceConnectionLimitRequest"/></param>
+        /// <returns><see cref="IncreaseDBInstanceConnectionLimitResponse"/></returns>
+        public IncreaseDBInstanceConnectionLimitResponse IncreaseDBInstanceConnectionLimitSync(IncreaseDBInstanceConnectionLimitRequest req)
+        {
+            return InternalRequestAsync<IncreaseDBInstanceConnectionLimitResponse>(req, "IncreaseDBInstanceConnectionLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（InquirePriceCreateDBInstances）用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>
@@ -1320,6 +1383,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyBackupExpireTimeResponse ModifyBackupExpireTimeSync(ModifyBackupExpireTimeRequest req)
         {
             return InternalRequestAsync<ModifyBackupExpireTimeResponse>(req, "ModifyBackupExpireTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启或关闭MongoDB慢日志、错误日志、操作日志投递CLS
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public Task<ModifyDBInstanceLogToCLSResponse> ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceLogToCLSResponse>(req, "ModifyDBInstanceLogToCLS");
+        }
+
+        /// <summary>
+        /// 开启或关闭MongoDB慢日志、错误日志、操作日志投递CLS
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLSSync(ModifyDBInstanceLogToCLSRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceLogToCLSResponse>(req, "ModifyDBInstanceLogToCLS")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

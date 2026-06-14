@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1445</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,9 @@
     <Compile Include="V20250513\Models\AddChunkResponse.cs" />
     <Compile Include="V20250513\Models\AddSceneRequest.cs" />
     <Compile Include="V20250513\Models\AddSceneResponse.cs" />
+    <Compile Include="V20250513\Models\AppendDocument.cs" />
+    <Compile Include="V20250513\Models\AppendKnowledgeTaskRequest.cs" />
+    <Compile Include="V20250513\Models\AppendKnowledgeTaskResponse.cs" />
     <Compile Include="V20250513\Models\ChatAIRequest.cs" />
     <Compile Include="V20250513\Models\ChatAIResponse.cs" />
     <Compile Include="V20250513\Models\Chunk.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="V20250513\Models\DeleteSceneResponse.cs" />
     <Compile Include="V20250513\Models\ExampleQA.cs" />
     <Compile Include="V20250513\Models\FileInfo.cs" />
+    <Compile Include="V20250513\Models\FileTaskStatus.cs" />
     <Compile Include="V20250513\Models\GetJobsByKnowledgeBaseIdRequest.cs" />
     <Compile Include="V20250513\Models\GetJobsByKnowledgeBaseIdResponse.cs" />
     <Compile Include="V20250513\Models\GetKnowledgeBaseFileListRequest.cs" />
@@ -90,6 +94,8 @@
     <Compile Include="V20250513\Models\ModifyUserAuthorityResponse.cs" />
     <Compile Include="V20250513\Models\QueryChunkListRequest.cs" />
     <Compile Include="V20250513\Models\QueryChunkListResponse.cs" />
+    <Compile Include="V20250513\Models\QueryKnowledgeTaskRequest.cs" />
+    <Compile Include="V20250513\Models\QueryKnowledgeTaskResponse.cs" />
     <Compile Include="V20250513\Models\QuerySceneListRequest.cs" />
     <Compile Include="V20250513\Models\QuerySceneListResponse.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityRequest.cs" />

@@ -25,43 +25,43 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("AllPage")]
         public bool? AllPage{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 是否过滤掉企业管理员
+        /// <p>是否过滤掉企业管理员</p>
         /// </summary>
         [JsonProperty("IsFilterPerAuthUser")]
         public bool? IsFilterPerAuthUser{ get; set; }
 
         /// <summary>
-        /// 是否过滤掉当前用户
+        /// <p>是否过滤掉当前用户</p>
         /// </summary>
         [JsonProperty("IsFilterCurrentUser")]
         public bool? IsFilterCurrentUser{ get; set; }
 
         /// <summary>
-        /// 关键字
+        /// <p>关键字</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

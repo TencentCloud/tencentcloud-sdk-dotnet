@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 需要停止的任务Id
+        /// <p>需要停止的任务Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

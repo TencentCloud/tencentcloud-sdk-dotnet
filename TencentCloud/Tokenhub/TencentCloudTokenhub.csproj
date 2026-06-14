@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1445</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,16 +52,29 @@
     <Compile Include="V20260322\Models\BatchCreateFailedItem.cs" />
     <Compile Include="V20260322\Models\BindingItem.cs" />
     <Compile Include="V20260322\Models\CreateApiKeysResultItem.cs" />
+    <Compile Include="V20260322\Models\CreateGlossaryEntriesRequest.cs" />
+    <Compile Include="V20260322\Models\CreateGlossaryEntriesResponse.cs" />
+    <Compile Include="V20260322\Models\CreateGlossaryRequest.cs" />
+    <Compile Include="V20260322\Models\CreateGlossaryResponse.cs" />
     <Compile Include="V20260322\Models\CreateTokenPlanApiKeysRequest.cs" />
     <Compile Include="V20260322\Models\CreateTokenPlanApiKeysResponse.cs" />
     <Compile Include="V20260322\Models\CreateTokenPlanTeamOrderAndBuyRequest.cs" />
     <Compile Include="V20260322\Models\CreateTokenPlanTeamOrderAndBuyResponse.cs" />
+    <Compile Include="V20260322\Models\DeleteGlossaryEntriesRequest.cs" />
+    <Compile Include="V20260322\Models\DeleteGlossaryEntriesResponse.cs" />
+    <Compile Include="V20260322\Models\DeleteGlossaryEntryInput.cs" />
+    <Compile Include="V20260322\Models\DeleteGlossaryRequest.cs" />
+    <Compile Include="V20260322\Models\DeleteGlossaryResponse.cs" />
     <Compile Include="V20260322\Models\DeleteTokenPlanApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\DeleteTokenPlanApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyListResponse.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeGlossariesRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeGlossariesResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeGlossaryEntriesRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\DescribeModelListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeModelListResponse.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanApiKeyListRequest.cs" />
@@ -78,6 +91,12 @@
     <Compile Include="V20260322\Models\DescribeTokenPlanResponse.cs" />
     <Compile Include="V20260322\Models\DescribeUsageRankListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeUsageRankListResponse.cs" />
+    <Compile Include="V20260322\Models\GlossaryEntryInput.cs" />
+    <Compile Include="V20260322\Models\GlossaryEntryItem.cs" />
+    <Compile Include="V20260322\Models\GlossaryItem.cs" />
+    <Compile Include="V20260322\Models\ModifyGlossaryEntriesRequest.cs" />
+    <Compile Include="V20260322\Models\ModifyGlossaryEntriesResponse.cs" />
+    <Compile Include="V20260322\Models\ModifyGlossaryEntryInput.cs" />
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeySecretRequest.cs" />

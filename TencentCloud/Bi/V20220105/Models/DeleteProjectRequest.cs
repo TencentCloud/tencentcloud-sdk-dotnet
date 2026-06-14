@@ -25,22 +25,19 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 随机数
+        /// <p>随机数</p>
         /// </summary>
         [JsonProperty("Seed")]
         public string Seed{ get; set; }
 
         /// <summary>
-        /// 默认看板
-        /// 取值范围：
-        /// 1：项目看板 
-        /// 2：我的看板
+        /// <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
         /// </summary>
         [JsonProperty("DefaultPanelType")]
         public long? DefaultPanelType{ get; set; }

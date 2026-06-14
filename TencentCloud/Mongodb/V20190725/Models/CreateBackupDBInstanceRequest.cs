@@ -25,28 +25,28 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 设置备份方式。
-        /// - 0：逻辑备份。
-        /// - 1：物理备份。
-        /// - 3：快照备份。
-        /// **说明**:
-        /// 1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-        /// 2. 实例开通存储加密，则备份方式不能为物理备份。
+        /// <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// 备份备注信息。
+        /// <p>备份备注信息。</p>
         /// </summary>
         [JsonProperty("BackupRemark")]
         public string BackupRemark{ get; set; }
+
+        /// <summary>
+        /// <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("BackupRetentionDays")]
+        public long? BackupRetentionDays{ get; set; }
 
 
         /// <summary>
@@ -57,6 +57,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupRemark", this.BackupRemark);
+            this.SetParamSimple(map, prefix + "BackupRetentionDays", this.BackupRetentionDays);
         }
     }
 }

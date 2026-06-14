@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1445";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,56 @@ namespace TencentCloud.Tokenhub.V20260322
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建术语库。
+        /// 
+        /// 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryResponse"/></returns>
+        public Task<CreateGlossaryResponse> CreateGlossary(CreateGlossaryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryResponse>(req, "CreateGlossary");
+        }
+
+        /// <summary>
+        /// 创建术语库。
+        /// 
+        /// 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryRequest"/></param>
+        /// <returns><see cref="CreateGlossaryResponse"/></returns>
+        public CreateGlossaryResponse CreateGlossarySync(CreateGlossaryRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryResponse>(req, "CreateGlossary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量创建术语条目。
+        /// 
+        /// 在指定术语库下批量创建术语条目。单次最多创建 100 条。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="CreateGlossaryEntriesResponse"/></returns>
+        public Task<CreateGlossaryEntriesResponse> CreateGlossaryEntries(CreateGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryEntriesResponse>(req, "CreateGlossaryEntries");
+        }
+
+        /// <summary>
+        /// 批量创建术语条目。
+        /// 
+        /// 在指定术语库下批量创建术语条目。单次最多创建 100 条。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="CreateGlossaryEntriesResponse"/></returns>
+        public CreateGlossaryEntriesResponse CreateGlossaryEntriesSync(CreateGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateGlossaryEntriesResponse>(req, "CreateGlossaryEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -100,6 +150,56 @@ namespace TencentCloud.Tokenhub.V20260322
         public CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuySync(CreateTokenPlanTeamOrderAndBuyRequest req)
         {
             return InternalRequestAsync<CreateTokenPlanTeamOrderAndBuyResponse>(req, "CreateTokenPlanTeamOrderAndBuy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除术语库。
+        /// 
+        /// 删除指定的术语库及其下所有术语条目。删除操作幂等，对不存在的术语库返回成功。调用接口后，若通过 DescribeGlossaries 接口查询不到对应术语库，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryResponse"/></returns>
+        public Task<DeleteGlossaryResponse> DeleteGlossary(DeleteGlossaryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryResponse>(req, "DeleteGlossary");
+        }
+
+        /// <summary>
+        /// 删除术语库。
+        /// 
+        /// 删除指定的术语库及其下所有术语条目。删除操作幂等，对不存在的术语库返回成功。调用接口后，若通过 DescribeGlossaries 接口查询不到对应术语库，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryResponse"/></returns>
+        public DeleteGlossaryResponse DeleteGlossarySync(DeleteGlossaryRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryResponse>(req, "DeleteGlossary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除术语条目。
+        /// 
+        /// 在指定术语库下批量删除术语条目。单次最多删除 200 条。若术语库不存在或不属于当前应用，返回 ResourceNotFound 错误。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryEntriesResponse"/></returns>
+        public Task<DeleteGlossaryEntriesResponse> DeleteGlossaryEntries(DeleteGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryEntriesResponse>(req, "DeleteGlossaryEntries");
+        }
+
+        /// <summary>
+        /// 批量删除术语条目。
+        /// 
+        /// 在指定术语库下批量删除术语条目。单次最多删除 200 条。若术语库不存在或不属于当前应用，返回 ResourceNotFound 错误。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="DeleteGlossaryEntriesResponse"/></returns>
+        public DeleteGlossaryEntriesResponse DeleteGlossaryEntriesSync(DeleteGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteGlossaryEntriesResponse>(req, "DeleteGlossaryEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -171,6 +271,56 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeApiKeyListResponse DescribeApiKeyListSync(DescribeApiKeyListRequest req)
         {
             return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询术语库列表。
+        /// 
+        /// 查询当前应用下的术语库列表。支持分页、过滤和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlossariesRequest"/></param>
+        /// <returns><see cref="DescribeGlossariesResponse"/></returns>
+        public Task<DescribeGlossariesResponse> DescribeGlossaries(DescribeGlossariesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlossariesResponse>(req, "DescribeGlossaries");
+        }
+
+        /// <summary>
+        /// 查询术语库列表。
+        /// 
+        /// 查询当前应用下的术语库列表。支持分页、过滤和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlossariesRequest"/></param>
+        /// <returns><see cref="DescribeGlossariesResponse"/></returns>
+        public DescribeGlossariesResponse DescribeGlossariesSync(DescribeGlossariesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlossariesResponse>(req, "DescribeGlossaries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询术语条目列表。
+        /// 
+        /// 查询指定术语库下的术语条目。支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="DescribeGlossaryEntriesResponse"/></returns>
+        public Task<DescribeGlossaryEntriesResponse> DescribeGlossaryEntries(DescribeGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlossaryEntriesResponse>(req, "DescribeGlossaryEntries");
+        }
+
+        /// <summary>
+        /// 查询术语条目列表。
+        /// 
+        /// 查询指定术语库下的术语条目。支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="DescribeGlossaryEntriesResponse"/></returns>
+        public DescribeGlossaryEntriesResponse DescribeGlossaryEntriesSync(DescribeGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlossaryEntriesResponse>(req, "DescribeGlossaryEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -375,6 +525,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeUsageRankListResponse DescribeUsageRankListSync(DescribeUsageRankListRequest req)
         {
             return InternalRequestAsync<DescribeUsageRankListResponse>(req, "DescribeUsageRankList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改术语条目。
+        /// 
+        /// 在指定术语库下批量修改术语条目。单次最多修改 200 条。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="ModifyGlossaryEntriesResponse"/></returns>
+        public Task<ModifyGlossaryEntriesResponse> ModifyGlossaryEntries(ModifyGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<ModifyGlossaryEntriesResponse>(req, "ModifyGlossaryEntries");
+        }
+
+        /// <summary>
+        /// 批量修改术语条目。
+        /// 
+        /// 在指定术语库下批量修改术语条目。单次最多修改 200 条。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlossaryEntriesRequest"/></param>
+        /// <returns><see cref="ModifyGlossaryEntriesResponse"/></returns>
+        public ModifyGlossaryEntriesResponse ModifyGlossaryEntriesSync(ModifyGlossaryEntriesRequest req)
+        {
+            return InternalRequestAsync<ModifyGlossaryEntriesResponse>(req, "ModifyGlossaryEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

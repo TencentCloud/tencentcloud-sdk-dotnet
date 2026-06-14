@@ -32,21 +32,21 @@ namespace TencentCloud.Bi.V20220105.Models
         public ErrorInfo ErrorInfo{ get; set; }
 
         /// <summary>
-        /// 消息
+        /// <p>消息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 112
+        /// <p>112</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

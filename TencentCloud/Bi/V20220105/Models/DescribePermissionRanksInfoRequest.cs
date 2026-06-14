@@ -25,59 +25,37 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("TableId")]
         public long? TableId{ get; set; }
 
         /// <summary>
-        /// 模式。
-        /// 取值范围：
-        /// 
-        /// - ALL：全部
-        /// - Specify：指定
-        /// - TAG：标签
-        /// 
-        /// 默认值：ALL
-        /// 示例值：ALL
+        /// <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 角色类型。
-        /// 取值范围：
-        /// 
-        /// - ROLES：按角色
-        /// - Others：其它
-        /// 
-        /// 默认值：Others
-        /// 示例值：Others
+        /// <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p>
         /// </summary>
         [JsonProperty("RoleType")]
         public string RoleType{ get; set; }
 
         /// <summary>
-        /// 所有页码
+        /// <p>所有页码</p>
         /// </summary>
         [JsonProperty("RoleId")]
         public long? RoleId{ get; set; }
 
         /// <summary>
-        /// 类型。
-        /// 取值范围：
-        /// 
-        /// - ROW：行权限
-        /// - COLUMN：列权限
-        /// 
-        /// 默认值：ROW
-        /// 示例值：ROW
+        /// <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

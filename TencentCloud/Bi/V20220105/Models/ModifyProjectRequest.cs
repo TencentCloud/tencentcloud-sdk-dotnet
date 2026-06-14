@@ -25,64 +25,61 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 项目Id
+        /// <p>项目Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// <p>名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 颜色值
+        /// <p>颜色值</p>
         /// </summary>
         [JsonProperty("ColorCode")]
         public string ColorCode{ get; set; }
 
         /// <summary>
-        /// 图标
+        /// <p>图标</p>
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Mark")]
         public string Mark{ get; set; }
 
         /// <summary>
-        /// 可申请
+        /// <p>可申请</p>
         /// </summary>
         [JsonProperty("IsApply")]
         public bool? IsApply{ get; set; }
 
         /// <summary>
-        /// 种子
+        /// <p>种子</p>
         /// </summary>
         [JsonProperty("Seed")]
         public string Seed{ get; set; }
 
         /// <summary>
-        /// 默认看板
-        /// 取值范围：
-        /// 1：项目看板 
-        /// 2：我的看板
+        /// <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
         /// </summary>
         [JsonProperty("DefaultPanelType")]
         public long? DefaultPanelType{ get; set; }
 
         /// <summary>
-        /// 2
+        /// <p>2</p>
         /// </summary>
         [JsonProperty("PanelScope")]
         public string PanelScope{ get; set; }
 
         /// <summary>
-        /// 项目管理平台
+        /// <p>项目管理平台</p>
         /// </summary>
         [JsonProperty("ManagePlatform")]
         public string ManagePlatform{ get; set; }

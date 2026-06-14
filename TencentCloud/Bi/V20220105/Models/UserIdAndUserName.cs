@@ -25,166 +25,159 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public string CorpId{ get; set; }
 
         /// <summary>
-        /// 电子邮箱
+        /// <p>电子邮箱</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 最后一次登录时间
+        /// <p>最后一次登录时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastLogin")]
         public string LastLogin{ get; set; }
 
         /// <summary>
-        /// 用户状态。
-        /// 取值范围：
-        /// 
-        /// - 1：启用
-        /// - 0：停用
-        /// 
-        /// 默认值：1
-        /// 示例值：1
+        /// <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 首次登录是否修改密码
+        /// <p>首次登录是否修改密码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstModify")]
         public long? FirstModify{ get; set; }
 
         /// <summary>
-        /// 手机号码
+        /// <p>手机号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 手机区号
+        /// <p>手机区号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AreaCode")]
         public string AreaCode{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedUser")]
         public string CreatedUser{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 修改人
+        /// <p>修改人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedUser")]
         public string UpdatedUser{ get; set; }
 
         /// <summary>
-        /// 更改时间
+        /// <p>更改时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 系统全局角色
+        /// <p>系统全局角色</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalUserName")]
         public string GlobalUserName{ get; set; }
 
         /// <summary>
-        /// 系统全局角色编码
+        /// <p>系统全局角色编码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GlobalUserCode")]
         public string GlobalUserCode{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// <p>手机号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserId")]
         public string AppUserId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserAliasName")]
         public string AppUserAliasName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserName")]
         public string AppUserName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InValidateAppRange")]
         public bool? InValidateAppRange{ get; set; }
 
         /// <summary>
-        /// -1 免激活  0 未激活  1 已激活 空代表待绑定
+        /// <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmailActivationStatus")]
         public long? EmailActivationStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]

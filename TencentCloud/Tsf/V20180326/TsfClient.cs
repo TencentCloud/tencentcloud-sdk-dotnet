@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1445";
 
         /// <summary>
         /// Client constructor.
@@ -197,31 +197,6 @@ namespace TencentCloud.Tsf.V20180326
         public ChangeApiUsableStatusResponse ChangeApiUsableStatusSync(ChangeApiUsableStatusRequest req)
         {
             return InternalRequestAsync<ChangeApiUsableStatusResponse>(req, "ChangeApiUsableStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 对执行失败的任务批次执行续跑
-        /// </summary>
-        /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
-        /// <returns><see cref="ContinueRunFailedTaskBatchResponse"/></returns>
-        public Task<ContinueRunFailedTaskBatchResponse> ContinueRunFailedTaskBatch(ContinueRunFailedTaskBatchRequest req)
-        {
-            return InternalRequestAsync<ContinueRunFailedTaskBatchResponse>(req, "ContinueRunFailedTaskBatch");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 对执行失败的任务批次执行续跑
-        /// </summary>
-        /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
-        /// <returns><see cref="ContinueRunFailedTaskBatchResponse"/></returns>
-        public ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatchSync(ContinueRunFailedTaskBatchRequest req)
-        {
-            return InternalRequestAsync<ContinueRunFailedTaskBatchResponse>(req, "ContinueRunFailedTaskBatch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -772,56 +747,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 创建任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskRequest"/></param>
-        /// <returns><see cref="CreateTaskResponse"/></returns>
-        public Task<CreateTaskResponse> CreateTask(CreateTaskRequest req)
-        {
-            return InternalRequestAsync<CreateTaskResponse>(req, "CreateTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 创建任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskRequest"/></param>
-        /// <returns><see cref="CreateTaskResponse"/></returns>
-        public CreateTaskResponse CreateTaskSync(CreateTaskRequest req)
-        {
-            return InternalRequestAsync<CreateTaskResponse>(req, "CreateTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 创建工作流
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
-        /// <returns><see cref="CreateTaskFlowResponse"/></returns>
-        public Task<CreateTaskFlowResponse> CreateTaskFlow(CreateTaskFlowRequest req)
-        {
-            return InternalRequestAsync<CreateTaskFlowResponse>(req, "CreateTaskFlow");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 创建工作流
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
-        /// <returns><see cref="CreateTaskFlowResponse"/></returns>
-        public CreateTaskFlowResponse CreateTaskFlowSync(CreateTaskFlowRequest req)
-        {
-            return InternalRequestAsync<CreateTaskFlowResponse>(req, "CreateTaskFlow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 批量创建单元化命名空间
         /// </summary>
         /// <param name="req"><see cref="CreateUnitNamespacesRequest"/></param>
@@ -1282,56 +1207,6 @@ namespace TencentCloud.Tsf.V20180326
         public DeleteRepositoryResponse DeleteRepositorySync(DeleteRepositoryRequest req)
         {
             return InternalRequestAsync<DeleteRepositoryResponse>(req, "DeleteRepository")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// serverless 能力已下线。下线对应接口。
-        /// 
-        /// 删除Serverless部署组
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessGroupRequest"/></param>
-        /// <returns><see cref="DeleteServerlessGroupResponse"/></returns>
-        public Task<DeleteServerlessGroupResponse> DeleteServerlessGroup(DeleteServerlessGroupRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessGroupResponse>(req, "DeleteServerlessGroup");
-        }
-
-        /// <summary>
-        /// serverless 能力已下线。下线对应接口。
-        /// 
-        /// 删除Serverless部署组
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessGroupRequest"/></param>
-        /// <returns><see cref="DeleteServerlessGroupResponse"/></returns>
-        public DeleteServerlessGroupResponse DeleteServerlessGroupSync(DeleteServerlessGroupRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessGroupResponse>(req, "DeleteServerlessGroup")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 删除任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
-        /// <returns><see cref="DeleteTaskResponse"/></returns>
-        public Task<DeleteTaskResponse> DeleteTask(DeleteTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskResponse>(req, "DeleteTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 删除任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
-        /// <returns><see cref="DeleteTaskResponse"/></returns>
-        public DeleteTaskResponse DeleteTaskSync(DeleteTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskResponse>(req, "DeleteTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2138,31 +2013,6 @@ namespace TencentCloud.Tsf.V20180326
         public DescribeFileConfigsResponse DescribeFileConfigsSync(DescribeFileConfigsRequest req)
         {
             return InternalRequestAsync<DescribeFileConfigsResponse>(req, "DescribeFileConfigs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询工作流最新一个批次的状态信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
-        /// <returns><see cref="DescribeFlowLastBatchStateResponse"/></returns>
-        public Task<DescribeFlowLastBatchStateResponse> DescribeFlowLastBatchState(DescribeFlowLastBatchStateRequest req)
-        {
-            return InternalRequestAsync<DescribeFlowLastBatchStateResponse>(req, "DescribeFlowLastBatchState");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询工作流最新一个批次的状态信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
-        /// <returns><see cref="DescribeFlowLastBatchStateResponse"/></returns>
-        public DescribeFlowLastBatchStateResponse DescribeFlowLastBatchStateSync(DescribeFlowLastBatchStateRequest req)
-        {
-            return InternalRequestAsync<DescribeFlowLastBatchStateResponse>(req, "DescribeFlowLastBatchState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3238,81 +3088,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
-        public Task<DescribeTaskDetailResponse> DescribeTaskDetail(DescribeTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailResponse>(req, "DescribeTaskDetail");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
-        public DescribeTaskDetailResponse DescribeTaskDetailSync(DescribeTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailResponse>(req, "DescribeTaskDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询任务最近一次执行状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
-        /// <returns><see cref="DescribeTaskLastStatusResponse"/></returns>
-        public Task<DescribeTaskLastStatusResponse> DescribeTaskLastStatus(DescribeTaskLastStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskLastStatusResponse>(req, "DescribeTaskLastStatus");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 查询任务最近一次执行状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
-        /// <returns><see cref="DescribeTaskLastStatusResponse"/></returns>
-        public DescribeTaskLastStatusResponse DescribeTaskLastStatusSync(DescribeTaskLastStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskLastStatusResponse>(req, "DescribeTaskLastStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 翻页查询任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
-        /// <returns><see cref="DescribeTaskRecordsResponse"/></returns>
-        public Task<DescribeTaskRecordsResponse> DescribeTaskRecords(DescribeTaskRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskRecordsResponse>(req, "DescribeTaskRecords");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 翻页查询任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
-        /// <returns><see cref="DescribeTaskRecordsResponse"/></returns>
-        public DescribeTaskRecordsResponse DescribeTaskRecordsSync(DescribeTaskRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskRecordsResponse>(req, "DescribeTaskRecords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
         /// </summary>
         /// <param name="req"><see cref="DescribeUnitApiUseDetailRequest"/></param>
@@ -3483,56 +3258,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停用任务
-        /// </summary>
-        /// <param name="req"><see cref="DisableTaskRequest"/></param>
-        /// <returns><see cref="DisableTaskResponse"/></returns>
-        public Task<DisableTaskResponse> DisableTask(DisableTaskRequest req)
-        {
-            return InternalRequestAsync<DisableTaskResponse>(req, "DisableTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停用任务
-        /// </summary>
-        /// <param name="req"><see cref="DisableTaskRequest"/></param>
-        /// <returns><see cref="DisableTaskResponse"/></returns>
-        public DisableTaskResponse DisableTaskSync(DisableTaskRequest req)
-        {
-            return InternalRequestAsync<DisableTaskResponse>(req, "DisableTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停用工作流
-        /// </summary>
-        /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
-        /// <returns><see cref="DisableTaskFlowResponse"/></returns>
-        public Task<DisableTaskFlowResponse> DisableTaskFlow(DisableTaskFlowRequest req)
-        {
-            return InternalRequestAsync<DisableTaskFlowResponse>(req, "DisableTaskFlow");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停用工作流
-        /// </summary>
-        /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
-        /// <returns><see cref="DisableTaskFlowResponse"/></returns>
-        public DisableTaskFlowResponse DisableTaskFlowSync(DisableTaskFlowRequest req)
-        {
-            return InternalRequestAsync<DisableTaskFlowResponse>(req, "DisableTaskFlow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 禁用单元化路由
         /// </summary>
         /// <param name="req"><see cref="DisableUnitRouteRequest"/></param>
@@ -3659,56 +3384,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 启用任务
-        /// </summary>
-        /// <param name="req"><see cref="EnableTaskRequest"/></param>
-        /// <returns><see cref="EnableTaskResponse"/></returns>
-        public Task<EnableTaskResponse> EnableTask(EnableTaskRequest req)
-        {
-            return InternalRequestAsync<EnableTaskResponse>(req, "EnableTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 启用任务
-        /// </summary>
-        /// <param name="req"><see cref="EnableTaskRequest"/></param>
-        /// <returns><see cref="EnableTaskResponse"/></returns>
-        public EnableTaskResponse EnableTaskSync(EnableTaskRequest req)
-        {
-            return InternalRequestAsync<EnableTaskResponse>(req, "EnableTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 启用工作流
-        /// </summary>
-        /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
-        /// <returns><see cref="EnableTaskFlowResponse"/></returns>
-        public Task<EnableTaskFlowResponse> EnableTaskFlow(EnableTaskFlowRequest req)
-        {
-            return InternalRequestAsync<EnableTaskFlowResponse>(req, "EnableTaskFlow");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 启用工作流
-        /// </summary>
-        /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
-        /// <returns><see cref="EnableTaskFlowResponse"/></returns>
-        public EnableTaskFlowResponse EnableTaskFlowSync(EnableTaskFlowRequest req)
-        {
-            return InternalRequestAsync<EnableTaskFlowResponse>(req, "EnableTaskFlow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 启用单元化路由
         /// </summary>
         /// <param name="req"><see cref="EnableUnitRouteRequest"/></param>
@@ -3747,56 +3422,6 @@ namespace TencentCloud.Tsf.V20180326
         public EnableUnitRuleResponse EnableUnitRuleSync(EnableUnitRuleRequest req)
         {
             return InternalRequestAsync<EnableUnitRuleResponse>(req, "EnableUnitRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 手动执行一次任务
-        /// </summary>
-        /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
-        /// <returns><see cref="ExecuteTaskResponse"/></returns>
-        public Task<ExecuteTaskResponse> ExecuteTask(ExecuteTaskRequest req)
-        {
-            return InternalRequestAsync<ExecuteTaskResponse>(req, "ExecuteTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 手动执行一次任务
-        /// </summary>
-        /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
-        /// <returns><see cref="ExecuteTaskResponse"/></returns>
-        public ExecuteTaskResponse ExecuteTaskSync(ExecuteTaskRequest req)
-        {
-            return InternalRequestAsync<ExecuteTaskResponse>(req, "ExecuteTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 执行一次工作流
-        /// </summary>
-        /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
-        /// <returns><see cref="ExecuteTaskFlowResponse"/></returns>
-        public Task<ExecuteTaskFlowResponse> ExecuteTaskFlow(ExecuteTaskFlowRequest req)
-        {
-            return InternalRequestAsync<ExecuteTaskFlowResponse>(req, "ExecuteTaskFlow");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 执行一次工作流
-        /// </summary>
-        /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
-        /// <returns><see cref="ExecuteTaskFlowResponse"/></returns>
-        public ExecuteTaskFlowResponse ExecuteTaskFlowSync(ExecuteTaskFlowRequest req)
-        {
-            return InternalRequestAsync<ExecuteTaskFlowResponse>(req, "ExecuteTaskFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4074,31 +3699,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 修改任务
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskRequest"/></param>
-        /// <returns><see cref="ModifyTaskResponse"/></returns>
-        public Task<ModifyTaskResponse> ModifyTask(ModifyTaskRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskResponse>(req, "ModifyTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 修改任务
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskRequest"/></param>
-        /// <returns><see cref="ModifyTaskResponse"/></returns>
-        public ModifyTaskResponse ModifyTaskSync(ModifyTaskRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskResponse>(req, "ModifyTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
         /// 调用此接口完成后，才标志上传包流程结束。
         /// </summary>
@@ -4164,106 +3764,6 @@ namespace TencentCloud.Tsf.V20180326
         public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfigSync(ReassociateBusinessLogConfigRequest req)
         {
             return InternalRequestAsync<ReassociateBusinessLogConfigResponse>(req, "ReassociateBusinessLogConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行任务
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskRequest"/></param>
-        /// <returns><see cref="RedoTaskResponse"/></returns>
-        public Task<RedoTaskResponse> RedoTask(RedoTaskRequest req)
-        {
-            return InternalRequestAsync<RedoTaskResponse>(req, "RedoTask");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行任务
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskRequest"/></param>
-        /// <returns><see cref="RedoTaskResponse"/></returns>
-        public RedoTaskResponse RedoTaskSync(RedoTaskRequest req)
-        {
-            return InternalRequestAsync<RedoTaskResponse>(req, "RedoTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行任务批次
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
-        /// <returns><see cref="RedoTaskBatchResponse"/></returns>
-        public Task<RedoTaskBatchResponse> RedoTaskBatch(RedoTaskBatchRequest req)
-        {
-            return InternalRequestAsync<RedoTaskBatchResponse>(req, "RedoTaskBatch");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行任务批次
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
-        /// <returns><see cref="RedoTaskBatchResponse"/></returns>
-        public RedoTaskBatchResponse RedoTaskBatchSync(RedoTaskBatchRequest req)
-        {
-            return InternalRequestAsync<RedoTaskBatchResponse>(req, "RedoTaskBatch")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行在某个节点上执行任务。
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
-        /// <returns><see cref="RedoTaskExecuteResponse"/></returns>
-        public Task<RedoTaskExecuteResponse> RedoTaskExecute(RedoTaskExecuteRequest req)
-        {
-            return InternalRequestAsync<RedoTaskExecuteResponse>(req, "RedoTaskExecute");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行在某个节点上执行任务。
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
-        /// <returns><see cref="RedoTaskExecuteResponse"/></returns>
-        public RedoTaskExecuteResponse RedoTaskExecuteSync(RedoTaskExecuteRequest req)
-        {
-            return InternalRequestAsync<RedoTaskExecuteResponse>(req, "RedoTaskExecute")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行工作流批次
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
-        /// <returns><see cref="RedoTaskFlowBatchResponse"/></returns>
-        public Task<RedoTaskFlowBatchResponse> RedoTaskFlowBatch(RedoTaskFlowBatchRequest req)
-        {
-            return InternalRequestAsync<RedoTaskFlowBatchResponse>(req, "RedoTaskFlowBatch");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 重新执行工作流批次
-        /// </summary>
-        /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
-        /// <returns><see cref="RedoTaskFlowBatchResponse"/></returns>
-        public RedoTaskFlowBatchResponse RedoTaskFlowBatchSync(RedoTaskFlowBatchRequest req)
-        {
-            return InternalRequestAsync<RedoTaskFlowBatchResponse>(req, "RedoTaskFlowBatch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4642,81 +4142,6 @@ namespace TencentCloud.Tsf.V20180326
         public StopGroupResponse StopGroupSync(StopGroupRequest req)
         {
             return InternalRequestAsync<StopGroupResponse>(req, "StopGroup")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止执行中的任务批次， 非运行中的任务不可调用。
-        /// </summary>
-        /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
-        /// <returns><see cref="StopTaskBatchResponse"/></returns>
-        public Task<StopTaskBatchResponse> StopTaskBatch(StopTaskBatchRequest req)
-        {
-            return InternalRequestAsync<StopTaskBatchResponse>(req, "StopTaskBatch");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止执行中的任务批次， 非运行中的任务不可调用。
-        /// </summary>
-        /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
-        /// <returns><see cref="StopTaskBatchResponse"/></returns>
-        public StopTaskBatchResponse StopTaskBatchSync(StopTaskBatchRequest req)
-        {
-            return InternalRequestAsync<StopTaskBatchResponse>(req, "StopTaskBatch")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止正在某个节点上执行的任务
-        /// </summary>
-        /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
-        /// <returns><see cref="StopTaskExecuteResponse"/></returns>
-        public Task<StopTaskExecuteResponse> StopTaskExecute(StopTaskExecuteRequest req)
-        {
-            return InternalRequestAsync<StopTaskExecuteResponse>(req, "StopTaskExecute");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止正在某个节点上执行的任务
-        /// </summary>
-        /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
-        /// <returns><see cref="StopTaskExecuteResponse"/></returns>
-        public StopTaskExecuteResponse StopTaskExecuteSync(StopTaskExecuteRequest req)
-        {
-            return InternalRequestAsync<StopTaskExecuteResponse>(req, "StopTaskExecute")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止一个工作流批次
-        /// </summary>
-        /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>
-        /// <returns><see cref="TerminateTaskFlowBatchResponse"/></returns>
-        public Task<TerminateTaskFlowBatchResponse> TerminateTaskFlowBatch(TerminateTaskFlowBatchRequest req)
-        {
-            return InternalRequestAsync<TerminateTaskFlowBatchResponse>(req, "TerminateTaskFlowBatch");
-        }
-
-        /// <summary>
-        /// 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-        /// 
-        /// 停止一个工作流批次
-        /// </summary>
-        /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>
-        /// <returns><see cref="TerminateTaskFlowBatchResponse"/></returns>
-        public TerminateTaskFlowBatchResponse TerminateTaskFlowBatchSync(TerminateTaskFlowBatchRequest req)
-        {
-            return InternalRequestAsync<TerminateTaskFlowBatchResponse>(req, "TerminateTaskFlowBatch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

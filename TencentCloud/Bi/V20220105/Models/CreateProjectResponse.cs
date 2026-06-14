@@ -32,19 +32,19 @@ namespace TencentCloud.Bi.V20220105.Models
         public ErrorInfo ErrorInfo{ get; set; }
 
         /// <summary>
-        /// 额外数据
+        /// <p>额外数据</p>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 数据
+        /// <p>数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public Data Data{ get; set; }
 
         /// <summary>
-        /// 返回信息
+        /// <p>返回信息</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

@@ -32,7 +32,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string RequestFromSource{ get; set; }
 
         /// <summary>
-        /// 详情结果
+        /// <p>详情结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

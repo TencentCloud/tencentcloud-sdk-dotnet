@@ -25,26 +25,19 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("TableId")]
         public long? TableId{ get; set; }
 
         /// <summary>
-        /// 类型。
-        /// 取值范围：
-        /// 
-        /// - ROW：行权限
-        /// - COLUMN：列权限
-        /// 
-        /// 默认值：ROW
-        /// 示例值：ROW
+        /// <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>1</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

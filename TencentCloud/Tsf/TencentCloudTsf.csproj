@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1424</VersionPrefix>
+    <VersionPrefix>3.0.1445</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,7 +53,6 @@
     <Compile Include="V20180326\Models\AddInstanceResult.cs" />
     <Compile Include="V20180326\Models\AddInstancesRequest.cs" />
     <Compile Include="V20180326\Models\AddInstancesResponse.cs" />
-    <Compile Include="V20180326\Models\AdvanceSettings.cs" />
     <Compile Include="V20180326\Models\Affinity.cs" />
     <Compile Include="V20180326\Models\AgentProfile.cs" />
     <Compile Include="V20180326\Models\ApiDefinitionDescr.cs" />
@@ -106,8 +105,6 @@
     <Compile Include="V20180326\Models\ContainerGroupServiceGovernanceConfig.cs" />
     <Compile Include="V20180326\Models\ContainerInfo.cs" />
     <Compile Include="V20180326\Models\ContainerInstanceResourceConfig.cs" />
-    <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
-    <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\CosCredentials.cs" />
     <Compile Include="V20180326\Models\CosDownloadInfo.cs" />
     <Compile Include="V20180326\Models\CosUploadInfo.cs" />
@@ -163,10 +160,6 @@
     <Compile Include="V20180326\Models\CreatePublicConfigWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CreateRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\CreateRepositoryResponse.cs" />
-    <Compile Include="V20180326\Models\CreateTaskFlowRequest.cs" />
-    <Compile Include="V20180326\Models\CreateTaskFlowResponse.cs" />
-    <Compile Include="V20180326\Models\CreateTaskRequest.cs" />
-    <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="V20180326\Models\CreateUnitNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\CreateUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleRequest.cs" />
@@ -215,10 +208,6 @@
     <Compile Include="V20180326\Models\DeletePublicConfigResponse.cs" />
     <Compile Include="V20180326\Models\DeleteRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\DeleteRepositoryResponse.cs" />
-    <Compile Include="V20180326\Models\DeleteServerlessGroupRequest.cs" />
-    <Compile Include="V20180326\Models\DeleteServerlessGroupResponse.cs" />
-    <Compile Include="V20180326\Models\DeleteTaskRequest.cs" />
-    <Compile Include="V20180326\Models\DeleteTaskResponse.cs" />
     <Compile Include="V20180326\Models\DeleteUnitNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\DeleteUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DeleteUnitRuleRequest.cs" />
@@ -299,8 +288,6 @@
     <Compile Include="V20180326\Models\DescribeFileConfigReleasesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeFileConfigsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeFileConfigsResponse.cs" />
-    <Compile Include="V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
-    <Compile Include="V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayApisRequest.cs" />
@@ -410,12 +397,6 @@
     <Compile Include="V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeStatisticsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeStatisticsResponse.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskDetailRequest.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskDetailResponse.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskLastStatusRequest.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskLastStatusResponse.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskRecordsRequest.cs" />
-    <Compile Include="V20180326\Models\DescribeTaskRecordsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUnitApiUseDetailRequest.cs" />
     <Compile Include="V20180326\Models\DescribeUnitApiUseDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUnitNamespacesRequest.cs" />
@@ -432,10 +413,6 @@
     <Compile Include="V20180326\Models\DescribeUsableUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DisableLaneRuleRequest.cs" />
     <Compile Include="V20180326\Models\DisableLaneRuleResponse.cs" />
-    <Compile Include="V20180326\Models\DisableTaskFlowRequest.cs" />
-    <Compile Include="V20180326\Models\DisableTaskFlowResponse.cs" />
-    <Compile Include="V20180326\Models\DisableTaskRequest.cs" />
-    <Compile Include="V20180326\Models\DisableTaskResponse.cs" />
     <Compile Include="V20180326\Models\DisableUnitRouteRequest.cs" />
     <Compile Include="V20180326\Models\DisableUnitRouteResponse.cs" />
     <Compile Include="V20180326\Models\DisableUnitRuleRequest.cs" />
@@ -449,20 +426,12 @@
     <Compile Include="V20180326\Models\EmptyDirOption.cs" />
     <Compile Include="V20180326\Models\EnableLaneRuleRequest.cs" />
     <Compile Include="V20180326\Models\EnableLaneRuleResponse.cs" />
-    <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
-    <Compile Include="V20180326\Models\EnableTaskFlowResponse.cs" />
-    <Compile Include="V20180326\Models\EnableTaskRequest.cs" />
-    <Compile Include="V20180326\Models\EnableTaskResponse.cs" />
     <Compile Include="V20180326\Models\EnableUnitRouteRequest.cs" />
     <Compile Include="V20180326\Models\EnableUnitRouteResponse.cs" />
     <Compile Include="V20180326\Models\EnableUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\EnableUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\Env.cs" />
     <Compile Include="V20180326\Models\ExclusiveInstance.cs" />
-    <Compile Include="V20180326\Models\ExecuteTaskFlowRequest.cs" />
-    <Compile Include="V20180326\Models\ExecuteTaskFlowResponse.cs" />
-    <Compile Include="V20180326\Models\ExecuteTaskRequest.cs" />
-    <Compile Include="V20180326\Models\ExecuteTaskResponse.cs" />
     <Compile Include="V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="V20180326\Models\FieldRef.cs" />
@@ -546,8 +515,6 @@
     <Compile Include="V20180326\Models\ModifyPathRewriteResponse.cs" />
     <Compile Include="V20180326\Models\ModifyProgramRequest.cs" />
     <Compile Include="V20180326\Models\ModifyProgramResponse.cs" />
-    <Compile Include="V20180326\Models\ModifyTaskRequest.cs" />
-    <Compile Include="V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoRequest.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoResponse.cs" />
     <Compile Include="V20180326\Models\MonitorOverview.cs" />
@@ -577,14 +544,6 @@
     <Compile Include="V20180326\Models\QuantileEntity.cs" />
     <Compile Include="V20180326\Models\ReassociateBusinessLogConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReassociateBusinessLogConfigResponse.cs" />
-    <Compile Include="V20180326\Models\RedoTaskBatchRequest.cs" />
-    <Compile Include="V20180326\Models\RedoTaskBatchResponse.cs" />
-    <Compile Include="V20180326\Models\RedoTaskExecuteRequest.cs" />
-    <Compile Include="V20180326\Models\RedoTaskExecuteResponse.cs" />
-    <Compile Include="V20180326\Models\RedoTaskFlowBatchRequest.cs" />
-    <Compile Include="V20180326\Models\RedoTaskFlowBatchResponse.cs" />
-    <Compile Include="V20180326\Models\RedoTaskRequest.cs" />
-    <Compile Include="V20180326\Models\RedoTaskResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\ReleaseApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigRequest.cs" />
@@ -622,7 +581,6 @@
     <Compile Include="V20180326\Models\ServiceSetting.cs" />
     <Compile Include="V20180326\Models\ServiceStatisticsResult.cs" />
     <Compile Include="V20180326\Models\ServiceStatisticsResults.cs" />
-    <Compile Include="V20180326\Models\ShardArgument.cs" />
     <Compile Include="V20180326\Models\ShrinkGroupRequest.cs" />
     <Compile Include="V20180326\Models\ShrinkGroupResponse.cs" />
     <Compile Include="V20180326\Models\ShrinkInstancesRequest.cs" />
@@ -639,21 +597,9 @@
     <Compile Include="V20180326\Models\StopContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\StopGroupRequest.cs" />
     <Compile Include="V20180326\Models\StopGroupResponse.cs" />
-    <Compile Include="V20180326\Models\StopTaskBatchRequest.cs" />
-    <Compile Include="V20180326\Models\StopTaskBatchResponse.cs" />
-    <Compile Include="V20180326\Models\StopTaskExecuteRequest.cs" />
-    <Compile Include="V20180326\Models\StopTaskExecuteResponse.cs" />
     <Compile Include="V20180326\Models\Tag.cs" />
-    <Compile Include="V20180326\Models\TaskFlowEdge.cs" />
-    <Compile Include="V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="V20180326\Models\TaskIdInfo.cs" />
-    <Compile Include="V20180326\Models\TaskLastExecuteStatus.cs" />
-    <Compile Include="V20180326\Models\TaskRecord.cs" />
-    <Compile Include="V20180326\Models\TaskRecordPage.cs" />
-    <Compile Include="V20180326\Models\TaskRule.cs" />
     <Compile Include="V20180326\Models\TcrRepoInfo.cs" />
-    <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
-    <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\ThreadPicture.cs" />
     <Compile Include="V20180326\Models\TrySchedule.cs" />
     <Compile Include="V20180326\Models\TsfApiListResponse.cs" />
