@@ -21,20 +21,20 @@ namespace TencentCloud.Tsf.V20180326.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMsApiListResponse : AbstractModel
+    public class ApiParam : AbstractModel
     {
         
         /// <summary>
-        /// <p>微服务API列表。</p>
+        /// <p>接口Method</p>
         /// </summary>
-        [JsonProperty("Result")]
-        public TsfApiListResponse Result{ get; set; }
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>接口Path</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

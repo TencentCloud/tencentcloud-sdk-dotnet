@@ -25,286 +25,292 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组ID
+        /// <p>部署组ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 部署组名称
+        /// <p>部署组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 部署组状态
+        /// <p>部署组状态</p>
         /// </summary>
         [JsonProperty("GroupStatus")]
         public string GroupStatus{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// <p>程序包ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// 程序包名称
+        /// <p>程序包名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// 程序包版本号
+        /// <p>程序包版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 命名空间ID
+        /// <p>命名空间ID</p>
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 命名空间名称
+        /// <p>命名空间名称</p>
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// 部署组机器数目
+        /// <p>部署组机器数目</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 部署组运行中机器数目
+        /// <p>部署组运行中机器数目</p>
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
-        /// 部署组启动参数信息
+        /// <p>部署组启动参数信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartupParameters")]
         public string StartupParameters{ get; set; }
 
         /// <summary>
-        /// 部署组创建时间
+        /// <p>部署组创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 部署组更新时间
+        /// <p>部署组更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 部署组停止机器数目
+        /// <p>部署组停止机器数目</p>
         /// </summary>
         [JsonProperty("OffInstanceCount")]
         public long? OffInstanceCount{ get; set; }
 
         /// <summary>
-        /// 部署组描述信息
+        /// <p>部署组描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupDesc")]
         public string GroupDesc{ get; set; }
 
         /// <summary>
-        /// 微服务类型
+        /// <p>微服务类型</p>
         /// </summary>
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
         /// <summary>
-        /// 应用类型
+        /// <p>应用类型</p>
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// 部署组资源类型
+        /// <p>部署组资源类型</p>
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
 
         /// <summary>
-        /// 部署组更新时间戳
+        /// <p>部署组更新时间戳</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public long? UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 部署应用描述信息
+        /// <p>部署应用描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
         /// <summary>
-        /// 滚动发布的更新方式
+        /// <p>滚动发布的更新方式</p>
         /// </summary>
         [JsonProperty("UpdateType")]
         public ulong? UpdateType{ get; set; }
 
         /// <summary>
-        /// 发布是否启用beta批次
+        /// <p>发布是否启用beta批次</p>
         /// </summary>
         [JsonProperty("DeployBetaEnable")]
         public bool? DeployBetaEnable{ get; set; }
 
         /// <summary>
-        /// 滚动发布的批次比例列表
+        /// <p>滚动发布的批次比例列表</p>
         /// </summary>
         [JsonProperty("DeployBatch")]
         public float?[] DeployBatch{ get; set; }
 
         /// <summary>
-        /// 滚动发布的批次执行方式
+        /// <p>滚动发布的批次执行方式</p>
         /// </summary>
         [JsonProperty("DeployExeMode")]
         public string DeployExeMode{ get; set; }
 
         /// <summary>
-        /// 滚动发布的每个批次的等待时间
+        /// <p>滚动发布的每个批次的等待时间</p>
         /// </summary>
         [JsonProperty("DeployWaitTime")]
         public ulong? DeployWaitTime{ get; set; }
 
         /// <summary>
-        /// 是否开启了健康检查
+        /// <p>是否开启了健康检查</p>
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 健康检查配置
+        /// <p>健康检查配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
 
         /// <summary>
-        /// 程序包类型
+        /// <p>程序包类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 启动脚本 base64编码
+        /// <p>启动脚本 base64编码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartScript")]
         public string StartScript{ get; set; }
 
         /// <summary>
-        /// 停止脚本 base64编码
+        /// <p>停止脚本 base64编码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopScript")]
         public string StopScript{ get; set; }
 
         /// <summary>
-        /// 部署组备注
+        /// <p>部署组备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// javaagent信息
+        /// <p>javaagent信息</p>
         /// </summary>
         [JsonProperty("AgentProfileList")]
         public AgentProfile[] AgentProfileList{ get; set; }
 
         /// <summary>
-        /// 预热属性配置
+        /// <p>预热属性配置</p>
         /// </summary>
         [JsonProperty("WarmupSetting")]
         public WarmupSetting WarmupSetting{ get; set; }
 
         /// <summary>
-        /// Envoy网关配置
+        /// <p>Envoy网关配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
 
         /// <summary>
-        /// 批次是否开启健康检查
+        /// <p>批次是否开启健康检查</p>
         /// </summary>
         [JsonProperty("EnableBatchHealthCheck")]
         public bool? EnableBatchHealthCheck{ get; set; }
 
         /// <summary>
-        /// 是否开启cgroup控制内存cpu
+        /// <p>是否开启cgroup控制内存cpu</p>
         /// </summary>
         [JsonProperty("FilebeatCgroupEnable")]
         public bool? FilebeatCgroupEnable{ get; set; }
 
         /// <summary>
-        /// filebeat使用cpu上限
+        /// <p>filebeat使用cpu上限</p>
         /// </summary>
         [JsonProperty("FilebeatMaxCpu")]
         public float? FilebeatMaxCpu{ get; set; }
 
         /// <summary>
-        /// filebeat使用内存上限
+        /// <p>filebeat使用内存上限</p>
         /// </summary>
         [JsonProperty("FilebeatMaxMem")]
         public long? FilebeatMaxMem{ get; set; }
 
         /// <summary>
-        /// 仓库ID
+        /// <p>仓库ID</p>
         /// </summary>
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }
 
         /// <summary>
-        /// 仓库名称
+        /// <p>仓库名称</p>
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }
 
         /// <summary>
-        /// 仓库类型
+        /// <p>仓库类型</p>
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动重启</p>
+        /// </summary>
+        [JsonProperty("LivenessAutoRestart")]
+        public bool? LivenessAutoRestart{ get; set; }
 
 
         /// <summary>
@@ -357,6 +363,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
             this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
             this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
         }
     }
 }

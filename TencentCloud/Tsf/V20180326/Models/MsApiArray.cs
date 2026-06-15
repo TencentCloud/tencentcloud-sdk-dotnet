@@ -25,30 +25,42 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// API 请求路径
+        /// <p>API 请求路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 请求方法
+        /// <p>请求方法</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 方法描述
+        /// <p>方法描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// API状态 0:离线 1:在线
+        /// <p>API状态 0:离线 1:在线</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>API ID</p>
+        /// </summary>
+        [JsonProperty("ApiId")]
+        public string ApiId{ get; set; }
+
+        /// <summary>
+        /// <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul>
+        /// </summary>
+        [JsonProperty("SrcTypeName")]
+        public string SrcTypeName{ get; set; }
 
 
         /// <summary>
@@ -60,6 +72,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ApiId", this.ApiId);
+            this.SetParamSimple(map, prefix + "SrcTypeName", this.SrcTypeName);
         }
     }
 }

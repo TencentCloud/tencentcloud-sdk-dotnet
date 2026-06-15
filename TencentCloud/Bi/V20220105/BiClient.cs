@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1445";
+       private const string sdkVersion = "SDK_NET_3.0.1446";
 
         /// <summary>
         /// Client constructor.
@@ -932,6 +932,27 @@ namespace TencentCloud.Bi.V20220105
         public ModifyProjectResponse ModifyProjectSync(ModifyProjectRequest req)
         {
             return InternalRequestAsync<ModifyProjectResponse>(req, "ModifyProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按用户资源修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserResponse"/></returns>
+        public Task<ModifyResourceUserResponse> ModifyResourceUser(ModifyResourceUserRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserResponse>(req, "ModifyResourceUser");
+        }
+
+        /// <summary>
+        /// 按用户资源修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserResponse"/></returns>
+        public ModifyResourceUserResponse ModifyResourceUserSync(ModifyResourceUserRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserResponse>(req, "ModifyResourceUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

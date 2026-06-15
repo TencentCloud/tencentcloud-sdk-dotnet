@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 翻页结构
+        /// <p>翻页结构</p>
         /// </summary>
         [JsonProperty("Result")]
         public TsfPageApiDetailInfo Result{ get; set; }

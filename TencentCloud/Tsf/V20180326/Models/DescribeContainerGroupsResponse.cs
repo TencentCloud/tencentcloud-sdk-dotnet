@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 查询的权限数据对象
+        /// <p>查询的权限数据对象</p>
         /// </summary>
         [JsonProperty("Result")]
         public ContainGroupResult Result{ get; set; }

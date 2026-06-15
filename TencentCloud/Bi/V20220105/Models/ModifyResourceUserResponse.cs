@@ -15,20 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMsApiListResponse : AbstractModel
+    public class ModifyResourceUserResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>微服务API列表。</p>
+        /// 自定义错误信息对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public TsfApiListResponse Result{ get; set; }
+        [JsonProperty("ErrorInfo")]
+        public ErrorInfo ErrorInfo{ get; set; }
+
+        /// <summary>
+        /// 扩展
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
+        /// <summary>
+        /// 消息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
+
+        /// <summary>
+        /// 数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public long? Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +64,10 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

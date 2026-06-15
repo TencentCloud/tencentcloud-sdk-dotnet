@@ -25,9 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 更新健康检查配置操作是否成功。
-        /// true：操作成功。
-        /// false：操作失败。
+        /// <p>更新健康检查配置操作是否成功。<br>true：操作成功。<br>false：操作失败。</p>
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

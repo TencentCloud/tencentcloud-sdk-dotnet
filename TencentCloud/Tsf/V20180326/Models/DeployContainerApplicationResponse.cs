@@ -25,9 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署容器应用是否成功。
-        /// true：成功。
-        /// false：失败。
+        /// <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]

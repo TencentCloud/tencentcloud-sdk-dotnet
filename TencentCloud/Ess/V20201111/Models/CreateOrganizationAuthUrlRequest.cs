@@ -192,6 +192,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AuthorizationMethod")]
         public ulong?[] AuthorizationMethod{ get; set; }
 
+        /// <summary>
+        /// <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
+        /// </summary>
+        [JsonProperty("HideBizLicense")]
+        public bool? HideBizLicense{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
             this.SetParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
             this.SetParamArraySimple(map, prefix + "AuthorizationMethod.", this.AuthorizationMethod);
+            this.SetParamSimple(map, prefix + "HideBizLicense", this.HideBizLicense);
         }
     }
 }

@@ -25,34 +25,40 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 业务日志列表
+        /// <p>业务日志列表</p>
         /// </summary>
         [JsonProperty("Content")]
         public BusinessLogV2[] Content{ get; set; }
 
         /// <summary>
-        /// 游标ID
+        /// <p>游标ID</p>
         /// </summary>
         [JsonProperty("ScrollId")]
         public string ScrollId{ get; set; }
 
         /// <summary>
-        /// 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
+        /// <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 查询es时，使用searchAfter返回的游标
+        /// <p>查询es时，使用searchAfter返回的游标</p>
         /// </summary>
         [JsonProperty("SearchAfter")]
         public string[] SearchAfter{ get; set; }
+
+        /// <summary>
+        /// <p>是否压缩</p>
+        /// </summary>
+        [JsonProperty("Compressed")]
+        public bool? Compressed{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ScrollId", this.ScrollId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "SearchAfter.", this.SearchAfter);
+            this.SetParamSimple(map, prefix + "Compressed", this.Compressed);
         }
     }
 }

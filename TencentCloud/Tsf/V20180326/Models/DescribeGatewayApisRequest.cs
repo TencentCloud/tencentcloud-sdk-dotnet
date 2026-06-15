@@ -25,40 +25,52 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 分组ID
+        /// <p>分组ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 翻页偏移量
+        /// <p>翻页偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页的记录数
+        /// <p>每页的记录数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键字，支持 API path
+        /// <p>搜索关键字，支持 API path</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 部署组ID
+        /// <p>部署组ID</p>
         /// </summary>
         [JsonProperty("GatewayDeployGroupId")]
         public string GatewayDeployGroupId{ get; set; }
 
         /// <summary>
-        /// 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+        /// <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
         /// </summary>
         [JsonProperty("ReleaseStatus")]
         public string ReleaseStatus{ get; set; }
+
+        /// <summary>
+        /// <p>返回扩展出参字段名</p>
+        /// </summary>
+        [JsonProperty("ExtendFieldList")]
+        public string[] ExtendFieldList{ get; set; }
+
+        /// <summary>
+        /// <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+        /// </summary>
+        [JsonProperty("ApiOnlineStatus")]
+        public string ApiOnlineStatus{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
             this.SetParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
+            this.SetParamArraySimple(map, prefix + "ExtendFieldList.", this.ExtendFieldList);
+            this.SetParamSimple(map, prefix + "ApiOnlineStatus", this.ApiOnlineStatus);
         }
     }
 }

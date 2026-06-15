@@ -25,61 +25,67 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 配置中心类型[注册中心Registration、配置中心Configuration]
+        /// <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
         /// </summary>
         [JsonProperty("CenterType")]
         public string CenterType{ get; set; }
 
         /// <summary>
-        /// 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+        /// <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例类型，例如北极星Polaris
+        /// <p>实例类型，例如北极星Polaris</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+        /// <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+        /// <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
         /// </summary>
         [JsonProperty("InstanceNamespaceId")]
         public string InstanceNamespaceId{ get; set; }
 
         /// <summary>
-        /// 部署组Id
+        /// <p>部署组Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>文档ID</p>
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
 
         /// <summary>
@@ -96,6 +102,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

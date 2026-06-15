@@ -25,376 +25,382 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 可观测配置
+        /// <p>可观测配置</p>
         /// </summary>
         [JsonProperty("ObservabilityConfig")]
         public ContainerGroupObservabilityConfig ObservabilityConfig{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 部署组ID，分组唯一标识
+        /// <p>部署组ID，分组唯一标识</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 业务容器的环境变量参数
+        /// <p>业务容器的环境变量参数</p>
         /// </summary>
         [JsonProperty("Envs")]
         public Env[] Envs{ get; set; }
 
         /// <summary>
-        /// 业务容器的挂载信息
+        /// <p>业务容器的挂载信息</p>
         /// </summary>
         [JsonProperty("VolumeMountInfoList")]
         public VolumeMountInfo[] VolumeMountInfoList{ get; set; }
 
         /// <summary>
-        /// 业务主容器生命周期钩子列表
+        /// <p>业务主容器生命周期钩子列表</p>
         /// </summary>
         [JsonProperty("LifeCycleHookList")]
         public LifeCycleHook[] LifeCycleHookList{ get; set; }
 
         /// <summary>
-        /// 附属容器列表
+        /// <p>附属容器列表</p>
         /// </summary>
         [JsonProperty("AdditionalContainerList")]
         public ContainerInfo[] AdditionalContainerList{ get; set; }
 
         /// <summary>
-        /// 容器卷信息
+        /// <p>容器卷信息</p>
         /// </summary>
         [JsonProperty("VolumeInfoList")]
         public VolumeInfo[] VolumeInfoList{ get; set; }
 
         /// <summary>
-        /// Service访问配置列表
+        /// <p>Service访问配置列表</p>
         /// </summary>
         [JsonProperty("ServiceSettingList")]
         public ServiceSetting[] ServiceSettingList{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 部署组名称
+        /// <p>部署组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 容器类型
+        /// <p>容器类型</p>
         /// </summary>
         [JsonProperty("ContainerKind")]
         public string ContainerKind{ get; set; }
 
         /// <summary>
-        /// 业务容器的 镜像Server ccr.ccs.tencentyun.com
+        /// <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
         /// </summary>
         [JsonProperty("Server")]
         public string Server{ get; set; }
 
         /// <summary>
-        /// 业务容器的镜像名
+        /// <p>业务容器的镜像名</p>
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }
 
         /// <summary>
-        /// 仓库类型
+        /// <p>仓库类型</p>
         /// </summary>
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
         /// <summary>
-        /// TCR仓库信息
+        /// <p>TCR仓库信息</p>
         /// </summary>
         [JsonProperty("TcrRepoInfo")]
         public TcrRepoInfo TcrRepoInfo{ get; set; }
 
         /// <summary>
-        /// 容器访问凭证名称
+        /// <p>容器访问凭证名称</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 业务容器的镜像版本号
+        /// <p>业务容器的镜像版本号</p>
         /// </summary>
         [JsonProperty("TagName")]
         public string TagName{ get; set; }
 
         /// <summary>
-        /// 健康检查
+        /// <p>健康检查</p>
         /// </summary>
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
 
         /// <summary>
-        /// 业务容器的 cpu  request
+        /// <p>业务容器的 cpu  request</p>
         /// </summary>
         [JsonProperty("CpuRequest")]
         public string CpuRequest{ get; set; }
 
         /// <summary>
-        /// 业务容器的 cpu limit
+        /// <p>业务容器的 cpu limit</p>
         /// </summary>
         [JsonProperty("CpuLimit")]
         public string CpuLimit{ get; set; }
 
         /// <summary>
-        /// 业务容器的 mem request
+        /// <p>业务容器的 mem request</p>
         /// </summary>
         [JsonProperty("MemRequest")]
         public string MemRequest{ get; set; }
 
         /// <summary>
-        /// 业务容器的 mem limit
+        /// <p>业务容器的 mem limit</p>
         /// </summary>
         [JsonProperty("MemLimit")]
         public string MemLimit{ get; set; }
 
         /// <summary>
-        /// 业务容器的 jvm 参数
+        /// <p>业务容器的 jvm 参数</p>
         /// </summary>
         [JsonProperty("JvmOpts")]
         public string JvmOpts{ get; set; }
 
         /// <summary>
-        /// 是否为初始化容器 业务主容器不能为初始化容
+        /// <p>是否为初始化容器 业务主容器不能为初始化容</p>
         /// </summary>
         [JsonProperty("InitContainerEnable")]
         public bool? InitContainerEnable{ get; set; }
 
         /// <summary>
-        /// 业务主容器是否为特权容器
+        /// <p>业务主容器是否为特权容器</p>
         /// </summary>
         [JsonProperty("PrivilegeContainerEnable")]
         public bool? PrivilegeContainerEnable{ get; set; }
 
         /// <summary>
-        /// 业务主容器运行命令(转base64)
+        /// <p>业务主容器运行命令(转base64)</p>
         /// </summary>
         [JsonProperty("RunCommand")]
         public string RunCommand{ get; set; }
 
         /// <summary>
-        /// 业务主容器运行参数(转base64)
+        /// <p>业务主容器运行参数(转base64)</p>
         /// </summary>
         [JsonProperty("RunArg")]
         public string RunArg{ get; set; }
 
         /// <summary>
-        /// 实例数量
+        /// <p>实例数量</p>
         /// </summary>
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// 调度策略
+        /// <p>调度策略</p>
         /// </summary>
         [JsonProperty("SchedulingStrategy")]
         public SchedulingStrategy SchedulingStrategy{ get; set; }
 
         /// <summary>
-        /// 重启策略
+        /// <p>重启策略</p>
         /// </summary>
         [JsonProperty("RestartPolicy")]
         public string RestartPolicy{ get; set; }
 
         /// <summary>
-        /// 服务治理配置
+        /// <p>服务治理配置</p>
         /// </summary>
         [JsonProperty("ServiceSpecEncode")]
         public string ServiceSpecEncode{ get; set; }
 
         /// <summary>
-        /// istio容器的 mem Request
+        /// <p>istio容器的 mem Request</p>
         /// </summary>
         [JsonProperty("IstioMemRequest")]
         public string IstioMemRequest{ get; set; }
 
         /// <summary>
-        ///  istio容器的 cpu Request
+        /// <p>istio容器的 cpu Request</p>
         /// </summary>
         [JsonProperty("IstioCpuRequest")]
         public string IstioCpuRequest{ get; set; }
 
         /// <summary>
-        /// istio容器的 mem Limit
+        /// <p>istio容器的 mem Limit</p>
         /// </summary>
         [JsonProperty("IstioMemLimit")]
         public string IstioMemLimit{ get; set; }
 
         /// <summary>
-        /// istio容器的 cpu Limit
+        /// <p>istio容器的 cpu Limit</p>
         /// </summary>
         [JsonProperty("IstioCpuLimit")]
         public string IstioCpuLimit{ get; set; }
 
         /// <summary>
-        /// 服务治理配置
+        /// <p>服务治理配置</p>
         /// </summary>
         [JsonProperty("ServiceGovernanceConfig")]
         public ContainerGroupServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
 
         /// <summary>
-        /// agent容器的 mem Request
+        /// <p>agent容器的 mem Request</p>
         /// </summary>
         [JsonProperty("AgentMemRequest")]
         public string AgentMemRequest{ get; set; }
 
         /// <summary>
-        /// agent容器的 cpu Request
+        /// <p>agent容器的 cpu Request</p>
         /// </summary>
         [JsonProperty("AgentCpuRequest")]
         public string AgentCpuRequest{ get; set; }
 
         /// <summary>
-        /// agent容器的 mem Limit
+        /// <p>agent容器的 mem Limit</p>
         /// </summary>
         [JsonProperty("AgentMemLimit")]
         public string AgentMemLimit{ get; set; }
 
         /// <summary>
-        /// agent容器的 cpu Limit
+        /// <p>agent容器的 cpu Limit</p>
         /// </summary>
         [JsonProperty("AgentCpuLimit")]
         public string AgentCpuLimit{ get; set; }
 
         /// <summary>
-        /// 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
+        /// <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
 
         /// <summary>
-        /// 更新间隔,单位秒
+        /// <p>更新间隔,单位秒</p>
         /// </summary>
         [JsonProperty("UpdateIvl")]
         public long? UpdateIvl{ get; set; }
 
         /// <summary>
-        /// 对应更新策略和策略配置参数
+        /// <p>对应更新策略和策略配置参数</p>
         /// </summary>
         [JsonProperty("MaxSurge")]
         public string MaxSurge{ get; set; }
 
         /// <summary>
-        /// 对应更新策略和策略配置参数
+        /// <p>对应更新策略和策略配置参数</p>
         /// </summary>
         [JsonProperty("MaxUnavailable")]
         public string MaxUnavailable{ get; set; }
 
         /// <summary>
-        /// 预热参数配置
+        /// <p>预热参数配置</p>
         /// </summary>
         [JsonProperty("WarmupSetting")]
         public WarmupSetting WarmupSetting{ get; set; }
 
         /// <summary>
-        /// 配置模版ID
+        /// <p>配置模版ID</p>
         /// </summary>
         [JsonProperty("ConfigTemplateId")]
         public string ConfigTemplateId{ get; set; }
 
         /// <summary>
-        /// 配置模版Version
+        /// <p>配置模版Version</p>
         /// </summary>
         [JsonProperty("ConfigTemplateVersion")]
         public long? ConfigTemplateVersion{ get; set; }
 
         /// <summary>
-        /// 是否清除数据卷信息
+        /// <p>是否清除数据卷信息</p>
         /// </summary>
         [JsonProperty("VolumeClean")]
         public bool? VolumeClean{ get; set; }
 
         /// <summary>
-        /// 命名空间Id
+        /// <p>命名空间Id</p>
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 是否部署agent容器
+        /// <p>是否部署agent容器</p>
         /// </summary>
         [JsonProperty("DeployAgent")]
         public bool? DeployAgent{ get; set; }
 
         /// <summary>
-        /// javaagent信息: SERVICE_AGENT/OT_AGENT
+        /// <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
         /// </summary>
         [JsonProperty("AgentProfileList")]
         public AgentProfile[] AgentProfileList{ get; set; }
 
         /// <summary>
-        /// 是否清除Service信息
+        /// <p>是否清除Service信息</p>
         /// </summary>
         [JsonProperty("ServiceClean")]
         public bool? ServiceClean{ get; set; }
 
         /// <summary>
-        /// 是否清除Env信息
+        /// <p>是否清除Env信息</p>
         /// </summary>
         [JsonProperty("EnvClean")]
         public bool? EnvClean{ get; set; }
 
         /// <summary>
-        /// 本次部署的描述信息
+        /// <p>本次部署的描述信息</p>
         /// </summary>
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
         /// <summary>
-        /// k8s命名空间名称
+        /// <p>k8s命名空间名称</p>
         /// </summary>
         [JsonProperty("K8sNamespaceName")]
         public string K8sNamespaceName{ get; set; }
 
         /// <summary>
-        /// 是否启用静态IP
+        /// <p>是否启用静态IP</p>
         /// </summary>
         [JsonProperty("StaticIpEnabled")]
         public bool? StaticIpEnabled{ get; set; }
 
         /// <summary>
-        /// 启动策略[OrderedReady/Parallel]
+        /// <p>启动策略[OrderedReady/Parallel]</p>
         /// </summary>
         [JsonProperty("PodManagementPolicyType")]
         public string PodManagementPolicyType{ get; set; }
 
         /// <summary>
-        /// 滚动更新分区序号
+        /// <p>滚动更新分区序号</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+        /// <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
         /// </summary>
         [JsonProperty("IncrementalDeployment")]
         public bool? IncrementalDeployment{ get; set; }
+
+        /// <summary>
+        /// <p>是否不立即启动</p>
+        /// </summary>
+        [JsonProperty("DoNotStart")]
+        public bool? DoNotStart{ get; set; }
 
 
         /// <summary>
@@ -464,6 +470,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
             this.SetParamSimple(map, prefix + "Partition", this.Partition);
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+            this.SetParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
         }
     }
 }

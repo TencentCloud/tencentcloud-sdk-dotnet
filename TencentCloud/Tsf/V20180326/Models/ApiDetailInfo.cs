@@ -218,6 +218,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("PathMappingUnsupportedMsg")]
         public string PathMappingUnsupportedMsg{ get; set; }
 
+        /// <summary>
+        /// <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiOnlineStatus")]
+        public string ApiOnlineStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -252,6 +259,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RpcType", this.RpcType);
             this.SetParamSimple(map, prefix + "PathMappingUnsupported", this.PathMappingUnsupported);
             this.SetParamSimple(map, prefix + "PathMappingUnsupportedMsg", this.PathMappingUnsupportedMsg);
+            this.SetParamSimple(map, prefix + "ApiOnlineStatus", this.ApiOnlineStatus);
         }
     }
 }

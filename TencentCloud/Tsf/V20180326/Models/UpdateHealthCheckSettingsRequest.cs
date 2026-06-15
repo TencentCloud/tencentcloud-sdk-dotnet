@@ -25,22 +25,28 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+        /// <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 是否开启健康检查
+        /// <p>是否开启健康检查</p>
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 健康检查配置
+        /// <p>健康检查配置</p>
         /// </summary>
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动重启</p>
+        /// </summary>
+        [JsonProperty("LivenessAutoRestart")]
+        public bool? LivenessAutoRestart{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
         }
     }
 }

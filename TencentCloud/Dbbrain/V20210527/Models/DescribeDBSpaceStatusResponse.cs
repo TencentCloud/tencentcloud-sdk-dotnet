@@ -25,25 +25,25 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 磁盘增长量(MB)。
+        /// <p>磁盘增长量(MB)。</p>
         /// </summary>
         [JsonProperty("Growth")]
         public long? Growth{ get; set; }
 
         /// <summary>
-        /// 磁盘剩余(MB)。
+        /// <p>磁盘剩余(MB)。</p>
         /// </summary>
         [JsonProperty("Remain")]
         public long? Remain{ get; set; }
 
         /// <summary>
-        /// 磁盘总量(MB)。
+        /// <p>磁盘总量(MB)。</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 预计可用天数。
+        /// <p>预计可用天数。</p>
         /// </summary>
         [JsonProperty("AvailableDays")]
         public long? AvailableDays{ get; set; }

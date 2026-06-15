@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1445</VersionPrefix>
+    <VersionPrefix>3.0.1446</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -157,6 +157,8 @@
     <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceRequest.cs" />
     <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceResponse.cs" />
     <Compile Include="V20220105\Models\ModifyResourceUserGroupResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserDetailInfoRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserDetailInfoResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserGroupRequest.cs" />
