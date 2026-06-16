@@ -25,38 +25,44 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 规格类型，如S2.MEDIUM8
+        /// <p>规格类型，如S2.MEDIUM8</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 系统盘，系统盘个数不超过1块
+        /// <p>系统盘，系统盘个数不超过1块</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemDisk")]
         public DiskSpecInfo[] SystemDisk{ get; set; }
 
         /// <summary>
-        /// 需要绑定的标签列表
+        /// <p>需要绑定的标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 云数据盘，云数据盘总个数不超过15块
+        /// <p>云数据盘，云数据盘总个数不超过15块</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpecInfo[] DataDisk{ get; set; }
 
         /// <summary>
-        /// 本地数据盘
+        /// <p>本地数据盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDataDisk")]
         public DiskSpecInfo[] LocalDataDisk{ get; set; }
+
+        /// <summary>
+        /// <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+        /// </summary>
+        [JsonProperty("SoftwareConfig")]
+        public ServiceDeploy[] SoftwareConfig{ get; set; }
 
 
         /// <summary>
@@ -69,6 +75,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
             this.SetParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
+            this.SetParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
         }
     }
 }

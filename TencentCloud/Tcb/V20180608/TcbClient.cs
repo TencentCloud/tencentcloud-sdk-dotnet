@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1447";
 
         /// <summary>
         /// Client constructor.
@@ -893,6 +893,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询云应用服务列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppListRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppListResponse"/></returns>
+        public Task<DescribeCloudAppListResponse> DescribeCloudAppList(DescribeCloudAppListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppListResponse>(req, "DescribeCloudAppList");
+        }
+
+        /// <summary>
+        /// 查询云应用服务列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppListRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppListResponse"/></returns>
+        public DescribeCloudAppListResponse DescribeCloudAppListSync(DescribeCloudAppListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppListResponse>(req, "DescribeCloudAppList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取云托管代码上传url
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseBuildServiceRequest"/></param>
@@ -958,6 +979,48 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCreateMySQLResultResponse DescribeCreateMySQLResultSync(DescribeCreateMySQLResultRequest req)
         {
             return InternalRequestAsync<DescribeCreateMySQLResultResponse>(req, "DescribeCreateMySQLResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源点模式下的资源点用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreditsUsageRequest"/></param>
+        /// <returns><see cref="DescribeCreditsUsageResponse"/></returns>
+        public Task<DescribeCreditsUsageResponse> DescribeCreditsUsage(DescribeCreditsUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeCreditsUsageResponse>(req, "DescribeCreditsUsage");
+        }
+
+        /// <summary>
+        /// 查询资源点模式下的资源点用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreditsUsageRequest"/></param>
+        /// <returns><see cref="DescribeCreditsUsageResponse"/></returns>
+        public DescribeCreditsUsageResponse DescribeCreditsUsageSync(DescribeCreditsUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeCreditsUsageResponse>(req, "DescribeCreditsUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源点模式下的资源点用量及原始用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreditsUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribeCreditsUsageDetailResponse"/></returns>
+        public Task<DescribeCreditsUsageDetailResponse> DescribeCreditsUsageDetail(DescribeCreditsUsageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCreditsUsageDetailResponse>(req, "DescribeCreditsUsageDetail");
+        }
+
+        /// <summary>
+        /// 查询资源点模式下的资源点用量及原始用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreditsUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribeCreditsUsageDetailResponse"/></returns>
+        public DescribeCreditsUsageDetailResponse DescribeCreditsUsageDetailSync(DescribeCreditsUsageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCreditsUsageDetailResponse>(req, "DescribeCreditsUsageDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

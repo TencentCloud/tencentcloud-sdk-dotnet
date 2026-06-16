@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1447</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,7 @@
     <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
+    <Compile Include="V20180608\Models\CloudAppServiceItem.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
     <Compile Include="V20180608\Models\CreateAIModelRequest.cs" />
@@ -130,6 +131,8 @@
     <Compile Include="V20180608\Models\DescribeBillingInfoResponse.cs" />
     <Compile Include="V20180608\Models\DescribeClientRequest.cs" />
     <Compile Include="V20180608\Models\DescribeClientResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
@@ -137,6 +140,10 @@
     <Compile Include="V20180608\Models\DescribeCreateMySQLResult.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResultRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCreateMySQLResultResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCreditsUsageDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCreditsUsageDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCreditsUsageRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCreditsUsageResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCurveDataRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCurveDataResponse.cs" />
     <Compile Include="V20180608\Models\DescribeDatabaseACLRequest.cs" />
@@ -196,6 +203,7 @@
     <Compile Include="V20180608\Models\EmailTemplateConfig.cs" />
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />
+    <Compile Include="V20180608\Models\EnvPkgCreditsUsage.cs" />
     <Compile Include="V20180608\Models\ExecutePGSqlRequest.cs" />
     <Compile Include="V20180608\Models\ExecutePGSqlResponse.cs" />
     <Compile Include="V20180608\Models\ExternalStorage.cs" />
@@ -236,6 +244,7 @@
     <Compile Include="V20180608\Models\ManagedAIModelGroup.cs" />
     <Compile Include="V20180608\Models\ManagedAIModelSpec.cs" />
     <Compile Include="V20180608\Models\MessageLocalized.cs" />
+    <Compile Include="V20180608\Models\MetricUsage.cs" />
     <Compile Include="V20180608\Models\MgoCommandParam.cs" />
     <Compile Include="V20180608\Models\MgoIndexKeys.cs" />
     <Compile Include="V20180608\Models\MgoKeySchema.cs" />
@@ -320,6 +329,7 @@
     <Compile Include="V20180608\Models\VMPrice.cs" />
     <Compile Include="V20180608\Models\VMSpec.cs" />
     <Compile Include="V20180608\Models\VMSpecLightHouse.cs" />
+    <Compile Include="V20180608\Models\ValueDetail.cs" />
     <Compile Include="V20180608\Models\VerificationConfig.cs" />
     <Compile Include="V20180608\Models\VmInstance.cs" />
     <Compile Include="V20180608\Models\WxGatewayCustomConfig.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{50461850-F9C3-3A53-AD7B-51584C3A8A40}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1375</VersionPrefix>
+    <VersionPrefix>3.0.1447</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,36 @@
 
   <ItemGroup>
     <Compile Include="V20201029\DbdcClient.cs" />
+    <Compile Include="V20201029\Models\AddNodesToDBCustomClusterRequest.cs" />
+    <Compile Include="V20201029\Models\AddNodesToDBCustomClusterResponse.cs" />
+    <Compile Include="V20201029\Models\ApiServerNetwork.cs" />
+    <Compile Include="V20201029\Models\CheckRoleAuthorizedRequest.cs" />
+    <Compile Include="V20201029\Models\CheckRoleAuthorizedResponse.cs" />
+    <Compile Include="V20201029\Models\ContainerNetwork.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomClusterRequest.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomClusterResponse.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomNodesRequest.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomNodesResponse.cs" />
+    <Compile Include="V20201029\Models\DBCustomCluster.cs" />
+    <Compile Include="V20201029\Models\DBCustomClusterNode.cs" />
+    <Compile Include="V20201029\Models\DBCustomImage.cs" />
+    <Compile Include="V20201029\Models\DBCustomNode.cs" />
     <Compile Include="V20201029\Models\DBInstanceDetail.cs" />
+    <Compile Include="V20201029\Models\DataDisk.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterDetailRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterDetailResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterKubeconfigRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterKubeconfigResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterNodesRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClusterNodesResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClustersRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomClustersResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomImagesRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomImagesResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomNodesRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomNodesResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomTaskStatusRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomTaskStatusResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20201029\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20201029\Models\DescribeHostListRequest.cs" />
@@ -60,13 +89,31 @@
     <Compile Include="V20201029\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20201029\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20201029\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20201029\Models\DestroyDBCustomClusterRequest.cs" />
+    <Compile Include="V20201029\Models\DestroyDBCustomClusterResponse.cs" />
+    <Compile Include="V20201029\Models\DestroyDBCustomNodeRequest.cs" />
+    <Compile Include="V20201029\Models\DestroyDBCustomNodeResponse.cs" />
     <Compile Include="V20201029\Models\DeviceInfo.cs" />
+    <Compile Include="V20201029\Models\Filter.cs" />
     <Compile Include="V20201029\Models\HostDetail.cs" />
     <Compile Include="V20201029\Models\InstanceDetail.cs" />
     <Compile Include="V20201029\Models\InstanceDeviceInfo.cs" />
     <Compile Include="V20201029\Models\InstanceExpand.cs" />
+    <Compile Include="V20201029\Models\IsolateDBCustomNodeRequest.cs" />
+    <Compile Include="V20201029\Models\IsolateDBCustomNodeResponse.cs" />
+    <Compile Include="V20201029\Models\LoginSettings.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomClusterTagsRequest.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomClusterTagsResponse.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomNodeTagsRequest.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomNodeTagsResponse.cs" />
     <Compile Include="V20201029\Models\ModifyInstanceNameRequest.cs" />
     <Compile Include="V20201029\Models\ModifyInstanceNameResponse.cs" />
+    <Compile Include="V20201029\Models\RemoveNodesFromDBCustomClusterRequest.cs" />
+    <Compile Include="V20201029\Models\RemoveNodesFromDBCustomClusterResponse.cs" />
+    <Compile Include="V20201029\Models\RenewDBCustomNodeRequest.cs" />
+    <Compile Include="V20201029\Models\RenewDBCustomNodeResponse.cs" />
     <Compile Include="V20201029\Models\ResourceTag.cs" />
+    <Compile Include="V20201029\Models\SystemDisk.cs" />
+    <Compile Include="V20201029\Models\Tag.cs" />
   </ItemGroup>
 </Project>
