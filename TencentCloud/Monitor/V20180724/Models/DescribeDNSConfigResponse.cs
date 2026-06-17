@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// DNS 服务器数组
+        /// <p>DNS 服务器数组</p>
         /// </summary>
         [JsonProperty("NameServers")]
         public string[] NameServers{ get; set; }

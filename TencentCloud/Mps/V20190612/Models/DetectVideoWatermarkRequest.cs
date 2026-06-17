@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateGrafanaConfigRequest : AbstractModel
+    public class DetectVideoWatermarkRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>实例 ID</p>
+        /// <p>输入信息，当前仅支持 URL、COS</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InputInfo")]
+        public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
+        /// <p>扩展参数，默认不填</p>
         /// </summary>
-        [JsonProperty("Config")]
-        public string Config{ get; set; }
+        [JsonProperty("UserExtPara")]
+        public string UserExtPara{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
+            this.SetParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
         }
     }
 }

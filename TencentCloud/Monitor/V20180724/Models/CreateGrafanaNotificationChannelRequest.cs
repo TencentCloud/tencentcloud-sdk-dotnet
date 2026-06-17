@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 告警通道名称，例如：test
+        /// <p>告警通道名称，例如：my-channel</p>
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+        /// <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 默认为1，建议使用 OrganizationIds
+        /// <p>默认为1，建议使用 OrganizationIds</p>
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
 
         /// <summary>
-        /// 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+        /// <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
 
         /// <summary>
-        /// 生效的所有组织 ID 数组，默认为 ["1"]
+        /// <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
         /// </summary>
         [JsonProperty("OrganizationIds")]
         public string[] OrganizationIds{ get; set; }

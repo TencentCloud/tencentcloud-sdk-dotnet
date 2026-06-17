@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通道数组
+        /// <p>告警通道数组</p>
         /// </summary>
         [JsonProperty("NotificationChannelSet")]
         public GrafanaChannel[] NotificationChannelSet{ get; set; }

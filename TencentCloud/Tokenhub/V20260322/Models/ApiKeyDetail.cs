@@ -120,6 +120,18 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
+        /// <summary>
+        /// Token 限额信息多维度列表。未配置限额时不返回该字段。
+        /// </summary>
+        [JsonProperty("QuotaSet")]
+        public QuotaInfo[] QuotaSet{ get; set; }
+
+        /// <summary>
+        /// Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+        /// </summary>
+        [JsonProperty("QuotaStatus")]
+        public string QuotaStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamArrayObj(map, prefix + "BindingItems.", this.BindingItems);
             this.SetParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamArrayObj(map, prefix + "QuotaSet.", this.QuotaSet);
+            this.SetParamSimple(map, prefix + "QuotaStatus", this.QuotaStatus);
         }
     }
 }

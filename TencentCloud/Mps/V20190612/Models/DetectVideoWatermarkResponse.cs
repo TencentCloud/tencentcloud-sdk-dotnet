@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGrafanaIntegrationsResponse : AbstractModel
+    public class DetectVideoWatermarkResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>集成数组</p>
+        /// <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
         /// </summary>
-        [JsonProperty("IntegrationSet")]
-        public GrafanaIntegrationConfig[] IntegrationSet{ get; set; }
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
+
+        /// <summary>
+        /// <p>视频中是否存在水印</p>
+        /// </summary>
+        [JsonProperty("HasWatermark")]
+        public bool? HasWatermark{ get; set; }
+
+        /// <summary>
+        /// <p>关于水印的一些描述性说明</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +54,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "IntegrationSet.", this.IntegrationSet);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "HasWatermark", this.HasWatermark);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

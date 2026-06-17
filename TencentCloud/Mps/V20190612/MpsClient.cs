@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1444";
+       private const string sdkVersion = "SDK_NET_3.0.1448";
 
         /// <summary>
         /// Client constructor.
@@ -3314,6 +3314,27 @@ namespace TencentCloud.Mps.V20190612
         public DetectVideoSubtitleAreaResponse DetectVideoSubtitleAreaSync(DetectVideoSubtitleAreaRequest req)
         {
             return InternalRequestAsync<DetectVideoSubtitleAreaResponse>(req, "DetectVideoSubtitleArea")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 快速探测视频文件是否包含水印
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoWatermarkRequest"/></param>
+        /// <returns><see cref="DetectVideoWatermarkResponse"/></returns>
+        public Task<DetectVideoWatermarkResponse> DetectVideoWatermark(DetectVideoWatermarkRequest req)
+        {
+            return InternalRequestAsync<DetectVideoWatermarkResponse>(req, "DetectVideoWatermark");
+        }
+
+        /// <summary>
+        /// 快速探测视频文件是否包含水印
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoWatermarkRequest"/></param>
+        /// <returns><see cref="DetectVideoWatermarkResponse"/></returns>
+        public DetectVideoWatermarkResponse DetectVideoWatermarkSync(DetectVideoWatermarkRequest req)
+        {
+            return InternalRequestAsync<DetectVideoWatermarkResponse>(req, "DetectVideoWatermark")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

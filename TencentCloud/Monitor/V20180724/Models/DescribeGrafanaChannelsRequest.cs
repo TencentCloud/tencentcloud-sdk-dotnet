@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-12345678
+        /// <p>Grafana 实例 ID，例如：grafana-12345678</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询数量
+        /// <p>查询数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 告警通道名称，例如：test
+        /// <p>告警通道名称，例如：test</p>
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 告警通道 ID，例如：nchannel-abcd1234
+        /// <p>告警通道 ID，例如：nchannel-abcd1234</p>
         /// </summary>
         [JsonProperty("ChannelIds")]
         public string[] ChannelIds{ get; set; }
 
         /// <summary>
-        /// 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
+        /// <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p>
         /// </summary>
         [JsonProperty("ChannelState")]
         public long? ChannelState{ get; set; }

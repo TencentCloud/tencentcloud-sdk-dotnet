@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集成 ID
+        /// <p>集成 ID</p>
         /// </summary>
         [JsonProperty("IntegrationId")]
         public string IntegrationId{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

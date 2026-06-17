@@ -25,13 +25,13 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// scecario结果
+        /// <p>Scenario结果</p>
         /// </summary>
         [JsonProperty("Scenario")]
         public Scenario Scenario{ get; set; }
 
         /// <summary>
-        /// job结果
+        /// <p>job结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Jobs")]

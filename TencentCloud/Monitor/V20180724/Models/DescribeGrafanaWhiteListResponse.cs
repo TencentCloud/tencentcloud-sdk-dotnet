@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 数组
+        /// <p>数组</p>
         /// </summary>
         [JsonProperty("WhiteList")]
         public string[] WhiteList{ get; set; }

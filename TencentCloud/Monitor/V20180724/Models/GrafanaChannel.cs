@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 渠道 ID
+        /// <p>渠道 ID</p>
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// 渠道名
+        /// <p>渠道名</p>
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 告警通道模板 ID 数组
+        /// <p>告警通道模板 ID 数组</p>
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 告警渠道的所有生效组织
+        /// <p>告警渠道的所有生效组织</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationIds")]

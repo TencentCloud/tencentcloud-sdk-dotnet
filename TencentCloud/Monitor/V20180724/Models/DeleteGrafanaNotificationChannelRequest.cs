@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+        /// <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
         /// </summary>
         [JsonProperty("ChannelIDs")]
         public string[] ChannelIDs{ get; set; }
 
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

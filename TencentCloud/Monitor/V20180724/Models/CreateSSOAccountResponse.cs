@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 已添加的用户 UIN
+        /// <p>已添加的用户 UIN</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

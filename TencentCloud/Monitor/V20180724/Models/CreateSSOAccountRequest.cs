@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户账号 ID ，例如：10000000
+        /// <p>用户账号 ID ，例如：10000000</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+        /// <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
         /// </summary>
         [JsonProperty("Role")]
         public GrafanaAccountRole[] Role{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Notes")]
         public string Notes{ get; set; }

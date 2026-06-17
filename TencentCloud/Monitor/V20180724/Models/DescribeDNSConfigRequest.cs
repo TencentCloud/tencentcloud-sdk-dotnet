@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

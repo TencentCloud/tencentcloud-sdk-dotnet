@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1445</VersionPrefix>
+    <VersionPrefix>3.0.1448</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,7 @@
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeySecretRequest.cs" />
     <Compile Include="V20260322\Models\ModifyTokenPlanApiKeySecretResponse.cs" />
+    <Compile Include="V20260322\Models\QuotaInfo.cs" />
     <Compile Include="V20260322\Models\RenewTokenPlanTeamOrderRequest.cs" />
     <Compile Include="V20260322\Models\RenewTokenPlanTeamOrderResponse.cs" />
     <Compile Include="V20260322\Models\RequestFilter.cs" />

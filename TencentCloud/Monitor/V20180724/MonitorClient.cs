@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1448";
 
         /// <summary>
         /// Client constructor.
@@ -1487,7 +1487,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Grafana DNS 配置
+        /// 列出 Grafana DNS 配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
         /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
@@ -1497,7 +1497,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Grafana DNS 配置
+        /// 列出 Grafana DNS 配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
         /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
@@ -1571,7 +1571,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Grafana 所有告警通道
+        /// 列出 Grafana 所有告警通道。
         /// </summary>
         /// <param name="req"><see cref="DescribeGrafanaChannelsRequest"/></param>
         /// <returns><see cref="DescribeGrafanaChannelsResponse"/></returns>
@@ -1581,7 +1581,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Grafana 所有告警通道
+        /// 列出 Grafana 所有告警通道。
         /// </summary>
         /// <param name="req"><see cref="DescribeGrafanaChannelsRequest"/></param>
         /// <returns><see cref="DescribeGrafanaChannelsResponse"/></returns>
@@ -2570,7 +2570,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出当前grafana实例的所有授权账号
+        /// 列出当前grafana实例的所有授权账号.
         /// </summary>
         /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
         /// <returns><see cref="DescribeSSOAccountResponse"/></returns>
@@ -2580,7 +2580,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出当前grafana实例的所有授权账号
+        /// 列出当前grafana实例的所有授权账号.
         /// </summary>
         /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
         /// <returns><see cref="DescribeSSOAccountResponse"/></returns>

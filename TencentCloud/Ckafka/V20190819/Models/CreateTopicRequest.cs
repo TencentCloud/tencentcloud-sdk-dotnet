@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+        /// <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
