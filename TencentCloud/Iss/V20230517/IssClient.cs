@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1449";
 
         /// <summary>
         /// Client constructor.
@@ -459,27 +459,6 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 用于删除网关。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteGatewayRequest"/></param>
-        /// <returns><see cref="DeleteGatewayResponse"/></returns>
-        public Task<DeleteGatewayResponse> DeleteGateway(DeleteGatewayRequest req)
-        {
-            return InternalRequestAsync<DeleteGatewayResponse>(req, "DeleteGateway");
-        }
-
-        /// <summary>
-        /// 用于删除网关。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteGatewayRequest"/></param>
-        /// <returns><see cref="DeleteGatewayResponse"/></returns>
-        public DeleteGatewayResponse DeleteGatewaySync(DeleteGatewayRequest req)
-        {
-            return InternalRequestAsync<DeleteGatewayResponse>(req, "DeleteGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于删除组织。
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
@@ -791,90 +770,6 @@ namespace TencentCloud.Iss.V20230517
         public DescribeGBDeviceAddrResponse DescribeGBDeviceAddrSync(DescribeGBDeviceAddrRequest req)
         {
             return InternalRequestAsync<DescribeGBDeviceAddrResponse>(req, "DescribeGBDeviceAddr")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于获取网关详情。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayRequest"/></param>
-        /// <returns><see cref="DescribeGatewayResponse"/></returns>
-        public Task<DescribeGatewayResponse> DescribeGateway(DescribeGatewayRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayResponse>(req, "DescribeGateway");
-        }
-
-        /// <summary>
-        /// 用于获取网关详情。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayRequest"/></param>
-        /// <returns><see cref="DescribeGatewayResponse"/></returns>
-        public DescribeGatewayResponse DescribeGatewaySync(DescribeGatewayRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayResponse>(req, "DescribeGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于获取网关的数据及流量监控信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayMonitorRequest"/></param>
-        /// <returns><see cref="DescribeGatewayMonitorResponse"/></returns>
-        public Task<DescribeGatewayMonitorResponse> DescribeGatewayMonitor(DescribeGatewayMonitorRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayMonitorResponse>(req, "DescribeGatewayMonitor");
-        }
-
-        /// <summary>
-        /// 用于获取网关的数据及流量监控信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayMonitorRequest"/></param>
-        /// <returns><see cref="DescribeGatewayMonitorResponse"/></returns>
-        public DescribeGatewayMonitorResponse DescribeGatewayMonitorSync(DescribeGatewayMonitorRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayMonitorResponse>(req, "DescribeGatewayMonitor")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于查询网关接入协议。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayProtocolRequest"/></param>
-        /// <returns><see cref="DescribeGatewayProtocolResponse"/></returns>
-        public Task<DescribeGatewayProtocolResponse> DescribeGatewayProtocol(DescribeGatewayProtocolRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayProtocolResponse>(req, "DescribeGatewayProtocol");
-        }
-
-        /// <summary>
-        /// 用于查询网关接入协议。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayProtocolRequest"/></param>
-        /// <returns><see cref="DescribeGatewayProtocolResponse"/></returns>
-        public DescribeGatewayProtocolResponse DescribeGatewayProtocolSync(DescribeGatewayProtocolRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayProtocolResponse>(req, "DescribeGatewayProtocol")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询网关服务版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayVersionRequest"/></param>
-        /// <returns><see cref="DescribeGatewayVersionResponse"/></returns>
-        public Task<DescribeGatewayVersionResponse> DescribeGatewayVersion(DescribeGatewayVersionRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayVersionResponse>(req, "DescribeGatewayVersion");
-        }
-
-        /// <summary>
-        /// 查询网关服务版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayVersionRequest"/></param>
-        /// <returns><see cref="DescribeGatewayVersionResponse"/></returns>
-        public DescribeGatewayVersionResponse DescribeGatewayVersionSync(DescribeGatewayVersionRequest req)
-        {
-            return InternalRequestAsync<DescribeGatewayVersionResponse>(req, "DescribeGatewayVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1234,48 +1129,6 @@ namespace TencentCloud.Iss.V20230517
         public ListDevicesResponse ListDevicesSync(ListDevicesRequest req)
         {
             return InternalRequestAsync<ListDevicesResponse>(req, "ListDevices")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于查询网关下挂载的设备列表。
-        /// </summary>
-        /// <param name="req"><see cref="ListGatewayDevicesRequest"/></param>
-        /// <returns><see cref="ListGatewayDevicesResponse"/></returns>
-        public Task<ListGatewayDevicesResponse> ListGatewayDevices(ListGatewayDevicesRequest req)
-        {
-            return InternalRequestAsync<ListGatewayDevicesResponse>(req, "ListGatewayDevices");
-        }
-
-        /// <summary>
-        /// 用于查询网关下挂载的设备列表。
-        /// </summary>
-        /// <param name="req"><see cref="ListGatewayDevicesRequest"/></param>
-        /// <returns><see cref="ListGatewayDevicesResponse"/></returns>
-        public ListGatewayDevicesResponse ListGatewayDevicesSync(ListGatewayDevicesRequest req)
-        {
-            return InternalRequestAsync<ListGatewayDevicesResponse>(req, "ListGatewayDevices")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于获取网关列表。
-        /// </summary>
-        /// <param name="req"><see cref="ListGatewaysRequest"/></param>
-        /// <returns><see cref="ListGatewaysResponse"/></returns>
-        public Task<ListGatewaysResponse> ListGateways(ListGatewaysRequest req)
-        {
-            return InternalRequestAsync<ListGatewaysResponse>(req, "ListGateways");
-        }
-
-        /// <summary>
-        /// 用于获取网关列表。
-        /// </summary>
-        /// <param name="req"><see cref="ListGatewaysRequest"/></param>
-        /// <returns><see cref="ListGatewaysResponse"/></returns>
-        public ListGatewaysResponse ListGatewaysSync(ListGatewaysRequest req)
-        {
-            return InternalRequestAsync<ListGatewaysResponse>(req, "ListGateways")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1679,27 +1532,6 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 用于修改网关信息（支持对网关名称和描述的修改）。
-        /// </summary>
-        /// <param name="req"><see cref="UpdateGatewayRequest"/></param>
-        /// <returns><see cref="UpdateGatewayResponse"/></returns>
-        public Task<UpdateGatewayResponse> UpdateGateway(UpdateGatewayRequest req)
-        {
-            return InternalRequestAsync<UpdateGatewayResponse>(req, "UpdateGateway");
-        }
-
-        /// <summary>
-        /// 用于修改网关信息（支持对网关名称和描述的修改）。
-        /// </summary>
-        /// <param name="req"><see cref="UpdateGatewayRequest"/></param>
-        /// <returns><see cref="UpdateGatewayResponse"/></returns>
-        public UpdateGatewayResponse UpdateGatewaySync(UpdateGatewayRequest req)
-        {
-            return InternalRequestAsync<UpdateGatewayResponse>(req, "UpdateGateway")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于修改组织。
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationRequest"/></param>
@@ -1822,27 +1654,6 @@ namespace TencentCloud.Iss.V20230517
         public UpdateUserDeviceResponse UpdateUserDeviceSync(UpdateUserDeviceRequest req)
         {
             return InternalRequestAsync<UpdateUserDeviceResponse>(req, "UpdateUserDevice")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于网关升级（支持对所有待更新的服务一键升级）。
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeGatewayRequest"/></param>
-        /// <returns><see cref="UpgradeGatewayResponse"/></returns>
-        public Task<UpgradeGatewayResponse> UpgradeGateway(UpgradeGatewayRequest req)
-        {
-            return InternalRequestAsync<UpgradeGatewayResponse>(req, "UpgradeGateway");
-        }
-
-        /// <summary>
-        /// 用于网关升级（支持对所有待更新的服务一键升级）。
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeGatewayRequest"/></param>
-        /// <returns><see cref="UpgradeGatewayResponse"/></returns>
-        public UpgradeGatewayResponse UpgradeGatewaySync(UpgradeGatewayRequest req)
-        {
-            return InternalRequestAsync<UpgradeGatewayResponse>(req, "UpgradeGateway")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

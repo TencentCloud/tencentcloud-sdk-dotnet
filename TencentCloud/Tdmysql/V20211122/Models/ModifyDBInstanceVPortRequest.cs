@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ags.V20250920.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResourceConfiguration : AbstractModel
+    public class ModifyDBInstanceVPortRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>cpu 资源量</p>
+        /// 实例 ID，形如：tdsql3-5baee8df。
         /// </summary>
-        [JsonProperty("CPU")]
-        public string CPU{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>内存资源量</p>
+        /// 新的VPC端口，3308
         /// </summary>
-        [JsonProperty("Memory")]
-        public string Memory{ get; set; }
-
-        /// <summary>
-        /// <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Storage")]
-        public string Storage{ get; set; }
+        [JsonProperty("Vport")]
+        public long? Vport{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Ags.V20250920.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CPU", this.CPU);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Vport", this.Vport);
         }
     }
 }

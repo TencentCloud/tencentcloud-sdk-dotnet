@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1446";
+       private const string sdkVersion = "SDK_NET_3.0.1449";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateAuthApiKeyResponse CreateAuthApiKeySync(CreateAuthApiKeyRequest req)
         {
             return InternalRequestAsync<CreateAuthApiKeyResponse>(req, "CreateAuthApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建企业标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
+        /// <returns><see cref="CreateCorpTagResponse"/></returns>
+        public Task<CreateCorpTagResponse> CreateCorpTag(CreateCorpTagRequest req)
+        {
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag");
+        }
+
+        /// <summary>
+        /// 创建企业标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
+        /// <returns><see cref="CreateCorpTagResponse"/></returns>
+        public CreateCorpTagResponse CreateCorpTagSync(CreateCorpTagRequest req)
+        {
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -239,6 +260,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
         {
             return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建标签表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagTableRequest"/></param>
+        /// <returns><see cref="CreateTagTableResponse"/></returns>
+        public Task<CreateTagTableResponse> CreateTagTable(CreateTagTableRequest req)
+        {
+            return InternalRequestAsync<CreateTagTableResponse>(req, "CreateTagTable");
+        }
+
+        /// <summary>
+        /// 创建标签表
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagTableRequest"/></param>
+        /// <returns><see cref="CreateTagTableResponse"/></returns>
+        public CreateTagTableResponse CreateTagTableSync(CreateTagTableRequest req)
+        {
+            return InternalRequestAsync<CreateTagTableResponse>(req, "CreateTagTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -831,6 +873,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 编辑企业标签(异步)
+        /// </summary>
+        /// <param name="req"><see cref="EditCorpTagRequest"/></param>
+        /// <returns><see cref="EditCorpTagResponse"/></returns>
+        public Task<EditCorpTagResponse> EditCorpTag(EditCorpTagRequest req)
+        {
+            return InternalRequestAsync<EditCorpTagResponse>(req, "EditCorpTag");
+        }
+
+        /// <summary>
+        /// 编辑企业标签(异步)
+        /// </summary>
+        /// <param name="req"><see cref="EditCorpTagRequest"/></param>
+        /// <returns><see cref="EditCorpTagResponse"/></returns>
+        public EditCorpTagResponse EditCorpTagSync(EditCorpTagRequest req)
+        {
+            return InternalRequestAsync<EditCorpTagResponse>(req, "EditCorpTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 页面截图导出
         /// </summary>
         /// <param name="req"><see cref="ExportScreenPageRequest"/></param>
@@ -999,6 +1062,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 编辑标签表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagTableRequest"/></param>
+        /// <returns><see cref="ModifyTagTableResponse"/></returns>
+        public Task<ModifyTagTableResponse> ModifyTagTable(ModifyTagTableRequest req)
+        {
+            return InternalRequestAsync<ModifyTagTableResponse>(req, "ModifyTagTable");
+        }
+
+        /// <summary>
+        /// 编辑标签表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagTableRequest"/></param>
+        /// <returns><see cref="ModifyTagTableResponse"/></returns>
+        public ModifyTagTableResponse ModifyTagTableSync(ModifyTagTableRequest req)
+        {
+            return InternalRequestAsync<ModifyTagTableResponse>(req, "ModifyTagTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户角色信息
         /// </summary>
         /// <param name="req"><see cref="ModifyUserDetailInfoRequest"/></param>
@@ -1079,6 +1163,27 @@ namespace TencentCloud.Bi.V20220105
         public ModifyUserRoleProjectResponse ModifyUserRoleProjectSync(ModifyUserRoleProjectRequest req)
         {
             return InternalRequestAsync<ModifyUserRoleProjectResponse>(req, "ModifyUserRoleProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户标签值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTagRequest"/></param>
+        /// <returns><see cref="ModifyUserTagResponse"/></returns>
+        public Task<ModifyUserTagResponse> ModifyUserTag(ModifyUserTagRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTagResponse>(req, "ModifyUserTag");
+        }
+
+        /// <summary>
+        /// 修改用户标签值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTagRequest"/></param>
+        /// <returns><see cref="ModifyUserTagResponse"/></returns>
+        public ModifyUserTagResponse ModifyUserTagSync(ModifyUserTagRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTagResponse>(req, "ModifyUserTag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
