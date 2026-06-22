@@ -25,40 +25,46 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 专享实例ID
+        /// <p>专享实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例备注信息
+        /// <p>实例备注信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 实例消息保留时间，小时为单位
+        /// <p>实例消息保留时间，小时为单位</p>
         /// </summary>
         [JsonProperty("MessageRetention")]
         public long? MessageRetention{ get; set; }
 
         /// <summary>
-        /// 是否开启删除保护
+        /// <p>是否开启删除保护</p>
         /// </summary>
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
         /// <summary>
-        /// 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+        /// <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
         /// </summary>
         [JsonProperty("SendReceiveRatio")]
         public float? SendReceiveRatio{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启ACL</p>
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
         }
     }
 }

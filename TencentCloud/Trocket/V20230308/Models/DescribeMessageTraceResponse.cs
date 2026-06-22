@@ -25,13 +25,19 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 主题名称
+        /// <p>主题名称</p>
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }
 
         /// <summary>
-        /// 轨迹详情
+        /// <p>轻量主题名称</p>
+        /// </summary>
+        [JsonProperty("LiteTopic")]
+        public string LiteTopic{ get; set; }
+
+        /// <summary>
+        /// <p>轨迹详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+            this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

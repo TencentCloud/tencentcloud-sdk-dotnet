@@ -37,19 +37,19 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+        /// <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
 
         /// <summary>
-        /// 是否是死信消息，默认为false
+        /// <p>是否是死信消息，默认为false</p>
         /// </summary>
         [JsonProperty("QueryDeadLetterMessage")]
         public bool? QueryDeadLetterMessage{ get; set; }
 
         /// <summary>
-        /// 是否是延时消息，默认为false
+        /// <p>是否是延时消息，默认为false</p>
         /// </summary>
         [JsonProperty("QueryDelayMessage")]
         public bool? QueryDelayMessage{ get; set; }

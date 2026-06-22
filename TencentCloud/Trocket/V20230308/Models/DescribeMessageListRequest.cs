@@ -102,6 +102,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// 轻量主题
+        /// </summary>
+        [JsonProperty("LiteTopic")]
+        public string LiteTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "RecentMessageNum", this.RecentMessageNum);
             this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         }
     }
 }

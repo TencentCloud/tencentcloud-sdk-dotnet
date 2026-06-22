@@ -25,63 +25,70 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// <p>主题名称</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型
-        /// UNSPECIFIED:未指定,
-        /// NORMAL:普通消息,
-        /// FIFO:顺序消息,
-        /// DELAY:延时消息,
-        /// TRANSACTION:事务消息
+        /// <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间，**Unix时间戳（毫秒）**
+        /// <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 最后写入时间，**Unix时间戳（毫秒）**
+        /// <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public long? LastUpdateTime{ get; set; }
 
         /// <summary>
-        /// 订阅数量
+        /// <p>订阅数量</p>
         /// </summary>
         [JsonProperty("SubscriptionCount")]
         public long? SubscriptionCount{ get; set; }
 
         /// <summary>
-        /// 订阅关系列表
+        /// <p>订阅关系列表</p>
         /// </summary>
         [JsonProperty("SubscriptionData")]
         public SubscriptionData[] SubscriptionData{ get; set; }
 
         /// <summary>
-        /// 消息保留时长，单位：小时
+        /// <p>消息保留时长，单位：小时</p>
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动删除</p><p>仅适用于轻量主题</p>
+        /// </summary>
+        [JsonProperty("AutoExpireDelete")]
+        public bool? AutoExpireDelete{ get; set; }
+
+        /// <summary>
+        /// <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+        /// </summary>
+        [JsonProperty("AutoExpireTime")]
+        public long? AutoExpireTime{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -104,6 +111,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
             this.SetParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+            this.SetParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

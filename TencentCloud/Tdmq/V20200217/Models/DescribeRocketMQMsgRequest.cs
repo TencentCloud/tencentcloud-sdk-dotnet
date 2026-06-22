@@ -25,65 +25,71 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+        /// <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 主题，查询死信时传groupId
+        /// <p>主题，查询死信时传groupId</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 消息id
+        /// <p>消息id</p>
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
 
         /// <summary>
-        /// pulsar消息id
+        /// <p>pulsar消息id</p>
         /// </summary>
         [JsonProperty("PulsarMsgId")]
         public string PulsarMsgId{ get; set; }
 
         /// <summary>
-        /// 查询死信时该值为true，只对Rocketmq有效
+        /// <p>查询死信时该值为true，只对Rocketmq有效</p>
         /// </summary>
         [JsonProperty("QueryDlqMsg")]
         [System.Obsolete]
         public bool? QueryDlqMsg{ get; set; }
 
         /// <summary>
-        /// 查询死信时该值为true，只对Rocketmq有效
+        /// <p>查询死信时该值为true，只对Rocketmq有效</p>
         /// </summary>
         [JsonProperty("QueryDeadLetterMessage")]
         public bool? QueryDeadLetterMessage{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// <p>分页Offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// <p>分页Limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 根据消费组名称过滤消费详情
+        /// <p>根据消费组名称过滤消费详情</p>
         /// </summary>
         [JsonProperty("FilterTrackGroup")]
         public string FilterTrackGroup{ get; set; }
+
+        /// <summary>
+        /// <p>查询延迟消息或定时消息时，该值为true</p>
+        /// </summary>
+        [JsonProperty("QueryDelayMessage")]
+        public bool? QueryDelayMessage{ get; set; }
 
 
         /// <summary>
@@ -101,6 +107,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "FilterTrackGroup", this.FilterTrackGroup);
+            this.SetParamSimple(map, prefix + "QueryDelayMessage", this.QueryDelayMessage);
         }
     }
 }

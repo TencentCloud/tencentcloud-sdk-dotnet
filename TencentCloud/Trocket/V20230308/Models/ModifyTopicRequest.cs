@@ -37,22 +37,34 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 队列数量，取值范围3～16
+        /// <p>队列数量，取值范围3～16</p>
         /// </summary>
         [JsonProperty("QueueNum")]
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 备注信息，最多 128 个字符
+        /// <p>备注信息，最多 128 个字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 消息保留时长（单位：小时）
+        /// <p>消息保留时长（单位：小时）</p>
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// <p>是否过期自动删除（仅针对轻量主题类型）</p>
+        /// </summary>
+        [JsonProperty("AutoExpireDelete")]
+        public bool? AutoExpireDelete{ get; set; }
+
+        /// <summary>
+        /// <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+        /// </summary>
+        [JsonProperty("AutoExpireTime")]
+        public long? AutoExpireTime{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "QueueNum", this.QueueNum);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+            this.SetParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
         }
     }
 }

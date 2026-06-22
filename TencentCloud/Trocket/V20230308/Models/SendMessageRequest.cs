@@ -54,6 +54,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("MsgTag")]
         public string MsgTag{ get; set; }
 
+        /// <summary>
+        /// 轻量主题
+        /// </summary>
+        [JsonProperty("LiteTopic")]
+        public string LiteTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MsgBody", this.MsgBody);
             this.SetParamSimple(map, prefix + "MsgKey", this.MsgKey);
             this.SetParamSimple(map, prefix + "MsgTag", this.MsgTag);
+            this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         }
     }
 }

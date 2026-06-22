@@ -117,6 +117,59 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
+        /// <summary>
+        /// <p>节点可用资源</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailableResource")]
+        public ResourceInfo AvailableResource{ get; set; }
+
+        /// <summary>
+        /// <p>资源组节点的IP</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceIP")]
+        public string InstanceIP{ get; set; }
+
+        /// <summary>
+        /// <p>资源组节点的名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>cvm机型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvmInstanceType")]
+        public string CvmInstanceType{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动续买</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public bool? AutoRenew{ get; set; }
+
+        /// <summary>
+        /// <p>是否被隔离</p>
+        /// </summary>
+        [JsonProperty("Isolated")]
+        public bool? Isolated{ get; set; }
+
+        /// <summary>
+        /// <p>维修任务信息</p>
+        /// </summary>
+        [JsonProperty("RepairTaskInfo")]
+        public RepairTaskInfo RepairTaskInfo{ get; set; }
+
+        /// <summary>
+        /// <p>节点可用区名称</p>
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +190,14 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamObj(map, prefix + "AvailableResource.", this.AvailableResource);
+            this.SetParamSimple(map, prefix + "InstanceIP", this.InstanceIP);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "CvmInstanceType", this.CvmInstanceType);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "Isolated", this.Isolated);
+            this.SetParamObj(map, prefix + "RepairTaskInfo.", this.RepairTaskInfo);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

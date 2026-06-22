@@ -25,58 +25,64 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 路由关系id
+        /// <p>路由关系id</p>
         /// </summary>
         [JsonProperty("BindingId")]
         public long? BindingId{ get; set; }
 
         /// <summary>
-        /// Vhost参数
+        /// <p>Vhost参数</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 源exchange名称
+        /// <p>源exchange名称</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 目标类型,queue或exchange
+        /// <p>目标类型,queue或exchange</p>
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
 
         /// <summary>
-        /// 目标资源名称
+        /// <p>目标资源名称</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string Destination{ get; set; }
 
         /// <summary>
-        /// 绑定key
+        /// <p>绑定key</p>
         /// </summary>
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }
 
         /// <summary>
-        /// 源exchange类型
+        /// <p>源exchange类型</p>
         /// </summary>
         [JsonProperty("SourceExchangeType")]
         public string SourceExchangeType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// <p>绑定参数，header类型的Exchange绑定时，可以传入参数。其它类型 Exchange 无需传入</p>
+        /// </summary>
+        [JsonProperty("Arguments")]
+        public RabbitMQServerlessKeyValuePair[] Arguments{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "SourceExchangeType", this.SourceExchangeType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         }
     }
 }

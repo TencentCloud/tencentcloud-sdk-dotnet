@@ -25,51 +25,57 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 消息体
+        /// <p>消息体</p>
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
-        /// 详情参数
+        /// <p>详情参数</p>
         /// </summary>
         [JsonProperty("Properties")]
         public string Properties{ get; set; }
 
         /// <summary>
-        /// 生产时间
+        /// <p>生产时间</p>
         /// </summary>
         [JsonProperty("ProduceTime")]
         public string ProduceTime{ get; set; }
 
         /// <summary>
-        /// 消息ID
+        /// <p>消息ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// 生产者地址
+        /// <p>生产者地址</p>
         /// </summary>
         [JsonProperty("ProducerAddr")]
         public string ProducerAddr{ get; set; }
 
         /// <summary>
-        /// 消息消费情况列表
+        /// <p>消息消费情况列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTracks")]
         public MessageTrackItem[] MessageTracks{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// <p>主题名称</p>
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }
 
         /// <summary>
-        /// 消息消费情况列表总条数
+        /// <p>轻量主题名称</p>
+        /// </summary>
+        [JsonProperty("LiteTopic")]
+        public string LiteTopic{ get; set; }
+
+        /// <summary>
+        /// <p>消息消费情况列表总条数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTracksCount")]
@@ -94,6 +100,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ProducerAddr", this.ProducerAddr);
             this.SetParamArrayObj(map, prefix + "MessageTracks.", this.MessageTracks);
             this.SetParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+            this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
             this.SetParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

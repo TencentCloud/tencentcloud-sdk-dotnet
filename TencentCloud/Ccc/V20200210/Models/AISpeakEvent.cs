@@ -49,6 +49,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LatencyMetrics")]
         public AICallLatencyMetrics LatencyMetrics{ get; set; }
 
+        /// <summary>
+        /// <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+        /// </summary>
+        [JsonProperty("TraverseReason")]
+        public string TraverseReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SpokenText", this.SpokenText);
             this.SetParamSimple(map, prefix + "SpokenType", this.SpokenType);
             this.SetParamObj(map, prefix + "LatencyMetrics.", this.LatencyMetrics);
+            this.SetParamSimple(map, prefix + "TraverseReason", this.TraverseReason);
         }
     }
 }

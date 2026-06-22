@@ -25,51 +25,51 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 消息体
+        /// <p>消息体</p>
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
-        /// 详情参数
+        /// <p>详情参数</p>
         /// </summary>
         [JsonProperty("Properties")]
         public string Properties{ get; set; }
 
         /// <summary>
-        /// 生产时间
+        /// <p>生产时间</p>
         /// </summary>
         [JsonProperty("ProduceTime")]
         public string ProduceTime{ get; set; }
 
         /// <summary>
-        /// 消息id
+        /// <p>消息id</p>
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }
 
         /// <summary>
-        /// 生产者地址
+        /// <p>生产者地址</p>
         /// </summary>
         [JsonProperty("ProducerAddr")]
         public string ProducerAddr{ get; set; }
 
         /// <summary>
-        /// 消费组消费情况列表
+        /// <p>消费组消费情况列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTracks")]
         public RocketMQMessageTrack[] MessageTracks{ get; set; }
 
         /// <summary>
-        /// 详情页展示的topic名称
+        /// <p>详情页展示的topic名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }
 
         /// <summary>
-        /// 消费组消费情况列表总数
+        /// <p>消费组消费情况列表总数</p>
         /// </summary>
         [JsonProperty("MessageTracksCount")]
         public long? MessageTracksCount{ get; set; }

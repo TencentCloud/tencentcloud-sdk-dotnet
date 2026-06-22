@@ -25,13 +25,13 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称
+        /// <p>消费组名称</p>
         /// </summary>
         [JsonProperty("ConsumerGroup")]
         public string ConsumerGroup{ get; set; }

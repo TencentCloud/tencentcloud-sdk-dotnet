@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20211111.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountConfigureInfo : AbstractModel
+    public class AdvancedOriginRoutingParameters : AbstractModel
     {
         
         /// <summary>
-        /// <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+        /// <p>回源优化方向，取值有：</p><li>MainlandChinaAndGlobalAdaptive：自适应。域名需同时开启「智能加速」后生效，EdgeOne将根据客户端与源站的实际地理位置，自动匹配最优回源优化方向，无需手动指定。例如 www.example.com 开启「高级回源优化」，但「智能加速」关闭或仅部分匹配条件开启时，「高级回源优化」将不生效。</li>
         /// </summary>
-        [JsonProperty("WorkDir")]
-        public string WorkDir{ get; set; }
+        [JsonProperty("Direction")]
+        public string Direction{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

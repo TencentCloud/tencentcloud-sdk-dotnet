@@ -25,40 +25,46 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost参数
+        /// <p>Vhost参数</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 源exchange
+        /// <p>源exchange</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 目标类型,取值queue或exchange
+        /// <p>目标类型,取值queue或exchange</p>
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
 
         /// <summary>
-        /// 目标队列或者交换机
+        /// <p>目标队列或者交换机</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string Destination{ get; set; }
 
         /// <summary>
-        /// 绑定key
+        /// <p>绑定key</p>
         /// </summary>
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }
+
+        /// <summary>
+        /// <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+        /// </summary>
+        [JsonProperty("Arguments")]
+        public RabbitMQServerlessKeyValuePair[] Arguments{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "DestinationType", this.DestinationType);
             this.SetParamSimple(map, prefix + "Destination", this.Destination);
             this.SetParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
+            this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         }
     }
 }

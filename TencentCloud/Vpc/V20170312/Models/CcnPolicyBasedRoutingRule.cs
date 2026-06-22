@@ -25,52 +25,64 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 策略路由下一跳ID
+        /// <p>策略路由下一跳ID</p>
         /// </summary>
         [JsonProperty("PolicyBasedRoutingNextHopId")]
         public string PolicyBasedRoutingNextHopId{ get; set; }
 
         /// <summary>
-        /// 实例类型[VPC,DIRECTCONNECT,VPNGW]
+        /// <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 源地址CIDR
+        /// <p>源地址CIDR</p>
         /// </summary>
         [JsonProperty("SourceCidrBlock")]
         public string SourceCidrBlock{ get; set; }
 
         /// <summary>
-        /// 目的地址CIDR
+        /// <p>目的地址CIDR</p>
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 优先级
+        /// <p>优先级</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 策略路由匹配策略ID
+        /// <p>策略路由匹配策略ID</p>
         /// </summary>
         [JsonProperty("PolicyBasedRoutingRuleId")]
         public string PolicyBasedRoutingRuleId{ get; set; }
+
+        /// <summary>
+        /// <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+        /// </summary>
+        [JsonProperty("DestinationInstanceType")]
+        public string DestinationInstanceType{ get; set; }
+
+        /// <summary>
+        /// <p>目的端实例ID</p>
+        /// </summary>
+        [JsonProperty("DestinationInstanceId")]
+        public string DestinationInstanceId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "PolicyBasedRoutingRuleId", this.PolicyBasedRoutingRuleId);
+            this.SetParamSimple(map, prefix + "DestinationInstanceType", this.DestinationInstanceType);
+            this.SetParamSimple(map, prefix + "DestinationInstanceId", this.DestinationInstanceId);
         }
     }
 }

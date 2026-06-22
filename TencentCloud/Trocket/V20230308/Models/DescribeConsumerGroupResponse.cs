@@ -25,77 +25,82 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 在线消费者数量
+        /// <p>在线消费者数量</p>
         /// </summary>
         [JsonProperty("ConsumerNum")]
         public long? ConsumerNum{ get; set; }
 
         /// <summary>
-        /// TPS
+        /// <p>TPS</p>
         /// </summary>
         [JsonProperty("Tps")]
         public long? Tps{ get; set; }
 
         /// <summary>
-        /// 消息堆积数量
+        /// <p>消息堆积数量</p>
         /// </summary>
         [JsonProperty("ConsumerLag")]
         public long? ConsumerLag{ get; set; }
 
         /// <summary>
-        /// 消费类型，枚举值如下：
-        /// 
-        /// - PULL：PULL 消费类型
-        /// - PUSH：PUSH 消费类型
-        /// - POP：POP 消费类型
+        /// <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
         /// </summary>
         [JsonProperty("ConsumeType")]
         public string ConsumeType{ get; set; }
 
         /// <summary>
-        /// 创建时间，**Unix时间戳（毫秒）**
+        /// <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// 顺序投递：true
-        /// 并发投递：false
+        /// <p>顺序投递：true<br>并发投递：false</p>
         /// </summary>
         [JsonProperty("ConsumeMessageOrderly")]
         public bool? ConsumeMessageOrderly{ get; set; }
 
         /// <summary>
-        /// 是否开启消费
+        /// <p>是否开启消费</p>
         /// </summary>
         [JsonProperty("ConsumeEnable")]
         public bool? ConsumeEnable{ get; set; }
 
         /// <summary>
-        /// 最大重试次数
+        /// <p>最大重试次数</p>
         /// </summary>
         [JsonProperty("MaxRetryTimes")]
         public long? MaxRetryTimes{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 消费模式：
-        /// BROADCASTING 广播模式
-        /// CLUSTERING 集群模式
+        /// <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
         /// </summary>
         [JsonProperty("MessageModel")]
         public string MessageModel{ get; set; }
 
         /// <summary>
-        /// 重试策略
+        /// <p>重试策略</p>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public RetryPolicy RetryPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+        /// </summary>
+        [JsonProperty("ConsumeModel")]
+        public string ConsumeModel{ get; set; }
+
+        /// <summary>
+        /// <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+        /// </summary>
+        [JsonProperty("LiteTopic")]
+        public string LiteTopic{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -120,6 +125,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MessageModel", this.MessageModel);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+            this.SetParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
+            this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

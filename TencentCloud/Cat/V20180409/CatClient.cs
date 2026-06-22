@@ -28,7 +28,7 @@ namespace TencentCloud.Cat.V20180409
 
        private const string endpoint = "cat.tencentcloudapi.com";
        private const string version = "2018-04-09";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1450";
 
         /// <summary>
         /// Client constructor.
@@ -181,7 +181,7 @@ namespace TencentCloud.Cat.V20180409
 
         /// <summary>
         /// 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
-        /// 拨测频率与groupby聚合时间设置关联，如拨测频率为 30 分钟，则 grouby 聚合时间建议设置为大于30分钟，避免出现查询数据为空的情况
+        /// 拨测频率与groupBy聚合时间设置关联，如拨测频率为 30 分钟，则 groupBy 聚合时间建议设置为大于30分钟，避免出现查询数据为空的情况
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
         /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>
@@ -192,7 +192,7 @@ namespace TencentCloud.Cat.V20180409
 
         /// <summary>
         /// 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
-        /// 拨测频率与groupby聚合时间设置关联，如拨测频率为 30 分钟，则 grouby 聚合时间建议设置为大于30分钟，避免出现查询数据为空的情况
+        /// 拨测频率与groupBy聚合时间设置关联，如拨测频率为 30 分钟，则 groupBy 聚合时间建议设置为大于30分钟，避免出现查询数据为空的情况
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
         /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>

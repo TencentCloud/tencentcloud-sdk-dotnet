@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20211111.Models
+namespace TencentCloud.Trabbit.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountConfigureInfo : AbstractModel
+    public class RabbitMQServerlessKeyValuePair : AbstractModel
     {
         
         /// <summary>
-        /// <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+        /// 键
         /// </summary>
-        [JsonProperty("WorkDir")]
-        public string WorkDir{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 值
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

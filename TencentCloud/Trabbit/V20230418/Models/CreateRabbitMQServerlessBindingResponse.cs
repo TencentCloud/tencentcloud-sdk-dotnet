@@ -25,19 +25,19 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 队列名称
+        /// <p>队列名称</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// vhost参数
+        /// <p>vhost参数</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 路由关系Id
+        /// <p>路由关系Id</p>
         /// </summary>
         [JsonProperty("BindingId")]
         public long? BindingId{ get; set; }

@@ -25,43 +25,37 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 分析任务类型，支持以下几种类型：
-        /// AnalyzeTaskType_Network：网络质量
-        /// AnalyzeTaskType_Browse：页面性能
-        /// AnalyzeTaskType_Transport：端口性能
-        /// AnalyzeTaskType_UploadDownload：文件传输
-        /// AnalyzeTaskType_MediaStream：音视频体验
+        /// <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
         /// </summary>
         [JsonProperty("AnalyzeTaskType")]
         public string AnalyzeTaskType{ get; set; }
 
         /// <summary>
-        /// 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+        /// <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p>
         /// </summary>
         [JsonProperty("MetricType")]
         public string MetricType{ get; set; }
 
         /// <summary>
-        /// 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。
+        /// <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p>
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 过滤条件可以传单个过滤条件也可以拼接多个参数
+        /// <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p>
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
         /// <summary>
-        /// 聚合时间, 1m、1d、30d 等等
+        /// <p>聚合时间, 1m、1d、30d 等等</p>
         /// </summary>
         [JsonProperty("GroupBy")]
         public string GroupBy{ get; set; }
 
         /// <summary>
-        /// 多条件过滤，支持多个过滤条件组合查询
-        /// 例如：[""host" = 'www.test.com'", "time >= now()-1h"]
+        /// <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p>
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }

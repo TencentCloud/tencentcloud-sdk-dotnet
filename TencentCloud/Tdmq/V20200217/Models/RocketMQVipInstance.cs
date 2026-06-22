@@ -25,115 +25,115 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例版本
+        /// <p>实例版本</p>
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 实例配置规格名称
+        /// <p>实例配置规格名称</p>
         /// </summary>
         [JsonProperty("ConfigDisplay")]
         public string ConfigDisplay{ get; set; }
 
         /// <summary>
-        /// 峰值TPS
+        /// <p>峰值TPS</p>
         /// </summary>
         [JsonProperty("MaxTps")]
         public ulong? MaxTps{ get; set; }
 
         /// <summary>
-        /// 峰值带宽，Mbps为单位
+        /// <p>峰值带宽，Mbps为单位</p>
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public ulong? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 存储容量，GB为单位
+        /// <p>存储容量，GB为单位</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 实例到期时间，毫秒为单位
+        /// <p>实例到期时间，毫秒为单位</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 0-后付费，1-预付费
+        /// <p>0-后付费，1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 实例配置ID
+        /// <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 最大可设置消息保留时间，小时为单位
+        /// <p>最大可设置消息保留时间，小时为单位</p>
         /// </summary>
         [JsonProperty("MaxRetention")]
         public long? MaxRetention{ get; set; }
 
         /// <summary>
-        /// 最小可设置消息保留时间，小时为单位
+        /// <p>最小可设置消息保留时间，小时为单位</p>
         /// </summary>
         [JsonProperty("MinRetention")]
         public long? MinRetention{ get; set; }
 
         /// <summary>
-        /// 实例消息保留时间，小时为单位
+        /// <p>实例消息保留时间，小时为单位</p>
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
 
         /// <summary>
-        /// 是否开启ACL鉴权
+        /// <p>是否开启ACL鉴权</p>
         /// </summary>
         [JsonProperty("AclEnabled")]
         public bool? AclEnabled{ get; set; }
 
         /// <summary>
-        /// 销毁时间
+        /// <p>销毁时间</p>
         /// </summary>
         [JsonProperty("DestroyTime")]
         public ulong? DestroyTime{ get; set; }

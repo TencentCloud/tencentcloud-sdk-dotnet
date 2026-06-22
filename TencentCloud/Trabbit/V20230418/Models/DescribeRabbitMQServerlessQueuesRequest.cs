@@ -25,54 +25,49 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost参数
+        /// <p>Vhost参数</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// <p>分页Offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// <p>分页Limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键词
+        /// <p>搜索关键词</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
+        /// <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
         /// </summary>
         [JsonProperty("QueueType")]
         public string QueueType{ get; set; }
 
         /// <summary>
-        /// 排序依据的字段：
-        /// ConsumerNumber - 在线消费者数量；
-        /// MessageHeapCount - 消息堆积数；
-        /// MessageRateInOut - 生产消费速率之和；
-        /// MessageRateIn - 生产速率；
-        /// MessageRateOut - 消费速率；
+        /// <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }
 
         /// <summary>
-        /// 排序顺序，ascend 或 descend
+        /// <p>排序顺序，asc 或 desc</p>
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

@@ -25,211 +25,218 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// <p>地域信息</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位
+        /// <p>创建时间，毫秒为单位</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 集群说明信息
+        /// <p>集群说明信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 公网接入地址
+        /// <p>公网接入地址</p>
         /// </summary>
         [JsonProperty("PublicEndPoint")]
         public string PublicEndPoint{ get; set; }
 
         /// <summary>
-        /// VPC接入地址
+        /// <p>VPC接入地址</p>
         /// </summary>
         [JsonProperty("VpcEndPoint")]
         public string VpcEndPoint{ get; set; }
 
         /// <summary>
-        /// 是否支持命名空间接入点
+        /// <p>是否支持命名空间接入点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportNamespaceEndpoint")]
         public bool? SupportNamespaceEndpoint{ get; set; }
 
         /// <summary>
-        /// VPC信息
+        /// <p>VPC信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcConfig[] Vpcs{ get; set; }
 
         /// <summary>
-        /// 是否为专享实例
+        /// <p>是否为专享实例</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
         /// <summary>
-        /// Rocketmq集群标识
+        /// <p>Rocketmq集群标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RocketMQFlag")]
         public bool? RocketMQFlag{ get; set; }
 
         /// <summary>
-        /// 计费状态，1表示正常，2表示已停服，3表示已销毁
+        /// <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 欠费停服时间，毫秒为单位
+        /// <p>欠费停服时间，毫秒为单位</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public long? IsolateTime{ get; set; }
 
         /// <summary>
-        /// HTTP协议公网接入地址
+        /// <p>HTTP协议公网接入地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpPublicEndpoint")]
         public string HttpPublicEndpoint{ get; set; }
 
         /// <summary>
-        /// HTTP协议VPC接入地址
+        /// <p>HTTP协议VPC接入地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpVpcEndpoint")]
         public string HttpVpcEndpoint{ get; set; }
 
         /// <summary>
-        /// TCP内部接入地址
+        /// <p>TCP内部接入地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalEndpoint")]
         public string InternalEndpoint{ get; set; }
 
         /// <summary>
-        /// HTTP协议内部接入地址
+        /// <p>HTTP协议内部接入地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpInternalEndpoint")]
         public string HttpInternalEndpoint{ get; set; }
 
         /// <summary>
-        /// 是否开启ACL鉴权，专享实例支持关闭
+        /// <p>是否开启ACL鉴权，专享实例支持关闭</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclEnabled")]
         public bool? AclEnabled{ get; set; }
 
         /// <summary>
-        /// 公网CLB实例ID
+        /// <p>公网CLB实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicClbId")]
         public string PublicClbId{ get; set; }
 
         /// <summary>
-        /// vip
+        /// <p>vip</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 所属VPC
+        /// <p>所属VPC</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 是否支持迁移
+        /// <p>是否支持迁移</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportMigration")]
         public bool? SupportMigration{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public long? InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 集群所属可用区，表明集群归属的可用区
+        /// <p>集群所属可用区，表明集群归属的可用区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+        /// <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 是否已冻结
+        /// <p>是否已冻结</p>
         /// </summary>
         [JsonProperty("IsFrozen")]
         public bool? IsFrozen{ get; set; }
 
         /// <summary>
-        /// 是否开启自动创建主题
+        /// <p>是否开启自动创建主题</p>
         /// </summary>
         [JsonProperty("AutoCreateTopicEnabled")]
         public bool? AutoCreateTopicEnabled{ get; set; }
 
         /// <summary>
-        /// 是否开启集群Admin能力
+        /// <p>是否开启集群Admin能力</p>
         /// </summary>
         [JsonProperty("AdminFeatureEnabled")]
         public bool? AdminFeatureEnabled{ get; set; }
 
         /// <summary>
-        /// Admin AK
+        /// <p>Admin AK</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminAccessKey")]
         public string AdminAccessKey{ get; set; }
 
         /// <summary>
-        /// Admin SK
+        /// <p>Admin SK</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdminSecretKey")]
         public string AdminSecretKey{ get; set; }
 
         /// <summary>
-        /// 是否开启删除保护
+        /// <p>是否开启删除保护</p>
         /// </summary>
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启自动创建消费组</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoCreateConsumeGroupEnabled")]
+        public bool? AutoCreateConsumeGroupEnabled{ get; set; }
 
 
         /// <summary>
@@ -268,6 +275,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AdminAccessKey", this.AdminAccessKey);
             this.SetParamSimple(map, prefix + "AdminSecretKey", this.AdminSecretKey);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamSimple(map, prefix + "AutoCreateConsumeGroupEnabled", this.AutoCreateConsumeGroupEnabled);
         }
     }
 }

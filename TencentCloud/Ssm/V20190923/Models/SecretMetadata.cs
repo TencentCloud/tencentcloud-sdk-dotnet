@@ -150,6 +150,18 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("EncryptSwitching")]
         public bool? EncryptSwitching{ get; set; }
 
+        /// <summary>
+        /// <p>创建者 UIN 字符串</p>
+        /// </summary>
+        [JsonProperty("CreateUinString")]
+        public string CreateUinString{ get; set; }
+
+        /// <summary>
+        /// <p>所属者 UIN 字符串</p><p>用以兼容uint64,防止精度丢失</p>
+        /// </summary>
+        [JsonProperty("TargetUinString")]
+        public string TargetUinString{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
             this.SetParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
+            this.SetParamSimple(map, prefix + "CreateUinString", this.CreateUinString);
+            this.SetParamSimple(map, prefix + "TargetUinString", this.TargetUinString);
         }
     }
 }

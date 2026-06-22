@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312
 
        private const string endpoint = "batch.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1450";
 
         /// <summary>
         /// Client constructor.

@@ -43,6 +43,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// - FIFO: 顺序消息
         /// - DELAY: 延时消息
         /// - TRANSACTION: 事务消息
+        /// - LITE: 轻量消息
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
@@ -71,6 +72,18 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
+        /// <summary>
+        /// 是否过期自动删除（仅针对轻量主题类型）
+        /// </summary>
+        [JsonProperty("AutoExpireDelete")]
+        public bool? AutoExpireDelete{ get; set; }
+
+        /// <summary>
+        /// 过期时间，单位：秒（仅针对轻量主题类型）
+        /// </summary>
+        [JsonProperty("AutoExpireTime")]
+        public long? AutoExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +97,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+            this.SetParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
         }
     }
 }
