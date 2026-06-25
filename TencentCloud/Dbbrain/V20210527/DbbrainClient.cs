@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1450";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -638,6 +638,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogTopSqlsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogTopSqlsResponse"/></returns>
+        public Task<DescribeDBAuditLogTopSqlsResponse> DescribeDBAuditLogTopSqls(DescribeDBAuditLogTopSqlsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogTopSqlsResponse>(req, "DescribeDBAuditLogTopSqls");
+        }
+
+        /// <summary>
+        /// 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogTopSqlsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogTopSqlsResponse"/></returns>
+        public DescribeDBAuditLogTopSqlsResponse DescribeDBAuditLogTopSqlsSync(DescribeDBAuditLogTopSqlsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogTopSqlsResponse>(req, "DescribeDBAuditLogTopSqls")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 录制任务的唯一Id
+        /// <p>录制任务的唯一Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

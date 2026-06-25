@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 是否查询临时额度
+        /// <p>是否查询临时额度</p>
         /// </summary>
         [JsonProperty("TempCredit")]
         public bool? TempCredit{ get; set; }

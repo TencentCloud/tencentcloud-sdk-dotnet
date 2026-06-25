@@ -25,40 +25,46 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// SSL 证书下载地址。
+        /// <p>SSL 证书下载地址。</p>
         /// </summary>
         [JsonProperty("CertDownloadUrl")]
         public string CertDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 证书下载链接到期时间。
+        /// <p>证书下载链接到期时间。</p>
         /// </summary>
         [JsonProperty("UrlExpiredTime")]
         public string UrlExpiredTime{ get; set; }
 
         /// <summary>
-        /// 标识实例开启 SSL 功能。
-        /// - true：开启 。
-        /// - false：关闭。
+        /// <p>标识实例开启 SSL 功能。</p><ul><li>true：开启 。</li><li>false：关闭。</li></ul>
         /// </summary>
         [JsonProperty("SSLConfig")]
         public bool? SSLConfig{ get; set; }
 
         /// <summary>
-        /// 标识实例是否支持 SSL特性。
-        /// - true：支持。
-        /// - false：不支持。
+        /// <p>标识实例是否支持 SSL特性。</p><ul><li>true：支持。</li><li>false：不支持。</li></ul>
         /// </summary>
         [JsonProperty("FeatureSupport")]
         public bool? FeatureSupport{ get; set; }
 
         /// <summary>
-        /// 说明配置 SSL 的状态。
-        /// - 1: 配置中。
-        /// - 2：配置成功。
+        /// <p>说明配置 SSL 的状态。</p><ul><li>1: 配置中。</li><li>2：配置成功。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>地址类型</p><p>枚举值：</p><ul><li>0： 不限</li><li>1： 内网IPv4</li><li>2： 内网IPv6</li><li>3： 外网</li><li>-1： 未指定</li></ul>
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public long? AddressType{ get; set; }
+
+        /// <summary>
+        /// <p>当前加密连接地址</p>
+        /// </summary>
+        [JsonProperty("EncryptAddress")]
+        public string EncryptAddress{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -77,6 +83,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "SSLConfig", this.SSLConfig);
             this.SetParamSimple(map, prefix + "FeatureSupport", this.FeatureSupport);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "EncryptAddress", this.EncryptAddress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

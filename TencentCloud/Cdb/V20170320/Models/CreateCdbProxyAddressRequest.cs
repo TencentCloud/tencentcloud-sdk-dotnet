@@ -25,123 +25,121 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+        /// <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 权重分配模式，
-        /// 系统自动分配："system"， 自定义："custom"
+        /// <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 是否开启延迟剔除，取值："true" | "false"
+        /// <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("IsKickOut")]
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
-        /// 最小保留数量，最小取值：0
+        /// <p>最小保留数量，最小取值：0</p>
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+        /// <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移，取值："true" | "false"
+        /// <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// 是否自动添加RO，取值："true" | "false"
+        /// <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否是只读，取值："true" | "false"
+        /// <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 是否开启事务分离，取值："true" | "false"
+        /// <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 读写权重分配
+        /// <p>读写权重分配</p>
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+        /// <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+        /// <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池。默认关闭。
-        /// 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+        /// <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+        /// <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 端口。默认值3306。
+        /// <p>端口。默认值3306。</p>
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// 安全组
+        /// <p>安全组</p>
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+        /// <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 是否开启自适应负载均衡。默认关闭。
+        /// <p>是否开启自适应负载均衡。默认关闭。</p>
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+        /// <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }

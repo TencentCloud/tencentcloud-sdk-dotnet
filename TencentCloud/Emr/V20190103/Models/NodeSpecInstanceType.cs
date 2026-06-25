@@ -166,6 +166,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("QuotaUnit")]
         public string QuotaUnit{ get; set; }
 
+        /// <summary>
+        /// <p>是否需要提供高性能计算集群</p>
+        /// </summary>
+        [JsonProperty("NeedHpcClusterId")]
+        public bool? NeedHpcClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>是否是GPU机型</p>
+        /// </summary>
+        [JsonProperty("IsGpuInstance")]
+        public bool? IsGpuInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +207,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
             this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
             this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
+            this.SetParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
+            this.SetParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
         }
     }
 }

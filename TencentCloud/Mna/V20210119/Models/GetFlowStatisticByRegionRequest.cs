@@ -25,37 +25,37 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 开始查找时间
+        /// <p>开始查找时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
-        /// 截止时间
+        /// <p>截止时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 流量种类（1：上行流量，2：下行流量， 3: 上下行总和）
+        /// <p>流量种类（1：上行流量，2：下行流量， 3: 上下行总和）</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 时间粒度（1：按小时统计，2：按天统计）
+        /// <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
         /// </summary>
         [JsonProperty("TimeGranularity")]
         public long? TimeGranularity{ get; set; }
 
         /// <summary>
-        /// 网关类型。0：公有云网关；1：自有网关。 
+        /// <p>网关类型。0：公有云网关；1：自有网关。</p>
         /// </summary>
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
         /// <summary>
-        /// 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+        /// <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }

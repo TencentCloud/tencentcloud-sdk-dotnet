@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1447</VersionPrefix>
+    <VersionPrefix>3.0.1451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -230,6 +230,7 @@
     <Compile Include="V20190103\Models\EmrPrice.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigDetail.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="V20190103\Models\EnableSparkAppMonitorInfo.cs" />
     <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\ExternalAccess.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
@@ -239,6 +240,7 @@
     <Compile Include="V20190103\Models\FlowExtraDetail.cs" />
     <Compile Include="V20190103\Models\FlowParam.cs" />
     <Compile Include="V20190103\Models\FlowParamsDesc.cs" />
+    <Compile Include="V20190103\Models\GooseFSVolume.cs" />
     <Compile Include="V20190103\Models\GroupGlobalConfs.cs" />
     <Compile Include="V20190103\Models\GroupInfo.cs" />
     <Compile Include="V20190103\Models\GroupInfos.cs" />
@@ -248,6 +250,7 @@
     <Compile Include="V20190103\Models\HostPathVolumeSource.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="V20190103\Models\ImageInfo.cs" />
+    <Compile Include="V20190103\Models\ImageInfoV2.cs" />
     <Compile Include="V20190103\Models\ImagePullSecret.cs" />
     <Compile Include="V20190103\Models\ImpalaQuery.cs" />
     <Compile Include="V20190103\Models\InquirePriceRenewEmrRequest.cs" />
@@ -457,6 +460,7 @@
     <Compile Include="V20190103\Models\VirtualPrivateCloud.cs" />
     <Compile Include="V20190103\Models\VolumeMount.cs" />
     <Compile Include="V20190103\Models\VolumeSetting.cs" />
+    <Compile Include="V20190103\Models\WebUIInfo.cs" />
     <Compile Include="V20190103\Models\WeekRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\WeightedPodAffinityTerm.cs" />
     <Compile Include="V20190103\Models\YarnApplication.cs" />

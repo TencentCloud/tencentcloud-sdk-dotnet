@@ -66,6 +66,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CFSTurboVolumes")]
         public CFSTurboVolume[] CFSTurboVolumes{ get; set; }
 
+        /// <summary>
+        /// <p>goosefs volume挂载信息</p>
+        /// </summary>
+        [JsonProperty("GooseFSVolumes")]
+        public GooseFSVolume[] GooseFSVolumes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
             this.SetParamArrayObj(map, prefix + "StorageVolumeDetail.", this.StorageVolumeDetail);
             this.SetParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+            this.SetParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
         }
     }
 }

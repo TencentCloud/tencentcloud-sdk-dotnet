@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -1247,6 +1247,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCVMAssetsResponse DescribeCVMAssetsSync(DescribeCVMAssetsRequest req)
         {
             return InternalRequestAsync<DescribeCVMAssetsResponse>(req, "DescribeCVMAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 主机详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachineDetailRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachineDetailResponse"/></returns>
+        public Task<DescribeCWPMachineDetailResponse> DescribeCWPMachineDetail(DescribeCWPMachineDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachineDetailResponse>(req, "DescribeCWPMachineDetail");
+        }
+
+        /// <summary>
+        /// 主机详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachineDetailRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachineDetailResponse"/></returns>
+        public DescribeCWPMachineDetailResponse DescribeCWPMachineDetailSync(DescribeCWPMachineDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachineDetailResponse>(req, "DescribeCWPMachineDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachinesRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachinesResponse"/></returns>
+        public Task<DescribeCWPMachinesResponse> DescribeCWPMachines(DescribeCWPMachinesRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachinesResponse>(req, "DescribeCWPMachines");
+        }
+
+        /// <summary>
+        /// 主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachinesRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachinesResponse"/></returns>
+        public DescribeCWPMachinesResponse DescribeCWPMachinesSync(DescribeCWPMachinesRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachinesResponse>(req, "DescribeCWPMachines")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4523,6 +4565,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriodSync(ModifyIaCTokenPeriodRequest req)
         {
             return InternalRequestAsync<ModifyIaCTokenPeriodResponse>(req, "ModifyIaCTokenPeriod")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改主机资产备注信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public Task<ModifyMachineRemarkResponse> ModifyMachineRemark(ModifyMachineRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark");
+        }
+
+        /// <summary>
+        /// 修改主机资产备注信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

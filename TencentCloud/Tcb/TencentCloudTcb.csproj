@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1447</VersionPrefix>
+    <VersionPrefix>3.0.1451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -152,6 +152,8 @@
     <Compile Include="V20180608\Models\DescribeEnvAccountCircleResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvPlansRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvPlansResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeGatewayVersionsRequest.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="V20180608\Models\Pager.cs" />
     <Compile Include="V20180608\Models\PasswordUpdateLoginConfig.cs" />
     <Compile Include="V20180608\Models\PermissionInfo.cs" />
+    <Compile Include="V20180608\Models\PlanInfo.cs" />
     <Compile Include="V20180608\Models\PostgreSQLInfo.cs" />
     <Compile Include="V20180608\Models\PreviewPGUserMigrationsRequest.cs" />
     <Compile Include="V20180608\Models\PreviewPGUserMigrationsResponse.cs" />

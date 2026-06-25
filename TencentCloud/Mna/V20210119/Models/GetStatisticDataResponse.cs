@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 文件地址url
+        /// <p>文件地址url</p>
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }

@@ -144,6 +144,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
+        /// <summary>
+        /// <p>产品名称code</p>
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "PayTime", this.PayTime);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         }
     }
 }

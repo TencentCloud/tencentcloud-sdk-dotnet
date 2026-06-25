@@ -25,93 +25,93 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+        /// <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
         /// </summary>
         [JsonProperty("Balance")]
         public long? Balance{ get; set; }
 
         /// <summary>
-        /// 查询的用户Uin
+        /// <p>查询的用户Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 当前真实可用余额,单位 分
+        /// <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
         /// </summary>
         [JsonProperty("RealBalance")]
         public float? RealBalance{ get; set; }
 
         /// <summary>
-        /// 现金账户余额,单位 分
+        /// <p>现金账户余额,单位 分</p>
         /// </summary>
         [JsonProperty("CashAccountBalance")]
         public float? CashAccountBalance{ get; set; }
 
         /// <summary>
-        /// 收益转入账户余额,单位 分
+        /// <p>收益转入账户余额,单位 分</p>
         /// </summary>
         [JsonProperty("IncomeIntoAccountBalance")]
         public float? IncomeIntoAccountBalance{ get; set; }
 
         /// <summary>
-        /// 赠送账户余额,单位 分
+        /// <p>赠送账户余额,单位 分</p>
         /// </summary>
         [JsonProperty("PresentAccountBalance")]
         public float? PresentAccountBalance{ get; set; }
 
         /// <summary>
-        /// 冻结金额,单位 分
+        /// <p>冻结金额,单位 分</p>
         /// </summary>
         [JsonProperty("FreezeAmount")]
         public float? FreezeAmount{ get; set; }
 
         /// <summary>
-        /// 欠费金额,单位 分
+        /// <p>欠费金额,单位 分</p>
         /// </summary>
         [JsonProperty("OweAmount")]
         public float? OweAmount{ get; set; }
 
         /// <summary>
-        /// 是否允许欠费消费
+        /// <p>是否允许欠费消费</p>
         /// </summary>
         [JsonProperty("IsAllowArrears")]
         [System.Obsolete]
         public bool? IsAllowArrears{ get; set; }
 
         /// <summary>
-        /// 是否限制信用额度
+        /// <p>是否限制信用额度</p>
         /// </summary>
         [JsonProperty("IsCreditLimited")]
         [System.Obsolete]
         public bool? IsCreditLimited{ get; set; }
 
         /// <summary>
-        /// 信用额度,单位 分
+        /// <p>信用额度,单位 分</p>
         /// </summary>
         [JsonProperty("CreditAmount")]
         public float? CreditAmount{ get; set; }
 
         /// <summary>
-        /// 可用信用额度,单位 分
+        /// <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
         /// </summary>
         [JsonProperty("CreditBalance")]
         public float? CreditBalance{ get; set; }
 
         /// <summary>
-        /// 真实可用信用额度,单位 分
+        /// <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
         /// </summary>
         [JsonProperty("RealCreditBalance")]
         public float? RealCreditBalance{ get; set; }
 
         /// <summary>
-        /// 临时额度，单位 分
+        /// <p>临时额度，单位 分</p>
         /// </summary>
         [JsonProperty("TempCredit")]
         public float? TempCredit{ get; set; }
 
         /// <summary>
-        /// 临时额度详情
+        /// <p>临时额度详情</p>
         /// </summary>
         [JsonProperty("TempAmountInfoList")]
         public UinTempAmountModel[] TempAmountInfoList{ get; set; }

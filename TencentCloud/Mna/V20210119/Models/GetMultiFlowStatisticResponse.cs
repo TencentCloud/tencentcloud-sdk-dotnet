@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 批量设备流量信息
+        /// <p>批量设备流量信息</p>
         /// </summary>
         [JsonProperty("FlowDetails")]
         public FlowDetails[] FlowDetails{ get; set; }

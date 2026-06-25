@@ -25,51 +25,49 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 设备ID。若不指定设备，可传"-1"
+        /// <p>设备ID。若不指定设备，可传&quot;-1&quot;</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 统计开始时间，单位：s
+        /// <p>统计开始时间，单位：s</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
-        /// 统计结束时间，单位：s
+        /// <p>统计结束时间，单位：s</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 聚合粒度：
-        /// 1:按小时统计
-        /// 2:按天统计
+        /// <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
         /// </summary>
         [JsonProperty("TimeGranularity")]
         public long? TimeGranularity{ get; set; }
 
         /// <summary>
-        /// 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+        /// <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }
 
         /// <summary>
-        /// 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+        /// <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
         /// </summary>
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
         /// <summary>
-        /// 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+        /// <p>设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传&quot;-1&quot;</p>
         /// </summary>
         [JsonProperty("DeviceList")]
         public string[] DeviceList{ get; set; }
 
         /// <summary>
-        /// 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+        /// <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

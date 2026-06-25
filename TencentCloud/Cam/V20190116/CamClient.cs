@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -1270,6 +1270,27 @@ namespace TencentCloud.Cam.V20190116
         public ListAccessKeysResponse ListAccessKeysSync(ListAccessKeysRequest req)
         {
             return InternalRequestAsync<ListAccessKeysResponse>(req, "ListAccessKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询所有账号列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountsRequest"/></param>
+        /// <returns><see cref="ListAccountsResponse"/></returns>
+        public Task<ListAccountsResponse> ListAccounts(ListAccountsRequest req)
+        {
+            return InternalRequestAsync<ListAccountsResponse>(req, "ListAccounts");
+        }
+
+        /// <summary>
+        /// 查询所有账号列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountsRequest"/></param>
+        /// <returns><see cref="ListAccountsResponse"/></returns>
+        public ListAccountsResponse ListAccountsSync(ListAccountsRequest req)
+        {
+            return InternalRequestAsync<ListAccountsResponse>(req, "ListAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

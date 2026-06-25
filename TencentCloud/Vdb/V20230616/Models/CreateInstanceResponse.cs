@@ -25,7 +25,7 @@ namespace TencentCloud.Vdb.V20230616.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

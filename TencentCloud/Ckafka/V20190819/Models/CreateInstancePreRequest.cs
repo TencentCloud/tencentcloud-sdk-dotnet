@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p>
+        /// <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p>
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p>
+        /// <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p>
+        /// <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -162,6 +162,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CustomSSLCertId")]
         public string CustomSSLCertId{ get; set; }
 
+        /// <summary>
+        /// <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("StoreQuantityType")]
+        public long? StoreQuantityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
             this.SetParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+            this.SetParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
         }
     }
 }

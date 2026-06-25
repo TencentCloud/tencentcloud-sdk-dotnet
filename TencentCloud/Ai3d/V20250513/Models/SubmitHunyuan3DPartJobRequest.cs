@@ -36,6 +36,18 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
+        /// <summary>
+        /// <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+        /// </summary>
+        [JsonProperty("PartSegmentationInfo")]
+        public string PartSegmentationInfo{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+        /// </summary>
+        [JsonProperty("EnableStagedGeneration")]
+        public bool? EnableStagedGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Ai3d.V20250513.Models
         {
             this.SetParamObj(map, prefix + "File.", this.File);
             this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
+            this.SetParamSimple(map, prefix + "EnableStagedGeneration", this.EnableStagedGeneration);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -856,6 +856,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeDomainListResponse DescribeDomainListSync(DescribeDomainListRequest req)
         {
             return InternalRequestAsync<DescribeDomainListResponse>(req, "DescribeDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取域名操作日志导出文件下载地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainLogFilterFileRequest"/></param>
+        /// <returns><see cref="DescribeDomainLogFilterFileResponse"/></returns>
+        public Task<DescribeDomainLogFilterFileResponse> DescribeDomainLogFilterFile(DescribeDomainLogFilterFileRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainLogFilterFileResponse>(req, "DescribeDomainLogFilterFile");
+        }
+
+        /// <summary>
+        /// 获取域名操作日志导出文件下载地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainLogFilterFileRequest"/></param>
+        /// <returns><see cref="DescribeDomainLogFilterFileResponse"/></returns>
+        public DescribeDomainLogFilterFileResponse DescribeDomainLogFilterFileSync(DescribeDomainLogFilterFileRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainLogFilterFileResponse>(req, "DescribeDomainLogFilterFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

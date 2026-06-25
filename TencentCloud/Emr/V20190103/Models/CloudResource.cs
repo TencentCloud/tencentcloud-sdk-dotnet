@@ -119,6 +119,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("EnableDefaultRayCluster")]
         public bool? EnableDefaultRayCluster{ get; set; }
 
+        /// <summary>
+        /// <p>自定义镜像</p>
+        /// </summary>
+        [JsonProperty("ImageInfoV2")]
+        public ImageInfoV2 ImageInfoV2{ get; set; }
+
+        /// <summary>
+        /// <p>创建动态实例参数</p>
+        /// </summary>
+        [JsonProperty("DynamicInstanceForm")]
+        public DynamicInstanceForm DynamicInstanceForm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +152,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "TopologySpreadConstraints.", this.TopologySpreadConstraints);
             this.SetParamArrayObj(map, prefix + "PodLabels.", this.PodLabels);
             this.SetParamSimple(map, prefix + "EnableDefaultRayCluster", this.EnableDefaultRayCluster);
+            this.SetParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+            this.SetParamObj(map, prefix + "DynamicInstanceForm.", this.DynamicInstanceForm);
         }
     }
 }

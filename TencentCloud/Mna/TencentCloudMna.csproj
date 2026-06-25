@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1441</VersionPrefix>
+    <VersionPrefix>3.0.1451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,7 @@
     <Compile Include="V20210119\Models\DownloadActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\FlowDetails.cs" />
     <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
+    <Compile Include="V20210119\Models\GatewayInfo.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountRequest.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\GetApplicationRequest.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="V20210119\Models\GetFlowStatisticByRegionResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetGatewayListRequest.cs" />
+    <Compile Include="V20210119\Models\GetGatewayListResponse.cs" />
     <Compile Include="V20210119\Models\GetGroupDetailRequest.cs" />
     <Compile Include="V20210119\Models\GetGroupDetailResponse.cs" />
     <Compile Include="V20210119\Models\GetGroupListRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1450</VersionPrefix>
+    <VersionPrefix>3.0.1451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -207,6 +207,8 @@
     <Compile Include="V20210527\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionsRequest.cs" />
@@ -380,6 +382,7 @@
     <Compile Include="V20210527\Models\TemplateInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
     <Compile Include="V20210527\Models\TopHotKeys.cs" />
+    <Compile Include="V20210527\Models\TopSqlTpl.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchRequest.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchResponse.cs" />
     <Compile Include="V20210527\Models\UpdateDatabaseAutonomyStatusRequest.cs" />

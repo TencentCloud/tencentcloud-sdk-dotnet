@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+        /// <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// <p>对话的id</p>
+        /// <p>一问一答的对话的id</p>
         /// </summary>
         [JsonProperty("ChatId")]
         public string ChatId{ get; set; }
@@ -84,6 +84,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ToolArgs")]
         public string ToolArgs{ get; set; }
 
+        /// <summary>
+        /// <p>多轮对话的id</p>
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>意图检测请求内容</p>
+        /// </summary>
+        [JsonProperty("IntentContent")]
+        public IntentContent IntentContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ImageEncode", this.ImageEncode);
             this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
             this.SetParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamObj(map, prefix + "IntentContent.", this.IntentContent);
         }
     }
 }

@@ -25,101 +25,112 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// group 名称
+        /// <p>group 名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// pod 数量
+        /// <p>pod 数量</p>
         /// </summary>
         [JsonProperty("PodCount")]
         public long? PodCount{ get; set; }
 
         /// <summary>
-        /// 最小节点数
+        /// <p>最小节点数</p>
         /// </summary>
         [JsonProperty("MinNodes")]
         public long? MinNodes{ get; set; }
 
         /// <summary>
-        /// 最大节点数
+        /// <p>最大节点数</p>
         /// </summary>
         [JsonProperty("MaxNodes")]
         public long? MaxNodes{ get; set; }
 
         /// <summary>
-        ///  是否开启存储配置
+        /// <p>是否开启存储配置</p>
         /// </summary>
         [JsonProperty("StorageConfigEnabled")]
         public bool? StorageConfigEnabled{ get; set; }
 
         /// <summary>
-        /// headGroup:head;
-        /// workerGroup:worker
+        /// <p>headGroup:head;<br>workerGroup:worker</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// CPU 核数
+        /// <p>CPU 核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存(GB)
+        /// <p>内存(GB)</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// GPU类型
+        /// <p>GPU类型</p>
         /// </summary>
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
         /// <summary>
-        /// GPU核数
+        /// <p>GPU核数</p>
         /// </summary>
         [JsonProperty("Gpu")]
         public long? Gpu{ get; set; }
 
         /// <summary>
-        /// 资源标签
+        /// <p>资源标签</p>
         /// </summary>
         [JsonProperty("ResourceLabels")]
         public string ResourceLabels{ get; set; }
 
         /// <summary>
-        /// 环境变量
+        /// <p>环境变量</p>
         /// </summary>
         [JsonProperty("Env")]
         public NameValue[] Env{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public NameValue[] Labels{ get; set; }
 
         /// <summary>
-        /// 容忍度
+        /// <p>容忍度</p>
         /// </summary>
         [JsonProperty("Tolerations")]
         public Toleration[] Tolerations{ get; set; }
 
         /// <summary>
-        /// 调度策略
+        /// <p>调度策略</p>
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 卷目录
+        /// <p>卷目录</p>
         /// </summary>
         [JsonProperty("PersistentVolume")]
         public PersistentVolume PersistentVolume{ get; set; }
+
+        /// <summary>
+        /// <p>前置启动命令</p>
+        /// </summary>
+        [JsonProperty("PreStartCommand")]
+        public string PreStartCommand{ get; set; }
+
+        /// <summary>
+        /// <p>RayStart启动参数</p>
+        /// </summary>
+        [JsonProperty("RayStartParams")]
+        public string RayStartParams{ get; set; }
 
 
         /// <summary>
@@ -143,6 +154,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamObj(map, prefix + "PersistentVolume.", this.PersistentVolume);
+            this.SetParamSimple(map, prefix + "PreStartCommand", this.PreStartCommand);
+            this.SetParamSimple(map, prefix + "RayStartParams", this.RayStartParams);
         }
     }
 }

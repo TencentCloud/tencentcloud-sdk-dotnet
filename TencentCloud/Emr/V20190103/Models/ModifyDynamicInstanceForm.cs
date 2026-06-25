@@ -108,6 +108,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CFSTurboVolumes")]
         public CFSTurboVolume[] CFSTurboVolumes{ get; set; }
 
+        /// <summary>
+        /// <p>自定义镜像</p>
+        /// </summary>
+        [JsonProperty("CustomImage")]
+        public CustomImage CustomImage{ get; set; }
+
+        /// <summary>
+        /// <p>自定义镜像</p>
+        /// </summary>
+        [JsonProperty("ImageInfoV2")]
+        public ImageInfoV2 ImageInfoV2{ get; set; }
+
+        /// <summary>
+        /// <p>GooseFS盘</p>
+        /// </summary>
+        [JsonProperty("GooseFSVolumes")]
+        public GooseFSVolume[] GooseFSVolumes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SupportNewToken", this.SupportNewToken);
             this.SetParamObj(map, prefix + "ModifyDynamicInstanceGroup.", this.ModifyDynamicInstanceGroup);
             this.SetParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+            this.SetParamObj(map, prefix + "CustomImage.", this.CustomImage);
+            this.SetParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+            this.SetParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DashboardUrl")]
         public string DashboardUrl{ get; set; }
 
+        /// <summary>
+        /// <p>命名空间</p>
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "RedisCount", this.RedisCount);
             this.SetParamSimple(map, prefix + "SubmitType", this.SubmitType);
             this.SetParamSimple(map, prefix + "DashboardUrl", this.DashboardUrl);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }

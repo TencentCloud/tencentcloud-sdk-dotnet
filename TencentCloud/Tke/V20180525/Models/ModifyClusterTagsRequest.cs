@@ -25,23 +25,28 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群标签:
-        /// [{"TagKey":"env","TagValue":"dev"}]}]
+        /// <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否同步集群内子资源标签
+        /// <p>是否同步集群内子资源标签</p>
         /// </summary>
         [JsonProperty("SyncSubresource")]
         public bool? SyncSubresource{ get; set; }
+
+        /// <summary>
+        /// <p>是否同步节点池标签</p>
+        /// </summary>
+        [JsonProperty("SyncNodePoolTags")]
+        public bool? SyncNodePoolTags{ get; set; }
 
 
         /// <summary>
@@ -52,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SyncSubresource", this.SyncSubresource);
+            this.SetParamSimple(map, prefix + "SyncNodePoolTags", this.SyncNodePoolTags);
         }
     }
 }

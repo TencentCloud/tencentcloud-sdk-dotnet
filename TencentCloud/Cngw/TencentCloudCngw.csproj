@@ -1,0 +1,191 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{5926007E-BC61-30BC-96D2-7B18B8113F0A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1451</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Cngw</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20230418\CngwClient.cs" />
+    <Compile Include="V20230418\Models\AIGWACLSubject.cs" />
+    <Compile Include="V20230418\Models\AIGWConsumerGroupBrief.cs" />
+    <Compile Include="V20230418\Models\AIGWCrossServiceFallbackConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWCustomDesensitizeRule.cs" />
+    <Compile Include="V20230418\Models\AIGWFallbackServiceItem.cs" />
+    <Compile Include="V20230418\Models\AIGWForwardDesensitizeConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWHealthCheckSetting.cs" />
+    <Compile Include="V20230418\Models\AIGWIntentRoute.cs" />
+    <Compile Include="V20230418\Models\AIGWIntentRouteRule.cs" />
+    <Compile Include="V20230418\Models\AIGWKVMatch.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMQuotaFallbackTrigger.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMQuotaLimit.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMTokenUsageItem.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMTokenUsageListResult.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMTokenUsageStatisticsResult.cs" />
+    <Compile Include="V20230418\Models\AIGWLatencyPriorityConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWLatencyPriorityRouteRule.cs" />
+    <Compile Include="V20230418\Models\AIGWLogConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWLogDesensitizeConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPServer.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPServerACLResult.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPServerAuthResult.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPServerList.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPSessionConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPToolACLItem.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPToolACLListResult.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPUpstreamInfo.cs" />
+    <Compile Include="V20230418\Models\AIGWMCPUpstreamInfoDetail.cs" />
+    <Compile Include="V20230418\Models\AIGWRedisConfig.cs" />
+    <Compile Include="V20230418\Models\AIGWTagFilter.cs" />
+    <Compile Include="V20230418\Models\AIGWTopConsumersItem.cs" />
+    <Compile Include="V20230418\Models\AddCloudNativeAPIGatewayConsumerGroupAuthRequest.cs" />
+    <Compile Include="V20230418\Models\AddCloudNativeAPIGatewayConsumerGroupAuthResponse.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwConsumer.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwConsumerGroup.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwCreateCommonResult.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwMCPTool.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwMCPToolList.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwMCPToolParam.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwSecretKey.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelAPI.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelFallbackRule.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelParamCheckInfo.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelService.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelServiceRoute.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy.cs" />
+    <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayMCPServerRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayMCPServerResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayMCPToolRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayMCPToolResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\DefaultKongRoute.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPServerRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPServerResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPToolRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPToolResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelServicesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelServicesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMTokenUsageListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMTokenUsageListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerACLRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerACLResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerAuthRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerAuthResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPServerResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolACLListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolACLListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueResponse.cs" />
+    <Compile Include="V20230418\Models\Filter.cs" />
+    <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelAPI.cs" />
+    <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelService.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayLLMModelServiceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerACLRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerACLResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerAuthRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerAuthResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerStatusRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPServerStatusResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolACLRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolACLResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolStatusRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayMCPToolStatusResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewaySecretKeyRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest.cs" />
+    <Compile Include="V20230418\Models\RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse.cs" />
+  </ItemGroup>
+</Project>

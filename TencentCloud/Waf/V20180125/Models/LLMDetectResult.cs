@@ -90,6 +90,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ToolCallResult")]
         public ToolCallResult ToolCallResult{ get; set; }
 
+        /// <summary>
+        /// <p>意图检测结果</p>
+        /// </summary>
+        [JsonProperty("IntentDetectResult")]
+        public IntentDetectResult IntentDetectResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
             this.SetParamSimple(map, prefix + "MsgID", this.MsgID);
             this.SetParamObj(map, prefix + "ToolCallResult.", this.ToolCallResult);
+            this.SetParamObj(map, prefix + "IntentDetectResult.", this.IntentDetectResult);
         }
     }
 }

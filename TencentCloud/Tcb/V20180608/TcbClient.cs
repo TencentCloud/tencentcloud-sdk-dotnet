@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1447";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -1123,6 +1123,27 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeEnvLimitResponse DescribeEnvLimitSync(DescribeEnvLimitRequest req)
         {
             return InternalRequestAsync<DescribeEnvLimitResponse>(req, "DescribeEnvLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取可售卖的新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvPlansRequest"/></param>
+        /// <returns><see cref="DescribeEnvPlansResponse"/></returns>
+        public Task<DescribeEnvPlansResponse> DescribeEnvPlans(DescribeEnvPlansRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvPlansResponse>(req, "DescribeEnvPlans");
+        }
+
+        /// <summary>
+        /// 获取可售卖的新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvPlansRequest"/></param>
+        /// <returns><see cref="DescribeEnvPlansResponse"/></returns>
+        public DescribeEnvPlansResponse DescribeEnvPlansSync(DescribeEnvPlansRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvPlansResponse>(req, "DescribeEnvPlans")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

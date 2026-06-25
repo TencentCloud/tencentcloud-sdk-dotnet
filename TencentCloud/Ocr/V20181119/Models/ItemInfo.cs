@@ -25,18 +25,24 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// key信息组
+        /// <p>key信息组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public Key Key{ get; set; }
 
         /// <summary>
-        /// Value信息组
+        /// <p>Value信息组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public Value Value{ get; set; }
+
+        /// <summary>
+        /// <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("AuditResult")]
+        public bool? AuditResult{ get; set; }
 
 
         /// <summary>
@@ -46,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamObj(map, prefix + "Key.", this.Key);
             this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "AuditResult", this.AuditResult);
         }
     }
 }

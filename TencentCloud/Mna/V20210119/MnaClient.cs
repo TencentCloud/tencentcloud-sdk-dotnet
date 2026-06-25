@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1441";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -575,6 +575,27 @@ namespace TencentCloud.Mna.V20210119
         public GetFlowStatisticByRegionResponse GetFlowStatisticByRegionSync(GetFlowStatisticByRegionRequest req)
         {
             return InternalRequestAsync<GetFlowStatisticByRegionResponse>(req, "GetFlowStatisticByRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持网关列表查询。包含网关名称、创建时间和网关状态（正常/异常）。支持基于网关名称的查询。默认按照创建时间倒序排列。
+        /// </summary>
+        /// <param name="req"><see cref="GetGatewayListRequest"/></param>
+        /// <returns><see cref="GetGatewayListResponse"/></returns>
+        public Task<GetGatewayListResponse> GetGatewayList(GetGatewayListRequest req)
+        {
+            return InternalRequestAsync<GetGatewayListResponse>(req, "GetGatewayList");
+        }
+
+        /// <summary>
+        /// 支持网关列表查询。包含网关名称、创建时间和网关状态（正常/异常）。支持基于网关名称的查询。默认按照创建时间倒序排列。
+        /// </summary>
+        /// <param name="req"><see cref="GetGatewayListRequest"/></param>
+        /// <returns><see cref="GetGatewayListResponse"/></returns>
+        public GetGatewayListResponse GetGatewayListSync(GetGatewayListRequest req)
+        {
+            return InternalRequestAsync<GetGatewayListResponse>(req, "GetGatewayList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

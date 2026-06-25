@@ -25,25 +25,25 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 流量详细信息
+        /// <p>流量详细信息</p>
         /// </summary>
         [JsonProperty("NetDetails")]
         public NetDetails[] NetDetails{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用最大值（单位：byte）
+        /// <p>查找时间段流量使用最大值（单位：byte）</p>
         /// </summary>
         [JsonProperty("MaxValue")]
         public float? MaxValue{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用平均值（单位：byte）
+        /// <p>查找时间段流量使用平均值（单位：byte）</p>
         /// </summary>
         [JsonProperty("AvgValue")]
         public float? AvgValue{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用总量（单位：byte）
+        /// <p>查找时间段流量使用总量（单位：byte）</p>
         /// </summary>
         [JsonProperty("TotalValue")]
         public float? TotalValue{ get; set; }

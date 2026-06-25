@@ -25,20 +25,20 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 交易的ID。
+        /// <p>交易的ID。</p>
         /// </summary>
         [JsonProperty("DealId")]
         [System.Obsolete]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 克隆实例的 ID。
+        /// <p>克隆实例的 ID。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 订单号。
+        /// <p>订单号。</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

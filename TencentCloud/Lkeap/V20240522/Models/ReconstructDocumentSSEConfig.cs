@@ -25,40 +25,40 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// Markdown文件中表格返回的形式
-        /// 0，表格以MD形式返回
-        /// 1，表格以HTML形式返回
-        /// 默认为0
+        /// <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p>
         /// </summary>
         [JsonProperty("TableResultType")]
         public string TableResultType{ get; set; }
 
         /// <summary>
-        /// Markdown文件中图片返回的形式
-        /// 0:markdown中图片以链接形式返回
-        /// 1:markdown中图片只返回图片中提取的文本内容
-        /// 默认是0
+        /// <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p>
         /// </summary>
         [JsonProperty("MarkdownImageResponseType")]
         public string MarkdownImageResponseType{ get; set; }
 
         /// <summary>
-        /// Markdown文件中是否包含页码信息
+        /// <p>Markdown文件中是否包含页码信息</p>
         /// </summary>
         [JsonProperty("ReturnPageFormat")]
         public bool? ReturnPageFormat{ get; set; }
 
         /// <summary>
-        /// 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+        /// <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
         /// </summary>
         [JsonProperty("PageFormat")]
         public string PageFormat{ get; set; }
 
         /// <summary>
-        /// 是否忽略失败页，返回已成功的页数据
+        /// <p>是否忽略失败页，返回已成功的页数据</p>
         /// </summary>
         [JsonProperty("IgnoreFailedPage")]
         public bool? IgnoreFailedPage{ get; set; }
+
+        /// <summary>
+        /// <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p>
+        /// </summary>
+        [JsonProperty("ResultType")]
+        public string ResultType{ get; set; }
 
 
         /// <summary>
@@ -71,6 +71,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "ReturnPageFormat", this.ReturnPageFormat);
             this.SetParamSimple(map, prefix + "PageFormat", this.PageFormat);
             this.SetParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
+            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
         }
     }
 }

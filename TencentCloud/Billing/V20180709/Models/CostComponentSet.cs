@@ -25,76 +25,88 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 组件类型名称
+        /// <p>组件类型名称</p>
         /// </summary>
         [JsonProperty("ComponentCodeName")]
         public string ComponentCodeName{ get; set; }
 
         /// <summary>
-        /// 组件名称
+        /// <p>组件名称</p>
         /// </summary>
         [JsonProperty("ItemCodeName")]
         public string ItemCodeName{ get; set; }
 
         /// <summary>
-        /// 刊例价
+        /// <p>刊例价</p>
         /// </summary>
         [JsonProperty("SinglePrice")]
         public string SinglePrice{ get; set; }
 
         /// <summary>
-        /// 刊例价单位
+        /// <p>刊例价单位</p>
         /// </summary>
         [JsonProperty("PriceUnit")]
         public string PriceUnit{ get; set; }
 
         /// <summary>
-        /// 用量
+        /// <p>用量</p>
         /// </summary>
         [JsonProperty("UsedAmount")]
         public string UsedAmount{ get; set; }
 
         /// <summary>
-        /// 用量单位
+        /// <p>用量单位</p>
         /// </summary>
         [JsonProperty("UsedAmountUnit")]
         public string UsedAmountUnit{ get; set; }
 
         /// <summary>
-        /// 原价
+        /// <p>原价</p>
         /// </summary>
         [JsonProperty("Cost")]
         public string Cost{ get; set; }
 
         /// <summary>
-        /// 折扣
+        /// <p>折扣</p>
         /// </summary>
         [JsonProperty("Discount")]
         public string Discount{ get; set; }
 
         /// <summary>
-        /// 折后价
+        /// <p>折后价</p>
         /// </summary>
         [JsonProperty("RealCost")]
         public string RealCost{ get; set; }
 
         /// <summary>
-        /// 代金券支付金额
+        /// <p>代金券支付金额</p>
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// 现金支付金额
+        /// <p>现金支付金额</p>
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送金支付金额
+        /// <p>赠送金支付金额</p>
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// <p>组件类型code</p>
+        /// </summary>
+        [JsonProperty("ComponentCode")]
+        public string ComponentCode{ get; set; }
+
+        /// <summary>
+        /// <p>组件名称code</p>
+        /// </summary>
+        [JsonProperty("ItemCode")]
+        public string ItemCode{ get; set; }
 
 
         /// <summary>
@@ -114,6 +126,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+            this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
         }
     }
 }

@@ -25,28 +25,34 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
+        /// <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码。
+        /// <p>错误码。</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// <p>错误信息。</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 生成文件的URL地址，有效期1天。
+        /// <p>生成文件的URL地址，有效期1天。</p>
         /// </summary>
         [JsonProperty("ResultFile3Ds")]
         public File3D[] ResultFile3Ds{ get; set; }
+
+        /// <summary>
+        /// <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+        /// </summary>
+        [JsonProperty("PartSegmentationInfo")]
+        public string PartSegmentationInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +70,7 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
+            this.SetParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

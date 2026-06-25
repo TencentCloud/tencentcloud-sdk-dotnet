@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,7 @@
     <Compile Include="V20221121\Models\AssetProcessItem.cs" />
     <Compile Include="V20221121\Models\AssetRiskItem.cs" />
     <Compile Include="V20221121\Models\AssetTag.cs" />
+    <Compile Include="V20221121\Models\AssetTagModifyAssetItem.cs" />
     <Compile Include="V20221121\Models\AssetViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\CommandPluginState.cs" />
+    <Compile Include="V20221121\Models\ContainerEnvInfo.cs" />
     <Compile Include="V20221121\Models\CosAccessInfo.cs" />
     <Compile Include="V20221121\Models\CosActionInfo.cs" />
     <Compile Include="V20221121\Models\CosAkAssetInfo.cs" />
@@ -237,6 +239,10 @@
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCWPMachineDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCWPMachineDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCWPMachinesRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCWPMachinesResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCallRecordRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCallRecordResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCheckViewRisksRequest.cs" />
@@ -509,6 +515,7 @@
     <Compile Include="V20221121\Models\DescribeVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DiskPartitionInfo.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
     <Compile Include="V20221121\Models\DownloadDspmExportLogRequest.cs" />
     <Compile Include="V20221121\Models\DownloadDspmExportLogResponse.cs" />
@@ -578,6 +585,9 @@
     <Compile Include="V20221121\Models\KeyValue.cs" />
     <Compile Include="V20221121\Models\KeyValueInt.cs" />
     <Compile Include="V20221121\Models\Location.cs" />
+    <Compile Include="V20221121\Models\Machine.cs" />
+    <Compile Include="V20221121\Models\MachineDetail.cs" />
+    <Compile Include="V20221121\Models\MiniTagItem.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountRequest.cs" />
@@ -616,6 +626,8 @@
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyResponse.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodRequest.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyMachineRemarkRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyMachineRemarkResponse.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyPolicyStatusRequest.cs" />
@@ -627,6 +639,7 @@
     <Compile Include="V20221121\Models\ModifyUebaRuleSwitchRequest.cs" />
     <Compile Include="V20221121\Models\ModifyUebaRuleSwitchResponse.cs" />
     <Compile Include="V20221121\Models\NICAsset.cs" />
+    <Compile Include="V20221121\Models\NetworkCardInfo.cs" />
     <Compile Include="V20221121\Models\NewAlertKey.cs" />
     <Compile Include="V20221121\Models\OrganizationInfo.cs" />
     <Compile Include="V20221121\Models\OrganizationUserInfo.cs" />
@@ -635,6 +648,7 @@
     <Compile Include="V20221121\Models\ProductSupport.cs" />
     <Compile Include="V20221121\Models\PublicIpDomainListKey.cs" />
     <Compile Include="V20221121\Models\RegionConfig.cs" />
+    <Compile Include="V20221121\Models\RegionInfo.cs" />
     <Compile Include="V20221121\Models\RelatedEvent.cs" />
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ReportTaskIdList.cs" />

@@ -60,6 +60,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("FailureThreshold")]
         public long? FailureThreshold{ get; set; }
 
+        /// <summary>
+        /// <p>TCP Socket请求进行健康检查</p>
+        /// </summary>
+        [JsonProperty("TcpSocket")]
+        public TcpSocketConfig TcpSocket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
             this.SetParamSimple(map, prefix + "SuccessThreshold", this.SuccessThreshold);
             this.SetParamSimple(map, prefix + "FailureThreshold", this.FailureThreshold);
+            this.SetParamObj(map, prefix + "TcpSocket.", this.TcpSocket);
         }
     }
 }

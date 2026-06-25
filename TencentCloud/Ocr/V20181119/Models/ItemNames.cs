@@ -25,22 +25,34 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 自定义抽取功能需返回的字段名称。
+        /// <p>自定义抽取功能需返回的字段名称。</p>
         /// </summary>
         [JsonProperty("KeyName")]
         public string KeyName{ get; set; }
 
         /// <summary>
-        /// 默认 0；0表示kv对  1表示 表格字段。
+        /// <p>默认 0；0表示kv对  1表示 表格字段。</p>
         /// </summary>
         [JsonProperty("KeyType")]
         public long? KeyType{ get; set; }
 
         /// <summary>
-        /// 抽取字段的描述内容。
+        /// <p>抽取字段的描述内容。</p>
         /// </summary>
         [JsonProperty("KeyPrompt")]
         public string KeyPrompt{ get; set; }
+
+        /// <summary>
+        /// <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p>
+        /// </summary>
+        [JsonProperty("KeyExpectedValue")]
+        public string KeyExpectedValue{ get; set; }
+
+        /// <summary>
+        /// <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p>
+        /// </summary>
+        [JsonProperty("KeyAuditPrompt")]
+        public string KeyAuditPrompt{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
             this.SetParamSimple(map, prefix + "KeyType", this.KeyType);
             this.SetParamSimple(map, prefix + "KeyPrompt", this.KeyPrompt);
+            this.SetParamSimple(map, prefix + "KeyExpectedValue", this.KeyExpectedValue);
+            this.SetParamSimple(map, prefix + "KeyAuditPrompt", this.KeyAuditPrompt);
         }
     }
 }

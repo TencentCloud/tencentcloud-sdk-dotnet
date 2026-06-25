@@ -144,6 +144,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ContainerExtraConf")]
         public ContainerExtraConf ContainerExtraConf{ get; set; }
 
+        /// <summary>
+        /// <p>spark监控</p>
+        /// </summary>
+        [JsonProperty("EnableSparkAppMonitorInfo")]
+        public EnableSparkAppMonitorInfo EnableSparkAppMonitorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
             this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
             this.SetParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
+            this.SetParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1438";
+       private const string sdkVersion = "SDK_NET_3.0.1451";
 
         /// <summary>
         /// Client constructor.
@@ -1650,7 +1650,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
+        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。
         /// </summary>
         /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
         /// <returns><see cref="ImportOpenApiResponse"/></returns>
@@ -1660,7 +1660,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
+        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。
         /// </summary>
         /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
         /// <returns><see cref="ImportOpenApiResponse"/></returns>

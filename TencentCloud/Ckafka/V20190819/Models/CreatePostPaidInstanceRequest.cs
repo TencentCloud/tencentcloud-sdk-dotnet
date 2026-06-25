@@ -150,6 +150,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CustomSSLCertId")]
         public string CustomSSLCertId{ get; set; }
 
+        /// <summary>
+        /// <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("StoreQuantityType")]
+        public long? StoreQuantityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
             this.SetParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+            this.SetParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
         }
     }
 }
