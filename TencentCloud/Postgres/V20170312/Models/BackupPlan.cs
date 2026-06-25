@@ -25,67 +25,73 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 备份周期
+        /// <p>备份周期</p>
         /// </summary>
         [JsonProperty("BackupPeriod")]
         public string BackupPeriod{ get; set; }
 
         /// <summary>
-        /// 数据备份保留时长。单位：天
+        /// <p>数据备份保留时长。单位：天</p>
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 开始备份的最早时间
+        /// <p>开始备份的最早时间</p>
         /// </summary>
         [JsonProperty("MinBackupStartTime")]
         public string MinBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 开始备份的最晚时间
+        /// <p>开始备份的最晚时间</p>
         /// </summary>
         [JsonProperty("MaxBackupStartTime")]
         public string MaxBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 备份计划ID
+        /// <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public string BackupMethod{ get; set; }
+
+        /// <summary>
+        /// <p>备份计划ID</p>
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// 备份计划自定义名称。
+        /// <p>备份计划自定义名称。</p>
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
 
         /// <summary>
-        /// 日志备份保留时长。单位：天
+        /// <p>日志备份保留时长。单位：天</p>
         /// </summary>
         [JsonProperty("LogBackupRetentionPeriod")]
         public ulong? LogBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 最近一次的修改时间。
+        /// <p>最近一次的修改时间。</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 备份计划类型。系统默认创建的为default，自定义的为custom。
+        /// <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
         /// </summary>
         [JsonProperty("PlanType")]
         public string PlanType{ get; set; }
 
         /// <summary>
-        /// 备份周期类型。当前支持week、month。
+        /// <p>备份周期类型。当前支持week、month。</p>
         /// </summary>
         [JsonProperty("BackupPeriodType")]
         public string BackupPeriodType{ get; set; }
@@ -100,6 +106,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamSimple(map, prefix + "MinBackupStartTime", this.MinBackupStartTime);
             this.SetParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
             this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
             this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);

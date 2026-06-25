@@ -25,34 +25,40 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// ioa用户组织id
+        /// <p>ioa用户组织id</p>
         /// </summary>
         [JsonProperty("OrgId")]
         public ulong? OrgId{ get; set; }
 
         /// <summary>
-        /// ioa用户组织名称
+        /// <p>ioa用户组织名称</p>
         /// </summary>
         [JsonProperty("OrgName")]
         public string OrgName{ get; set; }
 
         /// <summary>
-        /// ioa用户组织id路径
+        /// <p>ioa用户组织id路径</p>
         /// </summary>
         [JsonProperty("OrgIdPath")]
         public string OrgIdPath{ get; set; }
 
         /// <summary>
-        /// ioa用户组织名称路径
+        /// <p>ioa用户组织名称路径</p>
         /// </summary>
         [JsonProperty("OrgNamePath")]
         public string OrgNamePath{ get; set; }
 
         /// <summary>
-        /// ioa用户组织id下的用户数
+        /// <p>ioa用户组织id下的用户数</p>
         /// </summary>
         [JsonProperty("UserTotal")]
         public ulong? UserTotal{ get; set; }
+
+        /// <summary>
+        /// <p>组织绑定的用户组 id 列表</p>
+        /// </summary>
+        [JsonProperty("BindGroupIds")]
+        public ulong?[] BindGroupIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "OrgIdPath", this.OrgIdPath);
             this.SetParamSimple(map, prefix + "OrgNamePath", this.OrgNamePath);
             this.SetParamSimple(map, prefix + "UserTotal", this.UserTotal);
+            this.SetParamArraySimple(map, prefix + "BindGroupIds.", this.BindGroupIds);
         }
     }
 }

@@ -61,6 +61,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ConfigContent", this.ConfigContent);
             this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
             this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

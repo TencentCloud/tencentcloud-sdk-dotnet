@@ -25,52 +25,70 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 目录id
+        /// <p>目录id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// ioa目录id
+        /// <p>ioa目录id</p>
         /// </summary>
         [JsonProperty("DirId")]
         public ulong? DirId{ get; set; }
 
         /// <summary>
-        /// ioa目录名称
+        /// <p>ioa目录名称</p>
         /// </summary>
         [JsonProperty("DirName")]
         public string DirName{ get; set; }
 
         /// <summary>
-        /// ioa关联用户源类型
+        /// <p>ioa关联用户源类型</p>
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }
 
         /// <summary>
-        /// ioa关联用户源名称
+        /// <p>ioa关联用户源名称</p>
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
-        /// 目录包含用户数
+        /// <p>目录包含用户数</p>
         /// </summary>
         [JsonProperty("UserTotal")]
         public ulong? UserTotal{ get; set; }
 
         /// <summary>
-        /// 目录接入时间
+        /// <p>目录接入时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 目录下的组织细节信息
+        /// <p>目录下的组织细节信息</p>
         /// </summary>
         [JsonProperty("UserOrgSet")]
         public UserOrg[] UserOrgSet{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启自动同步</p>
+        /// </summary>
+        [JsonProperty("AutoSync")]
+        public bool? AutoSync{ get; set; }
+
+        /// <summary>
+        /// <p>同步周期（5段式 crontab 表达式）</p>
+        /// </summary>
+        [JsonProperty("SyncCron")]
+        public string SyncCron{ get; set; }
+
+        /// <summary>
+        /// <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p>
+        /// </summary>
+        [JsonProperty("NextSyncTime")]
+        public string NextSyncTime{ get; set; }
 
 
         /// <summary>
@@ -86,6 +104,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "UserTotal", this.UserTotal);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "UserOrgSet.", this.UserOrgSet);
+            this.SetParamSimple(map, prefix + "AutoSync", this.AutoSync);
+            this.SetParamSimple(map, prefix + "SyncCron", this.SyncCron);
+            this.SetParamSimple(map, prefix + "NextSyncTime", this.NextSyncTime);
         }
     }
 }

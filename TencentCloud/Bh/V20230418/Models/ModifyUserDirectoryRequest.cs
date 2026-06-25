@@ -25,16 +25,28 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 目录id
+        /// <p>目录id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// ioa分组信息
+        /// <p>ioa分组信息</p>
         /// </summary>
         [JsonProperty("UserOrgSet")]
         public UserOrg[] UserOrgSet{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启自动同步</p>
+        /// </summary>
+        [JsonProperty("AutoSync")]
+        public bool? AutoSync{ get; set; }
+
+        /// <summary>
+        /// <p>同步周期（5段式 crontab 表达式）</p>
+        /// </summary>
+        [JsonProperty("SyncCron")]
+        public string SyncCron{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Bh.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArrayObj(map, prefix + "UserOrgSet.", this.UserOrgSet);
+            this.SetParamSimple(map, prefix + "AutoSync", this.AutoSync);
+            this.SetParamSimple(map, prefix + "SyncCron", this.SyncCron);
         }
     }
 }

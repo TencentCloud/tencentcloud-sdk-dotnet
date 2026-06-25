@@ -74,7 +74,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public PronunciationDict[] PronunciationDict{ get; set; }
 
         /// <summary>
-        /// <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+        /// <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持词级别字幕</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("AlignmentMode")]
         public ulong? AlignmentMode{ get; set; }

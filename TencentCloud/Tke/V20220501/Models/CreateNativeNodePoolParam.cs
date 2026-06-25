@@ -127,6 +127,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public long? Replicas{ get; set; }
 
         /// <summary>
+        /// <p>机型和GPU配置相关信息</p>
+        /// </summary>
+        [JsonProperty("GPUConfigs")]
+        public GPUConfig[] GPUConfigs{ get; set; }
+
+        /// <summary>
         /// <p>公网带宽设置</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
@@ -191,6 +197,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "RuntimeRootDir", this.RuntimeRootDir);
             this.SetParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
+            this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamSimple(map, prefix + "QGPUEnable", this.QGPUEnable);

@@ -229,6 +229,12 @@ namespace TencentCloud.Es.V20180416.Models
         public bool? EnableDiagnose{ get; set; }
 
         /// <summary>
+        /// <p>是否开启自动备份</p>
+        /// </summary>
+        [JsonProperty("EnableCosBackup")]
+        public bool? EnableCosBackup{ get; set; }
+
+        /// <summary>
         /// <p>cdcId，使用cdc子网时传递</p>
         /// </summary>
         [JsonProperty("CdcId")]
@@ -322,6 +328,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
             this.SetParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
+            this.SetParamSimple(map, prefix + "EnableCosBackup", this.EnableCosBackup);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
             this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);

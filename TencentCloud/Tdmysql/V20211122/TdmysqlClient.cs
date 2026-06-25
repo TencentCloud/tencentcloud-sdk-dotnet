@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1449";
+       private const string sdkVersion = "SDK_NET_3.0.1452";
 
         /// <summary>
         /// Client constructor.
@@ -953,6 +953,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ResetUserPasswordResponse ResetUserPasswordSync(ResetUserPasswordRequest req)
         {
             return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResetUsersPassword）用于批量重置用户密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetUsersPasswordRequest"/></param>
+        /// <returns><see cref="ResetUsersPasswordResponse"/></returns>
+        public Task<ResetUsersPasswordResponse> ResetUsersPassword(ResetUsersPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUsersPasswordResponse>(req, "ResetUsersPassword");
+        }
+
+        /// <summary>
+        /// 本接口（ResetUsersPassword）用于批量重置用户密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetUsersPasswordRequest"/></param>
+        /// <returns><see cref="ResetUsersPasswordResponse"/></returns>
+        public ResetUsersPasswordResponse ResetUsersPasswordSync(ResetUsersPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUsersPasswordResponse>(req, "ResetUsersPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,34 +25,40 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
+        /// <p>布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。</p>
         /// </summary>
         [JsonProperty("MixLayoutMode")]
         public ulong? MixLayoutMode{ get; set; }
 
         /// <summary>
-        /// 纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
+        /// <p>纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。</p>
         /// </summary>
         [JsonProperty("PureAudioHoldPlaceMode")]
         public ulong? PureAudioHoldPlaceMode{ get; set; }
 
         /// <summary>
-        /// 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
+        /// <p>自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。</p>
         /// </summary>
         [JsonProperty("MixLayoutList")]
         public McuLayout[] MixLayoutList{ get; set; }
 
         /// <summary>
-        /// 指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
+        /// <p>指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。</p>
         /// </summary>
         [JsonProperty("MaxVideoUser")]
         public MaxVideoUser MaxVideoUser{ get; set; }
 
         /// <summary>
-        /// 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+        /// <p>屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底</p>
         /// </summary>
         [JsonProperty("RenderMode")]
         public ulong? RenderMode{ get; set; }
+
+        /// <summary>
+        /// <p>是否保留上行sei，1：保留 0：不保留，只对动态布局生效，自定义布局不生效</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("EnableStreamSEI")]
+        public ulong? EnableStreamSEI{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "MixLayoutList.", this.MixLayoutList);
             this.SetParamObj(map, prefix + "MaxVideoUser.", this.MaxVideoUser);
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
+            this.SetParamSimple(map, prefix + "EnableStreamSEI", this.EnableStreamSEI);
         }
     }
 }

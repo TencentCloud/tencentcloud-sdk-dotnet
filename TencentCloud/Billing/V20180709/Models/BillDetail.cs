@@ -25,226 +25,232 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+        /// <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+        /// <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// 计费模式：资源的计费模式，区分为包年包月和按量计费
+        /// <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+        /// <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 地域：资源所属地域，如华南地区（广州）
+        /// <p>地域：资源所属地域，如华南地区（广州）</p>
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 可用区：资源所属可用区，如广州三区
+        /// <p>可用区：资源所属可用区，如广州三区</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+        /// <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+        /// <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+        /// <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+        /// <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 交易ID：结算扣费单号
+        /// <p>交易ID：结算扣费单号</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// 扣费时间：结算扣费时间
+        /// <p>扣费时间：结算扣费时间</p>
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// 开始使用时间：产品服务开始使用时间
+        /// <p>开始使用时间：产品服务开始使用时间</p>
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// 结束使用时间：产品服务结束使用时间
+        /// <p>结束使用时间：产品服务结束使用时间</p>
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
-        /// 组件列表
+        /// <p>组件列表</p>
         /// </summary>
         [JsonProperty("ComponentSet")]
         public BillDetailComponent[] ComponentSet{ get; set; }
 
         /// <summary>
-        /// 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+        /// <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 使用者UIN：实际使用资源的账号 ID
+        /// <p>使用者UIN：实际使用资源的账号 ID</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+        /// <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 标签信息
+        /// <p>标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 产品编码
+        /// <p>产品编码</p>
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 子产品编码
+        /// <p>子产品编码</p>
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 交易类型编码
+        /// <p>交易类型编码</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+        /// <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
         /// </summary>
         [JsonProperty("PriceInfo")]
         public string[] PriceInfo{ get; set; }
 
         /// <summary>
-        /// 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+        /// <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
         /// </summary>
         [JsonProperty("AssociatedOrder")]
         public BillDetailAssociatedOrder AssociatedOrder{ get; set; }
 
         /// <summary>
-        /// 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+        /// <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
-        /// 计费规则：各产品详细的计费规则官网说明链接
+        /// <p>计费规则：各产品详细的计费规则官网说明链接</p>
         /// </summary>
         [JsonProperty("FormulaUrl")]
         public string FormulaUrl{ get; set; }
 
         /// <summary>
-        /// 账单归属日
+        /// <p>账单归属日</p>
         /// </summary>
         [JsonProperty("BillDay")]
         public string BillDay{ get; set; }
 
         /// <summary>
-        /// 账单归属月
+        /// <p>账单归属月</p>
         /// </summary>
         [JsonProperty("BillMonth")]
         public string BillMonth{ get; set; }
 
         /// <summary>
-        /// 账单记录ID
+        /// <p>账单记录ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 国内国际编码
+        /// <p>国内国际编码</p>
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// 国内国际：资源所属区域类型（国内、国际）
+        /// <p>国内国际：资源所属区域类型（国内、国际）</p>
         /// </summary>
         [JsonProperty("RegionTypeName")]
         public string RegionTypeName{ get; set; }
 
         /// <summary>
-        /// 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+        /// <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
         /// </summary>
         [JsonProperty("ReserveDetail")]
         public string ReserveDetail{ get; set; }
 
         /// <summary>
-        /// 优惠对象
+        /// <p>优惠对象</p>
         /// </summary>
         [JsonProperty("DiscountObject")]
         public string DiscountObject{ get; set; }
 
         /// <summary>
-        /// 优惠类型
+        /// <p>优惠类型</p>
         /// </summary>
         [JsonProperty("DiscountType")]
         public string DiscountType{ get; set; }
 
         /// <summary>
-        /// 优惠内容
+        /// <p>优惠内容</p>
         /// </summary>
         [JsonProperty("DiscountContent")]
         public string DiscountContent{ get; set; }
+
+        /// <summary>
+        /// <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+        /// </summary>
+        [JsonProperty("ExtendField")]
+        public string ExtendField{ get; set; }
 
 
         /// <summary>
@@ -289,6 +295,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
             this.SetParamSimple(map, prefix + "DiscountType", this.DiscountType);
             this.SetParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
+            this.SetParamSimple(map, prefix + "ExtendField", this.ExtendField);
         }
     }
 }

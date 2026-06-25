@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 目录Id
+        /// <p>目录Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }

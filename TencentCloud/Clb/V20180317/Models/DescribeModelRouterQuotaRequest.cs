@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Clb.V20180317.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeModelRouterQuotaRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>配额类型</p>
+        /// </summary>
+        [JsonProperty("QuotaTypes")]
+        public string[] QuotaTypes{ get; set; }
+
+        /// <summary>
+        /// <p>要查询的资源ID</p>
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// <p>需要展示的字段</p><p>枚举值：</p><ul><li>Used： 已使用的配额数量</li><li>Available： 剩余的配额数量</li></ul>
+        /// </summary>
+        [JsonProperty("DisplayFields")]
+        public string[] DisplayFields{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "QuotaTypes.", this.QuotaTypes);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "DisplayFields.", this.DisplayFields);
+        }
+    }
+}
+

@@ -25,13 +25,13 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移
+        /// <p>分页偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

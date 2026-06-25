@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1450";
+       private const string sdkVersion = "SDK_NET_3.0.1452";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Clb.V20180317
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 将Budget关联到企业型模型路由实例或企业型实例下的Key。资源已关联其他Budget时，本次请求会替换为新的Budget。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateBudgetRequest"/></param>
+        /// <returns><see cref="AssociateBudgetResponse"/></returns>
+        public Task<AssociateBudgetResponse> AssociateBudget(AssociateBudgetRequest req)
+        {
+            return InternalRequestAsync<AssociateBudgetResponse>(req, "AssociateBudget");
+        }
+
+        /// <summary>
+        /// 将Budget关联到企业型模型路由实例或企业型实例下的Key。资源已关联其他Budget时，本次请求会替换为新的Budget。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateBudgetRequest"/></param>
+        /// <returns><see cref="AssociateBudgetResponse"/></returns>
+        public AssociateBudgetResponse AssociateBudgetSync(AssociateBudgetRequest req)
+        {
+            return InternalRequestAsync<AssociateBudgetResponse>(req, "AssociateBudget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -274,6 +295,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBudgetRequest"/></param>
+        /// <returns><see cref="CreateBudgetResponse"/></returns>
+        public Task<CreateBudgetResponse> CreateBudget(CreateBudgetRequest req)
+        {
+            return InternalRequestAsync<CreateBudgetResponse>(req, "CreateBudget");
+        }
+
+        /// <summary>
+        /// 创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBudgetRequest"/></param>
+        /// <returns><see cref="CreateBudgetResponse"/></returns>
+        public CreateBudgetResponse CreateBudgetSync(CreateBudgetRequest req)
+        {
+            return InternalRequestAsync<CreateBudgetResponse>(req, "CreateBudget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建CLB专有日志集，此日志集用于存储CLB的日志。
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
@@ -291,6 +333,48 @@ namespace TencentCloud.Clb.V20180317
         public CreateClsLogSetResponse CreateClsLogSetSync(CreateClsLogSetRequest req)
         {
             return InternalRequestAsync<CreateClsLogSetResponse>(req, "CreateClsLogSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 API Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyRequest"/></param>
+        /// <returns><see cref="CreateKeyResponse"/></returns>
+        public Task<CreateKeyResponse> CreateKey(CreateKeyRequest req)
+        {
+            return InternalRequestAsync<CreateKeyResponse>(req, "CreateKey");
+        }
+
+        /// <summary>
+        /// 创建 API Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyRequest"/></param>
+        /// <returns><see cref="CreateKeyResponse"/></returns>
+        public CreateKeyResponse CreateKeySync(CreateKeyRequest req)
+        {
+            return InternalRequestAsync<CreateKeyResponse>(req, "CreateKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量创建Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeysRequest"/></param>
+        /// <returns><see cref="CreateKeysResponse"/></returns>
+        public Task<CreateKeysResponse> CreateKeys(CreateKeysRequest req)
+        {
+            return InternalRequestAsync<CreateKeysResponse>(req, "CreateKeys");
+        }
+
+        /// <summary>
+        /// 批量创建Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeysRequest"/></param>
+        /// <returns><see cref="CreateKeysResponse"/></returns>
+        public CreateKeysResponse CreateKeysSync(CreateKeysRequest req)
+        {
+            return InternalRequestAsync<CreateKeysResponse>(req, "CreateKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -366,6 +450,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 创建模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRouterRequest"/></param>
+        /// <returns><see cref="CreateModelRouterResponse"/></returns>
+        public Task<CreateModelRouterResponse> CreateModelRouter(CreateModelRouterRequest req)
+        {
+            return InternalRequestAsync<CreateModelRouterResponse>(req, "CreateModelRouter");
+        }
+
+        /// <summary>
+        /// 创建模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRouterRequest"/></param>
+        /// <returns><see cref="CreateModelRouterResponse"/></returns>
+        public CreateModelRouterResponse CreateModelRouterSync(CreateModelRouterRequest req)
+        {
+            return InternalRequestAsync<CreateModelRouterResponse>(req, "CreateModelRouter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CreateRule 接口用于在一个已存在的负载均衡七层监听器下创建转发规则，七层监听器中，后端服务必须绑定到规则上而非监听器上。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
         /// </summary>
@@ -427,6 +532,69 @@ namespace TencentCloud.Clb.V20180317
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
             return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
+        /// <returns><see cref="CreateUserGroupResponse"/></returns>
+        public Task<CreateUserGroupResponse> CreateUserGroup(CreateUserGroupRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupResponse>(req, "CreateUserGroup");
+        }
+
+        /// <summary>
+        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
+        /// <returns><see cref="CreateUserGroupResponse"/></returns>
+        public CreateUserGroupResponse CreateUserGroupSync(CreateUserGroupRequest req)
+        {
+            return InternalRequestAsync<CreateUserGroupResponse>(req, "CreateUserGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Budget对象。Budget存在任何关联资源时不允许删除，需要先调用DisassociateBudget解除关联。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBudgetsRequest"/></param>
+        /// <returns><see cref="DeleteBudgetsResponse"/></returns>
+        public Task<DeleteBudgetsResponse> DeleteBudgets(DeleteBudgetsRequest req)
+        {
+            return InternalRequestAsync<DeleteBudgetsResponse>(req, "DeleteBudgets");
+        }
+
+        /// <summary>
+        /// 删除Budget对象。Budget存在任何关联资源时不允许删除，需要先调用DisassociateBudget解除关联。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBudgetsRequest"/></param>
+        /// <returns><see cref="DeleteBudgetsResponse"/></returns>
+        public DeleteBudgetsResponse DeleteBudgetsSync(DeleteBudgetsRequest req)
+        {
+            return InternalRequestAsync<DeleteBudgetsResponse>(req, "DeleteBudgets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 API Key。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKeysRequest"/></param>
+        /// <returns><see cref="DeleteKeysResponse"/></returns>
+        public Task<DeleteKeysResponse> DeleteKeys(DeleteKeysRequest req)
+        {
+            return InternalRequestAsync<DeleteKeysResponse>(req, "DeleteKeys");
+        }
+
+        /// <summary>
+        /// 批量删除 API Key。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKeysRequest"/></param>
+        /// <returns><see cref="DeleteKeysResponse"/></returns>
+        public DeleteKeysResponse DeleteKeysSync(DeleteKeysRequest req)
+        {
+            return InternalRequestAsync<DeleteKeysResponse>(req, "DeleteKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -523,6 +691,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 删除模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRoutersRequest"/></param>
+        /// <returns><see cref="DeleteModelRoutersResponse"/></returns>
+        public Task<DeleteModelRoutersResponse> DeleteModelRouters(DeleteModelRoutersRequest req)
+        {
+            return InternalRequestAsync<DeleteModelRoutersResponse>(req, "DeleteModelRouters");
+        }
+
+        /// <summary>
+        /// 删除模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRoutersRequest"/></param>
+        /// <returns><see cref="DeleteModelRoutersResponse"/></returns>
+        public DeleteModelRoutersResponse DeleteModelRoutersSync(DeleteModelRoutersRequest req)
+        {
+            return InternalRequestAsync<DeleteModelRoutersResponse>(req, "DeleteModelRouters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DeleteRewrite 接口支持删除指定转发规则之间的重定向关系。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>
@@ -586,6 +775,27 @@ namespace TencentCloud.Clb.V20180317
         public DeleteTargetGroupsResponse DeleteTargetGroupsSync(DeleteTargetGroupsRequest req)
         {
             return InternalRequestAsync<DeleteTargetGroupsResponse>(req, "DeleteTargetGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除用户组。组内若仍存在 Key，将拒绝删除（错误码 ResourceInUse），需先将 Key 移出或迁移到其他组。删除为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupsRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupsResponse"/></returns>
+        public Task<DeleteUserGroupsResponse> DeleteUserGroups(DeleteUserGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupsResponse>(req, "DeleteUserGroups");
+        }
+
+        /// <summary>
+        /// 批量删除用户组。组内若仍存在 Key，将拒绝删除（错误码 ResourceInUse），需先将 Key 移出或迁移到其他组。删除为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserGroupsRequest"/></param>
+        /// <returns><see cref="DeleteUserGroupsResponse"/></returns>
+        public DeleteUserGroupsResponse DeleteUserGroupsSync(DeleteUserGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteUserGroupsResponse>(req, "DeleteUserGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -700,6 +910,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询异步任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncJobsRequest"/></param>
+        /// <returns><see cref="DescribeAsyncJobsResponse"/></returns>
+        public Task<DescribeAsyncJobsResponse> DescribeAsyncJobs(DescribeAsyncJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsyncJobsResponse>(req, "DescribeAsyncJobs");
+        }
+
+        /// <summary>
+        /// 查询异步任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncJobsRequest"/></param>
+        /// <returns><see cref="DescribeAsyncJobsResponse"/></returns>
+        public DescribeAsyncJobsResponse DescribeAsyncJobsSync(DescribeAsyncJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsyncJobsResponse>(req, "DescribeAsyncJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询一个负载均衡所封禁的IP列表（黑名单）。（接口灰度中，如需使用请提工单）
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockIPListRequest"/></param>
@@ -738,6 +969,48 @@ namespace TencentCloud.Clb.V20180317
         public DescribeBlockIPTaskResponse DescribeBlockIPTaskSync(DescribeBlockIPTaskRequest req)
         {
             return InternalRequestAsync<DescribeBlockIPTaskResponse>(req, "DescribeBlockIPTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定Budget关联的资源列表。支持按资源类型过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetAssociationsRequest"/></param>
+        /// <returns><see cref="DescribeBudgetAssociationsResponse"/></returns>
+        public Task<DescribeBudgetAssociationsResponse> DescribeBudgetAssociations(DescribeBudgetAssociationsRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetAssociationsResponse>(req, "DescribeBudgetAssociations");
+        }
+
+        /// <summary>
+        /// 查询指定Budget关联的资源列表。支持按资源类型过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetAssociationsRequest"/></param>
+        /// <returns><see cref="DescribeBudgetAssociationsResponse"/></returns>
+        public DescribeBudgetAssociationsResponse DescribeBudgetAssociationsSync(DescribeBudgetAssociationsRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetAssociationsResponse>(req, "DescribeBudgetAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Budget列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetsRequest"/></param>
+        /// <returns><see cref="DescribeBudgetsResponse"/></returns>
+        public Task<DescribeBudgetsResponse> DescribeBudgets(DescribeBudgetsRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetsResponse>(req, "DescribeBudgets");
+        }
+
+        /// <summary>
+        /// 查询Budget列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetsRequest"/></param>
+        /// <returns><see cref="DescribeBudgetsResponse"/></returns>
+        public DescribeBudgetsResponse DescribeBudgetsSync(DescribeBudgetsRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetsResponse>(req, "DescribeBudgets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1141,6 +1414,69 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询模型路由详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterDetailRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterDetailResponse"/></returns>
+        public Task<DescribeModelRouterDetailResponse> DescribeModelRouterDetail(DescribeModelRouterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterDetailResponse>(req, "DescribeModelRouterDetail");
+        }
+
+        /// <summary>
+        /// 查询模型路由详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterDetailRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterDetailResponse"/></returns>
+        public DescribeModelRouterDetailResponse DescribeModelRouterDetailSync(DescribeModelRouterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterDetailResponse>(req, "DescribeModelRouterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterQuotaRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterQuotaResponse"/></returns>
+        public Task<DescribeModelRouterQuotaResponse> DescribeModelRouterQuota(DescribeModelRouterQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterQuotaResponse>(req, "DescribeModelRouterQuota");
+        }
+
+        /// <summary>
+        /// 查询用户配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterQuotaRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterQuotaResponse"/></returns>
+        public DescribeModelRouterQuotaResponse DescribeModelRouterQuotaSync(DescribeModelRouterQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterQuotaResponse>(req, "DescribeModelRouterQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型路由列表页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRoutersRequest"/></param>
+        /// <returns><see cref="DescribeModelRoutersResponse"/></returns>
+        public Task<DescribeModelRoutersResponse> DescribeModelRouters(DescribeModelRoutersRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRoutersResponse>(req, "DescribeModelRouters");
+        }
+
+        /// <summary>
+        /// 查询模型路由列表页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRoutersRequest"/></param>
+        /// <returns><see cref="DescribeModelRoutersResponse"/></returns>
+        public DescribeModelRoutersResponse DescribeModelRoutersSync(DescribeModelRoutersRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRoutersResponse>(req, "DescribeModelRouters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户当前地域下的各项配额
         /// </summary>
         /// <param name="req"><see cref="DescribeQuotaRequest"/></param>
@@ -1351,6 +1687,48 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询指定模型路由实例下的用户组列表或详情，支持按ID、名称、状态、标签过滤及分页。真实用户组按名称字典序升序返回；返回列表末尾恒追加一个「未分组」虚拟分组（UserGroupId 固定为 ugrp-ungrouped、UserGroupName 固定为 ungrouped），它并非用户真实创建的用户组，而是代表该实例下所有未归属任何用户组的 Key（其 KeyCount 为无组 Key 数，不计入 TotalCount，不可修改或删除）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupsRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupsResponse"/></returns>
+        public Task<DescribeUserGroupsResponse> DescribeUserGroups(DescribeUserGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupsResponse>(req, "DescribeUserGroups");
+        }
+
+        /// <summary>
+        /// 查询指定模型路由实例下的用户组列表或详情，支持按ID、名称、状态、标签过滤及分页。真实用户组按名称字典序升序返回；返回列表末尾恒追加一个「未分组」虚拟分组（UserGroupId 固定为 ugrp-ungrouped、UserGroupName 固定为 ungrouped），它并非用户真实创建的用户组，而是代表该实例下所有未归属任何用户组的 Key（其 KeyCount 为无组 Key 数，不计入 TotalCount，不可修改或删除）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupsRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupsResponse"/></returns>
+        public DescribeUserGroupsResponse DescribeUserGroupsSync(DescribeUserGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserGroupsResponse>(req, "DescribeUserGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解除Budget与模型路由实例或Key的关联。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateBudgetRequest"/></param>
+        /// <returns><see cref="DisassociateBudgetResponse"/></returns>
+        public Task<DisassociateBudgetResponse> DisassociateBudget(DisassociateBudgetRequest req)
+        {
+            return InternalRequestAsync<DisassociateBudgetResponse>(req, "DisassociateBudget");
+        }
+
+        /// <summary>
+        /// 解除Budget与模型路由实例或Key的关联。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateBudgetRequest"/></param>
+        /// <returns><see cref="DisassociateBudgetResponse"/></returns>
+        public DisassociateBudgetResponse DisassociateBudgetSync(DisassociateBudgetRequest req)
+        {
+            return InternalRequestAsync<DisassociateBudgetResponse>(req, "DisassociateBudget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 去关联个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
         /// </summary>
         /// <param name="req"><see cref="DisassociateCustomizedConfigRequest"/></param>
@@ -1550,6 +1928,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBudgetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyBudgetAttributesResponse"/></returns>
+        public Task<ModifyBudgetAttributesResponse> ModifyBudgetAttributes(ModifyBudgetAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyBudgetAttributesResponse>(req, "ModifyBudgetAttributes");
+        }
+
+        /// <summary>
+        /// 修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBudgetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyBudgetAttributesResponse"/></returns>
+        public ModifyBudgetAttributesResponse ModifyBudgetAttributesSync(ModifyBudgetAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyBudgetAttributesResponse>(req, "ModifyBudgetAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// ModifyDomain接口用来修改负载均衡七层监听器下的域名。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
         /// </summary>
@@ -1617,6 +2016,69 @@ namespace TencentCloud.Clb.V20180317
         public ModifyFunctionTargetsResponse ModifyFunctionTargetsSync(ModifyFunctionTargetsRequest req)
         {
             return InternalRequestAsync<ModifyFunctionTargetsResponse>(req, "ModifyFunctionTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 API Key 的属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeyAttributesRequest"/></param>
+        /// <returns><see cref="ModifyKeyAttributesResponse"/></returns>
+        public Task<ModifyKeyAttributesResponse> ModifyKeyAttributes(ModifyKeyAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyKeyAttributesResponse>(req, "ModifyKeyAttributes");
+        }
+
+        /// <summary>
+        /// 修改 API Key 的属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeyAttributesRequest"/></param>
+        /// <returns><see cref="ModifyKeyAttributesResponse"/></returns>
+        public ModifyKeyAttributesResponse ModifyKeyAttributesSync(ModifyKeyAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyKeyAttributesResponse>(req, "ModifyKeyAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 禁用/启用Key
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeysBlockStatusRequest"/></param>
+        /// <returns><see cref="ModifyKeysBlockStatusResponse"/></returns>
+        public Task<ModifyKeysBlockStatusResponse> ModifyKeysBlockStatus(ModifyKeysBlockStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyKeysBlockStatusResponse>(req, "ModifyKeysBlockStatus");
+        }
+
+        /// <summary>
+        /// 禁用/启用Key
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeysBlockStatusRequest"/></param>
+        /// <returns><see cref="ModifyKeysBlockStatusResponse"/></returns>
+        public ModifyKeysBlockStatusResponse ModifyKeysBlockStatusSync(ModifyKeysBlockStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyKeysBlockStatusResponse>(req, "ModifyKeysBlockStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量变更 Key 的用户组归属：UserGroupId 传真实用户组ID表示批量入组/跨组移动，传 ugrp-ungrouped 表示批量移出到未分组。变更为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeysUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyKeysUserGroupResponse"/></returns>
+        public Task<ModifyKeysUserGroupResponse> ModifyKeysUserGroup(ModifyKeysUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyKeysUserGroupResponse>(req, "ModifyKeysUserGroup");
+        }
+
+        /// <summary>
+        /// 批量变更 Key 的用户组归属：UserGroupId 传真实用户组ID表示批量入组/跨组移动，传 ugrp-ungrouped 表示批量移出到未分组。变更为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKeysUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyKeysUserGroupResponse"/></returns>
+        public ModifyKeysUserGroupResponse ModifyKeysUserGroupSync(ModifyKeysUserGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyKeysUserGroupResponse>(req, "ModifyKeysUserGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1734,6 +2196,27 @@ namespace TencentCloud.Clb.V20180317
         public ModifyLoadBalancersProjectResponse ModifyLoadBalancersProjectSync(ModifyLoadBalancersProjectRequest req)
         {
             return InternalRequestAsync<ModifyLoadBalancersProjectResponse>(req, "ModifyLoadBalancersProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模型路由属性。支持修改实例名称、限速配置、路由配置，以及替换企业型实例 HTTPS 服务端点绑定的证书（CertId）。每次调用至少传入一个待修改的属性字段，未传入的字段保持原值不变。其中证书替换在请求内同步完成，成功返回即已生效；其余属性修改异步生效，可通过 DescribeModelRouterDetail 接口查询修改结果。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterAttributesResponse"/></returns>
+        public Task<ModifyModelRouterAttributesResponse> ModifyModelRouterAttributes(ModifyModelRouterAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterAttributesResponse>(req, "ModifyModelRouterAttributes");
+        }
+
+        /// <summary>
+        /// 修改模型路由属性。支持修改实例名称、限速配置、路由配置，以及替换企业型实例 HTTPS 服务端点绑定的证书（CertId）。每次调用至少传入一个待修改的属性字段，未传入的字段保持原值不变。其中证书替换在请求内同步完成，成功返回即已生效；其余属性修改异步生效，可通过 DescribeModelRouterDetail 接口查询修改结果。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterAttributesResponse"/></returns>
+        public ModifyModelRouterAttributesResponse ModifyModelRouterAttributesSync(ModifyModelRouterAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterAttributesResponse>(req, "ModifyModelRouterAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1870,6 +2353,48 @@ namespace TencentCloud.Clb.V20180317
         public ModifyTargetWeightResponse ModifyTargetWeightSync(ModifyTargetWeightRequest req)
         {
             return InternalRequestAsync<ModifyTargetWeightResponse>(req, "ModifyTargetWeight")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户组的名称、模型白名单或关联预算。仅修改传入的字段；其中数组类字段（Models）传入即整体覆盖。BudgetId 传入即关联/替换该组预算（不支持解绑，解绑用 DisassociateBudget）。修改为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupAttributesRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupAttributesResponse"/></returns>
+        public Task<ModifyUserGroupAttributesResponse> ModifyUserGroupAttributes(ModifyUserGroupAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupAttributesResponse>(req, "ModifyUserGroupAttributes");
+        }
+
+        /// <summary>
+        /// 修改用户组的名称、模型白名单或关联预算。仅修改传入的字段；其中数组类字段（Models）传入即整体覆盖。BudgetId 传入即关联/替换该组预算（不支持解绑，解绑用 DisassociateBudget）。修改为异步操作，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupAttributesRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupAttributesResponse"/></returns>
+        public ModifyUserGroupAttributesResponse ModifyUserGroupAttributesSync(ModifyUserGroupAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserGroupAttributesResponse>(req, "ModifyUserGroupAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量重新生成Key
+        /// </summary>
+        /// <param name="req"><see cref="RegenerateKeysRequest"/></param>
+        /// <returns><see cref="RegenerateKeysResponse"/></returns>
+        public Task<RegenerateKeysResponse> RegenerateKeys(RegenerateKeysRequest req)
+        {
+            return InternalRequestAsync<RegenerateKeysResponse>(req, "RegenerateKeys");
+        }
+
+        /// <summary>
+        /// 批量重新生成Key
+        /// </summary>
+        /// <param name="req"><see cref="RegenerateKeysRequest"/></param>
+        /// <returns><see cref="RegenerateKeysResponse"/></returns>
+        public RegenerateKeysResponse RegenerateKeysSync(RegenerateKeysRequest req)
+        {
+            return InternalRequestAsync<RegenerateKeysResponse>(req, "RegenerateKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

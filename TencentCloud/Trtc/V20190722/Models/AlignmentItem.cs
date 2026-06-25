@@ -25,28 +25,40 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 字幕对应的时间起点
+        /// <p>字幕文本</p>
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
+        /// <p>字幕对应的时间起点</p>
         /// </summary>
         [JsonProperty("TimeBeginMs")]
         public ulong? TimeBeginMs{ get; set; }
 
         /// <summary>
-        /// 字幕对应的时间尾点
+        /// <p>字幕对应的时间尾点</p>
         /// </summary>
         [JsonProperty("TimeEndMs")]
         public ulong? TimeEndMs{ get; set; }
 
         /// <summary>
-        /// 字幕对应的文本索引起点
+        /// <p>字幕对应的文本索引起点</p>
         /// </summary>
         [JsonProperty("TextBegin")]
         public ulong? TextBegin{ get; set; }
 
         /// <summary>
-        /// 字幕对应的文本索引尾点
+        /// <p>字幕对应的文本索引尾点</p>
         /// </summary>
         [JsonProperty("TextEnd")]
         public ulong? TextEnd{ get; set; }
+
+        /// <summary>
+        /// <p>词级别时间戳</p>
+        /// </summary>
+        [JsonProperty("Words")]
+        public WordItem[] Words{ get; set; }
 
 
         /// <summary>
@@ -54,10 +66,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "TimeBeginMs", this.TimeBeginMs);
             this.SetParamSimple(map, prefix + "TimeEndMs", this.TimeEndMs);
             this.SetParamSimple(map, prefix + "TextBegin", this.TextBegin);
             this.SetParamSimple(map, prefix + "TextEnd", this.TextEnd);
+            this.SetParamArrayObj(map, prefix + "Words.", this.Words);
         }
     }
 }

@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeApiAppRequest : AbstractModel
+    public class RateLimitConfigForModelRouter : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID。
+        /// <p>每分钟限制的请求数量</p><p>单位：次/分钟</p>
         /// </summary>
-        [JsonProperty("ApiAppId")]
-        public string ApiAppId{ get; set; }
+        [JsonProperty("RPM")]
+        public ulong? RPM{ get; set; }
+
+        /// <summary>
+        /// <p>每分钟限制的Token数量</p><p>单位：个/分钟</p>
+        /// </summary>
+        [JsonProperty("TPM")]
+        public ulong? TPM{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApiAppId", this.ApiAppId);
+            this.SetParamSimple(map, prefix + "RPM", this.RPM);
+            this.SetParamSimple(map, prefix + "TPM", this.TPM);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1452";
 
         /// <summary>
         /// Client constructor.
@@ -1519,6 +1519,35 @@ namespace TencentCloud.Ocr.V20181119
         public MixedInvoiceOCRResponse MixedInvoiceOCRSync(MixedInvoiceOCRRequest req)
         {
             return InternalRequestAsync<MixedInvoiceOCRResponse>(req, "MixedInvoiceOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），返回解析后的结果文件下载地址（zip压缩包，包含markdown、json和图片）。
+        /// 
+        /// 支持的文件大小：PDF/Word/PPT支持150M且300页以内、Excel支持10M以内、TXT支持10M以内、图片文件支持70M以内。
+        /// 
+        /// 默认接口请求频率限制：5 并发。
+        /// </summary>
+        /// <param name="req"><see cref="MultimodalDocParseRequest"/></param>
+        /// <returns><see cref="MultimodalDocParseResponse"/></returns>
+        public Task<MultimodalDocParseResponse> MultimodalDocParse(MultimodalDocParseRequest req)
+        {
+            return InternalRequestAsync<MultimodalDocParseResponse>(req, "MultimodalDocParse");
+        }
+
+        /// <summary>
+        /// 本接口支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），返回解析后的结果文件下载地址（zip压缩包，包含markdown、json和图片）。
+        /// 
+        /// 支持的文件大小：PDF/Word/PPT支持150M且300页以内、Excel支持10M以内、TXT支持10M以内、图片文件支持70M以内。
+        /// 
+        /// 默认接口请求频率限制：5 并发。
+        /// </summary>
+        /// <param name="req"><see cref="MultimodalDocParseRequest"/></param>
+        /// <returns><see cref="MultimodalDocParseResponse"/></returns>
+        public MultimodalDocParseResponse MultimodalDocParseSync(MultimodalDocParseRequest req)
+        {
+            return InternalRequestAsync<MultimodalDocParseResponse>(req, "MultimodalDocParse")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

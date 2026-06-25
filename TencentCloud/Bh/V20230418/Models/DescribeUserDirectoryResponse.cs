@@ -25,13 +25,13 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 用户目录集
+        /// <p>用户目录集</p>
         /// </summary>
         [JsonProperty("UserDirSet")]
         public UserDirectory[] UserDirSet{ get; set; }
 
         /// <summary>
-        /// 用户目录集总数
+        /// <p>用户目录集总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

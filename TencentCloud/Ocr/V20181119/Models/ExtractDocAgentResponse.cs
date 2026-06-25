@@ -25,25 +25,25 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+        /// <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 配置结构化文本信息。
+        /// <p>配置结构化文本信息。</p>
         /// </summary>
         [JsonProperty("StructuralList")]
         public GroupInfo[] StructuralList{ get; set; }
 
         /// <summary>
-        /// 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+        /// <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+        /// <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }

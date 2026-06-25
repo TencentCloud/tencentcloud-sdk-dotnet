@@ -25,34 +25,40 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// ioa用户组织id
+        /// <p>ioa用户组织id</p>
         /// </summary>
         [JsonProperty("OrgId")]
         public ulong? OrgId{ get; set; }
 
         /// <summary>
-        /// ioa用户组织名称
+        /// <p>ioa用户组织名称</p>
         /// </summary>
         [JsonProperty("OrgName")]
         public string OrgName{ get; set; }
 
         /// <summary>
-        /// ioa用户组织id路径	
+        /// <p>ioa用户组织id路径</p>
         /// </summary>
         [JsonProperty("OrgIdPath")]
         public string OrgIdPath{ get; set; }
 
         /// <summary>
-        /// ioa用户组织名称路径	
+        /// <p>ioa用户组织名称路径</p>
         /// </summary>
         [JsonProperty("OrgNamePath")]
         public string OrgNamePath{ get; set; }
 
         /// <summary>
-        /// ioa关联用户源类型
+        /// <p>ioa关联用户源类型</p>
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }
+
+        /// <summary>
+        /// <p>用户所属目录</p>
+        /// </summary>
+        [JsonProperty("UserDirName")]
+        public string UserDirName{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "OrgIdPath", this.OrgIdPath);
             this.SetParamSimple(map, prefix + "OrgNamePath", this.OrgNamePath);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "UserDirName", this.UserDirName);
         }
     }
 }

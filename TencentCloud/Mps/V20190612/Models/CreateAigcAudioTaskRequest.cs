@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p>
+        /// <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }

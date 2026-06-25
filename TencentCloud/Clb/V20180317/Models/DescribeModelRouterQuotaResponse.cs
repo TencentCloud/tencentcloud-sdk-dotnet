@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeApiAppResponse : AbstractModel
+    public class DescribeModelRouterQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// 应用详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>配额信息</p>
         /// </summary>
-        [JsonProperty("Result")]
-        public ApiAppInfos Result{ get; set; }
+        [JsonProperty("Quotas")]
+        public ModelRouterQuota[] Quotas{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +42,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamArrayObj(map, prefix + "Quotas.", this.Quotas);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1452";
 
         /// <summary>
         /// Client constructor.
@@ -744,31 +744,6 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 历史接口，已经无用户调用
-        /// 
-        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
-        /// <returns><see cref="DescribeApiAppResponse"/></returns>
-        public Task<DescribeApiAppResponse> DescribeApiApp(DescribeApiAppRequest req)
-        {
-            return InternalRequestAsync<DescribeApiAppResponse>(req, "DescribeApiApp");
-        }
-
-        /// <summary>
-        /// 历史接口，已经无用户调用
-        /// 
-        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
-        /// <returns><see cref="DescribeApiAppResponse"/></returns>
-        public DescribeApiAppResponse DescribeApiAppSync(DescribeApiAppRequest req)
-        {
-            return InternalRequestAsync<DescribeApiAppResponse>(req, "DescribeApiApp")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiAppBindApisStatusRequest"/></param>
@@ -898,7 +873,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// 本接口（DescribeApiKeysStatus）用于查询密钥列表。
-        /// 当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息。
+        /// 当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息1。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
@@ -909,7 +884,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// 本接口（DescribeApiKeysStatus）用于查询密钥列表。
-        /// 当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息。
+        /// 当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息1。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>

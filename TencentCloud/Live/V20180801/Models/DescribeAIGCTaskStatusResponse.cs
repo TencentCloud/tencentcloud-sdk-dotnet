@@ -74,6 +74,18 @@ namespace TencentCloud.Live.V20180801.Models
         public string TaskResultMsg{ get; set; }
 
         /// <summary>
+        /// <p>请求参数</p>
+        /// </summary>
+        [JsonProperty("RequestBody")]
+        public string RequestBody{ get; set; }
+
+        /// <summary>
+        /// <p>任务类型</p>
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +105,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "FinishedTime", this.FinishedTime);
             this.SetParamSimple(map, prefix + "TaskResultCode", this.TaskResultCode);
             this.SetParamSimple(map, prefix + "TaskResultMsg", this.TaskResultMsg);
+            this.SetParamSimple(map, prefix + "RequestBody", this.RequestBody);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

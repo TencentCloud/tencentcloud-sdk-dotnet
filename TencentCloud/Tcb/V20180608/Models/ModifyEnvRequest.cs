@@ -25,16 +25,22 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境ID
+        /// <p>环境ID</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+        /// <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
+
+        /// <summary>
+        /// <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+        /// </summary>
+        [JsonProperty("CustomQps")]
+        public long? CustomQps{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "CustomQps", this.CustomQps);
         }
     }
 }

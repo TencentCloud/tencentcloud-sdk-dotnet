@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1452";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeNodePoolsResponse DescribeNodePoolsSync(DescribeNodePoolsRequest req)
         {
             return InternalRequestAsync<DescribeNodePoolsResponse>(req, "DescribeNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询节点池健康度相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodePoolsElasticityStrengthRequest"/></param>
+        /// <returns><see cref="DescribeNodePoolsElasticityStrengthResponse"/></returns>
+        public Task<DescribeNodePoolsElasticityStrengthResponse> DescribeNodePoolsElasticityStrength(DescribeNodePoolsElasticityStrengthRequest req)
+        {
+            return InternalRequestAsync<DescribeNodePoolsElasticityStrengthResponse>(req, "DescribeNodePoolsElasticityStrength");
+        }
+
+        /// <summary>
+        /// 查询节点池健康度相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodePoolsElasticityStrengthRequest"/></param>
+        /// <returns><see cref="DescribeNodePoolsElasticityStrengthResponse"/></returns>
+        public DescribeNodePoolsElasticityStrengthResponse DescribeNodePoolsElasticityStrengthSync(DescribeNodePoolsElasticityStrengthRequest req)
+        {
+            return InternalRequestAsync<DescribeNodePoolsElasticityStrengthResponse>(req, "DescribeNodePoolsElasticityStrength")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

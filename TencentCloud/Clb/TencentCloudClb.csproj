@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1450</VersionPrefix>
+    <VersionPrefix>3.0.1452</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20180317\ClbClient.cs" />
+    <Compile Include="V20180317\Models\AssociateBudgetRequest.cs" />
+    <Compile Include="V20180317\Models\AssociateBudgetResponse.cs" />
     <Compile Include="V20180317\Models\AssociateCustomizedConfigRequest.cs" />
     <Compile Include="V20180317\Models\AssociateCustomizedConfigResponse.cs" />
     <Compile Include="V20180317\Models\AssociateTargetGroupsRequest.cs" />
@@ -70,6 +72,11 @@
     <Compile Include="V20180317\Models\BindDetailItem.cs" />
     <Compile Include="V20180317\Models\BindItem.cs" />
     <Compile Include="V20180317\Models\BlockedIP.cs" />
+    <Compile Include="V20180317\Models\BudgetAssociation.cs" />
+    <Compile Include="V20180317\Models\BudgetConfig.cs" />
+    <Compile Include="V20180317\Models\BudgetConfigInput.cs" />
+    <Compile Include="V20180317\Models\BudgetInfo.cs" />
+    <Compile Include="V20180317\Models\BudgetResource.cs" />
     <Compile Include="V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="V20180317\Models\CertInfo.cs" />
     <Compile Include="V20180317\Models\CertificateInput.cs" />
@@ -82,25 +89,42 @@
     <Compile Include="V20180317\Models\CloneLoadBalancerRequest.cs" />
     <Compile Include="V20180317\Models\CloneLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\Cluster.cs" />
+    <Compile Include="V20180317\Models\ClusterInfo.cs" />
     <Compile Include="V20180317\Models\ClusterItem.cs" />
     <Compile Include="V20180317\Models\ClusterResource.cs" />
     <Compile Include="V20180317\Models\ClustersZone.cs" />
     <Compile Include="V20180317\Models\ConfigListItem.cs" />
+    <Compile Include="V20180317\Models\CreateBudgetRequest.cs" />
+    <Compile Include="V20180317\Models\CreateBudgetResponse.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetResponse.cs" />
+    <Compile Include="V20180317\Models\CreateKeyRequest.cs" />
+    <Compile Include="V20180317\Models\CreateKeyResponse.cs" />
+    <Compile Include="V20180317\Models\CreateKeysRequest.cs" />
+    <Compile Include="V20180317\Models\CreateKeysResponse.cs" />
     <Compile Include="V20180317\Models\CreateListenerRequest.cs" />
     <Compile Include="V20180317\Models\CreateListenerResponse.cs" />
     <Compile Include="V20180317\Models\CreateLoadBalancerRequest.cs" />
     <Compile Include="V20180317\Models\CreateLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\CreateLoadBalancerSnatIpsRequest.cs" />
     <Compile Include="V20180317\Models\CreateLoadBalancerSnatIpsResponse.cs" />
+    <Compile Include="V20180317\Models\CreateModelRouterRequest.cs" />
+    <Compile Include="V20180317\Models\CreateModelRouterResponse.cs" />
     <Compile Include="V20180317\Models\CreateRuleRequest.cs" />
     <Compile Include="V20180317\Models\CreateRuleResponse.cs" />
     <Compile Include="V20180317\Models\CreateTargetGroupRequest.cs" />
     <Compile Include="V20180317\Models\CreateTargetGroupResponse.cs" />
     <Compile Include="V20180317\Models\CreateTopicRequest.cs" />
     <Compile Include="V20180317\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20180317\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20180317\Models\CreateUserGroupResponse.cs" />
+    <Compile Include="V20180317\Models\CreatedKey.cs" />
+    <Compile Include="V20180317\Models\CreditUsage.cs" />
     <Compile Include="V20180317\Models\CrossTargets.cs" />
+    <Compile Include="V20180317\Models\DeleteBudgetsRequest.cs" />
+    <Compile Include="V20180317\Models\DeleteBudgetsResponse.cs" />
+    <Compile Include="V20180317\Models\DeleteKeysRequest.cs" />
+    <Compile Include="V20180317\Models\DeleteKeysResponse.cs" />
     <Compile Include="V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -109,12 +133,16 @@
     <Compile Include="V20180317\Models\DeleteLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\DeleteLoadBalancerSnatIpsRequest.cs" />
     <Compile Include="V20180317\Models\DeleteLoadBalancerSnatIpsResponse.cs" />
+    <Compile Include="V20180317\Models\DeleteModelRoutersRequest.cs" />
+    <Compile Include="V20180317\Models\DeleteModelRoutersResponse.cs" />
     <Compile Include="V20180317\Models\DeleteRewriteRequest.cs" />
     <Compile Include="V20180317\Models\DeleteRewriteResponse.cs" />
     <Compile Include="V20180317\Models\DeleteRuleRequest.cs" />
     <Compile Include="V20180317\Models\DeleteRuleResponse.cs" />
     <Compile Include="V20180317\Models\DeleteTargetGroupsRequest.cs" />
     <Compile Include="V20180317\Models\DeleteTargetGroupsResponse.cs" />
+    <Compile Include="V20180317\Models\DeleteUserGroupsRequest.cs" />
+    <Compile Include="V20180317\Models\DeleteUserGroupsResponse.cs" />
     <Compile Include="V20180317\Models\DeregisterFunctionTargetsRequest.cs" />
     <Compile Include="V20180317\Models\DeregisterFunctionTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetGroupInstancesRequest.cs" />
@@ -123,10 +151,16 @@
     <Compile Include="V20180317\Models\DeregisterTargetsFromClassicalLBResponse.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetsRequest.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetsResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeAsyncJobsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeAsyncJobsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeBlockIPListRequest.cs" />
     <Compile Include="V20180317\Models\DescribeBlockIPListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeBlockIPTaskRequest.cs" />
     <Compile Include="V20180317\Models\DescribeBlockIPTaskResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeBudgetAssociationsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeBudgetAssociationsResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeBudgetsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeBudgetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClassicalLBByInstanceIdRequest.cs" />
     <Compile Include="V20180317\Models\DescribeClassicalLBByInstanceIdResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClassicalLBHealthStatusRequest.cs" />
@@ -165,6 +199,12 @@
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRouterDetailRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRouterDetailResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRouterQuotaRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRouterQuotaResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRoutersRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeModelRoutersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaRequest.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaResponse.cs" />
     <Compile Include="V20180317\Models\DescribeResourcesRequest.cs" />
@@ -185,17 +225,23 @@
     <Compile Include="V20180317\Models\DescribeTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="V20180317\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeUserGroupsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeUserGroupsResponse.cs" />
+    <Compile Include="V20180317\Models\DisassociateBudgetRequest.cs" />
+    <Compile Include="V20180317\Models\DisassociateBudgetResponse.cs" />
     <Compile Include="V20180317\Models\DisassociateCustomizedConfigRequest.cs" />
     <Compile Include="V20180317\Models\DisassociateCustomizedConfigResponse.cs" />
     <Compile Include="V20180317\Models\DisassociateTargetGroupsRequest.cs" />
     <Compile Include="V20180317\Models\DisassociateTargetGroupsResponse.cs" />
     <Compile Include="V20180317\Models\ExclusiveCluster.cs" />
     <Compile Include="V20180317\Models\ExtraInfo.cs" />
+    <Compile Include="V20180317\Models\FallBackItem.cs" />
     <Compile Include="V20180317\Models\Filter.cs" />
     <Compile Include="V20180317\Models\FunctionInfo.cs" />
     <Compile Include="V20180317\Models\FunctionTarget.cs" />
     <Compile Include="V20180317\Models\HealthCheck.cs" />
     <Compile Include="V20180317\Models\IdleLoadBalancer.cs" />
+    <Compile Include="V20180317\Models\InputKeyInfo.cs" />
     <Compile Include="V20180317\Models\InquiryPriceCreateLoadBalancerRequest.cs" />
     <Compile Include="V20180317\Models\InquiryPriceCreateLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\InquiryPriceModifyLoadBalancerRequest.cs" />
@@ -206,6 +252,7 @@
     <Compile Include="V20180317\Models\InquiryPriceRenewLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\InternetAccessible.cs" />
     <Compile Include="V20180317\Models\ItemPrice.cs" />
+    <Compile Include="V20180317\Models\Job.cs" />
     <Compile Include="V20180317\Models\LBChargePrepaid.cs" />
     <Compile Include="V20180317\Models\LBItem.cs" />
     <Compile Include="V20180317\Models\LBOperateProtectInfo.cs" />
@@ -223,14 +270,25 @@
     <Compile Include="V20180317\Models\ManualRewriteResponse.cs" />
     <Compile Include="V20180317\Models\MigrateClassicalLoadBalancersRequest.cs" />
     <Compile Include="V20180317\Models\MigrateClassicalLoadBalancersResponse.cs" />
+    <Compile Include="V20180317\Models\ModelRouterDetail.cs" />
+    <Compile Include="V20180317\Models\ModelRouterQuota.cs" />
+    <Compile Include="V20180317\Models\ModelRouterSet.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListRequest.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyBudgetAttributesRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyBudgetAttributesResponse.cs" />
     <Compile Include="V20180317\Models\ModifyDomainAttributesRequest.cs" />
     <Compile Include="V20180317\Models\ModifyDomainAttributesResponse.cs" />
     <Compile Include="V20180317\Models\ModifyDomainRequest.cs" />
     <Compile Include="V20180317\Models\ModifyDomainResponse.cs" />
     <Compile Include="V20180317\Models\ModifyFunctionTargetsRequest.cs" />
     <Compile Include="V20180317\Models\ModifyFunctionTargetsResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyKeyAttributesRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyKeyAttributesResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyKeysBlockStatusRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyKeysBlockStatusResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyKeysUserGroupRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyKeysUserGroupResponse.cs" />
     <Compile Include="V20180317\Models\ModifyListenerRequest.cs" />
     <Compile Include="V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />
@@ -241,6 +299,8 @@
     <Compile Include="V20180317\Models\ModifyLoadBalancerSlaResponse.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancersProjectRequest.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancersProjectResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyModelRouterAttributesRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyModelRouterAttributesResponse.cs" />
     <Compile Include="V20180317\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20180317\Models\ModifyRuleResponse.cs" />
     <Compile Include="V20180317\Models\ModifyTargetGroupAttributeRequest.cs" />
@@ -253,10 +313,18 @@
     <Compile Include="V20180317\Models\ModifyTargetPortResponse.cs" />
     <Compile Include="V20180317\Models\ModifyTargetWeightRequest.cs" />
     <Compile Include="V20180317\Models\ModifyTargetWeightResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyUserGroupAttributesRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyUserGroupAttributesResponse.cs" />
     <Compile Include="V20180317\Models\MultiCertInfo.cs" />
     <Compile Include="V20180317\Models\OAuth.cs" />
     <Compile Include="V20180317\Models\Price.cs" />
     <Compile Include="V20180317\Models\Quota.cs" />
+    <Compile Include="V20180317\Models\RateLimitConfigForBudget.cs" />
+    <Compile Include="V20180317\Models\RateLimitConfigForKey.cs" />
+    <Compile Include="V20180317\Models\RateLimitConfigForModelRouter.cs" />
+    <Compile Include="V20180317\Models\RegenerateKeysRequest.cs" />
+    <Compile Include="V20180317\Models\RegenerateKeysResponse.cs" />
+    <Compile Include="V20180317\Models\RegeneratedKey.cs" />
     <Compile Include="V20180317\Models\RegisterFunctionTargetsRequest.cs" />
     <Compile Include="V20180317\Models\RegisterFunctionTargetsResponse.cs" />
     <Compile Include="V20180317\Models\RegisterTargetGroupInstancesRequest.cs" />
@@ -273,6 +341,8 @@
     <Compile Include="V20180317\Models\ResourceAvailability.cs" />
     <Compile Include="V20180317\Models\RewriteLocationMap.cs" />
     <Compile Include="V20180317\Models\RewriteTarget.cs" />
+    <Compile Include="V20180317\Models\RouterSettingWithFallBack.cs" />
+    <Compile Include="V20180317\Models\RouterSettingWithoutFallBack.cs" />
     <Compile Include="V20180317\Models\RsTagRule.cs" />
     <Compile Include="V20180317\Models\RsWeightRule.cs" />
     <Compile Include="V20180317\Models\RuleHealth.cs" />
@@ -280,6 +350,7 @@
     <Compile Include="V20180317\Models\RuleOutput.cs" />
     <Compile Include="V20180317\Models\RuleTargets.cs" />
     <Compile Include="V20180317\Models\RulesItems.cs" />
+    <Compile Include="V20180317\Models\ServiceEndPoints.cs" />
     <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerRequest.cs" />
     <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
@@ -304,6 +375,7 @@
     <Compile Include="V20180317\Models\TargetHealth.cs" />
     <Compile Include="V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="V20180317\Models\TypeInfo.cs" />
+    <Compile Include="V20180317\Models\UserGroupInfo.cs" />
     <Compile Include="V20180317\Models\ZoneInfo.cs" />
     <Compile Include="V20180317\Models\ZoneResource.cs" />
   </ItemGroup>
