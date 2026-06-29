@@ -25,26 +25,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 绑定的对象实例列表
+        /// <p>绑定的对象实例列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public DescribeBindingPolicyObjectListInstance[] List{ get; set; }
 
         /// <summary>
-        /// 绑定的对象实例总数
+        /// <p>绑定的对象实例总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 未屏蔽的对象实例数
+        /// <p>未屏蔽的对象实例数</p>
         /// </summary>
         [JsonProperty("NoShieldedSum")]
         public long? NoShieldedSum{ get; set; }
 
         /// <summary>
-        /// 绑定的实例分组信息，没有绑定实例分组则为空
+        /// <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceGroup")]

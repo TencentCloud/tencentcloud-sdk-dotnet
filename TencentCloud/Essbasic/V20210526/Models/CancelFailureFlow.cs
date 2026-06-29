@@ -25,16 +25,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署流程编号，为32位字符串
+        /// <p>签署流程编号，为32位字符串</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 撤销失败原因
+        /// <p>撤销失败原因</p>
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
+
+        /// <summary>
+        /// <p>合同流程名称</p>
+        /// </summary>
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
         }
     }
 }

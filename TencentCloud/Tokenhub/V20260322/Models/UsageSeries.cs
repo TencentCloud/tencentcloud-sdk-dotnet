@@ -25,22 +25,40 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
+        /// <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("TotalToken")]
         public string TotalToken{ get; set; }
 
         /// <summary>
-        /// 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
+        /// <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("InputTotalToken")]
         public string InputTotalToken{ get; set; }
 
         /// <summary>
-        /// 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+        /// <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("OutputTotalToken")]
         public string OutputTotalToken{ get; set; }
+
+        /// <summary>
+        /// <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+        /// </summary>
+        [JsonProperty("CacheTotalToken")]
+        public string CacheTotalToken{ get; set; }
+
+        /// <summary>
+        /// <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+        /// </summary>
+        [JsonProperty("SearchRequestCount")]
+        public string SearchRequestCount{ get; set; }
+
+        /// <summary>
+        /// <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+        /// </summary>
+        [JsonProperty("SearchCount")]
+        public string SearchCount{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "TotalToken", this.TotalToken);
             this.SetParamSimple(map, prefix + "InputTotalToken", this.InputTotalToken);
             this.SetParamSimple(map, prefix + "OutputTotalToken", this.OutputTotalToken);
+            this.SetParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
+            this.SetParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
+            this.SetParamSimple(map, prefix + "SearchCount", this.SearchCount);
         }
     }
 }

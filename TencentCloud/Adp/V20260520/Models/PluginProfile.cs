@@ -49,37 +49,19 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 插件产品分类
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 普通插件 |
-        /// | 1 | 连接器类插件 |
+        /// <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
         /// </summary>
         [JsonProperty("PluginClass")]
         public long? PluginClass{ get; set; }
 
         /// <summary>
-        /// 插件类型
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | API接口 |
-        /// | 1 | 代码 |
-        /// | 2 | MCP |
-        /// | 3 | 应用 |
+        /// <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
         /// </summary>
         [JsonProperty("PluginKind")]
         public long? PluginKind{ get; set; }
 
         /// <summary>
-        /// 插件来源
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 自定义插件 |
-        /// | 1 | 官方插件 |
-        /// | 2 | 第三方插件 |
+        /// <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
         /// </summary>
         [JsonProperty("PluginSource")]
         public long? PluginSource{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("Agent")]
         public AgentSpec Agent{ get; set; }
 
+        /// <summary>
+        /// <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+        /// </summary>
+        [JsonProperty("Kind")]
+        public long? Kind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
         }
     }
 }

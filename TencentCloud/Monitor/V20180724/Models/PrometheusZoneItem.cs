@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 可用区 ID
+        /// <p>可用区 ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 可用区状态( 0: 不可用；1: 可用)
+        /// <p>可用区状态( 0: 不可用；1: 可用)</p>
         /// </summary>
         [JsonProperty("ZoneState")]
         public long? ZoneState{ get; set; }
 
         /// <summary>
-        /// 地域 ID
+        /// <p>地域 ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 可用区名（目前为中文）
+        /// <p>可用区名（目前为中文）</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+        /// <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneResourceState")]

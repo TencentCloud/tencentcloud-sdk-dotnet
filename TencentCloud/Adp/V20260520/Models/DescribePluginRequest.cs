@@ -25,16 +25,22 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 插件id
+        /// <p>插件id</p>
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 当前空间id
+        /// <p>当前空间id</p>
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>获取指定字段</p>
+        /// </summary>
+        [JsonProperty("FieldMask")]
+        public FieldMask FieldMask{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamObj(map, prefix + "FieldMask.", this.FieldMask);
         }
     }
 }

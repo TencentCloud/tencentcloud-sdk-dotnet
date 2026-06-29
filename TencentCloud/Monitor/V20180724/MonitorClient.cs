@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1452";
+       private const string sdkVersion = "SDK_NET_3.0.1453";
 
         /// <summary>
         /// Client constructor.
@@ -2155,6 +2155,31 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusConfigResponse DescribePrometheusConfigSync(DescribePrometheusConfigRequest req)
         {
             return InternalRequestAsync<DescribePrometheusConfigResponse>(req, "DescribePrometheusConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Prometheus实例创建配额
+        /// 
+        /// 配额不分地域，可从任意支持地域请求
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusCreateInstanceQuotaRequest"/></param>
+        /// <returns><see cref="DescribePrometheusCreateInstanceQuotaResponse"/></returns>
+        public Task<DescribePrometheusCreateInstanceQuotaResponse> DescribePrometheusCreateInstanceQuota(DescribePrometheusCreateInstanceQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusCreateInstanceQuotaResponse>(req, "DescribePrometheusCreateInstanceQuota");
+        }
+
+        /// <summary>
+        /// 查询Prometheus实例创建配额
+        /// 
+        /// 配额不分地域，可从任意支持地域请求
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusCreateInstanceQuotaRequest"/></param>
+        /// <returns><see cref="DescribePrometheusCreateInstanceQuotaResponse"/></returns>
+        public DescribePrometheusCreateInstanceQuotaResponse DescribePrometheusCreateInstanceQuotaSync(DescribePrometheusCreateInstanceQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusCreateInstanceQuotaResponse>(req, "DescribePrometheusCreateInstanceQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

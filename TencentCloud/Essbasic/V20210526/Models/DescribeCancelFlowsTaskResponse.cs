@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 批量撤销任务编号，为32位字符串。
+        /// <p>批量撤销任务编号，为32位字符串。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+        /// <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// 批量撤销成功的签署流程编号
+        /// <p>批量撤销成功的签署流程编号</p>
         /// </summary>
         [JsonProperty("SuccessFlowIds")]
         public string[] SuccessFlowIds{ get; set; }
 
         /// <summary>
-        /// 批量撤销失败的签署流程信息
+        /// <p>批量撤销失败的签署流程信息</p>
         /// </summary>
         [JsonProperty("FailureFlows")]
         public CancelFailureFlow[] FailureFlows{ get; set; }

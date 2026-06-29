@@ -25,54 +25,54 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 目标所在地域
+        /// <p>目标所在地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 目标实例
+        /// <p>目标实例</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群id，只有当采集模板的Level为cluster的时候需要
+        /// <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 最后一次同步时间， 用于出参
+        /// <p>最后一次同步时间， 用于出参</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncTime")]
         public string SyncTime{ get; set; }
 
         /// <summary>
-        /// 当前使用的模板版本，用于出参
+        /// <p>当前使用的模板版本，用于出参</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 集群类型，只有当采集模板的Level为cluster的时候需要
+        /// <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 用于出参，实例名称
+        /// <p>用于出参，实例名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 用于出参，集群名称
+        /// <p>用于出参，集群名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]

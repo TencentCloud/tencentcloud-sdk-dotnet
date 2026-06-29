@@ -25,43 +25,43 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 名字
+        /// <p>名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// 内容
+        /// <p>内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 实例描述
+        /// <p>实例描述</p>
         /// </summary>
         [JsonProperty("InstanceDesc")]
         public string InstanceDesc{ get; set; }
 
         /// <summary>
-        /// dashboard 的 URL
+        /// <p>dashboard 的 URL</p>
         /// </summary>
         [JsonProperty("GrafanaDashboardURL")]
         public string GrafanaDashboardURL{ get; set; }

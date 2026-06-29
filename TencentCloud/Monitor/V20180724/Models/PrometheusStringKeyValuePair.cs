@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 键
+        /// <p>键</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 值
+        /// <p>值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

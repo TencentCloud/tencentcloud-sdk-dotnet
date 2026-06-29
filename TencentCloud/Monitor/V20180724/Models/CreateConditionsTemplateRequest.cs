@@ -25,61 +25,61 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，monitor
+        /// <p>固定值，monitor</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 视图名
+        /// <p>视图名</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 组名
+        /// <p>组名</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 是否为与关系
+        /// <p>是否为与关系</p>
         /// </summary>
         [JsonProperty("IsUnionRule")]
         public long? IsUnionRule{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 父ID
+        /// <p>父ID</p>
         /// </summary>
         [JsonProperty("ParentGroupID")]
         public long? ParentGroupID{ get; set; }
 
         /// <summary>
-        /// 是否屏蔽
+        /// <p>是否屏蔽</p>
         /// </summary>
         [JsonProperty("IsShielded")]
         public long? IsShielded{ get; set; }
 
         /// <summary>
-        /// 复合告警表达式
+        /// <p>复合告警表达式</p>
         /// </summary>
         [JsonProperty("ComplexExpression")]
         public string ComplexExpression{ get; set; }
 
         /// <summary>
-        /// 指标告警条件
+        /// <p>指标告警条件</p>
         /// </summary>
         [JsonProperty("Conditions")]
         public ModifyConditionsTemplateRequestCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// 事件告警条件
+        /// <p>事件告警条件</p>
         /// </summary>
         [JsonProperty("EventConditions")]
         public ModifyConditionsTemplateRequestEventCondition[] EventConditions{ get; set; }

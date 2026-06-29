@@ -25,25 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 插件运营管理信息
+        /// <p>插件运营管理信息</p>
         /// </summary>
         [JsonProperty("Operation")]
         public PluginOperation Operation{ get; set; }
 
         /// <summary>
-        /// 插件id
+        /// <p>插件id</p>
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 插件基础信息
+        /// <p>插件基础信息</p>
         /// </summary>
         [JsonProperty("Profile")]
         public PluginProfile Profile{ get; set; }
 
         /// <summary>
-        /// 插件统计信息
+        /// <p>插件统计信息</p>
         /// </summary>
         [JsonProperty("Statistics")]
         public PluginStatistics Statistics{ get; set; }
@@ -55,10 +55,16 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 用户维度的插件状态信息
+        /// <p>用户维度的插件状态信息</p>
         /// </summary>
         [JsonProperty("UserState")]
         public PluginUserState UserState{ get; set; }
+
+        /// <summary>
+        /// <p>插件配置信息</p>
+        /// </summary>
+        [JsonProperty("Config")]
+        public PluginConfig Config{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "Statistics.", this.Statistics);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "UserState.", this.UserState);
+            this.SetParamObj(map, prefix + "Config.", this.Config);
         }
     }
 }

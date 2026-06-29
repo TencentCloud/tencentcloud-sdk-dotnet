@@ -84,6 +84,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// <p>用户端 AgentId，当需要查询基于用户端 AgentId 创建的会话时使用</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ShareCode", this.ShareCode);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
         }
     }
 }

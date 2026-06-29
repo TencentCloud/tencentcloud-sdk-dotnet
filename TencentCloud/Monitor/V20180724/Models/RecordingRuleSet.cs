@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 规则 ID
+        /// <p>规则 ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 规则状态码
+        /// <p>规则状态码</p>
         /// </summary>
         [JsonProperty("RuleState")]
         public long? RuleState{ get; set; }
 
         /// <summary>
-        /// 分组名称
+        /// <p>分组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则内容组
+        /// <p>规则内容组</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 规则数量
+        /// <p>规则数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 规则创建时间
+        /// <p>规则创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 规则最近更新时间
+        /// <p>规则最近更新时间</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]

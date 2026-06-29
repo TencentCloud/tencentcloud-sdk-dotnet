@@ -419,6 +419,30 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("UseDefaultFuseConfig")]
         public bool? UseDefaultFuseConfig{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启自动分析</p>
+        /// </summary>
+        [JsonProperty("AnalysisAutoEnable")]
+        public bool? AnalysisAutoEnable{ get; set; }
+
+        /// <summary>
+        /// <p>头采样开关</p>
+        /// </summary>
+        [JsonProperty("EnableHeadSampler")]
+        public bool? EnableHeadSampler{ get; set; }
+
+        /// <summary>
+        /// <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+        /// </summary>
+        [JsonProperty("HeadSamplerType")]
+        public string HeadSamplerType{ get; set; }
+
+        /// <summary>
+        /// <p>采样阈值，100等于关闭采样，0表示全采样</p>
+        /// </summary>
+        [JsonProperty("HeadSamplerArg")]
+        public long? HeadSamplerArg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -487,6 +511,10 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
             this.SetParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
+            this.SetParamSimple(map, prefix + "AnalysisAutoEnable", this.AnalysisAutoEnable);
+            this.SetParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
+            this.SetParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
+            this.SetParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
         }
     }
 }

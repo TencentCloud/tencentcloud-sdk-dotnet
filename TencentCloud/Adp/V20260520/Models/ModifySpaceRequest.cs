@@ -43,7 +43,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 指定需要更新的字段，支持name和description
+        /// 指定需要更新的字段，支持Name和Description
         /// </summary>
         [JsonProperty("FieldMask")]
         public FieldMask FieldMask{ get; set; }

@@ -36,6 +36,36 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
+        /// <summary>
+        /// <p>Agent 角色：0=主 / 1=子</p>
+        /// </summary>
+        [JsonProperty("Role")]
+        public long? Role{ get; set; }
+
+        /// <summary>
+        /// <p>Agent 描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>应用名称</p>
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
+        /// <summary>
+        /// <p>开发者</p>
+        /// </summary>
+        [JsonProperty("Developer")]
+        public string Developer{ get; set; }
+
+        /// <summary>
+        /// <p>主AgentId，只读，不可通过修改接口进行变更</p>
+        /// </summary>
+        [JsonProperty("ParentAgentId")]
+        public string ParentAgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +74,11 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "Developer", this.Developer);
+            this.SetParamSimple(map, prefix + "ParentAgentId", this.ParentAgentId);
         }
     }
 }

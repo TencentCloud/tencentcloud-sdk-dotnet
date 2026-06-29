@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 集成配置列表
+        /// <p>集成配置列表</p>
         /// </summary>
         [JsonProperty("IntegrationSet")]
         public IntegrationConfiguration[] IntegrationSet{ get; set; }

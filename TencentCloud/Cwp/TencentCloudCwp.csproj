@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1442</VersionPrefix>
+    <VersionPrefix>3.0.1453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20180228\Models\AccountStatistics.cs" />
     <Compile Include="V20180228\Models\AddLoginWhiteListsRequest.cs" />
     <Compile Include="V20180228\Models\AddLoginWhiteListsResponse.cs" />
+    <Compile Include="V20180228\Models\AddVulIgnoreRuleRequest.cs" />
+    <Compile Include="V20180228\Models\AddVulIgnoreRuleResponse.cs" />
     <Compile Include="V20180228\Models\AlarmInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppBaseInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppProcessInfo.cs" />
@@ -1367,6 +1369,7 @@
     <Compile Include="V20180228\Models\VulFixStatusInfo.cs" />
     <Compile Include="V20180228\Models\VulFixStatusSnapshotInfo.cs" />
     <Compile Include="V20180228\Models\VulHostTopInfo.cs" />
+    <Compile Include="V20180228\Models\VulIgnoreRule.cs" />
     <Compile Include="V20180228\Models\VulInfoByCveId.cs" />
     <Compile Include="V20180228\Models\VulInfoHostInfo.cs" />
     <Compile Include="V20180228\Models\VulInfoList.cs" />

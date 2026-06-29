@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Adp.V20260520.Models
+namespace TencentCloud.Cwp.V20180228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AppSharedKnowledgeInfo : AbstractModel
+    public class AddVulIgnoreRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 共享知识库ID
+        /// 忽略规则集合
         /// </summary>
-        [JsonProperty("KnowledgeId")]
-        public string KnowledgeId{ get; set; }
-
-        /// <summary>
-        /// 共享知识库名称
-        /// </summary>
-        [JsonProperty("KnowledgeName")]
-        public string KnowledgeName{ get; set; }
+        [JsonProperty("RuleDetailList")]
+        public VulIgnoreRule[] RuleDetailList{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KnowledgeId", this.KnowledgeId);
-            this.SetParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
+            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         }
     }
 }

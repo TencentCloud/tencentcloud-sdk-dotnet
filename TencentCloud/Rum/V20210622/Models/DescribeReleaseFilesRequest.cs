@@ -25,22 +25,28 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 项目 id
+        /// <p>项目 id</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 文件版本
+        /// <p>文件版本</p>
         /// </summary>
         [JsonProperty("FileVersion")]
         public string FileVersion{ get; set; }
 
         /// <summary>
-        /// 查询过滤条件（根据sourcemap的文件名模糊匹配）
+        /// <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
+
+        /// <summary>
+        /// <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+        /// </summary>
+        [JsonProperty("IgnoreDefaultTimeRange")]
+        public bool? IgnoreDefaultTimeRange{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamSimple(map, prefix + "FileVersion", this.FileVersion);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "IgnoreDefaultTimeRange", this.IgnoreDefaultTimeRange);
         }
     }
 }

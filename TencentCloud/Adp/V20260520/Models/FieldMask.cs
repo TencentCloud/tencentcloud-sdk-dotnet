@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// paths
+        /// <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
         /// </summary>
         [JsonProperty("Paths")]
         public string[] Paths{ get; set; }

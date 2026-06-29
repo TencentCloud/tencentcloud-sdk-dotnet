@@ -25,110 +25,110 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
+        /// <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public long? InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+        /// <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public long? ChargeStatus{ get; set; }
 
         /// <summary>
-        /// 是否开启 Grafana（0:不开启，1:开启）
+        /// <p>是否开启 Grafana（0:不开启，1:开启）</p>
         /// </summary>
         [JsonProperty("EnableGrafana")]
         public long? EnableGrafana{ get; set; }
 
         /// <summary>
-        /// Grafana 面板 URL
+        /// <p>Grafana 面板 URL</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrafanaURL")]
         public string GrafanaURL{ get; set; }
 
         /// <summary>
-        /// 实例付费类型（1:试用版；2:预付费）
+        /// <p>实例付费类型（1:试用版；2:预付费）</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public long? InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 规格名称
+        /// <p>规格名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 存储周期
+        /// <p>存储周期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }
 
         /// <summary>
-        /// 购买的实例过期时间
+        /// <p>购买的实例过期时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+        /// <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 绑定集群总数
+        /// <p>绑定集群总数</p>
         /// </summary>
         [JsonProperty("BoundTotal")]
         public long? BoundTotal{ get; set; }
 
         /// <summary>
-        /// 绑定集群正常状态总数
+        /// <p>绑定集群正常状态总数</p>
         /// </summary>
         [JsonProperty("BoundNormal")]
         public long? BoundNormal{ get; set; }
 
         /// <summary>
-        /// 资源包状态，0-无可用资源包，1-有可用资源包
+        /// <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourcePackageStatus")]
         public long? ResourcePackageStatus{ get; set; }
 
         /// <summary>
-        /// 资源包规格名称
+        /// <p>资源包规格名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourcePackageSpecName")]

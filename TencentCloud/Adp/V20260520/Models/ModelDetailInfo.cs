@@ -37,7 +37,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public ulong? HistoryLimit{ get; set; }
 
         /// <summary>
-        /// 模型唯一ID
+        /// 模型唯一 ID
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

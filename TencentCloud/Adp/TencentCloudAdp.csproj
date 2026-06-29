@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1440</VersionPrefix>
+    <VersionPrefix>3.0.1453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20260520\Models\AgentToolInputParameter.cs" />
     <Compile Include="V20260520\Models\AgentToolOutputParameter.cs" />
     <Compile Include="V20260520\Models\AgentUserInputValue.cs" />
+    <Compile Include="V20260520\Models\ApiKeyAuthConfig.cs" />
+    <Compile Include="V20260520\Models\ApiPluginConfig.cs" />
     <Compile Include="V20260520\Models\ApiToolConfig.cs" />
     <Compile Include="V20260520\Models\App.cs" />
     <Compile Include="V20260520\Models\AppAdvancedConf.cs" />
@@ -84,11 +86,12 @@
     <Compile Include="V20260520\Models\AppModeConfig.cs" />
     <Compile Include="V20260520\Models\AppModelConfig.cs" />
     <Compile Include="V20260520\Models\AppOperation.cs" />
+    <Compile Include="V20260520\Models\AppPluginConfig.cs" />
     <Compile Include="V20260520\Models\AppSecretInfo.cs" />
     <Compile Include="V20260520\Models\AppShareAccessControl.cs" />
     <Compile Include="V20260520\Models\AppShareURLInfo.cs" />
     <Compile Include="V20260520\Models\AppShareWhitelistItem.cs" />
-    <Compile Include="V20260520\Models\AppSharedKnowledgeInfo.cs" />
+    <Compile Include="V20260520\Models\AppSharedKbInfo.cs" />
     <Compile Include="V20260520\Models\AppStatusInfo.cs" />
     <Compile Include="V20260520\Models\AppSubStatusInfo.cs" />
     <Compile Include="V20260520\Models\AppSummary.cs" />
@@ -96,8 +99,16 @@
     <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
     <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\AppealingStatus.cs" />
+    <Compile Include="V20260520\Models\AuthConfig.cs" />
     <Compile Include="V20260520\Models\BackgroundImage.cs" />
+    <Compile Include="V20260520\Models\BasicBilling.cs" />
+    <Compile Include="V20260520\Models\BillingAttribute.cs" />
+    <Compile Include="V20260520\Models\CamAuthConfig.cs" />
+    <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
+    <Compile Include="V20260520\Models\ClawAgentCustomConfig.cs" />
     <Compile Include="V20260520\Models\CodeToolConfig.cs" />
+    <Compile Include="V20260520\Models\ComplexBilling.cs" />
+    <Compile Include="V20260520\Models\ComplexBillingItem.cs" />
     <Compile Include="V20260520\Models\Conversation.cs" />
     <Compile Include="V20260520\Models\ConversationAgentTask.cs" />
     <Compile Include="V20260520\Models\ConversationContent.cs" />
@@ -171,17 +182,20 @@
     <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableResponse.cs" />
     <Compile Include="V20260520\Models\DigitalHumanConfig.cs" />
+    <Compile Include="V20260520\Models\DuplexBilling.cs" />
     <Compile Include="V20260520\Models\FieldMask.cs" />
     <Compile Include="V20260520\Models\FileParseModel.cs" />
     <Compile Include="V20260520\Models\Filter.cs" />
     <Compile Include="V20260520\Models\GenerateModel.cs" />
     <Compile Include="V20260520\Models\InputBoxConfig.cs" />
     <Compile Include="V20260520\Models\IntentAchievementInfo.cs" />
+    <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
     <Compile Include="V20260520\Models\Model.cs" />
     <Compile Include="V20260520\Models\ModelBadge.cs" />
     <Compile Include="V20260520\Models\ModelBasic.cs" />
     <Compile Include="V20260520\Models\ModelDetailInfo.cs" />
+    <Compile Include="V20260520\Models\ModelDeveloperBasic.cs" />
     <Compile Include="V20260520\Models\ModelLimit.cs" />
     <Compile Include="V20260520\Models\ModelParameter.cs" />
     <Compile Include="V20260520\Models\ModelParams.cs" />
@@ -201,8 +215,11 @@
     <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
     <Compile Include="V20260520\Models\MultiModalQAModel.cs" />
     <Compile Include="V20260520\Models\MultiModalUnderstandingModel.cs" />
+    <Compile Include="V20260520\Models\OAuthConfig.cs" />
     <Compile Include="V20260520\Models\Plugin.cs" />
+    <Compile Include="V20260520\Models\PluginConfig.cs" />
     <Compile Include="V20260520\Models\PluginOperation.cs" />
+    <Compile Include="V20260520\Models\PluginParam.cs" />
     <Compile Include="V20260520\Models\PluginProfile.cs" />
     <Compile Include="V20260520\Models\PluginStatistics.cs" />
     <Compile Include="V20260520\Models\PluginSummary.cs" />
@@ -224,6 +241,7 @@
     <Compile Include="V20260520\Models\SkillAnalysisInfo.cs" />
     <Compile Include="V20260520\Models\SkillCategory.cs" />
     <Compile Include="V20260520\Models\SkillClassification.cs" />
+    <Compile Include="V20260520\Models\SkillNotice.cs" />
     <Compile Include="V20260520\Models\SkillProfile.cs" />
     <Compile Include="V20260520\Models\SkillShare.cs" />
     <Compile Include="V20260520\Models\SkillSummary.cs" />
@@ -232,7 +250,6 @@
     <Compile Include="V20260520\Models\SpecialStatusInfo.cs" />
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
-    <Compile Include="V20260520\Models\TemplatePublishInfo.cs" />
     <Compile Include="V20260520\Models\ThinkModel.cs" />
     <Compile Include="V20260520\Models\Tool.cs" />
     <Compile Include="V20260520\Models\ToolBilling.cs" />

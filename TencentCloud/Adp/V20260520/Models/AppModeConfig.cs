@@ -38,6 +38,13 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("SingleWorkflowConfig")]
         public SingleWorkflowConfig SingleWorkflowConfig{ get; set; }
 
+        /// <summary>
+        /// ClawAgent配置(ClawAgent模式)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClawAgentConfig")]
+        public ClawAgentConfig ClawAgentConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamObj(map, prefix + "MultiAgentConfig.", this.MultiAgentConfig);
             this.SetParamObj(map, prefix + "SingleWorkflowConfig.", this.SingleWorkflowConfig);
+            this.SetParamObj(map, prefix + "ClawAgentConfig.", this.ClawAgentConfig);
         }
     }
 }

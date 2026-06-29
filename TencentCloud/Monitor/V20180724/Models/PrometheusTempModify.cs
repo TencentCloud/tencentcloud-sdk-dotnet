@@ -25,52 +25,48 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 修改名称
+        /// <p>修改名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 修改描述
+        /// <p>修改描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
-        /// 当Level为cluster时有效，
-        /// 模板中的ServiceMonitor规则列表
+        /// <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceMonitors")]
         public PrometheusConfigItem[] ServiceMonitors{ get; set; }
 
         /// <summary>
-        /// 当Level为cluster时有效，
-        /// 模板中的PodMonitors规则列表
+        /// <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodMonitors")]
         public PrometheusConfigItem[] PodMonitors{ get; set; }
 
         /// <summary>
-        /// 当Level为cluster时有效，
-        /// 模板中的RawJobs规则列表
+        /// <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawJobs")]
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
         /// <summary>
-        /// 当Level为instance时有效，
-        /// 模板中的聚合规则列表
+        /// <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordRules")]
         public PrometheusConfigItem[] RecordRules{ get; set; }
 
         /// <summary>
-        /// 修改内容，只有当模板类型是Alert时生效
+        /// <p>修改内容，只有当模板类型是Alert时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlertDetailRules")]

@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Adp.V20260520.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TemplatePublishInfo : AbstractModel
+    public class KnowledgeAnalysisResult : AbstractModel
     {
         
         /// <summary>
-        /// 是否已同步到模版中心
+        /// <p>处理任务类型</p><p>枚举值：</p><ul><li>AiAnalysis.DescriptionTask： 智能摘要任务</li><li>AiAnalysis.VideoComprehensionTask： 视频理解任务</li><li>SmartSubtitle.AsrFullTextTask： 智能语音全文识别任务</li></ul>
         /// </summary>
-        [JsonProperty("IsPublished")]
-        public bool? IsPublished{ get; set; }
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
+        /// <summary>
+        /// <p>任务输出文件集合</p>
+        /// </summary>
+        [JsonProperty("File")]
+        public MPSOutputFileInfo File{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsPublished", this.IsPublished);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamObj(map, prefix + "File.", this.File);
         }
     }
 }

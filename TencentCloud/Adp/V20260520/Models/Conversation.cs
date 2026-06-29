@@ -55,10 +55,16 @@ namespace TencentCloud.Adp.V20260520.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 会话标题
+        /// <p>会话标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
+
+        /// <summary>
+        /// <p>会话使用的用户端 AgentId</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
         }
     }
 }

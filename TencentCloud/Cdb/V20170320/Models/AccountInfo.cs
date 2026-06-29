@@ -25,50 +25,50 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 账号备注信息
+        /// <p>账号备注信息</p>
         /// </summary>
         [JsonProperty("Notes")]
         public string Notes{ get; set; }
 
         /// <summary>
-        /// 账号的域名
+        /// <p>账号的域名</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 账号的名称
+        /// <p>账号的名称</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// 账号信息修改时间
+        /// <p>账号信息修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 修改密码的时间
+        /// <p>修改密码的时间</p>
         /// </summary>
         [JsonProperty("ModifyPasswordTime")]
         public string ModifyPasswordTime{ get; set; }
 
         /// <summary>
-        /// 该值已废弃
+        /// <p>该值已废弃</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         [System.Obsolete]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 用户最大可用实例连接数
+        /// <p>用户最大可用实例连接数</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
 
         /// <summary>
-        /// 用户账号是否开启了密码轮转
+        /// <p>用户账号是否开启了密码轮转</p>
         /// </summary>
         [JsonProperty("OpenCam")]
         public bool? OpenCam{ get; set; }

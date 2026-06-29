@@ -43,7 +43,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public AgentSpec Agent{ get; set; }
 
         /// <summary>
-        /// <p>需要更新的字段路径，如 [&quot;instructions&quot;, &quot;model&quot;, &quot;tool_list&quot;, &quot;plugin_list&quot;, &quot;skill_list&quot;, &quot;advanced_config&quot;]</p>
+        /// <p>需要更新的字段路径，如 ["Profile.Name", "Profile.IconUrl", "Instructions", "Model", "ToolList", "PluginList", "SkillList", "AdvancedConfig"]</p>
         /// </summary>
         [JsonProperty("UpdateMask")]
         public FieldMask UpdateMask{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+        /// <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p>
         /// </summary>
         [JsonProperty("BigDealId")]
         public string BigDealId{ get; set; }
 
         /// <summary>
-        /// 子订单列表
+        /// <p>子订单列表</p>
         /// </summary>
         [JsonProperty("DealList")]
         public Deals[] DealList{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 请求示例，json字符串
+        /// <p>请求参数</p>
         /// </summary>
         [JsonProperty("Request")]
         public string Request{ get; set; }
 
         /// <summary>
-        /// 回复示例，json字符串
+        /// <p>响应参数</p>
         /// </summary>
         [JsonProperty("Response")]
         public string Response{ get; set; }

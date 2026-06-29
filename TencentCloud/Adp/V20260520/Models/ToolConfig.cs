@@ -25,29 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// API插件工具配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>API工具配置信息</p>
         /// </summary>
         [JsonProperty("ApiToolConfig")]
         public ApiToolConfig ApiToolConfig{ get; set; }
 
         /// <summary>
-        /// 应用插件工具配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>应用配置信息</p>
         /// </summary>
         [JsonProperty("AppToolConfig")]
         public AppToolConfig AppToolConfig{ get; set; }
 
         /// <summary>
-        /// 代码插件工具配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>代码工具配置信息</p>
         /// </summary>
         [JsonProperty("CodeToolConfig")]
         public CodeToolConfig CodeToolConfig{ get; set; }
 
         /// <summary>
-        /// mcp插件工具配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>MCP工具配置信息</p>
         /// </summary>
         [JsonProperty("MCPToolConfig")]
         public MCPToolConfig MCPToolConfig{ get; set; }

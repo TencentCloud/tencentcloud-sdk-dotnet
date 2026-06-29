@@ -25,84 +25,80 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 规则 ID
+        /// <p>规则 ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则状态码
+        /// <p>规则状态码</p>
         /// </summary>
         [JsonProperty("RuleState")]
         public long? RuleState{ get; set; }
 
         /// <summary>
-        /// 规则类别
+        /// <p>规则类别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 规则标签列表
+        /// <p>规则标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public PrometheusRuleKV[] Labels{ get; set; }
 
         /// <summary>
-        /// 规则注释列表
+        /// <p>规则注释列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Annotations")]
         public PrometheusRuleKV[] Annotations{ get; set; }
 
         /// <summary>
-        /// 规则表达式
+        /// <p>规则表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expr")]
         public string Expr{ get; set; }
 
         /// <summary>
-        /// 规则报警持续时间
+        /// <p>规则报警持续时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
-        /// 报警接收组列表
+        /// <p>报警接收组列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 规则运行健康状态，取值如下：
-        /// <li>unknown 未知状态</li>
-        /// <li>pending 加载中</li>
-        /// <li>ok 运行正常</li>
-        /// <li>err 运行错误</li>
+        /// <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
         /// </summary>
         [JsonProperty("Health")]
         public string Health{ get; set; }
 
         /// <summary>
-        /// 规则创建时间
+        /// <p>规则创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 规则更新时间
+        /// <p>规则更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]

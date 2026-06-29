@@ -25,85 +25,85 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 回填请求的统计维度。
+        /// <p>回填请求的统计维度。</p>
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }
 
         /// <summary>
-        /// 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
+        /// <p>回填请求的指标族：tokens / search 。</p>
         /// </summary>
         [JsonProperty("MetricType")]
         public string MetricType{ get; set; }
 
         /// <summary>
-        /// 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
+        /// <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
         /// </summary>
         [JsonProperty("MetricKeys")]
         public string[] MetricKeys{ get; set; }
 
         /// <summary>
-        /// 视图（数据来源）
+        /// <p>视图（数据来源）</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
+        /// <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 回填请求的起始时间。
+        /// <p>回填请求的起始时间。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 回填请求的结束时间。
+        /// <p>回填请求的结束时间。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 全量对象数。
+        /// <p>全量对象数。</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 回填请求的翻页起点。ShowAll=true 时为 0。
+        /// <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 页大小，恒为 10。ShowAll=true 时为 Total。
+        /// <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
+        /// <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
         /// </summary>
         [JsonProperty("Timestamps")]
         public long?[] Timestamps{ get; set; }
 
         /// <summary>
-        /// 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
+        /// <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
         /// </summary>
         [JsonProperty("TopList")]
         public UsageRankItem[] TopList{ get; set; }
 
         /// <summary>
-        /// 分页统计结果
+        /// <p>分页统计结果</p>
         /// </summary>
         [JsonProperty("PageStats")]
         public UsageStats PageStats{ get; set; }
 
         /// <summary>
-        /// 总统计结果
+        /// <p>总统计结果</p>
         /// </summary>
         [JsonProperty("TotalStats")]
         public UsageStats TotalStats{ get; set; }

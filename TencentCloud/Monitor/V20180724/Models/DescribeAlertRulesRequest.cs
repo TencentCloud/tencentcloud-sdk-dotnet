@@ -25,45 +25,43 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID
+        /// <p>Prometheus 实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100
+        /// <p>返回数量，默认为 20，最大值为 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0
+        /// <p>偏移量，默认为 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 规则 ID
+        /// <p>规则 ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 规则状态码，取值如下：
-        /// <li>2=RuleEnabled</li>
-        /// <li>3=RuleDisabled</li>
+        /// <p>规则状态码，取值如下：</p><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
         /// </summary>
         [JsonProperty("RuleState")]
         public long? RuleState{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 报警策略模板分类
+        /// <p>报警策略模板分类</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResetUserPasswordRequest : AbstractModel
+    public class OAuthConfig : AbstractModel
     {
         
         /// <summary>
-        /// 用户名
+        /// OAuth服务方授权页url地址
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("AuthorizationUrl")]
+        public string AuthorizationUrl{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 客户端ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ClientId")]
+        public string ClientId{ get; set; }
 
         /// <summary>
-        /// 主机IP，IP段以%结尾，表示允许该IP段的所有IP
+        /// 客户端密钥
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("ClientSecret")]
+        public string ClientSecret{ get; set; }
 
         /// <summary>
-        /// 新密码，要求长度8-32，至少包含英文、数字和符号中的两种
+        /// 请求授权的数据范围
         /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
+        [JsonProperty("ScopeList")]
+        public string[] ScopeList{ get; set; }
 
         /// <summary>
-        /// 加密密码
+        /// 获取access token的url地址
         /// </summary>
-        [JsonProperty("EncryptedPassword")]
-        public string EncryptedPassword{ get; set; }
+        [JsonProperty("TokenUrl")]
+        public string TokenUrl{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
+            this.SetParamSimple(map, prefix + "AuthorizationUrl", this.AuthorizationUrl);
+            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
+            this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+            this.SetParamArraySimple(map, prefix + "ScopeList.", this.ScopeList);
+            this.SetParamSimple(map, prefix + "TokenUrl", this.TokenUrl);
         }
     }
 }

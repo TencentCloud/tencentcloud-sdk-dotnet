@@ -69,12 +69,12 @@ namespace TencentCloud.Adp.V20260520.Models
         /// <summary>
         /// 引用的共享知识库ID列表(全量覆盖)
         /// </summary>
-        [JsonProperty("SharedKnowledgeIdList")]
-        public string[] SharedKnowledgeIdList{ get; set; }
+        [JsonProperty("SharedKbIdList")]
+        public string[] SharedKbIdList{ get; set; }
 
         /// <summary>
         /// 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-        /// 【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+        /// 【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
         /// 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
         /// 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
         /// 【WebSearch】Config.WebSearch
@@ -101,7 +101,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "ShareConfig.", this.ShareConfig);
-            this.SetParamArraySimple(map, prefix + "SharedKnowledgeIdList.", this.SharedKnowledgeIdList);
+            this.SetParamArraySimple(map, prefix + "SharedKbIdList.", this.SharedKbIdList);
             this.SetParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
         }
     }

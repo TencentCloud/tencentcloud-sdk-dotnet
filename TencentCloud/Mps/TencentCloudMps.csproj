@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1452</VersionPrefix>
+    <VersionPrefix>3.0.1453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,7 @@
     <Compile Include="V20190612\Models\AiContentReviewResult.cs" />
     <Compile Include="V20190612\Models\AiContentReviewTaskInput.cs" />
     <Compile Include="V20190612\Models\AiParagraphInfo.cs" />
+    <Compile Include="V20190612\Models\AiPosterSuiteConfig.cs" />
     <Compile Include="V20190612\Models\AiQualityControlTaskInput.cs" />
     <Compile Include="V20190612\Models\AiRecognitionResult.cs" />
     <Compile Include="V20190612\Models\AiRecognitionTaskAsrFullTextResult.cs" />
@@ -369,6 +370,7 @@
     <Compile Include="V20190612\Models\CreateWordSamplesResponse.cs" />
     <Compile Include="V20190612\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\CustomVariable.cs" />
     <Compile Include="V20190612\Models\DashManifestInfo.cs" />
     <Compile Include="V20190612\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteAIAnalysisTemplateResponse.cs" />
@@ -908,6 +910,7 @@
     <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />
     <Compile Include="V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
+    <Compile Include="V20190612\Models\RecipeItem.cs" />
     <Compile Include="V20190612\Models\RecognizeAudioRequest.cs" />
     <Compile Include="V20190612\Models\RecognizeAudioResponse.cs" />
     <Compile Include="V20190612\Models\RecognizeAudioSentence.cs" />

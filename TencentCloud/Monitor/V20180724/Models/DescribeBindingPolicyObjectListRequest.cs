@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+        /// <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+        /// <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 每次返回的数量，取值1~100，默认20
+        /// <p>每次返回的数量，取值1~100，默认20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+        /// <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 筛选对象的维度信息
+        /// <p>筛选对象的维度信息</p>
         /// </summary>
         [JsonProperty("Dimensions")]
         public DescribeBindingPolicyObjectListDimension[] Dimensions{ get; set; }

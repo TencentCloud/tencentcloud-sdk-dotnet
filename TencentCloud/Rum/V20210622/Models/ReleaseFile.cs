@@ -25,34 +25,40 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 文件版本
+        /// <p>文件版本</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 文件唯一 key
+        /// <p>文件唯一 key</p>
         /// </summary>
         [JsonProperty("FileKey")]
         public string FileKey{ get; set; }
 
         /// <summary>
-        /// 文件名
+        /// <p>文件名</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件哈希值
+        /// <p>文件哈希值</p>
         /// </summary>
         [JsonProperty("FileHash")]
         public string FileHash{ get; set; }
 
         /// <summary>
-        /// 文件 id
+        /// <p>文件 id</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p>
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileHash", this.FileHash);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         }
     }
 }

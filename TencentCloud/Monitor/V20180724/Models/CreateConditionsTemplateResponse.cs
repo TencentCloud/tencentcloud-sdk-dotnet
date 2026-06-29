@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模板策略组ID
+        /// <p>模板策略组ID</p>
         /// </summary>
         [JsonProperty("GroupID")]
         public long? GroupID{ get; set; }

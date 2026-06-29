@@ -25,35 +25,35 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Agent 安装命令
+        /// <p>Agent 安装命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Install")]
         public string Install{ get; set; }
 
         /// <summary>
-        /// Agent 重启命令
+        /// <p>Agent 重启命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Restart")]
         public string Restart{ get; set; }
 
         /// <summary>
-        /// Agent 停止命令
+        /// <p>Agent 停止命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stop")]
         public string Stop{ get; set; }
 
         /// <summary>
-        /// Agent 状态检测命令
+        /// <p>Agent 状态检测命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusCheck")]
         public string StatusCheck{ get; set; }
 
         /// <summary>
-        /// Agent 日志检测命令
+        /// <p>Agent 日志检测命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogCheck")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 枚举值列表（仅枚举类型有效）
+        /// 可选值列表
         /// </summary>
         [JsonProperty("EnumValueList")]
         public string[] EnumValueList{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+        /// 超参类型。1-浮点数, 2-整数, 3-字符串
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

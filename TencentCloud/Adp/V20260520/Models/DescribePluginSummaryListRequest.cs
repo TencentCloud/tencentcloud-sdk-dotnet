@@ -37,21 +37,13 @@ namespace TencentCloud.Adp.V20260520.Models
         public Filter[] FilterList{ get; set; }
 
         /// <summary>
-        /// true-筛选收藏的插件，false不过滤
+        /// <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
         /// </summary>
         [JsonProperty("IsFavoriteOnly")]
         public bool? IsFavoriteOnly{ get; set; }
 
         /// <summary>
-        /// module
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 所有模块 |
-        /// | 1 | agent模式模块 |
-        /// | 2 | 工作流模块 |
-        /// | 3 | 企业员工助理模块 |
+        /// <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
         /// </summary>
         [JsonProperty("Module")]
         public long? Module{ get; set; }
@@ -75,14 +67,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 排序类型，仅搜索场景有效
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 未指定，使用默认行为 |
-        /// | 1 | 按相关性排序 |
-        /// | 2 | 按更新时间排序 |
+        /// <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
         /// </summary>
         [JsonProperty("SortType")]
         public long? SortType{ get; set; }

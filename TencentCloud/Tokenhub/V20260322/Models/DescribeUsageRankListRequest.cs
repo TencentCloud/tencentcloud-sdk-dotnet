@@ -25,52 +25,49 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。
+        /// <p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p>
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }
 
         /// <summary>
-        /// 起始时间（闭区间），RFC3339 格式。
+        /// <p>起始时间（闭区间），RFC3339 格式。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。
+        /// <p>结束时间（开区间），RFC3339 格式。与 StartTime 的跨度最大 90 天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 指标族切换字段。本期支持 tokens（累计 Token 用量，statistics=sum）；传其他值将返回 InvalidParameter。空字符串或不传时默认 tokens。接口预留 MetricType 字段以支持后续指标族扩展。
+        /// <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
         /// </summary>
         [JsonProperty("MetricType")]
         public string MetricType{ get; set; }
 
         /// <summary>
-        /// 维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。
+        /// <p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；> 10 天 → 86400。仅 ShowAll=false 时使用。
+        /// <p>统计粒度（秒）。取值：60、300、3600、86400。必须不小于跨度对应下限：跨度 ≤ 1 天 → 60；1 ~ 5 天 → 300；5 ~ 10 天 → 3600；&gt; 10 天 → 86400。仅 ShowAll=false 时使用。</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。
+        /// <p>翻页起点，从 0 起，默认 0。ShowAll=true 时忽略。页大小固定为 10。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 是否返回全量结果。
-        /// - false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含
-        ///   Series 时序点用于绘制曲线。
-        /// - true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。
+        /// <p>是否返回全量结果。</p><ul><li>false（默认）：按 Offset 分页返回 TopList（每页 10 条），每个对象包含<br>Series 时序点用于绘制曲线。</li><li>true：忽略 Offset，返回全量对象列表，不返回 Series（CSV 导出场景）。</li></ul>
         /// </summary>
         [JsonProperty("ShowAll")]
         public bool? ShowAll{ get; set; }

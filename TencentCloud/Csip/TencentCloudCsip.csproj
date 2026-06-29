@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1451</VersionPrefix>
+    <VersionPrefix>3.0.1453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -233,6 +233,10 @@
     <Compile Include="V20221121\Models\DescribeBucketInvokeIpListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCFWAssetStatisticsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCFWAssetStatisticsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCLSLogIndexV3Request.cs" />
+    <Compile Include="V20221121\Models\DescribeCLSLogIndexV3Response.cs" />
+    <Compile Include="V20221121\Models\DescribeCLSLogListV3Request.cs" />
+    <Compile Include="V20221121\Models\DescribeCLSLogListV3Response.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
@@ -585,6 +589,23 @@
     <Compile Include="V20221121\Models\KeyValue.cs" />
     <Compile Include="V20221121\Models\KeyValueInt.cs" />
     <Compile Include="V20221121\Models\Location.cs" />
+    <Compile Include="V20221121\Models\LogCLSFilter.cs" />
+    <Compile Include="V20221121\Models\LogColumn.cs" />
+    <Compile Include="V20221121\Models\LogContextInfo.cs" />
+    <Compile Include="V20221121\Models\LogDynamicIndex.cs" />
+    <Compile Include="V20221121\Models\LogFullTextInfo.cs" />
+    <Compile Include="V20221121\Models\LogHighLightItem.cs" />
+    <Compile Include="V20221121\Models\LogIndexRuleInfo.cs" />
+    <Compile Include="V20221121\Models\LogItem.cs" />
+    <Compile Include="V20221121\Models\LogItems.cs" />
+    <Compile Include="V20221121\Models\LogKeyValueInfo.cs" />
+    <Compile Include="V20221121\Models\LogRuleKeyValueInfo.cs" />
+    <Compile Include="V20221121\Models\LogSearchErrors.cs" />
+    <Compile Include="V20221121\Models\LogSearchInfos.cs" />
+    <Compile Include="V20221121\Models\LogSearchResult.cs" />
+    <Compile Include="V20221121\Models\LogSearchTopics.cs" />
+    <Compile Include="V20221121\Models\LogTopicIndexInfo.cs" />
+    <Compile Include="V20221121\Models\LogValueInfo.cs" />
     <Compile Include="V20221121\Models\Machine.cs" />
     <Compile Include="V20221121\Models\MachineDetail.cs" />
     <Compile Include="V20221121\Models\MiniTagItem.cs" />

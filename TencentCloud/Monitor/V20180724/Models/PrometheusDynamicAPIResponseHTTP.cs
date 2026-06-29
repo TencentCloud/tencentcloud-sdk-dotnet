@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// HTTP 状态码
+        /// <p>HTTP 状态码</p>
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// HTTP 响应体
+        /// <p>HTTP 响应体</p>
         /// </summary>
         [JsonProperty("ResponseBody")]
         public string ResponseBody{ get; set; }

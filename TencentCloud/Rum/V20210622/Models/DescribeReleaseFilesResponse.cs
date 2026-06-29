@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 文件信息列表
+        /// <p>文件信息列表</p>
         /// </summary>
         [JsonProperty("Files")]
         public ReleaseFile[] Files{ get; set; }

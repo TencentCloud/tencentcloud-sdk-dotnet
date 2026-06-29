@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1453";
 
         /// <summary>
         /// Client constructor.
@@ -1184,6 +1184,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatisticsSync(DescribeCFWAssetStatisticsRequest req)
         {
             return InternalRequestAsync<DescribeCFWAssetStatisticsResponse>(req, "DescribeCFWAssetStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取日志索引信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogIndexV3Request"/></param>
+        /// <returns><see cref="DescribeCLSLogIndexV3Response"/></returns>
+        public Task<DescribeCLSLogIndexV3Response> DescribeCLSLogIndexV3(DescribeCLSLogIndexV3Request req)
+        {
+            return InternalRequestAsync<DescribeCLSLogIndexV3Response>(req, "DescribeCLSLogIndexV3");
+        }
+
+        /// <summary>
+        /// 获取日志索引信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogIndexV3Request"/></param>
+        /// <returns><see cref="DescribeCLSLogIndexV3Response"/></returns>
+        public DescribeCLSLogIndexV3Response DescribeCLSLogIndexV3Sync(DescribeCLSLogIndexV3Request req)
+        {
+            return InternalRequestAsync<DescribeCLSLogIndexV3Response>(req, "DescribeCLSLogIndexV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志分析检索接口v3
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogListV3Request"/></param>
+        /// <returns><see cref="DescribeCLSLogListV3Response"/></returns>
+        public Task<DescribeCLSLogListV3Response> DescribeCLSLogListV3(DescribeCLSLogListV3Request req)
+        {
+            return InternalRequestAsync<DescribeCLSLogListV3Response>(req, "DescribeCLSLogListV3");
+        }
+
+        /// <summary>
+        /// 日志分析检索接口v3
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogListV3Request"/></param>
+        /// <returns><see cref="DescribeCLSLogListV3Response"/></returns>
+        public DescribeCLSLogListV3Response DescribeCLSLogListV3Sync(DescribeCLSLogListV3Request req)
+        {
+            return InternalRequestAsync<DescribeCLSLogListV3Response>(req, "DescribeCLSLogListV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

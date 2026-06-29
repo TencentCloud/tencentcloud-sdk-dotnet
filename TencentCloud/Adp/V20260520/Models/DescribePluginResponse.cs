@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 插件详情
+        /// <p>插件详情</p>
         /// </summary>
         [JsonProperty("Plugin")]
         public Plugin Plugin{ get; set; }

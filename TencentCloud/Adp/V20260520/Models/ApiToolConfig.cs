@@ -25,63 +25,58 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// API插件支持对外调用的工具URL
-        /// </summary>
-        [JsonProperty("ExternalApiUrl")]
-        public string ExternalApiUrl{ get; set; }
-
-        /// <summary>
-        /// 请求method
-        /// </summary>
-        [JsonProperty("Method")]
-        public string Method{ get; set; }
-
-        /// <summary>
-        /// 请求的url
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// body参数
+        /// <p>请求体参数</p>
         /// </summary>
         [JsonProperty("Body")]
         public RequestParam[] Body{ get; set; }
 
         /// <summary>
-        /// 示例
+        /// <p>示例</p>
         /// </summary>
         [JsonProperty("Example")]
         public ToolExample Example{ get; set; }
 
         /// <summary>
-        /// Header信息
+        /// <p>API插件外部调用地址</p>
+        /// </summary>
+        [JsonProperty("ExternalApiUrl")]
+        public string ExternalApiUrl{ get; set; }
+
+        /// <summary>
+        /// <p>Header</p>
         /// </summary>
         [JsonProperty("Header")]
         public RequestParam[] Header{ get; set; }
 
         /// <summary>
-        /// 输出参数
+        /// <p>请求方式</p>
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// <p>输出</p>
         /// </summary>
         [JsonProperty("Outputs")]
         public ResponseParam[] Outputs{ get; set; }
 
         /// <summary>
-        /// query参数
+        /// <p>查询参数</p>
         /// </summary>
         [JsonProperty("Query")]
         public RequestParam[] Query{ get; set; }
 
         /// <summary>
-        /// 流式模式
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 非流式 |
-        /// | 1 | 流式 |
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>STREAM_MODE_UNARY</td><td>0</td><td>非流式</td></tr><tr><td>STREAM_MODE_STREAMING</td><td>1</td><td>流式</td></tr></tbody></table>
         /// </summary>
         [JsonProperty("StreamMode")]
         public long? StreamMode{ get; set; }
+
+        /// <summary>
+        /// <p>地址</p>
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -89,15 +84,15 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ExternalApiUrl", this.ExternalApiUrl);
-            this.SetParamSimple(map, prefix + "Method", this.Method);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamArrayObj(map, prefix + "Body.", this.Body);
             this.SetParamObj(map, prefix + "Example.", this.Example);
+            this.SetParamSimple(map, prefix + "ExternalApiUrl", this.ExternalApiUrl);
             this.SetParamArrayObj(map, prefix + "Header.", this.Header);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArrayObj(map, prefix + "Outputs.", this.Outputs);
             this.SetParamArrayObj(map, prefix + "Query.", this.Query);
             this.SetParamSimple(map, prefix + "StreamMode", this.StreamMode);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

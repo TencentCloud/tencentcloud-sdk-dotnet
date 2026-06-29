@@ -25,54 +25,54 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Agent 名
+        /// <p>Agent 名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Agent ID
+        /// <p>Agent ID</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Agent IP
+        /// <p>Agent IP</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv4")]
         public string Ipv4{ get; set; }
 
         /// <summary>
-        /// 心跳时间
+        /// <p>心跳时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartbeatTime")]
         public string HeartbeatTime{ get; set; }
 
         /// <summary>
-        /// 最近一次错误
+        /// <p>最近一次错误</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastError")]
         public string LastError{ get; set; }
 
         /// <summary>
-        /// Agent 版本
+        /// <p>Agent 版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// Agent 状态
+        /// <p>Agent 状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1441</VersionPrefix>
+    <VersionPrefix>3.0.1453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -428,6 +428,7 @@
     <Compile Include="V20201016\Models\Instance.cs" />
     <Compile Include="V20201016\Models\InstanceConfig.cs" />
     <Compile Include="V20201016\Models\InstanceData.cs" />
+    <Compile Include="V20201016\Models\JsonExpandInfo.cs" />
     <Compile Include="V20201016\Models\JsonInfo.cs" />
     <Compile Include="V20201016\Models\KafkaConsumerContent.cs" />
     <Compile Include="V20201016\Models\KafkaProtocolInfo.cs" />

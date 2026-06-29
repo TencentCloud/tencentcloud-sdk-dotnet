@@ -25,51 +25,51 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// prometheus语句
+        /// <p>prometheus语句</p>
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
         /// <summary>
-        /// 额外标签
+        /// <p>额外标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 告警发送模板
+        /// <p>告警发送模板</p>
         /// </summary>
         [JsonProperty("Template")]
         public string Template{ get; set; }
 
         /// <summary>
-        /// 持续时间
+        /// <p>持续时间</p>
         /// </summary>
         [JsonProperty("For")]
         public string For{ get; set; }
 
         /// <summary>
-        /// 该条规则的描述信息
+        /// <p>该条规则的描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
-        /// 参考prometheus rule中的annotations
+        /// <p>参考prometheus rule中的annotations</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Annotations")]
         public Label[] Annotations{ get; set; }
 
         /// <summary>
-        /// 告警规则状态
+        /// <p>告警规则状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleState")]

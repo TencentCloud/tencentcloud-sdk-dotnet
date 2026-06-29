@@ -25,56 +25,62 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 模型徽章列表
+        /// <p>模型徽章列表</p>
         /// </summary>
         [JsonProperty("BadgeList")]
         public ModelBadge[] BadgeList{ get; set; }
 
         /// <summary>
-        /// 模型限制信息
+        /// <p>模型限制信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitInfo")]
         public ModelLimit LimitInfo{ get; set; }
 
         /// <summary>
-        /// 模型基本信息
+        /// <p>模型基本信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelBasic")]
         public ModelBasic ModelBasic{ get; set; }
 
         /// <summary>
-        /// 模型超参配置
+        /// <p>模型超参配置</p>
         /// </summary>
         [JsonProperty("ParameterList")]
         public ModelParameter[] ParameterList{ get; set; }
 
         /// <summary>
-        /// 模型属性配置
+        /// <p>模型属性配置</p>
         /// </summary>
         [JsonProperty("PropertyList")]
         public ModelProperty[] PropertyList{ get; set; }
 
         /// <summary>
-        /// 模型提供商信息
+        /// <p>模型提供商信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProviderInfo")]
         public ModelProviderBasic ProviderInfo{ get; set; }
 
         /// <summary>
-        /// 模型状态信息
+        /// <p>模型状态信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusInfo")]
         public ModelStatus StatusInfo{ get; set; }
 
         /// <summary>
-        /// 模型标签列表
+        /// <p>模型标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }
+
+        /// <summary>
+        /// <p>模型作者信息</p>
+        /// </summary>
+        [JsonProperty("DeveloperInfo")]
+        public ModelDeveloperBasic DeveloperInfo{ get; set; }
 
 
         /// <summary>
@@ -90,6 +96,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "ProviderInfo.", this.ProviderInfo);
             this.SetParamObj(map, prefix + "StatusInfo.", this.StatusInfo);
             this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
+            this.SetParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
         }
     }
 }

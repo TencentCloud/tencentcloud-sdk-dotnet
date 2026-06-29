@@ -66,6 +66,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "ShareCode", this.ShareCode);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
         }
     }
 }

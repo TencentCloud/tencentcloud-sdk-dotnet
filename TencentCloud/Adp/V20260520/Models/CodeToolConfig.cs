@@ -25,25 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 代码
+        /// <p>代码</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 示例
+        /// <p>示例</p>
         /// </summary>
         [JsonProperty("Example")]
         public ToolExample Example{ get; set; }
 
         /// <summary>
-        /// 输入参数
+        /// <p>输入参数</p>
         /// </summary>
         [JsonProperty("Inputs")]
         public RequestParam[] Inputs{ get; set; }
 
         /// <summary>
-        /// 输出参数
+        /// <p>输出参数</p>
         /// </summary>
         [JsonProperty("Outputs")]
         public ResponseParam[] Outputs{ get; set; }

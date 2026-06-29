@@ -58,10 +58,36 @@ namespace TencentCloud.Adp.V20260520.Models
         public string SkillId{ get; set; }
 
         /// <summary>
+        /// Skill 异常通知列表
+        /// </summary>
+        [JsonProperty("NoticeList")]
+        public SkillNotice[] NoticeList{ get; set; }
+
+        /// <summary>
+        /// 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+        /// </summary>
+        [JsonProperty("PermissionIdList")]
+        public string[] PermissionIdList{ get; set; }
+
+        /// <summary>
         /// 共享信息；可能有两条，一条是已共享的，一条是审核中的
         /// </summary>
         [JsonProperty("ShareList")]
         public SkillShare[] ShareList{ get; set; }
+
+        /// <summary>
+        /// Skill状态 
+        /// 
+        /// 枚举值:
+        /// | uint | 描述 |
+        /// | --- | --- |
+        /// | 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+        /// | 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+        /// | 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+        /// | 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+        /// </summary>
+        [JsonProperty("SkillStatus")]
+        public long? SkillStatus{ get; set; }
 
 
         /// <summary>
@@ -74,7 +100,10 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "IsFavorite", this.IsFavorite);
             this.SetParamObj(map, prefix + "Profile.", this.Profile);
             this.SetParamSimple(map, prefix + "SkillId", this.SkillId);
+            this.SetParamArrayObj(map, prefix + "NoticeList.", this.NoticeList);
+            this.SetParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
             this.SetParamArrayObj(map, prefix + "ShareList.", this.ShareList);
+            this.SetParamSimple(map, prefix + "SkillStatus", this.SkillStatus);
         }
     }
 }

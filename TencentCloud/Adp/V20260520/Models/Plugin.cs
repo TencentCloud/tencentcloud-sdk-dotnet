@@ -25,6 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// 插件配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Config")]
+        public PluginConfig Config{ get; set; }
+
+        /// <summary>
         /// 创建时间，unix时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -90,6 +97,7 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamObj(map, prefix + "Operation.", this.Operation);
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);

@@ -62,10 +62,16 @@ namespace TencentCloud.Adp.V20260520.Models
         public ConversationWorkspace Workspace{ get; set; }
 
         /// <summary>
-        /// 会话标题
+        /// <p>会话标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
+
+        /// <summary>
+        /// <p>会话使用的用户端 AgentId</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -86,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "Workspace.", this.Workspace);
             this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

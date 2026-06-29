@@ -25,101 +25,93 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 是否启用
+        /// <p>是否启用</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 通道类型，默认为amp，支持以下
-        /// amp
-        /// webhook
-        /// alertmanager
+        /// <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 如果Type为webhook, 则该字段为必填项
+        /// <p>如果Type为webhook, 则该字段为必填项</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebHook")]
         public string WebHook{ get; set; }
 
         /// <summary>
-        /// 如果Type为alertmanager, 则该字段为必填项
+        /// <p>如果Type为alertmanager, 则该字段为必填项</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlertManager")]
         public PrometheusAlertManagerConfig AlertManager{ get; set; }
 
         /// <summary>
-        /// 收敛时间
+        /// <p>收敛时间</p>
         /// </summary>
         [JsonProperty("RepeatInterval")]
         public string RepeatInterval{ get; set; }
 
         /// <summary>
-        /// 生效起始时间
+        /// <p>生效起始时间</p>
         /// </summary>
         [JsonProperty("TimeRangeStart")]
         public string TimeRangeStart{ get; set; }
 
         /// <summary>
-        /// 生效结束时间
+        /// <p>生效结束时间</p>
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }
 
         /// <summary>
-        /// 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+        /// <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyWay")]
         public string[] NotifyWay{ get; set; }
 
         /// <summary>
-        /// 告警接收组（用户组）
+        /// <p>告警接收组（用户组）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public string[] ReceiverGroups{ get; set; }
 
         /// <summary>
-        /// 电话告警顺序。
-        /// 注：NotifyWay选择CALL，采用该参数。
+        /// <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNotifyOrder")]
         public ulong?[] PhoneNotifyOrder{ get; set; }
 
         /// <summary>
-        /// 电话告警次数。
-        /// 注：NotifyWay选择CALL，采用该参数。
+        /// <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneCircleTimes")]
         public long? PhoneCircleTimes{ get; set; }
 
         /// <summary>
-        /// 电话告警轮内间隔。单位：秒
-        /// 注：NotifyWay选择CALL，采用该参数。
+        /// <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneInnerInterval")]
         public long? PhoneInnerInterval{ get; set; }
 
         /// <summary>
-        /// 电话告警轮外间隔。单位：秒
-        /// 注：NotifyWay选择CALL，采用该参数。
+        /// <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneCircleInterval")]
         public long? PhoneCircleInterval{ get; set; }
 
         /// <summary>
-        /// 电话告警触达通知
-        /// 注：NotifyWay选择CALL，采用该参数。
+        /// <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneArriveNotice")]

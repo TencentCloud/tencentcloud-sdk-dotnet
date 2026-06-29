@@ -31,18 +31,6 @@ namespace TencentCloud.Adp.V20260520.Models
         public string DeepThinking{ get; set; }
 
         /// <summary>
-        /// 深度思考效果
-        /// </summary>
-        [JsonProperty("ReasoningEffort")]
-        public string ReasoningEffort{ get; set; }
-
-        /// <summary>
-        /// 输出格式  text、json_object
-        /// </summary>
-        [JsonProperty("ReplyFormat")]
-        public string ReplyFormat{ get; set; }
-
-        /// <summary>
         /// 频率惩罚
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -64,11 +52,23 @@ namespace TencentCloud.Adp.V20260520.Models
         public float? PresencePenalty{ get; set; }
 
         /// <summary>
+        /// 深度思考效果
+        /// </summary>
+        [JsonProperty("ReasoningEffort")]
+        public string ReasoningEffort{ get; set; }
+
+        /// <summary>
         /// 重复惩罚
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepetitionPenalty")]
         public float? RepetitionPenalty{ get; set; }
+
+        /// <summary>
+        /// 输出格式（text、json_object）
+        /// </summary>
+        [JsonProperty("ReplyFormat")]
+        public string ReplyFormat{ get; set; }
 
         /// <summary>
         /// seed 随机种子
@@ -104,12 +104,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
-            this.SetParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
-            this.SetParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
             this.SetParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
             this.SetParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
+            this.SetParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
             this.SetParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
+            this.SetParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamArraySimple(map, prefix + "StopSequenceList.", this.StopSequenceList);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);

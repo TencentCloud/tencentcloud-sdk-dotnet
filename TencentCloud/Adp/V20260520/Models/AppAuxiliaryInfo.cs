@@ -52,13 +52,6 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("SubStatus")]
         public AppSubStatusInfo SubStatus{ get; set; }
 
-        /// <summary>
-        /// 模版中心同步信息(私有化独有)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TemplatePublish")]
-        public TemplatePublishInfo TemplatePublish{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,7 +62,6 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "SearchResourceStatus.", this.SearchResourceStatus);
             this.SetParamObj(map, prefix + "SpecialStatusInfo.", this.SpecialStatusInfo);
             this.SetParamObj(map, prefix + "SubStatus.", this.SubStatus);
-            this.SetParamObj(map, prefix + "TemplatePublish.", this.TemplatePublish);
         }
     }
 }

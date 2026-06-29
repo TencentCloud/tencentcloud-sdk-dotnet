@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Bases")]
         public string[] Bases{ get; set; }
 
+        /// <summary>
+        /// <p>知识库中媒体分析信息</p>
+        /// </summary>
+        [JsonProperty("KnowledgeAnalysisInfos")]
+        public KnowledgeAnalysisInfo[] KnowledgeAnalysisInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Bases.", this.Bases);
+            this.SetParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
         }
     }
 }

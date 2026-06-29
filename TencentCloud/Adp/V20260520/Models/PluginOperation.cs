@@ -31,13 +31,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public bool? AllowExternalAccess{ get; set; }
 
         /// <summary>
-        /// 计费类型
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 免费 |
-        /// | 1 | 限时免费 |
-        /// | 2 | 官方收费 |
+        /// <p>计费类型。</p><p>枚举值：</p><ul><li>0：免费</li><li>1：公测</li><li>2：官方收费</li></ul>
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }

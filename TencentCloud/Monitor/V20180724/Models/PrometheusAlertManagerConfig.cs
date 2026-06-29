@@ -25,20 +25,20 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// alertmanager url
+        /// <p>alertmanager url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// alertmanager部署所在集群类型
+        /// <p>alertmanager部署所在集群类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// alertmanager部署所在集群ID
+        /// <p>alertmanager部署所在集群ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]

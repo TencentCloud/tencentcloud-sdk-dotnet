@@ -25,52 +25,54 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 工具描述信息
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 工具名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 插件id
-        /// </summary>
-        [JsonProperty("PluginId")]
-        public string PluginId{ get; set; }
-
-        /// <summary>
-        /// 工具id
-        /// </summary>
-        [JsonProperty("ToolId")]
-        public string ToolId{ get; set; }
-
-        /// <summary>
-        /// 工具计费信息
+        /// <p>工具计费信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Billing")]
         public ToolBilling Billing{ get; set; }
 
         /// <summary>
-        /// 工具调用次数
+        /// <p>工具调用次数</p><p>单位：次数</p>
         /// </summary>
         [JsonProperty("CallCount")]
         public ulong? CallCount{ get; set; }
 
         /// <summary>
-        /// <p>工具访问模式</p><p>枚举值：</p><ul><li>0： 未指定</li><li>1： READ_ONLY</li><li>2： WRITE_DELETE</li></ul>
+        /// <p>工具描述信息</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>工具名称</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>插件ID</p>
+        /// </summary>
+        [JsonProperty("PluginId")]
+        public string PluginId{ get; set; }
+
+        /// <summary>
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>TOOL_ACCESS_MODE_UNKNOWN</td><td>0</td><td>未指定</td></tr><tr><td>TOOL_ACCESS_MODE_READ_ONLY</td><td>1</td><td>只读</td></tr><tr><td>TOOL_ACCESS_MODE_WRITE_DELETE</td><td>2</td><td>写/删除</td></tr></tbody></table>
         /// </summary>
         [JsonProperty("ToolAccessMode")]
         public long? ToolAccessMode{ get; set; }
 
         /// <summary>
-        /// 工具配置
+        /// <p>工具配置信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ToolConfig")]
         public ToolConfig ToolConfig{ get; set; }
+
+        /// <summary>
+        /// <p>工具ID</p>
+        /// </summary>
+        [JsonProperty("ToolId")]
+        public string ToolId{ get; set; }
 
 
         /// <summary>
@@ -78,14 +80,14 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Billing.", this.Billing);
+            this.SetParamSimple(map, prefix + "CallCount", this.CallCount);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
-            this.SetParamSimple(map, prefix + "ToolId", this.ToolId);
-            this.SetParamObj(map, prefix + "Billing.", this.Billing);
-            this.SetParamSimple(map, prefix + "CallCount", this.CallCount);
             this.SetParamSimple(map, prefix + "ToolAccessMode", this.ToolAccessMode);
             this.SetParamObj(map, prefix + "ToolConfig.", this.ToolConfig);
+            this.SetParamSimple(map, prefix + "ToolId", this.ToolId);
         }
     }
 }

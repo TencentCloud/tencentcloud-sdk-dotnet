@@ -50,6 +50,7 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// <p>模型参数</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelParameters")]
         public ModelParams ModelParameters{ get; set; }

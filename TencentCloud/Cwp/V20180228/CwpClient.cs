@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1453";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Cwp.V20180228
         public AddLoginWhiteListsResponse AddLoginWhiteListsSync(AddLoginWhiteListsRequest req)
         {
             return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加漏洞忽略规则
+        /// </summary>
+        /// <param name="req"><see cref="AddVulIgnoreRuleRequest"/></param>
+        /// <returns><see cref="AddVulIgnoreRuleResponse"/></returns>
+        public Task<AddVulIgnoreRuleResponse> AddVulIgnoreRule(AddVulIgnoreRuleRequest req)
+        {
+            return InternalRequestAsync<AddVulIgnoreRuleResponse>(req, "AddVulIgnoreRule");
+        }
+
+        /// <summary>
+        /// 添加漏洞忽略规则
+        /// </summary>
+        /// <param name="req"><see cref="AddVulIgnoreRuleRequest"/></param>
+        /// <returns><see cref="AddVulIgnoreRuleResponse"/></returns>
+        public AddVulIgnoreRuleResponse AddVulIgnoreRuleSync(AddVulIgnoreRuleRequest req)
+        {
+            return InternalRequestAsync<AddVulIgnoreRuleResponse>(req, "AddVulIgnoreRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

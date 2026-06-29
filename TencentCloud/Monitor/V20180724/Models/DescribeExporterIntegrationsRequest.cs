@@ -25,34 +25,31 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kubernetes 集群类型，可不填。取值如下：
-        /// <li> 1= 容器集群(TKE) </li>
-        /// <li> 2=弹性集群(EKS) </li>
-        /// <li> 3= Prometheus管理的弹性集群(MEKS) </li>
+        /// <p>Kubernetes 集群类型，可不填。取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li>
         /// </summary>
         [JsonProperty("KubeType")]
         public long? KubeType{ get; set; }
 
         /// <summary>
-        /// 集群 ID，可不填
+        /// <p>集群 ID，可不填</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
+        /// <p>类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// <p>名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -25,13 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 检索名称
+        /// 过滤字段名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 检索值
+        /// 操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
+        /// </summary>
+        [JsonProperty("Operator")]
+        public long? Operator{ get; set; }
+
+        /// <summary>
+        /// 过滤值数组
         /// </summary>
         [JsonProperty("ValueList")]
         public string[] ValueList{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamArraySimple(map, prefix + "ValueList.", this.ValueList);
         }
     }

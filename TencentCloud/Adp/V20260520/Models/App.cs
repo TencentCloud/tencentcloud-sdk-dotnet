@@ -69,8 +69,8 @@ namespace TencentCloud.Adp.V20260520.Models
         /// <summary>
         /// 应用引用的共享知识库列表
         /// </summary>
-        [JsonProperty("SharedKnowledgeList")]
-        public AppSharedKnowledgeInfo[] SharedKnowledgeList{ get; set; }
+        [JsonProperty("SharedKbList")]
+        public AppSharedKbInfo[] SharedKbList{ get; set; }
 
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "SecretInfo.", this.SecretInfo);
             this.SetParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
             this.SetParamObj(map, prefix + "Status.", this.Status);
-            this.SetParamArrayObj(map, prefix + "SharedKnowledgeList.", this.SharedKnowledgeList);
+            this.SetParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
         }
     }
 }
