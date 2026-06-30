@@ -25,91 +25,91 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 分页参数，每页返回的数量，取值1~100
+        /// <p>分页参数，每页返回的数量，取值1~100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页参数，页偏移量，从0开始计数
+        /// <p>分页参数，页偏移量，从0开始计数</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 按策略名搜索
+        /// <p>按策略名搜索</p>
         /// </summary>
         [JsonProperty("Like")]
         public string Like{ get; set; }
 
         /// <summary>
-        /// 实例分组id
+        /// <p>实例分组id</p>
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 按更新时间排序, asc 或者 desc
+        /// <p>按更新时间排序, asc 或者 desc</p>
         /// </summary>
         [JsonProperty("UpdateTimeOrder")]
         public string UpdateTimeOrder{ get; set; }
 
         /// <summary>
-        /// 项目id列表
+        /// <p>项目id列表</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 告警策略类型列表
+        /// <p>告警策略类型列表</p>
         /// </summary>
         [JsonProperty("ViewNames")]
         public string[] ViewNames{ get; set; }
 
         /// <summary>
-        /// 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
+        /// <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
         /// </summary>
         [JsonProperty("FilterUnuseReceiver")]
         public long? FilterUnuseReceiver{ get; set; }
 
         /// <summary>
-        /// 过滤条件, 接收组列表
+        /// <p>过滤条件, 接收组列表</p>
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 过滤条件, 接收人列表
+        /// <p>过滤条件, 接收人列表</p>
         /// </summary>
         [JsonProperty("ReceiverUserList")]
         public string[] ReceiverUserList{ get; set; }
 
         /// <summary>
-        /// 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+        /// <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 模板策略组id, 多个id用逗号分隔
+        /// <p>模板策略组id, 多个id用逗号分隔</p>
         /// </summary>
         [JsonProperty("ConditionTempGroupId")]
         public string ConditionTempGroupId{ get; set; }
 
         /// <summary>
-        /// 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+        /// <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
         /// </summary>
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// 过滤条件，告警策略是否已启动或停止
+        /// <p>过滤条件，告警策略是否已启动或停止</p>
         /// </summary>
         [JsonProperty("IsOpen")]
         public bool? IsOpen{ get; set; }

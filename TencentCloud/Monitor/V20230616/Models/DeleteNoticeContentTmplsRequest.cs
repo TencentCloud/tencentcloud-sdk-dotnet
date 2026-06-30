@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 要删除的模板id
+        /// <p>要删除的模板id</p>
         /// </summary>
         [JsonProperty("TmplIDs")]
         public string[] TmplIDs{ get; set; }

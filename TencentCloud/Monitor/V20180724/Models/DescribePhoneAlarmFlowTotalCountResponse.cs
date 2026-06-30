@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 电话流水总数
+        /// <p>电话流水总数</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1453";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -215,7 +215,7 @@ namespace TencentCloud.Ess.V20201111
         /// - **可撤回合同状态**：未全部签署完成
         /// - **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
         /// 
-        /// 批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](dbOrm := beego.GetBOrmFlows())主动查询。
+        /// 批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](https://qian.tencent.com/developers/companyApis/operateFlows/DescribeCancelFlowsTask)主动查询。
         /// 
         /// 
         /// 注:
@@ -239,7 +239,7 @@ namespace TencentCloud.Ess.V20201111
         /// - **可撤回合同状态**：未全部签署完成
         /// - **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
         /// 
-        /// 批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%BA%8C-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](dbOrm := beego.GetBOrmFlows())主动查询。
+        /// 批量撤销结果可以通过接口返回的TaskId关联[批量撤销任务结果回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E5%8D%81%E4%B8%80-%E5%85%A8%E9%87%8F%E6%92%A4%E9%94%80%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)或通过接口[查询批量撤销合同结果](https://qian.tencent.com/developers/companyApis/operateFlows/DescribeCancelFlowsTask)主动查询。
         /// 
         /// 
         /// 注:

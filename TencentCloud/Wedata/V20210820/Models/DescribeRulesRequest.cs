@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

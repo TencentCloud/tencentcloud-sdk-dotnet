@@ -25,51 +25,58 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// <p>邮箱</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// <p>手机号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 手机号区号
+        /// <p>手机号区号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AreaCode")]
         public string AreaCode{ get; set; }
 
         /// <summary>
-        /// 企微账号id
+        /// <p>企微账号id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserId")]
         public string AppUserId{ get; set; }
 
         /// <summary>
-        /// 企微账号名称
+        /// <p>企微账号名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserName")]
         public string AppUserName{ get; set; }
+
+        /// <summary>
+        /// <p>飞书OpenId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkOpenId")]
+        public string LarkOpenId{ get; set; }
 
 
         /// <summary>
@@ -84,6 +91,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AreaCode", this.AreaCode);
             this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
             this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
+            this.SetParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
         }
     }
 }

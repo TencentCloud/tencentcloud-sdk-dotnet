@@ -25,64 +25,70 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 作业ID
+        /// <p>作业ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// container名字
+        /// <p>container名字</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 条数
+        /// <p>条数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序类型 desc asc
+        /// <p>排序类型 desc asc</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 作业运行的实例ID
+        /// <p>作业运行的实例ID</p>
         /// </summary>
         [JsonProperty("RunningOrderId")]
         public ulong? RunningOrderId{ get; set; }
 
         /// <summary>
-        /// 关键字
+        /// <p>关键字</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
+
+        /// <summary>
+        /// <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
         }
     }
 }

@@ -25,97 +25,97 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 仓库名
+        /// <p>仓库名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// <p>密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 仓库url
+        /// <p>仓库url</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 仓库类型，列表：harbor
+        /// <p>仓库类型，列表：harbor</p>
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// 仓库版本
+        /// <p>仓库版本</p>
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型，列表：public（公网）,private（私网）
+        /// <p>网络类型，列表：public（公网）,private（私网）</p>
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 区域，列表:default（默认）
+        /// <p>区域，列表:default（默认）</p>
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// 限速
+        /// <p>限速</p>
         /// </summary>
         [JsonProperty("SpeedLimit")]
         public ulong? SpeedLimit{ get; set; }
 
         /// <summary>
-        /// 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+        /// <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
         /// </summary>
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
 
         /// <summary>
-        /// 联通性检测结果详情
+        /// <p>联通性检测结果详情</p>
         /// </summary>
         [JsonProperty("ConnDetectDetail")]
         public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
 
         /// <summary>
-        /// tcr情况下instance_id
+        /// <p>tcr情况下instance_id</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 同步方式，0全量同步，1增量同步
+        /// <p>同步方式，0全量同步，1增量同步</p>
         /// </summary>
         [JsonProperty("SyncMode")]
         public ulong? SyncMode{ get; set; }
 
         /// <summary>
-        /// 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+        /// <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
         /// </summary>
         [JsonProperty("NeedScan")]
         public bool? NeedScan{ get; set; }
 
         /// <summary>
-        /// webhook接入地址
+        /// <p>webhook接入地址</p>
         /// </summary>
         [JsonProperty("WebhookUrl")]
         public string WebhookUrl{ get; set; }
 
         /// <summary>
-        /// webhook接入token	
+        /// <p>webhook接入token</p>
         /// </summary>
         [JsonProperty("WebhookToken")]
         public string WebhookToken{ get; set; }

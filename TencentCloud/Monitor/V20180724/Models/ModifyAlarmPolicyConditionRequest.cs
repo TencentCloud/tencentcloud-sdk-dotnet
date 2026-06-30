@@ -25,73 +25,73 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模块名，固定值 monitor
+        /// <p>模块名，固定值 monitor</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 告警策略 ID
+        /// <p>告警策略 ID</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 触发条件模板 Id，可不传
+        /// <p>触发条件模板 Id，可不传</p>
         /// </summary>
         [JsonProperty("ConditionTemplateId")]
         public long? ConditionTemplateId{ get; set; }
 
         /// <summary>
-        /// 指标触发条件
+        /// <p>指标触发条件</p>
         /// </summary>
         [JsonProperty("Condition")]
         public AlarmPolicyCondition Condition{ get; set; }
 
         /// <summary>
-        /// 事件触发条件
+        /// <p>事件触发条件</p>
         /// </summary>
         [JsonProperty("EventCondition")]
         public AlarmPolicyEventCondition EventCondition{ get; set; }
 
         /// <summary>
-        /// 全局过滤条件
+        /// <p>全局过滤条件</p>
         /// </summary>
         [JsonProperty("Filter")]
         public AlarmPolicyFilter Filter{ get; set; }
 
         /// <summary>
-        /// 聚合维度列表，指定按哪些维度 key 来做 group by
+        /// <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
         /// <summary>
-        /// 日志告警创建请求参数信息
+        /// <p>日志告警创建请求参数信息</p>
         /// </summary>
         [JsonProperty("LogAlarmReqInfo")]
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
         /// <summary>
-        /// 模板id，专供prom使用
+        /// <p>模板id，专供prom使用</p>
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
 
         /// <summary>
-        /// 启停状态，0=停用，1=启用
+        /// <p>启停状态，0=停用，1=启用</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 专供prom策略名称
+        /// <p>专供prom策略名称</p>
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 事件配置的告警
+        /// <p>事件配置的告警</p>
         /// </summary>
         [JsonProperty("EbSubject")]
         public string EbSubject{ get; set; }

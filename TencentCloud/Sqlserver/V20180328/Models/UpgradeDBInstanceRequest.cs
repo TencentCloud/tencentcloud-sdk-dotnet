@@ -25,76 +25,82 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-j8kv137v
+        /// <p>实例ID，形如mssql-j8kv137v</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+        /// <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+        /// <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+        /// <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券ID，目前单个订单只能使用一张代金券
+        /// <p>代金券ID，目前单个订单只能使用一张代金券</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 实例升级后的CPU核心数
+        /// <p>实例升级后的CPU核心数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+        /// <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p>
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+        /// <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p>
         /// </summary>
         [JsonProperty("HAType")]
         public string HAType{ get; set; }
 
         /// <summary>
-        /// 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+        /// <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p>
         /// </summary>
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }
 
         /// <summary>
-        /// 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+        /// <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p>
         /// </summary>
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }
 
         /// <summary>
-        /// 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+        /// <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
         /// </summary>
         [JsonProperty("DrZones")]
         public DrZoneInfo[] DrZones{ get; set; }
 
         /// <summary>
-        /// 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+        /// <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p>
         /// </summary>
         [JsonProperty("UpgradeCompatLevel")]
         public long? UpgradeCompatLevel{ get; set; }
+
+        /// <summary>
+        /// <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamArrayObj(map, prefix + "DrZones.", this.DrZones);
             this.SetParamSimple(map, prefix + "UpgradeCompatLevel", this.UpgradeCompatLevel);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

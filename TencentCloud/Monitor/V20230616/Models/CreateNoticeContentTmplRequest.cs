@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 模板名称
+        /// <p>模板名称</p>
         /// </summary>
         [JsonProperty("TmplName")]
         public string TmplName{ get; set; }
 
         /// <summary>
-        /// 监控类型
+        /// <p>监控类型</p>
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 模板内容
+        /// <p>模板内容</p>
         /// </summary>
         [JsonProperty("TmplContents")]
         public NoticeContentTmplItem TmplContents{ get; set; }
 
         /// <summary>
-        /// 模板语言 en/zh
+        /// <p>模板语言 en/zh</p>
         /// </summary>
         [JsonProperty("TmplLanguage")]
         public string TmplLanguage{ get; set; }

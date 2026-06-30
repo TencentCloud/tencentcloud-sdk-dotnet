@@ -25,14 +25,14 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群支撑网接入点
+        /// <p>集群支撑网接入点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterEndPoint")]

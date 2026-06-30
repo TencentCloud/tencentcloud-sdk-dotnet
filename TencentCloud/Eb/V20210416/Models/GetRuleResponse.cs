@@ -25,55 +25,55 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件集id
+        /// <p>事件集id</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 事件规则id
+        /// <p>事件规则id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 事件规则名称
+        /// <p>事件规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 事件规则状态
+        /// <p>事件规则状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 使能开关
+        /// <p>使能开关</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 事件规则描述
+        /// <p>事件规则描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 事件模式
+        /// <p>事件模式</p>
         /// </summary>
         [JsonProperty("EventPattern")]
         public string EventPattern{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("ModTime")]
         public string ModTime{ get; set; }

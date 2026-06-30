@@ -25,19 +25,19 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+        /// <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }
 
         /// <summary>
-        /// 生成的dkim密钥长度。0:1024，1:2048
+        /// <p>生成的dkim密钥长度。0:1024，1:2048</p>
         /// </summary>
         [JsonProperty("DKIMOption")]
         public ulong? DKIMOption{ get; set; }
 
         /// <summary>
-        /// tag 标签
+        /// <p>tag 标签</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagList[] TagList{ get; set; }

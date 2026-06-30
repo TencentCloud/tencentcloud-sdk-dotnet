@@ -28,7 +28,7 @@ namespace TencentCloud.Vtc.V20240223
 
        private const string endpoint = "vtc.tencentcloudapi.com";
        private const string version = "2024-02-23";
-       private const string sdkVersion = "SDK_NET_3.0.1320";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,8 @@ namespace TencentCloud.Vtc.V20240223
         }
 
         /// <summary>
+        /// 视频转译业务整体下线
+        /// 
         /// ###### 支持音色种别列表
         /// | 音色名称                 | 性别 | 目标语言         | 音色ID |
         /// | ------------------------ | ---- | ---------------- | ------ |
@@ -158,6 +160,8 @@ namespace TencentCloud.Vtc.V20240223
         }
 
         /// <summary>
+        /// 视频转译业务整体下线
+        /// 
         /// ###### 支持音色种别列表
         /// | 音色名称                 | 性别 | 目标语言         | 音色ID |
         /// | ------------------------ | ---- | ---------------- | ------ |

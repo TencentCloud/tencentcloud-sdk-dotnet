@@ -25,98 +25,98 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 是否可设为默认告警策略
+        /// <p>是否可设为默认告警策略</p>
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public bool? CanSetDefault{ get; set; }
 
         /// <summary>
-        /// 告警策略组ID
+        /// <p>告警策略组ID</p>
         /// </summary>
         [JsonProperty("GroupID")]
         public long? GroupID{ get; set; }
 
         /// <summary>
-        /// 告警策略组名称
+        /// <p>告警策略组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }
 
         /// <summary>
-        /// 是否为默认告警策略
+        /// <p>是否为默认告警策略</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 告警策略启用状态
+        /// <p>告警策略启用状态</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 最后修改人UIN
+        /// <p>最后修改人UIN</p>
         /// </summary>
         [JsonProperty("LastEditUin")]
         public long? LastEditUin{ get; set; }
 
         /// <summary>
-        /// 未屏蔽的实例数
+        /// <p>未屏蔽的实例数</p>
         /// </summary>
         [JsonProperty("NoShieldedInstanceCount")]
         public long? NoShieldedInstanceCount{ get; set; }
 
         /// <summary>
-        /// 父策略组ID
+        /// <p>父策略组ID</p>
         /// </summary>
         [JsonProperty("ParentGroupID")]
         public long? ParentGroupID{ get; set; }
 
         /// <summary>
-        /// 所属项目ID
+        /// <p>所属项目ID</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 告警接收对象信息
+        /// <p>告警接收对象信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverInfos")]
         public PolicyGroupReceiverInfo[] ReceiverInfos{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 总绑定实例数
+        /// <p>总绑定实例数</p>
         /// </summary>
         [JsonProperty("TotalInstanceCount")]
         public long? TotalInstanceCount{ get; set; }
 
         /// <summary>
-        /// 视图
+        /// <p>视图</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 是否为与关系规则
+        /// <p>是否为与关系规则</p>
         /// </summary>
         [JsonProperty("IsUnionRule")]
         public long? IsUnionRule{ get; set; }

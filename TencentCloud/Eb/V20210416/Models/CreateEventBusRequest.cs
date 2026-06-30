@@ -25,25 +25,25 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+        /// <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p>
         /// </summary>
         [JsonProperty("EventBusName")]
         public string EventBusName{ get; set; }
 
         /// <summary>
-        /// 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+        /// <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// EB存储时长
+        /// <p>事件存储时长</p><p>单位：day</p>
         /// </summary>
         [JsonProperty("SaveDays")]
         public long? SaveDays{ get; set; }
 
         /// <summary>
-        /// EB是否开启存储
+        /// <p>是否开启事件存储</p>
         /// </summary>
         [JsonProperty("EnableStore")]
         public bool? EnableStore{ get; set; }

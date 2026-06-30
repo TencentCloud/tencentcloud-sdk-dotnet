@@ -25,52 +25,58 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 数据库实例ID，形如mssql-njj2mtpl
+        /// <p>数据库实例ID，形如mssql-njj2mtpl</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例变配后的CPU核心数，不填则不修改
+        /// <p>实例变配后的CPU核心数，不填则不修改</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例变配后内存大小，单位GB，不填则不修改
+        /// <p>实例变配后内存大小，单位GB，不填则不修改</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例变配后磁盘大小，单位GB，不填则不修改
+        /// <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例版本，不填则不修改
+        /// <p>实例版本，不填则不修改</p>
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
+        /// <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
         /// </summary>
         [JsonProperty("HAType")]
         public string HAType{ get; set; }
 
         /// <summary>
-        /// 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+        /// <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
         /// </summary>
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }
 
         /// <summary>
-        /// 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+        /// <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
         /// </summary>
         [JsonProperty("DrZones")]
         public DrZoneInfo[] DrZones{ get; set; }
+
+        /// <summary>
+        /// <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public long? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
             this.SetParamArrayObj(map, prefix + "DrZones.", this.DrZones);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

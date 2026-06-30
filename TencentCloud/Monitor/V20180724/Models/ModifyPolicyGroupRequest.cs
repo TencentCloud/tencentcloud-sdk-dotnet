@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id
+        /// <p>策略组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 告警类型
+        /// <p>告警类型</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 策略组名称
+        /// <p>策略组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警
+        /// <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul>
         /// </summary>
         [JsonProperty("IsUnionRule")]
         public long? IsUnionRule{ get; set; }
 
         /// <summary>
-        /// 指标告警条件规则，不填表示删除已有的所有指标告警条件规则
+        /// <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p>
         /// </summary>
         [JsonProperty("Conditions")]
         public ModifyPolicyGroupCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// 事件告警条件，不填表示删除已有的事件告警条件
+        /// <p>事件告警条件，不填表示删除已有的事件告警条件</p>
         /// </summary>
         [JsonProperty("EventConditions")]
         public ModifyPolicyGroupEventCondition[] EventConditions{ get; set; }
 
         /// <summary>
-        /// 模板策略组id
+        /// <p>模板策略组id</p>
         /// </summary>
         [JsonProperty("ConditionTempGroupId")]
         public long? ConditionTempGroupId{ get; set; }

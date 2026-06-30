@@ -43,13 +43,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模版类型（1：系统模版，2：自定义）
+        /// 模版类型：1-系统模版，2-用户自定义模版
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+        /// 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
         /// </summary>
         [JsonProperty("SourceObjectType")]
         public ulong? SourceObjectType{ get; set; }
@@ -68,14 +68,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SourceContent{ get; set; }
 
         /// <summary>
-        /// 源数据适用类型
+        /// 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceEngineTypes")]
         public ulong?[] SourceEngineTypes{ get; set; }
 
         /// <summary>
-        /// 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+        /// 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityDim")]

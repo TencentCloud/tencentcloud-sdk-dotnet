@@ -25,37 +25,37 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 事件集描述，不限字符类型，200字符描述以内
+        /// <p>事件集描述，不限字符类型，200字符描述以内</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+        /// <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
         /// </summary>
         [JsonProperty("EventBusName")]
         public string EventBusName{ get; set; }
 
         /// <summary>
-        /// EB日志存储时长
+        /// <p>事件存储时长</p><p>单位：day</p>
         /// </summary>
         [JsonProperty("SaveDays")]
         public long? SaveDays{ get; set; }
 
         /// <summary>
-        /// EB日志主题ID
+        /// <p>事件存储主题ID</p>
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
-        /// 是否开启存储
+        /// <p>是否开启存储</p>
         /// </summary>
         [JsonProperty("EnableStore")]
         public bool? EnableStore{ get; set; }

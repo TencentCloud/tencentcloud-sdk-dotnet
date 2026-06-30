@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 仓库唯一id
+        /// <p>仓库唯一id</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public long? RegistryId{ get; set; }

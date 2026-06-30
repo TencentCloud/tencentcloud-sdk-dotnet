@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+        /// 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
         /// </summary>
         [JsonProperty("MonitorType")]
         public ulong? MonitorType{ get; set; }
@@ -79,12 +79,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 离线周期模式下,调度周期 
-        /// MINUTE_CYCLE:I,
-        /// HOUR_CYCLE:H,
-        /// DAY_CYCLE:D,
-        /// WEEK_CYCLE:W,
-        /// MONTH_CYCLE:M
+        /// 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
@@ -126,13 +121,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TableId{ get; set; }
 
         /// <summary>
-        /// 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
         /// </summary>
         [JsonProperty("ExecEngineType")]
         public string ExecEngineType{ get; set; }
 
         /// <summary>
-        /// 触发场景
+        /// 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
         /// </summary>
         [JsonProperty("TriggerTypes")]
         public string[] TriggerTypes{ get; set; }

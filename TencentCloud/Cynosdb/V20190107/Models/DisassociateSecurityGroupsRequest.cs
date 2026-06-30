@@ -42,6 +42,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 说明：请正确输入集群所在的主可用区，若输入非集群所在的主可用区可能显示调用成功，但实际执行会失败。
         /// </summary>
         [JsonProperty("Zone")]
+        [System.Obsolete]
         public string Zone{ get; set; }
 
 

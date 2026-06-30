@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 监控类型
+        /// <p>监控类型</p>
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 策略类型值
+        /// <p>策略类型值</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

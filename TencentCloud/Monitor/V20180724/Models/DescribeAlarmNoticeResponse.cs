@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通知模板详细信息
+        /// <p>告警通知模板详细信息</p>
         /// </summary>
         [JsonProperty("Notice")]
         public AlarmNotice Notice{ get; set; }

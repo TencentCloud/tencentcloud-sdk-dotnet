@@ -54,6 +54,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
+        /// <summary>
+        /// <p>文章标题</p>
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamObj(map, prefix + "BucketInfo.", this.BucketInfo);
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
         }
     }
 }

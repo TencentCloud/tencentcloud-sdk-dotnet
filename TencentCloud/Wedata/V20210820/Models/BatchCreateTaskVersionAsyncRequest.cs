@@ -25,52 +25,58 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务信息
+        /// <p>任务信息</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public BatchCreateTaskVersionDTO[] Tasks{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否自动运行
+        /// <p>是否自动运行</p>
         /// </summary>
         [JsonProperty("AutoRun")]
         public bool? AutoRun{ get; set; }
 
         /// <summary>
-        /// 告警方式:email-邮件;sms-短信;wecom-企业微信
+        /// <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
         /// </summary>
         [JsonProperty("AlarmWays")]
         public string AlarmWays{ get; set; }
 
         /// <summary>
-        /// 告警对象:1-项目管理员，2-任务责任人
+        /// <p>告警对象:1-项目管理员，2-任务责任人</p>
         /// </summary>
         [JsonProperty("AlarmRecipientTypes")]
         public string AlarmRecipientTypes{ get; set; }
 
         /// <summary>
-        /// 是否需要校验父任务已经提交到调度
+        /// <p>是否需要校验父任务已经提交到调度</p>
         /// </summary>
         [JsonProperty("NeedCheckParentSubmitted")]
         public bool? NeedCheckParentSubmitted{ get; set; }
 
         /// <summary>
-        /// 是否需要补录中间实例
+        /// <p>是否需要补录中间实例</p>
         /// </summary>
         [JsonProperty("EnableMakeUp")]
         public bool? EnableMakeUp{ get; set; }
 
         /// <summary>
-        /// 指定审批人列表
+        /// <p>指定审批人列表</p>
         /// </summary>
         [JsonProperty("AssignApprovalList")]
         public string[] AssignApprovalList{ get; set; }
+
+        /// <summary>
+        /// <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+        /// </summary>
+        [JsonProperty("PerTaskMissingInstanceStrategy")]
+        public TaskMissingInstanceStrategy[] PerTaskMissingInstanceStrategy{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
             this.SetParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
             this.SetParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
+            this.SetParamArrayObj(map, prefix + "PerTaskMissingInstanceStrategy.", this.PerTaskMissingInstanceStrategy);
         }
     }
 }

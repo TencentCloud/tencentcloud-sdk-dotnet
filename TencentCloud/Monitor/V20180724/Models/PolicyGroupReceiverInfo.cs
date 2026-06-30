@@ -25,84 +25,84 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 有效时段结束时间
+        /// <p>有效时段结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 是否需要发送通知
+        /// <p>是否需要发送通知</p>
         /// </summary>
         [JsonProperty("NeedSendNotice")]
         public long? NeedSendNotice{ get; set; }
 
         /// <summary>
-        /// 告警接收渠道
+        /// <p>告警接收渠道</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyWay")]
         public string[] NotifyWay{ get; set; }
 
         /// <summary>
-        /// 电话告警对个人间隔（秒）
+        /// <p>电话告警对个人间隔（秒）</p>
         /// </summary>
         [JsonProperty("PersonInterval")]
         public long? PersonInterval{ get; set; }
 
         /// <summary>
-        /// 消息接收组列表
+        /// <p>消息接收组列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverGroupList")]
         public long?[] ReceiverGroupList{ get; set; }
 
         /// <summary>
-        /// 接受者类型
+        /// <p>接受者类型</p>
         /// </summary>
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// 接收人列表。通过平台接口查询到的接收人id列表
+        /// <p>接收人列表。通过平台接口查询到的接收人id列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverUserList")]
         public long?[] ReceiverUserList{ get; set; }
 
         /// <summary>
-        /// 告警恢复通知方式
+        /// <p>告警恢复通知方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecoverNotify")]
         public string[] RecoverNotify{ get; set; }
 
         /// <summary>
-        /// 电话告警每轮间隔（秒）
+        /// <p>电话告警每轮间隔（秒）</p>
         /// </summary>
         [JsonProperty("RoundInterval")]
         public long? RoundInterval{ get; set; }
 
         /// <summary>
-        /// 电话告警轮数
+        /// <p>电话告警轮数</p>
         /// </summary>
         [JsonProperty("RoundNumber")]
         public long? RoundNumber{ get; set; }
 
         /// <summary>
-        /// 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+        /// <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendFor")]
         public string[] SendFor{ get; set; }
 
         /// <summary>
-        /// 有效时段开始时间
+        /// <p>有效时段开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 电话告警接收者uid
+        /// <p>电话告警接收者uid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UIDList")]

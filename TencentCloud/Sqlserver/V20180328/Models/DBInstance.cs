@@ -25,335 +25,342 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例所在项目ID
+        /// <p>实例所在项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例所在地域ID
+        /// <p>实例所在地域ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 实例所在可用区ID
+        /// <p>实例所在可用区ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例所在私有网络ID，基础网络时为 0
+        /// <p>实例所在私有网络ID，基础网络时为 0</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 实例所在私有网络子网ID，基础网络时为 0
+        /// <p>实例所在私有网络子网ID，基础网络时为 0</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+        /// <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例访问IP
+        /// <p>实例访问IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 实例访问端口
+        /// <p>实例访问端口</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例更新时间
+        /// <p>实例更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 实例计费开始时间
+        /// <p>实例计费开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 实例计费结束时间
+        /// <p>实例计费结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 实例隔离时间
+        /// <p>实例隔离时间</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位G
+        /// <p>实例内存大小，单位G</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例已经使用存储空间大小，单位G
+        /// <p>实例已经使用存储空间大小，单位G</p>
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
 
         /// <summary>
-        /// 实例存储空间大小，单位G
+        /// <p>实例存储空间大小，单位G</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例版本
+        /// <p>实例版本</p>
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
-        /// 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+        /// <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+        /// <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
         /// </summary>
         [JsonProperty("Model")]
         public long? Model{ get; set; }
 
         /// <summary>
-        /// 实例所在地域名称，如 ap-guangzhou
+        /// <p>实例所在地域名称，如 ap-guangzhou</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例所在可用区名称，如 ap-guangzhou-1
+        /// <p>实例所在可用区名称，如 ap-guangzhou-1</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 备份时间点
+        /// <p>备份时间点</p>
         /// </summary>
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }
 
         /// <summary>
-        /// 实例付费模式， 0-按量计费，1-包年包月
+        /// <p>实例付费模式， 0-按量计费，1-包年包月</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例唯一UID
+        /// <p>实例唯一UID</p>
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
         /// <summary>
-        /// 实例cpu核心数
+        /// <p>实例cpu核心数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例版本代号
+        /// <p>实例版本代号</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+        /// <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 计费ID
+        /// <p>计费ID</p>
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+        /// <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+        /// <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 实例隔离操作
+        /// <p>实例隔离操作</p>
         /// </summary>
         [JsonProperty("IsolateOperator")]
         public string IsolateOperator{ get; set; }
 
         /// <summary>
-        /// 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+        /// <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
         /// </summary>
         [JsonProperty("SubFlag")]
         public string SubFlag{ get; set; }
 
         /// <summary>
-        /// 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+        /// <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
         /// </summary>
         [JsonProperty("ROFlag")]
         public string ROFlag{ get; set; }
 
         /// <summary>
-        /// 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+        /// <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
         /// </summary>
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }
 
         /// <summary>
-        /// 实例绑定的标签列表
+        /// <p>实例绑定的标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+        /// <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
         /// </summary>
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
         /// <summary>
-        /// 实例备份信息
+        /// <p>实例备份信息</p>
         /// </summary>
         [JsonProperty("InstanceNote")]
         public string InstanceNote{ get; set; }
 
         /// <summary>
-        /// 备份周期
+        /// <p>备份周期</p>
         /// </summary>
         [JsonProperty("BackupCycle")]
         public long?[] BackupCycle{ get; set; }
 
         /// <summary>
-        /// 备份周期类型，[daily、weekly、monthly]
+        /// <p>备份周期类型，[daily、weekly、monthly]</p>
         /// </summary>
         [JsonProperty("BackupCycleType")]
         public string BackupCycleType{ get; set; }
 
         /// <summary>
-        /// 数据(日志)备份保留时间
+        /// <p>数据(日志)备份保留时间</p>
         /// </summary>
         [JsonProperty("BackupSaveDays")]
         public long? BackupSaveDays{ get; set; }
 
         /// <summary>
-        /// 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+        /// <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+        /// <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// 跨地域备份状态 enable-开启，disable-关闭
+        /// <p>跨地域备份状态 enable-开启，disable-关闭</p>
         /// </summary>
         [JsonProperty("CrossBackupEnabled")]
         public string CrossBackupEnabled{ get; set; }
 
         /// <summary>
-        /// 跨地域备份保留天数，则默认7天
+        /// <p>跨地域备份保留天数，则默认7天</p>
         /// </summary>
         [JsonProperty("CrossBackupSaveDays")]
         public ulong? CrossBackupSaveDays{ get; set; }
 
         /// <summary>
-        /// 外网地址域名
+        /// <p>外网地址域名</p>
         /// </summary>
         [JsonProperty("DnsPodDomain")]
         public string DnsPodDomain{ get; set; }
 
         /// <summary>
-        /// 外网端口号
+        /// <p>外网端口号</p>
         /// </summary>
         [JsonProperty("TgwWanVPort")]
         public long? TgwWanVPort{ get; set; }
 
         /// <summary>
-        /// 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+        /// <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
         /// </summary>
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
         /// <summary>
-        /// 系统时区，默认：China Standard Time
+        /// <p>系统时区，默认：China Standard Time</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// 是否跨AZ
+        /// <p>是否跨AZ</p>
         /// </summary>
         [JsonProperty("IsDrZone")]
         public bool? IsDrZone{ get; set; }
 
         /// <summary>
-        /// 双节点实例备可用区信息
+        /// <p>双节点实例备可用区信息</p>
         /// </summary>
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
         /// <summary>
-        /// 架构标识，SINGLE-单节点 DOUBLE-双节点
+        /// <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+        /// <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }
 
         /// <summary>
-        /// 多节点实例备可用区信息
+        /// <p>多节点实例备可用区信息</p>
         /// </summary>
         [JsonProperty("MultiSlaveZones")]
         public SlaveZones[] MultiSlaveZones{ get; set; }
+
+        /// <summary>
+        /// <p>额外IO吞吐量</p><p>单位：MB/s</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public long? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -416,6 +423,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
             this.SetParamSimple(map, prefix + "Style", this.Style);
             this.SetParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 模板类型 1.系统模板 2.自定义模板
+        /// 模版类型：1-系统模版，2-用户自定义模版
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 1.常量 2.离线表级 2.离线字段级
+        /// 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
         /// </summary>
         [JsonProperty("SourceObjectType")]
         public ulong? SourceObjectType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 源端对应的引擎类型
+        /// 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
         /// </summary>
         [JsonProperty("SourceEngineTypes")]
         public ulong?[] SourceEngineTypes{ get; set; }

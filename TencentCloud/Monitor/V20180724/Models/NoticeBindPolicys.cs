@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通知模板 ID
+        /// <p>告警通知模板 ID</p>
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
 
         /// <summary>
-        /// 告警通知模板绑定的告警策略ID列表
+        /// <p>告警通知模板绑定的告警策略ID列表</p>
         /// </summary>
         [JsonProperty("PolicyIds")]
         public string[] PolicyIds{ get; set; }

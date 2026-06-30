@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -470,6 +470,27 @@ namespace TencentCloud.Omics.V20221128
         public GetRunCallsResponse GetRunCallsSync(GetRunCallsRequest req)
         {
             return InternalRequestAsync<GetRunCallsResponse>(req, "GetRunCalls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取任务详情文件。
+        /// </summary>
+        /// <param name="req"><see cref="GetRunJobLogRequest"/></param>
+        /// <returns><see cref="GetRunJobLogResponse"/></returns>
+        public Task<GetRunJobLogResponse> GetRunJobLog(GetRunJobLogRequest req)
+        {
+            return InternalRequestAsync<GetRunJobLogResponse>(req, "GetRunJobLog");
+        }
+
+        /// <summary>
+        /// 获取任务详情文件。
+        /// </summary>
+        /// <param name="req"><see cref="GetRunJobLogRequest"/></param>
+        /// <returns><see cref="GetRunJobLogResponse"/></returns>
+        public GetRunJobLogResponse GetRunJobLogSync(GetRunJobLogRequest req)
+        {
+            return InternalRequestAsync<GetRunJobLogResponse>(req, "GetRunJobLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

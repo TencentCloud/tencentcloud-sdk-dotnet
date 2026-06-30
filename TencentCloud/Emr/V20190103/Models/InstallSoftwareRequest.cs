@@ -102,6 +102,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ContainerExtraConf")]
         public ContainerExtraConf ContainerExtraConf{ get; set; }
 
+        /// <summary>
+        /// <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+        /// </summary>
+        [JsonProperty("CheckServiceDeployInfo")]
+        public bool? CheckServiceDeployInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
             this.SetParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
+            this.SetParamSimple(map, prefix + "CheckServiceDeployInfo", this.CheckServiceDeployInfo);
         }
     }
 }

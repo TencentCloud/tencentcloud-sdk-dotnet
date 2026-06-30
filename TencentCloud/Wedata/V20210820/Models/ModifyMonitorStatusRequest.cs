@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 监控开关状态
+        /// 监控是否开启：0-关闭，1-开启
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public bool? MonitorStatus{ get; set; }

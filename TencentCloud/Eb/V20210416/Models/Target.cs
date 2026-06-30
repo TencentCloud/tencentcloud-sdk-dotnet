@@ -25,51 +25,51 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 目标类型
+        /// <p>目标类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 目标ID
+        /// <p>目标ID</p>
         /// </summary>
         [JsonProperty("TargetId")]
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 目标描述
+        /// <p>目标描述</p>
         /// </summary>
         [JsonProperty("TargetDescription")]
         public TargetDescription TargetDescription{ get; set; }
 
         /// <summary>
-        /// 事件规则ID
+        /// <p>事件规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 开启批量投递使能
+        /// <p>开启批量投递使能</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableBatchDelivery")]
         public bool? EnableBatchDelivery{ get; set; }
 
         /// <summary>
-        /// 批量投递最长等待时间
+        /// <p>批量投递最长等待时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchTimeout")]
         public long? BatchTimeout{ get; set; }
 
         /// <summary>
-        /// 批量投递最大事件条数
+        /// <p>批量投递最大事件条数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchEventCount")]

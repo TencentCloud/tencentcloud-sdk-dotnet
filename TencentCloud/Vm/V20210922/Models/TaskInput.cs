@@ -25,22 +25,28 @@ namespace TencentCloud.Vm.V20210922.Models
     {
         
         /// <summary>
-        /// 数据ID
+        /// <p>数据ID</p>
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务输入
+        /// <p>任务输入</p>
         /// </summary>
         [JsonProperty("Input")]
         public StorageInfo Input{ get; set; }
+
+        /// <summary>
+        /// <p>视频解码参数</p>
+        /// </summary>
+        [JsonProperty("DecodeParams")]
+        public DecodeParams DecodeParams{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Input.", this.Input);
+            this.SetParamObj(map, prefix + "DecodeParams.", this.DecodeParams);
         }
     }
 }

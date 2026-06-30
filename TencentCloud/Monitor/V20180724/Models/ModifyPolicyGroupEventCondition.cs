@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 事件id
+        /// <p>事件id</p>
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 告警发送收敛类型。0连续告警，1指数告警
+        /// <p>告警发送收敛类型。0连续告警，1指数告警</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+        /// <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+        /// <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

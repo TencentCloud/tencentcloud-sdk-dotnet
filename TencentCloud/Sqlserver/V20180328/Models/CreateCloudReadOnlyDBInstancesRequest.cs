@@ -25,154 +25,160 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 主实例ID，格式如：mssql-3l3fgqn7
+        /// <p>主实例ID，格式如：mssql-3l3fgqn7</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
+        /// <p>实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+        /// <p>只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupType")]
         public long? ReadOnlyGroupType{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位GB
+        /// <p>实例内存大小，单位GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例磁盘大小，单位GB
+        /// <p>实例磁盘大小，单位GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例核心数
+        /// <p>实例核心数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+        /// <p>购买实例的宿主机磁盘类型,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。
+        /// <p>0-默认不升级主实例，1-强制升级主实例完成ro部署；主实例为非集群版时需要填1，强制升级为集群版。填1 说明您已同意将主实例升级到集群版实例。</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupForcedUpgrade")]
         public long? ReadOnlyGroupForcedUpgrade{ get; set; }
 
         /// <summary>
-        /// ReadOnlyGroupType=3时必填,已存在的只读组ID
+        /// <p>ReadOnlyGroupType=3时必填,已存在的只读组ID</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// ReadOnlyGroupType=2时必填，新建的只读组名称
+        /// <p>ReadOnlyGroupType=2时必填，新建的只读组名称</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
 
         /// <summary>
-        /// ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。
+        /// <p>ReadOnlyGroupType=2时必填，新建的只读组是否开启延迟剔除功能，1-开启，0-关闭。当只读副本与主实例延迟大于阈值后，自动剔除。</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupIsOfflineDelay")]
         public long? ReadOnlyGroupIsOfflineDelay{ get; set; }
 
         /// <summary>
-        /// ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
+        /// <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupMaxDelayTime")]
         public long? ReadOnlyGroupMaxDelayTime{ get; set; }
 
         /// <summary>
-        /// ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
+        /// <p>ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。</p>
         /// </summary>
         [JsonProperty("ReadOnlyGroupMinInGroup")]
         public long? ReadOnlyGroupMinInGroup{ get; set; }
 
         /// <summary>
-        /// 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+        /// <p>付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 本次即将购买的实例数量，默认取值2。
+        /// <p>本次即将购买的实例数量，默认取值2。</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
+        /// <p>VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
+        /// <p>VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 购买实例周期，默认取值为1，表示一个月。取值不超过48
+        /// <p>购买实例周期，默认取值为1，表示一个月。取值不超过48</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 安全组列表，填写形如sg-xxx的安全组ID
+        /// <p>安全组列表，填写形如sg-xxx的安全组ID</p>
         /// </summary>
         [JsonProperty("SecurityGroupList")]
         public string[] SecurityGroupList{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券；1 - 是，0 - 否，默认不使用
+        /// <p>是否自动使用代金券；1 - 是，0 - 否，默认不使用</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券ID数组，目前单个订单只能使用一张
+        /// <p>代金券ID数组，目前单个订单只能使用一张</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 新建实例绑定的标签集合
+        /// <p>新建实例绑定的标签集合</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+        /// <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
         /// </summary>
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
         /// <summary>
-        /// 系统时区，默认：China Standard Time
+        /// <p>系统时区，默认：China Standard Time</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// 磁盘加密标识，0-不加密，1-加密
+        /// <p>磁盘加密标识，0-不加密，1-加密</p>
         /// </summary>
         [JsonProperty("DiskEncryptFlag")]
         public long? DiskEncryptFlag{ get; set; }
+
+        /// <summary>
+        /// <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -205,6 +211,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

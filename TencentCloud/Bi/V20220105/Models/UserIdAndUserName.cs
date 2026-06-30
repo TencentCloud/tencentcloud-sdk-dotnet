@@ -183,6 +183,34 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
+        /// <summary>
+        /// <p>飞书应用ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkAppId")]
+        public string LarkAppId{ get; set; }
+
+        /// <summary>
+        /// <p>飞书UserId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkUserId")]
+        public string LarkUserId{ get; set; }
+
+        /// <summary>
+        /// <p>飞书OpenId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkOpenId")]
+        public string LarkOpenId{ get; set; }
+
+        /// <summary>
+        /// <p>飞书UserName</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkUserName")]
+        public string LarkUserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +240,10 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
             this.SetParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "LarkAppId", this.LarkAppId);
+            this.SetParamSimple(map, prefix + "LarkUserId", this.LarkUserId);
+            this.SetParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
+            this.SetParamSimple(map, prefix + "LarkUserName", this.LarkUserName);
         }
     }
 }

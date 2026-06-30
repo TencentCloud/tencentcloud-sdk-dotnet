@@ -25,25 +25,25 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 本变配是否对实例有影响，0-没有影响 1-有影响
+        /// <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
         /// </summary>
         [JsonProperty("IsAffect")]
         public long? IsAffect{ get; set; }
 
         /// <summary>
-        /// 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
+        /// <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
         /// </summary>
         [JsonProperty("Passed")]
         public long? Passed{ get; set; }
 
         /// <summary>
-        /// 本变配是升配还是降配，down-降配 up-升配
+        /// <p>本变配是升配还是降配，down-降配 up-升配</p>
         /// </summary>
         [JsonProperty("ModifyMode")]
         public string ModifyMode{ get; set; }
 
         /// <summary>
-        /// 检查项列表
+        /// <p>检查项列表</p>
         /// </summary>
         [JsonProperty("CheckItems")]
         public CheckItem[] CheckItems{ get; set; }

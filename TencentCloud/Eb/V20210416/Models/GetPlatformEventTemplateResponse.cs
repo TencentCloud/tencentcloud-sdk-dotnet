@@ -25,7 +25,7 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 平台产品事件模板
+        /// <p>平台产品事件模板</p>
         /// </summary>
         [JsonProperty("EventTemplate")]
         public string EventTemplate{ get; set; }

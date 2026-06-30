@@ -25,82 +25,82 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("ModTime")]
         public string ModTime{ get; set; }
 
         /// <summary>
-        /// 事件集描述
+        /// <p>事件集描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// <p>日志集ID</p>
         /// </summary>
         [JsonProperty("ClsLogsetId")]
         public string ClsLogsetId{ get; set; }
 
         /// <summary>
-        /// 事件集名称
+        /// <p>事件集名称</p>
         /// </summary>
         [JsonProperty("EventBusName")]
         public string EventBusName{ get; set; }
 
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// （已废弃）事件集类型
+        /// <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 计费模式
+        /// <p>计费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// EB日志存储时长
+        /// <p>EB日志存储时长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaveDays")]
         public long? SaveDays{ get; set; }
 
         /// <summary>
-        /// EB日志主题ID
+        /// <p>EB日志主题ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
-        /// 是否开启存储
+        /// <p>是否开启存储</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableStore")]
         public bool? EnableStore{ get; set; }
 
         /// <summary>
-        /// 消息序列，是否有序
+        /// <p>消息序列，是否有序</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinkMode")]

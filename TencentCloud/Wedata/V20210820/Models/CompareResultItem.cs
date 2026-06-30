@@ -53,14 +53,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 比较类型
+        /// 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareType")]
         public ulong? CompareType{ get; set; }
 
         /// <summary>
-        /// 值比较类型
+        /// 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueComputeType")]

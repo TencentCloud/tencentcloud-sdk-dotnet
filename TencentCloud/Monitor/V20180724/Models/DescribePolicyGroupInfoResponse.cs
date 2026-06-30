@@ -25,108 +25,108 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略组名称
+        /// <p>策略组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 策略组所属的项目id
+        /// <p>策略组所属的项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否为默认策略，0表示非默认策略，1表示默认策略
+        /// <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 策略说明
+        /// <p>策略说明</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 策略类型名称
+        /// <p>策略类型名称</p>
         /// </summary>
         [JsonProperty("ShowName")]
         public string ShowName{ get; set; }
 
         /// <summary>
-        /// 最近编辑的用户uin
+        /// <p>最近编辑的用户uin</p>
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// 最近编辑时间
+        /// <p>最近编辑时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 该策略支持的地域
+        /// <p>该策略支持的地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// 策略类型的维度列表
+        /// <p>策略类型的维度列表</p>
         /// </summary>
         [JsonProperty("DimensionGroup")]
         public string[] DimensionGroup{ get; set; }
 
         /// <summary>
-        /// 阈值规则列表
+        /// <p>阈值规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionsConfig")]
         public DescribePolicyGroupInfoCondition[] ConditionsConfig{ get; set; }
 
         /// <summary>
-        /// 产品事件规则列表
+        /// <p>产品事件规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventConfig")]
         public DescribePolicyGroupInfoEventCondition[] EventConfig{ get; set; }
 
         /// <summary>
-        /// 用户接收人列表
+        /// <p>用户接收人列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverInfos")]
         public DescribePolicyGroupInfoReceiverInfo[] ReceiverInfos{ get; set; }
 
         /// <summary>
-        /// 用户回调信息
+        /// <p>用户回调信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Callback")]
         public DescribePolicyGroupInfoCallback Callback{ get; set; }
 
         /// <summary>
-        /// 模板策略组
+        /// <p>模板策略组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionsTemp")]
         public DescribePolicyGroupInfoConditionTpl ConditionsTemp{ get; set; }
 
         /// <summary>
-        /// 是否可以设置成默认策略
+        /// <p>是否可以设置成默认策略</p>
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public bool? CanSetDefault{ get; set; }
 
         /// <summary>
-        /// 是否且规则
+        /// <p>是否且规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUnionRule")]

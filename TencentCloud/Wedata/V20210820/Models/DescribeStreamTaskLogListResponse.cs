@@ -25,14 +25,14 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 是否是全量
+        /// <p>是否是全量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 日志集合
+        /// <p>日志集合</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogContentList")]

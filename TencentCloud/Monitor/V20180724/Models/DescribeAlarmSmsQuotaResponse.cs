@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 配额总数
+        /// <p>配额总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 总使用量
+        /// <p>总使用量</p>
         /// </summary>
         [JsonProperty("Used")]
         public long? Used{ get; set; }
 
         /// <summary>
-        /// 短信配额信息列表
+        /// <p>短信配额信息列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaList")]

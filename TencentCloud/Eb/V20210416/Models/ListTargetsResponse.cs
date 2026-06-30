@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 目标总数
+        /// <p>目标总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 目标信息
+        /// <p>目标信息</p>
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }

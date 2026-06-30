@@ -41,6 +41,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 可用区
         /// </summary>
         [JsonProperty("Zone")]
+        [System.Obsolete]
         public string Zone{ get; set; }
 
 

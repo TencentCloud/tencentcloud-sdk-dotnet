@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 绑定的实例数量
+        /// <p>绑定的实例数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

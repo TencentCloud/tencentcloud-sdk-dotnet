@@ -25,62 +25,62 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 自定义通知内容模板id，唯一id
+        /// <p>自定义通知内容模板id，唯一id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmplID")]
         public string TmplID{ get; set; }
 
         /// <summary>
-        /// 自定义通知内容模板名
+        /// <p>自定义通知内容模板名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmplName")]
         public string TmplName{ get; set; }
 
         /// <summary>
-        /// 通知内容
+        /// <p>通知内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmplContents")]
         public NoticeContentTmplItem TmplContents{ get; set; }
 
         /// <summary>
-        /// Unix时间戳，秒
+        /// <p>Unix时间戳，秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// Unix时间戳，秒
+        /// <p>Unix时间戳，秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改人
+        /// <p>最后修改人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifier")]
         public string LastModifier{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 监控类型
+        /// <p>监控类型</p>
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 模板语言 en/zh
+        /// <p>模板语言 en/zh</p>
         /// </summary>
         [JsonProperty("TmplLanguage")]
         public string TmplLanguage{ get; set; }

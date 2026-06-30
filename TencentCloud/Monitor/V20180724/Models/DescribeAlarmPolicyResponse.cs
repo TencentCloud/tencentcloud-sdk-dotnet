@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略详情
+        /// <p>策略详情</p>
         /// </summary>
         [JsonProperty("Policy")]
         public AlarmPolicy Policy{ get; set; }

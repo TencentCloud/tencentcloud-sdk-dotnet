@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1453</VersionPrefix>
+    <VersionPrefix>3.0.1454</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -433,6 +433,12 @@
     <Compile Include="V20221121\Models\DescribeListenerListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifyAssetConfigRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifyAssetConfigResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifySettingAlertRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifySettingAlertResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifySettingRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeNotifySettingResponse.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationUserInfoRequest.cs" />
@@ -649,6 +655,12 @@
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodResponse.cs" />
     <Compile Include="V20221121\Models\ModifyMachineRemarkRequest.cs" />
     <Compile Include="V20221121\Models\ModifyMachineRemarkResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifyAssetConfigRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifyAssetConfigResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifySettingAlertRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifySettingAlertResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifySettingRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyNotifySettingResponse.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyPolicyStatusRequest.cs" />
@@ -662,6 +674,8 @@
     <Compile Include="V20221121\Models\NICAsset.cs" />
     <Compile Include="V20221121\Models\NetworkCardInfo.cs" />
     <Compile Include="V20221121\Models\NewAlertKey.cs" />
+    <Compile Include="V20221121\Models\NotifyAssetConfigItem.cs" />
+    <Compile Include="V20221121\Models\NotifySetting.cs" />
     <Compile Include="V20221121\Models\OrganizationInfo.cs" />
     <Compile Include="V20221121\Models\OrganizationUserInfo.cs" />
     <Compile Include="V20221121\Models\PortRiskAdvanceCFGParamItem.cs" />

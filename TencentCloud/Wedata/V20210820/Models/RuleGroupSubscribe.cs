@@ -39,7 +39,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public SubscribeReceiver[] Receivers{ get; set; }
 
         /// <summary>
-        /// 订阅方式 1.邮件email  2.短信sms
+        /// 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeType")]

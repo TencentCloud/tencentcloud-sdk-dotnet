@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 允许使用的运算符
+        /// <p>允许使用的运算符</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string[] Operator{ get; set; }
 
         /// <summary>
-        /// 允许配置的数据周期，以秒为单位
+        /// <p>允许配置的数据周期，以秒为单位</p>
         /// </summary>
         [JsonProperty("Period")]
         public long?[] Period{ get; set; }
 
         /// <summary>
-        /// 允许配置的持续周期个数
+        /// <p>允许配置的持续周期个数</p>
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public long?[] ContinuePeriod{ get; set; }

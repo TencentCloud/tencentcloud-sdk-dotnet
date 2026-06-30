@@ -25,46 +25,52 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 发信域名
+        /// <p>发信域名</p>
         /// </summary>
         [JsonProperty("IdentityName")]
         public string IdentityName{ get; set; }
 
         /// <summary>
-        /// 验证类型，固定为DOMAIN
+        /// <p>验证类型，固定为DOMAIN</p>
         /// </summary>
         [JsonProperty("IdentityType")]
         public string IdentityType{ get; set; }
 
         /// <summary>
-        /// 是否已通过验证
+        /// <p>是否已通过验证</p>
         /// </summary>
         [JsonProperty("SendingEnabled")]
         public bool? SendingEnabled{ get; set; }
 
         /// <summary>
-        /// 当前信誉等级
+        /// <p>当前信誉等级</p>
         /// </summary>
         [JsonProperty("CurrentReputationLevel")]
         public ulong? CurrentReputationLevel{ get; set; }
 
         /// <summary>
-        /// 当日最高发信量
+        /// <p>当日最高发信量</p>
         /// </summary>
         [JsonProperty("DailyQuota")]
         public ulong? DailyQuota{ get; set; }
 
         /// <summary>
-        /// 域名配置的独立ip
+        /// <p>域名配置的独立ip</p>
         /// </summary>
         [JsonProperty("SendIp")]
         public string[] SendIp{ get; set; }
 
         /// <summary>
-        /// tag 标签
+        /// <p>tag 标签</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagList[] TagList{ get; set; }
+
+        /// <summary>
+        /// <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("DKIMOption")]
+        public ulong? DKIMOption{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
             this.SetParamArraySimple(map, prefix + "SendIp.", this.SendIp);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
         }
     }
 }

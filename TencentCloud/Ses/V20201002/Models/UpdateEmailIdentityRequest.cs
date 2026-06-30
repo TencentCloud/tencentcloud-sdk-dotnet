@@ -25,10 +25,22 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 请求验证的域名
+        /// <p>请求验证的域名</p>
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }
+
+        /// <summary>
+        /// <p>匹分控制台新老API</p>
+        /// </summary>
+        [JsonProperty("NewAPI")]
+        public bool? NewAPI{ get; set; }
+
+        /// <summary>
+        /// <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+        /// </summary>
+        [JsonProperty("DKIMOption")]
+        public ulong? DKIMOption{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
+            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
         }
     }
 }

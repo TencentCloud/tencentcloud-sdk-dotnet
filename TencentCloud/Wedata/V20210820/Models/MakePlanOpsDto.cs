@@ -25,271 +25,292 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 补录计划ID
+        /// <p>补录计划ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// 补录计划名称
+        /// <p>补录计划名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MakeName")]
         public string MakeName{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 补录是否检查父任务状态
+        /// <p>补录是否检查父任务状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckParent")]
         public bool? CheckParent{ get; set; }
 
         /// <summary>
-        /// 是否使用任务原有自依赖配置
+        /// <p>是否使用任务原有自依赖配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SameSelfDependType")]
         public bool? SameSelfDependType{ get; set; }
 
         /// <summary>
-        /// 并行度，在SameSelfDependType为false时生效
+        /// <p>并行度，在SameSelfDependType为false时生效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParallelNum")]
         public long? ParallelNum{ get; set; }
 
         /// <summary>
-        /// 补录实例生成周期是否修改
+        /// <p>补录实例生成周期是否修改</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SameCycle")]
         public bool? SameCycle{ get; set; }
 
         /// <summary>
-        /// 调度周期转换方式-原始周期类型
+        /// <p>调度周期转换方式-原始周期类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceTaskCycle")]
         public string SourceTaskCycle{ get; set; }
 
         /// <summary>
-        /// 调度周期转换方式-目标周期类型
+        /// <p>调度周期转换方式-目标周期类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetTaskCycle")]
         public string TargetTaskCycle{ get; set; }
 
         /// <summary>
-        /// 调度周期转换方式-目标周期类型指定时间
+        /// <p>调度周期转换方式-目标周期类型指定时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetTaskAction")]
         public long? TargetTaskAction{ get; set; }
 
         /// <summary>
-        /// 补录实例自定义参数
+        /// <p>补录实例自定义参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapParamList")]
         public StrToStrMap[] MapParamList{ get; set; }
 
         /// <summary>
-        /// 补录扩展属性
+        /// <p>补录扩展属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MakeExtList")]
         public StrToStrMap[] MakeExtList{ get; set; }
 
         /// <summary>
-        /// 创建人ID
+        /// <p>创建人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 补录任务ID集合
+        /// <p>补录任务ID集合</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskIdList")]
         public string[] TaskIdList{ get; set; }
 
         /// <summary>
-        /// 补录计划日期范围
+        /// <p>补录计划日期范围</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MakeDatetimeList")]
         public CreateMakeDatetimeInfo[] MakeDatetimeList{ get; set; }
 
         /// <summary>
-        /// 补录计划说明
+        /// <p>补录计划说明</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 补录指定的调度资源组（ID）
+        /// <p>补录指定的调度资源组（ID）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerResourceGroup")]
         public string SchedulerResourceGroup{ get; set; }
 
         /// <summary>
-        /// 补录指定的调度资源组名称
+        /// <p>补录指定的调度资源组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerResourceGroupName")]
         public string SchedulerResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 补录指定的集成资源组（ID）
+        /// <p>补录指定的集成资源组（ID）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntegrationResourceGroup")]
         public string IntegrationResourceGroup{ get; set; }
 
         /// <summary>
-        /// 补录指定的集成资源组名称
+        /// <p>补录指定的集成资源组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntegrationResourceGroupName")]
         public string IntegrationResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 补录计划任务数量
+        /// <p>补录计划任务数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCount")]
         public long? TaskCount{ get; set; }
 
         /// <summary>
-        /// 补录计划实例完成百分数
+        /// <p>补录计划实例完成百分数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompletePercent")]
         public long? CompletePercent{ get; set; }
 
         /// <summary>
-        /// 补录计划实例成功百分数
+        /// <p>补录计划实例成功百分数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessPercent")]
         public long? SuccessPercent{ get; set; }
 
         /// <summary>
-        /// 补录检查父任务类型。取值范围：
-        /// <li> NONE: 全部不检查 </li>
-        /// <li> ALL: 检查全部上游父任务 </li>
-        /// <li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+        /// <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckParentType")]
         public string CheckParentType{ get; set; }
 
         /// <summary>
-        /// 是否和原任务保持相同工作流自依赖属性
+        /// <p>是否和原任务保持相同工作流自依赖属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SameSelfWorkflowDependType")]
         public bool? SameSelfWorkflowDependType{ get; set; }
 
         /// <summary>
-        /// 工作流自依赖类型
+        /// <p>工作流自依赖类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfWorkflowDependency")]
         public string SelfWorkflowDependency{ get; set; }
 
         /// <summary>
-        /// 补录时间顺序
-        /// NORMAL： 正常
-        /// ORDER ： 按照实例时间顺序执行
-        /// REVERSE： 实例数据时间逆序
+        /// <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
         /// </summary>
         [JsonProperty("MakeDataTimeOrder")]
         public string MakeDataTimeOrder{ get; set; }
 
         /// <summary>
-        /// 补录时间范围的时区
+        /// <p>补录时间范围的时区</p>
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// 执行应用参数
+        /// <p>执行应用参数</p>
         /// </summary>
         [JsonProperty("AppParam")]
         public string AppParam{ get; set; }
 
         /// <summary>
-        /// 补录计划时间范围的类型： 
-        /// DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+        /// <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
         /// </summary>
         [JsonProperty("TimeType")]
         public string TimeType{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 失败百分比
+        /// <p>失败百分比</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailurePercent")]
         public long? FailurePercent{ get; set; }
 
         /// <summary>
-        /// 补录计划的告警规则
+        /// <p>补录计划的告警规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmRule")]
         public MakePlanAlarmRule AlarmRule{ get; set; }
 
         /// <summary>
-        /// 运行类型
+        /// <p>运行类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunType")]
         public long? RunType{ get; set; }
 
         /// <summary>
-        /// 定时运行时间
+        /// <p>定时运行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunDateTime")]
         public string RunDateTime{ get; set; }
+
+        /// <summary>
+        /// <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunScheduleTimeZone")]
+        public string RunScheduleTimeZone{ get; set; }
+
+        /// <summary>
+        /// <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunScheduleRangeStartTime")]
+        public string RunScheduleRangeStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunScheduleRangeEndTime")]
+        public string RunScheduleRangeEndTime{ get; set; }
+
+        /// <summary>
+        /// <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunScheduleRangeWeekDays")]
+        public long?[] RunScheduleRangeWeekDays{ get; set; }
 
 
         /// <summary>
@@ -335,6 +356,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "AlarmRule.", this.AlarmRule);
             this.SetParamSimple(map, prefix + "RunType", this.RunType);
             this.SetParamSimple(map, prefix + "RunDateTime", this.RunDateTime);
+            this.SetParamSimple(map, prefix + "RunScheduleTimeZone", this.RunScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "RunScheduleRangeStartTime", this.RunScheduleRangeStartTime);
+            this.SetParamSimple(map, prefix + "RunScheduleRangeEndTime", this.RunScheduleRangeEndTime);
+            this.SetParamArraySimple(map, prefix + "RunScheduleRangeWeekDays.", this.RunScheduleRangeWeekDays);
         }
     }
 }

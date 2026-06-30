@@ -25,46 +25,52 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 0: 非安全手机校验 1: 安全手机校验。
+        /// <p>0: 非安全手机校验 1: 安全手机校验。</p>
         /// </summary>
         [JsonProperty("Phone")]
         public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 0: 非硬token校验 1: 硬token校验。
+        /// <p>0: 非硬token校验 1: 硬token校验。</p>
         /// </summary>
         [JsonProperty("Token")]
         public ulong? Token{ get; set; }
 
         /// <summary>
-        /// 0: 非软token校验 1: 软token校验
+        /// <p>0: 非软token校验 1: 软token校验</p>
         /// </summary>
         [JsonProperty("Stoken")]
         public ulong? Stoken{ get; set; }
 
         /// <summary>
-        /// 0: 非微信校验 1: 微信校验
+        /// <p>0: 非微信校验 1: 微信校验</p>
         /// </summary>
         [JsonProperty("Wechat")]
         public ulong? Wechat{ get; set; }
 
         /// <summary>
-        /// 0: 非自定义校验 1: 自定义校验
+        /// <p>0: 非自定义校验 1: 自定义校验</p>
         /// </summary>
         [JsonProperty("Custom")]
         public ulong? Custom{ get; set; }
 
         /// <summary>
-        /// 0: 非邮箱校验 1: 邮箱校验
+        /// <p>0: 非邮箱校验 1: 邮箱校验</p>
         /// </summary>
         [JsonProperty("Mail")]
         public ulong? Mail{ get; set; }
 
         /// <summary>
-        /// 0: 非u2f硬件token 1: u2f硬件token
+        /// <p>0: 非u2f硬件token 1: u2f硬件token</p>
         /// </summary>
         [JsonProperty("U2FToken")]
         public ulong? U2FToken{ get; set; }
+
+        /// <summary>
+        /// <p>0: 非passkey 校验 1: passkey校验</p>
+        /// </summary>
+        [JsonProperty("Passkey")]
+        public ulong? Passkey{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Custom", this.Custom);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
             this.SetParamSimple(map, prefix + "U2FToken", this.U2FToken);
+            this.SetParamSimple(map, prefix + "Passkey", this.Passkey);
         }
     }
 }

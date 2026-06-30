@@ -25,20 +25,20 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略组列表
+        /// <p>策略组列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupList")]
         public DescribePolicyGroupListGroup[] GroupList{ get; set; }
 
         /// <summary>
-        /// 策略组总数
+        /// <p>策略组总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warning")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 平台产品名称
+        /// <p>平台产品名称</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 平台产品类型
+        /// <p>平台产品类型</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }

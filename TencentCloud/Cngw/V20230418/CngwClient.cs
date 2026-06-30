@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,48 @@ namespace TencentCloud.Cngw.V20230418
         public AddCloudNativeAPIGatewayConsumerGroupAuthResponse AddCloudNativeAPIGatewayConsumerGroupAuthSync(AddCloudNativeAPIGatewayConsumerGroupAuthRequest req)
         {
             return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "AddCloudNativeAPIGatewayConsumerGroupAuth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将消费者添加到消费者组。
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public Task<AddCloudNativeAPIGatewayConsumerInGroupResponse> AddCloudNativeAPIGatewayConsumerInGroup(AddCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerInGroupResponse>(req, "AddCloudNativeAPIGatewayConsumerInGroup");
+        }
+
+        /// <summary>
+        /// 将消费者添加到消费者组。
+        /// </summary>
+        /// <param name="req"><see cref="AddCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="AddCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public AddCloudNativeAPIGatewayConsumerInGroupResponse AddCloudNativeAPIGatewayConsumerInGroupSync(AddCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<AddCloudNativeAPIGatewayConsumerInGroupResponse>(req, "AddCloudNativeAPIGatewayConsumerInGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加密钥与资源的引用关系接口
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="BindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public Task<BindCloudNativeAPIGatewaySecretKeyResponse> BindCloudNativeAPIGatewaySecretKey(BindCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<BindCloudNativeAPIGatewaySecretKeyResponse>(req, "BindCloudNativeAPIGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 添加密钥与资源的引用关系接口
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="BindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public BindCloudNativeAPIGatewaySecretKeyResponse BindCloudNativeAPIGatewaySecretKeySync(BindCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<BindCloudNativeAPIGatewaySecretKeyResponse>(req, "BindCloudNativeAPIGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -995,6 +1037,48 @@ namespace TencentCloud.Cngw.V20230418
         public RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuthSync(RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest req)
         {
             return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse>(req, "RemoveCloudNativeAPIGatewayConsumerGroupAuth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将消费者从消费者组移除。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public Task<RemoveCloudNativeAPIGatewayConsumerInGroupResponse> RemoveCloudNativeAPIGatewayConsumerInGroup(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerInGroupResponse>(req, "RemoveCloudNativeAPIGatewayConsumerInGroup");
+        }
+
+        /// <summary>
+        /// 将消费者从消费者组移除。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupRequest"/></param>
+        /// <returns><see cref="RemoveCloudNativeAPIGatewayConsumerInGroupResponse"/></returns>
+        public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroupSync(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerInGroupResponse>(req, "RemoveCloudNativeAPIGatewayConsumerInGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑密钥
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="UnbindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public Task<UnbindCloudNativeAPIGatewaySecretKeyResponse> UnbindCloudNativeAPIGatewaySecretKey(UnbindCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<UnbindCloudNativeAPIGatewaySecretKeyResponse>(req, "UnbindCloudNativeAPIGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// 解绑密钥
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudNativeAPIGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="UnbindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
+        public UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKeySync(UnbindCloudNativeAPIGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<UnbindCloudNativeAPIGatewaySecretKeyResponse>(req, "UnbindCloudNativeAPIGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

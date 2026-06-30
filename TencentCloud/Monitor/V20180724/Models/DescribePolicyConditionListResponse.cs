@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警策略条件列表
+        /// <p>告警策略条件列表</p>
         /// </summary>
         [JsonProperty("Conditions")]
         public DescribePolicyConditionListCondition[] Conditions{ get; set; }

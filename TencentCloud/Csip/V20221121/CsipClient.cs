@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1453";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -3288,6 +3288,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取通知资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifyAssetConfigRequest"/></param>
+        /// <returns><see cref="DescribeNotifyAssetConfigResponse"/></returns>
+        public Task<DescribeNotifyAssetConfigResponse> DescribeNotifyAssetConfig(DescribeNotifyAssetConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifyAssetConfigResponse>(req, "DescribeNotifyAssetConfig");
+        }
+
+        /// <summary>
+        /// 获取通知资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifyAssetConfigRequest"/></param>
+        /// <returns><see cref="DescribeNotifyAssetConfigResponse"/></returns>
+        public DescribeNotifyAssetConfigResponse DescribeNotifyAssetConfigSync(DescribeNotifyAssetConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifyAssetConfigResponse>(req, "DescribeNotifyAssetConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取通知设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingResponse"/></returns>
+        public Task<DescribeNotifySettingResponse> DescribeNotifySetting(DescribeNotifySettingRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingResponse>(req, "DescribeNotifySetting");
+        }
+
+        /// <summary>
+        /// 获取通知设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingResponse"/></returns>
+        public DescribeNotifySettingResponse DescribeNotifySettingSync(DescribeNotifySettingRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingResponse>(req, "DescribeNotifySetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取告警中心通知高级配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingAlertRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingAlertResponse"/></returns>
+        public Task<DescribeNotifySettingAlertResponse> DescribeNotifySettingAlert(DescribeNotifySettingAlertRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingAlertResponse>(req, "DescribeNotifySettingAlert");
+        }
+
+        /// <summary>
+        /// 获取告警中心通知高级配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingAlertRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingAlertResponse"/></returns>
+        public DescribeNotifySettingAlertResponse DescribeNotifySettingAlertSync(DescribeNotifySettingAlertRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingAlertResponse>(req, "DescribeNotifySettingAlert")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询集团账号详情
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
@@ -4628,6 +4691,69 @@ namespace TencentCloud.Csip.V20221121
         public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
         {
             return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改通知资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifyAssetConfigRequest"/></param>
+        /// <returns><see cref="ModifyNotifyAssetConfigResponse"/></returns>
+        public Task<ModifyNotifyAssetConfigResponse> ModifyNotifyAssetConfig(ModifyNotifyAssetConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifyAssetConfigResponse>(req, "ModifyNotifyAssetConfig");
+        }
+
+        /// <summary>
+        /// 修改通知资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifyAssetConfigRequest"/></param>
+        /// <returns><see cref="ModifyNotifyAssetConfigResponse"/></returns>
+        public ModifyNotifyAssetConfigResponse ModifyNotifyAssetConfigSync(ModifyNotifyAssetConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifyAssetConfigResponse>(req, "ModifyNotifyAssetConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改通知设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingResponse"/></returns>
+        public Task<ModifyNotifySettingResponse> ModifyNotifySetting(ModifyNotifySettingRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingResponse>(req, "ModifyNotifySetting");
+        }
+
+        /// <summary>
+        /// 修改通知设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingResponse"/></returns>
+        public ModifyNotifySettingResponse ModifyNotifySettingSync(ModifyNotifySettingRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingResponse>(req, "ModifyNotifySetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改告警中心通知高级配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingAlertRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingAlertResponse"/></returns>
+        public Task<ModifyNotifySettingAlertResponse> ModifyNotifySettingAlert(ModifyNotifySettingAlertRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingAlertResponse>(req, "ModifyNotifySettingAlert");
+        }
+
+        /// <summary>
+        /// 修改告警中心通知高级配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingAlertRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingAlertResponse"/></returns>
+        public ModifyNotifySettingAlertResponse ModifyNotifySettingAlertSync(ModifyNotifySettingAlertRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingAlertResponse>(req, "ModifyNotifySettingAlert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

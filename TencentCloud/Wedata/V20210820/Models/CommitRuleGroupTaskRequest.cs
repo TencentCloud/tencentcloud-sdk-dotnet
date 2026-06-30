@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+        /// 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
         /// </summary>
         [JsonProperty("TriggerType")]
         public ulong? TriggerType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// PREPAID需要传递，是否自动续费，1表示自动续费开启
+        /// ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 预付费需要传递，计费时间长度，多少个月
+        /// ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }

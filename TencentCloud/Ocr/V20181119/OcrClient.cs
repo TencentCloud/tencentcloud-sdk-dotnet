@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1452";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -2884,8 +2884,10 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 提供比对核验企业名称、统一社会信用代码、法人姓名一致性的服务，助力快速核验企业资质。
-        /// 注意：核验准确率在99%以上，存在个别特殊情况下核验结果不准确，请选用前知悉。
+        /// 提供比对核验企业名称、统一社会信用代码、法人姓名（可选）一致性的服务，助力快速核验企业资质。
+        /// 注意：
+        /// 存在个别特殊情况下核验结果不准确，请选用前知悉；
+        /// 按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
         /// </summary>
         /// <param name="req"><see cref="VerifyBizLicenseEnterprise3Request"/></param>
         /// <returns><see cref="VerifyBizLicenseEnterprise3Response"/></returns>
@@ -2895,8 +2897,10 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 提供比对核验企业名称、统一社会信用代码、法人姓名一致性的服务，助力快速核验企业资质。
-        /// 注意：核验准确率在99%以上，存在个别特殊情况下核验结果不准确，请选用前知悉。
+        /// 提供比对核验企业名称、统一社会信用代码、法人姓名（可选）一致性的服务，助力快速核验企业资质。
+        /// 注意：
+        /// 存在个别特殊情况下核验结果不准确，请选用前知悉；
+        /// 按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
         /// </summary>
         /// <param name="req"><see cref="VerifyBizLicenseEnterprise3Request"/></param>
         /// <returns><see cref="VerifyBizLicenseEnterprise3Response"/></returns>

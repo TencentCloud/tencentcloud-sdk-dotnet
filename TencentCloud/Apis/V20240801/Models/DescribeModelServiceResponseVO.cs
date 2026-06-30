@@ -261,6 +261,12 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("ModelProtocol")]
         public string ModelProtocol{ get; set; }
 
+        /// <summary>
+        /// <p>自定义模型协议配置</p>
+        /// </summary>
+        [JsonProperty("RawCustomModelProtocolConfig")]
+        public string RawCustomModelProtocolConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -304,6 +310,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
             this.SetParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
             this.SetParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
+            this.SetParamSimple(map, prefix + "RawCustomModelProtocolConfig", this.RawCustomModelProtocolConfig);
         }
     }
 }

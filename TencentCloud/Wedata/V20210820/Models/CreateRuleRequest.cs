@@ -55,13 +55,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleTemplateId{ get; set; }
 
         /// <summary>
-        /// 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+        /// 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+        /// 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
         /// </summary>
         [JsonProperty("QualityDim")]
         public ulong? QualityDim{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SourceObjectValue{ get; set; }
 
         /// <summary>
-        /// 检测范围 1.全表   2.条件扫描
+        /// 检测范围类型：1-全表，2-条件扫描
         /// </summary>
         [JsonProperty("ConditionType")]
         public ulong? ConditionType{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public CompareRule CompareRule{ get; set; }
 
         /// <summary>
-        /// 报警触发级别 1.低, 2.中, 3.高
+        /// 告警级别：1-低，2-中，3-高
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TargetObjectValue{ get; set; }
 
         /// <summary>
-        /// 该规则支持的执行引擎列表
+        /// 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
         /// </summary>
         [JsonProperty("SourceEngineTypes")]
         public ulong?[] SourceEngineTypes{ get; set; }

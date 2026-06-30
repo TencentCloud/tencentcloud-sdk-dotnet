@@ -39,7 +39,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+        /// 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]
@@ -123,7 +123,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ExecDetail{ get; set; }
 
         /// <summary>
-        /// 实际执行引擎
+        /// 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]

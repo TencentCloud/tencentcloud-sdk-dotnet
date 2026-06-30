@@ -25,31 +25,31 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+        /// <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 告警策略ID，使用此字段时 GroupId 会被忽略
+        /// <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 事件配置的告警
+        /// <p>事件配置的告警</p>
         /// </summary>
         [JsonProperty("EbSubject")]
         public string EbSubject{ get; set; }
 
         /// <summary>
-        /// 是否配置了事件告警
+        /// <p>是否配置了事件告警</p>
         /// </summary>
         [JsonProperty("EbEventFlag")]
         public long? EbEventFlag{ get; set; }

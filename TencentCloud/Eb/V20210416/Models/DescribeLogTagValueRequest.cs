@@ -25,43 +25,43 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 起始时间
+        /// <p>起始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+        /// <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
         /// </summary>
         [JsonProperty("GroupField")]
         public string GroupField{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 每页数据大小
+        /// <p>每页数据大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 筛选条件
+        /// <p>筛选条件</p>
         /// </summary>
         [JsonProperty("Filter")]
         public LogFilter[] Filter{ get; set; }

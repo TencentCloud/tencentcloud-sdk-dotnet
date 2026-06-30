@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 指标id
+        /// <p>指标id</p>
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等
+        /// <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p>
         /// </summary>
         [JsonProperty("CalcType")]
         public long? CalcType{ get; set; }
 
         /// <summary>
-        /// 检测阈值
+        /// <p>检测阈值</p>
         /// </summary>
         [JsonProperty("CalcValue")]
         public string CalcValue{ get; set; }
 
         /// <summary>
-        /// 检测指标的数据周期
+        /// <p>检测指标的数据周期</p>
         /// </summary>
         [JsonProperty("CalcPeriod")]
         public long? CalcPeriod{ get; set; }
 
         /// <summary>
-        /// 持续周期个数
+        /// <p>持续周期个数</p>
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// 告警发送收敛类型。0连续告警，1指数告警
+        /// <p>告警发送收敛类型。0连续告警，1指数告警</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+        /// <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+        /// <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -568,6 +568,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// gtid校验
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrateGtidCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeMigrateGtidCompareReportResponse"/></returns>
+        public Task<DescribeMigrateGtidCompareReportResponse> DescribeMigrateGtidCompareReport(DescribeMigrateGtidCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrateGtidCompareReportResponse>(req, "DescribeMigrateGtidCompareReport");
+        }
+
+        /// <summary>
+        /// gtid校验
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrateGtidCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeMigrateGtidCompareReportResponse"/></returns>
+        public DescribeMigrateGtidCompareReportResponse DescribeMigrateGtidCompareReportSync(DescribeMigrateGtidCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrateGtidCompareReportResponse>(req, "DescribeMigrateGtidCompareReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
         /// 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
         /// 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
@@ -828,6 +849,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeSyncCompareTasksResponse DescribeSyncCompareTasksSync(DescribeSyncCompareTasksRequest req)
         {
             return InternalRequestAsync<DescribeSyncCompareTasksResponse>(req, "DescribeSyncCompareTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// gtid校验
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncGtidCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeSyncGtidCompareReportResponse"/></returns>
+        public Task<DescribeSyncGtidCompareReportResponse> DescribeSyncGtidCompareReport(DescribeSyncGtidCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncGtidCompareReportResponse>(req, "DescribeSyncGtidCompareReport");
+        }
+
+        /// <summary>
+        /// gtid校验
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSyncGtidCompareReportRequest"/></param>
+        /// <returns><see cref="DescribeSyncGtidCompareReportResponse"/></returns>
+        public DescribeSyncGtidCompareReportResponse DescribeSyncGtidCompareReportSync(DescribeSyncGtidCompareReportRequest req)
+        {
+            return InternalRequestAsync<DescribeSyncGtidCompareReportResponse>(req, "DescribeSyncGtidCompareReport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1450";
+       private const string sdkVersion = "SDK_NET_3.0.1454";
 
         /// <summary>
         /// Client constructor.
@@ -1996,6 +1996,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQMigratingTopicListRequest"/></param>
@@ -2006,6 +2008,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQMigratingTopicListRequest"/></param>
@@ -2178,6 +2182,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 用于获取RocketMQ平滑迁移任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskRequest"/></param>
@@ -2188,6 +2194,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 用于获取RocketMQ平滑迁移任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQSmoothMigrationTaskRequest"/></param>
@@ -2551,6 +2559,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 输入迁移任务id和要导入的Group，导入后台
         /// </summary>
         /// <param name="req"><see cref="ImportRocketMQConsumerGroupsRequest"/></param>
@@ -2561,6 +2571,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 输入迁移任务id和要导入的Group，导入后台
         /// </summary>
         /// <param name="req"><see cref="ImportRocketMQConsumerGroupsRequest"/></param>
@@ -2572,6 +2584,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 导入topic列表
         /// </summary>
         /// <param name="req"><see cref="ImportRocketMQTopicsRequest"/></param>
@@ -2582,6 +2596,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史接口，对应接口已迁移到trocket
+        /// 
         /// 导入topic列表
         /// </summary>
         /// <param name="req"><see cref="ImportRocketMQTopicsRequest"/></param>

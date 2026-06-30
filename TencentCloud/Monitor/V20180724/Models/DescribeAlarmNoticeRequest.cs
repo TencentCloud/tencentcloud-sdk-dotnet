@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模块名，这里填“monitor”
+        /// <p>模块名，这里填“monitor”</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 告警通知模板 id
+        /// <p>告警通知模板 id</p>
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }

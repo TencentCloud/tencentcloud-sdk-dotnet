@@ -25,108 +25,113 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 是否高可用
+        /// <p>是否高可用</p>
         /// </summary>
         [JsonProperty("HaFlag")]
         public bool? HaFlag{ get; set; }
 
         /// <summary>
-        /// 私有网络
+        /// <p>私有网络</p>
         /// </summary>
         [JsonProperty("UserVPCId")]
         public string UserVPCId{ get; set; }
 
         /// <summary>
-        /// 子网
+        /// <p>子网</p>
         /// </summary>
         [JsonProperty("UserSubnetId")]
         public string UserSubnetId{ get; set; }
 
         /// <summary>
-        /// 系统版本
+        /// <p>系统版本</p>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// 计费方式
+        /// <p>计费方式</p>
         /// </summary>
         [JsonProperty("ChargeProperties")]
         public Charge ChargeProperties{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 数据节点
-        /// SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+        /// <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p>
         /// </summary>
         [JsonProperty("DataSpec")]
         public NodeSpec DataSpec{ get; set; }
 
         /// <summary>
-        /// 标签列表（废弃）
+        /// <p>标签列表（废弃）</p>
         /// </summary>
         [JsonProperty("Tags")]
         [System.Obsolete]
         public Tag Tags{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("ClsLogSetId")]
         public string ClsLogSetId{ get; set; }
 
         /// <summary>
-        /// COS桶名称
+        /// <p>COS桶名称</p>
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+        /// <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p>
         /// </summary>
         [JsonProperty("MountDiskType")]
         public long? MountDiskType{ get; set; }
 
         /// <summary>
-        /// 是否是ZK高可用
+        /// <p>是否是ZK高可用</p>
         /// </summary>
         [JsonProperty("HAZk")]
         public bool? HAZk{ get; set; }
 
         /// <summary>
-        /// ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+        /// <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p>
         /// </summary>
         [JsonProperty("CommonSpec")]
         public NodeSpec CommonSpec{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("TagItems")]
         public Tag[] TagItems{ get; set; }
 
         /// <summary>
-        /// 副可用区信息
+        /// <p>副可用区信息</p>
         /// </summary>
         [JsonProperty("SecondaryZoneInfo")]
         public SecondaryZoneInfo[] SecondaryZoneInfo{ get; set; }
 
         /// <summary>
-        /// default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+        /// <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p>
         /// </summary>
         [JsonProperty("CkDefaultUserPwd")]
         public string CkDefaultUserPwd{ get; set; }
+
+        /// <summary>
+        /// <p>集群类型</p>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
 
         /// <summary>
@@ -151,6 +156,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
             this.SetParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
             this.SetParamSimple(map, prefix + "CkDefaultUserPwd", this.CkDefaultUserPwd);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

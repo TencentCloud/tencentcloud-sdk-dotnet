@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1451</VersionPrefix>
+    <VersionPrefix>3.0.1454</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,8 @@
     <Compile Include="V20211206\Models\DescribeConsumerGroupsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrateDBInstancesRequest.cs" />
     <Compile Include="V20211206\Models\DescribeMigrateDBInstancesResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrateGtidCompareReportRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrateGtidCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationCheckJobRequest.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationCheckJobResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationDetailRequest.cs" />
@@ -143,6 +145,8 @@
     <Compile Include="V20211206\Models\DescribeSyncCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncCompareTasksRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncCompareTasksResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncGtidCompareReportRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncGtidCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsResponse.cs" />
     <Compile Include="V20211206\Models\DestroyIsolatedSubscribeRequest.cs" />
@@ -157,6 +161,7 @@
     <Compile Include="V20211206\Models\DifferenceData.cs" />
     <Compile Include="V20211206\Models\DifferenceDataDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceDetail.cs" />
+    <Compile Include="V20211206\Models\DifferenceDetails.cs" />
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
     <Compile Include="V20211206\Models\DifferenceOwnerDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceRowDetail.cs" />

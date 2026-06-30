@@ -25,14 +25,14 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 平台事件名称
+        /// <p>平台事件名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
-        /// 平台事件匹配规则
+        /// <p>平台事件匹配规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventPattern")]

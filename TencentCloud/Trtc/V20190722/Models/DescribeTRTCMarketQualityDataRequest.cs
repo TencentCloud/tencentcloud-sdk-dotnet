@@ -25,33 +25,31 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用户SdkAppId（如：1400xxxxxx）
+        /// <p>用户SdkAppId（如：1400xxxxxx）</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
+        /// <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，格式为YYYY-MM-DD。
+        /// <p>查询结束时间，格式为YYYY-MM-DD。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 返回数据的粒度，支持设为以下值：
-        /// d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-        /// h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+        /// <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p>
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
         /// <summary>
-        /// 返回数据是否为小数
+        /// <p>返回数据是否为小数</p>
         /// </summary>
         [JsonProperty("IsFloat")]
         public bool? IsFloat{ get; set; }

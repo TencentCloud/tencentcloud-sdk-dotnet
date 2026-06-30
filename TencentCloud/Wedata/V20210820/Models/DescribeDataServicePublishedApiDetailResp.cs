@@ -25,122 +25,129 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 服务Api名称
+        /// <p>服务Api名称</p>
         /// </summary>
         [JsonProperty("ApiName")]
         public string ApiName{ get; set; }
 
         /// <summary>
-        /// 服务请求Path
+        /// <p>服务请求Path</p>
         /// </summary>
         [JsonProperty("PathUrl")]
         public string PathUrl{ get; set; }
 
         /// <summary>
-        /// 服务责任人名称
+        /// <p>服务责任人名称</p>
         /// </summary>
         [JsonProperty("OwnerName")]
         public string OwnerName{ get; set; }
 
         /// <summary>
-        /// 服务请求方式
+        /// <p>服务请求方式</p>
         /// </summary>
         [JsonProperty("RequestType")]
         public string RequestType{ get; set; }
 
         /// <summary>
-        /// 服务标签名称集合
+        /// <p>服务标签名称集合</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiTagNames")]
         public string ApiTagNames{ get; set; }
 
         /// <summary>
-        /// 服务描述
+        /// <p>服务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiDescription")]
         public string ApiDescription{ get; set; }
 
         /// <summary>
-        /// 服务请求返回示例
+        /// <p>服务请求返回示例</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestExample")]
         public string RequestExample{ get; set; }
 
         /// <summary>
-        /// 服务请求成功返回示例
+        /// <p>服务请求成功返回示例</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestSuccess")]
         public string RequestSuccess{ get; set; }
 
         /// <summary>
-        /// 服务请求失败返回示例
+        /// <p>服务请求失败返回示例</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestError")]
         public string RequestError{ get; set; }
 
         /// <summary>
-        /// 服务请求参数列表
+        /// <p>服务请求参数列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestParam")]
         public DataServiceRequestParam[] RequestParam{ get; set; }
 
         /// <summary>
-        /// 服务响应参数列表
+        /// <p>服务响应参数列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseParam")]
         public DataServiceResponseParam[] ResponseParam{ get; set; }
 
         /// <summary>
-        /// 最大qps
+        /// <p>最大qps</p>
         /// </summary>
         [JsonProperty("MaxAllowQps")]
         public long? MaxAllowQps{ get; set; }
 
         /// <summary>
-        /// 最大记录数
+        /// <p>最大记录数</p>
         /// </summary>
         [JsonProperty("MaxAllowPageSize")]
         public long? MaxAllowPageSize{ get; set; }
 
         /// <summary>
-        /// 超时时间，单位ms
+        /// <p>超时时间，单位ms</p>
         /// </summary>
         [JsonProperty("TimeoutPeriod")]
         public ulong? TimeoutPeriod{ get; set; }
 
         /// <summary>
-        /// ApiId
+        /// <p>ApiId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiId")]
         public string ApiId{ get; set; }
 
         /// <summary>
-        /// 0:免认证 1:应用认证
+        /// <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 请求地址
+        /// <p>请求地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayApiUrl")]
         public string GatewayApiUrl{ get; set; }
 
         /// <summary>
-        /// 服务Api状态 1:已上线  3:已下线
+        /// <p>服务Api状态 1:已上线  3:已下线</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiStatus")]
         public ulong? ApiStatus{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnablePage")]
+        public long? EnablePage{ get; set; }
 
 
         /// <summary>
@@ -166,6 +173,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "GatewayApiUrl", this.GatewayApiUrl);
             this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+            this.SetParamSimple(map, prefix + "EnablePage", this.EnablePage);
         }
     }
 }

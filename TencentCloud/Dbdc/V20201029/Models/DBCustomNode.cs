@@ -154,7 +154,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>0： 不自动续费</li></ul>
+        /// <p>节点是否自动续费标记</p><p>枚举值：</p><ul><li>1： 自动续费</li><li>2： 不自动续费</li></ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
