@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 二维码/条形码识别结果信息，具体内容请点击左侧链接。
+        /// <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p>
         /// </summary>
         [JsonProperty("CodeResults")]
         public QrcodeResultsInfo[] CodeResults{ get; set; }
 
         /// <summary>
-        /// 图片大小，具体内容请点击左侧链接。
+        /// <p>图片大小，具体内容请点击左侧链接。</p>
         /// </summary>
         [JsonProperty("ImgSize")]
         public QrcodeImgSize ImgSize{ get; set; }

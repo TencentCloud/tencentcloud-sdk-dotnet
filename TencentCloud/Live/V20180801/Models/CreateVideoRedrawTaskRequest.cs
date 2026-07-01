@@ -36,6 +36,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("CosInfo")]
         public VideoRedrawCosInfo CosInfo{ get; set; }
 
+        /// <summary>
+        /// <p>转绘任务参数</p>
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public VideoRedrawTaskInfo TaskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "CosInfo.", this.CosInfo);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         }
     }
 }

@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProVersionStatusRequest : AbstractModel
+    public class VideoRedrawTaskInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+        /// <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("Style")]
+        public string Style{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Style", this.Style);
         }
     }
 }

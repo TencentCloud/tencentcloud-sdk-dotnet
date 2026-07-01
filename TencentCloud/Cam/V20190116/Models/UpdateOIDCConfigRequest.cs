@@ -25,34 +25,40 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 身份提供商URL
+        /// <p>身份提供商URL</p>
         /// </summary>
         [JsonProperty("IdentityUrl")]
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// 客户端ID
+        /// <p>客户端ID</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string[] ClientId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签名公钥，需要base64
+        /// <p>签名公钥，需要base64</p>
         /// </summary>
         [JsonProperty("IdentityKey")]
         public string IdentityKey{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("AutoRotateKey")]
+        public ulong? AutoRotateKey{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
         }
     }
 }

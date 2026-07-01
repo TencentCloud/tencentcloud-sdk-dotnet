@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1445";
+       private const string sdkVersion = "SDK_NET_3.0.1455";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,48 @@ namespace TencentCloud.Dataagent.V20250513
         public DeleteSceneResponse DeleteSceneSync(DeleteSceneRequest req)
         {
             return InternalRequestAsync<DeleteSceneResponse>(req, "DeleteScene")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行datateam相关的命令行请求
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteAgentApiRequest"/></param>
+        /// <returns><see cref="ExecuteAgentApiResponse"/></returns>
+        public Task<ExecuteAgentApiResponse> ExecuteAgentApi(ExecuteAgentApiRequest req)
+        {
+            return InternalRequestAsync<ExecuteAgentApiResponse>(req, "ExecuteAgentApi");
+        }
+
+        /// <summary>
+        /// 执行datateam相关的命令行请求
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteAgentApiRequest"/></param>
+        /// <returns><see cref="ExecuteAgentApiResponse"/></returns>
+        public ExecuteAgentApiResponse ExecuteAgentApiSync(ExecuteAgentApiRequest req)
+        {
+            return InternalRequestAsync<ExecuteAgentApiResponse>(req, "ExecuteAgentApi")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行datateam相关的命令行请求
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteAgentApiV1Request"/></param>
+        /// <returns><see cref="ExecuteAgentApiV1Response"/></returns>
+        public Task<ExecuteAgentApiV1Response> ExecuteAgentApiV1(ExecuteAgentApiV1Request req)
+        {
+            return InternalRequestAsync<ExecuteAgentApiV1Response>(req, "ExecuteAgentApiV1");
+        }
+
+        /// <summary>
+        /// 执行datateam相关的命令行请求
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteAgentApiV1Request"/></param>
+        /// <returns><see cref="ExecuteAgentApiV1Response"/></returns>
+        public ExecuteAgentApiV1Response ExecuteAgentApiV1Sync(ExecuteAgentApiV1Request req)
+        {
+            return InternalRequestAsync<ExecuteAgentApiV1Response>(req, "ExecuteAgentApiV1")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

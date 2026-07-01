@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Dataagent.V20250513.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProVersionStatusRequest : AbstractModel
+    public class ExecuteAgentApiV1Request : AbstractModel
     {
         
         /// <summary>
-        /// <p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+        /// <p>参数路径</p>
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("RequestPath")]
+        public string RequestPath{ get; set; }
+
+        /// <summary>
+        /// <p>post还是get</p><p>枚举值：</p><ul><li>post： post请求</li><li>get： get请求</li></ul>
+        /// </summary>
+        [JsonProperty("RequestType")]
+        public string RequestType{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "RequestPath", this.RequestPath);
+            this.SetParamSimple(map, prefix + "RequestType", this.RequestType);
         }
     }
 }

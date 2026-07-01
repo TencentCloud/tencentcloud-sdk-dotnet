@@ -25,22 +25,28 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 新增分片的数量
+        /// <p>新增分片的数量</p>
         /// </summary>
         [JsonProperty("ShardCount")]
         public long? ShardCount{ get; set; }
 
         /// <summary>
-        /// 分片内存大小，单位 GB
+        /// <p>分片内存大小，单位 GB</p>
         /// </summary>
         [JsonProperty("ShardMemory")]
         public long? ShardMemory{ get; set; }
 
         /// <summary>
-        /// 分片存储大小，单位 GB
+        /// <p>分片存储大小，单位 GB</p>
         /// </summary>
         [JsonProperty("ShardStorage")]
         public long? ShardStorage{ get; set; }
+
+        /// <summary>
+        /// <p>DCN实例的规格</p>
+        /// </summary>
+        [JsonProperty("DcnInsShardConfigs")]
+        public DcnInsShardConfig[] DcnInsShardConfigs{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardCount", this.ShardCount);
             this.SetParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
             this.SetParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
+            this.SetParamArrayObj(map, prefix + "DcnInsShardConfigs.", this.DcnInsShardConfigs);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public string ToolName{ get; set; }
 
         /// <summary>
-        /// <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
+        /// <p>沙箱工具类型，目前支持：browser、code-interpreter、custom等</p><p>枚举值：</p><ul><li>browser： browser</li><li>code-interpreter： code-interpreter</li><li>mobile： mobile</li><li>osworld： osworld</li><li>custom： custom</li><li>swebench： swebench</li><li>aio： aio</li><li>android-world： android-world</li><li>waa： waa</li></ul>
         /// </summary>
         [JsonProperty("ToolType")]
         public string ToolType{ get; set; }

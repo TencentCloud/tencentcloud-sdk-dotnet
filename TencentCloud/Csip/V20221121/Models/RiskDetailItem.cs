@@ -114,6 +114,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
+        /// <summary>
+        /// <p>风险忽略原因</p>
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

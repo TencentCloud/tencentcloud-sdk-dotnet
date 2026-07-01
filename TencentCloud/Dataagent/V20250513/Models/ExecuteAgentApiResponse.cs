@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Dataagent.V20250513.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBuyBindTaskRequest : AbstractModel
+    public class ExecuteAgentApiResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>订单号</p>
+        /// <p>请求路径</p>
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("RequestPath")]
+        public string RequestPath{ get; set; }
 
         /// <summary>
-        /// <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+        /// <p>返回的具体指</p>
         /// </summary>
-        [JsonProperty("LicenseType")]
-        public ulong? LicenseType{ get; set; }
+        [JsonProperty("AgentData")]
+        public string AgentData{ get; set; }
 
         /// <summary>
-        /// <p>机器列表</p>
+        /// <p>错误码信息</p>
         /// </summary>
-        [JsonProperty("QuuidList")]
-        public string[] QuuidList{ get; set; }
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// <p>是否全选机器</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("IsAll")]
-        public bool? IsAll{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
-            this.SetParamArraySimple(map, prefix + "QuuidList.", this.QuuidList);
-            this.SetParamSimple(map, prefix + "IsAll", this.IsAll);
+            this.SetParamSimple(map, prefix + "RequestPath", this.RequestPath);
+            this.SetParamSimple(map, prefix + "AgentData", this.AgentData);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

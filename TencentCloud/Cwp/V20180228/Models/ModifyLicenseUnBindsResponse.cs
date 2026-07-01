@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 只有解绑失败的才有该值.
+        /// <p>只有解绑失败的才有该值.</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public LicenseUnBindRsp[] ErrMsg{ get; set; }

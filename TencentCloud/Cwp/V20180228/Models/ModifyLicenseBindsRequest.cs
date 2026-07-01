@@ -25,25 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// <p>资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 授权类型
+        /// <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }
 
         /// <summary>
-        /// 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
+        /// <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
         /// </summary>
         [JsonProperty("IsAll")]
         public bool? IsAll{ get; set; }
 
         /// <summary>
-        /// 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+        /// <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
         /// </summary>
         [JsonProperty("QuuidList")]
         public string[] QuuidList{ get; set; }

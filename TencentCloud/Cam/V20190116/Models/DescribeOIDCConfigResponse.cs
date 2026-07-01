@@ -25,46 +25,52 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 身份提供商类型 11角色身份提供商
+        /// <p>身份提供商类型 11角色身份提供商</p>
         /// </summary>
         [JsonProperty("ProviderType")]
         public ulong? ProviderType{ get; set; }
 
         /// <summary>
-        /// 身份提供商URL
+        /// <p>身份提供商URL</p>
         /// </summary>
         [JsonProperty("IdentityUrl")]
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// 签名公钥
+        /// <p>签名公钥</p>
         /// </summary>
         [JsonProperty("IdentityKey")]
         public string IdentityKey{ get; set; }
 
         /// <summary>
-        /// 客户端id
+        /// <p>客户端id</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string[] ClientId{ get; set; }
 
         /// <summary>
-        /// 状态：0:未设置，11:已开启，2:已禁用
+        /// <p>状态：0:未设置，11:已开启，2:已禁用</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("AutoRotateKey")]
+        public ulong? AutoRotateKey{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -85,6 +91,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

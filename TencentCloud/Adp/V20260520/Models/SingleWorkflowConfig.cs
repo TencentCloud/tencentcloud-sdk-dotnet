@@ -25,34 +25,40 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 是否开启异步工作流
+        /// <p>是否开启异步工作流</p>
         /// </summary>
         [JsonProperty("AsyncWorkflow")]
         public bool? AsyncWorkflow{ get; set; }
 
         /// <summary>
-        /// 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+        /// <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 工作流描述
+        /// <p>工作流描述</p>
         /// </summary>
         [JsonProperty("WorkflowDescription")]
         public string WorkflowDescription{ get; set; }
 
         /// <summary>
-        /// 工作流Id
+        /// <p>工作流Id</p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
+
+        /// <summary>
+        /// <p>工作流是否启用</p>
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "WorkflowDescription", this.WorkflowDescription);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

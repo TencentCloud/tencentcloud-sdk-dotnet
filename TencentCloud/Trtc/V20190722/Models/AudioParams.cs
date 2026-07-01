@@ -25,24 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-        /// 1：48000Hz（默认）;
-        /// 2：44100Hz
-        /// 3：16000Hz。
+        /// <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// 声道数枚举值:
-        /// 1：单声道;
-        /// 2：双声道（默认）。
+        /// <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
         /// </summary>
         [JsonProperty("Channel")]
         public ulong? Channel{ get; set; }
 
         /// <summary>
-        /// 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+        /// <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
         /// </summary>
         [JsonProperty("BitRate")]
         public ulong? BitRate{ get; set; }

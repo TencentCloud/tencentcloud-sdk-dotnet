@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProVersionStatusRequest : AbstractModel
+    public class DcnInsShardConfig : AbstractModel
     {
         
         /// <summary>
-        /// <p>主机安全客户端UUID、填写&quot;all&quot;表示所有主机。</p>
+        /// <p>实例ID</p>
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>内存大小</p>
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// <p>磁盘大小</p>
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
         }
     }
 }

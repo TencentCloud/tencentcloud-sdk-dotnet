@@ -25,70 +25,82 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 数据库代理节点ID
+        /// <p>数据库代理节点ID</p>
         /// </summary>
         [JsonProperty("ProxyNodeId")]
         public string ProxyNodeId{ get; set; }
 
         /// <summary>
-        /// 节点当前连接数, DescribeProxyNodes接口此字段值不返回
+        /// <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
         /// </summary>
         [JsonProperty("ProxyNodeConnections")]
         public long? ProxyNodeConnections{ get; set; }
 
         /// <summary>
-        /// 数据库代理节点cpu
+        /// <p>数据库代理节点cpu</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 数据库代理节点内存
+        /// <p>数据库代理节点内存</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 数据库代理节点状态
+        /// <p>数据库代理节点状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 数据库代理组ID
+        /// <p>数据库代理组ID</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 用户AppID
+        /// <p>用户AppID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 数据库代理节点名字
+        /// <p>数据库代理节点名字</p>
         /// </summary>
         [JsonProperty("OssProxyNodeName")]
         public string OssProxyNodeName{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -107,6 +119,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }
