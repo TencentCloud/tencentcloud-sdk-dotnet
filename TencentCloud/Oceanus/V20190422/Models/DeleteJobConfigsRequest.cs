@@ -25,22 +25,28 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// <p>作业ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 作业配置版本数组
+        /// <p>作业配置版本数组</p>
         /// </summary>
         [JsonProperty("JobConfigVersions")]
         public long?[] JobConfigVersions{ get; set; }
 
         /// <summary>
-        /// 工作空间 SerialId
+        /// <p>工作空间 SerialId</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+        /// </summary>
+        [JsonProperty("ConfigScope")]
+        public long? ConfigScope{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamArraySimple(map, prefix + "JobConfigVersions.", this.JobConfigVersions);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "ConfigScope", this.ConfigScope);
         }
     }
 }

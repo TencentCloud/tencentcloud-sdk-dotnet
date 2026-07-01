@@ -49,19 +49,19 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string ForwardingRuleId{ get; set; }
 
         /// <summary>
-        /// <p>七层转发规则条件信息。</p>
+        /// <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p>
         /// </summary>
         [JsonProperty("RuleConditions")]
         public RuleCondition[] RuleConditions{ get; set; }
 
         /// <summary>
-        /// <p>七层转发规则行为信息。</p>
+        /// <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p>
         /// </summary>
         [JsonProperty("RuleActions")]
         public RuleAction[] RuleActions{ get; set; }
 
         /// <summary>
-        /// <p>回源Header信息。</p>
+        /// <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p>
         /// </summary>
         [JsonProperty("OriginHeaders")]
         public OriginHeader[] OriginHeaders{ get; set; }
@@ -73,25 +73,25 @@ namespace TencentCloud.Ga2.V20250115.Models
         public bool? EnableOriginSni{ get; set; }
 
         /// <summary>
-        /// <p>回源sni。</p>
+        /// <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
         /// </summary>
         [JsonProperty("OriginSni")]
         public string OriginSni{ get; set; }
 
         /// <summary>
-        /// <p>回源host。</p>
+        /// <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
         /// </summary>
         [JsonProperty("OriginHost")]
         public string OriginHost{ get; set; }
 
         /// <summary>
-        /// <p>源站响应头</p>
+        /// <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p>
         /// </summary>
         [JsonProperty("ResponseHeaders")]
         public ResponseHeaders[] ResponseHeaders{ get; set; }
 
         /// <summary>
-        /// <p>删除源站响应头</p>
+        /// <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p>
         /// </summary>
         [JsonProperty("HideResponseHeaders")]
         public HideResponseHeaders[] HideResponseHeaders{ get; set; }

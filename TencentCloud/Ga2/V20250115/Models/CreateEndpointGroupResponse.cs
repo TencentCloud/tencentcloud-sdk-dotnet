@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 任务ID。
+        /// <p>任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 终端节点组实例ID。
+        /// <p>终端节点组实例ID。</p>
         /// </summary>
         [JsonProperty("EndpointGroupId")]
         public string EndpointGroupId{ get; set; }

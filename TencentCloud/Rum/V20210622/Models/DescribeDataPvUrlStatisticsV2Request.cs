@@ -25,189 +25,187 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等
+        /// <p>allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 自定义2
+        /// <p>自定义2</p>
         /// </summary>
         [JsonProperty("ExtSecond")]
         public string ExtSecond{ get; set; }
 
         /// <summary>
-        /// 浏览器引擎
+        /// <p>浏览器引擎</p>
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// 运营商
+        /// <p>运营商</p>
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 来源页面
+        /// <p>来源页面， 可多选，用 “,” 隔开的 String</p>
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 日志等级
+        /// <p>日志等级</p>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 品牌
+        /// <p>品牌</p>
         /// </summary>
         [JsonProperty("Brand")]
         public string Brand{ get; set; }
 
         /// <summary>
-        /// 地区
+        /// <p>地区</p>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// <p>版本</p>
         /// </summary>
         [JsonProperty("VersionNum")]
         public string VersionNum{ get; set; }
 
         /// <summary>
-        /// 平台
+        /// <p>平台</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 自定义3
+        /// <p>自定义3</p>
         /// </summary>
         [JsonProperty("ExtThird")]
         public string ExtThird{ get; set; }
 
         /// <summary>
-        /// 自定义1
+        /// <p>自定义1</p>
         /// </summary>
         [JsonProperty("ExtFirst")]
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
+        /// <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知</p>
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 机型
+        /// <p>机型</p>
         /// </summary>
         [JsonProperty("Device")]
         public string Device{ get; set; }
 
         /// <summary>
-        /// 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+        /// <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
         /// </summary>
         [JsonProperty("IsAbroad")]
         public string IsAbroad{ get; set; }
 
         /// <summary>
-        /// 操作系统
+        /// <p>操作系统</p>
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
         /// <summary>
-        /// 浏览器
+        /// <p>浏览器</p>
         /// </summary>
         [JsonProperty("Browser")]
         public string Browser{ get; set; }
 
         /// <summary>
-        /// 环境
+        /// <p>环境</p>
         /// </summary>
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
         /// <summary>
-        /// group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
-        ///  5:1d
+        /// <p>group by 参数值枚举1:1m  2:5m  3:30m  4:1h<br> 5:1d</p>
         /// </summary>
         [JsonProperty("GroupByType")]
         public long? GroupByType{ get; set; }
 
         /// <summary>
-        /// 1: 查询智研
-        /// 0: 走旧逻辑，已下线，勿使用
+        /// <p>1: 查询智研<br>0: 走旧逻辑，已下线，勿使用</p>
         /// </summary>
         [JsonProperty("IsNewData")]
         public long? IsNewData{ get; set; }
 
         /// <summary>
-        /// 自定义4
+        /// <p>自定义4</p>
         /// </summary>
         [JsonProperty("ExtFourth")]
         public string ExtFourth{ get; set; }
 
         /// <summary>
-        /// 自定义5
+        /// <p>自定义5</p>
         /// </summary>
         [JsonProperty("ExtFifth")]
         public string ExtFifth{ get; set; }
 
         /// <summary>
-        /// 自定义6
+        /// <p>自定义6</p>
         /// </summary>
         [JsonProperty("ExtSixth")]
         public string ExtSixth{ get; set; }
 
         /// <summary>
-        /// 自定义7
+        /// <p>自定义7</p>
         /// </summary>
         [JsonProperty("ExtSeventh")]
         public string ExtSeventh{ get; set; }
 
         /// <summary>
-        /// 自定义8
+        /// <p>自定义8</p>
         /// </summary>
         [JsonProperty("ExtEighth")]
         public string ExtEighth{ get; set; }
 
         /// <summary>
-        /// 自定义9
+        /// <p>自定义9</p>
         /// </summary>
         [JsonProperty("ExtNinth")]
         public string ExtNinth{ get; set; }
 
         /// <summary>
-        /// 自定义10
+        /// <p>自定义10</p>
         /// </summary>
         [JsonProperty("ExtTenth")]
         public string ExtTenth{ get; set; }
 
         /// <summary>
-        /// 时间段
+        /// <p>时间段</p>
         /// </summary>
         [JsonProperty("Granularity")]
         public string Granularity{ get; set; }

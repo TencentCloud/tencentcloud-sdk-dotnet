@@ -25,19 +25,19 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100。
+        /// <p>返回数量，默认为 20，最大值为 100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0。
+        /// <p>偏移量，默认为 0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+        /// <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

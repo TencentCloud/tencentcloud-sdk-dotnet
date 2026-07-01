@@ -84,6 +84,28 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("Body")]
         public BodyItem[] Body{ get; set; }
 
+        /// <summary>
+        /// 连接UserProperty作为Header转发，默认false
+        /// </summary>
+        [JsonProperty("IncludingUserProperties")]
+        public bool? IncludingUserProperties{ get; set; }
+
+        /// <summary>
+        /// vpcsvcId
+        /// HTTP认证需要通过vpc网络访问时需要配置
+        /// </summary>
+        [JsonProperty("VpcSvcId")]
+        public string VpcSvcId{ get; set; }
+
+        /// <summary>
+        /// 网络连接类型
+        /// vpc：vpc网络
+        /// public：公网
+        /// 通过vpc网络连接需要设置VpcSvcId参数
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +122,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "ReadTimeout", this.ReadTimeout);
             this.SetParamArrayObj(map, prefix + "Header.", this.Header);
             this.SetParamArrayObj(map, prefix + "Body.", this.Body);
+            this.SetParamSimple(map, prefix + "IncludingUserProperties", this.IncludingUserProperties);
+            this.SetParamSimple(map, prefix + "VpcSvcId", this.VpcSvcId);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
         }
     }
 }

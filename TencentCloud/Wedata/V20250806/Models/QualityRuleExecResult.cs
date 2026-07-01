@@ -276,6 +276,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
 
+        /// <summary>
+        /// 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleExecStatus")]
+        public long? RuleExecStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +325,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "RuleExecStatus", this.RuleExecStatus);
         }
     }
 }

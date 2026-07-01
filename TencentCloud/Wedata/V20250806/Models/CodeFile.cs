@@ -25,88 +25,95 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 脚本ID
+        /// <p>脚本ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeFileId")]
         public string CodeFileId{ get; set; }
 
         /// <summary>
-        /// 脚本名称
+        /// <p>脚本名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeFileName")]
         public string CodeFileName{ get; set; }
 
         /// <summary>
-        /// 脚本所有者 uin
+        /// <p>脚本所有者 uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 脚本配置
+        /// <p>脚本配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeFileConfig")]
         public CodeFileConfig CodeFileConfig{ get; set; }
 
         /// <summary>
-        /// 脚本内容
+        /// <p>脚本内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeFileContent")]
         public string CodeFileContent{ get; set; }
 
         /// <summary>
-        /// 最近一次操作人
+        /// <p>最近一次操作人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUserUin")]
         public string UpdateUserUin{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 更新时间 yyyy-MM-dd hh:mm:ss
+        /// <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间 yyyy-MM-dd hh:mm:ss
+        /// <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 权限范围：SHARED, PRIVATE
+        /// <p>权限范围：SHARED, PRIVATE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessScope")]
         public string AccessScope{ get; set; }
 
         /// <summary>
-        /// 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+        /// <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 父文件夹路径
+        /// <p>父文件夹路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentFolderPath")]
         public string ParentFolderPath{ get; set; }
+
+        /// <summary>
+        /// <p>返回保存后的versionId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
 
 
         /// <summary>
@@ -126,6 +133,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "AccessScope", this.AccessScope);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }

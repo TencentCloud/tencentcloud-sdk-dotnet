@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 获取云原生API网关实例列表响应结果。
+        /// <p>获取云原生API网关实例列表响应结果。</p>
         /// </summary>
         [JsonProperty("Result")]
         public ListCloudNativeAPIGatewayResult Result{ get; set; }

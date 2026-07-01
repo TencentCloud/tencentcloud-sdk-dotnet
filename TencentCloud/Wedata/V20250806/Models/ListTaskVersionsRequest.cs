@@ -25,36 +25,40 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 保存版本：SAVE
-        /// 提交版本：SUBMIT
-        /// 默认为SAVE
+        /// <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
         /// </summary>
         [JsonProperty("TaskVersionType")]
         public string TaskVersionType{ get; set; }
 
         /// <summary>
-        /// 请求的数据页数。默认值为1，取值大于等于1。
+        /// <p>请求的数据页数。默认值为1，取值大于等于1。</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+        /// <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>是否为使用版本</p>
+        /// </summary>
+        [JsonProperty("UsedVersion")]
+        public bool? UsedVersion{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TaskVersionType", this.TaskVersionType);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "UsedVersion", this.UsedVersion);
         }
     }
 }

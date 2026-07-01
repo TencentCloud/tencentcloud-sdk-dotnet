@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1455</VersionPrefix>
+    <VersionPrefix>3.0.1456</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,12 +77,14 @@
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRiskData.cs" />
     <Compile Include="V20221121\Models\AssetViewWeakPassRisk.cs" />
+    <Compile Include="V20221121\Models\AttackStageCount.cs" />
     <Compile Include="V20221121\Models\AttributeOptionSet.cs" />
     <Compile Include="V20221121\Models\AuditLogInfo.cs" />
     <Compile Include="V20221121\Models\BackupLog.cs" />
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CFGViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\CICDToken.cs" />
+    <Compile Include="V20221121\Models\CSIPTag.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
     <Compile Include="V20221121\Models\CallRecord.cs" />
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
@@ -201,6 +203,8 @@
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAIAgentAssetListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAIAgentAssetListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAILinkSettingRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAILinkSettingResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAKAnalysisDetailRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAKAnalysisDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAbnormalCallRecordRequest.cs" />
@@ -403,6 +407,12 @@
     <Compile Include="V20221121\Models\DescribeDspmSyncUsersStatusResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExposeAssetCategoryRequest.cs" />
     <Compile Include="V20221121\Models\DescribeExposeAssetCategoryResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExposePathRequest.cs" />
@@ -525,8 +535,10 @@
     <Compile Include="V20221121\Models\DescribeVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DetectTypeCount.cs" />
     <Compile Include="V20221121\Models\DiskPartitionInfo.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
+    <Compile Include="V20221121\Models\DomainInfo.cs" />
     <Compile Include="V20221121\Models\DownloadDspmExportLogRequest.cs" />
     <Compile Include="V20221121\Models\DownloadDspmExportLogResponse.cs" />
     <Compile Include="V20221121\Models\DspmAccessRecord.cs" />
@@ -577,6 +589,13 @@
     <Compile Include="V20221121\Models\DspmTablePrivilege.cs" />
     <Compile Include="V20221121\Models\DspmUinUser.cs" />
     <Compile Include="V20221121\Models\DspmWhitelistStrategy.cs" />
+    <Compile Include="V20221121\Models\EDRFilter.cs" />
+    <Compile Include="V20221121\Models\EDRRule.cs" />
+    <Compile Include="V20221121\Models\EdrAlertCategoryCount.cs" />
+    <Compile Include="V20221121\Models\EdrAlertDetail.cs" />
+    <Compile Include="V20221121\Models\EdrAlertItem.cs" />
+    <Compile Include="V20221121\Models\EdrAlertTarget.cs" />
+    <Compile Include="V20221121\Models\EdrAlertTargetForIgnore.cs" />
     <Compile Include="V20221121\Models\Element.cs" />
     <Compile Include="V20221121\Models\ExportTask.cs" />
     <Compile Include="V20221121\Models\ExposeAssetTypeItem.cs" />
@@ -587,9 +606,11 @@
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\HighBaseLineRiskItem.cs" />
     <Compile Include="V20221121\Models\HitRules.cs" />
+    <Compile Include="V20221121\Models\IPIntelInfo.cs" />
     <Compile Include="V20221121\Models\IaCFile.cs" />
     <Compile Include="V20221121\Models\IaCFileRisk.cs" />
     <Compile Include="V20221121\Models\InquireInfo.cs" />
+    <Compile Include="V20221121\Models\InstanceIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
     <Compile Include="V20221121\Models\KeySandboxCredential.cs" />
     <Compile Include="V20221121\Models\KeyValue.cs" />
@@ -615,6 +636,8 @@
     <Compile Include="V20221121\Models\Machine.cs" />
     <Compile Include="V20221121\Models\MachineDetail.cs" />
     <Compile Include="V20221121\Models\MiniTagItem.cs" />
+    <Compile Include="V20221121\Models\ModifyAILinkSettingRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyAILinkSettingResponse.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountRequest.cs" />
@@ -651,6 +674,10 @@
     <Compile Include="V20221121\Models\ModifyDspmRiskStrategyResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertPermanentIgnoreRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertPermanentIgnoreResponse.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodRequest.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodResponse.cs" />
     <Compile Include="V20221121\Models\ModifyMachineRemarkRequest.cs" />
@@ -700,6 +727,9 @@
     <Compile Include="V20221121\Models\RiskRuleInfo.cs" />
     <Compile Include="V20221121\Models\RiskRuleItem.cs" />
     <Compile Include="V20221121\Models\RoleInfo.cs" />
+    <Compile Include="V20221121\Models\RuleContentCmdLine.cs" />
+    <Compile Include="V20221121\Models\RuleContentProcessInfo.cs" />
+    <Compile Include="V20221121\Models\RuleContentProcessNetwork.cs" />
     <Compile Include="V20221121\Models\STSCredentialOutput.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// <p>tts模型</p>
+        /// <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

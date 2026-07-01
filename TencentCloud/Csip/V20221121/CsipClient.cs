@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1455";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -848,6 +848,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAIAgentAssetListResponse DescribeAIAgentAssetListSync(DescribeAIAgentAssetListRequest req)
         {
             return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI-Link智链引擎配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILinkSettingRequest"/></param>
+        /// <returns><see cref="DescribeAILinkSettingResponse"/></returns>
+        public Task<DescribeAILinkSettingResponse> DescribeAILinkSetting(DescribeAILinkSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeAILinkSettingResponse>(req, "DescribeAILinkSetting");
+        }
+
+        /// <summary>
+        /// 查询AI-Link智链引擎配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILinkSettingRequest"/></param>
+        /// <returns><see cref="DescribeAILinkSettingResponse"/></returns>
+        public DescribeAILinkSettingResponse DescribeAILinkSettingSync(DescribeAILinkSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeAILinkSettingResponse>(req, "DescribeAILinkSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2973,6 +2994,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取EDR策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRRuleListRequest"/></param>
+        /// <returns><see cref="DescribeEDRRuleListResponse"/></returns>
+        public Task<DescribeEDRRuleListResponse> DescribeEDRRuleList(DescribeEDRRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRRuleListResponse>(req, "DescribeEDRRuleList");
+        }
+
+        /// <summary>
+        /// 获取EDR策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRRuleListRequest"/></param>
+        /// <returns><see cref="DescribeEDRRuleListResponse"/></returns>
+        public DescribeEDRRuleListResponse DescribeEDRRuleListSync(DescribeEDRRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRRuleListResponse>(req, "DescribeEDRRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertInfoResponse"/></returns>
+        public Task<DescribeEdrAlertInfoResponse> DescribeEdrAlertInfo(DescribeEdrAlertInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertInfoResponse>(req, "DescribeEdrAlertInfo");
+        }
+
+        /// <summary>
+        /// 获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertInfoResponse"/></returns>
+        public DescribeEdrAlertInfoResponse DescribeEdrAlertInfoSync(DescribeEdrAlertInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertInfoResponse>(req, "DescribeEdrAlertInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取EDR告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertListRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertListResponse"/></returns>
+        public Task<DescribeEdrAlertListResponse> DescribeEdrAlertList(DescribeEdrAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertListResponse>(req, "DescribeEdrAlertList");
+        }
+
+        /// <summary>
+        /// 获取EDR告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertListRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertListResponse"/></returns>
+        public DescribeEdrAlertListResponse DescribeEdrAlertListSync(DescribeEdrAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertListResponse>(req, "DescribeEdrAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 云边界分析资产分类
         /// </summary>
         /// <param name="req"><see cref="DescribeExposeAssetCategoryRequest"/></param>
@@ -4275,6 +4359,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改AI-Link智链引擎配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAILinkSettingRequest"/></param>
+        /// <returns><see cref="ModifyAILinkSettingResponse"/></returns>
+        public Task<ModifyAILinkSettingResponse> ModifyAILinkSetting(ModifyAILinkSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAILinkSettingResponse>(req, "ModifyAILinkSetting");
+        }
+
+        /// <summary>
+        /// 修改AI-Link智链引擎配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAILinkSettingRequest"/></param>
+        /// <returns><see cref="ModifyAILinkSettingResponse"/></returns>
+        public ModifyAILinkSettingResponse ModifyAILinkSettingSync(ModifyAILinkSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAILinkSettingResponse>(req, "ModifyAILinkSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改或者更改处置状态
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
@@ -4649,6 +4754,48 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategySync(ModifyDspmWhitelistStrategyRequest req)
         {
             return InternalRequestAsync<ModifyDspmWhitelistStrategyResponse>(req, "ModifyDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑或者创建EDR策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRuleRequest"/></param>
+        /// <returns><see cref="ModifyEDRRuleResponse"/></returns>
+        public Task<ModifyEDRRuleResponse> ModifyEDRRule(ModifyEDRRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRuleResponse>(req, "ModifyEDRRule");
+        }
+
+        /// <summary>
+        /// 编辑或者创建EDR策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRuleRequest"/></param>
+        /// <returns><see cref="ModifyEDRRuleResponse"/></returns>
+        public ModifyEDRRuleResponse ModifyEDRRuleSync(ModifyEDRRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRuleResponse>(req, "ModifyEDRRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertPermanentIgnoreRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertPermanentIgnoreResponse"/></returns>
+        public Task<ModifyEdrAlertPermanentIgnoreResponse> ModifyEdrAlertPermanentIgnore(ModifyEdrAlertPermanentIgnoreRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertPermanentIgnoreResponse>(req, "ModifyEdrAlertPermanentIgnore");
+        }
+
+        /// <summary>
+        /// 永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertPermanentIgnoreRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertPermanentIgnoreResponse"/></returns>
+        public ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnoreSync(ModifyEdrAlertPermanentIgnoreRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertPermanentIgnoreResponse>(req, "ModifyEdrAlertPermanentIgnore")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

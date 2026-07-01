@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1455";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Adp.V20260520
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建Agent
+        /// </summary>
+        /// <param name="req"><see cref="CopyAgentFromAppRequest"/></param>
+        /// <returns><see cref="CopyAgentFromAppResponse"/></returns>
+        public Task<CopyAgentFromAppResponse> CopyAgentFromApp(CopyAgentFromAppRequest req)
+        {
+            return InternalRequestAsync<CopyAgentFromAppResponse>(req, "CopyAgentFromApp");
+        }
+
+        /// <summary>
+        /// 创建Agent
+        /// </summary>
+        /// <param name="req"><see cref="CopyAgentFromAppRequest"/></param>
+        /// <returns><see cref="CopyAgentFromAppResponse"/></returns>
+        public CopyAgentFromAppResponse CopyAgentFromAppSync(CopyAgentFromAppRequest req)
+        {
+            return InternalRequestAsync<CopyAgentFromAppResponse>(req, "CopyAgentFromApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

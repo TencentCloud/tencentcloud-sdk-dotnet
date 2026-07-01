@@ -150,6 +150,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// <p>集群隔离时间，0为7天，1为15天</p>
+        /// </summary>
+        [JsonProperty("IsolationPolicyVersion")]
+        public long? IsolationPolicyVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "WebUIType", this.WebUIType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
         }
     }
 }

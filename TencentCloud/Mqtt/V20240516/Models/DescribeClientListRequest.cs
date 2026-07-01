@@ -42,6 +42,21 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
+        /// <summary>
+        /// 0:查询在线和离线客户端（默认值）
+        /// 1:查询在线客户端
+        /// 2:查询离线客户端
+        /// </summary>
+        [JsonProperty("OnlineStatus")]
+        public long? OnlineStatus{ get; set; }
+
+        /// <summary>
+        /// 在线连接：表示最后的连接时间
+        /// 离线连接：表示最后的断开连接时间
+        /// </summary>
+        [JsonProperty("MaxTimestamp")]
+        public long? MaxTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +66,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "Number", this.Number);
+            this.SetParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
+            this.SetParamSimple(map, prefix + "MaxTimestamp", this.MaxTimestamp);
         }
     }
 }

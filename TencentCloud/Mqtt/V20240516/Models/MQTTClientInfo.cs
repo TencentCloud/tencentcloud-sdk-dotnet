@@ -81,6 +81,18 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("MQTTClientSubscriptions")]
         public MQTTClientSubscription[] MQTTClientSubscriptions{ get; set; }
 
+        /// <summary>
+        /// clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+        /// </summary>
+        [JsonProperty("CleanSession")]
+        public bool? CleanSession{ get; set; }
+
+        /// <summary>
+        /// MQTT5协议：expireIntervalInSeconds
+        /// </summary>
+        [JsonProperty("ExpireIntervalInSeconds")]
+        public long? ExpireIntervalInSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +108,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "ConnectTime", this.ConnectTime);
             this.SetParamSimple(map, prefix + "DisconnectTime", this.DisconnectTime);
             this.SetParamArrayObj(map, prefix + "MQTTClientSubscriptions.", this.MQTTClientSubscriptions);
+            this.SetParamSimple(map, prefix + "CleanSession", this.CleanSession);
+            this.SetParamSimple(map, prefix + "ExpireIntervalInSeconds", this.ExpireIntervalInSeconds);
         }
     }
 }

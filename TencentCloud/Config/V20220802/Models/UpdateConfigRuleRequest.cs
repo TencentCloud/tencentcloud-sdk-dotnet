@@ -25,59 +25,55 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 触发类型，最多支持两种
+        /// <p>触发类型，最多支持两种</p>
         /// </summary>
         [JsonProperty("TriggerType")]
         public TriggerType[] TriggerType{ get; set; }
 
         /// <summary>
-        /// 风险等级
-        /// 1：高风险。
-        /// 2：中风险。
-        /// 3：低风险。
+        /// <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 入参
+        /// <p>入参</p>
         /// </summary>
         [JsonProperty("InputParameter")]
         public InputParameter[] InputParameter{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 规则评估地域范围，规则仅对指定地域中的资源生效。
-        /// 支持的地域范围config:ListResourceRegions返回的地域
+        /// <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
         /// </summary>
         [JsonProperty("RegionsScope")]
         public string[] RegionsScope{ get; set; }
 
         /// <summary>
-        /// 规则评估标签范围，规则仅对绑定指定标签的资源生效。
+        /// <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
         /// </summary>
         [JsonProperty("TagsScope")]
         public Tag[] TagsScope{ get; set; }
 
         /// <summary>
-        /// 规则对指定资源ID无效，即不对该资源执行评估。
+        /// <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
         /// </summary>
         [JsonProperty("ExcludeResourceIdsScope")]
         public string[] ExcludeResourceIdsScope{ get; set; }

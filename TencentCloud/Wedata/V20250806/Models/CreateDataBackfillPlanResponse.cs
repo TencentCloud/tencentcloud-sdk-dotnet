@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 数据补录计划创建结果
+        /// <p>数据补录计划创建结果</p>
         /// </summary>
         [JsonProperty("Data")]
         public CreateDataReplenishmentPlan Data{ get; set; }

@@ -25,106 +25,91 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 触发方式，
-        /// - 定时触发：TIME_TRIGGER
-        /// - 持续运行：CONTINUE_RUN
-        /// - 文件到达：FILE_ARRIVAL
-        /// 
-        /// 注意：
-        /// - TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-        /// - FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+        /// <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
-        /// WorkflowTriggerConfig转换成Json格式，对账使用
+        /// <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public string ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 调度时区
+        /// <p>调度时区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// 调度生效时间
+        /// <p>调度生效时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 调度结束时间
+        /// <p>调度结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+        /// <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigMode")]
         public string ConfigMode{ get; set; }
 
         /// <summary>
-        /// 周期类型：支持的类型为
-        /// ONEOFF_CYCLE: 一次性
-        /// YEAR_CYCLE: 年
-        /// MONTH_CYCLE: 月
-        /// WEEK_CYCLE: 周
-        /// DAY_CYCLE: 天
-        /// HOUR_CYCLE: 小时
-        /// MINUTE_CYCLE: 分钟
-        /// CRONTAB_CYCLE: crontab表达式类型
+        /// <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// cron表达式
+        /// <p>cron表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// triggerId, uuid
+        /// <p>triggerId, uuid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerId")]
         public string TriggerId{ get; set; }
 
         /// <summary>
-        /// 文件到达模式下	存储系统中的监听路径
+        /// <p>文件到达模式下    存储系统中的监听路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileArrivalPath")]
         public string FileArrivalPath{ get; set; }
 
         /// <summary>
-        /// 文件到达模式下	触发最短间隔时间（单位：秒）
+        /// <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMinimumIntervalSecond")]
         public ulong? TriggerMinimumIntervalSecond{ get; set; }
 
         /// <summary>
-        /// 文件到达模式下	触发等待时间（单位：秒）
+        /// <p>文件到达模式下    触发等待时间（单位：秒）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerWaitTimeSecond")]
         public ulong? TriggerWaitTimeSecond{ get; set; }
 
         /// <summary>
-        /// Trigger 状态 启动ACTIVE，暂停PAUSED
+        /// <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerStatus")]

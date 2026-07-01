@@ -402,6 +402,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DoNotStart")]
         public bool? DoNotStart{ get; set; }
 
+        /// <summary>
+        /// <p>镜像Secret列表</p>
+        /// </summary>
+        [JsonProperty("ImagePullSecretList")]
+        public string[] ImagePullSecretList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -471,6 +477,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Partition", this.Partition);
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
             this.SetParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
+            this.SetParamArraySimple(map, prefix + "ImagePullSecretList.", this.ImagePullSecretList);
         }
     }
 }

@@ -25,74 +25,79 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业Id
+        /// <p>作业Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 作业名
+        /// <p>作业名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 作业类型
+        /// <p>作业类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobType")]
         public long? JobType{ get; set; }
 
         /// <summary>
-        /// 作业占用资源
+        /// <p>作业占用资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCu")]
         public float? RunningCu{ get; set; }
 
         /// <summary>
-        /// 作业状态 启动或者停止或者暂停
+        /// <p>作业状态 启动或者停止或者暂停</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-        /// 
+        /// <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalingType")]
         public long? ScalingType{ get; set; }
 
         /// <summary>
-        /// RunningCpu
+        /// <p>RunningCpu</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningCpu")]
         public float? RunningCpu{ get; set; }
 
         /// <summary>
-        /// RunningMem
+        /// <p>RunningMem</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningMem")]
         public float? RunningMem{ get; set; }
 
         /// <summary>
-        /// sql
+        /// <p>sql</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DecodeSqlCode")]
         public string DecodeSqlCode{ get; set; }
 
         /// <summary>
-        /// 发布版本配置id
+        /// <p>发布版本配置id</p>
         /// </summary>
         [JsonProperty("PublishedJobConfigId")]
         public long? PublishedJobConfigId{ get; set; }
+
+        /// <summary>
+        /// <p>完整的文件夹路径，仅在平铺模式下返回</p>
+        /// </summary>
+        [JsonProperty("FolderPath")]
+        public string FolderPath{ get; set; }
 
 
         /// <summary>
@@ -110,6 +115,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
             this.SetParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
             this.SetParamSimple(map, prefix + "PublishedJobConfigId", this.PublishedJobConfigId);
+            this.SetParamSimple(map, prefix + "FolderPath", this.FolderPath);
         }
     }
 }

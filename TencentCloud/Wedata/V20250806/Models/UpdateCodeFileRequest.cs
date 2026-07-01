@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("CodeFileContent")]
         public string CodeFileContent{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SubmitAction")]
+        public bool? SubmitAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CodeFileId", this.CodeFileId);
             this.SetParamObj(map, prefix + "CodeFileConfig.", this.CodeFileConfig);
             this.SetParamSimple(map, prefix + "CodeFileContent", this.CodeFileContent);
+            this.SetParamSimple(map, prefix + "SubmitAction", this.SubmitAction);
         }
     }
 }

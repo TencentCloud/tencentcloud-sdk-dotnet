@@ -49,37 +49,37 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>监听类型，默认为智能路由。</p>
+        /// <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
         /// </summary>
         [JsonProperty("ListenerType")]
         public string ListenerType{ get; set; }
 
         /// <summary>
-        /// <p>协议，默认为TCP。</p>
+        /// <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// <p>连接空闲等待时间。</p>
+        /// <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public ulong? IdleTimeout{ get; set; }
 
         /// <summary>
-        /// <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
+        /// <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
         /// </summary>
         [JsonProperty("GetRealIpType")]
         public string GetRealIpType{ get; set; }
 
         /// <summary>
-        /// <p>是否开启会话保持。</p>
+        /// <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
         /// </summary>
         [JsonProperty("ClientAffinity")]
         public string ClientAffinity{ get; set; }
 
         /// <summary>
-        /// <p>请求超时时间。</p>
+        /// <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
         /// </summary>
         [JsonProperty("RequestTimeout")]
         public ulong? RequestTimeout{ get; set; }
@@ -91,25 +91,25 @@ namespace TencentCloud.Ga2.V20250115.Models
         public bool? XForwardedForRealIp{ get; set; }
 
         /// <summary>
-        /// <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+        /// <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
         /// </summary>
         [JsonProperty("CertificationType")]
         public string CertificationType{ get; set; }
 
         /// <summary>
-        /// <p>加密算法套件。</p>
+        /// <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
         /// </summary>
         [JsonProperty("CipherPolicyId")]
         public string CipherPolicyId{ get; set; }
 
         /// <summary>
-        /// <p>服务器证书。</p>
+        /// <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
         /// </summary>
         [JsonProperty("ServerCertificates")]
         public string[] ServerCertificates{ get; set; }
 
         /// <summary>
-        /// <p>客户端证书。</p>
+        /// <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
         /// </summary>
         [JsonProperty("ClientCaCertificates")]
         public string[] ClientCaCertificates{ get; set; }

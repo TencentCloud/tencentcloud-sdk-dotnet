@@ -440,6 +440,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("NetEniType")]
         public long? NetEniType{ get; set; }
 
+        /// <summary>
+        /// <p>桶列表信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterBuckets")]
+        public ClusterBucketInfo[] ClusterBuckets{ get; set; }
+
+        /// <summary>
+        /// <p>集群隔离时间，0为7天，1为15天</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolationPolicyVersion")]
+        public long? IsolationPolicyVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -509,6 +523,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "HiveMetastore.", this.HiveMetastore);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "NetEniType", this.NetEniType);
+            this.SetParamArrayObj(map, prefix + "ClusterBuckets.", this.ClusterBuckets);
+            this.SetParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
         }
     }
 }

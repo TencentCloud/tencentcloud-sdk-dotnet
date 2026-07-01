@@ -294,13 +294,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public JobConfig JobConfigItem{ get; set; }
 
         /// <summary>
-        /// <p>checkpoint 超时时间</p>
+        /// <p>checkpoint 超时时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("CheckpointTimeoutSecond")]
         public long? CheckpointTimeoutSecond{ get; set; }
 
         /// <summary>
-        /// <p>checkpoint 间隔时间</p>
+        /// <p>checkpoint 间隔时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("CheckpointIntervalSecond")]
         public long? CheckpointIntervalSecond{ get; set; }
@@ -310,6 +310,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         [JsonProperty("VariableReplaceMode")]
         public long? VariableReplaceMode{ get; set; }
+
+        /// <summary>
+        /// <p>快照桶</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StateCOSBucket")]
+        public string StateCOSBucket{ get; set; }
+
+        /// <summary>
+        /// <p>日志桶</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogCOSBucket")]
+        public string LogCOSBucket{ get; set; }
 
 
         /// <summary>
@@ -359,6 +373,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
             this.SetParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
             this.SetParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
+            this.SetParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
+            this.SetParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
         }
     }
 }

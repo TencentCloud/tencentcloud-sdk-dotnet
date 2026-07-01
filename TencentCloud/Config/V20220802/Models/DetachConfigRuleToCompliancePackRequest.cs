@@ -25,13 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("ConfigRuleId")]
         public string ConfigRuleId{ get; set; }

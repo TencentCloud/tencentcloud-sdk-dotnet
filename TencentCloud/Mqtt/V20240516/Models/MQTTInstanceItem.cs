@@ -168,6 +168,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// 单个共享订阅组TopicFilter数限制
         /// </summary>
         [JsonProperty("MaxTopicFilterPerSharedSubscriptionGroup")]
+        [System.Obsolete]
         public long? MaxTopicFilterPerSharedSubscriptionGroup{ get; set; }
 
         /// <summary>
@@ -181,6 +182,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         /// </summary>
         [JsonProperty("MaxTopicFilterPerAutoSubscriptionPolicy")]
         public long? MaxTopicFilterPerAutoSubscriptionPolicy{ get; set; }
+
+        /// <summary>
+        /// 集群删除保护开关
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
 
 
         /// <summary>
@@ -212,6 +219,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
             this.SetParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
             this.SetParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         }
     }
 }

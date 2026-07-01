@@ -25,25 +25,25 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 终端节点组类型。支持VIRTUAL，DEFAULT。
+        /// <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
         /// </summary>
         [JsonProperty("EndpointGroupType")]
         public string EndpointGroupType{ get; set; }
 
         /// <summary>
-        /// 终端节点组配置。
+        /// <p>终端节点组配置。</p>
         /// </summary>
         [JsonProperty("EndpointGroupConfiguration")]
         public EndpointGroupConfiguration EndpointGroupConfiguration{ get; set; }

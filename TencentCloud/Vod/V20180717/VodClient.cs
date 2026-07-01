@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1453";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -395,6 +395,35 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcImageTaskResponse CreateAigcImageTaskSync(CreateAigcImageTaskRequest req)
         {
             return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于创建并启用 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+        /// 
+        /// 如果删除配额后重新启用，用量将清零并重新计算。
+        /// 
+        /// 由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcQuotaRequest"/></param>
+        /// <returns><see cref="CreateAigcQuotaResponse"/></returns>
+        public Task<CreateAigcQuotaResponse> CreateAigcQuota(CreateAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateAigcQuotaResponse>(req, "CreateAigcQuota");
+        }
+
+        /// <summary>
+        /// 用于创建并启用 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+        /// 
+        /// 如果删除配额后重新启用，用量将清零并重新计算。
+        /// 
+        /// 由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcQuotaRequest"/></param>
+        /// <returns><see cref="CreateAigcQuotaResponse"/></returns>
+        public CreateAigcQuotaResponse CreateAigcQuotaSync(CreateAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateAigcQuotaResponse>(req, "CreateAigcQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1330,6 +1359,31 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 用于删除 AIGC 配额配置，删除后，将不再限制 AIGC 任务的发起。
+        /// 
+        /// 如果删除配额后重新启用，用量将清零并重新计算。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcQuotaRequest"/></param>
+        /// <returns><see cref="DeleteAigcQuotaResponse"/></returns>
+        public Task<DeleteAigcQuotaResponse> DeleteAigcQuota(DeleteAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcQuotaResponse>(req, "DeleteAigcQuota");
+        }
+
+        /// <summary>
+        /// 用于删除 AIGC 配额配置，删除后，将不再限制 AIGC 任务的发起。
+        /// 
+        /// 如果删除配额后重新启用，用量将清零并重新计算。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcQuotaRequest"/></param>
+        /// <returns><see cref="DeleteAigcQuotaResponse"/></returns>
+        public DeleteAigcQuotaResponse DeleteAigcQuotaSync(DeleteAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcQuotaResponse>(req, "DeleteAigcQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义转动图模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
@@ -2068,6 +2122,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsyncSync(DescribeAigcFaceInfoAsyncRequest req)
         {
             return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询 AIGC 配额配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAigcQuotasResponse"/></returns>
+        public Task<DescribeAigcQuotasResponse> DescribeAigcQuotas(DescribeAigcQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcQuotasResponse>(req, "DescribeAigcQuotas");
+        }
+
+        /// <summary>
+        /// 用于查询 AIGC 配额配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAigcQuotasResponse"/></returns>
+        public DescribeAigcQuotasResponse DescribeAigcQuotasSync(DescribeAigcQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcQuotasResponse>(req, "DescribeAigcQuotas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3902,6 +3977,31 @@ namespace TencentCloud.Vod.V20180717
         public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplateSync(ModifyAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<ModifyAdaptiveDynamicStreamingTemplateResponse>(req, "ModifyAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于编辑 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+        /// 
+        /// 由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAigcQuotaRequest"/></param>
+        /// <returns><see cref="ModifyAigcQuotaResponse"/></returns>
+        public Task<ModifyAigcQuotaResponse> ModifyAigcQuota(ModifyAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyAigcQuotaResponse>(req, "ModifyAigcQuota");
+        }
+
+        /// <summary>
+        /// 用于编辑 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+        /// 
+        /// 由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAigcQuotaRequest"/></param>
+        /// <returns><see cref="ModifyAigcQuotaResponse"/></returns>
+        public ModifyAigcQuotaResponse ModifyAigcQuotaSync(ModifyAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyAigcQuotaResponse>(req, "ModifyAigcQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

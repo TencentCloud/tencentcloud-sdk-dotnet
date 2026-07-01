@@ -108,6 +108,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("TriggerWorkflowRunConfiguration")]
         public WorkflowRunConfig TriggerWorkflowRunConfiguration{ get; set; }
 
+        /// <summary>
+        /// <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerMode")]
+        public string TriggerMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
             this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
             this.SetParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
+            this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
         }
     }
 }

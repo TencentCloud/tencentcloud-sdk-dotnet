@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 分页的data数据
+        /// <p>分页的data数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescribeDeviceHardwareInfoListRspData Data{ get; set; }

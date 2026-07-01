@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Csip.V20221121.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CSIPTag : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>标签颜色</p>
+        /// </summary>
+        [JsonProperty("TagColor")]
+        public string TagColor{ get; set; }
+
+        /// <summary>
+        /// <p>标签ID</p>
+        /// </summary>
+        [JsonProperty("TagID")]
+        public ulong? TagID{ get; set; }
+
+        /// <summary>
+        /// <p>标签键（根据语言环境返回中文或英文）</p>
+        /// </summary>
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// <p>标签值（根据语言环境返回中文或英文）</p>
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "TagColor", this.TagColor);
+            this.SetParamSimple(map, prefix + "TagID", this.TagID);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+        }
+    }
+}
+

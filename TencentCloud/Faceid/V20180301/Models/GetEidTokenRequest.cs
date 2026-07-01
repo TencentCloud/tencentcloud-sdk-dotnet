@@ -25,56 +25,43 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// EID商户ID。
-        /// - 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-        /// - 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
-        /// - 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
+        /// <p>EID商户ID。</p><ul><li>商户ID通过人脸核身控制台<a href="https://console.cloud.tencent.com/faceid/access">自助接入</a>申请。</li><li>商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。</li><li>必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。</li></ul>
         /// </summary>
         [JsonProperty("MerchantId")]
         public string MerchantId{ get; set; }
 
         /// <summary>
-        /// 身份标识。
-        /// - 未使用OCR服务时，必须传入。
-        /// - 规则：a-z，A-Z，0-9组合。
-        /// - 最长长度32位。
+        /// <p>身份标识。</p><ul><li>未使用OCR服务时，必须传入。</li><li>规则：a-z，A-Z，0-9组合。</li><li>最长长度32位。</li></ul>
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名。
-        /// - 未使用OCR服务时，必须传入。
-        /// - 最长长度32位。
-        /// - 中文请使用UTF-8编码。
+        /// <p>姓名。</p><ul><li>未使用OCR服务时，必须传入。</li><li>最长长度32位。</li><li>中文请使用UTF-8编码。</li></ul>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 透传字段，在获取验证结果时返回。
-        /// - 最长长度1024位。
+        /// <p>透传字段，在获取验证结果时返回。</p><ul><li>最长长度1024位。</li></ul>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
+        /// <p>小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。</p>
         /// </summary>
         [JsonProperty("Config")]
         public GetEidTokenConfig Config{ get; set; }
 
         /// <summary>
-        /// 用户从Url中进入核身认证结束后重定向的回调链接地址。
-        /// - 最长长度1024位。
-        /// - EidToken会在该链接的query参数中。
+        /// <p>用户从Url中进入核身认证结束后重定向的回调链接地址。</p><ul><li>最长长度1024位。</li><li>EidToken会在该链接的query参数中。</li></ul>
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。
-        /// - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

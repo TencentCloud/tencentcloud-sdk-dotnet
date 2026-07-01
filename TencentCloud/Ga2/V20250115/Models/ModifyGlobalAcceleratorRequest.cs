@@ -25,31 +25,31 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 名称，最大长度不能超过60个字节。
+        /// <p>名称，最大长度不能超过60个字节。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述信息，最大长度不能超过100个字节。
+        /// <p>描述信息，最大长度不能超过100个字节。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 跨境类型。
+        /// <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
         /// </summary>
         [JsonProperty("CrossBorderType")]
         public string CrossBorderType{ get; set; }
 
         /// <summary>
-        /// 代表是否跨境服务承诺。
+        /// <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
         /// </summary>
         [JsonProperty("CrossBorderPromiseFlag")]
         public bool? CrossBorderPromiseFlag{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1454";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -2643,7 +2643,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 查询数据探索文件夹树，包括文件夹下的脚本
+        /// 查询SQL文件夹树，包括文件夹下的脚本
         /// </summary>
         /// <param name="req"><see cref="ListSQLFolderContentsRequest"/></param>
         /// <returns><see cref="ListSQLFolderContentsResponse"/></returns>
@@ -2653,7 +2653,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// 查询数据探索文件夹树，包括文件夹下的脚本
+        /// 查询SQL文件夹树，包括文件夹下的脚本
         /// </summary>
         /// <param name="req"><see cref="ListSQLFolderContentsRequest"/></param>
         /// <returns><see cref="ListSQLFolderContentsResponse"/></returns>

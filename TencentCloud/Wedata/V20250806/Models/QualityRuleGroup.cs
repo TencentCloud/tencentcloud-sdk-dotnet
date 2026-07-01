@@ -25,235 +25,249 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 规则组Id
+        /// <p>规则组Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleGroupId")]
         public ulong? RuleGroupId{ get; set; }
 
         /// <summary>
-        /// 数据源Id
+        /// <p>数据源Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 数据源名称
+        /// <p>数据源名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceName")]
         public string DatasourceName{ get; set; }
 
         /// <summary>
-        /// 数据源类型
+        /// <p>数据源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceType")]
         public ulong? DatasourceType{ get; set; }
 
         /// <summary>
-        /// 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+        /// <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorType")]
         public ulong? MonitorType{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 关联数据表名称
+        /// <p>关联数据表名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 关联数据表Id
+        /// <p>关联数据表Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
         /// <summary>
-        /// 关联数据表负责人
+        /// <p>关联数据表负责人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableOwnerName")]
         public string TableOwnerName{ get; set; }
 
         /// <summary>
-        /// 执行策略
+        /// <p>执行策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecStrategy")]
         public QualityRuleGroupExecStrategy ExecStrategy{ get; set; }
 
         /// <summary>
-        /// 订阅信息
+        /// <p>订阅信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subscription")]
         public QualityRuleGroupSubscribe Subscription{ get; set; }
 
         /// <summary>
-        /// 数据库id
+        /// <p>数据库id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseId")]
         public string DatabaseId{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 模式名称
+        /// <p>模式名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 是否有权限
+        /// <p>是否有权限</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Permission")]
         public bool? Permission{ get; set; }
 
         /// <summary>
-        /// 已经配置的规则数量
+        /// <p>已经配置的规则数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCount")]
         public ulong? RuleCount{ get; set; }
 
         /// <summary>
-        /// 监控状态
+        /// <p>监控状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public bool? MonitorStatus{ get; set; }
 
         /// <summary>
-        /// 表负责人UserId
+        /// <p>表负责人UserId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableOwnerUserId")]
         public ulong? TableOwnerUserId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 是否已配置执行策略
+        /// <p>是否已配置执行策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyConfig")]
         public bool? StrategyConfig{ get; set; }
 
         /// <summary>
-        /// 是否已配置执行策略
+        /// <p>是否已配置执行策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeConfig")]
         public bool? SubscribeConfig{ get; set; }
 
         /// <summary>
-        /// 数据源环境：0或者未返回.未定义，1.生产 2.开发
+        /// <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DsEnvType")]
         public long? DsEnvType{ get; set; }
 
         /// <summary>
-        /// EMR集群部署方式：CVM/TKE
+        /// <p>EMR集群部署方式：CVM/TKE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterDeployType")]
         public string ClusterDeployType{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 执行详情
+        /// <p>执行详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecDetail")]
         public string ExecDetail{ get; set; }
 
         /// <summary>
-        /// 事中关联任务数量
+        /// <p>事中关联任务数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PipelineTaskCount")]
         public long? PipelineTaskCount{ get; set; }
 
         /// <summary>
-        /// 有效规则数
+        /// <p>有效规则数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRuleCount")]
         public long? EnableRuleCount{ get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// <p>任务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 监控创建人
+        /// <p>监控创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserName")]
         public string CreateUserName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AspectTaskId")]
         public string AspectTaskId{ get; set; }
 
         /// <summary>
-        /// 数据目录名称
+        /// <p>数据目录名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// <p>负责人ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InChargeId")]
+        public string InChargeId{ get; set; }
+
+        /// <summary>
+        /// <p>负责人名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InChargeName")]
+        public string InChargeName{ get; set; }
 
 
         /// <summary>
@@ -294,6 +308,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "InChargeId", this.InChargeId);
+            this.SetParamSimple(map, prefix + "InChargeName", this.InChargeName);
         }
     }
 }

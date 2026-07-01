@@ -25,25 +25,25 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 策略ID。
+        /// <p>策略ID。</p>
         /// </summary>
         [JsonProperty("ForwardingPolicyId")]
         public string ForwardingPolicyId{ get; set; }
 
         /// <summary>
-        /// 域名。
+        /// <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

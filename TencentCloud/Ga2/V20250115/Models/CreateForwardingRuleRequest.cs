@@ -43,49 +43,49 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string ForwardingPolicyId{ get; set; }
 
         /// <summary>
-        /// <p>七层转发规则条件信息。</p>
+        /// <p>七层转发规则条件信息。</p><p>数组长度最大不能超过1。</p>
         /// </summary>
         [JsonProperty("RuleConditions")]
         public RuleCondition[] RuleConditions{ get; set; }
 
         /// <summary>
-        /// <p>七层转发规则行为信息。</p>
+        /// <p>七层转发规则行为信息。</p><p>数组长度最大不能超过1。</p>
         /// </summary>
         [JsonProperty("RuleActions")]
         public RuleAction[] RuleActions{ get; set; }
 
         /// <summary>
-        /// <p>回源Header信息。</p>
+        /// <p>回源Header信息。</p><p>数组长度最大不能超过5。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
         /// </summary>
         [JsonProperty("OriginHeaders")]
         public OriginHeader[] OriginHeaders{ get; set; }
 
         /// <summary>
-        /// <p>是否开启回源sni。</p>
+        /// <p>是否开启回源sni。</p><p>默认值：False</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
         /// </summary>
         [JsonProperty("EnableOriginSni")]
         public bool? EnableOriginSni{ get; set; }
 
         /// <summary>
-        /// <p>回源sni。</p>
+        /// <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当EnableOriginSni为True时，此字段必传。当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
         /// </summary>
         [JsonProperty("OriginSni")]
         public string OriginSni{ get; set; }
 
         /// <summary>
-        /// <p>回源host。</p>
+        /// <p>回源host。</p><p>入参限制：长度不超过80。</p><p>当RuleActions.RuleActionType是ForwardGroup时，此字段必传。</p>
         /// </summary>
         [JsonProperty("OriginHost")]
         public string OriginHost{ get; set; }
 
         /// <summary>
-        /// <p>源站响应头</p>
+        /// <p>源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
         /// </summary>
         [JsonProperty("ResponseHeaders")]
         public ResponseHeaders[] ResponseHeaders{ get; set; }
 
         /// <summary>
-        /// <p>删除源站响应头</p>
+        /// <p>删除源站响应头</p><p>数组长度不超过5。可以传空数组，代表清空配置。</p>
         /// </summary>
         [JsonProperty("HideResponseHeaders")]
         public HideResponseHeaders[] HideResponseHeaders{ get; set; }

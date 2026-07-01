@@ -73,6 +73,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("MigrateWay")]
         public string MigrateWay{ get; set; }
 
+        /// <summary>
+        /// <p>迁移配置阶段限速相关参数</p>
+        /// </summary>
+        [JsonProperty("RateLimit")]
+        public RateLimit RateLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "IsDstReadOnly", this.IsDstReadOnly);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
             this.SetParamSimple(map, prefix + "MigrateWay", this.MigrateWay);
+            this.SetParamObj(map, prefix + "RateLimit.", this.RateLimit);
         }
     }
 }

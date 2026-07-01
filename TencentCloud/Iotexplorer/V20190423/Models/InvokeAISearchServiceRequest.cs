@@ -108,6 +108,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
+        /// <summary>
+        /// <p>是否输出原始任务信息</p>
+        /// </summary>
+        [JsonProperty("WithTaskInfo")]
+        public bool? WithTaskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
             this.SetParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "WithTaskInfo", this.WithTaskInfo);
         }
     }
 }

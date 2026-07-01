@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1453</VersionPrefix>
+    <VersionPrefix>3.0.1456</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -179,6 +179,7 @@
     <Compile Include="V20180717\Models\AigcImageTaskInputFileInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutput.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcQuotaItem.cs" />
     <Compile Include="V20180717\Models\AigcUsageDataItem.cs" />
     <Compile Include="V20180717\Models\AigcVideoOutputConfig.cs" />
     <Compile Include="V20180717\Models\AigcVideoRedrawOutputConfig.cs" />
@@ -292,6 +293,8 @@
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceTask.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskResponse.cs" />
+    <Compile Include="V20180717\Models\CreateAigcQuotaRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcQuotaResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcSubjectInput.cs" />
     <Compile Include="V20180717\Models\CreateAigcSubjectOutput.cs" />
     <Compile Include="V20180717\Models\CreateAigcSubjectRequest.cs" />
@@ -381,6 +384,8 @@
     <Compile Include="V20180717\Models\DeleteAigcAdvancedCustomElementResponse.cs" />
     <Compile Include="V20180717\Models\DeleteAigcApiTokenRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAigcApiTokenResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteAigcQuotaRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteAigcQuotaResponse.cs" />
     <Compile Include="V20180717\Models\DeleteAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteBlindWatermarkTemplateRequest.cs" />
@@ -452,6 +457,8 @@
     <Compile Include="V20180717\Models\DescribeAigcFaceInfoAsyncTask.cs" />
     <Compile Include="V20180717\Models\DescribeAigcFaceInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAigcFaceInfoResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcQuotasRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeAigcQuotasResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAigcUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAigcUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAllClassRequest.cs" />
@@ -780,6 +787,8 @@
     <Compile Include="V20180717\Models\ModifyAIRecognitionTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyAdaptiveDynamicStreamingTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyAdaptiveDynamicStreamingTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyAigcQuotaRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyAigcQuotaResponse.cs" />
     <Compile Include="V20180717\Models\ModifyAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyBlindWatermarkTemplateRequest.cs" />

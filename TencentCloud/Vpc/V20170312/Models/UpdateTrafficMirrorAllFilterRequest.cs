@@ -25,43 +25,43 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 流量镜像实例ID
+        /// <p>流量镜像实例ID</p>
         /// </summary>
         [JsonProperty("TrafficMirrorId")]
         public string TrafficMirrorId{ get; set; }
 
         /// <summary>
-        /// 流量镜像采集方向
+        /// <p>流量镜像采集方向</p>
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
 
         /// <summary>
-        /// 流量镜像采集对象
+        /// <p>流量镜像采集对象</p>
         /// </summary>
         [JsonProperty("CollectorSrcs")]
         public string[] CollectorSrcs{ get; set; }
 
         /// <summary>
-        /// 流量镜像需要过滤的natgw实例
+        /// <p>流量镜像需要过滤的natgw实例</p>
         /// </summary>
         [JsonProperty("NatId")]
         public string NatId{ get; set; }
 
         /// <summary>
-        /// 流量镜像需要过滤的五元组规则
+        /// <p>流量镜像需要过滤的五元组规则</p>
         /// </summary>
         [JsonProperty("CollectorNormalFilters")]
         public TrafficMirrorFilter[] CollectorNormalFilters{ get; set; }
 
         /// <summary>
-        /// 流量镜像入站过滤规则。
+        /// <p>流量镜像入站过滤规则。</p>
         /// </summary>
         [JsonProperty("IngressFilterRules")]
         public TrafficMirrorFilter[] IngressFilterRules{ get; set; }
 
         /// <summary>
-        /// 流量镜像出站过滤规则。
+        /// <p>流量镜像出站过滤规则。</p>
         /// </summary>
         [JsonProperty("EgressFilterRules")]
         public TrafficMirrorFilter[] EgressFilterRules{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
+        /// <summary>
+        /// 是否清理session，默认false
+        /// </summary>
+        [JsonProperty("DeleteSession")]
+        public bool? DeleteSession{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
+            this.SetParamSimple(map, prefix + "DeleteSession", this.DeleteSession);
         }
     }
 }

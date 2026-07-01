@@ -25,70 +25,82 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 责任人ID
+        /// <p>责任人ID</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("WorkflowDesc")]
         public string WorkflowDesc{ get; set; }
 
         /// <summary>
-        /// 工作流参数列表
+        /// <p>工作流参数列表</p>
         /// </summary>
         [JsonProperty("WorkflowParams")]
         public ParamInfo[] WorkflowParams{ get; set; }
 
         /// <summary>
-        /// 统一调度参数
+        /// <p>统一调度参数</p>
         /// </summary>
         [JsonProperty("TriggerWorkflowSchedulerConfigurations")]
         public WorkflowTriggerConfig[] TriggerWorkflowSchedulerConfigurations{ get; set; }
 
         /// <summary>
-        /// BundleId项
+        /// <p>BundleId项</p>
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// Bundle信息
+        /// <p>Bundle信息</p>
         /// </summary>
         [JsonProperty("BundleInfo")]
         public string BundleInfo{ get; set; }
 
         /// <summary>
-        /// 通用参数配置
+        /// <p>通用参数配置</p>
         /// </summary>
         [JsonProperty("GeneralTaskParams")]
         public WorkflowGeneralTaskParam[] GeneralTaskParams{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>调度运行配置</p>
         /// </summary>
         [JsonProperty("TriggerWorkflowRunConfiguration")]
         public WorkflowRunConfig TriggerWorkflowRunConfiguration{ get; set; }
+
+        /// <summary>
+        /// <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+        /// </summary>
+        [JsonProperty("SchedulerStatus")]
+        public string SchedulerStatus{ get; set; }
+
+        /// <summary>
+        /// <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+        /// </summary>
+        [JsonProperty("TriggerMode")]
+        public string TriggerMode{ get; set; }
 
 
         /// <summary>
@@ -107,6 +119,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
             this.SetParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
             this.SetParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
+            this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+            this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
         }
     }
 }

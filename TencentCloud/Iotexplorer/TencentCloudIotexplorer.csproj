@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1454</VersionPrefix>
+    <VersionPrefix>3.0.1456</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -137,6 +137,8 @@
     <Compile Include="V20190423\Models\CreateTRTCSignaturesWithRoomIdResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeCallbackRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeDirectUploadCredentialRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeeDirectUploadCredentialResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />

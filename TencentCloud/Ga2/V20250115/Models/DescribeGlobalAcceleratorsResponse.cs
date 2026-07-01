@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 符合条件的全球加速实例。
+        /// <p>符合条件的全球加速实例。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorSet")]
         public GlobalAcceleratorSet[] GlobalAcceleratorSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的实例个数。
+        /// <p>符合条件的实例个数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

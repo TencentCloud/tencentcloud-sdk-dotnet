@@ -25,31 +25,31 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 每页显示数量
+        /// <p>每页显示数量</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public ulong? MaxResults{ get; set; }
 
         /// <summary>
-        /// resourceName：资源名  resourceId ：资源ID
+        /// <p>resourceName：资源名  resourceId ：资源ID</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 下一页token
+        /// <p>下一页token</p>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// 排序方式 asc、desc
+        /// <p>排序方式 asc、desc</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }

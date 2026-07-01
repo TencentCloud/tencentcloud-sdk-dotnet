@@ -103,7 +103,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? CanBatchReject{ get; set; }
 
         /// <summary>
-        /// <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。</p>
+        /// <p>预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。若为个人动态签署方，支持预设姓名、证件、手机号。若为企业员工动态签署方，仅支持预设企业名称（仅限预设SaaS企业参与方，不支持子客企业）。</p>
         /// </summary>
         [JsonProperty("PresetApproverInfo")]
         public PresetApproverInfo PresetApproverInfo{ get; set; }

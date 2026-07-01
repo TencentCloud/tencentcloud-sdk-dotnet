@@ -25,31 +25,31 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 合规包名称
+        /// <p>合规包名称</p>
         /// </summary>
         [JsonProperty("CompliancePackName")]
         public string CompliancePackName{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// <p>风险等级</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
 
         /// <summary>
-        /// 合规包规则
+        /// <p>合规包规则</p>
         /// </summary>
         [JsonProperty("ConfigRules")]
         public CompliancePackRule[] ConfigRules{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

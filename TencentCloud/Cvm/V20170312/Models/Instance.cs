@@ -200,6 +200,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <p>分散置放群组ID。</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
+        [System.Obsolete]
         public string DisasterRecoverGroupId{ get; set; }
 
         /// <summary>
@@ -240,6 +241,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         [JsonProperty("IsolatedSource")]
         public string IsolatedSource{ get; set; }
+
+        /// <summary>
+        /// <p>置放群组列表(目前仅支持一个)</p>
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
         /// <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
@@ -337,6 +344,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);

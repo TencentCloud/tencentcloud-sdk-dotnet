@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 业务响应数据
+        /// <p>业务响应数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescribeSoftwareInformationPageData Data{ get; set; }

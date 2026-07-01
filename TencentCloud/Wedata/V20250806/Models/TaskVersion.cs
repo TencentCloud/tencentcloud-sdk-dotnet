@@ -25,60 +25,67 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 保存时间
+        /// <p>保存时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionNum")]
         public string VersionNum{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
 
         /// <summary>
-        /// 保存版本id
+        /// <p>保存版本id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 版本描述信息
+        /// <p>版本描述信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionRemark")]
         public string VersionRemark{ get; set; }
 
         /// <summary>
-        /// 审批状态（只有提交版本有）
+        /// <p>审批状态（只有提交版本有）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveStatus")]
         public string ApproveStatus{ get; set; }
 
         /// <summary>
-        /// 生产状态（只有提交版本有）
+        /// <p>生产状态（只有提交版本有）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 审批人（只有提交版本有）
+        /// <p>审批人（只有提交版本有）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveUserUin")]
         public string ApproveUserUin{ get; set; }
+
+        /// <summary>
+        /// <p>是否为使用版本</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsedVersion")]
+        public bool? UsedVersion{ get; set; }
 
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ApproveStatus", this.ApproveStatus);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ApproveUserUin", this.ApproveUserUin);
+            this.SetParamSimple(map, prefix + "UsedVersion", this.UsedVersion);
         }
     }
 }

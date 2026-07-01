@@ -242,6 +242,24 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? BlockRuleLimit{ get; set; }
 
         /// <summary>
+        /// <p>删除保护开关</p>
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
+
+        /// <summary>
+        /// <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+        /// </summary>
+        [JsonProperty("EventDialect")]
+        public string EventDialect{ get; set; }
+
+        /// <summary>
+        /// <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+        /// </summary>
+        [JsonProperty("HashMessagePolicy")]
+        public string HashMessagePolicy{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -289,6 +307,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
             this.SetParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
             this.SetParamSimple(map, prefix + "BlockRuleLimit", this.BlockRuleLimit);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+            this.SetParamSimple(map, prefix + "EventDialect", this.EventDialect);
+            this.SetParamSimple(map, prefix + "HashMessagePolicy", this.HashMessagePolicy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

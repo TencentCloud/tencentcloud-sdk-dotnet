@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1438";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -936,7 +936,7 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+        /// 终端自定义分组批量增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
         /// </summary>
         /// <param name="req"><see cref="ModifyVirtualDeviceGroupsRequest"/></param>
         /// <returns><see cref="ModifyVirtualDeviceGroupsResponse"/></returns>
@@ -946,7 +946,7 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+        /// 终端自定义分组批量增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
         /// </summary>
         /// <param name="req"><see cref="ModifyVirtualDeviceGroupsRequest"/></param>
         /// <returns><see cref="ModifyVirtualDeviceGroupsResponse"/></returns>

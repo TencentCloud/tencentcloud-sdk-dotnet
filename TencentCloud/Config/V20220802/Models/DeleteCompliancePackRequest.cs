@@ -25,7 +25,7 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }

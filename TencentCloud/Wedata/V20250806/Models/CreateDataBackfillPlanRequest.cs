@@ -25,97 +25,94 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 所属项目Id
+        /// <p>所属项目Id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 补录任务集合
+        /// <p>补录任务集合</p>
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
         /// <summary>
-        /// 补录任务的数据时间配置
+        /// <p>补录任务的数据时间配置</p>
         /// </summary>
         [JsonProperty("DataBackfillRangeList")]
         public DataBackfillRange[] DataBackfillRangeList{ get; set; }
 
         /// <summary>
-        /// 时区，默认UTC+8
+        /// <p>时区，默认UTC+8</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// 数据补录计划名称，不填则由系统随机生成一串字符
+        /// <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
         /// </summary>
         [JsonProperty("DataBackfillPlanName")]
         public string DataBackfillPlanName{ get; set; }
 
         /// <summary>
-        /// 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
+        /// <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
         /// </summary>
         [JsonProperty("CheckParentType")]
         public string CheckParentType{ get; set; }
 
         /// <summary>
-        /// 补录是否忽略事件依赖,默认true
+        /// <p>补录是否忽略事件依赖,默认true</p>
         /// </summary>
         [JsonProperty("SkipEventListening")]
         public bool? SkipEventListening{ get; set; }
 
         /// <summary>
-        /// 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
+        /// <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
         /// </summary>
         [JsonProperty("RedefineSelfWorkflowDependency")]
         public string RedefineSelfWorkflowDependency{ get; set; }
 
         /// <summary>
-        /// 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
+        /// <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
         /// </summary>
         [JsonProperty("RedefineParallelNum")]
         public ulong? RedefineParallelNum{ get; set; }
 
         /// <summary>
-        /// 调度资源组id，为空则表示使用任务原有调度执行资源组
+        /// <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
         /// </summary>
         [JsonProperty("SchedulerResourceGroupId")]
         public string SchedulerResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 集成任务资源组id，为空则表示使用任务原有调度执行资源组
+        /// <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
         /// </summary>
         [JsonProperty("IntegrationResourceGroupId")]
         public string IntegrationResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
+        /// <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
         /// </summary>
         [JsonProperty("RedefineParamList")]
         public KVPair[] RedefineParamList{ get; set; }
 
         /// <summary>
-        /// 补录是实例数据时间顺序，生效必须满足2个条件:
-        /// 1. 必须同周期任务
-        /// 2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
-        ///  
-        /// 可选值
-        /// - NORMAL: 不设置
-        /// - ORDER: 顺序
-        /// - REVERSE: 逆序
-        /// 不设置默认为NORMAL
+        /// <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
         /// </summary>
         [JsonProperty("DataTimeOrder")]
         public string DataTimeOrder{ get; set; }
 
         /// <summary>
-        /// 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-        /// * MONTH_CYCLE: 月
+        /// <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
         /// </summary>
         [JsonProperty("RedefineCycleType")]
         public string RedefineCycleType{ get; set; }
+
+        /// <summary>
+        /// <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+        /// </summary>
+        [JsonProperty("ComputeConfigMappings")]
+        public ComputeConfigMapping[] ComputeConfigMappings{ get; set; }
 
 
         /// <summary>
@@ -137,6 +134,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "RedefineParamList.", this.RedefineParamList);
             this.SetParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
             this.SetParamSimple(map, prefix + "RedefineCycleType", this.RedefineCycleType);
+            this.SetParamArrayObj(map, prefix + "ComputeConfigMappings.", this.ComputeConfigMappings);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// <p>key</p>
+        /// <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// <p>value</p>
+        /// <p>value</p><p>当前传&#39;&#39;值即可。</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

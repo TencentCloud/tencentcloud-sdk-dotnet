@@ -25,14 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 合规包ID
+        /// <p>合规包ID</p>
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
 
         /// <summary>
-        /// ACTIVE：启用
-        /// UN_ACTIVE ：停用
+        /// <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

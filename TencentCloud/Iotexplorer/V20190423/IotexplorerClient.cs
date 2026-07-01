@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1454";
+       private const string sdkVersion = "SDK_NET_3.0.1456";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTWeSeeCallbackResponse CreateTWeSeeCallbackSync(CreateTWeSeeCallbackRequest req)
         {
             return InternalRequestAsync<CreateTWeSeeCallbackResponse>(req, "CreateTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 TWeSee COS 直传凭据。调用方获取临时密钥后，可将视频 / 图片上传到返回的 StoragePath 前缀下；对象上传成功后由 COS 事件触发 TWeSee 任务创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeDirectUploadCredentialRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeDirectUploadCredentialResponse"/></returns>
+        public Task<CreateTWeSeeDirectUploadCredentialResponse> CreateTWeSeeDirectUploadCredential(CreateTWeSeeDirectUploadCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeDirectUploadCredentialResponse>(req, "CreateTWeSeeDirectUploadCredential");
+        }
+
+        /// <summary>
+        /// 创建 TWeSee COS 直传凭据。调用方获取临时密钥后，可将视频 / 图片上传到返回的 StoragePath 前缀下；对象上传成功后由 COS 事件触发 TWeSee 任务创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeeDirectUploadCredentialRequest"/></param>
+        /// <returns><see cref="CreateTWeSeeDirectUploadCredentialResponse"/></returns>
+        public CreateTWeSeeDirectUploadCredentialResponse CreateTWeSeeDirectUploadCredentialSync(CreateTWeSeeDirectUploadCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeeDirectUploadCredentialResponse>(req, "CreateTWeSeeDirectUploadCredential")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

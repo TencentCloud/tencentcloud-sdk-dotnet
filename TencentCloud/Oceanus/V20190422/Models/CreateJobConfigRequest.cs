@@ -241,13 +241,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string ProgramArgsAfterGzip{ get; set; }
 
         /// <summary>
-        /// <p>checkpoint 超时时间</p>
+        /// <p>checkpoint 超时时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("CheckpointTimeoutSecond")]
         public long? CheckpointTimeoutSecond{ get; set; }
 
         /// <summary>
-        /// <p>checkpoint 间隔时间</p>
+        /// <p>checkpoint 间隔时间</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("CheckpointIntervalSecond")]
         public long? CheckpointIntervalSecond{ get; set; }
@@ -257,6 +257,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         [JsonProperty("VariableReplaceMode")]
         public long? VariableReplaceMode{ get; set; }
+
+        /// <summary>
+        /// <p>user</p>
+        /// </summary>
+        [JsonProperty("OperatorName")]
+        public string OperatorName{ get; set; }
+
+        /// <summary>
+        /// <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+        /// </summary>
+        [JsonProperty("ConfigScope")]
+        public long? ConfigScope{ get; set; }
+
+        /// <summary>
+        /// <p>状态桶名字</p>
+        /// </summary>
+        [JsonProperty("StateCOSBucket")]
+        public string StateCOSBucket{ get; set; }
 
 
         /// <summary>
@@ -303,6 +321,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
             this.SetParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
             this.SetParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
+            this.SetParamSimple(map, prefix + "OperatorName", this.OperatorName);
+            this.SetParamSimple(map, prefix + "ConfigScope", this.ConfigScope);
+            this.SetParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
         }
     }
 }

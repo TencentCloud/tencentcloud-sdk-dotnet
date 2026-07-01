@@ -25,10 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 图片处理相关的prompt。
+        /// <p>图片处理相关的prompt。</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
+
+        /// <summary>
+        /// <p>prompt 对应的 role。</p>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
