@@ -67,6 +67,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AigcImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
+        /// <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+        /// </summary>
+        [JsonProperty("OutputImageCount")]
+        public long? OutputImageCount{ get; set; }
+
+        /// <summary>
         /// <p>用于传入模型要求的额外参数。</p>
         /// </summary>
         [JsonProperty("ExtraParameters")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+            this.SetParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
             this.SetParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
             this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
             this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

@@ -36,6 +36,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
         [JsonProperty("NodeRole")]
         public string NodeRole{ get; set; }
 
+        /// <summary>
+        /// 可用区ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         {
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

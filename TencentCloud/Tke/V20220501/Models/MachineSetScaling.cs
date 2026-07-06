@@ -25,23 +25,29 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 节点池最小副本数
+        /// <p>节点池最小副本数</p>
         /// </summary>
         [JsonProperty("MinReplicas")]
         public long? MinReplicas{ get; set; }
 
         /// <summary>
-        /// 节点池最大副本数
+        /// <p>节点池最大副本数</p>
         /// </summary>
         [JsonProperty("MaxReplicas")]
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+        /// <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatePolicy")]
         public string CreatePolicy{ get; set; }
+
+        /// <summary>
+        /// <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+        /// </summary>
+        [JsonProperty("ScaleDownMode")]
+        public string ScaleDownMode{ get; set; }
 
 
         /// <summary>
@@ -52,6 +58,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
             this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
             this.SetParamSimple(map, prefix + "CreatePolicy", this.CreatePolicy);
+            this.SetParamSimple(map, prefix + "ScaleDownMode", this.ScaleDownMode);
         }
     }
 }

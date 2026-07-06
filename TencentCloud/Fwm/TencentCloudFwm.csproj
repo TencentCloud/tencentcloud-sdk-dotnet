@@ -1,0 +1,169 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{6FE55EBA-5399-3AE2-A259-B16D1C7531CB}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1458</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Fwm</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20250611\FwmClient.cs" />
+    <Compile Include="V20250611\Models\Account.cs" />
+    <Compile Include="V20250611\Models\AccountGroupInfo.cs" />
+    <Compile Include="V20250611\Models\AccountGroupQuotaDetail.cs" />
+    <Compile Include="V20250611\Models\AccountProductDetailStats.cs" />
+    <Compile Include="V20250611\Models\AccountStatsGroup.cs" />
+    <Compile Include="V20250611\Models\AddressTemplateSpecification.cs" />
+    <Compile Include="V20250611\Models\AnalysisSgRuleInfoResp.cs" />
+    <Compile Include="V20250611\Models\CancelIgnorePolicyRiskRequest.cs" />
+    <Compile Include="V20250611\Models\CancelIgnorePolicyRiskResponse.cs" />
+    <Compile Include="V20250611\Models\CommonFilter.cs" />
+    <Compile Include="V20250611\Models\CreateAnalyzePolicyTaskRequest.cs" />
+    <Compile Include="V20250611\Models\CreateAnalyzePolicyTaskResponse.cs" />
+    <Compile Include="V20250611\Models\CreateEdgeAclRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\CreateEdgeAclRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\CreateEdgeAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\CreateEdgeAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\CreateNatAclRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\CreateNatAclRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\CreateNatAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\CreateNatAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\CreateSecurityGroupRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\CreateSecurityGroupRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\CreateSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20250611\Models\CreateSecurityGroupRuleResponse.cs" />
+    <Compile Include="V20250611\Models\CreateStrategyRequest.cs" />
+    <Compile Include="V20250611\Models\CreateStrategyResponse.cs" />
+    <Compile Include="V20250611\Models\CreateVpcAclRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\CreateVpcAclRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\CreateVpcAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\CreateVpcAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteEdgeAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteEdgeAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteNatAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteNatAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteSecurityGroupRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteStrategyRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteStrategyResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteVpcAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteVpcAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeEdgeAclRulesRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeEdgeAclRulesResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeNatAclRulesRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeNatAclRulesResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeOrganMembersRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeOrganMembersResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeOrganSummaryRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeOrganSummaryResponse.cs" />
+    <Compile Include="V20250611\Models\DescribePolicyRiskAccountProductStatsRequest.cs" />
+    <Compile Include="V20250611\Models\DescribePolicyRiskAccountProductStatsResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskAnalysisDetailsRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskAnalysisDetailsResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskCategoryStatsRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskCategoryStatsResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskListRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeRiskListResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeSecurityGroupRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeSecurityGroupRulesRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeSecurityGroupRulesResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategiesRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategiesResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyAccountsRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyAccountsResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyDispatchStatusRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyDispatchStatusResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeStrategyResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeVpcAclRulesRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeVpcAclRulesResponse.cs" />
+    <Compile Include="V20250611\Models\DispatchStrategyRequest.cs" />
+    <Compile Include="V20250611\Models\DispatchStrategyResponse.cs" />
+    <Compile Include="V20250611\Models\EdgeAclRuleInfo.cs" />
+    <Compile Include="V20250611\Models\EdgeAclRuleResp.cs" />
+    <Compile Include="V20250611\Models\IgnorePolicyRiskRequest.cs" />
+    <Compile Include="V20250611\Models\IgnorePolicyRiskResponse.cs" />
+    <Compile Include="V20250611\Models\MemberInfo.cs" />
+    <Compile Include="V20250611\Models\ModifyEdgeAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyEdgeAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyEdgeAclRuleSequenceRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyEdgeAclRuleSequenceResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyNatAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyNatAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyNatAclRuleSequenceRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyNatAclRuleSequenceResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyRuleGroupRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyRuleGroupResponse.cs" />
+    <Compile Include="V20250611\Models\ModifySecurityGroupRuleRequest.cs" />
+    <Compile Include="V20250611\Models\ModifySecurityGroupRuleResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyStrategyRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyStrategyResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyStrategySequenceRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyStrategySequenceResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyVpcAclRuleRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyVpcAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyVpcAclRuleSequenceRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyVpcAclRuleSequenceResponse.cs" />
+    <Compile Include="V20250611\Models\NatAclRule.cs" />
+    <Compile Include="V20250611\Models\NatAclRuleResp.cs" />
+    <Compile Include="V20250611\Models\OrganMemberItem.cs" />
+    <Compile Include="V20250611\Models\OrganSummary.cs" />
+    <Compile Include="V20250611\Models\PolicyRisk.cs" />
+    <Compile Include="V20250611\Models\ReceiveAccount.cs" />
+    <Compile Include="V20250611\Models\RiskCategoryItem.cs" />
+    <Compile Include="V20250611\Models\SecGroupRuleResp.cs" />
+    <Compile Include="V20250611\Models\SecurityGroupRiskPolicy.cs" />
+    <Compile Include="V20250611\Models\SecurityGroupRule.cs" />
+    <Compile Include="V20250611\Models\SequenceIndex.cs" />
+    <Compile Include="V20250611\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="V20250611\Models\SgDnsParseCount.cs" />
+    <Compile Include="V20250611\Models\SgRuleResp.cs" />
+    <Compile Include="V20250611\Models\StrategyReq.cs" />
+    <Compile Include="V20250611\Models\StrategyResp.cs" />
+    <Compile Include="V20250611\Models\VpcAclRule.cs" />
+    <Compile Include="V20250611\Models\VpcAclRuleResp.cs" />
+  </ItemGroup>
+</Project>

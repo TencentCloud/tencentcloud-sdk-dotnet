@@ -25,369 +25,374 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 用户APPID
+        /// <p>用户APPID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 序列号
+        /// <p>序列号</p>
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// 机器实例ID
+        /// <p>机器实例ID</p>
         /// </summary>
         [JsonProperty("OrderNo")]
         public string OrderNo{ get; set; }
 
         /// <summary>
-        /// master节点绑定外网IP
+        /// <p>master节点绑定外网IP</p>
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// 节点类型。0:common节点；1:master节点
-        /// ；2:core节点；3:task节点
+        /// <p>节点类型。0:common节点；1:master节点<br>；2:core节点；3:task节点</p>
         /// </summary>
         [JsonProperty("Flag")]
         public long? Flag{ get; set; }
 
         /// <summary>
-        /// 节点规格
+        /// <p>节点规格</p>
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// 节点核数
+        /// <p>节点核数</p>
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// 节点内存,单位b
+        /// <p>节点内存,单位b</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// 节点内存描述，单位GB
+        /// <p>节点内存描述，单位GB</p>
         /// </summary>
         [JsonProperty("MemDesc")]
         public string MemDesc{ get; set; }
 
         /// <summary>
-        /// 节点所在region
+        /// <p>节点所在region</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 节点所在Zone
+        /// <p>节点所在Zone</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 申请时间
+        /// <p>申请时间</p>
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// 释放时间
+        /// <p>释放时间</p>
         /// </summary>
         [JsonProperty("FreeTime")]
         public string FreeTime{ get; set; }
 
         /// <summary>
-        /// 硬盘大小
+        /// <p>硬盘大小</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public string DiskSize{ get; set; }
 
         /// <summary>
-        /// 节点描述
+        /// <p>节点描述</p>
         /// </summary>
         [JsonProperty("NameTag")]
         public string NameTag{ get; set; }
 
         /// <summary>
-        /// 节点部署服务
+        /// <p>节点部署服务</p>
         /// </summary>
         [JsonProperty("Services")]
         public string Services{ get; set; }
 
         /// <summary>
-        /// 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+        /// <p>磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// 系统盘大小，单位GB
+        /// <p>系统盘大小，单位GB</p>
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
-        /// 付费类型，0：按量计费；1：包年包月
+        /// <p>付费类型，0：按量计费；1：包年包月</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// 数据库IP
+        /// <p>数据库IP</p>
         /// </summary>
         [JsonProperty("CdbIp")]
         public string CdbIp{ get; set; }
 
         /// <summary>
-        /// 数据库端口
+        /// <p>数据库端口</p>
         /// </summary>
         [JsonProperty("CdbPort")]
         public long? CdbPort{ get; set; }
 
         /// <summary>
-        /// 硬盘容量,单位b
+        /// <p>硬盘容量,单位b</p>
         /// </summary>
         [JsonProperty("HwDiskSize")]
         public long? HwDiskSize{ get; set; }
 
         /// <summary>
-        /// 硬盘容量描述
+        /// <p>硬盘容量描述</p>
         /// </summary>
         [JsonProperty("HwDiskSizeDesc")]
         public string HwDiskSizeDesc{ get; set; }
 
         /// <summary>
-        /// 内存容量，单位b
+        /// <p>内存容量，单位b</p>
         /// </summary>
         [JsonProperty("HwMemSize")]
         public long? HwMemSize{ get; set; }
 
         /// <summary>
-        /// 内存容量描述
+        /// <p>内存容量描述</p>
         /// </summary>
         [JsonProperty("HwMemSizeDesc")]
         public string HwMemSizeDesc{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 节点资源ID
+        /// <p>节点资源ID</p>
         /// </summary>
         [JsonProperty("EmrResourceId")]
         public string EmrResourceId{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// <p>续费标志</p>
         /// </summary>
         [JsonProperty("IsAutoRenew")]
         public long? IsAutoRenew{ get; set; }
 
         /// <summary>
-        /// 设备标识
+        /// <p>设备标识</p>
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// 支持变配
+        /// <p>支持变配</p>
         /// </summary>
         [JsonProperty("Mutable")]
         public long? Mutable{ get; set; }
 
         /// <summary>
-        /// 多云盘
+        /// <p>多云盘</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MCMultiDisk")]
         public MultiDiskMC[] MCMultiDisk{ get; set; }
 
         /// <summary>
-        /// 数据库信息
+        /// <p>数据库信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdbNodeInfo")]
         public CdbInfo CdbNodeInfo{ get; set; }
 
         /// <summary>
-        /// 内网IP
+        /// <p>内网IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 此节点是否可销毁，1可销毁，0不可销毁
+        /// <p>此节点是否可销毁，1可销毁，0不可销毁</p>
         /// </summary>
         [JsonProperty("Destroyable")]
         public long? Destroyable{ get; set; }
 
         /// <summary>
-        /// 节点绑定的标签
+        /// <p>节点绑定的标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+        /// <p>是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。</p>
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }
 
         /// <summary>
-        /// 资源类型, host/pod
+        /// <p>资源类型, host/pod</p>
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// 是否浮动规格，1是，0否
+        /// <p>是否浮动规格，1是，0否</p>
         /// </summary>
         [JsonProperty("IsDynamicSpec")]
         public long? IsDynamicSpec{ get; set; }
 
         /// <summary>
-        /// 浮动规格值json字符串
+        /// <p>浮动规格值json字符串</p>
         /// </summary>
         [JsonProperty("DynamicPodSpec")]
         public string DynamicPodSpec{ get; set; }
 
         /// <summary>
-        /// 是否支持变更计费类型 1是，0否
+        /// <p>是否支持变更计费类型 1是，0否</p>
         /// </summary>
         [JsonProperty("SupportModifyPayMode")]
         public long? SupportModifyPayMode{ get; set; }
 
         /// <summary>
-        /// 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
+        /// <p>系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘</p>
         /// </summary>
         [JsonProperty("RootStorageType")]
         public long? RootStorageType{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// <p>可用区信息</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 子网
+        /// <p>子网</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetInfo")]
         public SubnetInfo SubnetInfo{ get; set; }
 
         /// <summary>
-        /// 客户端
+        /// <p>客户端</p>
         /// </summary>
         [JsonProperty("Clients")]
         public string Clients{ get; set; }
 
         /// <summary>
-        /// 系统当前时间
+        /// <p>系统当前时间</p>
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }
 
         /// <summary>
-        /// 是否用于联邦 ,1是，0否
+        /// <p>是否用于联邦 ,1是，0否</p>
         /// </summary>
         [JsonProperty("IsFederation")]
         public long? IsFederation{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 服务
+        /// <p>服务</p>
         /// </summary>
         [JsonProperty("ServiceClient")]
         public string ServiceClient{ get; set; }
 
         /// <summary>
-        /// 该实例是否开启实例保护，true为开启 false为关闭
+        /// <p>该实例是否开启实例保护，true为开启 false为关闭</p>
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
-        /// 0表示老计费，1表示新计费
+        /// <p>0表示老计费，1表示新计费</p>
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
-        /// 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+        /// <p>各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止</p>
         /// </summary>
         [JsonProperty("ServicesStatus")]
         public string ServicesStatus{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 共享集群id
+        /// <p>共享集群id</p>
         /// </summary>
         [JsonProperty("SharedClusterId")]
         public string SharedClusterId{ get; set; }
 
         /// <summary>
-        /// 共享集群id描述
+        /// <p>共享集群id描述</p>
         /// </summary>
         [JsonProperty("SharedClusterIdDesc")]
         public string SharedClusterIdDesc{ get; set; }
 
         /// <summary>
-        /// 是否是定时销毁资源
+        /// <p>是否是定时销毁资源</p>
         /// </summary>
         [JsonProperty("TimingResource")]
         public bool? TimingResource{ get; set; }
 
         /// <summary>
-        /// 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+        /// <p>资源类型（HardwareResourceType）为pod时，对应的TKE集群id</p>
         /// </summary>
         [JsonProperty("TkeClusterId")]
         public string TkeClusterId{ get; set; }
 
         /// <summary>
-        /// 新挂磁盘时可支持配置的服务名称列表
+        /// <p>新挂磁盘时可支持配置的服务名称列表</p>
         /// </summary>
         [JsonProperty("ConfigurableServices")]
         public string[] ConfigurableServices{ get; set; }
 
         /// <summary>
-        /// 节点标注信息，目前只提供给tf平台使用
+        /// <p>节点标注信息，目前只提供给tf平台使用</p>
         /// </summary>
         [JsonProperty("NodeMark")]
         public string NodeMark{ get; set; }
 
         /// <summary>
-        /// 包销资源是否支持设置自动续费
+        /// <p>包销资源是否支持设置自动续费</p>
         /// </summary>
         [JsonProperty("UnderwriteSetAutoRenew")]
         public bool? UnderwriteSetAutoRenew{ get; set; }
 
         /// <summary>
-        /// Gpu信息
+        /// <p>Gpu信息</p>
         /// </summary>
         [JsonProperty("GpuDesc")]
         public string GpuDesc{ get; set; }
+
+        /// <summary>
+        /// <p>磁盘问题描述</p>
+        /// </summary>
+        [JsonProperty("DiskHealthIssues")]
+        public DiskHealthIssue[] DiskHealthIssues{ get; set; }
 
 
         /// <summary>
@@ -455,6 +460,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NodeMark", this.NodeMark);
             this.SetParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+            this.SetParamArrayObj(map, prefix + "DiskHealthIssues.", this.DiskHealthIssues);
         }
     }
 }

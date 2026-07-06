@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1457</VersionPrefix>
+    <VersionPrefix>3.0.1458</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -305,8 +305,6 @@
     <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryRequest.cs" />
     <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryResponse.cs" />
     <Compile Include="V20180608\Models\ResourcePermission.cs" />
-    <Compile Include="V20180608\Models\RollbackPGUserMigrationsRequest.cs" />
-    <Compile Include="V20180608\Models\RollbackPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\RunCommandsRequest.cs" />
     <Compile Include="V20180608\Models\RunCommandsResponse.cs" />
     <Compile Include="V20180608\Models\RunSqlRequest.cs" />

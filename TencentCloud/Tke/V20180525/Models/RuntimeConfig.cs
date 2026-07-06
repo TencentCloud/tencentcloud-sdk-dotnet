@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 运行时类型，支持的类型有 docker、containerd
+        /// <p>运行时类型，支持的类型有 docker、containerd</p>
         /// </summary>
         [JsonProperty("RuntimeType")]
         public string RuntimeType{ get; set; }
 
         /// <summary>
-        /// 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+        /// <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }

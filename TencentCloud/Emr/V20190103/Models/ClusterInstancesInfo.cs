@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID号
+        /// <p>ID号</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ftitle")]
@@ -45,100 +45,73 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Ftitle{ get; set; }
 
         /// <summary>
-        /// 集群名
+        /// <p>集群名</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// <p>地域ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 地区ID
+        /// <p>地区ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 用户APPID
+        /// <p>用户APPID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 用户UIN
+        /// <p>用户UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 项目Id
+        /// <p>项目Id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 集群VPCID
+        /// <p>集群VPCID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例的状态码。取值范围：
-        /// <li>2：表示集群运行中。</li>
-        /// <li>3：表示集群创建中。</li>
-        /// <li>4：表示集群扩容中。</li>
-        /// <li>5：表示集群增加router节点中。</li>
-        /// <li>6：表示集群安装组件中。</li>
-        /// <li>7：表示集群执行命令中。</li>
-        /// <li>8：表示重启服务中。</li>
-        /// <li>9：表示进入维护中。</li>
-        /// <li>10：表示服务暂停中。</li>
-        /// <li>11：表示退出维护中。</li>
-        /// <li>12：表示退出暂停中。</li>
-        /// <li>13：表示配置下发中。</li>
-        /// <li>14：表示销毁集群中。</li>
-        /// <li>15：表示销毁core节点中。</li>
-        /// <li>16：销毁task节点中。</li>
-        /// <li>17：表示销毁router节点中。</li>
-        /// <li>18：表示更改webproxy密码中。</li>
-        /// <li>19：表示集群隔离中。</li>
-        /// <li>20：表示集群冲正中。</li>
-        /// <li>21：表示集群回收中。</li>
-        /// <li>22：表示变配等待中。</li>
-        /// <li>23：表示集群已隔离。</li>
-        /// <li>24：表示缩容节点中。</li>
-        /// <li>33：表示集群等待退费中。</li>
-        /// <li>34：表示集群已退费。</li>
-        /// <li>301：表示创建失败。</li>
-        /// <li>302：表示扩容失败。</li>
+        /// <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 添加时间
+        /// <p>添加时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 已经运行时间
+        /// <p>已经运行时间</p>
         /// </summary>
         [JsonProperty("RunTime")]
         public string RunTime{ get; set; }
 
         /// <summary>
-        /// 集群产品配置信息
+        /// <p>集群产品配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
@@ -146,201 +119,214 @@ namespace TencentCloud.Emr.V20190103.Models
         public EmrProductConfigOutter Config{ get; set; }
 
         /// <summary>
-        /// 主节点外网IP
+        /// <p>主节点外网IP</p>
         /// </summary>
         [JsonProperty("MasterIp")]
         public string MasterIp{ get; set; }
 
         /// <summary>
-        /// EMR版本
+        /// <p>EMR版本</p>
         /// </summary>
         [JsonProperty("EmrVersion")]
         public string EmrVersion{ get; set; }
 
         /// <summary>
-        /// 收费类型
+        /// <p>收费类型</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// 交易版本
+        /// <p>交易版本</p>
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
-        /// 资源订单ID
+        /// <p>资源订单ID</p>
         /// </summary>
         [JsonProperty("ResourceOrderId")]
         public long? ResourceOrderId{ get; set; }
 
         /// <summary>
-        /// 是否计费集群
+        /// <p>是否计费集群</p>
         /// </summary>
         [JsonProperty("IsTradeCluster")]
         public long? IsTradeCluster{ get; set; }
 
         /// <summary>
-        /// 集群错误状态告警信息
+        /// <p>集群错误状态告警信息</p>
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
-        /// 是否采用新架构
+        /// <p>是否采用新架构</p>
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public long? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
-        /// 元数据库信息
+        /// <p>元数据库信息</p>
         /// </summary>
         [JsonProperty("MetaDb")]
         public string MetaDb{ get; set; }
 
         /// <summary>
-        /// 标签信息
+        /// <p>标签信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Hive元数据信息
+        /// <p>Hive元数据信息</p>
         /// </summary>
         [JsonProperty("HiveMetaDb")]
         public string HiveMetaDb{ get; set; }
 
         /// <summary>
-        /// 集群类型:EMR,CLICKHOUSE,DRUID
+        /// <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
         /// </summary>
         [JsonProperty("ServiceClass")]
         public string ServiceClass{ get; set; }
 
         /// <summary>
-        /// 集群所有节点的别名序列化
+        /// <p>集群所有节点的别名序列化</p>
         /// </summary>
         [JsonProperty("AliasInfo")]
         public string AliasInfo{ get; set; }
 
         /// <summary>
-        /// 集群版本Id
+        /// <p>集群版本Id</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 地区ID
+        /// <p>地区ID</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 场景名称
+        /// <p>场景名称</p>
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
-        /// 场景化集群类型
+        /// <p>场景化集群类型</p>
         /// </summary>
         [JsonProperty("SceneServiceClass")]
         public string SceneServiceClass{ get; set; }
 
         /// <summary>
-        /// 场景化EMR版本
+        /// <p>场景化EMR版本</p>
         /// </summary>
         [JsonProperty("SceneEmrVersion")]
         public string SceneEmrVersion{ get; set; }
 
         /// <summary>
-        /// 场景化集群类型
+        /// <p>场景化集群类型</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// vpc name
+        /// <p>vpc name</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// subnet name
+        /// <p>subnet name</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 集群依赖关系
+        /// <p>集群依赖关系</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterExternalServiceInfo")]
         public ClusterExternalServiceInfo[] ClusterExternalServiceInfo{ get; set; }
 
         /// <summary>
-        /// 集群vpcid 字符串类型
+        /// <p>集群vpcid 字符串类型</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 子网id 字符串类型
+        /// <p>子网id 字符串类型</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 节点信息
+        /// <p>节点信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopologyInfoList")]
         public TopologyInfo[] TopologyInfoList{ get; set; }
 
         /// <summary>
-        /// 是否是跨AZ集群
+        /// <p>是否是跨AZ集群</p>
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
-        /// 是否开通异常节点自动补偿
+        /// <p>是否开通异常节点自动补偿</p>
         /// </summary>
         [JsonProperty("IsCvmReplace")]
         public bool? IsCvmReplace{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// </summary>
         [JsonProperty("ClusterTitle")]
         public string ClusterTitle{ get; set; }
 
         /// <summary>
-        /// 集群产品配置信息
+        /// <p>集群产品配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigDetail")]
         public EmrProductConfigDetail ConfigDetail{ get; set; }
 
         /// <summary>
-        /// 集群绑定的文件系统数
+        /// <p>集群绑定的文件系统数</p>
         /// </summary>
         [JsonProperty("BindFileSystemNum")]
         public long? BindFileSystemNum{ get; set; }
 
         /// <summary>
-        /// rss集群的绑定列表
+        /// <p>rss集群的绑定列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterRelationInfoList")]
         public ClusterRelationMeta[] ClusterRelationInfoList{ get; set; }
 
         /// <summary>
-        /// Redis信息
+        /// <p>Redis信息</p>
         /// </summary>
         [JsonProperty("RedisId")]
         public string RedisId{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启IO故障自愈</p>
+        /// </summary>
+        [JsonProperty("IsIOHungSelfRecovery")]
+        public bool? IsIOHungSelfRecovery{ get; set; }
+
+        /// <summary>
+        /// <p>元数据信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaDBGroupInfo")]
+        public CustomMetaDBInfo[] MetaDBGroupInfo{ get; set; }
 
 
         /// <summary>
@@ -395,6 +381,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
             this.SetParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
             this.SetParamSimple(map, prefix + "RedisId", this.RedisId);
+            this.SetParamSimple(map, prefix + "IsIOHungSelfRecovery", this.IsIOHungSelfRecovery);
+            this.SetParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
         }
     }
 }

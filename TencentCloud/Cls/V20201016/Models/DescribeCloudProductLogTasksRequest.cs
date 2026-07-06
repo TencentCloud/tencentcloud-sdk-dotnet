@@ -42,6 +42,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// <p>是否携带topic和logset的标签信息</p>
+        /// </summary>
+        [JsonProperty("WithTags")]
+        public bool? WithTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "WithTags", this.WithTags);
         }
     }
 }

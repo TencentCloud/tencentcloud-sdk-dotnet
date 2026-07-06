@@ -25,135 +25,134 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
+        /// <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍。
-        /// 计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
+        /// <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 实例 ID，如：kee-6ubh****。
+        /// <p>实例 ID，如：kee-6ubh****。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
+        /// <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
+        /// <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
+        /// <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// 子网ID数组，数组下标从0开始，如：56854
+        /// <p>子网ID数组，数组下标从0开始，如：56854</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 项目ID 组成的数组，数组下标从0开始
+        /// <p>项目ID 组成的数组，数组下标从0开始</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 查找关键字，可输入实例的ID或者实例名称。
+        /// <p>查找关键字，可输入实例的ID或者实例名称。</p>
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+        /// <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
         /// </summary>
         [JsonProperty("UniqVpcIds")]
         public string[] UniqVpcIds{ get; set; }
 
         /// <summary>
-        /// 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+        /// <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
         /// </summary>
         [JsonProperty("UniqSubnetIds")]
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+        /// <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+        /// <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }
 
         /// <summary>
-        /// 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+        /// <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+        /// <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
+        /// <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("TypeList")]
         public long?[] TypeList{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// 废弃字段。请使用TagList传参。
+        /// <p>废弃字段。请使用TagList传参。</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         [System.Obsolete]
         public InstanceTagInfo InstanceTags{ get; set; }
 
         /// <summary>
-        /// 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+        /// <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+        /// <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
         /// </summary>
         [JsonProperty("TagList")]
         public InstanceTagInfo[] TagList{ get; set; }

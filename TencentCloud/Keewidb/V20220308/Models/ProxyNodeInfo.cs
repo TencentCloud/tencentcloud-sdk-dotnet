@@ -30,6 +30,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
+        /// <summary>
+        /// 可用区ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

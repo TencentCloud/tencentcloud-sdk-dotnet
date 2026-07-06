@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// <p>待修改的员工手机号，支持海外格式</p>
+        /// <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
         /// </summary>
         [JsonProperty("NewMobile")]
         public string NewMobile{ get; set; }

@@ -25,46 +25,58 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志服务地域
+        /// <p>日志服务地域</p>
         /// </summary>
         [JsonProperty("ClsRegion")]
         public string ClsRegion{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// <p>日志集ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志配置拓展信息， 一般用于存储额外的日志投递配置
+        /// <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
 
         /// <summary>
-        /// 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+        /// <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 任务状态， 0创建中 1创建完成 2 删除中 
+        /// <p>任务状态， 0创建中 1创建完成 2 删除中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>投递任务关联topic的标签信息</p>
+        /// </summary>
+        [JsonProperty("TopicTags")]
+        public Tag[] TopicTags{ get; set; }
+
+        /// <summary>
+        /// <p>投递任务关联logset的标签信息</p>
+        /// </summary>
+        [JsonProperty("LogsetTags")]
+        public Tag[] LogsetTags{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
+            this.SetParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
         }
     }
 }

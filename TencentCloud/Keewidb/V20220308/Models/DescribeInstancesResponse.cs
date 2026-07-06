@@ -25,13 +25,13 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 实例数
+        /// <p>实例数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例详细信息列表
+        /// <p>实例详细信息列表</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public InstanceInfo[] InstanceSet{ get; set; }

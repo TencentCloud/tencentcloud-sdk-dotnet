@@ -25,167 +25,154 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板 Id。
+        /// <p>模板 Id。</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 视频编码：h264/h265/origin，默认origin。
-        /// 
-        /// origin: 保持原始编码格式
+        /// <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// 音频编码：aac，默认aac。
-        /// 注意：当前该参数未生效，待后续支持！
+        /// <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// 音频码率，默认0。
-        /// 范围：0-500。
+        /// <p>音频码率，默认0。<br>范围：0-500。</p>
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 模板描述。
+        /// <p>模板描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 视频码率。范围：0kbps - 8000kbps。
-        /// 0为保持原始码率。
-        /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+        /// <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 宽。0-3000。
-        /// 数值必须是2的倍数，0是原始宽度
+        /// <p>宽。0-3000。<br>数值必须是2的倍数，0是原始宽度</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 是否保留视频，0：否，1：是。默认1。
+        /// <p>是否保留视频，0：否，1：是。默认1。</p>
         /// </summary>
         [JsonProperty("NeedVideo")]
         public long? NeedVideo{ get; set; }
 
         /// <summary>
-        /// 是否保留音频，0：否，1：是。默认1。
+        /// <p>是否保留音频，0：否，1：是。默认1。</p>
         /// </summary>
         [JsonProperty("NeedAudio")]
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// 高。0-3000。
-        /// 数值必须是2的倍数，0是原始宽度
+        /// <p>高。0-3000。<br>数值必须是2的倍数，0是原始宽度</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 帧率，默认0。
-        /// 范围0-60
+        /// <p>帧率，默认0。<br>范围0-60</p>
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，单位：秒。
-        /// 范围2-6
+        /// <p>关键帧间隔，单位：秒。<br>范围2-6</p>
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 旋转角度，默认0。
-        /// 可取值：0，90，180，270
+        /// <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
-        /// 编码质量：
-        /// baseline/main/high。
+        /// <p>编码质量：<br>baseline/main/high。</p>
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// 当设置的码率>原始码率时，是否以原始码率为准。
-        /// 0：否， 1：是
-        /// 默认 0。
+        /// <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// 当设置的高度>原始高度时，是否以原始高度为准。
-        /// 0：否， 1：是
-        /// 默认 0。
+        /// <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// 当设置的帧率>原始帧率时，是否以原始帧率为准。
-        /// 0：否， 1：是
-        /// 默认 0。
+        /// <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// 极速高清视频码率压缩比。
-        /// 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-        /// 
-        /// 取值范围：0.0到0.5
+        /// <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9</p>
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
 
         /// <summary>
-        /// 是否以短边作为高度，0：否，1：是。默认0。
+        /// <p>是否以短边作为高度，0：否，1：是。默认0。</p>
         /// </summary>
         [JsonProperty("ShortEdgeAsHeight")]
         public long? ShortEdgeAsHeight{ get; set; }
 
         /// <summary>
-        /// DRM 加密类型，可选值：fairplay、normalaes、widevine。
-        /// 不传递或者为空字符串，清空之前的DRM配置。
+        /// <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
         /// </summary>
         [JsonProperty("DRMType")]
         public string DRMType{ get; set; }
 
         /// <summary>
-        /// DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-        /// 不传递或者为空字符串，清空之前的DRM配置。
+        /// <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
         /// </summary>
         [JsonProperty("DRMTracks")]
         public string DRMTracks{ get; set; }
 
         /// <summary>
-        /// 是否创建自适应码率，默认值 0。
-        /// 0：否。
-        /// 1：是。
+        /// <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
         /// </summary>
         [JsonProperty("IsAdaptiveBitRate")]
         public long? IsAdaptiveBitRate{ get; set; }
 
         /// <summary>
-        /// 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+        /// <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
         /// </summary>
         [JsonProperty("AdaptiveChildren")]
         public ChildTemplateInfo[] AdaptiveChildren{ get; set; }
+
+        /// <summary>
+        /// <p>是否智能降码，1 表示智能降码。</p>
+        /// </summary>
+        [JsonProperty("AudienceDrivenTranscode")]
+        public long? AudienceDrivenTranscode{ get; set; }
+
+        /// <summary>
+        /// <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时生效。  取值范围：[100, 1000000]。</p>
+        /// </summary>
+        [JsonProperty("AudienceThreshold")]
+        public long? AudienceThreshold{ get; set; }
 
 
         /// <summary>
@@ -216,6 +203,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
             this.SetParamSimple(map, prefix + "IsAdaptiveBitRate", this.IsAdaptiveBitRate);
             this.SetParamArrayObj(map, prefix + "AdaptiveChildren.", this.AdaptiveChildren);
+            this.SetParamSimple(map, prefix + "AudienceDrivenTranscode", this.AudienceDrivenTranscode);
+            this.SetParamSimple(map, prefix + "AudienceThreshold", this.AudienceThreshold);
         }
     }
 }

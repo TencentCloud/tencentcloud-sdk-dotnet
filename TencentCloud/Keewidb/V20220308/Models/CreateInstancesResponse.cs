@@ -38,7 +38,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// <p>订单号。    </p>
+        /// <p>订单号。</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

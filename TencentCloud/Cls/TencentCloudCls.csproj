@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1457</VersionPrefix>
+    <VersionPrefix>3.0.1458</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -388,6 +388,8 @@
     <Compile Include="V20201016\Models\DescribeWebCallbacksResponse.cs" />
     <Compile Include="V20201016\Models\Dimension.cs" />
     <Compile Include="V20201016\Models\DlcDeliverInfo.cs" />
+    <Compile Include="V20201016\Models\DlcFailHandle.cs" />
+    <Compile Include="V20201016\Models\DlcFailTableInfo.cs" />
     <Compile Include="V20201016\Models\DlcFiledInfo.cs" />
     <Compile Include="V20201016\Models\DlcInfo.cs" />
     <Compile Include="V20201016\Models\DlcPartitionExtra.cs" />

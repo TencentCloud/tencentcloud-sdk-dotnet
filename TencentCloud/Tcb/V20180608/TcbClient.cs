@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1458";
 
         /// <summary>
         /// Client constructor.
@@ -2131,27 +2131,6 @@ namespace TencentCloud.Tcb.V20180608
         public RepairPGUserMigrationHistoryResponse RepairPGUserMigrationHistorySync(RepairPGUserMigrationHistoryRequest req)
         {
             return InternalRequestAsync<RepairPGUserMigrationHistoryResponse>(req, "RepairPGUserMigrationHistory")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口（RollbackPGUserMigrations）用于按最近 N 条已应用 migration 倒序执行 rollback。
-        /// </summary>
-        /// <param name="req"><see cref="RollbackPGUserMigrationsRequest"/></param>
-        /// <returns><see cref="RollbackPGUserMigrationsResponse"/></returns>
-        public Task<RollbackPGUserMigrationsResponse> RollbackPGUserMigrations(RollbackPGUserMigrationsRequest req)
-        {
-            return InternalRequestAsync<RollbackPGUserMigrationsResponse>(req, "RollbackPGUserMigrations");
-        }
-
-        /// <summary>
-        /// 本接口（RollbackPGUserMigrations）用于按最近 N 条已应用 migration 倒序执行 rollback。
-        /// </summary>
-        /// <param name="req"><see cref="RollbackPGUserMigrationsRequest"/></param>
-        /// <returns><see cref="RollbackPGUserMigrationsResponse"/></returns>
-        public RollbackPGUserMigrationsResponse RollbackPGUserMigrationsSync(RollbackPGUserMigrationsRequest req)
-        {
-            return InternalRequestAsync<RollbackPGUserMigrationsResponse>(req, "RollbackPGUserMigrations")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,313 +25,313 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户的Appid。
+        /// <p>用户的Appid。</p>
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
 
         /// <summary>
-        /// 项目 ID。
+        /// <p>项目 ID。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul>
+        /// <p>地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li>8：北京。</li></ul></p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 可用区 ID。
+        /// <p>可用区 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。
+        /// <p>VPC 网络 ID， 如：75101。该参数当前暂保留，可忽略。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+        /// <p>实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul></p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。
+        /// <p>VPC 网络下子网 ID， 如：46315。该参数当前暂保留，可忽略。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例 VIP。
+        /// <p>实例 VIP。</p>
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// 实例端口号。
+        /// <p>实例端口号。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例创建时间。
+        /// <p>实例创建时间。</p>
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// 实例持久内存总容量大小，单位：MB。
+        /// <p>实例持久内存总容量大小，单位：MB。</p>
         /// </summary>
         [JsonProperty("Size")]
         public float? Size{ get; set; }
 
         /// <summary>
-        /// 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+        /// <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+        /// <p>实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul></p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例到期时间。
+        /// <p>实例到期时间。</p>
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// 存储引擎。
+        /// <p>存储引擎。</p>
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// 产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul>
+        /// <p>产品类型。<ul><li>standalone ：标准版。</li><li>cluster ：集群版。</li></ul></p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// VPC 网络 ID， 如：vpc-fk33jsf4****。
+        /// <p>VPC 网络 ID， 如：vpc-fk33jsf4****。</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC 网络下子网 ID，如：subnet-fd3j6l3****。
+        /// <p>VPC 网络下子网 ID，如：subnet-fd3j6l3****。</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+        /// <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// 实例运行状态描述：如”实例运行中“。
+        /// <p>实例运行状态描述：如”实例运行中“。</p>
         /// </summary>
         [JsonProperty("InstanceTitle")]
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// 计划下线时间。
+        /// <p>计划下线时间。</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 流程中的实例，返回子状态。
+        /// <p>流程中的实例，返回子状态。</p>
         /// </summary>
         [JsonProperty("SubStatus")]
         public long? SubStatus{ get; set; }
 
         /// <summary>
-        /// 反亲和性标签
+        /// <p>反亲和性标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 分片大小。
+        /// <p>分片大小。</p>
         /// </summary>
         [JsonProperty("RedisShardSize")]
         public long? RedisShardSize{ get; set; }
 
         /// <summary>
-        /// 分片数量。
+        /// <p>分片数量。</p>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量。
+        /// <p>副本数量。</p>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 计费 ID。
+        /// <p>计费 ID。</p>
         /// </summary>
         [JsonProperty("PriceId")]
         public long? PriceId{ get; set; }
 
         /// <summary>
-        /// 隔离时间。
+        /// <p>隔离时间。</p>
         /// </summary>
         [JsonProperty("CloseTime")]
         public string CloseTime{ get; set; }
 
         /// <summary>
-        /// 从节点读取权重。
+        /// <p>从节点读取权重。</p>
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }
 
         /// <summary>
-        /// 实例关联的标签信息。
+        /// <p>实例关联的标签信息。</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// 项目名称。
+        /// <p>项目名称。</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
+        /// <p>是否为免密实例；<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul></p>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// 客户端连接数。
+        /// <p>客户端连接数。</p>
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
-        /// DTS状态（内部参数，用户可忽略）。
+        /// <p>DTS状态（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
-        /// 分片带宽上限，单位 MB。
+        /// <p>分片带宽上限，单位 MB。</p>
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
-        /// 免密实例标识（内部参数，用户可忽略）。
+        /// <p>免密实例标识（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
-        /// 实例只读标识（内部参数，用户可忽略）。
+        /// <p>实例只读标识（内部参数，用户可忽略）。</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// <p>内部参数，用户可忽略。</p>
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
-        /// 实例的磁盘容量大小。
+        /// <p>实例的磁盘容量大小。</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+        /// <p>监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul></p>
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// 客户端最大连接数可设置的最小值。
+        /// <p>客户端最大连接数可设置的最小值。</p>
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
-        /// 客户端最大连接数可设置的最大值。
+        /// <p>客户端最大连接数可设置的最大值。</p>
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
-        /// 实例的节点详细信息。
+        /// <p>实例的节点详细信息。</p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public NodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// 实例所在的地域信息，比如ap-guangzhou。
+        /// <p>实例所在的地域信息，比如ap-guangzhou。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例内存容量，单位：GB。KeeWiDB 内存容量
+        /// <p>实例内存容量，单位：GB。KeeWiDB 内存容量</p>
         /// </summary>
         [JsonProperty("MachineMemory")]
         public long? MachineMemory{ get; set; }
 
         /// <summary>
-        /// 单分片磁盘大小，单位：MB
+        /// <p>单分片磁盘大小，单位：MB</p>
         /// </summary>
         [JsonProperty("DiskShardSize")]
         public long? DiskShardSize{ get; set; }
 
         /// <summary>
-        /// 3
+        /// <p>分片数量</p>
         /// </summary>
         [JsonProperty("DiskShardNum")]
         public long? DiskShardNum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// <p>副本数量</p>
         /// </summary>
         [JsonProperty("DiskReplicasNum")]
         public long? DiskReplicasNum{ get; set; }
 
         /// <summary>
-        /// 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+        /// <p>数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul></p>
         /// </summary>
         [JsonProperty("Compression")]
         public string Compression{ get; set; }

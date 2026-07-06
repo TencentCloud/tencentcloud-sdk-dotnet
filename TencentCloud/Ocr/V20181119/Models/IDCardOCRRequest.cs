@@ -68,7 +68,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDateVerify{ get; set; }
 
         /// <summary>
-        /// <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+        /// <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
         /// </summary>
         [JsonProperty("CardWarnType")]
         public string CardWarnType{ get; set; }

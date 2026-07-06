@@ -108,6 +108,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CheckServiceDeployInfo")]
         public bool? CheckServiceDeployInfo{ get; set; }
 
+        /// <summary>
+        /// <p>自定义metadb信息</p>
+        /// </summary>
+        [JsonProperty("MetaDBGroupInfo")]
+        public CustomMetaDBInfo[] MetaDBGroupInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
             this.SetParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
             this.SetParamSimple(map, prefix + "CheckServiceDeployInfo", this.CheckServiceDeployInfo);
+            this.SetParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
         }
     }
 }
