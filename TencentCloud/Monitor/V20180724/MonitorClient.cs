@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1454";
+       private const string sdkVersion = "SDK_NET_3.0.1457";
 
         /// <summary>
         /// Client constructor.
@@ -1970,6 +1970,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 已不再使用
+        /// 
         /// 分页获取产品事件的列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProductEventListRequest"/></param>
@@ -1980,6 +1982,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 已不再使用
+        /// 
         /// 分页获取产品事件的列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProductEventListRequest"/></param>

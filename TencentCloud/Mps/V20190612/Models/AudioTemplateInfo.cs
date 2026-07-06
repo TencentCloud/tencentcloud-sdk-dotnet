@@ -55,6 +55,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TrackChannelInfo")]
         public AudioTrackChannelInfo TrackChannelInfo{ get; set; }
 
+        /// <summary>
+        /// <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p>
+        /// </summary>
+        [JsonProperty("AudioLanguage")]
+        public string AudioLanguage{ get; set; }
+
+        /// <summary>
+        /// <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p>
+        /// </summary>
+        [JsonProperty("AudioName")]
+        public string AudioName{ get; set; }
+
+        /// <summary>
+        /// <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("DefaultTrack")]
+        public bool? DefaultTrack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +84,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
             this.SetParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
+            this.SetParamSimple(map, prefix + "AudioLanguage", this.AudioLanguage);
+            this.SetParamSimple(map, prefix + "AudioName", this.AudioName);
+            this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }
     }
 }

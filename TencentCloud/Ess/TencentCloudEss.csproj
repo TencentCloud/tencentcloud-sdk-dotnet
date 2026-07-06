@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1456</VersionPrefix>
+    <VersionPrefix>3.0.1457</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,8 @@
     <Compile Include="V20201111\Models\CreateEmployeeQualificationSealQrCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreateExtendedServiceAuthInfosRequest.cs" />
     <Compile Include="V20201111\Models\CreateExtendedServiceAuthInfosResponse.cs" />
+    <Compile Include="V20201111\Models\CreateFileConvertTaskRequest.cs" />
+    <Compile Include="V20201111\Models\CreateFileConvertTaskResponse.cs" />
     <Compile Include="V20201111\Models\CreateFileCounterSignRequest.cs" />
     <Compile Include="V20201111\Models\CreateFileCounterSignResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowApproversRequest.cs" />
@@ -294,6 +296,8 @@
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthDetailResponse.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosRequest.cs" />
     <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeFileConvertTaskRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeFileConvertTaskResponse.cs" />
     <Compile Include="V20201111\Models\DescribeFileCounterSignResultRequest.cs" />
     <Compile Include="V20201111\Models\DescribeFileCounterSignResultResponse.cs" />
     <Compile Include="V20201111\Models\DescribeFileUrlsRequest.cs" />

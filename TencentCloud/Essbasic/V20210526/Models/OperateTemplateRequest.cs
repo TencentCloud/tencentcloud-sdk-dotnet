@@ -25,39 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-        /// 
-        /// 此接口下面信息必填。
-        /// <ul>
-        /// <li>渠道应用标识:  Agent.AppId</li>
-        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-        /// </ul>
+        /// <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模板ID，为32位字符串。
+        /// <p>模板ID，为32位字符串。</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 操作类型，可取值如下:
-        /// <ul>
-        /// <li>DELETE:  删除</li>
-        /// <li>ENABLE: 启用</li>
-        /// <li>DISABLE: 停用</li>
-        /// <li>COPY: 复制新建</li>
-        /// </ul>
+        /// <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul>
         /// </summary>
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }
 
         /// <summary>
-        /// 模板名称，长度不超过64字符。<br>
-        /// 模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+        /// <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

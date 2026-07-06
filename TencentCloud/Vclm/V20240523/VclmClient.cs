@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1413";
+       private const string sdkVersion = "SDK_NET_3.0.1457";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Vclm.V20240523
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 检查图片跳舞输入图
-        /// </summary>
-        /// <param name="req"><see cref="CheckAnimateImageJobRequest"/></param>
-        /// <returns><see cref="CheckAnimateImageJobResponse"/></returns>
-        public Task<CheckAnimateImageJobResponse> CheckAnimateImageJob(CheckAnimateImageJobRequest req)
-        {
-            return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob");
-        }
-
-        /// <summary>
-        /// 检查图片跳舞输入图
-        /// </summary>
-        /// <param name="req"><see cref="CheckAnimateImageJobRequest"/></param>
-        /// <returns><see cref="CheckAnimateImageJobResponse"/></returns>
-        public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
-        {
-            return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -138,27 +117,6 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
-        /// 查询生视频任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAigcVideoJobRequest"/></param>
-        /// <returns><see cref="DescribeAigcVideoJobResponse"/></returns>
-        public Task<DescribeAigcVideoJobResponse> DescribeAigcVideoJob(DescribeAigcVideoJobRequest req)
-        {
-            return InternalRequestAsync<DescribeAigcVideoJobResponse>(req, "DescribeAigcVideoJob");
-        }
-
-        /// <summary>
-        /// 查询生视频任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAigcVideoJobRequest"/></param>
-        /// <returns><see cref="DescribeAigcVideoJobResponse"/></returns>
-        public DescribeAigcVideoJobResponse DescribeAigcVideoJobSync(DescribeAigcVideoJobRequest req)
-        {
-            return InternalRequestAsync<DescribeAigcVideoJobResponse>(req, "DescribeAigcVideoJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 通过JobId提交请求，获取人像驱动任务的结果信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeHumanActorJobRequest"/></param>
@@ -197,27 +155,6 @@ namespace TencentCloud.Vclm.V20240523
         public DescribeHunyuanToVideoJobResponse DescribeHunyuanToVideoJobSync(DescribeHunyuanToVideoJobRequest req)
         {
             return InternalRequestAsync<DescribeHunyuanToVideoJobResponse>(req, "DescribeHunyuanToVideoJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeImageAnimateJobRequest"/></param>
-        /// <returns><see cref="DescribeImageAnimateJobResponse"/></returns>
-        public Task<DescribeImageAnimateJobResponse> DescribeImageAnimateJob(DescribeImageAnimateJobRequest req)
-        {
-            return InternalRequestAsync<DescribeImageAnimateJobResponse>(req, "DescribeImageAnimateJob");
-        }
-
-        /// <summary>
-        /// 用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeImageAnimateJobRequest"/></param>
-        /// <returns><see cref="DescribeImageAnimateJobResponse"/></returns>
-        public DescribeImageAnimateJobResponse DescribeImageAnimateJobSync(DescribeImageAnimateJobRequest req)
-        {
-            return InternalRequestAsync<DescribeImageAnimateJobResponse>(req, "DescribeImageAnimateJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -413,27 +350,6 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
-        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoEditJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoEditJobResponse"/></returns>
-        public Task<DescribeVideoEditJobResponse> DescribeVideoEditJob(DescribeVideoEditJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoEditJobResponse>(req, "DescribeVideoEditJob");
-        }
-
-        /// <summary>
-        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoEditJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoEditJobResponse"/></returns>
-        public DescribeVideoEditJobResponse DescribeVideoEditJobSync(DescribeVideoEditJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoEditJobResponse>(req, "DescribeVideoEditJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询Kling多模态编辑任务
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoEditKlingJobRequest"/></param>
@@ -497,69 +413,6 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
-        /// 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoStylizationJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoStylizationJobResponse"/></returns>
-        public Task<DescribeVideoStylizationJobResponse> DescribeVideoStylizationJob(DescribeVideoStylizationJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoStylizationJobResponse>(req, "DescribeVideoStylizationJob");
-        }
-
-        /// <summary>
-        /// 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoStylizationJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoStylizationJobResponse"/></returns>
-        public DescribeVideoStylizationJobResponse DescribeVideoStylizationJobSync(DescribeVideoStylizationJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoStylizationJobResponse>(req, "DescribeVideoStylizationJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 通过JobId提交请求，获取视频配音频任务的结果信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoVoiceJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoVoiceJobResponse"/></returns>
-        public Task<DescribeVideoVoiceJobResponse> DescribeVideoVoiceJob(DescribeVideoVoiceJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoVoiceJobResponse>(req, "DescribeVideoVoiceJob");
-        }
-
-        /// <summary>
-        /// 通过JobId提交请求，获取视频配音频任务的结果信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoVoiceJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoVoiceJobResponse"/></returns>
-        public DescribeVideoVoiceJobResponse DescribeVideoVoiceJobSync(DescribeVideoVoiceJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoVoiceJobResponse>(req, "DescribeVideoVoiceJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 提交生视频任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitAigcVideoJobRequest"/></param>
-        /// <returns><see cref="SubmitAigcVideoJobResponse"/></returns>
-        public Task<SubmitAigcVideoJobResponse> SubmitAigcVideoJob(SubmitAigcVideoJobRequest req)
-        {
-            return InternalRequestAsync<SubmitAigcVideoJobResponse>(req, "SubmitAigcVideoJob");
-        }
-
-        /// <summary>
-        /// 提交生视频任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitAigcVideoJobRequest"/></param>
-        /// <returns><see cref="SubmitAigcVideoJobResponse"/></returns>
-        public SubmitAigcVideoJobResponse SubmitAigcVideoJobSync(SubmitAigcVideoJobRequest req)
-        {
-            return InternalRequestAsync<SubmitAigcVideoJobResponse>(req, "SubmitAigcVideoJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于提交人像驱动任务
         /// 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
         /// </summary>
@@ -604,27 +457,6 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitHunyuanToVideoJobResponse SubmitHunyuanToVideoJobSync(SubmitHunyuanToVideoJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuanToVideoJobResponse>(req, "SubmitHunyuanToVideoJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitImageAnimateJobRequest"/></param>
-        /// <returns><see cref="SubmitImageAnimateJobResponse"/></returns>
-        public Task<SubmitImageAnimateJobResponse> SubmitImageAnimateJob(SubmitImageAnimateJobRequest req)
-        {
-            return InternalRequestAsync<SubmitImageAnimateJobResponse>(req, "SubmitImageAnimateJob");
-        }
-
-        /// <summary>
-        /// 用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitImageAnimateJobRequest"/></param>
-        /// <returns><see cref="SubmitImageAnimateJobResponse"/></returns>
-        public SubmitImageAnimateJobResponse SubmitImageAnimateJobSync(SubmitImageAnimateJobRequest req)
-        {
-            return InternalRequestAsync<SubmitImageAnimateJobResponse>(req, "SubmitImageAnimateJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -820,27 +652,6 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
-        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoEditJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoEditJobResponse"/></returns>
-        public Task<SubmitVideoEditJobResponse> SubmitVideoEditJob(SubmitVideoEditJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoEditJobResponse>(req, "SubmitVideoEditJob");
-        }
-
-        /// <summary>
-        /// 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoEditJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoEditJobResponse"/></returns>
-        public SubmitVideoEditJobResponse SubmitVideoEditJobSync(SubmitVideoEditJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoEditJobResponse>(req, "SubmitVideoEditJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 提交Kling多模态编辑任务
         /// </summary>
         /// <param name="req"><see cref="SubmitVideoEditKlingJobRequest"/></param>
@@ -900,48 +711,6 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJobSync(SubmitVideoFaceFusionJobRequest req)
         {
             return InternalRequestAsync<SubmitVideoFaceFusionJobResponse>(req, "SubmitVideoFaceFusionJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于提交视频风格化任务。支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoStylizationJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoStylizationJobResponse"/></returns>
-        public Task<SubmitVideoStylizationJobResponse> SubmitVideoStylizationJob(SubmitVideoStylizationJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoStylizationJobResponse>(req, "SubmitVideoStylizationJob");
-        }
-
-        /// <summary>
-        /// 用于提交视频风格化任务。支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoStylizationJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoStylizationJobResponse"/></returns>
-        public SubmitVideoStylizationJobResponse SubmitVideoStylizationJobSync(SubmitVideoStylizationJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoStylizationJobResponse>(req, "SubmitVideoStylizationJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoVoiceJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoVoiceJobResponse"/></returns>
-        public Task<SubmitVideoVoiceJobResponse> SubmitVideoVoiceJob(SubmitVideoVoiceJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoVoiceJobResponse>(req, "SubmitVideoVoiceJob");
-        }
-
-        /// <summary>
-        /// 提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoVoiceJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoVoiceJobResponse"/></returns>
-        public SubmitVideoVoiceJobResponse SubmitVideoVoiceJobSync(SubmitVideoVoiceJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoVoiceJobResponse>(req, "SubmitVideoVoiceJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

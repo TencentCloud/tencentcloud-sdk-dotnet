@@ -25,43 +25,43 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>标签颜色</p>
+        /// 标签展示颜色。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
 
         /// <summary>
-        /// <p>描述</p>
+        /// 标签描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>标签ID</p>
+        /// 标签 ID。
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// <p>标签键</p>
+        /// 标签键（中文）。
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// <p>标签值</p>
+        /// 标签值（中文）。
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// <p>标签键英文</p>
+        /// 标签键（英文）。
         /// </summary>
         [JsonProperty("TagKeyEn")]
         public string TagKeyEn{ get; set; }
 
         /// <summary>
-        /// <p>标签值英文</p>
+        /// 标签值（英文）。
         /// </summary>
         [JsonProperty("TagValueEn")]
         public string TagValueEn{ get; set; }

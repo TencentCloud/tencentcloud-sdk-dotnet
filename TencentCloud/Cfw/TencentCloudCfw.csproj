@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1453</VersionPrefix>
+    <VersionPrefix>3.0.1457</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\CloseClusterNatFwSwitchRequest.cs" />
     <Compile Include="V20190904\Models\CloseClusterNatFwSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\ClusterFwPreAccessCheckResult.cs" />
+    <Compile Include="V20190904\Models\ClusterFwPreAccessCheckStage.cs" />
     <Compile Include="V20190904\Models\ClusterSwitchDetail.cs" />
     <Compile Include="V20190904\Models\Column.cs" />
     <Compile Include="V20190904\Models\CommonFilter.cs" />
@@ -212,6 +214,10 @@
     <Compile Include="V20190904\Models\DescribeNatFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeOfflineExportTaskRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeOfflineExportTaskResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeOfflineExportTemporaryCredentialsRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeOfflineExportTemporaryCredentialsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupRequest.cs" />
@@ -251,6 +257,8 @@
     <Compile Include="V20190904\Models\EnterpriseSecurityGroupRuleRuleInfo.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalResponse.cs" />
+    <Compile Include="V20190904\Models\ExportLogsOfflineRequest.cs" />
+    <Compile Include="V20190904\Models\ExportLogsOfflineResponse.cs" />
     <Compile Include="V20190904\Models\FieldOption.cs" />
     <Compile Include="V20190904\Models\FilterDataObject.cs" />
     <Compile Include="V20190904\Models\FwCidrInfo.cs" />
@@ -362,9 +370,11 @@
     <Compile Include="V20190904\Models\NatSwitchListData.cs" />
     <Compile Include="V20190904\Models\NetInstancesInfo.cs" />
     <Compile Include="V20190904\Models\NewModeItems.cs" />
+    <Compile Include="V20190904\Models\OfflineExportTask.cs" />
     <Compile Include="V20190904\Models\OpenClusterNatFwSwitchRequest.cs" />
     <Compile Include="V20190904\Models\OpenClusterNatFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\OperatorFilter.cs" />
+    <Compile Include="V20190904\Models\PolicyRoutePreCheckReport.cs" />
     <Compile Include="V20190904\Models\RegionCidrConfig.cs" />
     <Compile Include="V20190904\Models\RegionFwStatus.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />
@@ -375,6 +385,8 @@
     <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\RemoveNatAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveNatAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\RemoveOfflineExportTaskRequest.cs" />
+    <Compile Include="V20190904\Models\RemoveOfflineExportTaskResponse.cs" />
     <Compile Include="V20190904\Models\RemoveVpcAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveVpcAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\RuleChangeItem.cs" />

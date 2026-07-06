@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CA19FFF6-9270-3B65-85F2-4AFAB57C3107}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1413</VersionPrefix>
+    <VersionPrefix>3.0.1457</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,22 +50,16 @@
     <Compile Include="V20240523\VclmClient.cs" />
     <Compile Include="V20240523\Models\CameraControl.cs" />
     <Compile Include="V20240523\Models\CameraControlConfig.cs" />
-    <Compile Include="V20240523\Models\CheckAnimateImageJobRequest.cs" />
-    <Compile Include="V20240523\Models\CheckAnimateImageJobResponse.cs" />
     <Compile Include="V20240523\Models\CreateAigcElementRequest.cs" />
     <Compile Include="V20240523\Models\CreateAigcElementResponse.cs" />
     <Compile Include="V20240523\Models\DeleteAigcElementRequest.cs" />
     <Compile Include="V20240523\Models\DeleteAigcElementResponse.cs" />
     <Compile Include="V20240523\Models\DescribeAigcElementRequest.cs" />
     <Compile Include="V20240523\Models\DescribeAigcElementResponse.cs" />
-    <Compile Include="V20240523\Models\DescribeAigcVideoJobRequest.cs" />
-    <Compile Include="V20240523\Models\DescribeAigcVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeHumanActorJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeHunyuanToVideoJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeHunyuanToVideoJobResponse.cs" />
-    <Compile Include="V20240523\Models\DescribeImageAnimateJobRequest.cs" />
-    <Compile Include="V20240523\Models\DescribeImageAnimateJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeImageToVideoGeneralJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeImageToVideoGeneralJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeImageToVideoJobRequest.cs" />
@@ -84,18 +78,12 @@
     <Compile Include="V20240523\Models\DescribeTextToVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeTextToVideoViduJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeTextToVideoViduJobResponse.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoEditJobRequest.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoEditJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoEditKlingJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeVideoEditKlingJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoExtendKlingJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeVideoExtendKlingJobResponse.cs" />
     <Compile Include="V20240523\Models\DescribeVideoFaceFusionJobRequest.cs" />
     <Compile Include="V20240523\Models\DescribeVideoFaceFusionJobResponse.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoStylizationJobRequest.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoStylizationJobResponse.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoVoiceJobRequest.cs" />
-    <Compile Include="V20240523\Models\DescribeVideoVoiceJobResponse.cs" />
     <Compile Include="V20240523\Models\DynamicMask.cs" />
     <Compile Include="V20240523\Models\Element.cs" />
     <Compile Include="V20240523\Models\ElementImageList.cs" />
@@ -112,14 +100,10 @@
     <Compile Include="V20240523\Models\ReferImageItem.cs" />
     <Compile Include="V20240523\Models\ReferVideoInfo.cs" />
     <Compile Include="V20240523\Models\ReferenceSubject.cs" />
-    <Compile Include="V20240523\Models\SubmitAigcVideoJobRequest.cs" />
-    <Compile Include="V20240523\Models\SubmitAigcVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitHumanActorJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitHunyuanToVideoJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitHunyuanToVideoJobResponse.cs" />
-    <Compile Include="V20240523\Models\SubmitImageAnimateJobRequest.cs" />
-    <Compile Include="V20240523\Models\SubmitImageAnimateJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitImageToVideoGeneralJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitImageToVideoGeneralJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitImageToVideoJobRequest.cs" />
@@ -138,21 +122,14 @@
     <Compile Include="V20240523\Models\SubmitTextToVideoJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitTextToVideoViduJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitTextToVideoViduJobResponse.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoEditJobRequest.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoEditJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoEditKlingJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoEditKlingJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoExtendKlingJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoExtendKlingJobResponse.cs" />
     <Compile Include="V20240523\Models\SubmitVideoFaceFusionJobRequest.cs" />
     <Compile Include="V20240523\Models\SubmitVideoFaceFusionJobResponse.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoStylizationJobRequest.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoStylizationJobResponse.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoVoiceJobRequest.cs" />
-    <Compile Include="V20240523\Models\SubmitVideoVoiceJobResponse.cs" />
     <Compile Include="V20240523\Models\TagList.cs" />
     <Compile Include="V20240523\Models\Trajectory.cs" />
-    <Compile Include="V20240523\Models\VideoEditParam.cs" />
     <Compile Include="V20240523\Models\Voice.cs" />
   </ItemGroup>
 </Project>

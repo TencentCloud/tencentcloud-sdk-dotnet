@@ -31,6 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcUsageDataItem[] AigcUsageDataSet{ get; set; }
 
         /// <summary>
+        /// <p>生文详细日志</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AigcTextDetails")]
+        public AigcTextDetail AigcTextDetails{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "AigcUsageDataSet.", this.AigcUsageDataSet);
+            this.SetParamObj(map, prefix + "AigcTextDetails.", this.AigcTextDetails);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

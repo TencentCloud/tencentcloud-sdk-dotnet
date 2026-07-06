@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1453";
+       private const string sdkVersion = "SDK_NET_3.0.1457";
 
         /// <summary>
         /// Client constructor.
@@ -1255,7 +1255,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 日志审计日志查询
+        /// 请使用 [日志分析SearchLog接口](https://cloud.tencent.com/document/product/1132/118363)
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>
@@ -1265,7 +1265,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 日志审计日志查询
+        /// 请使用 [日志分析SearchLog接口](https://cloud.tencent.com/document/product/1132/118363)
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>
@@ -1524,6 +1524,48 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeNatFwVpcDnsLstResponse DescribeNatFwVpcDnsLstSync(DescribeNatFwVpcDnsLstRequest req)
         {
             return InternalRequestAsync<DescribeNatFwVpcDnsLstResponse>(req, "DescribeNatFwVpcDnsLst")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取日志离线导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeOfflineExportTaskResponse"/></returns>
+        public Task<DescribeOfflineExportTaskResponse> DescribeOfflineExportTask(DescribeOfflineExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeOfflineExportTaskResponse>(req, "DescribeOfflineExportTask");
+        }
+
+        /// <summary>
+        /// 获取日志离线导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineExportTaskRequest"/></param>
+        /// <returns><see cref="DescribeOfflineExportTaskResponse"/></returns>
+        public DescribeOfflineExportTaskResponse DescribeOfflineExportTaskSync(DescribeOfflineExportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeOfflineExportTaskResponse>(req, "DescribeOfflineExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取日志离线导出任务文件下载临时凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineExportTemporaryCredentialsRequest"/></param>
+        /// <returns><see cref="DescribeOfflineExportTemporaryCredentialsResponse"/></returns>
+        public Task<DescribeOfflineExportTemporaryCredentialsResponse> DescribeOfflineExportTemporaryCredentials(DescribeOfflineExportTemporaryCredentialsRequest req)
+        {
+            return InternalRequestAsync<DescribeOfflineExportTemporaryCredentialsResponse>(req, "DescribeOfflineExportTemporaryCredentials");
+        }
+
+        /// <summary>
+        /// 获取日志离线导出任务文件下载临时凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineExportTemporaryCredentialsRequest"/></param>
+        /// <returns><see cref="DescribeOfflineExportTemporaryCredentialsResponse"/></returns>
+        public DescribeOfflineExportTemporaryCredentialsResponse DescribeOfflineExportTemporaryCredentialsSync(DescribeOfflineExportTemporaryCredentialsRequest req)
+        {
+            return InternalRequestAsync<DescribeOfflineExportTemporaryCredentialsResponse>(req, "DescribeOfflineExportTemporaryCredentials")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1860,6 +1902,27 @@ namespace TencentCloud.Cfw.V20190904
         public ExpandCfwVerticalResponse ExpandCfwVerticalSync(ExpandCfwVerticalRequest req)
         {
             return InternalRequestAsync<ExpandCfwVerticalResponse>(req, "ExpandCfwVertical")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志审计日志离线导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportLogsOfflineRequest"/></param>
+        /// <returns><see cref="ExportLogsOfflineResponse"/></returns>
+        public Task<ExportLogsOfflineResponse> ExportLogsOffline(ExportLogsOfflineRequest req)
+        {
+            return InternalRequestAsync<ExportLogsOfflineResponse>(req, "ExportLogsOffline");
+        }
+
+        /// <summary>
+        /// 日志审计日志离线导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportLogsOfflineRequest"/></param>
+        /// <returns><see cref="ExportLogsOfflineResponse"/></returns>
+        public ExportLogsOfflineResponse ExportLogsOfflineSync(ExportLogsOfflineRequest req)
+        {
+            return InternalRequestAsync<ExportLogsOfflineResponse>(req, "ExportLogsOffline")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2771,6 +2834,27 @@ namespace TencentCloud.Cfw.V20190904
         public RemoveNatAcRuleResponse RemoveNatAcRuleSync(RemoveNatAcRuleRequest req)
         {
             return InternalRequestAsync<RemoveNatAcRuleResponse>(req, "RemoveNatAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除日志离线导出任务
+        /// </summary>
+        /// <param name="req"><see cref="RemoveOfflineExportTaskRequest"/></param>
+        /// <returns><see cref="RemoveOfflineExportTaskResponse"/></returns>
+        public Task<RemoveOfflineExportTaskResponse> RemoveOfflineExportTask(RemoveOfflineExportTaskRequest req)
+        {
+            return InternalRequestAsync<RemoveOfflineExportTaskResponse>(req, "RemoveOfflineExportTask");
+        }
+
+        /// <summary>
+        /// 删除日志离线导出任务
+        /// </summary>
+        /// <param name="req"><see cref="RemoveOfflineExportTaskRequest"/></param>
+        /// <returns><see cref="RemoveOfflineExportTaskResponse"/></returns>
+        public RemoveOfflineExportTaskResponse RemoveOfflineExportTaskSync(RemoveOfflineExportTaskRequest req)
+        {
+            return InternalRequestAsync<RemoveOfflineExportTaskResponse>(req, "RemoveOfflineExportTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,46 +25,58 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据不一致的表详情
+        /// <p>数据不一致的表详情</p>
         /// </summary>
         [JsonProperty("Difference")]
         public DifferenceDetail Difference{ get; set; }
 
         /// <summary>
-        /// 跳过校验的表详情
+        /// <p>跳过校验的表详情</p>
         /// </summary>
         [JsonProperty("Skipped")]
         public SkippedDetail Skipped{ get; set; }
 
         /// <summary>
-        /// 数据库不一致的详情，mongodb业务用到
+        /// <p>数据库不一致的详情，mongodb业务用到</p>
         /// </summary>
         [JsonProperty("DifferenceAdvancedObjects")]
         public DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects{ get; set; }
 
         /// <summary>
-        /// 数据不一致的详情，mongodb业务用到
+        /// <p>数据不一致的详情，mongodb业务用到</p>
         /// </summary>
         [JsonProperty("DifferenceData")]
         public DifferenceDataDetail DifferenceData{ get; set; }
 
         /// <summary>
-        /// 数据行不一致的详情，mongodb业务用到
+        /// <p>数据行不一致的详情，mongodb业务用到</p>
         /// </summary>
         [JsonProperty("DifferenceRow")]
         public DifferenceRowDetail DifferenceRow{ get; set; }
 
         /// <summary>
-        /// 表结构不一致详情，pg用
+        /// <p>表结构不一致详情，pg用</p>
         /// </summary>
         [JsonProperty("DifferenceSchema")]
         public DifferenceSchemaDetail DifferenceSchema{ get; set; }
 
         /// <summary>
-        /// 对象owner不一致详情，pg用
+        /// <p>对象owner不一致详情，pg用</p>
         /// </summary>
         [JsonProperty("DifferenceOwner")]
         public DifferenceOwnerDetail DifferenceOwner{ get; set; }
+
+        /// <summary>
+        /// <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+        /// </summary>
+        [JsonProperty("FullProgress")]
+        public CompareTableInfo FullProgress{ get; set; }
+
+        /// <summary>
+        /// <p>增量阶段表的校验进度</p>
+        /// </summary>
+        [JsonProperty("IncDifference")]
+        public CompareTableInfo IncDifference{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
             this.SetParamObj(map, prefix + "DifferenceSchema.", this.DifferenceSchema);
             this.SetParamObj(map, prefix + "DifferenceOwner.", this.DifferenceOwner);
+            this.SetParamObj(map, prefix + "FullProgress.", this.FullProgress);
+            this.SetParamObj(map, prefix + "IncDifference.", this.IncDifference);
         }
     }
 }

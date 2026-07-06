@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? IsRunAtOnce{ get; set; }
 
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }

@@ -227,6 +227,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
+        /// 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
+        /// <summary>
         /// 是否支持敏感数据识别。0 不支持；1 支持
         /// </summary>
         [JsonProperty("IdentifyScanSupported")]
@@ -271,6 +277,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "OperationErrorMsg", this.OperationErrorMsg);
             this.SetParamSimple(map, prefix + "AccountOptSupported", this.AccountOptSupported);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "IdentifyScanSupported", this.IdentifyScanSupported);
         }
     }

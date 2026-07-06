@@ -25,37 +25,37 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 创建规则数据
+        /// <p>创建规则数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public SecurityGroupRule[] Data{ get; set; }
 
         /// <summary>
-        /// 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
+        /// <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+        /// <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+        /// <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
         /// </summary>
         [JsonProperty("IsDelay")]
         public ulong? IsDelay{ get; set; }
 
         /// <summary>
-        /// 来源 默认空 覆盖导入是 batch_import_cover
+        /// <p>来源 默认空 覆盖导入是 batch_import_cover</p>
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 是否复用rule id，1为是，默认不需要
+        /// <p>是否复用rule id，1为是，默认不需要</p>
         /// </summary>
         [JsonProperty("IsUseId")]
         public long? IsUseId{ get; set; }

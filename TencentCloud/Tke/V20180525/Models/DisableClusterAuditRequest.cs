@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+        /// <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
         /// </summary>
         [JsonProperty("DeleteLogSetAndTopic")]
         public bool? DeleteLogSetAndTopic{ get; set; }

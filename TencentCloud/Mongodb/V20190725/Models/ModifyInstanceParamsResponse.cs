@@ -25,15 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 修改参数配置是否生效。
-        /// - true：参数修改后的值已生效。
-        /// - false：执行失败。
+        /// <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
         /// </summary>
         [JsonProperty("Changed")]
         public bool? Changed{ get; set; }
 
         /// <summary>
-        /// 该参数暂时无意义(兼容前端保留)。
+        /// <p>该参数暂时无意义(兼容前端保留)。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

@@ -25,64 +25,70 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+        /// <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+        /// <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
         /// </summary>
         [JsonProperty("StatusInfo")]
         public string StatusInfo{ get; set; }
 
         /// <summary>
-        /// 识别进度
+        /// <p>识别进度</p>
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// 最近扫描时间
+        /// <p>最近扫描时间</p>
         /// </summary>
         [JsonProperty("LatestScanTime")]
         public string LatestScanTime{ get; set; }
 
         /// <summary>
-        /// 识别失败信息
+        /// <p>识别失败信息</p>
         /// </summary>
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
 
         /// <summary>
-        /// 数据库数量
+        /// <p>数据库数量</p>
         /// </summary>
         [JsonProperty("DbCount")]
         public ulong? DbCount{ get; set; }
 
         /// <summary>
-        /// 分类id集合
+        /// <p>分类id集合</p>
         /// </summary>
         [JsonProperty("CategoryIds")]
         public ulong?[] CategoryIds{ get; set; }
 
         /// <summary>
-        /// 分类名称集合
+        /// <p>分类名称集合</p>
         /// </summary>
         [JsonProperty("CategoryNames")]
         public string[] CategoryNames{ get; set; }
 
         /// <summary>
-        /// 扫描任务配置
+        /// <p>扫描任务配置</p>
         /// </summary>
         [JsonProperty("TaskConfig")]
         public DspmSensitiveScanTaskConfig TaskConfig{ get; set; }
 
         /// <summary>
-        /// 识别结果分类详情
+        /// <p>识别结果分类详情</p>
         /// </summary>
         [JsonProperty("CategoryDetails")]
         public DspmIdentifyCategoryDetail[] CategoryDetails{ get; set; }
+
+        /// <summary>
+        /// <p>任务ID</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "CategoryNames.", this.CategoryNames);
             this.SetParamObj(map, prefix + "TaskConfig.", this.TaskConfig);
             this.SetParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

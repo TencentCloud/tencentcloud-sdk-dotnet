@@ -25,27 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-        /// 
-        /// 注: 
-        /// 1. 非小程序和APP集成使用
-        /// 2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+        /// <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+        /// <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-        /// 
-        /// 注: 
-        /// 1. 小程序和APP集成使用
-        /// 2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+        /// <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
         /// </summary>
         [JsonProperty("MiniAppPath")]
         public string MiniAppPath{ get; set; }

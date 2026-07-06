@@ -25,40 +25,52 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业的 ID
+        /// <p>作业的 ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 筛选条件：起始 Unix 时间戳（秒）
+        /// <p>筛选条件：起始 Unix 时间戳（秒）</p>
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public ulong? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// 筛选条件：结束 Unix 时间戳（秒）
+        /// <p>筛选条件：结束 Unix 时间戳（秒）</p>
         /// </summary>
         [JsonProperty("EndTimestamp")]
         public ulong? EndTimestamp{ get; set; }
 
         /// <summary>
-        /// 事件类型。如果不传则返回所有类型的数据
+        /// <p>事件类型。如果不传则返回所有类型的数据</p>
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }
 
         /// <summary>
-        /// 运行实例 ID 数组
+        /// <p>运行实例 ID 数组</p>
         /// </summary>
         [JsonProperty("RunningOrderIds")]
         public ulong?[] RunningOrderIds{ get; set; }
 
         /// <summary>
-        /// 工作空间 SerialId
+        /// <p>工作空间 SerialId</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>返回条数</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>起始偏移个数</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArraySimple(map, prefix + "Types.", this.Types);
             this.SetParamArraySimple(map, prefix + "RunningOrderIds.", this.RunningOrderIds);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

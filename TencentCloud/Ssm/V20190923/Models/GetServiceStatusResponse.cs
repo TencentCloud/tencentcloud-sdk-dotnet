@@ -25,65 +25,70 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// true表示服务已开通，false 表示服务尚未开通。
+        /// <p>true表示服务已开通，false 表示服务尚未开通。</p>
         /// </summary>
         [JsonProperty("ServiceEnabled")]
         public bool? ServiceEnabled{ get; set; }
 
         /// <summary>
-        /// 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+        /// <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
         /// </summary>
         [JsonProperty("InvalidType")]
         public long? InvalidType{ get; set; }
 
         /// <summary>
-        /// true表示用户已经可以使用密钥安全托管功能，
-        /// false表示用户暂时不能使用密钥安全托管功能。
+        /// <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
         /// </summary>
         [JsonProperty("AccessKeyEscrowEnabled")]
         public bool? AccessKeyEscrowEnabled{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 计算性能限制
+        /// <p>计算性能限制</p>
         /// </summary>
         [JsonProperty("QPSLimit")]
         public long? QPSLimit{ get; set; }
 
         /// <summary>
-        /// 凭据个数限制
+        /// <p>凭据个数限制</p>
         /// </summary>
         [JsonProperty("SecretLimit")]
         public long? SecretLimit{ get; set; }
 
         /// <summary>
-        /// 付费模式
+        /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayModel")]
         public string PayModel{ get; set; }
 
         /// <summary>
-        /// 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+        /// <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 资源id
+        /// <p>资源id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 已托管凭据个数
+        /// <p>已托管凭据个数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>预付费购买 SSM 资源的地域 ID</p>
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public long? ResourceRegion{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -107,6 +112,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -72,6 +72,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("EnableKeywords")]
         public bool? EnableKeywords{ get; set; }
 
+        /// <summary>
+        /// <p>自定义摘要提示词</p>
+        /// </summary>
+        [JsonProperty("SummaryPrompt")]
+        public string SummaryPrompt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamArrayObj(map, prefix + "CustomDetectQueries.", this.CustomDetectQueries);
             this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
             this.SetParamSimple(map, prefix + "EnableKeywords", this.EnableKeywords);
+            this.SetParamSimple(map, prefix + "SummaryPrompt", this.SummaryPrompt);
         }
     }
 }

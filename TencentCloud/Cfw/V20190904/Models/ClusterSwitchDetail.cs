@@ -146,6 +146,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Progress")]
         public string Progress{ get; set; }
 
+        /// <summary>
+        /// <p>预检查项的结果</p>
+        /// </summary>
+        [JsonProperty("CheckResult")]
+        public ClusterFwPreAccessCheckResult CheckResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "PeerStatus", this.PeerStatus);
             this.SetParamSimple(map, prefix + "Bypass", this.Bypass);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamObj(map, prefix + "CheckResult.", this.CheckResult);
         }
     }
 }

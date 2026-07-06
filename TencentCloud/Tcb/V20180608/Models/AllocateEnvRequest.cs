@@ -36,6 +36,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ExternalAppId")]
         public string ExternalAppId{ get; set; }
 
+        /// <summary>
+        /// <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+        /// </summary>
+        [JsonProperty("ExternalTag")]
+        public string ExternalTag{ get; set; }
+
+        /// <summary>
+        /// <p>是否需要云函数</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("RequireFunction")]
+        public bool? RequireFunction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "AllocateId", this.AllocateId);
             this.SetParamSimple(map, prefix + "ExternalAppId", this.ExternalAppId);
+            this.SetParamSimple(map, prefix + "ExternalTag", this.ExternalTag);
+            this.SetParamSimple(map, prefix + "RequireFunction", this.RequireFunction);
         }
     }
 }

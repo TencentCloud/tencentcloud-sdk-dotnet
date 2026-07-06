@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 模板ID，为32位字符串，模板复制新建时返回
+        /// <p>模板ID，为32位字符串，模板复制新建时返回</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名称，模板复制新建时返回
+        /// <p>模板名称，模板复制新建时返回</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

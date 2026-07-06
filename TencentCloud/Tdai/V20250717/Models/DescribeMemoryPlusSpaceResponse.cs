@@ -73,6 +73,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
+        /// <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
+        /// <summary>
         /// <p>Memory 版本信息：v1。</p>
         /// </summary>
         [JsonProperty("Version")]
@@ -158,6 +164,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);

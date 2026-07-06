@@ -25,21 +25,21 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 一致性校验摘要信息
+        /// <p>一致性校验摘要信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Abstract")]
         public CompareAbstractInfo Abstract{ get; set; }
 
         /// <summary>
-        /// 一致性校验详细信息
+        /// <p>一致性校验详细信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public CompareDetailInfo Detail{ get; set; }
 
         /// <summary>
-        /// 增量校验阶段的摘要
+        /// <p>增量校验阶段的摘要</p>
         /// </summary>
         [JsonProperty("IncAbstract")]
         public IncCompareAbstractInfo IncAbstract{ get; set; }

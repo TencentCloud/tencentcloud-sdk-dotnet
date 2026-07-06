@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产实例id
+        /// <p>资产实例id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 筛选项
+        /// <p>筛选项</p>
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }

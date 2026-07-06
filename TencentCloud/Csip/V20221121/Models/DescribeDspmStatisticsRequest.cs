@@ -25,10 +25,16 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string[] AssetType{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamArraySimple(map, prefix + "AssetType.", this.AssetType);
         }
     }
 }

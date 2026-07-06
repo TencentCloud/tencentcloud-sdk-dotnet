@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1453</VersionPrefix>
+    <VersionPrefix>3.0.1457</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,14 @@
     <Compile Include="V20260322\Models\GlossaryEntryInput.cs" />
     <Compile Include="V20260322\Models\GlossaryEntryItem.cs" />
     <Compile Include="V20260322\Models\GlossaryItem.cs" />
+    <Compile Include="V20260322\Models\Model.cs" />
+    <Compile Include="V20260322\Models\ModelAccessInfo.cs" />
+    <Compile Include="V20260322\Models\ModelChargingInfo.cs" />
+    <Compile Include="V20260322\Models\ModelChargingItem.cs" />
+    <Compile Include="V20260322\Models\ModelFreeTrialInfo.cs" />
+    <Compile Include="V20260322\Models\ModelImage.cs" />
+    <Compile Include="V20260322\Models\ModelSiteRegion.cs" />
+    <Compile Include="V20260322\Models\ModelSpec.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntryInput.cs" />

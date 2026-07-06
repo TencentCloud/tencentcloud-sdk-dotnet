@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 接口返回信息
+        /// <p>接口返回信息</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 接口返回错误码，0请求成功  非0失败
+        /// <p>接口返回错误码，0请求成功  非0失败</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public ulong? ReturnCode{ get; set; }

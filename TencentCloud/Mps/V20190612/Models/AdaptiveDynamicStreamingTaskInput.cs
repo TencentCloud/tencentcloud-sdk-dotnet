@@ -25,97 +25,94 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 转自适应码流模板 ID。
+        /// <p>转自适应码流模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+        /// <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 数字水印参数	
+        /// <p>数字水印参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
+        /// <p>转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
-        /// 若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-        /// 相对路径示例：
-        /// <li>文件名_{变量名}.{format}</li>
-        /// <li>文件名.{format}</li>
-        /// 绝对路径示例：
-        /// <li>/自定义路径/文件名_{变量名}.{format}</li>
-        /// 如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
+        /// <p>转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// 转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
+        /// <p>转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}</code>。</p>
         /// </summary>
         [JsonProperty("SubStreamObjectName")]
         public string SubStreamObjectName{ get; set; }
 
         /// <summary>
-        /// 转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
+        /// <p>转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}</code>。</p>
         /// </summary>
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// 外挂字幕功能，指定要插入的字幕文件。
+        /// <p>外挂字幕功能，指定要插入的字幕文件。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// Drm信息。
+        /// <p>Drm信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
 
         /// <summary>
-        /// 自适应转码模板类型：
-        /// Common：音视频类型
-        /// PureAudio：纯音频类型
+        /// <p>自适应转码模板类型：<br>Common：音视频类型<br>PureAudio：纯音频类型</p>
         /// </summary>
         [JsonProperty("DefinitionType")]
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
+        /// <p>硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// 转码参数扩展字段
+        /// <p>转码参数扩展字段</p>
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+        /// <p>指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差&lt;=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyPTSList")]
         public long?[] KeyPTSList{ get; set; }
+
+        /// <summary>
+        /// <p>外挂音频功能，指定要插入的音频文件。</p>
+        /// </summary>
+        [JsonProperty("AddOnAudios")]
+        public AddOnAudio[] AddOnAudios{ get; set; }
 
 
         /// <summary>
@@ -136,6 +133,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
             this.SetParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
+            this.SetParamArrayObj(map, prefix + "AddOnAudios.", this.AddOnAudios);
         }
     }
 }

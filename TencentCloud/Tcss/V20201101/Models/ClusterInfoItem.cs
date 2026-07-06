@@ -25,211 +25,205 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名字
+        /// <p>集群ca证书md5值</p>
+        /// </summary>
+        [JsonProperty("ClusterCAMD5")]
+        public string ClusterCAMD5{ get; set; }
+
+        /// <summary>
+        /// <p>集群名字</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群版本
+        /// <p>集群版本</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 集群操作系统
+        /// <p>集群操作系统</p>
         /// </summary>
         [JsonProperty("ClusterOs")]
         public string ClusterOs{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群节点数
+        /// <p>集群节点数</p>
         /// </summary>
         [JsonProperty("ClusterNodeNum")]
         public ulong? ClusterNodeNum{ get; set; }
 
         /// <summary>
-        /// 集群区域
+        /// <p>集群区域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 防护状态: 
-        /// 已防护: Defended 
-        /// 未防护: UnDefended
-        /// 部分防护: PartDefened
+        /// <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
         /// </summary>
         [JsonProperty("DefenderStatus")]
         public string DefenderStatus{ get; set; }
 
         /// <summary>
-        /// 集群状态
+        /// <p>集群状态</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 集群运行子状态
+        /// <p>集群运行子状态</p>
         /// </summary>
         [JsonProperty("ClusterSubStatus")]
         public string ClusterSubStatus{ get; set; }
 
         /// <summary>
-        /// 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
+        /// <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
         /// </summary>
         [JsonProperty("ClusterCheckMode")]
         public string ClusterCheckMode{ get; set; }
 
         /// <summary>
-        /// 是否自动定期检测
+        /// <p>是否自动定期检测</p>
         /// </summary>
         [JsonProperty("ClusterAutoCheck")]
         public bool? ClusterAutoCheck{ get; set; }
 
         /// <summary>
-        /// 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
+        /// <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
         /// </summary>
         [JsonProperty("DefenderErrorReason")]
         public string DefenderErrorReason{ get; set; }
 
         /// <summary>
-        /// 防御容器没有ready状态的节点数量
+        /// <p>防御容器没有ready状态的节点数量</p>
         /// </summary>
         [JsonProperty("UnreadyNodeNum")]
         public ulong? UnreadyNodeNum{ get; set; }
 
         /// <summary>
-        /// 严重风险检查项的数量
+        /// <p>严重风险检查项的数量</p>
         /// </summary>
         [JsonProperty("SeriousRiskCount")]
         public long? SeriousRiskCount{ get; set; }
 
         /// <summary>
-        /// 高风险检查项的数量
+        /// <p>高风险检查项的数量</p>
         /// </summary>
         [JsonProperty("HighRiskCount")]
         public long? HighRiskCount{ get; set; }
 
         /// <summary>
-        /// 中风险检查项的数量
+        /// <p>中风险检查项的数量</p>
         /// </summary>
         [JsonProperty("MiddleRiskCount")]
         public long? MiddleRiskCount{ get; set; }
 
         /// <summary>
-        /// 提示风险检查项的数量
+        /// <p>提示风险检查项的数量</p>
         /// </summary>
         [JsonProperty("HintRiskCount")]
         public long? HintRiskCount{ get; set; }
 
         /// <summary>
-        /// 检查失败原因
+        /// <p>检查失败原因</p>
         /// </summary>
         [JsonProperty("CheckFailReason")]
         public string CheckFailReason{ get; set; }
 
         /// <summary>
-        /// 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
+        /// <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// 任务创建时间,检查时间
+        /// <p>任务创建时间,检查时间</p>
         /// </summary>
         [JsonProperty("TaskCreateTime")]
         public string TaskCreateTime{ get; set; }
 
         /// <summary>
-        /// 接入状态:
-        /// 未接入: AccessedNone
-        /// 已防护: AccessedDefended
-        /// 未防护: AccessedInstalled
-        /// 部分防护: AccessedPartialDefence
-        /// 接入异常: AccessedException
-        /// 卸载异常: AccessedUninstallException
-        /// 接入中: AccessedInstalling
-        /// 卸载中: AccessedUninstalling
+        /// <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
         /// </summary>
         [JsonProperty("AccessedStatus")]
         public string AccessedStatus{ get; set; }
 
         /// <summary>
-        /// 接入失败原因
+        /// <p>接入失败原因</p>
         /// </summary>
         [JsonProperty("AccessedSubStatus")]
         public string AccessedSubStatus{ get; set; }
 
         /// <summary>
-        /// 接入/卸载失败原因
+        /// <p>接入/卸载失败原因</p>
         /// </summary>
         [JsonProperty("AccessedErrorReason")]
         public string AccessedErrorReason{ get; set; }
 
         /// <summary>
-        /// 节点总数
+        /// <p>节点总数</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 离线节点数
+        /// <p>离线节点数</p>
         /// </summary>
         [JsonProperty("OffLineNodeCount")]
         public ulong? OffLineNodeCount{ get; set; }
 
         /// <summary>
-        /// 未安装agent节点数
+        /// <p>未安装agent节点数</p>
         /// </summary>
         [JsonProperty("UnInstallAgentNodeCount")]
         public ulong? UnInstallAgentNodeCount{ get; set; }
 
         /// <summary>
-        /// 计费核数(弹性计费核数+普通计费核数)
+        /// <p>计费核数(弹性计费核数+普通计费核数)</p>
         /// </summary>
         [JsonProperty("ChargeCoresCnt")]
         public ulong? ChargeCoresCnt{ get; set; }
 
         /// <summary>
-        /// master 地址列表
+        /// <p>master 地址列表</p>
         /// </summary>
         [JsonProperty("MasterAddresses")]
         public string[] MasterAddresses{ get; set; }
 
         /// <summary>
-        /// 核数
+        /// <p>核数</p>
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
         /// <summary>
-        /// 集群审计开关状态：
-        /// 已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+        /// <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
         /// </summary>
         [JsonProperty("ClusterAuditStatus")]
         public string ClusterAuditStatus{ get; set; }
 
         /// <summary>
-        /// 集群审计开关失败信息
+        /// <p>集群审计开关失败信息</p>
         /// </summary>
         [JsonProperty("ClusterAuditFailedInfo")]
         public string ClusterAuditFailedInfo{ get; set; }
 
         /// <summary>
-        /// 所有者名称
+        /// <p>所有者名称</p>
         /// </summary>
         [JsonProperty("OwnerName")]
         public string OwnerName{ get; set; }
@@ -241,6 +235,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterCAMD5", this.ClusterCAMD5);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "ClusterOs", this.ClusterOs);

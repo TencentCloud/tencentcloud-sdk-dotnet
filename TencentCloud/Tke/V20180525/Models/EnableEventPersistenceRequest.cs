@@ -25,28 +25,34 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// cls服务的logsetID，通过cls接口或者控制台获取
+        /// <p>cls服务的logsetID，通过cls接口或者控制台获取</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// cls服务的topicID，通过cls接口或者控制台获取
+        /// <p>cls服务的topicID，通过cls接口或者控制台获取</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// topic所在地域，默认为集群所在地域
+        /// <p>topic所在地域，默认为集群所在地域</p>
         /// </summary>
         [JsonProperty("TopicRegion")]
         public string TopicRegion{ get; set; }
+
+        /// <summary>
+        /// <p>集群类型 tke/eks</p><p>默认值：tke</p>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "TopicRegion", this.TopicRegion);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

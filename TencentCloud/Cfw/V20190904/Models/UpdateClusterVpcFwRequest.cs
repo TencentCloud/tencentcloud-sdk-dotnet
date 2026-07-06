@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// ccn防火墙开关配置信息
+        /// <p>ccn防火墙开关配置信息</p>
         /// </summary>
         [JsonProperty("CcnSwitch")]
         public CcnSwitchInfo CcnSwitch{ get; set; }

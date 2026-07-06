@@ -25,115 +25,115 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模块名，这里填“monitor”
+        /// <p>模块名，这里填“monitor”</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 屏蔽策略名称
+        /// <p>屏蔽策略名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 监控类型
+        /// <p>监控类型</p>
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 命名空间即策略类型
+        /// <p>命名空间即策略类型</p>
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }
 
         /// <summary>
-        /// 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
+        /// <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
         /// </summary>
         [JsonProperty("ShieldTimeType")]
         public string ShieldTimeType{ get; set; }
 
         /// <summary>
-        /// 屏蔽对象
+        /// <p>屏蔽对象</p>
         /// </summary>
         [JsonProperty("ShieldObject")]
         public string[] ShieldObject{ get; set; }
 
         /// <summary>
-        /// 屏蔽指标 为空则为全部指标
+        /// <p>屏蔽指标 为空则为全部指标</p>
         /// </summary>
         [JsonProperty("ShieldMetric")]
         public string[] ShieldMetric{ get; set; }
 
         /// <summary>
-        /// 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
+        /// <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
+        /// <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 循环开始日期 2022/04/01 缺省:0
+        /// <p>循环开始日期 2022/04/01 缺省:0</p>
         /// </summary>
         [JsonProperty("LoopStartDate")]
         public ulong? LoopStartDate{ get; set; }
 
         /// <summary>
-        /// 循环结束日期 2022/04/05 缺省:0
+        /// <p>循环结束日期 2022/04/05 缺省:0</p>
         /// </summary>
         [JsonProperty("LoopEndDate")]
         public ulong? LoopEndDate{ get; set; }
 
         /// <summary>
-        /// 需要屏蔽的策略ID
+        /// <p>需要屏蔽的策略ID</p>
         /// </summary>
         [JsonProperty("ShieldPolicyId")]
         public string ShieldPolicyId{ get; set; }
 
         /// <summary>
-        /// 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
+        /// <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
         /// </summary>
         [JsonProperty("ShieldAlarmLevel")]
         public string[] ShieldAlarmLevel{ get; set; }
 
         /// <summary>
-        /// 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
+        /// <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
         /// </summary>
         [JsonProperty("VersionTag")]
         public string VersionTag{ get; set; }
 
         /// <summary>
-        /// 屏蔽规则的描述
+        /// <p>屏蔽规则的描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        ///  时区，东八区+8，西八区减8，以此类推
+        /// <p>时区，东八区+8，西八区减8，以此类推</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public float? TimeZone{ get; set; }
 
         /// <summary>
-        /// 屏蔽事件 为空则为全部指标
+        /// <p>屏蔽事件 为空则为全部指标</p>
         /// </summary>
         [JsonProperty("ShieldEvent")]
         public string[] ShieldEvent{ get; set; }
 
         /// <summary>
-        /// 是否对指标屏蔽 1=是 0=否
+        /// <p>是否对指标屏蔽 1=是 0=否</p>
         /// </summary>
         [JsonProperty("ShieldMetricFlag")]
         public long? ShieldMetricFlag{ get; set; }
 
         /// <summary>
-        /// 是否对事件屏蔽 1=是 0=否
+        /// <p>是否对事件屏蔽 1=是 0=否</p>
         /// </summary>
         [JsonProperty("ShieldEventFlag")]
         public long? ShieldEventFlag{ get; set; }

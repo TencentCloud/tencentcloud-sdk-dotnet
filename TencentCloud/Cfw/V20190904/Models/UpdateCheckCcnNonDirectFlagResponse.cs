@@ -25,9 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 检测更新状态
-        /// "Checked"：重新检测完成
-        /// "Checking": 正在重新检测中，请稍后刷新状态查看
+        /// <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

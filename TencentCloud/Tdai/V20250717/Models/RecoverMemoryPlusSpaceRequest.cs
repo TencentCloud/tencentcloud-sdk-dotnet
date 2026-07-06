@@ -30,6 +30,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("SpaceIds")]
         public string[] SpaceIds{ get; set; }
 
+        /// <summary>
+        /// <p>包年包月续费周期</p><p>单位：月</p>
+        /// </summary>
+        [JsonProperty("PayPeriod")]
+        public long? PayPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tdai.V20250717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "SpaceIds.", this.SpaceIds);
+            this.SetParamSimple(map, prefix + "PayPeriod", this.PayPeriod);
         }
     }
 }

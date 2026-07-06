@@ -48,6 +48,24 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
+        /// <summary>
+        /// <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// <p>包年包月周期</p>
+        /// </summary>
+        [JsonProperty("PayPeriod")]
+        public long? PayPeriod{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动续费</p>
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "PayPeriod", this.PayPeriod);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 刷新活动 ID。
+        /// <p>刷新活动 ID。</p>
         /// </summary>
         [JsonProperty("RefreshActivityId")]
         public string RefreshActivityId{ get; set; }

@@ -25,43 +25,55 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 内部定义的事件类型
+        /// <p>内部定义的事件类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 事件类型的说明文字
+        /// <p>事件类型的说明文字</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 事件发生的 Unix 时间戳（秒）
+        /// <p>事件发生的 Unix 时间戳（秒）</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// 事件发生时的运行 ID
+        /// <p>事件发生时的运行 ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningOrderId")]
         public ulong? RunningOrderId{ get; set; }
 
         /// <summary>
-        /// 事件的一些可选说明
+        /// <p>事件的一些可选说明</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 异常事件的排查手册链接
+        /// <p>异常事件的排查手册链接</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SolutionLink")]
         public string SolutionLink{ get; set; }
+
+        /// <summary>
+        /// <p>异常事件原因分析</p>
+        /// </summary>
+        [JsonProperty("CauseAnalysis")]
+        public string CauseAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>异常事件处理的参考方案</p>
+        /// </summary>
+        [JsonProperty("Solution")]
+        public string Solution{ get; set; }
 
 
         /// <summary>
@@ -75,6 +87,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "SolutionLink", this.SolutionLink);
+            this.SetParamSimple(map, prefix + "CauseAnalysis", this.CauseAnalysis);
+            this.SetParamSimple(map, prefix + "Solution", this.Solution);
         }
     }
 }

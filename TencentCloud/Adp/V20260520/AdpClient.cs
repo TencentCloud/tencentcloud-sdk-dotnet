@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1456";
+       private const string sdkVersion = "SDK_NET_3.0.1457";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 获取插件详情
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public Task<CreatePluginResponse> CreatePlugin(CreatePluginRequest req)
+        {
+            return InternalRequestAsync<CreatePluginResponse>(req, "CreatePlugin");
+        }
+
+        /// <summary>
+        /// 获取插件详情
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public CreatePluginResponse CreatePluginSync(CreatePluginRequest req)
+        {
+            return InternalRequestAsync<CreatePluginResponse>(req, "CreatePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新增发布任务
         /// </summary>
         /// <param name="req"><see cref="CreateReleaseRequest"/></param>
@@ -176,6 +197,48 @@ namespace TencentCloud.Adp.V20260520
         public CreateReleaseResponse CreateReleaseSync(CreateReleaseRequest req)
         {
             return InternalRequestAsync<CreateReleaseResponse>(req, "CreateRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建skill
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillRequest"/></param>
+        /// <returns><see cref="CreateSkillResponse"/></returns>
+        public Task<CreateSkillResponse> CreateSkill(CreateSkillRequest req)
+        {
+            return InternalRequestAsync<CreateSkillResponse>(req, "CreateSkill");
+        }
+
+        /// <summary>
+        /// 创建skill
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillRequest"/></param>
+        /// <returns><see cref="CreateSkillResponse"/></returns>
+        public CreateSkillResponse CreateSkillSync(CreateSkillRequest req)
+        {
+            return InternalRequestAsync<CreateSkillResponse>(req, "CreateSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillShareRequest"/></param>
+        /// <returns><see cref="CreateSkillShareResponse"/></returns>
+        public Task<CreateSkillShareResponse> CreateSkillShare(CreateSkillShareRequest req)
+        {
+            return InternalRequestAsync<CreateSkillShareResponse>(req, "CreateSkillShare");
+        }
+
+        /// <summary>
+        /// 提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillShareRequest"/></param>
+        /// <returns><see cref="CreateSkillShareResponse"/></returns>
+        public CreateSkillShareResponse CreateSkillShareSync(CreateSkillShareRequest req)
+        {
+            return InternalRequestAsync<CreateSkillShareResponse>(req, "CreateSkillShare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -264,6 +327,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 删除Agent
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentRequest"/></param>
+        /// <returns><see cref="DeleteAgentResponse"/></returns>
+        public Task<DeleteAgentResponse> DeleteAgent(DeleteAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentResponse>(req, "DeleteAgent");
+        }
+
+        /// <summary>
+        /// 删除Agent
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentRequest"/></param>
+        /// <returns><see cref="DeleteAgentResponse"/></returns>
+        public DeleteAgentResponse DeleteAgentSync(DeleteAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentResponse>(req, "DeleteAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除应用
         /// </summary>
         /// <param name="req"><see cref="DeleteAppRequest"/></param>
@@ -302,6 +386,69 @@ namespace TencentCloud.Adp.V20260520
         public DeleteConversationResponse DeleteConversationSync(DeleteConversationRequest req)
         {
             return InternalRequestAsync<DeleteConversationResponse>(req, "DeleteConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改插件
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public Task<DeletePluginResponse> DeletePlugin(DeletePluginRequest req)
+        {
+            return InternalRequestAsync<DeletePluginResponse>(req, "DeletePlugin");
+        }
+
+        /// <summary>
+        /// 修改插件
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public DeletePluginResponse DeletePluginSync(DeletePluginRequest req)
+        {
+            return InternalRequestAsync<DeletePluginResponse>(req, "DeletePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillRequest"/></param>
+        /// <returns><see cref="DeleteSkillResponse"/></returns>
+        public Task<DeleteSkillResponse> DeleteSkill(DeleteSkillRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillResponse>(req, "DeleteSkill");
+        }
+
+        /// <summary>
+        /// 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillRequest"/></param>
+        /// <returns><see cref="DeleteSkillResponse"/></returns>
+        public DeleteSkillResponse DeleteSkillSync(DeleteSkillRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillResponse>(req, "DeleteSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillShareRequest"/></param>
+        /// <returns><see cref="DeleteSkillShareResponse"/></returns>
+        public Task<DeleteSkillShareResponse> DeleteSkillShare(DeleteSkillShareRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillShareResponse>(req, "DeleteSkillShare");
+        }
+
+        /// <summary>
+        /// 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSkillShareRequest"/></param>
+        /// <returns><see cref="DeleteSkillShareResponse"/></returns>
+        public DeleteSkillShareResponse DeleteSkillShareSync(DeleteSkillShareRequest req)
+        {
+            return InternalRequestAsync<DeleteSkillShareResponse>(req, "DeleteSkillShare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +533,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeAgentReleasePreviewListResponse DescribeAgentReleasePreviewListSync(DescribeAgentReleasePreviewListRequest req)
         {
             return InternalRequestAsync<DescribeAgentReleasePreviewListResponse>(req, "DescribeAgentReleasePreviewList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Agent 摘要信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeAgentSummaryListResponse"/></returns>
+        public Task<DescribeAgentSummaryListResponse> DescribeAgentSummaryList(DescribeAgentSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentSummaryListResponse>(req, "DescribeAgentSummaryList");
+        }
+
+        /// <summary>
+        /// 查询 Agent 摘要信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeAgentSummaryListResponse"/></returns>
+        public DescribeAgentSummaryListResponse DescribeAgentSummaryListSync(DescribeAgentSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentSummaryListResponse>(req, "DescribeAgentSummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +810,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查询skill详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public Task<DescribeSkillDetailResponse> DescribeSkillDetail(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail");
+        }
+
+        /// <summary>
+        /// 查询skill详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public DescribeSkillDetailResponse DescribeSkillDetailSync(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询某个 Skill 被引用的详情列表（按 SkillRefType 分组：OpenClaw / cloud agent / 企业助手 agent） 鉴权：同 DescribeSkillDetail（能看该 Skill 即可查）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillReferenceListRequest"/></param>
+        /// <returns><see cref="DescribeSkillReferenceListResponse"/></returns>
+        public Task<DescribeSkillReferenceListResponse> DescribeSkillReferenceList(DescribeSkillReferenceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillReferenceListResponse>(req, "DescribeSkillReferenceList");
+        }
+
+        /// <summary>
+        /// 查询某个 Skill 被引用的详情列表（按 SkillRefType 分组：OpenClaw / cloud agent / 企业助手 agent） 鉴权：同 DescribeSkillDetail（能看该 Skill 即可查）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillReferenceListRequest"/></param>
+        /// <returns><see cref="DescribeSkillReferenceListResponse"/></returns>
+        public DescribeSkillReferenceListResponse DescribeSkillReferenceListSync(DescribeSkillReferenceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillReferenceListResponse>(req, "DescribeSkillReferenceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 Skill 列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillSummaryListRequest"/></param>
@@ -747,6 +957,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 收藏插件
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePluginRequest"/></param>
+        /// <returns><see cref="FavoritePluginResponse"/></returns>
+        public Task<FavoritePluginResponse> FavoritePlugin(FavoritePluginRequest req)
+        {
+            return InternalRequestAsync<FavoritePluginResponse>(req, "FavoritePlugin");
+        }
+
+        /// <summary>
+        /// 收藏插件
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePluginRequest"/></param>
+        /// <returns><see cref="FavoritePluginResponse"/></returns>
+        public FavoritePluginResponse FavoritePluginSync(FavoritePluginRequest req)
+        {
+            return InternalRequestAsync<FavoritePluginResponse>(req, "FavoritePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 收藏skill
+        /// </summary>
+        /// <param name="req"><see cref="FavoriteSkillRequest"/></param>
+        /// <returns><see cref="FavoriteSkillResponse"/></returns>
+        public Task<FavoriteSkillResponse> FavoriteSkill(FavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill");
+        }
+
+        /// <summary>
+        /// 收藏skill
+        /// </summary>
+        /// <param name="req"><see cref="FavoriteSkillRequest"/></param>
+        /// <returns><see cref="FavoriteSkillResponse"/></returns>
+        public FavoriteSkillResponse FavoriteSkillSync(FavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改Agent配置信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAgentRequest"/></param>
@@ -810,6 +1062,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 修改插件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public Task<ModifyPluginResponse> ModifyPlugin(ModifyPluginRequest req)
+        {
+            return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin");
+        }
+
+        /// <summary>
+        /// 修改插件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
+        {
+            return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Skill修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillRequest"/></param>
+        /// <returns><see cref="ModifySkillResponse"/></returns>
+        public Task<ModifySkillResponse> ModifySkill(ModifySkillRequest req)
+        {
+            return InternalRequestAsync<ModifySkillResponse>(req, "ModifySkill");
+        }
+
+        /// <summary>
+        /// Skill修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillRequest"/></param>
+        /// <returns><see cref="ModifySkillResponse"/></returns>
+        public ModifySkillResponse ModifySkillSync(ModifySkillRequest req)
+        {
+            return InternalRequestAsync<ModifySkillResponse>(req, "ModifySkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 编辑空间
         /// </summary>
         /// <param name="req"><see cref="ModifySpaceRequest"/></param>
@@ -848,6 +1142,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyVariableResponse ModifyVariableSync(ModifyVariableRequest req)
         {
             return InternalRequestAsync<ModifyVariableResponse>(req, "ModifyVariable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上架skill
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseSkillRequest"/></param>
+        /// <returns><see cref="ReleaseSkillResponse"/></returns>
+        public Task<ReleaseSkillResponse> ReleaseSkill(ReleaseSkillRequest req)
+        {
+            return InternalRequestAsync<ReleaseSkillResponse>(req, "ReleaseSkill");
+        }
+
+        /// <summary>
+        /// 上架skill
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseSkillRequest"/></param>
+        /// <returns><see cref="ReleaseSkillResponse"/></returns>
+        public ReleaseSkillResponse ReleaseSkillSync(ReleaseSkillRequest req)
+        {
+            return InternalRequestAsync<ReleaseSkillResponse>(req, "ReleaseSkill")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -911,6 +1226,48 @@ namespace TencentCloud.Adp.V20260520
         public RollbackReleaseResponse RollbackReleaseSync(RollbackReleaseRequest req)
         {
             return InternalRequestAsync<RollbackReleaseResponse>(req, "RollbackRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消收藏插件
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePluginRequest"/></param>
+        /// <returns><see cref="UnfavoritePluginResponse"/></returns>
+        public Task<UnfavoritePluginResponse> UnfavoritePlugin(UnfavoritePluginRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePluginResponse>(req, "UnfavoritePlugin");
+        }
+
+        /// <summary>
+        /// 取消收藏插件
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePluginRequest"/></param>
+        /// <returns><see cref="UnfavoritePluginResponse"/></returns>
+        public UnfavoritePluginResponse UnfavoritePluginSync(UnfavoritePluginRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePluginResponse>(req, "UnfavoritePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消收藏skill
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoriteSkillRequest"/></param>
+        /// <returns><see cref="UnfavoriteSkillResponse"/></returns>
+        public Task<UnfavoriteSkillResponse> UnfavoriteSkill(UnfavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<UnfavoriteSkillResponse>(req, "UnfavoriteSkill");
+        }
+
+        /// <summary>
+        /// 取消收藏skill
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoriteSkillRequest"/></param>
+        /// <returns><see cref="UnfavoriteSkillResponse"/></returns>
+        public UnfavoriteSkillResponse UnfavoriteSkillSync(UnfavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<UnfavoriteSkillResponse>(req, "UnfavoriteSkill")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

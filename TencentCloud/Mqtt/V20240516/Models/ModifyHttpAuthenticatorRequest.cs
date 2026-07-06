@@ -84,6 +84,12 @@ namespace TencentCloud.Mqtt.V20240516.Models
         [JsonProperty("Body")]
         public BodyItem[] Body{ get; set; }
 
+        /// <summary>
+        /// 连接UserProperty作为Header转发，默认false
+        /// </summary>
+        [JsonProperty("IncludingUserProperties")]
+        public bool? IncludingUserProperties{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArrayObj(map, prefix + "Header.", this.Header);
             this.SetParamArrayObj(map, prefix + "Body.", this.Body);
+            this.SetParamSimple(map, prefix + "IncludingUserProperties", this.IncludingUserProperties);
         }
     }
 }

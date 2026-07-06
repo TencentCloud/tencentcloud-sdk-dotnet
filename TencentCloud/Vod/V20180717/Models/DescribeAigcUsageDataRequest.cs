@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+        /// <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
         /// </summary>
         [JsonProperty("AigcType")]
         public string AigcType{ get; set; }
@@ -60,6 +60,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("APIKeys")]
         public string[] APIKeys{ get; set; }
 
+        /// <summary>
+        /// <p>查询游标</p>
+        /// </summary>
+        [JsonProperty("ScrollToken")]
+        public string ScrollToken{ get; set; }
+
+        /// <summary>
+        /// <p>每页大小，最大 200，超出会被截断为 200</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+        /// </summary>
+        [JsonProperty("ReqId")]
+        public string ReqId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
+            this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ReqId", this.ReqId);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 标签名称
+        /// 标签键。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标签内容
+        /// 标签值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

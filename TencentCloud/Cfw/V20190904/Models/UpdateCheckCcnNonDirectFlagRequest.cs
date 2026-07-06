@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 云联网ID
+        /// <p>云联网ID</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }

@@ -25,131 +25,136 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
+        /// <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p>
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
-        /// 总资源核数 = 总防护核数 + 未防护核数
+        /// <p>总资源核数 = 总防护核数 + 未防护核数</p>
         /// </summary>
         [JsonProperty("AllCoresCnt")]
         public ulong? AllCoresCnt{ get; set; }
 
         /// <summary>
-        /// 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
+        /// <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p>
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
         /// <summary>
-        /// 未防护核数(未开启防护资源核数)
+        /// <p>未防护核数(未开启防护资源核数)</p>
         /// </summary>
         [JsonProperty("UndefendCoresCnt")]
         public ulong? UndefendCoresCnt{ get; set; }
 
         /// <summary>
-        /// 已购买核数
+        /// <p>已购买核数</p>
         /// </summary>
         [JsonProperty("AuthorizedCoresCnt")]
         public ulong? AuthorizedCoresCnt{ get; set; }
 
         /// <summary>
-        /// 试用赠送专业版核心数
+        /// <p>试用赠送专业版核心数</p>
         /// </summary>
         [JsonProperty("GivenAuthorizedCoresCnt")]
         public long? GivenAuthorizedCoresCnt{ get; set; }
 
         /// <summary>
-        /// 当前弹性计费核数数量
+        /// <p>当前弹性计费核数数量</p>
         /// </summary>
         [JsonProperty("CurrentFlexibleCoresCnt")]
         public ulong? CurrentFlexibleCoresCnt{ get; set; }
 
         /// <summary>
-        /// 镜像数
+        /// <p>镜像数</p>
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
 
         /// <summary>
-        /// 已授权镜像数
+        /// <p>已授权镜像数</p>
         /// </summary>
         [JsonProperty("AuthorizedImageCnt")]
         public ulong? AuthorizedImageCnt{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpirationTime")]
         public string ExpirationTime{ get; set; }
 
         /// <summary>
-        /// 已购买镜像授权数
+        /// <p>已购买镜像授权数</p>
         /// </summary>
         [JsonProperty("PurchasedAuthorizedCnt")]
         public ulong? PurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("AutomaticRenewal")]
         public long? AutomaticRenewal{ get; set; }
 
         /// <summary>
-        /// 试用期间赠送镜像授权数，可能会过期
+        /// <p>试用期间赠送镜像授权数，可能会过期</p>
         /// </summary>
         [JsonProperty("GivenAuthorizedCnt")]
         public ulong? GivenAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 起始时间
+        /// <p>起始时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 子状态(具体意义依据State字段而定)
-        /// State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+        /// <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p>
         /// </summary>
         [JsonProperty("SubState")]
         public string SubState{ get; set; }
 
         /// <summary>
-        /// 计费key
+        /// <p>计费key</p>
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// 防护策略
+        /// <p>防护策略</p>
         /// </summary>
         [JsonProperty("DefendPolicy")]
         public string DefendPolicy{ get; set; }
 
         /// <summary>
-        /// 弹性计费核数上限
+        /// <p>弹性计费核数上限</p>
         /// </summary>
         [JsonProperty("FlexibleCoresLimit")]
         public ulong? FlexibleCoresLimit{ get; set; }
 
         /// <summary>
-        /// 已防护集群核数
+        /// <p>已防护集群核数</p>
         /// </summary>
         [JsonProperty("DefendClusterCoresCnt")]
         public ulong? DefendClusterCoresCnt{ get; set; }
 
         /// <summary>
-        /// 已防护主机核数
+        /// <p>已防护主机核数</p>
         /// </summary>
         [JsonProperty("DefendHostCoresCnt")]
         public ulong? DefendHostCoresCnt{ get; set; }
 
         /// <summary>
-        /// 试用的专业版核数
+        /// <p>试用的专业版核数</p>
         /// </summary>
         [JsonProperty("TrialCoresCnt")]
         public ulong? TrialCoresCnt{ get; set; }
+
+        /// <summary>
+        /// <p>无容器核数</p>
+        /// </summary>
+        [JsonProperty("NoContainerCoresCnt")]
+        public ulong? NoContainerCoresCnt{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -184,6 +189,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
             this.SetParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
             this.SetParamSimple(map, prefix + "TrialCoresCnt", this.TrialCoresCnt);
+            this.SetParamSimple(map, prefix + "NoContainerCoresCnt", this.NoContainerCoresCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

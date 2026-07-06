@@ -25,61 +25,61 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+        /// <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+        /// <p>校验任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
         /// </summary>
         [JsonProperty("CompareTaskId")]
         public string CompareTaskId{ get; set; }
 
         /// <summary>
-        /// 校验不一致结果的 limit
+        /// <p>校验不一致结果的 limit</p>
         /// </summary>
         [JsonProperty("DifferenceLimit")]
         public ulong? DifferenceLimit{ get; set; }
 
         /// <summary>
-        /// 不一致的 Offset
+        /// <p>不一致的 Offset</p>
         /// </summary>
         [JsonProperty("DifferenceOffset")]
         public ulong? DifferenceOffset{ get; set; }
 
         /// <summary>
-        /// 搜索条件，不一致的库名
+        /// <p>搜索条件，不一致的库名</p>
         /// </summary>
         [JsonProperty("DifferenceDB")]
         public string DifferenceDB{ get; set; }
 
         /// <summary>
-        /// 搜索条件，不一致的表名
+        /// <p>搜索条件，不一致的表名</p>
         /// </summary>
         [JsonProperty("DifferenceTable")]
         public string DifferenceTable{ get; set; }
 
         /// <summary>
-        /// 未校验的 Limit
+        /// <p>未校验的 Limit</p>
         /// </summary>
         [JsonProperty("SkippedLimit")]
         public ulong? SkippedLimit{ get; set; }
 
         /// <summary>
-        /// 未校验的 Offset
+        /// <p>未校验的 Offset</p>
         /// </summary>
         [JsonProperty("SkippedOffset")]
         public ulong? SkippedOffset{ get; set; }
 
         /// <summary>
-        /// 搜索条件，未校验的库名
+        /// <p>搜索条件，未校验的库名</p>
         /// </summary>
         [JsonProperty("SkippedDB")]
         public string SkippedDB{ get; set; }
 
         /// <summary>
-        /// 搜索条件，未校验的表名
+        /// <p>搜索条件，未校验的表名</p>
         /// </summary>
         [JsonProperty("SkippedTable")]
         public string SkippedTable{ get; set; }

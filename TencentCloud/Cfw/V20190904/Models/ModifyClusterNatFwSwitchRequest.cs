@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// NAT CCN防火墙开关配置
+        /// <p>NAT CCN防火墙开关配置</p>
         /// </summary>
         [JsonProperty("NatCcnSwitch")]
         public NatCcnSwitchConfig NatCcnSwitch{ get; set; }

@@ -42,6 +42,18 @@ namespace TencentCloud.Rce.V20250425.Models
         [JsonProperty("RiskType")]
         public long?[] RiskType{ get; set; }
 
+        /// <summary>
+        /// <p>IP地理位置信息</p>
+        /// </summary>
+        [JsonProperty("IpLocation")]
+        public IpLocationInfo IpLocation{ get; set; }
+
+        /// <summary>
+        /// <p>IP基础网络信息</p>
+        /// </summary>
+        [JsonProperty("IpNetwork")]
+        public IpNetworkInfo IpNetwork{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Rce.V20250425.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "RiskScore", this.RiskScore);
             this.SetParamArraySimple(map, prefix + "RiskType.", this.RiskType);
+            this.SetParamObj(map, prefix + "IpLocation.", this.IpLocation);
+            this.SetParamObj(map, prefix + "IpNetwork.", this.IpNetwork);
         }
     }
 }

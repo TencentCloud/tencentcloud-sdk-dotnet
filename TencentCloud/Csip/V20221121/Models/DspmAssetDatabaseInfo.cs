@@ -25,55 +25,55 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产实例id
+        /// <p>资产实例id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 总表数
+        /// <p>总表数</p>
         /// </summary>
         [JsonProperty("TableCount")]
         public ulong? TableCount{ get; set; }
 
         /// <summary>
-        /// 敏感表数
+        /// <p>敏感表数</p>
         /// </summary>
         [JsonProperty("SensitiveTableCount")]
         public ulong? SensitiveTableCount{ get; set; }
 
         /// <summary>
-        /// 数据项id集合
+        /// <p>数据项id集合</p>
         /// </summary>
         [JsonProperty("RuleIds")]
         public ulong?[] RuleIds{ get; set; }
 
         /// <summary>
-        /// 数据项名称集合
+        /// <p>数据项名称集合</p>
         /// </summary>
         [JsonProperty("RuleNames")]
         public string[] RuleNames{ get; set; }
 
         /// <summary>
-        /// 分类id集合
+        /// <p>分类id集合</p>
         /// </summary>
         [JsonProperty("CategoryIds")]
         public ulong?[] CategoryIds{ get; set; }
 
         /// <summary>
-        /// 分类名称集合
+        /// <p>分类名称集合</p>
         /// </summary>
         [JsonProperty("CategoryNames")]
         public string[] CategoryNames{ get; set; }
 
         /// <summary>
-        /// 分类详情
+        /// <p>分类详情</p>
         /// </summary>
         [JsonProperty("CategoryDetails")]
         public DspmIdentifyCategoryDetail[] CategoryDetails{ get; set; }

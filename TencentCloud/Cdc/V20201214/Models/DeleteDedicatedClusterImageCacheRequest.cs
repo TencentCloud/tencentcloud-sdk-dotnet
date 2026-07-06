@@ -25,13 +25,13 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// 镜像id
+        /// <p>镜像id</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

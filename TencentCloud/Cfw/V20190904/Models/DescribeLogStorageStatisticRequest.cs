@@ -24,12 +24,26 @@ namespace TencentCloud.Cfw.V20190904.Models
     public class DescribeLogStorageStatisticRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

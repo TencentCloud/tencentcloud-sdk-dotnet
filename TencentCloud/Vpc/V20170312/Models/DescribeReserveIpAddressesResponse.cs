@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 内网保留 IP返回信息。
+        /// <p>内网保留 IP返回信息。</p>
         /// </summary>
         [JsonProperty("ReserveIpAddressSet")]
         public ReserveIpAddressInfo[] ReserveIpAddressSet{ get; set; }
 
         /// <summary>
-        /// 返回内网保留IP的个数。
+        /// <p>返回内网保留IP的个数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

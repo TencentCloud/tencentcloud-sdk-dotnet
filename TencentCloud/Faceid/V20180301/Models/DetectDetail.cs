@@ -25,107 +25,98 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 请求时间戳。
+        /// <p>请求时间戳。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReqTime")]
         public string ReqTime{ get; set; }
 
         /// <summary>
-        /// 本次活体一比一请求的唯一标记。
+        /// <p>本次活体一比一请求的唯一标记。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seq")]
         public string Seq{ get; set; }
 
         /// <summary>
-        /// 参与本次活体一比一的身份证号。
+        /// <p>参与本次活体一比一的身份证号。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Idcard")]
         public string Idcard{ get; set; }
 
         /// <summary>
-        /// 参与本次活体一比一的姓名。
+        /// <p>参与本次活体一比一的姓名。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 本次活体一比一的相似度。
+        /// <p>本次活体一比一的相似度。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sim")]
         public string Sim{ get; set; }
 
         /// <summary>
-        /// 本次活体一比一是否收费
+        /// <p>本次活体一比一是否收费</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNeedCharge")]
         public bool? IsNeedCharge{ get; set; }
 
         /// <summary>
-        /// 本次活体一比一最终结果。0为成功
+        /// <p>本次活体一比一最终结果。0为成功</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errcode")]
         public long? Errcode{ get; set; }
 
         /// <summary>
-        /// 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+        /// <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errmsg")]
         public string Errmsg{ get; set; }
 
         /// <summary>
-        /// 本次活体结果。0为成功
+        /// <p>本次活体结果。0为成功</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Livestatus")]
         public long? Livestatus{ get; set; }
 
         /// <summary>
-        /// 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+        /// <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Livemsg")]
         public string Livemsg{ get; set; }
 
         /// <summary>
-        /// 本次一比一结果。0为成功
+        /// <p>本次一比一结果。0为成功</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comparestatus")]
         public long? Comparestatus{ get; set; }
 
         /// <summary>
-        /// 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+        /// <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comparemsg")]
         public string Comparemsg{ get; set; }
 
         /// <summary>
-        /// 比对库源类型。包括：
-        /// 公安商业库；
-        /// 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-        /// 二次验证库；
-        /// 人工审核库；
+        /// <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareLibType")]
         public string CompareLibType{ get; set; }
 
         /// <summary>
-        /// 枚举活体检测类型：
-        /// 0：未知
-        /// 1：数字活体
-        /// 2：动作活体
-        /// 3：静默活体
-        /// 4：一闪活体（动作+光线）
+        /// <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivenessMode")]

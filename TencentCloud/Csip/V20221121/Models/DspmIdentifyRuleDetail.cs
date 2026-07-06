@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 数据项id
+        /// <p>数据项id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// 数据项名称
+        /// <p>数据项名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 敏感级别id
+        /// <p>敏感级别id</p>
         /// </summary>
         [JsonProperty("LevelId")]
         public ulong? LevelId{ get; set; }
 
         /// <summary>
-        /// 敏感级别名称
+        /// <p>敏感级别名称</p>
         /// </summary>
         [JsonProperty("LevelName")]
         public string LevelName{ get; set; }
 
         /// <summary>
-        /// 敏感程度
+        /// <p>敏感程度</p>
         /// </summary>
         [JsonProperty("LevelScore")]
         public ulong? LevelScore{ get; set; }

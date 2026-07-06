@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 屏蔽规则的Id
+        /// <p>屏蔽规则的Id</p>
         /// </summary>
         [JsonProperty("ShieldId")]
         public string ShieldId{ get; set; }

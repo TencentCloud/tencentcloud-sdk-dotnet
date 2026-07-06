@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产统计信息
+        /// <p>资产统计信息</p>
         /// </summary>
         [JsonProperty("AssetCount")]
         public DspmAssetCount AssetCount{ get; set; }
 
         /// <summary>
-        /// 访问Ip统计信息
+        /// <p>访问Ip统计信息</p>
         /// </summary>
         [JsonProperty("IpCount")]
         public DspmIpCount IpCount{ get; set; }
 
         /// <summary>
-        /// 用户账号统计信息
+        /// <p>用户账号统计信息</p>
         /// </summary>
         [JsonProperty("UserCount")]
         public DspmAccountCount UserCount{ get; set; }
 
         /// <summary>
-        /// 风险统计信息
+        /// <p>风险统计信息</p>
         /// </summary>
         [JsonProperty("RiskCount")]
         public DspmRiskCount RiskCount{ get; set; }
 
         /// <summary>
-        /// 资产安全分析统计信息
+        /// <p>资产安全分析统计信息</p>
         /// </summary>
         [JsonProperty("AnalyseAssetStatusCount")]
         public DspmSecurityAnalyseStatusCount AnalyseAssetStatusCount{ get; set; }

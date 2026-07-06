@@ -25,13 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
+        /// <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
         /// </summary>
         [JsonProperty("DictType")]
         public string DictType{ get; set; }
 
         /// <summary>
-        /// 筛选条件
+        /// <p>集团账号的成员id</p>
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>筛选条件</p>
         /// </summary>
         [JsonProperty("Filters")]
         public WhereFilter[] Filters{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DictType", this.DictType);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

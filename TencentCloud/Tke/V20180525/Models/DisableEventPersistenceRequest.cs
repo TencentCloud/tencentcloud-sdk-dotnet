@@ -25,16 +25,22 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+        /// <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
         /// </summary>
         [JsonProperty("DeleteLogSetAndTopic")]
         public bool? DeleteLogSetAndTopic{ get; set; }
+
+        /// <summary>
+        /// <p>集群类型 tke/eks</p><p>默认值：tke</p>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DeleteLogSetAndTopic", this.DeleteLogSetAndTopic);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

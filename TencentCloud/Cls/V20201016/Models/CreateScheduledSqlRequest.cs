@@ -25,82 +25,94 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// 任务名称，0~255字符
+        /// <p>任务名称，0~255字符</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务启动状态.  1开启,  2关闭
+        /// <p>任务启动状态.  1开启,  2关闭</p>
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// 定时SQL分析目标日志主题
+        /// <p>定时SQL分析目标日志主题</p>
         /// </summary>
         [JsonProperty("DstResource")]
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// 查询语句
+        /// <p>查询语句</p>
         /// </summary>
         [JsonProperty("ScheduledSqlContent")]
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// 调度开始时间,Unix时间戳，单位ms
+        /// <p>调度开始时间,Unix时间戳，单位ms</p>
         /// </summary>
         [JsonProperty("ProcessStartTime")]
         public ulong? ProcessStartTime{ get; set; }
 
         /// <summary>
-        /// 调度类型，1:持续运行 2:指定时间范围
+        /// <p>调度类型，1:持续运行 2:指定时间范围</p>
         /// </summary>
         [JsonProperty("ProcessType")]
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// 调度周期(分钟)，1~1440分钟
+        /// <p>调度周期(分钟)，1~1440分钟</p>
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
 
         /// <summary>
-        /// 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+        /// <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
         /// </summary>
         [JsonProperty("ProcessTimeWindow")]
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// 执行延迟(秒)，0~120秒，默认60秒
+        /// <p>执行延迟(秒)，0~120秒，默认60秒</p>
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+        /// <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
+        /// <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
         /// </summary>
         [JsonProperty("ProcessEndTime")]
         public ulong? ProcessEndTime{ get; set; }
 
         /// <summary>
-        /// 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+        /// <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+        /// </summary>
+        [JsonProperty("FullQuery")]
+        public ulong? FullQuery{ get; set; }
 
 
         /// <summary>
@@ -121,6 +133,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
             this.SetParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
         }
     }
 }

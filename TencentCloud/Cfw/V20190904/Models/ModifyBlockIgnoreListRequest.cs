@@ -25,34 +25,40 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 1封禁列表 2 放通列表
+        /// <p>1封禁列表 2 放通列表</p>
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
         /// <summary>
-        /// IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+        /// <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
         /// </summary>
         [JsonProperty("IOC")]
         public IocListData[] IOC{ get; set; }
 
         /// <summary>
-        /// 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+        /// <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
         /// </summary>
         [JsonProperty("IocAction")]
         public string IocAction{ get; set; }
 
         /// <summary>
-        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+        /// <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+        /// <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+        /// </summary>
+        [JsonProperty("IsFromWeChat")]
+        public long? IsFromWeChat{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "IocAction", this.IocAction);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "IsFromWeChat", this.IsFromWeChat);
         }
     }
 }

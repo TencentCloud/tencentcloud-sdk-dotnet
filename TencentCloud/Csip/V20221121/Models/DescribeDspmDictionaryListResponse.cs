@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 结果集
+        /// <p>结果集</p>
         /// </summary>
         [JsonProperty("DataSet")]
         public DspmDictionary[] DataSet{ get; set; }

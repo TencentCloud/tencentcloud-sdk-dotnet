@@ -25,36 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 内网保留IP唯一ID 列表
+        /// <p>内网保留IP唯一ID 列表</p>
         /// </summary>
         [JsonProperty("ReserveIpIds")]
         public string[] ReserveIpIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-        /// 
-        /// reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-        /// vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-        /// subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-        /// address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-        /// ip-type - String - （过滤条件）业务类型 ipType，0。
-        /// name - String - （过滤条件）名称。
-        /// state - String - （过滤条件）状态，可选值：Bind， UnBind。
-        /// resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-        /// tag-key - String -（过滤条件）按照标签键进行过滤。
-        /// tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+        /// <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// <p>偏移量。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 请求对象个数。
+        /// <p>请求对象个数。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

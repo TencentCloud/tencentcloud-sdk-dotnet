@@ -25,40 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 插入形式，可选值：
-        /// <li>subtitle-stream：插入字幕轨道</li>
-        /// <li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-        /// <li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+        /// <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 字幕文件。
+        /// <p>字幕文件。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subtitle")]
         public MediaInputInfo Subtitle{ get; set; }
 
         /// <summary>
-        /// 字幕名称	。
-        /// 注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+        /// <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }
 
         /// <summary>
-        /// 字幕输出格式。取值{"WebVTT","TTML"}。
-        /// 默认值："WebVTT"
+        /// <p>字幕语言，比如：eng</p>
+        /// </summary>
+        [JsonProperty("SubtitleLanguage")]
+        public string SubtitleLanguage{ get; set; }
+
+        /// <summary>
+        /// <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
         /// </summary>
         [JsonProperty("OutputFormat")]
         public string OutputFormat{ get; set; }
 
         /// <summary>
-        /// 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-        /// 默认值：false
+        /// <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
         /// </summary>
         [JsonProperty("DefaultTrack")]
         public bool? DefaultTrack{ get; set; }
@@ -72,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
             this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+            this.SetParamSimple(map, prefix + "SubtitleLanguage", this.SubtitleLanguage);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }

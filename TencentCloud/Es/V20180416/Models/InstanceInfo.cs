@@ -235,6 +235,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string LicenseType{ get; set; }
 
         /// <summary>
+        /// <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealLicenseType")]
+        public string RealLicenseType{ get; set; }
+
+        /// <summary>
         /// <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -605,7 +612,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? DisasterRecoverGroupAffinity{ get; set; }
 
         /// <summary>
-        /// <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+        /// <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCode")]
@@ -688,6 +695,24 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DelayDestroyInterval")]
         public long? DelayDestroyInterval{ get; set; }
 
+        /// <summary>
+        /// <p>开启异常节点自动替换，0关闭，1开启</p>
+        /// </summary>
+        [JsonProperty("EnableAutoReplace")]
+        public long? EnableAutoReplace{ get; set; }
+
+        /// <summary>
+        /// <p>开启mtls，0关闭，1开启</p>
+        /// </summary>
+        [JsonProperty("OpenMTLS")]
+        public ulong? OpenMTLS{ get; set; }
+
+        /// <summary>
+        /// <p>证书类型</p>
+        /// </summary>
+        [JsonProperty("ServerCertSource")]
+        public string ServerCertSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -729,6 +754,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "RealLicenseType", this.RealLicenseType);
             this.SetParamSimple(map, prefix + "EnableHotWarmMode", this.EnableHotWarmMode);
             this.SetParamSimple(map, prefix + "WarmNodeType", this.WarmNodeType);
             this.SetParamSimple(map, prefix + "WarmNodeNum", this.WarmNodeNum);
@@ -795,6 +821,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RecycleLockEnabled", this.RecycleLockEnabled);
             this.SetParamSimple(map, prefix + "MayDestroyPoint", this.MayDestroyPoint);
             this.SetParamSimple(map, prefix + "DelayDestroyInterval", this.DelayDestroyInterval);
+            this.SetParamSimple(map, prefix + "EnableAutoReplace", this.EnableAutoReplace);
+            this.SetParamSimple(map, prefix + "OpenMTLS", this.OpenMTLS);
+            this.SetParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
         }
     }
 }

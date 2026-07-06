@@ -25,46 +25,52 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 客户端节点IP
+        /// <p>客户端节点IP</p>
         /// </summary>
         [JsonProperty("ClientNodeIp")]
         public string ClientNodeIp{ get; set; }
 
         /// <summary>
-        /// 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
+        /// <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 客户端节点类型，extend(扩展节点)，manager(管理节点)
+        /// <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }
 
         /// <summary>
-        /// 节点所属vpcid	
+        /// <p>节点所属vpcid</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 节点所属子网id
+        /// <p>节点所属子网id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// cvmId
+        /// <p>cvmId</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 自定义挂载点
+        /// <p>自定义挂载点</p>
         /// </summary>
         [JsonProperty("MountPoint")]
         public string MountPoint{ get; set; }
+
+        /// <summary>
+        /// <p>客户端集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "MountPoint", this.MountPoint);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

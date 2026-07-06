@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 结果集
+        /// <p>结果集</p>
         /// </summary>
         [JsonProperty("DataSet")]
         public DspmAssetDatabaseInfo[] DataSet{ get; set; }
