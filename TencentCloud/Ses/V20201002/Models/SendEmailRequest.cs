@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// <p>邮件主题</p>
+        /// <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }

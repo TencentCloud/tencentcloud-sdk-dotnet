@@ -28,7 +28,7 @@ namespace TencentCloud.Tmt.V20180321
 
        private const string endpoint = "tmt.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -81,29 +81,6 @@ namespace TencentCloud.Tmt.V20180321
         public ImageTranslateLLMResponse ImageTranslateLLMSync(ImageTranslateLLMRequest req)
         {
             return InternalRequestAsync<ImageTranslateLLMResponse>(req, "ImageTranslateLLM")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 腾讯翻译为合作伙伴提供文本翻译、文档翻译、交互翻译、AI同传等多种机器翻译服务，具有toB多行业解决方案。作为WMT世界机器翻译大赛冠军，翻译准确度值得信赖，其中，交互翻译能力是业界领先技术；腾讯同传是AI同传业界标杆。<br />
-        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
-        /// </summary>
-        /// <param name="req"><see cref="TextTranslateRequest"/></param>
-        /// <returns><see cref="TextTranslateResponse"/></returns>
-        public Task<TextTranslateResponse> TextTranslate(TextTranslateRequest req)
-        {
-            return InternalRequestAsync<TextTranslateResponse>(req, "TextTranslate");
-        }
-
-        /// <summary>
-        /// 腾讯翻译为合作伙伴提供文本翻译、文档翻译、交互翻译、AI同传等多种机器翻译服务，具有toB多行业解决方案。作为WMT世界机器翻译大赛冠军，翻译准确度值得信赖，其中，交互翻译能力是业界领先技术；腾讯同传是AI同传业界标杆。<br />
-        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
-        /// </summary>
-        /// <param name="req"><see cref="TextTranslateRequest"/></param>
-        /// <returns><see cref="TextTranslateResponse"/></returns>
-        public TextTranslateResponse TextTranslateSync(TextTranslateRequest req)
-        {
-            return InternalRequestAsync<TextTranslateResponse>(req, "TextTranslate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

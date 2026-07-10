@@ -25,19 +25,19 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 当前统计维度解析量小计
+        /// <p>当前统计维度解析量小计</p>
         /// </summary>
         [JsonProperty("Data")]
         public DomainAnalyticsDetail[] Data{ get; set; }
 
         /// <summary>
-        /// 域名解析量统计查询信息
+        /// <p>域名解析量统计查询信息</p>
         /// </summary>
         [JsonProperty("Info")]
         public DomainAnalyticsInfo Info{ get; set; }
 
         /// <summary>
-        /// 域名别名解析量统计信息
+        /// <p>域名别名解析量统计信息</p>
         /// </summary>
         [JsonProperty("AliasData")]
         public DomainAliasAnalyticsItem[] AliasData{ get; set; }

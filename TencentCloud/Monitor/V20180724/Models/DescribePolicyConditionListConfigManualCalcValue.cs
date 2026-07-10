@@ -25,35 +25,35 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// 固定值
+        /// <p>固定值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fixed")]
         public string Fixed{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// <p>最大值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// <p>最小值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// 是否必须
+        /// <p>是否必须</p>
         /// </summary>
         [JsonProperty("Need")]
         public bool? Need{ get; set; }

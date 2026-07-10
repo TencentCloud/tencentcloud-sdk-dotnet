@@ -25,38 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户组名
+        /// <p>用户组名</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 用户列表
+        /// <p>用户列表</p>
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// 用户组描述
+        /// <p>用户组描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 枚举类, ADD, DELETE, SYNC
-        /// 
-        /// 
-        /// 枚举类说明:
-        /// - ADD: 新增的批量用户, 多次新增相同的用户不会报错
-        /// - DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-        /// - SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-        /// 默认为SYNC
+        /// <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
         /// </summary>
         [JsonProperty("OperateAction")]
         public string OperateAction{ get; set; }

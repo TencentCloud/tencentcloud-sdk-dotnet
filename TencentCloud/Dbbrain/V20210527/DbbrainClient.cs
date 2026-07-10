@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public CreateDBDiagReportUrlResponse CreateDBDiagReportUrlSync(CreateDBDiagReportUrlRequest req)
         {
             return InternalRequestAsync<CreateDBDiagReportUrlResponse>(req, "CreateDBDiagReportUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对实例的某个诊断项设置忽略或取消忽略状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIgnoreDiagRecordRequest"/></param>
+        /// <returns><see cref="CreateIgnoreDiagRecordResponse"/></returns>
+        public Task<CreateIgnoreDiagRecordResponse> CreateIgnoreDiagRecord(CreateIgnoreDiagRecordRequest req)
+        {
+            return InternalRequestAsync<CreateIgnoreDiagRecordResponse>(req, "CreateIgnoreDiagRecord");
+        }
+
+        /// <summary>
+        /// 对实例的某个诊断项设置忽略或取消忽略状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIgnoreDiagRecordRequest"/></param>
+        /// <returns><see cref="CreateIgnoreDiagRecordResponse"/></returns>
+        public CreateIgnoreDiagRecordResponse CreateIgnoreDiagRecordSync(CreateIgnoreDiagRecordRequest req)
+        {
+            return InternalRequestAsync<CreateIgnoreDiagRecordResponse>(req, "CreateIgnoreDiagRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 事件名
+        /// <p>事件名</p>
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
-        /// 展示的事件名
+        /// <p>展示的事件名</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 告警策略类型
+        /// <p>告警策略类型</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

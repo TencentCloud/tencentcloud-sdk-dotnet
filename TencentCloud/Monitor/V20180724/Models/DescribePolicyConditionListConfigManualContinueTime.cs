@@ -25,21 +25,21 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 默认持续时间，单位：秒
+        /// <p>默认持续时间，单位：秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Default")]
         public long? Default{ get; set; }
 
         /// <summary>
-        /// 可选持续时间，单位：秒
+        /// <p>可选持续时间，单位：秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public long?[] Keys{ get; set; }
 
         /// <summary>
-        /// 是否必须
+        /// <p>是否必须</p>
         /// </summary>
         [JsonProperty("Need")]
         public bool? Need{ get; set; }

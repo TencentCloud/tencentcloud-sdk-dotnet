@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 加速地域信息。
+        /// <p>加速地域信息。</p>
         /// </summary>
         [JsonProperty("AccelerateAreaSet")]
         public AcceleratorAreas[] AccelerateAreaSet{ get; set; }
 
         /// <summary>
-        /// 实例个数。
+        /// <p>实例个数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

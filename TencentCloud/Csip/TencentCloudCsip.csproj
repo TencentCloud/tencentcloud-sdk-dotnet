@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1457</VersionPrefix>
+    <VersionPrefix>3.0.1459</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,12 +148,28 @@
     <Compile Include="V20221121\Models\CreateDspmApproveHistoryExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmAssetAccessTopologyExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmAssetAccessTopologyExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmAssetIdentifyInfoExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmAssetIdentifyInfoExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmAssetsExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmAssetsExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmExportTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmExportTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyCategoryRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyCategoryResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceCategoryRelationRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceCategoryRelationResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceGroupCopyRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceGroupCopyResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceGroupRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceGroupResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceRuleRelationRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyComplianceRuleRelationResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmIdentifyInfoListExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmIdentifyInfoListExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyLevelGroupRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyLevelGroupResponse.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyRuleRequest.cs" />
+    <Compile Include="V20221121\Models\CreateDspmIdentifyRuleResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmPersonalIdentifyRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmPersonalIdentifyResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmRiskExportJobRequest.cs" />
@@ -189,6 +205,18 @@
     <Compile Include="V20221121\Models\DeleteDspmBackupLogListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteDspmExportTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteDspmExportTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyCategoryRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyCategoryResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceCategoryRelationRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceCategoryRelationResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceGroupRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceGroupResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceRuleRelationRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyComplianceRuleRelationResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyLevelGroupRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyLevelGroupResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyRuleRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDspmIdentifyRuleResponse.cs" />
     <Compile Include="V20221121\Models\DeleteDspmPersonalIdentifyRequest.cs" />
     <Compile Include="V20221121\Models\DeleteDspmPersonalIdentifyResponse.cs" />
     <Compile Include="V20221121\Models\DeleteDspmRestoreLogListRequest.cs" />
@@ -299,6 +327,8 @@
     <Compile Include="V20221121\Models\DescribeCosIpInvokeLogResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCosIpInvokeRecordFileRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCosIpInvokeRecordFileResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCosObjectScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCosObjectScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCosOverviewRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCosOverviewResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCosPolicyRequest.cs" />
@@ -353,6 +383,10 @@
     <Compile Include="V20221121\Models\DescribeDspmAssetDatabasesResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmAssetFieldListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmAssetFieldListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmAssetFieldSamplesRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmAssetFieldSamplesResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmAssetIdentifyInfoListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmAssetIdentifyInfoListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmAssetIdsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmAssetIdsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmAssetLoginCredentialRequest.cs" />
@@ -373,12 +407,30 @@
     <Compile Include="V20221121\Models\DescribeDspmDictionaryListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmExportTaskRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmExportTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyCategoryListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyCategoryListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceCategoryRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceCategoryRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceGroupDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceGroupDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceGroupListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyComplianceGroupListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyDistributionStatisticsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyDistributionStatisticsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyIdListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyIdListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyInfoListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyInfoListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmIdentifyInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyLevelGroupListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyLevelGroupListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleTestResultRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDspmIdentifyRuleTestResultResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmLogListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDspmLogListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDspmPayInfoRequest.cs" />
@@ -544,6 +596,7 @@
     <Compile Include="V20221121\Models\DspmAccessRecord.cs" />
     <Compile Include="V20221121\Models\DspmAccessRecordId.cs" />
     <Compile Include="V20221121\Models\DspmAccountCount.cs" />
+    <Compile Include="V20221121\Models\DspmAddIdentifyLevelItem.cs" />
     <Compile Include="V20221121\Models\DspmApplyOrder.cs" />
     <Compile Include="V20221121\Models\DspmApproverOrder.cs" />
     <Compile Include="V20221121\Models\DspmApproverStep.cs" />
@@ -555,6 +608,8 @@
     <Compile Include="V20221121\Models\DspmAssetDataScanDetail.cs" />
     <Compile Include="V20221121\Models\DspmAssetDatabaseInfo.cs" />
     <Compile Include="V20221121\Models\DspmAssetFieldInfo.cs" />
+    <Compile Include="V20221121\Models\DspmAssetIdentifyInfo.cs" />
+    <Compile Include="V20221121\Models\DspmAssetIdentifyTaskStatus.cs" />
     <Compile Include="V20221121\Models\DspmAssetInstance.cs" />
     <Compile Include="V20221121\Models\DspmAssetSecurityAnalyseStatus.cs" />
     <Compile Include="V20221121\Models\DspmAssetTableInfo.cs" />
@@ -568,10 +623,21 @@
     <Compile Include="V20221121\Models\DspmFrequency.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyAssetStatistic.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyCategoryDetail.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyCategoryItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyCategoryRuleRelateDetailItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyCategoryRuleRelateItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyComplianceCategoryRelation.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyComplianceItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyComplianceRuleRelation.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyCount.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyIdItem.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyInfoItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyLevelGroupItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyLevelItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyRefComplianceInfo.cs" />
     <Compile Include="V20221121\Models\DspmIdentifyRuleDetail.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyRuleItem.cs" />
+    <Compile Include="V20221121\Models\DspmIdentifyRuleStructuredTestItem.cs" />
     <Compile Include="V20221121\Models\DspmIp.cs" />
     <Compile Include="V20221121\Models\DspmIpCount.cs" />
     <Compile Include="V20221121\Models\DspmPersonApplyHistoryItem.cs" />
@@ -585,6 +651,7 @@
     <Compile Include="V20221121\Models\DspmScheduleConfig.cs" />
     <Compile Include="V20221121\Models\DspmSecurityAnalyseStatusCount.cs" />
     <Compile Include="V20221121\Models\DspmSensitiveScanTaskConfig.cs" />
+    <Compile Include="V20221121\Models\DspmStatisticsItem.cs" />
     <Compile Include="V20221121\Models\DspmSupportedAssetType.cs" />
     <Compile Include="V20221121\Models\DspmTablePrivilege.cs" />
     <Compile Include="V20221121\Models\DspmUinUser.cs" />
@@ -642,10 +709,16 @@
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountRequest.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditObjectIdentifyStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditObjectIdentifyStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditObjectSampleRateRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditObjectSampleRateResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosMarkInfoRequest.cs" />
     <Compile Include="V20221121\Models\ModifyCosMarkInfoResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAccessRecordRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAccessRecordResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmApplyingIdentifyComplianceGroupRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmApplyingIdentifyComplianceGroupResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmApproveStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmApproveStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetAccountPrivilegesRequest.cs" />
@@ -654,14 +727,32 @@
     <Compile Include="V20221121\Models\ModifyDspmAssetAccountResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetDataScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetDataScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmAssetDataScanTaskStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmAssetDataScanTaskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetLogDeliverySwitchRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetLogDeliverySwitchResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetSecurityAnalysisSwitchRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmAssetSecurityAnalysisSwitchResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmBackupSettingRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmBackupSettingResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyCategoryRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyCategoryResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceGroupRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceGroupResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceGroupStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceGroupStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceRuleLevelInfoRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyComplianceRuleLevelInfoResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmIdentifyInfoRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmIdentifyInfoResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyLevelGroupRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyLevelGroupResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyLevelItemRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyLevelItemResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyRuleStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyDspmIdentifyRuleStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmIpInfoRequest.cs" />
     <Compile Include="V20221121\Models\ModifyDspmIpInfoResponse.cs" />
     <Compile Include="V20221121\Models\ModifyDspmPersonalIdentifyRequest.cs" />

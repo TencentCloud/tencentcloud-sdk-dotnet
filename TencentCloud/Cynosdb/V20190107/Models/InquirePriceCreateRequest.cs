@@ -25,72 +25,82 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 可用区,每个地域提供最佳实践
+        /// <p>可用区,每个地域提供最佳实践</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 购买计算节点个数
+        /// <p>购买计算节点个数</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+        /// <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
         /// </summary>
         [JsonProperty("InstancePayMode")]
         public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// 存储购买类型，可选值为：PREPAID, POSTPAID
+        /// <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// 实例设备类型，支持值如下：
-        /// - common：表示通用型
-        /// - exclusive：表示独享型
+        /// <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// CPU核数，PREPAID与POSTPAID实例类型必传
+        /// <p>CPU核数，PREPAID与POSTPAID实例类型必传</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存大小，单位G，PREPAID与POSTPAID实例类型必传
+        /// <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Ccu大小，serverless类型必传
+        /// <p>Ccu大小，serverless类型必传</p>
         /// </summary>
         [JsonProperty("Ccu")]
         public float? Ccu{ get; set; }
 
         /// <summary>
-        /// 存储大小，PREPAID存储类型必传
+        /// <p>存储大小，PREPAID存储类型必传</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 购买时长，PREPAID购买类型必传
+        /// <p>购买时长，PREPAID购买类型必传</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 时长单位，可选值为：m,d。PREPAID购买类型必传
+        /// <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p>
+        /// </summary>
+        [JsonProperty("StorageVersion")]
+        public string StorageVersion{ get; set; }
+
+        /// <summary>
+        /// <p>存储是否跨AZ，2.0存储架构下有效</p>
+        /// </summary>
+        [JsonProperty("IsMultiAz")]
+        public bool? IsMultiAz{ get; set; }
 
 
         /// <summary>
@@ -109,6 +119,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
+            this.SetParamSimple(map, prefix + "IsMultiAz", this.IsMultiAz);
         }
     }
 }

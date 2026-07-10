@@ -25,16 +25,22 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 镜像地址
+        /// <p>镜像地址</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 镜像仓库类型：`enterprise`、`personal`。
+        /// <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
         /// </summary>
         [JsonProperty("ImageRegistryType")]
         public string ImageRegistryType{ get; set; }
+
+        /// <summary>
+        /// <p>预热超时时长</p>
+        /// </summary>
+        [JsonProperty("TimeoutMinutes")]
+        public long? TimeoutMinutes{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+            this.SetParamSimple(map, prefix + "TimeoutMinutes", this.TimeoutMinutes);
         }
     }
 }

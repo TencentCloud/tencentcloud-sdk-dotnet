@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群实例ID
+        /// <p>集群实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// <p>密码</p>
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// 是否同步密码
+        /// <p>是否同步密码</p>
         /// </summary>
         [JsonProperty("SyncPwd")]
         public bool? SyncPwd{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据订阅实例的ID数组
+        /// <p>数据订阅实例的ID数组</p>
         /// </summary>
         [JsonProperty("SubscribeIds")]
         public string[] SubscribeIds{ get; set; }

@@ -25,32 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同流程ID，为32位字符串。
-        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-        /// 
-        /// 注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-        /// 
-        /// [点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+        /// <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 合同预览链接URL。
-        /// 
-        /// 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+        /// <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
 
         /// <summary>
-        /// 签署方信息，如角色ID、角色名称等
+        /// <p>签署方信息，如角色ID、角色名称等</p>
         /// </summary>
         [JsonProperty("Approvers")]
         public ApproverItem[] Approvers{ get; set; }
 
         /// <summary>
-        /// 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+        /// <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p>
         /// </summary>
         [JsonProperty("WorkflowInstanceId")]
         public string WorkflowInstanceId{ get; set; }

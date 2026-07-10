@@ -25,43 +25,43 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 加速地域。
+        /// <p>加速地域。</p>
         /// </summary>
         [JsonProperty("AccelerateRegion")]
         public string AccelerateRegion{ get; set; }
 
         /// <summary>
-        /// 带宽。
+        /// <p>带宽。</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 支持'BGP', '三网', '精品'，默认BGP。
+        /// <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
         /// </summary>
         [JsonProperty("IspType")]
         public string IspType{ get; set; }
 
         /// <summary>
-        /// 仅支持IPv4，默认是IPv4。
+        /// <p>仅支持IPv4，默认是IPv4。</p>
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }
 
         /// <summary>
-        /// 加速地域ID。
+        /// <p>加速地域ID。</p>
         /// </summary>
         [JsonProperty("AcceleratorAreaId")]
         public string AcceleratorAreaId{ get; set; }
 
         /// <summary>
-        /// IP。
+        /// <p>IP。</p>
         /// </summary>
         [JsonProperty("IpAddress")]
         public string[] IpAddress{ get; set; }
 
         /// <summary>
-        /// IP信息。
+        /// <p>IP信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpAddressInfoSet")]

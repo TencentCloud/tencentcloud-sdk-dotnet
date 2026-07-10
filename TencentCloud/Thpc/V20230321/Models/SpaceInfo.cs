@@ -25,90 +25,102 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 工作空间ID
+        /// <p>工作空间ID</p>
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 工作空间类型
+        /// <p>工作空间类别</p>
+        /// </summary>
+        [JsonProperty("SpaceClass")]
+        public string SpaceClass{ get; set; }
+
+        /// <summary>
+        /// <p>工作空间类型</p>
         /// </summary>
         [JsonProperty("SpaceFamily")]
         public string SpaceFamily{ get; set; }
 
         /// <summary>
-        /// 工作空间规格
+        /// <p>工作空间规格</p>
         /// </summary>
         [JsonProperty("SpaceType")]
         public string SpaceType{ get; set; }
 
         /// <summary>
-        /// 工作空间名称
+        /// <p>工作空间名称</p>
         /// </summary>
         [JsonProperty("SpaceName")]
         public string SpaceName{ get; set; }
 
         /// <summary>
-        /// 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li>
+        /// <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p>
         /// </summary>
         [JsonProperty("SpaceState")]
         public string SpaceState{ get; set; }
 
         /// <summary>
-        /// 工作空间计费模式
+        /// <p>工作空间计费模式</p>
         /// </summary>
         [JsonProperty("SpaceChargeType")]
         public string SpaceChargeType{ get; set; }
 
         /// <summary>
-        /// 工作空间对应资源ID
+        /// <p>工作空间对应资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 自动续费标识
+        /// <p>自动续费标识</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 工作空间关联的工作列表
+        /// <p>工作空间关联的工作列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// <p>到期时间</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 工作空间所在位置
+        /// <p>工作空间所在位置</p>
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 工作空间的最新操作
+        /// <p>工作空间的最新操作</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// 工作空间的最新操作状态
+        /// <p>工作空间的最新操作状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
+
+        /// <summary>
+        /// <p>实例的内网IP</p>
+        /// </summary>
+        [JsonProperty("PrivateIpAddresses")]
+        public string[] PrivateIpAddresses{ get; set; }
 
 
         /// <summary>
@@ -117,6 +129,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "SpaceClass", this.SpaceClass);
             this.SetParamSimple(map, prefix + "SpaceFamily", this.SpaceFamily);
             this.SetParamSimple(map, prefix + "SpaceType", this.SpaceType);
             this.SetParamSimple(map, prefix + "SpaceName", this.SpaceName);
@@ -130,6 +143,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+            this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         }
     }
 }

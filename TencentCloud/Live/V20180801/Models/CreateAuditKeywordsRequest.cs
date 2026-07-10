@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 关键词列表。
+        /// <p>关键词列表。</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public AuditKeyword[] Keywords{ get; set; }
 
         /// <summary>
-        /// 直播审核词库Id。
+        /// <p>直播审核词库Id。</p>
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }

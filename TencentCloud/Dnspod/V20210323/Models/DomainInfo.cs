@@ -25,206 +25,220 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名ID
+        /// <p>域名ID</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
 
         /// <summary>
-        /// 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+        /// <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 域名套餐等级
+        /// <p>域名套餐等级</p>
         /// </summary>
         [JsonProperty("Grade")]
         public string Grade{ get; set; }
 
         /// <summary>
-        /// 域名分组ID
+        /// <p>域名分组ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// 是否星标域名
+        /// <p>是否星标域名</p>
         /// </summary>
         [JsonProperty("IsMark")]
         public string IsMark{ get; set; }
 
         /// <summary>
-        /// TTL(DNS记录缓存时间)，单位：秒
+        /// <p>TTL(DNS记录缓存时间)，单位：秒</p>
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
 
         /// <summary>
-        /// cname加速启用状态
+        /// <p>CNAME加速启用状态</p>
         /// </summary>
         [JsonProperty("CnameSpeedup")]
+        [System.Obsolete]
         public string CnameSpeedup{ get; set; }
 
         /// <summary>
-        /// 域名备注
+        /// <p>域名备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 域名Punycode
+        /// <p>域名Punycode</p>
         /// </summary>
         [JsonProperty("Punycode")]
         public string Punycode{ get; set; }
 
         /// <summary>
-        /// 域名DNS状态，错误：dnserror，正常：空字符串
+        /// <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
         /// </summary>
         [JsonProperty("DnsStatus")]
+        [System.Obsolete]
         public string DnsStatus{ get; set; }
 
         /// <summary>
-        /// 域名的NS列表
+        /// <p>域名的NS列表</p>
         /// </summary>
         [JsonProperty("DnspodNsList")]
         public string[] DnspodNsList{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名等级代号
+        /// <p>域名等级代号</p>
         /// </summary>
         [JsonProperty("GradeLevel")]
         public ulong? GradeLevel{ get; set; }
 
         /// <summary>
-        /// 域名所属的用户ID
+        /// <p>域名所属的用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public ulong? UserId{ get; set; }
 
         /// <summary>
-        /// 是否为付费域名
+        /// <p>是否为付费域名</p>
         /// </summary>
         [JsonProperty("IsVip")]
         public string IsVip{ get; set; }
 
         /// <summary>
-        /// 域名所有者的账号
+        /// <p>域名所有者的账号</p>
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 域名等级的描述
+        /// <p>域名等级的描述</p>
         /// </summary>
         [JsonProperty("GradeTitle")]
         public string GradeTitle{ get; set; }
 
         /// <summary>
-        /// 域名创建时间
+        /// <p>域名创建时间</p>
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// 最后操作时间
+        /// <p>最后操作时间</p>
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
 
         /// <summary>
-        /// 腾讯云账户Uin
+        /// <p>腾讯云账户Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 域名实际使用的NS列表
+        /// <p>域名实际使用的NS列表</p>
         /// </summary>
         [JsonProperty("ActualNsList")]
         public string[] ActualNsList{ get; set; }
 
         /// <summary>
-        /// 域名的记录数量
+        /// <p>域名的记录数量</p>
         /// </summary>
         [JsonProperty("RecordCount")]
         public ulong? RecordCount{ get; set; }
 
         /// <summary>
-        /// 域名所有者的账户昵称
+        /// <p>域名所有者的账户昵称</p>
         /// </summary>
         [JsonProperty("OwnerNick")]
         public string OwnerNick{ get; set; }
 
         /// <summary>
-        /// 是否在付费套餐宽限期
+        /// <p>是否在付费套餐宽限期</p>
         /// </summary>
         [JsonProperty("IsGracePeriod")]
         public string IsGracePeriod{ get; set; }
 
         /// <summary>
-        /// 是否在付费套餐缓冲期
+        /// <p>是否在付费套餐缓冲期</p>
         /// </summary>
         [JsonProperty("VipBuffered")]
         public string VipBuffered{ get; set; }
 
         /// <summary>
-        /// VIP套餐有效期开始时间
+        /// <p>VIP套餐有效期开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipStartAt")]
         public string VipStartAt{ get; set; }
 
         /// <summary>
-        /// VIP套餐有效期结束时间
+        /// <p>VIP套餐有效期结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipEndAt")]
         public string VipEndAt{ get; set; }
 
         /// <summary>
-        /// VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+        /// <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipAutoRenew")]
         public string VipAutoRenew{ get; set; }
 
         /// <summary>
-        /// VIP套餐资源ID
+        /// <p>VIP套餐资源ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipResourceId")]
         public string VipResourceId{ get; set; }
 
         /// <summary>
-        /// 是否是子域名。
+        /// <p>是否是子域名。</p>
         /// </summary>
         [JsonProperty("IsSubDomain")]
         public bool? IsSubDomain{ get; set; }
 
         /// <summary>
-        /// 域名关联的标签列表
+        /// <p>域名关联的标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagItem[] TagList{ get; set; }
 
         /// <summary>
-        /// 是否启用搜索引擎推送
+        /// <p>是否启用搜索引擎推送</p>
         /// </summary>
         [JsonProperty("SearchEnginePush")]
         public string SearchEnginePush{ get; set; }
 
         /// <summary>
-        /// 是否开启辅助 DNS
+        /// <p>是否开启辅助 DNS</p>
         /// </summary>
         [JsonProperty("SlaveDNS")]
         public string SlaveDNS{ get; set; }
+
+        /// <summary>
+        /// <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+        /// </summary>
+        [JsonProperty("DNSStatus")]
+        public string DNSStatus{ get; set; }
+
+        /// <summary>
+        /// <p>CNAME加速启用状态</p>
+        /// </summary>
+        [JsonProperty("CNAMESpeedup")]
+        public string CNAMESpeedup{ get; set; }
 
 
         /// <summary>
@@ -265,6 +279,8 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
             this.SetParamSimple(map, prefix + "SlaveDNS", this.SlaveDNS);
+            this.SetParamSimple(map, prefix + "DNSStatus", this.DNSStatus);
+            this.SetParamSimple(map, prefix + "CNAMESpeedup", this.CNAMESpeedup);
         }
     }
 }

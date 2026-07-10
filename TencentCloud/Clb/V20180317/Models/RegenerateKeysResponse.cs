@@ -25,16 +25,16 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// <p>重新生成后的Key的信息</p>
-        /// </summary>
-        [JsonProperty("RegeneratedKeys")]
-        public RegeneratedKey[] RegeneratedKeys{ get; set; }
-
-        /// <summary>
         /// <p>重新生成失败的Key的ID列表</p>
         /// </summary>
         [JsonProperty("FailedKeyIds")]
         public string[] FailedKeyIds{ get; set; }
+
+        /// <summary>
+        /// <p>重新生成后的Key的信息</p>
+        /// </summary>
+        [JsonProperty("RegeneratedKeys")]
+        public RegeneratedKey[] RegeneratedKeys{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "RegeneratedKeys.", this.RegeneratedKeys);
             this.SetParamArraySimple(map, prefix + "FailedKeyIds.", this.FailedKeyIds);
+            this.SetParamArrayObj(map, prefix + "RegeneratedKeys.", this.RegeneratedKeys);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

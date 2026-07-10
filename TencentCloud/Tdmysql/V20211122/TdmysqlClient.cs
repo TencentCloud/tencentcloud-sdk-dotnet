@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1453";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.

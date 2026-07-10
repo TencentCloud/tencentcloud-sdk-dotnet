@@ -28,7 +28,7 @@ namespace TencentCloud.Asr.V20190614
 
        private const string endpoint = "asr.tencentcloudapi.com";
        private const string version = "2019-06-14";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -749,6 +749,27 @@ namespace TencentCloud.Asr.V20190614
         public VoicePrintEnrollResponse VoicePrintEnrollSync(VoicePrintEnrollRequest req)
         {
             return InternalRequestAsync<VoicePrintEnrollResponse>(req, "VoicePrintEnroll")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回注册的说话人分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintGroupListRequest"/></param>
+        /// <returns><see cref="VoicePrintGroupListResponse"/></returns>
+        public Task<VoicePrintGroupListResponse> VoicePrintGroupList(VoicePrintGroupListRequest req)
+        {
+            return InternalRequestAsync<VoicePrintGroupListResponse>(req, "VoicePrintGroupList");
+        }
+
+        /// <summary>
+        /// 返回注册的说话人分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintGroupListRequest"/></param>
+        /// <returns><see cref="VoicePrintGroupListResponse"/></returns>
+        public VoicePrintGroupListResponse VoicePrintGroupListSync(VoicePrintGroupListRequest req)
+        {
+            return InternalRequestAsync<VoicePrintGroupListResponse>(req, "VoicePrintGroupList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

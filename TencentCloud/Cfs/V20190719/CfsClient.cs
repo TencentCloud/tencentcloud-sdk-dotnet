@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -1093,9 +1093,9 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 执行数据检索任务。
-        /// 
+        /// RunDataRetrievalTask 执行数据检索任务。
         /// 手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+        /// 仅Turbo系列文件系统支持。
         /// </summary>
         /// <param name="req"><see cref="RunDataRetrievalTaskRequest"/></param>
         /// <returns><see cref="RunDataRetrievalTaskResponse"/></returns>
@@ -1105,9 +1105,9 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 执行数据检索任务。
-        /// 
+        /// RunDataRetrievalTask 执行数据检索任务。
         /// 手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+        /// 仅Turbo系列文件系统支持。
         /// </summary>
         /// <param name="req"><see cref="RunDataRetrievalTaskRequest"/></param>
         /// <returns><see cref="RunDataRetrievalTaskResponse"/></returns>

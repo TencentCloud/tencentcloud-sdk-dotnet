@@ -25,691 +25,702 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 虚拟任务id
+        /// <p>虚拟任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualTaskId")]
         public string VirtualTaskId{ get; set; }
 
         /// <summary>
-        /// 虚拟任务标记
+        /// <p>虚拟任务标记</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualFlag")]
         public bool? VirtualFlag{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 工作流id
+        /// <p>工作流id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 任务为虚拟任务时，任务所在的真实工作流Id
+        /// <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealWorkflowId")]
         public string RealWorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 文件夹id
+        /// <p>文件夹id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 文件夹名字
+        /// <p>文件夹名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间
+        /// <p>最近更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdate")]
         public string LastUpdate{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 责任人
+        /// <p>责任人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }
 
         /// <summary>
-        /// 责任人用户id
+        /// <p>责任人用户id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InChargeId")]
         public string InChargeId{ get; set; }
 
         /// <summary>
-        /// 调度生效日期
+        /// <p>调度生效日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 调度结束日期
+        /// <p>调度结束日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 执行时间左闭区间
+        /// <p>执行时间左闭区间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 执行时间右闭区间
+        /// <p>执行时间右闭区间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 周期类型
+        /// <p>周期类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// 步长
+        /// <p>步长</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleStep")]
         public ulong? CycleStep{ get; set; }
 
         /// <summary>
-        /// 调度cron表达式
+        /// <p>调度cron表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// 延时执行时间，unit=分钟
+        /// <p>延时执行时间，unit=分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
         /// <summary>
-        /// 开始执行时间
+        /// <p>开始执行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartupTime")]
         public ulong? StartupTime{ get; set; }
 
         /// <summary>
-        /// 重试等待时间, unit=分钟
+        /// <p>重试等待时间, unit=分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryWait")]
         public ulong? RetryWait{ get; set; }
 
         /// <summary>
-        /// 是否可重试，1 代表可以重试
+        /// <p>是否可重试，1 代表可以重试</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryAble")]
         public ulong? RetryAble{ get; set; }
 
         /// <summary>
-        /// 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+        /// <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskAction")]
         public string TaskAction{ get; set; }
 
         /// <summary>
-        /// 运行次数限制
+        /// <p>运行次数限制</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TryLimit")]
         public ulong? TryLimit{ get; set; }
 
         /// <summary>
-        /// 运行优先级
+        /// <p>运行优先级</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunPriority")]
         public ulong? RunPriority{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public TaskTypeOpsDto TaskType{ get; set; }
 
         /// <summary>
-        /// 指定的运行节点
+        /// <p>指定的运行节点</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
-        /// 集群name
+        /// <p>集群name</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 最小数据时间
+        /// <p>最小数据时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinDateTime")]
         public string MinDateTime{ get; set; }
 
         /// <summary>
-        /// 最大数据时间
+        /// <p>最大数据时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDateTime")]
         public string MaxDateTime{ get; set; }
 
         /// <summary>
-        /// 运行耗时超时时间
+        /// <p>运行耗时超时时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionTTL")]
         public long? ExecutionTTL{ get; set; }
 
         /// <summary>
-        /// 自依赖类型
+        /// <p>自依赖类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfDepend")]
         public string SelfDepend{ get; set; }
 
         /// <summary>
-        /// 左侧坐标
+        /// <p>左侧坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeftCoordinate")]
         public float? LeftCoordinate{ get; set; }
 
         /// <summary>
-        /// 顶部坐标
+        /// <p>顶部坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopCoordinate")]
         public float? TopCoordinate{ get; set; }
 
         /// <summary>
-        /// 任务备注
+        /// <p>任务备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Notes")]
         public string Notes{ get; set; }
 
         /// <summary>
-        /// 任务初始化策略
+        /// <p>任务初始化策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceInitStrategy")]
         public string InstanceInitStrategy{ get; set; }
 
         /// <summary>
-        /// 计算队列
+        /// <p>计算队列</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("YarnQueue")]
         public string YarnQueue{ get; set; }
 
         /// <summary>
-        /// 最新调度提交时间
+        /// <p>最新调度提交时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastSchedulerCommitTime")]
         public string LastSchedulerCommitTime{ get; set; }
 
         /// <summary>
-        /// 按cron表达式计算的任务开始执行时间
+        /// <p>按cron表达式计算的任务开始执行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalizedJobStartTime")]
         public string NormalizedJobStartTime{ get; set; }
 
         /// <summary>
-        /// 调度计划描述
+        /// <p>调度计划描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerDesc")]
         public string SchedulerDesc{ get; set; }
 
         /// <summary>
-        /// 计算资源组
+        /// <p>计算资源组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroup")]
         public string ResourceGroup{ get; set; }
 
         /// <summary>
-        /// 任务创建人
+        /// <p>任务创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 任务依赖类型 and、or
+        /// <p>任务依赖类型 and、or</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependencyRel")]
         public string DependencyRel{ get; set; }
 
         /// <summary>
-        /// 任务工作流依赖 yes、no
+        /// <p>任务工作流依赖 yes、no</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependencyWorkflow")]
         public string DependencyWorkflow{ get; set; }
 
         /// <summary>
-        /// 事件监听配置
+        /// <p>事件监听配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventListenerConfig")]
         public string EventListenerConfig{ get; set; }
 
         /// <summary>
-        /// 事件驱动配置
+        /// <p>事件驱动配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventPublisherConfig")]
         public string EventPublisherConfig{ get; set; }
 
         /// <summary>
-        /// 虚拟任务状态
+        /// <p>虚拟任务状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualTaskStatus")]
         public string VirtualTaskStatus{ get; set; }
 
         /// <summary>
-        /// 任务依赖边详情
+        /// <p>任务依赖边详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskLinkInfo")]
         public LinkOpsDto TaskLinkInfo{ get; set; }
 
         /// <summary>
-        /// 任务产品类型
+        /// <p>任务产品类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目标识
+        /// <p>项目标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectIdent")]
         public string ProjectIdent{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 主账户userId
+        /// <p>主账户userId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnId")]
         public string OwnId{ get; set; }
 
         /// <summary>
-        /// 用户userId
+        /// <p>用户userId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 租户id
+        /// <p>租户id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
-        /// 更新人昵称
+        /// <p>更新人昵称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 更新人userId
+        /// <p>更新人userId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUserId")]
         public string UpdateUserId{ get; set; }
 
         /// <summary>
-        /// 任务类型id
+        /// <p>任务类型id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeId")]
         public long? TaskTypeId{ get; set; }
 
         /// <summary>
-        /// 任务类型描述
+        /// <p>任务类型描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeDesc")]
         public string TaskTypeDesc{ get; set; }
 
         /// <summary>
-        /// 是否展示工作流
+        /// <p>是否展示工作流</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShowWorkflow")]
         public bool? ShowWorkflow{ get; set; }
 
         /// <summary>
-        /// 首次提交时间
+        /// <p>首次提交时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstSubmitTime")]
         public string FirstSubmitTime{ get; set; }
 
         /// <summary>
-        /// 首次运行时间
+        /// <p>首次运行时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstRunTime")]
         public string FirstRunTime{ get; set; }
 
         /// <summary>
-        /// 调度描述
+        /// <p>调度描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleDesc")]
         public string ScheduleDesc{ get; set; }
 
         /// <summary>
-        /// 周期
+        /// <p>周期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleNum")]
         public long? CycleNum{ get; set; }
 
         /// <summary>
-        /// 表达式
+        /// <p>表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Crontab")]
         public string Crontab{ get; set; }
 
         /// <summary>
-        /// 开始日期
+        /// <p>开始日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 结束日期
+        /// <p>结束日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 周期单位
+        /// <p>周期单位</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleUnit")]
         public string CycleUnit{ get; set; }
 
         /// <summary>
-        /// 初始化策略
+        /// <p>初始化策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitStrategy")]
         public string InitStrategy{ get; set; }
 
         /// <summary>
-        /// 层级
+        /// <p>层级</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Layer")]
         public string Layer{ get; set; }
 
         /// <summary>
-        /// 来源数据源ID
+        /// <p>来源数据源ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceServiceId")]
         public string SourceServiceId{ get; set; }
 
         /// <summary>
-        /// 来源数据源类型
+        /// <p>来源数据源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceServiceType")]
         public string SourceServiceType{ get; set; }
 
         /// <summary>
-        /// 目标数据源ID
+        /// <p>目标数据源ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetServiceId")]
         public string TargetServiceId{ get; set; }
 
         /// <summary>
-        /// 目标数据源类型
+        /// <p>目标数据源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetServiceType")]
         public string TargetServiceType{ get; set; }
 
         /// <summary>
-        /// 子任务列表
+        /// <p>子任务列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TasksStr")]
         public string TasksStr{ get; set; }
 
         /// <summary>
-        /// 任务版本是否已提交
+        /// <p>任务版本是否已提交</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Submit")]
         public bool? Submit{ get; set; }
 
         /// <summary>
-        /// 资源组id
+        /// <p>资源组id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorGroupId")]
         public string ExecutorGroupId{ get; set; }
 
         /// <summary>
-        /// 资源组名称
+        /// <p>资源组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutorGroupName")]
         public string ExecutorGroupName{ get; set; }
 
         /// <summary>
-        /// 任务扩展信息(目前返沪离线同步的任务详情)
+        /// <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskExtInfo")]
         public string TaskExtInfo{ get; set; }
 
         /// <summary>
-        /// 任务绑定的事件信息
+        /// <p>任务绑定的事件信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventListenerInfos")]
         public AiOpsEventListenerDTO[] EventListenerInfos{ get; set; }
 
         /// <summary>
-        /// 脚本信息
+        /// <p>脚本信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptInfo")]
         public AiopsScriptInfo ScriptInfo{ get; set; }
 
         /// <summary>
-        /// DLC资源配置
+        /// <p>DLC资源配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DLCResourceConfig")]
         public AiopsDLCResourceConfigDto DLCResourceConfig{ get; set; }
 
         /// <summary>
-        /// 父任务simple信息
+        /// <p>父任务simple信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentTaskInfos")]
         public AiopsSimpleTaskDto ParentTaskInfos{ get; set; }
 
         /// <summary>
-        /// 资源获取标识
+        /// <p>资源获取标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtResourceFlag")]
         public ExtResourceFlagDto ExtResourceFlag{ get; set; }
 
         /// <summary>
-        /// 父任务simple信息(新)
+        /// <p>父任务simple信息(新)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewParentTaskInfos")]
         public AiopsSimpleTaskDto[] NewParentTaskInfos{ get; set; }
 
         /// <summary>
-        /// 任务自依赖类型：
-        /// yes： 任务需满足自依赖
-        /// no：任务无需满足自依赖
+        /// <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfWorkFlowDependType")]
         public string SelfWorkFlowDependType{ get; set; }
 
         /// <summary>
-        /// 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+        /// <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
         /// </summary>
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
         /// <summary>
-        /// 负责人Id
+        /// <p>负责人Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerId")]
         public string OwnerId{ get; set; }
 
         /// <summary>
-        /// 当前用户对该任务的权限列表， 当前支持
-        /// CAN_MANAGE : 有权限管理操作
+        /// <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p>
         /// </summary>
         [JsonProperty("Privileges")]
         public string[] Privileges{ get; set; }
 
         /// <summary>
-        /// bundle客户端唯一id
+        /// <p>bundle客户端唯一id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// bundle客户端信息
+        /// <p>bundle客户端信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleInfo")]
         public string BundleInfo{ get; set; }
 
         /// <summary>
-        /// 工作流类型
+        /// <p>工作流类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
         /// <summary>
-        /// 任务扩展信息
+        /// <p>任务扩展信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskExtDTO")]
         public TaskExtOpsDto TaskExtDTO{ get; set; }
 
         /// <summary>
-        /// 任务时区
+        /// <p>任务时区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
+
+        /// <summary>
+        /// <p>代理任务ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyTaskId")]
+        public string ProxyTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>代理任务类型ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyTaskTypeId")]
+        public long? ProxyTaskTypeId{ get; set; }
 
 
         /// <summary>
@@ -815,6 +826,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
             this.SetParamObj(map, prefix + "TaskExtDTO.", this.TaskExtDTO);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "ProxyTaskId", this.ProxyTaskId);
+            this.SetParamSimple(map, prefix + "ProxyTaskTypeId", this.ProxyTaskTypeId);
         }
     }
 }

@@ -25,126 +25,126 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略组id
+        /// <p>策略组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 策略组名称
+        /// <p>策略组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 是否开启
+        /// <p>是否开启</p>
         /// </summary>
         [JsonProperty("IsOpen")]
         public bool? IsOpen{ get; set; }
 
         /// <summary>
-        /// 策略视图名称
+        /// <p>策略视图名称</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 最近编辑的用户uin
+        /// <p>最近编辑的用户uin</p>
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// 最后修改时间
+        /// <p>最后修改时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }
 
         /// <summary>
-        /// 策略组绑定的实例数
+        /// <p>策略组绑定的实例数</p>
         /// </summary>
         [JsonProperty("UseSum")]
         public long? UseSum{ get; set; }
 
         /// <summary>
-        /// 策略组绑定的未屏蔽实例数
+        /// <p>策略组绑定的未屏蔽实例数</p>
         /// </summary>
         [JsonProperty("NoShieldedSum")]
         public long? NoShieldedSum{ get; set; }
 
         /// <summary>
-        /// 是否为默认策略，0表示非默认策略，1表示默认策略
+        /// <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 是否可以设置成默认策略
+        /// <p>是否可以设置成默认策略</p>
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public bool? CanSetDefault{ get; set; }
 
         /// <summary>
-        /// 父策略组id
+        /// <p>父策略组id</p>
         /// </summary>
         [JsonProperty("ParentGroupId")]
         public long? ParentGroupId{ get; set; }
 
         /// <summary>
-        /// 策略组备注
+        /// <p>策略组备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 策略组所属项目id
+        /// <p>策略组所属项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 阈值规则列表
+        /// <p>阈值规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Conditions")]
         public DescribePolicyGroupInfoCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// 产品事件规则列表
+        /// <p>产品事件规则列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventConditions")]
         public DescribePolicyGroupInfoEventCondition[] EventConditions{ get; set; }
 
         /// <summary>
-        /// 用户接收人列表
+        /// <p>用户接收人列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverInfos")]
         public DescribePolicyGroupInfoReceiverInfo[] ReceiverInfos{ get; set; }
 
         /// <summary>
-        /// 模板策略组
+        /// <p>模板策略组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionsTemp")]
         public DescribePolicyGroupInfoConditionTpl ConditionsTemp{ get; set; }
 
         /// <summary>
-        /// 策略组绑定的实例组信息
+        /// <p>策略组绑定的实例组信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceGroup")]
         public DescribePolicyGroupListGroupInstanceGroup InstanceGroup{ get; set; }
 
         /// <summary>
-        /// 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+        /// <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUnionRule")]

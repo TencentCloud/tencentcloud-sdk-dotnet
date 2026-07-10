@@ -25,26 +25,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 指标配置
+        /// <p>指标配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigManual")]
         public DescribePolicyConditionListConfigManual ConfigManual{ get; set; }
 
         /// <summary>
-        /// 指标id
+        /// <p>指标id</p>
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// 指标名称
+        /// <p>指标名称</p>
         /// </summary>
         [JsonProperty("MetricShowName")]
         public string MetricShowName{ get; set; }
 
         /// <summary>
-        /// 指标单位
+        /// <p>指标单位</p>
         /// </summary>
         [JsonProperty("MetricUnit")]
         public string MetricUnit{ get; set; }

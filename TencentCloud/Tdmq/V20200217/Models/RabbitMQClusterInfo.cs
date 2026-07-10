@@ -25,197 +25,209 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群 ID
+        /// <p>集群 ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// <p>地域信息</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位。unix 时间戳
+        /// <p>创建时间，毫秒为单位。unix 时间戳</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 集群说明信息
+        /// <p>集群说明信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// VPC及网络信息
+        /// <p>VPC及网络信息</p>
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// <p>可用区信息</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 虚拟主机数量
+        /// <p>虚拟主机数量</p>
         /// </summary>
         [JsonProperty("VirtualHostNumber")]
         public long? VirtualHostNumber{ get; set; }
 
         /// <summary>
-        /// 队列数量
+        /// <p>队列数量</p>
         /// </summary>
         [JsonProperty("QueueNumber")]
         public long? QueueNumber{ get; set; }
 
         /// <summary>
-        /// 每秒生产消息数 单位：条/秒
+        /// <p>每秒生产消息数 单位：条/秒</p>
         /// </summary>
         [JsonProperty("MessagePublishRate")]
         public float? MessagePublishRate{ get; set; }
 
         /// <summary>
-        /// 堆积消息数 单位：条
+        /// <p>堆积消息数 单位：条</p>
         /// </summary>
         [JsonProperty("MessageStackNumber")]
         public long? MessageStackNumber{ get; set; }
 
         /// <summary>
-        /// 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+        /// <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Channel数量
+        /// <p>Channel数量</p>
         /// </summary>
         [JsonProperty("ChannelNumber")]
         public long? ChannelNumber{ get; set; }
 
         /// <summary>
-        /// Connection数量
+        /// <p>Connection数量</p>
         /// </summary>
         [JsonProperty("ConnectionNumber")]
         public long? ConnectionNumber{ get; set; }
 
         /// <summary>
-        /// Consumer数量
+        /// <p>Consumer数量</p>
         /// </summary>
         [JsonProperty("ConsumerNumber")]
         public long? ConsumerNumber{ get; set; }
 
         /// <summary>
-        /// Exchang数量
+        /// <p>Exchang数量</p>
         /// </summary>
         [JsonProperty("ExchangeNumber")]
         public long? ExchangeNumber{ get; set; }
 
         /// <summary>
-        /// 集群异常信息
+        /// <p>集群异常信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+        /// <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启镜像队列策略。1表示开启，0表示没开启。
+        /// <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public long? MirrorQueuePolicyFlag{ get; set; }
 
         /// <summary>
-        /// 每秒消费消息数 单位：条/秒
+        /// <p>每秒消费消息数 单位：条/秒</p>
         /// </summary>
         [JsonProperty("MessageConsumeRate")]
         public float? MessageConsumeRate{ get; set; }
 
         /// <summary>
-        /// 集群版本信息
+        /// <p>集群版本信息</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 计费模式，0-后付费，1-预付费
+        /// <p>计费模式，0-后付费，1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例类型，0 专享版、1 Serverless 版
+        /// <p>实例类型，0 专享版、1 Serverless 版</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// 开始隔离时间。unix 时间戳
+        /// <p>开始隔离时间。unix 时间戳</p>
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public long? IsolatedTime{ get; set; }
 
         /// <summary>
-        /// 是否为容器实例，默认 true
+        /// <p>是否为容器实例，默认 true</p>
         /// </summary>
         [JsonProperty("Container")]
         public bool? Container{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否已开启删除保护
+        /// <p>是否已开启删除保护</p>
         /// </summary>
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
         /// <summary>
-        /// 是否有vhost未开启镜像队列风险
+        /// <p>是否有vhost未开启镜像队列风险</p>
         /// </summary>
         [JsonProperty("MirroredQueueRisk")]
         public bool? MirroredQueueRisk{ get; set; }
 
         /// <summary>
-        /// 是否提示风险
+        /// <p>是否提示风险</p>
         /// </summary>
         [JsonProperty("EnableRiskWarning")]
         public bool? EnableRiskWarning{ get; set; }
 
         /// <summary>
-        /// 消费超时时间
+        /// <p>消费超时时间</p>
         /// </summary>
         [JsonProperty("ConsumeTimeout")]
         public ulong? ConsumeTimeout{ get; set; }
 
         /// <summary>
-        /// 最大Channel数
+        /// <p>最大Channel数</p>
         /// </summary>
         [JsonProperty("ChannelMax")]
         public ulong? ChannelMax{ get; set; }
+
+        /// <summary>
+        /// <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>CDC集群ID</p>
+        /// </summary>
+        [JsonProperty("CdcClusterId")]
+        public string CdcClusterId{ get; set; }
 
 
         /// <summary>
@@ -255,6 +267,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
             this.SetParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
             this.SetParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+        /// <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
         /// </summary>
         [JsonProperty("BudgetConfigs")]
         public BudgetConfigInput[] BudgetConfigs{ get; set; }
 
         /// <summary>
-        /// <p>Budget名称。</p><p>不传默认为空字符串。</p>
+        /// <p>Budget名称。</p><p>不传默认为 '-'。</p>
         /// </summary>
         [JsonProperty("BudgetName")]
         public string BudgetName{ get; set; }

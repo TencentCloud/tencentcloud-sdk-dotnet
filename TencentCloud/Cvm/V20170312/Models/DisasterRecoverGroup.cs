@@ -25,58 +25,67 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 分散置放群组id。
+        /// <p>分散置放群组id。</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
 
         /// <summary>
-        /// 分散置放群组名称，长度1-60个字符。
+        /// <p>分散置放群组名称，长度1-60个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分散置放群组类型，取值范围：<br>
-        /// <li>HOST：物理机<br></li>
-        /// <li>SW：交换机<br></li>
-        /// <li>RACK：机架</li>
+        /// <p>分散置放群组类型，取值范围：<br></p><li>HOST：物理机<br></li><li>SW：交换机<br></li><li>RACK：机架</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 分散置放群组内最大容纳云服务器数量。
+        /// <p>分散置放群组内最大容纳云服务器数量。</p>
         /// </summary>
         [JsonProperty("CvmQuotaTotal")]
         public long? CvmQuotaTotal{ get; set; }
 
         /// <summary>
-        /// 分散置放群组内云服务器当前数量。
+        /// <p>分散置放群组内云服务器当前数量。</p>
         /// </summary>
         [JsonProperty("CurrentNum")]
         public long? CurrentNum{ get; set; }
 
         /// <summary>
-        /// 分散置放群组内，云服务器id列表。
+        /// <p>分散置放群组内，云服务器id列表。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        /// <p>分散置放群组创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 置放群组亲和度
+        /// <p>置放群组亲和度</p>
         /// </summary>
         [JsonProperty("Affinity")]
         public long? Affinity{ get; set; }
 
         /// <summary>
-        /// 置放群组关联的标签列表。
+        /// <p>置放群组类型，当前支持两种；分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组</p>
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public string Strategy{ get; set; }
+
+        /// <summary>
+        /// <p>分区置放群组的分区数量，如果是分区置放群组会返回(功能灰度中)</p>
+        /// </summary>
+        [JsonProperty("PartitionCount")]
+        public long? PartitionCount{ get; set; }
+
+        /// <summary>
+        /// <p>置放群组关联的标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -95,6 +104,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
+            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

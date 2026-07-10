@@ -25,14 +25,14 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// CalcType 取值
+        /// <p>CalcType 取值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public long?[] Keys{ get; set; }
 
         /// <summary>
-        /// 是否必须
+        /// <p>是否必须</p>
         /// </summary>
         [JsonProperty("Need")]
         public bool? Need{ get; set; }

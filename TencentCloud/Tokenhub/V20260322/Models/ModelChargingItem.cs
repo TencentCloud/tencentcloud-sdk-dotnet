@@ -25,28 +25,34 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。
+        /// <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
         /// </summary>
         [JsonProperty("PriceName")]
         public string PriceName{ get; set; }
 
         /// <summary>
-        /// 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。
+        /// <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 价格数值。
+        /// <p>价格数值。</p>
         /// </summary>
         [JsonProperty("Price")]
         public string Price{ get; set; }
 
         /// <summary>
-        /// 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。
+        /// <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
         /// </summary>
         [JsonProperty("PriceUnit")]
         public string PriceUnit{ get; set; }
+
+        /// <summary>
+        /// <p>高峰价格，为空表示无高峰定价</p>
+        /// </summary>
+        [JsonProperty("PeakPrice")]
+        public string PeakPrice{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
+            this.SetParamSimple(map, prefix + "PeakPrice", this.PeakPrice);
         }
     }
 }

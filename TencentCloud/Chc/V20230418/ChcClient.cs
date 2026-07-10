@@ -28,7 +28,7 @@ namespace TencentCloud.Chc.V20230418
 
        private const string endpoint = "chc.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,48 @@ namespace TencentCloud.Chc.V20230418
         }
 
         /// <summary>
+        /// 查询工单归集的车辆信息列表，支持按车牌号、驾驶员姓名模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderCarCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderCarCollectListResponse"/></returns>
+        public Task<DescribeWorkOrderCarCollectListResponse> DescribeWorkOrderCarCollectList(DescribeWorkOrderCarCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderCarCollectListResponse>(req, "DescribeWorkOrderCarCollectList");
+        }
+
+        /// <summary>
+        /// 查询工单归集的车辆信息列表，支持按车牌号、驾驶员姓名模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderCarCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderCarCollectListResponse"/></returns>
+        public DescribeWorkOrderCarCollectListResponse DescribeWorkOrderCarCollectListSync(DescribeWorkOrderCarCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderCarCollectListResponse>(req, "DescribeWorkOrderCarCollectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工单归集的业务联系人信息列表，支持按姓名、电话模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderContactCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderContactCollectListResponse"/></returns>
+        public Task<DescribeWorkOrderContactCollectListResponse> DescribeWorkOrderContactCollectList(DescribeWorkOrderContactCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderContactCollectListResponse>(req, "DescribeWorkOrderContactCollectList");
+        }
+
+        /// <summary>
+        /// 查询工单归集的业务联系人信息列表，支持按姓名、电话模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderContactCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderContactCollectListResponse"/></returns>
+        public DescribeWorkOrderContactCollectListResponse DescribeWorkOrderContactCollectListSync(DescribeWorkOrderContactCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderContactCollectListResponse>(req, "DescribeWorkOrderContactCollectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询工单列表
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkOrderListRequest"/></param>
@@ -764,6 +806,27 @@ namespace TencentCloud.Chc.V20230418
         public DescribeWorkOrderListResponse DescribeWorkOrderListSync(DescribeWorkOrderListRequest req)
         {
             return InternalRequestAsync<DescribeWorkOrderListResponse>(req, "DescribeWorkOrderList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工单归集的人员信息列表，支持按姓名、手机号模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderPersonnelCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderPersonnelCollectListResponse"/></returns>
+        public Task<DescribeWorkOrderPersonnelCollectListResponse> DescribeWorkOrderPersonnelCollectList(DescribeWorkOrderPersonnelCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderPersonnelCollectListResponse>(req, "DescribeWorkOrderPersonnelCollectList");
+        }
+
+        /// <summary>
+        /// 查询工单归集的人员信息列表，支持按姓名、手机号模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkOrderPersonnelCollectListRequest"/></param>
+        /// <returns><see cref="DescribeWorkOrderPersonnelCollectListResponse"/></returns>
+        public DescribeWorkOrderPersonnelCollectListResponse DescribeWorkOrderPersonnelCollectListSync(DescribeWorkOrderPersonnelCollectListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkOrderPersonnelCollectListResponse>(req, "DescribeWorkOrderPersonnelCollectList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

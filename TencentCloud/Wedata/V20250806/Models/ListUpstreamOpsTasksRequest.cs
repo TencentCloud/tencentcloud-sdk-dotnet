@@ -25,25 +25,25 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目Id
+        /// <p>项目Id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务Id
+        /// <p>任务Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 分页页码
+        /// <p>分页页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

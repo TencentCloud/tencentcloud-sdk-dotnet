@@ -25,16 +25,22 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// IP地址。
+        /// <p>IP地址。</p>
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// IP类型。
+        /// <p>IP类型。</p>
         /// </summary>
         [JsonProperty("IspType")]
         public string IspType{ get; set; }
+
+        /// <summary>
+        /// <p>Ddos类型</p>
+        /// </summary>
+        [JsonProperty("DdosProtectionType")]
+        public string DdosProtectionType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         {
             this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
             this.SetParamSimple(map, prefix + "IspType", this.IspType);
+            this.SetParamSimple(map, prefix + "DdosProtectionType", this.DdosProtectionType);
         }
     }
 }

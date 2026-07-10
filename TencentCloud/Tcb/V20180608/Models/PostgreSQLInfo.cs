@@ -48,12 +48,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
-        /// <summary>
-        /// <p>数据库引擎版本</p>
-        /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,7 +58,6 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

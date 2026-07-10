@@ -37,25 +37,25 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
+        /// <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Checksum")]
         public string Checksum{ get; set; }
 
         /// <summary>
-        /// <p>应用时间</p>
+        /// <p>应用时间</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("AppliedAt")]
         public string AppliedAt{ get; set; }
 
         /// <summary>
-        /// <p>请求来源</p>
+        /// <p>请求来源</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// <p>migration 创建时间</p>
+        /// <p>migration 创建时间</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }

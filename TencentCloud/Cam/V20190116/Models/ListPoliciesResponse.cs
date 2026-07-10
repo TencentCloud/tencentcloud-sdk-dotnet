@@ -25,28 +25,19 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略总数
+        /// <p>策略总数</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
-        /// policyId：策略 id 
-        /// policyName：策略名
-        /// addTime：策略创建时间
-        /// type：1 表示自定义策略，2 表示预设策略 
-        /// description：策略描述 
-        /// createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
-        /// Attachments: 关联的用户数
-        /// ServiceType: 策略关联的产品
-        /// IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+        /// <p>策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中：<br>policyId：策略 id<br>policyName：策略名<br>addTime：策略创建时间<br>type：1 表示自定义策略，2 表示预设策略<br>description：策略描述<br>createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略<br>Attachments: 关联的用户数<br>ServiceType: 策略关联的产品<br>IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
         /// </summary>
         [JsonProperty("List")]
         public StrategyInfo[] List{ get; set; }
 
         /// <summary>
-        /// 保留字段
+        /// <p>保留字段</p>
         /// </summary>
         [JsonProperty("ServiceTypeList")]
         public string[] ServiceTypeList{ get; set; }

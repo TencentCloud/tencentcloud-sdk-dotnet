@@ -25,19 +25,19 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 解析量明细
+        /// <p>解析量明细</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResolveCountDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// 解析量统计信息
+        /// <p>解析量统计信息</p>
         /// </summary>
         [JsonProperty("Info")]
         public ResolveCountInfo Info{ get; set; }
 
         /// <summary>
-        /// 别名解析量明细
+        /// <p>别名解析量明细</p>
         /// </summary>
         [JsonProperty("AliasData")]
         public ResolveCountAliasItem[] AliasData{ get; set; }

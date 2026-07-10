@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群字符串ID
+        /// <p>集群字符串ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户信息列表
+        /// <p>用户信息列表</p>
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// 用户主组，cvm集群为必填参数，tke集群选填
+        /// <p>用户主组，cvm集群为必填参数，tke集群选填</p>
         /// </summary>
         [JsonProperty("UserGroup")]
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// 用户副组
+        /// <p>用户副组</p>
         /// </summary>
         [JsonProperty("Groups")]
         public string[] Groups{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

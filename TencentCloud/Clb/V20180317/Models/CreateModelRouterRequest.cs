@@ -31,28 +31,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ModelRouterType{ get; set; }
 
         /// <summary>
+        /// <p>关联的积分预算ID</p>
+        /// </summary>
+        [JsonProperty("BudgetId")]
+        public string BudgetId{ get; set; }
+
+        /// <summary>
+        /// <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>集群信息</p>
+        /// </summary>
+        [JsonProperty("ClusterInfo")]
+        public ClusterInfo ClusterInfo{ get; set; }
+
+        /// <summary>
         /// <p>模型路由实例名称</p><p>默认值：-</p>
         /// </summary>
         [JsonProperty("ModelRouterName")]
         public string ModelRouterName{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由实例的网络协议</p><p>枚举值：</p><ul><li>HTTP： HTTP协议</li><li>HTTPS： HTTPS协议</li></ul>
-        /// </summary>
-        [JsonProperty("Schema")]
-        public string Schema{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由的监听端口</p><p>取值范围：[1, 65535]</p>
-        /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
-
-        /// <summary>
-        /// <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
-        /// </summary>
-        [JsonProperty("CertId")]
-        public string CertId{ get; set; }
 
         /// <summary>
         /// <p>网络类型</p><p>枚举值：</p><ul><li>Internet： 公网</li><li>Intranet： 内网</li></ul>
@@ -61,22 +61,10 @@ namespace TencentCloud.Clb.V20180317.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// <p>模型路由实例所属VPC的ID</p>
+        /// <p>模型路由的监听端口</p><p>取值范围：[1, 65535]</p>
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由实例所属子网的ID</p>
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
-
-        /// <summary>
-        /// <p>关联的积分预算ID</p>
-        /// </summary>
-        [JsonProperty("BudgetId")]
-        public string BudgetId{ get; set; }
+        [JsonProperty("Port")]
+        public ulong? Port{ get; set; }
 
         /// <summary>
         /// <p>限速配置</p>
@@ -91,16 +79,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public RouterSettingWithoutFallBack RouterSetting{ get; set; }
 
         /// <summary>
+        /// <p>模型路由实例的网络协议</p><p>枚举值：</p><ul><li>HTTP： HTTP协议</li><li>HTTPS： HTTPS协议</li></ul>
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
+        /// <summary>
+        /// <p>模型路由实例所属子网的ID</p>
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
         /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// <p>集群信息</p>
+        /// <p>模型路由实例所属VPC的ID</p>
         /// </summary>
-        [JsonProperty("ClusterInfo")]
-        public ClusterInfo ClusterInfo{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
 
         /// <summary>
@@ -109,18 +109,18 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ModelRouterType", this.ModelRouterType);
-            this.SetParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
-            this.SetParamSimple(map, prefix + "Schema", this.Schema);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "BudgetId", this.BudgetId);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+            this.SetParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
             this.SetParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

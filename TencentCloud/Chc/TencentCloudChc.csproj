@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{678AC2F0-31B8-369B-9B5E-0BAB1405FDD8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1347</VersionPrefix>
+    <VersionPrefix>3.0.1459</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20230418\Models\CommonServiceBaseInfo.cs" />
     <Compile Include="V20230418\Models\ConfirmCommonServiceWorkOrderRequest.cs" />
     <Compile Include="V20230418\Models\ConfirmCommonServiceWorkOrderResponse.cs" />
+    <Compile Include="V20230418\Models\ContactCollectInfo.cs" />
     <Compile Include="V20230418\Models\CreateCommonServiceWorkOrderRequest.cs" />
     <Compile Include="V20230418\Models\CreateCommonServiceWorkOrderResponse.cs" />
     <Compile Include="V20230418\Models\CreateModelEvaluationWorkOrderRequest.cs" />
@@ -120,8 +121,14 @@
     <Compile Include="V20230418\Models\DescribeRacksResponse.cs" />
     <Compile Include="V20230418\Models\DescribeResourceUsageRequest.cs" />
     <Compile Include="V20230418\Models\DescribeResourceUsageResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderCarCollectListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderCarCollectListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderContactCollectListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderContactCollectListResponse.cs" />
     <Compile Include="V20230418\Models\DescribeWorkOrderListRequest.cs" />
     <Compile Include="V20230418\Models\DescribeWorkOrderListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderPersonnelCollectListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeWorkOrderPersonnelCollectListResponse.cs" />
     <Compile Include="V20230418\Models\DescribeWorkOrderStatisticsRequest.cs" />
     <Compile Include="V20230418\Models\DescribeWorkOrderStatisticsResponse.cs" />
     <Compile Include="V20230418\Models\DescribeWorkOrderTypesRequest.cs" />

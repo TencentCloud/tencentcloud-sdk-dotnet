@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 事件id
+        /// <p>事件id</p>
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 事件名称
+        /// <p>事件名称</p>
         /// </summary>
         [JsonProperty("EventShowName")]
         public string EventShowName{ get; set; }
 
         /// <summary>
-        /// 是否需要恢复
+        /// <p>是否需要恢复</p>
         /// </summary>
         [JsonProperty("NeedRecovered")]
         public bool? NeedRecovered{ get; set; }
 
         /// <summary>
-        /// 事件类型，预留字段，当前固定取值为2
+        /// <p>事件类型，预留字段，当前固定取值为2</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

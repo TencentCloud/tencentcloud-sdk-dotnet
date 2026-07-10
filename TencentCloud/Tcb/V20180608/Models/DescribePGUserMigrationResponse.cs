@@ -43,43 +43,43 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// <p>回滚的sql 语句</p>
+        /// <p>回滚的sql 语句</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Rollback")]
         public string Rollback{ get; set; }
 
         /// <summary>
-        /// <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
+        /// <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Checksum")]
         public string Checksum{ get; set; }
 
         /// <summary>
-        /// <p>用于标记调用来源</p>
+        /// <p>用于标记调用来源</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
+        /// <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// <p>该migration创建时间</p>
+        /// <p>该migration创建时间</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// <p>该migration应用时间</p>
+        /// <p>该migration应用时间</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("AppliedAt")]
         public string AppliedAt{ get; set; }
 
         /// <summary>
-        /// <p>该migration执行耗时</p><p>单位：毫秒</p>
+        /// <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("DurationMs")]
         public long? DurationMs{ get; set; }

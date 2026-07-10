@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的SDKAppId，和录制的房间所对应的SDKAppId相同。
+        /// <p>TRTC的SDKAppId，和录制的房间所对应的SDKAppId相同。</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 云端审核任务的唯一Id，在启动切片任务成功后会返回。
+        /// <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

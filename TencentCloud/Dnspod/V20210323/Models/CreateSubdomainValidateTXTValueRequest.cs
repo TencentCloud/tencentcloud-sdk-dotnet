@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 要添加的子域名 Zone 域。
+        /// <p>要添加的子域名 Zone 域。</p>
         /// </summary>
         [JsonProperty("DomainZone")]
         public string DomainZone{ get; set; }

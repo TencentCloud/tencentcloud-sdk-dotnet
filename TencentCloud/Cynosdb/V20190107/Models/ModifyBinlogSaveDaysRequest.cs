@@ -25,16 +25,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Binlog保留天数
+        /// <p>Binlog保留天数</p>
         /// </summary>
         [JsonProperty("BinlogSaveDays")]
         public long? BinlogSaveDays{ get; set; }
+
+        /// <summary>
+        /// <p>跨地域备份保留时间</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("BinlogCrossRegionSaveDays")]
+        public long? BinlogCrossRegionSaveDays{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
+            this.SetParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
         }
     }
 }

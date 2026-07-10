@@ -25,31 +25,31 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 偏移量，默认值为0。
+        /// <p>偏移量，默认值为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数量，默认值为20。
+        /// <p>限制数量，默认值为20。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 域名ID
+        /// <p>域名ID</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
 
         /// <summary>
-        /// 使用资源 ID 列表查询
+        /// <p>使用资源 ID 列表查询</p>
         /// </summary>
         [JsonProperty("ResourceIdList")]
         public string[] ResourceIdList{ get; set; }
 
         /// <summary>
-        /// 增值服务类型
+        /// <p>增值服务类型</p>
         /// </summary>
         [JsonProperty("LimitType")]
         public string LimitType{ get; set; }

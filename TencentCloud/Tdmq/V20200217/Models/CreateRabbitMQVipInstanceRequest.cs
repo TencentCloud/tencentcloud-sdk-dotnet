@@ -25,115 +25,118 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+        /// <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+        /// <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群的节点规格，需要输入对应的规格标识：
-        /// 2C8G：rabbit-vip-profession-2c8g
-        /// 4C16G：rabbit-vip-profession-4c16g
-        /// 8C32G：rabbit-vip-profession-8c32g
-        /// 16C32G：rabbit-vip-basic-4
-        /// 16C64G：rabbit-vip-profession-16c64g
-        /// 2C4G：rabbit-vip-basic-5
-        /// 4C8G：rabbit-vip-basic-1
-        /// 8C16G（已售罄）：rabbit-vip-basic-2
-        /// 不传默认为 4C8G：rabbit-vip-basic-1
+        /// <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
         /// </summary>
         [JsonProperty("NodeSpec")]
         public string NodeSpec{ get; set; }
 
         /// <summary>
-        /// 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
+        /// <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// 单节点存储规格,不传默认为200G
+        /// <p>单节点存储规格,不传默认为200G</p>
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
         /// <summary>
-        /// 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+        /// <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p>
         /// </summary>
         [JsonProperty("EnableCreateDefaultHaMirrorQueue")]
         public bool? EnableCreateDefaultHaMirrorQueue{ get; set; }
 
         /// <summary>
-        /// 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+        /// <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public bool? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 购买时长,不传默认为1(月)
+        /// <p>购买时长,不传默认为1(月)</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+        /// <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+        /// <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 是否国际站请求，默认 false
+        /// <p>是否国际站请求，默认 false</p>
         /// </summary>
         [JsonProperty("IsIntl")]
         public bool? IsIntl{ get; set; }
 
         /// <summary>
-        /// 资源标签列表
+        /// <p>资源标签列表</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 公网带宽大小，单位 Mbps
+        /// <p>公网带宽大小，单位 Mbps</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 是否打开公网接入，不传默认为false
+        /// <p>是否打开公网接入，不传默认为false</p>
         /// </summary>
         [JsonProperty("EnablePublicAccess")]
         public bool? EnablePublicAccess{ get; set; }
 
         /// <summary>
-        /// 是否打开集群删除保护，不传默认为 false
+        /// <p>是否打开集群删除保护，不传默认为 false</p>
         /// </summary>
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>CDC 集群 ID</p>
+        /// </summary>
+        [JsonProperty("CdcClusterId")]
+        public string CdcClusterId{ get; set; }
 
 
         /// <summary>
@@ -158,6 +161,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
         }
     }
 }

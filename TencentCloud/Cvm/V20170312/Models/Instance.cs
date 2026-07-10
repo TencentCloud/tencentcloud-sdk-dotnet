@@ -303,6 +303,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CpuTopology")]
         public CpuTopology CpuTopology{ get; set; }
 
+        /// <summary>
+        /// <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public long? PartitionNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -354,6 +360,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -1110,6 +1110,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribePlatformImagesResponse DescribePlatformImagesSync(DescribePlatformImagesRequest req)
         {
             return InternalRequestAsync<DescribePlatformImagesResponse>(req, "DescribePlatformImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询内置镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePresetImageListRequest"/></param>
+        /// <returns><see cref="DescribePresetImageListResponse"/></returns>
+        public Task<DescribePresetImageListResponse> DescribePresetImageList(DescribePresetImageListRequest req)
+        {
+            return InternalRequestAsync<DescribePresetImageListResponse>(req, "DescribePresetImageList");
+        }
+
+        /// <summary>
+        /// 该接口用于查询内置镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePresetImageListRequest"/></param>
+        /// <returns><see cref="DescribePresetImageListResponse"/></returns>
+        public DescribePresetImageListResponse DescribePresetImageListSync(DescribePresetImageListRequest req)
+        {
+            return InternalRequestAsync<DescribePresetImageListResponse>(req, "DescribePresetImageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

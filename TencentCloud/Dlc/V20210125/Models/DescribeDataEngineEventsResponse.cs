@@ -25,32 +25,32 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 事件详细信息
+        /// <p>事件详细信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public HouseEventsInfo[] Events{ get; set; }
 
         /// <summary>
-        /// 分页号
+        /// <p>分页号</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 总页数
+        /// <p>总页数</p>
         /// </summary>
         [JsonProperty("TotalPages")]
         public long? TotalPages{ get; set; }
 
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

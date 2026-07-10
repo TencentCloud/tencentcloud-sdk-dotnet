@@ -24,12 +24,19 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     public class DescribeFlowRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>流程ID</p>
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

@@ -40,6 +40,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         /// <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
         /// </summary>
         [JsonProperty("Subdomain")]
+        [System.Obsolete]
         public string Subdomain{ get; set; }
 
         /// <summary>
@@ -97,10 +98,16 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+        /// <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
         /// </summary>
         [JsonProperty("ErrorOnEmpty")]
         public string ErrorOnEmpty{ get; set; }
+
+        /// <summary>
+        /// <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+        /// </summary>
+        [JsonProperty("SubDomain")]
+        public string SubDomain{ get; set; }
 
 
         /// <summary>
@@ -121,6 +128,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ErrorOnEmpty", this.ErrorOnEmpty);
+            this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
         }
     }
 }

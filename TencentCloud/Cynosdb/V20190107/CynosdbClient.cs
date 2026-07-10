@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1455";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -1394,6 +1394,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBackupListByVaultResponse DescribeBackupListByVaultSync(DescribeBackupListByVaultRequest req)
         {
             return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupOverview）用于查询备份用量总览。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public Task<DescribeBackupOverviewResponse> DescribeBackupOverview(DescribeBackupOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupOverviewResponse>(req, "DescribeBackupOverview");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupOverview）用于查询备份用量总览。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public DescribeBackupOverviewResponse DescribeBackupOverviewSync(DescribeBackupOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupOverviewResponse>(req, "DescribeBackupOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

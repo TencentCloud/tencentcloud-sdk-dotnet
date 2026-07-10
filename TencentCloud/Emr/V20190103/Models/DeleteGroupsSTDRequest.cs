@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户组名称数组
+        /// <p>用户组名称数组</p>
         /// </summary>
         [JsonProperty("GroupNames")]
         public string[] GroupNames{ get; set; }

@@ -25,22 +25,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 是否开启跨地域快照备份ON/OFF
+        /// <p>是否开启跨地域快照备份ON/OFF</p>
         /// </summary>
         [JsonProperty("CrossRegionsEnable")]
         public string CrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// 快照备份所跨地域
+        /// <p>快照备份所跨地域</p>
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
+
+        /// <summary>
+        /// <p>跨地域备份保留时间</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("CrossRegionSaveDays")]
+        public long? CrossRegionSaveDays{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
         }
     }
 }

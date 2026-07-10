@@ -25,31 +25,31 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+        /// <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// vhost名
+        /// <p>vhost名</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 消息轨迹开关,true打开,false关闭,默认关闭
+        /// <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
         /// </summary>
         [JsonProperty("TraceFlag")]
         public bool? TraceFlag{ get; set; }
 
         /// <summary>
-        /// 是否创建镜像队列策略，默认值 true
+        /// <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public bool? MirrorQueuePolicyFlag{ get; set; }

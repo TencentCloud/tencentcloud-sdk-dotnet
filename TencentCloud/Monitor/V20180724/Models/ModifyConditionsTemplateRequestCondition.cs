@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 统计周期
+        /// <p>统计周期</p>
         /// </summary>
         [JsonProperty("CalcPeriod")]
         public string CalcPeriod{ get; set; }
 
         /// <summary>
-        /// 统计方式
+        /// <p>统计方式</p>
         /// </summary>
         [JsonProperty("CalcType")]
         public string CalcType{ get; set; }
 
         /// <summary>
-        /// 持续周期
+        /// <p>持续周期</p>
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public string ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// 指标ID
+        /// <p>指标ID</p>
         /// </summary>
         [JsonProperty("MetricID")]
         public long? MetricID{ get; set; }
 
         /// <summary>
-        /// 统计值
+        /// <p>统计值</p>
         /// </summary>
         [JsonProperty("CalcValue")]
         public string CalcValue{ get; set; }
 
         /// <summary>
-        /// 告警通知周期
+        /// <p>告警通知周期</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public string AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 告警通知方式
+        /// <p>告警通知方式</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }

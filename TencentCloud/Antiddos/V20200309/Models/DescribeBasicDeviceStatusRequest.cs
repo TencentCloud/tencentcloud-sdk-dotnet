@@ -25,25 +25,25 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// IP 资源列表
+        /// <p>IP 资源列表</p>
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
         /// <summary>
-        /// 域名化资源传id
+        /// <p>域名化资源传id</p>
         /// </summary>
         [JsonProperty("IdList")]
         public string[] IdList{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// <p>地域名称</p>
         /// </summary>
         [JsonProperty("FilterRegion")]
         public ulong? FilterRegion{ get; set; }
 
         /// <summary>
-        /// cnameWaf资源
+        /// <p>cnameWaf资源</p>
         /// </summary>
         [JsonProperty("CnameWafIdList")]
         public string[] CnameWafIdList{ get; set; }

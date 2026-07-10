@@ -25,58 +25,58 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略视图名称
+        /// <p>策略视图名称</p>
         /// </summary>
         [JsonProperty("PolicyViewName")]
         public string PolicyViewName{ get; set; }
 
         /// <summary>
-        /// 事件告警条件
+        /// <p>事件告警条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventMetrics")]
         public DescribePolicyConditionListEventMetric[] EventMetrics{ get; set; }
 
         /// <summary>
-        /// 是否支持多地域
+        /// <p>是否支持多地域</p>
         /// </summary>
         [JsonProperty("IsSupportMultiRegion")]
         public bool? IsSupportMultiRegion{ get; set; }
 
         /// <summary>
-        /// 指标告警条件
+        /// <p>指标告警条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metrics")]
         public DescribePolicyConditionListMetric[] Metrics{ get; set; }
 
         /// <summary>
-        /// 策略类型名称
+        /// <p>策略类型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 排序id
+        /// <p>排序id</p>
         /// </summary>
         [JsonProperty("SortId")]
         public long? SortId{ get; set; }
 
         /// <summary>
-        /// 是否支持默认策略
+        /// <p>是否支持默认策略</p>
         /// </summary>
         [JsonProperty("SupportDefault")]
         public bool? SupportDefault{ get; set; }
 
         /// <summary>
-        /// 支持该策略类型的地域列表
+        /// <p>支持该策略类型的地域列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportRegions")]
         public string[] SupportRegions{ get; set; }
 
         /// <summary>
-        /// 弃用信息
+        /// <p>弃用信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeprecatingInfo")]

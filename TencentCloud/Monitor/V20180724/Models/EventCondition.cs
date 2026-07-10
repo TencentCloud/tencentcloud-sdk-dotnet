@@ -25,39 +25,39 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通知频率
+        /// <p>告警通知频率</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public string AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+        /// <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public string AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 事件ID
+        /// <p>事件ID</p>
         /// </summary>
         [JsonProperty("EventID")]
         public string EventID{ get; set; }
 
         /// <summary>
-        /// 事件展示名称（对外）
+        /// <p>事件展示名称（对外）</p>
         /// </summary>
         [JsonProperty("EventDisplayName")]
         public string EventDisplayName{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
-        /// 指标名
+        /// <p>指标名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricName")]

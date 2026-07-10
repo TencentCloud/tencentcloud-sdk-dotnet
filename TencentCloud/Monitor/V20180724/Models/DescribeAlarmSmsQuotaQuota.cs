@@ -25,31 +25,31 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 配额类型
+        /// <p>配额类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 配额名称
+        /// <p>配额名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 免费配额剩余量
+        /// <p>免费配额剩余量</p>
         /// </summary>
         [JsonProperty("FreeLeft")]
         public long? FreeLeft{ get; set; }
 
         /// <summary>
-        /// 付费配额剩余量
+        /// <p>付费配额剩余量</p>
         /// </summary>
         [JsonProperty("PurchaseLeft")]
         public long? PurchaseLeft{ get; set; }
 
         /// <summary>
-        /// 已使用量
+        /// <p>已使用量</p>
         /// </summary>
         [JsonProperty("Used")]
         public long? Used{ get; set; }

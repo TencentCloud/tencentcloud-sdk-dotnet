@@ -25,56 +25,56 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 数据聚合方式，周期5秒
+        /// <p>数据聚合方式，周期5秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P5")]
         public string P5{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期10秒
+        /// <p>数据聚合方式，周期10秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P10")]
         public string P10{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期1分钟
+        /// <p>数据聚合方式，周期1分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P60")]
         public string P60{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期5分钟
+        /// <p>数据聚合方式，周期5分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P300")]
         public string P300{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期10分钟
+        /// <p>数据聚合方式，周期10分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P600")]
         public string P600{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期30分钟
+        /// <p>数据聚合方式，周期30分钟</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P1800")]
         public string P1800{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期1小时
+        /// <p>数据聚合方式，周期1小时</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P3600")]
         public string P3600{ get; set; }
 
         /// <summary>
-        /// 数据聚合方式，周期1天
+        /// <p>数据聚合方式，周期1天</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("P86400")]

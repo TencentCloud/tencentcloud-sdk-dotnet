@@ -25,10 +25,36 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
+        /// <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BudgetId")]
+        public string BudgetId{ get; set; }
+
+        /// <summary>
+        /// <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BudgetName")]
+        public string BudgetName{ get; set; }
+
+        /// <summary>
+        /// <p>集群信息</p>
+        /// </summary>
+        [JsonProperty("ClusterInfo")]
+        public ClusterInfo ClusterInfo{ get; set; }
+
+        /// <summary>
         /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+        /// </summary>
+        [JsonProperty("CreditUsageSet")]
+        public CreditUsage[] CreditUsageSet{ get; set; }
 
         /// <summary>
         /// <p>模型路由实例域名</p>
@@ -80,6 +106,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public RouterSettingWithFallBack RouterSetting{ get; set; }
 
         /// <summary>
+        /// <p>安全组ID列表</p>
+        /// </summary>
+        [JsonProperty("SecurityGroups")]
+        public string[] SecurityGroups{ get; set; }
+
+        /// <summary>
         /// <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
         /// </summary>
         [JsonProperty("SecurityStatus")]
@@ -127,52 +159,17 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
-        /// <summary>
-        /// <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BudgetId")]
-        public string BudgetId{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BudgetName")]
-        public string BudgetName{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由实例的Credit使用情况。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreditUsage")]
-        public CreditUsage CreditUsage{ get; set; }
-
-        /// <summary>
-        /// <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-        /// </summary>
-        [JsonProperty("CreditUsageSet")]
-        public CreditUsage[] CreditUsageSet{ get; set; }
-
-        /// <summary>
-        /// <p>安全组ID列表</p>
-        /// </summary>
-        [JsonProperty("SecurityGroups")]
-        public string[] SecurityGroups{ get; set; }
-
-        /// <summary>
-        /// <p>集群信息</p>
-        /// </summary>
-        [JsonProperty("ClusterInfo")]
-        public ClusterInfo ClusterInfo{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BudgetId", this.BudgetId);
+            this.SetParamSimple(map, prefix + "BudgetName", this.BudgetName);
+            this.SetParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
             this.SetParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
@@ -181,6 +178,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
             this.SetParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
+            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
             this.SetParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
             this.SetParamArrayObj(map, prefix + "ServiceEndPoints.", this.ServiceEndPoints);
             this.SetParamSimple(map, prefix + "Status", this.Status);
@@ -189,12 +187,6 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TradeStatus", this.TradeStatus);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "BudgetId", this.BudgetId);
-            this.SetParamSimple(map, prefix + "BudgetName", this.BudgetName);
-            this.SetParamObj(map, prefix + "CreditUsage.", this.CreditUsage);
-            this.SetParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
-            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
-            this.SetParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
         }
     }
 }

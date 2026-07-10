@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1451</VersionPrefix>
+    <VersionPrefix>3.0.1459</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,8 @@
     <Compile Include="V20211111\Models\DescribeNotebooksResponse.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesRequest.cs" />
     <Compile Include="V20211111\Models\DescribePlatformImagesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribePresetImageListRequest.cs" />
+    <Compile Include="V20211111\Models\DescribePresetImageListResponse.cs" />
     <Compile Include="V20211111\Models\DescribePublicAlgoVersionListRequest.cs" />
     <Compile Include="V20211111\Models\DescribePublicAlgoVersionListResponse.cs" />
     <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosRequest.cs" />
@@ -258,6 +260,7 @@
     <Compile Include="V20211111\Models\Pod.cs" />
     <Compile Include="V20211111\Models\PodInfo.cs" />
     <Compile Include="V20211111\Models\PodSSHInfo.cs" />
+    <Compile Include="V20211111\Models\PresetImageInfo.cs" />
     <Compile Include="V20211111\Models\PrivateLinkInfo.cs" />
     <Compile Include="V20211111\Models\Probe.cs" />
     <Compile Include="V20211111\Models\ProbeAction.cs" />
@@ -276,6 +279,7 @@
     <Compile Include="V20211111\Models\ResourceInstanceRunningJobInfo.cs" />
     <Compile Include="V20211111\Models\ResourceSpec.cs" />
     <Compile Include="V20211111\Models\RollingUpdate.cs" />
+    <Compile Include="V20211111\Models\RuntimeLib.cs" />
     <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchedulingPolicy.cs" />

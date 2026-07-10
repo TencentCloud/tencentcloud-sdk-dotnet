@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -2700,6 +2700,27 @@ namespace TencentCloud.Monitor.V20180724
         public EnableGrafanaSSOResponse EnableGrafanaSSOSync(EnableGrafanaSSORequest req)
         {
             return InternalRequestAsync<EnableGrafanaSSOResponse>(req, "EnableGrafanaSSO")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 一键启用（创建）某个云产品下的预设策略
+        /// </summary>
+        /// <param name="req"><see cref="EnablePredefinedPoliciesRequest"/></param>
+        /// <returns><see cref="EnablePredefinedPoliciesResponse"/></returns>
+        public Task<EnablePredefinedPoliciesResponse> EnablePredefinedPolicies(EnablePredefinedPoliciesRequest req)
+        {
+            return InternalRequestAsync<EnablePredefinedPoliciesResponse>(req, "EnablePredefinedPolicies");
+        }
+
+        /// <summary>
+        /// 一键启用（创建）某个云产品下的预设策略
+        /// </summary>
+        /// <param name="req"><see cref="EnablePredefinedPoliciesRequest"/></param>
+        /// <returns><see cref="EnablePredefinedPoliciesResponse"/></returns>
+        public EnablePredefinedPoliciesResponse EnablePredefinedPoliciesSync(EnablePredefinedPoliciesRequest req)
+        {
+            return InternalRequestAsync<EnablePredefinedPoliciesResponse>(req, "EnablePredefinedPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

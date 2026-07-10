@@ -25,42 +25,42 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 检测方式
+        /// <p>检测方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcType")]
         public DescribePolicyConditionListConfigManualCalcType CalcType{ get; set; }
 
         /// <summary>
-        /// 检测阈值
+        /// <p>检测阈值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcValue")]
         public DescribePolicyConditionListConfigManualCalcValue CalcValue{ get; set; }
 
         /// <summary>
-        /// 持续时间
+        /// <p>持续时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinueTime")]
         public DescribePolicyConditionListConfigManualContinueTime ContinueTime{ get; set; }
 
         /// <summary>
-        /// 数据周期
+        /// <p>数据周期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public DescribePolicyConditionListConfigManualPeriod Period{ get; set; }
 
         /// <summary>
-        /// 持续周期个数
+        /// <p>持续周期个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeriodNum")]
         public DescribePolicyConditionListConfigManualPeriodNum PeriodNum{ get; set; }
 
         /// <summary>
-        /// 聚合方式
+        /// <p>聚合方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatType")]

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tmt.V20180321.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextTranslateResponse : AbstractModel
+    public class DescribeIntentRouterTiersResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>翻译后的文本</p>
+        /// <p>Tier 字典列表（按 tier_id 升序排列）</p>
         /// </summary>
-        [JsonProperty("TargetText")]
-        public string TargetText{ get; set; }
+        [JsonProperty("TierSet")]
+        public IntentRouterTierDictItem[] TierSet{ get; set; }
 
         /// <summary>
-        /// <p>源语言，详见入参Source</p>
+        /// <p>Tier 总条数</p>
         /// </summary>
-        [JsonProperty("Source")]
-        public string Source{ get; set; }
-
-        /// <summary>
-        /// <p>目标语言，详见入参Target</p>
-        /// </summary>
-        [JsonProperty("Target")]
-        public string Target{ get; set; }
-
-        /// <summary>
-        /// <p>本次翻译消耗的字符数</p>
-        /// </summary>
-        [JsonProperty("UsedAmount")]
-        public long? UsedAmount{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,10 +48,8 @@ namespace TencentCloud.Tmt.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetText", this.TargetText);
-            this.SetParamSimple(map, prefix + "Source", this.Source);
-            this.SetParamSimple(map, prefix + "Target", this.Target);
-            this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
+            this.SetParamArrayObj(map, prefix + "TierSet.", this.TierSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

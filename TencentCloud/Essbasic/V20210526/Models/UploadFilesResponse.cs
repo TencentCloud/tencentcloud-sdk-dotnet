@@ -43,6 +43,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FileUrls{ get; set; }
 
         /// <summary>
+        /// <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArraySimple(map, prefix + "FileUrls.", this.FileUrls);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

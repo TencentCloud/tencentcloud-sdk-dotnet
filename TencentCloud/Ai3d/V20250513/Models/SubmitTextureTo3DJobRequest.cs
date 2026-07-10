@@ -60,6 +60,18 @@ namespace TencentCloud.Ai3d.V20250513.Models
         [JsonProperty("EnablePBR")]
         public bool? EnablePBR{ get; set; }
 
+        /// <summary>
+        /// <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p>
+        /// </summary>
+        [JsonProperty("EnableKeepUV")]
+        public bool? EnableKeepUV{ get; set; }
+
+        /// <summary>
+        /// <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p>
+        /// </summary>
+        [JsonProperty("TextureSize")]
+        public long? TextureSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Ai3d.V20250513.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
+            this.SetParamSimple(map, prefix + "EnableKeepUV", this.EnableKeepUV);
+            this.SetParamSimple(map, prefix + "TextureSize", this.TextureSize);
         }
     }
 }

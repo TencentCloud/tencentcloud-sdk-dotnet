@@ -25,49 +25,53 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 是否开启自动逻辑备份
+        /// <p>是否开启自动逻辑备份</p>
         /// </summary>
         [JsonProperty("LogicBackupEnable")]
         public string LogicBackupEnable{ get; set; }
 
         /// <summary>
-        /// 自动逻辑备份开始时间
+        /// <p>自动逻辑备份开始时间</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeBeg")]
         public ulong? LogicBackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// 自动逻辑备份结束时间
+        /// <p>自动逻辑备份结束时间</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeEnd")]
         public ulong? LogicBackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// 自动逻辑备份保留时间
-        /// 单位：秒
+        /// <p>自动逻辑备份保留时间<br>单位：秒</p>
         /// </summary>
         [JsonProperty("LogicReserveDuration")]
         public ulong? LogicReserveDuration{ get; set; }
 
         /// <summary>
-        /// 是否开启跨地域逻辑备份
-        /// 可选值：ON/OFF
+        /// <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
         /// </summary>
         [JsonProperty("LogicCrossRegionsEnable")]
         public string LogicCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// 逻辑备份所跨地域
+        /// <p>逻辑备份所跨地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogicCrossRegions")]
         public string[] LogicCrossRegions{ get; set; }
 
         /// <summary>
-        /// 备份投递关系
+        /// <p>备份投递关系</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
+
+        /// <summary>
+        /// <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+        /// </summary>
+        [JsonProperty("LogicCrossRegionSaveDays")]
+        public long? LogicCrossRegionSaveDays{ get; set; }
 
 
         /// <summary>
@@ -82,6 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "LogicCrossRegionsEnable", this.LogicCrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "LogicCrossRegions.", this.LogicCrossRegions);
             this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
+            this.SetParamSimple(map, prefix + "LogicCrossRegionSaveDays", this.LogicCrossRegionSaveDays);
         }
     }
 }

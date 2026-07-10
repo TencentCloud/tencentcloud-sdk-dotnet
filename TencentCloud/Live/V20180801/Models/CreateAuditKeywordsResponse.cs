@@ -25,16 +25,22 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 添加成功的关键词 Id 列表。
+        /// <p>添加成功的关键词 Id 列表。</p>
         /// </summary>
         [JsonProperty("KeywordIds")]
         public string[] KeywordIds{ get; set; }
 
         /// <summary>
-        /// 重复关键词列表。
+        /// <p>重复关键词列表。</p>
         /// </summary>
         [JsonProperty("DupInfos")]
         public AuditKeywordInfo[] DupInfos{ get; set; }
+
+        /// <summary>
+        /// <p>新增成功关键词列表</p>
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public AuditKeywordInfo[] Keywords{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamArraySimple(map, prefix + "KeywordIds.", this.KeywordIds);
             this.SetParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
+            this.SetParamArrayObj(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

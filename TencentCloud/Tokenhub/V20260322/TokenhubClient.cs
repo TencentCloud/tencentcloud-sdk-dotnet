@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1458";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,31 @@ namespace TencentCloud.Tokenhub.V20260322
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建 API 密钥。
+        /// 
+        /// 创建一个新的 API 密钥，创建成功后返回 API 密钥 ID。需指定平台类型、绑定方式和初始状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public Task<CreateApiKeyResponse> CreateApiKey(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey");
+        }
+
+        /// <summary>
+        /// 创建 API 密钥。
+        /// 
+        /// 创建一个新的 API 密钥，创建成功后返回 API 密钥 ID。需指定平台类型、绑定方式和初始状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -150,6 +175,27 @@ namespace TencentCloud.Tokenhub.V20260322
         public CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuySync(CreateTokenPlanTeamOrderAndBuyRequest req)
         {
             return InternalRequestAsync<CreateTokenPlanTeamOrderAndBuyResponse>(req, "CreateTokenPlanTeamOrderAndBuy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定的 API 密钥，同时清理关联的模型绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public Task<DeleteApiKeyResponse> DeleteApiKey(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey");
+        }
+
+        /// <summary>
+        /// 删除指定的 API 密钥，同时清理关联的模型绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public DeleteApiKeyResponse DeleteApiKeySync(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -452,7 +498,7 @@ namespace TencentCloud.Tokenhub.V20260322
         /// <summary>
         /// 查询 TokenPlan APIKey 调用明细。
         /// 
-        /// 从 CLS 日志服务查询套餐下的调用明细，按 pkg_id 过滤，支持游标分页。
+        /// 从 CLS 日志服务查询套餐下的调用明细，按 team_id 过滤，支持游标分页。
         /// </summary>
         /// <param name="req"><see cref="DescribeTokenPlanApiKeyUsageDetailRequest"/></param>
         /// <returns><see cref="DescribeTokenPlanApiKeyUsageDetailResponse"/></returns>
@@ -464,7 +510,7 @@ namespace TencentCloud.Tokenhub.V20260322
         /// <summary>
         /// 查询 TokenPlan APIKey 调用明细。
         /// 
-        /// 从 CLS 日志服务查询套餐下的调用明细，按 pkg_id 过滤，支持游标分页。
+        /// 从 CLS 日志服务查询套餐下的调用明细，按 team_id 过滤，支持游标分页。
         /// </summary>
         /// <param name="req"><see cref="DescribeTokenPlanApiKeyUsageDetailRequest"/></param>
         /// <returns><see cref="DescribeTokenPlanApiKeyUsageDetailResponse"/></returns>
@@ -541,6 +587,52 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeUsageRankListResponse DescribeUsageRankListSync(DescribeUsageRankListRequest req)
         {
             return InternalRequestAsync<DescribeUsageRankListResponse>(req, "DescribeUsageRankList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新 API 密钥信息。
+        /// 
+        /// 更新 API 密钥的备注信息、 IP 白名单和 Token 限额（修改限额推荐使用QuotaDesired参数）。所有可选参数不传表示不修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyInfoRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyInfoResponse"/></returns>
+        public Task<ModifyApiKeyInfoResponse> ModifyApiKeyInfo(ModifyApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyInfoResponse>(req, "ModifyApiKeyInfo");
+        }
+
+        /// <summary>
+        /// 更新 API 密钥信息。
+        /// 
+        /// 更新 API 密钥的备注信息、 IP 白名单和 Token 限额（修改限额推荐使用QuotaDesired参数）。所有可选参数不传表示不修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyInfoRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyInfoResponse"/></returns>
+        public ModifyApiKeyInfoResponse ModifyApiKeyInfoSync(ModifyApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyInfoResponse>(req, "ModifyApiKeyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新 API 密钥的启用或禁用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyStatusResponse"/></returns>
+        public Task<ModifyApiKeyStatusResponse> ModifyApiKeyStatus(ModifyApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyStatusResponse>(req, "ModifyApiKeyStatus");
+        }
+
+        /// <summary>
+        /// 更新 API 密钥的启用或禁用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyStatusResponse"/></returns>
+        public ModifyApiKeyStatusResponse ModifyApiKeyStatusSync(ModifyApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyStatusResponse>(req, "ModifyApiKeyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

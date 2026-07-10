@@ -25,65 +25,69 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 系统自动时间
+        /// <p>系统自动时间</p>
         /// </summary>
         [JsonProperty("BackupCustomAutoTime")]
         public bool? BackupCustomAutoTime{ get; set; }
 
         /// <summary>
-        /// 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+        /// <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+        /// <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+        /// <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupWeekDays")]
         public string[] BackupWeekDays{ get; set; }
 
         /// <summary>
-        /// 间隔时间
+        /// <p>间隔时间</p>
         /// </summary>
         [JsonProperty("BackupIntervalTime")]
         public long? BackupIntervalTime{ get; set; }
 
         /// <summary>
-        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
+        /// <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// 跨地域备份开启
-        /// yes-开启
-        /// no-关闭
+        /// <p>跨地域备份开启<br>yes-开启<br>no-关闭</p>
         /// </summary>
         [JsonProperty("CrossRegionsEnable")]
         public string CrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// 跨地域备份地域
+        /// <p>跨地域备份地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+        /// <p>跨地域备份保留时间</p><p>单位：天</p>
+        /// </summary>
+        [JsonProperty("CrossRegionSaveDays")]
+        public long? CrossRegionSaveDays{ get; set; }
+
+        /// <summary>
+        /// <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p>
         /// </summary>
         [JsonProperty("BackupTriggerStrategy")]
         public string BackupTriggerStrategy{ get; set; }
 
         /// <summary>
-        /// 备份投递关系
+        /// <p>备份投递关系</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
@@ -102,6 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
             this.SetParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
             this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }

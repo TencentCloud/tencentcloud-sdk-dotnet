@@ -25,34 +25,48 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// DATE:按天维度统计 HOUR:按小时维度统计
+        /// <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
         /// </summary>
         [JsonProperty("DnsFormat")]
+        [System.Obsolete]
         public string DnsFormat{ get; set; }
 
         /// <summary>
-        /// 当前统计周期解析量总计
+        /// <p>当前统计周期解析量总计</p>
         /// </summary>
         [JsonProperty("DnsTotal")]
+        [System.Obsolete]
         public ulong? DnsTotal{ get; set; }
 
         /// <summary>
-        /// 当前查询的域名
+        /// <p>当前查询的域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 当前统计周期开始时间
+        /// <p>当前统计周期开始时间</p>
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 当前统计周期结束时间
+        /// <p>当前统计周期结束时间</p>
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
+
+        /// <summary>
+        /// <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul>
+        /// </summary>
+        [JsonProperty("DNSFormat")]
+        public string DNSFormat{ get; set; }
+
+        /// <summary>
+        /// <p>当前统计周期解析量总计</p>
+        /// </summary>
+        [JsonProperty("DNSTotal")]
+        public ulong? DNSTotal{ get; set; }
 
 
         /// <summary>
@@ -65,6 +79,8 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
+            this.SetParamSimple(map, prefix + "DNSFormat", this.DNSFormat);
+            this.SetParamSimple(map, prefix + "DNSTotal", this.DNSTotal);
         }
     }
 }

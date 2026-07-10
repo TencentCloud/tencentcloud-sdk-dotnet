@@ -25,73 +25,73 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 维度 key 标示，后台英文名
+        /// <p>维度 key 标示，后台英文名</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 维度 key 名称，中英文前台展示名
+        /// <p>维度 key 名称，中英文前台展示名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 是否必选
+        /// <p>是否必选</p>
         /// </summary>
         [JsonProperty("IsRequired")]
         public bool? IsRequired{ get; set; }
 
         /// <summary>
-        /// 支持的操作符列表
+        /// <p>支持的操作符列表</p>
         /// </summary>
         [JsonProperty("Operators")]
         public Operator[] Operators{ get; set; }
 
         /// <summary>
-        /// 是否支持多选
+        /// <p>是否支持多选</p>
         /// </summary>
         [JsonProperty("IsMultiple")]
         public bool? IsMultiple{ get; set; }
 
         /// <summary>
-        /// 创建后是否可以修改
+        /// <p>创建后是否可以修改</p>
         /// </summary>
         [JsonProperty("IsMutable")]
         public bool? IsMutable{ get; set; }
 
         /// <summary>
-        /// 是否展示给用户
+        /// <p>是否展示给用户</p>
         /// </summary>
         [JsonProperty("IsVisible")]
         public bool? IsVisible{ get; set; }
 
         /// <summary>
-        /// 能否用来过滤策略列表
+        /// <p>能否用来过滤策略列表</p>
         /// </summary>
         [JsonProperty("CanFilterPolicy")]
         public bool? CanFilterPolicy{ get; set; }
 
         /// <summary>
-        /// 能否用来过滤告警历史
+        /// <p>能否用来过滤告警历史</p>
         /// </summary>
         [JsonProperty("CanFilterHistory")]
         public bool? CanFilterHistory{ get; set; }
 
         /// <summary>
-        /// 能否作为聚合维度
+        /// <p>能否作为聚合维度</p>
         /// </summary>
         [JsonProperty("CanGroupBy")]
         public bool? CanGroupBy{ get; set; }
 
         /// <summary>
-        /// 是否必须作为聚合维度
+        /// <p>是否必须作为聚合维度</p>
         /// </summary>
         [JsonProperty("MustGroupBy")]
         public bool? MustGroupBy{ get; set; }
 
         /// <summary>
-        /// 前端翻译要替换的 key
+        /// <p>前端翻译要替换的 key</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShowValueReplace")]

@@ -25,16 +25,23 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 符合筛选条件的套餐总数
+        /// <p>符合筛选条件的套餐总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 增值服务信息列表
+        /// <p>增值服务信息列表</p>
         /// </summary>
         [JsonProperty("VasList")]
+        [System.Obsolete]
         public VasListItem[] VasList{ get; set; }
+
+        /// <summary>
+        /// <p>增值服务信息列表</p>
+        /// </summary>
+        [JsonProperty("VASList")]
+        public VasListItem[] VASList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "VasList.", this.VasList);
+            this.SetParamArrayObj(map, prefix + "VASList.", this.VASList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

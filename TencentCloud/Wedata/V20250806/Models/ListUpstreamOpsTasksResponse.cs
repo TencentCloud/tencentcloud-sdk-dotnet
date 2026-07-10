@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 上游任务详情
+        /// <p>上游任务详情</p>
         /// </summary>
         [JsonProperty("Data")]
         public ParentDependencyConfigPage Data{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 每页数量，默认值是 20，必须大于 0 且小于或等于 200
+        /// <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
         /// </summary>
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
         /// <summary>
-        /// 页码，默认值是 1，从 1开始，不能大于 200
+        /// <p>页码，默认值是 1，从 1开始，不能大于 200</p>
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+        /// <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 按策略名匹配
+        /// <p>按策略名匹配</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

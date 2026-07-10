@@ -25,40 +25,54 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 要查询解析量的域名
+        /// <p>要查询解析量的域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 查询的开始时间，格式：YYYY-MM-DD
+        /// <p>查询的开始时间，格式：YYYY-MM-DD</p>
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 查询的结束时间，格式：YYYY-MM-DD
+        /// <p>查询的结束时间，格式：YYYY-MM-DD</p>
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 要查询解析量的子域名
-        /// </summary>
-        [JsonProperty("Subdomain")]
-        public string Subdomain{ get; set; }
-
-        /// <summary>
-        /// DATE:按天维度统计 HOUR:按小时维度统计
+        /// <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
         /// </summary>
         [JsonProperty("DnsFormat")]
+        [System.Obsolete]
         public string DnsFormat{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+        /// <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
+
+        /// <summary>
+        /// <p>要查询解析量的子域名</p>
+        /// </summary>
+        [JsonProperty("Subdomain")]
+        [System.Obsolete]
+        public string Subdomain{ get; set; }
+
+        /// <summary>
+        /// <p>要查询解析量的子域名</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+        /// </summary>
+        [JsonProperty("SubDomain")]
+        public string SubDomain{ get; set; }
+
+        /// <summary>
+        /// <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+        /// </summary>
+        [JsonProperty("DNSFormat")]
+        public string DNSFormat{ get; set; }
 
 
         /// <summary>
@@ -69,9 +83,11 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
-            this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
             this.SetParamSimple(map, prefix + "DnsFormat", this.DnsFormat);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
+            this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
+            this.SetParamSimple(map, prefix + "DNSFormat", this.DNSFormat);
         }
     }
 }

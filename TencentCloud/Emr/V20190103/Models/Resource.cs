@@ -110,6 +110,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PartitionNumber")]
         public long? PartitionNumber{ get; set; }
 
+        /// <summary>
+        /// <p>高性能集群ID</p>
+        /// </summary>
+        [JsonProperty("HCCHpcClusterId")]
+        public string HCCHpcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+            this.SetParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
         }
     }
 }

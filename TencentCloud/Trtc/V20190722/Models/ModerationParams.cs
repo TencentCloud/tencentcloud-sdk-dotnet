@@ -25,62 +25,57 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
+        /// <p>AI 内容理解任务类型， 1:音频切片理解，2:视频截帧理解，3:音视切片+视频截帧理解  默认值1 </p><p>枚举值：</p><ul><li>1： 音频切片理解</li></ul>
         /// </summary>
         [JsonProperty("ModerationType")]
         public ulong? ModerationType{ get; set; }
 
         /// <summary>
-        /// 房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止切片，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于1800秒(0.5小时)。示例值：30 
+        /// <p>房间内持续没有用户（主播）上行推流的状态超过MaxIdleTime的时长，自动停止切片，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于1800秒(0.5小时)。示例值：30</p>
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// 音频切片时长，默认15s 示例值：15, 范围15-60s
+        /// <p>音频切片时长，默认15s 示例值：15, 范围15-60s</p>
         /// </summary>
         [JsonProperty("SliceAudio")]
         public ulong? SliceAudio{ get; set; }
 
         /// <summary>
-        /// 视频截帧间隔时长，默认5s, 范围1-60s
+        /// <p>视频截帧间隔时长，默认5s, 范围1-60s</p>
         /// </summary>
         [JsonProperty("SliceVideo")]
         public ulong? SliceVideo{ get; set; }
 
         /// <summary>
-        /// 供应商枚举，
-        /// trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
-        /// tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
-        /// ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
-        /// shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
-        /// yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
+        /// <p>供应商枚举，<br>trtc : trtc内容理解</p>
         /// </summary>
         [JsonProperty("ModerationSupplier")]
         public string ModerationSupplier{ get; set; }
 
         /// <summary>
-        /// 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
+        /// <p>第三方内容理解供应商需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化</p>
         /// </summary>
         [JsonProperty("ModerationSupplierParam")]
         public ModerationSupplierParam ModerationSupplierParam{ get; set; }
 
         /// <summary>
-        /// 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
+        /// <p>是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件</p>
         /// </summary>
         [JsonProperty("SaveModerationFile")]
         public ulong? SaveModerationFile{ get; set; }
 
         /// <summary>
-        /// 是否回调所有审核结果:
+        /// <p>是否回调所有内容理解结果:
         /// 0 默认回调所有结果 
-        /// 1 仅回调命中结果 
+        /// 1 仅回调命中结果</p>
         /// </summary>
         [JsonProperty("CallbackAllResults")]
         public ulong? CallbackAllResults{ get; set; }
 
         /// <summary>
-        /// 指定订阅流白名单或者黑名单。
+        /// <p>指定订阅流白名单或者黑名单。</p>
         /// </summary>
         [JsonProperty("SubscribeStreamUserIds")]
         public SubscribeModerationUserIds SubscribeStreamUserIds{ get; set; }

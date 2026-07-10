@@ -25,37 +25,37 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群实例ID
+        /// <p>集群实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群用户名列表
+        /// <p>集群用户名列表</p>
         /// </summary>
         [JsonProperty("UserNameList")]
         public string[] UserNameList{ get; set; }
 
         /// <summary>
-        /// tke/eks集群id，容器集群传
+        /// <p>tke/eks集群id，容器集群传</p>
         /// </summary>
         [JsonProperty("TkeClusterId")]
         public string TkeClusterId{ get; set; }
 
         /// <summary>
-        /// 默认空，容器版传"native"
+        /// <p>默认空，容器版传&quot;native&quot;</p>
         /// </summary>
         [JsonProperty("DisplayStrategy")]
         public string DisplayStrategy{ get; set; }
 
         /// <summary>
-        /// 用户组
+        /// <p>用户组</p>
         /// </summary>
         [JsonProperty("UserGroupList")]
         public UserAndGroup[] UserGroupList{ get; set; }
 
         /// <summary>
-        /// 是否删除家目录，只针对cvm集群
+        /// <p>是否删除家目录，只针对cvm集群</p>
         /// </summary>
         [JsonProperty("DeleteHomeDir")]
         public bool? DeleteHomeDir{ get; set; }

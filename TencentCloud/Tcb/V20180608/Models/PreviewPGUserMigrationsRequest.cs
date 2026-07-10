@@ -37,10 +37,16 @@ namespace TencentCloud.Tcb.V20180608.Models
         public MigrationInput[] Migrations{ get; set; }
 
         /// <summary>
-        /// <p>标记请求来源</p>
+        /// <p>标记请求来源</p><p>deprecated</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
+
+        /// <summary>
+        /// <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("IncludeAll")]
+        public bool? IncludeAll{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamArrayObj(map, prefix + "Migrations.", this.Migrations);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "IncludeAll", this.IncludeAll);
         }
     }
 }

@@ -170,6 +170,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PublicStreamAccessEndpoint")]
         public string PublicStreamAccessEndpoint{ get; set; }
 
+        /// <summary>
+        /// <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>CDC 集群 ID</p>
+        /// </summary>
+        [JsonProperty("CdcClusterId")]
+        public string CdcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +212,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
         }
     }
 }

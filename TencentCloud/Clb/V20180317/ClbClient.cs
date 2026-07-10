@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1452";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Clb.V20180317
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 给 BYOK 模型添加 Key
+        /// </summary>
+        /// <param name="req"><see cref="AddModelKeyRequest"/></param>
+        /// <returns><see cref="AddModelKeyResponse"/></returns>
+        public Task<AddModelKeyResponse> AddModelKey(AddModelKeyRequest req)
+        {
+            return InternalRequestAsync<AddModelKeyResponse>(req, "AddModelKey");
+        }
+
+        /// <summary>
+        /// 给 BYOK 模型添加 Key
+        /// </summary>
+        /// <param name="req"><see cref="AddModelKeyRequest"/></param>
+        /// <returns><see cref="AddModelKeyResponse"/></returns>
+        public AddModelKeyResponse AddModelKeySync(AddModelKeyRequest req)
+        {
+            return InternalRequestAsync<AddModelKeyResponse>(req, "AddModelKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为模型路由实例新增或覆盖一条模型重写规则（Model Rewrite）。当 SourceModel 已存在重写规则时，本次请求会用新的 TargetModel 覆盖原值（覆盖语义）。该接口为异步接口。
+        /// </summary>
+        /// <param name="req"><see cref="AddModelRewriteRequest"/></param>
+        /// <returns><see cref="AddModelRewriteResponse"/></returns>
+        public Task<AddModelRewriteResponse> AddModelRewrite(AddModelRewriteRequest req)
+        {
+            return InternalRequestAsync<AddModelRewriteResponse>(req, "AddModelRewrite");
+        }
+
+        /// <summary>
+        /// 为模型路由实例新增或覆盖一条模型重写规则（Model Rewrite）。当 SourceModel 已存在重写规则时，本次请求会用新的 TargetModel 覆盖原值（覆盖语义）。该接口为异步接口。
+        /// </summary>
+        /// <param name="req"><see cref="AddModelRewriteRequest"/></param>
+        /// <returns><see cref="AddModelRewriteResponse"/></returns>
+        public AddModelRewriteResponse AddModelRewriteSync(AddModelRewriteRequest req)
+        {
+            return InternalRequestAsync<AddModelRewriteResponse>(req, "AddModelRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +134,56 @@ namespace TencentCloud.Clb.V20180317
         public AssociateCustomizedConfigResponse AssociateCustomizedConfigSync(AssociateCustomizedConfigRequest req)
         {
             return InternalRequestAsync<AssociateCustomizedConfigResponse>(req, "AssociateCustomizedConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为指定模型路由实例关联 Guardrails 防护。当前支持关联腾讯云 WAF LLM SDK 接入配置，关联成功后，模型路由转发的请求会按照绑定的 WAF 防护配置进行安全检测。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；防护配置生效后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+        /// 
+        /// 当前每个模型路由实例最多关联 1 个 Guardrail。如需替换已关联的防护配置，请调用 ModifyModelRouterGuardrails。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="AssociateModelRouterGuardrailsResponse"/></returns>
+        public Task<AssociateModelRouterGuardrailsResponse> AssociateModelRouterGuardrails(AssociateModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<AssociateModelRouterGuardrailsResponse>(req, "AssociateModelRouterGuardrails");
+        }
+
+        /// <summary>
+        /// 为指定模型路由实例关联 Guardrails 防护。当前支持关联腾讯云 WAF LLM SDK 接入配置，关联成功后，模型路由转发的请求会按照绑定的 WAF 防护配置进行安全检测。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；防护配置生效后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+        /// 
+        /// 当前每个模型路由实例最多关联 1 个 Guardrail。如需替换已关联的防护配置，请调用 ModifyModelRouterGuardrails。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="AssociateModelRouterGuardrailsResponse"/></returns>
+        public AssociateModelRouterGuardrailsResponse AssociateModelRouterGuardrailsSync(AssociateModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<AssociateModelRouterGuardrailsResponse>(req, "AssociateModelRouterGuardrails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="AssociateModelsToModelRouterRequest"/></param>
+        /// <returns><see cref="AssociateModelsToModelRouterResponse"/></returns>
+        public Task<AssociateModelsToModelRouterResponse> AssociateModelsToModelRouter(AssociateModelsToModelRouterRequest req)
+        {
+            return InternalRequestAsync<AssociateModelsToModelRouterResponse>(req, "AssociateModelsToModelRouter");
+        }
+
+        /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="AssociateModelsToModelRouterRequest"/></param>
+        /// <returns><see cref="AssociateModelsToModelRouterResponse"/></returns>
+        public AssociateModelsToModelRouterResponse AssociateModelsToModelRouterSync(AssociateModelsToModelRouterRequest req)
+        {
+            return InternalRequestAsync<AssociateModelsToModelRouterResponse>(req, "AssociateModelsToModelRouter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -234,6 +326,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 聊天测试，发送聊天请求验证模型连通性。用户传入 ApiKey 和 Model，支持自定义消息和额外参数、支持多模态附件。stream 强制关闭，max_tokens 上限 100。
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionsRequest"/></param>
+        /// <returns><see cref="ChatCompletionsResponse"/></returns>
+        public Task<ChatCompletionsResponse> ChatCompletions(ChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<ChatCompletionsResponse>(req, "ChatCompletions");
+        }
+
+        /// <summary>
+        /// 聊天测试，发送聊天请求验证模型连通性。用户传入 ApiKey 和 Model，支持自定义消息和额外参数、支持多模态附件。stream 强制关闭，max_tokens 上限 100。
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionsRequest"/></param>
+        /// <returns><see cref="ChatCompletionsResponse"/></returns>
+        public ChatCompletionsResponse ChatCompletionsSync(ChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<ChatCompletionsResponse>(req, "ChatCompletions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。克隆接口为异步操作，克隆的数据以调用CloneLoadBalancer时为准，如果调用CloneLoadBalancer后克隆CLB发生变化，变化规则不会克隆。
         /// 
         /// 注：查询实例创建状态可以根据返回值中的requestId访问[DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)接口
@@ -295,7 +408,28 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
+        /// 初始化 BYOK VPC 网络资源。PrivateCustom 场景的 Phase 1：创建 BYOK 模型主表记录并提交 VPC 网络初始化异步任务（申请 IP、创建 LBNAT、绑定 SNAT 等）。完成后需调用 CreateModel 传入返回的 ServiceProviderId 完成业务资源创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBYOKNetworkRequest"/></param>
+        /// <returns><see cref="CreateBYOKNetworkResponse"/></returns>
+        public Task<CreateBYOKNetworkResponse> CreateBYOKNetwork(CreateBYOKNetworkRequest req)
+        {
+            return InternalRequestAsync<CreateBYOKNetworkResponse>(req, "CreateBYOKNetwork");
+        }
+
+        /// <summary>
+        /// 初始化 BYOK VPC 网络资源。PrivateCustom 场景的 Phase 1：创建 BYOK 模型主表记录并提交 VPC 网络初始化异步任务（申请 IP、创建 LBNAT、绑定 SNAT 等）。完成后需调用 CreateModel 传入返回的 ServiceProviderId 完成业务资源创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBYOKNetworkRequest"/></param>
+        /// <returns><see cref="CreateBYOKNetworkResponse"/></returns>
+        public CreateBYOKNetworkResponse CreateBYOKNetworkSync(CreateBYOKNetworkRequest req)
+        {
+            return InternalRequestAsync<CreateBYOKNetworkResponse>(req, "CreateBYOKNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Budget对象。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
         /// </summary>
         /// <param name="req"><see cref="CreateBudgetRequest"/></param>
         /// <returns><see cref="CreateBudgetResponse"/></returns>
@@ -305,7 +439,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
+        /// 创建Budget对象。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
         /// </summary>
         /// <param name="req"><see cref="CreateBudgetRequest"/></param>
         /// <returns><see cref="CreateBudgetResponse"/></returns>
@@ -333,6 +467,27 @@ namespace TencentCloud.Clb.V20180317
         public CreateClsLogSetResponse CreateClsLogSetSync(CreateClsLogSetRequest req)
         {
             return InternalRequestAsync<CreateClsLogSetResponse>(req, "CreateClsLogSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为模型路由实例创建一个意图路由（Intent Router）。意图路由是独立资源，请求匹配model=<RouteName>时将通过配置的分层进行路由。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntentRouterRequest"/></param>
+        /// <returns><see cref="CreateIntentRouterResponse"/></returns>
+        public Task<CreateIntentRouterResponse> CreateIntentRouter(CreateIntentRouterRequest req)
+        {
+            return InternalRequestAsync<CreateIntentRouterResponse>(req, "CreateIntentRouter");
+        }
+
+        /// <summary>
+        /// 为模型路由实例创建一个意图路由（Intent Router）。意图路由是独立资源，请求匹配model=<RouteName>时将通过配置的分层进行路由。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntentRouterRequest"/></param>
+        /// <returns><see cref="CreateIntentRouterResponse"/></returns>
+        public CreateIntentRouterResponse CreateIntentRouterSync(CreateIntentRouterRequest req)
+        {
+            return InternalRequestAsync<CreateIntentRouterResponse>(req, "CreateIntentRouter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -450,6 +605,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 创建 BYOK 模型
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public Task<CreateModelResponse> CreateModel(CreateModelRequest req)
+        {
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel");
+        }
+
+        /// <summary>
+        /// 创建 BYOK 模型
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public CreateModelResponse CreateModelSync(CreateModelRequest req)
+        {
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建模型路由实例
         /// </summary>
         /// <param name="req"><see cref="CreateModelRouterRequest"/></param>
@@ -467,6 +643,27 @@ namespace TencentCloud.Clb.V20180317
         public CreateModelRouterResponse CreateModelRouterSync(CreateModelRouterRequest req)
         {
             return InternalRequestAsync<CreateModelRouterResponse>(req, "CreateModelRouter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建模型路由资源包
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="CreateModelRouterResourcePackageResponse"/></returns>
+        public Task<CreateModelRouterResourcePackageResponse> CreateModelRouterResourcePackage(CreateModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<CreateModelRouterResourcePackageResponse>(req, "CreateModelRouterResourcePackage");
+        }
+
+        /// <summary>
+        /// 创建模型路由资源包
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="CreateModelRouterResourcePackageResponse"/></returns>
+        public CreateModelRouterResourcePackageResponse CreateModelRouterResourcePackageSync(CreateModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<CreateModelRouterResourcePackageResponse>(req, "CreateModelRouterResourcePackage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -574,6 +771,27 @@ namespace TencentCloud.Clb.V20180317
         public DeleteBudgetsResponse DeleteBudgetsSync(DeleteBudgetsRequest req)
         {
             return InternalRequestAsync<DeleteBudgetsResponse>(req, "DeleteBudgets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除模型路由实例下的一个意图路由（Intent Router）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntentRouterRequest"/></param>
+        /// <returns><see cref="DeleteIntentRouterResponse"/></returns>
+        public Task<DeleteIntentRouterResponse> DeleteIntentRouter(DeleteIntentRouterRequest req)
+        {
+            return InternalRequestAsync<DeleteIntentRouterResponse>(req, "DeleteIntentRouter");
+        }
+
+        /// <summary>
+        /// 删除模型路由实例下的一个意图路由（Intent Router）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntentRouterRequest"/></param>
+        /// <returns><see cref="DeleteIntentRouterResponse"/></returns>
+        public DeleteIntentRouterResponse DeleteIntentRouterSync(DeleteIntentRouterRequest req)
+        {
+            return InternalRequestAsync<DeleteIntentRouterResponse>(req, "DeleteIntentRouter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -687,6 +905,27 @@ namespace TencentCloud.Clb.V20180317
         public DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIpsSync(DeleteLoadBalancerSnatIpsRequest req)
         {
             return InternalRequestAsync<DeleteLoadBalancerSnatIpsResponse>(req, "DeleteLoadBalancerSnatIps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 BYOK 模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public Task<DeleteModelResponse> DeleteModel(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel");
+        }
+
+        /// <summary>
+        /// 删除 BYOK 模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -843,6 +1082,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterModelsFromServiceProviderRequest"/></param>
+        /// <returns><see cref="DeregisterModelsFromServiceProviderResponse"/></returns>
+        public Task<DeregisterModelsFromServiceProviderResponse> DeregisterModelsFromServiceProvider(DeregisterModelsFromServiceProviderRequest req)
+        {
+            return InternalRequestAsync<DeregisterModelsFromServiceProviderResponse>(req, "DeregisterModelsFromServiceProvider");
+        }
+
+        /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterModelsFromServiceProviderRequest"/></param>
+        /// <returns><see cref="DeregisterModelsFromServiceProviderResponse"/></returns>
+        public DeregisterModelsFromServiceProviderResponse DeregisterModelsFromServiceProviderSync(DeregisterModelsFromServiceProviderRequest req)
+        {
+            return InternalRequestAsync<DeregisterModelsFromServiceProviderResponse>(req, "DeregisterModelsFromServiceProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 从目标组中解绑服务器。
         /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
         /// </summary>
@@ -906,6 +1166,27 @@ namespace TencentCloud.Clb.V20180317
         public DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLBSync(DeregisterTargetsFromClassicalLBRequest req)
         {
             return InternalRequestAsync<DeregisterTargetsFromClassicalLBResponse>(req, "DeregisterTargetsFromClassicalLB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例下关联模型的可用性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssociatedModelAvailabilityRequest"/></param>
+        /// <returns><see cref="DescribeAssociatedModelAvailabilityResponse"/></returns>
+        public Task<DescribeAssociatedModelAvailabilityResponse> DescribeAssociatedModelAvailability(DescribeAssociatedModelAvailabilityRequest req)
+        {
+            return InternalRequestAsync<DescribeAssociatedModelAvailabilityResponse>(req, "DescribeAssociatedModelAvailability");
+        }
+
+        /// <summary>
+        /// 查询实例下关联模型的可用性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssociatedModelAvailabilityRequest"/></param>
+        /// <returns><see cref="DescribeAssociatedModelAvailabilityResponse"/></returns>
+        public DescribeAssociatedModelAvailabilityResponse DescribeAssociatedModelAvailabilitySync(DescribeAssociatedModelAvailabilityRequest req)
+        {
+            return InternalRequestAsync<DescribeAssociatedModelAvailabilityResponse>(req, "DescribeAssociatedModelAvailability")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1246,6 +1527,69 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询平台维护的 IntentRouter Tier 字典。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntentRouterTiersRequest"/></param>
+        /// <returns><see cref="DescribeIntentRouterTiersResponse"/></returns>
+        public Task<DescribeIntentRouterTiersResponse> DescribeIntentRouterTiers(DescribeIntentRouterTiersRequest req)
+        {
+            return InternalRequestAsync<DescribeIntentRouterTiersResponse>(req, "DescribeIntentRouterTiers");
+        }
+
+        /// <summary>
+        /// 查询平台维护的 IntentRouter Tier 字典。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntentRouterTiersRequest"/></param>
+        /// <returns><see cref="DescribeIntentRouterTiersResponse"/></returns>
+        public DescribeIntentRouterTiersResponse DescribeIntentRouterTiersSync(DescribeIntentRouterTiersRequest req)
+        {
+            return InternalRequestAsync<DescribeIntentRouterTiersResponse>(req, "DescribeIntentRouterTiers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型路由实例下的意图路由（Intent Router）列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntentRoutersRequest"/></param>
+        /// <returns><see cref="DescribeIntentRoutersResponse"/></returns>
+        public Task<DescribeIntentRoutersResponse> DescribeIntentRouters(DescribeIntentRoutersRequest req)
+        {
+            return InternalRequestAsync<DescribeIntentRoutersResponse>(req, "DescribeIntentRouters");
+        }
+
+        /// <summary>
+        /// 查询模型路由实例下的意图路由（Intent Router）列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntentRoutersRequest"/></param>
+        /// <returns><see cref="DescribeIntentRoutersResponse"/></returns>
+        public DescribeIntentRoutersResponse DescribeIntentRoutersSync(DescribeIntentRoutersRequest req)
+        {
+            return InternalRequestAsync<DescribeIntentRoutersResponse>(req, "DescribeIntentRouters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定实例的 API Key 列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeysRequest"/></param>
+        /// <returns><see cref="DescribeKeysResponse"/></returns>
+        public Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys");
+        }
+
+        /// <summary>
+        /// 查询指定实例的 API Key 列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeysRequest"/></param>
+        /// <returns><see cref="DescribeKeysResponse"/></returns>
+        public DescribeKeysResponse DescribeKeysSync(DescribeKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>
@@ -1414,6 +1758,111 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询当前用户 BYOK 中已经配置过的模型别名列表，按 Provider 和 ModelAliasName 去重。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAliasesRequest"/></param>
+        /// <returns><see cref="DescribeModelAliasesResponse"/></returns>
+        public Task<DescribeModelAliasesResponse> DescribeModelAliases(DescribeModelAliasesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAliasesResponse>(req, "DescribeModelAliases");
+        }
+
+        /// <summary>
+        /// 查询当前用户 BYOK 中已经配置过的模型别名列表，按 Provider 和 ModelAliasName 去重。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAliasesRequest"/></param>
+        /// <returns><see cref="DescribeModelAliasesResponse"/></returns>
+        public DescribeModelAliasesResponse DescribeModelAliasesSync(DescribeModelAliasesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAliasesResponse>(req, "DescribeModelAliases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例关联的模型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAssociationsRequest"/></param>
+        /// <returns><see cref="DescribeModelAssociationsResponse"/></returns>
+        public Task<DescribeModelAssociationsResponse> DescribeModelAssociations(DescribeModelAssociationsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAssociationsResponse>(req, "DescribeModelAssociations");
+        }
+
+        /// <summary>
+        /// 查询实例关联的模型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAssociationsRequest"/></param>
+        /// <returns><see cref="DescribeModelAssociationsResponse"/></returns>
+        public DescribeModelAssociationsResponse DescribeModelAssociationsSync(DescribeModelAssociationsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAssociationsResponse>(req, "DescribeModelAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 BYOK 模型列表及 Key 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelKeysRequest"/></param>
+        /// <returns><see cref="DescribeModelKeysResponse"/></returns>
+        public Task<DescribeModelKeysResponse> DescribeModelKeys(DescribeModelKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeModelKeysResponse>(req, "DescribeModelKeys");
+        }
+
+        /// <summary>
+        /// 查询 BYOK 模型列表及 Key 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelKeysRequest"/></param>
+        /// <returns><see cref="DescribeModelKeysResponse"/></returns>
+        public DescribeModelKeysResponse DescribeModelKeysSync(DescribeModelKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeModelKeysResponse>(req, "DescribeModelKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型标识聚合列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelNamesRequest"/></param>
+        /// <returns><see cref="DescribeModelNamesResponse"/></returns>
+        public Task<DescribeModelNamesResponse> DescribeModelNames(DescribeModelNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelNamesResponse>(req, "DescribeModelNames");
+        }
+
+        /// <summary>
+        /// 查询模型标识聚合列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelNamesRequest"/></param>
+        /// <returns><see cref="DescribeModelNamesResponse"/></returns>
+        public DescribeModelNamesResponse DescribeModelNamesSync(DescribeModelNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelNamesResponse>(req, "DescribeModelNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型路由实例上的全部模型重写规则（Model Rewrite），或按 SourceModel 精确过滤后的单条规则。该接口为同步只读接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRewriteRequest"/></param>
+        /// <returns><see cref="DescribeModelRewriteResponse"/></returns>
+        public Task<DescribeModelRewriteResponse> DescribeModelRewrite(DescribeModelRewriteRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRewriteResponse>(req, "DescribeModelRewrite");
+        }
+
+        /// <summary>
+        /// 查询模型路由实例上的全部模型重写规则（Model Rewrite），或按 SourceModel 精确过滤后的单条规则。该接口为同步只读接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRewriteRequest"/></param>
+        /// <returns><see cref="DescribeModelRewriteResponse"/></returns>
+        public DescribeModelRewriteResponse DescribeModelRewriteSync(DescribeModelRewriteRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRewriteResponse>(req, "DescribeModelRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询模型路由详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeModelRouterDetailRequest"/></param>
@@ -1435,6 +1884,52 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询模型路由实例当前已关联的 Guardrails 防护配置。
+        /// 
+        /// 本接口为同步只读接口，不触发状态变更。AssociateModelRouterGuardrails、DisassociateModelRouterGuardrails 和 ModifyModelRouterGuardrails 为异步受理接口；如需确认变更任务是否执行成功，请优先使用写接口返回的 RequestId 调用 DescribeAsyncJobs 查询任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterGuardrailsResponse"/></returns>
+        public Task<DescribeModelRouterGuardrailsResponse> DescribeModelRouterGuardrails(DescribeModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterGuardrailsResponse>(req, "DescribeModelRouterGuardrails");
+        }
+
+        /// <summary>
+        /// 查询模型路由实例当前已关联的 Guardrails 防护配置。
+        /// 
+        /// 本接口为同步只读接口，不触发状态变更。AssociateModelRouterGuardrails、DisassociateModelRouterGuardrails 和 ModifyModelRouterGuardrails 为异步受理接口；如需确认变更任务是否执行成功，请优先使用写接口返回的 RequestId 调用 DescribeAsyncJobs 查询任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterGuardrailsResponse"/></returns>
+        public DescribeModelRouterGuardrailsResponse DescribeModelRouterGuardrailsSync(DescribeModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterGuardrailsResponse>(req, "DescribeModelRouterGuardrails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例的使用日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterLogsRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterLogsResponse"/></returns>
+        public Task<DescribeModelRouterLogsResponse> DescribeModelRouterLogs(DescribeModelRouterLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterLogsResponse>(req, "DescribeModelRouterLogs");
+        }
+
+        /// <summary>
+        /// 查询实例的使用日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterLogsRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterLogsResponse"/></returns>
+        public DescribeModelRouterLogsResponse DescribeModelRouterLogsSync(DescribeModelRouterLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterLogsResponse>(req, "DescribeModelRouterLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户配额信息
         /// </summary>
         /// <param name="req"><see cref="DescribeModelRouterQuotaRequest"/></param>
@@ -1452,6 +1947,48 @@ namespace TencentCloud.Clb.V20180317
         public DescribeModelRouterQuotaResponse DescribeModelRouterQuotaSync(DescribeModelRouterQuotaRequest req)
         {
             return InternalRequestAsync<DescribeModelRouterQuotaResponse>(req, "DescribeModelRouterQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型路由资源包抵扣明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterResourcePackageDeductionRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterResourcePackageDeductionResponse"/></returns>
+        public Task<DescribeModelRouterResourcePackageDeductionResponse> DescribeModelRouterResourcePackageDeduction(DescribeModelRouterResourcePackageDeductionRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterResourcePackageDeductionResponse>(req, "DescribeModelRouterResourcePackageDeduction");
+        }
+
+        /// <summary>
+        /// 查询模型路由资源包抵扣明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterResourcePackageDeductionRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterResourcePackageDeductionResponse"/></returns>
+        public DescribeModelRouterResourcePackageDeductionResponse DescribeModelRouterResourcePackageDeductionSync(DescribeModelRouterResourcePackageDeductionRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterResourcePackageDeductionResponse>(req, "DescribeModelRouterResourcePackageDeduction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型路由资源包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterResourcePackagesRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterResourcePackagesResponse"/></returns>
+        public Task<DescribeModelRouterResourcePackagesResponse> DescribeModelRouterResourcePackages(DescribeModelRouterResourcePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterResourcePackagesResponse>(req, "DescribeModelRouterResourcePackages");
+        }
+
+        /// <summary>
+        /// 查询模型路由资源包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRouterResourcePackagesRequest"/></param>
+        /// <returns><see cref="DescribeModelRouterResourcePackagesResponse"/></returns>
+        public DescribeModelRouterResourcePackagesResponse DescribeModelRouterResourcePackagesSync(DescribeModelRouterResourcePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelRouterResourcePackagesResponse>(req, "DescribeModelRouterResourcePackages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1536,6 +2073,48 @@ namespace TencentCloud.Clb.V20180317
         public DescribeRewriteResponse DescribeRewriteSync(DescribeRewriteRequest req)
         {
             return InternalRequestAsync<DescribeRewriteResponse>(req, "DescribeRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询BYOK健康检查信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceProviderHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeServiceProviderHealthStatusResponse"/></returns>
+        public Task<DescribeServiceProviderHealthStatusResponse> DescribeServiceProviderHealthStatus(DescribeServiceProviderHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceProviderHealthStatusResponse>(req, "DescribeServiceProviderHealthStatus");
+        }
+
+        /// <summary>
+        /// 查询BYOK健康检查信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceProviderHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeServiceProviderHealthStatusResponse"/></returns>
+        public DescribeServiceProviderHealthStatusResponse DescribeServiceProviderHealthStatusSync(DescribeServiceProviderHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceProviderHealthStatusResponse>(req, "DescribeServiceProviderHealthStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台支持的 Provider 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProvidersRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProvidersResponse"/></returns>
+        public Task<DescribeSupportedProvidersResponse> DescribeSupportedProviders(DescribeSupportedProvidersRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedProvidersResponse>(req, "DescribeSupportedProviders");
+        }
+
+        /// <summary>
+        /// 查询平台支持的 Provider 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProvidersRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProvidersResponse"/></returns>
+        public DescribeSupportedProvidersResponse DescribeSupportedProvidersSync(DescribeSupportedProvidersRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedProvidersResponse>(req, "DescribeSupportedProviders")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1687,6 +2266,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询上游 Provider 支持的模型列表。通过代理转发用户提供的 ApiBase 和 ApiKey 到上游 Provider 的模型列表端点，返回可用的模型名称列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpperModelsRequest"/></param>
+        /// <returns><see cref="DescribeUpperModelsResponse"/></returns>
+        public Task<DescribeUpperModelsResponse> DescribeUpperModels(DescribeUpperModelsRequest req)
+        {
+            return InternalRequestAsync<DescribeUpperModelsResponse>(req, "DescribeUpperModels");
+        }
+
+        /// <summary>
+        /// 查询上游 Provider 支持的模型列表。通过代理转发用户提供的 ApiBase 和 ApiKey 到上游 Provider 的模型列表端点，返回可用的模型名称列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpperModelsRequest"/></param>
+        /// <returns><see cref="DescribeUpperModelsResponse"/></returns>
+        public DescribeUpperModelsResponse DescribeUpperModelsSync(DescribeUpperModelsRequest req)
+        {
+            return InternalRequestAsync<DescribeUpperModelsResponse>(req, "DescribeUpperModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定模型路由实例下的用户组列表或详情，支持按ID、名称、状态、标签过滤及分页。真实用户组按名称字典序升序返回；返回列表末尾恒追加一个「未分组」虚拟分组（UserGroupId 固定为 ugrp-ungrouped、UserGroupName 固定为 ungrouped），它并非用户真实创建的用户组，而是代表该实例下所有未归属任何用户组的 Key（其 KeyCount 为无组 Key 数，不计入 TotalCount，不可修改或删除）。
         /// </summary>
         /// <param name="req"><see cref="DescribeUserGroupsRequest"/></param>
@@ -1750,6 +2350,56 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 解除模型路由实例与 Guardrails 防护配置的关联。解除后，模型路由不再使用指定的 Guardrail 防护配置。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；解除完成后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+        /// 
+        /// 本接口通过 GuardrailId 定位要解除的防护配置。GuardrailId 可通过 DescribeModelRouterGuardrails 获取。若传入的 GuardrailId 当前未关联到该模型路由实例，接口按幂等成功处理。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="DisassociateModelRouterGuardrailsResponse"/></returns>
+        public Task<DisassociateModelRouterGuardrailsResponse> DisassociateModelRouterGuardrails(DisassociateModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<DisassociateModelRouterGuardrailsResponse>(req, "DisassociateModelRouterGuardrails");
+        }
+
+        /// <summary>
+        /// 解除模型路由实例与 Guardrails 防护配置的关联。解除后，模型路由不再使用指定的 Guardrail 防护配置。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；解除完成后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+        /// 
+        /// 本接口通过 GuardrailId 定位要解除的防护配置。GuardrailId 可通过 DescribeModelRouterGuardrails 获取。若传入的 GuardrailId 当前未关联到该模型路由实例，接口按幂等成功处理。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="DisassociateModelRouterGuardrailsResponse"/></returns>
+        public DisassociateModelRouterGuardrailsResponse DisassociateModelRouterGuardrailsSync(DisassociateModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<DisassociateModelRouterGuardrailsResponse>(req, "DisassociateModelRouterGuardrails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将模型从模型路由实例解除关联
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateModelsFromModelRouterRequest"/></param>
+        /// <returns><see cref="DisassociateModelsFromModelRouterResponse"/></returns>
+        public Task<DisassociateModelsFromModelRouterResponse> DisassociateModelsFromModelRouter(DisassociateModelsFromModelRouterRequest req)
+        {
+            return InternalRequestAsync<DisassociateModelsFromModelRouterResponse>(req, "DisassociateModelsFromModelRouter");
+        }
+
+        /// <summary>
+        /// 将模型从模型路由实例解除关联
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateModelsFromModelRouterRequest"/></param>
+        /// <returns><see cref="DisassociateModelsFromModelRouterResponse"/></returns>
+        public DisassociateModelsFromModelRouterResponse DisassociateModelsFromModelRouterSync(DisassociateModelsFromModelRouterRequest req)
+        {
+            return InternalRequestAsync<DisassociateModelsFromModelRouterResponse>(req, "DisassociateModelsFromModelRouter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 解除规则的目标组关联关系。
         /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// 当解绑七层转发规则时，LocationId 为必填项。
@@ -1771,6 +2421,48 @@ namespace TencentCloud.Clb.V20180317
         public DisassociateTargetGroupsResponse DisassociateTargetGroupsSync(DisassociateTargetGroupsRequest req)
         {
             return InternalRequestAsync<DisassociateTargetGroupsResponse>(req, "DisassociateTargetGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询创建模型路由资源包的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateModelRouterResourcePackageResponse"/></returns>
+        public Task<InquirePriceCreateModelRouterResourcePackageResponse> InquirePriceCreateModelRouterResourcePackage(InquirePriceCreateModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateModelRouterResourcePackageResponse>(req, "InquirePriceCreateModelRouterResourcePackage");
+        }
+
+        /// <summary>
+        /// 查询创建模型路由资源包的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateModelRouterResourcePackageResponse"/></returns>
+        public InquirePriceCreateModelRouterResourcePackageResponse InquirePriceCreateModelRouterResourcePackageSync(InquirePriceCreateModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateModelRouterResourcePackageResponse>(req, "InquirePriceCreateModelRouterResourcePackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询退还模型路由资源包的价格。非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRefundModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="InquirePriceRefundModelRouterResourcePackageResponse"/></returns>
+        public Task<InquirePriceRefundModelRouterResourcePackageResponse> InquirePriceRefundModelRouterResourcePackage(InquirePriceRefundModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<InquirePriceRefundModelRouterResourcePackageResponse>(req, "InquirePriceRefundModelRouterResourcePackage");
+        }
+
+        /// <summary>
+        /// 查询退还模型路由资源包的价格。非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRefundModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="InquirePriceRefundModelRouterResourcePackageResponse"/></returns>
+        public InquirePriceRefundModelRouterResourcePackageResponse InquirePriceRefundModelRouterResourcePackageSync(InquirePriceRefundModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<InquirePriceRefundModelRouterResourcePackageResponse>(req, "InquirePriceRefundModelRouterResourcePackage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1928,7 +2620,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
+        /// 修改Budget属性。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。修改请求提交后，可通过DescribeBudgets查询状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyBudgetAttributesRequest"/></param>
         /// <returns><see cref="ModifyBudgetAttributesResponse"/></returns>
@@ -1938,7 +2630,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
+        /// 修改Budget属性。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。修改请求提交后，可通过DescribeBudgets查询状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyBudgetAttributesRequest"/></param>
         /// <returns><see cref="ModifyBudgetAttributesResponse"/></returns>
@@ -2016,6 +2708,29 @@ namespace TencentCloud.Clb.V20180317
         public ModifyFunctionTargetsResponse ModifyFunctionTargetsSync(ModifyFunctionTargetsRequest req)
         {
             return InternalRequestAsync<ModifyFunctionTargetsResponse>(req, "ModifyFunctionTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改意图路由（Intent Router）的属性，支持修改路由名称（RouteName）和分层配置（Tiers）。
+        /// RouteName和Tiers均为选填，至少传入一个。Tiers为全量替换（非增量）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntentRouterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyIntentRouterAttributeResponse"/></returns>
+        public Task<ModifyIntentRouterAttributeResponse> ModifyIntentRouterAttribute(ModifyIntentRouterAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyIntentRouterAttributeResponse>(req, "ModifyIntentRouterAttribute");
+        }
+
+        /// <summary>
+        /// 修改意图路由（Intent Router）的属性，支持修改路由名称（RouteName）和分层配置（Tiers）。
+        /// RouteName和Tiers均为选填，至少传入一个。Tiers为全量替换（非增量）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntentRouterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyIntentRouterAttributeResponse"/></returns>
+        public ModifyIntentRouterAttributeResponse ModifyIntentRouterAttributeSync(ModifyIntentRouterAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyIntentRouterAttributeResponse>(req, "ModifyIntentRouterAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2200,6 +2915,48 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 批量修改模型别名属性。本期支持批量修改模型别名的 Coefficient 配置。接口为异步接口，提交成功后返回 RequestId。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelAliasAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelAliasAttributesResponse"/></returns>
+        public Task<ModifyModelAliasAttributesResponse> ModifyModelAliasAttributes(ModifyModelAliasAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelAliasAttributesResponse>(req, "ModifyModelAliasAttributes");
+        }
+
+        /// <summary>
+        /// 批量修改模型别名属性。本期支持批量修改模型别名的 Coefficient 配置。接口为异步接口，提交成功后返回 RequestId。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelAliasAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelAliasAttributesResponse"/></returns>
+        public ModifyModelAliasAttributesResponse ModifyModelAliasAttributesSync(ModifyModelAliasAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelAliasAttributesResponse>(req, "ModifyModelAliasAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改BYOK的属性，包含：自定义名字
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelAttributesResponse"/></returns>
+        public Task<ModifyModelAttributesResponse> ModifyModelAttributes(ModifyModelAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelAttributesResponse>(req, "ModifyModelAttributes");
+        }
+
+        /// <summary>
+        /// 修改BYOK的属性，包含：自定义名字
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelAttributesRequest"/></param>
+        /// <returns><see cref="ModifyModelAttributesResponse"/></returns>
+        public ModifyModelAttributesResponse ModifyModelAttributesSync(ModifyModelAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyModelAttributesResponse>(req, "ModifyModelAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改模型路由属性。支持修改实例名称、限速配置、路由配置，以及替换企业型实例 HTTPS 服务端点绑定的证书（CertId）。每次调用至少传入一个待修改的属性字段，未传入的字段保持原值不变。其中证书替换在请求内同步完成，成功返回即已生效；其余属性修改异步生效，可通过 DescribeModelRouterDetail 接口查询修改结果。
         /// </summary>
         /// <param name="req"><see cref="ModifyModelRouterAttributesRequest"/></param>
@@ -2217,6 +2974,56 @@ namespace TencentCloud.Clb.V20180317
         public ModifyModelRouterAttributesResponse ModifyModelRouterAttributesSync(ModifyModelRouterAttributesRequest req)
         {
             return InternalRequestAsync<ModifyModelRouterAttributesResponse>(req, "ModifyModelRouterAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模型路由实例已关联的 Guardrail 防护配置。调用时需要指定已有的 GuardrailId，并在 Type 为 WAF 时传入 InstanceId 和 ServiceId；InputCheckDepth 为选填字段，未传时沿用当前已关联 Guardrail 的取值。修改成功后，GuardrailId 保持不变。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；修改完成后，可调用 DescribeModelRouterGuardrails 查询最新防护配置。
+        /// 
+        /// 当前每个模型路由实例最多关联 1 个 Guardrail。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterGuardrailsResponse"/></returns>
+        public Task<ModifyModelRouterGuardrailsResponse> ModifyModelRouterGuardrails(ModifyModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterGuardrailsResponse>(req, "ModifyModelRouterGuardrails");
+        }
+
+        /// <summary>
+        /// 修改模型路由实例已关联的 Guardrail 防护配置。调用时需要指定已有的 GuardrailId，并在 Type 为 WAF 时传入 InstanceId 和 ServiceId；InputCheckDepth 为选填字段，未传时沿用当前已关联 Guardrail 的取值。修改成功后，GuardrailId 保持不变。
+        /// 
+        /// 本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；修改完成后，可调用 DescribeModelRouterGuardrails 查询最新防护配置。
+        /// 
+        /// 当前每个模型路由实例最多关联 1 个 Guardrail。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterGuardrailsRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterGuardrailsResponse"/></returns>
+        public ModifyModelRouterGuardrailsResponse ModifyModelRouterGuardrailsSync(ModifyModelRouterGuardrailsRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterGuardrailsResponse>(req, "ModifyModelRouterGuardrails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模型路由实例关联的安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterSecurityGroupsResponse"/></returns>
+        public Task<ModifyModelRouterSecurityGroupsResponse> ModifyModelRouterSecurityGroups(ModifyModelRouterSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterSecurityGroupsResponse>(req, "ModifyModelRouterSecurityGroups");
+        }
+
+        /// <summary>
+        /// 修改模型路由实例关联的安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelRouterSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyModelRouterSecurityGroupsResponse"/></returns>
+        public ModifyModelRouterSecurityGroupsResponse ModifyModelRouterSecurityGroupsSync(ModifyModelRouterSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyModelRouterSecurityGroupsResponse>(req, "ModifyModelRouterSecurityGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2240,6 +3047,27 @@ namespace TencentCloud.Clb.V20180317
         public ModifyRuleResponse ModifyRuleSync(ModifyRuleRequest req)
         {
             return InternalRequestAsync<ModifyRuleResponse>(req, "ModifyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改byok实例下指定模型的属性。该接口为异步接口，可使用DescribeAsyncJobs根据requestId查询异步任务的进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceProviderModelAttributesRequest"/></param>
+        /// <returns><see cref="ModifyServiceProviderModelAttributesResponse"/></returns>
+        public Task<ModifyServiceProviderModelAttributesResponse> ModifyServiceProviderModelAttributes(ModifyServiceProviderModelAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceProviderModelAttributesResponse>(req, "ModifyServiceProviderModelAttributes");
+        }
+
+        /// <summary>
+        /// 修改byok实例下指定模型的属性。该接口为异步接口，可使用DescribeAsyncJobs根据requestId查询异步任务的进度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceProviderModelAttributesRequest"/></param>
+        /// <returns><see cref="ModifyServiceProviderModelAttributesResponse"/></returns>
+        public ModifyServiceProviderModelAttributesResponse ModifyServiceProviderModelAttributesSync(ModifyServiceProviderModelAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceProviderModelAttributesResponse>(req, "ModifyServiceProviderModelAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2378,6 +3206,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 退还模型路由资源包，非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+        /// </summary>
+        /// <param name="req"><see cref="RefundModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="RefundModelRouterResourcePackageResponse"/></returns>
+        public Task<RefundModelRouterResourcePackageResponse> RefundModelRouterResourcePackage(RefundModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<RefundModelRouterResourcePackageResponse>(req, "RefundModelRouterResourcePackage");
+        }
+
+        /// <summary>
+        /// 退还模型路由资源包，非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+        /// </summary>
+        /// <param name="req"><see cref="RefundModelRouterResourcePackageRequest"/></param>
+        /// <returns><see cref="RefundModelRouterResourcePackageResponse"/></returns>
+        public RefundModelRouterResourcePackageResponse RefundModelRouterResourcePackageSync(RefundModelRouterResourcePackageRequest req)
+        {
+            return InternalRequestAsync<RefundModelRouterResourcePackageResponse>(req, "RefundModelRouterResourcePackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量重新生成Key
         /// </summary>
         /// <param name="req"><see cref="RegenerateKeysRequest"/></param>
@@ -2438,6 +3287,27 @@ namespace TencentCloud.Clb.V20180317
         public RegisterFunctionTargetsResponse RegisterFunctionTargetsSync(RegisterFunctionTargetsRequest req)
         {
             return InternalRequestAsync<RegisterFunctionTargetsResponse>(req, "RegisterFunctionTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="RegisterModelsToServiceProviderRequest"/></param>
+        /// <returns><see cref="RegisterModelsToServiceProviderResponse"/></returns>
+        public Task<RegisterModelsToServiceProviderResponse> RegisterModelsToServiceProvider(RegisterModelsToServiceProviderRequest req)
+        {
+            return InternalRequestAsync<RegisterModelsToServiceProviderResponse>(req, "RegisterModelsToServiceProvider");
+        }
+
+        /// <summary>
+        /// 将模型关联到模型路由实例
+        /// </summary>
+        /// <param name="req"><see cref="RegisterModelsToServiceProviderRequest"/></param>
+        /// <returns><see cref="RegisterModelsToServiceProviderResponse"/></returns>
+        public RegisterModelsToServiceProviderResponse RegisterModelsToServiceProviderSync(RegisterModelsToServiceProviderRequest req)
+        {
+            return InternalRequestAsync<RegisterModelsToServiceProviderResponse>(req, "RegisterModelsToServiceProvider")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2505,6 +3375,48 @@ namespace TencentCloud.Clb.V20180317
         public RegisterTargetsWithClassicalLBResponse RegisterTargetsWithClassicalLBSync(RegisterTargetsWithClassicalLBRequest req)
         {
             return InternalRequestAsync<RegisterTargetsWithClassicalLBResponse>(req, "RegisterTargetsWithClassicalLB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 BYOK 模型下的指定 Key
+        /// </summary>
+        /// <param name="req"><see cref="RemoveModelKeyRequest"/></param>
+        /// <returns><see cref="RemoveModelKeyResponse"/></returns>
+        public Task<RemoveModelKeyResponse> RemoveModelKey(RemoveModelKeyRequest req)
+        {
+            return InternalRequestAsync<RemoveModelKeyResponse>(req, "RemoveModelKey");
+        }
+
+        /// <summary>
+        /// 删除 BYOK 模型下的指定 Key
+        /// </summary>
+        /// <param name="req"><see cref="RemoveModelKeyRequest"/></param>
+        /// <returns><see cref="RemoveModelKeyResponse"/></returns>
+        public RemoveModelKeyResponse RemoveModelKeySync(RemoveModelKeyRequest req)
+        {
+            return InternalRequestAsync<RemoveModelKeyResponse>(req, "RemoveModelKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除模型路由实例上的一条模型重写规则（按 SourceModel 定位）。该接口为幂等接口：当指定的 SourceModel 不存在重写规则时，请求默认成功。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveModelRewriteRequest"/></param>
+        /// <returns><see cref="RemoveModelRewriteResponse"/></returns>
+        public Task<RemoveModelRewriteResponse> RemoveModelRewrite(RemoveModelRewriteRequest req)
+        {
+            return InternalRequestAsync<RemoveModelRewriteResponse>(req, "RemoveModelRewrite");
+        }
+
+        /// <summary>
+        /// 删除模型路由实例上的一条模型重写规则（按 SourceModel 定位）。该接口为幂等接口：当指定的 SourceModel 不存在重写规则时，请求默认成功。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveModelRewriteRequest"/></param>
+        /// <returns><see cref="RemoveModelRewriteResponse"/></returns>
+        public RemoveModelRewriteResponse RemoveModelRewriteSync(RemoveModelRewriteRequest req)
+        {
+            return InternalRequestAsync<RemoveModelRewriteResponse>(req, "RemoveModelRewrite")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2664,6 +3576,48 @@ namespace TencentCloud.Clb.V20180317
         public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancersSync(SetSecurityGroupForLoadbalancersRequest req)
         {
             return InternalRequestAsync<SetSecurityGroupForLoadbalancersResponse>(req, "SetSecurityGroupForLoadbalancers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 探测模型支持的输入多模态能力。可在创建byok实例勾选模型支持的多模态能力列表、编辑byok实例下模型支持的多模态能力列表时探测。探测完成可根据探测结果一键录入多模态能力列表。
+        /// </summary>
+        /// <param name="req"><see cref="TestModelInputModalitiesRequest"/></param>
+        /// <returns><see cref="TestModelInputModalitiesResponse"/></returns>
+        public Task<TestModelInputModalitiesResponse> TestModelInputModalities(TestModelInputModalitiesRequest req)
+        {
+            return InternalRequestAsync<TestModelInputModalitiesResponse>(req, "TestModelInputModalities");
+        }
+
+        /// <summary>
+        /// 探测模型支持的输入多模态能力。可在创建byok实例勾选模型支持的多模态能力列表、编辑byok实例下模型支持的多模态能力列表时探测。探测完成可根据探测结果一键录入多模态能力列表。
+        /// </summary>
+        /// <param name="req"><see cref="TestModelInputModalitiesRequest"/></param>
+        /// <returns><see cref="TestModelInputModalitiesResponse"/></returns>
+        public TestModelInputModalitiesResponse TestModelInputModalitiesSync(TestModelInputModalitiesRequest req)
+        {
+            return InternalRequestAsync<TestModelInputModalitiesResponse>(req, "TestModelInputModalities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// BYOK健康检查
+        /// </summary>
+        /// <param name="req"><see cref="TestServiceProviderConnectionRequest"/></param>
+        /// <returns><see cref="TestServiceProviderConnectionResponse"/></returns>
+        public Task<TestServiceProviderConnectionResponse> TestServiceProviderConnection(TestServiceProviderConnectionRequest req)
+        {
+            return InternalRequestAsync<TestServiceProviderConnectionResponse>(req, "TestServiceProviderConnection");
+        }
+
+        /// <summary>
+        /// BYOK健康检查
+        /// </summary>
+        /// <param name="req"><see cref="TestServiceProviderConnectionRequest"/></param>
+        /// <returns><see cref="TestServiceProviderConnectionResponse"/></returns>
+        public TestServiceProviderConnectionResponse TestServiceProviderConnectionSync(TestServiceProviderConnectionRequest req)
+        {
+            return InternalRequestAsync<TestServiceProviderConnectionResponse>(req, "TestServiceProviderConnection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Clb.V20180317.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AddModelRewriteRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>模型路由实例 ID。</p>
+        /// </summary>
+        [JsonProperty("ModelRouterId")]
+        public string ModelRouterId{ get; set; }
+
+        /// <summary>
+        /// <p>源模型名（重写规则的 key）。</p><p>长度 1-255 字符；支持特殊值 <code>default</code> 表示兜底规则（命中所有未显式列出的源模型）。</p><p>不允许使用 <code>IntentRouter/</code> 前缀（大小写不敏感），即 IntentRouter 不能作为 source。</p>
+        /// </summary>
+        [JsonProperty("SourceModel")]
+        public string SourceModel{ get; set; }
+
+        /// <summary>
+        /// <p>目标模型名（重写规则的 value）。</p><p>长度 1-255 字符；必须是已关联到该模型路由实例的模型（含 IntentRouter/* 也需先通过 AssociateModels 关联）。</p><p>不允许使用 <code>default</code>；不允许与 SourceModel 相同（大小写不敏感）。</p>
+        /// </summary>
+        [JsonProperty("TargetModel")]
+        public string TargetModel{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
+            this.SetParamSimple(map, prefix + "SourceModel", this.SourceModel);
+            this.SetParamSimple(map, prefix + "TargetModel", this.TargetModel);
+        }
+    }
+}
+

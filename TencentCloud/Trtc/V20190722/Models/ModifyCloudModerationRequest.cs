@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+        /// <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 审核任务的唯一Id，在启动切片任务成功后会返回。
+        /// <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 指定订阅流白名单或者黑名单。
+        /// <p>指定订阅流白名单或者黑名单。</p>
         /// </summary>
         [JsonProperty("SubscribeStreamUserIds")]
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }

@@ -24,12 +24,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     public class RunDataRetrievalTaskRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+        /// </summary>
+        [JsonProperty("DataRetrievalId")]
+        public string DataRetrievalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataRetrievalId", this.DataRetrievalId);
         }
     }
 }

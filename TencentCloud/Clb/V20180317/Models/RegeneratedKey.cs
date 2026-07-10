@@ -25,16 +25,16 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// <p>Key的ID</p>
-        /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
-
-        /// <summary>
         /// <p>重新生成的明文Key</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
+
+        /// <summary>
+        /// <p>Key的ID</p>
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
         }
     }
 }

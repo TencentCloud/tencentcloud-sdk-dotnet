@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 切片任务的唯一Id，在启动切片任务成功后会返回。
+        /// <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
+        /// <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 订阅黑白名单
+        /// <p>订阅黑白名单</p>
         /// </summary>
         [JsonProperty("SubscribeStreamUserIds")]
         public SubscribeModerationUserIds SubscribeStreamUserIds{ get; set; }

@@ -25,91 +25,91 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警策略类型
+        /// <p>告警策略类型</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 指标名
+        /// <p>指标名</p>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 指标展示名
+        /// <p>指标展示名</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// <p>最小值</p>
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// <p>最大值</p>
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
 
         /// <summary>
-        /// 维度列表
+        /// <p>维度列表</p>
         /// </summary>
         [JsonProperty("Dimensions")]
         public string[] Dimensions{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// <p>单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 指标配置
+        /// <p>指标配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricConfig")]
         public MetricConfig MetricConfig{ get; set; }
 
         /// <summary>
-        /// 是否为高级指标。1是 0否
+        /// <p>是否为高级指标。1是 0否</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAdvanced")]
         public long? IsAdvanced{ get; set; }
 
         /// <summary>
-        /// 高级指标是否开通。1是 0否
+        /// <p>高级指标是否开通。1是 0否</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOpen")]
         public long? IsOpen{ get; set; }
 
         /// <summary>
-        /// 集成中心产品ID
+        /// <p>集成中心产品ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 匹配运算符
+        /// <p>匹配运算符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operators")]
         public Operator[] Operators{ get; set; }
 
         /// <summary>
-        /// 指标触发
+        /// <p>指标触发</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Periods")]
         public long?[] Periods{ get; set; }
 
         /// <summary>
-        /// 是否延迟指标
+        /// <p>是否延迟指标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsLatenessMetric")]

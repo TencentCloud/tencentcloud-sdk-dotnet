@@ -1,0 +1,201 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{591C889F-01D4-3F8D-A437-5DB371C32EF1}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1459</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Alb</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20251030\AlbClient.cs" />
+    <Compile Include="V20251030\Models\AccessLogConfig.cs" />
+    <Compile Include="V20251030\Models\AddTargetsToTargetGroupRequest.cs" />
+    <Compile Include="V20251030\Models\AddTargetsToTargetGroupResponse.cs" />
+    <Compile Include="V20251030\Models\AssociateBandwidthPackageWithLoadBalancerRequest.cs" />
+    <Compile Include="V20251030\Models\AssociateBandwidthPackageWithLoadBalancerResponse.cs" />
+    <Compile Include="V20251030\Models\AssociateListenerAdditionalCertificatesRequest.cs" />
+    <Compile Include="V20251030\Models\AssociateListenerAdditionalCertificatesResponse.cs" />
+    <Compile Include="V20251030\Models\CertificateInfo.cs" />
+    <Compile Include="V20251030\Models\CreateHealthCheckTemplateRequest.cs" />
+    <Compile Include="V20251030\Models\CreateHealthCheckTemplateResponse.cs" />
+    <Compile Include="V20251030\Models\CreateListenerRequest.cs" />
+    <Compile Include="V20251030\Models\CreateListenerResponse.cs" />
+    <Compile Include="V20251030\Models\CreateLoadBalancerRequest.cs" />
+    <Compile Include="V20251030\Models\CreateLoadBalancerResponse.cs" />
+    <Compile Include="V20251030\Models\CreateRulesRequest.cs" />
+    <Compile Include="V20251030\Models\CreateRulesResponse.cs" />
+    <Compile Include="V20251030\Models\CreateSecurityPolicyRequest.cs" />
+    <Compile Include="V20251030\Models\CreateSecurityPolicyResponse.cs" />
+    <Compile Include="V20251030\Models\CreateTargetGroupRequest.cs" />
+    <Compile Include="V20251030\Models\CreateTargetGroupResponse.cs" />
+    <Compile Include="V20251030\Models\DefaultAction.cs" />
+    <Compile Include="V20251030\Models\DeleteHealthCheckTemplatesRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteHealthCheckTemplatesResponse.cs" />
+    <Compile Include="V20251030\Models\DeleteListenerRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteListenerResponse.cs" />
+    <Compile Include="V20251030\Models\DeleteLoadBalancersRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteLoadBalancersResponse.cs" />
+    <Compile Include="V20251030\Models\DeleteRulesRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteRulesResponse.cs" />
+    <Compile Include="V20251030\Models\DeleteSecurityPolicyRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteSecurityPolicyResponse.cs" />
+    <Compile Include="V20251030\Models\DeleteTargetGroupsRequest.cs" />
+    <Compile Include="V20251030\Models\DeleteTargetGroupsResponse.cs" />
+    <Compile Include="V20251030\Models\DeletionProtectionConfig.cs" />
+    <Compile Include="V20251030\Models\DescribeAsyncJobsRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeAsyncJobsResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeHealthCheckTemplatesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeHealthCheckTemplatesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerCertificatesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerCertificatesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerDetailRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerDetailResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerHealthStatusRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeListenerHealthStatusResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeListenersRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeListenersResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeLoadBalancerDetailRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeLoadBalancerDetailResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeLoadBalancersRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeLoadBalancersResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeQuotaRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeQuotaResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeRulesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeRulesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPoliciesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPoliciesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPolicyCapabilitiesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPolicyCapabilitiesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPolicyRelationsRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeSecurityPolicyRelationsResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeSystemSecurityPoliciesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeSystemSecurityPoliciesResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupTargetsRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupTargetsResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupsByTargetRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupsByTargetResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupsRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeTargetGroupsResponse.cs" />
+    <Compile Include="V20251030\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20251030\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20251030\Models\DisassociateBandwidthPackageFromLoadBalancerRequest.cs" />
+    <Compile Include="V20251030\Models\DisassociateBandwidthPackageFromLoadBalancerResponse.cs" />
+    <Compile Include="V20251030\Models\DisassociateListenerAdditionalCertificatesRequest.cs" />
+    <Compile Include="V20251030\Models\DisassociateListenerAdditionalCertificatesResponse.cs" />
+    <Compile Include="V20251030\Models\Filter.cs" />
+    <Compile Include="V20251030\Models\FixedResponseInfo.cs" />
+    <Compile Include="V20251030\Models\HTTPCookieInfo.cs" />
+    <Compile Include="V20251030\Models\HTTPHeaderInfo.cs" />
+    <Compile Include="V20251030\Models\HTTPQueryStringInfo.cs" />
+    <Compile Include="V20251030\Models\HTTPRedirectInfo.cs" />
+    <Compile Include="V20251030\Models\HTTPRewriteInfo.cs" />
+    <Compile Include="V20251030\Models\HealthCheckConfig.cs" />
+    <Compile Include="V20251030\Models\HealthCheckTemplate.cs" />
+    <Compile Include="V20251030\Models\IPAddressInfo.cs" />
+    <Compile Include="V20251030\Models\InquirePriceCreateLoadBalancerRequest.cs" />
+    <Compile Include="V20251030\Models\InquirePriceCreateLoadBalancerResponse.cs" />
+    <Compile Include="V20251030\Models\InsertHTTPHeaderInfo.cs" />
+    <Compile Include="V20251030\Models\Job.cs" />
+    <Compile Include="V20251030\Models\ListenerOutput.cs" />
+    <Compile Include="V20251030\Models\LoadBalancer.cs" />
+    <Compile Include="V20251030\Models\LoadBalancerAddress.cs" />
+    <Compile Include="V20251030\Models\LoadBalancerBillingConfig.cs" />
+    <Compile Include="V20251030\Models\LoadBalancerDetail.cs" />
+    <Compile Include="V20251030\Models\LoadBalancerOperationLocksItem.cs" />
+    <Compile Include="V20251030\Models\ModificationProtectionInfo.cs" />
+    <Compile Include="V20251030\Models\ModifyHealthCheckTemplateRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyHealthCheckTemplateResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyListenerAttributesRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyListenerAttributesResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerAddressTypeRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerAddressTypeResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerAttributesRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerModificationProtectionRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyLoadBalancerModificationProtectionResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyRulesAttributesRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyRulesAttributesResponse.cs" />
+    <Compile Include="V20251030\Models\ModifySecurityPolicyAttributesRequest.cs" />
+    <Compile Include="V20251030\Models\ModifySecurityPolicyAttributesResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyTargetGroupAttributesRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyTargetGroupAttributesResponse.cs" />
+    <Compile Include="V20251030\Models\ModifyTargetsInTargetGroupRequest.cs" />
+    <Compile Include="V20251030\Models\ModifyTargetsInTargetGroupResponse.cs" />
+    <Compile Include="V20251030\Models\NotifyUnbindTargetRequest.cs" />
+    <Compile Include="V20251030\Models\NotifyUnbindTargetResponse.cs" />
+    <Compile Include="V20251030\Models\PostPayPriceInfo.cs" />
+    <Compile Include="V20251030\Models\Price.cs" />
+    <Compile Include="V20251030\Models\QuotaInfo.cs" />
+    <Compile Include="V20251030\Models\RelatedListener.cs" />
+    <Compile Include="V20251030\Models\RemoveHTTPHeaderInfo.cs" />
+    <Compile Include="V20251030\Models\RemoveTargetsFromTargetGroupRequest.cs" />
+    <Compile Include="V20251030\Models\RemoveTargetsFromTargetGroupResponse.cs" />
+    <Compile Include="V20251030\Models\RuleAction.cs" />
+    <Compile Include="V20251030\Models\RuleCondition.cs" />
+    <Compile Include="V20251030\Models\RuleHealthStatusInfo.cs" />
+    <Compile Include="V20251030\Models\RuleInput.cs" />
+    <Compile Include="V20251030\Models\RuleModify.cs" />
+    <Compile Include="V20251030\Models\RuleOutput.cs" />
+    <Compile Include="V20251030\Models\SecurityPolicyCapability.cs" />
+    <Compile Include="V20251030\Models\SecurityPolicyInfo.cs" />
+    <Compile Include="V20251030\Models\SecurityPolicyRelations.cs" />
+    <Compile Include="V20251030\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
+    <Compile Include="V20251030\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
+    <Compile Include="V20251030\Models\StickySessionConfig.cs" />
+    <Compile Include="V20251030\Models\TagInfo.cs" />
+    <Compile Include="V20251030\Models\TargetGroupConfig.cs" />
+    <Compile Include="V20251030\Models\TargetGroupHealthInfo.cs" />
+    <Compile Include="V20251030\Models\TargetGroupOutput.cs" />
+    <Compile Include="V20251030\Models\TargetGroupStickySession.cs" />
+    <Compile Include="V20251030\Models\TargetGroupTuple.cs" />
+    <Compile Include="V20251030\Models\TargetHealthStatusInfo.cs" />
+    <Compile Include="V20251030\Models\TargetOutput.cs" />
+    <Compile Include="V20251030\Models\TargetToAdd.cs" />
+    <Compile Include="V20251030\Models\TargetToModify.cs" />
+    <Compile Include="V20251030\Models\TargetToRemove.cs" />
+    <Compile Include="V20251030\Models\XForwardedForConfig.cs" />
+    <Compile Include="V20251030\Models\Zone.cs" />
+    <Compile Include="V20251030\Models\ZoneMappingInfo.cs" />
+    <Compile Include="V20251030\Models\ZoneMappingsItem.cs" />
+  </ItemGroup>
+</Project>

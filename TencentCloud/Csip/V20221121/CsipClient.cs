@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1459";
 
         /// <summary>
         /// Client constructor.
@@ -329,6 +329,27 @@ namespace TencentCloud.Csip.V20221121
         /// <summary>
         /// 创建Dspm资产列表导出任务
         /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetIdentifyInfoExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetIdentifyInfoExportJobResponse"/></returns>
+        public Task<CreateDspmAssetIdentifyInfoExportJobResponse> CreateDspmAssetIdentifyInfoExportJob(CreateDspmAssetIdentifyInfoExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetIdentifyInfoExportJobResponse>(req, "CreateDspmAssetIdentifyInfoExportJob");
+        }
+
+        /// <summary>
+        /// 创建Dspm资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAssetIdentifyInfoExportJobRequest"/></param>
+        /// <returns><see cref="CreateDspmAssetIdentifyInfoExportJobResponse"/></returns>
+        public CreateDspmAssetIdentifyInfoExportJobResponse CreateDspmAssetIdentifyInfoExportJobSync(CreateDspmAssetIdentifyInfoExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAssetIdentifyInfoExportJobResponse>(req, "CreateDspmAssetIdentifyInfoExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm资产列表导出任务
+        /// </summary>
         /// <param name="req"><see cref="CreateDspmAssetsExportJobRequest"/></param>
         /// <returns><see cref="CreateDspmAssetsExportJobResponse"/></returns>
         public Task<CreateDspmAssetsExportJobResponse> CreateDspmAssetsExportJob(CreateDspmAssetsExportJobRequest req)
@@ -369,6 +390,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyCategoryResponse"/></returns>
+        public Task<CreateDspmIdentifyCategoryResponse> CreateDspmIdentifyCategory(CreateDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyCategoryResponse>(req, "CreateDspmIdentifyCategory");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyCategoryResponse"/></returns>
+        public CreateDspmIdentifyCategoryResponse CreateDspmIdentifyCategorySync(CreateDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyCategoryResponse>(req, "CreateDspmIdentifyCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板分类关联
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceCategoryRelationRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceCategoryRelationResponse"/></returns>
+        public Task<CreateDspmIdentifyComplianceCategoryRelationResponse> CreateDspmIdentifyComplianceCategoryRelation(CreateDspmIdentifyComplianceCategoryRelationRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceCategoryRelationResponse>(req, "CreateDspmIdentifyComplianceCategoryRelation");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板分类关联
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceCategoryRelationRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceCategoryRelationResponse"/></returns>
+        public CreateDspmIdentifyComplianceCategoryRelationResponse CreateDspmIdentifyComplianceCategoryRelationSync(CreateDspmIdentifyComplianceCategoryRelationRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceCategoryRelationResponse>(req, "CreateDspmIdentifyComplianceCategoryRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceGroupResponse"/></returns>
+        public Task<CreateDspmIdentifyComplianceGroupResponse> CreateDspmIdentifyComplianceGroup(CreateDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceGroupResponse>(req, "CreateDspmIdentifyComplianceGroup");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceGroupResponse"/></returns>
+        public CreateDspmIdentifyComplianceGroupResponse CreateDspmIdentifyComplianceGroupSync(CreateDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceGroupResponse>(req, "CreateDspmIdentifyComplianceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 复制dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceGroupCopyRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceGroupCopyResponse"/></returns>
+        public Task<CreateDspmIdentifyComplianceGroupCopyResponse> CreateDspmIdentifyComplianceGroupCopy(CreateDspmIdentifyComplianceGroupCopyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceGroupCopyResponse>(req, "CreateDspmIdentifyComplianceGroupCopy");
+        }
+
+        /// <summary>
+        /// 复制dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceGroupCopyRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceGroupCopyResponse"/></returns>
+        public CreateDspmIdentifyComplianceGroupCopyResponse CreateDspmIdentifyComplianceGroupCopySync(CreateDspmIdentifyComplianceGroupCopyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceGroupCopyResponse>(req, "CreateDspmIdentifyComplianceGroupCopy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板数据项关联
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceRuleRelationRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceRuleRelationResponse"/></returns>
+        public Task<CreateDspmIdentifyComplianceRuleRelationResponse> CreateDspmIdentifyComplianceRuleRelation(CreateDspmIdentifyComplianceRuleRelationRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceRuleRelationResponse>(req, "CreateDspmIdentifyComplianceRuleRelation");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别模板数据项关联
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyComplianceRuleRelationRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyComplianceRuleRelationResponse"/></returns>
+        public CreateDspmIdentifyComplianceRuleRelationResponse CreateDspmIdentifyComplianceRuleRelationSync(CreateDspmIdentifyComplianceRuleRelationRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyComplianceRuleRelationResponse>(req, "CreateDspmIdentifyComplianceRuleRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建Dspm身份列表导出任务
         /// </summary>
         /// <param name="req"><see cref="CreateDspmIdentifyInfoListExportJobRequest"/></param>
@@ -386,6 +512,48 @@ namespace TencentCloud.Csip.V20221121
         public CreateDspmIdentifyInfoListExportJobResponse CreateDspmIdentifyInfoListExportJobSync(CreateDspmIdentifyInfoListExportJobRequest req)
         {
             return InternalRequestAsync<CreateDspmIdentifyInfoListExportJobResponse>(req, "CreateDspmIdentifyInfoListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyLevelGroupResponse"/></returns>
+        public Task<CreateDspmIdentifyLevelGroupResponse> CreateDspmIdentifyLevelGroup(CreateDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyLevelGroupResponse>(req, "CreateDspmIdentifyLevelGroup");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyLevelGroupResponse"/></returns>
+        public CreateDspmIdentifyLevelGroupResponse CreateDspmIdentifyLevelGroupSync(CreateDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyLevelGroupResponse>(req, "CreateDspmIdentifyLevelGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyRuleResponse"/></returns>
+        public Task<CreateDspmIdentifyRuleResponse> CreateDspmIdentifyRule(CreateDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyRuleResponse>(req, "CreateDspmIdentifyRule");
+        }
+
+        /// <summary>
+        /// 创建dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="CreateDspmIdentifyRuleResponse"/></returns>
+        public CreateDspmIdentifyRuleResponse CreateDspmIdentifyRuleSync(CreateDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<CreateDspmIdentifyRuleResponse>(req, "CreateDspmIdentifyRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -701,6 +869,132 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDspmExportTaskResponse DeleteDspmExportTaskSync(DeleteDspmExportTaskRequest req)
         {
             return InternalRequestAsync<DeleteDspmExportTaskResponse>(req, "DeleteDspmExportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyCategoryResponse"/></returns>
+        public Task<DeleteDspmIdentifyCategoryResponse> DeleteDspmIdentifyCategory(DeleteDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyCategoryResponse>(req, "DeleteDspmIdentifyCategory");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyCategoryResponse"/></returns>
+        public DeleteDspmIdentifyCategoryResponse DeleteDspmIdentifyCategorySync(DeleteDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyCategoryResponse>(req, "DeleteDspmIdentifyCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板分类关联
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceCategoryRelationRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceCategoryRelationResponse"/></returns>
+        public Task<DeleteDspmIdentifyComplianceCategoryRelationResponse> DeleteDspmIdentifyComplianceCategoryRelation(DeleteDspmIdentifyComplianceCategoryRelationRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceCategoryRelationResponse>(req, "DeleteDspmIdentifyComplianceCategoryRelation");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板分类关联
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceCategoryRelationRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceCategoryRelationResponse"/></returns>
+        public DeleteDspmIdentifyComplianceCategoryRelationResponse DeleteDspmIdentifyComplianceCategoryRelationSync(DeleteDspmIdentifyComplianceCategoryRelationRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceCategoryRelationResponse>(req, "DeleteDspmIdentifyComplianceCategoryRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceGroupResponse"/></returns>
+        public Task<DeleteDspmIdentifyComplianceGroupResponse> DeleteDspmIdentifyComplianceGroup(DeleteDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceGroupResponse>(req, "DeleteDspmIdentifyComplianceGroup");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceGroupResponse"/></returns>
+        public DeleteDspmIdentifyComplianceGroupResponse DeleteDspmIdentifyComplianceGroupSync(DeleteDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceGroupResponse>(req, "DeleteDspmIdentifyComplianceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板数据项关联
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceRuleRelationRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceRuleRelationResponse"/></returns>
+        public Task<DeleteDspmIdentifyComplianceRuleRelationResponse> DeleteDspmIdentifyComplianceRuleRelation(DeleteDspmIdentifyComplianceRuleRelationRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceRuleRelationResponse>(req, "DeleteDspmIdentifyComplianceRuleRelation");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别模板数据项关联
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyComplianceRuleRelationRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyComplianceRuleRelationResponse"/></returns>
+        public DeleteDspmIdentifyComplianceRuleRelationResponse DeleteDspmIdentifyComplianceRuleRelationSync(DeleteDspmIdentifyComplianceRuleRelationRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyComplianceRuleRelationResponse>(req, "DeleteDspmIdentifyComplianceRuleRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyLevelGroupResponse"/></returns>
+        public Task<DeleteDspmIdentifyLevelGroupResponse> DeleteDspmIdentifyLevelGroup(DeleteDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyLevelGroupResponse>(req, "DeleteDspmIdentifyLevelGroup");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyLevelGroupResponse"/></returns>
+        public DeleteDspmIdentifyLevelGroupResponse DeleteDspmIdentifyLevelGroupSync(DeleteDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyLevelGroupResponse>(req, "DeleteDspmIdentifyLevelGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyRuleResponse"/></returns>
+        public Task<DeleteDspmIdentifyRuleResponse> DeleteDspmIdentifyRule(DeleteDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyRuleResponse>(req, "DeleteDspmIdentifyRule");
+        }
+
+        /// <summary>
+        /// 删除dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="DeleteDspmIdentifyRuleResponse"/></returns>
+        public DeleteDspmIdentifyRuleResponse DeleteDspmIdentifyRuleSync(DeleteDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmIdentifyRuleResponse>(req, "DeleteDspmIdentifyRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1860,6 +2154,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询cos风险文件扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosObjectScanTaskResponse"/></returns>
+        public Task<DescribeCosObjectScanTaskResponse> DescribeCosObjectScanTask(DescribeCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosObjectScanTaskResponse>(req, "DescribeCosObjectScanTask");
+        }
+
+        /// <summary>
+        /// 查询cos风险文件扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosObjectScanTaskResponse"/></returns>
+        public DescribeCosObjectScanTaskResponse DescribeCosObjectScanTaskSync(DescribeCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosObjectScanTaskResponse>(req, "DescribeCosObjectScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// cos概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCosOverviewRequest"/></param>
@@ -2427,6 +2742,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询dspm资产字段样本值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetFieldSamplesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetFieldSamplesResponse"/></returns>
+        public Task<DescribeDspmAssetFieldSamplesResponse> DescribeDspmAssetFieldSamples(DescribeDspmAssetFieldSamplesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetFieldSamplesResponse>(req, "DescribeDspmAssetFieldSamples");
+        }
+
+        /// <summary>
+        /// 查询dspm资产字段样本值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetFieldSamplesRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetFieldSamplesResponse"/></returns>
+        public DescribeDspmAssetFieldSamplesResponse DescribeDspmAssetFieldSamplesSync(DescribeDspmAssetFieldSamplesRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetFieldSamplesResponse>(req, "DescribeDspmAssetFieldSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm资产数据识别信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetIdentifyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetIdentifyInfoListResponse"/></returns>
+        public Task<DescribeDspmAssetIdentifyInfoListResponse> DescribeDspmAssetIdentifyInfoList(DescribeDspmAssetIdentifyInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetIdentifyInfoListResponse>(req, "DescribeDspmAssetIdentifyInfoList");
+        }
+
+        /// <summary>
+        /// 查询dspm资产数据识别信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAssetIdentifyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDspmAssetIdentifyInfoListResponse"/></returns>
+        public DescribeDspmAssetIdentifyInfoListResponse DescribeDspmAssetIdentifyInfoListSync(DescribeDspmAssetIdentifyInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAssetIdentifyInfoListResponse>(req, "DescribeDspmAssetIdentifyInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询Dspm资产id列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmAssetIdsRequest"/></param>
@@ -2637,6 +2994,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询dspm数据识别分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyCategoryListResponse"/></returns>
+        public Task<DescribeDspmIdentifyCategoryListResponse> DescribeDspmIdentifyCategoryList(DescribeDspmIdentifyCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyCategoryListResponse>(req, "DescribeDspmIdentifyCategoryList");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyCategoryListResponse"/></returns>
+        public DescribeDspmIdentifyCategoryListResponse DescribeDspmIdentifyCategoryListSync(DescribeDspmIdentifyCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyCategoryListResponse>(req, "DescribeDspmIdentifyCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别模板分类关联数据项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceCategoryRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceCategoryRuleListResponse"/></returns>
+        public Task<DescribeDspmIdentifyComplianceCategoryRuleListResponse> DescribeDspmIdentifyComplianceCategoryRuleList(DescribeDspmIdentifyComplianceCategoryRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceCategoryRuleListResponse>(req, "DescribeDspmIdentifyComplianceCategoryRuleList");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别模板分类关联数据项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceCategoryRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceCategoryRuleListResponse"/></returns>
+        public DescribeDspmIdentifyComplianceCategoryRuleListResponse DescribeDspmIdentifyComplianceCategoryRuleListSync(DescribeDspmIdentifyComplianceCategoryRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceCategoryRuleListResponse>(req, "DescribeDspmIdentifyComplianceCategoryRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm识别模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceGroupDetailResponse"/></returns>
+        public Task<DescribeDspmIdentifyComplianceGroupDetailResponse> DescribeDspmIdentifyComplianceGroupDetail(DescribeDspmIdentifyComplianceGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceGroupDetailResponse>(req, "DescribeDspmIdentifyComplianceGroupDetail");
+        }
+
+        /// <summary>
+        /// 查询dspm识别模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceGroupDetailResponse"/></returns>
+        public DescribeDspmIdentifyComplianceGroupDetailResponse DescribeDspmIdentifyComplianceGroupDetailSync(DescribeDspmIdentifyComplianceGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceGroupDetailResponse>(req, "DescribeDspmIdentifyComplianceGroupDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceGroupListResponse"/></returns>
+        public Task<DescribeDspmIdentifyComplianceGroupListResponse> DescribeDspmIdentifyComplianceGroupList(DescribeDspmIdentifyComplianceGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceGroupListResponse>(req, "DescribeDspmIdentifyComplianceGroupList");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyComplianceGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyComplianceGroupListResponse"/></returns>
+        public DescribeDspmIdentifyComplianceGroupListResponse DescribeDspmIdentifyComplianceGroupListSync(DescribeDspmIdentifyComplianceGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyComplianceGroupListResponse>(req, "DescribeDspmIdentifyComplianceGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyDistributionStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyDistributionStatisticsResponse"/></returns>
+        public Task<DescribeDspmIdentifyDistributionStatisticsResponse> DescribeDspmIdentifyDistributionStatistics(DescribeDspmIdentifyDistributionStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyDistributionStatisticsResponse>(req, "DescribeDspmIdentifyDistributionStatistics");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyDistributionStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyDistributionStatisticsResponse"/></returns>
+        public DescribeDspmIdentifyDistributionStatisticsResponse DescribeDspmIdentifyDistributionStatisticsSync(DescribeDspmIdentifyDistributionStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyDistributionStatisticsResponse>(req, "DescribeDspmIdentifyDistributionStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询Dspm身份id列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmIdentifyIdListRequest"/></param>
@@ -2696,6 +3158,90 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmIdentifyInfoListResponse DescribeDspmIdentifyInfoListSync(DescribeDspmIdentifyInfoListRequest req)
         {
             return InternalRequestAsync<DescribeDspmIdentifyInfoListResponse>(req, "DescribeDspmIdentifyInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别分级组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyLevelGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyLevelGroupListResponse"/></returns>
+        public Task<DescribeDspmIdentifyLevelGroupListResponse> DescribeDspmIdentifyLevelGroupList(DescribeDspmIdentifyLevelGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyLevelGroupListResponse>(req, "DescribeDspmIdentifyLevelGroupList");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别分级组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyLevelGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyLevelGroupListResponse"/></returns>
+        public DescribeDspmIdentifyLevelGroupListResponse DescribeDspmIdentifyLevelGroupListSync(DescribeDspmIdentifyLevelGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyLevelGroupListResponse>(req, "DescribeDspmIdentifyLevelGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleDetailResponse"/></returns>
+        public Task<DescribeDspmIdentifyRuleDetailResponse> DescribeDspmIdentifyRuleDetail(DescribeDspmIdentifyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleDetailResponse>(req, "DescribeDspmIdentifyRuleDetail");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleDetailResponse"/></returns>
+        public DescribeDspmIdentifyRuleDetailResponse DescribeDspmIdentifyRuleDetailSync(DescribeDspmIdentifyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleDetailResponse>(req, "DescribeDspmIdentifyRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleListResponse"/></returns>
+        public Task<DescribeDspmIdentifyRuleListResponse> DescribeDspmIdentifyRuleList(DescribeDspmIdentifyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleListResponse>(req, "DescribeDspmIdentifyRuleList");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleListResponse"/></returns>
+        public DescribeDspmIdentifyRuleListResponse DescribeDspmIdentifyRuleListSync(DescribeDspmIdentifyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleListResponse>(req, "DescribeDspmIdentifyRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项验证结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleTestResultRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleTestResultResponse"/></returns>
+        public Task<DescribeDspmIdentifyRuleTestResultResponse> DescribeDspmIdentifyRuleTestResult(DescribeDspmIdentifyRuleTestResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleTestResultResponse>(req, "DescribeDspmIdentifyRuleTestResult");
+        }
+
+        /// <summary>
+        /// 查询dspm数据识别数据项验证结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmIdentifyRuleTestResultRequest"/></param>
+        /// <returns><see cref="DescribeDspmIdentifyRuleTestResultResponse"/></returns>
+        public DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResultSync(DescribeDspmIdentifyRuleTestResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmIdentifyRuleTestResultResponse>(req, "DescribeDspmIdentifyRuleTestResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4422,6 +4968,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改对象存储识别开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectIdentifyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectIdentifyStatusResponse"/></returns>
+        public Task<ModifyCosAuditObjectIdentifyStatusResponse> ModifyCosAuditObjectIdentifyStatus(ModifyCosAuditObjectIdentifyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectIdentifyStatusResponse>(req, "ModifyCosAuditObjectIdentifyStatus");
+        }
+
+        /// <summary>
+        /// 修改对象存储识别开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectIdentifyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectIdentifyStatusResponse"/></returns>
+        public ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatusSync(ModifyCosAuditObjectIdentifyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectIdentifyStatusResponse>(req, "ModifyCosAuditObjectIdentifyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置对象存储扫描采样率
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectSampleRateRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectSampleRateResponse"/></returns>
+        public Task<ModifyCosAuditObjectSampleRateResponse> ModifyCosAuditObjectSampleRate(ModifyCosAuditObjectSampleRateRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectSampleRateResponse>(req, "ModifyCosAuditObjectSampleRate");
+        }
+
+        /// <summary>
+        /// 设置对象存储扫描采样率
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectSampleRateRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectSampleRateResponse"/></returns>
+        public ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRateSync(ModifyCosAuditObjectSampleRateRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectSampleRateResponse>(req, "ModifyCosAuditObjectSampleRate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改对象存储备注
         /// </summary>
         /// <param name="req"><see cref="ModifyCosMarkInfoRequest"/></param>
@@ -4460,6 +5048,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmAccessRecordResponse ModifyDspmAccessRecordSync(ModifyDspmAccessRecordRequest req)
         {
             return InternalRequestAsync<ModifyDspmAccessRecordResponse>(req, "ModifyDspmAccessRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm当前应用的数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmApplyingIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmApplyingIdentifyComplianceGroupResponse"/></returns>
+        public Task<ModifyDspmApplyingIdentifyComplianceGroupResponse> ModifyDspmApplyingIdentifyComplianceGroup(ModifyDspmApplyingIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmApplyingIdentifyComplianceGroupResponse>(req, "ModifyDspmApplyingIdentifyComplianceGroup");
+        }
+
+        /// <summary>
+        /// 修改dspm当前应用的数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmApplyingIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmApplyingIdentifyComplianceGroupResponse"/></returns>
+        public ModifyDspmApplyingIdentifyComplianceGroupResponse ModifyDspmApplyingIdentifyComplianceGroupSync(ModifyDspmApplyingIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmApplyingIdentifyComplianceGroupResponse>(req, "ModifyDspmApplyingIdentifyComplianceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4548,6 +5157,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改Dspm资产数据扫描任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetDataScanTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetDataScanTaskStatusResponse"/></returns>
+        public Task<ModifyDspmAssetDataScanTaskStatusResponse> ModifyDspmAssetDataScanTaskStatus(ModifyDspmAssetDataScanTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetDataScanTaskStatusResponse>(req, "ModifyDspmAssetDataScanTaskStatus");
+        }
+
+        /// <summary>
+        /// 修改Dspm资产数据扫描任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAssetDataScanTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmAssetDataScanTaskStatusResponse"/></returns>
+        public ModifyDspmAssetDataScanTaskStatusResponse ModifyDspmAssetDataScanTaskStatusSync(ModifyDspmAssetDataScanTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAssetDataScanTaskStatusResponse>(req, "ModifyDspmAssetDataScanTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改Dspm资产日志投递开关
         /// </summary>
         /// <param name="req"><see cref="ModifyDspmAssetLogDeliverySwitchRequest"/></param>
@@ -4611,6 +5241,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyCategoryResponse"/></returns>
+        public Task<ModifyDspmIdentifyCategoryResponse> ModifyDspmIdentifyCategory(ModifyDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyCategoryResponse>(req, "ModifyDspmIdentifyCategory");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyCategoryResponse"/></returns>
+        public ModifyDspmIdentifyCategoryResponse ModifyDspmIdentifyCategorySync(ModifyDspmIdentifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyCategoryResponse>(req, "ModifyDspmIdentifyCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceGroupResponse"/></returns>
+        public Task<ModifyDspmIdentifyComplianceGroupResponse> ModifyDspmIdentifyComplianceGroup(ModifyDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceGroupResponse>(req, "ModifyDspmIdentifyComplianceGroup");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceGroupResponse"/></returns>
+        public ModifyDspmIdentifyComplianceGroupResponse ModifyDspmIdentifyComplianceGroupSync(ModifyDspmIdentifyComplianceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceGroupResponse>(req, "ModifyDspmIdentifyComplianceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceGroupStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceGroupStatusResponse"/></returns>
+        public Task<ModifyDspmIdentifyComplianceGroupStatusResponse> ModifyDspmIdentifyComplianceGroupStatus(ModifyDspmIdentifyComplianceGroupStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceGroupStatusResponse>(req, "ModifyDspmIdentifyComplianceGroupStatus");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceGroupStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceGroupStatusResponse"/></returns>
+        public ModifyDspmIdentifyComplianceGroupStatusResponse ModifyDspmIdentifyComplianceGroupStatusSync(ModifyDspmIdentifyComplianceGroupStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceGroupStatusResponse>(req, "ModifyDspmIdentifyComplianceGroupStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板数据项关联级别信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceRuleLevelInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceRuleLevelInfoResponse"/></returns>
+        public Task<ModifyDspmIdentifyComplianceRuleLevelInfoResponse> ModifyDspmIdentifyComplianceRuleLevelInfo(ModifyDspmIdentifyComplianceRuleLevelInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceRuleLevelInfoResponse>(req, "ModifyDspmIdentifyComplianceRuleLevelInfo");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别模板数据项关联级别信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyComplianceRuleLevelInfoRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyComplianceRuleLevelInfoResponse"/></returns>
+        public ModifyDspmIdentifyComplianceRuleLevelInfoResponse ModifyDspmIdentifyComplianceRuleLevelInfoSync(ModifyDspmIdentifyComplianceRuleLevelInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyComplianceRuleLevelInfoResponse>(req, "ModifyDspmIdentifyComplianceRuleLevelInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改Dspm身份信息
         /// </summary>
         /// <param name="req"><see cref="ModifyDspmIdentifyInfoRequest"/></param>
@@ -4628,6 +5342,90 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmIdentifyInfoResponse ModifyDspmIdentifyInfoSync(ModifyDspmIdentifyInfoRequest req)
         {
             return InternalRequestAsync<ModifyDspmIdentifyInfoResponse>(req, "ModifyDspmIdentifyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyLevelGroupResponse"/></returns>
+        public Task<ModifyDspmIdentifyLevelGroupResponse> ModifyDspmIdentifyLevelGroup(ModifyDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyLevelGroupResponse>(req, "ModifyDspmIdentifyLevelGroup");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别分级组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyLevelGroupRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyLevelGroupResponse"/></returns>
+        public ModifyDspmIdentifyLevelGroupResponse ModifyDspmIdentifyLevelGroupSync(ModifyDspmIdentifyLevelGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyLevelGroupResponse>(req, "ModifyDspmIdentifyLevelGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别分级信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyLevelItemRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyLevelItemResponse"/></returns>
+        public Task<ModifyDspmIdentifyLevelItemResponse> ModifyDspmIdentifyLevelItem(ModifyDspmIdentifyLevelItemRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyLevelItemResponse>(req, "ModifyDspmIdentifyLevelItem");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别分级信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyLevelItemRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyLevelItemResponse"/></returns>
+        public ModifyDspmIdentifyLevelItemResponse ModifyDspmIdentifyLevelItemSync(ModifyDspmIdentifyLevelItemRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyLevelItemResponse>(req, "ModifyDspmIdentifyLevelItem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyRuleResponse"/></returns>
+        public Task<ModifyDspmIdentifyRuleResponse> ModifyDspmIdentifyRule(ModifyDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyRuleResponse>(req, "ModifyDspmIdentifyRule");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别数据项
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyRuleRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyRuleResponse"/></returns>
+        public ModifyDspmIdentifyRuleResponse ModifyDspmIdentifyRuleSync(ModifyDspmIdentifyRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyRuleResponse>(req, "ModifyDspmIdentifyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别数据项状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyRuleStatusResponse"/></returns>
+        public Task<ModifyDspmIdentifyRuleStatusResponse> ModifyDspmIdentifyRuleStatus(ModifyDspmIdentifyRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyRuleStatusResponse>(req, "ModifyDspmIdentifyRuleStatus");
+        }
+
+        /// <summary>
+        /// 修改dspm数据识别数据项状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmIdentifyRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyDspmIdentifyRuleStatusResponse"/></returns>
+        public ModifyDspmIdentifyRuleStatusResponse ModifyDspmIdentifyRuleStatusSync(ModifyDspmIdentifyRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmIdentifyRuleStatusResponse>(req, "ModifyDspmIdentifyRuleStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

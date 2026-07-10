@@ -25,22 +25,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 返回资源及状态，状态码：
-        /// 1 - 封堵状态
-        /// 2 - 正常状态
-        /// 3 - 攻击状态
+        /// <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
         /// </summary>
         [JsonProperty("Data")]
         public KeyValue[] Data{ get; set; }
 
         /// <summary>
-        /// 域名化资产的名称
+        /// <p>域名化资产的名称</p>
         /// </summary>
         [JsonProperty("CLBData")]
         public KeyValue[] CLBData{ get; set; }
 
         /// <summary>
-        /// cnamewaf资源状态
+        /// <p>cnamewaf资源状态</p>
         /// </summary>
         [JsonProperty("CnameWafData")]
         public KeyValue[] CnameWafData{ get; set; }
