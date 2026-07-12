@@ -25,19 +25,19 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+        /// <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 鉴权策略集合
+        /// <p>鉴权策略集合</p>
         /// </summary>
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }
 
         /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+        /// <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }

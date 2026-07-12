@@ -25,16 +25,22 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 工作组Id
+        /// <p>工作组Id</p>
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
-        /// 解绑的权限集合
+        /// <p>解绑的权限集合</p>
         /// </summary>
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }
+
+        /// <summary>
+        /// <p>要授权的策略列表</p>
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "WorkGroupId", this.WorkGroupId);
             this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         }
     }
 }

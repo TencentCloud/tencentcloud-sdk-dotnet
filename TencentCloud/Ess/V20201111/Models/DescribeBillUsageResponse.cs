@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 企业套餐余额及使用情况
+        /// <p>企业套餐余额及使用情况</p>
         /// </summary>
         [JsonProperty("Summary")]
         public OrgBillSummary[] Summary{ get; set; }
 
         /// <summary>
-        /// 集团子企业套餐使用情况
+        /// <p>集团子企业套餐使用情况</p>
         /// </summary>
         [JsonProperty("SubOrgSummary")]
         public SubOrgBillSummary[] SubOrgSummary{ get; set; }

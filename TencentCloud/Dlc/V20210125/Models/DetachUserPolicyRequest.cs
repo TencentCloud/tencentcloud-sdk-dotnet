@@ -25,22 +25,28 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// <p>用户Id，和CAM侧Uin匹配</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 解绑的权限集合
+        /// <p>解绑的权限集合</p>
         /// </summary>
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }
 
         /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+        /// <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
+
+        /// <summary>
+        /// <p>要授权的策略列表</p>
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         }
     }
 }

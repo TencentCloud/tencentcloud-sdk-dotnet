@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 查询到的所有用户合同类型列表	
+        /// <p>查询到的所有用户合同类型列表</p>
         /// </summary>
         [JsonProperty("AllUserFlowTypes")]
         public TemplateUserFlowType[] AllUserFlowTypes{ get; set; }

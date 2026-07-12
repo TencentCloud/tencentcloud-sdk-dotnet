@@ -24,12 +24,33 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     public class ModifyApiKeyStatusRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>API 密钥 ID。</p>
+        /// </summary>
+        [JsonProperty("ApiKeyId")]
+        public string ApiKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>平台类型。取值：maas。</p>
+        /// </summary>
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
+
+        /// <summary>
+        /// <p>状态。取值：enable（启用）、disable（禁用）。</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApiKeyId", this.ApiKeyId);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

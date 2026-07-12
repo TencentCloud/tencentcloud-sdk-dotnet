@@ -25,18 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 图片转码输出配置。
+        /// <p>图片转码输出配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
-        /// 图片增强配置。
+        /// <p>图片增强配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>图片美颜配置。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BeautyConfig")]
+        public ImageBeautyConfig BeautyConfig{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
         }
     }
 }

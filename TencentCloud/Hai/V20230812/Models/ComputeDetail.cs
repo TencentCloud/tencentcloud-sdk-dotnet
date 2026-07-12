@@ -66,6 +66,18 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("Memory")]
         public string Memory{ get; set; }
 
+        /// <summary>
+        /// 该套餐是否支持包年包月
+        /// </summary>
+        [JsonProperty("PrepaidEnable")]
+        public bool? PrepaidEnable{ get; set; }
+
+        /// <summary>
+        /// 该套餐是否支持按量计费
+        /// </summary>
+        [JsonProperty("PostpaidEnable")]
+        public bool? PostpaidEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "GPUPerformance", this.GPUPerformance);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "PrepaidEnable", this.PrepaidEnable);
+            this.SetParamSimple(map, prefix + "PostpaidEnable", this.PostpaidEnable);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("SecurityType")]
         public string SecurityType{ get; set; }
 
+        /// <summary>
+        /// <p>包年包月参数(包月时必填)</p>
+        /// </summary>
+        [JsonProperty("ServiceChargePrepaid")]
+        public ServiceChargePrepaid ServiceChargePrepaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamObj(map, prefix + "HyperParam.", this.HyperParam);
             this.SetParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
+            this.SetParamObj(map, prefix + "ServiceChargePrepaid.", this.ServiceChargePrepaid);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 对比任务详情下载链接。
+        /// <p>对比任务详情下载链接。</p>
         /// </summary>
         [JsonProperty("ResourceUrl")]
         public string ResourceUrl{ get; set; }
 
         /// <summary>
-        /// 下载链接有效截止时间。
+        /// <p>下载链接有效截止时间。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

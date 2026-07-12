@@ -25,43 +25,40 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 身份证号。
-        /// - 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。
-        /// - 若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
+        /// <p>身份证号。</p><ul><li>姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。</li><li>若都提供了，则按照姓名和身份证号&gt;ImageBase64&gt;ImageUrl的优先级使用参数。</li></ul>
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名。
+        /// <p>姓名。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 身份证人像面的 Base64 值。
-        /// - 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// - 支持的图片大小：所下载图片经Base64编码后不超过 3M。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+        /// <p>身份证人像面的 Base64 值。</p><ul><li>支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。</li><li>支持的图片大小：所下载图片经Base64编码后不超过 3M。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li></ul>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 身份证人像面的 Url 地址。
-        /// - 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// - 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-        /// - 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-        /// - 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// <p>身份证人像面的 Url 地址。</p><ul><li>支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。</li><li>支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。</li><li>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。
-        /// - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
+
+        /// <summary>
+        /// <p>告警配置。</p><ul><li>仅当使用ImageBase64或者ImageUrl时，告警配置生效</li><li>以下可选字段均为bool 类型，默认false。<ul><li>CopyWarn，复印件告警。</li><li>BorderCheckWarn，边框和框内遮挡告警。</li><li>ReshootWarn，翻拍告警。</li><li>DetectPsWarn，PS检测告警（疑似存在PS痕迹）。</li><li>TempIdWarn，临时身份证告警。</li><li>Quality，图片质量告警（评价图片模糊程度）。</li></ul></li><li>SDK 设置方式参考：Config = Json.stringify({&quot;CopyWarn&quot;:true,&quot;ReshootWarn&quot;:true})。</li><li>API 3.0 Explorer 设置方式参考：Config = {&quot;CopyWarn&quot;:true,&quot;Quality&quot;:true}。</li></ul>
+        /// </summary>
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
 
 
         /// <summary>
@@ -74,6 +71,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "Config", this.Config);
         }
     }
 }

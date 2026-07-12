@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 工作组Id
+        /// <p>工作组Id</p>
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
-        /// 要绑定的策略集合
+        /// <p>要绑定的策略集合</p>
         /// </summary>
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }

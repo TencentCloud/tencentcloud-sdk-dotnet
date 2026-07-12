@@ -25,35 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行合同审查任务的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
+        /// <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 导出对比结果文件类型。
-        /// 类型如下：
-        /// <ul>
-        /// <li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-        /// <li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-        /// </ul>
+        /// <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
         /// </summary>
         [JsonProperty("ExportType")]
         public long? ExportType{ get; set; }
 
         /// <summary>
-        /// 是否忽略，适用于PDF。
-        /// <ul>
-        /// <li> **true**：导出文件标注去掉忽略项。</li>
-        /// <li> **false**：导出文件包含所有对比点。</li>
-        /// </ul>
+        /// <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
         /// </summary>
         [JsonProperty("Ignore")]
         public bool? Ignore{ get; set; }

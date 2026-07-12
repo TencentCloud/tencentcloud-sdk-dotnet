@@ -102,6 +102,36 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("TargetReplicas")]
         public ulong? TargetReplicas{ get; set; }
 
+        /// <summary>
+        /// 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// 到期时间(包月)，按量为空
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 自动续费标识(包月)
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+        /// <summary>
+        /// 受限状态(如欠费隔离)
+        /// </summary>
+        [JsonProperty("RestrictState")]
+        public string RestrictState{ get; set; }
+
+        /// <summary>
+        /// 是否自定义部署：1是 0否
+        /// </summary>
+        [JsonProperty("IsCustomDeploy")]
+        public long? IsCustomDeploy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +151,11 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
             this.SetParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
+            this.SetParamSimple(map, prefix + "IsCustomDeploy", this.IsCustomDeploy);
         }
     }
 }

@@ -25,76 +25,58 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id
+        /// <p>用户Id</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
+        /// <p>必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 查询的过滤条件。
-        /// 
-        /// 当Type为Group时，支持Key为workgroup-name的模糊搜索；
-        /// 
-        /// 当Type为DataAuth时，支持key：
-        /// 
-        /// policy-type：权限类型。
-        /// 
-        /// policy-source：数据来源。
-        /// 
-        /// data-name：库表的模糊搜索。
-        /// 
-        /// 当Type为EngineAuth时，支持key：
-        /// 
-        /// policy-type：权限类型。
-        /// 
-        /// policy-source：数据来源。
-        /// 
-        /// engine-name：库表的模糊搜索。
+        /// <p>查询的过滤条件。</p><p>当Type为Group时，支持Key为workgroup-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段。
-        /// 
-        /// 当Type为Group时，支持create-time、group-name
-        /// 
-        /// 当Type为DataAuth时，支持create-time
-        /// 
-        /// 当Type为EngineAuth时，支持create-time
+        /// <p>排序字段。</p><p>当Type为Group时，支持create-time、group-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，desc表示正序，asc表示反序， 默认为asc
+        /// <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
         /// </summary>
         [JsonProperty("Sorting")]
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20，最大值100
+        /// <p>返回数量，默认20，最大值100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+        /// <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
+
+        /// <summary>
+        /// <p>TF 资源 ID</p>
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
 
 
         /// <summary>
@@ -110,6 +92,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

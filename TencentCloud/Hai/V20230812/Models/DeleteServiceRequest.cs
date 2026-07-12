@@ -25,7 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

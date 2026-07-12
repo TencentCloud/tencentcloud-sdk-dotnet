@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1459";
+       private const string sdkVersion = "SDK_NET_3.0.1460";
 
         /// <summary>
         /// Client constructor.
@@ -1667,6 +1667,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrpsSync(DescribeClusterInstanceGrpsRequest req)
         {
             return InternalRequestAsync<DescribeClusterInstanceGrpsResponse>(req, "DescribeClusterInstanceGrps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询可支持的集群类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelsRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelsResponse"/></returns>
+        public Task<DescribeClusterLevelsResponse> DescribeClusterLevels(DescribeClusterLevelsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterLevelsResponse>(req, "DescribeClusterLevels");
+        }
+
+        /// <summary>
+        /// 查询可支持的集群类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelsRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelsResponse"/></returns>
+        public DescribeClusterLevelsResponse DescribeClusterLevelsSync(DescribeClusterLevelsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterLevelsResponse>(req, "DescribeClusterLevels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

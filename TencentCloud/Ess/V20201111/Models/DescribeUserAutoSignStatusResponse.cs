@@ -25,35 +25,31 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 查询用户是否已开通自动签
+        /// <p>查询用户是否已开通自动签</p>
         /// </summary>
         [JsonProperty("IsOpen")]
         public bool? IsOpen{ get; set; }
 
         /// <summary>
-        /// 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-        /// 
-        /// 值为unix时间戳,单位为秒。
+        /// <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
         /// </summary>
         [JsonProperty("LicenseFrom")]
         public long? LicenseFrom{ get; set; }
 
         /// <summary>
-        /// 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-        /// 
-        /// 值为unix时间戳,单位为秒。
+        /// <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
         /// </summary>
         [JsonProperty("LicenseTo")]
         public long? LicenseTo{ get; set; }
 
         /// <summary>
-        /// 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+        /// <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
 
         /// <summary>
-        /// 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+        /// <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p>
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }

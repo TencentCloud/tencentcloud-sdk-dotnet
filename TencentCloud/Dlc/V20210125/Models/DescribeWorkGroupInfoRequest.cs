@@ -25,70 +25,52 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 工作组Id
+        /// <p>工作组Id</p>
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
-        /// 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限
+        /// <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 查询的过滤条件。
-        /// 
-        /// 当Type为User时，支持Key为user-name的模糊搜索；
-        /// 
-        /// 当Type为DataAuth时，支持key：
-        /// 
-        /// policy-type：权限类型。
-        /// 
-        /// policy-source：数据来源。
-        /// 
-        /// data-name：库表的模糊搜索。
-        /// 
-        /// 当Type为EngineAuth时，支持key：
-        /// 
-        /// policy-type：权限类型。
-        /// 
-        /// policy-source：数据来源。
-        /// 
-        /// engine-name：库表的模糊搜索。
+        /// <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段。
-        /// 
-        /// 当Type为User时，支持create-time、user-name
-        /// 
-        /// 当Type为DataAuth时，支持create-time
-        /// 
-        /// 当Type为EngineAuth时，支持create-time
+        /// <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，desc表示正序，asc表示反序， 默认为asc
+        /// <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
         /// </summary>
         [JsonProperty("Sorting")]
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20，最大值100
+        /// <p>返回数量，默认20，最大值100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>要授权的策略列表</p>
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
 
 
         /// <summary>
@@ -103,6 +85,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Sorting", this.Sorting);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

@@ -25,62 +25,62 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+        /// <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+        /// <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。
+        /// <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+        /// <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p>
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+        /// <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
         /// </summary>
         [JsonProperty("LibType")]
         public long? LibType{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+        /// <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p>
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
+        /// <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p>
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回当前标签（Label）下的二级标签。
+        /// <p>该字段用于返回当前标签（Label）下的二级标签。</p>
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+        /// <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回违规文本命中信息
+        /// <p>该字段用于返回违规文本命中信息</p>
         /// </summary>
         [JsonProperty("HitInfos")]
         public HitInfo[] HitInfos{ get; set; }

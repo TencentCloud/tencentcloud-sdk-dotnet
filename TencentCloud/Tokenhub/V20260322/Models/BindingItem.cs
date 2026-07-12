@@ -25,19 +25,19 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 资源 ID（模型 ID 或服务 ID）。
+        /// <p>资源 ID（模型 ID 或服务 ID）。</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型。取值：endpoint（服务）、model（模型）。
+        /// <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源状态
+        /// <p>资源状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
