@@ -187,6 +187,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ParamTemplateId{ get; set; }
 
         /// <summary>
+        /// <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul>
+        /// </summary>
+        [JsonProperty("DataEncryption")]
+        public string DataEncryption{ get; set; }
+
+        /// <summary>
+        /// <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul>
+        /// </summary>
+        [JsonProperty("EncryptionKeySource")]
+        public string EncryptionKeySource{ get; set; }
+
+        /// <summary>
+        /// <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p>
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p>
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
+        /// <summary>
         /// <p>实例CPU核大小，单位：C。具体售卖的CPU规格，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。<br>注意：通用 I 型实例必须设置 CPU 大小。</p>
         /// </summary>
         [JsonProperty("CpuCore")]
@@ -225,6 +249,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
             this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamSimple(map, prefix + "DataEncryption", this.DataEncryption);
+            this.SetParamSimple(map, prefix + "EncryptionKeySource", this.EncryptionKeySource);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
             this.SetParamSimple(map, prefix + "CpuCore", this.CpuCore);
         }
     }

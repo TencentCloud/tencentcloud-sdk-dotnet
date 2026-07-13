@@ -25,51 +25,51 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略组id
+        /// <p>策略组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 策略组名称
+        /// <p>策略组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 策略组说明
+        /// <p>策略组说明</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 最后编辑的用户uin
+        /// <p>最后编辑的用户uin</p>
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }
 
         /// <summary>
-        /// 是否且规则
+        /// <p>是否且规则</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUnionRule")]

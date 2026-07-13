@@ -25,103 +25,100 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 备份开始时间。
+        /// <p>备份开始时间。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 备份任务ID。
+        /// <p>备份任务ID。</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// 备份类型。
-        /// - 1：凌晨系统发起的自动备份。
-        /// - 0：用户发起的手动备份。
+        /// <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 备份状态。 
-        /// - 1：备份被其它流程锁定。
-        /// - 2：备份正常，没有被任何流程锁定。
-        /// - -1：备份已过期。
-        /// - 3：备份正在被导出。
-        /// - 4：备份导出成功。
+        /// <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 备份的备注信息。
+        /// <p>备份的备注信息。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 备份是否被锁定。
-        /// - 0：未被锁定。
-        /// - 1：已被锁定。
+        /// <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
-        /// 内部字段，用户可忽略。
+        /// <p>内部字段，用户可忽略。</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// 内部字段，用户可忽略。
+        /// <p>内部字段，用户可忽略。</p>
         /// </summary>
         [JsonProperty("FullBackup")]
         public long? FullBackup{ get; set; }
 
         /// <summary>
-        /// 内部字段，用户可忽略。
+        /// <p>内部字段，用户可忽略。</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 本地备份所在地域。
+        /// <p>本地备份所在地域。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 备份结束时间。
+        /// <p>备份结束时间。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备份文件类型。
+        /// <p>备份文件类型。</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 备份文件过期时间。
+        /// <p>备份文件过期时间。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>备份文件是否加密</p>
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
 
 
         /// <summary>
@@ -144,6 +141,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
         }
     }
 }

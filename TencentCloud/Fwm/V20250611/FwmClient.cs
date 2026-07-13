@@ -28,7 +28,7 @@ namespace TencentCloud.Fwm.V20250611
 
        private const string endpoint = "fwm.tencentcloudapi.com";
        private const string version = "2025-06-11";
-       private const string sdkVersion = "SDK_NET_3.0.1458";
+       private const string sdkVersion = "SDK_NET_3.0.1461";
 
         /// <summary>
         /// Client constructor.

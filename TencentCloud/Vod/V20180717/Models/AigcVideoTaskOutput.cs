@@ -36,6 +36,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ProcedureTaskIds")]
         public string[] ProcedureTaskIds{ get; set; }
 
+        /// <summary>
+        /// <p>AIGC 生视频任务的用量信息。</p>
+        /// </summary>
+        [JsonProperty("Usage")]
+        public AigcVideoTaskUsage Usage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
+            this.SetParamObj(map, prefix + "Usage.", this.Usage);
         }
     }
 }

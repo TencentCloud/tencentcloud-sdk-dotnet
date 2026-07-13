@@ -25,148 +25,133 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 驾驶证正页姓名
+        /// <p>驾驶证正页姓名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// <p>性别</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 国籍
+        /// <p>国籍</p>
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 住址
+        /// <p>住址</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 出生日期（YYYY-MM-DD）
+        /// <p>出生日期（YYYY-MM-DD）</p>
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// 初次领证日期（YYYY-MM-DD）
+        /// <p>初次领证日期（YYYY-MM-DD）</p>
         /// </summary>
         [JsonProperty("DateOfFirstIssue")]
         public string DateOfFirstIssue{ get; set; }
 
         /// <summary>
-        /// 准驾车型
+        /// <p>准驾车型</p>
         /// </summary>
         [JsonProperty("Class")]
         public string Class{ get; set; }
 
         /// <summary>
-        /// 有效期开始时间（YYYY-MM-DD）
+        /// <p>有效期开始时间（YYYY-MM-DD）</p>
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-        /// 老版驾驶证返回有效期限 X年）
+        /// <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p>
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 驾驶证正页证号
+        /// <p>驾驶证正页证号</p>
         /// </summary>
         [JsonProperty("CardCode")]
         public string CardCode{ get; set; }
 
         /// <summary>
-        /// 档案编号
+        /// <p>档案编号</p>
         /// </summary>
         [JsonProperty("ArchivesCode")]
         public string ArchivesCode{ get; set; }
 
         /// <summary>
-        /// 记录
+        /// <p>记录</p>
         /// </summary>
         [JsonProperty("Record")]
         public string Record{ get; set; }
 
         /// <summary>
-        /// Code 告警码列表和释义：
-        /// -9102  复印件告警
-        /// -9103  翻拍件告警
-        /// -9104  反光告警
-        /// -9105  模糊告警
-        /// -9106  边框不完整告警
-        /// 注：告警码可以同时存在多个
+        /// <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p>
         /// </summary>
         [JsonProperty("RecognizeWarnCode")]
         public long?[] RecognizeWarnCode{ get; set; }
 
         /// <summary>
-        /// 告警码说明：
-        /// WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-        /// WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-        /// WARN_DRIVER_LICENSE_REFLECTION 反光告警
-        /// WARN_DRIVER_LICENSE_BLUR 模糊告警
-        /// WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-        /// 注：告警信息可以同时存在多个
+        /// <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p>
         /// </summary>
         [JsonProperty("RecognizeWarnMsg")]
         public string[] RecognizeWarnMsg{ get; set; }
 
         /// <summary>
-        /// 发证单位
+        /// <p>发证单位</p>
         /// </summary>
         [JsonProperty("IssuingAuthority")]
         public string IssuingAuthority{ get; set; }
 
         /// <summary>
-        /// 状态（仅电子驾驶证支持返回该字段）
+        /// <p>状态（仅电子驾驶证支持返回该字段）</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 累积记分（仅电子驾驶证支持返回该字段）
+        /// <p>累积记分（仅电子驾驶证支持返回该字段）</p>
         /// </summary>
         [JsonProperty("CumulativeScore")]
         public string CumulativeScore{ get; set; }
 
         /// <summary>
-        /// 当前时间（仅电子驾驶证支持返回该字段）
+        /// <p>当前时间（仅电子驾驶证支持返回该字段）</p>
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }
 
         /// <summary>
-        /// 生成时间（仅电子驾驶证支持返回该字段）
+        /// <p>生成时间（仅电子驾驶证支持返回该字段）</p>
         /// </summary>
         [JsonProperty("GenerateTime")]
         public string GenerateTime{ get; set; }
 
         /// <summary>
-        /// 驾驶证副页姓名
+        /// <p>驾驶证副页姓名</p>
         /// </summary>
         [JsonProperty("BackPageName")]
         public string BackPageName{ get; set; }
 
         /// <summary>
-        /// 驾驶证副页证号
+        /// <p>驾驶证副页证号</p>
         /// </summary>
         [JsonProperty("BackPageCardCode")]
         public string BackPageCardCode{ get; set; }
 
         /// <summary>
-        /// 驾驶证类型
-        /// 电子驾驶证：Electronic
-        /// 普通驾驶证：Normal
+        /// <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p>
         /// </summary>
         [JsonProperty("DriverLicenseType")]
         public string DriverLicenseType{ get; set; }

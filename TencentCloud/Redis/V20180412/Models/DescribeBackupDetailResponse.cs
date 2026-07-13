@@ -25,88 +25,100 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 备份 ID。
+        /// <p>备份 ID。</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// 备份开始时间。
+        /// <p>备份开始时间。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 备份结束时间。
+        /// <p>备份结束时间。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备份方式。 
-        /// 
-        /// - 1：手动备份。
-        /// -  0：自动备份。
+        /// <p>备份方式。 </p><ul><li>1：手动备份。</li><li>0：自动备份。</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 备份状态。 
-        /// 
-        /// - 1：备份被其它流程锁定。
-        /// - 2：备份正常，没有被任何流程锁定。
-        /// - -1：备份已过期。
-        /// - 3：备份正在被导出。
-        /// - 4：备份导出成功。
+        /// <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 备份的备注信息。
+        /// <p>备份的备注信息。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 备份是否被锁定。
-        /// 
-        /// - 0：未被锁定。
-        /// - 1：已被锁定。
+        /// <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
-        /// 备份文件大小。单位：Byte。
+        /// <p>备份文件大小。单位：Byte。</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// 实例类型。
+        /// <p>实例类型。</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 单分片内存规格大小，单位：MB。
+        /// <p>单分片内存规格大小，单位：MB。</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// 分片数量。
+        /// <p>分片数量。</p>
         /// </summary>
         [JsonProperty("ShardNum")]
         public long? ShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量。
+        /// <p>副本数量。</p>
         /// </summary>
         [JsonProperty("ReplicasNum")]
         public long? ReplicasNum{ get; set; }
+
+        /// <summary>
+        /// <p>是否已加密。</p><p>枚举值：</p><ul><li>true： 已加密</li><li>false： 未加密</li></ul>
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
+
+        /// <summary>
+        /// <p>解密密钥。</p>
+        /// </summary>
+        [JsonProperty("DecryptKey")]
+        public string DecryptKey{ get; set; }
+
+        /// <summary>
+        /// <p>KMS的密钥ID。</p>
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>加密该备份文件的加密算法。</p><p>枚举值：</p><ul><li>AES-256-CBC： 当前仅支持AES-256-CBC</li></ul>
+        /// </summary>
+        [JsonProperty("KeyAlgorithm")]
+        public string KeyAlgorithm{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -132,6 +144,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
             this.SetParamSimple(map, prefix + "ReplicasNum", this.ReplicasNum);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
+            this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "KeyAlgorithm", this.KeyAlgorithm);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

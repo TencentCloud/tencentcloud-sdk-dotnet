@@ -25,31 +25,31 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱工具ID
+        /// <p>沙箱工具ID</p>
         /// </summary>
         [JsonProperty("ToolId")]
         public string ToolId{ get; set; }
 
         /// <summary>
-        /// 沙箱工具描述，最大长度200字符
+        /// <p>沙箱工具描述，最大长度200字符</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 网络配置
+        /// <p>网络配置</p>
         /// </summary>
         [JsonProperty("NetworkConfiguration")]
         public NetworkConfiguration NetworkConfiguration{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 沙箱工具自定义配置
+        /// <p>沙箱工具自定义配置</p>
         /// </summary>
         [JsonProperty("CustomConfiguration")]
         public CustomConfiguration CustomConfiguration{ get; set; }

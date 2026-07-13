@@ -25,49 +25,43 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 每页输出的备份列表大小。默认大小为20，最大值为 100。
+        /// <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+        /// <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+        /// <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+        /// <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+        /// <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备份任务的状态：
-        /// 1：备份在流程中。
-        /// 2：备份正常。
-        /// 3：备份转RDB文件处理中。
-        /// 4：已完成RDB转换。
-        /// -1：备份已过期。
-        /// -2：备份已删除。
+        /// <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 实例名称，支持根据实例名称模糊搜索。
+        /// <p>实例名称，支持根据实例名称模糊搜索。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

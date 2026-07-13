@@ -31,6 +31,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsAutoMonitor")]
+        public ulong? IsAutoMonitor{ get; set; }
+
+        /// <summary>
         /// bucket id集合
         /// </summary>
         [JsonProperty("BucketIdSet")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "IsAutoMonitor", this.IsAutoMonitor);
             this.SetParamArraySimple(map, prefix + "BucketIdSet.", this.BucketIdSet);
         }
     }

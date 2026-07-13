@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 加速地域信息。
+        /// <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
         /// </summary>
         [JsonProperty("AcceleratorAreas")]
         public AcceleratorAreas[] AcceleratorAreas{ get; set; }

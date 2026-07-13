@@ -25,7 +25,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 客户端集群Id
+        /// <p>客户端集群Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 对象唯一id
+        /// <p>对象唯一id</p>
         /// </summary>
         [JsonProperty("UniqueId")]
         public string UniqueId{ get; set; }
 
         /// <summary>
-        /// 表示对象实例的维度集合，jsonObj字符串
+        /// <p>表示对象实例的维度集合，jsonObj字符串</p>
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
+        /// <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
         /// </summary>
         [JsonProperty("IsShielded")]
         public long? IsShielded{ get; set; }
 
         /// <summary>
-        /// 对象所在的地域
+        /// <p>对象所在的地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

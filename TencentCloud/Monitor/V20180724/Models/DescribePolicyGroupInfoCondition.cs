@@ -25,70 +25,70 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 指标名称
+        /// <p>指标名称</p>
         /// </summary>
         [JsonProperty("MetricShowName")]
         public string MetricShowName{ get; set; }
 
         /// <summary>
-        /// 数据聚合周期(单位秒)
+        /// <p>数据聚合周期(单位秒)</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 指标id
+        /// <p>指标id</p>
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// 阈值规则id
+        /// <p>阈值规则id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
-        /// 指标单位
+        /// <p>指标单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 告警发送收敛类型。0连续告警，1指数告警
+        /// <p>告警发送收敛类型。0连续告警，1指数告警</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+        /// <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+        /// <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcType")]
         public long? CalcType{ get; set; }
 
         /// <summary>
-        /// 检测阈值
+        /// <p>检测阈值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcValue")]
         public string CalcValue{ get; set; }
 
         /// <summary>
-        /// 持续多长时间触发规则会告警(单位秒)
+        /// <p>持续多长时间触发规则会告警(单位秒)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinueTime")]
         public long? ContinueTime{ get; set; }
 
         /// <summary>
-        /// 告警指标名
+        /// <p>告警指标名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricName")]

@@ -138,6 +138,60 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>模型改写规则</p>
+        /// </summary>
+        [JsonProperty("ModelRewriteRules")]
+        public AIGWModelRewriteRule[] ModelRewriteRules{ get; set; }
+
+        /// <summary>
+        /// <p>来源 id</p>
+        /// </summary>
+        [JsonProperty("SourceId")]
+        public string SourceId{ get; set; }
+
+        /// <summary>
+        /// <p>命名空间</p>
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// <p>服务名字</p>
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// <p>协议</p>
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数</p>
+        /// </summary>
+        [JsonProperty("ExtParams")]
+        public KeyValue[] ExtParams{ get; set; }
+
+        /// <summary>
+        /// <p>密钥轮转开关</p>
+        /// </summary>
+        [JsonProperty("KeyRotationEnabled")]
+        public bool? KeyRotationEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>密钥轮转天数</p>
+        /// </summary>
+        [JsonProperty("KeyRotationPeriodDays")]
+        public ulong? KeyRotationPeriodDays{ get; set; }
+
+        /// <summary>
+        /// <p>外部服务来源ID</p>
+        /// </summary>
+        [JsonProperty("ExternalInstanceId")]
+        public string ExternalInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +217,15 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SNI", this.SNI);
             this.SetParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "ModelRewriteRules.", this.ModelRewriteRules);
+            this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
+            this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
+            this.SetParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
+            this.SetParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
         }
     }
 }

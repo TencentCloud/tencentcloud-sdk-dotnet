@@ -25,31 +25,31 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 创建设备所归属的项目ID
+        /// <p>创建设备所归属的项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18
+        /// <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线
+        /// <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field
+        /// <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 设备认证口令，由大小写英文字母和数字构成，须为16位
+        /// <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p>
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }

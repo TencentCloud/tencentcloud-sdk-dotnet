@@ -25,37 +25,43 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 资源id
+        /// <p>资源id</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public long? Region{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 计费项
+        /// <p>申请数量</p>
+        /// </summary>
+        [JsonProperty("InquireNum")]
+        public long? InquireNum{ get; set; }
+
+        /// <summary>
+        /// <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p>
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
@@ -71,6 +77,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "InquireNum", this.InquireNum);
             this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
         }
     }

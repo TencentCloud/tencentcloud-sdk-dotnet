@@ -25,25 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 地域id
+        /// <p>地域id</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 地域简称
+        /// <p>地域简称</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 维度组合json字符串
+        /// <p>维度组合json字符串</p>
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 事件维度组合json字符串
+        /// <p>事件维度组合json字符串</p>
         /// </summary>
         [JsonProperty("EventDimensions")]
         public string EventDimensions{ get; set; }

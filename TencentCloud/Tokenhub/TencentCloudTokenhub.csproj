@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1460</VersionPrefix>
+    <VersionPrefix>3.0.1461</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,8 @@
     <Compile Include="V20260322\Models\CreateApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\CreateApiKeysResultItem.cs" />
+    <Compile Include="V20260322\Models\CreateEndpointRequest.cs" />
+    <Compile Include="V20260322\Models\CreateEndpointResponse.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryRequest.cs" />
@@ -64,6 +66,8 @@
     <Compile Include="V20260322\Models\CreateTokenPlanTeamOrderAndBuyResponse.cs" />
     <Compile Include="V20260322\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\DeleteApiKeyResponse.cs" />
+    <Compile Include="V20260322\Models\DeleteEndpointRequest.cs" />
+    <Compile Include="V20260322\Models\DeleteEndpointResponse.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntryInput.cs" />
@@ -75,10 +79,14 @@
     <Compile Include="V20260322\Models\DescribeApiKeyListResponse.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyRequest.cs" />
     <Compile Include="V20260322\Models\DescribeApiKeyResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeEndpointRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeEndpointResponse.cs" />
     <Compile Include="V20260322\Models\DescribeGlossariesRequest.cs" />
     <Compile Include="V20260322\Models\DescribeGlossariesResponse.cs" />
     <Compile Include="V20260322\Models\DescribeGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\DescribeGlossaryEntriesResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeModelEndpointListRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeModelEndpointListResponse.cs" />
     <Compile Include="V20260322\Models\DescribeModelListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeModelListResponse.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanApiKeyListRequest.cs" />
@@ -95,6 +103,8 @@
     <Compile Include="V20260322\Models\DescribeTokenPlanResponse.cs" />
     <Compile Include="V20260322\Models\DescribeUsageRankListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeUsageRankListResponse.cs" />
+    <Compile Include="V20260322\Models\EndpointCreateDetail.cs" />
+    <Compile Include="V20260322\Models\EndpointDetail.cs" />
     <Compile Include="V20260322\Models\GlossaryEntryInput.cs" />
     <Compile Include="V20260322\Models\GlossaryEntryItem.cs" />
     <Compile Include="V20260322\Models\GlossaryItem.cs" />
@@ -102,6 +112,7 @@
     <Compile Include="V20260322\Models\ModelAccessInfo.cs" />
     <Compile Include="V20260322\Models\ModelChargingInfo.cs" />
     <Compile Include="V20260322\Models\ModelChargingItem.cs" />
+    <Compile Include="V20260322\Models\ModelEndpointView.cs" />
     <Compile Include="V20260322\Models\ModelFreeTrialInfo.cs" />
     <Compile Include="V20260322\Models\ModelImage.cs" />
     <Compile Include="V20260322\Models\ModelSiteRegion.cs" />
@@ -110,6 +121,8 @@
     <Compile Include="V20260322\Models\ModifyApiKeyInfoResponse.cs" />
     <Compile Include="V20260322\Models\ModifyApiKeyStatusRequest.cs" />
     <Compile Include="V20260322\Models\ModifyApiKeyStatusResponse.cs" />
+    <Compile Include="V20260322\Models\ModifyEndpointRequest.cs" />
+    <Compile Include="V20260322\Models\ModifyEndpointResponse.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntryInput.cs" />

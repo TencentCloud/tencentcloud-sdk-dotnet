@@ -25,89 +25,89 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 源地址内容
+        /// <p>源地址内容</p>
         /// </summary>
         [JsonProperty("SourceContent")]
         public string SourceContent{ get; set; }
 
         /// <summary>
-        /// 源类型：ip/url/template/instance/tag
+        /// <p>源类型：ip/url/template/instance/tag</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 目的地址内容
+        /// <p>目的地址内容</p>
         /// </summary>
         [JsonProperty("TargetContent")]
         public string TargetContent{ get; set; }
 
         /// <summary>
-        /// 目的类型：ip/url/template/instance/tag
+        /// <p>目的类型：ip/url/template/instance/tag</p>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等
+        /// <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 动作：accept/drop/log
+        /// <p>动作：accept/drop/log</p>
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
 
         /// <summary>
-        /// 优先级（从1开始）
+        /// <p>优先级（从1开始）</p>
         /// </summary>
         [JsonProperty("OrderIndex")]
         public long? OrderIndex{ get; set; }
 
         /// <summary>
-        /// 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效
+        /// <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p>
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 规则方向：1-入站规则，0-出站规则
+        /// <p>规则方向：1-入站规则，0-出站规则</p>
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
 
         /// <summary>
-        /// 规则ID（修改时必填）
+        /// <p>规则ID（修改时必填）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 端口（ICMP协议时为空）
+        /// <p>端口（ICMP协议时为空）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 规则描述
+        /// <p>规则描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 端口模板ID
+        /// <p>端口模板ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+        /// <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BelongMemberId")]

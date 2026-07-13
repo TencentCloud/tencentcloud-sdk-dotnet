@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1451";
+       private const string sdkVersion = "SDK_NET_3.0.1461";
 
         /// <summary>
         /// Client constructor.
@@ -1732,6 +1732,27 @@ namespace TencentCloud.Ckafka.V20190819
         public InstanceScalingDownResponse InstanceScalingDownSync(InstanceScalingDownRequest req)
         {
             return InternalRequestAsync<InstanceScalingDownResponse>(req, "InstanceScalingDown")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 隔离预付费实例，该接口会对实例执行隔离的动作，执行成功后实例会被隔离
+        /// </summary>
+        /// <param name="req"><see cref="IsolatedInstancePreRequest"/></param>
+        /// <returns><see cref="IsolatedInstancePreResponse"/></returns>
+        public Task<IsolatedInstancePreResponse> IsolatedInstancePre(IsolatedInstancePreRequest req)
+        {
+            return InternalRequestAsync<IsolatedInstancePreResponse>(req, "IsolatedInstancePre");
+        }
+
+        /// <summary>
+        /// 隔离预付费实例，该接口会对实例执行隔离的动作，执行成功后实例会被隔离
+        /// </summary>
+        /// <param name="req"><see cref="IsolatedInstancePreRequest"/></param>
+        /// <returns><see cref="IsolatedInstancePreResponse"/></returns>
+        public IsolatedInstancePreResponse IsolatedInstancePreSync(IsolatedInstancePreRequest req)
+        {
+            return InternalRequestAsync<IsolatedInstancePreResponse>(req, "IsolatedInstancePre")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

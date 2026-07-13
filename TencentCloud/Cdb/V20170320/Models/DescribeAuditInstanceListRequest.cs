@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例审计开启的状态。1-已开启审计；0-未开启审计。
+        /// <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
         /// </summary>
         [JsonProperty("AuditSwitch")]
         public long? AuditSwitch{ get; set; }
 
         /// <summary>
-        /// 查询实例列表的过滤条件。
+        /// <p>查询实例列表的过滤条件。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AuditInstanceFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 实例的审计规则模式。1-规则审计；0-全审计。
+        /// <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
         /// </summary>
         [JsonProperty("AuditMode")]
         public long? AuditMode{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量。默认值为30，最大值为 20000。
+        /// <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为 0。
+        /// <p>偏移量，默认值为 0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

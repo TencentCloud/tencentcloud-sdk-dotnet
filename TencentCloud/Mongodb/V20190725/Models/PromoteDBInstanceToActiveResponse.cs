@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务 ID。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

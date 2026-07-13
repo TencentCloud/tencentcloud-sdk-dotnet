@@ -25,139 +25,136 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 审计状态。ON-表示审计已开启，OFF-表示审计关闭
+        /// <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
         /// </summary>
         [JsonProperty("AuditStatus")]
         public string AuditStatus{ get; set; }
 
         /// <summary>
-        /// 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
+        /// <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
         /// </summary>
         [JsonProperty("AuditTask")]
         public ulong? AuditTask{ get; set; }
 
         /// <summary>
-        /// 日志保留时长。支持值包括：
-        /// 7 - 一周；
-        /// 30 - 一个月；
-        /// 90 - 三个月；
-        /// 180 - 六个月；
-        /// 365 - 一年；
-        /// 1095 - 三年；
-        /// 1825 - 五年。
+        /// <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频存储时长。支持值包括：
-        /// 3 - 3天；
-        /// 7 - 一周；
-        /// 30 - 一个月；
-        /// 90 - 三个月；
-        /// 180 - 六个月；
-        /// 365 - 一年；
-        /// 1095 - 三年；
-        /// 1825 - 五年。
+        /// <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+        /// <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
         /// </summary>
         [JsonProperty("LowLogExpireDay")]
         public ulong? LowLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 日志存储量(单位：GB)。
+        /// <p>日志存储量(单位：GB)。</p>
         /// </summary>
         [JsonProperty("BillingAmount")]
         public float? BillingAmount{ get; set; }
 
         /// <summary>
-        /// 高频存储量(单位：GB)。
+        /// <p>高频存储量(单位：GB)。</p>
         /// </summary>
         [JsonProperty("HighRealStorage")]
         public float? HighRealStorage{ get; set; }
 
         /// <summary>
-        /// 低频存储量(单位：GB)。
+        /// <p>低频存储量(单位：GB)。</p>
         /// </summary>
         [JsonProperty("LowRealStorage")]
         public float? LowRealStorage{ get; set; }
 
         /// <summary>
-        /// 是否为全审计。true-表示全审计。
+        /// <p>是否为全审计（true-表示全审计）</p>
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }
 
         /// <summary>
-        /// 审计开通时间。
+        /// <p>审计开通时间。</p>
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
-        /// 实例相关信息
+        /// <p>实例相关信息</p>
         /// </summary>
         [JsonProperty("InstanceInfo")]
         public AuditInstanceInfo InstanceInfo{ get; set; }
 
         /// <summary>
-        /// 总存储量(单位：GB)。
+        /// <p>总存储量(单位：GB)。</p>
         /// </summary>
         [JsonProperty("RealStorage")]
         public float? RealStorage{ get; set; }
 
         /// <summary>
-        /// 是否包含审计策略
+        /// <p>是否包含审计策略</p>
         /// </summary>
         [JsonProperty("OldRule")]
         public bool? OldRule{ get; set; }
 
         /// <summary>
-        /// 实例所应用的规则模板。
+        /// <p>实例所应用的规则模板。</p>
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// 限免状态
+        /// <p>限免状态</p>
         /// </summary>
         [JsonProperty("TrialStatus")]
         public string TrialStatus{ get; set; }
 
         /// <summary>
-        /// 限免开启时间
+        /// <p>限免开启时间</p>
         /// </summary>
         [JsonProperty("TrialStartTime")]
         public long? TrialStartTime{ get; set; }
 
         /// <summary>
-        /// 限免持续时间
+        /// <p>限免持续时间</p>
         /// </summary>
         [JsonProperty("TrialDuration")]
         public long? TrialDuration{ get; set; }
 
         /// <summary>
-        /// 限免关闭时间
+        /// <p>限免关闭时间</p>
         /// </summary>
         [JsonProperty("TrialCloseTime")]
         public long? TrialCloseTime{ get; set; }
 
         /// <summary>
-        /// 限免期查询日志时长
+        /// <p>限免期查询日志时长</p>
         /// </summary>
         [JsonProperty("TrialDescribeLogHours")]
         public long? TrialDescribeLogHours{ get; set; }
+
+        /// <summary>
+        /// <p>投递信息</p>
+        /// </summary>
+        [JsonProperty("DeliverSummary")]
+        public DeliverSummary[] DeliverSummary{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启了投递，ON：开启，OFF：关闭</p>
+        /// </summary>
+        [JsonProperty("Deliver")]
+        public string Deliver{ get; set; }
 
 
         /// <summary>
@@ -185,6 +182,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "TrialDuration", this.TrialDuration);
             this.SetParamSimple(map, prefix + "TrialCloseTime", this.TrialCloseTime);
             this.SetParamSimple(map, prefix + "TrialDescribeLogHours", this.TrialDescribeLogHours);
+            this.SetParamArrayObj(map, prefix + "DeliverSummary.", this.DeliverSummary);
+            this.SetParamSimple(map, prefix + "Deliver", this.Deliver);
         }
     }
 }

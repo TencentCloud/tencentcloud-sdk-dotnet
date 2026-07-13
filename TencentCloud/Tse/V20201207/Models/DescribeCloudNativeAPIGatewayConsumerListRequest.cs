@@ -31,16 +31,28 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// <p>每页条数，范围 [1, 100]，默认 20。</p>
+        /// <p>页显示条数，最大20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>起始位置，从 0 开始。</p>
+        /// <p>起始位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>资源ID</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

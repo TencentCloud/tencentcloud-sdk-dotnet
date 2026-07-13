@@ -25,237 +25,205 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 规则id  等同RuleUuid
+        /// <p>规则id  等同RuleUuid</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 规则Id
+        /// <p>规则Id</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// <p>排序</p>
         /// </summary>
         [JsonProperty("OrderIndex")]
         public long? OrderIndex{ get; set; }
 
         /// <summary>
-        /// 云防排序
+        /// <p>云防排序</p>
         /// </summary>
         [JsonProperty("CfwOrderIndex")]
         public long? CfwOrderIndex{ get; set; }
 
         /// <summary>
-        /// 源规则内容
+        /// <p>源规则内容</p>
         /// </summary>
         [JsonProperty("SourceId")]
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 源规则类型 
-        /// 取值范围 0/1/2/3/4/5/6/7/8/9/100
-        /// 0表示ip(net),
-        /// 1表示VPC实例(instance)
-        /// 2表示子网实例(instance)
-        /// 3表示CVM实例(instance)
-        /// 4表示CLB实例(instance)
-        /// 5表示ENI实例(instance)
-        /// 6表示数据库实例(instance)
-        /// 7表示模板(template)
-        /// 8表示标签(tag)
-        /// 9表示地域(region)
-        /// 100表示资产分组(resourcegroup)
+        /// <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
         /// </summary>
         [JsonProperty("SourceType")]
         public long? SourceType{ get; set; }
 
         /// <summary>
-        /// 目的规则内容
+        /// <p>目的规则内容</p>
         /// </summary>
         [JsonProperty("TargetId")]
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 目的规则类型 
-        /// 取值范围 0/1/2/3/4/5/6/7/8/9/100
-        /// 0表示ip(net),
-        /// 1表示VPC实例(instance)
-        /// 2表示子网实例(instance)
-        /// 3表示CVM实例(instance)
-        /// 4表示CLB实例(instance)
-        /// 5表示ENI实例(instance)
-        /// 6表示数据库实例(instance)
-        /// 7表示模板(template)
-        /// 8表示标签(tag)
-        /// 9表示地域(region)
-        /// 100表示资产分组(resourcegroup)
+        /// <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p><p>枚举值：</p><ul><li>0： IP / CIDR</li><li>1： VPC 实例</li><li>2： 子网 </li><li>3： CVM 实例</li><li>4： CLB 实例</li><li>5： ENI（弹性网卡）实例</li><li>6： CDB（云数据库）实例</li><li>7： 参数模板</li><li>8： 标签</li><li>9： 地域</li></ul>
         /// </summary>
         [JsonProperty("TargetType")]
         public long? TargetType{ get; set; }
 
         /// <summary>
-        /// 协议名称
-        /// 取值范围:TCP/ANY/ICMP/UDP
-        /// ANY:表示所有
+        /// <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// <p>端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 规则策略
-        /// 取值范围:1/2
-        /// 1:阻断
-        /// 2:放行
+        /// <p>规则策略<br>取值范围:1/2<br>1:阻断<br>2:放行</p>
         /// </summary>
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 服务模板id
+        /// <p>服务模板id</p>
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
-        /// 源资产名称
+        /// <p>源资产名称</p>
         /// </summary>
         [JsonProperty("SouInstanceName")]
         public string SouInstanceName{ get; set; }
 
         /// <summary>
-        /// 源资产公网ip
+        /// <p>源资产公网ip</p>
         /// </summary>
         [JsonProperty("SouPublicIp")]
         public string SouPublicIp{ get; set; }
 
         /// <summary>
-        /// 源资产内网ip
+        /// <p>源资产内网ip</p>
         /// </summary>
         [JsonProperty("SouPrivateIp")]
         public string SouPrivateIp{ get; set; }
 
         /// <summary>
-        /// 源资产网段信息
+        /// <p>源资产网段信息</p>
         /// </summary>
         [JsonProperty("SouCidr")]
         public string SouCidr{ get; set; }
 
         /// <summary>
-        /// 源模板名称
+        /// <p>源模板名称</p>
         /// </summary>
         [JsonProperty("SouParameterName")]
         public string SouParameterName{ get; set; }
 
         /// <summary>
-        /// 目的资产名称
+        /// <p>目的资产名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 目的资产公网ip
+        /// <p>目的资产公网ip</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 目的资产内网ip
+        /// <p>目的资产内网ip</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 目的资产网段信息
+        /// <p>目的资产网段信息</p>
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }
 
         /// <summary>
-        /// 目的模板名称
+        /// <p>目的模板名称</p>
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
         /// <summary>
-        /// 端口模板名称
+        /// <p>端口模板名称</p>
         /// </summary>
         [JsonProperty("ProtocolPortName")]
         public string ProtocolPortName{ get; set; }
 
         /// <summary>
-        /// 域名解析的IP统计
+        /// <p>域名解析的IP统计</p>
         /// </summary>
         [JsonProperty("DnsParseCount")]
         public SgDnsParseCount DnsParseCount{ get; set; }
 
         /// <summary>
-        /// 规则生效范围
+        /// <p>规则生效范围</p>
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 分区：
-        /// 1防火墙管理最前分区
-        /// 2是云防规则
-        /// 3防火墙管理最后分区
+        /// <p>分区：<br>1防火墙管理最前分区<br>2是云防规则<br>3防火墙管理最后分区</p>
         /// </summary>
         [JsonProperty("RulePartition")]
         public long? RulePartition{ get; set; }
 
         /// <summary>
-        /// 规则组Id
+        /// <p>规则组Id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 规则组名称
+        /// <p>规则组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 规则组内规则id
+        /// <p>规则组内规则id</p>
         /// </summary>
         [JsonProperty("GroupRuleId")]
         public string GroupRuleId{ get; set; }
 
         /// <summary>
-        /// 策略Id
+        /// <p>策略Id</p>
         /// </summary>
         [JsonProperty("StrategyId")]
         public string StrategyId{ get; set; }
 
         /// <summary>
-        /// ip类型
+        /// <p>ip类型</p>
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }
 
         /// <summary>
-        /// 成员信息
+        /// <p>成员信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BelongMember")]

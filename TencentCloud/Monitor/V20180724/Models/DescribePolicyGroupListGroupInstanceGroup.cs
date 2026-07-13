@@ -25,43 +25,43 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例分组名称id
+        /// <p>实例分组名称id</p>
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 策略类型视图名称
+        /// <p>策略类型视图名称</p>
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 最近编辑的用户uin
+        /// <p>最近编辑的用户uin</p>
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// 实例分组名称
+        /// <p>实例分组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 实例数量
+        /// <p>实例数量</p>
         /// </summary>
         [JsonProperty("InstanceSum")]
         public long? InstanceSum{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }

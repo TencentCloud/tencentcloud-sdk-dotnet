@@ -25,34 +25,40 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 总实例个数
+        /// <p>总实例个数</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 运行实例个数
+        /// <p>运行实例个数</p>
         /// </summary>
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
         /// <summary>
-        /// 应用下部署组个数
+        /// <p>应用下部署组个数</p>
         /// </summary>
         [JsonProperty("GroupCount")]
         public long? GroupCount{ get; set; }
 
         /// <summary>
-        /// 运行中部署组个数
+        /// <p>运行中部署组个数</p>
         /// </summary>
         [JsonProperty("RunningGroupCount")]
         public string RunningGroupCount{ get; set; }
 
         /// <summary>
-        /// 异常部署组个数
+        /// <p>异常部署组个数</p>
         /// </summary>
         [JsonProperty("AbnormalCount")]
         public string AbnormalCount{ get; set; }
+
+        /// <summary>
+        /// <p>镜像tag数量</p>
+        /// </summary>
+        [JsonProperty("ImageTagCount")]
+        public long? ImageTagCount{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupCount", this.GroupCount);
             this.SetParamSimple(map, prefix + "RunningGroupCount", this.RunningGroupCount);
             this.SetParamSimple(map, prefix + "AbnormalCount", this.AbnormalCount);
+            this.SetParamSimple(map, prefix + "ImageTagCount", this.ImageTagCount);
         }
     }
 }

@@ -25,188 +25,191 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 云原生API网关ID。
+        /// <p>云原生API网关ID。</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 云原生API网关状态。
+        /// <p>云原生API网关状态。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 云原生API网关名。
+        /// <p>云原生API网关名。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 云原生API网关类型。
+        /// <p>云原生API网关类型。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 实例版本：
-        /// - 2.4.1
-        /// - 2.5.1
+        /// <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
         /// </summary>
         [JsonProperty("GatewayVersion")]
         public string GatewayVersion{ get; set; }
 
         /// <summary>
-        /// 云原生API网关节点信息。
+        /// <p>云原生API网关节点信息。</p>
         /// </summary>
         [JsonProperty("NodeConfig")]
         public CloudNativeAPIGatewayNodeConfig NodeConfig{ get; set; }
 
         /// <summary>
-        /// 云原生API网关vpc配置。
+        /// <p>云原生API网关vpc配置。</p>
         /// </summary>
         [JsonProperty("VpcConfig")]
         public CloudNativeAPIGatewayVpcConfig VpcConfig{ get; set; }
 
         /// <summary>
-        /// 云原生API网关描述。
+        /// <p>云原生API网关描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 云原生API网关创建时间。
+        /// <p>云原生API网关创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例的标签信息
+        /// <p>实例的标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public InstanceTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否开启 cls 日志
+        /// <p>是否开启 cls 日志</p>
         /// </summary>
         [JsonProperty("EnableCls")]
         public bool? EnableCls{ get; set; }
 
         /// <summary>
-        /// 付费模式，0表示后付费，1预付费
+        /// <p>付费模式，0表示后付费，1预付费</p>
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }
 
         /// <summary>
-        /// 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
+        /// <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
         /// </summary>
         [JsonProperty("FeatureVersion")]
         public string FeatureVersion{ get; set; }
 
         /// <summary>
-        /// 公网出流量带宽，[1,2048]Mbps
+        /// <p>公网出流量带宽，[1,2048]Mbps</p>
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-        /// 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+        /// <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 到期时间，预付费时使用
+        /// <p>到期时间，预付费时使用</p>
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
-        /// 隔离时间，实例隔离时使用
+        /// <p>隔离时间，实例隔离时使用</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 是否开启客户端公网。
+        /// <p>是否开启客户端公网。</p>
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
-        /// 实例实际的地域信息
+        /// <p>实例实际的地域信息</p>
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// Ingress class名称
+        /// <p>Ingress class名称</p>
         /// </summary>
         [JsonProperty("IngressClassName")]
         public string IngressClassName{ get; set; }
 
         /// <summary>
-        /// 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+        /// <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
         /// </summary>
         [JsonProperty("InternetPayMode")]
         public string InternetPayMode{ get; set; }
 
         /// <summary>
-        /// 云原生API网关小版本号
+        /// <p>云原生API网关小版本号</p>
         /// </summary>
         [JsonProperty("GatewayMinorVersion")]
         public string GatewayMinorVersion{ get; set; }
 
         /// <summary>
-        /// 实例监听的端口信息
+        /// <p>实例监听的端口信息</p>
         /// </summary>
         [JsonProperty("InstancePort")]
         public InstancePort InstancePort{ get; set; }
 
         /// <summary>
-        /// 公网CLB默认类型
+        /// <p>公网CLB默认类型</p>
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 公网IP地址列表
+        /// <p>公网IP地址列表</p>
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// 是否开启删除保护
+        /// <p>是否开启删除保护</p>
         /// </summary>
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
         /// <summary>
-        /// 表示可以升级的版本号
+        /// <p>表示可以升级的版本号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableVersions")]
         public string[] AvailableVersions{ get; set; }
 
         /// <summary>
-        /// 网关可以升级的版本号列表
+        /// <p>网关可以升级的版本号列表</p>
         /// </summary>
         [JsonProperty("AvailableUpgradeVersions")]
         public string[] AvailableUpgradeVersions{ get; set; }
 
         /// <summary>
-        /// 是否提示可升级
+        /// <p>是否提示可升级</p>
         /// </summary>
         [JsonProperty("AvailableUpgrade")]
         public bool? AvailableUpgrade{ get; set; }
 
         /// <summary>
-        /// 可回退的版本
+        /// <p>可回退的版本</p>
         /// </summary>
         [JsonProperty("AvailableRollbackVersion")]
         public string AvailableRollbackVersion{ get; set; }
+
+        /// <summary>
+        /// <p>强制跳转HTTPS开关</p>
+        /// </summary>
+        [JsonProperty("ForceHTTPSRedirect")]
+        public bool? ForceHTTPSRedirect{ get; set; }
 
 
         /// <summary>
@@ -244,6 +247,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
             this.SetParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
             this.SetParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
+            this.SetParamSimple(map, prefix + "ForceHTTPSRedirect", this.ForceHTTPSRedirect);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
@@ -78,6 +78,30 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>JWT凭证配置</p>
+        /// </summary>
+        [JsonProperty("JWTCredentialConfig")]
+        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OAuth2.0凭证配置</p>
+        /// </summary>
+        [JsonProperty("OAuthCredentialConfig")]
+        public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OIDC凭证配置</p>
+        /// </summary>
+        [JsonProperty("OIDCCredentialConfig")]
+        public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+        /// </summary>
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +117,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
             this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+            this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
+            this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 模型 API 列表。
+        /// <p>模型 API 列表。</p>
         /// </summary>
         [JsonProperty("Result")]
         public ListCloudNativeAPIGatewayLLMModelAPI Result{ get; set; }

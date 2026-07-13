@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1460";
+       private const string sdkVersion = "SDK_NET_3.0.1461";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
         {
             return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建推理服务。
+        /// 
+        /// 创建一个在线推理服务，创建成功后返回推理服务 ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndpointRequest"/></param>
+        /// <returns><see cref="CreateEndpointResponse"/></returns>
+        public Task<CreateEndpointResponse> CreateEndpoint(CreateEndpointRequest req)
+        {
+            return InternalRequestAsync<CreateEndpointResponse>(req, "CreateEndpoint");
+        }
+
+        /// <summary>
+        /// 创建推理服务。
+        /// 
+        /// 创建一个在线推理服务，创建成功后返回推理服务 ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndpointRequest"/></param>
+        /// <returns><see cref="CreateEndpointResponse"/></returns>
+        public CreateEndpointResponse CreateEndpointSync(CreateEndpointRequest req)
+        {
+            return InternalRequestAsync<CreateEndpointResponse>(req, "CreateEndpoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -200,6 +225,31 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
+        /// 删除推理服务。
+        /// 
+        /// 删除指定的推理服务端点，操作不可逆。调用接口后，若通过 DescribeEndpoint 接口查询不到对应的端点，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEndpointRequest"/></param>
+        /// <returns><see cref="DeleteEndpointResponse"/></returns>
+        public Task<DeleteEndpointResponse> DeleteEndpoint(DeleteEndpointRequest req)
+        {
+            return InternalRequestAsync<DeleteEndpointResponse>(req, "DeleteEndpoint");
+        }
+
+        /// <summary>
+        /// 删除推理服务。
+        /// 
+        /// 删除指定的推理服务端点，操作不可逆。调用接口后，若通过 DescribeEndpoint 接口查询不到对应的端点，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEndpointRequest"/></param>
+        /// <returns><see cref="DeleteEndpointResponse"/></returns>
+        public DeleteEndpointResponse DeleteEndpointSync(DeleteEndpointRequest req)
+        {
+            return InternalRequestAsync<DeleteEndpointResponse>(req, "DeleteEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除术语库。
         /// 
         /// 删除指定的术语库及其下所有术语条目。删除操作幂等，对不存在的术语库返回成功。调用接口后，若通过 DescribeGlossaries 接口查询不到对应术语库，则表示删除成功。
@@ -321,6 +371,31 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
+        /// 查询推理服务详情。
+        /// 
+        /// 根据推理服务 ID 查询推理服务的详细信息，包括计费信息、免费额度、API 调用地址等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndpointRequest"/></param>
+        /// <returns><see cref="DescribeEndpointResponse"/></returns>
+        public Task<DescribeEndpointResponse> DescribeEndpoint(DescribeEndpointRequest req)
+        {
+            return InternalRequestAsync<DescribeEndpointResponse>(req, "DescribeEndpoint");
+        }
+
+        /// <summary>
+        /// 查询推理服务详情。
+        /// 
+        /// 根据推理服务 ID 查询推理服务的详细信息，包括计费信息、免费额度、API 调用地址等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndpointRequest"/></param>
+        /// <returns><see cref="DescribeEndpointResponse"/></returns>
+        public DescribeEndpointResponse DescribeEndpointSync(DescribeEndpointRequest req)
+        {
+            return InternalRequestAsync<DescribeEndpointResponse>(req, "DescribeEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询术语库列表。
         /// 
         /// 查询当前应用下的术语库列表。支持分页、过滤和排序。
@@ -367,6 +442,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeGlossaryEntriesResponse DescribeGlossaryEntriesSync(DescribeGlossaryEntriesRequest req)
         {
             return InternalRequestAsync<DescribeGlossaryEntriesResponse>(req, "DescribeGlossaryEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询模型接入点列表。
+        /// 
+        /// 以模型为基准展示所有在线文本类型模型的接入点概览，支持按状态、计费方式、创建来源等条件筛选，使用 Offset/Limit 分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelEndpointListRequest"/></param>
+        /// <returns><see cref="DescribeModelEndpointListResponse"/></returns>
+        public Task<DescribeModelEndpointListResponse> DescribeModelEndpointList(DescribeModelEndpointListRequest req)
+        {
+            return InternalRequestAsync<DescribeModelEndpointListResponse>(req, "DescribeModelEndpointList");
+        }
+
+        /// <summary>
+        /// 查询模型接入点列表。
+        /// 
+        /// 以模型为基准展示所有在线文本类型模型的接入点概览，支持按状态、计费方式、创建来源等条件筛选，使用 Offset/Limit 分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelEndpointListRequest"/></param>
+        /// <returns><see cref="DescribeModelEndpointListResponse"/></returns>
+        public DescribeModelEndpointListResponse DescribeModelEndpointListSync(DescribeModelEndpointListRequest req)
+        {
+            return InternalRequestAsync<DescribeModelEndpointListResponse>(req, "DescribeModelEndpointList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -633,6 +733,41 @@ namespace TencentCloud.Tokenhub.V20260322
         public ModifyApiKeyStatusResponse ModifyApiKeyStatusSync(ModifyApiKeyStatusRequest req)
         {
             return InternalRequestAsync<ModifyApiKeyStatusResponse>(req, "ModifyApiKeyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改推理服务。
+        /// 
+        /// 修改推理服务的属性，支持修改服务名称、QPM/TPM 限流上限、TPM 包续费设置、智能路由开关和手动重试 TPM 购买。
+        /// 
+        /// 注意事项：
+        /// - 不支持通过本接口切换计费类型（ChargeType），计费类型仅可在创建推理服务（CreateEndpoint）时指定。
+        /// - 不支持通过本接口修改 TPM 预付费保障包的 quota（TpmInputLimit/TpmOutputLimit/TimeSpan），这些值仅可在创建推理服务时指定。
+        /// - 当 RetryTPMPurchase 为 true 时，系统会异步重试 TPM 包购买，调用后需轮询推理服务状态确认结果。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEndpointRequest"/></param>
+        /// <returns><see cref="ModifyEndpointResponse"/></returns>
+        public Task<ModifyEndpointResponse> ModifyEndpoint(ModifyEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyEndpointResponse>(req, "ModifyEndpoint");
+        }
+
+        /// <summary>
+        /// 修改推理服务。
+        /// 
+        /// 修改推理服务的属性，支持修改服务名称、QPM/TPM 限流上限、TPM 包续费设置、智能路由开关和手动重试 TPM 购买。
+        /// 
+        /// 注意事项：
+        /// - 不支持通过本接口切换计费类型（ChargeType），计费类型仅可在创建推理服务（CreateEndpoint）时指定。
+        /// - 不支持通过本接口修改 TPM 预付费保障包的 quota（TpmInputLimit/TpmOutputLimit/TimeSpan），这些值仅可在创建推理服务时指定。
+        /// - 当 RetryTPMPurchase 为 true 时，系统会异步重试 TPM 包购买，调用后需轮询推理服务状态确认结果。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEndpointRequest"/></param>
+        /// <returns><see cref="ModifyEndpointResponse"/></returns>
+        public ModifyEndpointResponse ModifyEndpointSync(ModifyEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyEndpointResponse>(req, "ModifyEndpoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

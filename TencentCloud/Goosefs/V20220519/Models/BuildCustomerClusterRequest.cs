@@ -25,28 +25,34 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 文件系统id
+        /// <p>文件系统id</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// vpc网络ID
+        /// <p>vpc网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网id
+        /// <p>子网id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// <p>集群名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>可用区</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

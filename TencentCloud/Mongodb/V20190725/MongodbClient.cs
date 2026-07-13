@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1461";
 
         /// <summary>
         /// Client constructor.
@@ -1599,7 +1599,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（PromoteDBInstanceToActive）用于灾备实例转正
+        /// 本接口（PromoteDBInstanceToActive）用于将灾备实例或只读实例转为独立的主实例
         /// </summary>
         /// <param name="req"><see cref="PromoteDBInstanceToActiveRequest"/></param>
         /// <returns><see cref="PromoteDBInstanceToActiveResponse"/></returns>
@@ -1609,7 +1609,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（PromoteDBInstanceToActive）用于灾备实例转正
+        /// 本接口（PromoteDBInstanceToActive）用于将灾备实例或只读实例转为独立的主实例
         /// </summary>
         /// <param name="req"><see cref="PromoteDBInstanceToActiveRequest"/></param>
         /// <returns><see cref="PromoteDBInstanceToActiveResponse"/></returns>

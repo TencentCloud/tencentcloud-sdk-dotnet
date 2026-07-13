@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 用户回调接口地址
+        /// <p>用户回调接口地址</p>
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
+        /// <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
         /// </summary>
         [JsonProperty("ValidFlag")]
         public long? ValidFlag{ get; set; }
 
         /// <summary>
-        /// 用户回调接口验证码
+        /// <p>用户回调接口验证码</p>
         /// </summary>
         [JsonProperty("VerifyCode")]
         public string VerifyCode{ get; set; }
