@@ -25,7 +25,8 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 融合规则 ID（9xxxx）
+        /// 融合规则 ID
+        /// 参数格式：形如 9xxxx
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }

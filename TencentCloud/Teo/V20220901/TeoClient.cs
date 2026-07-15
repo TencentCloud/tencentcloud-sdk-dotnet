@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1459";
+       private const string sdkVersion = "SDK_NET_3.0.1462";
 
         /// <summary>
         /// Client constructor.
@@ -632,6 +632,35 @@ namespace TencentCloud.Teo.V20220901
         public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
         {
             return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用以创建日志分析下载任务，创建完成后可通过 DescribeLogAnalysisDownloadTasks 接口查询下载任务。
+        /// 注意：
+        /// 1.单次最多支持下载 5000万条日志。
+        /// 2.日志文件将保留 3 天。
+        /// 3.同时存在多个任务时将按照任务创建时间依次处理。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
+        public Task<CreateLogAnalysisDownloadTaskResponse> CreateLogAnalysisDownloadTask(CreateLogAnalysisDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogAnalysisDownloadTaskResponse>(req, "CreateLogAnalysisDownloadTask");
+        }
+
+        /// <summary>
+        /// 本接口用以创建日志分析下载任务，创建完成后可通过 DescribeLogAnalysisDownloadTasks 接口查询下载任务。
+        /// 注意：
+        /// 1.单次最多支持下载 5000万条日志。
+        /// 2.日志文件将保留 3 天。
+        /// 3.同时存在多个任务时将按照任务创建时间依次处理。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
+        public CreateLogAnalysisDownloadTaskResponse CreateLogAnalysisDownloadTaskSync(CreateLogAnalysisDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogAnalysisDownloadTaskResponse>(req, "CreateLogAnalysisDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2367,6 +2396,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeLoadBalancerListResponse DescribeLoadBalancerListSync(DescribeLoadBalancerListRequest req)
         {
             return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用以查询日志分析日志详情，数据来自站点下实时日志推送任务目的地为 "log-analysis" 的任务推送的日志数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
+        public Task<DescribeLogAnalysisDetailResponse> DescribeLogAnalysisDetail(DescribeLogAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDetailResponse>(req, "DescribeLogAnalysisDetail");
+        }
+
+        /// <summary>
+        /// 本接口用以查询日志分析日志详情，数据来自站点下实时日志推送任务目的地为 "log-analysis" 的任务推送的日志数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
+        public DescribeLogAnalysisDetailResponse DescribeLogAnalysisDetailSync(DescribeLogAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDetailResponse>(req, "DescribeLogAnalysisDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用以查询日志分析日志下载任务列表。注意：只保留最近三天的下载任务记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDownloadTasksResponse"/></returns>
+        public Task<DescribeLogAnalysisDownloadTasksResponse> DescribeLogAnalysisDownloadTasks(DescribeLogAnalysisDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDownloadTasksResponse>(req, "DescribeLogAnalysisDownloadTasks");
+        }
+
+        /// <summary>
+        /// 本接口用以查询日志分析日志下载任务列表。注意：只保留最近三天的下载任务记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDownloadTasksResponse"/></returns>
+        public DescribeLogAnalysisDownloadTasksResponse DescribeLogAnalysisDownloadTasksSync(DescribeLogAnalysisDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDownloadTasksResponse>(req, "DescribeLogAnalysisDownloadTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

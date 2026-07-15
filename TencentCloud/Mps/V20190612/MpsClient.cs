@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1462";
 
         /// <summary>
         /// Client constructor.
@@ -2151,6 +2151,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeImageTaskDetailResponse DescribeImageTaskDetailSync(DescribeImageTaskDetailRequest req)
         {
             return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 图片处理任务查询接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTasksRequest"/></param>
+        /// <returns><see cref="DescribeImageTasksResponse"/></returns>
+        public Task<DescribeImageTasksResponse> DescribeImageTasks(DescribeImageTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTasksResponse>(req, "DescribeImageTasks");
+        }
+
+        /// <summary>
+        /// 图片处理任务查询接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTasksRequest"/></param>
+        /// <returns><see cref="DescribeImageTasksResponse"/></returns>
+        public DescribeImageTasksResponse DescribeImageTasksSync(DescribeImageTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTasksResponse>(req, "DescribeImageTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

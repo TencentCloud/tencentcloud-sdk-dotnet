@@ -102,6 +102,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FullQuery")]
         public ulong? FullQuery{ get; set; }
 
+        /// <summary>
+        /// <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+        /// </summary>
+        [JsonProperty("ProcessPeriodUnit")]
+        public long? ProcessPeriodUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
             this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
+            this.SetParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
         }
     }
 }

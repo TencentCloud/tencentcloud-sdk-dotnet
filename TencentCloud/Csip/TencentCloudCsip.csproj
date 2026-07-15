@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1462</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -707,6 +707,8 @@
     <Compile Include="V20221121\Models\ModifyAILinkSettingResponse.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyAlarmRiskStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditBucketMonitorStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyCosAuditBucketMonitorStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountRequest.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditObjectIdentifyStatusRequest.cs" />

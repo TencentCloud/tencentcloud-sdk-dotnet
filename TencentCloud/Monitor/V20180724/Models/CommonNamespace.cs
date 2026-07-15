@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 命名空间标示
+        /// <p>命名空间标示</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 命名空间名称
+        /// <p>命名空间名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 命名空间值
+        /// <p>命名空间值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// <p>产品名称</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 配置信息
+        /// <p>配置信息</p>
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
-        /// 支持地域列表
+        /// <p>支持地域列表</p>
         /// </summary>
         [JsonProperty("AvailableRegions")]
         public string[] AvailableRegions{ get; set; }
 
         /// <summary>
-        /// 排序Id
+        /// <p>排序Id</p>
         /// </summary>
         [JsonProperty("SortId")]
         public long? SortId{ get; set; }
 
         /// <summary>
-        /// Dashboard中的唯一表示
+        /// <p>Dashboard中的唯一表示</p>
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }

@@ -25,21 +25,21 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 提醒等级阈值
+        /// <p>提醒等级阈值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remind")]
         public string Remind{ get; set; }
 
         /// <summary>
-        /// 警告等级阈值
+        /// <p>警告等级阈值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warn")]
         public string Warn{ get; set; }
 
         /// <summary>
-        /// 严重等级阈值
+        /// <p>严重等级阈值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Serious")]

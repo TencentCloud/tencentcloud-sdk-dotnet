@@ -25,303 +25,300 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警策略 ID
+        /// <p>告警策略 ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 告警策略名称
+        /// <p>告警策略名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 监控类型 MT_QCE=云产品监控
+        /// <p>监控类型 MT_QCE=云产品监控</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 启停状态 0=停用 1=启用
+        /// <p>启停状态 0=停用 1=启用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 策略组绑定的实例数
+        /// <p>策略组绑定的实例数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseSum")]
         public long? UseSum{ get; set; }
 
         /// <summary>
-        /// 项目 Id -1=无项目 0=默认项目
+        /// <p>项目 Id -1=无项目 0=默认项目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目名
+        /// <p>项目名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 告警策略类型
+        /// <p>告警策略类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 触发条件模板 Id
+        /// <p>触发条件模板 Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionTemplateId")]
         public string ConditionTemplateId{ get; set; }
 
         /// <summary>
-        /// 指标触发条件
+        /// <p>指标触发条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Condition")]
         public AlarmPolicyCondition Condition{ get; set; }
 
         /// <summary>
-        /// 事件触发条件
+        /// <p>事件触发条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCondition")]
         public AlarmPolicyEventCondition EventCondition{ get; set; }
 
         /// <summary>
-        /// 通知规则 id 列表
+        /// <p>通知规则 id 列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
 
         /// <summary>
-        /// 通知规则 列表
+        /// <p>通知规则 列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Notices")]
         public AlarmNotice[] Notices{ get; set; }
 
         /// <summary>
-        /// 触发任务列表
+        /// <p>触发任务列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerTasks")]
         public AlarmPolicyTriggerTask[] TriggerTasks{ get; set; }
 
         /// <summary>
-        /// 模板策略组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionsTemp")]
         public ConditionsTemp ConditionsTemp{ get; set; }
 
         /// <summary>
-        /// 最后编辑的用户uin
+        /// <p>最后编辑的用户uin</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// namespace显示名字
+        /// <p>namespace显示名字</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceShowName")]
         public string NamespaceShowName{ get; set; }
 
         /// <summary>
-        /// 是否默认策略，1是，0否
+        /// <p>是否默认策略，1是，0否</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// 能否设置默认策略，1是，0否
+        /// <p>能否设置默认策略，1是，0否</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public long? CanSetDefault{ get; set; }
 
         /// <summary>
-        /// 实例分组ID
+        /// <p>实例分组ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 实例分组总实例数
+        /// <p>实例分组总实例数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceSum")]
         public long? InstanceSum{ get; set; }
 
         /// <summary>
-        /// 实例分组名称
+        /// <p>实例分组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceGroupName")]
         public string InstanceGroupName{ get; set; }
 
         /// <summary>
-        /// 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+        /// <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+        /// <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInstances")]
         public TagInstance[] TagInstances{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// <p>过滤条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filter")]
         public AlarmConditionFilter Filter{ get; set; }
 
         /// <summary>
-        /// 聚合条件
+        /// <p>聚合条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupBy")]
         public AlarmGroupByItem[] GroupBy{ get; set; }
 
         /// <summary>
-        /// 策略关联的过滤维度信息
+        /// <p>策略关联的过滤维度信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterDimensionsParam")]
         public string FilterDimensionsParam{ get; set; }
 
         /// <summary>
-        /// 是否为一键告警策略
+        /// <p>是否为一键告警策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOneClick")]
         public long? IsOneClick{ get; set; }
 
         /// <summary>
-        /// 一键告警策略是否开启
+        /// <p>一键告警策略是否开启</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OneClickStatus")]
         public long? OneClickStatus{ get; set; }
 
         /// <summary>
-        /// 高级指标数量
+        /// <p>高级指标数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedMetricNumber")]
         public long? AdvancedMetricNumber{ get; set; }
 
         /// <summary>
-        /// 策略是否是全部对象策略
+        /// <p>策略是否是全部对象策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsBindAll")]
         public long? IsBindAll{ get; set; }
 
         /// <summary>
-        /// 策略标签
+        /// <p>策略标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否支持告警标签
+        /// <p>是否支持告警标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportAlarmTag")]
         public long? IsSupportAlarmTag{ get; set; }
 
         /// <summary>
-        /// 多标签交/并集关系
+        /// <p>多标签交/并集关系</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagOperation")]
         public string TagOperation{ get; set; }
 
         /// <summary>
-        /// 通知模板绑定内容模板信息
+        /// <p>通知模板绑定内容模板信息</p>
         /// </summary>
         [JsonProperty("NoticeTmplBindInfos")]
         public NoticeContentTmplBindInfo[] NoticeTmplBindInfos{ get; set; }
 
         /// <summary>
-        /// 模板通知的等级
+        /// <p>模板通知的等级</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HierarchicalNotices")]
         public AlarmHierarchicalNotice[] HierarchicalNotices{ get; set; }
 
         /// <summary>
-        /// 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+        /// <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeContentTmplBindInfos")]
         public NoticeContentTmplBindInfo[] NoticeContentTmplBindInfos{ get; set; }
 
         /// <summary>
-        /// 预设配置id
+        /// <p>预设配置id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PredefinedConfigID")]

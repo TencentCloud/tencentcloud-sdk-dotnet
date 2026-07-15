@@ -34,7 +34,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ScanType{ get; set; }
 
         /// <summary>
-        /// 该引擎命中的规则列表
+        /// 命中规则列表
         /// </summary>
         [JsonProperty("RuleList")]
         public SkillScanRuleHit[] RuleList{ get; set; }

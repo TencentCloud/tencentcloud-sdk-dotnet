@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1462";
 
         /// <summary>
         /// Client constructor.
@@ -4943,6 +4943,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatusSync(ModifyAlarmRiskStatusRequest req)
         {
             return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改存储桶监测状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditBucketMonitorStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditBucketMonitorStatusResponse"/></returns>
+        public Task<ModifyCosAuditBucketMonitorStatusResponse> ModifyCosAuditBucketMonitorStatus(ModifyCosAuditBucketMonitorStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditBucketMonitorStatusResponse>(req, "ModifyCosAuditBucketMonitorStatus");
+        }
+
+        /// <summary>
+        /// 修改存储桶监测状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditBucketMonitorStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditBucketMonitorStatusResponse"/></returns>
+        public ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatusSync(ModifyCosAuditBucketMonitorStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditBucketMonitorStatusResponse>(req, "ModifyCosAuditBucketMonitorStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

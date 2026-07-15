@@ -25,13 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
+        /// 融合规则编号
+        /// 参数格式：形如 9xxxx
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
-        /// 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+        /// 风险发现描述
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

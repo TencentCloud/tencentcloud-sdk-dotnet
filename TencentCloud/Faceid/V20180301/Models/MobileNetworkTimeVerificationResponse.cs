@@ -25,30 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 认证结果码，收费情况如下。
-        /// - 收费结果码：
-        /// 0: 成功。
-        /// -2: 手机号不存在。
-        /// -3: 手机号存在，但无法查询到在网时长。
-        /// 
-        /// - 不收费结果码：
-        /// -1: 手机号格式不正确。
-        /// -4: 验证中心服务繁忙。
-        /// -5：认证次数超过当日限制，请次日重试。
+        /// <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 业务结果描述。
+        /// <p>业务结果描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 在网时长区间。
-        /// - 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-        /// - 若b为+时表示没有上限。
+        /// <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul>
         /// </summary>
         [JsonProperty("Range")]
         public string Range{ get; set; }

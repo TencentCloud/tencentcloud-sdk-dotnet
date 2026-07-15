@@ -25,28 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 状态变更的事件数量
+        /// <p>状态变更的事件数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusChangeAmount")]
         public long? StatusChangeAmount{ get; set; }
 
         /// <summary>
-        /// 告警状态未配置的事件数量
+        /// <p>告警状态未配置的事件数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnConfigAlarmAmount")]
         public long? UnConfigAlarmAmount{ get; set; }
 
         /// <summary>
-        /// 异常事件数量
+        /// <p>异常事件数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnNormalEventAmount")]
         public long? UnNormalEventAmount{ get; set; }
 
         /// <summary>
-        /// 未恢复的事件数量
+        /// <p>未恢复的事件数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnRecoverAmount")]

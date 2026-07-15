@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1460";
+       private const string sdkVersion = "SDK_NET_3.0.1462";
 
         /// <summary>
         /// Client constructor.
@@ -453,6 +453,48 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 获取自动扩盘参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleDiskInfoRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleDiskInfoResponse"/></returns>
+        public Task<DescribeAutoScaleDiskInfoResponse> DescribeAutoScaleDiskInfo(DescribeAutoScaleDiskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleDiskInfoResponse>(req, "DescribeAutoScaleDiskInfo");
+        }
+
+        /// <summary>
+        /// 获取自动扩盘参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleDiskInfoRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleDiskInfoResponse"/></returns>
+        public DescribeAutoScaleDiskInfoResponse DescribeAutoScaleDiskInfoSync(DescribeAutoScaleDiskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleDiskInfoResponse>(req, "DescribeAutoScaleDiskInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集群节点磁盘大小上下限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDiskRangeRequest"/></param>
+        /// <returns><see cref="DescribeClusterDiskRangeResponse"/></returns>
+        public Task<DescribeClusterDiskRangeResponse> DescribeClusterDiskRange(DescribeClusterDiskRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDiskRangeResponse>(req, "DescribeClusterDiskRange");
+        }
+
+        /// <summary>
+        /// 获取集群节点磁盘大小上下限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDiskRangeRequest"/></param>
+        /// <returns><see cref="DescribeClusterDiskRangeResponse"/></returns>
+        public DescribeClusterDiskRangeResponse DescribeClusterDiskRangeSync(DescribeClusterDiskRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDiskRangeResponse>(req, "DescribeClusterDiskRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取快照备份列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterSnapshotRequest"/></param>
@@ -474,6 +516,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 获取集群自动备份策略概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBackupStrategyViewsRequest"/></param>
+        /// <returns><see cref="DescribeCosBackupStrategyViewsResponse"/></returns>
+        public Task<DescribeCosBackupStrategyViewsResponse> DescribeCosBackupStrategyViews(DescribeCosBackupStrategyViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBackupStrategyViewsResponse>(req, "DescribeCosBackupStrategyViews");
+        }
+
+        /// <summary>
+        /// 获取集群自动备份策略概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBackupStrategyViewsRequest"/></param>
+        /// <returns><see cref="DescribeCosBackupStrategyViewsResponse"/></returns>
+        public DescribeCosBackupStrategyViewsResponse DescribeCosBackupStrategyViewsSync(DescribeCosBackupStrategyViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBackupStrategyViewsResponse>(req, "DescribeCosBackupStrategyViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询智能运维诊断结果报告
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseRequest"/></param>
@@ -491,6 +554,90 @@ namespace TencentCloud.Es.V20180416
         public DescribeDiagnoseResponse DescribeDiagnoseSync(DescribeDiagnoseRequest req)
         {
             return InternalRequestAsync<DescribeDiagnoseResponse>(req, "DescribeDiagnose")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询事件中心列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsInstanceEventListsRequest"/></param>
+        /// <returns><see cref="DescribeEsInstanceEventListsResponse"/></returns>
+        public Task<DescribeEsInstanceEventListsResponse> DescribeEsInstanceEventLists(DescribeEsInstanceEventListsRequest req)
+        {
+            return InternalRequestAsync<DescribeEsInstanceEventListsResponse>(req, "DescribeEsInstanceEventLists");
+        }
+
+        /// <summary>
+        /// 查询事件中心列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsInstanceEventListsRequest"/></param>
+        /// <returns><see cref="DescribeEsInstanceEventListsResponse"/></returns>
+        public DescribeEsInstanceEventListsResponse DescribeEsInstanceEventListsSync(DescribeEsInstanceEventListsRequest req)
+        {
+            return InternalRequestAsync<DescribeEsInstanceEventListsResponse>(req, "DescribeEsInstanceEventLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeEventDataDetailResponse"/></returns>
+        public Task<DescribeEventDataDetailResponse> DescribeEventDataDetail(DescribeEventDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeEventDataDetailResponse>(req, "DescribeEventDataDetail");
+        }
+
+        /// <summary>
+        /// 查询事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeEventDataDetailResponse"/></returns>
+        public DescribeEventDataDetailResponse DescribeEventDataDetailSync(DescribeEventDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeEventDataDetailResponse>(req, "DescribeEventDataDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询事件类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventInfoListRequest"/></param>
+        /// <returns><see cref="DescribeEventInfoListResponse"/></returns>
+        public Task<DescribeEventInfoListResponse> DescribeEventInfoList(DescribeEventInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeEventInfoListResponse>(req, "DescribeEventInfoList");
+        }
+
+        /// <summary>
+        /// 查询事件类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventInfoListRequest"/></param>
+        /// <returns><see cref="DescribeEventInfoListResponse"/></returns>
+        public DescribeEventInfoListResponse DescribeEventInfoListSync(DescribeEventInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeEventInfoListResponse>(req, "DescribeEventInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询新增的forcemerge任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForceMergeTaskRequest"/></param>
+        /// <returns><see cref="DescribeForceMergeTaskResponse"/></returns>
+        public Task<DescribeForceMergeTaskResponse> DescribeForceMergeTask(DescribeForceMergeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeForceMergeTaskResponse>(req, "DescribeForceMergeTask");
+        }
+
+        /// <summary>
+        /// 查询新增的forcemerge任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForceMergeTaskRequest"/></param>
+        /// <returns><see cref="DescribeForceMergeTaskResponse"/></returns>
+        public DescribeForceMergeTaskResponse DescribeForceMergeTaskSync(DescribeForceMergeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeForceMergeTaskResponse>(req, "DescribeForceMergeTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +852,69 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 查询Logstash集群视图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashViewsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashViewsResponse"/></returns>
+        public Task<DescribeLogstashViewsResponse> DescribeLogstashViews(DescribeLogstashViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogstashViewsResponse>(req, "DescribeLogstashViews");
+        }
+
+        /// <summary>
+        /// 查询Logstash集群视图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashViewsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashViewsResponse"/></returns>
+        public DescribeLogstashViewsResponse DescribeLogstashViewsSync(DescribeLogstashViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogstashViewsResponse>(req, "DescribeLogstashViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询ES支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions");
+        }
+
+        /// <summary>
+        /// 查询ES支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 集群可访问API展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRequestInstancePolicyRequest"/></param>
+        /// <returns><see cref="DescribeRequestInstancePolicyResponse"/></returns>
+        public Task<DescribeRequestInstancePolicyResponse> DescribeRequestInstancePolicy(DescribeRequestInstancePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeRequestInstancePolicyResponse>(req, "DescribeRequestInstancePolicy");
+        }
+
+        /// <summary>
+        /// 集群可访问API展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRequestInstancePolicyRequest"/></param>
+        /// <returns><see cref="DescribeRequestInstancePolicyResponse"/></returns>
+        public DescribeRequestInstancePolicyResponse DescribeRequestInstancePolicySync(DescribeRequestInstancePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeRequestInstancePolicyResponse>(req, "DescribeRequestInstancePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Serverless获取索引列表
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessInstancesRequest"/></param>
@@ -791,6 +1001,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 获取集群快照列表概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotViewsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotViewsResponse"/></returns>
+        public Task<DescribeSnapshotViewsResponse> DescribeSnapshotViews(DescribeSnapshotViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotViewsResponse>(req, "DescribeSnapshotViews");
+        }
+
+        /// <summary>
+        /// 获取集群快照列表概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotViewsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotViewsResponse"/></returns>
+        public DescribeSnapshotViewsResponse DescribeSnapshotViewsSync(DescribeSnapshotViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotViewsResponse>(req, "DescribeSnapshotViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// space维度的kibana获取登录token
         /// </summary>
         /// <param name="req"><see cref="DescribeSpaceKibanaToolsRequest"/></param>
@@ -808,6 +1039,27 @@ namespace TencentCloud.Es.V20180416
         public DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaToolsSync(DescribeSpaceKibanaToolsRequest req)
         {
             return InternalRequestAsync<DescribeSpaceKibanaToolsResponse>(req, "DescribeSpaceKibanaTools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例可升级列表，包括可升级的大版本、商业特性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeResponse"/></returns>
+        public Task<DescribeUpgradeResponse> DescribeUpgrade(DescribeUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeResponse>(req, "DescribeUpgrade");
+        }
+
+        /// <summary>
+        /// 获取实例可升级列表，包括可升级的大版本、商业特性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeResponse"/></returns>
+        public DescribeUpgradeResponse DescribeUpgradeSync(DescribeUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeResponse>(req, "DescribeUpgrade")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1081,6 +1333,48 @@ namespace TencentCloud.Es.V20180416
         public QueryIpTraceLogResponse QueryIpTraceLogSync(QueryIpTraceLogRequest req)
         {
             return InternalRequestAsync<QueryIpTraceLogResponse>(req, "QueryIpTraceLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定region下指定zone列表的资源情况
+        /// </summary>
+        /// <param name="req"><see cref="QueryZoneResourceRequest"/></param>
+        /// <returns><see cref="QueryZoneResourceResponse"/></returns>
+        public Task<QueryZoneResourceResponse> QueryZoneResource(QueryZoneResourceRequest req)
+        {
+            return InternalRequestAsync<QueryZoneResourceResponse>(req, "QueryZoneResource");
+        }
+
+        /// <summary>
+        /// 获取指定region下指定zone列表的资源情况
+        /// </summary>
+        /// <param name="req"><see cref="QueryZoneResourceRequest"/></param>
+        /// <returns><see cref="QueryZoneResourceResponse"/></returns>
+        public QueryZoneResourceResponse QueryZoneResourceSync(QueryZoneResourceRequest req)
+        {
+            return InternalRequestAsync<QueryZoneResourceResponse>(req, "QueryZoneResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Logstash指定region下指定zone列表的资源情况
+        /// </summary>
+        /// <param name="req"><see cref="QueryZoneResourceForLogstashRequest"/></param>
+        /// <returns><see cref="QueryZoneResourceForLogstashResponse"/></returns>
+        public Task<QueryZoneResourceForLogstashResponse> QueryZoneResourceForLogstash(QueryZoneResourceForLogstashRequest req)
+        {
+            return InternalRequestAsync<QueryZoneResourceForLogstashResponse>(req, "QueryZoneResourceForLogstash");
+        }
+
+        /// <summary>
+        /// 获取Logstash指定region下指定zone列表的资源情况
+        /// </summary>
+        /// <param name="req"><see cref="QueryZoneResourceForLogstashRequest"/></param>
+        /// <returns><see cref="QueryZoneResourceForLogstashResponse"/></returns>
+        public QueryZoneResourceForLogstashResponse QueryZoneResourceForLogstashSync(QueryZoneResourceForLogstashRequest req)
+        {
+            return InternalRequestAsync<QueryZoneResourceForLogstashResponse>(req, "QueryZoneResourceForLogstash")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

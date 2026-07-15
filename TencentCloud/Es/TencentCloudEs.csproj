@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1460</VersionPrefix>
+    <VersionPrefix>3.0.1462</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,6 +122,7 @@
     <Compile Include="V20180416\Models\CreateServerlessInstanceResponse.cs" />
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Request.cs" />
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Response.cs" />
+    <Compile Include="V20180416\Models\CrontabTaskInfo.cs" />
     <Compile Include="V20180416\Models\DataStreamInfo.cs" />
     <Compile Include="V20180416\Models\DeleteAutoBackUpStrategyRequest.cs" />
     <Compile Include="V20180416\Models\DeleteAutoBackUpStrategyResponse.cs" />
@@ -141,10 +142,24 @@
     <Compile Include="V20180416\Models\DeleteServerlessSpaceUserResponse.cs" />
     <Compile Include="V20180416\Models\DescribeAutoBackUpStrategyRequest.cs" />
     <Compile Include="V20180416\Models\DescribeAutoBackUpStrategyResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeAutoScaleDiskInfoRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeAutoScaleDiskInfoResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeClusterDiskRangeRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeClusterDiskRangeResponse.cs" />
     <Compile Include="V20180416\Models\DescribeClusterSnapshotRequest.cs" />
     <Compile Include="V20180416\Models\DescribeClusterSnapshotResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeCosBackupStrategyViewsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeCosBackupStrategyViewsResponse.cs" />
     <Compile Include="V20180416\Models\DescribeDiagnoseRequest.cs" />
     <Compile Include="V20180416\Models\DescribeDiagnoseResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeEsInstanceEventListsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeEsInstanceEventListsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeEventDataDetailRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeEventDataDetailResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeEventInfoListRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeEventInfoListResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeForceMergeTaskRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeForceMergeTaskResponse.cs" />
     <Compile Include="V20180416\Models\DescribeIndexListRequest.cs" />
     <Compile Include="V20180416\Models\DescribeIndexListResponse.cs" />
     <Compile Include="V20180416\Models\DescribeIndexMetaRequest.cs" />
@@ -166,6 +181,12 @@
     <Compile Include="V20180416\Models\DescribeLogstashInstancesResponse.cs" />
     <Compile Include="V20180416\Models\DescribeLogstashPipelinesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeLogstashPipelinesResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeLogstashViewsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeLogstashViewsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeRequestInstancePolicyRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeRequestInstancePolicyResponse.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessInstancesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessInstancesResponse.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessMetricsRequest.cs" />
@@ -174,8 +195,12 @@
     <Compile Include="V20180416\Models\DescribeServerlessSpaceUserResponse.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessSpacesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessSpacesResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeSnapshotViewsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeSnapshotViewsResponse.cs" />
     <Compile Include="V20180416\Models\DescribeSpaceKibanaToolsRequest.cs" />
     <Compile Include="V20180416\Models\DescribeSpaceKibanaToolsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeUpgradeRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeUpgradeResponse.cs" />
     <Compile Include="V20180416\Models\DescribeUserCosSnapshotListRequest.cs" />
     <Compile Include="V20180416\Models\DescribeUserCosSnapshotListResponse.cs" />
     <Compile Include="V20180416\Models\DescribeViewsRequest.cs" />
@@ -195,11 +220,16 @@
     <Compile Include="V20180416\Models\DiagnoseResult.cs" />
     <Compile Include="V20180416\Models\DictInfo.cs" />
     <Compile Include="V20180416\Models\Dimension.cs" />
+    <Compile Include="V20180416\Models\DiskCountRange.cs" />
+    <Compile Include="V20180416\Models\DiskSizeRange.cs" />
     <Compile Include="V20180416\Models\EnableScheduleOperationDuration.cs" />
     <Compile Include="V20180416\Models\EsAcl.cs" />
     <Compile Include="V20180416\Models\EsConfigSetInfo.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="V20180416\Models\EventDataDetail.cs" />
+    <Compile Include="V20180416\Models\EventDataInfoOverview.cs" />
+    <Compile Include="V20180416\Models\EventTypeInfo.cs" />
     <Compile Include="V20180416\Models\ExportIpTraceLogRequest.cs" />
     <Compile Include="V20180416\Models\ExportIpTraceLogResponse.cs" />
     <Compile Include="V20180416\Models\Failures.cs" />
@@ -234,8 +264,11 @@
     <Compile Include="V20180416\Models\LogstashExtendedFile.cs" />
     <Compile Include="V20180416\Models\LogstashInstanceInfo.cs" />
     <Compile Include="V20180416\Models\LogstashNodeInfo.cs" />
+    <Compile Include="V20180416\Models\LogstashNodeTypeResource.cs" />
+    <Compile Include="V20180416\Models\LogstashNodeView.cs" />
     <Compile Include="V20180416\Models\LogstashPipeline.cs" />
     <Compile Include="V20180416\Models\LogstashPipelineInfo.cs" />
+    <Compile Include="V20180416\Models\LogstashZoneResource.cs" />
     <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
     <Compile Include="V20180416\Models\Metric.cs" />
     <Compile Include="V20180416\Models\MetricAllData.cs" />
@@ -249,6 +282,9 @@
     <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupResponse.cs" />
     <Compile Include="V20180416\Models\Namespaces.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
+    <Compile Include="V20180416\Models\NodeTypeDiskSizeRange.cs" />
+    <Compile Include="V20180416\Models\NodeTypeInfo.cs" />
+    <Compile Include="V20180416\Models\NodeTypeResource.cs" />
     <Compile Include="V20180416\Models\NodeView.cs" />
     <Compile Include="V20180416\Models\Operation.cs" />
     <Compile Include="V20180416\Models\OperationDetail.cs" />
@@ -261,6 +297,11 @@
     <Compile Include="V20180416\Models\ProcessDetail.cs" />
     <Compile Include="V20180416\Models\QueryIpTraceLogRequest.cs" />
     <Compile Include="V20180416\Models\QueryIpTraceLogResponse.cs" />
+    <Compile Include="V20180416\Models\QueryZoneResourceForLogstashRequest.cs" />
+    <Compile Include="V20180416\Models\QueryZoneResourceForLogstashResponse.cs" />
+    <Compile Include="V20180416\Models\QueryZoneResourceRequest.cs" />
+    <Compile Include="V20180416\Models\QueryZoneResourceResponse.cs" />
+    <Compile Include="V20180416\Models\RegionsData.cs" />
     <Compile Include="V20180416\Models\RequestInstancesByGetRequest.cs" />
     <Compile Include="V20180416\Models\RequestInstancesByGetResponse.cs" />
     <Compile Include="V20180416\Models\RequestInstancesRequest.cs" />
@@ -324,5 +365,6 @@
     <Compile Include="V20180416\Models\VpcInfo.cs" />
     <Compile Include="V20180416\Models\WebNodeTypeInfo.cs" />
     <Compile Include="V20180416\Models\ZoneDetail.cs" />
+    <Compile Include="V20180416\Models\ZoneResource.cs" />
   </ItemGroup>
 </Project>

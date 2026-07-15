@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 维度名
+        /// <p>维度名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 维度值
+        /// <p>维度值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

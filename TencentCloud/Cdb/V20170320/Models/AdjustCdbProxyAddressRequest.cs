@@ -103,7 +103,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+        /// <p>访问模式。</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }

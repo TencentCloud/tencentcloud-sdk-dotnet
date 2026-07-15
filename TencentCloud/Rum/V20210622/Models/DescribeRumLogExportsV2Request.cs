@@ -25,19 +25,19 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// Page size
+        /// <p>Page size</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Page number
+        /// <p>Page number</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Project ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }

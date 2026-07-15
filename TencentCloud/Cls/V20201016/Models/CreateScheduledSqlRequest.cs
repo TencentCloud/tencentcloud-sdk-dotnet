@@ -91,6 +91,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
+        /// <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+        /// </summary>
+        [JsonProperty("ProcessPeriodUnit")]
+        public long? ProcessPeriodUnit{ get; set; }
+
+        /// <summary>
         /// <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
         /// </summary>
         [JsonProperty("ProcessEndTime")]
@@ -131,6 +137,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ProcessTimeWindow", this.ProcessTimeWindow);
             this.SetParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
+            this.SetParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
             this.SetParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);

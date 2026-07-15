@@ -25,21 +25,21 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 通知模板ID
+        /// <p>通知模板ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
 
         /// <summary>
-        /// 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+        /// <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Classification")]
         public string[] Classification{ get; set; }
 
         /// <summary>
-        /// 模板对应的策略id
+        /// <p>模板对应的策略id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]

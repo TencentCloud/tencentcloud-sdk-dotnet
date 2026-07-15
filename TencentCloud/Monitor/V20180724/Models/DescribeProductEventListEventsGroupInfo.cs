@@ -25,14 +25,14 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略ID
+        /// <p>策略ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// <p>策略名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]

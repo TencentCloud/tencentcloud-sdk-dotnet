@@ -25,21 +25,21 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模板名称
+        /// <p>模板名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 指标触发条件
+        /// <p>指标触发条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Condition")]
         public AlarmPolicyCondition Condition{ get; set; }
 
         /// <summary>
-        /// 事件触发条件
+        /// <p>事件触发条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCondition")]

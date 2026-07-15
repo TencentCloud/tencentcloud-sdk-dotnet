@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 能力标签标识，适合程序判定、过滤或聚合使用
+        /// 能力标签标识
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }

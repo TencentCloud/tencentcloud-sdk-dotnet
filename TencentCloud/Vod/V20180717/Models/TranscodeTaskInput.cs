@@ -79,6 +79,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
+        /// <p>自定义视频转码参数。</p>
+        /// </summary>
+        [JsonProperty("OverrideParameter")]
+        public OverrideTranscodeParameter OverrideParameter{ get; set; }
+
+        /// <summary>
         /// <p>字幕压制信息列表。最大可支持 2 个。</p>
         /// </summary>
         [JsonProperty("SubtitleInfoSet")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
         }
     }

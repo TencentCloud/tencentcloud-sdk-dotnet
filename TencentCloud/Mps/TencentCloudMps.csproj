@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1462</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -482,6 +482,8 @@
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeImageTaskDetailRequest.cs" />
     <Compile Include="V20190612\Models\DescribeImageTaskDetailResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeImageTasksRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeImageTasksResponse.cs" />
     <Compile Include="V20190612\Models\DescribeInput.cs" />
     <Compile Include="V20190612\Models\DescribeInputHLSPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputRISTSettings.cs" />
@@ -693,6 +695,7 @@
     <Compile Include="V20190612\Models\ImageResizeConfig.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
+    <Compile Include="V20190612\Models\ImageTaskInfo.cs" />
     <Compile Include="V20190612\Models\ImageTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageTransformConfig.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInput.cs" />

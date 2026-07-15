@@ -25,30 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 认证结果码，收费情况如下。
-        /// - 收费结果码：
-        /// 0: 认证通过。
-        /// -4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-        /// 
-        /// - 不收费结果码：
-        /// -6: 手机号码不合法。
-        /// -7: 身份证号码有误。
-        /// -8: 姓名校验不通过。
-        /// -9: 没有记录。
-        /// -11: 验证中心服务繁忙。
+        /// <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 运营商名称。
-        /// - 取值范围为["移动","联通","电信",""]。
+        /// <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 业务结果描述。
+        /// <p>业务结果描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

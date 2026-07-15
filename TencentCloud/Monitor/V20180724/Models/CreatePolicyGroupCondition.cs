@@ -25,49 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 指标Id
+        /// <p>指标Id</p>
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// 告警发送收敛类型。0连续告警，1指数告警
+        /// <p>告警发送收敛类型。0连续告警，1指数告警</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+        /// <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+        /// <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p>
         /// </summary>
         [JsonProperty("CalcType")]
         public long? CalcType{ get; set; }
 
         /// <summary>
-        /// 比较的值，如果指标不必须CalcValue可不填
+        /// <p>比较的值，如果指标不必须CalcValue可不填</p>
         /// </summary>
         [JsonProperty("CalcValue")]
         public float? CalcValue{ get; set; }
 
         /// <summary>
-        /// 数据聚合周期(单位秒)，若指标有默认值可不填
+        /// <p>数据聚合周期(单位秒)，若指标有默认值可不填</p>
         /// </summary>
         [JsonProperty("CalcPeriod")]
         public long? CalcPeriod{ get; set; }
 
         /// <summary>
-        /// 持续几个检测周期触发规则会告警
+        /// <p>持续几个检测周期触发规则会告警</p>
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// 如果通过模板创建，需要传入模板中该指标的对应RuleId
+        /// <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

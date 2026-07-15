@@ -25,96 +25,96 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警通知频率
+        /// <p>告警通知频率</p>
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+        /// <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
         /// </summary>
         [JsonProperty("AlarmNotifyType")]
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 检测方式
+        /// <p>检测方式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcType")]
         public string CalcType{ get; set; }
 
         /// <summary>
-        /// 检测值
+        /// <p>检测值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcValue")]
         public string CalcValue{ get; set; }
 
         /// <summary>
-        /// 持续时间，单位秒
+        /// <p>持续时间，单位秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinueTime")]
         public string ContinueTime{ get; set; }
 
         /// <summary>
-        /// 指标ID
+        /// <p>指标ID</p>
         /// </summary>
         [JsonProperty("MetricID")]
         public long? MetricID{ get; set; }
 
         /// <summary>
-        /// 指标展示名称（对外）
+        /// <p>指标展示名称（对外）</p>
         /// </summary>
         [JsonProperty("MetricDisplayName")]
         public string MetricDisplayName{ get; set; }
 
         /// <summary>
-        /// 周期
+        /// <p>周期</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// 指标单位
+        /// <p>指标单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 是否为高级指标，0：否；1：是
+        /// <p>是否为高级指标，0：否；1：是</p>
         /// </summary>
         [JsonProperty("IsAdvanced")]
         public long? IsAdvanced{ get; set; }
 
         /// <summary>
-        /// 是否开通高级指标，0：否；1：是
+        /// <p>是否开通高级指标，0：否；1：是</p>
         /// </summary>
         [JsonProperty("IsOpen")]
         public long? IsOpen{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 告警分级阈值配置
+        /// <p>告警分级阈值配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HierarchicalValue")]
         public AlarmHierarchicalValue HierarchicalValue{ get; set; }
 
         /// <summary>
-        /// 指标类型，用于区分动态指标
+        /// <p>指标类型，用于区分动态指标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]

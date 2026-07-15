@@ -24,12 +24,33 @@ namespace TencentCloud.Es.V20180416.Models
     public class RequestInstancesByGetRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>请求路径</p>
+        /// </summary>
+        [JsonProperty("Uri")]
+        public string Uri{ get; set; }
+
+        /// <summary>
+        /// <p>调用方</p>
+        /// </summary>
+        [JsonProperty("Caller")]
+        public string Caller{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Uri", this.Uri);
+            this.SetParamSimple(map, prefix + "Caller", this.Caller);
         }
     }
 }

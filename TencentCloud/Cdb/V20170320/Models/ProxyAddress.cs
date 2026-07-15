@@ -25,125 +25,130 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 代理组地址ID
+        /// <p>代理组地址ID</p>
         /// </summary>
         [JsonProperty("ProxyAddressId")]
         public string ProxyAddressId{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// <p>私有网络ID</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 私有子网ID
+        /// <p>私有子网ID</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// <p>IP地址</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// <p>端口</p>
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// 权重分配模式；
-        /// 系统自动分配："system"， 自定义："custom"
+        /// <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 是否开启延迟剔除，取值："true" | "false"
+        /// <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("IsKickOut")]
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
-        /// 最小保留数量，最小取值：0
+        /// <p>最小保留数量，最小取值：0</p>
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// 延迟剔除阈值，最小取值：0
+        /// <p>延迟剔除阈值，最小取值：0</p>
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
 
         /// <summary>
-        /// 是否自动添加RO，取值："true" | "false"
+        /// <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否是只读，取值："true" | "false"
+        /// <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 是否开启事务分离
+        /// <p>是否开启事务分离</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移
+        /// <p>是否开启故障转移</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池
+        /// <p>是否开启连接池</p>
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 实例读权重分配
+        /// <p>实例读权重分配</p>
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// 接入模式
+        /// <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// 是否开启自动负载均衡
+        /// <p>是否开启自动负载均衡</p>
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// 是否把libra当作ro节点
+        /// <p>是否把libra当作ro节点</p>
         /// </summary>
         [JsonProperty("ApNodeAsRoNode")]
         public bool? ApNodeAsRoNode{ get; set; }
 
         /// <summary>
-        /// libra节点故障，是否转发给其他节点
+        /// <p>libra节点故障，是否转发给其他节点</p>
         /// </summary>
         [JsonProperty("ApQueryToOtherNode")]
         public bool? ApQueryToOtherNode{ get; set; }
+
+        /// <summary>
+        /// <p>地址所在地域名</p>
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -171,6 +176,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
             this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
             this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

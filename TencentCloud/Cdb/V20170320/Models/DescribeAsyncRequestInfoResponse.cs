@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+        /// <p>任务执行结果。</p><p>枚举值：</p><ul><li>INITIAL： 初始化。</li><li>RUNNING： 运行中。</li><li>SUCCESS： 执行成功。</li><li>FAILED： 执行失败。</li><li>KILLED： 已终止。</li><li>REMOVED： 已删除。</li><li>PAUSED： 终止中。</li><li>UNDEFINED： 任务已创建但未开始执行，在 WaitSwitch = true 场景下，表示任务正在等待维护时间窗到来。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务执行信息描述。
+        /// <p>任务执行信息描述。</p>
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }

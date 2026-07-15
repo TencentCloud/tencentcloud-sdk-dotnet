@@ -25,144 +25,126 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+        /// <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+        /// <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 英文运算符
-        /// intelligent=无阈值智能检测
-        /// eq=等于
-        /// ge=大于等于
-        /// gt=大于
-        /// le=小于等于
-        /// lt=小于
-        /// ne=不等于
-        /// day_increase=天同比增长
-        /// day_decrease=天同比下降
-        /// day_wave=天同比波动
-        /// week_increase=周同比增长
-        /// week_decrease=周同比下降
-        /// week_wave=周同比波动
-        /// cycle_increase=环比增长
-        /// cycle_decrease=环比下降
-        /// cycle_wave=环比波动
-        /// re=正则匹配
-        /// 支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+        /// <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+        /// <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+        /// <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+        /// <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeFrequency")]
         public long? NoticeFrequency{ get; set; }
 
         /// <summary>
-        /// 告警频率是否指数增长 0=否 1=是
+        /// <p>告警频率是否指数增长 0=否 1=是</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPowerNotice")]
         public long? IsPowerNotice{ get; set; }
 
         /// <summary>
-        /// 对于单个触发规则的过滤条件
+        /// <p>对于单个触发规则的过滤条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filter")]
         public AlarmPolicyFilter Filter{ get; set; }
 
         /// <summary>
-        /// 指标展示名，用于出参
+        /// <p>指标展示名，用于出参</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 单位，用于出参
+        /// <p>单位，用于出参</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+        /// <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 是否为高级指标，0否，1是
+        /// <p>是否为高级指标，0否，1是</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAdvanced")]
         public long? IsAdvanced{ get; set; }
 
         /// <summary>
-        /// 高级指标是否开通，0否，1是
+        /// <p>高级指标是否开通，0否，1是</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOpen")]
         public long? IsOpen{ get; set; }
 
         /// <summary>
-        /// 集成中心产品ID
+        /// <p>集成中心产品ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// <p>最大值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueMax")]
         public float? ValueMax{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// <p>最小值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValueMin")]
         public float? ValueMin{ get; set; }
 
         /// <summary>
-        /// 告警分级阈值配置
+        /// <p>告警分级阈值配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HierarchicalValue")]
         public AlarmHierarchicalValue HierarchicalValue{ get; set; }
 
         /// <summary>
-        /// 是否延迟指标
+        /// <p>是否延迟指标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsLatenessMetric")]
