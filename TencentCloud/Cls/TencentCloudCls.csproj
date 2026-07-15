@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1462</VersionPrefix>
+    <VersionPrefix>3.0.1463</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20201016\Models\AddMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\AdvanceFilterRuleInfo.cs" />
     <Compile Include="V20201016\Models\AdvancedConsumerConfiguration.cs" />
+    <Compile Include="V20201016\Models\AgentApplicationInfo.cs" />
+    <Compile Include="V20201016\Models\AgentTopicInfo.cs" />
     <Compile Include="V20201016\Models\AlarmAnalysisConfig.cs" />
     <Compile Include="V20201016\Models\AlarmClassification.cs" />
     <Compile Include="V20201016\Models\AlarmInfo.cs" />
@@ -110,6 +112,8 @@
     <Compile Include="V20201016\Models\ContainerWorkLoadInfo.cs" />
     <Compile Include="V20201016\Models\ContentInfo.cs" />
     <Compile Include="V20201016\Models\CosRechargeInfo.cs" />
+    <Compile Include="V20201016\Models\CreateAgentApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\CreateAgentApplicationResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmRequest.cs" />
@@ -170,6 +174,10 @@
     <Compile Include="V20201016\Models\CreateRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateS3RechargeRequest.cs" />
+    <Compile Include="V20201016\Models\CreateS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\CreateSearchViewRequest.cs" />
@@ -194,6 +202,8 @@
     <Compile Include="V20201016\Models\DataTransformResouceInfo.cs" />
     <Compile Include="V20201016\Models\DataTransformSqlDataSource.cs" />
     <Compile Include="V20201016\Models\DataTransformTaskInfo.cs" />
+    <Compile Include="V20201016\Models\DeleteAgentApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteAgentApplicationResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
@@ -254,6 +264,10 @@
     <Compile Include="V20201016\Models\DeleteRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteS3RechargeRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\DeleteSearchViewRequest.cs" />
@@ -268,6 +282,10 @@
     <Compile Include="V20201016\Models\DeleteWebCallbackResponse.cs" />
     <Compile Include="V20201016\Models\DeliverConfig.cs" />
     <Compile Include="V20201016\Models\Delta.cs" />
+    <Compile Include="V20201016\Models\DescribeAgentApplicationsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeAgentApplicationsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeAgentConfigsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeAgentConfigsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmNoticesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmNoticesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmShieldsRequest.cs" />
@@ -366,6 +384,10 @@
     <Compile Include="V20201016\Models\DescribeRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeRemoteWriteTasksRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeRemoteWriteTasksResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeS3RechargesRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeS3RechargesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeSearchViewsRequest.cs" />
@@ -438,6 +460,7 @@
     <Compile Include="V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="V20201016\Models\Label.cs" />
+    <Compile Include="V20201016\Models\LogConfigInfo.cs" />
     <Compile Include="V20201016\Models\LogContextInfo.cs" />
     <Compile Include="V20201016\Models\LogInfo.cs" />
     <Compile Include="V20201016\Models\LogItem.cs" />
@@ -460,6 +483,8 @@
     <Compile Include="V20201016\Models\MetricSpec.cs" />
     <Compile Include="V20201016\Models\MetricSubscribeInfo.cs" />
     <Compile Include="V20201016\Models\MetricYamlSpec.cs" />
+    <Compile Include="V20201016\Models\ModifyAgentApplicationRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyAgentApplicationResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmRequest.cs" />
@@ -518,6 +543,10 @@
     <Compile Include="V20201016\Models\ModifyRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyS3RechargeRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\ModifySearchViewRequest.cs" />
@@ -564,11 +593,14 @@
     <Compile Include="V20201016\Models\RecordingRuleTaskInfo.cs" />
     <Compile Include="V20201016\Models\RecordingRuleYamlTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
+    <Compile Include="V20201016\Models\RemoteWriteAuthInfo.cs" />
+    <Compile Include="V20201016\Models\RemoteWriteInfo.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />
     <Compile Include="V20201016\Models\RuleKeyValueInfo.cs" />
     <Compile Include="V20201016\Models\RuleTagInfo.cs" />
+    <Compile Include="V20201016\Models\S3RechargeInfo.cs" />
     <Compile Include="V20201016\Models\ScheduledSqlResouceInfo.cs" />
     <Compile Include="V20201016\Models\ScheduledSqlTaskInfo.cs" />
     <Compile Include="V20201016\Models\SearchCosRechargeInfoRequest.cs" />
@@ -580,9 +612,12 @@
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="V20201016\Models\SearchLogResponse.cs" />
     <Compile Include="V20201016\Models\SearchLogTopics.cs" />
+    <Compile Include="V20201016\Models\SearchS3RechargeInfoRequest.cs" />
+    <Compile Include="V20201016\Models\SearchS3RechargeInfoResponse.cs" />
     <Compile Include="V20201016\Models\SearchViewInfo.cs" />
     <Compile Include="V20201016\Models\SendConsumerHeartbeatRequest.cs" />
     <Compile Include="V20201016\Models\SendConsumerHeartbeatResponse.cs" />
+    <Compile Include="V20201016\Models\ServiceLogConfigInfo.cs" />
     <Compile Include="V20201016\Models\ShipperInfo.cs" />
     <Compile Include="V20201016\Models\ShipperTaskInfo.cs" />
     <Compile Include="V20201016\Models\SplitPartitionRequest.cs" />

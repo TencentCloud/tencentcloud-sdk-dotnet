@@ -25,82 +25,100 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 公共字段
+        /// <p>公共字段</p>
         /// </summary>
         [JsonProperty("DisplayToolCommon")]
         public DisplayToolCommon DisplayToolCommon{ get; set; }
 
         /// <summary>
-        /// 事件名称
+        /// <p>事件名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 事件描述
+        /// <p>事件描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据源
+        /// <p>数据源</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+        /// <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long? RiskLevel{ get; set; }
 
         /// <summary>
-        /// 仓库名称
+        /// <p>仓库名称</p>
         /// </summary>
         [JsonProperty("HubName")]
         public string HubName{ get; set; }
 
         /// <summary>
-        /// 链接
+        /// <p>链接</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 截图
+        /// <p>截图</p>
         /// </summary>
         [JsonProperty("Screenshot")]
         public string Screenshot{ get; set; }
 
         /// <summary>
-        /// 建议
+        /// <p>建议</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 关键词
+        /// <p>关键词</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 处置状态：0-待处理 1-处理中 2-已处理
+        /// <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
         /// </summary>
         [JsonProperty("HandlingStatus")]
         public long? HandlingStatus{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>仓库命名空间</p>
+        /// </summary>
+        [JsonProperty("RepoNamespace")]
+        public string RepoNamespace{ get; set; }
+
+        /// <summary>
+        /// <p>仓库名称</p>
+        /// </summary>
+        [JsonProperty("RepoName")]
+        public string RepoName{ get; set; }
+
+        /// <summary>
+        /// <p>作者名称</p>
+        /// </summary>
+        [JsonProperty("AuthorName")]
+        public string AuthorName{ get; set; }
 
 
         /// <summary>
@@ -121,6 +139,9 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "HandlingStatus", this.HandlingStatus);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "RepoNamespace", this.RepoNamespace);
+            this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
+            this.SetParamSimple(map, prefix + "AuthorName", this.AuthorName);
         }
     }
 }

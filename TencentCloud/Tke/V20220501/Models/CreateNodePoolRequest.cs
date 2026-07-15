@@ -25,61 +25,61 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 集群 ID
+        /// <p>集群 ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// <p>节点池名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 节点池类型
+        /// <p>节点池类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 节点  Labels
+        /// <p>节点  Labels</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 节点污点
+        /// <p>节点污点</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 节点标签
+        /// <p>节点标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagSpecification[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否开启删除保护
+        /// <p>是否开启删除保护</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// 节点是否默认不可调度
+        /// <p>节点是否默认不可调度</p>
         /// </summary>
         [JsonProperty("Unschedulable")]
         public bool? Unschedulable{ get; set; }
 
         /// <summary>
-        /// 原生节点池创建参数（Type字段设置为Native时需填写）
+        /// <p>原生节点池创建参数（Type字段设置为Native时需填写）</p>
         /// </summary>
         [JsonProperty("Native")]
         public CreateNativeNodePoolParam Native{ get; set; }
 
         /// <summary>
-        /// 节点 Annotation 列表
+        /// <p>节点 Annotation 列表</p>
         /// </summary>
         [JsonProperty("Annotations")]
         public Annotation[] Annotations{ get; set; }

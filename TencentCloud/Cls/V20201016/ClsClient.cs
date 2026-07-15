@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1462";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -222,6 +222,27 @@ namespace TencentCloud.Cls.V20201016
         public CommitConsumerOffsetsResponse CommitConsumerOffsetsSync(CommitConsumerOffsetsRequest req)
         {
             return InternalRequestAsync<CommitConsumerOffsetsResponse>(req, "CommitConsumerOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentApplicationRequest"/></param>
+        /// <returns><see cref="CreateAgentApplicationResponse"/></returns>
+        public Task<CreateAgentApplicationResponse> CreateAgentApplication(CreateAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateAgentApplicationResponse>(req, "CreateAgentApplication");
+        }
+
+        /// <summary>
+        /// 本接口用于创建Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentApplicationRequest"/></param>
+        /// <returns><see cref="CreateAgentApplicationResponse"/></returns>
+        public CreateAgentApplicationResponse CreateAgentApplicationSync(CreateAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateAgentApplicationResponse>(req, "CreateAgentApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -882,6 +903,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建remote write投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="CreateRemoteWriteTaskResponse"/></returns>
+        public Task<CreateRemoteWriteTaskResponse> CreateRemoteWriteTask(CreateRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteWriteTaskResponse>(req, "CreateRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// 创建remote write投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="CreateRemoteWriteTaskResponse"/></returns>
+        public CreateRemoteWriteTaskResponse CreateRemoteWriteTaskSync(CreateRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteWriteTaskResponse>(req, "CreateRemoteWriteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于创建aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateS3RechargeRequest"/></param>
+        /// <returns><see cref="CreateS3RechargeResponse"/></returns>
+        public Task<CreateS3RechargeResponse> CreateS3Recharge(CreateS3RechargeRequest req)
+        {
+            return InternalRequestAsync<CreateS3RechargeResponse>(req, "CreateS3Recharge");
+        }
+
+        /// <summary>
+        /// 本接口用于创建aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateS3RechargeRequest"/></param>
+        /// <returns><see cref="CreateS3RechargeResponse"/></returns>
+        public CreateS3RechargeResponse CreateS3RechargeSync(CreateS3RechargeRequest req)
+        {
+            return InternalRequestAsync<CreateS3RechargeResponse>(req, "CreateS3Recharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
@@ -1004,6 +1067,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateWebCallbackResponse CreateWebCallbackSync(CreateWebCallbackRequest req)
         {
             return InternalRequestAsync<CreateWebCallbackResponse>(req, "CreateWebCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentApplicationRequest"/></param>
+        /// <returns><see cref="DeleteAgentApplicationResponse"/></returns>
+        public Task<DeleteAgentApplicationResponse> DeleteAgentApplication(DeleteAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentApplicationResponse>(req, "DeleteAgentApplication");
+        }
+
+        /// <summary>
+        /// 本接口用于删除Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentApplicationRequest"/></param>
+        /// <returns><see cref="DeleteAgentApplicationResponse"/></returns>
+        public DeleteAgentApplicationResponse DeleteAgentApplicationSync(DeleteAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteAgentApplicationResponse>(req, "DeleteAgentApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1638,6 +1722,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 删除RemoteWrite任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="DeleteRemoteWriteTaskResponse"/></returns>
+        public Task<DeleteRemoteWriteTaskResponse> DeleteRemoteWriteTask(DeleteRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteWriteTaskResponse>(req, "DeleteRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// 删除RemoteWrite任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="DeleteRemoteWriteTaskResponse"/></returns>
+        public DeleteRemoteWriteTaskResponse DeleteRemoteWriteTaskSync(DeleteRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteWriteTaskResponse>(req, "DeleteRemoteWriteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteS3RechargeRequest"/></param>
+        /// <returns><see cref="DeleteS3RechargeResponse"/></returns>
+        public Task<DeleteS3RechargeResponse> DeleteS3Recharge(DeleteS3RechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteS3RechargeResponse>(req, "DeleteS3Recharge");
+        }
+
+        /// <summary>
+        /// 本接口用于删除aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteS3RechargeRequest"/></param>
+        /// <returns><see cref="DeleteS3RechargeResponse"/></returns>
+        public DeleteS3RechargeResponse DeleteS3RechargeSync(DeleteS3RechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteS3RechargeResponse>(req, "DeleteS3Recharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
@@ -1760,6 +1886,48 @@ namespace TencentCloud.Cls.V20201016
         public DeleteWebCallbackResponse DeleteWebCallbackSync(DeleteWebCallbackRequest req)
         {
             return InternalRequestAsync<DeleteWebCallbackResponse>(req, "DeleteWebCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Agent应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeAgentApplicationsResponse"/></returns>
+        public Task<DescribeAgentApplicationsResponse> DescribeAgentApplications(DescribeAgentApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentApplicationsResponse>(req, "DescribeAgentApplications");
+        }
+
+        /// <summary>
+        /// 获取Agent应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeAgentApplicationsResponse"/></returns>
+        public DescribeAgentApplicationsResponse DescribeAgentApplicationsSync(DescribeAgentApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentApplicationsResponse>(req, "DescribeAgentApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取agent对应的采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentConfigsRequest"/></param>
+        /// <returns><see cref="DescribeAgentConfigsResponse"/></returns>
+        public Task<DescribeAgentConfigsResponse> DescribeAgentConfigs(DescribeAgentConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentConfigsResponse>(req, "DescribeAgentConfigs");
+        }
+
+        /// <summary>
+        /// 获取agent对应的采集配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentConfigsRequest"/></param>
+        /// <returns><see cref="DescribeAgentConfigsResponse"/></returns>
+        public DescribeAgentConfigsResponse DescribeAgentConfigsSync(DescribeAgentConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentConfigsResponse>(req, "DescribeAgentConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2795,6 +2963,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口获取RemoteWrite投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWriteTasksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWriteTasksResponse"/></returns>
+        public Task<DescribeRemoteWriteTasksResponse> DescribeRemoteWriteTasks(DescribeRemoteWriteTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWriteTasksResponse>(req, "DescribeRemoteWriteTasks");
+        }
+
+        /// <summary>
+        /// 本接口获取RemoteWrite投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWriteTasksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWriteTasksResponse"/></returns>
+        public DescribeRemoteWriteTasksResponse DescribeRemoteWriteTasksSync(DescribeRemoteWriteTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWriteTasksResponse>(req, "DescribeRemoteWriteTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于获取cos导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeS3RechargesRequest"/></param>
+        /// <returns><see cref="DescribeS3RechargesResponse"/></returns>
+        public Task<DescribeS3RechargesResponse> DescribeS3Recharges(DescribeS3RechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeS3RechargesResponse>(req, "DescribeS3Recharges");
+        }
+
+        /// <summary>
+        /// 本接口用于获取cos导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeS3RechargesRequest"/></param>
+        /// <returns><see cref="DescribeS3RechargesResponse"/></returns>
+        public DescribeS3RechargesResponse DescribeS3RechargesSync(DescribeS3RechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeS3RechargesResponse>(req, "DescribeS3Recharges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取定时SQL分析任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
@@ -3108,6 +3318,27 @@ namespace TencentCloud.Cls.V20201016
         public MergePartitionResponse MergePartitionSync(MergePartitionRequest req)
         {
             return InternalRequestAsync<MergePartitionResponse>(req, "MergePartition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentApplicationRequest"/></param>
+        /// <returns><see cref="ModifyAgentApplicationResponse"/></returns>
+        public Task<ModifyAgentApplicationResponse> ModifyAgentApplication(ModifyAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentApplicationResponse>(req, "ModifyAgentApplication");
+        }
+
+        /// <summary>
+        /// 本接口用于修改Agent应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentApplicationRequest"/></param>
+        /// <returns><see cref="ModifyAgentApplicationResponse"/></returns>
+        public ModifyAgentApplicationResponse ModifyAgentApplicationSync(ModifyAgentApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentApplicationResponse>(req, "ModifyAgentApplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3723,6 +3954,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 修改RemoteWrite任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="ModifyRemoteWriteTaskResponse"/></returns>
+        public Task<ModifyRemoteWriteTaskResponse> ModifyRemoteWriteTask(ModifyRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteWriteTaskResponse>(req, "ModifyRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// 修改RemoteWrite任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="ModifyRemoteWriteTaskResponse"/></returns>
+        public ModifyRemoteWriteTaskResponse ModifyRemoteWriteTaskSync(ModifyRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteWriteTaskResponse>(req, "ModifyRemoteWriteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyS3RechargeRequest"/></param>
+        /// <returns><see cref="ModifyS3RechargeResponse"/></returns>
+        public Task<ModifyS3RechargeResponse> ModifyS3Recharge(ModifyS3RechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyS3RechargeResponse>(req, "ModifyS3Recharge");
+        }
+
+        /// <summary>
+        /// 本接口用于修改aws导入任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyS3RechargeRequest"/></param>
+        /// <returns><see cref="ModifyS3RechargeResponse"/></returns>
+        public ModifyS3RechargeResponse ModifyS3RechargeSync(ModifyS3RechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyS3RechargeResponse>(req, "ModifyS3Recharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
@@ -4063,6 +4336,27 @@ namespace TencentCloud.Cls.V20201016
         public SearchLogResponse SearchLogSync(SearchLogRequest req)
         {
             return InternalRequestAsync<SearchLogResponse>(req, "SearchLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于预览aws导入信息
+        /// </summary>
+        /// <param name="req"><see cref="SearchS3RechargeInfoRequest"/></param>
+        /// <returns><see cref="SearchS3RechargeInfoResponse"/></returns>
+        public Task<SearchS3RechargeInfoResponse> SearchS3RechargeInfo(SearchS3RechargeInfoRequest req)
+        {
+            return InternalRequestAsync<SearchS3RechargeInfoResponse>(req, "SearchS3RechargeInfo");
+        }
+
+        /// <summary>
+        /// 本接口用于预览aws导入信息
+        /// </summary>
+        /// <param name="req"><see cref="SearchS3RechargeInfoRequest"/></param>
+        /// <returns><see cref="SearchS3RechargeInfoResponse"/></returns>
+        public SearchS3RechargeInfoResponse SearchS3RechargeInfoSync(SearchS3RechargeInfoRequest req)
+        {
+            return InternalRequestAsync<SearchS3RechargeInfoResponse>(req, "SearchS3RechargeInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

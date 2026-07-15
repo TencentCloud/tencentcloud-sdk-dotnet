@@ -112,6 +112,30 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
+        /// <summary>
+        /// <p>JWT凭证配置</p>
+        /// </summary>
+        [JsonProperty("JWTCredentialConfig")]
+        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OAuth2凭证配置</p>
+        /// </summary>
+        [JsonProperty("OAuthCredentialConfig")]
+        public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OIDC凭证配置</p>
+        /// </summary>
+        [JsonProperty("OIDCCredentialConfig")]
+        public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Agent 密钥类型</p>
+        /// </summary>
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +156,10 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+            this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
+            this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
         }
     }
 }

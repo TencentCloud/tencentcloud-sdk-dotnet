@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 返回字符串
+        /// <p>返回字符串</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

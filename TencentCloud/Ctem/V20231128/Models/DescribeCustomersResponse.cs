@@ -25,13 +25,13 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 企业列表
+        /// <p>企业列表</p>
         /// </summary>
         [JsonProperty("List")]
         public Customer[] List{ get; set; }

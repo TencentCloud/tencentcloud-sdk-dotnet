@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
-        /// 节点池 ID
+        /// <p>节点池 ID</p>
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }

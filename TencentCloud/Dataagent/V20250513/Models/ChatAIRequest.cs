@@ -84,6 +84,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("KnowledgeBaseIds")]
         public string[] KnowledgeBaseIds{ get; set; }
 
+        /// <summary>
+        /// <p>版本信息</p>
+        /// </summary>
+        [JsonProperty("ArchVersion")]
+        public string ArchVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
             this.SetParamSimple(map, prefix + "OldRecordId", this.OldRecordId);
             this.SetParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
+            this.SetParamSimple(map, prefix + "ArchVersion", this.ArchVersion);
         }
     }
 }

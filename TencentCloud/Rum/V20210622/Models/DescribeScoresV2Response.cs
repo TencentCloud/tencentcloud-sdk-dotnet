@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 项目得分数组
+        /// <p>项目得分数组</p>
         /// </summary>
         [JsonProperty("ScoreSet")]
         public ScoreInfoV2[] ScoreSet{ get; set; }

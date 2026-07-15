@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1462";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -5472,6 +5472,27 @@ namespace TencentCloud.Vod.V20180717
         public SplitMediaResponse SplitMediaSync(SplitMediaRequest req)
         {
             return InternalRequestAsync<SplitMediaResponse>(req, "SplitMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>
+        public Task<UpdateAigcApiTokenResponse> UpdateAigcApiToken(UpdateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<UpdateAigcApiTokenResponse>(req, "UpdateAigcApiToken");
+        }
+
+        /// <summary>
+        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>
+        public UpdateAigcApiTokenResponse UpdateAigcApiTokenSync(UpdateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<UpdateAigcApiTokenResponse>(req, "UpdateAigcApiToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

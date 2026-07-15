@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// appid
+        /// <p>appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>是否自动监测</p>
         /// </summary>
         [JsonProperty("IsAutoMonitor")]
         public ulong? IsAutoMonitor{ get; set; }
 
         /// <summary>
-        /// bucket id集合
+        /// <p>bucket id集合</p>
         /// </summary>
         [JsonProperty("BucketIdSet")]
         public string[] BucketIdSet{ get; set; }

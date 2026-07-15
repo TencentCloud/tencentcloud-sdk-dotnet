@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1463</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20250115\Models\CreateForwardingRuleResponse.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorResponse.cs" />
+    <Compile Include="V20250115\Models\CreateListenerAdditionalCertRequest.cs" />
+    <Compile Include="V20250115\Models\CreateListenerAdditionalCertResponse.cs" />
     <Compile Include="V20250115\Models\CreateListenerRequest.cs" />
     <Compile Include="V20250115\Models\CreateListenerResponse.cs" />
     <Compile Include="V20250115\Models\DeleteAccelerateAreasRequest.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="V20250115\Models\DeleteForwardingRuleResponse.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteListenerAdditionalCertRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteListenerAdditionalCertResponse.cs" />
     <Compile Include="V20250115\Models\DeleteListenerRequest.cs" />
     <Compile Include="V20250115\Models\DeleteListenerResponse.cs" />
     <Compile Include="V20250115\Models\DescribeAccelerateAreasRequest.cs" />
@@ -117,6 +121,8 @@
     <Compile Include="V20250115\Models\OriginHeader.cs" />
     <Compile Include="V20250115\Models\PortOverride.cs" />
     <Compile Include="V20250115\Models\PortRanges.cs" />
+    <Compile Include="V20250115\Models\ReplaceListenerAdditionalCertRequest.cs" />
+    <Compile Include="V20250115\Models\ReplaceListenerAdditionalCertResponse.cs" />
     <Compile Include="V20250115\Models\ResponseHeaders.cs" />
     <Compile Include="V20250115\Models\RuleAction.cs" />
     <Compile Include="V20250115\Models\RuleCondition.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Ctem.V20231128.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 企业名称模糊搜索
+        /// <p>企业名称模糊搜索</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? UnStructuredStatus{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>关联的识别模板信息</p>
         /// </summary>
         [JsonProperty("ComplianceRelations")]
         public DspmIdentifyRefComplianceInfo[] ComplianceRelations{ get; set; }

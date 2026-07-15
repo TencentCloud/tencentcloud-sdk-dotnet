@@ -30,6 +30,24 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
+        /// <summary>
+        /// <p>JWT认证配置</p>
+        /// </summary>
+        [JsonProperty("JWTAuthConfig")]
+        public AIGWJWTAuthPluginConfig JWTAuthConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OAuth2认证配置</p>
+        /// </summary>
+        [JsonProperty("OAuthAuthConfig")]
+        public AIGWOAuthAuthPluginConfig OAuthAuthConfig{ get; set; }
+
+        /// <summary>
+        /// <p>OIDC认证配置</p>
+        /// </summary>
+        [JsonProperty("OIDCAuthConfig")]
+        public AIGWOIDCAuthPluginConfig OIDCAuthConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Cngw.V20230418.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
+            this.SetParamObj(map, prefix + "JWTAuthConfig.", this.JWTAuthConfig);
+            this.SetParamObj(map, prefix + "OAuthAuthConfig.", this.OAuthAuthConfig);
+            this.SetParamObj(map, prefix + "OIDCAuthConfig.", this.OIDCAuthConfig);
         }
     }
 }

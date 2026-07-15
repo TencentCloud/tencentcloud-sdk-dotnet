@@ -61,13 +61,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? CategoryGrade{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>关联的数据项信息</p>
         /// </summary>
         [JsonProperty("RuleRelations")]
         public DspmIdentifyComplianceRuleRelation[] RuleRelations{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>子节点信息</p>
         /// </summary>
         [JsonProperty("Children")]
         public DspmIdentifyComplianceCategoryRelation[] Children{ get; set; }

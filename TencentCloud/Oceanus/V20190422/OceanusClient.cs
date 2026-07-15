@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 创建Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateOceanusClusterRequest"/></param>
+        /// <returns><see cref="CreateOceanusClusterResponse"/></returns>
+        public Task<CreateOceanusClusterResponse> CreateOceanusCluster(CreateOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<CreateOceanusClusterResponse>(req, "CreateOceanusCluster");
+        }
+
+        /// <summary>
+        /// 创建Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateOceanusClusterRequest"/></param>
+        /// <returns><see cref="CreateOceanusClusterResponse"/></returns>
+        public CreateOceanusClusterResponse CreateOceanusClusterSync(CreateOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<CreateOceanusClusterResponse>(req, "CreateOceanusCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建资源接口
         /// </summary>
         /// <param name="req"><see cref="CreateResourceRequest"/></param>
@@ -344,6 +365,27 @@ namespace TencentCloud.Oceanus.V20190422
         public DeleteJobsResponse DeleteJobsSync(DeleteJobsRequest req)
         {
             return InternalRequestAsync<DeleteJobsResponse>(req, "DeleteJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOceanusClusterRequest"/></param>
+        /// <returns><see cref="DeleteOceanusClusterResponse"/></returns>
+        public Task<DeleteOceanusClusterResponse> DeleteOceanusCluster(DeleteOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteOceanusClusterResponse>(req, "DeleteOceanusCluster");
+        }
+
+        /// <summary>
+        /// 销毁Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOceanusClusterRequest"/></param>
+        /// <returns><see cref="DeleteOceanusClusterResponse"/></returns>
+        public DeleteOceanusClusterResponse DeleteOceanusClusterSync(DeleteOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteOceanusClusterResponse>(req, "DeleteOceanusCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -952,6 +994,27 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 续费Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewOceanusClusterRequest"/></param>
+        /// <returns><see cref="RenewOceanusClusterResponse"/></returns>
+        public Task<RenewOceanusClusterResponse> RenewOceanusCluster(RenewOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<RenewOceanusClusterResponse>(req, "RenewOceanusCluster");
+        }
+
+        /// <summary>
+        /// 续费Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewOceanusClusterRequest"/></param>
+        /// <returns><see cref="RenewOceanusClusterResponse"/></returns>
+        public RenewOceanusClusterResponse RenewOceanusClusterSync(RenewOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<RenewOceanusClusterResponse>(req, "RenewOceanusCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量启动或者恢复作业，批量操作数量上限20
         /// </summary>
         /// <param name="req"><see cref="RunJobsRequest"/></param>
@@ -990,6 +1053,27 @@ namespace TencentCloud.Oceanus.V20190422
         public RunSqlGatewayStatementResponse RunSqlGatewayStatementSync(RunSqlGatewayStatementRequest req)
         {
             return InternalRequestAsync<RunSqlGatewayStatementResponse>(req, "RunSqlGatewayStatement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 扩缩容Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOceanusClusterRequest"/></param>
+        /// <returns><see cref="ScaleOceanusClusterResponse"/></returns>
+        public Task<ScaleOceanusClusterResponse> ScaleOceanusCluster(ScaleOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<ScaleOceanusClusterResponse>(req, "ScaleOceanusCluster");
+        }
+
+        /// <summary>
+        /// 扩缩容Oceanus集群
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOceanusClusterRequest"/></param>
+        /// <returns><see cref="ScaleOceanusClusterResponse"/></returns>
+        public ScaleOceanusClusterResponse ScaleOceanusClusterSync(ScaleOceanusClusterRequest req)
+        {
+            return InternalRequestAsync<ScaleOceanusClusterResponse>(req, "ScaleOceanusCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

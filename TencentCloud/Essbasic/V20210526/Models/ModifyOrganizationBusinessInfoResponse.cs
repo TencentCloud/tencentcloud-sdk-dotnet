@@ -43,13 +43,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public ulong? UnfinishedCount{ get; set; }
 
         /// <summary>
-        /// <p>SaaS 企业下未完结合同的 flowId 列表。</p>
+        /// <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+        /// <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
         /// </summary>
         [JsonProperty("ChannelFlowIds")]
         public string[] ChannelFlowIds{ get; set; }

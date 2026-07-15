@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1462</VersionPrefix>
+    <VersionPrefix>3.0.1463</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1115,6 +1115,8 @@
     <Compile Include="V20180717\Models\TransitionOperation.cs" />
     <Compile Include="V20180717\Models\TransitionOpertion.cs" />
     <Compile Include="V20180717\Models\TrtcRecordInfo.cs" />
+    <Compile Include="V20180717\Models\UpdateAigcApiTokenRequest.cs" />
+    <Compile Include="V20180717\Models\UpdateAigcApiTokenResponse.cs" />
     <Compile Include="V20180717\Models\UrlSignatureAuthPolicy.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />

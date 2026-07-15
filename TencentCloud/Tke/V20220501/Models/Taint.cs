@@ -25,6 +25,12 @@ namespace TencentCloud.Tke.V20220501.Models
     {
         
         /// <summary>
+        /// Taint的Effect
+        /// </summary>
+        [JsonProperty("Effect")]
+        public string Effect{ get; set; }
+
+        /// <summary>
         /// Taint的Key
         /// </summary>
         [JsonProperty("Key")]
@@ -36,21 +42,15 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
-        /// <summary>
-        /// Taint的Effect
-        /// </summary>
-        [JsonProperty("Effect")]
-        public string Effect{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Effect", this.Effect);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamSimple(map, prefix + "Effect", this.Effect);
         }
     }
 }

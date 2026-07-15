@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1462";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -241,6 +241,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiDramaTaskRequest"/></param>
+        /// <returns><see cref="CreateAiDramaTaskResponse"/></returns>
+        public Task<CreateAiDramaTaskResponse> CreateAiDramaTask(CreateAiDramaTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask");
+        }
+
+        /// <summary>
+        /// Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiDramaTaskRequest"/></param>
+        /// <returns><see cref="CreateAiDramaTaskResponse"/></returns>
+        public CreateAiDramaTaskResponse CreateAiDramaTaskSync(CreateAiDramaTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -949,6 +970,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTaskSync(CreateVideoDatabaseEntryTaskRequest req)
         {
             return InternalRequestAsync<CreateVideoDatabaseEntryTaskResponse>(req, "CreateVideoDatabaseEntryTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建AIGC转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public Task<CreateVideoRedrawTaskResponse> CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask");
+        }
+
+        /// <summary>
+        /// 创建AIGC转绘任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public CreateVideoRedrawTaskResponse CreateVideoRedrawTaskSync(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

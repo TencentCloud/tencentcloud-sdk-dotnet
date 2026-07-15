@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -793,6 +793,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取课堂的所有编辑版本（含源版本）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEditVersionsRequest"/></param>
+        /// <returns><see cref="DescribeEditVersionsResponse"/></returns>
+        public Task<DescribeEditVersionsResponse> DescribeEditVersions(DescribeEditVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeEditVersionsResponse>(req, "DescribeEditVersions");
+        }
+
+        /// <summary>
+        /// 获取课堂的所有编辑版本（含源版本）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEditVersionsRequest"/></param>
+        /// <returns><see cref="DescribeEditVersionsResponse"/></returns>
+        public DescribeEditVersionsResponse DescribeEditVersionsSync(DescribeEditVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeEditVersionsResponse>(req, "DescribeEditVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口用于获取群组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>
@@ -1284,6 +1305,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取剪辑信令回放token
+        /// </summary>
+        /// <param name="req"><see cref="GetEditVersionTokenRequest"/></param>
+        /// <returns><see cref="GetEditVersionTokenResponse"/></returns>
+        public Task<GetEditVersionTokenResponse> GetEditVersionToken(GetEditVersionTokenRequest req)
+        {
+            return InternalRequestAsync<GetEditVersionTokenResponse>(req, "GetEditVersionToken");
+        }
+
+        /// <summary>
+        /// 获取剪辑信令回放token
+        /// </summary>
+        /// <param name="req"><see cref="GetEditVersionTokenRequest"/></param>
+        /// <returns><see cref="GetEditVersionTokenResponse"/></returns>
+        public GetEditVersionTokenResponse GetEditVersionTokenSync(GetEditVersionTokenRequest req)
+        {
+            return InternalRequestAsync<GetEditVersionTokenResponse>(req, "GetEditVersionToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取信令录制回放token，用于回放指定课堂时鉴权
         /// </summary>
         /// <param name="req"><see cref="GetPlaybackTokenRequest"/></param>
@@ -1679,6 +1721,27 @@ namespace TencentCloud.Lcic.V20220817
         public SetAppCustomContentResponse SetAppCustomContentSync(SetAppCustomContentRequest req)
         {
             return InternalRequestAsync<SetAppCustomContentResponse>(req, "SetAppCustomContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 切换课堂的主编辑版本
+        /// </summary>
+        /// <param name="req"><see cref="SetMainEditVersionRequest"/></param>
+        /// <returns><see cref="SetMainEditVersionResponse"/></returns>
+        public Task<SetMainEditVersionResponse> SetMainEditVersion(SetMainEditVersionRequest req)
+        {
+            return InternalRequestAsync<SetMainEditVersionResponse>(req, "SetMainEditVersion");
+        }
+
+        /// <summary>
+        /// 切换课堂的主编辑版本
+        /// </summary>
+        /// <param name="req"><see cref="SetMainEditVersionRequest"/></param>
+        /// <returns><see cref="SetMainEditVersionResponse"/></returns>
+        public SetMainEditVersionResponse SetMainEditVersionSync(SetMainEditVersionRequest req)
+        {
+            return InternalRequestAsync<SetMainEditVersionResponse>(req, "SetMainEditVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

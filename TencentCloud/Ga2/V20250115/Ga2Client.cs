@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Ga2.V20250115
         }
 
         /// <summary>
+        /// 添加扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="CreateListenerAdditionalCertResponse"/></returns>
+        public Task<CreateListenerAdditionalCertResponse> CreateListenerAdditionalCert(CreateListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<CreateListenerAdditionalCertResponse>(req, "CreateListenerAdditionalCert");
+        }
+
+        /// <summary>
+        /// 添加扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="CreateListenerAdditionalCertResponse"/></returns>
+        public CreateListenerAdditionalCertResponse CreateListenerAdditionalCertSync(CreateListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<CreateListenerAdditionalCertResponse>(req, "CreateListenerAdditionalCert")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除加速地域
         /// </summary>
         /// <param name="req"><see cref="DeleteAccelerateAreasRequest"/></param>
@@ -302,6 +323,27 @@ namespace TencentCloud.Ga2.V20250115
         public DeleteListenerResponse DeleteListenerSync(DeleteListenerRequest req)
         {
             return InternalRequestAsync<DeleteListenerResponse>(req, "DeleteListener")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="DeleteListenerAdditionalCertResponse"/></returns>
+        public Task<DeleteListenerAdditionalCertResponse> DeleteListenerAdditionalCert(DeleteListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<DeleteListenerAdditionalCertResponse>(req, "DeleteListenerAdditionalCert");
+        }
+
+        /// <summary>
+        /// 删除扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="DeleteListenerAdditionalCertResponse"/></returns>
+        public DeleteListenerAdditionalCertResponse DeleteListenerAdditionalCertSync(DeleteListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<DeleteListenerAdditionalCertResponse>(req, "DeleteListenerAdditionalCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +659,27 @@ namespace TencentCloud.Ga2.V20250115
         public ModifyListenerResponse ModifyListenerSync(ModifyListenerRequest req)
         {
             return InternalRequestAsync<ModifyListenerResponse>(req, "ModifyListener")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 替换扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="ReplaceListenerAdditionalCertResponse"/></returns>
+        public Task<ReplaceListenerAdditionalCertResponse> ReplaceListenerAdditionalCert(ReplaceListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<ReplaceListenerAdditionalCertResponse>(req, "ReplaceListenerAdditionalCert");
+        }
+
+        /// <summary>
+        /// 替换扩展证书
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceListenerAdditionalCertRequest"/></param>
+        /// <returns><see cref="ReplaceListenerAdditionalCertResponse"/></returns>
+        public ReplaceListenerAdditionalCertResponse ReplaceListenerAdditionalCertSync(ReplaceListenerAdditionalCertRequest req)
+        {
+            return InternalRequestAsync<ReplaceListenerAdditionalCertResponse>(req, "ReplaceListenerAdditionalCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

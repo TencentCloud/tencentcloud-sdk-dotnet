@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1463";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,31 @@ namespace TencentCloud.Iotexplorer.V20190423
         public BindTWeTalkAIBotResponse BindTWeTalkAIBotSync(BindTWeTalkAIBotRequest req)
         {
             return InternalRequestAsync<BindTWeTalkAIBotResponse>(req, "BindTWeTalkAIBot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定智能体到产品或设备
+        /// - `BindingScope=product` 时，`DeviceName` 必须为空。
+        /// - `BindingScope=device` 时，`DeviceName` 必填。
+        /// </summary>
+        /// <param name="req"><see cref="BindTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="BindTWeTalkAgentResponse"/></returns>
+        public Task<BindTWeTalkAgentResponse> BindTWeTalkAgent(BindTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<BindTWeTalkAgentResponse>(req, "BindTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 绑定智能体到产品或设备
+        /// - `BindingScope=product` 时，`DeviceName` 必须为空。
+        /// - `BindingScope=device` 时，`DeviceName` 必填。
+        /// </summary>
+        /// <param name="req"><see cref="BindTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="BindTWeTalkAgentResponse"/></returns>
+        public BindTWeTalkAgentResponse BindTWeTalkAgentSync(BindTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<BindTWeTalkAgentResponse>(req, "BindTWeTalkAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +961,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 新增TWeTalk智能体。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="CreateTWeTalkAgentResponse"/></returns>
+        public Task<CreateTWeTalkAgentResponse> CreateTWeTalkAgent(CreateTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<CreateTWeTalkAgentResponse>(req, "CreateTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 新增TWeTalk智能体。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="CreateTWeTalkAgentResponse"/></returns>
+        public CreateTWeTalkAgentResponse CreateTWeTalkAgentSync(CreateTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<CreateTWeTalkAgentResponse>(req, "CreateTWeTalkAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于配置TWeTalk服务连接产品配置信息。
         /// </summary>
         /// <param name="req"><see cref="CreateTWeTalkProductConfigRequest"/></param>
@@ -1310,6 +1356,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBotSync(DeleteTWeTalkAIBotRequest req)
         {
             return InternalRequestAsync<DeleteTWeTalkAIBotResponse>(req, "DeleteTWeTalkAIBot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于删除TWeTalk智能体
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="DeleteTWeTalkAgentResponse"/></returns>
+        public Task<DeleteTWeTalkAgentResponse> DeleteTWeTalkAgent(DeleteTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeTalkAgentResponse>(req, "DeleteTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 用于删除TWeTalk智能体
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="DeleteTWeTalkAgentResponse"/></returns>
+        public DeleteTWeTalkAgentResponse DeleteTWeTalkAgentSync(DeleteTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeTalkAgentResponse>(req, "DeleteTWeTalkAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2717,6 +2784,69 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeTWeTalkAIBotResponse DescribeTWeTalkAIBotSync(DescribeTWeTalkAIBotRequest req)
         {
             return InternalRequestAsync<DescribeTWeTalkAIBotResponse>(req, "DescribeTWeTalkAIBot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户查询TWeTalk智能体详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentResponse"/></returns>
+        public Task<DescribeTWeTalkAgentResponse> DescribeTWeTalkAgent(DescribeTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentResponse>(req, "DescribeTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 用户查询TWeTalk智能体详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentResponse"/></returns>
+        public DescribeTWeTalkAgentResponse DescribeTWeTalkAgentSync(DescribeTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentResponse>(req, "DescribeTWeTalkAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询智能体绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentBindingRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentBindingResponse"/></returns>
+        public Task<DescribeTWeTalkAgentBindingResponse> DescribeTWeTalkAgentBinding(DescribeTWeTalkAgentBindingRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentBindingResponse>(req, "DescribeTWeTalkAgentBinding");
+        }
+
+        /// <summary>
+        /// 查询智能体绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentBindingRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentBindingResponse"/></returns>
+        public DescribeTWeTalkAgentBindingResponse DescribeTWeTalkAgentBindingSync(DescribeTWeTalkAgentBindingRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentBindingResponse>(req, "DescribeTWeTalkAgentBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询智能体列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentListRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentListResponse"/></returns>
+        public Task<DescribeTWeTalkAgentListResponse> DescribeTWeTalkAgentList(DescribeTWeTalkAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentListResponse>(req, "DescribeTWeTalkAgentList");
+        }
+
+        /// <summary>
+        /// 分页查询智能体列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeTalkAgentListRequest"/></param>
+        /// <returns><see cref="DescribeTWeTalkAgentListResponse"/></returns>
+        public DescribeTWeTalkAgentListResponse DescribeTWeTalkAgentListSync(DescribeTWeTalkAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeTalkAgentListResponse>(req, "DescribeTWeTalkAgentList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4195,6 +4325,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 修改TWeTalk智能体
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="ModifyTWeTalkAgentResponse"/></returns>
+        public Task<ModifyTWeTalkAgentResponse> ModifyTWeTalkAgent(ModifyTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeTalkAgentResponse>(req, "ModifyTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 修改TWeTalk智能体
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="ModifyTWeTalkAgentResponse"/></returns>
+        public ModifyTWeTalkAgentResponse ModifyTWeTalkAgentSync(ModifyTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeTalkAgentResponse>(req, "ModifyTWeTalkAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于修改TWeTalk服务连接产品配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyTWeTalkProductConfigRequest"/></param>
@@ -4745,6 +4896,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public UnbindTWeTalkAIBotResponse UnbindTWeTalkAIBotSync(UnbindTWeTalkAIBotRequest req)
         {
             return InternalRequestAsync<UnbindTWeTalkAIBotResponse>(req, "UnbindTWeTalkAIBot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑产品或设备上的智能体
+        /// </summary>
+        /// <param name="req"><see cref="UnbindTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="UnbindTWeTalkAgentResponse"/></returns>
+        public Task<UnbindTWeTalkAgentResponse> UnbindTWeTalkAgent(UnbindTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<UnbindTWeTalkAgentResponse>(req, "UnbindTWeTalkAgent");
+        }
+
+        /// <summary>
+        /// 解绑产品或设备上的智能体
+        /// </summary>
+        /// <param name="req"><see cref="UnbindTWeTalkAgentRequest"/></param>
+        /// <returns><see cref="UnbindTWeTalkAgentResponse"/></returns>
+        public UnbindTWeTalkAgentResponse UnbindTWeTalkAgentSync(UnbindTWeTalkAgentRequest req)
+        {
+            return InternalRequestAsync<UnbindTWeTalkAgentResponse>(req, "UnbindTWeTalkAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -91,7 +91,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MetadataRiskURL{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>凭据 Skill 安装状态</p>
         /// </summary>
         [JsonProperty("SkillState")]
         public SkillState SkillState{ get; set; }

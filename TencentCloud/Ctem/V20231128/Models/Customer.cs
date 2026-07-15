@@ -175,6 +175,13 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("PortScanQps")]
         public long? PortScanQps{ get; set; }
 
+        /// <summary>
+        /// <p>扫描优先级配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScanPriority")]
+        public ScanPriorityDisplay ScanPriority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "EnableGroupMemberDiscovered", this.EnableGroupMemberDiscovered);
             this.SetParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
             this.SetParamSimple(map, prefix + "PortScanQps", this.PortScanQps);
+            this.SetParamObj(map, prefix + "ScanPriority.", this.ScanPriority);
         }
     }
 }

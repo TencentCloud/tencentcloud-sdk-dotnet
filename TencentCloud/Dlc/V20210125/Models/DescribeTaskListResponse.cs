@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 任务对象列表。
+        /// <p>任务对象列表。</p>
         /// </summary>
         [JsonProperty("TaskList")]
         public TaskFullRespInfo[] TaskList{ get; set; }
 
         /// <summary>
-        /// 实例总数。
+        /// <p>实例总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

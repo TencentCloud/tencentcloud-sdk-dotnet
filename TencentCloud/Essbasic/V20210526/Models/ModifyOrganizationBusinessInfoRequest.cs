@@ -60,6 +60,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
 
+        /// <summary>
+        /// <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p>
+        /// </summary>
+        [JsonProperty("NewLegalMobile")]
+        public string NewLegalMobile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "OrganizationType", this.OrganizationType);
             this.SetParamSimple(map, prefix + "LegalName", this.LegalName);
+            this.SetParamSimple(map, prefix + "NewLegalMobile", this.NewLegalMobile);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组信息数组
+        /// <p>安全组信息数组</p>
         /// </summary>
         [JsonProperty("SecurityGroupSet")]
         public SecurityGroup[] SecurityGroupSet{ get; set; }

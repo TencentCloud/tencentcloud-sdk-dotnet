@@ -54,6 +54,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("LatencyPriorityConfig")]
         public AIGWLatencyPriorityConfig LatencyPriorityConfig{ get; set; }
 
+        /// <summary>
+        /// <p>前缀缓存感知路由</p>
+        /// </summary>
+        [JsonProperty("CacheAwareRouteConfig")]
+        public AIGWCacheAwareRouteConfig CacheAwareRouteConfig{ get; set; }
+
+        /// <summary>
+        /// <p>token 长度路</p>
+        /// </summary>
+        [JsonProperty("TokenLengthRouteConfig")]
+        public AIGWTokenLengthRoute TokenLengthRouteConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
             this.SetParamObj(map, prefix + "IntentRouteConfig.", this.IntentRouteConfig);
             this.SetParamObj(map, prefix + "LatencyPriorityConfig.", this.LatencyPriorityConfig);
+            this.SetParamObj(map, prefix + "CacheAwareRouteConfig.", this.CacheAwareRouteConfig);
+            this.SetParamObj(map, prefix + "TokenLengthRouteConfig.", this.TokenLengthRouteConfig);
         }
     }
 }

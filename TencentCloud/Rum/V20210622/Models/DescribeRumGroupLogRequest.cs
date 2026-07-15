@@ -25,49 +25,49 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 排序方式  desc  asc（必填）
+        /// <p>排序方式  desc  asc（必填）</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 开始时间（必填）
+        /// <p>开始时间（必填）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 单次查询返回的原始日志条数，最大值为100（必填）
+        /// <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 页数，第几页
+        /// <p>页数，第几页（注意：该字段已废弃！）</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+        /// <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 结束时间（必填）
+        /// <p>结束时间（必填）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 项目ID（必填）
+        /// <p>项目ID（必填）</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 聚合字段
+        /// <p>聚合字段</p>
         /// </summary>
         [JsonProperty("GroupField")]
         public string GroupField{ get; set; }

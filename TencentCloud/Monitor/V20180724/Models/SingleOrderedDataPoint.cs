@@ -25,28 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例对象维度组合	
+        /// <p>实例对象维度组合</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dimensions")]
         public Dimension[] Dimensions{ get; set; }
 
         /// <summary>
-        /// 监控数据值
+        /// <p>监控数据值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }
 
         /// <summary>
-        /// 监控数据时间戳
+        /// <p>监控数据时间戳</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// 排序序号
+        /// <p>排序序号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Order")]

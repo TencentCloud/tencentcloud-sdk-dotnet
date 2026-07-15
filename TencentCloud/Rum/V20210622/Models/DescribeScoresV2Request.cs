@@ -25,31 +25,31 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 项目 ID 列表
+        /// <p>项目 ID 列表</p>
         /// </summary>
         [JsonProperty("IDList")]
         public long?[] IDList{ get; set; }
 
         /// <summary>
-        /// 查询粒度，hour 或 day
+        /// <p>查询粒度，hour 或 day</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 环境
+        /// <p>环境</p>
         /// </summary>
         [JsonProperty("Env")]
         public string Env{ get; set; }

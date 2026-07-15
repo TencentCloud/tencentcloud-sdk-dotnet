@@ -150,6 +150,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("ScanRateAckChecklist")]
         public string[] ScanRateAckChecklist{ get; set; }
 
+        /// <summary>
+        /// <p>扫描优先级配置</p>
+        /// </summary>
+        [JsonProperty("ScanPriority")]
+        public ScanPriorityReq ScanPriority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
             this.SetParamSimple(map, prefix + "HighRiskAck", this.HighRiskAck);
             this.SetParamArraySimple(map, prefix + "ScanRateAckChecklist.", this.ScanRateAckChecklist);
+            this.SetParamObj(map, prefix + "ScanPriority.", this.ScanPriority);
         }
     }
 }

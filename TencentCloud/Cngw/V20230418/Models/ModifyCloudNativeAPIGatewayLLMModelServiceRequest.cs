@@ -138,6 +138,36 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>参数改写规则</p>
+        /// </summary>
+        [JsonProperty("ModelRewriteRules")]
+        public AIGWModelRewriteRule[] ModelRewriteRules{ get; set; }
+
+        /// <summary>
+        /// <p>外部服务来源ID</p>
+        /// </summary>
+        [JsonProperty("ExternalInstanceId")]
+        public string ExternalInstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>其他参数</p>
+        /// </summary>
+        [JsonProperty("ExtParams")]
+        public KeyValue[] ExtParams{ get; set; }
+
+        /// <summary>
+        /// <p>密钥轮转开关</p>
+        /// </summary>
+        [JsonProperty("KeyRotationEnabled")]
+        public bool? KeyRotationEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>密钥轮转周期</p><p>单位：天数</p>
+        /// </summary>
+        [JsonProperty("KeyRotationPeriodDays")]
+        public ulong? KeyRotationPeriodDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +193,11 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "SNI", this.SNI);
             this.SetParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "ModelRewriteRules.", this.ModelRewriteRules);
+            this.SetParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+            this.SetParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
+            this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
+            this.SetParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
         }
     }
 }
