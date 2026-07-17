@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+        /// <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }

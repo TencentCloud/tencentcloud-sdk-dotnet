@@ -25,19 +25,19 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 单次详情数据
+        /// <p>单次详情数据</p>
         /// </summary>
         [JsonProperty("DataSet")]
         public DetailedSingleDataDefine[] DataSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的数据总数
+        /// <p>符合条件的数据总数</p>
         /// </summary>
         [JsonProperty("TotalNumber")]
         public long? TotalNumber{ get; set; }
 
         /// <summary>
-        /// es scroll查询的id
+        /// <p>es scroll查询的id</p>
         /// </summary>
         [JsonProperty("ScrollID")]
         public string ScrollID{ get; set; }

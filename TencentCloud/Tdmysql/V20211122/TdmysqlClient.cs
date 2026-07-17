@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1460";
+       private const string sdkVersion = "SDK_NET_3.0.1464";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBEngines）用于获取DB引擎版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDBEnginesResponse"/></returns>
+        public Task<DescribeDBEnginesResponse> DescribeDBEngines(DescribeDBEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBEnginesResponse>(req, "DescribeDBEngines");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBEngines）用于获取DB引擎版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDBEnginesResponse"/></returns>
+        public DescribeDBEnginesResponse DescribeDBEnginesSync(DescribeDBEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBEnginesResponse>(req, "DescribeDBEngines")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -52,6 +52,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// 上报方式，已弃用
         /// </summary>
         [JsonProperty("ReportMethod")]
+        [System.Obsolete]
         public string ReportMethod{ get; set; }
 
 

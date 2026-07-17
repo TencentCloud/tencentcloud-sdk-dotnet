@@ -25,10 +25,16 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 需要编辑的规则数组
+        /// <p>需要编辑的规则数组</p>
         /// </summary>
         [JsonProperty("Rules")]
         public VpcRuleItem[] Rules{ get; set; }
+
+        /// <summary>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         }
     }
 }

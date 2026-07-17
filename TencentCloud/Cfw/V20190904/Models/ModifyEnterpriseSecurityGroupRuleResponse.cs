@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 状态值，0：编辑成功，非0：编辑失败
+        /// <p>状态值，0：编辑成功，非0：编辑失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 编辑后新生成规则的Id
+        /// <p>编辑后新生成规则的Id</p>
         /// </summary>
         [JsonProperty("NewRuleUuid")]
         public ulong? NewRuleUuid{ get; set; }

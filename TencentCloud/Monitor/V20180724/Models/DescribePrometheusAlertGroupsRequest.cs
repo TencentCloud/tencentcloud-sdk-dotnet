@@ -25,36 +25,40 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID
+        /// <p>Prometheus 实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100
+        /// <p>返回数量，默认为 20，最大值为 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0
+        /// <p>偏移量，默认为 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 告警分组ID，形如alert-xxxx。
-        /// 查询给定ID的告警分组
+        /// <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 告警分组名称。
-        /// 查询名称中包含给定字符串的告警分组
+        /// <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
+
+        /// <summary>
+        /// <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+        /// </summary>
+        [JsonProperty("Labels")]
+        public PrometheusRuleKV[] Labels{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
 }

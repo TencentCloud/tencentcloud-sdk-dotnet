@@ -25,34 +25,40 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+        /// <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
+        /// <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// 购买时长。单位：月。必须大于 0。
+        /// <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
+        /// <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
         /// </summary>
         [JsonProperty("CreditOrToken")]
         public long? CreditOrToken{ get; set; }
 
         /// <summary>
-        /// 是否开启自动续费。默认不开启。
+        /// <p>是否开启自动续费。默认不开启。</p>
         /// </summary>
         [JsonProperty("EnableAutoRenew")]
         public bool? EnableAutoRenew{ get; set; }
+
+        /// <summary>
+        /// <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+        /// </summary>
+        [JsonProperty("TeamId")]
+        public string TeamId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "CreditOrToken", this.CreditOrToken);
             this.SetParamSimple(map, prefix + "EnableAutoRenew", this.EnableAutoRenew);
+            this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
         }
     }
 }

@@ -25,62 +25,55 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+        /// <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// create 表示开始一次升级任务
-        /// pause 表示停止任务
-        /// resume表示继续任务
-        /// abort表示终止任务
+        /// <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 升级类型，只有Operation是create需要设置
-        /// reset 大版本重装升级
-        /// hot 小版本热升级
-        /// major 大版本原地升级
+        /// <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-        /// ](https://cloud.tencent.com/document/api/457/50366) 获取
+        /// <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
+        /// <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
         /// </summary>
         [JsonProperty("ResetParam")]
         public UpgradeNodeResetParam ResetParam{ get; set; }
 
         /// <summary>
-        /// 是否忽略节点升级前检查，默认值 false
+        /// <p>是否忽略节点升级前检查，默认值 false</p>
         /// </summary>
         [JsonProperty("SkipPreCheck")]
         public bool? SkipPreCheck{ get; set; }
 
         /// <summary>
-        /// 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+        /// <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
         /// </summary>
         [JsonProperty("MaxNotReadyPercent")]
         public float? MaxNotReadyPercent{ get; set; }
 
         /// <summary>
-        /// 是否升级节点运行时，默认false不升级
+        /// <p>是否升级节点运行时，默认false不升级</p>
         /// </summary>
         [JsonProperty("UpgradeRunTime")]
         public bool? UpgradeRunTime{ get; set; }
 
         /// <summary>
-        /// 支持多个节点并行升级，默认值为 1，最大并行数为15
+        /// <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
         /// </summary>
         [JsonProperty("Concurrent")]
         public long? Concurrent{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3D80EA95-07CB-3BD7-AB22-6D1BCDBA6B91}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1460</VersionPrefix>
+    <VersionPrefix>3.0.1464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,7 @@
     <Compile Include="V20211122\Models\CreateDBSBackupResponse.cs" />
     <Compile Include="V20211122\Models\CreateUsersRequest.cs" />
     <Compile Include="V20211122\Models\CreateUsersResponse.cs" />
+    <Compile Include="V20211122\Models\DBEngineInfo.cs" />
     <Compile Include="V20211122\Models\DBParamValue.cs" />
     <Compile Include="V20211122\Models\DataBackupStatisticsModel.cs" />
     <Compile Include="V20211122\Models\Database.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="V20211122\Models\DeleteDBSBackupSetsResponse.cs" />
     <Compile Include="V20211122\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20211122\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBEnginesRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBEnginesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBInstanceDetailRequest.cs" />
     <Compile Include="V20211122\Models\DescribeDBInstanceDetailResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBInstancesRequest.cs" />

@@ -25,91 +25,91 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// cluster id
+        /// <p>cluster id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+        /// <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
         /// </summary>
         [JsonProperty("AutoScalingGroupPara")]
         public string AutoScalingGroupPara{ get; set; }
 
         /// <summary>
-        /// LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+        /// <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
         /// </summary>
         [JsonProperty("LaunchConfigurePara")]
         public string LaunchConfigurePara{ get; set; }
 
         /// <summary>
-        /// InstanceAdvancedSettings
+        /// <p>InstanceAdvancedSettings</p>
         /// </summary>
         [JsonProperty("InstanceAdvancedSettings")]
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// 是否启用自动伸缩
+        /// <p>是否启用自动伸缩</p>
         /// </summary>
         [JsonProperty("EnableAutoscale")]
         public bool? EnableAutoscale{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// <p>节点池名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Labels标签
+        /// <p>Labels标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// Taints互斥
+        /// <p>Taints互斥</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 节点Annotation 列表
+        /// <p>节点Annotation 列表</p>
         /// </summary>
         [JsonProperty("Annotations")]
         public AnnotationValue[] Annotations{ get; set; }
 
         /// <summary>
-        /// 节点池纬度运行时类型及版本
+        /// <p>节点池纬度运行时类型及版本</p>
         /// </summary>
         [JsonProperty("ContainerRuntime")]
         public string ContainerRuntime{ get; set; }
 
         /// <summary>
-        /// 运行时版本
+        /// <p>运行时版本</p>
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+        /// <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p>
         /// </summary>
         [JsonProperty("NodePoolOs")]
         public string NodePoolOs{ get; set; }
 
         /// <summary>
-        /// 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+        /// <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// 资源标签
+        /// <p>资源标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// <p>删除保护开关</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }

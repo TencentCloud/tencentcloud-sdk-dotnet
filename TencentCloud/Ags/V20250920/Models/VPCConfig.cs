@@ -25,13 +25,13 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// VPC子网ID列表
+        /// <p>VPC子网ID列表</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 安全组ID列表
+        /// <p>安全组ID列表</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

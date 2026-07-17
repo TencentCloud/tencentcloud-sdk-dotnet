@@ -31,6 +31,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         public SecurityGroupRule[] Data{ get; set; }
 
         /// <summary>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
         /// <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
         /// </summary>
         [JsonProperty("Type")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "IsDelay", this.IsDelay);

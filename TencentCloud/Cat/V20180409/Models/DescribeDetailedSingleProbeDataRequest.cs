@@ -25,118 +25,91 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 开始时间戳（毫秒级）
+        /// <p>开始时间戳（毫秒级）</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public ulong? BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳（毫秒级）
+        /// <p>结束时间戳（毫秒级）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 任务类型
-        /// AnalyzeTaskType_Network：网络质量
-        /// AnalyzeTaskType_Browse：页面性能
-        /// AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-        /// AnalyzeTaskType_Transport：端口性能
-        /// AnalyzeTaskType_MediaStream：音视频体验
+        /// <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 待排序字段
-        /// 可以填写 ProbeTime 拨测时间排序
-        /// 也可填写SelectedFields 中的选中字段
+        /// <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// true表示升序
+        /// <p>true表示升序</p>
         /// </summary>
         [JsonProperty("Ascending")]
         public bool? Ascending{ get; set; }
 
         /// <summary>
-        /// 选中字段，如ProbeTime、TransferTime、TransferSize等。
+        /// <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
         /// </summary>
         [JsonProperty("SelectedFields")]
         public string[] SelectedFields{ get; set; }
 
         /// <summary>
-        /// 起始取数位置
+        /// <p>起始取数位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 取数数量
+        /// <p>取数数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// </summary>
         [JsonProperty("TaskID")]
         public string[] TaskID{ get; set; }
 
         /// <summary>
-        /// 拨测点运营商
-        /// 	
-        /// 这里实际按拨测结果中的运营商来填写即可
-        /// 
-        /// 电信：中国电信
-        /// 移动：中国移动
-        /// 联通：中国联通
+        /// <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
         /// </summary>
         [JsonProperty("Operators")]
         public string[] Operators{ get; set; }
 
         /// <summary>
-        /// 拨测点地区
-        /// 	
-        /// 这里实际按拨测结果中的地区来填写即可
-        /// 
-        /// 国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-        /// 
-        /// 境外一般是国家名，如澳大利亚、新加坡
+        /// <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
         /// </summary>
         [JsonProperty("Districts")]
         public string[] Districts{ get; set; }
 
         /// <summary>
-        /// 错误类型
+        /// <p>错误类型</p>
         /// </summary>
         [JsonProperty("ErrorTypes")]
         public string[] ErrorTypes{ get; set; }
 
         /// <summary>
-        /// 城市
-        /// 这里实际按拨测结果中的城市来填写即可
-        /// 
-        /// 示例：
-        /// 
-        /// 深圳市
-        /// 武汉市
-        /// 首尔
-        /// 多伦多
+        /// <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
         /// </summary>
         [JsonProperty("City")]
         public string[] City{ get; set; }
 
         /// <summary>
-        /// es scroll查询id
+        /// <p>es scroll查询id</p>
         /// </summary>
         [JsonProperty("ScrollID")]
         public string ScrollID{ get; set; }
 
         /// <summary>
-        /// 详情数据下载
+        /// <p>详情数据下载</p>
         /// </summary>
         [JsonProperty("QueryFlag")]
         public string QueryFlag{ get; set; }

@@ -25,19 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 非自定义类型规则列表
+        /// <p>非自定义类型规则列表</p>
         /// </summary>
         [JsonProperty("Rules")]
         public BanAndAllowRule[] Rules{ get; set; }
 
         /// <summary>
-        /// RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+        /// <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
         /// <summary>
-        /// 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
         /// </summary>
         [JsonProperty("CoverDuplicate")]
         public long? CoverDuplicate{ get; set; }
@@ -50,6 +56,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
         }
     }

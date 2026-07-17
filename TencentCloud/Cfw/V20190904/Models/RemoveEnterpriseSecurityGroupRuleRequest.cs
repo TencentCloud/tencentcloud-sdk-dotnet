@@ -25,16 +25,22 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则的uuid，可通过查询规则列表获取
+        /// <p>规则的uuid，可通过查询规则列表获取</p>
         /// </summary>
         [JsonProperty("RuleUuid")]
         public long? RuleUuid{ get; set; }
 
         /// <summary>
-        /// 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+        /// <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
         /// </summary>
         [JsonProperty("RemoveType")]
         public long? RemoveType{ get; set; }
+
+        /// <summary>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
             this.SetParamSimple(map, prefix + "RemoveType", this.RemoveType);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         }
     }
 }

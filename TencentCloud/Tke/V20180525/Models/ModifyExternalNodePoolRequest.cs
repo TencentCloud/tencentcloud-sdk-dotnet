@@ -25,43 +25,43 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID
+        /// <p>节点池ID</p>
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 节点池名称
+        /// <p>节点池名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 注册节点标签
+        /// <p>注册节点标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 注册节点污点
+        /// <p>注册节点污点</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// <p>删除保护开关</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+        /// <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
         /// </summary>
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }

@@ -150,6 +150,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("TriggerStrategy")]
         public TriggerStrategyItem[] TriggerStrategy{ get; set; }
 
+        /// <summary>
+        /// <p>智能体并发限制</p>
+        /// </summary>
+        [JsonProperty("ConcurrencyLimit")]
+        public long? ConcurrencyLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
             this.SetParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
             this.SetParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
+            this.SetParamSimple(map, prefix + "ConcurrencyLimit", this.ConcurrencyLimit);
         }
     }
 }

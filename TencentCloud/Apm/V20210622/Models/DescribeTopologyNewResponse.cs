@@ -38,7 +38,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public TopologyEdgeNew[] Edges{ get; set; }
 
         /// <summary>
-        /// <p>拓扑图是否有修改</p>
+        /// <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopologyModifyFlag")]

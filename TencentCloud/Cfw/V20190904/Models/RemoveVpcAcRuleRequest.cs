@@ -25,13 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+        /// <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
         /// </summary>
         [JsonProperty("RuleUuids")]
         public long?[] RuleUuids{ get; set; }
 
         /// <summary>
-        /// 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
         /// </summary>
         [JsonProperty("IpVersion")]
         public ulong? IpVersion{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "RuleUuids.", this.RuleUuids);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }

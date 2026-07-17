@@ -25,14 +25,14 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警分组信息
+        /// <p>告警分组信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlertGroupSet")]
         public PrometheusAlertGroupSet[] AlertGroupSet{ get; set; }
 
         /// <summary>
-        /// 告警分组总数
+        /// <p>告警分组总数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

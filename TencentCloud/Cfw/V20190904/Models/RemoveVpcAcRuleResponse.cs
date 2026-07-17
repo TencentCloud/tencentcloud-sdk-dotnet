@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 删除成功后返回被删除策略的uuid列表
+        /// <p>删除成功后返回被删除策略的uuid列表</p>
         /// </summary>
         [JsonProperty("RuleUuids")]
         public long?[] RuleUuids{ get; set; }

@@ -52,6 +52,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
+        [System.Obsolete]
         public ulong? SpanDailyCounters{ get; set; }
 
         /// <summary>

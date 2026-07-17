@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体处理生成的文件输出的目标 *Bucket ID*
+        /// <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 媒体处理生成的文件输出的目标 Bucket 的园区
+        /// <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 点播专业版应用Id
+        /// <p>点播专业版应用Id</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

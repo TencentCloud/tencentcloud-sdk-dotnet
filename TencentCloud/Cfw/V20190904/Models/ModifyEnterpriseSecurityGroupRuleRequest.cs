@@ -25,25 +25,31 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则的uuid，可通过查询规则列表获取
+        /// <p>规则的uuid，可通过查询规则列表获取</p>
         /// </summary>
         [JsonProperty("RuleUuid")]
         public ulong? RuleUuid{ get; set; }
 
         /// <summary>
-        /// 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
+        /// <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
         /// </summary>
         [JsonProperty("ModifyType")]
         public ulong? ModifyType{ get; set; }
 
         /// <summary>
-        /// 编辑后的企业安全组规则数据；修改规则状态不用填该字段
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
         /// </summary>
         [JsonProperty("Data")]
         public SecurityGroupRule Data{ get; set; }
 
         /// <summary>
-        /// 0是关闭,1是开启
+        /// <p>0是关闭,1是开启</p>
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }
@@ -56,6 +62,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
             this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }

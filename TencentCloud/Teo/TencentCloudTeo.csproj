@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1462</VersionPrefix>
+    <VersionPrefix>3.0.1464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20220106\TeoClient.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
+    <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20220106\Models\FailReason.cs" />
+    <Compile Include="V20220106\Models\Header.cs" />
+    <Compile Include="V20220106\Models\Resource.cs" />
+    <Compile Include="V20220106\Models\Sv.cs" />
+    <Compile Include="V20220106\Models\Tag.cs" />
+    <Compile Include="V20220106\Models\Task.cs" />
+    <Compile Include="V20220106\Models\Zone.cs" />
+    <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
     <Compile Include="V20220901\Models\AICrawlerDetection.cs" />
     <Compile Include="V20220901\Models\APIResource.cs" />
@@ -182,6 +201,10 @@
     <Compile Include="V20220901\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceAPITokenRequest.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceAPITokenResponse.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceServiceRequest.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRequest.cs" />
@@ -268,6 +291,8 @@
     <Compile Include="V20220901\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteInferenceAPITokenRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteInferenceAPITokenResponse.cs" />
     <Compile Include="V20220901\Models\DeleteJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRequest.cs" />
@@ -363,6 +388,18 @@
     <Compile Include="V20220901\Models\DescribeIPRegionResponse.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceAPITokensRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceAPITokensResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentLogsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentLogsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentRecordsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentRecordsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceMonitorDataRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServiceMonitorDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServicesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceServicesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRequest.cs" />
@@ -552,6 +589,26 @@
     <Compile Include="V20220901\Models\ImportZoneConfigResponse.cs" />
     <Compile Include="V20220901\Models\IncreasePlanQuotaRequest.cs" />
     <Compile Include="V20220901\Models\IncreasePlanQuotaResponse.cs" />
+    <Compile Include="V20220901\Models\InferenceAPIToken.cs" />
+    <Compile Include="V20220901\Models\InferenceAutoScalingConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceContainerConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceContainerConfigForModify.cs" />
+    <Compile Include="V20220901\Models\InferenceEnvironmentVariable.cs" />
+    <Compile Include="V20220901\Models\InferenceHardwareSpecification.cs" />
+    <Compile Include="V20220901\Models\InferenceManualInstanceConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceResourceConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceResourceConfigForModify.cs" />
+    <Compile Include="V20220901\Models\InferenceScalingPolicy.cs" />
+    <Compile Include="V20220901\Models\InferenceScheduledScalingAction.cs" />
+    <Compile Include="V20220901\Models\InferenceScheduledScalingEffectiveRange.cs" />
+    <Compile Include="V20220901\Models\InferenceScheduledScalingPolicy.cs" />
+    <Compile Include="V20220901\Models\InferenceService.cs" />
+    <Compile Include="V20220901\Models\InferenceServiceConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceServiceDeploymentLogInfo.cs" />
+    <Compile Include="V20220901\Models\InferenceServiceDeploymentRecord.cs" />
+    <Compile Include="V20220901\Models\InferenceServiceMonitorItem.cs" />
+    <Compile Include="V20220901\Models\InferenceServiceMonitorRecord.cs" />
+    <Compile Include="V20220901\Models\InferenceTCRRepositoryConfig.cs" />
     <Compile Include="V20220901\Models\IntelligenceRule.cs" />
     <Compile Include="V20220901\Models\IntelligenceRuleItem.cs" />
     <Compile Include="V20220901\Models\IpTableConfig.cs" />
@@ -623,6 +680,8 @@
     <Compile Include="V20220901\Models\ModifyFunctionRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyInferenceServiceRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyRulesRequest.cs" />
@@ -702,6 +761,8 @@
     <Compile Include="V20220901\Models\OCSPStaplingParameters.cs" />
     <Compile Include="V20220901\Models\OfflineCache.cs" />
     <Compile Include="V20220901\Models\OfflineCacheParameters.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceServiceRequest.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginACLEntity.cs" />
     <Compile Include="V20220901\Models\OriginACLInfo.cs" />
@@ -846,24 +907,5 @@
     <Compile Include="V20220901\Models\ZoneConfigParameters.cs" />
     <Compile Include="V20220901\Models\ZoneInfo.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />
-    <Compile Include="V20220106\TeoClient.cs" />
-    <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
-    <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
-    <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
-    <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
-    <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
-    <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
-    <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
-    <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
-    <Compile Include="V20220106\Models\DescribeZonesRequest.cs" />
-    <Compile Include="V20220106\Models\DescribeZonesResponse.cs" />
-    <Compile Include="V20220106\Models\FailReason.cs" />
-    <Compile Include="V20220106\Models\Header.cs" />
-    <Compile Include="V20220106\Models\Resource.cs" />
-    <Compile Include="V20220106\Models\Sv.cs" />
-    <Compile Include="V20220106\Models\Tag.cs" />
-    <Compile Include="V20220106\Models\Task.cs" />
-    <Compile Include="V20220106\Models\Zone.cs" />
-    <Compile Include="V20220106\Models\ZoneFilter.cs" />
   </ItemGroup>
 </Project>

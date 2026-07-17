@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1459";
+       private const string sdkVersion = "SDK_NET_3.0.1464";
 
         /// <summary>
         /// Client constructor.
@@ -919,6 +919,69 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询当前租户防火墙聚合告警事件。Response.Data 内 total 表示聚合告警事件数；alerts[].occurrence_count 表示单个聚合告警事件的告警发生次数/命中次数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAlertsRequest"/></param>
+        /// <returns><see cref="DescribeCfwAlertsResponse"/></returns>
+        public Task<DescribeCfwAlertsResponse> DescribeCfwAlerts(DescribeCfwAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAlertsResponse>(req, "DescribeCfwAlerts");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙聚合告警事件。Response.Data 内 total 表示聚合告警事件数；alerts[].occurrence_count 表示单个聚合告警事件的告警发生次数/命中次数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAlertsRequest"/></param>
+        /// <returns><see cref="DescribeCfwAlertsResponse"/></returns>
+        public DescribeCfwAlertsResponse DescribeCfwAlertsSync(DescribeCfwAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAlertsResponse>(req, "DescribeCfwAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙分析报告数据。按分析场景返回整组分析结果，结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeCfwAnalysisDataResponse"/></returns>
+        public Task<DescribeCfwAnalysisDataResponse> DescribeCfwAnalysisData(DescribeCfwAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAnalysisDataResponse>(req, "DescribeCfwAnalysisData");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙分析报告数据。按分析场景返回整组分析结果，结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeCfwAnalysisDataResponse"/></returns>
+        public DescribeCfwAnalysisDataResponse DescribeCfwAnalysisDataSync(DescribeCfwAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAnalysisDataResponse>(req, "DescribeCfwAnalysisData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAssetsRequest"/></param>
+        /// <returns><see cref="DescribeCfwAssetsResponse"/></returns>
+        public Task<DescribeCfwAssetsResponse> DescribeCfwAssets(DescribeCfwAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAssetsResponse>(req, "DescribeCfwAssets");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwAssetsRequest"/></param>
+        /// <returns><see cref="DescribeCfwAssetsResponse"/></returns>
+        public DescribeCfwAssetsResponse DescribeCfwAssetsSync(DescribeCfwAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwAssetsResponse>(req, "DescribeCfwAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询防火墙弹性公网IP
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
@@ -957,6 +1020,132 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeCfwInsStatusResponse DescribeCfwInsStatusSync(DescribeCfwInsStatusRequest req)
         {
             return InternalRequestAsync<DescribeCfwInsStatusResponse>(req, "DescribeCfwInsStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙日志。分页只使用 Response.Data 内的 HasMore / NextToken。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwLogsRequest"/></param>
+        /// <returns><see cref="DescribeCfwLogsResponse"/></returns>
+        public Task<DescribeCfwLogsResponse> DescribeCfwLogs(DescribeCfwLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwLogsResponse>(req, "DescribeCfwLogs");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙日志。分页只使用 Response.Data 内的 HasMore / NextToken。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwLogsRequest"/></param>
+        /// <returns><see cref="DescribeCfwLogsResponse"/></returns>
+        public DescribeCfwLogsResponse DescribeCfwLogsSync(DescribeCfwLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwLogsResponse>(req, "DescribeCfwLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户风险中心未处理风险概览。默认查询最近 7 天；自定义时间范围需同时传 StartTime 和 EndTime。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRiskOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCfwRiskOverviewResponse"/></returns>
+        public Task<DescribeCfwRiskOverviewResponse> DescribeCfwRiskOverview(DescribeCfwRiskOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRiskOverviewResponse>(req, "DescribeCfwRiskOverview");
+        }
+
+        /// <summary>
+        /// 查询当前租户风险中心未处理风险概览。默认查询最近 7 天；自定义时间范围需同时传 StartTime 和 EndTime。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRiskOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCfwRiskOverviewResponse"/></returns>
+        public DescribeCfwRiskOverviewResponse DescribeCfwRiskOverviewSync(DescribeCfwRiskOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRiskOverviewResponse>(req, "DescribeCfwRiskOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙规则优化建议。只读分析，不修改规则；Action 名保持单数 RuleOptimization。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRuleOptimizationRequest"/></param>
+        /// <returns><see cref="DescribeCfwRuleOptimizationResponse"/></returns>
+        public Task<DescribeCfwRuleOptimizationResponse> DescribeCfwRuleOptimization(DescribeCfwRuleOptimizationRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRuleOptimizationResponse>(req, "DescribeCfwRuleOptimization");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙规则优化建议。只读分析，不修改规则；Action 名保持单数 RuleOptimization。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRuleOptimizationRequest"/></param>
+        /// <returns><see cref="DescribeCfwRuleOptimizationResponse"/></returns>
+        public DescribeCfwRuleOptimizationResponse DescribeCfwRuleOptimizationSync(DescribeCfwRuleOptimizationRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRuleOptimizationResponse>(req, "DescribeCfwRuleOptimization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙规则配置。覆盖互联网边界、NAT、VPC、企业安全组，以及入侵防御 intrusion_prevention 的 blocklist、whitelist、isolate 三类有效列表。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRulesRequest"/></param>
+        /// <returns><see cref="DescribeCfwRulesResponse"/></returns>
+        public Task<DescribeCfwRulesResponse> DescribeCfwRules(DescribeCfwRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRulesResponse>(req, "DescribeCfwRules");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙规则配置。覆盖互联网边界、NAT、VPC、企业安全组，以及入侵防御 intrusion_prevention 的 blocklist、whitelist、isolate 三类有效列表。结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwRulesRequest"/></param>
+        /// <returns><see cref="DescribeCfwRulesResponse"/></returns>
+        public DescribeCfwRulesResponse DescribeCfwRulesSync(DescribeCfwRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwRulesResponse>(req, "DescribeCfwRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询状态监控场景。Op=describe_scene 用于发现可用场景、指标、视角和二级下拉 available_options；Op=fetch_scene 用于拉取具体场景快照，结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwStatusMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCfwStatusMonitorResponse"/></returns>
+        public Task<DescribeCfwStatusMonitorResponse> DescribeCfwStatusMonitor(DescribeCfwStatusMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwStatusMonitorResponse>(req, "DescribeCfwStatusMonitor");
+        }
+
+        /// <summary>
+        /// 查询状态监控场景。Op=describe_scene 用于发现可用场景、指标、视角和二级下拉 available_options；Op=fetch_scene 用于拉取具体场景快照，结果在 Response.Data 的 JSON 字符串中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwStatusMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCfwStatusMonitorResponse"/></returns>
+        public DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitorSync(DescribeCfwStatusMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwStatusMonitorResponse>(req, "DescribeCfwStatusMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeCfwSwitchesResponse"/></returns>
+        public Task<DescribeCfwSwitchesResponse> DescribeCfwSwitches(DescribeCfwSwitchesRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwSwitchesResponse>(req, "DescribeCfwSwitches");
+        }
+
+        /// <summary>
+        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeCfwSwitchesResponse"/></returns>
+        public DescribeCfwSwitchesResponse DescribeCfwSwitchesSync(DescribeCfwSwitchesRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwSwitchesResponse>(req, "DescribeCfwSwitches")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

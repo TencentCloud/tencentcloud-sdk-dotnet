@@ -25,20 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 处置对象,ID列表，  IdLists和IpList二选一
+        /// <p>处置对象,ID列表，  IdLists和IpList二选一</p>
         /// </summary>
         [JsonProperty("HandleIdList")]
         public string[] HandleIdList{ get; set; }
 
         /// <summary>
-        /// 忽略数据来源：
-        /// AlertTable 告警中心  InterceptionTable拦截列表
+        /// <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
         /// </summary>
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
         /// <summary>
-        /// 处置对象,事件ID列表
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>处置对象,事件ID列表</p>
         /// </summary>
         [JsonProperty("HandleEventIdList")]
         public string[] HandleEventIdList{ get; set; }
@@ -51,6 +56,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamArraySimple(map, prefix + "HandleIdList.", this.HandleIdList);
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamArraySimple(map, prefix + "HandleEventIdList.", this.HandleEventIdList);
         }
     }

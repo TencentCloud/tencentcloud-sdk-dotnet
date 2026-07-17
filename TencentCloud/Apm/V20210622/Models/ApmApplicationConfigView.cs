@@ -55,7 +55,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string ErrorCodeFilter{ get; set; }
 
         /// <summary>
-        /// <p>应用诊断开关（已废弃）</p>
+        /// <p>应用诊断开关</p>
         /// </summary>
         [JsonProperty("EventEnable")]
         public bool? EventEnable{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Apm.V20210622.Models
         public bool? AgentEnable{ get; set; }
 
         /// <summary>
-        /// <p>组件列表开关（已废弃）</p>
+        /// <p>组件列表开关</p>
         /// </summary>
         [JsonProperty("InstrumentList")]
         public Instrument[] InstrumentList{ get; set; }
 
         /// <summary>
-        /// <p>链路压缩开关（已废弃）</p>
+        /// <p>链路压缩开关</p>
         /// </summary>
         [JsonProperty("TraceSquash")]
         public bool? TraceSquash{ get; set; }

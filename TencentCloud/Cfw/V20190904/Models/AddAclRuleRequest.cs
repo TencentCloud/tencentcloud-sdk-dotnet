@@ -25,13 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 需要添加的访问控制规则列表
+        /// <p>需要添加的访问控制规则列表</p>
         /// </summary>
         [JsonProperty("Rules")]
         public CreateRuleItem[] Rules{ get; set; }
 
         /// <summary>
-        /// 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamSimple(map, prefix + "From", this.From);
         }
     }

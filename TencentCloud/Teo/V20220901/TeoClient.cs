@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1462";
+       private const string sdkVersion = "SDK_NET_3.0.1464";
 
         /// <summary>
         /// Client constructor.
@@ -523,6 +523,48 @@ namespace TencentCloud.Teo.V20220901
         public CreateFunctionRuleResponse CreateFunctionRuleSync(CreateFunctionRuleRequest req)
         {
             return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建推理 API Token，用于访问推理服务时进行鉴权，Token 内容仅在创建时返回一次，每个站点最多创建 100 个。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
+        public Task<CreateInferenceAPITokenResponse> CreateInferenceAPIToken(CreateInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceAPITokenResponse>(req, "CreateInferenceAPIToken");
+        }
+
+        /// <summary>
+        /// 创建推理 API Token，用于访问推理服务时进行鉴权，Token 内容仅在创建时返回一次，每个站点最多创建 100 个。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
+        public CreateInferenceAPITokenResponse CreateInferenceAPITokenSync(CreateInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceAPITokenResponse>(req, "CreateInferenceAPIToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建推理服务，支持设置服务名称、监听端口、容器镜像配置和资源配置，创建成功后提供推理访问地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public Task<CreateInferenceServiceResponse> CreateInferenceService(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService");
+        }
+
+        /// <summary>
+        /// 创建推理服务，支持设置服务名称、监听端口、容器镜像配置和资源配置，创建成功后提供推理访问地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public CreateInferenceServiceResponse CreateInferenceServiceSync(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1300,6 +1342,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteFunctionRulesResponse DeleteFunctionRulesSync(DeleteFunctionRulesRequest req)
         {
             return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除推理 API Token，删除后该 Token 立即失效，使用其访问推理服务的请求将无法通过鉴权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
+        public Task<DeleteInferenceAPITokenResponse> DeleteInferenceAPIToken(DeleteInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceAPITokenResponse>(req, "DeleteInferenceAPIToken");
+        }
+
+        /// <summary>
+        /// 删除推理 API Token，删除后该 Token 立即失效，使用其访问推理服务的请求将无法通过鉴权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
+        public DeleteInferenceAPITokenResponse DeleteInferenceAPITokenSync(DeleteInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceAPITokenResponse>(req, "DeleteInferenceAPIToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2270,6 +2333,132 @@ namespace TencentCloud.Teo.V20220901
         public DescribeIdentificationsResponse DescribeIdentificationsSync(DescribeIdentificationsRequest req)
         {
             return InternalRequestAsync<DescribeIdentificationsResponse>(req, "DescribeIdentifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理 API Token 列表，返回 Token 的 ID、名称、内容和创建时间，支持分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
+        /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
+        public Task<DescribeInferenceAPITokensResponse> DescribeInferenceAPITokens(DescribeInferenceAPITokensRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceAPITokensResponse>(req, "DescribeInferenceAPITokens");
+        }
+
+        /// <summary>
+        /// 查询推理 API Token 列表，返回 Token 的 ID、名称、内容和创建时间，支持分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
+        /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
+        public DescribeInferenceAPITokensResponse DescribeInferenceAPITokensSync(DescribeInferenceAPITokensRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceAPITokensResponse>(req, "DescribeInferenceAPITokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理硬件规格列表，返回各规格的 CPU、内存、GPU 和显存等配置，创建服务时可从中选择所需规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
+        public Task<DescribeInferenceHardwareSpecificationsResponse> DescribeInferenceHardwareSpecifications(DescribeInferenceHardwareSpecificationsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceHardwareSpecificationsResponse>(req, "DescribeInferenceHardwareSpecifications");
+        }
+
+        /// <summary>
+        /// 查询推理硬件规格列表，返回各规格的 CPU、内存、GPU 和显存等配置，创建服务时可从中选择所需规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
+        public DescribeInferenceHardwareSpecificationsResponse DescribeInferenceHardwareSpecificationsSync(DescribeInferenceHardwareSpecificationsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceHardwareSpecificationsResponse>(req, "DescribeInferenceHardwareSpecifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理服务指定一次部署的日志，返回日志内容和产生时间，支持按时间范围检索、分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
+        public Task<DescribeInferenceServiceDeploymentLogsResponse> DescribeInferenceServiceDeploymentLogs(DescribeInferenceServiceDeploymentLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentLogsResponse>(req, "DescribeInferenceServiceDeploymentLogs");
+        }
+
+        /// <summary>
+        /// 查询推理服务指定一次部署的日志，返回日志内容和产生时间，支持按时间范围检索、分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
+        public DescribeInferenceServiceDeploymentLogsResponse DescribeInferenceServiceDeploymentLogsSync(DescribeInferenceServiceDeploymentLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentLogsResponse>(req, "DescribeInferenceServiceDeploymentLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理服务部署历史列表，返回每次部署的操作类型、状态、耗时、配置快照和是否为当前生效配置，支持分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
+        public Task<DescribeInferenceServiceDeploymentRecordsResponse> DescribeInferenceServiceDeploymentRecords(DescribeInferenceServiceDeploymentRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentRecordsResponse>(req, "DescribeInferenceServiceDeploymentRecords");
+        }
+
+        /// <summary>
+        /// 查询推理服务部署历史列表，返回每次部署的操作类型、状态、耗时、配置快照和是否为当前生效配置，支持分页和排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
+        public DescribeInferenceServiceDeploymentRecordsResponse DescribeInferenceServiceDeploymentRecordsSync(DescribeInferenceServiceDeploymentRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentRecordsResponse>(req, "DescribeInferenceServiceDeploymentRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理服务监控数据，支持 CPU、内存、GPU、显存使用率和实例数量等指标，可指定时间范围和聚合粒度，最多查询最近 30 天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
+        public Task<DescribeInferenceServiceMonitorDataResponse> DescribeInferenceServiceMonitorData(DescribeInferenceServiceMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceMonitorDataResponse>(req, "DescribeInferenceServiceMonitorData");
+        }
+
+        /// <summary>
+        /// 查询推理服务监控数据，支持 CPU、内存、GPU、显存使用率和实例数量等指标，可指定时间范围和聚合粒度，最多查询最近 30 天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
+        public DescribeInferenceServiceMonitorDataResponse DescribeInferenceServiceMonitorDataSync(DescribeInferenceServiceMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceMonitorDataResponse>(req, "DescribeInferenceServiceMonitorData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理服务列表，支持按服务名称、服务 ID、状态过滤，返回服务的配置、运行状态、实例数和推理访问地址等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
+        public Task<DescribeInferenceServicesResponse> DescribeInferenceServices(DescribeInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServicesResponse>(req, "DescribeInferenceServices");
+        }
+
+        /// <summary>
+        /// 查询推理服务列表，支持按服务名称、服务 ID、状态过滤，返回服务的配置、运行状态、实例数和推理访问地址等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
+        public DescribeInferenceServicesResponse DescribeInferenceServicesSync(DescribeInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServicesResponse>(req, "DescribeInferenceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4041,6 +4230,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 修改推理服务，支持更新监听端口、请求路径、容器镜像、资源配置和描述信息，仅传入的参数会被修改，未传入的参数保持不变。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
+        /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
+        public Task<ModifyInferenceServiceResponse> ModifyInferenceService(ModifyInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyInferenceServiceResponse>(req, "ModifyInferenceService");
+        }
+
+        /// <summary>
+        /// 修改推理服务，支持更新监听端口、请求路径、容器镜像、资源配置和描述信息，仅传入的参数会被修改，未传入的参数保持不变。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
+        /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
+        public ModifyInferenceServiceResponse ModifyInferenceServiceSync(ModifyInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyInferenceServiceResponse>(req, "ModifyInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于修改四层代理实例的配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
@@ -4671,6 +4881,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneWorkModeResponse ModifyZoneWorkModeSync(ModifyZoneWorkModeRequest req)
         {
             return InternalRequestAsync<ModifyZoneWorkModeResponse>(req, "ModifyZoneWorkMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 操作推理服务，支持停止、启动和删除推理服务，删除后资源不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
+        /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
+        public Task<OperateInferenceServiceResponse> OperateInferenceService(OperateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceServiceResponse>(req, "OperateInferenceService");
+        }
+
+        /// <summary>
+        /// 操作推理服务，支持停止、启动和删除推理服务，删除后资源不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
+        /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
+        public OperateInferenceServiceResponse OperateInferenceServiceSync(OperateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceServiceResponse>(req, "OperateInferenceService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,26 +25,31 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 是否删除全部
+        /// <p>是否删除全部</p>
         /// </summary>
         [JsonProperty("DeleteAll")]
         public long? DeleteAll{ get; set; }
 
         /// <summary>
-        /// blocklist 封禁列表 whitelist 白名单列表
+        /// <p>blocklist 封禁列表 whitelist 白名单列表</p>
         /// </summary>
         [JsonProperty("ShowType")]
         public string ShowType{ get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// </summary>
+        [JsonProperty("CfwAiAgentOperationSource")]
+        public string CfwAiAgentOperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>规则列表</p>
         /// </summary>
         [JsonProperty("Rules")]
         public BanAndAllowRuleDel[] Rules{ get; set; }
 
         /// <summary>
-        /// 封禁：1，放通：100，
-        /// 主要用于全部删除时区分列表类型
+        /// <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
@@ -57,6 +62,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
             this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
+            this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
         }

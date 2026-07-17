@@ -25,7 +25,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+        /// <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
         /// </summary>
         [JsonProperty("BigOrderId")]
         public string BigOrderId{ get; set; }

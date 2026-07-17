@@ -25,121 +25,121 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点池ID
+        /// <p>节点池ID</p>
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+        /// <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 最大节点数
+        /// <p>最大节点数</p>
         /// </summary>
         [JsonProperty("MaxNodesNum")]
         public long? MaxNodesNum{ get; set; }
 
         /// <summary>
-        /// 最小节点数
+        /// <p>最小节点数</p>
         /// </summary>
         [JsonProperty("MinNodesNum")]
         public long? MinNodesNum{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 污点
+        /// <p>污点</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// 节点 Annotation 列表
+        /// <p>节点 Annotation 列表</p>
         /// </summary>
         [JsonProperty("Annotations")]
         public AnnotationValue[] Annotations{ get; set; }
 
         /// <summary>
-        /// 是否开启伸缩
+        /// <p>是否开启伸缩</p>
         /// </summary>
         [JsonProperty("EnableAutoscale")]
         public bool? EnableAutoscale{ get; set; }
 
         /// <summary>
-        /// 操作系统名称
+        /// <p>操作系统名称</p>
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+        /// <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+        /// <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
         /// </summary>
         [JsonProperty("GPUArgs")]
         public GPUArgs GPUArgs{ get; set; }
 
         /// <summary>
-        /// base64编码后的自定义脚本
+        /// <p>base64编码后的自定义脚本</p>
         /// </summary>
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }
 
         /// <summary>
-        /// 更新label和taint时忽略存量节点
+        /// <p>更新label和taint时忽略存量节点</p>
         /// </summary>
         [JsonProperty("IgnoreExistedNode")]
         public bool? IgnoreExistedNode{ get; set; }
 
         /// <summary>
-        /// 节点自定义参数
+        /// <p>节点自定义参数</p>
         /// </summary>
         [JsonProperty("ExtraArgs")]
         public InstanceExtraArgs ExtraArgs{ get; set; }
 
         /// <summary>
-        /// 资源标签
+        /// <p>资源标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+        /// <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
         /// </summary>
         [JsonProperty("Unschedulable")]
         public long? Unschedulable{ get; set; }
 
         /// <summary>
-        /// 删除保护开关
+        /// <p>删除保护开关</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// dockerd --graph 指定值, 默认为 /var/lib/docker
+        /// <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
         /// </summary>
         [JsonProperty("DockerGraphPath")]
         public string DockerGraphPath{ get; set; }
 
         /// <summary>
-        /// base64编码后的自定义脚本
+        /// <p>base64编码后的自定义脚本</p>
         /// </summary>
         [JsonProperty("PreStartUserScript")]
         public string PreStartUserScript{ get; set; }

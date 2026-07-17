@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1463</VersionPrefix>
+    <VersionPrefix>3.0.1464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,10 +75,14 @@
     <Compile Include="V20190423\Models\BindTWeTalkAIBotResponse.cs" />
     <Compile Include="V20190423\Models\BindTWeTalkAgentRequest.cs" />
     <Compile Include="V20190423\Models\BindTWeTalkAgentResponse.cs" />
+    <Compile Include="V20190423\Models\BindUserDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\BindUserDeviceResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
+    <Compile Include="V20190423\Models\CallDeviceRRPCSyncRequest.cs" />
+    <Compile Include="V20190423\Models\CallDeviceRRPCSyncResponse.cs" />
     <Compile Include="V20190423\Models\CamTag.cs" />
     <Compile Include="V20190423\Models\ChangeP2PRouteRequest.cs" />
     <Compile Include="V20190423\Models\ChangeP2PRouteResponse.cs" />
@@ -555,6 +559,8 @@
     <Compile Include="V20190423\Models\ResetTWeCallDeviceResponse.cs" />
     <Compile Include="V20190423\Models\ResumeWeCallDeviceRequest.cs" />
     <Compile Include="V20190423\Models\ResumeWeCallDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\RevokeBindUserDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\RevokeBindUserDeviceResponse.cs" />
     <Compile Include="V20190423\Models\SearchKeyword.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceRequest.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceResponse.cs" />
