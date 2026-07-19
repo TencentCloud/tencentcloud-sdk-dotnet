@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1464";
+       private const string sdkVersion = "SDK_NET_3.0.1465";
 
         /// <summary>
         /// Client constructor.
@@ -409,6 +409,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateContentReviewTemplateResponse CreateContentReviewTemplateSync(CreateContentReviewTemplateRequest req)
         {
             return InternalRequestAsync<CreateContentReviewTemplateResponse>(req, "CreateContentReviewTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 AiGC 文档生成视频任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>
+        public Task<CreateDocToVideoTaskResponse> CreateDocToVideoTask(CreateDocToVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDocToVideoTaskResponse>(req, "CreateDocToVideoTask");
+        }
+
+        /// <summary>
+        /// 创建 AiGC 文档生成视频任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>
+        public CreateDocToVideoTaskResponse CreateDocToVideoTaskSync(CreateDocToVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDocToVideoTaskResponse>(req, "CreateDocToVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3506,6 +3527,27 @@ namespace TencentCloud.Mps.V20190612
         public EditMediaResponse EditMediaSync(EditMediaRequest req)
         {
             return InternalRequestAsync<EditMediaResponse>(req, "EditMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 模型embedding 接口
+        /// </summary>
+        /// <param name="req"><see cref="EmbeddingDataRequest"/></param>
+        /// <returns><see cref="EmbeddingDataResponse"/></returns>
+        public Task<EmbeddingDataResponse> EmbeddingData(EmbeddingDataRequest req)
+        {
+            return InternalRequestAsync<EmbeddingDataResponse>(req, "EmbeddingData");
+        }
+
+        /// <summary>
+        /// 模型embedding 接口
+        /// </summary>
+        /// <param name="req"><see cref="EmbeddingDataRequest"/></param>
+        /// <returns><see cref="EmbeddingDataResponse"/></returns>
+        public EmbeddingDataResponse EmbeddingDataSync(EmbeddingDataRequest req)
+        {
+            return InternalRequestAsync<EmbeddingDataResponse>(req, "EmbeddingData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

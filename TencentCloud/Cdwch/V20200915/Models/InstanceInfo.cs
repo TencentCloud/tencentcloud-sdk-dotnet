@@ -372,6 +372,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("HttpsEnabled")]
         public bool? HttpsEnabled{ get; set; }
 
+        /// <summary>
+        /// <p>集群磁盘加密配置</p>
+        /// </summary>
+        [JsonProperty("DiskEncryptInfo")]
+        public DiskEncryptInfo DiskEncryptInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -436,6 +442,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "EnableConfigKeyValue", this.EnableConfigKeyValue);
             this.SetParamSimple(map, prefix + "HttpsEnabled", this.HttpsEnabled);
+            this.SetParamObj(map, prefix + "DiskEncryptInfo.", this.DiskEncryptInfo);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Chdfs.V20201112
 
        private const string endpoint = "chdfs.tencentcloudapi.com";
        private const string version = "2020-11-12";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1465";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Chdfs.V20201112
         }
 
         /// <summary>
+        /// 创建回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrashConfigRequest"/></param>
+        /// <returns><see cref="CreateTrashConfigResponse"/></returns>
+        public Task<CreateTrashConfigResponse> CreateTrashConfig(CreateTrashConfigRequest req)
+        {
+            return InternalRequestAsync<CreateTrashConfigResponse>(req, "CreateTrashConfig");
+        }
+
+        /// <summary>
+        /// 创建回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrashConfigRequest"/></param>
+        /// <returns><see cref="CreateTrashConfigResponse"/></returns>
+        public CreateTrashConfigResponse CreateTrashConfigSync(CreateTrashConfigRequest req)
+        {
+            return InternalRequestAsync<CreateTrashConfigResponse>(req, "CreateTrashConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除权限组。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessGroupRequest"/></param>
@@ -302,6 +323,27 @@ namespace TencentCloud.Chdfs.V20201112
         public DeleteMountPointResponse DeleteMountPointSync(DeleteMountPointRequest req)
         {
             return InternalRequestAsync<DeleteMountPointResponse>(req, "DeleteMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrashConfigRequest"/></param>
+        /// <returns><see cref="DeleteTrashConfigResponse"/></returns>
+        public Task<DeleteTrashConfigResponse> DeleteTrashConfig(DeleteTrashConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteTrashConfigResponse>(req, "DeleteTrashConfig");
+        }
+
+        /// <summary>
+        /// 删除回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrashConfigRequest"/></param>
+        /// <returns><see cref="DeleteTrashConfigResponse"/></returns>
+        public DeleteTrashConfigResponse DeleteTrashConfigSync(DeleteTrashConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteTrashConfigResponse>(req, "DeleteTrashConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +558,27 @@ namespace TencentCloud.Chdfs.V20201112
         }
 
         /// <summary>
+        /// 通过文件系统ID查看回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrashConfigRequest"/></param>
+        /// <returns><see cref="DescribeTrashConfigResponse"/></returns>
+        public Task<DescribeTrashConfigResponse> DescribeTrashConfig(DescribeTrashConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeTrashConfigResponse>(req, "DescribeTrashConfig");
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看回收站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrashConfigRequest"/></param>
+        /// <returns><see cref="DescribeTrashConfigResponse"/></returns>
+        public DescribeTrashConfigResponse DescribeTrashConfigSync(DescribeTrashConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeTrashConfigResponse>(req, "DescribeTrashConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 给挂载点解绑多个权限组。
         /// </summary>
         /// <param name="req"><see cref="DisassociateAccessGroupsRequest"/></param>
@@ -659,6 +722,27 @@ namespace TencentCloud.Chdfs.V20201112
         public ModifyResourceTagsResponse ModifyResourceTagsSync(ModifyResourceTagsRequest req)
         {
             return InternalRequestAsync<ModifyResourceTagsResponse>(req, "ModifyResourceTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改回收站配置，需要指定回收站路径，数据保留时间、和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrashConfigRequest"/></param>
+        /// <returns><see cref="ModifyTrashConfigResponse"/></returns>
+        public Task<ModifyTrashConfigResponse> ModifyTrashConfig(ModifyTrashConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyTrashConfigResponse>(req, "ModifyTrashConfig");
+        }
+
+        /// <summary>
+        /// 修改回收站配置，需要指定回收站路径，数据保留时间、和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrashConfigRequest"/></param>
+        /// <returns><see cref="ModifyTrashConfigResponse"/></returns>
+        public ModifyTrashConfigResponse ModifyTrashConfigSync(ModifyTrashConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyTrashConfigResponse>(req, "ModifyTrashConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

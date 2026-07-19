@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class JumpEvent : AbstractModel
+    public class DocToVideoCosInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>跳转事件枚举</p><p>枚举值：</p><ul><li>1： 企业收录</li><li>2： 超管授权书审核</li><li>3： 企业认证完成</li></ul>
+        /// <p>cos桶地域</p>
         /// </summary>
-        [JsonProperty("JumpEventType")]
-        public ulong? JumpEventType{ get; set; }
+        [JsonProperty("CosBucketRegion")]
+        public string CosBucketRegion{ get; set; }
 
         /// <summary>
-        /// <p>为认证成功后页面进行回跳的URL，请确保回跳地址的可用性。<br>Endpoint如果是APP 类型，请传递<font color="red">&quot;true&quot;</font><br>如果 Endpoint 是 H5 类型，请参考文档<a href="https://qian.tencent.com/developers/company/openqianh5/">跳转电子签H5</a></p><p>p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。</p>
+        /// <p>cos桶名称</p>
         /// </summary>
-        [JsonProperty("JumpUrl")]
-        public string JumpUrl{ get; set; }
+        [JsonProperty("CosBucketName")]
+        public string CosBucketName{ get; set; }
+
+        /// <summary>
+        /// <p>cos桶路径</p>
+        /// </summary>
+        [JsonProperty("CosBucketPath")]
+        public string CosBucketPath{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JumpEventType", this.JumpEventType);
-            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "CosBucketPath", this.CosBucketPath);
         }
     }
 }

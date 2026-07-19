@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class JumpEvent : AbstractModel
+    public class ShareDeviceToUserResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>跳转事件枚举</p><p>枚举值：</p><ul><li>1： 企业收录</li><li>2： 超管授权书审核</li><li>3： 企业认证完成</li></ul>
+        /// <p>Owner 的 UserID</p>
         /// </summary>
-        [JsonProperty("JumpEventType")]
-        public ulong? JumpEventType{ get; set; }
+        [JsonProperty("OwnerUserID")]
+        public string OwnerUserID{ get; set; }
 
         /// <summary>
-        /// <p>为认证成功后页面进行回跳的URL，请确保回跳地址的可用性。<br>Endpoint如果是APP 类型，请传递<font color="red">&quot;true&quot;</font><br>如果 Endpoint 是 H5 类型，请参考文档<a href="https://qian.tencent.com/developers/company/openqianh5/">跳转电子签H5</a></p><p>p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。</p>
+        /// <p>被分享用户的 UserID</p>
         /// </summary>
-        [JsonProperty("JumpUrl")]
-        public string JumpUrl{ get; set; }
+        [JsonProperty("ToUserID")]
+        public string ToUserID{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JumpEventType", this.JumpEventType);
-            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "OwnerUserID", this.OwnerUserID);
+            this.SetParamSimple(map, prefix + "ToUserID", this.ToUserID);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

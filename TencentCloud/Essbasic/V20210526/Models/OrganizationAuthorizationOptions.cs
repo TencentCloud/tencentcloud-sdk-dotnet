@@ -54,6 +54,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AddressSame")]
         public bool? AddressSame{ get; set; }
 
+        /// <summary>
+        /// <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>
+        /// </summary>
+        [JsonProperty("BizLicenseSame")]
+        public bool? BizLicenseSame{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "LegalNameSame", this.LegalNameSame);
             this.SetParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
             this.SetParamSimple(map, prefix + "AddressSame", this.AddressSame);
+            this.SetParamSimple(map, prefix + "BizLicenseSame", this.BizLicenseSame);
         }
     }
 }
