@@ -31,6 +31,20 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("CustomConfig")]
         public ClawAgentCustomConfig CustomConfig{ get; set; }
 
+        /// <summary>
+        /// Agent团队协作配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentTeamConfig")]
+        public ClawAgentAgentTeamConfig AgentTeamConfig{ get; set; }
+
+        /// <summary>
+        /// 长期记忆配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LongMemoryConfig")]
+        public ClawAgentLongMemoryConfig LongMemoryConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +52,8 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "CustomConfig.", this.CustomConfig);
+            this.SetParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
+            this.SetParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
         }
     }
 }

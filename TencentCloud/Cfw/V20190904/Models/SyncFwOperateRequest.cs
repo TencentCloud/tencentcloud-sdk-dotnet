@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 同步操作类型：Route，同步防火墙路由
+        /// <p>同步操作类型：Route，同步防火墙路由</p>
         /// </summary>
         [JsonProperty("SyncType")]
         public string SyncType{ get; set; }
 
         /// <summary>
-        /// 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+        /// <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }

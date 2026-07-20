@@ -30,6 +30,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IsUnSafe")]
         public ulong? IsUnSafe{ get; set; }
 
+        /// <summary>
+        /// <p>检出分类</p>
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsUnSafe", this.IsUnSafe);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

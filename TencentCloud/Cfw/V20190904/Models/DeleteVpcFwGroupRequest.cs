@@ -25,21 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙(组)Id
+        /// <p>防火墙(组)Id</p>
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
-        /// 是否删除整个防火墙(组)
-        /// 0：不删除防火墙(组)，只删除单独实例
-        /// 1：删除整个防火墙(组)
+        /// <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
         /// </summary>
         [JsonProperty("DeleteFwGroup")]
         public long? DeleteFwGroup{ get; set; }
 
         /// <summary>
-        /// 待删除的防火墙实例数组
+        /// <p>待删除的防火墙实例数组</p>
         /// </summary>
         [JsonProperty("VpcFwInsList")]
         public string[] VpcFwInsList{ get; set; }

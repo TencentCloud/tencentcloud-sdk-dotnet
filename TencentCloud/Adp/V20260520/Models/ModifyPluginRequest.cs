@@ -60,6 +60,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ToolList")]
         public Tool[] ToolList{ get; set; }
 
+        /// <summary>
+        /// <p>登录用户主账号(集成商模式必填)</p>
+        /// </summary>
+        [JsonProperty("LoginUin")]
+        public string LoginUin{ get; set; }
+
+        /// <summary>
+        /// <p>登录用户子账号(集成商模式必填)</p>
+        /// </summary>
+        [JsonProperty("LoginSubAccountUin")]
+        public string LoginSubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
             this.SetParamArrayObj(map, prefix + "ToolList.", this.ToolList);
+            this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
+            this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }
     }
 }

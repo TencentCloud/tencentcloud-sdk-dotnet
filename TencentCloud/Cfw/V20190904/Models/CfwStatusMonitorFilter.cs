@@ -25,21 +25,21 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>过滤字段名。</p>
+        /// 过滤字段名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>过滤值列表，最多 10 个。</p>
+        /// 过滤值列表，最多 10 个。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// <p>操作符类型，可选；仅支持后端允许的类型。</p>
+        /// 操作符类型，可选；仅支持后端允许的类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorType")]

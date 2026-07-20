@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 编辑的防火墙(组)ID
+        /// <p>编辑的防火墙(组)ID</p>
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
-        /// 修改防火墙(组)名称
+        /// <p>修改防火墙(组)名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 编辑的防火墙实例列表
+        /// <p>编辑的防火墙实例列表</p>
         /// </summary>
         [JsonProperty("VpcFwInstances")]
         public VpcFwInstance[] VpcFwInstances{ get; set; }
 
         /// <summary>
-        /// 指定防火墙使用网段信息
+        /// <p>指定防火墙使用网段信息</p>
         /// </summary>
         [JsonProperty("FwCidrInfo")]
         public FwCidrInfo FwCidrInfo{ get; set; }

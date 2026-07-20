@@ -25,65 +25,49 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+        /// <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
         /// </summary>
         [JsonProperty("AppMode")]
         public long? AppMode{ get; set; }
 
         /// <summary>
-        /// 应用头像
+        /// <p>应用头像</p>
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 应用配置
+        /// <p>应用配置</p>
         /// </summary>
         [JsonProperty("Config")]
         public AppConfig Config{ get; set; }
 
         /// <summary>
-        /// 应用描述
+        /// <p>应用描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分享配置
-        /// </summary>
-        [JsonProperty("ShareConfig")]
-        public AppShareAccessControl ShareConfig{ get; set; }
-
-        /// <summary>
-        /// 引用的共享知识库ID列表(全量覆盖)
+        /// <p>引用的共享知识库ID列表(全量覆盖)</p>
         /// </summary>
         [JsonProperty("SharedKbIdList")]
         public string[] SharedKbIdList{ get; set; }
 
         /// <summary>
-        /// 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-        /// 【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
-        /// 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
-        /// 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
-        /// 【WebSearch】Config.WebSearch
-        /// 【Memory】Config.Memory, Config.Memory.Enabled, Config.Memory.LongMemoryDay, Config.Memory.Model, Config.Memory.PromptMode, Config.Memory.PromptContent
-        /// 【Mode】Config.Mode, Config.Mode.MultiAgentConfig, Config.Mode.SingleWorkflowConfig
-        /// 【Experience】Config.Experience, Config.Experience.Conversation, Config.Experience.Role, Config.Experience.Advanced
-        /// 【Experience.Conversation】Config.Experience.Conversation.AiCall, Config.Experience.Conversation.BackgroundImage, Config.Experience.Conversation.Method, Config.Experience.Conversation.FallbackReply, Config.Experience.Conversation.Recommended, Config.Experience.Conversation.InputBoxConfig, Config.Experience.Conversation.WebSearch
-        /// 【Experience.Conversation.AiCall】Config.Experience.Conversation.AiCall.VoiceInteract, Config.Experience.Conversation.AiCall.VoiceCall, Config.Experience.Conversation.AiCall.DigitalHuman
-        /// 【Experience.Advanced】Config.Experience.Advanced.ContextRewrite, Config.Experience.Advanced.ImageTextRetrieval, Config.Experience.Advanced.IntentAchievement, Config.Experience.Advanced.ReplyFlexibility
+        /// <p>字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：<br>【顶层】Name, Avatar, Description, AppMode, SharedKbIdList<br>【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList<br>【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel<br>【WebSearch】Config.WebSearch<br>【Memory】Config.Memory, Config.Memory.Enabled, Config.Memory.LongMemoryDay, Config.Memory.Model, Config.Memory.PromptMode, Config.Memory.PromptContent<br>【Mode】Config.Mode, Config.Mode.MultiAgentConfig, Config.Mode.SingleWorkflowConfig<br>【Experience】Config.Experience, Config.Experience.Conversation, Config.Experience.Role, Config.Experience.Advanced<br>【Experience.Conversation】Config.Experience.Conversation.AiCall, Config.Experience.Conversation.BackgroundImage, Config.Experience.Conversation.Method, Config.Experience.Conversation.FallbackReply, Config.Experience.Conversation.Recommended, Config.Experience.Conversation.InputBoxConfig, Config.Experience.Conversation.WebSearch<br>【Experience.Conversation.AiCall】Config.Experience.Conversation.AiCall.VoiceInteract, Config.Experience.Conversation.AiCall.VoiceCall, Config.Experience.Conversation.AiCall.DigitalHuman<br>【Experience.Advanced】Config.Experience.Advanced.ContextRewrite, Config.Experience.Advanced.ImageTextRetrieval, Config.Experience.Advanced.IntentAchievement, Config.Experience.Advanced.ReplyFlexibility</p>
         /// </summary>
         [JsonProperty("UpdateMask")]
         public FieldMask UpdateMask{ get; set; }
@@ -100,7 +84,6 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "ShareConfig.", this.ShareConfig);
             this.SetParamArraySimple(map, prefix + "SharedKbIdList.", this.SharedKbIdList);
             this.SetParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
         }

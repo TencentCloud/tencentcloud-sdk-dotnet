@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 访问控制类型。枚举值: 1:公开访问(所有用户都可访问), 2:内部访问(仅企业用户可访问), 3:账号白名单(指定UIN/手机/邮箱/IP可访问)
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_SHARE_ACCESS_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>APP_SHARE_ACCESS_TYPE_PUBLIC</td><td>1</td><td>公开访问(所有用户都可访问)</td></tr><tr><td>APP_SHARE_ACCESS_TYPE_INTERNAL</td><td>2</td><td>内部访问(仅企业用户可访问)</td></tr><tr><td>APP_SHARE_ACCESS_TYPE_ACCOUNT_WHITELIST</td><td>3</td><td>账号白名单(指定UIN/手机/邮箱/IP可访问)</td></tr></tbody></table>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// 体验链接开关
+        /// <p>是否开启访问控制</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 禁用</li></ul>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 白名单(仅 access_type=ACCOUNT_WHITELIST 时生效)
+        /// <p>白名单信息</p>
         /// </summary>
         [JsonProperty("Whitelist")]
         public AppShareWhitelistItem[] Whitelist{ get; set; }

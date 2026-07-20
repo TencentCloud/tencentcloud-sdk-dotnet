@@ -25,20 +25,20 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 防火墙开关列表
+        /// <p>防火墙开关列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ClusterSwitchDetail[] Data{ get; set; }
 
         /// <summary>
-        /// 开关开启失败列表
+        /// <p>开关开启失败列表</p>
         /// </summary>
         [JsonProperty("FailData")]
         public SwitchFailInfo[] FailData{ get; set; }

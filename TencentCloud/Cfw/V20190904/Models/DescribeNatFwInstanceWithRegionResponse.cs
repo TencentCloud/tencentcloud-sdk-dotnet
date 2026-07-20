@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 实例数组
+        /// <p>实例数组</p>
         /// </summary>
         [JsonProperty("NatinsLst")]
         public NatFwInstance[] NatinsLst{ get; set; }

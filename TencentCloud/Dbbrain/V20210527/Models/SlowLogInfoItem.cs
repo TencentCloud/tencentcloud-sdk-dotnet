@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 慢日志开始时间
+        /// 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }

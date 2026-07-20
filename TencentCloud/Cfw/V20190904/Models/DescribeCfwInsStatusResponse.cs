@@ -25,14 +25,14 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙实例运行状态
+        /// <p>防火墙实例运行状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CfwInsStatus")]
         public CfwInsStatus[] CfwInsStatus{ get; set; }
 
         /// <summary>
-        /// 0
+        /// <p>0</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

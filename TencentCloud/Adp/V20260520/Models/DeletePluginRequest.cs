@@ -30,6 +30,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
+        /// <summary>
+        /// <p>登录用户主账号(集成商模式必填)</p>
+        /// </summary>
+        [JsonProperty("LoginUin")]
+        public string LoginUin{ get; set; }
+
+        /// <summary>
+        /// <p>登录用户子账号(集成商模式必填)</p>
+        /// </summary>
+        [JsonProperty("LoginSubAccountUin")]
+        public string LoginSubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
+            this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
+            this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }
     }
 }

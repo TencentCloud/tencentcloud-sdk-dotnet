@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 扫描信息
+        /// <p>扫描信息</p>
         /// </summary>
         [JsonProperty("Data")]
         public ScanInfo Data{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 支持的引流策略数量（最外层总条数）
+        /// <p>支持的引流策略数量（最外层总条数）</p>
         /// </summary>
         [JsonProperty("CcnPolicyInterconnectPairLenLimit")]
         public ulong? CcnPolicyInterconnectPairLenLimit{ get; set; }
 
         /// <summary>
-        /// 单条引流策略中单组的最大配置数量（内层单组总条数）
+        /// <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
         /// </summary>
         [JsonProperty("CcnPolicyGroupLenLimit")]
         public ulong? CcnPolicyGroupLenLimit{ get; set; }
 
         /// <summary>
-        /// 接入的实例网段长度（网段数量）限制
+        /// <p>接入的实例网段长度（网段数量）限制</p>
         /// </summary>
         [JsonProperty("CcnPolicyCidrLenLimit")]
         public ulong? CcnPolicyCidrLenLimit{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// nat防火墙vpc dns 信息数组
+        /// <p>nat防火墙vpc dns 信息数组</p>
         /// </summary>
         [JsonProperty("VpcDnsSwitchLst")]
         public VpcDnsInfo[] VpcDnsSwitchLst{ get; set; }
 
         /// <summary>
-        /// 返回参数 success成功 failed 失败
+        /// <p>返回参数 success成功 failed 失败</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 开关总条数
+        /// <p>开关总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

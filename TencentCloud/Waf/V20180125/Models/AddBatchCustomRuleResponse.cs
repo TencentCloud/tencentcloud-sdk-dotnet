@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 操作成功
+        /// <p>操作成功</p>
         /// </summary>
         [JsonProperty("Res")]
         public string Res{ get; set; }

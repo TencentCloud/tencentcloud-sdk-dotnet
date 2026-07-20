@@ -25,43 +25,43 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 每页条数
+        /// <p>每页条数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移值
+        /// <p>偏移值</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件组合
+        /// <p>过滤条件组合</p>
         /// </summary>
         [JsonProperty("Filters")]
         public CommonFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 检索的起始时间，可不传
+        /// <p>检索的起始时间，可不传</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 检索的截止时间，可不传
+        /// <p>检索的截止时间，可不传</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+        /// <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序所用到的字段
+        /// <p>排序所用到的字段</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

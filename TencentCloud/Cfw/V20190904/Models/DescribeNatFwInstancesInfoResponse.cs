@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 实例卡片信息数组
+        /// <p>实例卡片信息数组</p>
         /// </summary>
         [JsonProperty("NatinsLst")]
         public NatInstanceInfo[] NatinsLst{ get; set; }
 
         /// <summary>
-        /// nat 防火墙个数
+        /// <p>nat 防火墙个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 模式 1：接入模式；0：新增模式
+        /// <p>模式 1：接入模式；0：新增模式</p>
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id
+        /// <p>防火墙实例id</p>
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }
 
         /// <summary>
-        /// 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
+        /// <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
         /// </summary>
         [JsonProperty("NatGwList")]
         public string[] NatGwList{ get; set; }
 
         /// <summary>
-        /// 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+        /// <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
         /// </summary>
         [JsonProperty("VpcList")]
         public string[] VpcList{ get; set; }
 
         /// <summary>
-        /// 指定防火墙使用网段信息
+        /// <p>指定防火墙使用网段信息</p>
         /// </summary>
         [JsonProperty("FwCidrInfo")]
         public FwCidrInfo FwCidrInfo{ get; set; }

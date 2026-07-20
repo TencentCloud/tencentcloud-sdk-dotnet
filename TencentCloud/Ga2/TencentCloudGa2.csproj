@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1463</VersionPrefix>
+    <VersionPrefix>3.0.1466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20250115\Ga2Client.cs" />
     <Compile Include="V20250115\Models\AcceleratorAreas.cs" />
     <Compile Include="V20250115\Models\AcceleratorRegionSet.cs" />
+    <Compile Include="V20250115\Models\AclEntries.cs" />
     <Compile Include="V20250115\Models\CreateAccelerateAreasRequest.cs" />
     <Compile Include="V20250115\Models\CreateAccelerateAreasResponse.cs" />
     <Compile Include="V20250115\Models\CreateEndpointGroupRequest.cs" />
@@ -58,6 +59,10 @@
     <Compile Include="V20250115\Models\CreateForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\CreateForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\CreateForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclPolicyRequest.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclPolicyResponse.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclRuleRequest.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclRuleResponse.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorResponse.cs" />
     <Compile Include="V20250115\Models\CreateListenerAdditionalCertRequest.cs" />
@@ -72,6 +77,10 @@
     <Compile Include="V20250115\Models\DeleteForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\DeleteForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\DeleteForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclPolicyRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclPolicyResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclRuleRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclRuleResponse.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorResponse.cs" />
     <Compile Include="V20250115\Models\DeleteListenerAdditionalCertRequest.cs" />
@@ -114,6 +123,10 @@
     <Compile Include="V20250115\Models\ModifyForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclPolicyRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclPolicyResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclRuleRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclRuleResponse.cs" />
     <Compile Include="V20250115\Models\ModifyGlobalAcceleratorRequest.cs" />
     <Compile Include="V20250115\Models\ModifyGlobalAcceleratorResponse.cs" />
     <Compile Include="V20250115\Models\ModifyListenerRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1457</VersionPrefix>
+    <VersionPrefix>3.0.1466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20260520\AdpClient.cs" />
     <Compile Include="V20260520\Models\AICallConfig.cs" />
     <Compile Include="V20260520\Models\AIOptimizeModel.cs" />
+    <Compile Include="V20260520\Models\AccountInfo.cs" />
     <Compile Include="V20260520\Models\AgentAdvancedConfig.cs" />
     <Compile Include="V20260520\Models\AgentCollaborationConfig.cs" />
     <Compile Include="V20260520\Models\AgentDetail.cs" />
@@ -100,13 +101,17 @@
     <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
     <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\AppealingStatus.cs" />
+    <Compile Include="V20260520\Models\AuditLog.cs" />
+    <Compile Include="V20260520\Models\AuditLogMetaField.cs" />
     <Compile Include="V20260520\Models\AuthConfig.cs" />
     <Compile Include="V20260520\Models\BackgroundImage.cs" />
     <Compile Include="V20260520\Models\BasicBilling.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
     <Compile Include="V20260520\Models\CamAuthConfig.cs" />
+    <Compile Include="V20260520\Models\ClawAgentAgentTeamConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentCustomConfig.cs" />
+    <Compile Include="V20260520\Models\ClawAgentLongMemoryConfig.cs" />
     <Compile Include="V20260520\Models\CodeToolConfig.cs" />
     <Compile Include="V20260520\Models\ComplexBilling.cs" />
     <Compile Include="V20260520\Models\ComplexBillingItem.cs" />
@@ -122,6 +127,7 @@
     <Compile Include="V20260520\Models\CopyAgentFromAppResponse.cs" />
     <Compile Include="V20260520\Models\CopyAppRequest.cs" />
     <Compile Include="V20260520\Models\CopyAppResponse.cs" />
+    <Compile Include="V20260520\Models\CorpShareConfig.cs" />
     <Compile Include="V20260520\Models\CreateAgentRequest.cs" />
     <Compile Include="V20260520\Models\CreateAgentResponse.cs" />
     <Compile Include="V20260520\Models\CreateAppRequest.cs" />
@@ -160,6 +166,8 @@
     <Compile Include="V20260520\Models\DeleteSpaceResponse.cs" />
     <Compile Include="V20260520\Models\DeleteVariableRequest.cs" />
     <Compile Include="V20260520\Models\DeleteVariableResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAccountListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAccountListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAgentDetailRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAgentDetailResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAgentReleasePreviewListRequest.cs" />
@@ -170,6 +178,10 @@
     <Compile Include="V20260520\Models\DescribeAppResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAppSummaryListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAppSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAuditLogListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAuditLogListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAuditLogMetaRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAuditLogMetaResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConversationListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeConversationListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConversationMessageListRequest.cs" />

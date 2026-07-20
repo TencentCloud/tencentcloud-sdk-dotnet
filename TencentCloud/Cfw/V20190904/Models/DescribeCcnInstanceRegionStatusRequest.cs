@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 云联网ID
+        /// <p>云联网ID</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 要查询引流网络部署状态的云联网关联的实例ID列表
+        /// <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 引流路由方法 0:多路由表, 1:策略路由
+        /// <p>引流路由方法 0:多路由表, 1:策略路由</p>
         /// </summary>
         [JsonProperty("RoutingMode")]
         public ulong? RoutingMode{ get; set; }

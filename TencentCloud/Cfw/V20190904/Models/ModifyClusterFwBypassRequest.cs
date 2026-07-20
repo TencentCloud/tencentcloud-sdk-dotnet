@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
+        /// <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
         /// <summary>
-        /// 云联网实例ID
+        /// <p>云联网实例ID</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
+        /// <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// NAT防火墙实例ID，FwType为nat时必填
+        /// <p>NAT防火墙实例ID，FwType为nat时必填</p>
         /// </summary>
         [JsonProperty("NatInsId")]
         public string NatInsId{ get; set; }

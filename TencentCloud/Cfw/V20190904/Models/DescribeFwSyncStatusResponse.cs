@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 同步状态：1，同步中；0，同步完成
+        /// <p>同步状态：1，同步中；0，同步完成</p>
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }

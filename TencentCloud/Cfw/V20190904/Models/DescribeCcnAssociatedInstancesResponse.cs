@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 实例总数
+        /// <p>实例总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 云联网关联的实例信息
+        /// <p>云联网关联的实例信息</p>
         /// </summary>
         [JsonProperty("CcnAssociatedInstances")]
         public CcnAssociatedInstance[] CcnAssociatedInstances{ get; set; }

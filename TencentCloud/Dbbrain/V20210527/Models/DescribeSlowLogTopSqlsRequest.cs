@@ -25,55 +25,55 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2019-09-10 12:13:14”。
+        /// <p>开始时间，如“2019-09-10 12:13:14”。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+        /// <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
+        /// <p>排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。<br>其中：<br>QueryTime-查询耗时<br>ExecTimes-执行次数<br>RowsSent-返回行数<br>LockTime-锁等待时间<br>RowsExamined-扫描行数</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
+        /// <p>排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 数据库名称数组。
+        /// <p>数据库名称数组。</p>
         /// </summary>
         [JsonProperty("SchemaList")]
         public SchemaItem[] SchemaList{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+        /// <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB  for MySQL， &quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

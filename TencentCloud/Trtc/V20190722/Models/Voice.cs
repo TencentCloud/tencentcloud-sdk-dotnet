@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public float? Speed{ get; set; }
 
         /// <summary>
-        /// <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
+        /// <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p>
         /// </summary>
         [JsonProperty("Volume")]
         public float? Volume{ get; set; }

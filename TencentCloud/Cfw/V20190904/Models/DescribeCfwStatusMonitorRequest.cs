@@ -25,109 +25,109 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
+        /// 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
 
         /// <summary>
-        /// <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
+        /// 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
         /// </summary>
         [JsonProperty("FirewallType")]
         public string FirewallType{ get; set; }
 
         /// <summary>
-        /// <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
+        /// 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
         /// </summary>
         [JsonProperty("SelectionId")]
         public string SelectionId{ get; set; }
 
         /// <summary>
-        /// <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
+        /// 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
         /// </summary>
         [JsonProperty("SelectionName")]
         public string SelectionName{ get; set; }
 
         /// <summary>
-        /// <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
+        /// 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
         /// </summary>
         [JsonProperty("SelectionInstanceId")]
         public string SelectionInstanceId{ get; set; }
 
         /// <summary>
-        /// <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
+        /// 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
+        /// 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
         /// </summary>
         [JsonProperty("Perspective")]
         public string Perspective{ get; set; }
 
         /// <summary>
-        /// <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
+        /// NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
         /// </summary>
         [JsonProperty("IpScope")]
         public string IpScope{ get; set; }
 
         /// <summary>
-        /// <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
+        /// 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
         /// </summary>
         [JsonProperty("TimePreset")]
         public string TimePreset{ get; set; }
 
         /// <summary>
-        /// <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
+        /// 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
+        /// 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
+        /// 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
+        /// 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
+        /// 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
         /// </summary>
         [JsonProperty("OverviewOnly")]
         public bool? OverviewOnly{ get; set; }
 
         /// <summary>
-        /// <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
+        /// 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
+        /// 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// <p>排序方向。默认 desc；支持 asc、desc。</p>
+        /// 排序方向。默认 desc；支持 asc、desc。
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+        /// 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
         /// </summary>
         [JsonProperty("Filters")]
         public CfwStatusMonitorFilter[] Filters{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 开关列表
+        /// <p>开关列表</p>
         /// </summary>
         [JsonProperty("SwitchList")]
         public FwGroupSwitchShow[] SwitchList{ get; set; }
 
         /// <summary>
-        /// 开关总个数
+        /// <p>开关总个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

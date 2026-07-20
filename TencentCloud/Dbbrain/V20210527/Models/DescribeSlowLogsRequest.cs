@@ -25,73 +25,73 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
+        /// <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 实例id。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// sql模板的md5值
+        /// <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2019-09-10 12:13:14”。
+        /// <p>开始时间，如“2019-09-10 12:13:14”。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+        /// <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询数目，默认为20，最大为100。
+        /// <p>查询数目，默认为20，最大为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 数据库列表
+        /// <p>数据库列表</p>
         /// </summary>
         [JsonProperty("DB")]
         public string[] DB{ get; set; }
 
         /// <summary>
-        /// 关键字
+        /// <p>关键字</p>
         /// </summary>
         [JsonProperty("Key")]
         public string[] Key{ get; set; }
 
         /// <summary>
-        /// 用户
+        /// <p>用户</p>
         /// </summary>
         [JsonProperty("User")]
         public string[] User{ get; set; }
 
         /// <summary>
-        /// IP
+        /// <p>IP 来源</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string[] Ip{ get; set; }
 
         /// <summary>
-        /// 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
+        /// <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p>
         /// </summary>
         [JsonProperty("Time")]
         public long?[] Time{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 支持自动接入和策略路由的CCN列表
+        /// <p>支持自动接入和策略路由的CCN列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportCcnPolicy")]
         public string[] SupportCcnPolicy{ get; set; }
 
         /// <summary>
-        /// 自动接入中支持自定义cidr的CCN列表
+        /// <p>自动接入中支持自定义cidr的CCN列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportCcnPolicyCidr")]

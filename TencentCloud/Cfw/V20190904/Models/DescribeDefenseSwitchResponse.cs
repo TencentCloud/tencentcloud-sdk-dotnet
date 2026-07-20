@@ -25,43 +25,43 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 基础防御开关
+        /// <p>基础防御开关</p>
         /// </summary>
         [JsonProperty("BasicRuleSwitch")]
         public long? BasicRuleSwitch{ get; set; }
 
         /// <summary>
-        /// 安全基线开关
+        /// <p>安全基线开关</p>
         /// </summary>
         [JsonProperty("BaselineAllSwitch")]
         public long? BaselineAllSwitch{ get; set; }
 
         /// <summary>
-        /// 威胁情报开关
+        /// <p>威胁情报开关</p>
         /// </summary>
         [JsonProperty("TiSwitch")]
         public long? TiSwitch{ get; set; }
 
         /// <summary>
-        /// 虚拟补丁开关
+        /// <p>虚拟补丁开关</p>
         /// </summary>
         [JsonProperty("VirtualPatchSwitch")]
         public long? VirtualPatchSwitch{ get; set; }
 
         /// <summary>
-        /// 是否历史开启
+        /// <p>是否历史开启</p>
         /// </summary>
         [JsonProperty("HistoryOpen")]
         public long? HistoryOpen{ get; set; }
 
         /// <summary>
-        /// 状态值，0：查询成功，非0：查询失败
+        /// <p>状态值，0：查询成功，非0：查询失败</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// 状态信息，success：查询成功，fail：查询失败
+        /// <p>状态信息，success：查询成功，fail：查询失败</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

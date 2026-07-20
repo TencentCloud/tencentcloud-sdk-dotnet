@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 开关，0：关闭，1：开启
+        /// <p>开关，0：关闭，1：开启</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 集群模式vpc间防火墙ccn开关信息
+        /// <p>集群模式vpc间防火墙ccn开关信息</p>
         /// </summary>
         [JsonProperty("CcnSwitch")]
         public CcnSwitchInfo[] CcnSwitch{ get; set; }

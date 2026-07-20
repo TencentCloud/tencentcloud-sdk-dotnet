@@ -216,6 +216,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CpuCoreCount")]
         public ulong? CpuCoreCount{ get; set; }
 
+        /// <summary>
+        /// <p>是否支持迁移</p>
+        /// </summary>
+        [JsonProperty("MigrationRequired")]
+        public bool? MigrationRequired{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持暴露面扫描</p>
+        /// </summary>
+        [JsonProperty("IsSupportXSPM")]
+        public bool? IsSupportXSPM{ get; set; }
+
+        /// <summary>
+        /// <p>是否能解绑</p>
+        /// </summary>
+        [JsonProperty("CanUnbind")]
+        public bool? CanUnbind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +272,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ContainerDefendStatus", this.ContainerDefendStatus);
             this.SetParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
             this.SetParamSimple(map, prefix + "CpuCoreCount", this.CpuCoreCount);
+            this.SetParamSimple(map, prefix + "MigrationRequired", this.MigrationRequired);
+            this.SetParamSimple(map, prefix + "IsSupportXSPM", this.IsSupportXSPM);
+            this.SetParamSimple(map, prefix + "CanUnbind", this.CanUnbind);
         }
     }
 }

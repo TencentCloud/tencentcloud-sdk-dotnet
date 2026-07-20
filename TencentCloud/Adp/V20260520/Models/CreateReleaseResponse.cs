@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// need_approval
+        /// <p>need_approval</p>
         /// </summary>
         [JsonProperty("NeedApproval")]
         public bool? NeedApproval{ get; set; }
 
         /// <summary>
-        /// release_id
+        /// <p>release_id</p>
         /// </summary>
         [JsonProperty("ReleaseId")]
         public string ReleaseId{ get; set; }

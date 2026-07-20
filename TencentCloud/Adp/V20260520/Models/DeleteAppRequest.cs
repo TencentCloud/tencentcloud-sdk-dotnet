@@ -25,10 +25,16 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// app_id
+        /// <p>app_id</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
+
+        /// <summary>
+        /// <p>删除原因(非必填,审批时展示)</p>
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

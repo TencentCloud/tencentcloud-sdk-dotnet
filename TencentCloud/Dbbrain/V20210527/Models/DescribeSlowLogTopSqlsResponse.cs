@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 符合条件的记录总数。
+        /// <p>符合条件的记录总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢日志 top sql 列表
+        /// <p>慢日志 top sql 列表</p>
         /// </summary>
         [JsonProperty("Rows")]
         public SlowLogTopSqlItem[] Rows{ get; set; }

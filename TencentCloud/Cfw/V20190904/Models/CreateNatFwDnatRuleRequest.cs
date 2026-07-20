@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0：cfw新增模式，1：cfw接入模式。
+        /// <p>0：cfw新增模式，1：cfw接入模式。</p>
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id，该字段必须传递。
+        /// <p>防火墙实例id，该字段必须传递。</p>
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }
 
         /// <summary>
-        /// 添加或删除操作的Dnat规则列表。
+        /// <p>添加或删除操作的Dnat规则列表。</p>
         /// </summary>
         [JsonProperty("DnatRules")]
         public CfwNatDnatRule[] DnatRules{ get; set; }

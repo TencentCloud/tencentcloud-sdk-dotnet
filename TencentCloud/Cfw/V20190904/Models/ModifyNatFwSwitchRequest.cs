@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 开关，0：关闭，1：开启
+        /// <p>开关，0：关闭，1：开启</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+        /// <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
         /// </summary>
         [JsonProperty("CfwInsIdList")]
         public string[] CfwInsIdList{ get; set; }
 
         /// <summary>
-        /// 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+        /// <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
         /// </summary>
         [JsonProperty("SubnetIdList")]
         public string[] SubnetIdList{ get; set; }
 
         /// <summary>
-        /// 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+        /// <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
         /// </summary>
         [JsonProperty("RouteTableIdList")]
         public string[] RouteTableIdList{ get; set; }

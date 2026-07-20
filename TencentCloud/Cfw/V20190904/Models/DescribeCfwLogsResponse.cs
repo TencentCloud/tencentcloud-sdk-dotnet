@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+        /// 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。Items 是当前页日志数组，字段随 LogType 变化；TotalCount 是当前页返回条数，Limit 是页大小，LogType 和 TimeWindow 回显查询范围。HasMore=true 时必须保存并原样使用 NextToken 续查；HasMore=false 时分页结束。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

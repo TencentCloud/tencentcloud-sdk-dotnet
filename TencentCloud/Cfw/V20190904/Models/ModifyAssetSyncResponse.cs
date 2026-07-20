@@ -25,24 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 返回状态
-        /// 0 请求成功
-        /// 2 请求失败
-        /// 3 请求失败-频率限制
+        /// <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// success 成功
-        /// 其他失败
+        /// <p>success 成功<br>其他失败</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 0 成功
-        /// 非0 失败
+        /// <p>0 成功<br>非0 失败</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public ulong? ReturnCode{ get; set; }

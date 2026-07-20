@@ -25,56 +25,56 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// NAT边界防火墙开关列表数据
+        /// <p>NAT边界防火墙开关列表数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public NatSwitchListData[] Data{ get; set; }
 
         /// <summary>
-        /// 开关相关VPC列表
+        /// <p>开关相关VPC列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcList")]
         public CommonIdName[] VpcList{ get; set; }
 
         /// <summary>
-        /// 开关相关NAT列表
+        /// <p>开关相关NAT列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatList")]
         public CommonIdName[] NatList{ get; set; }
 
         /// <summary>
-        /// 开关相关ROUTE列表
+        /// <p>开关相关ROUTE列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteList")]
         public CommonIdName[] RouteList{ get; set; }
 
         /// <summary>
-        /// 开启开关个数
+        /// <p>开启开关个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnNum")]
         public long? OnNum{ get; set; }
 
         /// <summary>
-        /// 关闭开关个数
+        /// <p>关闭开关个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffNum")]
         public long? OffNum{ get; set; }
 
         /// <summary>
-        /// 失败开关状态
+        /// <p>失败开关状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailData")]

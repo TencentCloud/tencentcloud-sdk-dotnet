@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 查询的同步状态类型：Route,同步路由状态
+        /// <p>查询的同步状态类型：Route,同步路由状态</p>
         /// </summary>
         [JsonProperty("SyncType")]
         public string SyncType{ get; set; }

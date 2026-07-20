@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1463";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -1923,6 +1923,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResultSync(DescribeLakeFsTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeLakeFsTaskResultResponse>(req, "DescribeLakeFsTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeTasks）用于查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTaskRequest"/></param>
+        /// <returns><see cref="DescribeMCPTaskResponse"/></returns>
+        public Task<DescribeMCPTaskResponse> DescribeMCPTask(DescribeMCPTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTaskResponse>(req, "DescribeMCPTask");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeTasks）用于查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTaskRequest"/></param>
+        /// <returns><see cref="DescribeMCPTaskResponse"/></returns>
+        public DescribeMCPTaskResponse DescribeMCPTaskSync(DescribeMCPTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTaskResponse>(req, "DescribeMCPTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取任务结果查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeMCPTaskResultResponse"/></returns>
+        public Task<DescribeMCPTaskResultResponse> DescribeMCPTaskResult(DescribeMCPTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTaskResultResponse>(req, "DescribeMCPTaskResult");
+        }
+
+        /// <summary>
+        /// 获取任务结果查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeMCPTaskResultResponse"/></returns>
+        public DescribeMCPTaskResultResponse DescribeMCPTaskResultSync(DescribeMCPTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTaskResultResponse>(req, "DescribeMCPTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

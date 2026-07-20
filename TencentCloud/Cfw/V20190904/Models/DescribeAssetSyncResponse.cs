@@ -25,28 +25,28 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 返回状态
-        /// 1 更新中
-        /// 2 更新完成
-        /// 3 更新失败
-        /// 4 更新失败
+        /// <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// success 成功
-        /// 其他失败
+        /// <p>success 成功<br>其他失败</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 0 成功
-        /// 非0 失败
+        /// <p>0 成功<br>非0 失败</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public ulong? ReturnCode{ get; set; }
+
+        /// <summary>
+        /// <p>已有CVM数量</p>
+        /// </summary>
+        [JsonProperty("CVMCount")]
+        public long? CVMCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -63,6 +63,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "CVMCount", this.CVMCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

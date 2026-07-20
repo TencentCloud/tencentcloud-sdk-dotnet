@@ -25,54 +25,49 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// VPC防火墙(组)名称
+        /// <p>VPC防火墙(组)名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
+        /// <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// 防火墙(组)下的防火墙实例列表
+        /// <p>防火墙(组)下的防火墙实例列表</p>
         /// </summary>
         [JsonProperty("VpcFwInstances")]
         public VpcFwInstance[] VpcFwInstances{ get; set; }
 
         /// <summary>
-        /// 防火墙实例的开关模式
-        /// 1: 单点互通
-        /// 2: 多点互通
-        /// 3: 全互通
-        /// 4: 自定义路由
+        /// <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
         /// </summary>
         [JsonProperty("SwitchMode")]
         public long? SwitchMode{ get; set; }
 
         /// <summary>
-        /// auto 自动选择防火墙网段
-        /// 10.10.10.0/24 用户输入的防火墙网段
+        /// <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
         /// </summary>
         [JsonProperty("FwVpcCidr")]
         public string FwVpcCidr{ get; set; }
 
         /// <summary>
-        /// 云联网id ，适用于云联网模式
+        /// <p>云联网id ，适用于云联网模式</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 指定防火墙使用网段信息
+        /// <p>指定防火墙使用网段信息</p>
         /// </summary>
         [JsonProperty("FwCidrInfo")]
         public FwCidrInfo FwCidrInfo{ get; set; }
 
         /// <summary>
-        /// 跨租户管理员模式  1管理员 2多账号
+        /// <p>跨租户管理员模式  1管理员 2多账号</p>
         /// </summary>
         [JsonProperty("CrossUserMode")]
         public string CrossUserMode{ get; set; }

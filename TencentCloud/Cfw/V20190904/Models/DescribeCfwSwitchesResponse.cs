@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+        /// 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

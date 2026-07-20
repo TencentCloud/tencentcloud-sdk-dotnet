@@ -25,94 +25,100 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+        /// <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 优先级
+        /// <p>优先级</p>
         /// </summary>
         [JsonProperty("SortId")]
         public long? SortId{ get; set; }
 
         /// <summary>
-        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+        /// <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public long? ActionType{ get; set; }
 
         /// <summary>
-        /// 重定向地址
+        /// <p>重定向地址</p>
         /// </summary>
         [JsonProperty("Redirect")]
         public string Redirect{ get; set; }
 
         /// <summary>
-        /// 加白模块
+        /// <p>加白模块</p>
         /// </summary>
         [JsonProperty("Bypass")]
         public string Bypass{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 事件Id
+        /// <p>事件Id</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 域名列表
+        /// <p>域名列表</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 策略详情列表
+        /// <p>策略详情列表</p>
         /// </summary>
         [JsonProperty("Strategies")]
         public Strategy[] Strategies{ get; set; }
 
         /// <summary>
-        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+        /// <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
 
         /// <summary>
-        /// 定时任务配置
+        /// <p>定时任务配置</p>
         /// </summary>
         [JsonProperty("JobDateTime")]
         public JobDateTime JobDateTime{ get; set; }
 
         /// <summary>
-        /// 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+        /// <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
         /// </summary>
         [JsonProperty("LogicalOp")]
         public string LogicalOp{ get; set; }
 
         /// <summary>
-        /// 页面ID
+        /// <p>页面ID</p>
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }
 
         /// <summary>
-        /// 动作灰度比例
+        /// <p>动作灰度比例</p>
         /// </summary>
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }
+
+        /// <summary>
+        /// <p>绑定的防护组ID</p>
+        /// </summary>
+        [JsonProperty("GroupIds")]
+        public ulong?[] GroupIds{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

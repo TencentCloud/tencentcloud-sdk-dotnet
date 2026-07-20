@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1464";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -359,7 +359,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
+        /// 在版本管理模式下，用于创建指定配置组的新版本。
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
+        /// 在版本管理模式下，用于创建指定配置组的新版本。
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>

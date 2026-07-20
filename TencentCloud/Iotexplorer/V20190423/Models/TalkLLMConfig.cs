@@ -55,7 +55,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+        /// <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
         /// </summary>
         [JsonProperty("BaseUrl")]
         public string BaseUrl{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ExtraBody")]
         public string ExtraBody{ get; set; }
 
+        /// <summary>
+        /// <p>ADP 平台配置</p>
+        /// </summary>
+        [JsonProperty("ADP")]
+        public ADPConfig ADP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "ApiKey", this.ApiKey);
             this.SetParamSimple(map, prefix + "ExtraBody", this.ExtraBody);
+            this.SetParamObj(map, prefix + "ADP.", this.ADP);
         }
     }
 }

@@ -25,31 +25,31 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 根据哪个字段进行返回结果排序，目前支持如下以下字段：AddTime, ModTime
+        /// <p>根据哪个字段进行返回结果排序</p><p>枚举值：</p><ul><li>created_at： 创建时间</li><li>updated_at： 更新时间</li><li>name： 连接器名称</li></ul><p>默认值：updated_at</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+        /// <p>以升序还是降序的方式返回结果，可选值 ASC 和 DESC</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

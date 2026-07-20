@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 地域总数量
+        /// <p>地域总数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 地域防火墙引流网络状态列表
+        /// <p>地域防火墙引流网络状态列表</p>
         /// </summary>
         [JsonProperty("RegionFwStatus")]
         public RegionFwStatus[] RegionFwStatus{ get; set; }

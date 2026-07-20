@@ -25,14 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0 正常
-        /// -1 异常
+        /// <p>0 正常<br>-1 异常</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// nat实例唯一ID
+        /// <p>nat实例唯一ID</p>
         /// </summary>
         [JsonProperty("NatInstanceId")]
         public string NatInstanceId{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// NAT防火墙实例名称
+        /// <p>NAT防火墙实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// NAT防火墙实例ID
+        /// <p>NAT防火墙实例ID</p>
         /// </summary>
         [JsonProperty("NatInstanceId")]
         public string NatInstanceId{ get; set; }

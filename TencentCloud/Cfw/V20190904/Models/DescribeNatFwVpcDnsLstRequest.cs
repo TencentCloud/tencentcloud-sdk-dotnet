@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// natfw 防火墙实例id
+        /// <p>natfw 防火墙实例id</p>
         /// </summary>
         [JsonProperty("NatFwInsId")]
         public string NatFwInsId{ get; set; }
 
         /// <summary>
-        /// natfw 过滤，以','分隔
+        /// <p>natfw 过滤，以&#39;,&#39;分隔</p>
         /// </summary>
         [JsonProperty("NatInsIdFilter")]
         public string NatInsIdFilter{ get; set; }
 
         /// <summary>
-        /// 分页页数
+        /// <p>分页页数</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页最多个数
+        /// <p>每页最多个数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

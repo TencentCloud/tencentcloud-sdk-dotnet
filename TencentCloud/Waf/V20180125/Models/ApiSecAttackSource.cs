@@ -25,70 +25,88 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 攻击来源ip
+        /// <p>攻击来源ip</p>
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
-        /// 威胁等级
+        /// <p>威胁等级</p>
         /// </summary>
         [JsonProperty("EventLevel")]
         public string EventLevel{ get; set; }
 
         /// <summary>
-        /// BOT标签
+        /// <p>BOT标签</p>
         /// </summary>
         [JsonProperty("BotLabel")]
         public string BotLabel{ get; set; }
 
         /// <summary>
-        /// 变更时间
+        /// <p>变更时间</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// 地理位置
+        /// <p>地理位置</p>
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 关联事件数量
+        /// <p>关联事件数量</p>
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
-        /// 攻击数量
+        /// <p>攻击数量</p>
         /// </summary>
         [JsonProperty("AttackCount")]
         public long? AttackCount{ get; set; }
 
         /// <summary>
-        /// 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+        /// <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
         /// </summary>
         [JsonProperty("MissUserName")]
         public string MissUserName{ get; set; }
 
         /// <summary>
-        /// 当是水平越权和垂直越权时，返回此字段
+        /// <p>当是水平越权和垂直越权时，返回此字段</p>
         /// </summary>
         [JsonProperty("AttackDetail")]
         public string[] AttackDetail{ get; set; }
 
         /// <summary>
-        /// 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+        /// <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
         /// </summary>
         [JsonProperty("MissPassword")]
         public string MissPassword{ get; set; }
+
+        /// <summary>
+        /// <p>事件描述</p>
+        /// </summary>
+        [JsonProperty("EventDescription")]
+        public string EventDescription{ get; set; }
+
+        /// <summary>
+        /// <p>事件描述(英文)</p>
+        /// </summary>
+        [JsonProperty("EventDescriptionEng")]
+        public string EventDescriptionEng{ get; set; }
+
+        /// <summary>
+        /// <p>攻击样本</p>
+        /// </summary>
+        [JsonProperty("Sample")]
+        public ApiEventSample Sample{ get; set; }
 
 
         /// <summary>
@@ -107,6 +125,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "MissUserName", this.MissUserName);
             this.SetParamArraySimple(map, prefix + "AttackDetail.", this.AttackDetail);
             this.SetParamSimple(map, prefix + "MissPassword", this.MissPassword);
+            this.SetParamSimple(map, prefix + "EventDescription", this.EventDescription);
+            this.SetParamSimple(map, prefix + "EventDescriptionEng", this.EventDescriptionEng);
+            this.SetParamObj(map, prefix + "Sample.", this.Sample);
         }
     }
 }

@@ -25,6 +25,84 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// <p>告警开始时间。可选，格式 YYYY-MM-DD HH:MM:SS；默认查询最近 1 小时。</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>告警结束时间。可选，格式 YYYY-MM-DD HH:MM:SS；默认当前时间。</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>告警严重级别过滤。可选；枚举 low、middle、high。</p>
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
+        /// <summary>
+        /// <p>流量方向过滤。可选；枚举 outbound 出站、inbound 入站、lateral 横向。</p>
+        /// </summary>
+        [JsonProperty("Direction")]
+        public string Direction{ get; set; }
+
+        /// <summary>
+        /// <p>处置状态过滤。可选；枚举 unhandled、handled、blocked、passed、isolated、ignored。</p>
+        /// </summary>
+        [JsonProperty("ActionStatus")]
+        public string ActionStatus{ get; set; }
+
+        /// <summary>
+        /// <p>攻击链阶段过滤。可选；枚举 recon、brute_force、delivery、exploit、c2、lateral_movement、exfiltration。</p>
+        /// </summary>
+        [JsonProperty("KillChain")]
+        public string KillChain{ get; set; }
+
+        /// <summary>
+        /// <p>攻击结果过滤。可选；枚举 attempt、success、fail、unknown。</p>
+        /// </summary>
+        [JsonProperty("AttackResult")]
+        public string AttackResult{ get; set; }
+
+        /// <summary>
+        /// <p>IPS 策略动作过滤。可选；枚举 observe、block。</p>
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public string Strategy{ get; set; }
+
+        /// <summary>
+        /// <p>攻击事件名称关键字过滤。可选，例如 SQL注入、暴力破解、恶意域名访问。</p>
+        /// </summary>
+        [JsonProperty("EventName")]
+        public string EventName{ get; set; }
+
+        /// <summary>
+        /// <p>精确告警事件 ID 过滤。用于指定事件的写操作前检查和写操作后核验；事件重新聚合时返回原请求 ID 和当前事件 ID。无匹配返回空结果，多匹配或定位过程异常时失败，不退化为宽查询。</p>
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
+        /// <summary>
+        /// <p>源 IP 过滤。可选。</p>
+        /// </summary>
+        [JsonProperty("SrcIp")]
+        public string SrcIp{ get; set; }
+
+        /// <summary>
+        /// <p>目的 IP 过滤。可选。</p>
+        /// </summary>
+        [JsonProperty("DstIp")]
+        public string DstIp{ get; set; }
+
+        /// <summary>
+        /// <p>云资源实例 ID 过滤。可选，例如 ins-xxxxxxxx。</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// <p>单页返回告警数。可选，默认 10，最大 50。</p>
         /// </summary>
         [JsonProperty("Limit")]
@@ -36,14 +114,41 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>排序字段。可选，默认 EndTime；枚举 EndTime、StartTime、Count。排序字段。可选，默认 EndTime；枚举 EndTime、StartTime、Count；Count 表示按单个聚合告警事件的告警发生次数/命中次数排序，对应返回中的 occurrence_count</p>
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// <p>排序方向。可选，默认 desc；枚举 desc、asc。</p>
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "ActionStatus", this.ActionStatus);
+            this.SetParamSimple(map, prefix + "KillChain", this.KillChain);
+            this.SetParamSimple(map, prefix + "AttackResult", this.AttackResult);
+            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "EventName", this.EventName);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "SrcIp", this.SrcIp);
+            this.SetParamSimple(map, prefix + "DstIp", this.DstIp);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

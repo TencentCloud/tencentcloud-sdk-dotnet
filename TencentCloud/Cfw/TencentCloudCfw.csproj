@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1464</VersionPrefix>
+    <VersionPrefix>3.0.1466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,8 @@
     <Compile Include="V20190904\Models\CreateAlertCenterIsolateResponse.cs" />
     <Compile Include="V20190904\Models\CreateAlertCenterOmitRequest.cs" />
     <Compile Include="V20190904\Models\CreateAlertCenterOmitResponse.cs" />
+    <Compile Include="V20190904\Models\CreateAlertCenterRuleAsyncRequest.cs" />
+    <Compile Include="V20190904\Models\CreateAlertCenterRuleAsyncResponse.cs" />
     <Compile Include="V20190904\Models\CreateAlertCenterRuleRequest.cs" />
     <Compile Include="V20190904\Models\CreateAlertCenterRuleResponse.cs" />
     <Compile Include="V20190904\Models\CreateBlockIgnoreRuleListRequest.cs" />
@@ -337,6 +339,8 @@
     <Compile Include="V20190904\Models\ModifyFwGroupSwitchResponse.cs" />
     <Compile Include="V20190904\Models\ModifyIpsModeSwitchRequest.cs" />
     <Compile Include="V20190904\Models\ModifyIpsModeSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyIsolateTableRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyIsolateTableResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\ModifyNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwReSelectRequest.cs" />

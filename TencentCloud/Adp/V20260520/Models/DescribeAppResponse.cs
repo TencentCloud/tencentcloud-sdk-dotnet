@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 应用详情
+        /// <p>应用详情</p>
         /// </summary>
         [JsonProperty("App")]
         public App App{ get; set; }

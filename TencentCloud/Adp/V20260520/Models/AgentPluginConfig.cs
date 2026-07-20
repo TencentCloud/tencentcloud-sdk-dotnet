@@ -55,7 +55,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? AuthType{ get; set; }
 
         /// <summary>
-        /// OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+        /// <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
         /// </summary>
         [JsonProperty("OAuthConsent")]
         public long? OAuthConsent{ get; set; }

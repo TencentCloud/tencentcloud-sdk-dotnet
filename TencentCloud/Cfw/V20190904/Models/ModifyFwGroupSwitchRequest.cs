@@ -25,21 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 打开或关闭开关
-        /// 0：关闭开关
-        /// 1：打开开关
+        /// <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 是否操作全部开关 0 不操作全部开关，1 操作全部开关
+        /// <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
         /// </summary>
         [JsonProperty("AllSwitch")]
         public long? AllSwitch{ get; set; }
 
         /// <summary>
-        /// 开关列表
+        /// <p>开关列表</p>
         /// </summary>
         [JsonProperty("SwitchList")]
         public FwGroupSwitch[] SwitchList{ get; set; }

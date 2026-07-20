@@ -271,6 +271,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
+        /// <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+        /// </summary>
+        [JsonProperty("DiskEncryption")]
+        public string DiskEncryption{ get; set; }
+
+        /// <summary>
         /// <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
         /// </summary>
         [JsonProperty("DestroyProtect")]
@@ -329,6 +335,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
             this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
         }

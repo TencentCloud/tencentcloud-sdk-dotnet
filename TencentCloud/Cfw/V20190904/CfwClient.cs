@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1464";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Cfw.V20190904
         public CreateAlertCenterRuleResponse CreateAlertCenterRuleSync(CreateAlertCenterRuleRequest req)
         {
             return InternalRequestAsync<CreateAlertCenterRuleResponse>(req, "CreateAlertCenterRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户告警中心-封禁、放通处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterRuleAsyncRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterRuleAsyncResponse"/></returns>
+        public Task<CreateAlertCenterRuleAsyncResponse> CreateAlertCenterRuleAsync(CreateAlertCenterRuleAsyncRequest req)
+        {
+            return InternalRequestAsync<CreateAlertCenterRuleAsyncResponse>(req, "CreateAlertCenterRuleAsync");
+        }
+
+        /// <summary>
+        /// 用户告警中心-封禁、放通处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterRuleAsyncRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterRuleAsyncResponse"/></returns>
+        public CreateAlertCenterRuleAsyncResponse CreateAlertCenterRuleAsyncSync(CreateAlertCenterRuleAsyncRequest req)
+        {
+            return InternalRequestAsync<CreateAlertCenterRuleAsyncResponse>(req, "CreateAlertCenterRuleAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -961,7 +982,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
+        /// 查询当前租户防火墙纳管资产。首次查询传 AssetType、过滤条件和 Limit；Response.Data.HasMore=true 时，续查只传 NextToken。默认查询 host；broad 查询分页返回资产，exact InstanceId 查询分页返回该实例 fingerprints 且每页重复基础资产。仅明确需要 VPC 或子网时传 AssetType。
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwAssetsRequest"/></param>
         /// <returns><see cref="DescribeCfwAssetsResponse"/></returns>
@@ -971,7 +992,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
+        /// 查询当前租户防火墙纳管资产。首次查询传 AssetType、过滤条件和 Limit；Response.Data.HasMore=true 时，续查只传 NextToken。默认查询 host；broad 查询分页返回资产，exact InstanceId 查询分页返回该实例 fingerprints 且每页重复基础资产。仅明确需要 VPC 或子网时传 AssetType。
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwAssetsRequest"/></param>
         /// <returns><see cref="DescribeCfwAssetsResponse"/></returns>
@@ -1129,7 +1150,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
+        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。border_firewall、nat_firewall、vpc_firewall、ndr 的 available 表示至少一个对应防护开关实际开启，不表示仅已购买或已创建；ips.mode 可能为跟随全局、观察、拦截、严格、关闭或未知。
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwSwitchesRequest"/></param>
         /// <returns><see cref="DescribeCfwSwitchesResponse"/></returns>
@@ -1139,7 +1160,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
+        /// 查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。border_firewall、nat_firewall、vpc_firewall、ndr 的 available 表示至少一个对应防护开关实际开启，不表示仅已购买或已创建；ips.mode 可能为跟随全局、观察、拦截、严格、关闭或未知。
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwSwitchesRequest"/></param>
         /// <returns><see cref="DescribeCfwSwitchesResponse"/></returns>
@@ -2540,6 +2561,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyIpsModeSwitchResponse ModifyIpsModeSwitchSync(ModifyIpsModeSwitchRequest req)
         {
             return InternalRequestAsync<ModifyIpsModeSwitchResponse>(req, "ModifyIpsModeSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ModifyIsolateTable 隔离列表编辑和删除操作
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIsolateTableRequest"/></param>
+        /// <returns><see cref="ModifyIsolateTableResponse"/></returns>
+        public Task<ModifyIsolateTableResponse> ModifyIsolateTable(ModifyIsolateTableRequest req)
+        {
+            return InternalRequestAsync<ModifyIsolateTableResponse>(req, "ModifyIsolateTable");
+        }
+
+        /// <summary>
+        /// ModifyIsolateTable 隔离列表编辑和删除操作
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIsolateTableRequest"/></param>
+        /// <returns><see cref="ModifyIsolateTableResponse"/></returns>
+        public ModifyIsolateTableResponse ModifyIsolateTableSync(ModifyIsolateTableRequest req)
+        {
+            return InternalRequestAsync<ModifyIsolateTableResponse>(req, "ModifyIsolateTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

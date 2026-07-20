@@ -25,30 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0 关闭开关
-        /// 1 打开开关
-        /// 2 不操作开关，此次切换模式
+        /// <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 操作开关详情
+        /// <p>操作开关详情</p>
         /// </summary>
         [JsonProperty("EdgeIpSwitchLst")]
         public EdgeIpSwitch[] EdgeIpSwitchLst{ get; set; }
 
         /// <summary>
-        /// 0 不自动选择子网
-        /// 1 自动选择子网创建私有连接
+        /// <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
         /// </summary>
         [JsonProperty("AutoChooseSubnet")]
         public long? AutoChooseSubnet{ get; set; }
 
         /// <summary>
-        /// 0 切换为旁路
-        /// 1 切换为串行
-        /// 2 不切换模式，此次操作开关
+        /// <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
         /// </summary>
         [JsonProperty("SwitchMode")]
         public long? SwitchMode{ get; set; }

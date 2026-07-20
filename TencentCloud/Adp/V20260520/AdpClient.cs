@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查看企业下的员工列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountListRequest"/></param>
+        /// <returns><see cref="DescribeAccountListResponse"/></returns>
+        public Task<DescribeAccountListResponse> DescribeAccountList(DescribeAccountListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountListResponse>(req, "DescribeAccountList");
+        }
+
+        /// <summary>
+        /// 查看企业下的员工列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountListRequest"/></param>
+        /// <returns><see cref="DescribeAccountListResponse"/></returns>
+        public DescribeAccountListResponse DescribeAccountListSync(DescribeAccountListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountListResponse>(req, "DescribeAccountList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 Agent 详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDetailRequest"/></param>
@@ -596,6 +617,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeAppSummaryListResponse DescribeAppSummaryListSync(DescribeAppSummaryListRequest req)
         {
             return InternalRequestAsync<DescribeAppSummaryListResponse>(req, "DescribeAppSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看操作日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogListRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogListResponse"/></returns>
+        public Task<DescribeAuditLogListResponse> DescribeAuditLogList(DescribeAuditLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogListResponse>(req, "DescribeAuditLogList");
+        }
+
+        /// <summary>
+        /// 查看操作日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogListRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogListResponse"/></returns>
+        public DescribeAuditLogListResponse DescribeAuditLogListSync(DescribeAuditLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogListResponse>(req, "DescribeAuditLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取审计日志元信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogMetaRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogMetaResponse"/></returns>
+        public Task<DescribeAuditLogMetaResponse> DescribeAuditLogMeta(DescribeAuditLogMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogMetaResponse>(req, "DescribeAuditLogMeta");
+        }
+
+        /// <summary>
+        /// 获取审计日志元信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogMetaRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogMetaResponse"/></returns>
+        public DescribeAuditLogMetaResponse DescribeAuditLogMetaSync(DescribeAuditLogMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogMetaResponse>(req, "DescribeAuditLogMeta")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

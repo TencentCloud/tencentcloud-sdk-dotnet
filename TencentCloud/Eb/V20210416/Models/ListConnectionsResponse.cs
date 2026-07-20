@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 连接器信息
+        /// <p>连接器信息</p>
         /// </summary>
         [JsonProperty("Connections")]
         public Connection[] Connections{ get; set; }
 
         /// <summary>
-        /// 连接器总数
+        /// <p>连接器总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

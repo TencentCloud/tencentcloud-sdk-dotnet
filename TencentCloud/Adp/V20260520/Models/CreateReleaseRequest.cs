@@ -25,31 +25,43 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 渠道ID列表
+        /// <p>应用分享访问控制配置</p>
+        /// </summary>
+        [JsonProperty("AppShareAccessControl")]
+        public AppShareAccessControl AppShareAccessControl{ get; set; }
+
+        /// <summary>
+        /// <p>渠道ID列表</p>
         /// </summary>
         [JsonProperty("ChannelIdList")]
         public string[] ChannelIdList{ get; set; }
 
         /// <summary>
-        /// 发布描述
+        /// <p>企业共享配置</p>
+        /// </summary>
+        [JsonProperty("CorpShareConfig")]
+        public CorpShareConfig CorpShareConfig{ get; set; }
+
+        /// <summary>
+        /// <p>发布描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
+        /// <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
         /// </summary>
         [JsonProperty("IsDevToRelease")]
         public bool? IsDevToRelease{ get; set; }
 
         /// <summary>
-        /// 是否同步发布为应用模板
+        /// <p>是否同步发布为应用模板</p>
         /// </summary>
         [JsonProperty("IsPublishAsTemplate")]
         public bool? IsPublishAsTemplate{ get; set; }
@@ -61,7 +73,9 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
             this.SetParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
+            this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsDevToRelease", this.IsDevToRelease);
             this.SetParamSimple(map, prefix + "IsPublishAsTemplate", this.IsPublishAsTemplate);

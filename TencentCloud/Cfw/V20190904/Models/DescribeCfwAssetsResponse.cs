@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+        /// <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

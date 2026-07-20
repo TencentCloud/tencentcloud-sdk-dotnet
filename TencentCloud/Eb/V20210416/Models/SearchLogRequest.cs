@@ -49,7 +49,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// <p>每页数据大小</p>
+        /// <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Eb.V20210416.Models
         public LogFilter[] Filter{ get; set; }
 
         /// <summary>
-        /// <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+        /// <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
         /// </summary>
         [JsonProperty("OrderFields")]
         public string[] OrderFields{ get; set; }
 
         /// <summary>
-        /// <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+        /// <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

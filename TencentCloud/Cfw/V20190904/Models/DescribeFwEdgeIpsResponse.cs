@@ -25,31 +25,31 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// ip 开关列表
+        /// <p>ip 开关列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public EdgeIpInfo[] Data{ get; set; }
 
         /// <summary>
-        /// ip 开关列表个数
+        /// <p>ip 开关列表个数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 地域列表
+        /// <p>地域列表</p>
         /// </summary>
         [JsonProperty("RegionLst")]
         public string[] RegionLst{ get; set; }
 
         /// <summary>
-        /// 实例类型列表
+        /// <p>实例类型列表</p>
         /// </summary>
         [JsonProperty("InstanceTypeLst")]
         public string[] InstanceTypeLst{ get; set; }
 
         /// <summary>
-        /// 串行模式开关个数
+        /// <p>串行模式开关个数</p>
         /// </summary>
         [JsonProperty("SerilCount")]
         public long? SerilCount{ get; set; }

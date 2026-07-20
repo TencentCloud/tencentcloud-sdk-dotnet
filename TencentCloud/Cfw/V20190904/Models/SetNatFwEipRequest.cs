@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
+        /// <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id
+        /// <p>防火墙实例id</p>
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }
 
         /// <summary>
-        /// 当OperationType 为bind或unbind操作时，使用该字段。
+        /// <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
         /// </summary>
         [JsonProperty("EipList")]
         public string[] EipList{ get; set; }

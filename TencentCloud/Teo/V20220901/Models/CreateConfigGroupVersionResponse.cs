@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 版本 ID。
+        /// <p>版本 ID。</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

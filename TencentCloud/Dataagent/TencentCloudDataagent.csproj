@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1463</VersionPrefix>
+    <VersionPrefix>3.0.1466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,7 @@
     <Compile Include="V20250513\Models\GetUserInstanceListResponse.cs" />
     <Compile Include="V20250513\Models\KnowledgeBase.cs" />
     <Compile Include="V20250513\Models\KnowledgeTaskConfig.cs" />
+    <Compile Include="V20250513\Models\ModelList.cs" />
     <Compile Include="V20250513\Models\ModelUserAuthority.cs" />
     <Compile Include="V20250513\Models\ModifyChunkRequest.cs" />
     <Compile Include="V20250513\Models\ModifyChunkResponse.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="V20250513\Models\QueryChunkListResponse.cs" />
     <Compile Include="V20250513\Models\QueryKnowledgeTaskRequest.cs" />
     <Compile Include="V20250513\Models\QueryKnowledgeTaskResponse.cs" />
+    <Compile Include="V20250513\Models\QueryModelsRequest.cs" />
+    <Compile Include="V20250513\Models\QueryModelsResponse.cs" />
     <Compile Include="V20250513\Models\QuerySceneListRequest.cs" />
     <Compile Include="V20250513\Models\QuerySceneListResponse.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityRequest.cs" />

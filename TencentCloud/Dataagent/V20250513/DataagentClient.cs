@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1463";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -491,6 +491,27 @@ namespace TencentCloud.Dataagent.V20250513
         public QueryKnowledgeTaskResponse QueryKnowledgeTaskSync(QueryKnowledgeTaskRequest req)
         {
             return InternalRequestAsync<QueryKnowledgeTaskResponse>(req, "QueryKnowledgeTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询聊天支持模型信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryModelsRequest"/></param>
+        /// <returns><see cref="QueryModelsResponse"/></returns>
+        public Task<QueryModelsResponse> QueryModels(QueryModelsRequest req)
+        {
+            return InternalRequestAsync<QueryModelsResponse>(req, "QueryModels");
+        }
+
+        /// <summary>
+        /// 查询聊天支持模型信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryModelsRequest"/></param>
+        /// <returns><see cref="QueryModelsResponse"/></returns>
+        public QueryModelsResponse QueryModelsSync(QueryModelsRequest req)
+        {
+            return InternalRequestAsync<QueryModelsResponse>(req, "QueryModels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙组ID
+        /// <p>防火墙组ID</p>
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }

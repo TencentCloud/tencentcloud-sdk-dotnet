@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// Dnat规则列表
+        /// <p>Dnat规则列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescNatDnatRule[] Data{ get; set; }
 
         /// <summary>
-        /// 列表总数
+        /// <p>列表总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

@@ -210,6 +210,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("WafAccessStatus")]
         public long? WafAccessStatus{ get; set; }
 
+        /// <summary>
+        /// <p>备注</p>
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
             this.SetParamArrayObj(map, prefix + "PreciseDomainDetails.", this.PreciseDomainDetails);
             this.SetParamSimple(map, prefix + "WafAccessStatus", this.WafAccessStatus);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

@@ -39,6 +39,7 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// 插件运营管理信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operation")]
         public PluginOperation Operation{ get; set; }
@@ -57,12 +58,14 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// 插件基础信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Profile")]
         public PluginProfile Profile{ get; set; }
 
         /// <summary>
         /// 插件统计信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Statistics")]
         public PluginStatistics Statistics{ get; set; }
@@ -75,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// 工具列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ToolList")]
         public Tool[] ToolList{ get; set; }
@@ -87,6 +91,7 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// 用户维度的插件状态信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserState")]
         public PluginUserState UserState{ get; set; }

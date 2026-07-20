@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 获取实例列表过滤字段
+        /// <p>获取实例列表过滤字段</p>
         /// </summary>
         [JsonProperty("Filter")]
         public NatFwFilter[] Filter{ get; set; }
 
         /// <summary>
-        /// 第几页
+        /// <p>第几页</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页长度
+        /// <p>每页长度</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

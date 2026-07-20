@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
+        /// <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+        /// <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntegrityAlgorith")]
@@ -39,25 +39,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string IntegrityAlgorith{ get; set; }
 
         /// <summary>
-        /// IPsec SA lifetime(s)：单位秒，取值范围：180-604800
+        /// <p>IPsec SA lifetime(s)</p><p>取值范围：[180, 604800]</p><p>单位：秒</p><p>默认值：14400</p>
         /// </summary>
         [JsonProperty("IPSECSaLifetimeSeconds")]
         public ulong? IPSECSaLifetimeSeconds{ get; set; }
 
         /// <summary>
-        /// PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
+        /// <p>PFS：可选值：&#39;NULL&#39;, &#39;DH-GROUP1&#39;, &#39;DH-GROUP2&#39;, &#39;DH-GROUP5&#39;, &#39;DH-GROUP14&#39;, &#39;DH-GROUP15&#39;,&#39;DH-GROUP16&#39;,&#39;DH-GROUP19&#39;,&#39;DH-GROUP20&#39;,&#39;DH-GROUP21&#39;,&#39;DH-GROUP24&#39;，默认为NULL</p>
         /// </summary>
         [JsonProperty("PfsDhGroup")]
         public string PfsDhGroup{ get; set; }
 
         /// <summary>
-        /// IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
+        /// <p>IPsec SA lifetime(KB)</p><p>取值范围：[2560, 4294967295]</p><p>单位：KB</p><p>默认值：4096000000</p>
         /// </summary>
         [JsonProperty("IPSECSaLifetimeTraffic")]
         public ulong? IPSECSaLifetimeTraffic{ get; set; }
 
         /// <summary>
-        /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+        /// <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
         /// </summary>
         [JsonProperty("IntegrityAlgorithm")]
         public string IntegrityAlgorithm{ get; set; }

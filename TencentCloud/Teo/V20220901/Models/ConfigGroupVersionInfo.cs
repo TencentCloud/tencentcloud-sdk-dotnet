@@ -25,46 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 版本 ID。
+        /// <p>配置组版本 ID，创建配置组版本时 EdgeOne 分配的唯一资源 ID。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 版本号。
+        /// <p>配置组版本号。该参数仅作展示使用，配置组每创建一次新版本，该版本号自增加一，初始版本的版本号为 &quot;0&quot;。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></p>
         /// </summary>
         [JsonProperty("VersionNumber")]
         public string VersionNumber{ get; set; }
 
         /// <summary>
-        /// 配置组 ID。
+        /// <p>配置组版本所基于的来源版本 ID，在创建配置组版本时进行指定来源版本 ID，新版本将在该来源版本的配置基础上派生创建。</p><p>参数格式：ver-2kplomhisdcb</p><p>取值参考：</p><ul><li><a href="https://cloud.tencent.com/document/api/1552/101867">CreateConfigGroupVersion</a> 返回值 <code>VersionId</code></li><li><a href="https://cloud.tencent.com/document/api/1552/101864">DescribeConfigGroupVersions</a> 返回值 <code>ConfigGroupVersionInfos</code></li></ul>
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("SourceVersion")]
+        public string SourceVersion{ get; set; }
 
         /// <summary>
-        /// 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
+        /// <p>版本归属的配置组类型。</p><p>枚举值：</p><ul><li>l7_acceleration： 七层加速配置组</li><li>edge_functions： 边缘函数配置组</li><li>web_security： Web 防护配置组</li></ul>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 版本描述。
+        /// <p>版本归属的配置组 ID。</p><p>参数格式：cg-2kplomhisdcb</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>版本描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 版本状态，取值有：
-        /// <li>creating：创建中；</li>
-        /// <li>inactive：未生效；</li>
-        /// <li>active：已生效。</li>
+        /// <p>版本生效状态。</p><p>枚举值：</p><ul><li>creating： 版本创建中</li><li>inactive： 版本未生效</li><li>active： 版本已生效</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+        /// <p>版本创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -77,8 +80,9 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "SourceVersion", this.SourceVersion);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

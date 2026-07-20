@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件集信息
+        /// <p>事件集信息</p>
         /// </summary>
         [JsonProperty("EventBuses")]
         public EventBus[] EventBuses{ get; set; }
 
         /// <summary>
-        /// 事件集总数
+        /// <p>事件集总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

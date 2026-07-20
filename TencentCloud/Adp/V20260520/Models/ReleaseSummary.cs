@@ -25,40 +25,54 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 创建时间 (Unix时间戳,秒级)
+        /// <p>创建时间 (Unix时间戳,秒级)</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 发布描述
+        /// <p>发布描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 发布ID
+        /// <p>发布ID</p>
         /// </summary>
         [JsonProperty("ReleaseId")]
         public string ReleaseId{ get; set; }
 
         /// <summary>
-        /// 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+        /// <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 状态描述
+        /// <p>状态描述</p>
         /// </summary>
         [JsonProperty("StatusDescription")]
         public string StatusDescription{ get; set; }
 
         /// <summary>
-        /// 发布渠道ID列表
+        /// <p>应用分享访问控制</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppShareAccessControl")]
+        public AppShareAccessControl AppShareAccessControl{ get; set; }
+
+        /// <summary>
+        /// <p>发布渠道ID列表</p>
         /// </summary>
         [JsonProperty("ChannelIdList")]
         public string[] ChannelIdList{ get; set; }
+
+        /// <summary>
+        /// <p>企业共享配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CorpShareConfig")]
+        public CorpShareConfig CorpShareConfig{ get; set; }
 
 
         /// <summary>
@@ -71,7 +85,9 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "ReleaseId", this.ReleaseId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDescription", this.StatusDescription);
+            this.SetParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
             this.SetParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
+            this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
         }
     }
 }

@@ -25,62 +25,62 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModTime")]
         public string ModTime{ get; set; }
 
         /// <summary>
-        /// 使能开关
+        /// <p>使能开关</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// <p>规则ID</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 事件集ID
+        /// <p>事件集ID</p>
         /// </summary>
         [JsonProperty("EventBusId")]
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// <p>规则名称</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Target 简要信息
+        /// <p>Target 简要信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]
         public TargetBrief[] Targets{ get; set; }
 
         /// <summary>
-        /// rule设置的dlq规则. 可能为null
+        /// <p>rule设置的dlq规则. 可能为null</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterConfig")]

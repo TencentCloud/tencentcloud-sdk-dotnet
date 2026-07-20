@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// nat 防火墙 id
+        /// <p>nat 防火墙 id</p>
         /// </summary>
         [JsonProperty("NatFwInsId")]
         public string NatFwInsId{ get; set; }
 
         /// <summary>
-        /// DNS 开关切换列表
+        /// <p>DNS 开关切换列表</p>
         /// </summary>
         [JsonProperty("DnsVpcSwitchLst")]
         public DnsVpcSwitch[] DnsVpcSwitchLst{ get; set; }

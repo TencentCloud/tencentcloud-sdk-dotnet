@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 1：cfw接入模式，目前仅支持接入模式实例
+        /// <p>1：cfw接入模式，目前仅支持接入模式实例</p>
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
+        /// <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+        /// <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }

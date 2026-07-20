@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// nat实例信息
+        /// <p>nat实例信息</p>
         /// </summary>
         [JsonProperty("CfwInsId")]
         public string CfwInsId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 过滤条件名称
+        /// 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1463";
+       private const string sdkVersion = "SDK_NET_3.0.1466";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,48 @@ namespace TencentCloud.Ga2.V20250115
         public CreateGlobalAcceleratorResponse CreateGlobalAcceleratorSync(CreateGlobalAcceleratorRequest req)
         {
             return InternalRequestAsync<CreateGlobalAcceleratorResponse>(req, "CreateGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAclPolicyResponse"/></returns>
+        public Task<CreateGlobalAcceleratorAclPolicyResponse> CreateGlobalAcceleratorAclPolicy(CreateGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAclPolicyResponse>(req, "CreateGlobalAcceleratorAclPolicy");
+        }
+
+        /// <summary>
+        /// 创建访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAclPolicyResponse"/></returns>
+        public CreateGlobalAcceleratorAclPolicyResponse CreateGlobalAcceleratorAclPolicySync(CreateGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAclPolicyResponse>(req, "CreateGlobalAcceleratorAclPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAclRuleResponse"/></returns>
+        public Task<CreateGlobalAcceleratorAclRuleResponse> CreateGlobalAcceleratorAclRule(CreateGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAclRuleResponse>(req, "CreateGlobalAcceleratorAclRule");
+        }
+
+        /// <summary>
+        /// 创建ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAclRuleResponse"/></returns>
+        public CreateGlobalAcceleratorAclRuleResponse CreateGlobalAcceleratorAclRuleSync(CreateGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAclRuleResponse>(req, "CreateGlobalAcceleratorAclRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -302,6 +344,48 @@ namespace TencentCloud.Ga2.V20250115
         public DeleteGlobalAcceleratorResponse DeleteGlobalAcceleratorSync(DeleteGlobalAcceleratorRequest req)
         {
             return InternalRequestAsync<DeleteGlobalAcceleratorResponse>(req, "DeleteGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAclPolicyResponse"/></returns>
+        public Task<DeleteGlobalAcceleratorAclPolicyResponse> DeleteGlobalAcceleratorAclPolicy(DeleteGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAclPolicyResponse>(req, "DeleteGlobalAcceleratorAclPolicy");
+        }
+
+        /// <summary>
+        /// 删除访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAclPolicyResponse"/></returns>
+        public DeleteGlobalAcceleratorAclPolicyResponse DeleteGlobalAcceleratorAclPolicySync(DeleteGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAclPolicyResponse>(req, "DeleteGlobalAcceleratorAclPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAclRuleResponse"/></returns>
+        public Task<DeleteGlobalAcceleratorAclRuleResponse> DeleteGlobalAcceleratorAclRule(DeleteGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAclRuleResponse>(req, "DeleteGlobalAcceleratorAclRule");
+        }
+
+        /// <summary>
+        /// 删除ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAclRuleResponse"/></returns>
+        public DeleteGlobalAcceleratorAclRuleResponse DeleteGlobalAcceleratorAclRuleSync(DeleteGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAclRuleResponse>(req, "DeleteGlobalAcceleratorAclRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -638,6 +722,48 @@ namespace TencentCloud.Ga2.V20250115
         public ModifyGlobalAcceleratorResponse ModifyGlobalAcceleratorSync(ModifyGlobalAcceleratorRequest req)
         {
             return InternalRequestAsync<ModifyGlobalAcceleratorResponse>(req, "ModifyGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改访问控制策略状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAclPolicyResponse"/></returns>
+        public Task<ModifyGlobalAcceleratorAclPolicyResponse> ModifyGlobalAcceleratorAclPolicy(ModifyGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAclPolicyResponse>(req, "ModifyGlobalAcceleratorAclPolicy");
+        }
+
+        /// <summary>
+        /// 修改访问控制策略状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAclPolicyRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAclPolicyResponse"/></returns>
+        public ModifyGlobalAcceleratorAclPolicyResponse ModifyGlobalAcceleratorAclPolicySync(ModifyGlobalAcceleratorAclPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAclPolicyResponse>(req, "ModifyGlobalAcceleratorAclPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAclRuleResponse"/></returns>
+        public Task<ModifyGlobalAcceleratorAclRuleResponse> ModifyGlobalAcceleratorAclRule(ModifyGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAclRuleResponse>(req, "ModifyGlobalAcceleratorAclRule");
+        }
+
+        /// <summary>
+        /// 修改ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAclRuleResponse"/></returns>
+        public ModifyGlobalAcceleratorAclRuleResponse ModifyGlobalAcceleratorAclRuleSync(ModifyGlobalAcceleratorAclRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAclRuleResponse>(req, "ModifyGlobalAcceleratorAclRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

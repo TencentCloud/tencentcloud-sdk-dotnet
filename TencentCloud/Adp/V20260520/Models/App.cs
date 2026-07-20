@@ -25,52 +25,59 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+        /// <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuxiliaryInfo")]
         public AppAuxiliaryInfo AuxiliaryInfo{ get; set; }
 
         /// <summary>
-        /// 配置
+        /// <p>配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public AppConfig Config{ get; set; }
 
         /// <summary>
-        /// 元数据
+        /// <p>元数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public AppMetadata Metadata{ get; set; }
 
         /// <summary>
-        /// 应用密钥信息
+        /// <p>应用密钥信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretInfo")]
         public AppSecretInfo SecretInfo{ get; set; }
 
         /// <summary>
-        /// 分享链接信息(含访问控制)
+        /// <p>分享链接信息(含访问控制)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareUrlInfo")]
         public AppShareURLInfo ShareUrlInfo{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public AppStatusInfo Status{ get; set; }
 
         /// <summary>
-        /// 应用引用的共享知识库列表
+        /// <p>应用引用的共享知识库列表</p>
         /// </summary>
         [JsonProperty("SharedKbList")]
         public AppSharedKbInfo[] SharedKbList{ get; set; }
+
+        /// <summary>
+        /// <p>企业共享配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CorpShareConfig")]
+        public CorpShareConfig CorpShareConfig{ get; set; }
 
 
         /// <summary>
@@ -85,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
             this.SetParamObj(map, prefix + "Status.", this.Status);
             this.SetParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
+            this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
         }
     }
 }
