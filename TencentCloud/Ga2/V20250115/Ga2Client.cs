@@ -28,7 +28,7 @@ namespace TencentCloud.Ga2.V20250115
 
        private const string endpoint = "ga2.tencentcloudapi.com";
        private const string version = "2025-01-15";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1467";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Ga2.V20250115
         public CreateGlobalAcceleratorResponse CreateGlobalAcceleratorSync(CreateGlobalAcceleratorRequest req)
         {
             return InternalRequestAsync<CreateGlobalAcceleratorResponse>(req, "CreateGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建GA访问日志
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAccessLogResponse"/></returns>
+        public Task<CreateGlobalAcceleratorAccessLogResponse> CreateGlobalAcceleratorAccessLog(CreateGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAccessLogResponse>(req, "CreateGlobalAcceleratorAccessLog");
+        }
+
+        /// <summary>
+        /// 创建GA访问日志
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="CreateGlobalAcceleratorAccessLogResponse"/></returns>
+        public CreateGlobalAcceleratorAccessLogResponse CreateGlobalAcceleratorAccessLogSync(CreateGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalAcceleratorAccessLogResponse>(req, "CreateGlobalAcceleratorAccessLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +369,27 @@ namespace TencentCloud.Ga2.V20250115
         }
 
         /// <summary>
+        /// 删除GA日志任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAccessLogResponse"/></returns>
+        public Task<DeleteGlobalAcceleratorAccessLogResponse> DeleteGlobalAcceleratorAccessLog(DeleteGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAccessLogResponse>(req, "DeleteGlobalAcceleratorAccessLog");
+        }
+
+        /// <summary>
+        /// 删除GA日志任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="DeleteGlobalAcceleratorAccessLogResponse"/></returns>
+        public DeleteGlobalAcceleratorAccessLogResponse DeleteGlobalAcceleratorAccessLogSync(DeleteGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<DeleteGlobalAcceleratorAccessLogResponse>(req, "DeleteGlobalAcceleratorAccessLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除访问控制策略
         /// </summary>
         /// <param name="req"><see cref="DeleteGlobalAcceleratorAclPolicyRequest"/></param>
@@ -474,6 +516,27 @@ namespace TencentCloud.Ga2.V20250115
         }
 
         /// <summary>
+        /// 查看访问日志上报参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessLogParamRequest"/></param>
+        /// <returns><see cref="DescribeAccessLogParamResponse"/></returns>
+        public Task<DescribeAccessLogParamResponse> DescribeAccessLogParam(DescribeAccessLogParamRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessLogParamResponse>(req, "DescribeAccessLogParam");
+        }
+
+        /// <summary>
+        /// 查看访问日志上报参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessLogParamRequest"/></param>
+        /// <returns><see cref="DescribeAccessLogParamResponse"/></returns>
+        public DescribeAccessLogParamResponse DescribeAccessLogParamSync(DescribeAccessLogParamRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessLogParamResponse>(req, "DescribeAccessLogParam")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询跨境账单
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossBorderSettlementRequest"/></param>
@@ -554,6 +617,69 @@ namespace TencentCloud.Ga2.V20250115
         public DescribeForwardingRuleResponse DescribeForwardingRuleSync(DescribeForwardingRuleRequest req)
         {
             return InternalRequestAsync<DescribeForwardingRuleResponse>(req, "DescribeForwardingRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAccessLogResponse"/></returns>
+        public Task<DescribeGlobalAcceleratorAccessLogResponse> DescribeGlobalAcceleratorAccessLog(DescribeGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAccessLogResponse>(req, "DescribeGlobalAcceleratorAccessLog");
+        }
+
+        /// <summary>
+        /// 查询日志任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAccessLogResponse"/></returns>
+        public DescribeGlobalAcceleratorAccessLogResponse DescribeGlobalAcceleratorAccessLogSync(DescribeGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAccessLogResponse>(req, "DescribeGlobalAcceleratorAccessLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAclPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAclPoliciesResponse"/></returns>
+        public Task<DescribeGlobalAcceleratorAclPoliciesResponse> DescribeGlobalAcceleratorAclPolicies(DescribeGlobalAcceleratorAclPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAclPoliciesResponse>(req, "DescribeGlobalAcceleratorAclPolicies");
+        }
+
+        /// <summary>
+        /// 查看访问控制策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAclPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAclPoliciesResponse"/></returns>
+        public DescribeGlobalAcceleratorAclPoliciesResponse DescribeGlobalAcceleratorAclPoliciesSync(DescribeGlobalAcceleratorAclPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAclPoliciesResponse>(req, "DescribeGlobalAcceleratorAclPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAclRulesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAclRulesResponse"/></returns>
+        public Task<DescribeGlobalAcceleratorAclRulesResponse> DescribeGlobalAcceleratorAclRules(DescribeGlobalAcceleratorAclRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAclRulesResponse>(req, "DescribeGlobalAcceleratorAclRules");
+        }
+
+        /// <summary>
+        /// 查看ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalAcceleratorAclRulesRequest"/></param>
+        /// <returns><see cref="DescribeGlobalAcceleratorAclRulesResponse"/></returns>
+        public DescribeGlobalAcceleratorAclRulesResponse DescribeGlobalAcceleratorAclRulesSync(DescribeGlobalAcceleratorAclRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalAcceleratorAclRulesResponse>(req, "DescribeGlobalAcceleratorAclRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +768,27 @@ namespace TencentCloud.Ga2.V20250115
         }
 
         /// <summary>
+        /// 修改日志任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessLogStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessLogStatusResponse"/></returns>
+        public Task<ModifyAccessLogStatusResponse> ModifyAccessLogStatus(ModifyAccessLogStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessLogStatusResponse>(req, "ModifyAccessLogStatus");
+        }
+
+        /// <summary>
+        /// 修改日志任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessLogStatusRequest"/></param>
+        /// <returns><see cref="ModifyAccessLogStatusResponse"/></returns>
+        public ModifyAccessLogStatusResponse ModifyAccessLogStatusSync(ModifyAccessLogStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessLogStatusResponse>(req, "ModifyAccessLogStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改终端节点组。
         /// </summary>
         /// <param name="req"><see cref="ModifyEndpointGroupRequest"/></param>
@@ -722,6 +869,27 @@ namespace TencentCloud.Ga2.V20250115
         public ModifyGlobalAcceleratorResponse ModifyGlobalAcceleratorSync(ModifyGlobalAcceleratorRequest req)
         {
             return InternalRequestAsync<ModifyGlobalAcceleratorResponse>(req, "ModifyGlobalAccelerator")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改GA访问日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAccessLogResponse"/></returns>
+        public Task<ModifyGlobalAcceleratorAccessLogResponse> ModifyGlobalAcceleratorAccessLog(ModifyGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAccessLogResponse>(req, "ModifyGlobalAcceleratorAccessLog");
+        }
+
+        /// <summary>
+        /// 修改GA访问日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalAcceleratorAccessLogRequest"/></param>
+        /// <returns><see cref="ModifyGlobalAcceleratorAccessLogResponse"/></returns>
+        public ModifyGlobalAcceleratorAccessLogResponse ModifyGlobalAcceleratorAccessLogSync(ModifyGlobalAcceleratorAccessLogRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalAcceleratorAccessLogResponse>(req, "ModifyGlobalAcceleratorAccessLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

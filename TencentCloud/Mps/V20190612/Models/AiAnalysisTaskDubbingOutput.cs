@@ -54,6 +54,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ExtraOutput")]
         public string ExtraOutput{ get; set; }
 
+        /// <summary>
+        /// <p>译制视频FileId。</p>
+        /// </summary>
+        [JsonProperty("VideoFileId")]
+        public string VideoFileId{ get; set; }
+
+        /// <summary>
+        /// <p>标记文件FileId。</p>
+        /// </summary>
+        [JsonProperty("SpeakerFileId")]
+        public string SpeakerFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "ExtraOutput", this.ExtraOutput);
+            this.SetParamSimple(map, prefix + "VideoFileId", this.VideoFileId);
+            this.SetParamSimple(map, prefix + "SpeakerFileId", this.SpeakerFileId);
         }
     }
 }

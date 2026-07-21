@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1467";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Rce.V20260130
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 设备风险评估-高级版
+        /// </summary>
+        /// <param name="req"><see cref="AssessDeviceRiskPremiumProRequest"/></param>
+        /// <returns><see cref="AssessDeviceRiskPremiumProResponse"/></returns>
+        public Task<AssessDeviceRiskPremiumProResponse> AssessDeviceRiskPremiumPro(AssessDeviceRiskPremiumProRequest req)
+        {
+            return InternalRequestAsync<AssessDeviceRiskPremiumProResponse>(req, "AssessDeviceRiskPremiumPro");
+        }
+
+        /// <summary>
+        /// 设备风险评估-高级版
+        /// </summary>
+        /// <param name="req"><see cref="AssessDeviceRiskPremiumProRequest"/></param>
+        /// <returns><see cref="AssessDeviceRiskPremiumProResponse"/></returns>
+        public AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumProSync(AssessDeviceRiskPremiumProRequest req)
+        {
+            return InternalRequestAsync<AssessDeviceRiskPremiumProResponse>(req, "AssessDeviceRiskPremiumPro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设备风险评估-基础版
+        /// </summary>
+        /// <param name="req"><see cref="AssessDeviceRiskProRequest"/></param>
+        /// <returns><see cref="AssessDeviceRiskProResponse"/></returns>
+        public Task<AssessDeviceRiskProResponse> AssessDeviceRiskPro(AssessDeviceRiskProRequest req)
+        {
+            return InternalRequestAsync<AssessDeviceRiskProResponse>(req, "AssessDeviceRiskPro");
+        }
+
+        /// <summary>
+        /// 设备风险评估-基础版
+        /// </summary>
+        /// <param name="req"><see cref="AssessDeviceRiskProRequest"/></param>
+        /// <returns><see cref="AssessDeviceRiskProResponse"/></returns>
+        public AssessDeviceRiskProResponse AssessDeviceRiskProSync(AssessDeviceRiskProRequest req)
+        {
+            return InternalRequestAsync<AssessDeviceRiskProResponse>(req, "AssessDeviceRiskPro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

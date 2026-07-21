@@ -37,10 +37,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>点播专业版应用Id</p>
+        /// <p>点播应用Id</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+        /// </summary>
+        [JsonProperty("VodBasic")]
+        public long? VodBasic{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "VodBasic", this.VodBasic);
         }
     }
 }

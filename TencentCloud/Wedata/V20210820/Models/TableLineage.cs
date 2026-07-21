@@ -25,43 +25,43 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 数据源id
+        /// <p>数据源id</p>
         /// </summary>
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 库名称
+        /// <p>库名称</p>
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 表名称
+        /// <p>表名称</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// catalog值
+        /// <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
         /// </summary>
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
 
         /// <summary>
-        /// schema名称
+        /// <p>schema名称</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 扩展参数
+        /// <p>扩展参数</p>
         /// </summary>
         [JsonProperty("ExtParams")]
         public ExtParam[] ExtParams{ get; set; }
 
         /// <summary>
-        /// table类型 TABLE｜VIEW
+        /// <p>table类型 TABLE｜VIEW</p>
         /// </summary>
         [JsonProperty("TableType")]
         public string TableType{ get; set; }

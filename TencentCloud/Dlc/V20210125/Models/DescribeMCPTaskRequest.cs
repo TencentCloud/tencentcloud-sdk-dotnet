@@ -24,12 +24,19 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DescribeMCPTaskRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>任务 ID</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

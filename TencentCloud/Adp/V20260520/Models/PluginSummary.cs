@@ -66,6 +66,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("Config")]
         public PluginConfig Config{ get; set; }
 
+        /// <summary>
+        /// <p>工具信息</p>
+        /// </summary>
+        [JsonProperty("ToolList")]
+        public ToolSummary[] ToolList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "UserState.", this.UserState);
             this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamArrayObj(map, prefix + "ToolList.", this.ToolList);
         }
     }
 }

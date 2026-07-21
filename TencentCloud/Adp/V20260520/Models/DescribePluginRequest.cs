@@ -42,6 +42,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("FieldMask")]
         public FieldMask FieldMask{ get; set; }
 
+        /// <summary>
+        /// <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+        /// </summary>
+        [JsonProperty("Module")]
+        public long? Module{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamObj(map, prefix + "FieldMask.", this.FieldMask);
+            this.SetParamSimple(map, prefix + "Module", this.Module);
         }
     }
 }

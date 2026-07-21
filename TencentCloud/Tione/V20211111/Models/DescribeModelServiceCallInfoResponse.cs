@@ -26,28 +26,24 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 服务调用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceCallInfo")]
         public ServiceCallInfo ServiceCallInfo{ get; set; }
 
         /// <summary>
         /// 升级网关调用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InferGatewayCallInfo")]
         public InferGatewayCallInfo InferGatewayCallInfo{ get; set; }
 
         /// <summary>
         /// 默认nginx网关的调用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultNginxGatewayCallInfo")]
         public DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo{ get; set; }
 
         /// <summary>
         /// 太极服务的调用信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TJCallInfo")]
         public TJCallInfo TJCallInfo{ get; set; }

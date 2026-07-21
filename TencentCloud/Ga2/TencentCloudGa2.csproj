@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1467</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,8 @@
     <Compile Include="V20250115\Models\CreateForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\CreateForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\CreateForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAccessLogRequest.cs" />
+    <Compile Include="V20250115\Models\CreateGlobalAcceleratorAccessLogResponse.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclPolicyRequest.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclPolicyResponse.cs" />
     <Compile Include="V20250115\Models\CreateGlobalAcceleratorAclRuleRequest.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="V20250115\Models\DeleteForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\DeleteForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\DeleteForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAccessLogRequest.cs" />
+    <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAccessLogResponse.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclPolicyRequest.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclPolicyResponse.cs" />
     <Compile Include="V20250115\Models\DeleteGlobalAcceleratorAclRuleRequest.cs" />
@@ -91,6 +95,8 @@
     <Compile Include="V20250115\Models\DescribeAccelerateAreasResponse.cs" />
     <Compile Include="V20250115\Models\DescribeAccelerateRegionsRequest.cs" />
     <Compile Include="V20250115\Models\DescribeAccelerateRegionsResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeAccessLogParamRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeAccessLogParamResponse.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementRequest.cs" />
     <Compile Include="V20250115\Models\DescribeCrossBorderSettlementResponse.cs" />
     <Compile Include="V20250115\Models\DescribeEndpointGroupsRequest.cs" />
@@ -99,6 +105,12 @@
     <Compile Include="V20250115\Models\DescribeForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\DescribeForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\DescribeForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAccessLogRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAccessLogResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAclPoliciesRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAclPoliciesResponse.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAclRulesRequest.cs" />
+    <Compile Include="V20250115\Models\DescribeGlobalAcceleratorAclRulesResponse.cs" />
     <Compile Include="V20250115\Models\DescribeGlobalAcceleratorsRequest.cs" />
     <Compile Include="V20250115\Models\DescribeGlobalAcceleratorsResponse.cs" />
     <Compile Include="V20250115\Models\DescribeListenersRequest.cs" />
@@ -111,18 +123,25 @@
     <Compile Include="V20250115\Models\Filter.cs" />
     <Compile Include="V20250115\Models\ForwardingPolicySet.cs" />
     <Compile Include="V20250115\Models\ForwardingRuleSet.cs" />
+    <Compile Include="V20250115\Models\GlobalAcceleratorAccessLog.cs" />
+    <Compile Include="V20250115\Models\GlobalAcceleratorAclPolicies.cs" />
+    <Compile Include="V20250115\Models\GlobalAcceleratorAclRuleSet.cs" />
     <Compile Include="V20250115\Models\GlobalAcceleratorSet.cs" />
     <Compile Include="V20250115\Models\HideResponseHeaders.cs" />
     <Compile Include="V20250115\Models\IpAddressInfoSet.cs" />
     <Compile Include="V20250115\Models\ListenerSet.cs" />
     <Compile Include="V20250115\Models\ModifyAccelerateAreasRequest.cs" />
     <Compile Include="V20250115\Models\ModifyAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyAccessLogStatusRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyAccessLogStatusResponse.cs" />
     <Compile Include="V20250115\Models\ModifyEndpointGroupRequest.cs" />
     <Compile Include="V20250115\Models\ModifyEndpointGroupResponse.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingPolicyRequest.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingPolicyResponse.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingRuleRequest.cs" />
     <Compile Include="V20250115\Models\ModifyForwardingRuleResponse.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAccessLogRequest.cs" />
+    <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAccessLogResponse.cs" />
     <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclPolicyRequest.cs" />
     <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclPolicyResponse.cs" />
     <Compile Include="V20250115\Models\ModifyGlobalAcceleratorAclRuleRequest.cs" />

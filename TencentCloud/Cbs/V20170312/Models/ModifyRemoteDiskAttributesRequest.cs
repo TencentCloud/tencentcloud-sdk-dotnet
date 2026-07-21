@@ -42,6 +42,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public string AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
             this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

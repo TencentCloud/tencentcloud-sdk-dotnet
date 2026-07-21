@@ -25,13 +25,13 @@ namespace TencentCloud.Rce.V20260130.Models
     {
         
         /// <summary>
-        /// <p>环境风险分信息</p>
+        /// <p>IP环境风险分信息</p>
         /// </summary>
         [JsonProperty("Score")]
         public DataScore Score{ get; set; }
 
         /// <summary>
-        /// <p>环境基础信息</p>
+        /// <p>IP环境基础信息</p>
         /// </summary>
         [JsonProperty("Environment")]
         public Environment Environment{ get; set; }

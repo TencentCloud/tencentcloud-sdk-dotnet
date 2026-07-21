@@ -25,64 +25,76 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 七层转发规则条件信息。
+        /// <p>七层转发规则条件信息。</p>
         /// </summary>
         [JsonProperty("RuleCondition")]
         public RuleCondition[] RuleCondition{ get; set; }
 
         /// <summary>
-        /// 七层转发规则行为信息。
+        /// <p>七层转发规则行为信息。</p>
         /// </summary>
         [JsonProperty("RuleAction")]
         public RuleAction[] RuleAction{ get; set; }
 
         /// <summary>
-        /// 是否开启回源Sni。
+        /// <p>是否开启回源Sni。</p>
         /// </summary>
         [JsonProperty("EnableOriginSni")]
         public bool? EnableOriginSni{ get; set; }
 
         /// <summary>
-        /// 回源Sni。
+        /// <p>回源Sni。</p>
         /// </summary>
         [JsonProperty("OriginSni")]
         public string OriginSni{ get; set; }
 
         /// <summary>
-        /// 回源Herder信息。
+        /// <p>回源Herder信息。</p>
         /// </summary>
         [JsonProperty("OriginHeaders")]
         public OriginHeader[] OriginHeaders{ get; set; }
 
         /// <summary>
-        /// 回源Host。
+        /// <p>回源Host。</p>
         /// </summary>
         [JsonProperty("OriginHost")]
         public string OriginHost{ get; set; }
 
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 七层转发策略ID。
+        /// <p>七层转发策略ID。</p>
         /// </summary>
         [JsonProperty("ForwardingPolicyId")]
         public string ForwardingPolicyId{ get; set; }
 
         /// <summary>
-        /// 七层转发规则ID。
+        /// <p>七层转发规则ID。</p>
         /// </summary>
         [JsonProperty("ForwardingRuleId")]
         public string ForwardingRuleId{ get; set; }
+
+        /// <summary>
+        /// <p>源站响应头</p>
+        /// </summary>
+        [JsonProperty("HideResponseHeaders")]
+        public HideResponseHeaders[] HideResponseHeaders{ get; set; }
+
+        /// <summary>
+        /// <p>删除源站响应头</p>
+        /// </summary>
+        [JsonProperty("ResponseHeaders")]
+        public ResponseHeaders[] ResponseHeaders{ get; set; }
 
 
         /// <summary>
@@ -100,6 +112,8 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
             this.SetParamSimple(map, prefix + "ForwardingRuleId", this.ForwardingRuleId);
+            this.SetParamArrayObj(map, prefix + "HideResponseHeaders.", this.HideResponseHeaders);
+            this.SetParamArrayObj(map, prefix + "ResponseHeaders.", this.ResponseHeaders);
         }
     }
 }

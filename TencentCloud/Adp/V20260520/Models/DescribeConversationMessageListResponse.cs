@@ -58,7 +58,15 @@ namespace TencentCloud.Adp.V20260520.Models
         /// <p>消息列表</p>
         /// </summary>
         [JsonProperty("Messages")]
+        [System.Obsolete]
         public ConversationMessage[] Messages{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次重置信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResetInfo")]
+        public ConversationResetInfo ResetInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -78,6 +86,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
             this.SetParamArrayObj(map, prefix + "MessageList.", this.MessageList);
             this.SetParamArrayObj(map, prefix + "Messages.", this.Messages);
+            this.SetParamObj(map, prefix + "ResetInfo.", this.ResetInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

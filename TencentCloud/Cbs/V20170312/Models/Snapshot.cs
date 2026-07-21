@@ -162,6 +162,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
+        /// <summary>
+        /// <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+        /// </summary>
+        [JsonProperty("SnapshotMode")]
+        public string SnapshotMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "IsLocked", this.IsLocked);
             this.SetParamSimple(map, prefix + "LatestModifyTime", this.LatestModifyTime);
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
         }
     }
 }

@@ -25,30 +25,36 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输出文件的路径。
+        /// <p>输出文件的路径。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 输出文件的存储位置。
+        /// <p>输出文件的存储位置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 输出文件的URL。
+        /// <p>输出文件的URL。</p>
         /// </summary>
         [JsonProperty("SignedUrl")]
         public string SignedUrl{ get; set; }
 
         /// <summary>
-        /// 图生文任务的处理结果。
+        /// <p>图生文任务的处理结果。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// <p>VOD标准版FileId</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "SignedUrl", this.SignedUrl);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

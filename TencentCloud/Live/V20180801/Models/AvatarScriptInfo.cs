@@ -78,6 +78,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// <p>已完成状态的视频URL</p>
+        /// </summary>
+        [JsonProperty("MediaUrl")]
+        public string MediaUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Position", this.Position);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
         }
     }
 }

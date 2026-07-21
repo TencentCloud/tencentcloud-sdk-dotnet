@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0: 互联网防火墙开关，1：vpc 防火墙开关
+        /// <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

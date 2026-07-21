@@ -25,85 +25,106 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 唯一标识
+        /// <p>唯一标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialId")]
         public string SerialId{ get; set; }
 
         /// <summary>
-        /// Flink内核版本
+        /// <p>Flink内核版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
         /// <summary>
-        /// 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+        /// <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 引用资源
+        /// <p>引用资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRefs")]
         public GatewayRefItem[] ResourceRefs{ get; set; }
 
         /// <summary>
-        /// Cu规格
+        /// <p>Cu规格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CuSpec")]
         public float? CuSpec{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 配置参数
+        /// <p>配置参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
         /// <summary>
-        /// Cpu
+        /// <p>Cpu</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public float? Cpu{ get; set; }
 
         /// <summary>
-        /// Mem
+        /// <p>Mem</p>
         /// </summary>
         [JsonProperty("Mem")]
         public float? Mem{ get; set; }
 
         /// <summary>
-        /// jdk版本
+        /// <p>jdk版本</p>
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
+
+        /// <summary>
+        /// <p>session id</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionClusterId")]
+        public string SessionClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>pg用户名</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PgUser")]
+        public string PgUser{ get; set; }
+
+        /// <summary>
+        /// <p>协议</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Endpoints")]
+        public SqlGatewayEndpoint[] Endpoints{ get; set; }
 
 
         /// <summary>
@@ -123,6 +144,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Mem", this.Mem);
             this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+            this.SetParamSimple(map, prefix + "SessionClusterId", this.SessionClusterId);
+            this.SetParamSimple(map, prefix + "PgUser", this.PgUser);
+            this.SetParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
         }
     }
 }

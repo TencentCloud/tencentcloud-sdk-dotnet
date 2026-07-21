@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1467</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -158,6 +158,7 @@
     <Compile Include="V20190612\Models\AiRecognitionTaskTransTextResultInput.cs" />
     <Compile Include="V20190612\Models\AiRecognitionTaskTransTextResultOutput.cs" />
     <Compile Include="V20190612\Models\AiRecognitionTaskTransTextSegmentItem.cs" />
+    <Compile Include="V20190612\Models\AiRestorationConfig.cs" />
     <Compile Include="V20190612\Models\AiReviewPoliticalAsrTaskInput.cs" />
     <Compile Include="V20190612\Models\AiReviewPoliticalAsrTaskOutput.cs" />
     <Compile Include="V20190612\Models\AiReviewPoliticalOcrTaskInput.cs" />

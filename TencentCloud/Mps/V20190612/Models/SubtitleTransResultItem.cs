@@ -54,6 +54,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleEmbedPath")]
         public string SubtitleEmbedPath{ get; set; }
 
+        /// <summary>
+        /// <p>字幕文件FileId。</p>
+        /// </summary>
+        [JsonProperty("SubtitleFileId")]
+        public string SubtitleFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TransDst", this.TransDst);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
+            this.SetParamSimple(map, prefix + "SubtitleFileId", this.SubtitleFileId);
         }
     }
 }

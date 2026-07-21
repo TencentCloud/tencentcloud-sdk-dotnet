@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1467";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeAcListsResponse DescribeAcListsSync(DescribeAcListsRequest req)
         {
             return InternalRequestAsync<DescribeAcListsResponse>(req, "DescribeAcLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询ACL规则支持配置的地区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAclRegInfoRequest"/></param>
+        /// <returns><see cref="DescribeAclRegInfoResponse"/></returns>
+        public Task<DescribeAclRegInfoResponse> DescribeAclRegInfo(DescribeAclRegInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAclRegInfoResponse>(req, "DescribeAclRegInfo");
+        }
+
+        /// <summary>
+        /// 查询ACL规则支持配置的地区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAclRegInfoRequest"/></param>
+        /// <returns><see cref="DescribeAclRegInfoResponse"/></returns>
+        public DescribeAclRegInfoResponse DescribeAclRegInfoSync(DescribeAclRegInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAclRegInfoResponse>(req, "DescribeAclRegInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

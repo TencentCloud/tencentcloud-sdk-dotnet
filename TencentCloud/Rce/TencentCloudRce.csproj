@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1467</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,18 @@
 
   <ItemGroup>
     <Compile Include="V20260130\RceClient.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProRequest.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProResponse.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskPremiumRsp.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskProRequest.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskProResponse.cs" />
+    <Compile Include="V20260130\Models\AssessDeviceRiskRsp.cs" />
     <Compile Include="V20260130\Models\AssessEnvironmentRiskRequest.cs" />
     <Compile Include="V20260130\Models\AssessEnvironmentRiskResponse.cs" />
     <Compile Include="V20260130\Models\AssessEnvironmentRiskRsp.cs" />
     <Compile Include="V20260130\Models\DataScore.cs" />
+    <Compile Include="V20260130\Models\Decision.cs" />
+    <Compile Include="V20260130\Models\Device.cs" />
     <Compile Include="V20260130\Models\Environment.cs" />
     <Compile Include="V20260130\Models\IPLocation.cs" />
     <Compile Include="V20260130\Models\IPNetwork.cs" />

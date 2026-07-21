@@ -25,55 +25,55 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 防火墙实例名称
+        /// <p>防火墙实例名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 带宽
+        /// <p>带宽</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 模式 1：接入模式；0：新增模式
+        /// <p>模式 1：接入模式；0：新增模式</p>
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
+        /// <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
         /// </summary>
         [JsonProperty("NewModeItems")]
         public NewModeItems NewModeItems{ get; set; }
 
         /// <summary>
-        /// 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
+        /// <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
         /// </summary>
         [JsonProperty("NatGwList")]
         public string[] NatGwList{ get; set; }
 
         /// <summary>
-        /// 主可用区，为空则选择默认可用区
+        /// <p>主可用区，为空则选择默认可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 备可用区，为空则选择默认可用区
+        /// <p>备可用区，为空则选择默认可用区</p>
         /// </summary>
         [JsonProperty("ZoneBak")]
         public string ZoneBak{ get; set; }
 
         /// <summary>
-        /// 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+        /// <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
         /// </summary>
         [JsonProperty("CrossAZone")]
         public long? CrossAZone{ get; set; }
 
         /// <summary>
-        /// 指定防火墙使用网段信息
+        /// <p>指定防火墙使用网段信息</p>
         /// </summary>
         [JsonProperty("FwCidrInfo")]
         public FwCidrInfo FwCidrInfo{ get; set; }

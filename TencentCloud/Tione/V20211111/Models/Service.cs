@@ -277,6 +277,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceGroupInfo[] ExternalResourceGroups{ get; set; }
 
         /// <summary>
+        /// <p>服务所属的项目 id,0表示默认空间</p>
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
         /// <p>变更服务的子账户</p>
         /// </summary>
         [JsonProperty("Changer")]
@@ -331,6 +337,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
             this.SetParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Changer", this.Changer);
             this.SetParamSimple(map, prefix + "ChangerName", this.ChangerName);
         }

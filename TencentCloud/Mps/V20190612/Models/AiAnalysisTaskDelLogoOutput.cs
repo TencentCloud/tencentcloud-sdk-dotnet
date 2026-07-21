@@ -69,6 +69,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VoiceClonedMarkFile")]
         public string VoiceClonedMarkFile{ get; set; }
 
+        /// <summary>
+        /// <p>擦除后文件的FileId。</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
+        /// <p>基于画面提取的字幕文件FileId。</p>
+        /// </summary>
+        [JsonProperty("OriginSubtitleFileId")]
+        public string OriginSubtitleFileId{ get; set; }
+
+        /// <summary>
+        /// <p>基于画面提取的字幕翻译文件FileId    。</p>
+        /// </summary>
+        [JsonProperty("TranslateSubtitleFileId")]
+        public string TranslateSubtitleFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +100,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
             this.SetParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
             this.SetParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "OriginSubtitleFileId", this.OriginSubtitleFileId);
+            this.SetParamSimple(map, prefix + "TranslateSubtitleFileId", this.TranslateSubtitleFileId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 生成的模型服务
+        /// <p>生成的模型服务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Service")]
