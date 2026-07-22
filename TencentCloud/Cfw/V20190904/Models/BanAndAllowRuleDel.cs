@@ -25,20 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 封禁和放通对象
-        /// </summary>
-        [JsonProperty("Ioc")]
-        public string Ioc{ get; set; }
-
-        /// <summary>
-        /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
+        /// 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
         /// </summary>
         [JsonProperty("DirectionList")]
         public string DirectionList{ get; set; }
 
         /// <summary>
-        /// 规则类型
-        /// RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+        /// 封禁或放通对象值。
+        /// </summary>
+        [JsonProperty("Ioc")]
+        public string Ioc{ get; set; }
+
+        /// <summary>
+        /// 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
@@ -49,8 +48,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
             this.SetParamSimple(map, prefix + "DirectionList", this.DirectionList);
+            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
         }
     }

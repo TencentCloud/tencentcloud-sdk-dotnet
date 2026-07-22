@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Subnet实例ID，例如：subnet-f1xjkw1b。
+        /// <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }

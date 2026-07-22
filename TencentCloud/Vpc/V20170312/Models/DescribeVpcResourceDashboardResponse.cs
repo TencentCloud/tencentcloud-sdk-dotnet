@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 资源对象列表。
+        /// <p>资源对象列表。</p>
         /// </summary>
         [JsonProperty("ResourceDashboardSet")]
         public ResourceDashboard[] ResourceDashboardSet{ get; set; }

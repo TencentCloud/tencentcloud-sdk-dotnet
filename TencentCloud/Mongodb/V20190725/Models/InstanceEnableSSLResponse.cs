@@ -25,30 +25,28 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// SSL开启状态。
-        /// - 0：关闭。
-        /// - 1：开启。
+        /// <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 证书文件过期时间，格式为：2023-05-01 12:00:00。
+        /// <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 证书文件的下载链接。
+        /// <p>证书文件的下载链接。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertUrl")]
         public string CertUrl{ get; set; }
 
         /// <summary>
-        /// 流程id
+        /// <p>流程id</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

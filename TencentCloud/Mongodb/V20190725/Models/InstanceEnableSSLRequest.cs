@@ -25,15 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 配置是否要开启SSL访问。
-        /// - true：开启。
-        /// - false：关闭。
+        /// <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpc实例ID，例如：vpc-f1xjkw1b。
+        /// <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }

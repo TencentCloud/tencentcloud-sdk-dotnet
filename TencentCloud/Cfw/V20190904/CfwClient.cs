@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1468";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加互联网边界访问控制规则
+        /// 添加一条或多条互联网边界访问控制规则。规则写入当前账号的可操作分区；本批 Rules 在一次插入事务中写入。From=batch_import_cover 会先以独立事务删除首条规则 Direction 对应的旧规则，再插入本批 Rules；删除一旦提交，后续插入失败不会恢复旧规则。公有云环境在数据库事务提交后异步触发规则下发，因此成功返回只表示规则已写入并已发起下发，不表示数据面已经生效。
         /// </summary>
         /// <param name="req"><see cref="AddAclRuleRequest"/></param>
         /// <returns><see cref="AddAclRuleResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加互联网边界访问控制规则
+        /// 添加一条或多条互联网边界访问控制规则。规则写入当前账号的可操作分区；本批 Rules 在一次插入事务中写入。From=batch_import_cover 会先以独立事务删除首条规则 Direction 对应的旧规则，再插入本批 Rules；删除一旦提交，后续插入失败不会恢复旧规则。公有云环境在数据库事务提交后异步触发规则下发，因此成功返回只表示规则已写入并已发起下发，不表示数据面已经生效。
         /// </summary>
         /// <param name="req"><see cref="AddAclRuleRequest"/></param>
         /// <returns><see cref="AddAclRuleResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 用户告警中心-忽略处置按钮
+        /// 忽略告警中心或拦截列表中的记录。接口将目标记录的 bhide 标记设为 1，使其不再进入未忽略列表和相关统计，但不删除日志，也不创建持续匹配后续记录的忽略规则；本接口没有恢复 bhide 的参数。TableType 决定目标表及 ID 类型：AlertTable 按告警日志 logid 更新，InterceptionTable 按拦截记录 unique_id 更新。HandleEventIdList 中的聚合事件 ID 会先解析为告警日志 ID，再与 HandleIdList 合并；合并后会删除空字符串并去重。
         /// </summary>
         /// <param name="req"><see cref="CreateAlertCenterOmitRequest"/></param>
         /// <returns><see cref="CreateAlertCenterOmitResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 用户告警中心-忽略处置按钮
+        /// 忽略告警中心或拦截列表中的记录。接口将目标记录的 bhide 标记设为 1，使其不再进入未忽略列表和相关统计，但不删除日志，也不创建持续匹配后续记录的忽略规则；本接口没有恢复 bhide 的参数。TableType 决定目标表及 ID 类型：AlertTable 按告警日志 logid 更新，InterceptionTable 按拦截记录 unique_id 更新。HandleEventIdList 中的聚合事件 ID 会先解析为告警日志 ID，再与 HandleIdList 合并；合并后会删除空字符串并去重。
         /// </summary>
         /// <param name="req"><see cref="CreateAlertCenterOmitRequest"/></param>
         /// <returns><see cref="CreateAlertCenterOmitResponse"/></returns>

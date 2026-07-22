@@ -151,6 +151,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string TargetUinString{ get; set; }
 
         /// <summary>
+        /// <p>对应云产品的账号信息</p>
+        /// </summary>
+        [JsonProperty("AccountInfoList")]
+        public SecretAccountInfo[] AccountInfoList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -183,6 +189,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
             this.SetParamSimple(map, prefix + "CreateUinString", this.CreateUinString);
             this.SetParamSimple(map, prefix + "TargetUinString", this.TargetUinString);
+            this.SetParamArrayObj(map, prefix + "AccountInfoList.", this.AccountInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

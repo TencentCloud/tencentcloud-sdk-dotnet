@@ -28,7 +28,7 @@ namespace TencentCloud.Chdfs.V20201112
 
        private const string endpoint = "chdfs.tencentcloudapi.com";
        private const string version = "2020-11-12";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1468";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Chdfs.V20201112
         }
 
         /// <summary>
+        /// 创建路径保护规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathProtectionRuleRequest"/></param>
+        /// <returns><see cref="CreatePathProtectionRuleResponse"/></returns>
+        public Task<CreatePathProtectionRuleResponse> CreatePathProtectionRule(CreatePathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePathProtectionRuleResponse>(req, "CreatePathProtectionRule");
+        }
+
+        /// <summary>
+        /// 创建路径保护规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathProtectionRuleRequest"/></param>
+        /// <returns><see cref="CreatePathProtectionRuleResponse"/></returns>
+        public CreatePathProtectionRuleResponse CreatePathProtectionRuleSync(CreatePathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePathProtectionRuleResponse>(req, "CreatePathProtectionRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
@@ -323,6 +344,27 @@ namespace TencentCloud.Chdfs.V20201112
         public DeleteMountPointResponse DeleteMountPointSync(DeleteMountPointRequest req)
         {
             return InternalRequestAsync<DeleteMountPointResponse>(req, "DeleteMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除路径保护规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePathProtectionRuleRequest"/></param>
+        /// <returns><see cref="DeletePathProtectionRuleResponse"/></returns>
+        public Task<DeletePathProtectionRuleResponse> DeletePathProtectionRule(DeletePathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePathProtectionRuleResponse>(req, "DeletePathProtectionRule");
+        }
+
+        /// <summary>
+        /// 删除路径保护规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePathProtectionRuleRequest"/></param>
+        /// <returns><see cref="DeletePathProtectionRuleResponse"/></returns>
+        public DeletePathProtectionRuleResponse DeletePathProtectionRuleSync(DeletePathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePathProtectionRuleResponse>(req, "DeletePathProtectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +558,27 @@ namespace TencentCloud.Chdfs.V20201112
         }
 
         /// <summary>
+        /// 通过文件系统ID查看路径保护规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathProtectionRulesRequest"/></param>
+        /// <returns><see cref="DescribePathProtectionRulesResponse"/></returns>
+        public Task<DescribePathProtectionRulesResponse> DescribePathProtectionRules(DescribePathProtectionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePathProtectionRulesResponse>(req, "DescribePathProtectionRules");
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看路径保护规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathProtectionRulesRequest"/></param>
+        /// <returns><see cref="DescribePathProtectionRulesResponse"/></returns>
+        public DescribePathProtectionRulesResponse DescribePathProtectionRulesSync(DescribePathProtectionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePathProtectionRulesResponse>(req, "DescribePathProtectionRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过文件系统ID查看资源标签列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
@@ -701,6 +764,27 @@ namespace TencentCloud.Chdfs.V20201112
         public ModifyMountPointResponse ModifyMountPointSync(ModifyMountPointRequest req)
         {
             return InternalRequestAsync<ModifyMountPointResponse>(req, "ModifyMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改路径保护规则属性，需要指定路径保护规则ID，支持修改规则名称、路径和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPathProtectionRuleRequest"/></param>
+        /// <returns><see cref="ModifyPathProtectionRuleResponse"/></returns>
+        public Task<ModifyPathProtectionRuleResponse> ModifyPathProtectionRule(ModifyPathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPathProtectionRuleResponse>(req, "ModifyPathProtectionRule");
+        }
+
+        /// <summary>
+        /// 修改路径保护规则属性，需要指定路径保护规则ID，支持修改规则名称、路径和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPathProtectionRuleRequest"/></param>
+        /// <returns><see cref="ModifyPathProtectionRuleResponse"/></returns>
+        public ModifyPathProtectionRuleResponse ModifyPathProtectionRuleSync(ModifyPathProtectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPathProtectionRuleResponse>(req, "ModifyPathProtectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

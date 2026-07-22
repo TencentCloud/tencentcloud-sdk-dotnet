@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1468";
 
         /// <summary>
         /// Client constructor.
@@ -1983,6 +1983,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAigcImageTaskResponse DescribeAigcImageTaskSync(DescribeAigcImageTaskRequest req)
         {
             return InternalRequestAsync<DescribeAigcImageTaskResponse>(req, "DescribeAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AIGC场景任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskStatusResponse"/></returns>
+        public Task<DescribeAigcTaskStatusResponse> DescribeAigcTaskStatus(DescribeAigcTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskStatusResponse>(req, "DescribeAigcTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询AIGC场景任务接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskStatusResponse"/></returns>
+        public DescribeAigcTaskStatusResponse DescribeAigcTaskStatusSync(DescribeAigcTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskStatusResponse>(req, "DescribeAigcTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4362,6 +4383,8 @@ namespace TencentCloud.Mps.V20190612
         /// 1. 格式转换；
         /// 2. 图像增强；
         /// 3. 图像擦除;
+        /// 4. 数字水印；
+        /// 5. 美颜滤镜；
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>
@@ -4375,6 +4398,8 @@ namespace TencentCloud.Mps.V20190612
         /// 1. 格式转换；
         /// 2. 图像增强；
         /// 3. 图像擦除;
+        /// 4. 数字水印；
+        /// 5. 美颜滤镜；
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>

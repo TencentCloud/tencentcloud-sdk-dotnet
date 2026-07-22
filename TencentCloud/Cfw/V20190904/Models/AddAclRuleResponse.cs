@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>创建成功后返回新策略ID列表</p>
+        /// 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
         /// </summary>
         [JsonProperty("RuleUuid")]
         public long?[] RuleUuid{ get; set; }

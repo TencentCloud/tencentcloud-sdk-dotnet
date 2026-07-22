@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1459";
+       private const string sdkVersion = "SDK_NET_3.0.1468";
 
         /// <summary>
         /// Client constructor.
@@ -474,6 +474,8 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 不使用了
+        /// 
         /// 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceDetailListRequest"/></param>
@@ -484,6 +486,8 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 不使用了
+        /// 
         /// 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceDetailListRequest"/></param>

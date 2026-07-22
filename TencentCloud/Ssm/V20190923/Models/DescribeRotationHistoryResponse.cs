@@ -25,16 +25,22 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 版本号列表
+        /// <p>版本号列表</p>
         /// </summary>
         [JsonProperty("VersionIDs")]
         public string[] VersionIDs{ get; set; }
 
         /// <summary>
-        /// 版本号个数，可以给用户展示的版本号个数上限为10个。
+        /// <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>凭据对应账号相关信息</p>
+        /// </summary>
+        [JsonProperty("AccountInfoList")]
+        public SecretAccountInfo[] AccountInfoList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamArraySimple(map, prefix + "VersionIDs.", this.VersionIDs);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "AccountInfoList.", this.AccountInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

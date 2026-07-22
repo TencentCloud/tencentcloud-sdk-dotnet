@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
+        /// <p>AIGC 视频转绘任务参数信息。</p>
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }
+
+        /// <summary>
         /// <p>AIGC 视频转绘输出配置。</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "FileInfo.", this.FileInfo);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         }
     }

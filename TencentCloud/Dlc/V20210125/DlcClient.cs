@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1468";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Dlc.V20210125
         public AlterDMSTableResponse AlterDMSTableSync(AlterDMSTableRequest req)
         {
             return InternalRequestAsync<AlterDMSTableResponse>(req, "AlterDMSTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改表备注
+        /// </summary>
+        /// <param name="req"><see cref="AlterTableCommentRequest"/></param>
+        /// <returns><see cref="AlterTableCommentResponse"/></returns>
+        public Task<AlterTableCommentResponse> AlterTableComment(AlterTableCommentRequest req)
+        {
+            return InternalRequestAsync<AlterTableCommentResponse>(req, "AlterTableComment");
+        }
+
+        /// <summary>
+        /// 修改表备注
+        /// </summary>
+        /// <param name="req"><see cref="AlterTableCommentRequest"/></param>
+        /// <returns><see cref="AlterTableCommentResponse"/></returns>
+        public AlterTableCommentResponse AlterTableCommentSync(AlterTableCommentRequest req)
+        {
+            return InternalRequestAsync<AlterTableCommentResponse>(req, "AlterTableComment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +726,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（CreateMetaDatabase）用于创建元数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDatabaseRequest"/></param>
+        /// <returns><see cref="CreateMetaDatabaseResponse"/></returns>
+        public Task<CreateMetaDatabaseResponse> CreateMetaDatabase(CreateMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase");
+        }
+
+        /// <summary>
+        /// 本接口（CreateMetaDatabase）用于创建元数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDatabaseRequest"/></param>
+        /// <returns><see cref="CreateMetaDatabaseResponse"/></returns>
+        public CreateMetaDatabaseResponse CreateMetaDatabaseSync(CreateMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateNotebookSession）用于创建交互式session（notebook）
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>
@@ -1188,6 +1230,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteDataMaskStrategyResponse DeleteDataMaskStrategySync(DeleteDataMaskStrategyRequest req)
         {
             return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteMetaDatabase）用于一键删除元数据库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetaDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteMetaDatabaseResponse"/></returns>
+        public Task<DeleteMetaDatabaseResponse> DeleteMetaDatabase(DeleteMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<DeleteMetaDatabaseResponse>(req, "DeleteMetaDatabase");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteMetaDatabase）用于一键删除元数据库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetaDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteMetaDatabaseResponse"/></returns>
+        public DeleteMetaDatabaseResponse DeleteMetaDatabaseSync(DeleteMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<DeleteMetaDatabaseResponse>(req, "DeleteMetaDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1734,6 +1797,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategiesSync(DescribeDataMaskStrategiesRequest req)
         {
             return InternalRequestAsync<DescribeDataMaskStrategiesResponse>(req, "DescribeDataMaskStrategies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatabase）,查询数据库详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseResponse"/></returns>
+        public Task<DescribeDatabaseResponse> DescribeDatabase(DescribeDatabaseRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseResponse>(req, "DescribeDatabase");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatabase）,查询数据库详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseResponse"/></returns>
+        public DescribeDatabaseResponse DescribeDatabaseSync(DescribeDatabaseRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseResponse>(req, "DescribeDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3162,6 +3246,27 @@ namespace TencentCloud.Dlc.V20210125
         public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSqlSync(GenerateCreateMangedTableSqlRequest req)
         {
             return InternalRequestAsync<GenerateCreateMangedTableSqlResponse>(req, "GenerateCreateMangedTableSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 建表
+        /// </summary>
+        /// <param name="req"><see cref="GenerateInternalTableRequest"/></param>
+        /// <returns><see cref="GenerateInternalTableResponse"/></returns>
+        public Task<GenerateInternalTableResponse> GenerateInternalTable(GenerateInternalTableRequest req)
+        {
+            return InternalRequestAsync<GenerateInternalTableResponse>(req, "GenerateInternalTable");
+        }
+
+        /// <summary>
+        /// 建表
+        /// </summary>
+        /// <param name="req"><see cref="GenerateInternalTableRequest"/></param>
+        /// <returns><see cref="GenerateInternalTableResponse"/></returns>
+        public GenerateInternalTableResponse GenerateInternalTableSync(GenerateInternalTableRequest req)
+        {
+            return InternalRequestAsync<GenerateInternalTableResponse>(req, "GenerateInternalTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

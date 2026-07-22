@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1467</VersionPrefix>
+    <VersionPrefix>3.0.1468</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -305,6 +305,7 @@
     <Compile Include="V20190612\Models\CreateContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateDocToVideoTaskRequest.cs" />
     <Compile Include="V20190612\Models\CreateDocToVideoTaskResponse.cs" />
+    <Compile Include="V20190612\Models\CreateImageConfig.cs" />
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateInput.cs" />
@@ -464,6 +465,8 @@
     <Compile Include="V20190612\Models\DescribeAigcAudioTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAigcImageTaskRequest.cs" />
     <Compile Include="V20190612\Models\DescribeAigcImageTaskResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeAigcTaskStatusRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeAigcTaskStatusResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAigcVideoTaskRequest.cs" />
     <Compile Include="V20190612\Models\DescribeAigcVideoTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />

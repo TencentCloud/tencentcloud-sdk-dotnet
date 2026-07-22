@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 资源统计结果。
+        /// <p>资源统计结果。</p>
         /// </summary>
         [JsonProperty("ResourceStatisticsSet")]
         public ResourceStatistics[] ResourceStatisticsSet{ get; set; }

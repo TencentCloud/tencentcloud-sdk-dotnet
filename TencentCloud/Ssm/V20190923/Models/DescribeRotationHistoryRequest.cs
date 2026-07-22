@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 指定需要获取凭据轮转历史的凭据名称。
+        /// <p>指定需要获取凭据轮转历史的凭据名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }

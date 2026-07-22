@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1467</VersionPrefix>
+    <VersionPrefix>3.0.1468</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20210125\Models\AlterDMSPartitionResponse.cs" />
     <Compile Include="V20210125\Models\AlterDMSTableRequest.cs" />
     <Compile Include="V20210125\Models\AlterDMSTableResponse.cs" />
+    <Compile Include="V20210125\Models\AlterTableCommentRequest.cs" />
+    <Compile Include="V20210125\Models\AlterTableCommentResponse.cs" />
     <Compile Include="V20210125\Models\AnalysisTaskResults.cs" />
     <Compile Include="V20210125\Models\Asset.cs" />
     <Compile Include="V20210125\Models\AssignMangedTablePropertiesRequest.cs" />
@@ -122,6 +124,8 @@
     <Compile Include="V20210125\Models\CreateImportTaskResponse.cs" />
     <Compile Include="V20210125\Models\CreateInternalTableRequest.cs" />
     <Compile Include="V20210125\Models\CreateInternalTableResponse.cs" />
+    <Compile Include="V20210125\Models\CreateMetaDatabaseRequest.cs" />
+    <Compile Include="V20210125\Models\CreateMetaDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\CreateNotebookSessionRequest.cs" />
     <Compile Include="V20210125\Models\CreateNotebookSessionResponse.cs" />
     <Compile Include="V20210125\Models\CreateNotebookSessionStatementRequest.cs" />
@@ -196,6 +200,8 @@
     <Compile Include="V20210125\Models\DeleteDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\DeleteDataMaskStrategyRequest.cs" />
     <Compile Include="V20210125\Models\DeleteDataMaskStrategyResponse.cs" />
+    <Compile Include="V20210125\Models\DeleteMetaDatabaseRequest.cs" />
+    <Compile Include="V20210125\Models\DeleteMetaDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DeleteNativeSparkSessionRequest.cs" />
     <Compile Include="V20210125\Models\DeleteNativeSparkSessionResponse.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionRequest.cs" />
@@ -249,6 +255,8 @@
     <Compile Include="V20210125\Models\DescribeDataEnginesScaleDetailResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataMaskStrategiesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDataMaskStrategiesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDatabaseRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatasourceConnectionRequest.cs" />
@@ -395,6 +403,8 @@
     <Compile Include="V20210125\Models\GatewayInfo.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlRequest.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlResponse.cs" />
+    <Compile Include="V20210125\Models\GenerateInternalTableRequest.cs" />
+    <Compile Include="V20210125\Models\GenerateInternalTableResponse.cs" />
     <Compile Include="V20210125\Models\GetOptimizerPolicyRequest.cs" />
     <Compile Include="V20210125\Models\GetOptimizerPolicyResponse.cs" />
     <Compile Include="V20210125\Models\GrantDLCCatalogAccessRequest.cs" />
@@ -425,6 +435,7 @@
     <Compile Include="V20210125\Models\LockMetaDataResponse.cs" />
     <Compile Include="V20210125\Models\MCPTaskInfo.cs" />
     <Compile Include="V20210125\Models\MCPTaskResultInfo.cs" />
+    <Compile Include="V20210125\Models\MetaDatabaseInfo.cs" />
     <Compile Include="V20210125\Models\MixedTablePartitions.cs" />
     <Compile Include="V20210125\Models\ModifyAdvancedStoreLocationRequest.cs" />
     <Compile Include="V20210125\Models\ModifyAdvancedStoreLocationResponse.cs" />

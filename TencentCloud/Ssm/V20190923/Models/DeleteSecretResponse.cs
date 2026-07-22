@@ -25,16 +25,22 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 指定删除的凭据名称。
+        /// <p>指定删除的凭据名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 凭据删除的日期，unix时间戳。
+        /// <p>凭据删除的日期，unix时间戳。</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public long? DeleteTime{ get; set; }
+
+        /// <summary>
+        /// <p>异步删除任务 ID</p>
+        /// </summary>
+        [JsonProperty("FlowID")]
+        public long? FlowID{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "FlowID", this.FlowID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

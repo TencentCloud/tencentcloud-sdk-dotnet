@@ -25,6 +25,12 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// 上次执行时间
+        /// </summary>
+        [JsonProperty("LastTime")]
+        public string LastTime{ get; set; }
+
+        /// <summary>
         /// 任务id
         /// </summary>
         [JsonProperty("TaskId")]
@@ -36,21 +42,15 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
-        /// <summary>
-        /// 上次执行时间
-        /// </summary>
-        [JsonProperty("LastTime")]
-        public string LastTime{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
-            this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
         }
     }
 }

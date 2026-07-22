@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>返回状态码：<br>0 成功<br>非0 失败</p>
+        /// <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// <p>返回信息：<br>success 成功<br>其他</p>
+        /// <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
+        /// <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
