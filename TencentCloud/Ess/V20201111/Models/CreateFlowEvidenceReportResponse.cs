@@ -25,24 +25,19 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
+        /// <p>出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL</p>
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// 出证任务执行的状态, 状态含义如下：
-        /// 
-        /// <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
-        /// <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
-        /// <li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
+        /// <p>出证任务执行的状态, 状态含义如下：</p><ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li><li>**EvidenceStatusSuccess**：  出证任务执行成功</li><li>**EvidenceStatusFailed** ： 出证任务执行失败</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 此字段已经废除,不再使用.
-        /// 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
+        /// <p>此字段已经废除,不再使用.<br>出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取</p>
         /// </summary>
         [JsonProperty("ReportUrl")]
         [System.Obsolete]

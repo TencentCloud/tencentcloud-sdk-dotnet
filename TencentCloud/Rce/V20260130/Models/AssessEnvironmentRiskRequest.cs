@@ -25,7 +25,7 @@ namespace TencentCloud.Rce.V20260130.Models
     {
         
         /// <summary>
-        /// <p>客户端 IP 地址</p>
+        /// <p>客户端 IP 地址（IPv4或IPv6）</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

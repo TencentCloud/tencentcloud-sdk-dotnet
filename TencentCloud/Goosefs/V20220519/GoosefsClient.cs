@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1469";
 
         /// <summary>
         /// Client constructor.
@@ -659,6 +659,27 @@ namespace TencentCloud.Goosefs.V20220519
         public ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidthSync(ModifyDataRepositoryBandwidthRequest req)
         {
             return InternalRequestAsync<ModifyDataRepositoryBandwidthResponse>(req, "ModifyDataRepositoryBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据流动任务状态，目前支持任务暂停/恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataRepositoryTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDataRepositoryTaskStatusResponse"/></returns>
+        public Task<ModifyDataRepositoryTaskStatusResponse> ModifyDataRepositoryTaskStatus(ModifyDataRepositoryTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDataRepositoryTaskStatusResponse>(req, "ModifyDataRepositoryTaskStatus");
+        }
+
+        /// <summary>
+        /// 修改数据流动任务状态，目前支持任务暂停/恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataRepositoryTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDataRepositoryTaskStatusResponse"/></returns>
+        public ModifyDataRepositoryTaskStatusResponse ModifyDataRepositoryTaskStatusSync(ModifyDataRepositoryTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDataRepositoryTaskStatusResponse>(req, "ModifyDataRepositoryTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

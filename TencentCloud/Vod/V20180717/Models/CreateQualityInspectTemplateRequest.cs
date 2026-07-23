@@ -25,85 +25,97 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 音画质检测模板名称。
+        /// <p>音画质检测模板名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 音画质检测模板描述。
+        /// <p>音画质检测模板描述。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 截帧间隔，单位为秒，最小值为 1。当不填时，默认截帧间隔为 1 秒。
+        /// <p>音画质检测配置参数。</p>
+        /// </summary>
+        [JsonProperty("Configs")]
+        public QualityInspectConfig[] Configs{ get; set; }
+
+        /// <summary>
+        /// <p>音画质检测的抽检策略参数。</p>
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public QualityInspectStrategy Strategy{ get; set; }
+
+        /// <summary>
+        /// <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒，最小值为 1。当不填时，默认截帧间隔为 1 秒。</p>
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// 视频画面抖动重影检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfo JitterConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面模糊检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfo BlurConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面低光、过曝检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfo AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面花屏检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfo CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面黑边、白边、黑屏、白屏检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面噪点检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfo NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面马赛克检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfo MosaicConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面二维码检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfo QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// 音频（静音、低音、爆音）检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfo VoiceConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面质量评价的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfo QualityEvaluationConfigure{ get; set; }
@@ -117,6 +129,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
             this.SetParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);

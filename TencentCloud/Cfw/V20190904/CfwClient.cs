@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1468";
+       private const string sdkVersion = "SDK_NET_3.0.1469";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,48 @@ namespace TencentCloud.Cfw.V20190904
         public AddVpcAcRuleResponse AddVpcAcRuleSync(AddVpcAcRuleRequest req)
         {
             return InternalRequestAsync<AddVpcAcRuleResponse>(req, "AddVpcAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起 NAT CCN 集群模式防火墙预接入检查（仅支持自动接入模式）。入参与 OpenClusterNatFwSwitch 完全相同，传入相同的 NatCcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterNatCcnFwSwitchList 接口读取 CheckResult 获取各阶段的通过/失败状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckClusterNatFwPreAccessRequest"/></param>
+        /// <returns><see cref="CheckClusterNatFwPreAccessResponse"/></returns>
+        public Task<CheckClusterNatFwPreAccessResponse> CheckClusterNatFwPreAccess(CheckClusterNatFwPreAccessRequest req)
+        {
+            return InternalRequestAsync<CheckClusterNatFwPreAccessResponse>(req, "CheckClusterNatFwPreAccess");
+        }
+
+        /// <summary>
+        /// 发起 NAT CCN 集群模式防火墙预接入检查（仅支持自动接入模式）。入参与 OpenClusterNatFwSwitch 完全相同，传入相同的 NatCcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterNatCcnFwSwitchList 接口读取 CheckResult 获取各阶段的通过/失败状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckClusterNatFwPreAccessRequest"/></param>
+        /// <returns><see cref="CheckClusterNatFwPreAccessResponse"/></returns>
+        public CheckClusterNatFwPreAccessResponse CheckClusterNatFwPreAccessSync(CheckClusterNatFwPreAccessRequest req)
+        {
+            return InternalRequestAsync<CheckClusterNatFwPreAccessResponse>(req, "CheckClusterNatFwPreAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起 VPC 集群防火墙预接入检查（仅支持自动接入模式）。入参与 ModifyClusterVpcFwSwitch 完全相同，传入相同的 CcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterVpcFwSwitchs 接口读取 CheckResult 获取各阶段的通过/失败状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckClusterVpcFwPreAccessRequest"/></param>
+        /// <returns><see cref="CheckClusterVpcFwPreAccessResponse"/></returns>
+        public Task<CheckClusterVpcFwPreAccessResponse> CheckClusterVpcFwPreAccess(CheckClusterVpcFwPreAccessRequest req)
+        {
+            return InternalRequestAsync<CheckClusterVpcFwPreAccessResponse>(req, "CheckClusterVpcFwPreAccess");
+        }
+
+        /// <summary>
+        /// 发起 VPC 集群防火墙预接入检查（仅支持自动接入模式）。入参与 ModifyClusterVpcFwSwitch 完全相同，传入相同的 CcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterVpcFwSwitchs 接口读取 CheckResult 获取各阶段的通过/失败状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckClusterVpcFwPreAccessRequest"/></param>
+        /// <returns><see cref="CheckClusterVpcFwPreAccessResponse"/></returns>
+        public CheckClusterVpcFwPreAccessResponse CheckClusterVpcFwPreAccessSync(CheckClusterVpcFwPreAccessRequest req)
+        {
+            return InternalRequestAsync<CheckClusterVpcFwPreAccessResponse>(req, "CheckClusterVpcFwPreAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -852,6 +894,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// DescribeBlockList 告警中心阻断资产视图列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockListRequest"/></param>
+        /// <returns><see cref="DescribeBlockListResponse"/></returns>
+        public Task<DescribeBlockListResponse> DescribeBlockList(DescribeBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockListResponse>(req, "DescribeBlockList");
+        }
+
+        /// <summary>
+        /// DescribeBlockList 告警中心阻断资产视图列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockListRequest"/></param>
+        /// <returns><see cref="DescribeBlockListResponse"/></returns>
+        public DescribeBlockListResponse DescribeBlockListSync(DescribeBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockListResponse>(req, "DescribeBlockList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DescribeBlockStaticList 告警中心柱形图
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockStaticListRequest"/></param>
@@ -1360,6 +1423,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 获取用户防火墙(组)的ID名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFwGroupIdNamesRequest"/></param>
+        /// <returns><see cref="DescribeFwGroupIdNamesResponse"/></returns>
+        public Task<DescribeFwGroupIdNamesResponse> DescribeFwGroupIdNames(DescribeFwGroupIdNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeFwGroupIdNamesResponse>(req, "DescribeFwGroupIdNames");
+        }
+
+        /// <summary>
+        /// 获取用户防火墙(组)的ID名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFwGroupIdNamesRequest"/></param>
+        /// <returns><see cref="DescribeFwGroupIdNamesResponse"/></returns>
+        public DescribeFwGroupIdNamesResponse DescribeFwGroupIdNamesSync(DescribeFwGroupIdNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeFwGroupIdNamesResponse>(req, "DescribeFwGroupIdNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取租户所有VPC防火墙(组)及VPC防火墙实例卡片信息
         /// </summary>
         /// <param name="req"><see cref="DescribeFwGroupInstanceInfoRequest"/></param>
@@ -1461,6 +1545,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeIpsModeSwitchResponse DescribeIpsModeSwitchSync(DescribeIpsModeSwitchRequest req)
         {
             return InternalRequestAsync<DescribeIpsModeSwitchResponse>(req, "DescribeIpsModeSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// IPS规则查询接口新
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpsRuleListNewRequest"/></param>
+        /// <returns><see cref="DescribeIpsRuleListNewResponse"/></returns>
+        public Task<DescribeIpsRuleListNewResponse> DescribeIpsRuleListNew(DescribeIpsRuleListNewRequest req)
+        {
+            return InternalRequestAsync<DescribeIpsRuleListNewResponse>(req, "DescribeIpsRuleListNew");
+        }
+
+        /// <summary>
+        /// IPS规则查询接口新
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpsRuleListNewRequest"/></param>
+        /// <returns><see cref="DescribeIpsRuleListNewResponse"/></returns>
+        public DescribeIpsRuleListNewResponse DescribeIpsRuleListNewSync(DescribeIpsRuleListNewRequest req)
+        {
+            return InternalRequestAsync<DescribeIpsRuleListNewResponse>(req, "DescribeIpsRuleListNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1759,6 +1864,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询nat规则的配额和使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatRuleScopesRequest"/></param>
+        /// <returns><see cref="DescribeNatRuleScopesResponse"/></returns>
+        public Task<DescribeNatRuleScopesResponse> DescribeNatRuleScopes(DescribeNatRuleScopesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatRuleScopesResponse>(req, "DescribeNatRuleScopes");
+        }
+
+        /// <summary>
+        /// 查询nat规则的配额和使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatRuleScopesRequest"/></param>
+        /// <returns><see cref="DescribeNatRuleScopesResponse"/></returns>
+        public DescribeNatRuleScopesResponse DescribeNatRuleScopesSync(DescribeNatRuleScopesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatRuleScopesResponse>(req, "DescribeNatRuleScopes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取日志离线导出任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineExportTaskRequest"/></param>
@@ -1881,6 +2007,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeSecurityGroupListResponse DescribeSecurityGroupListSync(DescribeSecurityGroupListRequest req)
         {
             return InternalRequestAsync<DescribeSecurityGroupListResponse>(req, "DescribeSecurityGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询地域配置信息-DescribeAllRegionList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRegionListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRegionListResponse"/></returns>
+        public Task<DescribeSecurityGroupRegionListResponse> DescribeSecurityGroupRegionList(DescribeSecurityGroupRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRegionListResponse>(req, "DescribeSecurityGroupRegionList");
+        }
+
+        /// <summary>
+        /// 查询地域配置信息-DescribeAllRegionList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRegionListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRegionListResponse"/></returns>
+        public DescribeSecurityGroupRegionListResponse DescribeSecurityGroupRegionListSync(DescribeSecurityGroupRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRegionListResponse>(req, "DescribeSecurityGroupRegionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2070,6 +2217,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeVpcAcRuleResponse DescribeVpcAcRuleSync(DescribeVpcAcRuleRequest req)
         {
             return InternalRequestAsync<DescribeVpcAcRuleResponse>(req, "DescribeVpcAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询内网间访问控制规则的生效范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcAclEdgeRangeRequest"/></param>
+        /// <returns><see cref="DescribeVpcAclEdgeRangeResponse"/></returns>
+        public Task<DescribeVpcAclEdgeRangeResponse> DescribeVpcAclEdgeRange(DescribeVpcAclEdgeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcAclEdgeRangeResponse>(req, "DescribeVpcAclEdgeRange");
+        }
+
+        /// <summary>
+        /// 查询内网间访问控制规则的生效范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcAclEdgeRangeRequest"/></param>
+        /// <returns><see cref="DescribeVpcAclEdgeRangeResponse"/></returns>
+        public DescribeVpcAclEdgeRangeResponse DescribeVpcAclEdgeRangeSync(DescribeVpcAclEdgeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcAclEdgeRangeResponse>(req, "DescribeVpcAclEdgeRange")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

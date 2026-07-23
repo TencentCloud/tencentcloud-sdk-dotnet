@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音画质检测模板 ID。
+        /// <p>音画质检测模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -25,91 +25,103 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 模板 ID。
+        /// <p>模板 ID。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 模板名称，长度限制：64 个字符。
+        /// <p>模板名称，长度限制：64 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述信息，长度限制：256 个字符。
+        /// <p>模板描述信息，长度限制：256 个字符。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 截帧间隔，单位为秒，最小值为 1。
+        /// <p>音画质检测的配置参数。</p>
+        /// </summary>
+        [JsonProperty("Configs")]
+        public QualityInspectConfig[] Configs{ get; set; }
+
+        /// <summary>
+        /// <p>音画质检测的抽检策略。</p>
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public QualityInspectStrategy Strategy{ get; set; }
+
+        /// <summary>
+        /// <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒，最小值为 1。</p>
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// 视频画面抖动重影检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfoForUpdate JitterConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面模糊检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfoForUpdate BlurConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面低光、过曝检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面花屏检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfoForUpdate CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面黑边、白边、黑屏、白屏检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面噪点检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfoForUpdate NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面马赛克检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfoForUpdate MosaicConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面二维码检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfoForUpdate QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// 音频（静音、低音、爆音）检测的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfoForUpdate VoiceConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面质量评价的控制参数。
+        /// <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure{ get; set; }
@@ -124,6 +136,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
             this.SetParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);

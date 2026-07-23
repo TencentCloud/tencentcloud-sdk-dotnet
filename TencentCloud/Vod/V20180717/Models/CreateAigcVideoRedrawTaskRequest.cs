@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
+        /// <p>AIGC 视频转绘任务参数信息。</p>
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }
+
+        /// <summary>
         /// <p>AIGC 视频转绘任务的输出媒体文件配置。</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
@@ -74,6 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamObj(map, prefix + "FileInfo.", this.FileInfo);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

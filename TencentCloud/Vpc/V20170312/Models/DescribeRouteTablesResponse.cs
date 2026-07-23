@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的实例数量。
+        /// <p>符合条件的实例数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 路由表对象。
+        /// <p>路由表对象。</p>
         /// </summary>
         [JsonProperty("RouteTableSet")]
         public RouteTable[] RouteTableSet{ get; set; }

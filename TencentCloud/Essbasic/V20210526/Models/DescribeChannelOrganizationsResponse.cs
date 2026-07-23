@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 满足查询条件的企业信息列表。
+        /// <p>满足查询条件的企业信息列表。</p>
         /// </summary>
         [JsonProperty("ChannelOrganizationInfos")]
         public ChannelOrganizationInfo[] ChannelOrganizationInfos{ get; set; }
 
         /// <summary>
-        /// 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
+        /// <p>偏移量:从 0 开始，最大20000。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 指定分页每页返回的数据条数，单页最大支持 200。
+        /// <p>指定分页每页返回的数据条数，单页最大支持 200。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 满足查询条件的企业总数量。
+        /// <p>满足查询条件的企业总数量。</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

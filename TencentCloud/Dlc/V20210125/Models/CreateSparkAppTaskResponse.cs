@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 批Id
+        /// <p>批Id</p>
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
         /// <summary>
-        /// 任务Id
+        /// <p>任务Id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

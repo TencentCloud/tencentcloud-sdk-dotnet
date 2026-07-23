@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的实例数量。
+        /// <p>符合条件的实例数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 子网对象。
+        /// <p>子网对象。</p>
         /// </summary>
         [JsonProperty("SubnetSet")]
         public Subnet[] SubnetSet{ get; set; }
 
         /// <summary>
-        /// 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+        /// <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }

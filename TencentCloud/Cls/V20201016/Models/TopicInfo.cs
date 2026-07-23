@@ -133,10 +133,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// <p>kms-cls服务秘钥id</p>
+        /// <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
+
+        /// <summary>
+        /// <p>用户自定义 KMS 密钥信息</p>
+        /// </summary>
+        [JsonProperty("CustomKmsInfo")]
+        public CustomKmsInfo CustomKmsInfo{ get; set; }
 
         /// <summary>
         /// <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
@@ -217,6 +223,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);

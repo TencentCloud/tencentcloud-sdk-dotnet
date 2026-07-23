@@ -75,6 +75,24 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BudgetName{ get; set; }
 
         /// <summary>
+        /// <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+        /// </summary>
+        [JsonProperty("PromptId")]
+        public string PromptId{ get; set; }
+
+        /// <summary>
+        /// <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+        /// </summary>
+        [JsonProperty("PromptVersion")]
+        public string PromptVersion{ get; set; }
+
+        /// <summary>
+        /// <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+        /// </summary>
+        [JsonProperty("PromptName")]
+        public string PromptName{ get; set; }
+
+        /// <summary>
         /// <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
         /// </summary>
         [JsonProperty("CreditUsageSet")]
@@ -118,6 +136,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "IntentRouters.", this.IntentRouters);
             this.SetParamSimple(map, prefix + "BudgetId", this.BudgetId);
             this.SetParamSimple(map, prefix + "BudgetName", this.BudgetName);
+            this.SetParamSimple(map, prefix + "PromptId", this.PromptId);
+            this.SetParamSimple(map, prefix + "PromptVersion", this.PromptVersion);
+            this.SetParamSimple(map, prefix + "PromptName", this.PromptName);
             this.SetParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
             this.SetParamSimple(map, prefix + "KeyCount", this.KeyCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

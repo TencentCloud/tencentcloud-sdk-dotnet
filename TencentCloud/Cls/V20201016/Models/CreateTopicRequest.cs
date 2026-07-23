@@ -91,6 +91,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Encryption{ get; set; }
 
         /// <summary>
+        /// <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+        /// </summary>
+        [JsonProperty("CustomKmsInfo")]
+        public CustomKmsInfo CustomKmsInfo{ get; set; }
+
+        /// <summary>
         /// <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
         /// </summary>
         [JsonProperty("BizType")]
@@ -143,6 +149,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);

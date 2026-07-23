@@ -115,6 +115,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Encryption{ get; set; }
 
         /// <summary>
+        /// <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+        /// </summary>
+        [JsonProperty("CustomKmsInfo")]
+        public CustomKmsInfo CustomKmsInfo{ get; set; }
+
+        /// <summary>
         /// <p>开启记录公网来源ip和服务端接收时间</p>
         /// </summary>
         [JsonProperty("IsSourceFrom")]
@@ -147,6 +153,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
             this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
         }

@@ -25,160 +25,166 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// mcp server ID
+        /// <p>mcp server ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 模式：proxy代理模式； wrap封装模式；
+        /// <p>模式：proxy代理模式； wrap封装模式；</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 版本号：2024-11-05 2025-03-26
+        /// <p>版本号：2024-11-05 2025-03-26</p>
         /// </summary>
         [JsonProperty("McpVersion")]
         public string McpVersion{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 封装服务列表
+        /// <p>封装服务列表</p>
         /// </summary>
         [JsonProperty("WrapServices")]
         public string[] WrapServices{ get; set; }
 
         /// <summary>
-        /// 负载方式，robin random consistentHash
+        /// <p>负载方式，robin random consistentHash</p>
         /// </summary>
         [JsonProperty("TargetSelect")]
         public string TargetSelect{ get; set; }
 
         /// <summary>
-        /// 目标服务器
+        /// <p>目标服务器</p>
         /// </summary>
         [JsonProperty("TargetHosts")]
         public TargetHostDTO[] TargetHosts{ get; set; }
 
         /// <summary>
-        /// 后端协议：http https
+        /// <p>后端协议：http https</p>
         /// </summary>
         [JsonProperty("HttpProtocolType")]
         public string HttpProtocolType{ get; set; }
 
         /// <summary>
-        /// 证书检查
+        /// <p>证书检查</p>
         /// </summary>
         [JsonProperty("CheckTargetCertsError")]
         public bool? CheckTargetCertsError{ get; set; }
 
         /// <summary>
-        /// 目标路径
+        /// <p>目标路径</p>
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// 流量控制开启状态
+        /// <p>流量控制开启状态</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
-        /// 流量控制配置
+        /// <p>流量控制配置</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>
-        /// IP白名单开启状态
+        /// <p>IP白名单开启状态</p>
         /// </summary>
         [JsonProperty("IpWhiteStatus")]
         public bool? IpWhiteStatus{ get; set; }
 
         /// <summary>
-        /// IP白名单配置
+        /// <p>IP白名单配置</p>
         /// </summary>
         [JsonProperty("IpWhiteConfig")]
         public IpConfig IpWhiteConfig{ get; set; }
 
         /// <summary>
-        /// IP黑名单开启状态
+        /// <p>IP黑名单开启状态</p>
         /// </summary>
         [JsonProperty("IpBlackStatus")]
         public bool? IpBlackStatus{ get; set; }
 
         /// <summary>
-        /// IP黑名单配置
+        /// <p>IP黑名单配置</p>
         /// </summary>
         [JsonProperty("IpBlackConfig")]
         public IpConfig IpBlackConfig{ get; set; }
 
         /// <summary>
-        /// 目标Host类型 0 默认 1 vpc
+        /// <p>目标Host类型 0 默认 1 vpc</p>
         /// </summary>
         [JsonProperty("TargetHostType")]
         public long? TargetHostType{ get; set; }
 
         /// <summary>
-        /// 自定义host
+        /// <p>自定义host</p>
         /// </summary>
         [JsonProperty("CustomHttpHost")]
         public string CustomHttpHost{ get; set; }
 
         /// <summary>
-        /// Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host； customHost 自定义host
+        /// <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host； customHost 自定义host</p>
         /// </summary>
         [JsonProperty("HttpHostType")]
         public string HttpHostType{ get; set; }
 
         /// <summary>
-        /// 请求的超时时间
+        /// <p>请求的超时时间</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// 安全规则集
+        /// <p>安全规则集</p>
         /// </summary>
         [JsonProperty("McpSecurityRules")]
         public McpSecurityRule[] McpSecurityRules{ get; set; }
 
         /// <summary>
-        /// 工具集配置（openapi可能会用到）
+        /// <p>工具集配置（openapi可能会用到）</p>
         /// </summary>
         [JsonProperty("ToolConfigs")]
         public ToolConfigDTO[] ToolConfigs{ get; set; }
 
         /// <summary>
-        /// 封装的API分组ID
+        /// <p>封装的API分组ID</p>
         /// </summary>
         [JsonProperty("WrapPaasID")]
         public string WrapPaasID{ get; set; }
 
         /// <summary>
-        /// 插件配置
+        /// <p>插件配置</p>
         /// </summary>
         [JsonProperty("PluginConfigs")]
         public PluginConfigDTO[] PluginConfigs{ get; set; }
+
+        /// <summary>
+        /// <p>是否忽略健康检查</p>
+        /// </summary>
+        [JsonProperty("IgnoreHealthCheck")]
+        public bool? IgnoreHealthCheck{ get; set; }
 
 
         /// <summary>
@@ -212,6 +218,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamArrayObj(map, prefix + "ToolConfigs.", this.ToolConfigs);
             this.SetParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
             this.SetParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
+            this.SetParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
         }
     }
 }

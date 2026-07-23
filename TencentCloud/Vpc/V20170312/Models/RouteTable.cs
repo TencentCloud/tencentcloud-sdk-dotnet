@@ -25,55 +25,55 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。
+        /// <p>VPC实例ID。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 路由表实例ID，例如：rtb-azd4dt1c。
+        /// <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 路由表名称。
+        /// <p>路由表名称。</p>
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
 
         /// <summary>
-        /// 路由表关联关系。
+        /// <p>路由表关联关系。</p>
         /// </summary>
         [JsonProperty("AssociationSet")]
         public RouteTableAssociation[] AssociationSet{ get; set; }
 
         /// <summary>
-        /// IPv4路由策略集合。
+        /// <p>IPv4路由策略集合。</p>
         /// </summary>
         [JsonProperty("RouteSet")]
         public Route[] RouteSet{ get; set; }
 
         /// <summary>
-        /// 是否默认路由表。
+        /// <p>是否默认路由表。</p>
         /// </summary>
         [JsonProperty("Main")]
         public bool? Main{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 标签键值对。
+        /// <p>标签键值对。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// local路由是否发布云联网。
+        /// <p>local路由是否发布云联网。</p>
         /// </summary>
         [JsonProperty("LocalCidrForCcn")]
         public CidrForCcn[] LocalCidrForCcn{ get; set; }

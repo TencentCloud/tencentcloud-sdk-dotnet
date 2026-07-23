@@ -25,282 +25,288 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 标签ID数组
+        /// <p>标签ID数组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelIDs")]
         public string[] LabelIDs{ get; set; }
 
         /// <summary>
-        /// 目录ID数组
+        /// <p>目录ID数组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryIDs")]
         public string[] CategoryIDs{ get; set; }
 
         /// <summary>
-        /// 负载方式，robin random consistentHash
+        /// <p>负载方式，robin random consistentHash</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetSelect")]
         public string TargetSelect{ get; set; }
 
         /// <summary>
-        /// 目标服务器
+        /// <p>目标服务器</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetHosts")]
         public TargetHostDTO[] TargetHosts{ get; set; }
 
         /// <summary>
-        /// 后端协议：http https
+        /// <p>后端协议：http https</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpProtocolType")]
         public string HttpProtocolType{ get; set; }
 
         /// <summary>
-        /// 证书检查
+        /// <p>证书检查</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckTargetCertsError")]
         public bool? CheckTargetCertsError{ get; set; }
 
         /// <summary>
-        /// 目标路径
+        /// <p>目标路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// 流量控制状态
+        /// <p>流量控制状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
-        /// 流量控制配置
+        /// <p>流量控制配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>
-        /// IP白名单开启状态
+        /// <p>IP白名单开启状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpWhiteStatus")]
         public bool? IpWhiteStatus{ get; set; }
 
         /// <summary>
-        /// IP白名单配置
+        /// <p>IP白名单配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpWhiteConfig")]
         public IpConfig IpWhiteConfig{ get; set; }
 
         /// <summary>
-        /// IP黑名单开启状态
+        /// <p>IP黑名单开启状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpBlackStatus")]
         public bool? IpBlackStatus{ get; set; }
 
         /// <summary>
-        /// IP黑名单配置
+        /// <p>IP黑名单配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpBlackConfig")]
         public IpConfig IpBlackConfig{ get; set; }
 
         /// <summary>
-        /// mcp server ID
+        /// <p>mcp server ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 预览地址
+        /// <p>预览地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 应用
+        /// <p>应用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("App")]
         public IDNameVO App{ get; set; }
 
         /// <summary>
-        /// 目录
+        /// <p>目录</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Catalogs")]
         public IDNameVO[] Catalogs{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public IDNameVO[] Labels{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改时间
+        /// <p>最后修改时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
 
         /// <summary>
-        /// 用户appID
+        /// <p>用户appID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 自定义host
+        /// <p>自定义host</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomHttpHost")]
         public string CustomHttpHost{ get; set; }
 
         /// <summary>
-        ///  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+        /// <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpHostType")]
         public string HttpHostType{ get; set; }
 
         /// <summary>
-        /// 请求的超时时间
+        /// <p>请求的超时时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// mcp server模式
+        /// <p>mcp server模式</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// mcp version
+        /// <p>mcp version</p>
         /// </summary>
         [JsonProperty("McpVersion")]
         public string McpVersion{ get; set; }
 
         /// <summary>
-        /// 封装模式下绑定的服务ID列表
+        /// <p>封装模式下绑定的服务ID列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WrapServices")]
         public string[] WrapServices{ get; set; }
 
         /// <summary>
-        /// 工具数量
+        /// <p>工具数量</p>
         /// </summary>
         [JsonProperty("ToolNum")]
         public long? ToolNum{ get; set; }
 
         /// <summary>
-        /// 安全规则集响应
+        /// <p>安全规则集响应</p>
         /// </summary>
         [JsonProperty("McpSecurityRulesVO")]
         public McpSecurityRulesVO[] McpSecurityRulesVO{ get; set; }
 
         /// <summary>
-        /// 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+        /// <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ToolConfigs")]
         public ToolConfigVO[] ToolConfigs{ get; set; }
 
         /// <summary>
-        /// 访问URL
+        /// <p>访问URL</p>
         /// </summary>
         [JsonProperty("UrlObj")]
         public McpUrlObj UrlObj{ get; set; }
 
         /// <summary>
-        /// 后端mcp服务是否正常
+        /// <p>后端mcp服务是否正常</p>
         /// </summary>
         [JsonProperty("ToolMessage")]
         public string ToolMessage{ get; set; }
 
         /// <summary>
-        /// 后端mcp服务的工具列表
+        /// <p>后端mcp服务的工具列表</p>
         /// </summary>
         [JsonProperty("Tools")]
         public McpTool[] Tools{ get; set; }
 
         /// <summary>
-        /// 封装的API分组ID
+        /// <p>封装的API分组ID</p>
         /// </summary>
         [JsonProperty("WrapPaasID")]
         public string WrapPaasID{ get; set; }
 
         /// <summary>
-        /// 关联的agentApp数量
+        /// <p>关联的agentApp数量</p>
         /// </summary>
         [JsonProperty("RelateAgentAppNum")]
         public long? RelateAgentAppNum{ get; set; }
 
         /// <summary>
-        /// 插件配置
+        /// <p>插件配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PluginConfigs")]
         public PluginConfigDTO[] PluginConfigs{ get; set; }
+
+        /// <summary>
+        /// <p>是否忽略健康检查</p>
+        /// </summary>
+        [JsonProperty("IgnoreHealthCheck")]
+        public bool? IgnoreHealthCheck{ get; set; }
 
 
         /// <summary>
@@ -349,6 +355,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
             this.SetParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
             this.SetParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
+            this.SetParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
         }
     }
 }

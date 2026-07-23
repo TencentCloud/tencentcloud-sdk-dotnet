@@ -25,55 +25,55 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `VPC`实例`ID`。
+        /// <p><code>VPC</code>实例<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 网络ACL实例`ID`。
+        /// <p>网络ACL实例<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("NetworkAclId")]
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// 网络ACL名称，最大长度为60。
+        /// <p>网络ACL名称，最大长度为60。</p>
         /// </summary>
         [JsonProperty("NetworkAclName")]
         public string NetworkAclName{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 网络ACL关联的子网数组。
+        /// <p>网络ACL关联的子网数组。</p>
         /// </summary>
         [JsonProperty("SubnetSet")]
         public Subnet[] SubnetSet{ get; set; }
 
         /// <summary>
-        /// 该参数仅对三元组ACL有效，网络ACl入站规则。
+        /// <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p>
         /// </summary>
         [JsonProperty("IngressEntries")]
         public NetworkAclEntry[] IngressEntries{ get; set; }
 
         /// <summary>
-        /// 该参数仅对三元组ACL有效，网络ACL出站规则。
+        /// <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p>
         /// </summary>
         [JsonProperty("EgressEntries")]
         public NetworkAclEntry[] EgressEntries{ get; set; }
 
         /// <summary>
-        /// 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+        /// <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p>
         /// </summary>
         [JsonProperty("NetworkAclType")]
         public string NetworkAclType{ get; set; }
 
         /// <summary>
-        /// 标签键值对
+        /// <p>标签键值对</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// spark作业名
+        /// <p>spark作业名</p>
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// spark作业程序入参，以空格分隔；一般用于周期性调用使用
+        /// <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
         /// <summary>
-        /// 任务来源信息
+        /// <p>任务来源信息</p>
         /// </summary>
         [JsonProperty("SourceInfo")]
         public KVPair[] SourceInfo{ get; set; }

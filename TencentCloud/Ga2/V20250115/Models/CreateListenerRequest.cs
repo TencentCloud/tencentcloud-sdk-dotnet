@@ -31,7 +31,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// <p>名称，最大长度不能超过60个字节。</p>
+        /// <p>名称，最大长度不能超过128个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public PortRanges PortRanges{ get; set; }
 
         /// <summary>
-        /// <p>描述信息，最大长度不能超过100个字节。</p>
+        /// <p>描述信息，最大长度不能超过100个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

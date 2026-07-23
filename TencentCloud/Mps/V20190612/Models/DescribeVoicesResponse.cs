@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Msg{ get; set; }
 
         /// <summary>
+        /// <p>符合查询条件的音色总数</p>
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
         /// <p>可用音色列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -57,6 +63,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Voices.", this.Voices);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

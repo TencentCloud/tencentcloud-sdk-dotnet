@@ -25,40 +25,37 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-        /// <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-        /// <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-        /// <li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+        /// <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+        /// <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
         /// </summary>
         [JsonProperty("NetworkAclIds")]
         public string[] NetworkAclIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最小值为1，最大值为100。
+        /// <p>返回数量，默认为20，最小值为1，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+        /// <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方法。顺序：ASC，倒序：DESC。
+        /// <p>排序方法。顺序：ASC，倒序：DESC。</p>
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

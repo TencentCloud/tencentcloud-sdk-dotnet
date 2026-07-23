@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1469";
 
         /// <summary>
         /// Client constructor.
@@ -2872,7 +2872,7 @@ namespace TencentCloud.Ess.V20201111
         /// 1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId 需要传递超管或者法人的UserId)
         /// 2. 已经在授权中或者授权成功的企业，无法重复授权
         /// 3. 授权企业和被授权企业必须都是已认证企业
-        /// 4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
+        /// 4. <font color='red'>需要授权企业的超管或者法人打开链接</font>走开通逻辑。
         /// 
         /// 
         /// **该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权**
@@ -2894,7 +2894,7 @@ namespace TencentCloud.Ess.V20201111
         /// 1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId 需要传递超管或者法人的UserId)
         /// 2. 已经在授权中或者授权成功的企业，无法重复授权
         /// 3. 授权企业和被授权企业必须都是已认证企业
-        /// 4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
+        /// 4. <font color='red'>需要授权企业的超管或者法人打开链接</font>走开通逻辑。
         /// 
         /// 
         /// **该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权**

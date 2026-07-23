@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1452";
+       private const string sdkVersion = "SDK_NET_3.0.1469";
 
         /// <summary>
         /// Client constructor.
@@ -723,7 +723,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
+        /// 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。u200b
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>
@@ -733,7 +733,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
+        /// 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。u200b
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>

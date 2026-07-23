@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的对象数。
+        /// <p>符合条件的对象数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// VPC对象。
+        /// <p>VPC对象。</p>
         /// </summary>
         [JsonProperty("VpcSet")]
         public Vpc[] VpcSet{ get; set; }

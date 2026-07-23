@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 事件id
+        /// <p>事件id</p>
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

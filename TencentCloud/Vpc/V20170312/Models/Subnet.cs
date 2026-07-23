@@ -25,103 +25,103 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `VPC`实例`ID`。
+        /// <p><code>VPC</code>实例<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网实例`ID`，例如：subnet-bthucmmy。
+        /// <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 子网名称。
+        /// <p>子网名称。</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 子网的 `IPv4` `CIDR`。
+        /// <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 是否默认子网。
+        /// <p>是否默认子网。</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 是否开启广播。
+        /// <p>是否开启广播。</p>
         /// </summary>
         [JsonProperty("EnableBroadcast")]
         public bool? EnableBroadcast{ get; set; }
 
         /// <summary>
-        /// 可用区。
+        /// <p>可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 路由表实例ID，例如：rtb-l2h8d7c2。
+        /// <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 可用`IPv4`数。
+        /// <p>可用<code>IPv4</code>数。</p>
         /// </summary>
         [JsonProperty("AvailableIpAddressCount")]
         public ulong? AvailableIpAddressCount{ get; set; }
 
         /// <summary>
-        /// 子网的 `IPv6` `CIDR`。
+        /// <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
         /// <summary>
-        /// 关联`ACL`ID
+        /// <p>关联<code>ACL</code>ID</p>
         /// </summary>
         [JsonProperty("NetworkAclId")]
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// 是否为 `SNAT` 地址池子网。
+        /// <p>是否为 <code>SNAT</code> 地址池子网。</p>
         /// </summary>
         [JsonProperty("IsRemoteVpcSnat")]
         public bool? IsRemoteVpcSnat{ get; set; }
 
         /// <summary>
-        /// 子网`IPv4`总数。
+        /// <p>子网<code>IPv4</code>总数。</p>
         /// </summary>
         [JsonProperty("TotalIpAddressCount")]
         public ulong? TotalIpAddressCount{ get; set; }
 
         /// <summary>
-        /// 标签键值对。
+        /// <p>标签键值对。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// CDC实例ID。
+        /// <p>CDC实例ID。</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// 是否是CDC所属子网。0:否 1:是
+        /// <p>是否是CDC所属子网。0:否 1:是</p>
         /// </summary>
         [JsonProperty("IsCdcSubnet")]
         public long? IsCdcSubnet{ get; set; }

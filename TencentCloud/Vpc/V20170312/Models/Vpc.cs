@@ -25,97 +25,97 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `VPC`名称。
+        /// <p><code>VPC</code>名称。</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// `VPC`实例`ID`，例如：vpc-azd4dt1c。
+        /// <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// `VPC`的`IPv4` `CIDR`。
+        /// <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 是否默认`VPC`。
+        /// <p>是否默认<code>VPC</code>。</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 是否开启组播。
+        /// <p>是否开启组播。</p>
         /// </summary>
         [JsonProperty("EnableMulticast")]
         public bool? EnableMulticast{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// `DNS`列表。
+        /// <p><code>DNS</code>列表。</p>
         /// </summary>
         [JsonProperty("DnsServerSet")]
         public string[] DnsServerSet{ get; set; }
 
         /// <summary>
-        /// `DHCP`域名选项值。
+        /// <p><code>DHCP</code>域名选项值。</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// `DHCP`选项集`ID`。
+        /// <p><code>DHCP</code>选项集<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("DhcpOptionsId")]
         public string DhcpOptionsId{ get; set; }
 
         /// <summary>
-        /// 是否开启`DHCP`。
+        /// <p>是否开启<code>DHCP</code>。</p>
         /// </summary>
         [JsonProperty("EnableDhcp")]
         public bool? EnableDhcp{ get; set; }
 
         /// <summary>
-        /// `VPC`的`IPv6` `CIDR`。
+        /// <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
         /// <summary>
-        /// 标签键值对
+        /// <p>标签键值对</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 辅助CIDR
+        /// <p>辅助CIDR</p>
         /// </summary>
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }
 
         /// <summary>
-        /// vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+        /// <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
         /// </summary>
         [JsonProperty("EnableRouteVpcPublish")]
         public bool? EnableRouteVpcPublish{ get; set; }
 
         /// <summary>
-        /// 返回多运营商IPv6 Cidr Block
+        /// <p>返回多运营商IPv6 Cidr Block</p>
         /// </summary>
         [JsonProperty("Ipv6CidrBlockSet")]
         public ISPIPv6CidrBlock[] Ipv6CidrBlockSet{ get; set; }
 
         /// <summary>
-        /// vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+        /// <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
         /// </summary>
         [JsonProperty("EnableRouteVpcPublishIpv6")]
         public bool? EnableRouteVpcPublishIpv6{ get; set; }

@@ -25,36 +25,26 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-        /// 
-        /// 此接口下面信息必填。
-        /// <ul>
-        /// <li>渠道应用标识:  Agent.AppId</li>
-        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-        /// </ul>
-        /// 第三方平台子客企业和员工必须已经经过实名认证
+        /// <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 签署报告编号, 由<a href="https://qian.tencent.com/developers/partnerApis/certificate/CreateChannelFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
+        /// <p>签署报告编号, 由<a href="https://qian.tencent.com/developers/partnerApis/certificate/CreateChannelFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生</p>
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// 暂未开放
+        /// <p>暂未开放</p>
         /// </summary>
         [JsonProperty("Operator")]
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 指定申请的报告类型，可选类型如下：
-        /// <ul><li> **0** :合同签署报告（默认）</li>
-        /// <li> **1** :公证处核验报告</li></ul>
+        /// <p>指定申请的报告类型，可选类型如下：<ul><li> <strong>0</strong> :合同签署报告（默认）</li></ul></p><p>枚举值：</p><ul><li>0： 合同签署报告</li></ul>
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }

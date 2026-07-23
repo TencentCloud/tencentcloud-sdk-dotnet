@@ -25,19 +25,19 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
+        /// <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
+        /// <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p>
         /// </summary>
         [JsonProperty("MiniAppPath")]
         public string MiniAppPath{ get; set; }
 
         /// <summary>
-        /// 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+        /// <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

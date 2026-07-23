@@ -25,7 +25,7 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// mcp server ID
+        /// <p>mcp server ID</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResultIDVO Data{ get; set; }

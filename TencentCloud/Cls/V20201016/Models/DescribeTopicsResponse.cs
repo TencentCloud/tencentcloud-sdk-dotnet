@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 主题列表
+        /// <p>主题列表</p>
         /// </summary>
         [JsonProperty("Topics")]
         public TopicInfo[] Topics{ get; set; }
 
         /// <summary>
-        /// 总数目
+        /// <p>总数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
