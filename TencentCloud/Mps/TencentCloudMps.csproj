@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1469</VersionPrefix>
+    <VersionPrefix>3.0.1470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -252,6 +252,12 @@
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ClipRangeInfo.cs" />
+    <Compile Include="V20190612\Models\CloneViralAIGC.cs" />
+    <Compile Include="V20190612\Models\CloneViralContent.cs" />
+    <Compile Include="V20190612\Models\CloneViralPersona.cs" />
+    <Compile Include="V20190612\Models\CloneViralProduct.cs" />
+    <Compile Include="V20190612\Models\CloneViralRequest.cs" />
+    <Compile Include="V20190612\Models\CloneViralResponse.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ComposeAudioItem.cs" />
     <Compile Include="V20190612\Models\ComposeAudioOperation.cs" />
@@ -479,6 +485,8 @@
     <Compile Include="V20190612\Models\DescribeBatchTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeBlindWatermarkTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeBlindWatermarkTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeCloneViralTaskRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeCloneViralTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeDesignTaskRequest.cs" />

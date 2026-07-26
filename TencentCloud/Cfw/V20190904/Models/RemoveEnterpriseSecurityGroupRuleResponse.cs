@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>删除成功后返回被删除策略的uuid</p>
+        /// 回显请求中的 RuleUuid。
         /// </summary>
         [JsonProperty("RuleUuid")]
         public long? RuleUuid{ get; set; }
 
         /// <summary>
-        /// <p>0代表成功，-1代表失败</p>
+        /// 处理状态：0 表示成功。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

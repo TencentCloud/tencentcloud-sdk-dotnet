@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>非自定义类型规则列表</p>
-        /// </summary>
-        [JsonProperty("Rules")]
-        public BanAndAllowRule[] Rules{ get; set; }
-
-        /// <summary>
-        /// <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+        /// 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
         /// <summary>
-        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// 待新增规则列表；可为空，空数组返回成功且不新增规则。
+        /// </summary>
+        [JsonProperty("Rules")]
+        public BanAndAllowRule[] Rules{ get; set; }
+
+        /// <summary>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
         /// </summary>
         [JsonProperty("CfwAiAgentOperationSource")]
         public string CfwAiAgentOperationSource{ get; set; }
 
         /// <summary>
-        /// <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+        /// 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。
         /// </summary>
         [JsonProperty("CoverDuplicate")]
         public long? CoverDuplicate{ get; set; }
@@ -54,8 +54,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
             this.SetParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
         }

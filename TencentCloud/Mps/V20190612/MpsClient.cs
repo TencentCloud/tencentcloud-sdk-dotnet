@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1469";
+       private const string sdkVersion = "SDK_NET_3.0.1470";
 
         /// <summary>
         /// Client constructor.
@@ -178,6 +178,27 @@ namespace TencentCloud.Mps.V20190612
         public BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlowSync(BatchStopStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<BatchStopStreamLinkFlowResponse>(req, "BatchStopStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
+        /// </summary>
+        /// <param name="req"><see cref="CloneViralRequest"/></param>
+        /// <returns><see cref="CloneViralResponse"/></returns>
+        public Task<CloneViralResponse> CloneViral(CloneViralRequest req)
+        {
+            return InternalRequestAsync<CloneViralResponse>(req, "CloneViral");
+        }
+
+        /// <summary>
+        /// 爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
+        /// </summary>
+        /// <param name="req"><see cref="CloneViralRequest"/></param>
+        /// <returns><see cref="CloneViralResponse"/></returns>
+        public CloneViralResponse CloneViralSync(CloneViralRequest req)
+        {
+            return InternalRequestAsync<CloneViralResponse>(req, "CloneViral")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2130,6 +2151,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplatesSync(DescribeBlindWatermarkTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询爆款复刻任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneViralTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloneViralTaskResponse"/></returns>
+        public Task<DescribeCloneViralTaskResponse> DescribeCloneViralTask(DescribeCloneViralTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloneViralTaskResponse>(req, "DescribeCloneViralTask");
+        }
+
+        /// <summary>
+        /// 查询爆款复刻任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneViralTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloneViralTaskResponse"/></returns>
+        public DescribeCloneViralTaskResponse DescribeCloneViralTaskSync(DescribeCloneViralTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloneViralTaskResponse>(req, "DescribeCloneViralTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

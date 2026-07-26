@@ -25,16 +25,16 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>状态值，0：添加成功，非0：添加失败</p>
-        /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
-
-        /// <summary>
-        /// <p>添加成功的规则详情</p>
+        /// 新增规则的摘要列表。
         /// </summary>
         [JsonProperty("Rules")]
         public SecurityGroupSimplifyRule[] Rules{ get; set; }
+
+        /// <summary>
+        /// 处理状态：0 表示成功。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

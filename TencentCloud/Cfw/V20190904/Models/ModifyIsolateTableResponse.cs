@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>0 成功  非0失败</p>
+        /// 处理返回码：0 表示成功。
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// <p>success 成功 其他失败</p>
+        /// 处理结果信息，成功时为 success。
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string DstIP{ get; set; }
 
         /// <summary>
-        /// 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+        /// 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
         /// </summary>
         [JsonProperty("IdsRuleId")]
         public string IdsRuleId{ get; set; }

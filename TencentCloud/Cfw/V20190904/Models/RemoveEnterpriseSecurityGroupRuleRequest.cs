@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>规则的uuid，可通过查询规则列表获取</p>
-        /// </summary>
-        [JsonProperty("RuleUuid")]
-        public long? RuleUuid{ get; set; }
-
-        /// <summary>
-        /// <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
+        /// <p>必填的删除类型，只使用 0 或 1。0 表示删除 RuleUuid 指定的单条规则；1 表示删除当前账号的全部可操作企业安全组规则，风险极高。</p>
         /// </summary>
         [JsonProperty("RemoveType")]
         public long? RemoveType{ get; set; }
 
         /// <summary>
-        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// <p>必填的规则数值 ID。RemoveType=0 时，调用 DescribeCfwRules，传 RuleType=enterprise_sg、RuleId=&lt;数值 RuleUuid&gt;，并使用返回的 rules[].uuid；规则不存在时返回 ResourceNotFound。RemoveType=1 时传 0，删除当前账号的全部可操作企业安全组规则。成功响应回显请求中的 RuleUuid。</p>
+        /// </summary>
+        [JsonProperty("RuleUuid")]
+        public long? RuleUuid{ get; set; }
+
+        /// <summary>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
         /// </summary>
         [JsonProperty("CfwAiAgentOperationSource")]
         public string CfwAiAgentOperationSource{ get; set; }
@@ -48,8 +48,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
             this.SetParamSimple(map, prefix + "RemoveType", this.RemoveType);
+            this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
             this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         }
     }

@@ -25,34 +25,34 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// <p>是否删除全部</p>
+        /// 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。
         /// </summary>
         [JsonProperty("DeleteAll")]
         public long? DeleteAll{ get; set; }
 
         /// <summary>
-        /// <p>blocklist 封禁列表 whitelist 白名单列表</p>
-        /// </summary>
-        [JsonProperty("ShowType")]
-        public string ShowType{ get; set; }
-
-        /// <summary>
-        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+        /// <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
         /// </summary>
         [JsonProperty("CfwAiAgentOperationSource")]
         public string CfwAiAgentOperationSource{ get; set; }
 
         /// <summary>
-        /// <p>规则列表</p>
+        /// 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public long? RuleType{ get; set; }
+
+        /// <summary>
+        /// 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。
         /// </summary>
         [JsonProperty("Rules")]
         public BanAndAllowRuleDel[] Rules{ get; set; }
 
         /// <summary>
-        /// <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+        /// 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。
         /// </summary>
-        [JsonProperty("RuleType")]
-        public long? RuleType{ get; set; }
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
 
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
-            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
             this.SetParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
-            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }

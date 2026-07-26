@@ -31,13 +31,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 访问目的内容，非空且最多 512 字节，格式由 DestType 决定：net 使用 IPv4 IP/CIDR，且不接受裸地址 0.0.0.0，表示全部 IPv4 地址时使用 0.0.0.0/0；template 使用可用的地址模板 ID；instance 使用属于当前账号的资产实例 ID；resourcegroup 使用当前账号的资产分组 ID；tag 使用当前账号已存在的资源标签 JSON 字符串，例如 {\"Key\":\"标签键\",\"Value\":\"标签值\"}；region 使用支持的地域标识；dnsparse 使用合法域名。DestType=dnsparse 时服务端将内容转换为小写，并检查域名格式和域名解析配额。
+        /// 访问目的内容，非空且最多 512 字节，格式由 DestType 决定：net 使用 IPv4 IP/CIDR，且不接受裸地址 0.0.0.0，表示全部 IPv4 地址时使用 0.0.0.0/0；template 使用通过 VPC DescribeAddressTemplates 或 DescribeAddressTemplateGroups 查询的广州地域（ap-guangzhou）地址模板 ID，即 AddressTemplateId（ipm-）或 AddressTemplateGroupId（ipmg-）；instance 使用 DescribeCfwAssets 返回的 assets[].instance_id；resourcegroup 使用 DescribeResourceGroupNew（QueryType=resource）返回的 GroupId；tag 根据 DescribeResourceGroupNew（QueryType=tag）返回的 GroupName 构造 {\"Key\":\"标签键\",\"Value\":\"标签值\"}；region 使用 DescribeSecurityGroupRegionList 返回的 Data[].Region；dnsparse 使用合法域名并按小写处理，同时受域名解析配额限制。
         /// </summary>
         [JsonProperty("DestContent")]
         public string DestContent{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，不区分大小写，可传 net、template、instance、resourcegroup、tag、region 或 dnsparse。instance 的具体资产类型由 DestContent 的实例 ID 前缀识别；template、instance、resourcegroup、tag、region 对应的内容必须对当前账号有效。
+        /// 访问目的类型，不区分大小写：net 表示 IP/CIDR，template 表示地址模板，instance 表示资产实例，resourcegroup 表示资产分组，tag 表示资源标签，region 表示资产地域，dnsparse 表示 DNS 解析匹配。内容必须与类型匹配，并且对当前账号有效。
         /// </summary>
         [JsonProperty("DestType")]
         public string DestType{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string OrderIndex{ get; set; }
 
         /// <summary>
-        /// 访问控制动作，不区分大小写。accept 表示放行，drop 表示拒绝，log 表示仅记录；isolateinaccept、isolateoutaccept 分别按放行动作写入并标记入向或出向隔离来源，isolateindrop、isolateoutdrop 分别按拒绝动作写入并标记入向或出向隔离来源。
+        /// 访问控制动作，不区分大小写：accept 表示放行，drop 表示拒绝，log 表示观察；isolateinaccept 表示放行访问隔离资产的白名单流量，isolateindrop 表示阻断访问隔离资产的其它流量，isolateoutaccept 表示放行隔离资产访问白名单目标，isolateoutdrop 表示阻断隔离资产访问其它目标。
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
 
         /// <summary>
-        /// 访问源内容，非空且最多 512 字节，格式由 SourceType 决定：net 使用 IPv4 IP/CIDR，且不接受裸地址 0.0.0.0，表示全部 IPv4 地址时使用 0.0.0.0/0；template 使用可用的地址模板 ID；instance 使用属于当前账号的资产实例 ID；resourcegroup 使用当前账号的资产分组 ID；tag 使用当前账号已存在的资源标签 JSON 字符串，例如 {\"Key\":\"标签键\",\"Value\":\"标签值\"}；region 使用支持的地域标识；dnsparse 使用字符串内容。SourceType=dnsparse 时，服务端接受该类型，但不执行目的域名的小写归一化、域名格式校验或域名解析配额检查。
+        /// 访问源内容，非空且最多 512 字节，格式由 SourceType 决定：net 使用 IPv4 IP/CIDR，且不接受裸地址 0.0.0.0，表示全部 IPv4 地址时使用 0.0.0.0/0；template 使用通过 VPC DescribeAddressTemplates 或 DescribeAddressTemplateGroups 查询的广州地域（ap-guangzhou）地址模板 ID，即 AddressTemplateId（ipm-）或 AddressTemplateGroupId（ipmg-）；instance 使用 DescribeCfwAssets 返回的 assets[].instance_id；resourcegroup 使用 DescribeResourceGroupNew（QueryType=resource）返回的 GroupId；tag 根据 DescribeResourceGroupNew（QueryType=tag）返回的 GroupName 构造 {\"Key\":\"标签键\",\"Value\":\"标签值\"}；region 使用 DescribeSecurityGroupRegionList 返回的 Data[].Region。
         /// </summary>
         [JsonProperty("SourceContent")]
         public string SourceContent{ get; set; }
 
         /// <summary>
-        /// 访问源类型，不区分大小写，可传 net、template、instance、resourcegroup、tag、region 或 dnsparse。instance 的具体资产类型由 SourceContent 的实例 ID 前缀识别；template、instance、resourcegroup、tag、region 对应的内容必须对当前账号有效。dnsparse 作为访问源时不执行目的域名的小写归一化、域名格式校验或域名解析配额检查。
+        /// 访问源类型，不区分大小写：net 表示 IP/CIDR，template 表示地址模板，instance 表示资产实例，resourcegroup 表示资产分组，tag 表示资源标签，region 表示资产地域。内容必须与类型匹配，并且对当前账号有效；dnsparse 作为 SourceType 时仅按普通字符串保存，不提供 DNS 解析匹配，请勿使用；DNS 解析匹配仅用于 DestType。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -73,37 +73,37 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Enable{ get; set; }
 
         /// <summary>
-        /// 规则数据库数值 ID。普通新增由服务端生成；新增请求仅在 IsUseId=1 时采用 Data.Id。修改规则内容时 Data.Id 不改变目标规则 ID，服务端保留由外层 RuleUuid 定位的原 ID。当前 Schema 将本字段声明为字符串，而后端请求结构按 JSON 整数解析；传入字符串会导致请求解析失败。
+        /// 规则 ID，使用十进制数字字符串。普通新增由系统分配；仅 IsUseId=1 的新增请求采用 Data.Id。修改规则内容时忽略 Data.Id，并保留 RuleUuid 指定的规则 ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 访问控制端口字符串，最多 200 字节。未使用服务模板时不能为空，可传 1..65535 的单端口、以斜杠连接且两端分别位于 1..65535 的范围、最多 15 个逗号分隔项，或以 -1/-1 表示全部端口；Protocol 为 ANY 或 ICMP 时必须为 -1/-1。使用服务模板时 Protocol、Port 可同时省略或留空；若任一字段非空，则只接受 Protocol=ANY 且 Port=-1/-1。
+        /// 访问控制端口字符串，最多 200 字节。未使用服务模板时必填，可传 1..65535 的单端口、斜杠连接的端口范围、最多 15 个逗号分隔项，或 -1/-1 表示全部端口；Protocol 为 ANY 或 ICMP 时必须为 -1/-1。使用 ServiceTemplateId 时，Protocol 和 Port 可同时省略或留空；如填写非空值则必须为 Protocol=ANY、Port=-1/-1。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// IPv4 企业安全组协议，区分大小写。未使用服务模板时必须填写 ANY、TCP、UDP 或 ICMP；ANY 和 ICMP 仅支持 Port=-1/-1。使用服务模板时 Protocol、Port 可同时省略或留空；若填写则只接受 Protocol=ANY 且 Port=-1/-1。ICMPv6 由独立的 IPv6 企业安全组接口处理。
+        /// IPv4 企业安全组协议，使用区分大小写的大写值 ANY、TCP、UDP 或 ICMP；ANY 表示所有 IPv4 协议。未使用服务模板时必填，ANY 和 ICMP 必须搭配 Port=-1/-1；使用 ServiceTemplateId 时，Protocol 和 Port 可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。ICMPv6 使用独立的 IPv6 企业安全组接口。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 规则生效范围，使用大写 SG、LH 或无空格的逗号分隔组合；SG 表示安全组，LH 表示轻量应用服务器。新增时省略默认补为 SG；修改规则内容时省略表示保留原范围。范围包含 LH 时，SourceType、DestType 均不能为 template，且不能使用 ServiceTemplateId。
+        /// 规则生效范围，使用大写 SG、LH、NONE 或无空格的逗号分隔组合；SG 表示安全组，LH 表示轻量应用服务器，NONE 表示未设置范围。新增时省略默认为 SG；修改规则内容时省略或使用 NONE 均保留原范围。组合项会去重。范围包含 LH 时，SourceType、DestType 均不能为 template，且不能使用 ServiceTemplateId。
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 协议端口模板 ID，最多 50 字节，必须属于当前账号或为当前账号可用的公共模板。非空时 Protocol、Port 可同时省略或留空；若任一字段非空，则只接受 Protocol=ANY 且 Port=-1/-1。Scope 包含 LH 时不能使用服务模板。
+        /// 协议端口模板 ID，最多 50 字节。仅支持通过 VPC DescribeServiceTemplates 或 DescribeServiceTemplateGroups 查询的广州地域（ap-guangzhou）服务模板，即 ServiceTemplateId（ppm-）或 ServiceTemplateGroupId（ppmg-）。非空时 Protocol 和 Port 可同时省略或留空；如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 包含 LH 时不能使用服务模板。
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
-        /// Schema 中声明的规则内部 UUID 字段。当前新增和修改请求结构绑定的 JSON 键名为 UuId 而不是 Uid，因此传入本字段不会参与这两个接口的内部 UUID 生成或复用。
+        /// 保留字段。新增和修改请求均忽略 Uid，无法通过该字段指定或保留规则标识，建议省略。
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }

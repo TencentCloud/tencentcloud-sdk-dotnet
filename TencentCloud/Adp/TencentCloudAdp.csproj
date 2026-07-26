@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1467</VersionPrefix>
+    <VersionPrefix>3.0.1470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,6 +98,21 @@
     <Compile Include="V20260520\Models\AppSubStatusInfo.cs" />
     <Compile Include="V20260520\Models\AppSummary.cs" />
     <Compile Include="V20260520\Models\AppToolConfig.cs" />
+    <Compile Include="V20260520\Models\AppTrigger.cs" />
+    <Compile Include="V20260520\Models\AppTriggerInstance.cs" />
+    <Compile Include="V20260520\Models\AppTriggerParamBinding.cs" />
+    <Compile Include="V20260520\Models\AppTriggerParamBindingConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerParamBindingValue.cs" />
+    <Compile Include="V20260520\Models\AppTriggerParamSchema.cs" />
+    <Compile Include="V20260520\Models\AppTriggerPromptExecuteConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerRunLog.cs" />
+    <Compile Include="V20260520\Models\AppTriggerScheduleConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerScheduleStatus.cs" />
+    <Compile Include="V20260520\Models\AppTriggerSummary.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWebhookConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWebhookParamSchemaConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWebhookStatus.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWorkflowExecuteConfig.cs" />
     <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
     <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\AppealingStatus.cs" />
@@ -133,6 +148,8 @@
     <Compile Include="V20260520\Models\CreateAgentResponse.cs" />
     <Compile Include="V20260520\Models\CreateAppRequest.cs" />
     <Compile Include="V20260520\Models\CreateAppResponse.cs" />
+    <Compile Include="V20260520\Models\CreateAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\CreateAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\CreateConversationRequest.cs" />
     <Compile Include="V20260520\Models\CreateConversationResponse.cs" />
     <Compile Include="V20260520\Models\CreatePluginRequest.cs" />
@@ -145,16 +162,22 @@
     <Compile Include="V20260520\Models\CreateSkillShareResponse.cs" />
     <Compile Include="V20260520\Models\CreateSpaceRequest.cs" />
     <Compile Include="V20260520\Models\CreateSpaceResponse.cs" />
+    <Compile Include="V20260520\Models\CreateTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\CreateTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\CreateVariableRequest.cs" />
     <Compile Include="V20260520\Models\CreateVariableResponse.cs" />
     <Compile Include="V20260520\Models\CreateWebSocketTokenRequest.cs" />
     <Compile Include="V20260520\Models\CreateWebSocketTokenResponse.cs" />
     <Compile Include="V20260520\Models\CreateWorkspaceCredentialRequest.cs" />
     <Compile Include="V20260520\Models\CreateWorkspaceCredentialResponse.cs" />
+    <Compile Include="V20260520\Models\CronSchedule.cs" />
+    <Compile Include="V20260520\Models\DailySchedule.cs" />
     <Compile Include="V20260520\Models\DeleteAgentRequest.cs" />
     <Compile Include="V20260520\Models\DeleteAgentResponse.cs" />
     <Compile Include="V20260520\Models\DeleteAppRequest.cs" />
     <Compile Include="V20260520\Models\DeleteAppResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\DeleteConversationRequest.cs" />
     <Compile Include="V20260520\Models\DeleteConversationResponse.cs" />
     <Compile Include="V20260520\Models\DeletePluginRequest.cs" />
@@ -165,6 +188,8 @@
     <Compile Include="V20260520\Models\DeleteSkillShareResponse.cs" />
     <Compile Include="V20260520\Models\DeleteSpaceRequest.cs" />
     <Compile Include="V20260520\Models\DeleteSpaceResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\DeleteVariableRequest.cs" />
     <Compile Include="V20260520\Models\DeleteVariableResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAccountListRequest.cs" />
@@ -179,6 +204,14 @@
     <Compile Include="V20260520\Models\DescribeAppResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAppSummaryListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAppSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerInstanceRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerInstanceResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerRunLogListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerRunLogListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeAppTriggerSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogMetaRequest.cs" />
@@ -213,12 +246,19 @@
     <Compile Include="V20260520\Models\DescribeSpaceListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskRunLogListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskRunLogListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeTimerTaskSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableResponse.cs" />
     <Compile Include="V20260520\Models\DigitalHumanConfig.cs" />
     <Compile Include="V20260520\Models\DuplexBilling.cs" />
+    <Compile Include="V20260520\Models\ExecuteConfig.cs" />
     <Compile Include="V20260520\Models\FavoritePluginRequest.cs" />
     <Compile Include="V20260520\Models\FavoritePluginResponse.cs" />
     <Compile Include="V20260520\Models\FavoriteSkillRequest.cs" />
@@ -229,8 +269,14 @@
     <Compile Include="V20260520\Models\GenerateModel.cs" />
     <Compile Include="V20260520\Models\InputBoxConfig.cs" />
     <Compile Include="V20260520\Models\IntentAchievementInfo.cs" />
+    <Compile Include="V20260520\Models\IntervalSchedule.cs" />
     <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
+    <Compile Include="V20260520\Models\ManualOnlySchedule.cs" />
+    <Compile Include="V20260520\Models\MarkAppTriggerRunLogReadRequest.cs" />
+    <Compile Include="V20260520\Models\MarkAppTriggerRunLogReadResponse.cs" />
+    <Compile Include="V20260520\Models\MarkTimerTaskRunLogReadRequest.cs" />
+    <Compile Include="V20260520\Models\MarkTimerTaskRunLogReadResponse.cs" />
     <Compile Include="V20260520\Models\Model.cs" />
     <Compile Include="V20260520\Models\ModelBadge.cs" />
     <Compile Include="V20260520\Models\ModelBasic.cs" />
@@ -246,6 +292,8 @@
     <Compile Include="V20260520\Models\ModifyAgentResponse.cs" />
     <Compile Include="V20260520\Models\ModifyAppRequest.cs" />
     <Compile Include="V20260520\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\ModifyConversationRequest.cs" />
     <Compile Include="V20260520\Models\ModifyConversationResponse.cs" />
     <Compile Include="V20260520\Models\ModifyPluginRequest.cs" />
@@ -254,12 +302,19 @@
     <Compile Include="V20260520\Models\ModifySkillResponse.cs" />
     <Compile Include="V20260520\Models\ModifySpaceRequest.cs" />
     <Compile Include="V20260520\Models\ModifySpaceResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\ModifyVariableRequest.cs" />
     <Compile Include="V20260520\Models\ModifyVariableResponse.cs" />
     <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
     <Compile Include="V20260520\Models\MultiModalQAModel.cs" />
     <Compile Include="V20260520\Models\MultiModalUnderstandingModel.cs" />
     <Compile Include="V20260520\Models\OAuthConfig.cs" />
+    <Compile Include="V20260520\Models\OnceSchedule.cs" />
+    <Compile Include="V20260520\Models\PauseAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\PauseAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\PauseTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\PauseTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\Plugin.cs" />
     <Compile Include="V20260520\Models\PluginConfig.cs" />
     <Compile Include="V20260520\Models\PluginOperation.cs" />
@@ -277,11 +332,19 @@
     <Compile Include="V20260520\Models\ResetConversationRequest.cs" />
     <Compile Include="V20260520\Models\ResetConversationResponse.cs" />
     <Compile Include="V20260520\Models\ResponseParam.cs" />
+    <Compile Include="V20260520\Models\ResumeAppTriggerRequest.cs" />
+    <Compile Include="V20260520\Models\ResumeAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\ResumeTimerTaskRequest.cs" />
+    <Compile Include="V20260520\Models\ResumeTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20260520\Models\RetryReleaseResponse.cs" />
     <Compile Include="V20260520\Models\RoleConfig.cs" />
     <Compile Include="V20260520\Models\RollbackReleaseRequest.cs" />
     <Compile Include="V20260520\Models\RollbackReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\RunAppTriggerNowRequest.cs" />
+    <Compile Include="V20260520\Models\RunAppTriggerNowResponse.cs" />
+    <Compile Include="V20260520\Models\RunTimerTaskNowRequest.cs" />
+    <Compile Include="V20260520\Models\RunTimerTaskNowResponse.cs" />
     <Compile Include="V20260520\Models\SearchResourceStatusInfo.cs" />
     <Compile Include="V20260520\Models\SingleWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\SkillAnalysisInfo.cs" />
@@ -300,16 +363,27 @@
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
     <Compile Include="V20260520\Models\ThinkModel.cs" />
+    <Compile Include="V20260520\Models\TimerConfig.cs" />
+    <Compile Include="V20260520\Models\TimerProfile.cs" />
+    <Compile Include="V20260520\Models\TimerPushConfig.cs" />
+    <Compile Include="V20260520\Models\TimerScheduleConfig.cs" />
+    <Compile Include="V20260520\Models\TimerStatus.cs" />
+    <Compile Include="V20260520\Models\TimerTask.cs" />
+    <Compile Include="V20260520\Models\TimerTaskSummary.cs" />
     <Compile Include="V20260520\Models\Tool.cs" />
     <Compile Include="V20260520\Models\ToolBilling.cs" />
     <Compile Include="V20260520\Models\ToolConfig.cs" />
     <Compile Include="V20260520\Models\ToolExample.cs" />
     <Compile Include="V20260520\Models\ToolSummary.cs" />
+    <Compile Include="V20260520\Models\TriggerConfig.cs" />
+    <Compile Include="V20260520\Models\TriggerStatus.cs" />
     <Compile Include="V20260520\Models\UnfavoritePluginRequest.cs" />
     <Compile Include="V20260520\Models\UnfavoritePluginResponse.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillRequest.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillResponse.cs" />
     <Compile Include="V20260520\Models\Variable.cs" />
     <Compile Include="V20260520\Models\VoiceConfig.cs" />
+    <Compile Include="V20260520\Models\WeeklySchedule.cs" />
+    <Compile Include="V20260520\Models\WeeklyTime.cs" />
   </ItemGroup>
 </Project>

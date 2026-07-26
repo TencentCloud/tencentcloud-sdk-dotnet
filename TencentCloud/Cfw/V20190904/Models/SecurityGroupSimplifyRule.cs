@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 写入规则的描述。
+        /// 规则描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 服务端写入后生成或采用的规则数据库 ID。
+        /// 规则 ID。
         /// </summary>
         [JsonProperty("RuleUuid")]
         public long? RuleUuid{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Scope{ get; set; }
 
         /// <summary>
-        /// 服务端写入后的实际规则顺序。
+        /// 写入后的实际规则顺序。
         /// </summary>
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }
