@@ -21,20 +21,20 @@ namespace TencentCloud.Tcb.V20180608.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPServiceRouteRequest : AbstractModel
+    public class OwnershipVerificationFileInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境ID</p>
+        /// <p>归属权校验文件路径</p>
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
         /// <summary>
-        /// <p>域名路由信息</p>
+        /// <p>归属权校验文件内容</p>
         /// </summary>
-        [JsonProperty("Domain")]
-        public HTTPServiceDomainParam Domain{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamObj(map, prefix + "Domain.", this.Domain);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

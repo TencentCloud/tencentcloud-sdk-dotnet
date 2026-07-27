@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPServiceRouteRequest : AbstractModel
+    public class ModifySparkAppForTDLCResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境ID</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
-
-        /// <summary>
-        /// <p>域名路由信息</p>
-        /// </summary>
-        [JsonProperty("Domain")]
-        public HTTPServiceDomainParam Domain{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamObj(map, prefix + "Domain.", this.Domain);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,97 +25,97 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 迁移任务名称
+        /// <p>迁移任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+        /// <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
         /// </summary>
         [JsonProperty("MigrationType")]
         public ulong? MigrationType{ get; set; }
 
         /// <summary>
-        /// 迁移模式，默认为0。0: 全量迁移
+        /// <p>迁移模式，默认为0。0: 全量迁移</p>
         /// </summary>
         [JsonProperty("MigrationMode")]
         public ulong? MigrationMode{ get; set; }
 
         /// <summary>
-        /// 数据源账号的 SecretId
+        /// <p>数据源账号的 SecretId</p>
         /// </summary>
         [JsonProperty("SrcSecretId")]
         public string SrcSecretId{ get; set; }
 
         /// <summary>
-        /// 数据源账号的 SecretKey
+        /// <p>数据源账号的 SecretKey</p>
         /// </summary>
         [JsonProperty("SrcSecretKey")]
         public string SrcSecretKey{ get; set; }
 
         /// <summary>
-        /// 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+        /// <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 文件系统路径
+        /// <p>文件系统路径</p>
         /// </summary>
         [JsonProperty("FsPath")]
         public string FsPath{ get; set; }
 
         /// <summary>
-        /// 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+        /// <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
         /// </summary>
         [JsonProperty("CoverType")]
         public ulong? CoverType{ get; set; }
 
         /// <summary>
-        /// 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+        /// <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
         /// </summary>
         [JsonProperty("SrcService")]
         public string SrcService{ get; set; }
 
         /// <summary>
-        /// 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+        /// <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 数据源桶地域
+        /// <p>数据源桶地域</p>
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+        /// <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
 
         /// <summary>
-        /// 清单地址，迁移方式为清单迁移时必填
+        /// <p>清单地址，迁移方式为清单迁移时必填</p>
         /// </summary>
         [JsonProperty("ListAddress")]
         public string ListAddress{ get; set; }
 
         /// <summary>
-        /// 目标文件系统名称
+        /// <p>目标文件系统名称</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// 源桶路径，默认为 /
+        /// <p>源桶路径，默认为 /</p>
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
 
         /// <summary>
-        /// 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+        /// <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }

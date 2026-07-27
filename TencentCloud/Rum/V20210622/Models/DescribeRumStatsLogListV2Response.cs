@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// Query result in JSON string format
+        /// <p>日志时间分布</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

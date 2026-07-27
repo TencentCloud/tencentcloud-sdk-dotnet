@@ -25,104 +25,103 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 迁移类型：
-        /// 1-远端集群迁移；2-COS迁移
+        /// <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public long? BackupType{ get; set; }
 
         /// <summary>
-        /// 当前任务现存实例数
+        /// <p>当前任务现存实例数</p>
         /// </summary>
         [JsonProperty("ExistCount")]
         public long? ExistCount{ get; set; }
 
         /// <summary>
-        /// cos信息
+        /// <p>cos信息</p>
         /// </summary>
         [JsonProperty("CosSourceInfo")]
         public string CosSourceInfo{ get; set; }
 
         /// <summary>
-        /// doris信息
+        /// <p>doris信息</p>
         /// </summary>
         [JsonProperty("DorisSourceInfo")]
         public string DorisSourceInfo{ get; set; }
 
         /// <summary>
-        /// 恢复类型
+        /// <p>恢复类型</p>
         /// </summary>
         [JsonProperty("RestoreType")]
         public long? RestoreType{ get; set; }
 
         /// <summary>
-        /// 快照保留策略
+        /// <p>快照保留策略</p>
         /// </summary>
         [JsonProperty("SnapshotRemainPolicy")]
         public SnapshotRemainPolicy SnapshotRemainPolicy{ get; set; }
 
         /// <summary>
-        /// 远程备份地域
+        /// <p>远程备份地域</p>
         /// </summary>
         [JsonProperty("DataRemoteRegion")]
         public string DataRemoteRegion{ get; set; }
 
         /// <summary>
-        /// 是否在宽限期内
+        /// <p>是否在宽限期内</p>
         /// </summary>
         [JsonProperty("IsWithinGracePeriod")]
         public bool? IsWithinGracePeriod{ get; set; }
 
         /// <summary>
-        /// 宽限期（天数）
+        /// <p>宽限期（天数）</p>
         /// </summary>
         [JsonProperty("GracePeriod")]
         public long? GracePeriod{ get; set; }
 
         /// <summary>
-        /// 宽限开始时间
+        /// <p>宽限开始时间</p>
         /// </summary>
         [JsonProperty("GraceStartTime")]
         public string GraceStartTime{ get; set; }
 
         /// <summary>
-        /// 托管桶类型：standard-标准，多可用区-MAZ
+        /// <p>托管桶类型：standard-标准，多可用区-MAZ</p>
         /// </summary>
         [JsonProperty("BucketType")]
         public string BucketType{ get; set; }
 
         /// <summary>
-        /// 是否开启安全锁：0-未开启，1-已开启
+        /// <p>是否开启安全锁：0-未开启，1-已开启</p>
         /// </summary>
         [JsonProperty("EnableSecurityLock")]
         public ulong? EnableSecurityLock{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 实例状态描述
+        /// <p>实例状态描述</p>
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// 桶加密状态信息
+        /// <p>桶加密状态信息</p>
         /// </summary>
         [JsonProperty("BucketEncryption")]
         public BucketEncryptionInfo BucketEncryption{ get; set; }

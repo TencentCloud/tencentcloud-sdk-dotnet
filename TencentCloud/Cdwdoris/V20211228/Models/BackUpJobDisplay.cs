@@ -25,184 +25,208 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 备份实例id
+        /// <p>备份实例id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public long? JobId{ get; set; }
 
         /// <summary>
-        /// 备份实例名
+        /// <p>备份实例名</p>
         /// </summary>
         [JsonProperty("Snapshot")]
         public string Snapshot{ get; set; }
 
         /// <summary>
-        /// 备份数据量
+        /// <p>备份数据量</p>
         /// </summary>
         [JsonProperty("BackUpSize")]
         public long? BackUpSize{ get; set; }
 
         /// <summary>
-        /// 备份单副本数据量
+        /// <p>备份单副本数据量</p>
         /// </summary>
         [JsonProperty("BackUpSingleSize")]
         public long? BackUpSingleSize{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// <p>实例创建时间</p>
         /// </summary>
         [JsonProperty("BackUpTime")]
         public string BackUpTime{ get; set; }
 
         /// <summary>
-        /// 实例过期时间
+        /// <p>实例过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("JobStatus")]
         public string JobStatus{ get; set; }
 
         /// <summary>
-        /// 0为默认。1时是对远端的doris进行备份，不周期，一次性
+        /// <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public long? BackupType{ get; set; }
 
         /// <summary>
-        /// 0为默认。1时是立即备份。2时是迁移
+        /// <p>0为默认。1时是立即备份。2时是迁移</p>
         /// </summary>
         [JsonProperty("BackupTimeType")]
         public long? BackupTimeType{ get; set; }
 
         /// <summary>
-        /// 远端doris的连接信息
+        /// <p>远端doris的连接信息</p>
         /// </summary>
         [JsonProperty("DorisSourceInfo")]
         public DorisSourceInfo DorisSourceInfo{ get; set; }
 
         /// <summary>
-        /// 实例状态对应的数值
+        /// <p>实例状态对应的数值</p>
         /// </summary>
         [JsonProperty("JobStatusNum")]
         public long? JobStatusNum{ get; set; }
 
         /// <summary>
-        /// 备份实例中关于cos的信息	
+        /// <p>备份实例中关于cos的信息</p>
         /// </summary>
         [JsonProperty("BackupCosInfo")]
         public BackupCosInfo BackupCosInfo{ get; set; }
 
         /// <summary>
-        /// 是否使用的自定义桶
+        /// <p>是否使用的自定义桶</p>
         /// </summary>
         [JsonProperty("IsUserDefineBucket")]
         public bool? IsUserDefineBucket{ get; set; }
 
         /// <summary>
-        /// 错误原因
+        /// <p>错误原因</p>
         /// </summary>
         [JsonProperty("ErrorReason")]
         public string ErrorReason{ get; set; }
 
         /// <summary>
-        /// 快照保留策略
+        /// <p>快照保留策略</p>
         /// </summary>
         [JsonProperty("SnapshotRemainPolicy")]
         public SnapshotRemainPolicy SnapshotRemainPolicy{ get; set; }
 
         /// <summary>
-        /// 隔离次数
+        /// <p>隔离次数</p>
         /// </summary>
         [JsonProperty("IsolationCount")]
         public long? IsolationCount{ get; set; }
 
         /// <summary>
-        /// 是否开启安全锁
+        /// <p>是否开启安全锁</p>
         /// </summary>
         [JsonProperty("EnableSecurityLock")]
         public ulong? EnableSecurityLock{ get; set; }
 
         /// <summary>
-        /// 宽限期天数
+        /// <p>宽限期天数</p>
         /// </summary>
         [JsonProperty("GracePeriod")]
         public ulong? GracePeriod{ get; set; }
 
         /// <summary>
-        /// 宽限期开始时间
+        /// <p>宽限期开始时间</p>
         /// </summary>
         [JsonProperty("GraceStartTime")]
         public string GraceStartTime{ get; set; }
 
         /// <summary>
-        /// 是否在宽限期内
+        /// <p>是否在宽限期内</p>
         /// </summary>
         [JsonProperty("IsWithinGracePeriod")]
         public bool? IsWithinGracePeriod{ get; set; }
 
         /// <summary>
-        /// 是否使用托管桶
+        /// <p>是否使用托管桶</p>
         /// </summary>
         [JsonProperty("UseManagedBucket")]
         public bool? UseManagedBucket{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 实例状态描述
+        /// <p>实例状态描述</p>
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// 备份远程桶地域
+        /// <p>备份远程桶地域</p>
         /// </summary>
         [JsonProperty("DataRemoteRegion")]
         public string DataRemoteRegion{ get; set; }
 
         /// <summary>
-        /// 桶加密状态信息
+        /// <p>桶加密状态信息</p>
         /// </summary>
         [JsonProperty("BucketEncryption")]
         public BucketEncryptionInfo BucketEncryption{ get; set; }
 
         /// <summary>
-        /// 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+        /// <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p>
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }
 
         /// <summary>
-        /// 是否开通加密存储：0-未开通，1-已开通
+        /// <p>是否开通加密存储：0-未开通，1-已开通</p>
         /// </summary>
         [JsonProperty("EncryptionEnabled")]
         public bool? EncryptionEnabled{ get; set; }
 
         /// <summary>
-        /// 任务调度id
+        /// <p>任务调度id</p>
         /// </summary>
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }
+
+        /// <summary>
+        /// <p>总任务数（库数）</p>
+        /// </summary>
+        [JsonProperty("TotalTasks")]
+        public long? TotalTasks{ get; set; }
+
+        /// <summary>
+        /// <p>已完成任务数</p>
+        /// </summary>
+        [JsonProperty("CompletedTasks")]
+        public long? CompletedTasks{ get; set; }
+
+        /// <summary>
+        /// <p>失败任务数</p>
+        /// </summary>
+        [JsonProperty("FailedTasks")]
+        public long? FailedTasks{ get; set; }
+
+        /// <summary>
+        /// <p>备份进度描述，如 3/5</p>
+        /// </summary>
+        [JsonProperty("BackupProgress")]
+        public string BackupProgress{ get; set; }
 
 
         /// <summary>
@@ -240,6 +264,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+            this.SetParamSimple(map, prefix + "TotalTasks", this.TotalTasks);
+            this.SetParamSimple(map, prefix + "CompletedTasks", this.CompletedTasks);
+            this.SetParamSimple(map, prefix + "FailedTasks", this.FailedTasks);
+            this.SetParamSimple(map, prefix + "BackupProgress", this.BackupProgress);
         }
     }
 }

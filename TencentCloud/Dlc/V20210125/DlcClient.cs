@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1469";
+       private const string sdkVersion = "SDK_NET_3.0.1471";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateSparkAppResponse CreateSparkAppSync(CreateSparkAppRequest req)
         {
             return InternalRequestAsync<CreateSparkAppResponse>(req, "CreateSparkApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建tdlc spark作业
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppForTDLCRequest"/></param>
+        /// <returns><see cref="CreateSparkAppForTDLCResponse"/></returns>
+        public Task<CreateSparkAppForTDLCResponse> CreateSparkAppForTDLC(CreateSparkAppForTDLCRequest req)
+        {
+            return InternalRequestAsync<CreateSparkAppForTDLCResponse>(req, "CreateSparkAppForTDLC");
+        }
+
+        /// <summary>
+        /// 创建tdlc spark作业
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppForTDLCRequest"/></param>
+        /// <returns><see cref="CreateSparkAppForTDLCResponse"/></returns>
+        public CreateSparkAppForTDLCResponse CreateSparkAppForTDLCSync(CreateSparkAppForTDLCRequest req)
+        {
+            return InternalRequestAsync<CreateSparkAppForTDLCResponse>(req, "CreateSparkAppForTDLC")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2007,6 +2028,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResultSync(DescribeLakeFsTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeLakeFsTaskResultResponse>(req, "DescribeLakeFsTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账户子账户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPSubUinRequest"/></param>
+        /// <returns><see cref="DescribeMCPSubUinResponse"/></returns>
+        public Task<DescribeMCPSubUinResponse> DescribeMCPSubUin(DescribeMCPSubUinRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPSubUinResponse>(req, "DescribeMCPSubUin");
+        }
+
+        /// <summary>
+        /// 获取账户子账户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPSubUinRequest"/></param>
+        /// <returns><see cref="DescribeMCPSubUinResponse"/></returns>
+        public DescribeMCPSubUinResponse DescribeMCPSubUinSync(DescribeMCPSubUinRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPSubUinResponse>(req, "DescribeMCPSubUin")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3519,6 +3561,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifySparkAppBatchResponse ModifySparkAppBatchSync(ModifySparkAppBatchRequest req)
         {
             return InternalRequestAsync<ModifySparkAppBatchResponse>(req, "ModifySparkAppBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新tdlc spark作业
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppForTDLCRequest"/></param>
+        /// <returns><see cref="ModifySparkAppForTDLCResponse"/></returns>
+        public Task<ModifySparkAppForTDLCResponse> ModifySparkAppForTDLC(ModifySparkAppForTDLCRequest req)
+        {
+            return InternalRequestAsync<ModifySparkAppForTDLCResponse>(req, "ModifySparkAppForTDLC");
+        }
+
+        /// <summary>
+        /// 更新tdlc spark作业
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppForTDLCRequest"/></param>
+        /// <returns><see cref="ModifySparkAppForTDLCResponse"/></returns>
+        public ModifySparkAppForTDLCResponse ModifySparkAppForTDLCSync(ModifySparkAppForTDLCRequest req)
+        {
+            return InternalRequestAsync<ModifySparkAppForTDLCResponse>(req, "ModifySparkAppForTDLC")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

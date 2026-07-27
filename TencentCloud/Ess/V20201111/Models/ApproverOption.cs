@@ -66,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverMobileMode")]
         public string ApproverMobileMode{ get; set; }
 
+        /// <summary>
+        /// <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+        /// </summary>
+        [JsonProperty("ForbidModifySealInfos")]
+        public bool? ForbidModifySealInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
             this.SetParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
             this.SetParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
+            this.SetParamSimple(map, prefix + "ForbidModifySealInfos", this.ForbidModifySealInfos);
         }
     }
 }

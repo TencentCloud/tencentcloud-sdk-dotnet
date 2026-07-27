@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// <p>开始时间（必填）</p>
+        /// <p>查询日志开始时间（必填）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件</p>
+        /// <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
         /// <summary>
-        /// <p>结束时间（必填）</p>
+        /// <p>查询日志结束时间（必填）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

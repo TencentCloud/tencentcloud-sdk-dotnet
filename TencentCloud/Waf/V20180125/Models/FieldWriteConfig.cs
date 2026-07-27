@@ -25,26 +25,25 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 1:开启 0:不开启
+        /// <p>1:开启 0:不开启</p>
         /// </summary>
         [JsonProperty("EnableHeaders")]
         public long? EnableHeaders{ get; set; }
 
         /// <summary>
-        /// 1:开启 0:不开启
+        /// <p>1:开启 0:不开启</p>
         /// </summary>
         [JsonProperty("EnableBody")]
         public long? EnableBody{ get; set; }
 
         /// <summary>
-        /// 1:开启 0:不开启
+        /// <p>1:开启 0:不开启</p>
         /// </summary>
         [JsonProperty("EnableBot")]
         public long? EnableBot{ get; set; }
 
         /// <summary>
-        /// 响应方向body
-        /// 1:开启 0:不开启
+        /// <p>响应方向body<br>1:开启 0:不开启</p>
         /// </summary>
         [JsonProperty("EnableResponse")]
         public long? EnableResponse{ get; set; }

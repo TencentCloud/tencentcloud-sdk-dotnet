@@ -294,6 +294,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ChangerName")]
         public string ChangerName{ get; set; }
 
+        /// <summary>
+        /// <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceSupplyAttribute")]
+        public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +347,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Changer", this.Changer);
             this.SetParamSimple(map, prefix + "ChangerName", this.ChangerName);
+            this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
         }
     }
 }

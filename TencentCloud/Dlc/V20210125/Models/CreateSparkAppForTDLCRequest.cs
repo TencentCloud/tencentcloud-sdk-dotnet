@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPServiceRouteRequest : AbstractModel
+    public class CreateSparkAppForTDLCRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <p>环境ID</p>
-        /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
-
-        /// <summary>
-        /// <p>域名路由信息</p>
-        /// </summary>
-        [JsonProperty("Domain")]
-        public HTTPServiceDomainParam Domain{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamObj(map, prefix + "Domain.", this.Domain);
         }
     }
 }

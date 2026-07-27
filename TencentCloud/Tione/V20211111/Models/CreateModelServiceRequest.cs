@@ -300,6 +300,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
 
+        /// <summary>
+        /// <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+        /// </summary>
+        [JsonProperty("ResourceSupplyAttribute")]
+        public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -352,6 +358,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
             this.SetParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+            this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
         }
     }
 }

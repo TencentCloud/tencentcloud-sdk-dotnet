@@ -25,49 +25,49 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 排序方式 desc asc
+        /// <p>排序方式 desc asc</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 开始时间（必填）格式为时间戳 毫秒
+        /// <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 单次查询返回的原始日志条数，最大值为100（必填）
+        /// <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询的相关参数
+        /// <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
         /// <summary>
-        /// 结束时间（必填）格式为时间戳 毫秒
+        /// <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 项目ID（必填）
+        /// <p>项目ID（必填）</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 上次查询的最后一个日志的时间戳
+        /// <p>上次查询的最后一个日志的时间戳</p>
         /// </summary>
         [JsonProperty("LastTime")]
         public long? LastTime{ get; set; }
 
         /// <summary>
-        /// 上次查询的最后一个日志的rowId
+        /// <p>上次查询的最后一个日志的rowId</p>
         /// </summary>
         [JsonProperty("LastRowId")]
         public long? LastRowId{ get; set; }

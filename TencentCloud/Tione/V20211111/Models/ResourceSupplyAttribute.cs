@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPServiceRouteRequest : AbstractModel
+    public class ResourceSupplyAttribute : AbstractModel
     {
         
         /// <summary>
-        /// <p>环境ID</p>
+        /// <p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p>
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
-
-        /// <summary>
-        /// <p>域名路由信息</p>
-        /// </summary>
-        [JsonProperty("Domain")]
-        public HTTPServiceDomainParam Domain{ get; set; }
+        [JsonProperty("SupplyType")]
+        public string SupplyType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamObj(map, prefix + "Domain.", this.Domain);
+            this.SetParamSimple(map, prefix + "SupplyType", this.SupplyType);
         }
     }
 }

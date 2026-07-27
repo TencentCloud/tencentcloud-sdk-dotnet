@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 日志总量
+        /// <p>日志总量</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
