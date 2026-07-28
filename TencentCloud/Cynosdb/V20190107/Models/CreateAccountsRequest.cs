@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 新账户列表
+        /// <p>新账户列表</p>
         /// </summary>
         [JsonProperty("Accounts")]
         public NewAccount[] Accounts{ get; set; }

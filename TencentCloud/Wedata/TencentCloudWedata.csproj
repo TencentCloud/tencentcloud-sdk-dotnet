@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1467</VersionPrefix>
+    <VersionPrefix>3.0.1472</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1024,6 +1024,8 @@
     <Compile Include="V20210820\Models\DescribeInstanceLogListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceLogRequest.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceLogResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeInstancesByExecutorsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeInstancesByExecutorsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationNodeRequest.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationNodeResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationStatisticsInstanceTrendRequest.cs" />
@@ -1271,6 +1273,7 @@
     <Compile Include="V20210820\Models\ExecutorResourcePackageExtInfo.cs" />
     <Compile Include="V20210820\Models\ExecutorResourcePackageInfo.cs" />
     <Compile Include="V20210820\Models\ExecutorResourcePackageUsageInfo.cs" />
+    <Compile Include="V20210820\Models\ExecutorTaskInstanceCount.cs" />
     <Compile Include="V20210820\Models\ExecutorUsageTrendInfo.cs" />
     <Compile Include="V20210820\Models\ExtParam.cs" />
     <Compile Include="V20210820\Models\ExtResourceFlagDto.cs" />

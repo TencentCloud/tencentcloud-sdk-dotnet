@@ -25,73 +25,73 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 是否支持从可用区
+        /// <p>是否支持从可用区</p>
         /// </summary>
         [JsonProperty("IsSupportSlaveZone")]
         public string IsSupportSlaveZone{ get; set; }
 
         /// <summary>
-        /// 不支持从可用区的原因
+        /// <p>不支持从可用区的原因</p>
         /// </summary>
         [JsonProperty("NonsupportSlaveZoneReason")]
         public string NonsupportSlaveZoneReason{ get; set; }
 
         /// <summary>
-        /// 是否支持RO实例
+        /// <p>是否支持RO实例</p>
         /// </summary>
         [JsonProperty("IsSupportRo")]
         public string IsSupportRo{ get; set; }
 
         /// <summary>
-        /// 不支持RO实例的原因
+        /// <p>不支持RO实例的原因</p>
         /// </summary>
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
 
         /// <summary>
-        /// 是否支持手动发起快照备份
+        /// <p>是否支持手动发起快照备份</p>
         /// </summary>
         [JsonProperty("IsSupportManualSnapshot")]
         public string IsSupportManualSnapshot{ get; set; }
 
         /// <summary>
-        /// 是否支持透明数据加密
+        /// <p>是否支持透明数据加密</p>
         /// </summary>
         [JsonProperty("IsSupportTransparentDataEncryption")]
         public string IsSupportTransparentDataEncryption{ get; set; }
 
         /// <summary>
-        /// 不支持透明数据加密原因
+        /// <p>不支持透明数据加密原因</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReason")]
         public string NoSupportTransparentDataEncryptionReason{ get; set; }
 
         /// <summary>
-        /// 是否支持手动发起逻辑备份
+        /// <p>是否支持手动发起逻辑备份</p>
         /// </summary>
         [JsonProperty("IsSupportManualLogic")]
         public string IsSupportManualLogic{ get; set; }
 
         /// <summary>
-        /// 是否支持开启全局加密
+        /// <p>是否支持开启全局加密</p>
         /// </summary>
         [JsonProperty("IsSupportGlobalEncryption")]
         public string IsSupportGlobalEncryption{ get; set; }
 
         /// <summary>
-        /// 不支持全局加密的原因
+        /// <p>不支持全局加密的原因</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReason")]
         public string NoSupportGlobalEncryptionReason{ get; set; }
 
         /// <summary>
-        /// 不支持透明加密原因状态码
+        /// <p>不支持透明加密原因状态码</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReasonCode")]
         public string NoSupportTransparentDataEncryptionReasonCode{ get; set; }
 
         /// <summary>
-        /// 不支持全局加密原因状态码
+        /// <p>不支持全局加密原因状态码</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReasonCode")]
         public string NoSupportGlobalEncryptionReasonCode{ get; set; }

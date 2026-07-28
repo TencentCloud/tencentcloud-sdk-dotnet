@@ -25,28 +25,34 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
+        /// <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
         /// </summary>
         [JsonProperty("TimeOut")]
         public ulong? TimeOut{ get; set; }
 
         /// <summary>
-        /// 连续密码错误次数，超过锁定账号，3-5
+        /// <p>连续密码错误次数，超过锁定账号，3-5</p>
         /// </summary>
         [JsonProperty("LockThreshold")]
         public ulong? LockThreshold{ get; set; }
 
         /// <summary>
-        /// 账号锁定时长，10分钟，20分钟，30分钟
+        /// <p>账号锁定时长，10分钟，20分钟，30分钟</p>
         /// </summary>
         [JsonProperty("LockTime")]
         public ulong? LockTime{ get; set; }
 
         /// <summary>
-        /// 用户多少天不活跃，账号自动锁定
+        /// <p>用户多少天不活跃，账号自动锁定</p>
         /// </summary>
         [JsonProperty("InactiveUserLock")]
         public ulong? InactiveUserLock{ get; set; }
+
+        /// <summary>
+        /// <p>运维账号单点登录开关：0-关闭，1-开启</p>
+        /// </summary>
+        [JsonProperty("EnableSingleLogin")]
+        public ulong? EnableSingleLogin{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "LockThreshold", this.LockThreshold);
             this.SetParamSimple(map, prefix + "LockTime", this.LockTime);
             this.SetParamSimple(map, prefix + "InactiveUserLock", this.InactiveUserLock);
+            this.SetParamSimple(map, prefix + "EnableSingleLogin", this.EnableSingleLogin);
         }
     }
 }

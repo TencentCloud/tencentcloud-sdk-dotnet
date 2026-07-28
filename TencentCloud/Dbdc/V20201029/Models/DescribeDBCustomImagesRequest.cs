@@ -25,6 +25,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
     {
         
         /// <summary>
+        /// <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// <p>偏移量</p><p>默认值：0</p>
         /// </summary>
         [JsonProperty("Offset")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1472";
 
         /// <summary>
         /// Client constructor.
@@ -2528,6 +2528,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeInstanceLogListResponse DescribeInstanceLogListSync(DescribeInstanceLogListRequest req)
         {
             return InternalRequestAsync<DescribeInstanceLogListResponse>(req, "DescribeInstanceLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按执行资源组查询任务调度与运行实例数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesByExecutorsRequest"/></param>
+        /// <returns><see cref="DescribeInstancesByExecutorsResponse"/></returns>
+        public Task<DescribeInstancesByExecutorsResponse> DescribeInstancesByExecutors(DescribeInstancesByExecutorsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesByExecutorsResponse>(req, "DescribeInstancesByExecutors");
+        }
+
+        /// <summary>
+        /// 按执行资源组查询任务调度与运行实例数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesByExecutorsRequest"/></param>
+        /// <returns><see cref="DescribeInstancesByExecutorsResponse"/></returns>
+        public DescribeInstancesByExecutorsResponse DescribeInstancesByExecutorsSync(DescribeInstancesByExecutorsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesByExecutorsResponse>(req, "DescribeInstancesByExecutors")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

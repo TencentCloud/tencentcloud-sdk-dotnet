@@ -36,6 +36,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("NodeIds")]
         public string[] NodeIds{ get; set; }
 
+        /// <summary>
+        /// <p>节点的登录参数</p>
+        /// </summary>
+        [JsonProperty("LoginSettings")]
+        public LoginSettings LoginSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
+            this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         }
     }
 }

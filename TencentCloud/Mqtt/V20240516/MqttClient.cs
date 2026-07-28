@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1472";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 跨集群灾备场景下查询设备证书同步记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateBackupHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateBackupHistoryResponse"/></returns>
+        public Task<DescribeDeviceCertificateBackupHistoryResponse> DescribeDeviceCertificateBackupHistory(DescribeDeviceCertificateBackupHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateBackupHistoryResponse>(req, "DescribeDeviceCertificateBackupHistory");
+        }
+
+        /// <summary>
+        /// 跨集群灾备场景下查询设备证书同步记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateBackupHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateBackupHistoryResponse"/></returns>
+        public DescribeDeviceCertificateBackupHistoryResponse DescribeDeviceCertificateBackupHistorySync(DescribeDeviceCertificateBackupHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateBackupHistoryResponse>(req, "DescribeDeviceCertificateBackupHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页查询设备证书
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceCertificatesRequest"/></param>
@@ -806,6 +827,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeDeviceIdentityResponse DescribeDeviceIdentitySync(DescribeDeviceIdentityRequest req)
         {
             return InternalRequestAsync<DescribeDeviceIdentityResponse>(req, "DescribeDeviceIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 跨集群容灾场景下查询设备标识同步记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityBackupHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityBackupHistoryResponse"/></returns>
+        public Task<DescribeDeviceIdentityBackupHistoryResponse> DescribeDeviceIdentityBackupHistory(DescribeDeviceIdentityBackupHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityBackupHistoryResponse>(req, "DescribeDeviceIdentityBackupHistory");
+        }
+
+        /// <summary>
+        /// 跨集群容灾场景下查询设备标识同步记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityBackupHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityBackupHistoryResponse"/></returns>
+        public DescribeDeviceIdentityBackupHistoryResponse DescribeDeviceIdentityBackupHistorySync(DescribeDeviceIdentityBackupHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityBackupHistoryResponse>(req, "DescribeDeviceIdentityBackupHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1183,6 +1225,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeUserListResponse DescribeUserListSync(DescribeUserListRequest req)
         {
             return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 遗嘱消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWillMessageRequest"/></param>
+        /// <returns><see cref="DescribeWillMessageResponse"/></returns>
+        public Task<DescribeWillMessageResponse> DescribeWillMessage(DescribeWillMessageRequest req)
+        {
+            return InternalRequestAsync<DescribeWillMessageResponse>(req, "DescribeWillMessage");
+        }
+
+        /// <summary>
+        /// 遗嘱消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWillMessageRequest"/></param>
+        /// <returns><see cref="DescribeWillMessageResponse"/></returns>
+        public DescribeWillMessageResponse DescribeWillMessageSync(DescribeWillMessageRequest req)
+        {
+            return InternalRequestAsync<DescribeWillMessageResponse>(req, "DescribeWillMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,124 +25,136 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 事件ID
+        /// <p>事件ID</p>
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// <p>主机名称</p>
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 主机IP
+        /// <p>主机IP</p>
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
-        /// 外网IP
+        /// <p>外网IP</p>
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// 进程ID
+        /// <p>进程ID</p>
         /// </summary>
         [JsonProperty("ProcessId")]
         public long? ProcessId{ get; set; }
 
         /// <summary>
-        /// 文件路径
+        /// <p>文件路径</p>
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// 执行命令
+        /// <p>执行命令</p>
         /// </summary>
         [JsonProperty("CmdLine")]
         public string CmdLine{ get; set; }
 
         /// <summary>
-        /// 进程启动时间
+        /// <p>进程启动时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 最近检测时间
+        /// <p>最近检测时间</p>
         /// </summary>
         [JsonProperty("DetectTime")]
         public string DetectTime{ get; set; }
 
         /// <summary>
-        /// 病毒名称
+        /// <p>病毒名称</p>
         /// </summary>
         [JsonProperty("VirusName")]
         public string VirusName{ get; set; }
 
         /// <summary>
-        /// 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
+        /// <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
         /// </summary>
         [JsonProperty("CheckPlatform")]
         public string[] CheckPlatform{ get; set; }
 
         /// <summary>
-        /// 病毒标签
+        /// <p>病毒标签</p>
         /// </summary>
         [JsonProperty("VirusTags")]
         public string[] VirusTags{ get; set; }
 
         /// <summary>
-        /// 威胁描述
+        /// <p>威胁描述</p>
         /// </summary>
         [JsonProperty("ThreatDesc")]
         public string ThreatDesc{ get; set; }
 
         /// <summary>
-        /// 建议方案
+        /// <p>建议方案</p>
         /// </summary>
         [JsonProperty("SuggestSolution")]
         public string SuggestSolution{ get; set; }
 
         /// <summary>
-        /// 参考链接
+        /// <p>参考链接</p>
         /// </summary>
         [JsonProperty("ReferenceLink")]
         public string ReferenceLink{ get; set; }
 
         /// <summary>
-        /// 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
+        /// <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
         /// </summary>
         [JsonProperty("HandleStatus")]
         public long? HandleStatus{ get; set; }
 
         /// <summary>
-        /// 主机在线状态
+        /// <p>主机在线状态</p>
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// 附加信息
+        /// <p>附加信息</p>
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// 主机uuid
+        /// <p>主机uuid</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 首次检出方式 0扫描;1实时监控
+        /// <p>首次检出方式 0扫描;1实时监控</p>
         /// </summary>
         [JsonProperty("FirstDetectionMethod")]
         public ulong? FirstDetectionMethod{ get; set; }
+
+        /// <summary>
+        /// <p>quuid</p>
+        /// </summary>
+        [JsonProperty("QUUID")]
+        public string QUUID{ get; set; }
+
+        /// <summary>
+        /// <p>进程md5</p>
+        /// </summary>
+        [JsonProperty("ExeMd5")]
+        public string ExeMd5{ get; set; }
 
 
         /// <summary>
@@ -170,6 +182,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
+            this.SetParamSimple(map, prefix + "QUUID", this.QUUID);
+            this.SetParamSimple(map, prefix + "ExeMd5", this.ExeMd5);
         }
     }
 }

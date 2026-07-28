@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1472</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20190722\Models\CreateCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudTranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudTranscriptionResponse.cs" />
+    <Compile Include="V20190722\Models\CreateLiveStreamModerationRequest.cs" />
+    <Compile Include="V20190722\Models\CreateLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="V20190722\Models\DeleteBasicModerationRequest.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="V20190722\Models\DeleteCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudTranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudTranscriptionResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteLiveStreamModerationRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintRequest.cs" />
@@ -111,6 +115,8 @@
     <Compile Include="V20190722\Models\DescribeCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudTranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCloudTranscriptionResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeLiveStreamModerationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageResponse.cs" />
     <Compile Include="V20190722\Models\DescribePictureRequest.cs" />
@@ -167,8 +173,11 @@
     <Compile Include="V20190722\Models\EncodeParams.cs" />
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
+    <Compile Include="V20190722\Models\Input.cs" />
     <Compile Include="V20190722\Models\InvokeLLM.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
+    <Compile Include="V20190722\Models\LiveModerationParams.cs" />
+    <Compile Include="V20190722\Models\LiveModerationStorageParams.cs" />
     <Compile Include="V20190722\Models\MaxVideoUser.cs" />
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
     <Compile Include="V20190722\Models\McuBackgroundCustomRender.cs" />
@@ -233,6 +242,7 @@
     <Compile Include="V20190722\Models\SliceParams.cs" />
     <Compile Include="V20190722\Models\SliceStorageParams.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
+    <Compile Include="V20190722\Models\SourceInfo.cs" />
     <Compile Include="V20190722\Models\StartAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\StartAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\StartAITranscriptionRequest.cs" />

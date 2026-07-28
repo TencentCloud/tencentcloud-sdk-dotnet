@@ -25,32 +25,44 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 单条日志的ID
+        /// <p>单条日志的ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 单条日志的内容
+        /// <p>单条日志的内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 这条日志对应的Pod名称
+        /// <p>这条日志对应的Pod名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// 日志的时间戳（RFC3339格式的时间字符串）
+        /// <p>日志的时间戳（RFC3339格式的时间字符串）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
+
+        /// <summary>
+        /// <p>日志上报请求包的ID</p>
+        /// </summary>
+        [JsonProperty("PkgId")]
+        public string PkgId{ get; set; }
+
+        /// <summary>
+        /// <p>请求包内日志的ID</p>
+        /// </summary>
+        [JsonProperty("PkgLogId")]
+        public string PkgLogId{ get; set; }
 
 
         /// <summary>
@@ -62,6 +74,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
+            this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         }
     }
 }

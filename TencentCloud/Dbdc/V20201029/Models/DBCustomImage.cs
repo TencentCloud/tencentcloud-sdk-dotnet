@@ -48,6 +48,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
+        /// <summary>
+        /// <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+        /// </summary>
+        [JsonProperty("OsType")]
+        public string OsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
             this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
+            this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }
     }
 }

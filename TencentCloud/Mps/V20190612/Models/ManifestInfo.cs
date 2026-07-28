@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 单位秒。
+        /// <p>单位秒。</p>
         /// </summary>
         [JsonProperty("Windows")]
         public ulong? Windows{ get; set; }
 
         /// <summary>
-        /// 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+        /// <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
         /// </summary>
         [JsonProperty("AdMarkupType")]
         public string AdMarkupType{ get; set; }

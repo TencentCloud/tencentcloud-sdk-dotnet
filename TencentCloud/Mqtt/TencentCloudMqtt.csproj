@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{75DEC97F-E1D6-361A-8DD6-47A670CA2B92}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1457</VersionPrefix>
+    <VersionPrefix>3.0.1472</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -116,12 +116,16 @@
     <Compile Include="V20240516\Models\DescribeCaCertificatesResponse.cs" />
     <Compile Include="V20240516\Models\DescribeClientListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeClientListResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceCertificateBackupHistoryRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceCertificateBackupHistoryResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceIdentitiesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceIdentitiesResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentityBackupHistoryRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeDeviceIdentityBackupHistoryResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceIdentityRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceIdentityResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInsPublicEndpointsRequest.cs" />
@@ -158,7 +162,11 @@
     <Compile Include="V20240516\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20240516\Models\DescribeUserListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeUserListResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeWillMessageRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeWillMessageResponse.cs" />
+    <Compile Include="V20240516\Models\DeviceCertificateBackupHistoryItem.cs" />
     <Compile Include="V20240516\Models\DeviceCertificateItem.cs" />
+    <Compile Include="V20240516\Models\DeviceIdentityBackupHistoryItem.cs" />
     <Compile Include="V20240516\Models\DeviceIdentityItem.cs" />
     <Compile Include="V20240516\Models\Filter.cs" />
     <Compile Include="V20240516\Models\HeaderItem.cs" />

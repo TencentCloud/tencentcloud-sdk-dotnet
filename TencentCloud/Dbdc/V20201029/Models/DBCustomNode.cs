@@ -177,6 +177,18 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
+        /// <summary>
+        /// <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+        /// </summary>
+        [JsonProperty("NetworkMode")]
+        public string NetworkMode{ get; set; }
+
+        /// <summary>
+        /// <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+        /// </summary>
+        [JsonProperty("EniIP")]
+        public string EniIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +220,8 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "SwitchId", this.SwitchId);
             this.SetParamSimple(map, prefix + "RackId", this.RackId);
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
+            this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+            this.SetParamSimple(map, prefix + "EniIP", this.EniIP);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// <p>磁盘名称</p>
+        /// <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }

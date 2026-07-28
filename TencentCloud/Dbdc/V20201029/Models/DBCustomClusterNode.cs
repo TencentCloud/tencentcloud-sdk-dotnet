@@ -66,6 +66,20 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
+        /// <summary>
+        /// <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkMode")]
+        public string NetworkMode{ get; set; }
+
+        /// <summary>
+        /// <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EniIP")]
+        public string EniIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +93,8 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+            this.SetParamSimple(map, prefix + "EniIP", this.EniIP);
         }
     }
 }

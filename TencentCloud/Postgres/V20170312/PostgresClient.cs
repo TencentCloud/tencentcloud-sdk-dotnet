@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1463";
+       private const string sdkVersion = "SDK_NET_3.0.1472";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccessSync(CreateDBInstanceNetworkAccessRequest req)
         {
             return InternalRequestAsync<CreateDBInstanceNetworkAccessResponse>(req, "CreateDBInstanceNetworkAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBProxy）用于为指定的 PostgreSQL 实例创建数据库代理（Proxy）。走计费下单流程，下单成功后异步发起 Proxy 创建任务，同步返回订单号 DealName 与 Proxy 实例 ID ProxyGroupId。当前仅支持后付费按量计费。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBProxyRequest"/></param>
+        /// <returns><see cref="CreateDBProxyResponse"/></returns>
+        public Task<CreateDBProxyResponse> CreateDBProxy(CreateDBProxyRequest req)
+        {
+            return InternalRequestAsync<CreateDBProxyResponse>(req, "CreateDBProxy");
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBProxy）用于为指定的 PostgreSQL 实例创建数据库代理（Proxy）。走计费下单流程，下单成功后异步发起 Proxy 创建任务，同步返回订单号 DealName 与 Proxy 实例 ID ProxyGroupId。当前仅支持后付费按量计费。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBProxyRequest"/></param>
+        /// <returns><see cref="CreateDBProxyResponse"/></returns>
+        public CreateDBProxyResponse CreateDBProxySync(CreateDBProxyRequest req)
+        {
+            return InternalRequestAsync<CreateDBProxyResponse>(req, "CreateDBProxy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1049,6 +1070,48 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDBProxy）用于查询指定 PostgreSQL 实例下的数据库代理（Proxy）信息，包含 Proxy 节点列表与接入地址列表。可选传入 ProxyGroupId 精确查询某一 Proxy；不传则返回该实例下的全部 Proxy。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeDBProxyResponse"/></returns>
+        public Task<DescribeDBProxyResponse> DescribeDBProxy(DescribeDBProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxyResponse>(req, "DescribeDBProxy");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBProxy）用于查询指定 PostgreSQL 实例下的数据库代理（Proxy）信息，包含 Proxy 节点列表与接入地址列表。可选传入 ProxyGroupId 精确查询某一 Proxy；不传则返回该实例下的全部 Proxy。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeDBProxyResponse"/></returns>
+        public DescribeDBProxyResponse DescribeDBProxySync(DescribeDBProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxyResponse>(req, "DescribeDBProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询代理可售规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxySpecsRequest"/></param>
+        /// <returns><see cref="DescribeDBProxySpecsResponse"/></returns>
+        public Task<DescribeDBProxySpecsResponse> DescribeDBProxySpecs(DescribeDBProxySpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxySpecsResponse>(req, "DescribeDBProxySpecs");
+        }
+
+        /// <summary>
+        /// 查询代理可售规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxySpecsRequest"/></param>
+        /// <returns><see cref="DescribeDBProxySpecsResponse"/></returns>
+        public DescribeDBProxySpecsResponse DescribeDBProxySpecsSync(DescribeDBProxySpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxySpecsResponse>(req, "DescribeDBProxySpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBVersions）用于查询支持的数据库版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
@@ -1488,6 +1551,27 @@ namespace TencentCloud.Postgres.V20170312
         public DestroyDBInstanceResponse DestroyDBInstanceSync(DestroyDBInstanceRequest req)
         {
             return InternalRequestAsync<DestroyDBInstanceResponse>(req, "DestroyDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DestroyDBProxy）用于销毁指定的数据库代理（Proxy）。接口仅返回 RequestId，销毁动作由计费回调异步触发 ProxyDestroy 任务，内部统一完成「隔离 + 销毁」全部步骤（释放 VIP、解绑安全组、回收资源、上报计费等），用户无需先调用隔离接口。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBProxyRequest"/></param>
+        /// <returns><see cref="DestroyDBProxyResponse"/></returns>
+        public Task<DestroyDBProxyResponse> DestroyDBProxy(DestroyDBProxyRequest req)
+        {
+            return InternalRequestAsync<DestroyDBProxyResponse>(req, "DestroyDBProxy");
+        }
+
+        /// <summary>
+        /// 本接口（DestroyDBProxy）用于销毁指定的数据库代理（Proxy）。接口仅返回 RequestId，销毁动作由计费回调异步触发 ProxyDestroy 任务，内部统一完成「隔离 + 销毁」全部步骤（释放 VIP、解绑安全组、回收资源、上报计费等），用户无需先调用隔离接口。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBProxyRequest"/></param>
+        /// <returns><see cref="DestroyDBProxyResponse"/></returns>
+        public DestroyDBProxyResponse DestroyDBProxySync(DestroyDBProxyRequest req)
+        {
+            return InternalRequestAsync<DestroyDBProxyResponse>(req, "DestroyDBProxy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1979,6 +2063,48 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBProxy）用于修改数据库代理（Proxy）。支持两种模式：①仅修改 Description 时同步生效，不下单，DealName 为空；②变更 Proxy 节点规格或数量（ProxyNodeCustom）时走计费下单流程，异步触发变配任务，返回 DealName。可通过 SwitchTag 控制变配执行时机。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyDBProxyResponse"/></returns>
+        public Task<ModifyDBProxyResponse> ModifyDBProxy(ModifyDBProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxyResponse>(req, "ModifyDBProxy");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBProxy）用于修改数据库代理（Proxy）。支持两种模式：①仅修改 Description 时同步生效，不下单，DealName 为空；②变更 Proxy 节点规格或数量（ProxyNodeCustom）时走计费下单流程，异步触发变配任务，返回 DealName。可通过 SwitchTag 控制变配执行时机。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyDBProxyResponse"/></returns>
+        public ModifyDBProxyResponse ModifyDBProxySync(ModifyDBProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxyResponse>(req, "ModifyDBProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改代理地址配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxyAddressRequest"/></param>
+        /// <returns><see cref="ModifyDBProxyAddressResponse"/></returns>
+        public Task<ModifyDBProxyAddressResponse> ModifyDBProxyAddress(ModifyDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxyAddressResponse>(req, "ModifyDBProxyAddress");
+        }
+
+        /// <summary>
+        /// 修改代理地址配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxyAddressRequest"/></param>
+        /// <returns><see cref="ModifyDBProxyAddressResponse"/></returns>
+        public ModifyDBProxyAddressResponse ModifyDBProxyAddressSync(ModifyDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxyAddressResponse>(req, "ModifyDBProxyAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改数据库所有者
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseOwnerRequest"/></param>
@@ -2206,6 +2332,27 @@ namespace TencentCloud.Postgres.V20170312
         public RefreshAccountPasswordResponse RefreshAccountPasswordSync(RefreshAccountPasswordRequest req)
         {
             return InternalRequestAsync<RefreshAccountPasswordResponse>(req, "RefreshAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ReloadBalanceDBProxyNode）用于重新均衡数据库代理节点
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceDBProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceDBProxyNodeResponse"/></returns>
+        public Task<ReloadBalanceDBProxyNodeResponse> ReloadBalanceDBProxyNode(ReloadBalanceDBProxyNodeRequest req)
+        {
+            return InternalRequestAsync<ReloadBalanceDBProxyNodeResponse>(req, "ReloadBalanceDBProxyNode");
+        }
+
+        /// <summary>
+        /// 本接口（ReloadBalanceDBProxyNode）用于重新均衡数据库代理节点
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceDBProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceDBProxyNodeResponse"/></returns>
+        public ReloadBalanceDBProxyNodeResponse ReloadBalanceDBProxyNodeSync(ReloadBalanceDBProxyNodeRequest req)
+        {
+            return InternalRequestAsync<ReloadBalanceDBProxyNodeResponse>(req, "ReloadBalanceDBProxyNode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

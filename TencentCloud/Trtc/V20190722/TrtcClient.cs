@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1472";
 
         /// <summary>
         /// Client constructor.
@@ -243,6 +243,31 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 启动一路直播流审核。服务端异步拉流、定频截帧、音频切片、送审，通过回调返回结果。一次一个任务（一路流）。您可以通过此接口实现如下目标：
+        /// ●指定内容参数（LiveModerationParams）来指定内容理解需要的详细参数。
+        /// ●指定存储参数（LiveModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="CreateLiveStreamModerationResponse"/></returns>
+        public Task<CreateLiveStreamModerationResponse> CreateLiveStreamModeration(CreateLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<CreateLiveStreamModerationResponse>(req, "CreateLiveStreamModeration");
+        }
+
+        /// <summary>
+        /// 启动一路直播流审核。服务端异步拉流、定频截帧、音频切片、送审，通过回调返回结果。一次一个任务（一路流）。您可以通过此接口实现如下目标：
+        /// ●指定内容参数（LiveModerationParams）来指定内容理解需要的详细参数。
+        /// ●指定存储参数（LiveModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="CreateLiveStreamModerationResponse"/></returns>
+        public CreateLiveStreamModerationResponse CreateLiveStreamModerationSync(CreateLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<CreateLiveStreamModerationResponse>(req, "CreateLiveStreamModeration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
         /// </summary>
         /// <param name="req"><see cref="CreatePictureRequest"/></param>
@@ -365,6 +390,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudTranscriptionResponse DeleteCloudTranscriptionSync(DeleteCloudTranscriptionRequest req)
         {
             return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启直播流AI 内容理解任务后，可以使用此接口来停止进行内容识别。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="DeleteLiveStreamModerationResponse"/></returns>
+        public Task<DeleteLiveStreamModerationResponse> DeleteLiveStreamModeration(DeleteLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveStreamModerationResponse>(req, "DeleteLiveStreamModeration");
+        }
+
+        /// <summary>
+        /// 成功开启直播流AI 内容理解任务后，可以使用此接口来停止进行内容识别。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="DeleteLiveStreamModerationResponse"/></returns>
+        public DeleteLiveStreamModerationResponse DeleteLiveStreamModerationSync(DeleteLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveStreamModerationResponse>(req, "DeleteLiveStreamModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -587,6 +633,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCloudTranscriptionResponse DescribeCloudTranscriptionSync(DescribeCloudTranscriptionRequest req)
         {
             return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启直播流AI 内容理解任务后，可以使用此接口来查询AI 内容理解任务状态，仅在任务进行时有效，任务退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamModerationResponse"/></returns>
+        public Task<DescribeLiveStreamModerationResponse> DescribeLiveStreamModeration(DescribeLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveStreamModerationResponse>(req, "DescribeLiveStreamModeration");
+        }
+
+        /// <summary>
+        /// 成功开启直播流AI 内容理解任务后，可以使用此接口来查询AI 内容理解任务状态，仅在任务进行时有效，任务退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamModerationRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamModerationResponse"/></returns>
+        public DescribeLiveStreamModerationResponse DescribeLiveStreamModerationSync(DescribeLiveStreamModerationRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveStreamModerationResponse>(req, "DescribeLiveStreamModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

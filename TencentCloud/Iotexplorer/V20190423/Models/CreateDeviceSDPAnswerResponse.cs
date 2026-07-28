@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// SDP应答
+        /// <p>SDP应答</p>
         /// </summary>
         [JsonProperty("SDPAnswer")]
         public string SDPAnswer{ get; set; }

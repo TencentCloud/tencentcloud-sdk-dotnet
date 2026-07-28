@@ -25,28 +25,34 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// SDP提议
+        /// <p>SDP提议</p>
         /// </summary>
         [JsonProperty("SDPOffer")]
         public string SDPOffer{ get; set; }
 
         /// <summary>
-        /// 客户自定义拉流标识
+        /// <p>客户自定义拉流标识</p>
         /// </summary>
         [JsonProperty("RequesterTag")]
         public string RequesterTag{ get; set; }
+
+        /// <summary>
+        /// <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("EnableSubPub")]
+        public ulong? EnableSubPub{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "SDPOffer", this.SDPOffer);
             this.SetParamSimple(map, prefix + "RequesterTag", this.RequesterTag);
+            this.SetParamSimple(map, prefix + "EnableSubPub", this.EnableSubPub);
         }
     }
 }

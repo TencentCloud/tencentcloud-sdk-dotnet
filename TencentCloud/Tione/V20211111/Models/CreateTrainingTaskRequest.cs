@@ -186,6 +186,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Envs")]
         public EnvVar[] Envs{ get; set; }
 
+        /// <summary>
+        /// <p>训练诊断工具配置</p>
+        /// </summary>
+        [JsonProperty("TrainToolConfig")]
+        public TrainToolConfig TrainToolConfig{ get; set; }
+
+        /// <summary>
+        /// <p>资源供应属性</p>
+        /// </summary>
+        [JsonProperty("ResourceSupplyAttribute")]
+        public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +231,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
             this.SetParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamObj(map, prefix + "TrainToolConfig.", this.TrainToolConfig);
+            this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
         }
     }
 }

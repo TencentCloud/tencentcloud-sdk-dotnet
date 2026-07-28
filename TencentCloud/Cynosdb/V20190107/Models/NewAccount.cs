@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+        /// <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 主机(%或ipv4地址)
+        /// <p>主机(%或ipv4地址)</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 密码，密码长度范围为8到64个字符
+        /// <p>密码，密码长度范围为8到64个字符</p>
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// 是否开启密码轮转(0:关闭;1:开启)
+        /// <p>是否开启密码轮转(0:关闭;1:开启)</p>
         /// </summary>
         [JsonProperty("PasswordRotation")]
         public long? PasswordRotation{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用户最大连接数，不能大于10240
+        /// <p>用户最大连接数，不能大于10240</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }

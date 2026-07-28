@@ -96,6 +96,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+        /// </summary>
+        [JsonProperty("LogStream")]
+        public string LogStream{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "LogStream", this.LogStream);
         }
     }
 }

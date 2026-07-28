@@ -31,7 +31,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public ContainerNetwork ContainerNetwork{ get; set; }
 
         /// <summary>
-        /// <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+        /// <p>集群名称</p><p>入参限制：最长128个字符。</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

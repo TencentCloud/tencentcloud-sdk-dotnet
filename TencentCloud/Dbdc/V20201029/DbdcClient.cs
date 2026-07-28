@@ -28,7 +28,7 @@ namespace TencentCloud.Dbdc.V20201029
 
        private const string endpoint = "dbdc.tencentcloudapi.com";
        private const string version = "2020-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1454";
+       private const string sdkVersion = "SDK_NET_3.0.1472";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（AddNodesToDBCustomCluster）用于为 DB Custom 集群上架节点。
+        /// 该接口（AddNodesToDBCustomCluster）用于为 DB Custom 集群添加已存在的节点。
         /// </summary>
         /// <param name="req"><see cref="AddNodesToDBCustomClusterRequest"/></param>
         /// <returns><see cref="AddNodesToDBCustomClusterResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（AddNodesToDBCustomCluster）用于为 DB Custom 集群上架节点。
+        /// 该接口（AddNodesToDBCustomCluster）用于为 DB Custom 集群添加已存在的节点。
         /// </summary>
         /// <param name="req"><see cref="AddNodesToDBCustomClusterRequest"/></param>
         /// <returns><see cref="AddNodesToDBCustomClusterResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（DescribeDBCustomClusters）为DB Custom 集群列表查询接口。
+        /// 该接口（DescribeDBCustomClusters）为 DB Custom 集群列表查询接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCustomClustersRequest"/></param>
         /// <returns><see cref="DescribeDBCustomClustersResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（DescribeDBCustomClusters）为DB Custom 集群列表查询接口。
+        /// 该接口（DescribeDBCustomClusters）为 DB Custom 集群列表查询接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCustomClustersRequest"/></param>
         /// <returns><see cref="DescribeDBCustomClustersResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群的标签配置。
+        /// 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomClusterTagsRequest"/></param>
         /// <returns><see cref="ModifyDBCustomClusterTagsResponse"/></returns>
@@ -463,7 +463,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群的标签配置。
+        /// 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomClusterTagsRequest"/></param>
         /// <returns><see cref="ModifyDBCustomClusterTagsResponse"/></returns>
@@ -474,7 +474,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点的标签配置。
+        /// 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点绑定的标签。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomNodeTagsRequest"/></param>
         /// <returns><see cref="ModifyDBCustomNodeTagsResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点的标签配置。
+        /// 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点绑定的标签。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomNodeTagsRequest"/></param>
         /// <returns><see cref="ModifyDBCustomNodeTagsResponse"/></returns>
@@ -516,7 +516,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移除节点。
+        /// 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。
         /// </summary>
         /// <param name="req"><see cref="RemoveNodesFromDBCustomClusterRequest"/></param>
         /// <returns><see cref="RemoveNodesFromDBCustomClusterResponse"/></returns>
@@ -526,7 +526,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移除节点。
+        /// 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。
         /// </summary>
         /// <param name="req"><see cref="RemoveNodesFromDBCustomClusterRequest"/></param>
         /// <returns><see cref="RemoveNodesFromDBCustomClusterResponse"/></returns>
@@ -537,7 +537,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（RenewDBCustomNode）用于给 DB Custom 节点续费。
+        /// 该接口（RenewDBCustomNode）用于给 DB Custom 节点续费，或者给已经隔离的实例解除隔离。
         /// </summary>
         /// <param name="req"><see cref="RenewDBCustomNodeRequest"/></param>
         /// <returns><see cref="RenewDBCustomNodeResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
-        /// 该接口（RenewDBCustomNode）用于给 DB Custom 节点续费。
+        /// 该接口（RenewDBCustomNode）用于给 DB Custom 节点续费，或者给已经隔离的实例解除隔离。
         /// </summary>
         /// <param name="req"><see cref="RenewDBCustomNodeRequest"/></param>
         /// <returns><see cref="RenewDBCustomNodeResponse"/></returns>
