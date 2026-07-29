@@ -25,37 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+        /// <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+        /// <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
+        /// <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p>
         /// </summary>
         [JsonProperty("QueryString")]
         public string QueryString{ get; set; }
 
         /// <summary>
-        /// 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+        /// <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+        /// <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+        /// <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

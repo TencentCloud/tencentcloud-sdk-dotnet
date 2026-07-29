@@ -103,10 +103,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>切片类型，仅当 Format 为 HLS 时有效。</p>
+        /// <p>切片类型。</p><p>ts: HLS，内部映射为ts-segment</p><p>fmp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
+
+        /// <summary>
+        /// <p>切片平均时长</p><p>单位：秒</p><p>默认值：6</p><p>转自适应码流使用SegmentDuration设置分片时长，而非HlsTime字段.</p>
+        /// </summary>
+        [JsonProperty("SegmentDuration")]
+        public long? SegmentDuration{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
         }
     }
 }

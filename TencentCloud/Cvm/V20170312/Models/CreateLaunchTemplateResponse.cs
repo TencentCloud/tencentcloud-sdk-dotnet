@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。
+        /// <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("LaunchTemplateId")]
         public string LaunchTemplateId{ get; set; }

@@ -67,7 +67,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 实例部署模式。
+        /// 实例部署模式。MySQL 实例类型取值包括"STANDARD"-标准类型,"CUSTOM"-普通类型, "EXCLUSIVE"-独占类型, "CUSTOMER_AGENT"-用户代理类型, "CUSTOMER_DIRECT"-用户直连类型,
+        /// "CLOUD_NATIVE_CLUSTER_EXCLUSIVE"-云原生独占集群, "CLOUD_NATIVE_CLUSTER"-云原生集群。
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }

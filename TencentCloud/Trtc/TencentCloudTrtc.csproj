@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1472</VersionPrefix>
+    <VersionPrefix>3.0.1474</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,16 +61,12 @@
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
     <Compile Include="V20190722\Models\AudioFormat.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
-    <Compile Include="V20190722\Models\AuditStorageParams.cs" />
-    <Compile Include="V20190722\Models\CloudAuditStorage.cs" />
     <Compile Include="V20190722\Models\CloudModerationStorage.cs" />
     <Compile Include="V20190722\Models\CloudSliceStorage.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
-    <Compile Include="V20190722\Models\CreateBasicModerationRequest.cs" />
-    <Compile Include="V20190722\Models\CreateBasicModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
@@ -83,8 +79,6 @@
     <Compile Include="V20190722\Models\CreateLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
-    <Compile Include="V20190722\Models\DeleteBasicModerationRequest.cs" />
-    <Compile Include="V20190722\Models\DeleteBasicModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />

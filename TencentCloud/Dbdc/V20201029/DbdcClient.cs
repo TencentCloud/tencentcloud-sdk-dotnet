@@ -28,7 +28,7 @@ namespace TencentCloud.Dbdc.V20201029
 
        private const string endpoint = "dbdc.tencentcloudapi.com";
        private const string version = "2020-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1472";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,48 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（DescribeDBCustomClusterNodeConfig）用于查询 DB Custom 集群内节点的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterNodeConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterNodeConfigResponse"/></returns>
+        public Task<DescribeDBCustomClusterNodeConfigResponse> DescribeDBCustomClusterNodeConfig(DescribeDBCustomClusterNodeConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterNodeConfigResponse>(req, "DescribeDBCustomClusterNodeConfig");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomClusterNodeConfig）用于查询 DB Custom 集群内节点的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterNodeConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterNodeConfigResponse"/></returns>
+        public DescribeDBCustomClusterNodeConfigResponse DescribeDBCustomClusterNodeConfigSync(DescribeDBCustomClusterNodeConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterNodeConfigResponse>(req, "DescribeDBCustomClusterNodeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomClusterNodeResources）用于查询 DB Custom 集群内节点的资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterNodeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterNodeResourcesResponse"/></returns>
+        public Task<DescribeDBCustomClusterNodeResourcesResponse> DescribeDBCustomClusterNodeResources(DescribeDBCustomClusterNodeResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterNodeResourcesResponse>(req, "DescribeDBCustomClusterNodeResources");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomClusterNodeResources）用于查询 DB Custom 集群内节点的资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterNodeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterNodeResourcesResponse"/></returns>
+        public DescribeDBCustomClusterNodeResourcesResponse DescribeDBCustomClusterNodeResourcesSync(DescribeDBCustomClusterNodeResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterNodeResourcesResponse>(req, "DescribeDBCustomClusterNodeResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（DescribeDBCustomClusterNodes）用于查询 DB Custom 集群中的节点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCustomClusterNodesRequest"/></param>
@@ -197,6 +239,27 @@ namespace TencentCloud.Dbdc.V20201029
         public DescribeDBCustomClusterNodesResponse DescribeDBCustomClusterNodesSync(DescribeDBCustomClusterNodesRequest req)
         {
             return InternalRequestAsync<DescribeDBCustomClusterNodesResponse>(req, "DescribeDBCustomClusterNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomClusterResources）用于查询 DB Custom 集群的资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterResourcesResponse"/></returns>
+        public Task<DescribeDBCustomClusterResourcesResponse> DescribeDBCustomClusterResources(DescribeDBCustomClusterResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterResourcesResponse>(req, "DescribeDBCustomClusterResources");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomClusterResources）用于查询 DB Custom 集群的资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomClusterResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomClusterResourcesResponse"/></returns>
+        public DescribeDBCustomClusterResourcesResponse DescribeDBCustomClusterResourcesSync(DescribeDBCustomClusterResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomClusterResourcesResponse>(req, "DescribeDBCustomClusterResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +306,48 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（DescribeDBCustomNodeSecurityGroups）用于查询 DB Custom 节点安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomNodeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomNodeSecurityGroupsResponse"/></returns>
+        public Task<DescribeDBCustomNodeSecurityGroupsResponse> DescribeDBCustomNodeSecurityGroups(DescribeDBCustomNodeSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomNodeSecurityGroupsResponse>(req, "DescribeDBCustomNodeSecurityGroups");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomNodeSecurityGroups）用于查询 DB Custom 节点安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomNodeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomNodeSecurityGroupsResponse"/></returns>
+        public DescribeDBCustomNodeSecurityGroupsResponse DescribeDBCustomNodeSecurityGroupsSync(DescribeDBCustomNodeSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomNodeSecurityGroupsResponse>(req, "DescribeDBCustomNodeSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口(DescribeDBCustomNodeTypes) 用于查询 DB Custom 节点支持的机型信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomNodeTypesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomNodeTypesResponse"/></returns>
+        public Task<DescribeDBCustomNodeTypesResponse> DescribeDBCustomNodeTypes(DescribeDBCustomNodeTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomNodeTypesResponse>(req, "DescribeDBCustomNodeTypes");
+        }
+
+        /// <summary>
+        /// 该接口(DescribeDBCustomNodeTypes) 用于查询 DB Custom 节点支持的机型信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomNodeTypesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomNodeTypesResponse"/></returns>
+        public DescribeDBCustomNodeTypesResponse DescribeDBCustomNodeTypesSync(DescribeDBCustomNodeTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomNodeTypesResponse>(req, "DescribeDBCustomNodeTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（DescribeDBCustomNodes）用于查询 DB Custom 节点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCustomNodesRequest"/></param>
@@ -264,6 +369,27 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口(DescribeDBCustomRegions) 用于查询 DB Custom 支持的地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomRegionsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomRegionsResponse"/></returns>
+        public Task<DescribeDBCustomRegionsResponse> DescribeDBCustomRegions(DescribeDBCustomRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomRegionsResponse>(req, "DescribeDBCustomRegions");
+        }
+
+        /// <summary>
+        /// 该接口(DescribeDBCustomRegions) 用于查询 DB Custom 支持的地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomRegionsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomRegionsResponse"/></returns>
+        public DescribeDBCustomRegionsResponse DescribeDBCustomRegionsSync(DescribeDBCustomRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomRegionsResponse>(req, "DescribeDBCustomRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（DescribeDBCustomTaskStatus）用于查询 DB Custom 任务的状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCustomTaskStatusRequest"/></param>
@@ -281,6 +407,27 @@ namespace TencentCloud.Dbdc.V20201029
         public DescribeDBCustomTaskStatusResponse DescribeDBCustomTaskStatusSync(DescribeDBCustomTaskStatusRequest req)
         {
             return InternalRequestAsync<DescribeDBCustomTaskStatusResponse>(req, "DescribeDBCustomTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口(DescribeDBCustomZones) 用于查询指定地域的 DB Custom 可用区列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomZonesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomZonesResponse"/></returns>
+        public Task<DescribeDBCustomZonesResponse> DescribeDBCustomZones(DescribeDBCustomZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomZonesResponse>(req, "DescribeDBCustomZones");
+        }
+
+        /// <summary>
+        /// 该接口(DescribeDBCustomZones) 用于查询指定地域的 DB Custom 可用区列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomZonesRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomZonesResponse"/></returns>
+        public DescribeDBCustomZonesResponse DescribeDBCustomZonesSync(DescribeDBCustomZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomZonesResponse>(req, "DescribeDBCustomZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,6 +600,27 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomClusterNodeConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomClusterNodeConfigResponse"/></returns>
+        public Task<ModifyDBCustomClusterNodeConfigResponse> ModifyDBCustomClusterNodeConfig(ModifyDBCustomClusterNodeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomClusterNodeConfigResponse>(req, "ModifyDBCustomClusterNodeConfig");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomClusterNodeConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomClusterNodeConfigResponse"/></returns>
+        public ModifyDBCustomClusterNodeConfigResponse ModifyDBCustomClusterNodeConfigSync(ModifyDBCustomClusterNodeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomClusterNodeConfigResponse>(req, "ModifyDBCustomClusterNodeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomClusterTagsRequest"/></param>
@@ -470,6 +638,27 @@ namespace TencentCloud.Dbdc.V20201029
         public ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTagsSync(ModifyDBCustomClusterTagsRequest req)
         {
             return InternalRequestAsync<ModifyDBCustomClusterTagsResponse>(req, "ModifyDBCustomClusterTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeSecurityGroupsResponse"/></returns>
+        public Task<ModifyDBCustomNodeSecurityGroupsResponse> ModifyDBCustomNodeSecurityGroups(ModifyDBCustomNodeSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeSecurityGroupsResponse>(req, "ModifyDBCustomNodeSecurityGroups");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeSecurityGroupsResponse"/></returns>
+        public ModifyDBCustomNodeSecurityGroupsResponse ModifyDBCustomNodeSecurityGroupsSync(ModifyDBCustomNodeSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeSecurityGroupsResponse>(req, "ModifyDBCustomNodeSecurityGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1474</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -169,6 +169,8 @@
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="V20210527\Models\CreateDBDiagReportUrlsRequest.cs" />
+    <Compile Include="V20210527\Models\CreateDBDiagReportUrlsResponse.cs" />
     <Compile Include="V20210527\Models\CreateIgnoreDiagRecordRequest.cs" />
     <Compile Include="V20210527\Models\CreateIgnoreDiagRecordResponse.cs" />
     <Compile Include="V20210527\Models\CreateKillTaskRequest.cs" />
@@ -227,6 +229,8 @@
     <Compile Include="V20210527\Models\DescribeDBDiagReportContentResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagReportTasksRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagReportTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBPerfTimeSeriesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBPerfTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBSpaceStatusRequest.cs" />
@@ -310,6 +314,7 @@
     <Compile Include="V20210527\Models\DescribeUserSqlAdviceRequest.cs" />
     <Compile Include="V20210527\Models\DescribeUserSqlAdviceResponse.cs" />
     <Compile Include="V20210527\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="V20210527\Models\DiagReportUrlItem.cs" />
     <Compile Include="V20210527\Models\EventInfo.cs" />
     <Compile Include="V20210527\Models\GroupItem.cs" />
     <Compile Include="V20210527\Models\HealthReportTask.cs" />
@@ -322,6 +327,7 @@
     <Compile Include="V20210527\Models\InstanceConfs.cs" />
     <Compile Include="V20210527\Models\InstanceID.cs" />
     <Compile Include="V20210527\Models\InstanceInfo.cs" />
+    <Compile Include="V20210527\Models\InstanceItem.cs" />
     <Compile Include="V20210527\Models\IssueTypeInfo.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsRequest.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsResponse.cs" />
@@ -380,6 +386,9 @@
     <Compile Include="V20210527\Models\Table.cs" />
     <Compile Include="V20210527\Models\TableSpaceData.cs" />
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
+    <Compile Include="V20210527\Models\TagFilterGroup.cs" />
+    <Compile Include="V20210527\Models\TagInfo.cs" />
+    <Compile Include="V20210527\Models\TagPair.cs" />
     <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20210527\Models\TemplateInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />

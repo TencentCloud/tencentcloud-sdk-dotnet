@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p>
+        /// <p>模型等级。flagship（默认）、standard</p>
         /// </summary>
         [JsonProperty("ModelTier")]
         public string ModelTier{ get; set; }

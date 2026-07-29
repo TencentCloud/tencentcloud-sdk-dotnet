@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1472";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -2291,6 +2291,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeHostsSettingResponse DescribeHostsSettingSync(DescribeHostsSettingRequest req)
         {
             return InternalRequestAsync<DescribeHostsSettingResponse>(req, "DescribeHostsSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取使用 IP 分组的策略配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeIPGroupReferencesResponse"/></returns>
+        public Task<DescribeIPGroupReferencesResponse> DescribeIPGroupReferences(DescribeIPGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPGroupReferencesResponse>(req, "DescribeIPGroupReferences");
+        }
+
+        /// <summary>
+        /// 获取使用 IP 分组的策略配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeIPGroupReferencesResponse"/></returns>
+        public DescribeIPGroupReferencesResponse DescribeIPGroupReferencesSync(DescribeIPGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPGroupReferencesResponse>(req, "DescribeIPGroupReferences")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tcb.V20180608.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeCloudAppCosInfoRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 环境id
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
+        /// 服务名
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// 部署类型
+        /// </summary>
+        [JsonProperty("DeployType")]
+        public string DeployType{ get; set; }
+
+        /// <summary>
+        /// 时间戳
+        /// </summary>
+        [JsonProperty("UnixTimestamp")]
+        public string UnixTimestamp{ get; set; }
+
+        /// <summary>
+        /// 文件后缀
+        /// </summary>
+        [JsonProperty("Suffix")]
+        public string Suffix{ get; set; }
+
+        /// <summary>
+        /// 是否需要下载
+        /// </summary>
+        [JsonProperty("NeedDownload")]
+        public bool? NeedDownload{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "DeployType", this.DeployType);
+            this.SetParamSimple(map, prefix + "UnixTimestamp", this.UnixTimestamp);
+            this.SetParamSimple(map, prefix + "Suffix", this.Suffix);
+            this.SetParamSimple(map, prefix + "NeedDownload", this.NeedDownload);
+        }
+    }
+}
+

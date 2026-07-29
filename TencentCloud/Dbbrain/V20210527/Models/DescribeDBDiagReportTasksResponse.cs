@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 任务总数目。
+        /// <p>任务总数目。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务列表。
+        /// <p>任务列表。</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public HealthReportTask[] Tasks{ get; set; }

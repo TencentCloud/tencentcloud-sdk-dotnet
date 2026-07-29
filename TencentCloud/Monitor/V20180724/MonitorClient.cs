@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -1252,6 +1252,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacksSync(DescribeAlarmNoticeCallbacksRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNoticeCallbacksResponse>(req, "DescribeAlarmNoticeCallbacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询通知模板中配置的发送用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse"/></returns>
+        public Task<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse> DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse>(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID");
+        }
+
+        /// <summary>
+        /// 查询通知模板中配置的发送用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse"/></returns>
+        public DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDSync(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse>(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

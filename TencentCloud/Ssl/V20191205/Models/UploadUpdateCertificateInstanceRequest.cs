@@ -25,34 +25,40 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+        /// <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 需要部署的资源类型，参数值可选（小写）：clb
+        /// <p>需要部署的资源类型，参数值可选（小写）：clb</p>
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// 公钥证书
+        /// <p>公钥证书</p>
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// 私钥证书
+        /// <p>私钥证书</p>
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+        /// <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
         /// </summary>
         [JsonProperty("ResourceTypesRegions")]
         public ResourceTypeRegions[] ResourceTypesRegions{ get; set; }
+
+        /// <summary>
+        /// <p>证书ID</p>
+        /// </summary>
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertificatePublicKey", this.CertificatePublicKey);
             this.SetParamSimple(map, prefix + "CertificatePrivateKey", this.CertificatePrivateKey);
             this.SetParamArrayObj(map, prefix + "ResourceTypesRegions.", this.ResourceTypesRegions);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
         }
     }
 }

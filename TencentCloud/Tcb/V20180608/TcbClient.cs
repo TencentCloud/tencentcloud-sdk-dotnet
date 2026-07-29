@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1471";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -291,6 +291,27 @@ namespace TencentCloud.Tcb.V20180608
         public CreateBillDealResponse CreateBillDealSync(CreateBillDealRequest req)
         {
             return InternalRequestAsync<CreateBillDealResponse>(req, "CreateBillDeal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudAppRequest"/></param>
+        /// <returns><see cref="CreateCloudAppResponse"/></returns>
+        public Task<CreateCloudAppResponse> CreateCloudApp(CreateCloudAppRequest req)
+        {
+            return InternalRequestAsync<CreateCloudAppResponse>(req, "CreateCloudApp");
+        }
+
+        /// <summary>
+        /// 创建云应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudAppRequest"/></param>
+        /// <returns><see cref="CreateCloudAppResponse"/></returns>
+        public CreateCloudAppResponse CreateCloudAppSync(CreateCloudAppRequest req)
+        {
+            return InternalRequestAsync<CreateCloudAppResponse>(req, "CreateCloudApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -636,6 +657,48 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 删除云应用服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudAppRequest"/></param>
+        /// <returns><see cref="DeleteCloudAppResponse"/></returns>
+        public Task<DeleteCloudAppResponse> DeleteCloudApp(DeleteCloudAppRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudAppResponse>(req, "DeleteCloudApp");
+        }
+
+        /// <summary>
+        /// 删除云应用服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudAppRequest"/></param>
+        /// <returns><see cref="DeleteCloudAppResponse"/></returns>
+        public DeleteCloudAppResponse DeleteCloudAppSync(DeleteCloudAppRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudAppResponse>(req, "DeleteCloudApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云应用服务版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudAppVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudAppVersionResponse"/></returns>
+        public Task<DeleteCloudAppVersionResponse> DeleteCloudAppVersion(DeleteCloudAppVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudAppVersionResponse>(req, "DeleteCloudAppVersion");
+        }
+
+        /// <summary>
+        /// 删除云应用服务版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudAppVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudAppVersionResponse"/></returns>
+        public DeleteCloudAppVersionResponse DeleteCloudAppVersionSync(DeleteCloudAppVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudAppVersionResponse>(req, "DeleteCloudAppVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
         /// </summary>
         /// <param name="req"><see cref="DeleteHTTPServiceRouteRequest"/></param>
@@ -893,6 +956,48 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取云应用cos信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppCosInfoRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppCosInfoResponse"/></returns>
+        public Task<DescribeCloudAppCosInfoResponse> DescribeCloudAppCosInfo(DescribeCloudAppCosInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppCosInfoResponse>(req, "DescribeCloudAppCosInfo");
+        }
+
+        /// <summary>
+        /// 获取云应用cos信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppCosInfoRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppCosInfoResponse"/></returns>
+        public DescribeCloudAppCosInfoResponse DescribeCloudAppCosInfoSync(DescribeCloudAppCosInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppCosInfoResponse>(req, "DescribeCloudAppCosInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppInfoRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppInfoResponse"/></returns>
+        public Task<DescribeCloudAppInfoResponse> DescribeCloudAppInfo(DescribeCloudAppInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppInfoResponse>(req, "DescribeCloudAppInfo");
+        }
+
+        /// <summary>
+        /// 查询应用服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppInfoRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppInfoResponse"/></returns>
+        public DescribeCloudAppInfoResponse DescribeCloudAppInfoSync(DescribeCloudAppInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppInfoResponse>(req, "DescribeCloudAppInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询云应用服务列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudAppListRequest"/></param>
@@ -910,6 +1015,48 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCloudAppListResponse DescribeCloudAppListSync(DescribeCloudAppListRequest req)
         {
             return InternalRequestAsync<DescribeCloudAppListResponse>(req, "DescribeCloudAppList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云应用服务版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppVersionResponse"/></returns>
+        public Task<DescribeCloudAppVersionResponse> DescribeCloudAppVersion(DescribeCloudAppVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppVersionResponse>(req, "DescribeCloudAppVersion");
+        }
+
+        /// <summary>
+        /// 查询云应用服务版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppVersionResponse"/></returns>
+        public DescribeCloudAppVersionResponse DescribeCloudAppVersionSync(DescribeCloudAppVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppVersionResponse>(req, "DescribeCloudAppVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云应用服务版本列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppVersionListResponse"/></returns>
+        public Task<DescribeCloudAppVersionListResponse> DescribeCloudAppVersionList(DescribeCloudAppVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppVersionListResponse>(req, "DescribeCloudAppVersionList");
+        }
+
+        /// <summary>
+        /// 查询云应用服务版本列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAppVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudAppVersionListResponse"/></returns>
+        public DescribeCloudAppVersionListResponse DescribeCloudAppVersionListSync(DescribeCloudAppVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAppVersionListResponse>(req, "DescribeCloudAppVersionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

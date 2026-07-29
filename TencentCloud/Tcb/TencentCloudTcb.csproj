@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1471</VersionPrefix>
+    <VersionPrefix>3.0.1474</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,9 +63,15 @@
     <Compile Include="V20180608\Models\BanConfig.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceRequest.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
+    <Compile Include="V20180608\Models\BuildCommands.cs" />
+    <Compile Include="V20180608\Models\BuildSecret.cs" />
+    <Compile Include="V20180608\Models\BuildSource.cs" />
+    <Compile Include="V20180608\Models\BuildStep.cs" />
+    <Compile Include="V20180608\Models\BuildStepStatus.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="V20180608\Models\CloudAppServiceItem.cs" />
+    <Compile Include="V20180608\Models\CloudAppVersionItem.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
     <Compile Include="V20180608\Models\CreateAIModelRequest.cs" />
@@ -76,6 +82,8 @@
     <Compile Include="V20180608\Models\CreateAuthDomainResponse.cs" />
     <Compile Include="V20180608\Models\CreateBillDealRequest.cs" />
     <Compile Include="V20180608\Models\CreateBillDealResponse.cs" />
+    <Compile Include="V20180608\Models\CreateCloudAppRequest.cs" />
+    <Compile Include="V20180608\Models\CreateCloudAppResponse.cs" />
     <Compile Include="V20180608\Models\CreateCustomLoginKeyRequest.cs" />
     <Compile Include="V20180608\Models\CreateCustomLoginKeyResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvRequest.cs" />
@@ -108,6 +116,10 @@
     <Compile Include="V20180608\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20180608\Models\DeleteAuthDomainRequest.cs" />
     <Compile Include="V20180608\Models\DeleteAuthDomainResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudAppRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudAppResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudAppVersionRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteCloudAppVersionResponse.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteRequest.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DeleteProviderRequest.cs" />
@@ -131,8 +143,16 @@
     <Compile Include="V20180608\Models\DescribeBillingInfoResponse.cs" />
     <Compile Include="V20180608\Models\DescribeClientRequest.cs" />
     <Compile Include="V20180608\Models\DescribeClientResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppCosInfoRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppCosInfoResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppInfoRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppInfoResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudAppListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudAppListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppVersionListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppVersionListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppVersionRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudAppVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
@@ -316,6 +336,9 @@
     <Compile Include="V20180608\Models\SMSTemplateParams.cs" />
     <Compile Include="V20180608\Models\SearchClsLogRequest.cs" />
     <Compile Include="V20180608\Models\SearchClsLogResponse.cs" />
+    <Compile Include="V20180608\Models\StaticCmd.cs" />
+    <Compile Include="V20180608\Models\StaticConfig.cs" />
+    <Compile Include="V20180608\Models\StaticEnvironment.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="V20180608\Models\StaticStoreInfo.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
@@ -334,6 +357,7 @@
     <Compile Include="V20180608\Models\VMSpec.cs" />
     <Compile Include="V20180608\Models\VMSpecLightHouse.cs" />
     <Compile Include="V20180608\Models\ValueDetail.cs" />
+    <Compile Include="V20180608\Models\Variable.cs" />
     <Compile Include="V20180608\Models\VerificationConfig.cs" />
     <Compile Include="V20180608\Models\VmInstance.cs" />
     <Compile Include="V20180608\Models\WxGatewayCustomConfig.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -3847,6 +3847,27 @@ namespace TencentCloud.Cdb.V20170320
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersionSync(UpgradeDBInstanceEngineVersionRequest req)
         {
             return InternalRequestAsync<UpgradeDBInstanceEngineVersionResponse>(req, "UpgradeDBInstanceEngineVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（UpgradeRoGroup）用于只读组升级为纯网络转发模式。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeRoGroupRequest"/></param>
+        /// <returns><see cref="UpgradeRoGroupResponse"/></returns>
+        public Task<UpgradeRoGroupResponse> UpgradeRoGroup(UpgradeRoGroupRequest req)
+        {
+            return InternalRequestAsync<UpgradeRoGroupResponse>(req, "UpgradeRoGroup");
+        }
+
+        /// <summary>
+        /// 该接口（UpgradeRoGroup）用于只读组升级为纯网络转发模式。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeRoGroupRequest"/></param>
+        /// <returns><see cref="UpgradeRoGroupResponse"/></returns>
+        public UpgradeRoGroupResponse UpgradeRoGroupSync(UpgradeRoGroupRequest req)
+        {
+            return InternalRequestAsync<UpgradeRoGroupResponse>(req, "UpgradeRoGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

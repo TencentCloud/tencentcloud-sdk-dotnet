@@ -192,6 +192,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
+        /// <summary>
+        /// <p>创建者UIN</p>
+        /// </summary>
+        [JsonProperty("CreatorUinString")]
+        public string CreatorUinString{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
             this.SetParamSimple(map, prefix + "AccountUin", this.AccountUin);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
+            this.SetParamSimple(map, prefix + "CreatorUinString", this.CreatorUinString);
         }
     }
 }

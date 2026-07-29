@@ -151,6 +151,18 @@ namespace TencentCloud.Kms.V20190118.Models
         public RegionQps[] RegionsQps{ get; set; }
 
         /// <summary>
+        /// <p>资源的地域信息</p>
+        /// </summary>
+        [JsonProperty("ResourceZone")]
+        public ulong? ResourceZone{ get; set; }
+
+        /// <summary>
+        /// <p>资源的地域可用区信息</p>
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public ulong? ResourceRegion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -183,6 +195,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
             this.SetParamSimple(map, prefix + "QpsTotalLimit", this.QpsTotalLimit);
             this.SetParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
+            this.SetParamSimple(map, prefix + "ResourceZone", this.ResourceZone);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,28 +25,25 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 应用型负载均衡实例列表。
+        /// <p>应用型负载均衡实例列表。</p>
         /// </summary>
         [JsonProperty("LoadBalancers")]
         public LoadBalancer[] LoadBalancers{ get; set; }
 
         /// <summary>
-        /// 分批次查询时每次显示的条目数。
-        /// 
+        /// <p>分批次查询时每次显示的条目数。</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// 是否拥有下一次查询的令牌（Token）。取值：
-        /// - 如果**NextToken**为空表示没有下一次查询。
-        /// - 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
+        /// <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// 列表条目数。
+        /// <p>列表条目数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

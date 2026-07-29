@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 异步任务ID。
+        /// <p>异步任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

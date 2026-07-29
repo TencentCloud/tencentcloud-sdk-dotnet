@@ -25,31 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 匹配检索条件的原始日志的数量
+        /// <p>匹配检索条件的原始日志的数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+        /// <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+        /// <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的是否为统计分析（即SQL）结果
+        /// <p>返回的是否为统计分析（即SQL）结果</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// 匹配检索条件的原始日志
+        /// <p>匹配检索条件的原始日志</p>
         /// </summary>
         [JsonProperty("Data")]
         public LogInfo[] Data{ get; set; }

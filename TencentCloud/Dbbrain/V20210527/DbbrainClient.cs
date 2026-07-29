@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1474";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public CreateDBDiagReportUrlResponse CreateDBDiagReportUrlSync(CreateDBDiagReportUrlRequest req)
         {
             return InternalRequestAsync<CreateDBDiagReportUrlResponse>(req, "CreateDBDiagReportUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量创建健康报告的PDF下载链接，支持一次获取多个报告的下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlsRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlsResponse"/></returns>
+        public Task<CreateDBDiagReportUrlsResponse> CreateDBDiagReportUrls(CreateDBDiagReportUrlsRequest req)
+        {
+            return InternalRequestAsync<CreateDBDiagReportUrlsResponse>(req, "CreateDBDiagReportUrls");
+        }
+
+        /// <summary>
+        /// 批量创建健康报告的PDF下载链接，支持一次获取多个报告的下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlsRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlsResponse"/></returns>
+        public CreateDBDiagReportUrlsResponse CreateDBDiagReportUrlsSync(CreateDBDiagReportUrlsRequest req)
+        {
+            return InternalRequestAsync<CreateDBDiagReportUrlsResponse>(req, "CreateDBDiagReportUrls")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -848,6 +869,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasksSync(DescribeDBDiagReportTasksRequest req)
         {
             return InternalRequestAsync<DescribeDBDiagReportTasksResponse>(req, "DescribeDBDiagReportTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据实例ID列表查询数据库实例基本信息，支持跨产品查询（MySQL、CynosDB、MariaDB、DCDB、MongoDB、PostgreSQL、Redis、TDStore等）。不支持分页，通过InstanceIds限制查询数量（最多100条）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances");
+        }
+
+        /// <summary>
+        /// 根据实例ID列表查询数据库实例基本信息，支持跨产品查询（MySQL、CynosDB、MariaDB、DCDB、MongoDB、PostgreSQL、Redis、TDStore等）。不支持分页，通过InstanceIds限制查询数量（最多100条）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

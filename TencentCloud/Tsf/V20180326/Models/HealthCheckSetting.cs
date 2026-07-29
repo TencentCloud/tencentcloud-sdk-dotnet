@@ -25,77 +25,77 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+        /// <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 容器延时启动健康检查的时间，单位秒。
+        /// <p>容器延时启动健康检查的时间，单位秒。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialDelaySeconds")]
         public ulong? InitialDelaySeconds{ get; set; }
 
         /// <summary>
-        /// 每次健康检查响应的最大超时时间，单位秒。
+        /// <p>每次健康检查响应的最大超时时间，单位秒。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeoutSeconds")]
         public ulong? TimeoutSeconds{ get; set; }
 
         /// <summary>
-        /// 进行健康检查的时间间隔，单位秒。
+        /// <p>进行健康检查的时间间隔，单位秒。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeriodSeconds")]
         public ulong? PeriodSeconds{ get; set; }
 
         /// <summary>
-        /// 表示后端容器从失败到成功的连续健康检查成功次数。
+        /// <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessThreshold")]
         public ulong? SuccessThreshold{ get; set; }
 
         /// <summary>
-        /// 表示后端容器从成功到失败的连续健康检查成功次数。
+        /// <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailureThreshold")]
         public ulong? FailureThreshold{ get; set; }
 
         /// <summary>
-        /// HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+        /// <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 健康检查端口，范围 1~65535 。
+        /// <p>健康检查端口，范围 1~65535 。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// HTTP 健康检查接口的请求路径。
+        /// <p>HTTP 健康检查接口的请求路径。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 执行命令检查方式，执行的命令。
+        /// <p>执行命令检查方式，执行的命令。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Command")]
         public string[] Command{ get; set; }
 
         /// <summary>
-        /// TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+        /// <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

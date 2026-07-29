@@ -25,52 +25,58 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 异步任务请求 ID。
+        /// <p>异步任务请求 ID。</p>
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public long? AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+        /// <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 任务完成进度，单位%。
+        /// <p>任务完成进度，单位%。</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 任务创建时间。
+        /// <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 任务开始执行时间。
+        /// <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务完成执行时间。
+        /// <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 任务所属实例的基础信息。
+        /// <p>任务所属实例的基础信息。</p>
         /// </summary>
         [JsonProperty("InstanceInfo")]
         public InstanceBasicInfo InstanceInfo{ get; set; }
 
         /// <summary>
-        /// 健康报告中的健康信息。
+        /// <p>健康报告中的健康信息。</p>
         /// </summary>
         [JsonProperty("HealthStatus")]
         public HealthStatus HealthStatus{ get; set; }
+
+        /// <summary>
+        /// <p>任务所属实例的标签信息</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
             this.SetParamObj(map, prefix + "HealthStatus.", this.HealthStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

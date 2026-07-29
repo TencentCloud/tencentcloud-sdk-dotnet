@@ -330,6 +330,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("RemarkName")]
         public string RemarkName{ get; set; }
 
+        /// <summary>
+        /// <p>BiosUUID（启动盘标识符）</p>
+        /// </summary>
+        [JsonProperty("BiosUuid")]
+        public string BiosUuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +393,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
             this.SetParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
+            this.SetParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
         }
     }
 }

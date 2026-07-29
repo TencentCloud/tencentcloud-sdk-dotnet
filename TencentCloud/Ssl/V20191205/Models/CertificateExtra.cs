@@ -25,50 +25,62 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书可配置域名数量。
+        /// <p>证书可配置域名数量。</p>
         /// </summary>
         [JsonProperty("DomainNumber")]
         public string DomainNumber{ get; set; }
 
         /// <summary>
-        /// 续费原证书 ID。
+        /// <p>续费原证书 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginCertificateId")]
         public string OriginCertificateId{ get; set; }
 
         /// <summary>
-        /// 重颁发证书原始 ID。
+        /// <p>重颁发证书原始 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplacedBy")]
         public string ReplacedBy{ get; set; }
 
         /// <summary>
-        /// 重颁发证书ID。
+        /// <p>重颁发证书ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplacedFor")]
         public string ReplacedFor{ get; set; }
 
         /// <summary>
-        /// 续费证书 ID。
+        /// <p>续费证书 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewOrder")]
         public string RenewOrder{ get; set; }
 
         /// <summary>
-        /// 是否是国密证书
+        /// <p>是否是国密证书</p>
         /// </summary>
         [JsonProperty("SMCert")]
         public long? SMCert{ get; set; }
 
         /// <summary>
-        /// 公司类型，取值：1（个人）；2（公司）
+        /// <p>公司类型，取值：1（个人）；2（公司）</p>
         /// </summary>
         [JsonProperty("CompanyType")]
         public long? CompanyType{ get; set; }
+
+        /// <summary>
+        /// <p>下一张订阅服务续期证书ID</p>
+        /// </summary>
+        [JsonProperty("ServiceRenewCertificateId")]
+        public string ServiceRenewCertificateId{ get; set; }
+
+        /// <summary>
+        /// <p>上一张订阅服务来源证书ID</p>
+        /// </summary>
+        [JsonProperty("ServiceOriginCertificateId")]
+        public string ServiceOriginCertificateId{ get; set; }
 
 
         /// <summary>
@@ -83,6 +95,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
             this.SetParamSimple(map, prefix + "SMCert", this.SMCert);
             this.SetParamSimple(map, prefix + "CompanyType", this.CompanyType);
+            this.SetParamSimple(map, prefix + "ServiceRenewCertificateId", this.ServiceRenewCertificateId);
+            this.SetParamSimple(map, prefix + "ServiceOriginCertificateId", this.ServiceOriginCertificateId);
         }
     }
 }
