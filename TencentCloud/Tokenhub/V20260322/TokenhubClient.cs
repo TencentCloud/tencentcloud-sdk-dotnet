@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1464";
+       private const string sdkVersion = "SDK_NET_3.0.1476";
 
         /// <summary>
         /// Client constructor.
@@ -104,7 +104,7 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
-        /// 创建术语库。(单个用户默认最多可以创建50个术语库，支持加白)
+        /// 创建术语库。(单个用户默认最多可以创建50个术语库)
         /// 
         /// 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
         /// </summary>
@@ -116,7 +116,7 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
-        /// 创建术语库。(单个用户默认最多可以创建50个术语库，支持加白)
+        /// 创建术语库。(单个用户默认最多可以创建50个术语库)
         /// 
         /// 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
         /// </summary>

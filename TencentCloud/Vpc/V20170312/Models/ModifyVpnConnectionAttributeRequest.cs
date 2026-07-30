@@ -25,97 +25,97 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN通道实例ID。形如：vpnx-f49l6u0z。
+        /// <p>VPN通道实例ID。形如：vpnx-f49l6u0z。</p>
         /// </summary>
         [JsonProperty("VpnConnectionId")]
         public string VpnConnectionId{ get; set; }
 
         /// <summary>
-        /// VPN通道名称，可任意命名，但不得超过60个字符。
+        /// <p>VPN通道名称，可任意命名，但不得超过60个字符。</p>
         /// </summary>
         [JsonProperty("VpnConnectionName")]
         public string VpnConnectionName{ get; set; }
 
         /// <summary>
-        /// 预共享密钥。
+        /// <p>预共享密钥。</p>
         /// </summary>
         [JsonProperty("PreShareKey")]
         public string PreShareKey{ get; set; }
 
         /// <summary>
-        /// SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+        /// <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p>
         /// </summary>
         [JsonProperty("SecurityPolicyDatabases")]
         public SecurityPolicyDatabase[] SecurityPolicyDatabases{ get; set; }
 
         /// <summary>
-        /// IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
+        /// <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。</p>
         /// </summary>
         [JsonProperty("IKEOptionsSpecification")]
         public IKEOptionsSpecification IKEOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// IPSec配置，腾讯云提供IPSec安全会话设置。
+        /// <p>IPSec配置，腾讯云提供IPSec安全会话设置。</p>
         /// </summary>
         [JsonProperty("IPSECOptionsSpecification")]
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// 是否启用通道健康检查，默认为False。
+        /// <p>是否启用通道健康检查，默认为False。</p>
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 本端通道探测IP。
+        /// <p>本端通道探测IP。</p>
         /// </summary>
         [JsonProperty("HealthCheckLocalIp")]
         public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// 对端通道探测IP。
+        /// <p>对端通道探测IP。</p>
         /// </summary>
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }
 
         /// <summary>
-        /// 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+        /// <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p>
         /// </summary>
         [JsonProperty("NegotiationType")]
         public string NegotiationType{ get; set; }
 
         /// <summary>
-        /// DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+        /// <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
         /// </summary>
         [JsonProperty("DpdEnable")]
         public long? DpdEnable{ get; set; }
 
         /// <summary>
-        /// DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+        /// <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p>
         /// </summary>
         [JsonProperty("DpdTimeout")]
         public string DpdTimeout{ get; set; }
 
         /// <summary>
-        /// DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+        /// <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p><p>默认值：restart</p>
         /// </summary>
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
 
         /// <summary>
-        /// 对端网关ID，4.0及以上网关下的通道支持更新。
+        /// <p>对端网关ID，4.0及以上网关下的通道支持更新。</p>
         /// </summary>
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
 
         /// <summary>
-        /// 健康检查配置
+        /// <p>健康检查配置</p>
         /// </summary>
         [JsonProperty("HealthCheckConfig")]
         public HealthCheckConfig HealthCheckConfig{ get; set; }
 
         /// <summary>
-        /// BGP隧道配置
+        /// <p>BGP隧道配置</p>
         /// </summary>
         [JsonProperty("BgpConfig")]
         public BgpConfig BgpConfig{ get; set; }

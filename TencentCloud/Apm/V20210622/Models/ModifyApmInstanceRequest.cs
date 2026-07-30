@@ -283,22 +283,28 @@ namespace TencentCloud.Apm.V20210622.Models
         public string LogSpanIdKey{ get; set; }
 
         /// <summary>
-        /// <p>是否开启探针头采样</p>
+        /// <p>是否开启探针头采样</p><p>（受限）</p>
         /// </summary>
         [JsonProperty("EnableHeadSampler")]
         public bool? EnableHeadSampler{ get; set; }
 
         /// <summary>
-        /// <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+        /// <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
         /// </summary>
         [JsonProperty("HeadSamplerType")]
         public string HeadSamplerType{ get; set; }
 
         /// <summary>
-        /// <p>头采采样率</p><p>取值范围：[0, 100]</p>
+        /// <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
         /// </summary>
         [JsonProperty("HeadSamplerArg")]
         public long? HeadSamplerArg{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁用 AI 能力</p><p>单位：无</p>
+        /// </summary>
+        [JsonProperty("DisableAiAbility")]
+        public long? DisableAiAbility{ get; set; }
 
 
         /// <summary>
@@ -352,6 +358,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
             this.SetParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
             this.SetParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+            this.SetParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
         }
     }
 }

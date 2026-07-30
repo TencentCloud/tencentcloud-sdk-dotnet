@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filters : AbstractModel
+    public class AiCutoutConfig : AbstractModel
     {
         
         /// <summary>
-        /// 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
+        /// <p>能力配置开关，可选值：  ON：开启； OFF：关闭。 默认值：ON。</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 过滤条件值列表
+        /// <p>抠图目标类型指定：&quot;foreground&quot;（默认）/ &quot;pattern&quot;</p>
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 是否精确匹配：1 精确匹配；默认模糊匹配
+        /// <p>图案抠图配置。仅在Type为pattern时生效。</p>
         /// </summary>
-        [JsonProperty("ExactMatch")]
-        public string ExactMatch{ get; set; }
+        [JsonProperty("PatternConfig")]
+        public PatternConfig PatternConfig{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "PatternConfig.", this.PatternConfig);
         }
     }
 }

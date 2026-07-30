@@ -55,6 +55,18 @@ namespace TencentCloud.Tdai.V20250717.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
+        /// <summary>
         /// <p>记忆条数</p>
         /// </summary>
         [JsonProperty("MemoryUsage")]
@@ -71,6 +83,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// <p>版本号</p>
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
         /// <p>创建时间</p>
@@ -107,9 +125,12 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "IsolatedAt", this.IsolatedAt);
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);

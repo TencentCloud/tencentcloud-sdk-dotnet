@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filters : AbstractModel
+    public class UpdateInstancePublicAccessResponse : AbstractModel
     {
         
         /// <summary>
-        /// 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
+        /// 订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
         /// <summary>
-        /// 过滤条件值列表
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
-        /// 是否精确匹配：1 精确匹配；默认模糊匹配
-        /// </summary>
-        [JsonProperty("ExactMatch")]
-        public string ExactMatch{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

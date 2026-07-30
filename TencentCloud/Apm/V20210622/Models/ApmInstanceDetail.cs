@@ -366,6 +366,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("LogSpanIdKey")]
         public string LogSpanIdKey{ get; set; }
 
+        /// <summary>
+        /// <p>是否禁用 AI 能力</p><p>单位：无</p>
+        /// </summary>
+        [JsonProperty("DisableAiAbility")]
+        public long? DisableAiAbility{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -429,6 +435,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
             this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
             this.SetParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+            this.SetParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
         }
     }
 }

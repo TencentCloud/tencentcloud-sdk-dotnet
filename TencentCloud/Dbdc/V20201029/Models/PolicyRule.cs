@@ -61,7 +61,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string AddressModule{ get; set; }
 
         /// <summary>
-        /// <p>规则 ID</p>
+        /// <p>安全组 ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

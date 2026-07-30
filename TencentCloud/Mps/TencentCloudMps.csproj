@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1474</VersionPrefix>
+    <VersionPrefix>3.0.1476</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,7 +119,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskVideoRemakeResult.cs" />
     <Compile Include="V20190612\Models\AiContentReviewResult.cs" />
     <Compile Include="V20190612\Models\AiContentReviewTaskInput.cs" />
+    <Compile Include="V20190612\Models\AiCutoutConfig.cs" />
     <Compile Include="V20190612\Models\AiDramaInput.cs" />
+    <Compile Include="V20190612\Models\AiExpansionConfig.cs" />
     <Compile Include="V20190612\Models\AiParagraphInfo.cs" />
     <Compile Include="V20190612\Models\AiPosterSuiteConfig.cs" />
     <Compile Include="V20190612\Models\AiQualityControlTaskInput.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="V20190612\Models\AiSampleTagOperation.cs" />
     <Compile Include="V20190612\Models\AiSampleWord.cs" />
     <Compile Include="V20190612\Models\AiSampleWordInfo.cs" />
+    <Compile Include="V20190612\Models\AiStoryboardConfig.cs" />
     <Compile Include="V20190612\Models\AiTryOnConfig.cs" />
     <Compile Include="V20190612\Models\AigcAudioExtraParam.cs" />
     <Compile Include="V20190612\Models\AigcAudioOutputAudioInfo.cs" />
@@ -885,6 +888,7 @@
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
     <Compile Include="V20190612\Models\ParseNotificationRequest.cs" />
     <Compile Include="V20190612\Models\ParseNotificationResponse.cs" />
+    <Compile Include="V20190612\Models\PatternConfig.cs" />
     <Compile Include="V20190612\Models\PidSelector.cs" />
     <Compile Include="V20190612\Models\PlaybackInfo.cs" />
     <Compile Include="V20190612\Models\PlaybackInfoReq.cs" />

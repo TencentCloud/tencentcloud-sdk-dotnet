@@ -82,6 +82,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CreateImageConfig")]
         public CreateImageConfig CreateImageConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Ai抠图配置</p>
+        /// </summary>
+        [JsonProperty("AiCutoutConfig")]
+        public AiCutoutConfig AiCutoutConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai扩图配置</p>
+        /// </summary>
+        [JsonProperty("AiExpansionConfig")]
+        public AiExpansionConfig AiExpansionConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai分镜拆解配置</p>
+        /// </summary>
+        [JsonProperty("AiStoryboardConfig")]
+        public AiStoryboardConfig AiStoryboardConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +115,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
             this.SetParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
             this.SetParamObj(map, prefix + "CreateImageConfig.", this.CreateImageConfig);
+            this.SetParamObj(map, prefix + "AiCutoutConfig.", this.AiCutoutConfig);
+            this.SetParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
+            this.SetParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
         }
     }
 }

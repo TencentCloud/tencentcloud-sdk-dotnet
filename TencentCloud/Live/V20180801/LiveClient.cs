@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1476";
 
         /// <summary>
         /// Client constructor.
@@ -952,6 +952,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
+        /// 创建规则后生效时间为10分钟，规则仅对推流时间晚于配置生效时间的流有效，对正在直播的流不生效。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveWatermarkRuleRequest"/></param>
         /// <returns><see cref="CreateLiveWatermarkRuleResponse"/></returns>
@@ -962,6 +963,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
+        /// 创建规则后生效时间为10分钟，规则仅对推流时间晚于配置生效时间的流有效，对正在直播的流不生效。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveWatermarkRuleRequest"/></param>
         /// <returns><see cref="CreateLiveWatermarkRuleResponse"/></returns>
@@ -4004,6 +4006,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 直播上行路数查询。
+        /// 数据延迟3小时左右。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
         /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
@@ -4014,6 +4017,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 直播上行路数查询。
+        /// 数据延迟3小时左右。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
         /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>

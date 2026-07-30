@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1437";
+       private const string sdkVersion = "SDK_NET_3.0.1476";
 
         /// <summary>
         /// Client constructor.
@@ -661,6 +661,27 @@ namespace TencentCloud.Lighthouse.V20200324
         public DescribeAllScenesResponse DescribeAllScenesSync(DescribeAllScenesRequest req)
         {
             return InternalRequestAsync<DescribeAllScenesResponse>(req, "DescribeAllScenes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBlueprintBundles)用于查询镜像所对应的套餐。当前仅支持查询镜像类型为游戏专区的镜像ID。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintBundlesRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintBundlesResponse"/></returns>
+        public Task<DescribeBlueprintBundlesResponse> DescribeBlueprintBundles(DescribeBlueprintBundlesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlueprintBundlesResponse>(req, "DescribeBlueprintBundles");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBlueprintBundles)用于查询镜像所对应的套餐。当前仅支持查询镜像类型为游戏专区的镜像ID。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintBundlesRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintBundlesResponse"/></returns>
+        public DescribeBlueprintBundlesResponse DescribeBlueprintBundlesSync(DescribeBlueprintBundlesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlueprintBundlesResponse>(req, "DescribeBlueprintBundles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

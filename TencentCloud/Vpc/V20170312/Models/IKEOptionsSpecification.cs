@@ -85,13 +85,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DhGroupName{ get; set; }
 
         /// <summary>
-        /// <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
+        /// <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
         /// </summary>
         [JsonProperty("IKESaLifetimeSeconds")]
         public ulong? IKESaLifetimeSeconds{ get; set; }
 
         /// <summary>
-        /// <p>IKE版本</p>
+        /// <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
         /// </summary>
         [JsonProperty("IKEVersion")]
         public string IKEVersion{ get; set; }

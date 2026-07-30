@@ -25,16 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 目的端IDC网段
+        /// <p>目的端IDC网段</p>
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 优先级；可选值0，100。
+        /// <p>优先级；可选值0，100。</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
+
+        /// <summary>
+        /// <p>路由备注；可选值</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

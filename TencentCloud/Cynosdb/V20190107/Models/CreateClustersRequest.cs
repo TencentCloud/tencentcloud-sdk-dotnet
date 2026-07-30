@@ -306,6 +306,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
+        /// <summary>
+        /// <p>同步方式。可选值：async、semisync、sync。</p>
+        /// </summary>
+        [JsonProperty("SyncWay")]
+        public string SyncWay{ get; set; }
+
+        /// <summary>
+        /// <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+        /// </summary>
+        [JsonProperty("SemiSyncTimeout")]
+        public long? SemiSyncTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -359,6 +371,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "SyncWay", this.SyncWay);
+            this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
         }
     }
 }

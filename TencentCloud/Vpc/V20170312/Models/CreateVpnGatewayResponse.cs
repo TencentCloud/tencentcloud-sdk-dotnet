@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN网关对象
+        /// <p>VPN网关对象</p>
         /// </summary>
         [JsonProperty("VpnGateway")]
         public VpnGateway VpnGateway{ get; set; }

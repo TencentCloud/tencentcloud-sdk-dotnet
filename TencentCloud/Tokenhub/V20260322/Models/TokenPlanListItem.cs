@@ -25,85 +25,91 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 套餐 ID。
+        /// <p>套餐 ID。</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+        /// <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// 套餐名称。最大 128 字符。
+        /// <p>套餐名称。最大 128 字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 账号 APP ID。
+        /// <p>账号 APP ID。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 主账号 UIN。
+        /// <p>主账号 UIN。</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 套餐状态。取值：enable（启用）、disable（停用）。
+        /// <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
+        /// <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
         /// </summary>
         [JsonProperty("StopReason")]
         public string StopReason{ get; set; }
 
         /// <summary>
-        /// 可创建 API Key 上限。
+        /// <p>可创建 API Key 上限。</p>
         /// </summary>
         [JsonProperty("ApiKeyMax")]
         public long? ApiKeyMax{ get; set; }
 
         /// <summary>
-        /// 云计费预付费资源包 ID。
+        /// <p>当前已创建的 APIKey 数量</p>
+        /// </summary>
+        [JsonProperty("ApiKeyCount")]
+        public long? ApiKeyCount{ get; set; }
+
+        /// <summary>
+        /// <p>云计费预付费资源包 ID。</p>
         /// </summary>
         [JsonProperty("PrepayResourceID")]
         public string PrepayResourceID{ get; set; }
 
         /// <summary>
-        /// 创建人。若为子账号创建的套餐，则该值为子账号UIN。
+        /// <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// <p>更新时间。</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 套餐包基本信息。
+        /// <p>套餐包基本信息。</p>
         /// </summary>
         [JsonProperty("PackageInfo")]
         public TokenPlanPackageInfo PackageInfo{ get; set; }
 
         /// <summary>
-        /// 是否开启自动续费。取值：0（未开启），1（开启）
+        /// <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -122,6 +128,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
             this.SetParamSimple(map, prefix + "ApiKeyMax", this.ApiKeyMax);
+            this.SetParamSimple(map, prefix + "ApiKeyCount", this.ApiKeyCount);
             this.SetParamSimple(map, prefix + "PrepayResourceID", this.PrepayResourceID);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

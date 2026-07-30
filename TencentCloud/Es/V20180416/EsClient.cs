@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1464";
+       private const string sdkVersion = "SDK_NET_3.0.1476";
 
         /// <summary>
         /// Client constructor.
@@ -1683,6 +1683,27 @@ namespace TencentCloud.Es.V20180416
         public UpdateInstanceResponse UpdateInstanceSync(UpdateInstanceRequest req)
         {
             return InternalRequestAsync<UpdateInstanceResponse>(req, "UpdateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新ES集群实例的Kibana、cerebro公网开关
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstancePublicAccessRequest"/></param>
+        /// <returns><see cref="UpdateInstancePublicAccessResponse"/></returns>
+        public Task<UpdateInstancePublicAccessResponse> UpdateInstancePublicAccess(UpdateInstancePublicAccessRequest req)
+        {
+            return InternalRequestAsync<UpdateInstancePublicAccessResponse>(req, "UpdateInstancePublicAccess");
+        }
+
+        /// <summary>
+        /// 更新ES集群实例的Kibana、cerebro公网开关
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstancePublicAccessRequest"/></param>
+        /// <returns><see cref="UpdateInstancePublicAccessResponse"/></returns>
+        public UpdateInstancePublicAccessResponse UpdateInstancePublicAccessSync(UpdateInstancePublicAccessRequest req)
+        {
+            return InternalRequestAsync<UpdateInstancePublicAccessResponse>(req, "UpdateInstancePublicAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
