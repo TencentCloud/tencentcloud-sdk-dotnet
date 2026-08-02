@@ -85,6 +85,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MPSSelectingSubtitleAreasConfig SelectingSubtitleAreasConfig{ get; set; }
 
         /// <summary>
+        /// <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedId")]
+        public long? SubtitleEmbedId{ get; set; }
+
+        /// <summary>
         /// <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
         /// </summary>
         [JsonProperty("SpeakerMode")]
@@ -112,6 +118,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
             this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
             this.SetParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
             this.SetParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
         }

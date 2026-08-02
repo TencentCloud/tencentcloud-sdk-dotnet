@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>分段摘要解析配置</p>
+        /// <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummary Summary{ get; set; }

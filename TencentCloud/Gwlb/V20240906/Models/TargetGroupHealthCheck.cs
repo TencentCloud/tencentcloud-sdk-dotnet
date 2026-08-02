@@ -25,46 +25,43 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 是否开启健康检查。
+        /// <p>是否开启健康检查。</p>
         /// </summary>
         [JsonProperty("HealthSwitch")]
         public bool? HealthSwitch{ get; set; }
 
         /// <summary>
-        /// 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-        /// 
-        /// - icmp: 使用PING的方式进行健康检查
-        /// - tcp: 使用TCP连接的方式进行健康检查
+        /// <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 健康检查端口，探测协议为tcp时，该参数必填。
+        /// <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
+        /// <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
+        /// <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
         /// </summary>
         [JsonProperty("IntervalTime")]
         public long? IntervalTime{ get; set; }
 
         /// <summary>
-        /// 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+        /// <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
         /// </summary>
         [JsonProperty("HealthNum")]
         public long? HealthNum{ get; set; }
 
         /// <summary>
-        /// 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+        /// <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
         /// </summary>
         [JsonProperty("UnHealthNum")]
         public long? UnHealthNum{ get; set; }

@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Text{ get; set; }
 
         /// <summary>
+        /// <p>知识库ID，留空时将使用默认知识库</p>
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
         /// <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
         /// </summary>
         [JsonProperty("Limit")]
@@ -74,6 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);

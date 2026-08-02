@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li>
+        /// <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SmartEraseTemplate")]
         public MPSSmartEraseTemplate SmartEraseTemplate{ get; set; }
 
+        /// <summary>
+        /// <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p>
+        /// </summary>
+        [JsonProperty("EmbedSubtitleTemplate")]
+        public MPSEmbedSubtitleTemplate EmbedSubtitleTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AIAnalysisTemplate.", this.AIAnalysisTemplate);
             this.SetParamObj(map, prefix + "SmartSubtitleTemplate.", this.SmartSubtitleTemplate);
             this.SetParamObj(map, prefix + "SmartEraseTemplate.", this.SmartEraseTemplate);
+            this.SetParamObj(map, prefix + "EmbedSubtitleTemplate.", this.EmbedSubtitleTemplate);
         }
     }
 }

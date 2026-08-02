@@ -25,25 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 任务 ID。
+        /// <p>任务 ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+        /// <p>媒体文件 ID</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
+        /// <p>导入知识库任务的输入。</p>
+        /// </summary>
+        [JsonProperty("Input")]
+        public ImportMediaKnowledgeTaskInput Input{ get; set; }
+
+        /// <summary>
+        /// <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码，0 表示成功，其他值表示失败
+        /// <p>错误码，0 表示成功，其他值表示失败</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// <p>错误信息。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -55,6 +67,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);

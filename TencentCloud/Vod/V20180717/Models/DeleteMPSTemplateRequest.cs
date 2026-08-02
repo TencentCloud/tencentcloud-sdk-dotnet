@@ -25,23 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 需要删除的 MPS 模板的类型。取值：
-        /// <li>Transcode: 删除转码模板。</li>
-        /// <li>AIAnalysis: 创建智能分析模板。</li>
-        /// <li>SmartSubtitle: 创建智能字幕模板。</li>
-        /// <li>SmartErase: 创建智能擦除模板。</li>
+        /// <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// MPS 任务模板唯一标识。
+        /// <p>MPS 任务模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

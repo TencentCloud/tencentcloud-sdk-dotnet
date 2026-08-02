@@ -36,6 +36,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("KnowledgeAnalysisInfos")]
         public KnowledgeAnalysisInfo[] KnowledgeAnalysisInfos{ get; set; }
 
+        /// <summary>
+        /// <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+        /// </summary>
+        [JsonProperty("KnowledgeBaseDetails")]
+        public KnowledgeBaseDetail[] KnowledgeBaseDetails{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamArraySimple(map, prefix + "Bases.", this.Bases);
             this.SetParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
+            this.SetParamArrayObj(map, prefix + "KnowledgeBaseDetails.", this.KnowledgeBaseDetails);
         }
     }
 }

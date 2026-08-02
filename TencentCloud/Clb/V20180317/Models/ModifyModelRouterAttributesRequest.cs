@@ -54,6 +54,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("RouterSetting")]
         public RouterSettingWithFallBack RouterSetting{ get; set; }
 
+        /// <summary>
+        /// <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
             this.SetParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
             this.SetParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

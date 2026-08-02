@@ -25,106 +25,112 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 主账号UIN
+        /// <p>主账号UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }
 
         /// <summary>
-        /// 账号AppId
+        /// <p>账号AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 智能体ID
+        /// <p>智能体ID</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 智能体名称
+        /// <p>智能体名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 智能体描述
+        /// <p>智能体描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 语音识别配置
+        /// <p>语音识别配置</p>
         /// </summary>
         [JsonProperty("STTConfig")]
         public TalkSTTConfig STTConfig{ get; set; }
 
         /// <summary>
-        /// 大模型配置
+        /// <p>大模型配置</p>
         /// </summary>
         [JsonProperty("LLMConfig")]
         public TalkLLMConfig LLMConfig{ get; set; }
 
         /// <summary>
-        /// 语音合成配置
+        /// <p>语音合成配置</p>
         /// </summary>
         [JsonProperty("TTSConfig")]
         public TalkTTSConfig TTSConfig{ get; set; }
 
         /// <summary>
-        /// 对话行为配置
+        /// <p>对话行为配置</p>
         /// </summary>
         [JsonProperty("ConversationConfig")]
         public TalkConversationConfig ConversationConfig{ get; set; }
 
         /// <summary>
-        /// 长期记忆配置
+        /// <p>长期记忆配置</p>
         /// </summary>
         [JsonProperty("MemoryConfig")]
         public TalkMemoryConfig MemoryConfig{ get; set; }
 
         /// <summary>
-        /// IoT 工具列表
+        /// <p>IoT 工具列表</p>
         /// </summary>
         [JsonProperty("IOTTools")]
         public TalkIOTTool[] IOTTools{ get; set; }
 
         /// <summary>
-        /// Webhook 工具列表
+        /// <p>Webhook 工具列表</p>
         /// </summary>
         [JsonProperty("WebhookTools")]
         public TalkWebhookTool[] WebhookTools{ get; set; }
 
         /// <summary>
-        /// 元信息JSON object 字符串
+        /// <p>元信息JSON object 字符串</p>
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }
 
         /// <summary>
-        /// 绑定关系列表
+        /// <p>绑定关系列表</p>
         /// </summary>
         [JsonProperty("Bindings")]
         public TalkAgentBinding[] Bindings{ get; set; }
 
         /// <summary>
-        /// 创建时间，Unix 秒
+        /// <p>创建时间，Unix 秒</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间，Unix 秒
+        /// <p>更新时间，Unix 秒</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>事件回调配置</p>
+        /// </summary>
+        [JsonProperty("EventCallbackConfig")]
+        public TalkEventCallbackConfig EventCallbackConfig{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamArrayObj(map, prefix + "Bindings.", this.Bindings);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamObj(map, prefix + "EventCallbackConfig.", this.EventCallbackConfig);
         }
     }
 }

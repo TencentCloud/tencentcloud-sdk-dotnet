@@ -30,6 +30,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("RoutingStrategy")]
         public string RoutingStrategy{ get; set; }
 
+        /// <summary>
+        /// <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+        /// </summary>
+        [JsonProperty("CrossModelGroupRoutingStrategy")]
+        public string CrossModelGroupRoutingStrategy{ get; set; }
+
+        /// <summary>
+        /// <p>L2模型组内路由调度算法参数</p>
+        /// </summary>
+        [JsonProperty("RoutingStrategyArgs")]
+        public RoutingStrategyArgs RoutingStrategyArgs{ get; set; }
+
+        /// <summary>
+        /// <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+        /// </summary>
+        [JsonProperty("NumRetries")]
+        public ulong? NumRetries{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoutingStrategy", this.RoutingStrategy);
+            this.SetParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
+            this.SetParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
+            this.SetParamSimple(map, prefix + "NumRetries", this.NumRetries);
         }
     }
 }

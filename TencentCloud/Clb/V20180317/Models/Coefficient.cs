@@ -31,6 +31,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public float? InputCachedCoefficient{ get; set; }
 
         /// <summary>
+        /// <p>缓存创建积分系数</p>
+        /// </summary>
+        [JsonProperty("InputCacheCreationCoefficient")]
+        public float? InputCacheCreationCoefficient{ get; set; }
+
+        /// <summary>
         /// <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
         /// </summary>
         [JsonProperty("InputCoefficient")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InputCachedCoefficient", this.InputCachedCoefficient);
+            this.SetParamSimple(map, prefix + "InputCacheCreationCoefficient", this.InputCacheCreationCoefficient);
             this.SetParamSimple(map, prefix + "InputCoefficient", this.InputCoefficient);
             this.SetParamSimple(map, prefix + "OutputCoefficient", this.OutputCoefficient);
         }

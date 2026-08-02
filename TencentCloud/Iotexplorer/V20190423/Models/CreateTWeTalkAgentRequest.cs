@@ -90,6 +90,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }
 
+        /// <summary>
+        /// <p>回调配置</p>
+        /// </summary>
+        [JsonProperty("EventCallbackConfig")]
+        public TalkEventCallbackConfig EventCallbackConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamArrayObj(map, prefix + "IOTTools.", this.IOTTools);
             this.SetParamArrayObj(map, prefix + "WebhookTools.", this.WebhookTools);
             this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
+            this.SetParamObj(map, prefix + "EventCallbackConfig.", this.EventCallbackConfig);
         }
     }
 }

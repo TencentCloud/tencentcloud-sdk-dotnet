@@ -25,103 +25,112 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 媒体文件唯一标识。
+        /// <p>媒体文件唯一标识。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 媒体文件名称，最长 64 个字符。
+        /// <p>媒体文件名称，最长 64 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 媒体文件描述，最长 128 个字符。
+        /// <p>媒体文件描述，最长 128 个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 媒体文件分类 ID。
+        /// <p>媒体文件分类 ID。</p>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
+        /// <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。
+        /// <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p>
         /// </summary>
         [JsonProperty("CoverData")]
         public string CoverData{ get; set; }
 
         /// <summary>
-        /// 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+        /// <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
         /// </summary>
         [JsonProperty("AddKeyFrameDescs")]
         public MediaKeyFrameDescItem[] AddKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+        /// <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
         /// </summary>
         [JsonProperty("DeleteKeyFrameDescs")]
         public float?[] DeleteKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// 取值 1 表示清空视频打点信息，其他值无意义。
-        /// 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
+        /// <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p>
         /// </summary>
         [JsonProperty("ClearKeyFrameDescs")]
         public long? ClearKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+        /// <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
         /// </summary>
         [JsonProperty("AddTags")]
         public string[] AddTags{ get; set; }
 
         /// <summary>
-        /// 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+        /// <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
         /// </summary>
         [JsonProperty("DeleteTags")]
         public string[] DeleteTags{ get; set; }
 
         /// <summary>
-        /// 取值 1 表示清空媒体文件所有标签，其他值无意义。
-        /// 同一个请求里，ClearTags 与 AddTags 不能同时出现。
+        /// <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p>
         /// </summary>
         [JsonProperty("ClearTags")]
         public long? ClearTags{ get; set; }
 
         /// <summary>
-        /// 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+        /// <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
         /// </summary>
         [JsonProperty("AddSubtitles")]
         public MediaSubtitleInput[] AddSubtitles{ get; set; }
 
         /// <summary>
-        /// 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+        /// <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
         /// </summary>
         [JsonProperty("DeleteSubtitleIds")]
         public string[] DeleteSubtitleIds{ get; set; }
 
         /// <summary>
-        /// 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-        /// 同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+        /// <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p>
         /// </summary>
         [JsonProperty("ClearSubtitles")]
         public long? ClearSubtitles{ get; set; }
+
+        /// <summary>
+        /// <p>待出库的知识库ID。</p>
+        /// </summary>
+        [JsonProperty("DeleteKnowledgeBases")]
+        public string[] DeleteKnowledgeBases{ get; set; }
+
+        /// <summary>
+        /// <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p>
+        /// </summary>
+        [JsonProperty("ClearKnowledgeBases")]
+        public long? ClearKnowledgeBases{ get; set; }
 
 
         /// <summary>
@@ -145,6 +154,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
             this.SetParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
             this.SetParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
+            this.SetParamArraySimple(map, prefix + "DeleteKnowledgeBases.", this.DeleteKnowledgeBases);
+            this.SetParamSimple(map, prefix + "ClearKnowledgeBases", this.ClearKnowledgeBases);
         }
     }
 }

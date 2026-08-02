@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
+        /// <p>文件分类。取值为：</p><ul><li>Image: 图片；</li><li>Video: 视频；</li><li>Audio: 音频；</li></ul>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

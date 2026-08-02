@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public long?[] Definitions{ get; set; }
 
         /// <summary>
+        /// <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
         /// <p>分页偏移量，默认值：0。</p>
         /// </summary>
         [JsonProperty("Offset")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

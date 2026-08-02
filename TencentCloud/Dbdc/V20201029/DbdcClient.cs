@@ -28,7 +28,7 @@ namespace TencentCloud.Dbdc.V20201029
 
        private const string endpoint = "dbdc.tencentcloudapi.com";
        private const string version = "2020-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1476";
+       private const string sdkVersion = "SDK_NET_3.0.1477";
 
         /// <summary>
         /// Client constructor.
@@ -638,6 +638,27 @@ namespace TencentCloud.Dbdc.V20201029
         public ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTagsSync(ModifyDBCustomClusterTagsRequest req)
         {
             return InternalRequestAsync<ModifyDBCustomClusterTagsResponse>(req, "ModifyDBCustomClusterTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeAttributesResponse"/></returns>
+        public Task<ModifyDBCustomNodeAttributesResponse> ModifyDBCustomNodeAttributes(ModifyDBCustomNodeAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeAttributesResponse>(req, "ModifyDBCustomNodeAttributes");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeAttributesResponse"/></returns>
+        public ModifyDBCustomNodeAttributesResponse ModifyDBCustomNodeAttributesSync(ModifyDBCustomNodeAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeAttributesResponse>(req, "ModifyDBCustomNodeAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

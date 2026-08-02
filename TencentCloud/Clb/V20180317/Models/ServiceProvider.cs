@@ -60,6 +60,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ServiceProviderName")]
         public string ServiceProviderName{ get; set; }
 
+        /// <summary>
+        /// <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+        /// </summary>
+        [JsonProperty("Order")]
+        public ulong? Order{ get; set; }
+
+        /// <summary>
+        /// <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
+        /// <summary>
+        /// <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+        /// </summary>
+        [JsonProperty("AssociationStatus")]
+        public string AssociationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "AssociationStatus", this.AssociationStatus);
         }
     }
 }

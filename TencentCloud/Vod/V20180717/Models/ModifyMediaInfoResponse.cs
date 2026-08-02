@@ -25,14 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 新的视频封面 URL。
-        /// * 注意：仅当请求携带 CoverData 时此返回值有效。 *
+        /// <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul>
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// 新增的字幕信息。
+        /// <p>新增的字幕信息。</p>
         /// </summary>
         [JsonProperty("AddedSubtitleSet")]
         public MediaSubtitleItem[] AddedSubtitleSet{ get; set; }

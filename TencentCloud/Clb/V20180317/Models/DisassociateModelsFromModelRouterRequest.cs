@@ -34,7 +34,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <p>需要解除关联的模型信息</p>
         /// </summary>
         [JsonProperty("Models")]
-        public ModelRouterModel[] Models{ get; set; }
+        public ModelRouterModelToDisassociate[] Models{ get; set; }
 
 
         /// <summary>

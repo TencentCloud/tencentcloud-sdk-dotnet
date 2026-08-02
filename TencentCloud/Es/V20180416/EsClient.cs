@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1476";
+       private const string sdkVersion = "SDK_NET_3.0.1477";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Es.V20180416
         public CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaDataSync(CheckMigrateIndexMetaDataRequest req)
         {
             return InternalRequestAsync<CheckMigrateIndexMetaDataResponse>(req, "CheckMigrateIndexMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查实例变配操作是否可以发起
+        /// </summary>
+        /// <param name="req"><see cref="CheckUpdateInstanceRequest"/></param>
+        /// <returns><see cref="CheckUpdateInstanceResponse"/></returns>
+        public Task<CheckUpdateInstanceResponse> CheckUpdateInstance(CheckUpdateInstanceRequest req)
+        {
+            return InternalRequestAsync<CheckUpdateInstanceResponse>(req, "CheckUpdateInstance");
+        }
+
+        /// <summary>
+        /// 检查实例变配操作是否可以发起
+        /// </summary>
+        /// <param name="req"><see cref="CheckUpdateInstanceRequest"/></param>
+        /// <returns><see cref="CheckUpdateInstanceResponse"/></returns>
+        public CheckUpdateInstanceResponse CheckUpdateInstanceSync(CheckUpdateInstanceRequest req)
+        {
+            return InternalRequestAsync<CheckUpdateInstanceResponse>(req, "CheckUpdateInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1291,6 +1312,27 @@ namespace TencentCloud.Es.V20180416
         public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategySync(ModifyAutoBackUpStrategyRequest req)
         {
             return InternalRequestAsync<ModifyAutoBackUpStrategyResponse>(req, "ModifyAutoBackUpStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自动扩盘参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScaleDiskInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoScaleDiskInfoResponse"/></returns>
+        public Task<ModifyAutoScaleDiskInfoResponse> ModifyAutoScaleDiskInfo(ModifyAutoScaleDiskInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScaleDiskInfoResponse>(req, "ModifyAutoScaleDiskInfo");
+        }
+
+        /// <summary>
+        /// 修改自动扩盘参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScaleDiskInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoScaleDiskInfoResponse"/></returns>
+        public ModifyAutoScaleDiskInfoResponse ModifyAutoScaleDiskInfoSync(ModifyAutoScaleDiskInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScaleDiskInfoResponse>(req, "ModifyAutoScaleDiskInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

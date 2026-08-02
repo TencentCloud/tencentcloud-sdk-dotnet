@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1476</VersionPrefix>
+    <VersionPrefix>3.0.1477</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -368,6 +368,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\CreateKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\CreateLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateMPSTemplateRequest.cs" />
@@ -443,6 +445,8 @@
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMPSTemplateRequest.cs" />
@@ -554,6 +558,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeKnowledgeBasesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeKnowledgeBasesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
@@ -710,6 +716,7 @@
     <Compile Include="V20180717\Models\ImportMediaKnowledgeRequest.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeResponse.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeTask.cs" />
+    <Compile Include="V20180717\Models\ImportMediaKnowledgeTaskInput.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityRequest.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityResponse.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
@@ -717,6 +724,7 @@
     <Compile Include="V20180717\Models\JustInTimeTranscodeTemplate.cs" />
     <Compile Include="V20180717\Models\KnowledgeAnalysisInfo.cs" />
     <Compile Include="V20180717\Models\KnowledgeAnalysisResult.cs" />
+    <Compile Include="V20180717\Models\KnowledgeBaseDetail.cs" />
     <Compile Include="V20180717\Models\KnowledgeBasesInfo.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsr.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsrForUpdate.cs" />
@@ -741,6 +749,8 @@
     <Compile Include="V20180717\Models\MPSAiMediaInfo.cs" />
     <Compile Include="V20180717\Models\MPSAiMediaItem.cs" />
     <Compile Include="V20180717\Models\MPSAiMediaTask.cs" />
+    <Compile Include="V20180717\Models\MPSEmbedSubtitleTemplate.cs" />
+    <Compile Include="V20180717\Models\MPSEmbedSubtitleTemplateForUpdate.cs" />
     <Compile Include="V20180717\Models\MPSEraseArea.cs" />
     <Compile Include="V20180717\Models\MPSEraseTimeArea.cs" />
     <Compile Include="V20180717\Models\MPSOutputFile.cs" />
@@ -759,6 +769,11 @@
     <Compile Include="V20180717\Models\MPSSmartSubtitleTemplateForUpdate.cs" />
     <Compile Include="V20180717\Models\MPSSmartSubtitlesTaskInput.cs" />
     <Compile Include="V20180717\Models\MPSSubTaskResult.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleBoardConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleEmbedConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleLayoutConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleOutlineConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleShadowConfig.cs" />
     <Compile Include="V20180717\Models\MPSTaskOutput.cs" />
     <Compile Include="V20180717\Models\MPSTemplate.cs" />
     <Compile Include="V20180717\Models\MPSUpdateSmartEraseSubtitleConfig.cs" />
@@ -849,6 +864,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMPSTemplateRequest.cs" />

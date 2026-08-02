@@ -25,78 +25,88 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统 ID
+        /// <p>文件系统 ID</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 挂载点 ID
+        /// <p>挂载点 ID</p>
         /// </summary>
         [JsonProperty("MountTargetId")]
         public string MountTargetId{ get; set; }
 
         /// <summary>
-        /// 挂载点 IP
+        /// <p>挂载点 IP</p>
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 挂载根目录
+        /// <p>挂载根目录</p>
         /// </summary>
         [JsonProperty("FSID")]
         public string FSID{ get; set; }
 
         /// <summary>
-        /// 挂载点状态，包括creating：创建中；available：运行中；
-        /// deleting：删除中；
-        /// create_failed： 创建失败
+        /// <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 网络类型，包括VPC,CCN
+        /// <p>网络类型，包括VPC,CCN</p>
         /// </summary>
         [JsonProperty("NetworkInterface")]
         public string NetworkInterface{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID
+        /// <p>私有网络 ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络名称
+        /// <p>私有网络名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 子网 Id
+        /// <p>子网 Id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 子网名称
+        /// <p>子网名称</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// CFS Turbo使用的云联网ID
+        /// <p>CFS Turbo使用的云联网ID</p>
         /// </summary>
         [JsonProperty("CcnID")]
         public string CcnID{ get; set; }
 
         /// <summary>
-        /// 云联网中CFS Turbo使用的网段
+        /// <p>云联网中CFS Turbo使用的网段</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
+
+        /// <summary>
+        /// <p>占用用户ip列表</p>
+        /// </summary>
+        [JsonProperty("ServerList")]
+        public string[] ServerList{ get; set; }
+
+        /// <summary>
+        /// <p>是否占用超过200个ip</p>
+        /// </summary>
+        [JsonProperty("ServerListTruncated")]
+        public bool? ServerListTruncated{ get; set; }
 
 
         /// <summary>
@@ -116,6 +126,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamSimple(map, prefix + "CcnID", this.CcnID);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+            this.SetParamArraySimple(map, prefix + "ServerList.", this.ServerList);
+            this.SetParamSimple(map, prefix + "ServerListTruncated", this.ServerListTruncated);
         }
     }
 }

@@ -128,6 +128,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// <p>带宽</p><p>单位：Mbps</p>
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>弹性公网IP的ID</p>
+        /// </summary>
+        [JsonProperty("EipAddressId")]
+        public string EipAddressId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +163,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TradeStatus", this.TradeStatus);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         }
     }
 }

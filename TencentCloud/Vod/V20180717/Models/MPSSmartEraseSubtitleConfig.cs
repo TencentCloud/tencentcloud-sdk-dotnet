@@ -79,6 +79,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MPSEraseTimeArea[] CustomAreas{ get; set; }
 
         /// <summary>
+        /// <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedId")]
+        public ulong? SubtitleEmbedId{ get; set; }
+
+        /// <summary>
         /// <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
         /// </summary>
         [JsonProperty("UseOriginalPos")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TransDstLang", this.TransDstLang);
             this.SetParamArrayObj(map, prefix + "AutoAreas.", this.AutoAreas);
             this.SetParamArrayObj(map, prefix + "CustomAreas.", this.CustomAreas);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
             this.SetParamSimple(map, prefix + "UseOriginalPos", this.UseOriginalPos);
             this.SetParamSimple(map, prefix + "UseOriginalSize", this.UseOriginalSize);
         }

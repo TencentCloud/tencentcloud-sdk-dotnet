@@ -43,10 +43,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+        /// <p>BYOK实例ID</p>
         /// </summary>
         [JsonProperty("ServiceProviderId")]
         public string ServiceProviderId{ get; set; }
+
+        /// <summary>
+        /// <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("Order")]
+        public ulong? Order{ get; set; }
+
+        /// <summary>
+        /// <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

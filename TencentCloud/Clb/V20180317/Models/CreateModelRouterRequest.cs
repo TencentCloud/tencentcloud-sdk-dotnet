@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BudgetId{ get; set; }
 
         /// <summary>
-        /// <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+        /// <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -46,7 +46,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <p>集群信息</p>
         /// </summary>
         [JsonProperty("ClusterInfo")]
-        public ClusterInfo ClusterInfo{ get; set; }
+        public ClusterInfoInput ClusterInfo{ get; set; }
 
         /// <summary>
         /// <p>模型路由实例名称</p><p>默认值：-</p>
@@ -102,6 +102,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// <p>模型路由实例计费信息</p>
+        /// </summary>
+        [JsonProperty("ModelRouterBillingConfig")]
+        public ModelRouterBillingConfigInput ModelRouterBillingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamObj(map, prefix + "ModelRouterBillingConfig.", this.ModelRouterBillingConfig);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1476";
+       private const string sdkVersion = "SDK_NET_3.0.1477";
 
         /// <summary>
         /// Client constructor.
@@ -794,6 +794,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建知识库。用于为智能媒资功能创建一个新的知识库，每个用户最多可创建的20个知识库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="CreateKnowledgeBaseResponse"/></returns>
+        public Task<CreateKnowledgeBaseResponse> CreateKnowledgeBase(CreateKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<CreateKnowledgeBaseResponse>(req, "CreateKnowledgeBase");
+        }
+
+        /// <summary>
+        /// 创建知识库。用于为智能媒资功能创建一个新的知识库，每个用户最多可创建的20个知识库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="CreateKnowledgeBaseResponse"/></returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBaseSync(CreateKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<CreateKnowledgeBaseResponse>(req, "CreateKnowledgeBase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1596,6 +1617,29 @@ namespace TencentCloud.Vod.V20180717
         public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplateSync(DeleteJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<DeleteJustInTimeTranscodeTemplateResponse>(req, "DeleteJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除知识库。
+        /// 调用接口后，知识库会处于“删除中”状态，并在后台执行删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="DeleteKnowledgeBaseResponse"/></returns>
+        public Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBase(DeleteKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<DeleteKnowledgeBaseResponse>(req, "DeleteKnowledgeBase");
+        }
+
+        /// <summary>
+        /// 删除知识库。
+        /// 调用接口后，知识库会处于“删除中”状态，并在后台执行删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="DeleteKnowledgeBaseResponse"/></returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBaseSync(DeleteKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<DeleteKnowledgeBaseResponse>(req, "DeleteKnowledgeBase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2833,6 +2877,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplatesSync(DescribeJustInTimeTranscodeTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询知识库列表。返回指定用户下的所有知识库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeBasesRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeBasesResponse"/></returns>
+        public Task<DescribeKnowledgeBasesResponse> DescribeKnowledgeBases(DescribeKnowledgeBasesRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeBasesResponse>(req, "DescribeKnowledgeBases");
+        }
+
+        /// <summary>
+        /// 查询知识库列表。返回指定用户下的所有知识库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeBasesRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeBasesResponse"/></returns>
+        public DescribeKnowledgeBasesResponse DescribeKnowledgeBasesSync(DescribeKnowledgeBasesRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeBasesResponse>(req, "DescribeKnowledgeBases")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4253,6 +4318,27 @@ namespace TencentCloud.Vod.V20180717
         public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplateSync(ModifyJustInTimeTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<ModifyJustInTimeTranscodeTemplateResponse>(req, "ModifyJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改知识库。可以修改知识库的名称和/或描述。至少需要提供 Name 或 Description 中的一个字段。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="ModifyKnowledgeBaseResponse"/></returns>
+        public Task<ModifyKnowledgeBaseResponse> ModifyKnowledgeBase(ModifyKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<ModifyKnowledgeBaseResponse>(req, "ModifyKnowledgeBase");
+        }
+
+        /// <summary>
+        /// 修改知识库。可以修改知识库的名称和/或描述。至少需要提供 Name 或 Description 中的一个字段。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKnowledgeBaseRequest"/></param>
+        /// <returns><see cref="ModifyKnowledgeBaseResponse"/></returns>
+        public ModifyKnowledgeBaseResponse ModifyKnowledgeBaseSync(ModifyKnowledgeBaseRequest req)
+        {
+            return InternalRequestAsync<ModifyKnowledgeBaseResponse>(req, "ModifyKnowledgeBase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

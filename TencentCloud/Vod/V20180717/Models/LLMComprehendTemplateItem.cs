@@ -43,6 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
+        /// <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
         /// </summary>
         [JsonProperty("Level")]
@@ -87,6 +93,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamObj(map, prefix + "Summary.", this.Summary);
             this.SetParamObj(map, prefix + "Asr.", this.Asr);

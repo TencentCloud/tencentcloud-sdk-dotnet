@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1476";
+       private const string sdkVersion = "SDK_NET_3.0.1477";
 
         /// <summary>
         /// Client constructor.
@@ -4926,6 +4926,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（TransferClusterPrepayToPostpay）用于将预付费集群转为后付费集群
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterPrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferClusterPrepayToPostpayResponse"/></returns>
+        public Task<TransferClusterPrepayToPostpayResponse> TransferClusterPrepayToPostpay(TransferClusterPrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferClusterPrepayToPostpayResponse>(req, "TransferClusterPrepayToPostpay");
+        }
+
+        /// <summary>
+        /// 本接口（TransferClusterPrepayToPostpay）用于将预付费集群转为后付费集群
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterPrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferClusterPrepayToPostpayResponse"/></returns>
+        public TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpaySync(TransferClusterPrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferClusterPrepayToPostpayResponse>(req, "TransferClusterPrepayToPostpay")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（TransferClusterZone）用于发起跨可用区迁移。
         /// </summary>
         /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
@@ -4943,6 +4964,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public TransferClusterZoneResponse TransferClusterZoneSync(TransferClusterZoneRequest req)
         {
             return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（TransferStoragePrepayToPostpay）用于将预付费存储转为后付费存储
+        /// </summary>
+        /// <param name="req"><see cref="TransferStoragePrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferStoragePrepayToPostpayResponse"/></returns>
+        public Task<TransferStoragePrepayToPostpayResponse> TransferStoragePrepayToPostpay(TransferStoragePrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferStoragePrepayToPostpayResponse>(req, "TransferStoragePrepayToPostpay");
+        }
+
+        /// <summary>
+        /// 本接口（TransferStoragePrepayToPostpay）用于将预付费存储转为后付费存储
+        /// </summary>
+        /// <param name="req"><see cref="TransferStoragePrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferStoragePrepayToPostpayResponse"/></returns>
+        public TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpaySync(TransferStoragePrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferStoragePrepayToPostpayResponse>(req, "TransferStoragePrepayToPostpay")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

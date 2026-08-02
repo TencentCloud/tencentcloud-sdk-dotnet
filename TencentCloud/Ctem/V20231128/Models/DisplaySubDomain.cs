@@ -132,6 +132,12 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("AggregationCount")]
         public long? AggregationCount{ get; set; }
 
+        /// <summary>
+        /// <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+        /// </summary>
+        [JsonProperty("AvailabilityTag")]
+        public string AvailabilityTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "DnsType", this.DnsType);
             this.SetParamSimple(map, prefix + "DnsValue", this.DnsValue);
             this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
+            this.SetParamSimple(map, prefix + "AvailabilityTag", this.AvailabilityTag);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// <p>Webhook地址，仅支持 80 和 443 端口</p>
+        /// <p>Webhook地址</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

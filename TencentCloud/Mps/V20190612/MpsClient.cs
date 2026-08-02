@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1476";
+       private const string sdkVersion = "SDK_NET_3.0.1477";
 
         /// <summary>
         /// Client constructor.
@@ -203,6 +203,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 同步接口，使用该接口从参考音频克隆一个音色
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceRequest"/></param>
+        /// <returns><see cref="CloneVoiceResponse"/></returns>
+        public Task<CloneVoiceResponse> CloneVoice(CloneVoiceRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceResponse>(req, "CloneVoice");
+        }
+
+        /// <summary>
+        /// 同步接口，使用该接口从参考音频克隆一个音色
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceRequest"/></param>
+        /// <returns><see cref="CloneVoiceResponse"/></returns>
+        public CloneVoiceResponse CloneVoiceSync(CloneVoiceRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceResponse>(req, "CloneVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户自定义内容分析模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
@@ -283,6 +304,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAiDramaTaskResponse CreateAiDramaTaskSync(CreateAiDramaTaskRequest req)
         {
             return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建ai视频裂变任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiFissionTaskRequest"/></param>
+        /// <returns><see cref="CreateAiFissionTaskResponse"/></returns>
+        public Task<CreateAiFissionTaskResponse> CreateAiFissionTask(CreateAiFissionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiFissionTaskResponse>(req, "CreateAiFissionTask");
+        }
+
+        /// <summary>
+        /// 创建ai视频裂变任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiFissionTaskRequest"/></param>
+        /// <returns><see cref="CreateAiFissionTaskResponse"/></returns>
+        public CreateAiFissionTaskResponse CreateAiFissionTaskSync(CreateAiFissionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiFissionTaskResponse>(req, "CreateAiFissionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4719,6 +4761,27 @@ namespace TencentCloud.Mps.V20190612
         public SyncDubbingResponse SyncDubbingSync(SyncDubbingRequest req)
         {
             return InternalRequestAsync<SyncDubbingResponse>(req, "SyncDubbing")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步语音合成，根据输入文本和指定音色生成语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public Task<TextToSpeechResponse> TextToSpeech(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech");
+        }
+
+        /// <summary>
+        /// 同步语音合成，根据输入文本和指定音色生成语音
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public TextToSpeechResponse TextToSpeechSync(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

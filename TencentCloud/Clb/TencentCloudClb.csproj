@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1469</VersionPrefix>
+    <VersionPrefix>3.0.1477</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,7 @@
     <Compile Include="V20180317\Models\CloneLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\Cluster.cs" />
     <Compile Include="V20180317\Models\ClusterInfo.cs" />
+    <Compile Include="V20180317\Models\ClusterInfoInput.cs" />
     <Compile Include="V20180317\Models\ClusterItem.cs" />
     <Compile Include="V20180317\Models\ClusterResource.cs" />
     <Compile Include="V20180317\Models\ClustersZone.cs" />
@@ -353,9 +354,11 @@
     <Compile Include="V20180317\Models\ModelItem.cs" />
     <Compile Include="V20180317\Models\ModelKeyInfoItem.cs" />
     <Compile Include="V20180317\Models\ModelNameAggregatedItem.cs" />
+    <Compile Include="V20180317\Models\ModelRouterBillingConfigInput.cs" />
     <Compile Include="V20180317\Models\ModelRouterDetail.cs" />
     <Compile Include="V20180317\Models\ModelRouterLog.cs" />
     <Compile Include="V20180317\Models\ModelRouterModel.cs" />
+    <Compile Include="V20180317\Models\ModelRouterModelToDisassociate.cs" />
     <Compile Include="V20180317\Models\ModelRouterPackage.cs" />
     <Compile Include="V20180317\Models\ModelRouterQuota.cs" />
     <Compile Include="V20180317\Models\ModelRouterResourcePackageDeduction.cs" />
@@ -456,6 +459,7 @@
     <Compile Include="V20180317\Models\RewriteTarget.cs" />
     <Compile Include="V20180317\Models\RouterSettingWithFallBack.cs" />
     <Compile Include="V20180317\Models\RouterSettingWithoutFallBack.cs" />
+    <Compile Include="V20180317\Models\RoutingStrategyArgs.cs" />
     <Compile Include="V20180317\Models\RsTagRule.cs" />
     <Compile Include="V20180317\Models\RsWeightRule.cs" />
     <Compile Include="V20180317\Models\RuleHealth.cs" />

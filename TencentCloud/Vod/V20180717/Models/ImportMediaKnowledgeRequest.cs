@@ -25,27 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+        /// <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 大模型理解模板的唯一标识
+        /// <p>大模型理解模板的唯一标识</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 需要导入知识库任务类型，可选值有：
-        /// - AiAnalysis.DescriptionTask
-        /// - SmartSubtitle.AsrFullTextTask
+        /// <p>知识库ID列表，留空时将使用默认知识库</p>
+        /// </summary>
+        [JsonProperty("KnowledgeBaseIds")]
+        public string[] KnowledgeBaseIds{ get; set; }
+
+        /// <summary>
+        /// <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
         /// </summary>
         [JsonProperty("ImportTasks")]
         [System.Obsolete]
@@ -60,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
             this.SetParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
         }
     }

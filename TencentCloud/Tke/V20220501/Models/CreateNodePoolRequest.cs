@@ -84,6 +84,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("Annotations")]
         public Annotation[] Annotations{ get; set; }
 
+        /// <summary>
+        /// <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+        /// </summary>
+        [JsonProperty("SkipValidateOptions")]
+        public string[] SkipValidateOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamObj(map, prefix + "Native.", this.Native);
             this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
+            this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         }
     }
 }
