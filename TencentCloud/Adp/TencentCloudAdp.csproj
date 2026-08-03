@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1470</VersionPrefix>
+    <VersionPrefix>3.0.1478</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -136,6 +136,10 @@
     <Compile Include="V20260520\Models\ConversationExperience.cs" />
     <Compile Include="V20260520\Models\ConversationMessage.cs" />
     <Compile Include="V20260520\Models\ConversationQuoteInfo.cs" />
+    <Compile Include="V20260520\Models\ConversationRecordErrorInfo.cs" />
+    <Compile Include="V20260520\Models\ConversationRecordSummary.cs" />
+    <Compile Include="V20260520\Models\ConversationRecordTimeUsage.cs" />
+    <Compile Include="V20260520\Models\ConversationRecordTokenUsage.cs" />
     <Compile Include="V20260520\Models\ConversationReference.cs" />
     <Compile Include="V20260520\Models\ConversationResetInfo.cs" />
     <Compile Include="V20260520\Models\ConversationWorkspace.cs" />
@@ -162,8 +166,6 @@
     <Compile Include="V20260520\Models\CreateSkillShareResponse.cs" />
     <Compile Include="V20260520\Models\CreateSpaceRequest.cs" />
     <Compile Include="V20260520\Models\CreateSpaceResponse.cs" />
-    <Compile Include="V20260520\Models\CreateTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\CreateTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\CreateVariableRequest.cs" />
     <Compile Include="V20260520\Models\CreateVariableResponse.cs" />
     <Compile Include="V20260520\Models\CreateWebSocketTokenRequest.cs" />
@@ -188,8 +190,6 @@
     <Compile Include="V20260520\Models\DeleteSkillShareResponse.cs" />
     <Compile Include="V20260520\Models\DeleteSpaceRequest.cs" />
     <Compile Include="V20260520\Models\DeleteSpaceResponse.cs" />
-    <Compile Include="V20260520\Models\DeleteTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\DeleteTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\DeleteVariableRequest.cs" />
     <Compile Include="V20260520\Models\DeleteVariableResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAccountListRequest.cs" />
@@ -246,12 +246,6 @@
     <Compile Include="V20260520\Models\DescribeSpaceListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListResponse.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskResponse.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskRunLogListRequest.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskRunLogListResponse.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskSummaryListRequest.cs" />
-    <Compile Include="V20260520\Models\DescribeTimerTaskSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
@@ -273,10 +267,6 @@
     <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
     <Compile Include="V20260520\Models\ManualOnlySchedule.cs" />
-    <Compile Include="V20260520\Models\MarkAppTriggerRunLogReadRequest.cs" />
-    <Compile Include="V20260520\Models\MarkAppTriggerRunLogReadResponse.cs" />
-    <Compile Include="V20260520\Models\MarkTimerTaskRunLogReadRequest.cs" />
-    <Compile Include="V20260520\Models\MarkTimerTaskRunLogReadResponse.cs" />
     <Compile Include="V20260520\Models\Model.cs" />
     <Compile Include="V20260520\Models\ModelBadge.cs" />
     <Compile Include="V20260520\Models\ModelBasic.cs" />
@@ -302,8 +292,6 @@
     <Compile Include="V20260520\Models\ModifySkillResponse.cs" />
     <Compile Include="V20260520\Models\ModifySpaceRequest.cs" />
     <Compile Include="V20260520\Models\ModifySpaceResponse.cs" />
-    <Compile Include="V20260520\Models\ModifyTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\ModifyTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\ModifyVariableRequest.cs" />
     <Compile Include="V20260520\Models\ModifyVariableResponse.cs" />
     <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
@@ -313,8 +301,6 @@
     <Compile Include="V20260520\Models\OnceSchedule.cs" />
     <Compile Include="V20260520\Models\PauseAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\PauseAppTriggerResponse.cs" />
-    <Compile Include="V20260520\Models\PauseTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\PauseTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\Plugin.cs" />
     <Compile Include="V20260520\Models\PluginConfig.cs" />
     <Compile Include="V20260520\Models\PluginOperation.cs" />
@@ -334,8 +320,6 @@
     <Compile Include="V20260520\Models\ResponseParam.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerResponse.cs" />
-    <Compile Include="V20260520\Models\ResumeTimerTaskRequest.cs" />
-    <Compile Include="V20260520\Models\ResumeTimerTaskResponse.cs" />
     <Compile Include="V20260520\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20260520\Models\RetryReleaseResponse.cs" />
     <Compile Include="V20260520\Models\RoleConfig.cs" />
@@ -343,8 +327,6 @@
     <Compile Include="V20260520\Models\RollbackReleaseResponse.cs" />
     <Compile Include="V20260520\Models\RunAppTriggerNowRequest.cs" />
     <Compile Include="V20260520\Models\RunAppTriggerNowResponse.cs" />
-    <Compile Include="V20260520\Models\RunTimerTaskNowRequest.cs" />
-    <Compile Include="V20260520\Models\RunTimerTaskNowResponse.cs" />
     <Compile Include="V20260520\Models\SearchResourceStatusInfo.cs" />
     <Compile Include="V20260520\Models\SingleWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\SkillAnalysisInfo.cs" />
@@ -363,13 +345,8 @@
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
     <Compile Include="V20260520\Models\ThinkModel.cs" />
-    <Compile Include="V20260520\Models\TimerConfig.cs" />
-    <Compile Include="V20260520\Models\TimerProfile.cs" />
     <Compile Include="V20260520\Models\TimerPushConfig.cs" />
     <Compile Include="V20260520\Models\TimerScheduleConfig.cs" />
-    <Compile Include="V20260520\Models\TimerStatus.cs" />
-    <Compile Include="V20260520\Models\TimerTask.cs" />
-    <Compile Include="V20260520\Models\TimerTaskSummary.cs" />
     <Compile Include="V20260520\Models\Tool.cs" />
     <Compile Include="V20260520\Models\ToolBilling.cs" />
     <Compile Include="V20260520\Models\ToolConfig.cs" />

@@ -25,19 +25,19 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 镜像地址
+        /// <p>镜像地址</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 镜像 Digest
+        /// <p>镜像 Digest</p>
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
 
         /// <summary>
-        /// 镜像仓库类型：`enterprise`、`personal`。
+        /// <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
         /// </summary>
         [JsonProperty("ImageRegistryType")]
         public string ImageRegistryType{ get; set; }

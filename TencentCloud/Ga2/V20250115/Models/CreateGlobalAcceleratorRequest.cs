@@ -25,7 +25,7 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+        /// <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// <p>描述信息，最大长度不能超过100个字节。</p>
+        /// <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

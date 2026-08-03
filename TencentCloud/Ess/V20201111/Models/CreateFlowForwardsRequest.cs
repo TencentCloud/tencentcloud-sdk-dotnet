@@ -25,27 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 合同对应参与方需要修改的目标经办人。其UserId可在企业控制台中组织管理里面找到。或者使用获取员工信息接口得到。
-        /// 
-        /// 注意：`需要保证目标经办人已经加入企业且已实名`
+        /// <p>合同对应参与方需要修改的目标经办人。其UserId可在企业控制台中组织管理里面找到。或者使用获取员工信息接口得到。</p><p>注意：<code>需要保证目标经办人已经加入企业且已实名</code></p>
         /// </summary>
         [JsonProperty("TargetUserId")]
         public string TargetUserId{ get; set; }
 
         /// <summary>
-        /// 企业签署方的合同及对应签署方
+        /// <p>企业签署方的合同及对应签署方</p>
         /// </summary>
         [JsonProperty("FlowForwardInfos")]
         public FlowForwardInfo[] FlowForwardInfos{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

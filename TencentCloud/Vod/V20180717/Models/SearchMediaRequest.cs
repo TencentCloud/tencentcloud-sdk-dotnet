@@ -216,6 +216,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("StreamPaths")]
         public string[] StreamPaths{ get; set; }
 
+        /// <summary>
+        /// <p>知识库ID，匹配集合中任意元素。</p>
+        /// </summary>
+        [JsonProperty("KnowledgeBases")]
+        public string[] KnowledgeBases{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamArraySimple(map, prefix + "StreamDomains.", this.StreamDomains);
             this.SetParamArraySimple(map, prefix + "StreamPaths.", this.StreamPaths);
+            this.SetParamArraySimple(map, prefix + "KnowledgeBases.", this.KnowledgeBases);
         }
     }
 }

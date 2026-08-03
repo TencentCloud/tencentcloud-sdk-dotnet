@@ -25,38 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 |  |
-        /// | 1 | 不推送 |
-        /// | 2 | 微信公众号 |
-        /// | 3 | 企业微信 AI 机器人 |
+        /// <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
         /// </summary>
         [JsonProperty("PushChannel")]
         public long? PushChannel{ get; set; }
 
         /// <summary>
-        /// 推送会话ID
+        /// <p>推送会话ID</p>
         /// </summary>
         [JsonProperty("PushTargetId")]
         public string PushTargetId{ get; set; }
 
         /// <summary>
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 |  |
-        /// | 1 | 用户 (微信公众号 openid) |
-        /// | 2 | 群聊 (企微机器人 chat_id) |
+        /// <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
         /// </summary>
         [JsonProperty("PushTargetType")]
         public long? PushTargetType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>推送webhook的url</p>
         /// </summary>
         [JsonProperty("PushWebhookUrl")]
         public string PushWebhookUrl{ get; set; }

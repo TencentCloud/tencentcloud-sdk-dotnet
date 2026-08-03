@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5926007E-BC61-30BC-96D2-7B18B8113F0A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1463</VersionPrefix>
+    <VersionPrefix>3.0.1478</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,8 @@
     <Compile Include="V20230418\Models\CNAPIGwMCPTool.cs" />
     <Compile Include="V20230418\Models\CNAPIGwMCPToolList.cs" />
     <Compile Include="V20230418\Models\CNAPIGwMCPToolParam.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwMCPToolPreview.cs" />
+    <Compile Include="V20230418\Models\CNAPIGwParseMCPToolsResult.cs" />
     <Compile Include="V20230418\Models\CNAPIGwSecretKey.cs" />
     <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelAPI.cs" />
     <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelFallbackRule.cs" />
@@ -171,6 +173,8 @@
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolListResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest.cs" />
@@ -209,5 +213,7 @@
     <Compile Include="V20230418\Models\RemoveCloudNativeAPIGatewayConsumerInGroupResponse.cs" />
     <Compile Include="V20230418\Models\UnbindCloudNativeAPIGatewaySecretKeyRequest.cs" />
     <Compile Include="V20230418\Models\UnbindCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\UpdateCloudNativeAPIGatewayMCPToolsRequest.cs" />
+    <Compile Include="V20230418\Models\UpdateCloudNativeAPIGatewayMCPToolsResponse.cs" />
   </ItemGroup>
 </Project>

@@ -25,25 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>触发器webhook参数配置</p>
         /// </summary>
         [JsonProperty("ParamSchemaConfig")]
         public AppTriggerWebhookParamSchemaConfig ParamSchemaConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>webhook的key</p>
         /// </summary>
         [JsonProperty("WebhookKey")]
         public string WebhookKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>webhook的密钥</p>
         /// </summary>
         [JsonProperty("WebhookToken")]
         public string WebhookToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>webhook的地址</p>
         /// </summary>
         [JsonProperty("WebhookUrl")]
         public string WebhookUrl{ get; set; }

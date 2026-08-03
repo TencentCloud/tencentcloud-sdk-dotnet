@@ -37,6 +37,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? Limit{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// 过滤条件数组，支持数据集ID，标注场景、任务状态、数据集名称、人物名称的过滤，后面两个支持模糊查询
         /// </summary>
         [JsonProperty("Filters")]
@@ -68,6 +74,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "Order", this.Order);

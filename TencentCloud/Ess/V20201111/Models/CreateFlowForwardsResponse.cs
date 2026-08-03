@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 失败的合同id以及错误详情
+        /// <p>失败的合同id以及错误详情</p>
         /// </summary>
         [JsonProperty("FailedFlows")]
         public FlowForwardResult[] FailedFlows{ get; set; }
 
         /// <summary>
-        /// 成功的合同id
+        /// <p>成功的合同id</p>
         /// </summary>
         [JsonProperty("SuccessFlows")]
         public string[] SuccessFlows{ get; set; }

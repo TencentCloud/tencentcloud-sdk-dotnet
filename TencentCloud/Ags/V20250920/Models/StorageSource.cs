@@ -42,6 +42,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("Cfs")]
         public CfsStorageSource Cfs{ get; set; }
 
+        /// <summary>
+        /// <p>AgentBucket 存储配置</p>
+        /// </summary>
+        [JsonProperty("AgentBucket")]
+        public AgentBucketStorageSource AgentBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "Cos.", this.Cos);
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamObj(map, prefix + "Cfs.", this.Cfs);
+            this.SetParamObj(map, prefix + "AgentBucket.", this.AgentBucket);
         }
     }
 }

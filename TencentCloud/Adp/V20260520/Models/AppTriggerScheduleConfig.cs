@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>触发器定时配置</p>
         /// </summary>
         [JsonProperty("Schedule")]
         public TimerScheduleConfig Schedule{ get; set; }

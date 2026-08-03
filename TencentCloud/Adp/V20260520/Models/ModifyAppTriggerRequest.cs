@@ -31,6 +31,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public string AppId{ get; set; }
 
         /// <summary>
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+        /// </summary>
+        [JsonProperty("Scope")]
+        public long? Scope{ get; set; }
+
+        /// <summary>
         /// <p>触发器信息</p>
         /// </summary>
         [JsonProperty("Trigger")]
@@ -48,6 +54,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("UpdateMask")]
         public FieldMask UpdateMask{ get; set; }
 
+        /// <summary>
+        /// <p>访客ID</p>
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +67,11 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
             this.SetParamSimple(map, prefix + "TriggerId", this.TriggerId);
             this.SetParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
         /// </summary>
         [JsonProperty("LastFireTime")]
         public string LastFireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
         /// </summary>
         [JsonProperty("NextFireTime")]
         public string NextFireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>触发方式</p>
         /// </summary>
         [JsonProperty("PolicySummary")]
         public string PolicySummary{ get; set; }

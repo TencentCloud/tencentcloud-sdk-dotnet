@@ -25,48 +25,43 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 灾备实例状态
+        /// <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 可用区信息
+        /// <p>可用区信息</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// <p>地域信息</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例同步状态。可能的返回值为：
-        /// 0 - 灾备未同步；
-        /// 1 - 灾备同步中；
-        /// 2 - 灾备同步成功；
-        /// 3 - 灾备同步失败；
-        /// 4 - 灾备同步修复中。
+        /// <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }

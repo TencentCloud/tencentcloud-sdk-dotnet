@@ -25,25 +25,26 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 存储挂载配置名称
+        /// <p>存储挂载配置名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 存储配置
+        /// <p>存储配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageSource")]
         public StorageSource StorageSource{ get; set; }
 
         /// <summary>
-        /// 沙箱实例本地挂载路径
+        /// <p>沙箱实例本地挂载路径</p>
         /// </summary>
         [JsonProperty("MountPath")]
         public string MountPath{ get; set; }
 
         /// <summary>
-        /// 存储挂载读写权限配置，默认为false
+        /// <p>存储挂载读写权限配置，默认为false</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }

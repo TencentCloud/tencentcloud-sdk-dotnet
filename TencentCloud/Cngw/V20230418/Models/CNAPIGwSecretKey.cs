@@ -25,28 +25,30 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// <p>密钥id</p>
+        /// <p>绑定数</p>
         /// </summary>
-        [JsonProperty("SecretKeyId")]
-        public string SecretKeyId{ get; set; }
+        [JsonProperty("BindCount")]
+        public ulong? BindCount{ get; set; }
 
         /// <summary>
-        /// <p>密钥名字</p>
+        /// <p>是否可以绑定</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("CanBind")]
+        public bool? CanBind{ get; set; }
 
         /// <summary>
-        /// <p>密钥协议类型。</p>
+        /// <p>创建时间</p>
         /// </summary>
-        [JsonProperty("SecretType")]
-        public string SecretType{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+        /// <p>描述</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
         /// <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
@@ -55,10 +57,10 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// <p>密钥明文</p>
+        /// <p>JWT凭证配置</p>
         /// </summary>
-        [JsonProperty("SecretValue")]
-        public string SecretValue{ get; set; }
+        [JsonProperty("JWTCredentialConfig")]
+        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
 
         /// <summary>
         /// <p>KMS凭证名字</p>
@@ -75,51 +77,19 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string KmsKeyVersion{ get; set; }
 
         /// <summary>
-        /// <p>描述</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// <p>是否可以绑定</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CanBind")]
-        public bool? CanBind{ get; set; }
-
-        /// <summary>
-        /// <p>创建时间</p>
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
         /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// <p>绑定数</p>
+        /// <p>密钥名字</p>
         /// </summary>
-        [JsonProperty("BindCount")]
-        public ulong? BindCount{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
-
-        /// <summary>
-        /// <p>JWT凭证配置</p>
-        /// </summary>
-        [JsonProperty("JWTCredentialConfig")]
-        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
-
-        /// <summary>
-        /// <p>OAuth2凭证配置</p>
+        /// <p>OAuth凭证配置</p>
         /// </summary>
         [JsonProperty("OAuthCredentialConfig")]
         public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
@@ -131,10 +101,40 @@ namespace TencentCloud.Cngw.V20230418.Models
         public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
 
         /// <summary>
-        /// <p>Agent 密钥类型</p>
+        /// <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
+
+        /// <summary>
+        /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>密钥id</p>
+        /// </summary>
+        [JsonProperty("SecretKeyId")]
+        public string SecretKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>密钥协议类型。</p>
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public string SecretType{ get; set; }
+
+        /// <summary>
+        /// <p>密钥明文</p>
+        /// </summary>
+        [JsonProperty("SecretValue")]
+        public string SecretValue{ get; set; }
+
+        /// <summary>
+        /// <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -142,24 +142,24 @@ namespace TencentCloud.Cngw.V20230418.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
-            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
-            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
-            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
             this.SetParamSimple(map, prefix + "CanBind", this.CanBind);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
-            this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
             this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
+            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

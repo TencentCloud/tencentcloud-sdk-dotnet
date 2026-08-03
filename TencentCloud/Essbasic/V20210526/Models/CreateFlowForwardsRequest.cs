@@ -25,21 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同对应参与方需要修改的目标经办人对应的OpenId。
-        /// 
-        /// 注意：`需要保证目标经办人已经加入企业且已实名`
+        /// <p>合同对应参与方需要修改的目标经办人对应的OpenId。</p><p>注意：<code>需要保证目标经办人已经加入企业且已实名</code></p>
         /// </summary>
         [JsonProperty("TargetOpenId")]
         public string TargetOpenId{ get; set; }
 
         /// <summary>
-        /// 企业签署方的合同及对应签署方
+        /// <p>企业签署方的合同及对应签署方</p>
         /// </summary>
         [JsonProperty("FlowForwardInfos")]
         public FlowForwardInfo[] FlowForwardInfos{ get; set; }
 
         /// <summary>
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。此接口下面信息必填。<ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+        /// <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。此接口下面信息必填。<ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

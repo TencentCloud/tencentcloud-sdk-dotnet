@@ -168,6 +168,30 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("KeyRotationPeriodDays")]
         public ulong? KeyRotationPeriodDays{ get; set; }
 
+        /// <summary>
+        /// <p>来源服务 ID。</p>
+        /// </summary>
+        [JsonProperty("SourceId")]
+        public string SourceId{ get; set; }
+
+        /// <summary>
+        /// <p>命名空间。</p>
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// <p>服务名称。</p>
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// <p>协议类型，如 OpenAI、Custom。</p>
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +222,10 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
             this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
+            this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

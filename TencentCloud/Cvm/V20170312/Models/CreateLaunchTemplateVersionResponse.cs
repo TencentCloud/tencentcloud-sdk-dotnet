@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 新创建的实例启动模板版本号。
+        /// <p>新创建的实例启动模板版本号。</p>
         /// </summary>
         [JsonProperty("LaunchTemplateVersionNumber")]
         public long? LaunchTemplateVersionNumber{ get; set; }

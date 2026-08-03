@@ -25,16 +25,16 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// 是否成功
-        /// </summary>
-        [JsonProperty("Success")]
-        public bool? Success{ get; set; }
-
-        /// <summary>
         /// 对应的id 值
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
+
+        /// <summary>
+        /// 是否成功
+        /// </summary>
+        [JsonProperty("Success")]
+        public bool? Success{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cngw.V20230418.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Success", this.Success);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "Success", this.Success);
         }
     }
 }

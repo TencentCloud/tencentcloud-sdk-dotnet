@@ -36,6 +36,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("TPMLimit")]
         public long? TPMLimit{ get; set; }
 
+        /// <summary>
+        /// <p>并发数限流</p>
+        /// </summary>
+        [JsonProperty("ConcurrentCountLimit")]
+        public long? ConcurrentCountLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "RPMLimit", this.RPMLimit);
             this.SetParamSimple(map, prefix + "TPMLimit", this.TPMLimit);
+            this.SetParamSimple(map, prefix + "ConcurrentCountLimit", this.ConcurrentCountLimit);
         }
     }
 }

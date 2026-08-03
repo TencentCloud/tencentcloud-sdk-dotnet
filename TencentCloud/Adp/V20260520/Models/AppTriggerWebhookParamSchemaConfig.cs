@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>触发器API参数列表</p>
         /// </summary>
         [JsonProperty("SchemaList")]
         public AppTriggerParamSchema[] SchemaList{ get; set; }

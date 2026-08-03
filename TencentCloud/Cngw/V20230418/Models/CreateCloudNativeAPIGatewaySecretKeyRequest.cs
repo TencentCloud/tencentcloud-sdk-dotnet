@@ -31,10 +31,10 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+        /// <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
         /// </summary>
-        [JsonProperty("SecretType")]
-        public string SecretType{ get; set; }
+        [JsonProperty("GenerateType")]
+        public string GenerateType{ get; set; }
 
         /// <summary>
         /// <p>密钥名称，2-60 字符。</p>
@@ -43,34 +43,16 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
-        /// </summary>
-        [JsonProperty("GenerateType")]
-        public string GenerateType{ get; set; }
-
-        /// <summary>
         /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+        /// <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
         /// </summary>
-        [JsonProperty("KmsKeyName")]
-        public string KmsKeyName{ get; set; }
-
-        /// <summary>
-        /// <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
-        /// </summary>
-        [JsonProperty("KmsKeyVersion")]
-        public string KmsKeyVersion{ get; set; }
-
-        /// <summary>
-        /// <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
-        /// </summary>
-        [JsonProperty("SecretValue")]
-        public string SecretValue{ get; set; }
+        [JsonProperty("SecretType")]
+        public string SecretType{ get; set; }
 
         /// <summary>
         /// <p>密钥描述。最长 200 字符。</p>
@@ -85,7 +67,19 @@ namespace TencentCloud.Cngw.V20230418.Models
         public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
 
         /// <summary>
-        /// <p>Oauth2凭证配置</p>
+        /// <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+        /// </summary>
+        [JsonProperty("KmsKeyName")]
+        public string KmsKeyName{ get; set; }
+
+        /// <summary>
+        /// <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+        /// </summary>
+        [JsonProperty("KmsKeyVersion")]
+        public string KmsKeyVersion{ get; set; }
+
+        /// <summary>
+        /// <p>OAuth2.0凭证配置</p>
         /// </summary>
         [JsonProperty("OAuthCredentialConfig")]
         public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
@@ -96,6 +90,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("OIDCCredentialConfig")]
         public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
 
+        /// <summary>
+        /// <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+        /// </summary>
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
+        /// <summary>
+        /// <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+        /// </summary>
+        [JsonProperty("SecretValue")]
+        public string SecretValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,17 +109,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
-            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
-            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
-            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
+            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
             this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
         }
     }
 }

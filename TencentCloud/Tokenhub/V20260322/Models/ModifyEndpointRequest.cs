@@ -25,7 +25,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 自动调整配额
+        /// <p>自动调整配额</p>
         /// </summary>
         [JsonProperty("AutoAdjustQuota")]
         public long? AutoAdjustQuota{ get; set; }

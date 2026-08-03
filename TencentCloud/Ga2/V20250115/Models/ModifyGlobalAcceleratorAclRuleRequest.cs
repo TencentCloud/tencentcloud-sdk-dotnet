@@ -43,7 +43,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string GlobalAcceleratorAclRuleId{ get; set; }
 
         /// <summary>
-        /// <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+        /// <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

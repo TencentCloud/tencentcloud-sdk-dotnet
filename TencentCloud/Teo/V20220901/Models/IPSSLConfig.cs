@@ -25,18 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+        /// <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedDomain")]
         public string AssociatedDomain{ get; set; }
 
         /// <summary>
-        /// 关联状态， 取值如下：
-        /// <li>bound：IP SSL配置已绑定</li>
-        /// <li>binding：IP SSL配置绑定中</li>
-        /// <li>unbinding：IP SSL配置解绑中</li>
-        /// <li>unbound：IP SSL配置未绑定</li>
+        /// <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -47,6 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "AssociatedDomain", this.AssociatedDomain);
             this.SetParamSimple(map, prefix + "Status", this.Status);
         }

@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>推送Webbook地址</p>
         /// </summary>
         [JsonProperty("WebhookUrl")]
         public string WebhookUrl{ get; set; }

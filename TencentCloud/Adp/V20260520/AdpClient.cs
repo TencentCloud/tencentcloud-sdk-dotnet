@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1470";
+       private const string sdkVersion = "SDK_NET_3.0.1478";
 
         /// <summary>
         /// Client constructor.
@@ -285,27 +285,6 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// CreateTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="CreateTimerTaskRequest"/></param>
-        /// <returns><see cref="CreateTimerTaskResponse"/></returns>
-        public Task<CreateTimerTaskResponse> CreateTimerTask(CreateTimerTaskRequest req)
-        {
-            return InternalRequestAsync<CreateTimerTaskResponse>(req, "CreateTimerTask");
-        }
-
-        /// <summary>
-        /// CreateTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="CreateTimerTaskRequest"/></param>
-        /// <returns><see cref="CreateTimerTaskResponse"/></returns>
-        public CreateTimerTaskResponse CreateTimerTaskSync(CreateTimerTaskRequest req)
-        {
-            return InternalRequestAsync<CreateTimerTaskResponse>(req, "CreateTimerTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建参数变量
         /// </summary>
         /// <param name="req"><see cref="CreateVariableRequest"/></param>
@@ -533,27 +512,6 @@ namespace TencentCloud.Adp.V20260520
         public DeleteSpaceResponse DeleteSpaceSync(DeleteSpaceRequest req)
         {
             return InternalRequestAsync<DeleteSpaceResponse>(req, "DeleteSpace")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// DeleteTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTimerTaskRequest"/></param>
-        /// <returns><see cref="DeleteTimerTaskResponse"/></returns>
-        public Task<DeleteTimerTaskResponse> DeleteTimerTask(DeleteTimerTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteTimerTaskResponse>(req, "DeleteTimerTask");
-        }
-
-        /// <summary>
-        /// DeleteTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTimerTaskRequest"/></param>
-        /// <returns><see cref="DeleteTimerTaskResponse"/></returns>
-        public DeleteTimerTaskResponse DeleteTimerTaskSync(DeleteTimerTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteTimerTaskResponse>(req, "DeleteTimerTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1146,69 +1104,6 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// DescribeTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskResponse"/></returns>
-        public Task<DescribeTimerTaskResponse> DescribeTimerTask(DescribeTimerTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskResponse>(req, "DescribeTimerTask");
-        }
-
-        /// <summary>
-        /// DescribeTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskResponse"/></returns>
-        public DescribeTimerTaskResponse DescribeTimerTaskSync(DescribeTimerTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskResponse>(req, "DescribeTimerTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询定时任务执行记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskRunLogListRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskRunLogListResponse"/></returns>
-        public Task<DescribeTimerTaskRunLogListResponse> DescribeTimerTaskRunLogList(DescribeTimerTaskRunLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskRunLogListResponse>(req, "DescribeTimerTaskRunLogList");
-        }
-
-        /// <summary>
-        /// 查询定时任务执行记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskRunLogListRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskRunLogListResponse"/></returns>
-        public DescribeTimerTaskRunLogListResponse DescribeTimerTaskRunLogListSync(DescribeTimerTaskRunLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskRunLogListResponse>(req, "DescribeTimerTaskRunLogList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询定时任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskSummaryListRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskSummaryListResponse"/></returns>
-        public Task<DescribeTimerTaskSummaryListResponse> DescribeTimerTaskSummaryList(DescribeTimerTaskSummaryListRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskSummaryListResponse>(req, "DescribeTimerTaskSummaryList");
-        }
-
-        /// <summary>
-        /// 查询定时任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTimerTaskSummaryListRequest"/></param>
-        /// <returns><see cref="DescribeTimerTaskSummaryListResponse"/></returns>
-        public DescribeTimerTaskSummaryListResponse DescribeTimerTaskSummaryListSync(DescribeTimerTaskSummaryListRequest req)
-        {
-            return InternalRequestAsync<DescribeTimerTaskSummaryListResponse>(req, "DescribeTimerTaskSummaryList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取参数变量
         /// </summary>
         /// <param name="req"><see cref="DescribeVariableRequest"/></param>
@@ -1289,48 +1184,6 @@ namespace TencentCloud.Adp.V20260520
         public FavoriteSkillResponse FavoriteSkillSync(FavoriteSkillRequest req)
         {
             return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// MarkAppTriggerRunLogRead
-        /// </summary>
-        /// <param name="req"><see cref="MarkAppTriggerRunLogReadRequest"/></param>
-        /// <returns><see cref="MarkAppTriggerRunLogReadResponse"/></returns>
-        public Task<MarkAppTriggerRunLogReadResponse> MarkAppTriggerRunLogRead(MarkAppTriggerRunLogReadRequest req)
-        {
-            return InternalRequestAsync<MarkAppTriggerRunLogReadResponse>(req, "MarkAppTriggerRunLogRead");
-        }
-
-        /// <summary>
-        /// MarkAppTriggerRunLogRead
-        /// </summary>
-        /// <param name="req"><see cref="MarkAppTriggerRunLogReadRequest"/></param>
-        /// <returns><see cref="MarkAppTriggerRunLogReadResponse"/></returns>
-        public MarkAppTriggerRunLogReadResponse MarkAppTriggerRunLogReadSync(MarkAppTriggerRunLogReadRequest req)
-        {
-            return InternalRequestAsync<MarkAppTriggerRunLogReadResponse>(req, "MarkAppTriggerRunLogRead")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// MarkTimerTaskRunLogRead
-        /// </summary>
-        /// <param name="req"><see cref="MarkTimerTaskRunLogReadRequest"/></param>
-        /// <returns><see cref="MarkTimerTaskRunLogReadResponse"/></returns>
-        public Task<MarkTimerTaskRunLogReadResponse> MarkTimerTaskRunLogRead(MarkTimerTaskRunLogReadRequest req)
-        {
-            return InternalRequestAsync<MarkTimerTaskRunLogReadResponse>(req, "MarkTimerTaskRunLogRead");
-        }
-
-        /// <summary>
-        /// MarkTimerTaskRunLogRead
-        /// </summary>
-        /// <param name="req"><see cref="MarkTimerTaskRunLogReadRequest"/></param>
-        /// <returns><see cref="MarkTimerTaskRunLogReadResponse"/></returns>
-        public MarkTimerTaskRunLogReadResponse MarkTimerTaskRunLogReadSync(MarkTimerTaskRunLogReadRequest req)
-        {
-            return InternalRequestAsync<MarkTimerTaskRunLogReadResponse>(req, "MarkTimerTaskRunLogRead")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1482,27 +1335,6 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// ModifyTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTimerTaskRequest"/></param>
-        /// <returns><see cref="ModifyTimerTaskResponse"/></returns>
-        public Task<ModifyTimerTaskResponse> ModifyTimerTask(ModifyTimerTaskRequest req)
-        {
-            return InternalRequestAsync<ModifyTimerTaskResponse>(req, "ModifyTimerTask");
-        }
-
-        /// <summary>
-        /// ModifyTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTimerTaskRequest"/></param>
-        /// <returns><see cref="ModifyTimerTaskResponse"/></returns>
-        public ModifyTimerTaskResponse ModifyTimerTaskSync(ModifyTimerTaskRequest req)
-        {
-            return InternalRequestAsync<ModifyTimerTaskResponse>(req, "ModifyTimerTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 更新参数变量
         /// </summary>
         /// <param name="req"><see cref="ModifyVariableRequest"/></param>
@@ -1545,27 +1377,6 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// PauseTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="PauseTimerTaskRequest"/></param>
-        /// <returns><see cref="PauseTimerTaskResponse"/></returns>
-        public Task<PauseTimerTaskResponse> PauseTimerTask(PauseTimerTaskRequest req)
-        {
-            return InternalRequestAsync<PauseTimerTaskResponse>(req, "PauseTimerTask");
-        }
-
-        /// <summary>
-        /// PauseTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="PauseTimerTaskRequest"/></param>
-        /// <returns><see cref="PauseTimerTaskResponse"/></returns>
-        public PauseTimerTaskResponse PauseTimerTaskSync(PauseTimerTaskRequest req)
-        {
-            return InternalRequestAsync<PauseTimerTaskResponse>(req, "PauseTimerTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 上架skill
         /// </summary>
         /// <param name="req"><see cref="ReleaseSkillRequest"/></param>
@@ -1588,6 +1399,7 @@ namespace TencentCloud.Adp.V20260520
 
         /// <summary>
         /// 重置会话
+        /// 注意：当前Claw模式应用会话不支持重置
         /// </summary>
         /// <param name="req"><see cref="ResetConversationRequest"/></param>
         /// <returns><see cref="ResetConversationResponse"/></returns>
@@ -1598,6 +1410,7 @@ namespace TencentCloud.Adp.V20260520
 
         /// <summary>
         /// 重置会话
+        /// 注意：当前Claw模式应用会话不支持重置
         /// </summary>
         /// <param name="req"><see cref="ResetConversationRequest"/></param>
         /// <returns><see cref="ResetConversationResponse"/></returns>
@@ -1625,27 +1438,6 @@ namespace TencentCloud.Adp.V20260520
         public ResumeAppTriggerResponse ResumeAppTriggerSync(ResumeAppTriggerRequest req)
         {
             return InternalRequestAsync<ResumeAppTriggerResponse>(req, "ResumeAppTrigger")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// ResumeTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="ResumeTimerTaskRequest"/></param>
-        /// <returns><see cref="ResumeTimerTaskResponse"/></returns>
-        public Task<ResumeTimerTaskResponse> ResumeTimerTask(ResumeTimerTaskRequest req)
-        {
-            return InternalRequestAsync<ResumeTimerTaskResponse>(req, "ResumeTimerTask");
-        }
-
-        /// <summary>
-        /// ResumeTimerTask
-        /// </summary>
-        /// <param name="req"><see cref="ResumeTimerTaskRequest"/></param>
-        /// <returns><see cref="ResumeTimerTaskResponse"/></returns>
-        public ResumeTimerTaskResponse ResumeTimerTaskSync(ResumeTimerTaskRequest req)
-        {
-            return InternalRequestAsync<ResumeTimerTaskResponse>(req, "ResumeTimerTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1709,27 +1501,6 @@ namespace TencentCloud.Adp.V20260520
         public RunAppTriggerNowResponse RunAppTriggerNowSync(RunAppTriggerNowRequest req)
         {
             return InternalRequestAsync<RunAppTriggerNowResponse>(req, "RunAppTriggerNow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// RunTimerTaskNow
-        /// </summary>
-        /// <param name="req"><see cref="RunTimerTaskNowRequest"/></param>
-        /// <returns><see cref="RunTimerTaskNowResponse"/></returns>
-        public Task<RunTimerTaskNowResponse> RunTimerTaskNow(RunTimerTaskNowRequest req)
-        {
-            return InternalRequestAsync<RunTimerTaskNowResponse>(req, "RunTimerTaskNow");
-        }
-
-        /// <summary>
-        /// RunTimerTaskNow
-        /// </summary>
-        /// <param name="req"><see cref="RunTimerTaskNowRequest"/></param>
-        /// <returns><see cref="RunTimerTaskNowResponse"/></returns>
-        public RunTimerTaskNowResponse RunTimerTaskNowSync(RunTimerTaskNowRequest req)
-        {
-            return InternalRequestAsync<RunTimerTaskNowResponse>(req, "RunTimerTaskNow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

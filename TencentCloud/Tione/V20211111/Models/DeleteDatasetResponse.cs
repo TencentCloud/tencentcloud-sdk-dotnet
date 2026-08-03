@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 删除的datasetId
+        /// <p>删除的datasetId</p>
         /// </summary>
         [JsonProperty("DatasetId")]
         public string DatasetId{ get; set; }

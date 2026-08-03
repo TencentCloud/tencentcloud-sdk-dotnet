@@ -49,7 +49,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public EndpointConfigurations[] EndpointConfigurations{ get; set; }
 
         /// <summary>
-        /// <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+        /// <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

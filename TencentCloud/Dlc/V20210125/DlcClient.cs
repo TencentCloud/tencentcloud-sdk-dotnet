@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1478";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 根据任务ID取消正在运行的Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelRayJobRequest"/></param>
+        /// <returns><see cref="CancelRayJobResponse"/></returns>
+        public Task<CancelRayJobResponse> CancelRayJob(CancelRayJobRequest req)
+        {
+            return InternalRequestAsync<CancelRayJobResponse>(req, "CancelRayJob");
+        }
+
+        /// <summary>
+        /// 根据任务ID取消正在运行的Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelRayJobRequest"/></param>
+        /// <returns><see cref="CancelRayJobResponse"/></returns>
+        public CancelRayJobResponse CancelRayJobSync(CancelRayJobRequest req)
+        {
+            return InternalRequestAsync<CancelRayJobResponse>(req, "CancelRayJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
         /// </summary>
         /// <param name="req"><see cref="CancelSparkSessionBatchSQLRequest"/></param>
@@ -516,6 +537,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 复制一份已有的作业配置
+        /// </summary>
+        /// <param name="req"><see cref="CopyJobSpecRequest"/></param>
+        /// <returns><see cref="CopyJobSpecResponse"/></returns>
+        public Task<CopyJobSpecResponse> CopyJobSpec(CopyJobSpecRequest req)
+        {
+            return InternalRequestAsync<CopyJobSpecResponse>(req, "CopyJobSpec");
+        }
+
+        /// <summary>
+        /// 复制一份已有的作业配置
+        /// </summary>
+        /// <param name="req"><see cref="CopyJobSpecRequest"/></param>
+        /// <returns><see cref="CopyJobSpecResponse"/></returns>
+        public CopyJobSpecResponse CopyJobSpecSync(CopyJobSpecRequest req)
+        {
+            return InternalRequestAsync<CopyJobSpecResponse>(req, "CopyJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
         /// </summary>
         /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
@@ -533,6 +575,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateCHDFSBindingProductResponse CreateCHDFSBindingProductSync(CreateCHDFSBindingProductRequest req)
         {
             return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群组
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterGroupRequest"/></param>
+        /// <returns><see cref="CreateClusterGroupResponse"/></returns>
+        public Task<CreateClusterGroupResponse> CreateClusterGroup(CreateClusterGroupRequest req)
+        {
+            return InternalRequestAsync<CreateClusterGroupResponse>(req, "CreateClusterGroup");
+        }
+
+        /// <summary>
+        /// 创建集群组
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterGroupRequest"/></param>
+        /// <returns><see cref="CreateClusterGroupResponse"/></returns>
+        public CreateClusterGroupResponse CreateClusterGroupSync(CreateClusterGroupRequest req)
+        {
+            return InternalRequestAsync<CreateClusterGroupResponse>(req, "CreateClusterGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +789,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建作业配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobSpecRequest"/></param>
+        /// <returns><see cref="CreateJobSpecResponse"/></returns>
+        public Task<CreateJobSpecResponse> CreateJobSpec(CreateJobSpecRequest req)
+        {
+            return InternalRequestAsync<CreateJobSpecResponse>(req, "CreateJobSpec");
+        }
+
+        /// <summary>
+        /// 创建作业配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobSpecRequest"/></param>
+        /// <returns><see cref="CreateJobSpecResponse"/></returns>
+        public CreateJobSpecResponse CreateJobSpecSync(CreateJobSpecRequest req)
+        {
+            return InternalRequestAsync<CreateJobSpecResponse>(req, "CreateJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建实验室
+        /// </summary>
+        /// <param name="req"><see cref="CreateLabRequest"/></param>
+        /// <returns><see cref="CreateLabResponse"/></returns>
+        public Task<CreateLabResponse> CreateLab(CreateLabRequest req)
+        {
+            return InternalRequestAsync<CreateLabResponse>(req, "CreateLab");
+        }
+
+        /// <summary>
+        /// 创建实验室
+        /// </summary>
+        /// <param name="req"><see cref="CreateLabRequest"/></param>
+        /// <returns><see cref="CreateLabResponse"/></returns>
+        public CreateLabResponse CreateLabSync(CreateLabRequest req)
+        {
+            return InternalRequestAsync<CreateLabResponse>(req, "CreateLab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateMetaDatabase）用于创建元数据库
         /// </summary>
         /// <param name="req"><see cref="CreateMetaDatabaseRequest"/></param>
@@ -806,6 +911,48 @@ namespace TencentCloud.Dlc.V20210125
         public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQLSync(CreateNotebookSessionStatementSupportBatchSQLRequest req)
         {
             return InternalRequestAsync<CreateNotebookSessionStatementSupportBatchSQLResponse>(req, "CreateNotebookSessionStatementSupportBatchSQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateRayClusterRequest"/></param>
+        /// <returns><see cref="CreateRayClusterResponse"/></returns>
+        public Task<CreateRayClusterResponse> CreateRayCluster(CreateRayClusterRequest req)
+        {
+            return InternalRequestAsync<CreateRayClusterResponse>(req, "CreateRayCluster");
+        }
+
+        /// <summary>
+        /// 创建集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateRayClusterRequest"/></param>
+        /// <returns><see cref="CreateRayClusterResponse"/></returns>
+        public CreateRayClusterResponse CreateRayClusterSync(CreateRayClusterRequest req)
+        {
+            return InternalRequestAsync<CreateRayClusterResponse>(req, "CreateRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceConfigRequest"/></param>
+        /// <returns><see cref="CreateResourceConfigResponse"/></returns>
+        public Task<CreateResourceConfigResponse> CreateResourceConfig(CreateResourceConfigRequest req)
+        {
+            return InternalRequestAsync<CreateResourceConfigResponse>(req, "CreateResourceConfig");
+        }
+
+        /// <summary>
+        /// 创建资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceConfigRequest"/></param>
+        /// <returns><see cref="CreateResourceConfigResponse"/></returns>
+        public CreateResourceConfigResponse CreateResourceConfigSync(CreateResourceConfigRequest req)
+        {
+            return InternalRequestAsync<CreateResourceConfigResponse>(req, "CreateResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1213,6 +1360,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 删除集群组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterGroupRequest"/></param>
+        /// <returns><see cref="DeleteClusterGroupResponse"/></returns>
+        public Task<DeleteClusterGroupResponse> DeleteClusterGroup(DeleteClusterGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterGroupResponse>(req, "DeleteClusterGroup");
+        }
+
+        /// <summary>
+        /// 删除集群组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterGroupRequest"/></param>
+        /// <returns><see cref="DeleteClusterGroupResponse"/></returns>
+        public DeleteClusterGroupResponse DeleteClusterGroupSync(DeleteClusterGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterGroupResponse>(req, "DeleteClusterGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除数据引擎
         /// </summary>
         /// <param name="req"><see cref="DeleteDataEngineRequest"/></param>
@@ -1251,6 +1419,48 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteDataMaskStrategyResponse DeleteDataMaskStrategySync(DeleteDataMaskStrategyRequest req)
         {
             return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据配置ID删除作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobSpecRequest"/></param>
+        /// <returns><see cref="DeleteJobSpecResponse"/></returns>
+        public Task<DeleteJobSpecResponse> DeleteJobSpec(DeleteJobSpecRequest req)
+        {
+            return InternalRequestAsync<DeleteJobSpecResponse>(req, "DeleteJobSpec");
+        }
+
+        /// <summary>
+        /// 根据配置ID删除作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobSpecRequest"/></param>
+        /// <returns><see cref="DeleteJobSpecResponse"/></returns>
+        public DeleteJobSpecResponse DeleteJobSpecSync(DeleteJobSpecRequest req)
+        {
+            return InternalRequestAsync<DeleteJobSpecResponse>(req, "DeleteJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据实验室
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLabRequest"/></param>
+        /// <returns><see cref="DeleteLabResponse"/></returns>
+        public Task<DeleteLabResponse> DeleteLab(DeleteLabRequest req)
+        {
+            return InternalRequestAsync<DeleteLabResponse>(req, "DeleteLab");
+        }
+
+        /// <summary>
+        /// 删除数据实验室
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLabRequest"/></param>
+        /// <returns><see cref="DeleteLabResponse"/></returns>
+        public DeleteLabResponse DeleteLabSync(DeleteLabRequest req)
+        {
+            return InternalRequestAsync<DeleteLabResponse>(req, "DeleteLab")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1314,6 +1524,69 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteNotebookSessionResponse DeleteNotebookSessionSync(DeleteNotebookSessionRequest req)
         {
             return InternalRequestAsync<DeleteNotebookSessionResponse>(req, "DeleteNotebookSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRayClusterRequest"/></param>
+        /// <returns><see cref="DeleteRayClusterResponse"/></returns>
+        public Task<DeleteRayClusterResponse> DeleteRayCluster(DeleteRayClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteRayClusterResponse>(req, "DeleteRayCluster");
+        }
+
+        /// <summary>
+        /// 删除集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRayClusterRequest"/></param>
+        /// <returns><see cref="DeleteRayClusterResponse"/></returns>
+        public DeleteRayClusterResponse DeleteRayClusterSync(DeleteRayClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteRayClusterResponse>(req, "DeleteRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID删除Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRayJobRequest"/></param>
+        /// <returns><see cref="DeleteRayJobResponse"/></returns>
+        public Task<DeleteRayJobResponse> DeleteRayJob(DeleteRayJobRequest req)
+        {
+            return InternalRequestAsync<DeleteRayJobResponse>(req, "DeleteRayJob");
+        }
+
+        /// <summary>
+        /// 根据任务ID删除Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRayJobRequest"/></param>
+        /// <returns><see cref="DeleteRayJobResponse"/></returns>
+        public DeleteRayJobResponse DeleteRayJobSync(DeleteRayJobRequest req)
+        {
+            return InternalRequestAsync<DeleteRayJobResponse>(req, "DeleteRayJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceConfigRequest"/></param>
+        /// <returns><see cref="DeleteResourceConfigResponse"/></returns>
+        public Task<DeleteResourceConfigResponse> DeleteResourceConfig(DeleteResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceConfigResponse>(req, "DeleteResourceConfig");
+        }
+
+        /// <summary>
+        /// 删除资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceConfigRequest"/></param>
+        /// <returns><see cref="DeleteResourceConfigResponse"/></returns>
+        public DeleteResourceConfigResponse DeleteResourceConfigSync(DeleteResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceConfigResponse>(req, "DeleteResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +1797,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
         {
             return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据集群组 ID 获取集群组详情。支持通过 IncludeDeleted 参数控制是否返回已软删除的记录（用于悬挂 cluster 回显场景）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterGroupRequest"/></param>
+        /// <returns><see cref="DescribeClusterGroupResponse"/></returns>
+        public Task<DescribeClusterGroupResponse> DescribeClusterGroup(DescribeClusterGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterGroupResponse>(req, "DescribeClusterGroup");
+        }
+
+        /// <summary>
+        /// 根据集群组 ID 获取集群组详情。支持通过 IncludeDeleted 参数控制是否返回已软删除的记录（用于悬挂 cluster 回显场景）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterGroupRequest"/></param>
+        /// <returns><see cref="DescribeClusterGroupResponse"/></returns>
+        public DescribeClusterGroupResponse DescribeClusterGroupSync(DescribeClusterGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterGroupResponse>(req, "DescribeClusterGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 计算组关联 cluster 使用情况响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterGroupClustersRequest"/></param>
+        /// <returns><see cref="DescribeClusterGroupClustersResponse"/></returns>
+        public Task<DescribeClusterGroupClustersResponse> DescribeClusterGroupClusters(DescribeClusterGroupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterGroupClustersResponse>(req, "DescribeClusterGroupClusters");
+        }
+
+        /// <summary>
+        /// 计算组关联 cluster 使用情况响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterGroupClustersRequest"/></param>
+        /// <returns><see cref="DescribeClusterGroupClustersResponse"/></returns>
+        public DescribeClusterGroupClustersResponse DescribeClusterGroupClustersSync(DescribeClusterGroupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterGroupClustersResponse>(req, "DescribeClusterGroupClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3313,6 +3628,195 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 根据 exampleId 获取单个案例详情
+        /// </summary>
+        /// <param name="req"><see cref="GetExampleDetailRequest"/></param>
+        /// <returns><see cref="GetExampleDetailResponse"/></returns>
+        public Task<GetExampleDetailResponse> GetExampleDetail(GetExampleDetailRequest req)
+        {
+            return InternalRequestAsync<GetExampleDetailResponse>(req, "GetExampleDetail");
+        }
+
+        /// <summary>
+        /// 根据 exampleId 获取单个案例详情
+        /// </summary>
+        /// <param name="req"><see cref="GetExampleDetailRequest"/></param>
+        /// <returns><see cref="GetExampleDetailResponse"/></returns>
+        public GetExampleDetailResponse GetExampleDetailSync(GetExampleDetailRequest req)
+        {
+            return InternalRequestAsync<GetExampleDetailResponse>(req, "GetExampleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据配置ID获取作业配置详情
+        /// </summary>
+        /// <param name="req"><see cref="GetJobSpecRequest"/></param>
+        /// <returns><see cref="GetJobSpecResponse"/></returns>
+        public Task<GetJobSpecResponse> GetJobSpec(GetJobSpecRequest req)
+        {
+            return InternalRequestAsync<GetJobSpecResponse>(req, "GetJobSpec");
+        }
+
+        /// <summary>
+        /// 根据配置ID获取作业配置详情
+        /// </summary>
+        /// <param name="req"><see cref="GetJobSpecRequest"/></param>
+        /// <returns><see cref="GetJobSpecResponse"/></returns>
+        public GetJobSpecResponse GetJobSpecSync(GetJobSpecRequest req)
+        {
+            return InternalRequestAsync<GetJobSpecResponse>(req, "GetJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实验室详情
+        /// </summary>
+        /// <param name="req"><see cref="GetLabDetailRequest"/></param>
+        /// <returns><see cref="GetLabDetailResponse"/></returns>
+        public Task<GetLabDetailResponse> GetLabDetail(GetLabDetailRequest req)
+        {
+            return InternalRequestAsync<GetLabDetailResponse>(req, "GetLabDetail");
+        }
+
+        /// <summary>
+        /// 获取实验室详情
+        /// </summary>
+        /// <param name="req"><see cref="GetLabDetailRequest"/></param>
+        /// <returns><see cref="GetLabDetailResponse"/></returns>
+        public GetLabDetailResponse GetLabDetailSync(GetLabDetailRequest req)
+        {
+            return InternalRequestAsync<GetLabDetailResponse>(req, "GetLabDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实验室的事件流（基于 K8s Event + CLS 日志）
+        /// </summary>
+        /// <param name="req"><see cref="GetLabEventRequest"/></param>
+        /// <returns><see cref="GetLabEventResponse"/></returns>
+        public Task<GetLabEventResponse> GetLabEvent(GetLabEventRequest req)
+        {
+            return InternalRequestAsync<GetLabEventResponse>(req, "GetLabEvent");
+        }
+
+        /// <summary>
+        /// 获取实验室的事件流（基于 K8s Event + CLS 日志）
+        /// </summary>
+        /// <param name="req"><see cref="GetLabEventRequest"/></param>
+        /// <returns><see cref="GetLabEventResponse"/></returns>
+        public GetLabEventResponse GetLabEventSync(GetLabEventRequest req)
+        {
+            return InternalRequestAsync<GetLabEventResponse>(req, "GetLabEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实验室的状态变更历史记录
+        /// </summary>
+        /// <param name="req"><see cref="GetLabHistoryRequest"/></param>
+        /// <returns><see cref="GetLabHistoryResponse"/></returns>
+        public Task<GetLabHistoryResponse> GetLabHistory(GetLabHistoryRequest req)
+        {
+            return InternalRequestAsync<GetLabHistoryResponse>(req, "GetLabHistory");
+        }
+
+        /// <summary>
+        /// 获取实验室的状态变更历史记录
+        /// </summary>
+        /// <param name="req"><see cref="GetLabHistoryRequest"/></param>
+        /// <returns><see cref="GetLabHistoryResponse"/></returns>
+        public GetLabHistoryResponse GetLabHistorySync(GetLabHistoryRequest req)
+        {
+            return InternalRequestAsync<GetLabHistoryResponse>(req, "GetLabHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据实验室Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetLabPodYamlRequest"/></param>
+        /// <returns><see cref="GetLabPodYamlResponse"/></returns>
+        public Task<GetLabPodYamlResponse> GetLabPodYaml(GetLabPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetLabPodYamlResponse>(req, "GetLabPodYaml");
+        }
+
+        /// <summary>
+        /// 获取数据实验室Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetLabPodYamlRequest"/></param>
+        /// <returns><see cref="GetLabPodYamlResponse"/></returns>
+        public GetLabPodYamlResponse GetLabPodYamlSync(GetLabPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetLabPodYamlResponse>(req, "GetLabPodYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据实验室的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetLabPodsRequest"/></param>
+        /// <returns><see cref="GetLabPodsResponse"/></returns>
+        public Task<GetLabPodsResponse> GetLabPods(GetLabPodsRequest req)
+        {
+            return InternalRequestAsync<GetLabPodsResponse>(req, "GetLabPods");
+        }
+
+        /// <summary>
+        /// 获取数据实验室的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetLabPodsRequest"/></param>
+        /// <returns><see cref="GetLabPodsResponse"/></returns>
+        public GetLabPodsResponse GetLabPodsSync(GetLabPodsRequest req)
+        {
+            return InternalRequestAsync<GetLabPodsResponse>(req, "GetLabPods")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实验室ide访问地址
+        /// </summary>
+        /// <param name="req"><see cref="GetLabServiceUrlsRequest"/></param>
+        /// <returns><see cref="GetLabServiceUrlsResponse"/></returns>
+        public Task<GetLabServiceUrlsResponse> GetLabServiceUrls(GetLabServiceUrlsRequest req)
+        {
+            return InternalRequestAsync<GetLabServiceUrlsResponse>(req, "GetLabServiceUrls");
+        }
+
+        /// <summary>
+        /// 获取实验室ide访问地址
+        /// </summary>
+        /// <param name="req"><see cref="GetLabServiceUrlsRequest"/></param>
+        /// <returns><see cref="GetLabServiceUrlsResponse"/></returns>
+        public GetLabServiceUrlsResponse GetLabServiceUrlsSync(GetLabServiceUrlsRequest req)
+        {
+            return InternalRequestAsync<GetLabServiceUrlsResponse>(req, "GetLabServiceUrls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据实验室对应的RayCluster YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetLabYamlRequest"/></param>
+        /// <returns><see cref="GetLabYamlResponse"/></returns>
+        public Task<GetLabYamlResponse> GetLabYaml(GetLabYamlRequest req)
+        {
+            return InternalRequestAsync<GetLabYamlResponse>(req, "GetLabYaml");
+        }
+
+        /// <summary>
+        /// 获取数据实验室对应的RayCluster YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetLabYamlRequest"/></param>
+        /// <returns><see cref="GetLabYamlResponse"/></returns>
+        public GetLabYamlResponse GetLabYamlSync(GetLabYamlRequest req)
+        {
+            return InternalRequestAsync<GetLabYamlResponse>(req, "GetLabYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// GetOptimizerPolicy
         /// </summary>
         /// <param name="req"><see cref="GetOptimizerPolicyRequest"/></param>
@@ -3330,6 +3834,300 @@ namespace TencentCloud.Dlc.V20210125
         public GetOptimizerPolicyResponse GetOptimizerPolicySync(GetOptimizerPolicyRequest req)
         {
             return InternalRequestAsync<GetOptimizerPolicyResponse>(req, "GetOptimizerPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Ray集群详情请求
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterRequest"/></param>
+        /// <returns><see cref="GetRayClusterResponse"/></returns>
+        public Task<GetRayClusterResponse> GetRayCluster(GetRayClusterRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterResponse>(req, "GetRayCluster");
+        }
+
+        /// <summary>
+        /// 获取Ray集群详情请求
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterRequest"/></param>
+        /// <returns><see cref="GetRayClusterResponse"/></returns>
+        public GetRayClusterResponse GetRayClusterSync(GetRayClusterRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterResponse>(req, "GetRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Ray集群的事件流（基于 K8s Event + CLS 日志）
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterEventRequest"/></param>
+        /// <returns><see cref="GetRayClusterEventResponse"/></returns>
+        public Task<GetRayClusterEventResponse> GetRayClusterEvent(GetRayClusterEventRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterEventResponse>(req, "GetRayClusterEvent");
+        }
+
+        /// <summary>
+        /// 获取Ray集群的事件流（基于 K8s Event + CLS 日志）
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterEventRequest"/></param>
+        /// <returns><see cref="GetRayClusterEventResponse"/></returns>
+        public GetRayClusterEventResponse GetRayClusterEventSync(GetRayClusterEventRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterEventResponse>(req, "GetRayClusterEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集群状态历史
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterHistoryRequest"/></param>
+        /// <returns><see cref="GetRayClusterHistoryResponse"/></returns>
+        public Task<GetRayClusterHistoryResponse> GetRayClusterHistory(GetRayClusterHistoryRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterHistoryResponse>(req, "GetRayClusterHistory");
+        }
+
+        /// <summary>
+        /// 获取集群状态历史
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterHistoryRequest"/></param>
+        /// <returns><see cref="GetRayClusterHistoryResponse"/></returns>
+        public GetRayClusterHistoryResponse GetRayClusterHistorySync(GetRayClusterHistoryRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterHistoryResponse>(req, "GetRayClusterHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集群Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterPodYamlRequest"/></param>
+        /// <returns><see cref="GetRayClusterPodYamlResponse"/></returns>
+        public Task<GetRayClusterPodYamlResponse> GetRayClusterPodYaml(GetRayClusterPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterPodYamlResponse>(req, "GetRayClusterPodYaml");
+        }
+
+        /// <summary>
+        /// 获取集群Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterPodYamlRequest"/></param>
+        /// <returns><see cref="GetRayClusterPodYamlResponse"/></returns>
+        public GetRayClusterPodYamlResponse GetRayClusterPodYamlSync(GetRayClusterPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterPodYamlResponse>(req, "GetRayClusterPodYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集群的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterPodsRequest"/></param>
+        /// <returns><see cref="GetRayClusterPodsResponse"/></returns>
+        public Task<GetRayClusterPodsResponse> GetRayClusterPods(GetRayClusterPodsRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterPodsResponse>(req, "GetRayClusterPods");
+        }
+
+        /// <summary>
+        /// 获取集群的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterPodsRequest"/></param>
+        /// <returns><see cref="GetRayClusterPodsResponse"/></returns>
+        public GetRayClusterPodsResponse GetRayClusterPodsSync(GetRayClusterPodsRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterPodsResponse>(req, "GetRayClusterPods")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取RayCluster的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterYamlRequest"/></param>
+        /// <returns><see cref="GetRayClusterYamlResponse"/></returns>
+        public Task<GetRayClusterYamlResponse> GetRayClusterYaml(GetRayClusterYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterYamlResponse>(req, "GetRayClusterYaml");
+        }
+
+        /// <summary>
+        /// 获取RayCluster的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayClusterYamlRequest"/></param>
+        /// <returns><see cref="GetRayClusterYamlResponse"/></returns>
+        public GetRayClusterYamlResponse GetRayClusterYamlSync(GetRayClusterYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayClusterYamlResponse>(req, "GetRayClusterYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID获取Ray任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobRequest"/></param>
+        /// <returns><see cref="GetRayJobResponse"/></returns>
+        public Task<GetRayJobResponse> GetRayJob(GetRayJobRequest req)
+        {
+            return InternalRequestAsync<GetRayJobResponse>(req, "GetRayJob");
+        }
+
+        /// <summary>
+        /// 根据任务ID获取Ray任务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobRequest"/></param>
+        /// <returns><see cref="GetRayJobResponse"/></returns>
+        public GetRayJobResponse GetRayJobSync(GetRayJobRequest req)
+        {
+            return InternalRequestAsync<GetRayJobResponse>(req, "GetRayJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过 ResourceManager 调用 CLS SearchLog API 查询作业相关日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobEventRequest"/></param>
+        /// <returns><see cref="GetRayJobEventResponse"/></returns>
+        public Task<GetRayJobEventResponse> GetRayJobEvent(GetRayJobEventRequest req)
+        {
+            return InternalRequestAsync<GetRayJobEventResponse>(req, "GetRayJobEvent");
+        }
+
+        /// <summary>
+        /// 通过 ResourceManager 调用 CLS SearchLog API 查询作业相关日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobEventRequest"/></param>
+        /// <returns><see cref="GetRayJobEventResponse"/></returns>
+        public GetRayJobEventResponse GetRayJobEventSync(GetRayJobEventRequest req)
+        {
+            return InternalRequestAsync<GetRayJobEventResponse>(req, "GetRayJobEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取作业事件日志
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobEventLogRequest"/></param>
+        /// <returns><see cref="GetRayJobEventLogResponse"/></returns>
+        public Task<GetRayJobEventLogResponse> GetRayJobEventLog(GetRayJobEventLogRequest req)
+        {
+            return InternalRequestAsync<GetRayJobEventLogResponse>(req, "GetRayJobEventLog");
+        }
+
+        /// <summary>
+        /// 获取作业事件日志
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobEventLogRequest"/></param>
+        /// <returns><see cref="GetRayJobEventLogResponse"/></returns>
+        public GetRayJobEventLogResponse GetRayJobEventLogSync(GetRayJobEventLogRequest req)
+        {
+            return InternalRequestAsync<GetRayJobEventLogResponse>(req, "GetRayJobEventLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID获取Ray任务的历史执行记录
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobHistoryRequest"/></param>
+        /// <returns><see cref="GetRayJobHistoryResponse"/></returns>
+        public Task<GetRayJobHistoryResponse> GetRayJobHistory(GetRayJobHistoryRequest req)
+        {
+            return InternalRequestAsync<GetRayJobHistoryResponse>(req, "GetRayJobHistory");
+        }
+
+        /// <summary>
+        /// 根据任务ID获取Ray任务的历史执行记录
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobHistoryRequest"/></param>
+        /// <returns><see cref="GetRayJobHistoryResponse"/></returns>
+        public GetRayJobHistoryResponse GetRayJobHistorySync(GetRayJobHistoryRequest req)
+        {
+            return InternalRequestAsync<GetRayJobHistoryResponse>(req, "GetRayJobHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobPodYamlRequest"/></param>
+        /// <returns><see cref="GetRayJobPodYamlResponse"/></returns>
+        public Task<GetRayJobPodYamlResponse> GetRayJobPodYaml(GetRayJobPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayJobPodYamlResponse>(req, "GetRayJobPodYaml");
+        }
+
+        /// <summary>
+        /// 获取Pod的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobPodYamlRequest"/></param>
+        /// <returns><see cref="GetRayJobPodYamlResponse"/></returns>
+        public GetRayJobPodYamlResponse GetRayJobPodYamlSync(GetRayJobPodYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayJobPodYamlResponse>(req, "GetRayJobPodYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取作业的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobPodsRequest"/></param>
+        /// <returns><see cref="GetRayJobPodsResponse"/></returns>
+        public Task<GetRayJobPodsResponse> GetRayJobPods(GetRayJobPodsRequest req)
+        {
+            return InternalRequestAsync<GetRayJobPodsResponse>(req, "GetRayJobPods");
+        }
+
+        /// <summary>
+        /// 获取作业的Pod列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobPodsRequest"/></param>
+        /// <returns><see cref="GetRayJobPodsResponse"/></returns>
+        public GetRayJobPodsResponse GetRayJobPodsSync(GetRayJobPodsRequest req)
+        {
+            return InternalRequestAsync<GetRayJobPodsResponse>(req, "GetRayJobPods")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取RayJob的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobYamlRequest"/></param>
+        /// <returns><see cref="GetRayJobYamlResponse"/></returns>
+        public Task<GetRayJobYamlResponse> GetRayJobYaml(GetRayJobYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayJobYamlResponse>(req, "GetRayJobYaml");
+        }
+
+        /// <summary>
+        /// 获取RayJob的YAML内容
+        /// </summary>
+        /// <param name="req"><see cref="GetRayJobYamlRequest"/></param>
+        /// <returns><see cref="GetRayJobYamlResponse"/></returns>
+        public GetRayJobYamlResponse GetRayJobYamlSync(GetRayJobYamlRequest req)
+        {
+            return InternalRequestAsync<GetRayJobYamlResponse>(req, "GetRayJobYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取资源配置模板详情
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceConfigRequest"/></param>
+        /// <returns><see cref="GetResourceConfigResponse"/></returns>
+        public Task<GetResourceConfigResponse> GetResourceConfig(GetResourceConfigRequest req)
+        {
+            return InternalRequestAsync<GetResourceConfigResponse>(req, "GetResourceConfig");
+        }
+
+        /// <summary>
+        /// 获取资源配置模板详情
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceConfigRequest"/></param>
+        /// <returns><see cref="GetResourceConfigResponse"/></returns>
+        public GetResourceConfigResponse GetResourceConfigSync(GetResourceConfigRequest req)
+        {
+            return InternalRequestAsync<GetResourceConfigResponse>(req, "GetResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3393,6 +4191,258 @@ namespace TencentCloud.Dlc.V20210125
         public LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroupsSync(LaunchStandardEngineResourceGroupsRequest req)
         {
             return InternalRequestAsync<LaunchStandardEngineResourceGroupsResponse>(req, "LaunchStandardEngineResourceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出所有集群组
+        /// </summary>
+        /// <param name="req"><see cref="ListClusterGroupsRequest"/></param>
+        /// <returns><see cref="ListClusterGroupsResponse"/></returns>
+        public Task<ListClusterGroupsResponse> ListClusterGroups(ListClusterGroupsRequest req)
+        {
+            return InternalRequestAsync<ListClusterGroupsResponse>(req, "ListClusterGroups");
+        }
+
+        /// <summary>
+        /// 列出所有集群组
+        /// </summary>
+        /// <param name="req"><see cref="ListClusterGroupsRequest"/></param>
+        /// <returns><see cref="ListClusterGroupsResponse"/></returns>
+        public ListClusterGroupsResponse ListClusterGroupsSync(ListClusterGroupsRequest req)
+        {
+            return InternalRequestAsync<ListClusterGroupsResponse>(req, "ListClusterGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取所有案例分类
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleCategoriesRequest"/></param>
+        /// <returns><see cref="ListExampleCategoriesResponse"/></returns>
+        public Task<ListExampleCategoriesResponse> ListExampleCategories(ListExampleCategoriesRequest req)
+        {
+            return InternalRequestAsync<ListExampleCategoriesResponse>(req, "ListExampleCategories");
+        }
+
+        /// <summary>
+        /// 获取所有案例分类
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleCategoriesRequest"/></param>
+        /// <returns><see cref="ListExampleCategoriesResponse"/></returns>
+        public ListExampleCategoriesResponse ListExampleCategoriesSync(ListExampleCategoriesRequest req)
+        {
+            return InternalRequestAsync<ListExampleCategoriesResponse>(req, "ListExampleCategories")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取所有案例分类
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleDifficultiesRequest"/></param>
+        /// <returns><see cref="ListExampleDifficultiesResponse"/></returns>
+        public Task<ListExampleDifficultiesResponse> ListExampleDifficulties(ListExampleDifficultiesRequest req)
+        {
+            return InternalRequestAsync<ListExampleDifficultiesResponse>(req, "ListExampleDifficulties");
+        }
+
+        /// <summary>
+        /// 获取所有案例分类
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleDifficultiesRequest"/></param>
+        /// <returns><see cref="ListExampleDifficultiesResponse"/></returns>
+        public ListExampleDifficultiesResponse ListExampleDifficultiesSync(ListExampleDifficultiesRequest req)
+        {
+            return InternalRequestAsync<ListExampleDifficultiesResponse>(req, "ListExampleDifficulties")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回标签去重列表，按出现频次从高到低排序。
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleTagsRequest"/></param>
+        /// <returns><see cref="ListExampleTagsResponse"/></returns>
+        public Task<ListExampleTagsResponse> ListExampleTags(ListExampleTagsRequest req)
+        {
+            return InternalRequestAsync<ListExampleTagsResponse>(req, "ListExampleTags");
+        }
+
+        /// <summary>
+        /// 返回标签去重列表，按出现频次从高到低排序。
+        /// </summary>
+        /// <param name="req"><see cref="ListExampleTagsRequest"/></param>
+        /// <returns><see cref="ListExampleTagsResponse"/></returns>
+        public ListExampleTagsResponse ListExampleTagsSync(ListExampleTagsRequest req)
+        {
+            return InternalRequestAsync<ListExampleTagsResponse>(req, "ListExampleTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 案例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListExamplesRequest"/></param>
+        /// <returns><see cref="ListExamplesResponse"/></returns>
+        public Task<ListExamplesResponse> ListExamples(ListExamplesRequest req)
+        {
+            return InternalRequestAsync<ListExamplesResponse>(req, "ListExamples");
+        }
+
+        /// <summary>
+        /// 案例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListExamplesRequest"/></param>
+        /// <returns><see cref="ListExamplesResponse"/></returns>
+        public ListExamplesResponse ListExamplesSync(ListExamplesRequest req)
+        {
+            return InternalRequestAsync<ListExamplesResponse>(req, "ListExamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询作业配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListJobSpecsRequest"/></param>
+        /// <returns><see cref="ListJobSpecsResponse"/></returns>
+        public Task<ListJobSpecsResponse> ListJobSpecs(ListJobSpecsRequest req)
+        {
+            return InternalRequestAsync<ListJobSpecsResponse>(req, "ListJobSpecs");
+        }
+
+        /// <summary>
+        /// 分页查询作业配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListJobSpecsRequest"/></param>
+        /// <returns><see cref="ListJobSpecsResponse"/></returns>
+        public ListJobSpecsResponse ListJobSpecsSync(ListJobSpecsRequest req)
+        {
+            return InternalRequestAsync<ListJobSpecsResponse>(req, "ListJobSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询某作业配置下产生的所有作业实例
+        /// </summary>
+        /// <param name="req"><see cref="ListJobsBySpecRequest"/></param>
+        /// <returns><see cref="ListJobsBySpecResponse"/></returns>
+        public Task<ListJobsBySpecResponse> ListJobsBySpec(ListJobsBySpecRequest req)
+        {
+            return InternalRequestAsync<ListJobsBySpecResponse>(req, "ListJobsBySpec");
+        }
+
+        /// <summary>
+        /// 分页查询某作业配置下产生的所有作业实例
+        /// </summary>
+        /// <param name="req"><see cref="ListJobsBySpecRequest"/></param>
+        /// <returns><see cref="ListJobsBySpecResponse"/></returns>
+        public ListJobsBySpecResponse ListJobsBySpecSync(ListJobsBySpecRequest req)
+        {
+            return InternalRequestAsync<ListJobsBySpecResponse>(req, "ListJobsBySpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出实验室列表
+        /// </summary>
+        /// <param name="req"><see cref="ListLabsRequest"/></param>
+        /// <returns><see cref="ListLabsResponse"/></returns>
+        public Task<ListLabsResponse> ListLabs(ListLabsRequest req)
+        {
+            return InternalRequestAsync<ListLabsResponse>(req, "ListLabs");
+        }
+
+        /// <summary>
+        /// 列出实验室列表
+        /// </summary>
+        /// <param name="req"><see cref="ListLabsRequest"/></param>
+        /// <returns><see cref="ListLabsResponse"/></returns>
+        public ListLabsResponse ListLabsSync(ListLabsRequest req)
+        {
+            return InternalRequestAsync<ListLabsResponse>(req, "ListLabs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 Ray 集群下提交的所有作业，分页返回。底层委托给 ListRayJobs，强制注入 ClusterId 作为过滤条件。
+        /// </summary>
+        /// <param name="req"><see cref="ListRayClusterJobsRequest"/></param>
+        /// <returns><see cref="ListRayClusterJobsResponse"/></returns>
+        public Task<ListRayClusterJobsResponse> ListRayClusterJobs(ListRayClusterJobsRequest req)
+        {
+            return InternalRequestAsync<ListRayClusterJobsResponse>(req, "ListRayClusterJobs");
+        }
+
+        /// <summary>
+        /// 查询指定 Ray 集群下提交的所有作业，分页返回。底层委托给 ListRayJobs，强制注入 ClusterId 作为过滤条件。
+        /// </summary>
+        /// <param name="req"><see cref="ListRayClusterJobsRequest"/></param>
+        /// <returns><see cref="ListRayClusterJobsResponse"/></returns>
+        public ListRayClusterJobsResponse ListRayClusterJobsSync(ListRayClusterJobsRequest req)
+        {
+            return InternalRequestAsync<ListRayClusterJobsResponse>(req, "ListRayClusterJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出所有集群
+        /// </summary>
+        /// <param name="req"><see cref="ListRayClustersRequest"/></param>
+        /// <returns><see cref="ListRayClustersResponse"/></returns>
+        public Task<ListRayClustersResponse> ListRayClusters(ListRayClustersRequest req)
+        {
+            return InternalRequestAsync<ListRayClustersResponse>(req, "ListRayClusters");
+        }
+
+        /// <summary>
+        /// 列出所有集群
+        /// </summary>
+        /// <param name="req"><see cref="ListRayClustersRequest"/></param>
+        /// <returns><see cref="ListRayClustersResponse"/></returns>
+        public ListRayClustersResponse ListRayClustersSync(ListRayClustersRequest req)
+        {
+            return InternalRequestAsync<ListRayClustersResponse>(req, "ListRayClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据集群ID列出所有Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="ListRayJobsRequest"/></param>
+        /// <returns><see cref="ListRayJobsResponse"/></returns>
+        public Task<ListRayJobsResponse> ListRayJobs(ListRayJobsRequest req)
+        {
+            return InternalRequestAsync<ListRayJobsResponse>(req, "ListRayJobs");
+        }
+
+        /// <summary>
+        /// 根据集群ID列出所有Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="ListRayJobsRequest"/></param>
+        /// <returns><see cref="ListRayJobsResponse"/></returns>
+        public ListRayJobsResponse ListRayJobsSync(ListRayJobsRequest req)
+        {
+            return InternalRequestAsync<ListRayJobsResponse>(req, "ListRayJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出所有资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="ListResourceConfigsRequest"/></param>
+        /// <returns><see cref="ListResourceConfigsResponse"/></returns>
+        public Task<ListResourceConfigsResponse> ListResourceConfigs(ListResourceConfigsRequest req)
+        {
+            return InternalRequestAsync<ListResourceConfigsResponse>(req, "ListResourceConfigs");
+        }
+
+        /// <summary>
+        /// 列出所有资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="ListResourceConfigsRequest"/></param>
+        /// <returns><see cref="ListResourceConfigsResponse"/></returns>
+        public ListResourceConfigsResponse ListResourceConfigsSync(ListResourceConfigsRequest req)
+        {
+            return InternalRequestAsync<ListResourceConfigsResponse>(req, "ListResourceConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3481,6 +4531,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 修改集群的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPriorityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPriorityResponse"/></returns>
+        public Task<ModifyClusterPriorityResponse> ModifyClusterPriority(ModifyClusterPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterPriorityResponse>(req, "ModifyClusterPriority");
+        }
+
+        /// <summary>
+        /// 修改集群的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPriorityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPriorityResponse"/></returns>
+        public ModifyClusterPriorityResponse ModifyClusterPrioritySync(ModifyClusterPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterPriorityResponse>(req, "ModifyClusterPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改引擎描述信息
         /// </summary>
         /// <param name="req"><see cref="ModifyDataEngineDescriptionRequest"/></param>
@@ -3519,6 +4590,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifyGovernEventRuleResponse ModifyGovernEventRuleSync(ModifyGovernEventRuleRequest req)
         {
             return InternalRequestAsync<ModifyGovernEventRuleResponse>(req, "ModifyGovernEventRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实验室的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabPriorityRequest"/></param>
+        /// <returns><see cref="ModifyLabPriorityResponse"/></returns>
+        public Task<ModifyLabPriorityResponse> ModifyLabPriority(ModifyLabPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyLabPriorityResponse>(req, "ModifyLabPriority");
+        }
+
+        /// <summary>
+        /// 修改实验室的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabPriorityRequest"/></param>
+        /// <returns><see cref="ModifyLabPriorityResponse"/></returns>
+        public ModifyLabPriorityResponse ModifyLabPrioritySync(ModifyLabPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyLabPriorityResponse>(req, "ModifyLabPriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3859,6 +4951,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 基于指定作业配置提交一次作业实例
+        /// </summary>
+        /// <param name="req"><see cref="RunJobSpecRequest"/></param>
+        /// <returns><see cref="RunJobSpecResponse"/></returns>
+        public Task<RunJobSpecResponse> RunJobSpec(RunJobSpecRequest req)
+        {
+            return InternalRequestAsync<RunJobSpecResponse>(req, "RunJobSpec");
+        }
+
+        /// <summary>
+        /// 基于指定作业配置提交一次作业实例
+        /// </summary>
+        /// <param name="req"><see cref="RunJobSpecRequest"/></param>
+        /// <returns><see cref="RunJobSpecResponse"/></returns>
+        public RunJobSpecResponse RunJobSpecSync(RunJobSpecRequest req)
+        {
+            return InternalRequestAsync<RunJobSpecResponse>(req, "RunJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 设置优化策略的接口
         /// </summary>
         /// <param name="req"><see cref="SetOptimizerPolicyRequest"/></param>
@@ -3876,6 +4989,90 @@ namespace TencentCloud.Dlc.V20210125
         public SetOptimizerPolicyResponse SetOptimizerPolicySync(SetOptimizerPolicyRequest req)
         {
             return InternalRequestAsync<SetOptimizerPolicyResponse>(req, "SetOptimizerPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动实验室
+        /// </summary>
+        /// <param name="req"><see cref="StartLabRequest"/></param>
+        /// <returns><see cref="StartLabResponse"/></returns>
+        public Task<StartLabResponse> StartLab(StartLabRequest req)
+        {
+            return InternalRequestAsync<StartLabResponse>(req, "StartLab");
+        }
+
+        /// <summary>
+        /// 启动实验室
+        /// </summary>
+        /// <param name="req"><see cref="StartLabRequest"/></param>
+        /// <returns><see cref="StartLabResponse"/></returns>
+        public StartLabResponse StartLabSync(StartLabRequest req)
+        {
+            return InternalRequestAsync<StartLabResponse>(req, "StartLab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动集群
+        /// </summary>
+        /// <param name="req"><see cref="StartRayClusterRequest"/></param>
+        /// <returns><see cref="StartRayClusterResponse"/></returns>
+        public Task<StartRayClusterResponse> StartRayCluster(StartRayClusterRequest req)
+        {
+            return InternalRequestAsync<StartRayClusterResponse>(req, "StartRayCluster");
+        }
+
+        /// <summary>
+        /// 启动集群
+        /// </summary>
+        /// <param name="req"><see cref="StartRayClusterRequest"/></param>
+        /// <returns><see cref="StartRayClusterResponse"/></returns>
+        public StartRayClusterResponse StartRayClusterSync(StartRayClusterRequest req)
+        {
+            return InternalRequestAsync<StartRayClusterResponse>(req, "StartRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止实验室
+        /// </summary>
+        /// <param name="req"><see cref="StopLabRequest"/></param>
+        /// <returns><see cref="StopLabResponse"/></returns>
+        public Task<StopLabResponse> StopLab(StopLabRequest req)
+        {
+            return InternalRequestAsync<StopLabResponse>(req, "StopLab");
+        }
+
+        /// <summary>
+        /// 停止实验室
+        /// </summary>
+        /// <param name="req"><see cref="StopLabRequest"/></param>
+        /// <returns><see cref="StopLabResponse"/></returns>
+        public StopLabResponse StopLabSync(StopLabRequest req)
+        {
+            return InternalRequestAsync<StopLabResponse>(req, "StopLab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止集群
+        /// </summary>
+        /// <param name="req"><see cref="StopRayClusterRequest"/></param>
+        /// <returns><see cref="StopRayClusterResponse"/></returns>
+        public Task<StopRayClusterResponse> StopRayCluster(StopRayClusterRequest req)
+        {
+            return InternalRequestAsync<StopRayClusterResponse>(req, "StopRayCluster");
+        }
+
+        /// <summary>
+        /// 停止集群
+        /// </summary>
+        /// <param name="req"><see cref="StopRayClusterRequest"/></param>
+        /// <returns><see cref="StopRayClusterResponse"/></returns>
+        public StopRayClusterResponse StopRayClusterSync(StopRayClusterRequest req)
+        {
+            return InternalRequestAsync<StopRayClusterResponse>(req, "StopRayCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4006,6 +5203,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 更新集群组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterGroupRequest"/></param>
+        /// <returns><see cref="UpdateClusterGroupResponse"/></returns>
+        public Task<UpdateClusterGroupResponse> UpdateClusterGroup(UpdateClusterGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterGroupResponse>(req, "UpdateClusterGroup");
+        }
+
+        /// <summary>
+        /// 更新集群组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterGroupRequest"/></param>
+        /// <returns><see cref="UpdateClusterGroupResponse"/></returns>
+        public UpdateClusterGroupResponse UpdateClusterGroupSync(UpdateClusterGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterGroupResponse>(req, "UpdateClusterGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于更新数据引擎配置
         /// </summary>
         /// <param name="req"><see cref="UpdateDataEngineRequest"/></param>
@@ -4090,6 +5308,69 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 更新已有作业配置的字段
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJobSpecRequest"/></param>
+        /// <returns><see cref="UpdateJobSpecResponse"/></returns>
+        public Task<UpdateJobSpecResponse> UpdateJobSpec(UpdateJobSpecRequest req)
+        {
+            return InternalRequestAsync<UpdateJobSpecResponse>(req, "UpdateJobSpec");
+        }
+
+        /// <summary>
+        /// 更新已有作业配置的字段
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJobSpecRequest"/></param>
+        /// <returns><see cref="UpdateJobSpecResponse"/></returns>
+        public UpdateJobSpecResponse UpdateJobSpecSync(UpdateJobSpecRequest req)
+        {
+            return InternalRequestAsync<UpdateJobSpecResponse>(req, "UpdateJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改作业配置的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJobSpecPriorityRequest"/></param>
+        /// <returns><see cref="UpdateJobSpecPriorityResponse"/></returns>
+        public Task<UpdateJobSpecPriorityResponse> UpdateJobSpecPriority(UpdateJobSpecPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateJobSpecPriorityResponse>(req, "UpdateJobSpecPriority");
+        }
+
+        /// <summary>
+        /// 修改作业配置的调度优先级（1-9，数字越大优先级越高）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJobSpecPriorityRequest"/></param>
+        /// <returns><see cref="UpdateJobSpecPriorityResponse"/></returns>
+        public UpdateJobSpecPriorityResponse UpdateJobSpecPrioritySync(UpdateJobSpecPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateJobSpecPriorityResponse>(req, "UpdateJobSpecPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新实验室配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLabRequest"/></param>
+        /// <returns><see cref="UpdateLabResponse"/></returns>
+        public Task<UpdateLabResponse> UpdateLab(UpdateLabRequest req)
+        {
+            return InternalRequestAsync<UpdateLabResponse>(req, "UpdateLab");
+        }
+
+        /// <summary>
+        /// 更新实验室配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLabRequest"/></param>
+        /// <returns><see cref="UpdateLabResponse"/></returns>
+        public UpdateLabResponse UpdateLabSync(UpdateLabRequest req)
+        {
+            return InternalRequestAsync<UpdateLabResponse>(req, "UpdateLab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新网络配置
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkConnectionRequest"/></param>
@@ -4107,6 +5388,69 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateNetworkConnectionResponse UpdateNetworkConnectionSync(UpdateNetworkConnectionRequest req)
         {
             return InternalRequestAsync<UpdateNetworkConnectionResponse>(req, "UpdateNetworkConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新集群配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRayClusterRequest"/></param>
+        /// <returns><see cref="UpdateRayClusterResponse"/></returns>
+        public Task<UpdateRayClusterResponse> UpdateRayCluster(UpdateRayClusterRequest req)
+        {
+            return InternalRequestAsync<UpdateRayClusterResponse>(req, "UpdateRayCluster");
+        }
+
+        /// <summary>
+        /// 更新集群配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRayClusterRequest"/></param>
+        /// <returns><see cref="UpdateRayClusterResponse"/></returns>
+        public UpdateRayClusterResponse UpdateRayClusterSync(UpdateRayClusterRequest req)
+        {
+            return InternalRequestAsync<UpdateRayClusterResponse>(req, "UpdateRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新处于 SUBMITTED/PENDING 状态的作业的优先级。仅 SUBMITTED/PENDING 状态的作业允许调整优先级。内部通过调用 Neutrino 的 UpdateJobConfig 接口更新 ENVIRONMENT 配置中的 priority 字段。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRayJobPriorityRequest"/></param>
+        /// <returns><see cref="UpdateRayJobPriorityResponse"/></returns>
+        public Task<UpdateRayJobPriorityResponse> UpdateRayJobPriority(UpdateRayJobPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateRayJobPriorityResponse>(req, "UpdateRayJobPriority");
+        }
+
+        /// <summary>
+        /// 更新处于 SUBMITTED/PENDING 状态的作业的优先级。仅 SUBMITTED/PENDING 状态的作业允许调整优先级。内部通过调用 Neutrino 的 UpdateJobConfig 接口更新 ENVIRONMENT 配置中的 priority 字段。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRayJobPriorityRequest"/></param>
+        /// <returns><see cref="UpdateRayJobPriorityResponse"/></returns>
+        public UpdateRayJobPriorityResponse UpdateRayJobPrioritySync(UpdateRayJobPriorityRequest req)
+        {
+            return InternalRequestAsync<UpdateRayJobPriorityResponse>(req, "UpdateRayJobPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="UpdateResourceConfigRequest"/></param>
+        /// <returns><see cref="UpdateResourceConfigResponse"/></returns>
+        public Task<UpdateResourceConfigResponse> UpdateResourceConfig(UpdateResourceConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateResourceConfigResponse>(req, "UpdateResourceConfig");
+        }
+
+        /// <summary>
+        /// 更新资源配置模板
+        /// </summary>
+        /// <param name="req"><see cref="UpdateResourceConfigRequest"/></param>
+        /// <returns><see cref="UpdateResourceConfigResponse"/></returns>
+        public UpdateResourceConfigResponse UpdateResourceConfigSync(UpdateResourceConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateResourceConfigResponse>(req, "UpdateResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

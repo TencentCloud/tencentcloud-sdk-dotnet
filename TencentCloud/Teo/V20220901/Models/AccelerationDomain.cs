@@ -25,106 +25,93 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点 ID。
+        /// <p>站点 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 加速域名名称。
+        /// <p>加速域名名称。</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 加速域名状态，取值有：
-        /// <li>online：已生效；</li>
-        /// <li>process：部署中；</li>
-        /// <li>offline：已停用；</li>
-        /// <li>forbidden：已封禁；</li>
-        /// <li>init：未生效，待激活站点。</li>
+        /// <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
         /// </summary>
         [JsonProperty("DomainStatus")]
         public string DomainStatus{ get; set; }
 
         /// <summary>
-        /// CNAME 地址。
+        /// <p>CNAME 地址。</p>
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// IPv6 状态，取值有：
-        /// <li>follow：遵循站点IPv6配置；</li>
-        /// <li>on：开启状态；</li>
-        /// <li>off：关闭状态。</li>
+        /// <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }
 
         /// <summary>
-        /// 加速域名归属权验证状态，取值有： 
-        /// <li>pending：待验证；</li>
-        /// <li>finished：已完成验证。</li>	
+        /// <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentificationStatus")]
         public string IdentificationStatus{ get; set; }
 
         /// <summary>
-        /// 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+        /// <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
 
         /// <summary>
-        /// 源站信息。
+        /// <p>源站信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginDetail")]
         public OriginDetail OriginDetail{ get; set; }
 
         /// <summary>
-        /// 回源协议，取值有：
-        /// <li>FOLLOW：协议跟随；</li>
-        /// <li>HTTP：HTTP协议回源；</li>
-        /// <li>HTTPS：HTTPS协议回源。</li>
+        /// <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// HTTP 回源端口。
+        /// <p>HTTP 回源端口。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// HTTPS 回源端口。
+        /// <p>HTTPS 回源端口。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// 加速域名证书信息。
+        /// <p>加速域名证书信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Certificate")]
         public AccelerationDomainCertificate Certificate{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// 修改时间。
+        /// <p>修改时间。</p>
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }

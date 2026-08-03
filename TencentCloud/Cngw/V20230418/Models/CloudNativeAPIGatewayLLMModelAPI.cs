@@ -103,7 +103,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
         /// </summary>
         [JsonProperty("MatchHeaders")]
         public AIGWKVMatch[] MatchHeaders{ get; set; }

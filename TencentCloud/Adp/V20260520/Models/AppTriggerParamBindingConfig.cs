@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>绑定参数列表</p>
         /// </summary>
         [JsonProperty("ParamList")]
         public AppTriggerParamBinding[] ParamList{ get; set; }

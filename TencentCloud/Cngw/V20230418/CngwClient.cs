@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1463";
+       private const string sdkVersion = "SDK_NET_3.0.1478";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 LLM 模型 API 列表。
+        /// 查询指定网关实例下的所有 LLM 模型 API 列表。支持按名称关键词模糊搜索、按过滤器筛选，以及分页查询。用于绑定场景时，可通过 ConsumerGroupId 和 UseToBind 参数筛选可绑定的模型 API。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 LLM 模型 API 列表。
+        /// 查询指定网关实例下的所有 LLM 模型 API 列表。支持按名称关键词模糊搜索、按过滤器筛选，以及分页查询。用于绑定场景时，可通过 ConsumerGroupId 和 UseToBind 参数筛选可绑定的模型 API。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMModelAPIsResponse"/></returns>
@@ -722,6 +722,27 @@ namespace TencentCloud.Cngw.V20230418
         public DescribeCloudNativeAPIGatewayMCPToolListResponse DescribeCloudNativeAPIGatewayMCPToolListSync(DescribeCloudNativeAPIGatewayMCPToolListRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolListResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从OpenAPI文件中解析出可导入的MCP tools
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse> DescribeCloudNativeAPIGatewayMCPToolsFromFile(DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolsFromFile");
+        }
+
+        /// <summary>
+        /// 从OpenAPI文件中解析出可导入的MCP tools
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse DescribeCloudNativeAPIGatewayMCPToolsFromFileSync(DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolsFromFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1079,6 +1100,27 @@ namespace TencentCloud.Cngw.V20230418
         public UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKeySync(UnbindCloudNativeAPIGatewaySecretKeyRequest req)
         {
             return InternalRequestAsync<UnbindCloudNativeAPIGatewaySecretKeyResponse>(req, "UnbindCloudNativeAPIGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量导入从OpenAPI文件中解析的MCP Tools
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayMCPToolsRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewayMCPToolsResponse"/></returns>
+        public Task<UpdateCloudNativeAPIGatewayMCPToolsResponse> UpdateCloudNativeAPIGatewayMCPTools(UpdateCloudNativeAPIGatewayMCPToolsRequest req)
+        {
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewayMCPToolsResponse>(req, "UpdateCloudNativeAPIGatewayMCPTools");
+        }
+
+        /// <summary>
+        /// 批量导入从OpenAPI文件中解析的MCP Tools
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayMCPToolsRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewayMCPToolsResponse"/></returns>
+        public UpdateCloudNativeAPIGatewayMCPToolsResponse UpdateCloudNativeAPIGatewayMCPToolsSync(UpdateCloudNativeAPIGatewayMCPToolsRequest req)
+        {
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewayMCPToolsResponse>(req, "UpdateCloudNativeAPIGatewayMCPTools")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

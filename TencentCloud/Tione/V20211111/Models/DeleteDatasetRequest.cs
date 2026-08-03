@@ -25,16 +25,22 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 数据集id
+        /// <p>数据集id</p>
         /// </summary>
         [JsonProperty("DatasetId")]
         public string DatasetId{ get; set; }
 
         /// <summary>
-        /// 是否删除cos标签文件
+        /// <p>是否删除cos标签文件</p>
         /// </summary>
         [JsonProperty("DeleteLabelEnable")]
         public bool? DeleteLabelEnable{ get; set; }
+
+        /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "DatasetId", this.DatasetId);
             this.SetParamSimple(map, prefix + "DeleteLabelEnable", this.DeleteLabelEnable);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         }
     }
 }

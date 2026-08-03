@@ -25,25 +25,25 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 镜像地址
+        /// <p>镜像地址</p>
         /// </summary>
         [JsonProperty("Reference")]
         public string Reference{ get; set; }
 
         /// <summary>
-        /// 镜像仓库类型：`enterprise`、`personal`。
+        /// <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
         /// </summary>
         [JsonProperty("ImageRegistryType")]
         public string ImageRegistryType{ get; set; }
 
         /// <summary>
-        /// 镜像内部的路径
+        /// <p>镜像内部的路径</p>
         /// </summary>
         [JsonProperty("SubPath")]
         public string SubPath{ get; set; }
 
         /// <summary>
-        /// 镜像 Digest，请求时无需传入
+        /// <p>镜像 Digest，请求时无需传入</p>
         /// </summary>
         [JsonProperty("Digest")]
         public string Digest{ get; set; }

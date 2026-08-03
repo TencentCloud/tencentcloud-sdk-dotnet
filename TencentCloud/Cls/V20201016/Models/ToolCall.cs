@@ -48,6 +48,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Index")]
         public ulong? Index{ get; set; }
 
+        /// <summary>
+        /// <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+        /// </summary>
+        [JsonProperty("ThoughtSignature")]
+        public string ThoughtSignature{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Function.", this.Function);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "ThoughtSignature", this.ThoughtSignature);
         }
     }
 }

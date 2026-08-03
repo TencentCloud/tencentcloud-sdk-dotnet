@@ -31,7 +31,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+        /// <p>IdP 注册的 client_secret</p>
         /// </summary>
         [JsonProperty("ClientSecret")]
         public string ClientSecret{ get; set; }

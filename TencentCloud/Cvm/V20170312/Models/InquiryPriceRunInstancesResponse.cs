@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 该参数表示对应配置实例的价格。
+        /// <p>该参数表示对应配置实例的价格。</p>
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }

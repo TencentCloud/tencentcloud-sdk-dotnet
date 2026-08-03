@@ -37,7 +37,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// <p>名称，最大长度不能超过60个字节。</p>
+        /// <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string CipherPolicyId{ get; set; }
 
         /// <summary>
-        /// <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+        /// <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
         /// </summary>
         [JsonProperty("ServerCertificates")]
         public string[] ServerCertificates{ get; set; }
 
         /// <summary>
-        /// <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+        /// <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
         /// </summary>
         [JsonProperty("ClientCaCertificates")]
         public string[] ClientCaCertificates{ get; set; }

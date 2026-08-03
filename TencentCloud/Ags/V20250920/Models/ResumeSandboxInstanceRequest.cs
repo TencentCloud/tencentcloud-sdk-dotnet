@@ -25,10 +25,16 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱实例ID
+        /// <p>沙箱实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public string Timeout{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

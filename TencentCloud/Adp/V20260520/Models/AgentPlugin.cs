@@ -25,25 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 插件基本配置
+        /// <p>插件基本配置</p>
         /// </summary>
         [JsonProperty("Config")]
         public AgentPluginConfig Config{ get; set; }
 
         /// <summary>
-        /// 插件名称
+        /// <p>插件名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 插件图标url
+        /// <p>插件图标url</p>
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
         /// <summary>
-        /// 插件描述
+        /// <p>插件描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

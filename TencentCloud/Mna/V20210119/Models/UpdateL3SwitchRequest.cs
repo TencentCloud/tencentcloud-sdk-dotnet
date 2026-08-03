@@ -25,13 +25,13 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 互通规则ID
+        /// <p>互通规则ID</p>
         /// </summary>
         [JsonProperty("L3ConnId")]
         public string L3ConnId{ get; set; }
 
         /// <summary>
-        /// 互通规则开关
+        /// <p>互通规则开关</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }

@@ -54,6 +54,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
+        /// <summary>
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+        /// </summary>
+        [JsonProperty("Scope")]
+        public long? Scope{ get; set; }
+
+        /// <summary>
+        /// <p>访客ID</p>
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

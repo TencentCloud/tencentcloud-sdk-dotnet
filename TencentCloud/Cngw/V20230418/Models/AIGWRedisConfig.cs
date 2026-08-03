@@ -48,6 +48,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// <p>Redis配置ID</p>
+        /// </summary>
+        [JsonProperty("RedisConfigId")]
+        public string RedisConfigId{ get; set; }
+
+        /// <summary>
+        /// <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "RedisConfigId", this.RedisConfigId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

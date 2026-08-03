@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>触发器执行提示词</p>
         /// </summary>
         [JsonProperty("ExecutePrompt")]
         public string ExecutePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>api参数绑定</p>
         /// </summary>
         [JsonProperty("ParamBindingsApi")]
         public AppTriggerParamBindingConfig ParamBindingsApi{ get; set; }

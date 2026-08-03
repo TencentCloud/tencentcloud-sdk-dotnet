@@ -25,16 +25,22 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// <p>客户端ID</p>
+        /// <p>OAuth2 client_id</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// <p>客户端密钥</p>
+        /// <p>OAuth2 client_secret</p>
         /// </summary>
         [JsonProperty("ClientSecret")]
         public string ClientSecret{ get; set; }
+
+        /// <summary>
+        /// <p>OAuth2 授权回调地址</p>
+        /// </summary>
+        [JsonProperty("RedirectURIs")]
+        public string RedirectURIs{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+            this.SetParamSimple(map, prefix + "RedirectURIs", this.RedirectURIs);
         }
     }
 }

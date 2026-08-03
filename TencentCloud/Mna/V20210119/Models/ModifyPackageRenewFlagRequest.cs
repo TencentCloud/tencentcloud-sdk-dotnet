@@ -25,13 +25,13 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 流量包的唯一资源ID
+        /// <p>流量包的唯一资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。true代表自动续费，false代表不自动续费
+        /// <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }

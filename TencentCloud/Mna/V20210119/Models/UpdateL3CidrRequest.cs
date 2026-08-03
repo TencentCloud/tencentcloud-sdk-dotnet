@@ -25,31 +25,31 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 互通规则ID
+        /// <p>互通规则ID</p>
         /// </summary>
         [JsonProperty("L3ConnId")]
         public string L3ConnId{ get; set; }
 
         /// <summary>
-        /// 互通规则CIDR
+        /// <p>互通规则CIDR</p>
         /// </summary>
         [JsonProperty("Cidr1")]
         public string Cidr1{ get; set; }
 
         /// <summary>
-        /// 互通设备ID
+        /// <p>互通设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId1")]
         public string DeviceId1{ get; set; }
 
         /// <summary>
-        /// 互通设备ID
+        /// <p>互通设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId2")]
         public string DeviceId2{ get; set; }
 
         /// <summary>
-        /// 互通规则CIDR
+        /// <p>互通规则CIDR</p>
         /// </summary>
         [JsonProperty("Cidr2")]
         public string Cidr2{ get; set; }
