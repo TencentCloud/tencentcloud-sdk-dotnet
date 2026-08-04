@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? RowNumMax{ get; set; }
 
         /// <summary>
-        /// 数据库类型
+        /// 数据库类型, 支持的值：cdb，mariadb
         /// </summary>
         [JsonProperty("DbTypes")]
         public string[] DbTypes{ get; set; }

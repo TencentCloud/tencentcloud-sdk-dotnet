@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1454";
+       private const string sdkVersion = "SDK_NET_3.0.1479";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Omics.V20221128
         public DeleteEnvironmentResponse DeleteEnvironmentSync(DeleteEnvironmentRequest req)
         {
             return InternalRequestAsync<DeleteEnvironmentResponse>(req, "DeleteEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除环境缓存。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentCacheRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentCacheResponse"/></returns>
+        public Task<DeleteEnvironmentCacheResponse> DeleteEnvironmentCache(DeleteEnvironmentCacheRequest req)
+        {
+            return InternalRequestAsync<DeleteEnvironmentCacheResponse>(req, "DeleteEnvironmentCache");
+        }
+
+        /// <summary>
+        /// 删除环境缓存。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentCacheRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentCacheResponse"/></returns>
+        public DeleteEnvironmentCacheResponse DeleteEnvironmentCacheSync(DeleteEnvironmentCacheRequest req)
+        {
+            return InternalRequestAsync<DeleteEnvironmentCacheResponse>(req, "DeleteEnvironmentCache")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

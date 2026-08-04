@@ -25,94 +25,100 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 白名单策略id
+        /// <p>白名单策略id</p>
         /// </summary>
         [JsonProperty("WhitelistStrategyId")]
         public string WhitelistStrategyId{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// 白名单策略名
+        /// <p>白名单策略名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("StrategyCategory")]
         public string StrategyCategory{ get; set; }
 
         /// <summary>
-        /// 策略规则
+        /// <p>策略规则</p>
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 资产id
+        /// <p>资产id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// <p>账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 主机
+        /// <p>主机</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 策略规则内容描述
+        /// <p>策略规则内容描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 白名单类型。risk-风险白名单；alarm-告警白名单。
+        /// <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// 资产所属账号app id
+        /// <p>资产所属账号app id</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 账号昵称
+        /// <p>账号昵称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 资产所属账号uin
+        /// <p>资产所属账号uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>白名单类型</p>
+        /// </summary>
+        [JsonProperty("WhitelistType")]
+        public string WhitelistType{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "WhitelistType", this.WhitelistType);
         }
     }
 }

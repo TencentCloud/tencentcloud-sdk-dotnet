@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同(流程)组的合同组Id
+        /// <p>合同(流程)组的合同组Id</p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 嵌入式合同组发起链接
+        /// <p>嵌入式合同组发起链接</p>
         /// </summary>
         [JsonProperty("PrepareUrl")]
         public string PrepareUrl{ get; set; }

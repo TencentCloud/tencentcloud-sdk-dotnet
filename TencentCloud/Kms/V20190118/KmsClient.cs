@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1479";
 
         /// <summary>
         /// Client constructor.
@@ -1291,6 +1291,27 @@ namespace TencentCloud.Kms.V20190118
         public ReEncryptResponse ReEncryptSync(ReEncryptRequest req)
         {
             return InternalRequestAsync<ReEncryptResponse>(req, "ReEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对指定的CMK（用户主密钥）执行立即轮转操作。可以通过调用DescribeKey，返回上次轮转时间和下次轮转时间，判断是否轮转成功。
+        /// </summary>
+        /// <param name="req"><see cref="RotateKeyRequest"/></param>
+        /// <returns><see cref="RotateKeyResponse"/></returns>
+        public Task<RotateKeyResponse> RotateKey(RotateKeyRequest req)
+        {
+            return InternalRequestAsync<RotateKeyResponse>(req, "RotateKey");
+        }
+
+        /// <summary>
+        /// 对指定的CMK（用户主密钥）执行立即轮转操作。可以通过调用DescribeKey，返回上次轮转时间和下次轮转时间，判断是否轮转成功。
+        /// </summary>
+        /// <param name="req"><see cref="RotateKeyRequest"/></param>
+        /// <returns><see cref="RotateKeyResponse"/></returns>
+        public RotateKeyResponse RotateKeySync(RotateKeyRequest req)
+        {
+            return InternalRequestAsync<RotateKeyResponse>(req, "RotateKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

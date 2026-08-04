@@ -25,7 +25,7 @@ namespace TencentCloud.Chc.V20230418.Models
     {
         
         /// <summary>
-        /// 工单ID
+        /// <p>工单ID</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }

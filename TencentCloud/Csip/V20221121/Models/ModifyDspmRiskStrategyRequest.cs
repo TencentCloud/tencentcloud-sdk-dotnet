@@ -25,40 +25,58 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 风险策略类型
+        /// <p>风险策略类型</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// 是否启用
+        /// <p>是否启用</p>
         /// </summary>
         [JsonProperty("IsEnabled")]
         public long? IsEnabled{ get; set; }
 
         /// <summary>
-        /// 策略内容，如：{     ThresholdValue: "100" }
+        /// <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
         /// <summary>
-        /// 可选值：Info/Low/Medium/High
+        /// <p>可选值：Info/Low/Medium/High</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 策略id
+        /// <p>策略id</p>
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong?[] StrategyId{ get; set; }
+
+        /// <summary>
+        /// <p>策略名</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>策略描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>支持的数据库类型</p>
+        /// </summary>
+        [JsonProperty("DbTypes")]
+        public string DbTypes{ get; set; }
 
 
         /// <summary>
@@ -72,6 +90,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamArraySimple(map, prefix + "StrategyId.", this.StrategyId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "DbTypes", this.DbTypes);
         }
     }
 }

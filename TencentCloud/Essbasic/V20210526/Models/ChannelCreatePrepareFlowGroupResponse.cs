@@ -25,14 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同组ID，为32位字符串。
-        /// 建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+        /// <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 嵌入式发起链接
+        /// <p>嵌入式发起链接</p>
         /// </summary>
         [JsonProperty("PrepareUrl")]
         public string PrepareUrl{ get; set; }

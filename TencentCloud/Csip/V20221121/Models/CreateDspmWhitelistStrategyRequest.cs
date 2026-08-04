@@ -25,58 +25,64 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 白名单
+        /// <p>白名单</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则
+        /// <p>规则</p>
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
         /// <summary>
-        /// 资产id
+        /// <p>资产id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// <p>账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 主机
+        /// <p>主机</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 风险id
+        /// <p>风险id</p>
         /// </summary>
         [JsonProperty("RiskId")]
         public string RiskId{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+        /// </summary>
+        [JsonProperty("WhitelistType")]
+        public string WhitelistType{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "RiskId", this.RiskId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "WhitelistType", this.WhitelistType);
         }
     }
 }

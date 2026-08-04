@@ -25,20 +25,64 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
-        /// <ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
-        /// <li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+        /// <p>发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认</p><ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li><li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
         /// </summary>
         [JsonProperty("SelfOrganizationApproverSignEach")]
         public bool? SelfOrganizationApproverSignEach{ get; set; }
 
         /// <summary>
-        /// 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
-        /// <ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
-        /// <li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+        /// <p>非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认</p><ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li><li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
         /// </summary>
         [JsonProperty("OtherApproverSignEach")]
         public bool? OtherApproverSignEach{ get; set; }
+
+        /// <summary>
+        /// <p>是否不可编辑合同名称 true-不可编辑 false-可编辑(默认)</p>
+        /// </summary>
+        [JsonProperty("NoEditFlowName")]
+        public bool? NoEditFlowName{ get; set; }
+
+        /// <summary>
+        /// <p>是否不可编辑合同类型 true-不可编辑 false-可编辑(默认)</p>
+        /// </summary>
+        [JsonProperty("NoEditFlowType")]
+        public bool? NoEditFlowType{ get; set; }
+
+        /// <summary>
+        /// <p>是否不可编辑合同截止日期 true-不可编辑 false-可编辑(默认)</p>
+        /// </summary>
+        [JsonProperty("NoEditDeadline")]
+        public bool? NoEditDeadline{ get; set; }
+
+        /// <summary>
+        /// <p>签署控件配置(如是否默认展示日期)，用于嵌入式发起页面配置</p>
+        /// </summary>
+        [JsonProperty("SignComponentConfig")]
+        public SignComponentConfig SignComponentConfig{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁止编辑水印控件属性 true-禁止 false-否(默认)</p>
+        /// </summary>
+        [JsonProperty("ForbidEditWatermark")]
+        public bool? ForbidEditWatermark{ get; set; }
+
+        /// <summary>
+        /// <p>发起成功后是否隐藏签署码 true-隐藏 false-否(默认)</p>
+        /// </summary>
+        [JsonProperty("HideSignCodeAfterStart")]
+        public bool? HideSignCodeAfterStart{ get; set; }
+
+        /// <summary>
+        /// <p>发起成功后是否签署合同,仅当前经办人为签署人时生效 true-展示签署 false-否(默认)</p>
+        /// </summary>
+        [JsonProperty("SignAfterStart")]
+        public bool? SignAfterStart{ get; set; }
+
+        /// <summary>
+        /// <p>发起成功后是否预览合同 true-展示预览按钮 false-否(默认)</p>
+        /// </summary>
+        [JsonProperty("PreviewAfterStart")]
+        public bool? PreviewAfterStart{ get; set; }
 
 
         /// <summary>
@@ -48,6 +92,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "SelfOrganizationApproverSignEach", this.SelfOrganizationApproverSignEach);
             this.SetParamSimple(map, prefix + "OtherApproverSignEach", this.OtherApproverSignEach);
+            this.SetParamSimple(map, prefix + "NoEditFlowName", this.NoEditFlowName);
+            this.SetParamSimple(map, prefix + "NoEditFlowType", this.NoEditFlowType);
+            this.SetParamSimple(map, prefix + "NoEditDeadline", this.NoEditDeadline);
+            this.SetParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+            this.SetParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
+            this.SetParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
+            this.SetParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
+            this.SetParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1472";
+       private const string sdkVersion = "SDK_NET_3.0.1479";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateAuthorizationPolicyResponse CreateAuthorizationPolicySync(CreateAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuthorizationPolicyResponse>(req, "CreateAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockRuleRequest"/></param>
+        /// <returns><see cref="CreateBlockRuleResponse"/></returns>
+        public Task<CreateBlockRuleResponse> CreateBlockRule(CreateBlockRuleRequest req)
+        {
+            return InternalRequestAsync<CreateBlockRuleResponse>(req, "CreateBlockRule");
+        }
+
+        /// <summary>
+        /// 创建封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockRuleRequest"/></param>
+        /// <returns><see cref="CreateBlockRuleResponse"/></returns>
+        public CreateBlockRuleResponse CreateBlockRuleSync(CreateBlockRuleRequest req)
+        {
+            return InternalRequestAsync<CreateBlockRuleResponse>(req, "CreateBlockRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +453,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 删除封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlockRuleRequest"/></param>
+        /// <returns><see cref="DeleteBlockRuleResponse"/></returns>
+        public Task<DeleteBlockRuleResponse> DeleteBlockRule(DeleteBlockRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBlockRuleResponse>(req, "DeleteBlockRule");
+        }
+
+        /// <summary>
+        /// 删除封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlockRuleRequest"/></param>
+        /// <returns><see cref="DeleteBlockRuleResponse"/></returns>
+        public DeleteBlockRuleResponse DeleteBlockRuleSync(DeleteBlockRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBlockRuleResponse>(req, "DeleteBlockRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除Ca证书
         /// </summary>
         /// <param name="req"><see cref="DeleteCaCertificateRequest"/></param>
@@ -659,6 +701,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeAuthorizationPoliciesResponse DescribeAuthorizationPoliciesSync(DescribeAuthorizationPoliciesRequest req)
         {
             return InternalRequestAsync<DescribeAuthorizationPoliciesResponse>(req, "DescribeAuthorizationPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 封禁规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBlockRuleListResponse"/></returns>
+        public Task<DescribeBlockRuleListResponse> DescribeBlockRuleList(DescribeBlockRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockRuleListResponse>(req, "DescribeBlockRuleList");
+        }
+
+        /// <summary>
+        /// 封禁规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBlockRuleListResponse"/></returns>
+        public DescribeBlockRuleListResponse DescribeBlockRuleListSync(DescribeBlockRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockRuleListResponse>(req, "DescribeBlockRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1288,6 +1351,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockRuleRequest"/></param>
+        /// <returns><see cref="ModifyBlockRuleResponse"/></returns>
+        public Task<ModifyBlockRuleResponse> ModifyBlockRule(ModifyBlockRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBlockRuleResponse>(req, "ModifyBlockRule");
+        }
+
+        /// <summary>
+        /// 修改封禁规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockRuleRequest"/></param>
+        /// <returns><see cref="ModifyBlockRuleResponse"/></returns>
+        public ModifyBlockRuleResponse ModifyBlockRuleSync(ModifyBlockRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBlockRuleResponse>(req, "ModifyBlockRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

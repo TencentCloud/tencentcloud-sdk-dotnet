@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 白名单id
+        /// <p>白名单id</p>
         /// </summary>
         [JsonProperty("WhitelistStrategyId")]
         public string WhitelistStrategyId{ get; set; }

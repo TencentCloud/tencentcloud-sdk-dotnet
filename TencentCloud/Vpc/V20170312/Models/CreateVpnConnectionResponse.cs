@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 通道实例对象。
+        /// <p>通道实例对象。</p>
         /// </summary>
         [JsonProperty("VpnConnection")]
         public VpnConnection VpnConnection{ get; set; }

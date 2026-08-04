@@ -109,7 +109,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? EffectRow{ get; set; }
 
         /// <summary>
-        /// 执行时间
+        /// 执行时间,单位：毫秒
         /// </summary>
         [JsonProperty("ExecTime")]
         public ulong? ExecTime{ get; set; }

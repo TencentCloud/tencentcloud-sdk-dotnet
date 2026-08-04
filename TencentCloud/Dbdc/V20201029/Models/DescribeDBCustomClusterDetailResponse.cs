@@ -100,6 +100,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public ContainerNetwork ContainerNetwork{ get; set; }
 
         /// <summary>
+        /// <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -123,6 +129,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ApiServerNetwork.", this.ApiServerNetwork);
             this.SetParamObj(map, prefix + "ContainerNetwork.", this.ContainerNetwork);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

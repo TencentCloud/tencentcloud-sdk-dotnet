@@ -25,52 +25,58 @@ namespace TencentCloud.Chc.V20230418.Models
     {
         
         /// <summary>
-        /// 工单号
+        /// <p>工单号</p>
         /// </summary>
         [JsonProperty("WorkOrderId")]
         public string WorkOrderId{ get; set; }
 
         /// <summary>
-        /// 服务类型，一个服务可能会产生多个工单
+        /// <p>服务类型，一个服务可能会产生多个工单</p>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 工单类型
+        /// <p>工单类型</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 工单状态
+        /// <p>工单状态</p>
         /// </summary>
         [JsonProperty("OrderStatus")]
         public string OrderStatus{ get; set; }
 
         /// <summary>
-        /// 工单创建人
+        /// <p>工单创建人</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 工单创建时间
+        /// <p>工单创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 工单完成时间
+        /// <p>工单完成时间</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 工单关联的dcops单号
+        /// <p>工单关联的dcops单号</p>
         /// </summary>
         [JsonProperty("TicketId")]
         public string TicketId{ get; set; }
+
+        /// <summary>
+        /// <p>SLA</p>
+        /// </summary>
+        [JsonProperty("SLAInfo")]
+        public SLAInfo SLAInfo{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Chc.V20230418.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "TicketId", this.TicketId);
+            this.SetParamObj(map, prefix + "SLAInfo.", this.SLAInfo);
         }
     }
 }

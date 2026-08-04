@@ -25,26 +25,32 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步对象类型 Partial(部分对象)
+        /// <p>同步对象类型 Partial(部分对象)</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 同步对象，当 Mode 为 Partial 时，不为空
+        /// <p>同步对象，当 Mode 为 Partial 时，不为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Databases")]
         public Database[] Databases{ get; set; }
 
         /// <summary>
-        /// 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
+        /// <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }
 
         /// <summary>
-        /// 库/表/视图级 DML/DDL 白名单
+        /// <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+        /// </summary>
+        [JsonProperty("OnlineDDL")]
+        public OnlineDDL OnlineDDL{ get; set; }
+
+        /// <summary>
+        /// <p>库/表/视图级 DML/DDL 白名单</p>
         /// </summary>
         [JsonProperty("DatabasesOpFilter")]
         public DBOpFilter[] DatabasesOpFilter{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "Databases.", this.Databases);
             this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
+            this.SetParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
             this.SetParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
         }
     }

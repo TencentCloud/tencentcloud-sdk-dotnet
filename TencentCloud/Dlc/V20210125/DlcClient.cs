@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1478";
+       private const string sdkVersion = "SDK_NET_3.0.1479";
 
         /// <summary>
         /// Client constructor.
@@ -537,6 +537,69 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 变配校验：判断用户的目标配置是否可以执行变配。校验逻辑：对于缩容场景（目标值 < 当前值），检查 default 队列的 min 值是否足够承受缩容差值。
+        /// </summary>
+        /// <param name="req"><see cref="CheckModifyPartitionRequest"/></param>
+        /// <returns><see cref="CheckModifyPartitionResponse"/></returns>
+        public Task<CheckModifyPartitionResponse> CheckModifyPartition(CheckModifyPartitionRequest req)
+        {
+            return InternalRequestAsync<CheckModifyPartitionResponse>(req, "CheckModifyPartition");
+        }
+
+        /// <summary>
+        /// 变配校验：判断用户的目标配置是否可以执行变配。校验逻辑：对于缩容场景（目标值 < 当前值），检查 default 队列的 min 值是否足够承受缩容差值。
+        /// </summary>
+        /// <param name="req"><see cref="CheckModifyPartitionRequest"/></param>
+        /// <returns><see cref="CheckModifyPartitionResponse"/></returns>
+        public CheckModifyPartitionResponse CheckModifyPartitionSync(CheckModifyPartitionRequest req)
+        {
+            return InternalRequestAsync<CheckModifyPartitionResponse>(req, "CheckModifyPartition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资源队列名称合法性检测：校验队列名称是否合法，包括非空校验、格式校验（以小写字母开头，只允许小写字母、数字和连字符，长度1~11）和同分区下重名校验。
+        /// </summary>
+        /// <param name="req"><see cref="CheckQueueNameRequest"/></param>
+        /// <returns><see cref="CheckQueueNameResponse"/></returns>
+        public Task<CheckQueueNameResponse> CheckQueueName(CheckQueueNameRequest req)
+        {
+            return InternalRequestAsync<CheckQueueNameResponse>(req, "CheckQueueName");
+        }
+
+        /// <summary>
+        /// 资源队列名称合法性检测：校验队列名称是否合法，包括非空校验、格式校验（以小写字母开头，只允许小写字母、数字和连字符，长度1~11）和同分区下重名校验。
+        /// </summary>
+        /// <param name="req"><see cref="CheckQueueNameRequest"/></param>
+        /// <returns><see cref="CheckQueueNameResponse"/></returns>
+        public CheckQueueNameResponse CheckQueueNameSync(CheckQueueNameRequest req)
+        {
+            return InternalRequestAsync<CheckQueueNameResponse>(req, "CheckQueueName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 校验资源名称合法性
+        /// </summary>
+        /// <param name="req"><see cref="CheckResourceNameRequest"/></param>
+        /// <returns><see cref="CheckResourceNameResponse"/></returns>
+        public Task<CheckResourceNameResponse> CheckResourceName(CheckResourceNameRequest req)
+        {
+            return InternalRequestAsync<CheckResourceNameResponse>(req, "CheckResourceName");
+        }
+
+        /// <summary>
+        /// 校验资源名称合法性
+        /// </summary>
+        /// <param name="req"><see cref="CheckResourceNameRequest"/></param>
+        /// <returns><see cref="CheckResourceNameResponse"/></returns>
+        public CheckResourceNameResponse CheckResourceNameSync(CheckResourceNameRequest req)
+        {
+            return InternalRequestAsync<CheckResourceNameResponse>(req, "CheckResourceName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 复制一份已有的作业配置
         /// </summary>
         /// <param name="req"><see cref="CopyJobSpecRequest"/></param>
@@ -768,6 +831,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建推理模型（模型上传）
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceModelRequest"/></param>
+        /// <returns><see cref="CreateInferenceModelResponse"/></returns>
+        public Task<CreateInferenceModelResponse> CreateInferenceModel(CreateInferenceModelRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceModelResponse>(req, "CreateInferenceModel");
+        }
+
+        /// <summary>
+        /// 创建推理模型（模型上传）
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceModelRequest"/></param>
+        /// <returns><see cref="CreateInferenceModelResponse"/></returns>
+        public CreateInferenceModelResponse CreateInferenceModelSync(CreateInferenceModelRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceModelResponse>(req, "CreateInferenceModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建托管存储内表（该接口已废弃）
         /// </summary>
         /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
@@ -911,6 +995,48 @@ namespace TencentCloud.Dlc.V20210125
         public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQLSync(CreateNotebookSessionStatementSupportBatchSQLRequest req)
         {
             return InternalRequestAsync<CreateNotebookSessionStatementSupportBatchSQLResponse>(req, "CreateNotebookSessionStatementSupportBatchSQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增资源包
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartitionRequest"/></param>
+        /// <returns><see cref="CreatePartitionResponse"/></returns>
+        public Task<CreatePartitionResponse> CreatePartition(CreatePartitionRequest req)
+        {
+            return InternalRequestAsync<CreatePartitionResponse>(req, "CreatePartition");
+        }
+
+        /// <summary>
+        /// 新增资源包
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartitionRequest"/></param>
+        /// <returns><see cref="CreatePartitionResponse"/></returns>
+        public CreatePartitionResponse CreatePartitionSync(CreatePartitionRequest req)
+        {
+            return InternalRequestAsync<CreatePartitionResponse>(req, "CreatePartition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增资源队列：在指定分区下创建一个新的资源队列，支持设置队列名称、描述、资源规格列表和队列类型。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartitionQueueRequest"/></param>
+        /// <returns><see cref="CreatePartitionQueueResponse"/></returns>
+        public Task<CreatePartitionQueueResponse> CreatePartitionQueue(CreatePartitionQueueRequest req)
+        {
+            return InternalRequestAsync<CreatePartitionQueueResponse>(req, "CreatePartitionQueue");
+        }
+
+        /// <summary>
+        /// 新增资源队列：在指定分区下创建一个新的资源队列，支持设置队列名称、描述、资源规格列表和队列类型。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartitionQueueRequest"/></param>
+        /// <returns><see cref="CreatePartitionQueueResponse"/></returns>
+        public CreatePartitionQueueResponse CreatePartitionQueueSync(CreatePartitionQueueRequest req)
+        {
+            return InternalRequestAsync<CreatePartitionQueueResponse>(req, "CreatePartitionQueue")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +1650,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteNotebookSessionResponse DeleteNotebookSessionSync(DeleteNotebookSessionRequest req)
         {
             return InternalRequestAsync<DeleteNotebookSessionResponse>(req, "DeleteNotebookSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除资源队列
+        /// </summary>
+        /// <param name="req"><see cref="DeletePartitionQueueRequest"/></param>
+        /// <returns><see cref="DeletePartitionQueueResponse"/></returns>
+        public Task<DeletePartitionQueueResponse> DeletePartitionQueue(DeletePartitionQueueRequest req)
+        {
+            return InternalRequestAsync<DeletePartitionQueueResponse>(req, "DeletePartitionQueue");
+        }
+
+        /// <summary>
+        /// 删除资源队列
+        /// </summary>
+        /// <param name="req"><see cref="DeletePartitionQueueRequest"/></param>
+        /// <returns><see cref="DeletePartitionQueueResponse"/></returns>
+        public DeletePartitionQueueResponse DeletePartitionQueueSync(DeletePartitionQueueRequest req)
+        {
+            return InternalRequestAsync<DeletePartitionQueueResponse>(req, "DeletePartitionQueue")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2263,6 +2410,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 分页查询指定分区的流程详情列表，包含每个流程的基本信息和活动列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowDetailListRequest"/></param>
+        /// <returns><see cref="DescribeFlowDetailListResponse"/></returns>
+        public Task<DescribeFlowDetailListResponse> DescribeFlowDetailList(DescribeFlowDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowDetailListResponse>(req, "DescribeFlowDetailList");
+        }
+
+        /// <summary>
+        /// 分页查询指定分区的流程详情列表，包含每个流程的基本信息和活动列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowDetailListRequest"/></param>
+        /// <returns><see cref="DescribeFlowDetailListResponse"/></returns>
+        public DescribeFlowDetailListResponse DescribeFlowDetailListSync(DescribeFlowDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowDetailListResponse>(req, "DescribeFlowDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定分区的流程列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowListRequest"/></param>
+        /// <returns><see cref="DescribeFlowListResponse"/></returns>
+        public Task<DescribeFlowListResponse> DescribeFlowList(DescribeFlowListRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowListResponse>(req, "DescribeFlowList");
+        }
+
+        /// <summary>
+        /// 查询指定分区的流程列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowListRequest"/></param>
+        /// <returns><see cref="DescribeFlowListResponse"/></returns>
+        public DescribeFlowListResponse DescribeFlowListSync(DescribeFlowListRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowListResponse>(req, "DescribeFlowList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
         /// </summary>
         /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
@@ -2599,6 +2788,69 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取指定资源分区详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionDetailRequest"/></param>
+        /// <returns><see cref="DescribePartitionDetailResponse"/></returns>
+        public Task<DescribePartitionDetailResponse> DescribePartitionDetail(DescribePartitionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionDetailResponse>(req, "DescribePartitionDetail");
+        }
+
+        /// <summary>
+        /// 获取指定资源分区详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionDetailRequest"/></param>
+        /// <returns><see cref="DescribePartitionDetailResponse"/></returns>
+        public DescribePartitionDetailResponse DescribePartitionDetailSync(DescribePartitionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionDetailResponse>(req, "DescribePartitionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定分区的所有队列列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionQueuesRequest"/></param>
+        /// <returns><see cref="DescribePartitionQueuesResponse"/></returns>
+        public Task<DescribePartitionQueuesResponse> DescribePartitionQueues(DescribePartitionQueuesRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionQueuesResponse>(req, "DescribePartitionQueues");
+        }
+
+        /// <summary>
+        /// 查询指定分区的所有队列列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionQueuesRequest"/></param>
+        /// <returns><see cref="DescribePartitionQueuesResponse"/></returns>
+        public DescribePartitionQueuesResponse DescribePartitionQueuesSync(DescribePartitionQueuesRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionQueuesResponse>(req, "DescribePartitionQueues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取分区列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
+        /// <returns><see cref="DescribePartitionsResponse"/></returns>
+        public Task<DescribePartitionsResponse> DescribePartitions(DescribePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionsResponse>(req, "DescribePartitions");
+        }
+
+        /// <summary>
+        /// 获取分区列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
+        /// <returns><see cref="DescribePartitionsResponse"/></returns>
+        public DescribePartitionsResponse DescribePartitionsSync(DescribePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribePartitionsResponse>(req, "DescribePartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口根据资源组ID查询资源组CU使用情况
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceGroupUsageInfoRequest"/></param>
@@ -2637,6 +2889,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeResultDownloadResponse DescribeResultDownloadSync(DescribeResultDownloadRequest req)
         {
             return InternalRequestAsync<DescribeResultDownloadResponse>(req, "DescribeResultDownload")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleRegionsRequest"/></param>
+        /// <returns><see cref="DescribeSaleRegionsResponse"/></returns>
+        public Task<DescribeSaleRegionsResponse> DescribeSaleRegions(DescribeSaleRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleRegionsResponse>(req, "DescribeSaleRegions");
+        }
+
+        /// <summary>
+        /// 查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleRegionsRequest"/></param>
+        /// <returns><see cref="DescribeSaleRegionsResponse"/></returns>
+        public DescribeSaleRegionsResponse DescribeSaleRegionsSync(DescribeSaleRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleRegionsResponse>(req, "DescribeSaleRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前地域可售卖的资源规格和最大配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleResourceInfoResponse"/></returns>
+        public Task<DescribeSaleResourceInfoResponse> DescribeSaleResourceInfo(DescribeSaleResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleResourceInfoResponse>(req, "DescribeSaleResourceInfo");
+        }
+
+        /// <summary>
+        /// 查询当前地域可售卖的资源规格和最大配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleResourceInfoResponse"/></returns>
+        public DescribeSaleResourceInfoResponse DescribeSaleResourceInfoSync(DescribeSaleResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleResourceInfoResponse>(req, "DescribeSaleResourceInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3649,6 +3943,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取单个模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetInferenceModelRequest"/></param>
+        /// <returns><see cref="GetInferenceModelResponse"/></returns>
+        public Task<GetInferenceModelResponse> GetInferenceModel(GetInferenceModelRequest req)
+        {
+            return InternalRequestAsync<GetInferenceModelResponse>(req, "GetInferenceModel");
+        }
+
+        /// <summary>
+        /// 获取单个模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetInferenceModelRequest"/></param>
+        /// <returns><see cref="GetInferenceModelResponse"/></returns>
+        public GetInferenceModelResponse GetInferenceModelSync(GetInferenceModelRequest req)
+        {
+            return InternalRequestAsync<GetInferenceModelResponse>(req, "GetInferenceModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据配置ID获取作业配置详情
         /// </summary>
         /// <param name="req"><see cref="GetJobSpecRequest"/></param>
@@ -4300,6 +4615,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 列出推理模型（支持关键词过滤 + 分页）
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceModelsRequest"/></param>
+        /// <returns><see cref="ListInferenceModelsResponse"/></returns>
+        public Task<ListInferenceModelsResponse> ListInferenceModels(ListInferenceModelsRequest req)
+        {
+            return InternalRequestAsync<ListInferenceModelsResponse>(req, "ListInferenceModels");
+        }
+
+        /// <summary>
+        /// 列出推理模型（支持关键词过滤 + 分页）
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceModelsRequest"/></param>
+        /// <returns><see cref="ListInferenceModelsResponse"/></returns>
+        public ListInferenceModelsResponse ListInferenceModelsSync(ListInferenceModelsRequest req)
+        {
+            return InternalRequestAsync<ListInferenceModelsResponse>(req, "ListInferenceModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页查询作业配置列表
         /// </summary>
         /// <param name="req"><see cref="ListJobSpecsRequest"/></param>
@@ -4611,6 +4947,48 @@ namespace TencentCloud.Dlc.V20210125
         public ModifyLabPriorityResponse ModifyLabPrioritySync(ModifyLabPriorityRequest req)
         {
             return InternalRequestAsync<ModifyLabPriorityResponse>(req, "ModifyLabPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改分区描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPartitionDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyPartitionDescriptionResponse"/></returns>
+        public Task<ModifyPartitionDescriptionResponse> ModifyPartitionDescription(ModifyPartitionDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyPartitionDescriptionResponse>(req, "ModifyPartitionDescription");
+        }
+
+        /// <summary>
+        /// 修改分区描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPartitionDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyPartitionDescriptionResponse"/></returns>
+        public ModifyPartitionDescriptionResponse ModifyPartitionDescriptionSync(ModifyPartitionDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyPartitionDescriptionResponse>(req, "ModifyPartitionDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑资源队列：根据队列ID修改指定资源队列的名称、描述、资源规格列表和队列类型等信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPartitionQueueRequest"/></param>
+        /// <returns><see cref="ModifyPartitionQueueResponse"/></returns>
+        public Task<ModifyPartitionQueueResponse> ModifyPartitionQueue(ModifyPartitionQueueRequest req)
+        {
+            return InternalRequestAsync<ModifyPartitionQueueResponse>(req, "ModifyPartitionQueue");
+        }
+
+        /// <summary>
+        /// 编辑资源队列：根据队列ID修改指定资源队列的名称、描述、资源规格列表和队列类型等信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPartitionQueueRequest"/></param>
+        /// <returns><see cref="ModifyPartitionQueueResponse"/></returns>
+        public ModifyPartitionQueueResponse ModifyPartitionQueueSync(ModifyPartitionQueueRequest req)
+        {
+            return InternalRequestAsync<ModifyPartitionQueueResponse>(req, "ModifyPartitionQueue")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5304,6 +5682,27 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfoSync(UpdateEngineResourceGroupNetworkConfigInfoRequest req)
         {
             return InternalRequestAsync<UpdateEngineResourceGroupNetworkConfigInfoResponse>(req, "UpdateEngineResourceGroupNetworkConfigInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新推理模型（编辑标签、描述、参数量）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInferenceModelRequest"/></param>
+        /// <returns><see cref="UpdateInferenceModelResponse"/></returns>
+        public Task<UpdateInferenceModelResponse> UpdateInferenceModel(UpdateInferenceModelRequest req)
+        {
+            return InternalRequestAsync<UpdateInferenceModelResponse>(req, "UpdateInferenceModel");
+        }
+
+        /// <summary>
+        /// 更新推理模型（编辑标签、描述、参数量）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInferenceModelRequest"/></param>
+        /// <returns><see cref="UpdateInferenceModelResponse"/></returns>
+        public UpdateInferenceModelResponse UpdateInferenceModelSync(UpdateInferenceModelRequest req)
+        {
+            return InternalRequestAsync<UpdateInferenceModelResponse>(req, "UpdateInferenceModel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
