@@ -25,196 +25,194 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据订阅的ID，形如subs-b6x64o31tm
+        /// <p>数据订阅的ID，形如subs-b6x64o31tm</p>
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的名称
+        /// <p>数据订阅实例的名称</p>
         /// </summary>
         [JsonProperty("SubscribeName")]
         public string SubscribeName{ get; set; }
 
         /// <summary>
-        /// 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+        /// <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
+        /// <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
+        /// <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
+        /// <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
+        /// <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
         /// </summary>
         [JsonProperty("SubsStatus")]
         public string SubsStatus{ get; set; }
 
         /// <summary>
-        /// 修改时间，时间格式如：Y-m-d h:m:s
+        /// <p>修改时间。</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间，时间格式如：Y-m-d h:m:s
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>隔离时间。</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>包年包月任务的到期时间。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>下线时间。</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 付费方式，可能值为：0-包年包月，1-按量计费
+        /// <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+        /// <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 任务所在地域
+        /// <p>任务所在地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Kafka topic
+        /// <p>Kafka topic</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Kafka服务Broker地址
+        /// <p>Kafka服务Broker地址</p>
         /// </summary>
         [JsonProperty("Broker")]
         public string Broker{ get; set; }
 
         /// <summary>
-        /// 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+        /// <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
         /// </summary>
         [JsonProperty("SubscribeMode")]
         public string SubscribeMode{ get; set; }
 
         /// <summary>
-        /// 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
+        /// <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 订阅的数据库表信息
+        /// <p>订阅的数据库表信息</p>
         /// </summary>
         [JsonProperty("SubscribeObjects")]
         public SubscribeObject[] SubscribeObjects{ get; set; }
 
         /// <summary>
-        /// kafka配置信息
+        /// <p>kafka配置信息</p>
         /// </summary>
         [JsonProperty("KafkaConfig")]
         public SubscribeKafkaConfig KafkaConfig{ get; set; }
 
         /// <summary>
-        /// 订阅内置kafka的版本信息
+        /// <p>订阅内置kafka的版本信息</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+        /// <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
-        /// 接入类型信息
+        /// <p>接入类型信息</p>
         /// </summary>
         [JsonProperty("Endpoints")]
         public EndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
-        /// mongo输出聚合设置
+        /// <p>mongo输出聚合设置</p>
         /// </summary>
         [JsonProperty("PipelineInfo")]
         public PipelineInfo[] PipelineInfo{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// 订阅任务报错信息
+        /// <p>订阅任务报错信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public SubsErr[] Errors{ get; set; }
 
         /// <summary>
-        /// 为业务添加的额外信息。参数名作key，参数值作value。
-        /// mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-        /// mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+        /// <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
         /// </summary>
         [JsonProperty("ExtraAttr")]
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
         /// <summary>
-        /// 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+        /// <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }
 
         /// <summary>
-        /// 消费端地址所在vpc
+        /// <p>消费端地址所在vpc</p>
         /// </summary>
         [JsonProperty("ConsumerVpcId")]
         public string ConsumerVpcId{ get; set; }
 
         /// <summary>
-        /// 消费端地址所在子网
+        /// <p>消费端地址所在子网</p>
         /// </summary>
         [JsonProperty("ConsumerSubnetId")]
         public string ConsumerSubnetId{ get; set; }
 
         /// <summary>
-        /// 订阅实例规格
+        /// <p>订阅实例规格</p>
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }

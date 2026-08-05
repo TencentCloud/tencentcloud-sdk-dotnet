@@ -189,6 +189,13 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("EniIP")]
         public string EniIP{ get; set; }
 
+        /// <summary>
+        /// <p>节点绑定的安全组</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +229,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamSimple(map, prefix + "EniIP", this.EniIP);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

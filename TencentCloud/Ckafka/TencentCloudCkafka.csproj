@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1480</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -124,6 +124,8 @@
     <Compile Include="V20190819\Models\CreatePrometheusResponse.cs" />
     <Compile Include="V20190819\Models\CreateRouteRequest.cs" />
     <Compile Include="V20190819\Models\CreateRouteResponse.cs" />
+    <Compile Include="V20190819\Models\CreateThrottleRuleRequest.cs" />
+    <Compile Include="V20190819\Models\CreateThrottleRuleResponse.cs" />
     <Compile Include="V20190819\Models\CreateTokenRequest.cs" />
     <Compile Include="V20190819\Models\CreateTokenResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
@@ -166,6 +168,8 @@
     <Compile Include="V20190819\Models\DeleteRouteResponse.cs" />
     <Compile Include="V20190819\Models\DeleteRouteTriggerTimeRequest.cs" />
     <Compile Include="V20190819\Models\DeleteRouteTriggerTimeResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteThrottleRuleRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteThrottleRuleResponse.cs" />
     <Compile Include="V20190819\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20190819\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20190819\Models\DeleteUserRequest.cs" />
@@ -232,6 +236,8 @@
     <Compile Include="V20190819\Models\DescribeSecurityGroupRoutesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeThrottleRulesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeThrottleRulesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
@@ -343,6 +349,8 @@
     <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
     <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskRequest.cs" />
     <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyThrottleRuleRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyThrottleRuleResponse.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\MongoDBConnectParam.cs" />
@@ -401,6 +409,8 @@
     <Compile Include="V20190819\Models\Tag.cs" />
     <Compile Include="V20190819\Models\TaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\TdwParam.cs" />
+    <Compile Include="V20190819\Models\ThrottleRuleDetail.cs" />
+    <Compile Include="V20190819\Models\ThrottleRuleResult.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\TopicDetail.cs" />

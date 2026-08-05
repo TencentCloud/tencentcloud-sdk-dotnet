@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1477";
+       private const string sdkVersion = "SDK_NET_3.0.1480";
 
         /// <summary>
         /// Client constructor.
@@ -476,7 +476,8 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 创建 AiGC 文档生成视频任务
+        /// 创建 AIGC 文档生成视频任务
+        /// （使用 DescribeAigcTaskStatus 接口进行任务查询）
         /// </summary>
         /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
         /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>
@@ -486,7 +487,8 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 创建 AiGC 文档生成视频任务
+        /// 创建 AIGC 文档生成视频任务
+        /// （使用 DescribeAigcTaskStatus 接口进行任务查询）
         /// </summary>
         /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
         /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>

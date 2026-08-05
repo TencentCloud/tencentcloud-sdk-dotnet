@@ -25,53 +25,53 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
+        /// <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 地域英文ID。
+        /// <p>地域英文ID。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 集群ID，仅集群类产品返回。
+        /// <p>集群ID，仅集群类产品返回。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 引擎版本。
+        /// <p>引擎版本。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 实例状态，1表示运行中。
+        /// <p>实例状态，1表示运行中。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例创建时间。
+        /// <p>实例创建时间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例到期时间。
+        /// <p>实例到期时间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadlineTime")]

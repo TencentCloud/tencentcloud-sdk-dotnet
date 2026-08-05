@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// <p>配额数量</p>
+        /// <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }

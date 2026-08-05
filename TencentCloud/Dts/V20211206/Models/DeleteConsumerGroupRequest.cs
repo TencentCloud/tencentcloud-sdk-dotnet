@@ -44,6 +44,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BackendJobId")]
+        public string BackendJobId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
+            this.SetParamSimple(map, prefix + "BackendJobId", this.BackendJobId);
         }
     }
 }

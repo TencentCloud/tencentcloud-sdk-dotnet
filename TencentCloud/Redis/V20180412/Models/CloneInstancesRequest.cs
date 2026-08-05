@@ -168,6 +168,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("SSLBindPrivateIPv4")]
         public bool? SSLBindPrivateIPv4{ get; set; }
 
+        /// <summary>
+        /// <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
             this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
             this.SetParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         }
     }
 }

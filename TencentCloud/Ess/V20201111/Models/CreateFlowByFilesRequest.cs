@@ -79,7 +79,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? CcNotifyType{ get; set; }
 
         /// <summary>
-        /// <p>是否为预览模式，取值如下：</p><ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li><li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+        /// <p>是否为预览模式，取值如下：</p><ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li><li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul><p><strong>注</strong>: 预览服务按照合同份额 1:2的比例赠送预览次数。例如：购买 100 份合同，将赠送 200 次合同预览额度。当赠送的预览额度使用完后，如需继续使用预览服务，则需要单独购买预览服务额度。</p>
         /// </summary>
         [JsonProperty("NeedPreview")]
         public bool? NeedPreview{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+        /// <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 返回记录的起始偏移量。默认0
+        /// <p>返回记录的起始偏移量。默认0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次返回的记录数量。默认10
+        /// <p>单次返回的记录数量。默认10</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

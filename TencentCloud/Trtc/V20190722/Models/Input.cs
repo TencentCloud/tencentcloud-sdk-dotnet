@@ -36,6 +36,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// <p>声网拉流进房参数</p>
+        /// </summary>
+        [JsonProperty("AgoraParam")]
+        public AgoraParam AgoraParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamObj(map, prefix + "AgoraParam.", this.AgoraParam);
         }
     }
 }

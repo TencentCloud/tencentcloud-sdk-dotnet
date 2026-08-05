@@ -55,6 +55,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealType{ get; set; }
 
         /// <summary>
+        /// <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+        /// </summary>
+        [JsonProperty("SubSealType")]
+        public string SubSealType{ get; set; }
+
+        /// <summary>
         /// <p>电子印章图片文件名称，1-50个中文字符。</p>
         /// </summary>
         [JsonProperty("FileName")]
@@ -149,6 +155,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
             this.SetParamSimple(map, prefix + "SealType", this.SealType);
+            this.SetParamSimple(map, prefix + "SubSealType", this.SubSealType);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Width", this.Width);

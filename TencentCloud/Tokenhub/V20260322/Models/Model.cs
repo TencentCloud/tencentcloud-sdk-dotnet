@@ -79,7 +79,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string Provider{ get; set; }
 
         /// <summary>
-        /// <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+        /// <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("OfflineAt")]
         public string OfflineAt{ get; set; }
 
+        /// <summary>
+        /// <p>停止新购时间</p>
+        /// </summary>
+        [JsonProperty("DiscontinuedAt")]
+        public string DiscontinuedAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamObj(map, prefix + "ModelAccessInfo.", this.ModelAccessInfo);
             this.SetParamObj(map, prefix + "FreeTrialInfo.", this.FreeTrialInfo);
             this.SetParamSimple(map, prefix + "OfflineAt", this.OfflineAt);
+            this.SetParamSimple(map, prefix + "DiscontinuedAt", this.DiscontinuedAt);
         }
     }
 }

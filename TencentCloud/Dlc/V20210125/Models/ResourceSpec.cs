@@ -38,7 +38,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>四层计费项</p>
+        /// <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
         /// </summary>
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Spec{ get; set; }
 
         /// <summary>
-        /// <p>GPU类型，仅GU有值</p>
+        /// <p>GPU类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuType")]

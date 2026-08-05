@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1478";
+       private const string sdkVersion = "SDK_NET_3.0.1480";
 
         /// <summary>
         /// Client constructor.
@@ -1529,6 +1529,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteKafkaRechargeResponse DeleteKafkaRechargeSync(DeleteKafkaRechargeRequest req)
         {
             return InternalRequestAsync<DeleteKafkaRechargeResponse>(req, "DeleteKafkaRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改日志信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogRequest"/></param>
+        /// <returns><see cref="DeleteLogResponse"/></returns>
+        public Task<DeleteLogResponse> DeleteLog(DeleteLogRequest req)
+        {
+            return InternalRequestAsync<DeleteLogResponse>(req, "DeleteLog");
+        }
+
+        /// <summary>
+        /// 修改日志信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogRequest"/></param>
+        /// <returns><see cref="DeleteLogResponse"/></returns>
+        public DeleteLogResponse DeleteLogSync(DeleteLogRequest req)
+        {
+            return InternalRequestAsync<DeleteLogResponse>(req, "DeleteLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3780,6 +3801,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyKafkaRechargeResponse ModifyKafkaRechargeSync(ModifyKafkaRechargeRequest req)
         {
             return InternalRequestAsync<ModifyKafkaRechargeResponse>(req, "ModifyKafkaRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改日志信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public Task<ModifyLogResponse> ModifyLog(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog");
+        }
+
+        /// <summary>
+        /// 修改日志信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogRequest"/></param>
+        /// <returns><see cref="ModifyLogResponse"/></returns>
+        public ModifyLogResponse ModifyLogSync(ModifyLogRequest req)
+        {
+            return InternalRequestAsync<ModifyLogResponse>(req, "ModifyLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

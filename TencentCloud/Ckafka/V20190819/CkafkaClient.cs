@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1480";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 实例限流规则相关接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateThrottleRuleRequest"/></param>
+        /// <returns><see cref="CreateThrottleRuleResponse"/></returns>
+        public Task<CreateThrottleRuleResponse> CreateThrottleRule(CreateThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<CreateThrottleRuleResponse>(req, "CreateThrottleRule");
+        }
+
+        /// <summary>
+        /// 实例限流规则相关接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateThrottleRuleRequest"/></param>
+        /// <returns><see cref="CreateThrottleRuleResponse"/></returns>
+        public CreateThrottleRuleResponse CreateThrottleRuleSync(CreateThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<CreateThrottleRuleResponse>(req, "CreateThrottleRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建最高权限的token
         /// </summary>
         /// <param name="req"><see cref="CreateTokenRequest"/></param>
@@ -806,6 +827,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTimeSync(DeleteRouteTriggerTimeRequest req)
         {
             return InternalRequestAsync<DeleteRouteTriggerTimeResponse>(req, "DeleteRouteTriggerTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除实例限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThrottleRuleRequest"/></param>
+        /// <returns><see cref="DeleteThrottleRuleResponse"/></returns>
+        public Task<DeleteThrottleRuleResponse> DeleteThrottleRule(DeleteThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteThrottleRuleResponse>(req, "DeleteThrottleRule");
+        }
+
+        /// <summary>
+        /// 删除实例限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThrottleRuleRequest"/></param>
+        /// <returns><see cref="DeleteThrottleRuleResponse"/></returns>
+        public DeleteThrottleRuleResponse DeleteThrottleRuleSync(DeleteThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteThrottleRuleResponse>(req, "DeleteThrottleRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1398,6 +1440,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 获取实例限流规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThrottleRulesRequest"/></param>
+        /// <returns><see cref="DescribeThrottleRulesResponse"/></returns>
+        public Task<DescribeThrottleRulesResponse> DescribeThrottleRules(DescribeThrottleRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeThrottleRulesResponse>(req, "DescribeThrottleRules");
+        }
+
+        /// <summary>
+        /// 获取实例限流规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThrottleRulesRequest"/></param>
+        /// <returns><see cref="DescribeThrottleRulesResponse"/></returns>
+        public DescribeThrottleRulesResponse DescribeThrottleRulesSync(DescribeThrottleRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeThrottleRulesResponse>(req, "DescribeThrottleRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 接口请求域名：https://ckafka.tencentcloudapi.com
         /// 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
         /// </summary>
@@ -1963,6 +2026,27 @@ namespace TencentCloud.Ckafka.V20190819
         public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTaskSync(ModifyRoutineMaintenanceTaskRequest req)
         {
             return InternalRequestAsync<ModifyRoutineMaintenanceTaskResponse>(req, "ModifyRoutineMaintenanceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改限流规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyThrottleRuleRequest"/></param>
+        /// <returns><see cref="ModifyThrottleRuleResponse"/></returns>
+        public Task<ModifyThrottleRuleResponse> ModifyThrottleRule(ModifyThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyThrottleRuleResponse>(req, "ModifyThrottleRule");
+        }
+
+        /// <summary>
+        /// 修改限流规则接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyThrottleRuleRequest"/></param>
+        /// <returns><see cref="ModifyThrottleRuleResponse"/></returns>
+        public ModifyThrottleRuleResponse ModifyThrottleRuleSync(ModifyThrottleRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyThrottleRuleResponse>(req, "ModifyThrottleRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -355,6 +355,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("NewStateCOSBucketType")]
         public long? NewStateCOSBucketType{ get; set; }
 
+        /// <summary>
+        /// <p>健康分数</p>
+        /// </summary>
+        [JsonProperty("HealthScore")]
+        public long? HealthScore{ get; set; }
+
+        /// <summary>
+        /// <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+        /// </summary>
+        [JsonProperty("LastDiagnoseTime")]
+        public string LastDiagnoseTime{ get; set; }
+
+        /// <summary>
+        /// <p>负责人Uin</p>
+        /// </summary>
+        [JsonProperty("ManagerUin")]
+        public string ManagerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -409,6 +427,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "NewStateCOSBucket", this.NewStateCOSBucket);
             this.SetParamSimple(map, prefix + "StateCOSBucketType", this.StateCOSBucketType);
             this.SetParamSimple(map, prefix + "NewStateCOSBucketType", this.NewStateCOSBucketType);
+            this.SetParamSimple(map, prefix + "HealthScore", this.HealthScore);
+            this.SetParamSimple(map, prefix + "LastDiagnoseTime", this.LastDiagnoseTime);
+            this.SetParamSimple(map, prefix + "ManagerUin", this.ManagerUin);
         }
     }
 }

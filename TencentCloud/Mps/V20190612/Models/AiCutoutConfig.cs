@@ -42,6 +42,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PatternConfig")]
         public PatternConfig PatternConfig{ get; set; }
 
+        /// <summary>
+        /// <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "PatternConfig.", this.PatternConfig);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
         }
     }
 }

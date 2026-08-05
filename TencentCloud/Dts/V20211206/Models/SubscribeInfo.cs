@@ -25,138 +25,144 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据订阅的实例ID
+        /// <p>数据订阅的实例ID</p>
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的名称
+        /// <p>数据订阅实例的名称</p>
         /// </summary>
         [JsonProperty("SubscribeName")]
         public string SubscribeName{ get; set; }
 
         /// <summary>
-        /// 订阅实例发送数据的kafka topic
+        /// <p>订阅实例发送数据的kafka topic</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+        /// <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
+        /// <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
+        /// <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
+        /// <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+        /// <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
         /// </summary>
         [JsonProperty("SubsStatus")]
         public string SubsStatus{ get; set; }
 
         /// <summary>
-        /// 上次修改时间，时间格式如：Y-m-d h:m:s
+        /// <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间，时间格式如：Y-m-d h:m:s
+        /// <p>创建时间，时间格式如：Y-m-d h:m:s</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+        /// <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 计费方式，0 - 包年包月，1 - 按量计费
+        /// <p>计费方式，0 - 包年包月，1 - 按量计费</p>
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+        /// <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例所属地域
+        /// <p>数据订阅实例所属地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
+        /// <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
-        /// 数据库节点信息
+        /// <p>数据库节点信息</p>
         /// </summary>
         [JsonProperty("Endpoints")]
         public EndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
-        /// 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+        /// <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// 任务报错信息，如果有的话。
+        /// <p>任务报错信息，如果有的话。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public SubsErr[] Errors{ get; set; }
 
         /// <summary>
-        /// 订阅实例规格
+        /// <p>订阅实例规格</p>
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
+
+        /// <summary>
+        /// <p>新版订阅消费端路由阶段</p>
+        /// </summary>
+        [JsonProperty("ConsumerRoutePhase")]
+        public string ConsumerRoutePhase{ get; set; }
 
 
         /// <summary>
@@ -186,6 +192,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
+            this.SetParamSimple(map, prefix + "ConsumerRoutePhase", this.ConsumerRoutePhase);
         }
     }
 }

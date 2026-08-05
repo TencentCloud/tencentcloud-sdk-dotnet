@@ -25,37 +25,37 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 默认值
+        /// <p>默认值</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 可选值列表
+        /// <p>可选值列表</p>
         /// </summary>
         [JsonProperty("EnumValueList")]
         public string[] EnumValueList{ get; set; }
 
         /// <summary>
-        /// 最大值（仅数值类型有效）
+        /// <p>最大值（仅数值类型有效）</p>
         /// </summary>
         [JsonProperty("MaxValue")]
         public float? MaxValue{ get; set; }
 
         /// <summary>
-        /// 最小值（仅数值类型有效）
+        /// <p>最小值（仅数值类型有效）</p>
         /// </summary>
         [JsonProperty("MinValue")]
         public float? MinValue{ get; set; }
 
         /// <summary>
-        /// 超参名称
+        /// <p>超参名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 超参类型。1-浮点数, 2-整数, 3-字符串
+        /// <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

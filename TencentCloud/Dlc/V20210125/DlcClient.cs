@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1479";
+       private const string sdkVersion = "SDK_NET_3.0.1480";
 
         /// <summary>
         /// Client constructor.
@@ -852,6 +852,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建推理服务（含默认部署）
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public Task<CreateInferenceServiceResponse> CreateInferenceService(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService");
+        }
+
+        /// <summary>
+        /// 创建推理服务（含默认部署）
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public CreateInferenceServiceResponse CreateInferenceServiceSync(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建托管存储内表（该接口已废弃）
         /// </summary>
         /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
@@ -932,6 +953,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateMetaDatabaseResponse CreateMetaDatabaseSync(CreateMetaDatabaseRequest req)
         {
             return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建模型新版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelVersionRequest"/></param>
+        /// <returns><see cref="CreateModelVersionResponse"/></returns>
+        public Task<CreateModelVersionResponse> CreateModelVersion(CreateModelVersionRequest req)
+        {
+            return InternalRequestAsync<CreateModelVersionResponse>(req, "CreateModelVersion");
+        }
+
+        /// <summary>
+        /// 创建模型新版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelVersionRequest"/></param>
+        /// <returns><see cref="CreateModelVersionResponse"/></returns>
+        public CreateModelVersionResponse CreateModelVersionSync(CreateModelVersionRequest req)
+        {
+            return InternalRequestAsync<CreateModelVersionResponse>(req, "CreateModelVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3964,6 +4006,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取单个推理服务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetInferenceServiceRequest"/></param>
+        /// <returns><see cref="GetInferenceServiceResponse"/></returns>
+        public Task<GetInferenceServiceResponse> GetInferenceService(GetInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<GetInferenceServiceResponse>(req, "GetInferenceService");
+        }
+
+        /// <summary>
+        /// 获取单个推理服务详情
+        /// </summary>
+        /// <param name="req"><see cref="GetInferenceServiceRequest"/></param>
+        /// <returns><see cref="GetInferenceServiceResponse"/></returns>
+        public GetInferenceServiceResponse GetInferenceServiceSync(GetInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<GetInferenceServiceResponse>(req, "GetInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据配置ID获取作业配置详情
         /// </summary>
         /// <param name="req"><see cref="GetJobSpecRequest"/></param>
@@ -4128,6 +4191,69 @@ namespace TencentCloud.Dlc.V20210125
         public GetLabYamlResponse GetLabYamlSync(GetLabYamlRequest req)
         {
             return InternalRequestAsync<GetLabYamlResponse>(req, "GetLabYaml")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型 config.json 配置（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelConfigRequest"/></param>
+        /// <returns><see cref="GetModelConfigResponse"/></returns>
+        public Task<GetModelConfigResponse> GetModelConfig(GetModelConfigRequest req)
+        {
+            return InternalRequestAsync<GetModelConfigResponse>(req, "GetModelConfig");
+        }
+
+        /// <summary>
+        /// 获取模型 config.json 配置（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelConfigRequest"/></param>
+        /// <returns><see cref="GetModelConfigResponse"/></returns>
+        public GetModelConfigResponse GetModelConfigSync(GetModelConfigRequest req)
+        {
+            return InternalRequestAsync<GetModelConfigResponse>(req, "GetModelConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型文件树（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelFilesRequest"/></param>
+        /// <returns><see cref="GetModelFilesResponse"/></returns>
+        public Task<GetModelFilesResponse> GetModelFiles(GetModelFilesRequest req)
+        {
+            return InternalRequestAsync<GetModelFilesResponse>(req, "GetModelFiles");
+        }
+
+        /// <summary>
+        /// 获取模型文件树（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelFilesRequest"/></param>
+        /// <returns><see cref="GetModelFilesResponse"/></returns>
+        public GetModelFilesResponse GetModelFilesSync(GetModelFilesRequest req)
+        {
+            return InternalRequestAsync<GetModelFilesResponse>(req, "GetModelFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型 README 信息（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelReadmeRequest"/></param>
+        /// <returns><see cref="GetModelReadmeResponse"/></returns>
+        public Task<GetModelReadmeResponse> GetModelReadme(GetModelReadmeRequest req)
+        {
+            return InternalRequestAsync<GetModelReadmeResponse>(req, "GetModelReadme");
+        }
+
+        /// <summary>
+        /// 获取模型 README 信息（默认最新版本）
+        /// </summary>
+        /// <param name="req"><see cref="GetModelReadmeRequest"/></param>
+        /// <returns><see cref="GetModelReadmeResponse"/></returns>
+        public GetModelReadmeResponse GetModelReadmeSync(GetModelReadmeRequest req)
+        {
+            return InternalRequestAsync<GetModelReadmeResponse>(req, "GetModelReadme")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4615,6 +4741,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 列出推理引擎
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceEnginesRequest"/></param>
+        /// <returns><see cref="ListInferenceEnginesResponse"/></returns>
+        public Task<ListInferenceEnginesResponse> ListInferenceEngines(ListInferenceEnginesRequest req)
+        {
+            return InternalRequestAsync<ListInferenceEnginesResponse>(req, "ListInferenceEngines");
+        }
+
+        /// <summary>
+        /// 列出推理引擎
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceEnginesRequest"/></param>
+        /// <returns><see cref="ListInferenceEnginesResponse"/></returns>
+        public ListInferenceEnginesResponse ListInferenceEnginesSync(ListInferenceEnginesRequest req)
+        {
+            return InternalRequestAsync<ListInferenceEnginesResponse>(req, "ListInferenceEngines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出推理模型（支持关键词过滤 + 分页）
         /// </summary>
         /// <param name="req"><see cref="ListInferenceModelsRequest"/></param>
@@ -4632,6 +4779,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListInferenceModelsResponse ListInferenceModelsSync(ListInferenceModelsRequest req)
         {
             return InternalRequestAsync<ListInferenceModelsResponse>(req, "ListInferenceModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出推理服务（支持关键词和状态过滤 + 分页）
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceServicesRequest"/></param>
+        /// <returns><see cref="ListInferenceServicesResponse"/></returns>
+        public Task<ListInferenceServicesResponse> ListInferenceServices(ListInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<ListInferenceServicesResponse>(req, "ListInferenceServices");
+        }
+
+        /// <summary>
+        /// 列出推理服务（支持关键词和状态过滤 + 分页）
+        /// </summary>
+        /// <param name="req"><see cref="ListInferenceServicesRequest"/></param>
+        /// <returns><see cref="ListInferenceServicesResponse"/></returns>
+        public ListInferenceServicesResponse ListInferenceServicesSync(ListInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<ListInferenceServicesResponse>(req, "ListInferenceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4695,6 +4863,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListLabsResponse ListLabsSync(ListLabsRequest req)
         {
             return InternalRequestAsync<ListLabsResponse>(req, "ListLabs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出模型所有版本
+        /// </summary>
+        /// <param name="req"><see cref="ListModelVersionsRequest"/></param>
+        /// <returns><see cref="ListModelVersionsResponse"/></returns>
+        public Task<ListModelVersionsResponse> ListModelVersions(ListModelVersionsRequest req)
+        {
+            return InternalRequestAsync<ListModelVersionsResponse>(req, "ListModelVersions");
+        }
+
+        /// <summary>
+        /// 列出模型所有版本
+        /// </summary>
+        /// <param name="req"><see cref="ListModelVersionsRequest"/></param>
+        /// <returns><see cref="ListModelVersionsResponse"/></returns>
+        public ListModelVersionsResponse ListModelVersionsSync(ListModelVersionsRequest req)
+        {
+            return InternalRequestAsync<ListModelVersionsResponse>(req, "ListModelVersions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5140,6 +5329,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 返回指定时间范围内所有推理服务的聚合 KPI 值。
+        /// </summary>
+        /// <param name="req"><see cref="QueryDashboardOverviewRequest"/></param>
+        /// <returns><see cref="QueryDashboardOverviewResponse"/></returns>
+        public Task<QueryDashboardOverviewResponse> QueryDashboardOverview(QueryDashboardOverviewRequest req)
+        {
+            return InternalRequestAsync<QueryDashboardOverviewResponse>(req, "QueryDashboardOverview");
+        }
+
+        /// <summary>
+        /// 返回指定时间范围内所有推理服务的聚合 KPI 值。
+        /// </summary>
+        /// <param name="req"><see cref="QueryDashboardOverviewRequest"/></param>
+        /// <returns><see cref="QueryDashboardOverviewResponse"/></returns>
+        public QueryDashboardOverviewResponse QueryDashboardOverviewSync(QueryDashboardOverviewRequest req)
+        {
+            return InternalRequestAsync<QueryDashboardOverviewResponse>(req, "QueryDashboardOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询监控大盘服务列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryDashboardServiceListRequest"/></param>
+        /// <returns><see cref="QueryDashboardServiceListResponse"/></returns>
+        public Task<QueryDashboardServiceListResponse> QueryDashboardServiceList(QueryDashboardServiceListRequest req)
+        {
+            return InternalRequestAsync<QueryDashboardServiceListResponse>(req, "QueryDashboardServiceList");
+        }
+
+        /// <summary>
+        /// 查询监控大盘服务列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryDashboardServiceListRequest"/></param>
+        /// <returns><see cref="QueryDashboardServiceListResponse"/></returns>
+        public QueryDashboardServiceListResponse QueryDashboardServiceListSync(QueryDashboardServiceListRequest req)
+        {
+            return InternalRequestAsync<QueryDashboardServiceListResponse>(req, "QueryDashboardServiceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
         /// </summary>
         /// <param name="req"><see cref="QueryInternalTableWarehouseRequest"/></param>
@@ -5157,6 +5388,27 @@ namespace TencentCloud.Dlc.V20210125
         public QueryInternalTableWarehouseResponse QueryInternalTableWarehouseSync(QueryInternalTableWarehouseRequest req)
         {
             return InternalRequestAsync<QueryInternalTableWarehouseResponse>(req, "QueryInternalTableWarehouse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询监控概览数据（瞬时值）
+        /// </summary>
+        /// <param name="req"><see cref="QueryMonitorOverviewRequest"/></param>
+        /// <returns><see cref="QueryMonitorOverviewResponse"/></returns>
+        public Task<QueryMonitorOverviewResponse> QueryMonitorOverview(QueryMonitorOverviewRequest req)
+        {
+            return InternalRequestAsync<QueryMonitorOverviewResponse>(req, "QueryMonitorOverview");
+        }
+
+        /// <summary>
+        /// 查询监控概览数据（瞬时值）
+        /// </summary>
+        /// <param name="req"><see cref="QueryMonitorOverviewRequest"/></param>
+        /// <returns><see cref="QueryMonitorOverviewResponse"/></returns>
+        public QueryMonitorOverviewResponse QueryMonitorOverviewSync(QueryMonitorOverviewRequest req)
+        {
+            return InternalRequestAsync<QueryMonitorOverviewResponse>(req, "QueryMonitorOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5287,6 +5539,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 重启推理服务（操作所有部署）。
+        /// </summary>
+        /// <param name="req"><see cref="RestartInferenceServiceRequest"/></param>
+        /// <returns><see cref="RestartInferenceServiceResponse"/></returns>
+        public Task<RestartInferenceServiceResponse> RestartInferenceService(RestartInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<RestartInferenceServiceResponse>(req, "RestartInferenceService");
+        }
+
+        /// <summary>
+        /// 重启推理服务（操作所有部署）。
+        /// </summary>
+        /// <param name="req"><see cref="RestartInferenceServiceRequest"/></param>
+        /// <returns><see cref="RestartInferenceServiceResponse"/></returns>
+        public RestartInferenceServiceResponse RestartInferenceServiceSync(RestartInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<RestartInferenceServiceResponse>(req, "RestartInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 撤销DLC Catalog访问权限
         /// </summary>
         /// <param name="req"><see cref="RevokeDLCCatalogAccessRequest"/></param>
@@ -5409,6 +5682,27 @@ namespace TencentCloud.Dlc.V20210125
         public StartRayClusterResponse StartRayClusterSync(StartRayClusterRequest req)
         {
             return InternalRequestAsync<StartRayClusterResponse>(req, "StartRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止推理服务（操作所有部署）。
+        /// </summary>
+        /// <param name="req"><see cref="StopInferenceServiceRequest"/></param>
+        /// <returns><see cref="StopInferenceServiceResponse"/></returns>
+        public Task<StopInferenceServiceResponse> StopInferenceService(StopInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<StopInferenceServiceResponse>(req, "StopInferenceService");
+        }
+
+        /// <summary>
+        /// 停止推理服务（操作所有部署）。
+        /// </summary>
+        /// <param name="req"><see cref="StopInferenceServiceRequest"/></param>
+        /// <returns><see cref="StopInferenceServiceResponse"/></returns>
+        public StopInferenceServiceResponse StopInferenceServiceSync(StopInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<StopInferenceServiceResponse>(req, "StopInferenceService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

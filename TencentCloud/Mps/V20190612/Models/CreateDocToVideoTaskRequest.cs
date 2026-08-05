@@ -36,6 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosInfo")]
         public DocToVideoCosInfo CosInfo{ get; set; }
 
+        /// <summary>
+        /// <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "CosInfo.", this.CosInfo);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

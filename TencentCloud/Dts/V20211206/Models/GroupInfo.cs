@@ -25,67 +25,67 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 消费者组账号
+        /// <p>消费者组账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 消费者组名称
+        /// <p>消费者组名称</p>
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 消费者组备注
+        /// <p>消费者组备注</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段
+        /// <p>消费组偏移量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区的偏移量。各分区的偏移量详见StateOfPartition字段</p>
         /// </summary>
         [JsonProperty("ConsumerGroupOffset")]
         public long? ConsumerGroupOffset{ get; set; }
 
         /// <summary>
-        /// 消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段
+        /// <p>消费组未消费的数据量。该字段是为了兼容以前单Partition的情况，取值为最后一个分区未消费的数据量。各分区未消费数据量详见StateOfPartition字段</p>
         /// </summary>
         [JsonProperty("ConsumerGroupLag")]
         public long? ConsumerGroupLag{ get; set; }
 
         /// <summary>
-        /// 消费延迟(单位为秒)
+        /// <p>消费延迟(单位为秒)</p>
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// 各分区的消费状态
+        /// <p>各分区的消费状态</p>
         /// </summary>
         [JsonProperty("StateOfPartition")]
         public MonitorInfo[] StateOfPartition{ get; set; }
 
         /// <summary>
-        /// 消费者组创建时间，格式为YYYY-MM-DD hh:mm:ss
+        /// <p>消费者组创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 消费者组修改时间，格式为YYYY-MM-DD hh:mm:ss
+        /// <p>消费者组修改时间。</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作
+        /// <p>消费者组状态，包括Dead、Empty、Stable等，只有Dead和Empty两种状态可以执行reset操作</p>
         /// </summary>
         [JsonProperty("ConsumerGroupState")]
         public string ConsumerGroupState{ get; set; }
 
         /// <summary>
-        /// 每个消费者正在消费的分区
+        /// <p>每个消费者正在消费的分区</p>
         /// </summary>
         [JsonProperty("PartitionAssignment")]
         public PartitionAssignment[] PartitionAssignment{ get; set; }
