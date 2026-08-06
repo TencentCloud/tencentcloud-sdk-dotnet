@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1478";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Cngw.V20230418
         public DeleteCloudNativeAPIGatewaySecretKeyResponse DeleteCloudNativeAPIGatewaySecretKeySync(DeleteCloudNativeAPIGatewaySecretKeyRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewaySecretKeyResponse>(req, "DeleteCloudNativeAPIGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关服务和路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCNGWServicesWithRoutesRequest"/></param>
+        /// <returns><see cref="DescribeCNGWServicesWithRoutesResponse"/></returns>
+        public Task<DescribeCNGWServicesWithRoutesResponse> DescribeCNGWServicesWithRoutes(DescribeCNGWServicesWithRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeCNGWServicesWithRoutesResponse>(req, "DescribeCNGWServicesWithRoutes");
+        }
+
+        /// <summary>
+        /// 查询云原生网关服务和路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCNGWServicesWithRoutesRequest"/></param>
+        /// <returns><see cref="DescribeCNGWServicesWithRoutesResponse"/></returns>
+        public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutesSync(DescribeCNGWServicesWithRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeCNGWServicesWithRoutesResponse>(req, "DescribeCNGWServicesWithRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

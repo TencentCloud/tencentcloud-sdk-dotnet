@@ -25,13 +25,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 集群总数
+        /// <p>集群总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 集群列表
+        /// <p>集群列表</p>
         /// </summary>
         [JsonProperty("ClusterSet")]
         public Cluster[] ClusterSet{ get; set; }

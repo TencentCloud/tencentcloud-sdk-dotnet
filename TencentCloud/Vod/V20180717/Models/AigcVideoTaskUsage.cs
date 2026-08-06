@@ -36,6 +36,30 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ThoughtTokens")]
         public long? ThoughtTokens{ get; set; }
 
+        /// <summary>
+        /// <p>输入图片数目。</p>
+        /// </summary>
+        [JsonProperty("InputImageCount")]
+        public long? InputImageCount{ get; set; }
+
+        /// <summary>
+        /// <p>输入视频的时长。</p><p>单位：秒。</p>
+        /// </summary>
+        [JsonProperty("InputSeconds")]
+        public long? InputSeconds{ get; set; }
+
+        /// <summary>
+        /// <p>输出视频时长。</p><p>单位：秒。</p>
+        /// </summary>
+        [JsonProperty("OutputSeconds")]
+        public long? OutputSeconds{ get; set; }
+
+        /// <summary>
+        /// <p>输入输出总时长。</p><p>默认值：秒。</p>
+        /// </summary>
+        [JsonProperty("TotalSeconds")]
+        public long? TotalSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +68,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "InputTokens", this.InputTokens);
             this.SetParamSimple(map, prefix + "ThoughtTokens", this.ThoughtTokens);
+            this.SetParamSimple(map, prefix + "InputImageCount", this.InputImageCount);
+            this.SetParamSimple(map, prefix + "InputSeconds", this.InputSeconds);
+            this.SetParamSimple(map, prefix + "OutputSeconds", this.OutputSeconds);
+            this.SetParamSimple(map, prefix + "TotalSeconds", this.TotalSeconds);
         }
     }
 }

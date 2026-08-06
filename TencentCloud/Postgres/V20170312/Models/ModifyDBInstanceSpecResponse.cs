@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 订单号。
+        /// <p>订单号。</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 冻结流水号。
+        /// <p>冻结流水号。</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }

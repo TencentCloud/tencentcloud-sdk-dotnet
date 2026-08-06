@@ -408,6 +408,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ImagePullSecretList")]
         public string[] ImagePullSecretList{ get; set; }
 
+        /// <summary>
+        /// <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+        /// </summary>
+        [JsonProperty("MeshSidecarVersion")]
+        public string MeshSidecarVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -478,6 +484,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
             this.SetParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
             this.SetParamArraySimple(map, prefix + "ImagePullSecretList.", this.ImagePullSecretList);
+            this.SetParamSimple(map, prefix + "MeshSidecarVersion", this.MeshSidecarVersion);
         }
     }
 }

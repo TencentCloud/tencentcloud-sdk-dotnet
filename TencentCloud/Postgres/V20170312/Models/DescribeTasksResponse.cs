@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 查询到的任务数量
+        /// <p>查询到的任务数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务信息列表
+        /// <p>任务信息列表</p>
         /// </summary>
         [JsonProperty("TaskSet")]
         public TaskSet[] TaskSet{ get; set; }

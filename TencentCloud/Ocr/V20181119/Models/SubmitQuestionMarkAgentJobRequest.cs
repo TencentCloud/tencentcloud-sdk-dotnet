@@ -57,7 +57,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDeepThink{ get; set; }
 
         /// <summary>
-        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer  value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection  value为true表示启用步骤级批改；</p><p> 设置方式参考  {&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
+        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
         /// </summary>
         [JsonProperty("QuestionConfigMap")]
         public string QuestionConfigMap{ get; set; }
@@ -69,16 +69,28 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ReferenceAnswer{ get; set; }
 
         /// <summary>
-        /// <p>图片/PDF的 Base64 列表值，最多三张。每张图片要求参考ImageBase64  1. 如果ImageBase64List或者ImageUrlList 都没值则取ImageBase64 或者ImageUrl  2.如果ImageBase64List或者ImageUrlList 有一个值，则不取ImageBase64 或者ImageUrl值，优先去list  3.如果ImageBase64List或者ImageUrlList 都有值，则取ImageUrlList</p>
+        /// <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
         /// </summary>
         [JsonProperty("ImageBase64List")]
         public string[] ImageBase64List{ get; set; }
 
         /// <summary>
-        /// <p>图片/PDF的 Url 地址Base64 列表值，最多三张。每张图片要求参考ImageUrl。  图片生效规则同ImageBase64List</p>
+        /// <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
         /// </summary>
         [JsonProperty("ImageUrlList")]
         public string[] ImageUrlList{ get; set; }
+
+        /// <summary>
+        /// <p>辅助批改类型</p><p>枚举值：</p><ul><li>0： 无辅助批改，直接模型批改</li><li>1： 单题文本辅助批改，配合AnswerAssistMap使用</li><li>2： 整页辅助批改，待批改试卷使用ImageUrl/ImageBase64，答案部分使用ImageBase64List.N/ImageUrlList.N</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("AssistMarkType")]
+        public long? AssistMarkType{ get; set; }
+
+        /// <summary>
+        /// <p>单题辅助批改文本内容列表，当AssistMarkType为1时生效，用于提供题目相关的辅助文本信息。</p><ol><li>当key为ReferenceAnswer，value可以输入单题的辅助答案文本。</li><li>当key为QuestionAuxStem，value可以输入单题的辅助题干。</li></ol>
+        /// </summary>
+        [JsonProperty("AnswerAssistMap")]
+        public string AnswerAssistMap{ get; set; }
 
 
         /// <summary>
@@ -95,6 +107,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ReferenceAnswer", this.ReferenceAnswer);
             this.SetParamArraySimple(map, prefix + "ImageBase64List.", this.ImageBase64List);
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
+            this.SetParamSimple(map, prefix + "AssistMarkType", this.AssistMarkType);
+            this.SetParamSimple(map, prefix + "AnswerAssistMap", this.AnswerAssistMap);
         }
     }
 }

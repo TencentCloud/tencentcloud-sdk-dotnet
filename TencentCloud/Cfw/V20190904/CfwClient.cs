@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -516,6 +516,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建入侵防御白名单。先选择 RuleType，再按该类型填写 Rules[].Info；每条策略使用唯一 RuleName。创建成功后调用 DescribeWhiteRule，使用 RuleName+OperatorType 9 查询并精确核对 RuleName，取得 WhiteId。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateWhiteRuleResponse"/></returns>
+        public Task<CreateWhiteRuleResponse> CreateWhiteRule(CreateWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<CreateWhiteRuleResponse>(req, "CreateWhiteRule");
+        }
+
+        /// <summary>
+        /// 创建入侵防御白名单。先选择 RuleType，再按该类型填写 Rules[].Info；每条策略使用唯一 RuleName。创建成功后调用 DescribeWhiteRule，使用 RuleName+OperatorType 9 查询并精确核对 RuleName，取得 WhiteId。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateWhiteRuleResponse"/></returns>
+        public CreateWhiteRuleResponse CreateWhiteRuleSync(CreateWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<CreateWhiteRuleResponse>(req, "CreateWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteAcRuleRequest"/></param>
@@ -722,6 +743,27 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteVpcFwGroupResponse DeleteVpcFwGroupSync(DeleteVpcFwGroupRequest req)
         {
             return InternalRequestAsync<DeleteVpcFwGroupResponse>(req, "DeleteVpcFwGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按 WhiteId 删除入侵防御白名单。先从 DescribeWhiteRule.Data[].WhiteId 读取目标 ID；提交删除后调用 DescribeWhiteRule，Filters 使用 Name=WD、OperatorType=1 和目标 WhiteId，Data 为空表示删除完成。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteWhiteRuleResponse"/></returns>
+        public Task<DeleteWhiteRuleResponse> DeleteWhiteRule(DeleteWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteWhiteRuleResponse>(req, "DeleteWhiteRule");
+        }
+
+        /// <summary>
+        /// 按 WhiteId 删除入侵防御白名单。先从 DescribeWhiteRule.Data[].WhiteId 读取目标 ID；提交删除后调用 DescribeWhiteRule，Filters 使用 Name=WD、OperatorType=1 和目标 WhiteId，Data 为空表示删除完成。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteWhiteRuleResponse"/></returns>
+        public DeleteWhiteRuleResponse DeleteWhiteRuleSync(DeleteWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteWhiteRuleResponse>(req, "DeleteWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3149,6 +3191,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyVpcFwSequenceRulesResponse ModifyVpcFwSequenceRulesSync(ModifyVpcFwSequenceRulesRequest req)
         {
             return InternalRequestAsync<ModifyVpcFwSequenceRulesResponse>(req, "ModifyVpcFwSequenceRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改入侵防御白名单采用整条替换。先调用 DescribeWhiteRule，选择 BanEdit=0 的策略并沿用其 WhiteId 和 RuleType；Rule 提交修改后的全部可写字段。Info 多值字段按笛卡尔积展开，第一项更新原 WhiteId，其余组合创建新 WhiteId，展开后最多 100 条且新增组合消耗配额。成功后调用 DescribeWhiteRule：原策略使用 Name=WD、OperatorType=1 精确查询，新组合使用 Name=RuleName、OperatorType=9 查询并逐项核对。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyWhiteRuleResponse"/></returns>
+        public Task<ModifyWhiteRuleResponse> ModifyWhiteRule(ModifyWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyWhiteRuleResponse>(req, "ModifyWhiteRule");
+        }
+
+        /// <summary>
+        /// 修改入侵防御白名单采用整条替换。先调用 DescribeWhiteRule，选择 BanEdit=0 的策略并沿用其 WhiteId 和 RuleType；Rule 提交修改后的全部可写字段。Info 多值字段按笛卡尔积展开，第一项更新原 WhiteId，其余组合创建新 WhiteId，展开后最多 100 条且新增组合消耗配额。成功后调用 DescribeWhiteRule：原策略使用 Name=WD、OperatorType=1 精确查询，新组合使用 Name=RuleName、OperatorType=9 查询并逐项核对。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyWhiteRuleResponse"/></returns>
+        public ModifyWhiteRuleResponse ModifyWhiteRuleSync(ModifyWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyWhiteRuleResponse>(req, "ModifyWhiteRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -54,6 +54,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PageRange")]
         public string PageRange{ get; set; }
 
+        /// <summary>
+        /// <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
             this.SetParamSimple(map, prefix + "EnableSubImg", this.EnableSubImg);
             this.SetParamSimple(map, prefix + "PageRange", this.PageRange);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -414,31 +414,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号），公式返回格式为 Latex 格式文本。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="EduPaperOCRRequest"/></param>
-        /// <returns><see cref="EduPaperOCRResponse"/></returns>
-        public Task<EduPaperOCRResponse> EduPaperOCR(EduPaperOCRRequest req)
-        {
-            return InternalRequestAsync<EduPaperOCRResponse>(req, "EduPaperOCR");
-        }
-
-        /// <summary>
-        /// 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号），公式返回格式为 Latex 格式文本。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="EduPaperOCRRequest"/></param>
-        /// <returns><see cref="EduPaperOCRResponse"/></returns>
-        public EduPaperOCRResponse EduPaperOCRSync(EduPaperOCRRequest req)
-        {
-            return InternalRequestAsync<EduPaperOCRResponse>(req, "EduPaperOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
         /// 
         /// 默认接口请求频率限制：10次/秒。
@@ -618,87 +593,6 @@ namespace TencentCloud.Ocr.V20181119
         public ExtractDocMultiResponse ExtractDocMultiSync(ExtractDocMultiRequest req)
         {
             return InternalRequestAsync<ExtractDocMultiResponse>(req, "ExtractDocMulti")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口当前仅支持复杂磅单收发货单抽取，更多强推理场景支持定制咨询。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocMultiPro)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="ExtractDocMultiProRequest"/></param>
-        /// <returns><see cref="ExtractDocMultiProResponse"/></returns>
-        public Task<ExtractDocMultiProResponse> ExtractDocMultiPro(ExtractDocMultiProRequest req)
-        {
-            return InternalRequestAsync<ExtractDocMultiProResponse>(req, "ExtractDocMultiPro");
-        }
-
-        /// <summary>
-        /// 本接口当前仅支持复杂磅单收发货单抽取，更多强推理场景支持定制咨询。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocMultiPro)。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="ExtractDocMultiProRequest"/></param>
-        /// <returns><see cref="ExtractDocMultiProResponse"/></returns>
-        public ExtractDocMultiProResponse ExtractDocMultiProSync(ExtractDocMultiProRequest req)
-        {
-            return InternalRequestAsync<ExtractDocMultiProResponse>(req, "ExtractDocMultiPro")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持机票行程单关键字段的识别，包括旅客姓名、有效身份证件号码、电子客票号码、验证码、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、票价、合计金额、填开日期、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李等字段，支持航班信息多行明细输出。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FlightInvoiceOCRRequest"/></param>
-        /// <returns><see cref="FlightInvoiceOCRResponse"/></returns>
-        public Task<FlightInvoiceOCRResponse> FlightInvoiceOCR(FlightInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<FlightInvoiceOCRResponse>(req, "FlightInvoiceOCR");
-        }
-
-        /// <summary>
-        /// <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
-        /// 本接口支持机票行程单关键字段的识别，包括旅客姓名、有效身份证件号码、电子客票号码、验证码、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、票价、合计金额、填开日期、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李等字段，支持航班信息多行明细输出。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FlightInvoiceOCRRequest"/></param>
-        /// <returns><see cref="FlightInvoiceOCRResponse"/></returns>
-        public FlightInvoiceOCRResponse FlightInvoiceOCRSync(FlightInvoiceOCRRequest req)
-        {
-            return InternalRequestAsync<FlightInvoiceOCRResponse>(req, "FlightInvoiceOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口下线
-        /// 
-        /// 本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FormulaOCRRequest"/></param>
-        /// <returns><see cref="FormulaOCRResponse"/></returns>
-        public Task<FormulaOCRResponse> FormulaOCR(FormulaOCRRequest req)
-        {
-            return InternalRequestAsync<FormulaOCRResponse>(req, "FormulaOCR");
-        }
-
-        /// <summary>
-        /// 接口下线
-        /// 
-        /// 本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="FormulaOCRRequest"/></param>
-        /// <returns><see cref="FormulaOCRResponse"/></returns>
-        public FormulaOCRResponse FormulaOCRSync(FormulaOCRRequest req)
-        {
-            return InternalRequestAsync<FormulaOCRResponse>(req, "FormulaOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1404,32 +1298,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
-        /// 
-        /// 默认接口请求频率限制：1次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="InsuranceBillOCRRequest"/></param>
-        /// <returns><see cref="InsuranceBillOCRResponse"/></returns>
-        public Task<InsuranceBillOCRResponse> InsuranceBillOCR(InsuranceBillOCRRequest req)
-        {
-            return InternalRequestAsync<InsuranceBillOCRResponse>(req, "InsuranceBillOCR");
-        }
-
-        /// <summary>
-        /// 本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
-        /// 
-        /// 默认接口请求频率限制：1次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="InsuranceBillOCRRequest"/></param>
-        /// <returns><see cref="InsuranceBillOCRResponse"/></returns>
-        public InsuranceBillOCRResponse InsuranceBillOCRSync(InsuranceBillOCRRequest req)
-        {
-            return InternalRequestAsync<InsuranceBillOCRResponse>(req, "InsuranceBillOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。
+        /// 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。 
         /// 
         /// 默认接口请求频率限制：10次/秒。
         /// </summary>
@@ -1441,7 +1310,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。
+        /// 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。 
         /// 
         /// 默认接口请求频率限制：10次/秒。
         /// </summary>

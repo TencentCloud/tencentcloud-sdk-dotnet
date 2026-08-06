@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Config.V20220802.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FormulaOCRResponse : AbstractModel
+    public class ListConfigRuleResourceEvaluationResultsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+        /// <p>返回数量，最大值1000，不填写返回全部</p>
         /// </summary>
-        [JsonProperty("Angle")]
-        public long? Angle{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 检测到的文本信息，具体内容请点击左侧链接。
+        /// <p>偏移量，默认为0</p>
         /// </summary>
-        [JsonProperty("FormulaInfos")]
-        public TextFormula[] FormulaInfos{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Angle", this.Angle);
-            this.SetParamArrayObj(map, prefix + "FormulaInfos.", this.FormulaInfos);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

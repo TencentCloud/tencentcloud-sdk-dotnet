@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextFormula : AbstractModel
+    public class DeleteWhiteRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 识别出的文本行内容
+        /// JSON string 数组，至少一项；元素取自 DescribeWhiteRule.Data[].WhiteId，可批量。
         /// </summary>
-        [JsonProperty("DetectedText")]
-        public string DetectedText{ get; set; }
+        [JsonProperty("WhiteIdList")]
+        public string[] WhiteIdList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
+            this.SetParamArraySimple(map, prefix + "WhiteIdList.", this.WhiteIdList);
         }
     }
 }

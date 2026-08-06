@@ -49,7 +49,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string TreeNodeUniqKey{ get; set; }
 
         /// <summary>
-        /// <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+        /// <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
         /// </summary>
         [JsonProperty("GatherType")]
         public string GatherType{ get; set; }

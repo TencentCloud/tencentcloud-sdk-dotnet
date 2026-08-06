@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1480";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -1078,6 +1078,27 @@ namespace TencentCloud.Tcb.V20180608
         public DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildServiceSync(DescribeCloudBaseBuildServiceRequest req)
         {
             return InternalRequestAsync<DescribeCloudBaseBuildServiceResponse>(req, "DescribeCloudBaseBuildService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询构建日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunBuildLogRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunBuildLogResponse"/></returns>
+        public Task<DescribeCloudBaseRunBuildLogResponse> DescribeCloudBaseRunBuildLog(DescribeCloudBaseRunBuildLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseRunBuildLogResponse>(req, "DescribeCloudBaseRunBuildLog");
+        }
+
+        /// <summary>
+        /// 查询构建日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunBuildLogRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunBuildLogResponse"/></returns>
+        public DescribeCloudBaseRunBuildLogResponse DescribeCloudBaseRunBuildLogSync(DescribeCloudBaseRunBuildLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudBaseRunBuildLogResponse>(req, "DescribeCloudBaseRunBuildLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

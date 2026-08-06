@@ -36,6 +36,13 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("RiskLabels")]
         public RiskLabel[] RiskLabels{ get; set; }
 
+        /// <summary>
+        /// <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskScore")]
+        public long? RiskScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Rce.V20260130.Models
         {
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamArrayObj(map, prefix + "RiskLabels.", this.RiskLabels);
+            this.SetParamSimple(map, prefix + "RiskScore", this.RiskScore);
         }
     }
 }

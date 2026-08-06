@@ -25,58 +25,64 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Kibana节点IP
+        /// <p>Kibana节点IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 节点总磁盘大小
+        /// <p>节点总磁盘大小</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 磁盘使用率
+        /// <p>磁盘使用率</p>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public float? DiskUsage{ get; set; }
 
         /// <summary>
-        /// 节点内存大小
+        /// <p>节点内存大小</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// 内存使用率
+        /// <p>内存使用率</p>
         /// </summary>
         [JsonProperty("MemUsage")]
         public float? MemUsage{ get; set; }
 
         /// <summary>
-        /// 节点cpu个数
+        /// <p>节点cpu个数</p>
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// cpu使用率
+        /// <p>cpu使用率</p>
         /// </summary>
         [JsonProperty("CpuUsage")]
         public float? CpuUsage{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// ts-0noqayxu-az6-hot-03222010-0
+        /// <p>ts-0noqayxu-az6-hot-03222010-0</p>
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
+
+        /// <summary>
+        /// <p>客户侧Ip信息</p>
+        /// </summary>
+        [JsonProperty("UserIp")]
+        public string UserIp{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -1394,6 +1394,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeAutoScalerResourceStrategyBindingGroupsResponse DescribeAutoScalerResourceStrategyBindingGroupsSync(DescribeAutoScalerResourceStrategyBindingGroupsRequest req)
         {
             return InternalRequestAsync<DescribeAutoScalerResourceStrategyBindingGroupsResponse>(req, "DescribeAutoScalerResourceStrategyBindingGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关服务和路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCNGWServicesWithRoutesRequest"/></param>
+        /// <returns><see cref="DescribeCNGWServicesWithRoutesResponse"/></returns>
+        public Task<DescribeCNGWServicesWithRoutesResponse> DescribeCNGWServicesWithRoutes(DescribeCNGWServicesWithRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeCNGWServicesWithRoutesResponse>(req, "DescribeCNGWServicesWithRoutes");
+        }
+
+        /// <summary>
+        /// 查询云原生网关服务和路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCNGWServicesWithRoutesRequest"/></param>
+        /// <returns><see cref="DescribeCNGWServicesWithRoutesResponse"/></returns>
+        public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutesSync(DescribeCNGWServicesWithRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeCNGWServicesWithRoutesResponse>(req, "DescribeCNGWServicesWithRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

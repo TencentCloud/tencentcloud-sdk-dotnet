@@ -25,28 +25,40 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关ID
+        /// <p>网关ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 列表数量
+        /// <p>列表数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 列表 offset
+        /// <p>列表 offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+        /// <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
         /// </summary>
         [JsonProperty("Filters")]
         public ListFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>排序字段</p>
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public string OrderType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
         }
     }
 }

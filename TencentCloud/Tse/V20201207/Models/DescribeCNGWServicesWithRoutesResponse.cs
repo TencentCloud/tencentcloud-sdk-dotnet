@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextEduPaper : AbstractModel
+    public class DescribeCNGWServicesWithRoutesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 识别出的字段名称（关键字）
+        /// <p>无</p>
         /// </summary>
-        [JsonProperty("Item")]
-        public string Item{ get; set; }
+        [JsonProperty("Result")]
+        public KongServiceWithRoutes Result{ get; set; }
 
         /// <summary>
-        /// 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DetectedText")]
-        public string DetectedText{ get; set; }
-
-        /// <summary>
-        /// 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
-        /// </summary>
-        [JsonProperty("Itemcoord")]
-        public ItemCoord Itemcoord{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Item", this.Item);
-            this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
-            this.SetParamObj(map, prefix + "Itemcoord.", this.Itemcoord);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

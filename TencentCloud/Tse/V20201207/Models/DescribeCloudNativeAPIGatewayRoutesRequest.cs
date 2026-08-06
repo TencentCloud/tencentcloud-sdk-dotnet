@@ -25,40 +25,64 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关ID
+        /// <p>网关ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 翻页单页查询限制数量[0,1000], 默认值0
+        /// <p>翻页单页查询限制数量[0,1000], 默认值0</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 翻页单页偏移量，默认值0
+        /// <p>翻页单页偏移量，默认值0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 服务的名字，精确匹配
+        /// <p>服务的名字，精确匹配</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 路由的名字，精确匹配
+        /// <p>路由的名字，精确匹配</p>
         /// </summary>
         [JsonProperty("RouteName")]
         public string RouteName{ get; set; }
 
         /// <summary>
-        /// 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol
+        /// <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
         /// </summary>
         [JsonProperty("Filters")]
         public ListFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>路由类型</p>
+        /// </summary>
+        [JsonProperty("RouteTypes")]
+        public string[] RouteTypes{ get; set; }
+
+        /// <summary>
+        /// <p>是否将灰度规则可能带来的路由排在原始路由前</p>
+        /// </summary>
+        [JsonProperty("GrayRoutesFirst")]
+        public bool? GrayRoutesFirst{ get; set; }
+
+        /// <summary>
+        /// <p>排序字段</p>
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public string OrderType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +96,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "RouteName", this.RouteName);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "RouteTypes.", this.RouteTypes);
+            this.SetParamSimple(map, prefix + "GrayRoutesFirst", this.GrayRoutesFirst);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
         }
     }
 }

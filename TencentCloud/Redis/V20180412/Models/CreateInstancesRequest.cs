@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+        /// <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -186,6 +186,30 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }
 
+        /// <summary>
+        /// <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+        /// </summary>
+        [JsonProperty("PasswordPolicy")]
+        public PasswordPolicy PasswordPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+        /// </summary>
+        [JsonProperty("EnableSSL")]
+        public bool? EnableSSL{ get; set; }
+
+        /// <summary>
+        /// <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+        /// </summary>
+        [JsonProperty("SSLBindPrivateIPv4")]
+        public bool? SSLBindPrivateIPv4{ get; set; }
+
+        /// <summary>
+        /// <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+        /// </summary>
+        [JsonProperty("ConnectionMode")]
+        public long? ConnectionMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +243,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
             this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+            this.SetParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
+            this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+            this.SetParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+            this.SetParamSimple(map, prefix + "ConnectionMode", this.ConnectionMode);
         }
     }
 }

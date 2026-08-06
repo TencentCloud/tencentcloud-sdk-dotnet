@@ -25,49 +25,49 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 服务名字
+        /// <p>服务名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 后端配置
+        /// <p>后端配置</p>
         /// </summary>
         [JsonProperty("UpstreamInfo")]
         public KongUpstreamInfo UpstreamInfo{ get; set; }
 
         /// <summary>
-        /// 后端类型
+        /// <p>后端类型</p>
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 是否可编辑
+        /// <p>是否可编辑</p>
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
-        /// 请求路径
+        /// <p>请求路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]

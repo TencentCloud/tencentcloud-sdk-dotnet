@@ -25,52 +25,64 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区。
+        /// <p>可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例机型。
+        /// <p>实例机型。</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例机型系列。
+        /// <p>实例机型系列。</p>
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// GPU核数，单位：核。
+        /// <p>GPU核数，单位：核。</p>
         /// </summary>
         [JsonProperty("GPU")]
         public long? GPU{ get; set; }
 
         /// <summary>
-        /// CPU核数，单位：核。
+        /// <p>CPU核数，单位：核。</p>
         /// </summary>
         [JsonProperty("CPU")]
         public long? CPU{ get; set; }
 
         /// <summary>
-        /// 内存容量，单位：`GiB`。
+        /// <p>内存容量，单位：<code>GiB</code>。</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// FPGA核数，单位：核。
+        /// <p>FPGA核数，单位：核。</p>
         /// </summary>
         [JsonProperty("FPGA")]
         public long? FPGA{ get; set; }
 
         /// <summary>
-        /// 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+        /// <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
         /// </summary>
         [JsonProperty("GpuCount")]
         public float? GpuCount{ get; set; }
+
+        /// <summary>
+        /// <p>实例GPU类型</p>
+        /// </summary>
+        [JsonProperty("GpuType")]
+        public string GpuType{ get; set; }
+
+        /// <summary>
+        /// <p>实例GPU单块显存,单位：GiB。</p>
+        /// </summary>
+        [JsonProperty("GpuMemory")]
+        public float? GpuMemory{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "FPGA", this.FPGA);
             this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
+            this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
         }
     }
 }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Config.V20220802.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InsuranceBillOCRResponse : AbstractModel
+    public class ListAggregateConfigRuleResourceEvaluationResultsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 保险单据识别结果，具体内容请点击左侧链接。
+        /// <p>账号组Id</p>
         /// </summary>
-        [JsonProperty("InsuranceBillInfos")]
-        public InsuranceBillInfo[] InsuranceBillInfos{ get; set; }
+        [JsonProperty("AccountGroupId")]
+        public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>返回数量，最大值1000，不填写返回全部</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>偏移量，默认为0</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "InsuranceBillInfos.", this.InsuranceBillInfos);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

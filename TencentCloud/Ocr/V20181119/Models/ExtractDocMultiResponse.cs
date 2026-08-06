@@ -25,25 +25,25 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
+        /// <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 配置结构化文本信息
+        /// <p>配置结构化文本信息</p>
         /// </summary>
         [JsonProperty("StructuralList")]
         public GroupInfo[] StructuralList{ get; set; }
 
         /// <summary>
-        /// 还原文本信息
+        /// <p>还原文本信息</p>
         /// </summary>
         [JsonProperty("WordList")]
         public WordItem[] WordList{ get; set; }
 
         /// <summary>
-        /// 样本识别字段数
+        /// <p>样本识别字段数</p>
         /// </summary>
         [JsonProperty("TokenNum")]
         public long? TokenNum{ get; set; }

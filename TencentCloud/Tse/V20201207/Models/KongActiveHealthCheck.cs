@@ -25,28 +25,34 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 主动健康检查健康探测间隔，单位：秒，0表示不开启
+        /// <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
         /// </summary>
         [JsonProperty("HealthyInterval")]
         public ulong? HealthyInterval{ get; set; }
 
         /// <summary>
-        /// 主动健康检查异常探测间隔，单位：秒，0表示不开启
+        /// <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
         /// </summary>
         [JsonProperty("UnHealthyInterval")]
         public ulong? UnHealthyInterval{ get; set; }
 
         /// <summary>
-        /// 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
+        /// <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
         /// </summary>
         [JsonProperty("HttpPath")]
         public string HttpPath{ get; set; }
 
         /// <summary>
-        /// GET HTTP 请求的超时时间，单位：秒。默认 60。
+        /// <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public float? Timeout{ get; set; }
+
+        /// <summary>
+        /// <p>Host头</p>
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "UnHealthyInterval", this.UnHealthyInterval);
             this.SetParamSimple(map, prefix + "HttpPath", this.HttpPath);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }
 }

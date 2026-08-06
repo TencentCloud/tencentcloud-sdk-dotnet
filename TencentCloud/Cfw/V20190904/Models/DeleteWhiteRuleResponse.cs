@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EduPaperOCRResponse : AbstractModel
+    public class DeleteWhiteRuleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 检测到的文本信息，具体内容请点击左侧链接。
+        /// 状态码，0 表示请求被接受处理。
         /// </summary>
-        [JsonProperty("EduPaperInfos")]
-        public TextEduPaper[] EduPaperInfos{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+        /// 状态信息；成功一般为 success。
         /// </summary>
-        [JsonProperty("Angle")]
-        public long? Angle{ get; set; }
-
-        /// <summary>
-        /// 结构化方式输出，具体内容请点击左侧链接。
-        /// </summary>
-        [JsonProperty("QuestionBlockInfos")]
-        public QuestionBlockObj[] QuestionBlockInfos{ get; set; }
+        [JsonProperty("ReturnMsg")]
+        public string ReturnMsg{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +48,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "EduPaperInfos.", this.EduPaperInfos);
-            this.SetParamSimple(map, prefix + "Angle", this.Angle);
-            this.SetParamArrayObj(map, prefix + "QuestionBlockInfos.", this.QuestionBlockInfos);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

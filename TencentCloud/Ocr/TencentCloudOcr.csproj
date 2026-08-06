@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1481</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -99,8 +99,6 @@
     <Compile Include="V20181119\Models\DetectedWords.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRResponse.cs" />
-    <Compile Include="V20181119\Models\EduPaperOCRRequest.cs" />
-    <Compile Include="V20181119\Models\EduPaperOCRResponse.cs" />
     <Compile Include="V20181119\Models\ElectronicAirTransport.cs" />
     <Compile Include="V20181119\Models\ElectronicAirTransportDetail.cs" />
     <Compile Include="V20181119\Models\ElectronicFlightTicketFull.cs" />
@@ -124,21 +122,14 @@
     <Compile Include="V20181119\Models\ExtractDocAgentResponse.cs" />
     <Compile Include="V20181119\Models\ExtractDocBasicRequest.cs" />
     <Compile Include="V20181119\Models\ExtractDocBasicResponse.cs" />
-    <Compile Include="V20181119\Models\ExtractDocMultiProRequest.cs" />
-    <Compile Include="V20181119\Models\ExtractDocMultiProResponse.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiRequest.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiResponse.cs" />
     <Compile Include="V20181119\Models\FieldsInfo.cs" />
     <Compile Include="V20181119\Models\FinancialBill.cs" />
     <Compile Include="V20181119\Models\FinancialBillItem.cs" />
     <Compile Include="V20181119\Models\FinancialBillItemDetails.cs" />
-    <Compile Include="V20181119\Models\FlightInvoiceInfo.cs" />
-    <Compile Include="V20181119\Models\FlightInvoiceOCRRequest.cs" />
-    <Compile Include="V20181119\Models\FlightInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\FlightItem.cs" />
     <Compile Include="V20181119\Models\FlightItemInfo.cs" />
-    <Compile Include="V20181119\Models\FormulaOCRRequest.cs" />
-    <Compile Include="V20181119\Models\FormulaOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
@@ -170,9 +161,6 @@
     <Compile Include="V20181119\Models\ImageEnhancementRequest.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementResponse.cs" />
     <Compile Include="V20181119\Models\ImageSize.cs" />
-    <Compile Include="V20181119\Models\InsuranceBillInfo.cs" />
-    <Compile Include="V20181119\Models\InsuranceBillOCRRequest.cs" />
-    <Compile Include="V20181119\Models\InsuranceBillOCRResponse.cs" />
     <Compile Include="V20181119\Models\InvoiceDetectInfo.cs" />
     <Compile Include="V20181119\Models\InvoiceItem.cs" />
     <Compile Include="V20181119\Models\InvoiceSealInfo.cs" />
@@ -231,11 +219,9 @@
     <Compile Include="V20181119\Models\QrcodeOCRResponse.cs" />
     <Compile Include="V20181119\Models\QrcodePositionObj.cs" />
     <Compile Include="V20181119\Models\QrcodeResultsInfo.cs" />
-    <Compile Include="V20181119\Models\QuestionBlockObj.cs" />
     <Compile Include="V20181119\Models\QuestionInfo.cs" />
     <Compile Include="V20181119\Models\QuestionOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuestionOCRResponse.cs" />
-    <Compile Include="V20181119\Models\QuestionObj.cs" />
     <Compile Include="V20181119\Models\QuestionSplitLayoutOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuestionSplitLayoutOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuestionSplitOCRRequest.cs" />
@@ -311,8 +297,6 @@
     <Compile Include="V20181119\Models\TextDetectResponse.cs" />
     <Compile Include="V20181119\Models\TextDetection.cs" />
     <Compile Include="V20181119\Models\TextDetectionEn.cs" />
-    <Compile Include="V20181119\Models\TextEduPaper.cs" />
-    <Compile Include="V20181119\Models\TextFormula.cs" />
     <Compile Include="V20181119\Models\TextFormulaInfo.cs" />
     <Compile Include="V20181119\Models\TextGeneralHandwriting.cs" />
     <Compile Include="V20181119\Models\TextTable.cs" />

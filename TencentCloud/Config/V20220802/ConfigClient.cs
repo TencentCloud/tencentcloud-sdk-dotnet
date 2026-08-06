@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1456";
+       private const string sdkVersion = "SDK_NET_3.0.1481";
 
         /// <summary>
         /// Client constructor.
@@ -726,6 +726,27 @@ namespace TencentCloud.Config.V20220802
         }
 
         /// <summary>
+        /// 账号组查询配置规则资源评估结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateConfigRuleResourceEvaluationResultsRequest"/></param>
+        /// <returns><see cref="ListAggregateConfigRuleResourceEvaluationResultsResponse"/></returns>
+        public Task<ListAggregateConfigRuleResourceEvaluationResultsResponse> ListAggregateConfigRuleResourceEvaluationResults(ListAggregateConfigRuleResourceEvaluationResultsRequest req)
+        {
+            return InternalRequestAsync<ListAggregateConfigRuleResourceEvaluationResultsResponse>(req, "ListAggregateConfigRuleResourceEvaluationResults");
+        }
+
+        /// <summary>
+        /// 账号组查询配置规则资源评估结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateConfigRuleResourceEvaluationResultsRequest"/></param>
+        /// <returns><see cref="ListAggregateConfigRuleResourceEvaluationResultsResponse"/></returns>
+        public ListAggregateConfigRuleResourceEvaluationResultsResponse ListAggregateConfigRuleResourceEvaluationResultsSync(ListAggregateConfigRuleResourceEvaluationResultsRequest req)
+        {
+            return InternalRequestAsync<ListAggregateConfigRuleResourceEvaluationResultsResponse>(req, "ListAggregateConfigRuleResourceEvaluationResults")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 账号组获取规则列表
         /// </summary>
         /// <param name="req"><see cref="ListAggregateConfigRulesRequest"/></param>
@@ -848,6 +869,27 @@ namespace TencentCloud.Config.V20220802
         public ListConfigRuleEvaluationResultsResponse ListConfigRuleEvaluationResultsSync(ListConfigRuleEvaluationResultsRequest req)
         {
             return InternalRequestAsync<ListConfigRuleEvaluationResultsResponse>(req, "ListConfigRuleEvaluationResults")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询配置规则资源评估结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConfigRuleResourceEvaluationResultsRequest"/></param>
+        /// <returns><see cref="ListConfigRuleResourceEvaluationResultsResponse"/></returns>
+        public Task<ListConfigRuleResourceEvaluationResultsResponse> ListConfigRuleResourceEvaluationResults(ListConfigRuleResourceEvaluationResultsRequest req)
+        {
+            return InternalRequestAsync<ListConfigRuleResourceEvaluationResultsResponse>(req, "ListConfigRuleResourceEvaluationResults");
+        }
+
+        /// <summary>
+        /// 查询配置规则资源评估结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConfigRuleResourceEvaluationResultsRequest"/></param>
+        /// <returns><see cref="ListConfigRuleResourceEvaluationResultsResponse"/></returns>
+        public ListConfigRuleResourceEvaluationResultsResponse ListConfigRuleResourceEvaluationResultsSync(ListConfigRuleResourceEvaluationResultsRequest req)
+        {
+            return InternalRequestAsync<ListConfigRuleResourceEvaluationResultsResponse>(req, "ListConfigRuleResourceEvaluationResults")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

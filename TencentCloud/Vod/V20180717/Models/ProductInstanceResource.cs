@@ -25,37 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 资源类型。
-        /// <li>Storage：存储资源包。</li>
-        /// <li>Traffic：流量资源包。</li>
-        /// <li>Transcode：普通转码资源包。</li>
-        /// <li>TESHD：极速高清转码资源包。</li>
-        /// <li>Review：音视频审核转码资源包。</li>
-        /// <li>MediaProcess：媒体处理时长资源包。</li>
+        /// <p>资源类型。</p><p>枚举值：</p><ul><li>Storage： 存储资源</li><li>Traffic： 流量资源</li><li>Transcode： 转码资源</li><li>TESHD： 极速高清转码资源</li><li>Review： 音视频审核资源</li><li>MediaProcess： 媒体处理资源</li><li>MLLMMediaProcess： 大模型媒体处理资源</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源包额度。
-        /// <li>音视频存储资源包，单位为字节。</li>
-        /// <li>音视频转码资源包，单位为秒。</li>
-        /// <li>音视频审核资源包，单位为秒。</li>
-        /// <li>音视频极速高清资源包，单位为秒。</li>
-        /// <li>音视频加速资源包，单位为字节。</li>
-        /// <li>媒体处理时长资源包，单位为秒。</li>
+        /// <p>资源包额度。</p><li>音视频存储资源包，单位为字节。</li><li>音视频转码资源包，单位为秒。</li><li>音视频审核资源包，单位为秒。</li><li>音视频极速高清资源包，单位为秒。</li><li>音视频加速资源包，单位为字节。</li><li>媒体处理时长资源包，单位为秒。</li>
         /// </summary>
         [JsonProperty("Amount")]
         public long? Amount{ get; set; }
 
         /// <summary>
-        /// 资源包余量。
-        /// <li>音视频存储资源包，单位为字节。</li>
-        /// <li>音视频转码资源包，单位为秒。</li>
-        /// <li>音视频审核资源包，单位为秒。</li>
-        /// <li>音视频极速高清资源包，单位为秒。</li>
-        /// <li>音视频加速资源包，单位为字节。</li>
-        /// <li>媒体处理时长资源包，单位为秒。</li>
+        /// <p>资源包余量。</p><li>音视频存储资源包，单位为字节。</li><li>音视频转码资源包，单位为秒。</li><li>音视频审核资源包，单位为秒。</li><li>音视频极速高清资源包，单位为秒。</li><li>音视频加速资源包，单位为字节。</li><li>媒体处理时长资源包，单位为秒。</li>
         /// </summary>
         [JsonProperty("Left")]
         public long? Left{ get; set; }

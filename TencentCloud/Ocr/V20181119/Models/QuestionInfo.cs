@@ -25,44 +25,44 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 旋转角度
+        /// <p>旋转角度</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 预处理后图片高度
+        /// <p>预处理后图片高度</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 预处理后图片宽度
+        /// <p>预处理后图片宽度</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 文档元素
+        /// <p>文档元素</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultList")]
         public ResultList[] ResultList{ get; set; }
 
         /// <summary>
-        /// 输入图片高度
+        /// <p>输入图片高度</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("OrgHeight")]
         public long? OrgHeight{ get; set; }
 
         /// <summary>
-        /// 输入图片宽度
+        /// <p>输入图片宽度</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("OrgWidth")]
         public long? OrgWidth{ get; set; }
 
         /// <summary>
-        /// 预处理后的图片base64编码
+        /// <p>预处理后的图片base64编码</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

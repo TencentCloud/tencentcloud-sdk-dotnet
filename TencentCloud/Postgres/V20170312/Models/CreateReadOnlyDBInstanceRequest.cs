@@ -115,7 +115,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+        /// <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }
@@ -157,6 +157,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

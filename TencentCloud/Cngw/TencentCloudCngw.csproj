@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5926007E-BC61-30BC-96D2-7B18B8113F0A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1478</VersionPrefix>
+    <VersionPrefix>3.0.1481</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -143,6 +143,8 @@
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPToolResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerGroupRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerRequest.cs" />
@@ -180,9 +182,17 @@
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueResponse.cs" />
     <Compile Include="V20230418\Models\Filter.cs" />
+    <Compile Include="V20230418\Models\KVMapping.cs" />
     <Compile Include="V20230418\Models\KeyValue.cs" />
+    <Compile Include="V20230418\Models\KongRoutePreview.cs" />
+    <Compile Include="V20230418\Models\KongServicePreview.cs" />
+    <Compile Include="V20230418\Models\KongServiceRoute.cs" />
+    <Compile Include="V20230418\Models\KongServiceWithRoutes.cs" />
+    <Compile Include="V20230418\Models\KongTarget.cs" />
+    <Compile Include="V20230418\Models\KongUpstreamInfo.cs" />
     <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelAPI.cs" />
     <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelService.cs" />
+    <Compile Include="V20230418\Models\ListFilter.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupResponse.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerRequest.cs" />

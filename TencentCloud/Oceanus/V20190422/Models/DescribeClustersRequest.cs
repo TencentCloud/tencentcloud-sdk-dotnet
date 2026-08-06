@@ -25,43 +25,37 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
+        /// <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认 0
+        /// <p>偏移量，默认 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 请求的集群数量，默认 20，最大值 100
+        /// <p>请求的集群数量，默认 20，最大值 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
+        /// <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 过滤规则
-        ///     
-        /// - Name
-        ///     按照集群的名字进行模糊查询。例如：测试
-        ///     类型： String
-        ///     必选： 否
-        ///     
+        /// <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 工作空间 SerialId
+        /// <p>工作空间 SerialId</p>
         /// </summary>
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }

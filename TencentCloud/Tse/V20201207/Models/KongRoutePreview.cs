@@ -25,70 +25,70 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 服务名字
+        /// <p>服务名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Methods")]
         public string[] Methods{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paths")]
         public string[] Paths{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("Protocols")]
         public string[] Protocols{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("PreserveHost")]
         public bool? PreserveHost{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("HttpsRedirectStatusCode")]
         public long? HttpsRedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("StripPath")]
         public bool? StripPath{ get; set; }
 
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 是否开启了强制HTTPS
+        /// <p>是否开启了强制HTTPS</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForceHttps")]
@@ -96,52 +96,58 @@ namespace TencentCloud.Tse.V20201207.Models
         public bool? ForceHttps{ get; set; }
 
         /// <summary>
-        /// 服务名
+        /// <p>服务名</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 服务ID
+        /// <p>服务ID</p>
         /// </summary>
         [JsonProperty("ServiceID")]
         public string ServiceID{ get; set; }
 
         /// <summary>
-        /// 目的端口
+        /// <p>目的端口</p>
         /// </summary>
         [JsonProperty("DestinationPorts")]
         public ulong?[] DestinationPorts{ get; set; }
 
         /// <summary>
-        /// 路由的Headers
+        /// <p>路由的Headers</p>
         /// </summary>
         [JsonProperty("Headers")]
         public KVMapping[] Headers{ get; set; }
 
         /// <summary>
-        /// 是否缓存请求body，默认true
+        /// <p>是否缓存请求body，默认true</p>
         /// </summary>
         [JsonProperty("RequestBuffering")]
         public bool? RequestBuffering{ get; set; }
 
         /// <summary>
-        /// 是否缓存响应body，默认true
+        /// <p>是否缓存响应body，默认true</p>
         /// </summary>
         [JsonProperty("ResponseBuffering")]
         public bool? ResponseBuffering{ get; set; }
 
         /// <summary>
-        /// 正则优先级
+        /// <p>正则优先级</p>
         /// </summary>
         [JsonProperty("RegexPriority")]
         public long? RegexPriority{ get; set; }
 
         /// <summary>
-        /// querystring参数
+        /// <p>querystring参数</p>
         /// </summary>
         [JsonProperty("QueryStringParameters")]
         public KVMapping[] QueryStringParameters{ get; set; }
+
+        /// <summary>
+        /// <p>路由来源</p>
+        /// </summary>
+        [JsonProperty("RouteSource")]
+        public string RouteSource{ get; set; }
 
 
         /// <summary>
@@ -168,6 +174,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
             this.SetParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
             this.SetParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
+            this.SetParamSimple(map, prefix + "RouteSource", this.RouteSource);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 作业总数
+        /// <p>作业总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 作业列表
+        /// <p>作业列表</p>
         /// </summary>
         [JsonProperty("JobSet")]
         public JobV1[] JobSet{ get; set; }
