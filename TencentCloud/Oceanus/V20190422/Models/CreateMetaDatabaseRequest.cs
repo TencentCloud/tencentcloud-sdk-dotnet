@@ -15,33 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20260130.Models
+namespace TencentCloud.Oceanus.V20190422.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssessDeviceRiskRsp : AbstractModel
+    public class CreateMetaDatabaseRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>设备风险分信息</p>
+        /// 无
         /// </summary>
-        [JsonProperty("Score")]
-        public DataScore Score{ get; set; }
+        [JsonProperty("CatalogId")]
+        public long? CatalogId{ get; set; }
 
         /// <summary>
-        /// <p>设备基础信息</p>
+        /// 库名
         /// </summary>
-        [JsonProperty("Device")]
-        public Device Device{ get; set; }
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// <p>IP环境基础信息</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 备注
         /// </summary>
-        [JsonProperty("Environment")]
-        public Environment Environment{ get; set; }
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Rce.V20260130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Score.", this.Score);
-            this.SetParamObj(map, prefix + "Device.", this.Device);
-            this.SetParamObj(map, prefix + "Environment.", this.Environment);
+            this.SetParamSimple(map, prefix + "CatalogId", this.CatalogId);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

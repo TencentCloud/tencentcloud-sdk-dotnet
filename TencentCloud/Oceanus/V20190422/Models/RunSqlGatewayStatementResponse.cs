@@ -25,20 +25,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 错误信息
+        /// <p>错误信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string[] ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+        /// <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 返回执行id，可以根据该执行id和会话id获取执行结果
+        /// <p>返回执行id，可以根据该执行id和会话id获取执行结果</p>
         /// </summary>
         [JsonProperty("OperationHandleId")]
         public string OperationHandleId{ get; set; }

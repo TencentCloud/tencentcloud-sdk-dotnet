@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1481</VersionPrefix>
+    <VersionPrefix>3.0.1482</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,10 @@
     <Compile Include="V20190422\Models\CreateJobConfigResponse.cs" />
     <Compile Include="V20190422\Models\CreateJobRequest.cs" />
     <Compile Include="V20190422\Models\CreateJobResponse.cs" />
+    <Compile Include="V20190422\Models\CreateMetaDatabaseRequest.cs" />
+    <Compile Include="V20190422\Models\CreateMetaDatabaseResponse.cs" />
+    <Compile Include="V20190422\Models\CreateMetaTableRequest.cs" />
+    <Compile Include="V20190422\Models\CreateMetaTableResponse.cs" />
     <Compile Include="V20190422\Models\CreateOceanusClusterRequest.cs" />
     <Compile Include="V20190422\Models\CreateOceanusClusterResponse.cs" />
     <Compile Include="V20190422\Models\CreateResourceConfigRequest.cs" />
@@ -161,6 +165,8 @@
     <Compile Include="V20190422\Models\ModifyFolderResponse.cs" />
     <Compile Include="V20190422\Models\ModifyJobRequest.cs" />
     <Compile Include="V20190422\Models\ModifyJobResponse.cs" />
+    <Compile Include="V20190422\Models\ModifyMetaTableRequest.cs" />
+    <Compile Include="V20190422\Models\ModifyMetaTableResponse.cs" />
     <Compile Include="V20190422\Models\ModifyWorkSpaceRequest.cs" />
     <Compile Include="V20190422\Models\ModifyWorkSpaceResponse.cs" />
     <Compile Include="V20190422\Models\NodeConfig.cs" />

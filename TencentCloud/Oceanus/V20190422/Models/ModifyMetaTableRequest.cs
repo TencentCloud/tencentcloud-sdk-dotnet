@@ -21,26 +21,44 @@ namespace TencentCloud.Oceanus.V20190422.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunSqlGatewayStatementRequest : AbstractModel
+    public class ModifyMetaTableRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>集群ID</p>
+        /// <p>集群唯一id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>需要执行的sql，需要对其进行base64编译后传入</p>
+        /// <p>元数据表唯一id</p>
         /// </summary>
-        [JsonProperty("Sql")]
-        public string Sql{ get; set; }
+        [JsonProperty("TableId")]
+        public string TableId{ get; set; }
 
         /// <summary>
-        /// <p>Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟</p>
+        /// <p>SQL</p><p>参数格式：base64加密</p>
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("SqlCode")]
+        public string SqlCode{ get; set; }
+
+        /// <summary>
+        /// <p>Flink版本</p>
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
+        /// <summary>
+        /// <p>空间唯一id</p>
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>备注</p>
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -49,8 +67,11 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "Sql", this.Sql);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamSimple(map, prefix + "SqlCode", this.SqlCode);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

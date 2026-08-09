@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1481";
+       private const string sdkVersion = "SDK_NET_3.0.1482";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,48 @@ namespace TencentCloud.Oceanus.V20190422
         public CreateJobConfigResponse CreateJobConfigSync(CreateJobConfigRequest req)
         {
             return InternalRequestAsync<CreateJobConfigResponse>(req, "CreateJobConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建元数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDatabaseRequest"/></param>
+        /// <returns><see cref="CreateMetaDatabaseResponse"/></returns>
+        public Task<CreateMetaDatabaseResponse> CreateMetaDatabase(CreateMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase");
+        }
+
+        /// <summary>
+        /// 创建元数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaDatabaseRequest"/></param>
+        /// <returns><see cref="CreateMetaDatabaseResponse"/></returns>
+        public CreateMetaDatabaseResponse CreateMetaDatabaseSync(CreateMetaDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建元数据表
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaTableRequest"/></param>
+        /// <returns><see cref="CreateMetaTableResponse"/></returns>
+        public Task<CreateMetaTableResponse> CreateMetaTable(CreateMetaTableRequest req)
+        {
+            return InternalRequestAsync<CreateMetaTableResponse>(req, "CreateMetaTable");
+        }
+
+        /// <summary>
+        /// 创建元数据表
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetaTableRequest"/></param>
+        /// <returns><see cref="CreateMetaTableResponse"/></returns>
+        public CreateMetaTableResponse CreateMetaTableSync(CreateMetaTableRequest req)
+        {
+            return InternalRequestAsync<CreateMetaTableResponse>(req, "CreateMetaTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -948,6 +990,27 @@ namespace TencentCloud.Oceanus.V20190422
         public ModifyJobResponse ModifyJobSync(ModifyJobRequest req)
         {
             return InternalRequestAsync<ModifyJobResponse>(req, "ModifyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改元数据表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetaTableRequest"/></param>
+        /// <returns><see cref="ModifyMetaTableResponse"/></returns>
+        public Task<ModifyMetaTableResponse> ModifyMetaTable(ModifyMetaTableRequest req)
+        {
+            return InternalRequestAsync<ModifyMetaTableResponse>(req, "ModifyMetaTable");
+        }
+
+        /// <summary>
+        /// 修改元数据表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetaTableRequest"/></param>
+        /// <returns><see cref="ModifyMetaTableResponse"/></returns>
+        public ModifyMetaTableResponse ModifyMetaTableSync(ModifyMetaTableRequest req)
+        {
+            return InternalRequestAsync<ModifyMetaTableResponse>(req, "ModifyMetaTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
