@@ -25,45 +25,63 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 私有连接所在的VPCID
+        /// <p>私有连接所在的VPCID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有连接所在的子网ID
+        /// <p>私有连接所在的子网ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// HTTP内网调用地址
+        /// <p>HTTP内网调用地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InnerHttpAddr")]
         public string[] InnerHttpAddr{ get; set; }
 
         /// <summary>
-        /// HTTPS内网调用地址
+        /// <p>HTTPS内网调用地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InnerHttpsAddr")]
         public string[] InnerHttpsAddr{ get; set; }
 
         /// <summary>
-        /// 私有连接状态
+        /// <p>私有连接状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// grpc内网调用地址
+        /// <p>grpc内网调用地址</p>
         /// </summary>
         [JsonProperty("InnerGrpcAddr")]
         public string[] InnerGrpcAddr{ get; set; }
+
+        /// <summary>
+        /// <p>创建者 UIN</p>
+        /// </summary>
+        [JsonProperty("CreatedBy")]
+        public string CreatedBy{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>子用户名称</p>
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
 
 
         /// <summary>
@@ -77,6 +95,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamArraySimple(map, prefix + "InnerGrpcAddr.", this.InnerGrpcAddr);
+            this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
         }
     }
 }

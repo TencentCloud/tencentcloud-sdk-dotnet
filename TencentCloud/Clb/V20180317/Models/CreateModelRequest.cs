@@ -102,6 +102,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VerifySSL")]
         public bool? VerifySSL{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查配置</p>
+        /// </summary>
+        [JsonProperty("HealthCheckConfig")]
+        public ServiceProviderHealthCheckConfigInput HealthCheckConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
+            this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
+        /// <summary>
+        /// <p>音色所属引擎</p>
+        /// </summary>
+        [JsonProperty("Engine")]
+        public string Engine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+            this.SetParamSimple(map, prefix + "Engine", this.Engine);
         }
     }
 }

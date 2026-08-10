@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1478";
+       private const string sdkVersion = "SDK_NET_3.0.1483";
 
         /// <summary>
         /// Client constructor.
@@ -3001,6 +3001,48 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVportSync(ModifyDBInstanceVipVportRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceVipVportResponse>(req, "ModifyDBInstanceVipVport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceChargeType)用于将实例的计费模式从包年包月改为按量计费。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceChargeTypeResponse"/></returns>
+        public Task<ModifyInstanceChargeTypeResponse> ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceChargeTypeResponse>(req, "ModifyInstanceChargeType");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceChargeType)用于将实例的计费模式从包年包月改为按量计费。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceChargeTypeResponse"/></returns>
+        public ModifyInstanceChargeTypeResponse ModifyInstanceChargeTypeSync(ModifyInstanceChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceChargeTypeResponse>(req, "ModifyInstanceChargeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyInstanceDestroyProtect）用于修改实例销毁保护状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDestroyProtectRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDestroyProtectResponse"/></returns>
+        public Task<ModifyInstanceDestroyProtectResponse> ModifyInstanceDestroyProtect(ModifyInstanceDestroyProtectRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDestroyProtectResponse>(req, "ModifyInstanceDestroyProtect");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyInstanceDestroyProtect）用于修改实例销毁保护状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDestroyProtectRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDestroyProtectResponse"/></returns>
+        public ModifyInstanceDestroyProtectResponse ModifyInstanceDestroyProtectSync(ModifyInstanceDestroyProtectRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDestroyProtectResponse>(req, "ModifyInstanceDestroyProtect")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

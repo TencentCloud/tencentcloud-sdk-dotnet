@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1479";
+       private const string sdkVersion = "SDK_NET_3.0.1483";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Csip.V20221121
         public AddNewBindRoleUserResponse AddNewBindRoleUserSync(AddNewBindRoleUserRequest req)
         {
             return InternalRequestAsync<AddNewBindRoleUserResponse>(req, "AddNewBindRoleUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddVulWhitelistRequest"/></param>
+        /// <returns><see cref="AddVulWhitelistResponse"/></returns>
+        public Task<AddVulWhitelistResponse> AddVulWhitelist(AddVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<AddVulWhitelistResponse>(req, "AddVulWhitelist");
+        }
+
+        /// <summary>
+        /// 添加漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddVulWhitelistRequest"/></param>
+        /// <returns><see cref="AddVulWhitelistResponse"/></returns>
+        public AddVulWhitelistResponse AddVulWhitelistSync(AddVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<AddVulWhitelistResponse>(req, "AddVulWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +642,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建主机列漏洞表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostVulExportJobResponse"/></returns>
+        public Task<CreateHostVulExportJobResponse> CreateHostVulExportJob(CreateHostVulExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostVulExportJobResponse>(req, "CreateHostVulExportJob");
+        }
+
+        /// <summary>
+        /// 创建主机列漏洞表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostVulExportJobResponse"/></returns>
+        public CreateHostVulExportJobResponse CreateHostVulExportJobSync(CreateHostVulExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostVulExportJobResponse>(req, "CreateHostVulExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建IaC检测接入Token
         /// </summary>
         /// <param name="req"><see cref="CreateIaCAccessTokenRequest"/></param>
@@ -722,6 +764,111 @@ namespace TencentCloud.Csip.V20221121
         public CreateSkillScanResponse CreateSkillScanSync(CreateSkillScanRequest req)
         {
             return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对修复失败的漏洞修复任务进行重试，仅针对原任务中修复失败的主机重新下发修复指令。仅当任务状态为部分修复失败或全部修复失败时允许重试。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixRetryTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixRetryTaskResponse"/></returns>
+        public Task<CreateVulFixRetryTaskResponse> CreateVulFixRetryTask(CreateVulFixRetryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixRetryTaskResponse>(req, "CreateVulFixRetryTask");
+        }
+
+        /// <summary>
+        /// 对修复失败的漏洞修复任务进行重试，仅针对原任务中修复失败的主机重新下发修复指令。仅当任务状态为部分修复失败或全部修复失败时允许重试。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixRetryTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixRetryTaskResponse"/></returns>
+        public CreateVulFixRetryTaskResponse CreateVulFixRetryTaskSync(CreateVulFixRetryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixRetryTaskResponse>(req, "CreateVulFixRetryTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户手动提交漏洞修复任务，指定需要修复的漏洞和目标主机，系统创建修复任务并下发执行。支持指定修复超时时间、是否创建快照等选项。通过FixItems数组精确控制每个漏洞/KB补丁修复哪些主机。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixTaskResponse"/></returns>
+        public Task<CreateVulFixTaskResponse> CreateVulFixTask(CreateVulFixTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixTaskResponse>(req, "CreateVulFixTask");
+        }
+
+        /// <summary>
+        /// 用户手动提交漏洞修复任务，指定需要修复的漏洞和目标主机，系统创建修复任务并下发执行。支持指定修复超时时间、是否创建快照等选项。通过FixItems数组精确控制每个漏洞/KB补丁修复哪些主机。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixTaskResponse"/></returns>
+        public CreateVulFixTaskResponse CreateVulFixTaskSync(CreateVulFixTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixTaskResponse>(req, "CreateVulFixTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建已修复漏洞列表的导出任务。支持与 DescribeVulFixedList 相同的过滤条件，导出通过异步任务实现，返回 JobID 后前端轮询查询导出任务状态。导出字段包含漏洞ID、漏洞名称、漏洞等级、VPR评级、漏洞类型、CVE编号、主机名称、实例ID、关联组件&路径、修复时间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixedExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulFixedExportJobResponse"/></returns>
+        public Task<CreateVulFixedExportJobResponse> CreateVulFixedExportJob(CreateVulFixedExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixedExportJobResponse>(req, "CreateVulFixedExportJob");
+        }
+
+        /// <summary>
+        /// 创建已修复漏洞列表的导出任务。支持与 DescribeVulFixedList 相同的过滤条件，导出通过异步任务实现，返回 JobID 后前端轮询查询导出任务状态。导出字段包含漏洞ID、漏洞名称、漏洞等级、VPR评级、漏洞类型、CVE编号、主机名称、实例ID、关联组件&路径、修复时间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixedExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulFixedExportJobResponse"/></returns>
+        public CreateVulFixedExportJobResponse CreateVulFixedExportJobSync(CreateVulFixedExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixedExportJobResponse>(req, "CreateVulFixedExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建漏洞重新扫描
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulReScanRequest"/></param>
+        /// <returns><see cref="CreateVulReScanResponse"/></returns>
+        public Task<CreateVulReScanResponse> CreateVulReScan(CreateVulReScanRequest req)
+        {
+            return InternalRequestAsync<CreateVulReScanResponse>(req, "CreateVulReScan");
+        }
+
+        /// <summary>
+        /// 创建漏洞重新扫描
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulReScanRequest"/></param>
+        /// <returns><see cref="CreateVulReScanResponse"/></returns>
+        public CreateVulReScanResponse CreateVulReScanSync(CreateVulReScanRequest req)
+        {
+            return InternalRequestAsync<CreateVulReScanResponse>(req, "CreateVulReScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建漏洞扫描（一键扫描）
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulScanManualRequest"/></param>
+        /// <returns><see cref="CreateVulScanManualResponse"/></returns>
+        public Task<CreateVulScanManualResponse> CreateVulScanManual(CreateVulScanManualRequest req)
+        {
+            return InternalRequestAsync<CreateVulScanManualResponse>(req, "CreateVulScanManual");
+        }
+
+        /// <summary>
+        /// 创建漏洞扫描（一键扫描）
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulScanManualRequest"/></param>
+        /// <returns><see cref="CreateVulScanManualResponse"/></returns>
+        public CreateVulScanManualResponse CreateVulScanManualSync(CreateVulScanManualRequest req)
+        {
+            return InternalRequestAsync<CreateVulScanManualResponse>(req, "CreateVulScanManual")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1121,6 +1268,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteVulWhitelistResponse"/></returns>
+        public Task<DeleteVulWhitelistResponse> DeleteVulWhitelist(DeleteVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteVulWhitelistResponse>(req, "DeleteVulWhitelist");
+        }
+
+        /// <summary>
+        /// 删除漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteVulWhitelistResponse"/></returns>
+        public DeleteVulWhitelistResponse DeleteVulWhitelistSync(DeleteVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteVulWhitelistResponse>(req, "DeleteVulWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3708,6 +3876,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取主机kb风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostKBRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostKBRiskListResponse"/></returns>
+        public Task<DescribeHostKBRiskListResponse> DescribeHostKBRiskList(DescribeHostKBRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostKBRiskListResponse>(req, "DescribeHostKBRiskList");
+        }
+
+        /// <summary>
+        /// 获取主机kb风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostKBRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostKBRiskListResponse"/></returns>
+        public DescribeHostKBRiskListResponse DescribeHostKBRiskListSync(DescribeHostKBRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostKBRiskListResponse>(req, "DescribeHostKBRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取主机漏洞VPR信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulItemVPRInfoRequest"/></param>
+        /// <returns><see cref="DescribeHostVulItemVPRInfoResponse"/></returns>
+        public Task<DescribeHostVulItemVPRInfoResponse> DescribeHostVulItemVPRInfo(DescribeHostVulItemVPRInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulItemVPRInfoResponse>(req, "DescribeHostVulItemVPRInfo");
+        }
+
+        /// <summary>
+        /// 获取主机漏洞VPR信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulItemVPRInfoRequest"/></param>
+        /// <returns><see cref="DescribeHostVulItemVPRInfoResponse"/></returns>
+        public DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfoSync(DescribeHostVulItemVPRInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulItemVPRInfoResponse>(req, "DescribeHostVulItemVPRInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取主机漏洞概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHostVulOverviewResponse"/></returns>
+        public Task<DescribeHostVulOverviewResponse> DescribeHostVulOverview(DescribeHostVulOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulOverviewResponse>(req, "DescribeHostVulOverview");
+        }
+
+        /// <summary>
+        /// 获取主机漏洞概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHostVulOverviewResponse"/></returns>
+        public DescribeHostVulOverviewResponse DescribeHostVulOverviewSync(DescribeHostVulOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulOverviewResponse>(req, "DescribeHostVulOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取主机漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskListResponse"/></returns>
+        public Task<DescribeHostVulRiskListResponse> DescribeHostVulRiskList(DescribeHostVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList");
+        }
+
+        /// <summary>
+        /// 获取主机漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskListResponse"/></returns>
+        public DescribeHostVulRiskListResponse DescribeHostVulRiskListSync(DescribeHostVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取IaC检测文件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeIaCFileListRequest"/></param>
@@ -3830,6 +4082,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetailSync(DescribeIpInvokeRecordDetailRequest req)
         {
             return InternalRequestAsync<DescribeIpInvokeRecordDetailResponse>(req, "DescribeIpInvokeRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据用户输入的 KB 内部 ID 查询单个 Windows KB 补丁的详情信息，返回 KB 基本信息、发布时间、是否需要重启，以及该 KB 关联的漏洞列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBDetailRequest"/></param>
+        /// <returns><see cref="DescribeKBDetailResponse"/></returns>
+        public Task<DescribeKBDetailResponse> DescribeKBDetail(DescribeKBDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKBDetailResponse>(req, "DescribeKBDetail");
+        }
+
+        /// <summary>
+        /// 根据用户输入的 KB 内部 ID 查询单个 Windows KB 补丁的详情信息，返回 KB 基本信息、发布时间、是否需要重启，以及该 KB 关联的漏洞列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBDetailRequest"/></param>
+        /// <returns><see cref="DescribeKBDetailResponse"/></returns>
+        public DescribeKBDetailResponse DescribeKBDetailSync(DescribeKBDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKBDetailResponse>(req, "DescribeKBDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定KB补丁可以更新的主机列表。用于Windows系统补丁修复场景，在用户提交KB补丁更新任务前，查询哪些主机缺少该补丁且支持自动更新。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBUpdatableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeKBUpdatableMachineListResponse"/></returns>
+        public Task<DescribeKBUpdatableMachineListResponse> DescribeKBUpdatableMachineList(DescribeKBUpdatableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBUpdatableMachineListResponse>(req, "DescribeKBUpdatableMachineList");
+        }
+
+        /// <summary>
+        /// 查询指定KB补丁可以更新的主机列表。用于Windows系统补丁修复场景，在用户提交KB补丁更新任务前，查询哪些主机缺少该补丁且支持自动更新。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBUpdatableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeKBUpdatableMachineListResponse"/></returns>
+        public DescribeKBUpdatableMachineListResponse DescribeKBUpdatableMachineListSync(DescribeKBUpdatableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBUpdatableMachineListResponse>(req, "DescribeKBUpdatableMachineList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4842,6 +5136,216 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取漏洞组件关联主机
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulComponentRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulComponentRelateHostResponse"/></returns>
+        public Task<DescribeVulComponentRelateHostResponse> DescribeVulComponentRelateHost(DescribeVulComponentRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulComponentRelateHostResponse>(req, "DescribeVulComponentRelateHost");
+        }
+
+        /// <summary>
+        /// 获取漏洞组件关联主机
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulComponentRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulComponentRelateHostResponse"/></returns>
+        public DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHostSync(DescribeVulComponentRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulComponentRelateHostResponse>(req, "DescribeVulComponentRelateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定漏洞修复任务的详情信息，包含每台主机的修复状态、快照状态等明细数据，支持分页和筛选。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskDetailResponse"/></returns>
+        public Task<DescribeVulFixTaskDetailResponse> DescribeVulFixTaskDetail(DescribeVulFixTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskDetailResponse>(req, "DescribeVulFixTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询指定漏洞修复任务的详情信息，包含每台主机的修复状态、快照状态等明细数据，支持分页和筛选。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskDetailResponse"/></returns>
+        public DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetailSync(DescribeVulFixTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskDetailResponse>(req, "DescribeVulFixTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询漏洞修复任务记录列表，支持按修复状态、时间范围等条件筛选，展示每个修复任务的概要信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskListResponse"/></returns>
+        public Task<DescribeVulFixTaskListResponse> DescribeVulFixTaskList(DescribeVulFixTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskListResponse>(req, "DescribeVulFixTaskList");
+        }
+
+        /// <summary>
+        /// 分页查询漏洞修复任务记录列表，支持按修复状态、时间范围等条件筛选，展示每个修复任务的概要信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskListResponse"/></returns>
+        public DescribeVulFixTaskListResponse DescribeVulFixTaskListSync(DescribeVulFixTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskListResponse>(req, "DescribeVulFixTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定漏洞可以被修复的主机列表。在用户提交修复任务前，需要先查询哪些主机支持自动修复，为用户选择修复目标提供数据支持。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixableMachineListResponse"/></returns>
+        public Task<DescribeVulFixableMachineListResponse> DescribeVulFixableMachineList(DescribeVulFixableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixableMachineListResponse>(req, "DescribeVulFixableMachineList");
+        }
+
+        /// <summary>
+        /// 查询指定漏洞可以被修复的主机列表。在用户提交修复任务前，需要先查询哪些主机支持自动修复，为用户选择修复目标提供数据支持。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixableMachineListResponse"/></returns>
+        public DescribeVulFixableMachineListResponse DescribeVulFixableMachineListSync(DescribeVulFixableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixableMachineListResponse>(req, "DescribeVulFixableMachineList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询某个已修复漏洞在指定主机上的修复详情，包含漏洞基本信息、修复主机信息以及关联组件&路径的详细列表（组件名称、命中版本、关联路径、修复命令）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedHostDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedHostDetailResponse"/></returns>
+        public Task<DescribeVulFixedHostDetailResponse> DescribeVulFixedHostDetail(DescribeVulFixedHostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedHostDetailResponse>(req, "DescribeVulFixedHostDetail");
+        }
+
+        /// <summary>
+        /// 查询某个已修复漏洞在指定主机上的修复详情，包含漏洞基本信息、修复主机信息以及关联组件&路径的详细列表（组件名称、命中版本、关联路径、修复命令）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedHostDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedHostDetailResponse"/></returns>
+        public DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetailSync(DescribeVulFixedHostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedHostDetailResponse>(req, "DescribeVulFixedHostDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询已被修复的漏洞列表，展示修复成功的漏洞信息及修复情况统计，帮助用户了解修复成效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedListResponse"/></returns>
+        public Task<DescribeVulFixedListResponse> DescribeVulFixedList(DescribeVulFixedListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedListResponse>(req, "DescribeVulFixedList");
+        }
+
+        /// <summary>
+        /// 查询已被修复的漏洞列表，展示修复成功的漏洞信息及修复情况统计，帮助用户了解修复成效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedListResponse"/></returns>
+        public DescribeVulFixedListResponse DescribeVulFixedListSync(DescribeVulFixedListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedListResponse>(req, "DescribeVulFixedList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞主机关联组件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulHostRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulHostRelateComponentResponse"/></returns>
+        public Task<DescribeVulHostRelateComponentResponse> DescribeVulHostRelateComponent(DescribeVulHostRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulHostRelateComponentResponse>(req, "DescribeVulHostRelateComponent");
+        }
+
+        /// <summary>
+        /// 获取漏洞主机关联组件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulHostRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulHostRelateComponentResponse"/></returns>
+        public DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponentSync(DescribeVulHostRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulHostRelateComponentResponse>(req, "DescribeVulHostRelateComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞忽略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="DescribeVulIgnoreRuleListResponse"/></returns>
+        public Task<DescribeVulIgnoreRuleListResponse> DescribeVulIgnoreRuleList(DescribeVulIgnoreRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulIgnoreRuleListResponse>(req, "DescribeVulIgnoreRuleList");
+        }
+
+        /// <summary>
+        /// 获取漏洞忽略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="DescribeVulIgnoreRuleListResponse"/></returns>
+        public DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleListSync(DescribeVulIgnoreRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulIgnoreRuleListResponse>(req, "DescribeVulIgnoreRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulItemListRequest"/></param>
+        /// <returns><see cref="DescribeVulItemListResponse"/></returns>
+        public Task<DescribeVulItemListResponse> DescribeVulItemList(DescribeVulItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulItemListResponse>(req, "DescribeVulItemList");
+        }
+
+        /// <summary>
+        /// 获取漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulItemListRequest"/></param>
+        /// <returns><see cref="DescribeVulItemListResponse"/></returns>
+        public DescribeVulItemListResponse DescribeVulItemListSync(DescribeVulItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulItemListResponse>(req, "DescribeVulItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulLabelListRequest"/></param>
+        /// <returns><see cref="DescribeVulLabelListResponse"/></returns>
+        public Task<DescribeVulLabelListResponse> DescribeVulLabelList(DescribeVulLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulLabelListResponse>(req, "DescribeVulLabelList");
+        }
+
+        /// <summary>
+        /// 获取漏洞标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulLabelListRequest"/></param>
+        /// <returns><see cref="DescribeVulLabelListResponse"/></returns>
+        public DescribeVulLabelListResponse DescribeVulLabelListSync(DescribeVulLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulLabelListResponse>(req, "DescribeVulLabelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询云边界分析-暴露路径下主机节点的漏洞列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVulRiskListRequest"/></param>
@@ -4859,6 +5363,111 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVulRiskListResponse DescribeVulRiskListSync(DescribeVulRiskListRequest req)
         {
             return InternalRequestAsync<DescribeVulRiskListResponse>(req, "DescribeVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞关联组件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateComponentResponse"/></returns>
+        public Task<DescribeVulRiskRelateComponentResponse> DescribeVulRiskRelateComponent(DescribeVulRiskRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateComponentResponse>(req, "DescribeVulRiskRelateComponent");
+        }
+
+        /// <summary>
+        /// 获取漏洞关联组件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateComponentResponse"/></returns>
+        public DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponentSync(DescribeVulRiskRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateComponentResponse>(req, "DescribeVulRiskRelateComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞或KB关联的主机
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateHostResponse"/></returns>
+        public Task<DescribeVulRiskRelateHostResponse> DescribeVulRiskRelateHost(DescribeVulRiskRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateHostResponse>(req, "DescribeVulRiskRelateHost");
+        }
+
+        /// <summary>
+        /// 获取漏洞或KB关联的主机
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateHostResponse"/></returns>
+        public DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHostSync(DescribeVulRiskRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateHostResponse>(req, "DescribeVulRiskRelateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞扫描（周期扫描）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="DescribeVulScanPeriodicResponse"/></returns>
+        public Task<DescribeVulScanPeriodicResponse> DescribeVulScanPeriodic(DescribeVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanPeriodicResponse>(req, "DescribeVulScanPeriodic");
+        }
+
+        /// <summary>
+        /// 获取漏洞扫描（周期扫描）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="DescribeVulScanPeriodicResponse"/></returns>
+        public DescribeVulScanPeriodicResponse DescribeVulScanPeriodicSync(DescribeVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanPeriodicResponse>(req, "DescribeVulScanPeriodic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫描漏洞任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskDetailResponse"/></returns>
+        public Task<DescribeVulScanTaskDetailResponse> DescribeVulScanTaskDetail(DescribeVulScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskDetailResponse>(req, "DescribeVulScanTaskDetail");
+        }
+
+        /// <summary>
+        /// 获取扫描漏洞任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskDetailResponse"/></returns>
+        public DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetailSync(DescribeVulScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskDetailResponse>(req, "DescribeVulScanTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞扫描任务记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskListResponse"/></returns>
+        public Task<DescribeVulScanTaskListResponse> DescribeVulScanTaskList(DescribeVulScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskListResponse>(req, "DescribeVulScanTaskList");
+        }
+
+        /// <summary>
+        /// 获取漏洞扫描任务记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskListResponse"/></returns>
+        public DescribeVulScanTaskListResponse DescribeVulScanTaskListSync(DescribeVulScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskListResponse>(req, "DescribeVulScanTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5829,6 +6438,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改漏洞扫描（周期扫描）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="ModifyVulScanPeriodicResponse"/></returns>
+        public Task<ModifyVulScanPeriodicResponse> ModifyVulScanPeriodic(ModifyVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<ModifyVulScanPeriodicResponse>(req, "ModifyVulScanPeriodic");
+        }
+
+        /// <summary>
+        /// 修改漏洞扫描（周期扫描）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="ModifyVulScanPeriodicResponse"/></returns>
+        public ModifyVulScanPeriodicResponse ModifyVulScanPeriodicSync(ModifyVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<ModifyVulScanPeriodicResponse>(req, "ModifyVulScanPeriodic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改漏洞白名单配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>
+        public Task<ModifyVulWhitelistConfigResponse> ModifyVulWhitelistConfig(ModifyVulWhitelistConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistConfigResponse>(req, "ModifyVulWhitelistConfig");
+        }
+
+        /// <summary>
+        /// 修改漏洞白名单配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>
+        public ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfigSync(ModifyVulWhitelistConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistConfigResponse>(req, "ModifyVulWhitelistConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改漏洞白名单开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistSwitchRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistSwitchResponse"/></returns>
+        public Task<ModifyVulWhitelistSwitchResponse> ModifyVulWhitelistSwitch(ModifyVulWhitelistSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistSwitchResponse>(req, "ModifyVulWhitelistSwitch");
+        }
+
+        /// <summary>
+        /// 修改漏洞白名单开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistSwitchRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistSwitchResponse"/></returns>
+        public ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitchSync(ModifyVulWhitelistSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistSwitchResponse>(req, "ModifyVulWhitelistSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重置Dspm资产账号密码
         /// </summary>
         /// <param name="req"><see cref="ResetDspmAssetAccountPasswordRequest"/></param>
@@ -5930,6 +6602,27 @@ namespace TencentCloud.Csip.V20221121
         public StopRiskCenterTaskResponse StopRiskCenterTaskSync(StopRiskCenterTaskRequest req)
         {
             return InternalRequestAsync<StopRiskCenterTaskResponse>(req, "StopRiskCenterTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止漏洞扫描（任务扫描）
+        /// </summary>
+        /// <param name="req"><see cref="StopVulScanTaskRequest"/></param>
+        /// <returns><see cref="StopVulScanTaskResponse"/></returns>
+        public Task<StopVulScanTaskResponse> StopVulScanTask(StopVulScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopVulScanTaskResponse>(req, "StopVulScanTask");
+        }
+
+        /// <summary>
+        /// 停止漏洞扫描（任务扫描）
+        /// </summary>
+        /// <param name="req"><see cref="StopVulScanTaskRequest"/></param>
+        /// <returns><see cref="StopVulScanTaskResponse"/></returns>
+        public StopVulScanTaskResponse StopVulScanTaskSync(StopVulScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopVulScanTaskResponse>(req, "StopVulScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

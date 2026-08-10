@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 欢迎语内容
+        /// <p>欢迎语内容</p>
         /// </summary>
         [JsonProperty("Greeting")]
         public string Greeting{ get; set; }
 
         /// <summary>
-        /// 开场问题列表
+        /// <p>开场问题列表</p>
         /// </summary>
         [JsonProperty("OpeningQuestionList")]
         public string[] OpeningQuestionList{ get; set; }

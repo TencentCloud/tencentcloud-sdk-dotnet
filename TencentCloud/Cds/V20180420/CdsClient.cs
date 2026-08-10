@@ -28,7 +28,7 @@ namespace TencentCloud.Cds.V20180420
 
        private const string endpoint = "cds.tencentcloudapi.com";
        private const string version = "2018-04-20";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1483";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,69 @@ namespace TencentCloud.Cds.V20180420
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 下载报表PDF
+        /// </summary>
+        /// <param name="req"><see cref="CreateReportPdfRequest"/></param>
+        /// <returns><see cref="CreateReportPdfResponse"/></returns>
+        public Task<CreateReportPdfResponse> CreateReportPdf(CreateReportPdfRequest req)
+        {
+            return InternalRequestAsync<CreateReportPdfResponse>(req, "CreateReportPdf");
+        }
+
+        /// <summary>
+        /// 下载报表PDF
+        /// </summary>
+        /// <param name="req"><see cref="CreateReportPdfRequest"/></param>
+        /// <returns><see cref="CreateReportPdfResponse"/></returns>
+        public CreateReportPdfResponse CreateReportPdfSync(CreateReportPdfRequest req)
+        {
+            return InternalRequestAsync<CreateReportPdfResponse>(req, "CreateReportPdf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新建报表任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTimerReportRequest"/></param>
+        /// <returns><see cref="CreateTimerReportResponse"/></returns>
+        public Task<CreateTimerReportResponse> CreateTimerReport(CreateTimerReportRequest req)
+        {
+            return InternalRequestAsync<CreateTimerReportResponse>(req, "CreateTimerReport");
+        }
+
+        /// <summary>
+        /// 新建报表任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTimerReportRequest"/></param>
+        /// <returns><see cref="CreateTimerReportResponse"/></returns>
+        public CreateTimerReportResponse CreateTimerReportSync(CreateTimerReportRequest req)
+        {
+            return InternalRequestAsync<CreateTimerReportResponse>(req, "CreateTimerReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetsListRequest"/></param>
+        /// <returns><see cref="DescribeAssetsListResponse"/></returns>
+        public Task<DescribeAssetsListResponse> DescribeAssetsList(DescribeAssetsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetsListResponse>(req, "DescribeAssetsList");
+        }
+
+        /// <summary>
+        /// 查询资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetsListRequest"/></param>
+        /// <returns><see cref="DescribeAssetsListResponse"/></returns>
+        public DescribeAssetsListResponse DescribeAssetsListSync(DescribeAssetsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetsListResponse>(req, "DescribeAssetsList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -113,6 +176,48 @@ namespace TencentCloud.Cds.V20180420
         public DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegionsSync(DescribeDbauditUsedRegionsRequest req)
         {
             return InternalRequestAsync<DescribeDbauditUsedRegionsResponse>(req, "DescribeDbauditUsedRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询报表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportListRequest"/></param>
+        /// <returns><see cref="DescribeReportListResponse"/></returns>
+        public Task<DescribeReportListResponse> DescribeReportList(DescribeReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportListResponse>(req, "DescribeReportList");
+        }
+
+        /// <summary>
+        /// 查询报表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportListRequest"/></param>
+        /// <returns><see cref="DescribeReportListResponse"/></returns>
+        public DescribeReportListResponse DescribeReportListSync(DescribeReportListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportListResponse>(req, "DescribeReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询报表任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportMissionListRequest"/></param>
+        /// <returns><see cref="DescribeReportMissionListResponse"/></returns>
+        public Task<DescribeReportMissionListResponse> DescribeReportMissionList(DescribeReportMissionListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportMissionListResponse>(req, "DescribeReportMissionList");
+        }
+
+        /// <summary>
+        /// 查询报表任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportMissionListRequest"/></param>
+        /// <returns><see cref="DescribeReportMissionListResponse"/></returns>
+        public DescribeReportMissionListResponse DescribeReportMissionListSync(DescribeReportMissionListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportMissionListResponse>(req, "DescribeReportMissionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

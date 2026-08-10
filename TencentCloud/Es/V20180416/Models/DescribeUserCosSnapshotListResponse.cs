@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// cos 快照信息列表
+        /// <p>cos 快照信息列表</p>
         /// </summary>
         [JsonProperty("CosSnapshotInfoList")]
         public CosSnapShotInfo[] CosSnapshotInfoList{ get; set; }
 
         /// <summary>
-        /// cos 快照数量
+        /// <p>cos 快照数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

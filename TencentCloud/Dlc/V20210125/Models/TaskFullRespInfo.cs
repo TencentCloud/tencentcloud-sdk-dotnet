@@ -478,6 +478,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("QueueTime")]
         public long? QueueTime{ get; set; }
 
+        /// <summary>
+        /// <p>资源组类型</p>
+        /// </summary>
+        [JsonProperty("ResourceGroupType")]
+        public string ResourceGroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -555,6 +561,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ShuffleWriteBytesSum", this.ShuffleWriteBytesSum);
             this.SetParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
             this.SetParamSimple(map, prefix + "QueueTime", this.QueueTime);
+            this.SetParamSimple(map, prefix + "ResourceGroupType", this.ResourceGroupType);
         }
     }
 }

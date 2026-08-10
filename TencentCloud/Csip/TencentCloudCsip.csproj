@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1479</VersionPrefix>
+    <VersionPrefix>3.0.1483</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,10 +57,13 @@
     <Compile Include="V20221121\Models\AccessKeyAsset.cs" />
     <Compile Include="V20221121\Models\AccessKeyRisk.cs" />
     <Compile Include="V20221121\Models\AccessKeyUser.cs" />
+    <Compile Include="V20221121\Models\AccountBriefInfo.cs" />
     <Compile Include="V20221121\Models\AddDspmAssetManagerRequest.cs" />
     <Compile Include="V20221121\Models\AddDspmAssetManagerResponse.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserRequest.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
+    <Compile Include="V20221121\Models\AddVulWhitelistRequest.cs" />
+    <Compile Include="V20221121\Models\AddVulWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
     <Compile Include="V20221121\Models\AlertInfo.cs" />
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
@@ -91,6 +94,7 @@
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\CommandPluginState.cs" />
+    <Compile Include="V20221121\Models\ComponentDetailItem.cs" />
     <Compile Include="V20221121\Models\ContainerEnvInfo.cs" />
     <Compile Include="V20221121\Models\CosAccessInfo.cs" />
     <Compile Include="V20221121\Models\CosActionInfo.cs" />
@@ -176,6 +180,8 @@
     <Compile Include="V20221121\Models\CreateDspmRiskExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\CreateHostVulExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateHostVulExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateIaCAccessTokenRequest.cs" />
     <Compile Include="V20221121\Models\CreateIaCAccessTokenResponse.cs" />
     <Compile Include="V20221121\Models\CreateIaCFileExportJobRequest.cs" />
@@ -186,6 +192,16 @@
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateSkillScanRequest.cs" />
     <Compile Include="V20221121\Models\CreateSkillScanResponse.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixRetryTaskRequest.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixRetryTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixTaskRequest.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixedExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateVulFixedExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateVulReScanRequest.cs" />
+    <Compile Include="V20221121\Models\CreateVulReScanResponse.cs" />
+    <Compile Include="V20221121\Models\CreateVulScanManualRequest.cs" />
+    <Compile Include="V20221121\Models\CreateVulScanManualResponse.cs" />
     <Compile Include="V20221121\Models\CredentialEffectScope.cs" />
     <Compile Include="V20221121\Models\CsipRiskCenterStatistics.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
@@ -229,6 +245,8 @@
     <Compile Include="V20221121\Models\DeleteIaCFileResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteVulWhitelistRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteVulWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAIAgentAssetListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAIAgentAssetListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAILinkSettingRequest.cs" />
@@ -475,6 +493,14 @@
     <Compile Include="V20221121\Models\DescribeGatewayAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeHighBaseLineRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostKBRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostKBRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulItemVPRInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulItemVPRInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulOverviewRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulOverviewResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileOverviewRequest.cs" />
@@ -487,6 +513,10 @@
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordRequest.cs" />
     <Compile Include="V20221121\Models\DescribeIpInvokeRecordResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeKBDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeKBDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeKBUpdatableMachineListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeKBUpdatableMachineListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeKeySandboxCredentialListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeKeySandboxCredentialListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeKeySandboxCredentialRequest.cs" />
@@ -583,8 +613,38 @@
     <Compile Include="V20221121\Models\DescribeVULRiskDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulComponentRelateHostRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulComponentRelateHostResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixTaskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixTaskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixTaskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixTaskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixableMachineListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixableMachineListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixedHostDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixedHostDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixedListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulFixedListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulHostRelateComponentRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulHostRelateComponentResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulIgnoreRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulIgnoreRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulItemListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulItemListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulLabelListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulLabelListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVulRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulRiskRelateComponentRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulRiskRelateComponentResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulRiskRelateHostRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulRiskRelateHostResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanPeriodicRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanPeriodicResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanTaskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanTaskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanTaskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DetectTypeCount.cs" />
@@ -673,12 +733,20 @@
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\HighBaseLineRiskItem.cs" />
     <Compile Include="V20221121\Models\HitRules.cs" />
+    <Compile Include="V20221121\Models\HostBriefInfo.cs" />
+    <Compile Include="V20221121\Models\HostKBRisk.cs" />
+    <Compile Include="V20221121\Models\HostVulComponent.cs" />
+    <Compile Include="V20221121\Models\HostVulOverview.cs" />
+    <Compile Include="V20221121\Models\HostVulRisk.cs" />
     <Compile Include="V20221121\Models\IPIntelInfo.cs" />
     <Compile Include="V20221121\Models\IaCFile.cs" />
     <Compile Include="V20221121\Models\IaCFileRisk.cs" />
     <Compile Include="V20221121\Models\InquireInfo.cs" />
     <Compile Include="V20221121\Models\InstanceIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\KBDetail.cs" />
+    <Compile Include="V20221121\Models\KBFixSummaryItem.cs" />
+    <Compile Include="V20221121\Models\KBUpdateMachineItem.cs" />
     <Compile Include="V20221121\Models\KeySandboxCredential.cs" />
     <Compile Include="V20221121\Models\KeyValue.cs" />
     <Compile Include="V20221121\Models\KeyValueInt.cs" />
@@ -791,6 +859,12 @@
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\ModifyUebaRuleSwitchRequest.cs" />
     <Compile Include="V20221121\Models\ModifyUebaRuleSwitchResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyVulScanPeriodicRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyVulScanPeriodicResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyVulWhitelistConfigRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyVulWhitelistConfigResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyVulWhitelistSwitchRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyVulWhitelistSwitchResponse.cs" />
     <Compile Include="V20221121\Models\NICAsset.cs" />
     <Compile Include="V20221121\Models\NetworkCardInfo.cs" />
     <Compile Include="V20221121\Models\NewAlertKey.cs" />
@@ -845,6 +919,8 @@
     <Compile Include="V20221121\Models\StatisticalFilter.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
+    <Compile Include="V20221121\Models\StopVulScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\StopVulScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\SubUserInfo.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />
     <Compile Include="V20221121\Models\SyncDspmAssetsRequest.cs" />
@@ -876,6 +952,9 @@
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
     <Compile Include="V20221121\Models\UserCallRecord.cs" />
     <Compile Include="V20221121\Models\UserDspmInfo.cs" />
+    <Compile Include="V20221121\Models\VPRLabel.cs" />
+    <Compile Include="V20221121\Models\VPRRatingInfo.cs" />
+    <Compile Include="V20221121\Models\VPRRatingStage.cs" />
     <Compile Include="V20221121\Models\VULBaseInfo.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
     <Compile Include="V20221121\Models\VULRiskInfo.cs" />
@@ -884,9 +963,26 @@
     <Compile Include="V20221121\Models\VerifyDspmAssetLoginCodeRequest.cs" />
     <Compile Include="V20221121\Models\VerifyDspmAssetLoginCodeResponse.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />
+    <Compile Include="V20221121\Models\VulBriefInfo.cs" />
+    <Compile Include="V20221121\Models\VulComponentSummary.cs" />
+    <Compile Include="V20221121\Models\VulDetailInfo.cs" />
+    <Compile Include="V20221121\Models\VulFixItem.cs" />
+    <Compile Include="V20221121\Models\VulFixStatusItem.cs" />
+    <Compile Include="V20221121\Models\VulFixSummaryItem.cs" />
+    <Compile Include="V20221121\Models\VulFixTaskDetailItem.cs" />
+    <Compile Include="V20221121\Models\VulFixTaskInfo.cs" />
+    <Compile Include="V20221121\Models\VulFixTaskItem.cs" />
+    <Compile Include="V20221121\Models\VulFixableMachineItem.cs" />
+    <Compile Include="V20221121\Models\VulFixedItem.cs" />
+    <Compile Include="V20221121\Models\VulHostBriefInfo.cs" />
     <Compile Include="V20221121\Models\VulImpactComponentInfo.cs" />
     <Compile Include="V20221121\Models\VulRiskItem.cs" />
+    <Compile Include="V20221121\Models\VulScanTask.cs" />
+    <Compile Include="V20221121\Models\VulScanTaskDetail.cs" />
+    <Compile Include="V20221121\Models\VulSpreadTrend.cs" />
     <Compile Include="V20221121\Models\VulTrend.cs" />
+    <Compile Include="V20221121\Models\VulVendorProduct.cs" />
+    <Compile Include="V20221121\Models\VulWhitelist.cs" />
     <Compile Include="V20221121\Models\WebsiteRisk.cs" />
     <Compile Include="V20221121\Models\WhereFilter.cs" />
   </ItemGroup>

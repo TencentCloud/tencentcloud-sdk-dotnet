@@ -192,6 +192,24 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("RawCustomModelProtocolConfig")]
         public string RawCustomModelProtocolConfig{ get; set; }
 
+        /// <summary>
+        /// <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+        /// </summary>
+        [JsonProperty("RouteStrategy")]
+        public string RouteStrategy{ get; set; }
+
+        /// <summary>
+        /// <p>token长度路由策略</p>
+        /// </summary>
+        [JsonProperty("TokenLengthRoute")]
+        public TokenLengthRouteDTO[] TokenLengthRoute{ get; set; }
+
+        /// <summary>
+        /// <p>任务复杂度路由策略</p>
+        /// </summary>
+        [JsonProperty("TaskComplexityRoute")]
+        public TaskComplexityRouteDTO TaskComplexityRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +244,9 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
             this.SetParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
             this.SetParamSimple(map, prefix + "RawCustomModelProtocolConfig", this.RawCustomModelProtocolConfig);
+            this.SetParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
+            this.SetParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
+            this.SetParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
         }
     }
 }

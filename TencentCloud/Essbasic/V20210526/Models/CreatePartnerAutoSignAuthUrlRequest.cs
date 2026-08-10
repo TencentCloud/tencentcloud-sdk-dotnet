@@ -74,6 +74,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AuthorizedOrganizationNames")]
         public string[] AuthorizedOrganizationNames{ get; set; }
 
+        /// <summary>
+        /// <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("LimitAuthType")]
+        public ulong? LimitAuthType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
             this.SetParamArraySimple(map, prefix + "AuthorizedOrganizationIds.", this.AuthorizedOrganizationIds);
             this.SetParamArraySimple(map, prefix + "AuthorizedOrganizationNames.", this.AuthorizedOrganizationNames);
+            this.SetParamSimple(map, prefix + "LimitAuthType", this.LimitAuthType);
         }
     }
 }

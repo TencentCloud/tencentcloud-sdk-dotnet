@@ -25,20 +25,20 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 话单记录总数
+        /// <p>话单记录总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 话单记录
+        /// <p>话单记录</p>
         /// </summary>
         [JsonProperty("TelCdrs")]
         [System.Obsolete]
         public TelCdrInfo[] TelCdrs{ get; set; }
 
         /// <summary>
-        /// 话单记录
+        /// <p>话单记录</p>
         /// </summary>
         [JsonProperty("TelCdrList")]
         public TelCdrInfo[] TelCdrList{ get; set; }

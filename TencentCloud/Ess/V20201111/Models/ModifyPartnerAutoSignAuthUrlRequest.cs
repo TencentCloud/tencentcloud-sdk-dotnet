@@ -60,6 +60,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
 
+        /// <summary>
+        /// <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul>
+        /// </summary>
+        [JsonProperty("LimitAuthType")]
+        public ulong? LimitAuthType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
             this.SetParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+            this.SetParamSimple(map, prefix + "LimitAuthType", this.LimitAuthType);
         }
     }
 }

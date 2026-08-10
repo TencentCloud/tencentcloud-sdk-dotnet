@@ -25,22 +25,36 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 如果认证类型为sts时，该项必填
+        /// <p>如果认证类型为sts时，该项必填</p>
         /// </summary>
         [JsonProperty("STSSystem")]
         public string STSSystem{ get; set; }
 
         /// <summary>
-        /// 如果认证类型为sts时，该项必填
+        /// <p>如果认证类型为sts时，该项必填</p>
         /// </summary>
         [JsonProperty("STSService")]
         public string STSService{ get; set; }
 
         /// <summary>
-        /// 如果认证类型为reqKey时，该项必填
+        /// <p>如果认证类型为reqKey时，该项必填</p>
         /// </summary>
         [JsonProperty("Headers")]
         public AgentCredentialContentHeaderDTO[] Headers{ get; set; }
+
+        /// <summary>
+        /// <p>如果认证类型为apiKey时，该项必填</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiKeys")]
+        public AgentCredentialApiKeyDTO[] ApiKeys{ get; set; }
+
+        /// <summary>
+        /// <p>容错策略，仅Type为apiKey时支持</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FaultTolerance")]
+        public FaultToleranceDTO FaultTolerance{ get; set; }
 
 
         /// <summary>
@@ -51,6 +65,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "STSSystem", this.STSSystem);
             this.SetParamSimple(map, prefix + "STSService", this.STSService);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamArrayObj(map, prefix + "ApiKeys.", this.ApiKeys);
+            this.SetParamObj(map, prefix + "FaultTolerance.", this.FaultTolerance);
         }
     }
 }

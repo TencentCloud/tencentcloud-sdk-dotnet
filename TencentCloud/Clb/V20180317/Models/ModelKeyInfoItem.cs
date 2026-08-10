@@ -101,7 +101,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ServiceProviderName{ get; set; }
 
         /// <summary>
-        /// <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+        /// <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查配置</p>
+        /// </summary>
+        [JsonProperty("HealthCheckConfig")]
+        public ServiceProviderHealthCheckConfigOutput HealthCheckConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +161,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
         }
     }
 }

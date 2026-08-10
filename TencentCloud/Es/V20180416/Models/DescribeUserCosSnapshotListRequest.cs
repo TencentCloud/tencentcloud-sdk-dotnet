@@ -25,22 +25,28 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// cos桶名
+        /// <p>cos桶名</p>
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
         /// <summary>
-        /// bucket 桶下的备份路径
+        /// <p>bucket 桶下的备份路径</p>
         /// </summary>
         [JsonProperty("BasePath")]
         public string BasePath{ get; set; }
 
         /// <summary>
-        /// 云上集群迁移集群名
+        /// <p>云上集群迁移集群名</p>
         /// </summary>
         [JsonProperty("ClusterInstanceId")]
         public string ClusterInstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>es 集群仓库</p>
+        /// </summary>
+        [JsonProperty("PaasEsRepository")]
+        public string PaasEsRepository{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
             this.SetParamSimple(map, prefix + "ClusterInstanceId", this.ClusterInstanceId);
+            this.SetParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
         }
     }
 }
