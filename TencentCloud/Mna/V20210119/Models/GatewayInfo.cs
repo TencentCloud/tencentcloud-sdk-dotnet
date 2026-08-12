@@ -54,6 +54,36 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("InstanceSize")]
         public long? InstanceSize{ get; set; }
 
+        /// <summary>
+        /// <p>网关内网IP。</p>
+        /// </summary>
+        [JsonProperty("GatewayIp")]
+        public string GatewayIp{ get; set; }
+
+        /// <summary>
+        /// <p>用户名。</p>
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// <p>网关接入token。</p>
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
+        /// <p>网关注册URL。</p>
+        /// </summary>
+        [JsonProperty("RegisterCenterUrl")]
+        public string RegisterCenterUrl{ get; set; }
+
+        /// <summary>
+        /// <p>网关上报URL。</p>
+        /// </summary>
+        [JsonProperty("TelemetryUrl")]
+        public string TelemetryUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "InstanceSize", this.InstanceSize);
+            this.SetParamSimple(map, prefix + "GatewayIp", this.GatewayIp);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "RegisterCenterUrl", this.RegisterCenterUrl);
+            this.SetParamSimple(map, prefix + "TelemetryUrl", this.TelemetryUrl);
         }
     }
 }

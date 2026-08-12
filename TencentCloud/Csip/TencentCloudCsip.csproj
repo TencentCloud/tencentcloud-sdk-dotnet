@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1483</VersionPrefix>
+    <VersionPrefix>3.0.1484</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -93,8 +93,10 @@
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
+    <Compile Include="V20221121\Models\ClusterIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\CommandPluginState.cs" />
     <Compile Include="V20221121\Models\ComponentDetailItem.cs" />
+    <Compile Include="V20221121\Models\ConditionMatch.cs" />
     <Compile Include="V20221121\Models\ContainerEnvInfo.cs" />
     <Compile Include="V20221121\Models\CosAccessInfo.cs" />
     <Compile Include="V20221121\Models\CosActionInfo.cs" />
@@ -718,6 +720,7 @@
     <Compile Include="V20221121\Models\DspmWhitelistStrategy.cs" />
     <Compile Include="V20221121\Models\EDRFilter.cs" />
     <Compile Include="V20221121\Models\EDRRule.cs" />
+    <Compile Include="V20221121\Models\EDRRuleTagItem.cs" />
     <Compile Include="V20221121\Models\EdrAlertCategoryCount.cs" />
     <Compile Include="V20221121\Models\EdrAlertDetail.cs" />
     <Compile Include="V20221121\Models\EdrAlertItem.cs" />
@@ -741,6 +744,7 @@
     <Compile Include="V20221121\Models\IPIntelInfo.cs" />
     <Compile Include="V20221121\Models\IaCFile.cs" />
     <Compile Include="V20221121\Models\IaCFileRisk.cs" />
+    <Compile Include="V20221121\Models\ImageIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\InquireInfo.cs" />
     <Compile Include="V20221121\Models\InstanceIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />

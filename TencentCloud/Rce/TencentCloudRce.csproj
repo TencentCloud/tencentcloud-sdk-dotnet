@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1482</VersionPrefix>
+    <VersionPrefix>3.0.1484</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,10 @@
 
   <ItemGroup>
     <Compile Include="V20260130\RceClient.cs" />
+    <Compile Include="V20260130\Models\AddPromotionEvent.cs" />
+    <Compile Include="V20260130\Models\Address.cs" />
+    <Compile Include="V20260130\Models\Amount.cs" />
+    <Compile Include="V20260130\Models\App.cs" />
     <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProRequest.cs" />
     <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProResponse.cs" />
     <Compile Include="V20260130\Models\AssessDeviceRiskPremiumRsp.cs" />
@@ -57,13 +61,60 @@
     <Compile Include="V20260130\Models\AssessEnvironmentRiskRequest.cs" />
     <Compile Include="V20260130\Models\AssessEnvironmentRiskResponse.cs" />
     <Compile Include="V20260130\Models\AssessEnvironmentRiskRsp.cs" />
+    <Compile Include="V20260130\Models\AssessRiskRequest.cs" />
+    <Compile Include="V20260130\Models\AssessRiskResponse.cs" />
+    <Compile Include="V20260130\Models\AssessRiskRsp.cs" />
+    <Compile Include="V20260130\Models\Billing.cs" />
+    <Compile Include="V20260130\Models\BrowseEvent.cs" />
+    <Compile Include="V20260130\Models\Browser.cs" />
+    <Compile Include="V20260130\Models\Card.cs" />
+    <Compile Include="V20260130\Models\ChargeBackEvent.cs" />
+    <Compile Include="V20260130\Models\ClaimRedPacketEvent.cs" />
+    <Compile Include="V20260130\Models\Coupon.cs" />
+    <Compile Include="V20260130\Models\CreateOrderEvent.cs" />
+    <Compile Include="V20260130\Models\CreditPoint.cs" />
+    <Compile Include="V20260130\Models\Cust.cs" />
+    <Compile Include="V20260130\Models\CustEvent.cs" />
+    <Compile Include="V20260130\Models\DataAuthorization.cs" />
     <Compile Include="V20260130\Models\DataScore.cs" />
     <Compile Include="V20260130\Models\Decision.cs" />
+    <Compile Include="V20260130\Models\Delivery.cs" />
     <Compile Include="V20260130\Models\Device.cs" />
+    <Compile Include="V20260130\Models\DigitalOrder.cs" />
     <Compile Include="V20260130\Models\Environment.cs" />
+    <Compile Include="V20260130\Models\EventDetail.cs" />
     <Compile Include="V20260130\Models\IPLocation.cs" />
     <Compile Include="V20260130\Models\IPNetwork.cs" />
+    <Compile Include="V20260130\Models\InvitationEvent.cs" />
+    <Compile Include="V20260130\Models\Inviter.cs" />
+    <Compile Include="V20260130\Models\Item.cs" />
+    <Compile Include="V20260130\Models\LoginEvent.cs" />
+    <Compile Include="V20260130\Models\LogoutEvent.cs" />
+    <Compile Include="V20260130\Models\LuckyDrawEvent.cs" />
+    <Compile Include="V20260130\Models\Merchant.cs" />
+    <Compile Include="V20260130\Models\ModifyAccountEvent.cs" />
+    <Compile Include="V20260130\Models\ModifyPasswordEvent.cs" />
+    <Compile Include="V20260130\Models\Order.cs" />
+    <Compile Include="V20260130\Models\PaymentMethod.cs" />
+    <Compile Include="V20260130\Models\PaymentResult.cs" />
+    <Compile Include="V20260130\Models\Person.cs" />
+    <Compile Include="V20260130\Models\Promotion.cs" />
+    <Compile Include="V20260130\Models\PromotionCode.cs" />
+    <Compile Include="V20260130\Models\RedeemEvent.cs" />
+    <Compile Include="V20260130\Models\RegisterEvent.cs" />
+    <Compile Include="V20260130\Models\ReportEventRequest.cs" />
+    <Compile Include="V20260130\Models\ReportEventResponse.cs" />
+    <Compile Include="V20260130\Models\Result.cs" />
     <Compile Include="V20260130\Models\RiskLabel.cs" />
+    <Compile Include="V20260130\Models\SMSEvent.cs" />
+    <Compile Include="V20260130\Models\ScanCodeEvent.cs" />
+    <Compile Include="V20260130\Models\Score.cs" />
+    <Compile Include="V20260130\Models\SecurityVerificationEvent.cs" />
+    <Compile Include="V20260130\Models\TaskEvent.cs" />
+    <Compile Include="V20260130\Models\TransactionEvent.cs" />
+    <Compile Include="V20260130\Models\User.cs" />
+    <Compile Include="V20260130\Models\Wallet.cs" />
+    <Compile Include="V20260130\Models\WithdrawEvent.cs" />
     <Compile Include="V20201103\RceClient.cs" />
     <Compile Include="V20201103\Models\AccountInfo.cs" />
     <Compile Include="V20201103\Models\CreateNameListRequest.cs" />

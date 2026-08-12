@@ -186,6 +186,36 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ExcludeInstanceIDsWithAppId")]
         public InstanceIDWithAppIdItem[] ExcludeInstanceIDsWithAppId{ get; set; }
 
+        /// <summary>
+        /// <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+        /// </summary>
+        [JsonProperty("TagIDs")]
+        public string[] TagIDs{ get; set; }
+
+        /// <summary>
+        /// <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+        /// </summary>
+        [JsonProperty("ClusterIDsWithAppId")]
+        public ClusterIDWithAppIdItem[] ClusterIDsWithAppId{ get; set; }
+
+        /// <summary>
+        /// <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+        /// </summary>
+        [JsonProperty("ExcludeClusterIDsWithAppId")]
+        public ClusterIDWithAppIdItem[] ExcludeClusterIDsWithAppId{ get; set; }
+
+        /// <summary>
+        /// <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+        /// </summary>
+        [JsonProperty("ImageIDsWithAppId")]
+        public ImageIDWithAppIdItem[] ImageIDsWithAppId{ get; set; }
+
+        /// <summary>
+        /// <p>容器条件匹配</p>
+        /// </summary>
+        [JsonProperty("ConditionMatches")]
+        public ConditionMatch[] ConditionMatches{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +249,11 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamObj(map, prefix + "Target.", this.Target);
             this.SetParamArrayObj(map, prefix + "InstanceIDsWithAppId.", this.InstanceIDsWithAppId);
             this.SetParamArrayObj(map, prefix + "ExcludeInstanceIDsWithAppId.", this.ExcludeInstanceIDsWithAppId);
+            this.SetParamArraySimple(map, prefix + "TagIDs.", this.TagIDs);
+            this.SetParamArrayObj(map, prefix + "ClusterIDsWithAppId.", this.ClusterIDsWithAppId);
+            this.SetParamArrayObj(map, prefix + "ExcludeClusterIDsWithAppId.", this.ExcludeClusterIDsWithAppId);
+            this.SetParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
+            this.SetParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
         }
     }
 }

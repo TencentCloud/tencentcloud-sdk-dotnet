@@ -25,86 +25,92 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// Mysql数据源连接的属性
+        /// <p>Mysql数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mysql")]
         public MysqlInfo Mysql{ get; set; }
 
         /// <summary>
-        /// Hive数据源连接的属性
+        /// <p>Hive数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hive")]
         public HiveInfo Hive{ get; set; }
 
         /// <summary>
-        /// Kafka数据源连接的属性
+        /// <p>Kafka数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kafka")]
         public KafkaInfo Kafka{ get; set; }
 
         /// <summary>
-        /// 其他数据源连接的属性
+        /// <p>其他数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherDatasourceConnection")]
         public OtherDatasourceConnection OtherDatasourceConnection{ get; set; }
 
         /// <summary>
-        /// PostgreSQL数据源连接的属性
+        /// <p>PostgreSQL数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostgreSql")]
         public DataSourceInfo PostgreSql{ get; set; }
 
         /// <summary>
-        /// SQLServer数据源连接的属性
+        /// <p>SQLServer数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlServer")]
         public DataSourceInfo SqlServer{ get; set; }
 
         /// <summary>
-        /// ClickHouse数据源连接的属性
+        /// <p>ClickHouse数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClickHouse")]
         public DataSourceInfo ClickHouse{ get; set; }
 
         /// <summary>
-        /// Elasticsearch数据源连接的属性
+        /// <p>Elasticsearch数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Elasticsearch")]
         public ElasticsearchInfo Elasticsearch{ get; set; }
 
         /// <summary>
-        /// TDSQL-PostgreSQL数据源连接的属性
+        /// <p>TDSQL-PostgreSQL数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TDSQLPostgreSql")]
         public DataSourceInfo TDSQLPostgreSql{ get; set; }
 
         /// <summary>
-        /// Doris数据源连接的属性
+        /// <p>Doris数据源连接的属性</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TCHouseD")]
         public TCHouseD TCHouseD{ get; set; }
 
         /// <summary>
-        /// TccHive数据目录连接信息
+        /// <p>TccHive数据目录连接信息</p>
         /// </summary>
         [JsonProperty("TccHive")]
         public TccHive TccHive{ get; set; }
 
         /// <summary>
-        /// MongoDB 数据源
+        /// <p>MongoDB 数据源</p>
         /// </summary>
         [JsonProperty("MongoDB")]
         public DataSourceInfo MongoDB{ get; set; }
+
+        /// <summary>
+        /// <p>TCHouseP数据源</p>
+        /// </summary>
+        [JsonProperty("TCHouseP")]
+        public TCHousePInfo TCHouseP{ get; set; }
 
 
         /// <summary>
@@ -124,6 +130,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
             this.SetParamObj(map, prefix + "TccHive.", this.TccHive);
             this.SetParamObj(map, prefix + "MongoDB.", this.MongoDB);
+            this.SetParamObj(map, prefix + "TCHouseP.", this.TCHouseP);
         }
     }
 }

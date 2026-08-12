@@ -25,30 +25,36 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// cfs的实例的ID
+        /// <p>cfs的实例的ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 存储的路径
+        /// <p>存储的路径</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+        /// <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountType")]
         public string MountType{ get; set; }
 
         /// <summary>
-        /// 协议 1: NFS, 2: TURBO
+        /// <p>协议 1: NFS, 2: TURBO</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
+
+        /// <summary>
+        /// <p>是否平台预置存储</p>
+        /// </summary>
+        [JsonProperty("IsPresetStorage")]
+        public bool? IsPresetStorage{ get; set; }
 
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "MountType", this.MountType);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "IsPresetStorage", this.IsPresetStorage);
         }
     }
 }

@@ -25,364 +25,389 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 服务实例ID，如bh-saas-s3ed4r5e
+        /// <p>服务实例ID，如bh-saas-s3ed4r5e</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 地域编码
+        /// <p>地域编码</p>
         /// </summary>
         [JsonProperty("ApCode")]
         public string ApCode{ get; set; }
 
         /// <summary>
-        /// 服务实例规格信息
+        /// <p>服务实例规格信息</p>
         /// </summary>
         [JsonProperty("SvArgs")]
         public string SvArgs{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 服务规格对应的资产数
+        /// <p>服务规格对应的资产数</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public ulong? Nodes{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+        /// <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+        /// <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 服务实例名，如T-Sec-堡垒机（SaaS型）
+        /// <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 定价模型ID
+        /// <p>定价模型ID</p>
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
 
         /// <summary>
-        /// 资源创建时间
+        /// <p>资源创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 商品码, p_cds_dasb
+        /// <p>商品码, p_cds_dasb</p>
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 子商品码, sp_cds_dasb_bh_saas
+        /// <p>子商品码, sp_cds_dasb_bh_saas</p>
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 是否过期，true-过期，false-未过期
+        /// <p>是否过期，true-过期，false-未过期</p>
         /// </summary>
         [JsonProperty("Expired")]
         public bool? Expired{ get; set; }
 
         /// <summary>
-        /// 是否开通，true-开通，false-未开通
+        /// <p>是否开通，true-开通，false-未开通</p>
         /// </summary>
         [JsonProperty("Deployed")]
         public bool? Deployed{ get; set; }
 
         /// <summary>
-        /// 开通服务的 VPC 名称
+        /// <p>开通服务的 VPC 名称</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 开通服务的 VPC 对应的网段
+        /// <p>开通服务的 VPC 对应的网段</p>
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
-        /// 开通服务的子网ID
+        /// <p>开通服务的子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 开通服务的子网名称
+        /// <p>开通服务的子网名称</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 开通服务的子网网段
+        /// <p>开通服务的子网网段</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 外部IP
+        /// <p>外部IP</p>
         /// </summary>
         [JsonProperty("PublicIpSet")]
         public string[] PublicIpSet{ get; set; }
 
         /// <summary>
-        /// 内部IP
+        /// <p>内部IP</p>
         /// </summary>
         [JsonProperty("PrivateIpSet")]
         public string[] PrivateIpSet{ get; set; }
 
         /// <summary>
-        /// 服务开通的高级功能列表，如:[DB]
+        /// <p>服务开通的高级功能列表，如:[DB]</p>
         /// </summary>
         [JsonProperty("ModuleSet")]
         public string[] ModuleSet{ get; set; }
 
         /// <summary>
-        /// 已使用的授权点数
+        /// <p>已使用的授权点数</p>
         /// </summary>
         [JsonProperty("UsedNodes")]
         public ulong? UsedNodes{ get; set; }
 
         /// <summary>
-        /// 扩展点数
+        /// <p>扩展点数</p>
         /// </summary>
         [JsonProperty("ExtendPoints")]
         public ulong? ExtendPoints{ get; set; }
 
         /// <summary>
-        /// 带宽扩展包个数(4M)
+        /// <p>带宽扩展包个数(4M)</p>
         /// </summary>
         [JsonProperty("PackageBandwidth")]
         public ulong? PackageBandwidth{ get; set; }
 
         /// <summary>
-        /// 授权点数扩展包个数(50点)
+        /// <p>授权点数扩展包个数(50点)</p>
         /// </summary>
         [JsonProperty("PackageNode")]
         public ulong? PackageNode{ get; set; }
 
         /// <summary>
-        /// 日志投递规格信息
+        /// <p>日志投递规格信息</p>
         /// </summary>
         [JsonProperty("LogDeliveryArgs")]
         public string LogDeliveryArgs{ get; set; }
 
         /// <summary>
-        /// 堡垒机资源LB	
+        /// <p>堡垒机资源LB</p>
         /// </summary>
         [JsonProperty("ClbSet")]
         public Clb[] ClbSet{ get; set; }
 
         /// <summary>
-        /// 网络域个数
+        /// <p>网络域个数</p>
         /// </summary>
         [JsonProperty("DomainCount")]
         public ulong? DomainCount{ get; set; }
 
         /// <summary>
-        /// 已经使用的网络域个数
+        /// <p>已经使用的网络域个数</p>
         /// </summary>
         [JsonProperty("UsedDomainCount")]
         public ulong? UsedDomainCount{ get; set; }
 
         /// <summary>
-        /// 0 非试用版，1 试用版
+        /// <p>开启的网络域个数（不包含默认网络域）</p>
+        /// </summary>
+        [JsonProperty("EnabledDomainCount")]
+        public ulong? EnabledDomainCount{ get; set; }
+
+        /// <summary>
+        /// <p>0 非试用版，1 试用版</p>
         /// </summary>
         [JsonProperty("Trial")]
         public ulong? Trial{ get; set; }
 
         /// <summary>
-        /// 日志投递规格信息
+        /// <p>日志投递规格信息</p>
         /// </summary>
         [JsonProperty("LogDelivery")]
         public string LogDelivery{ get; set; }
 
         /// <summary>
-        /// cdc集群id
+        /// <p>cdc集群id</p>
         /// </summary>
         [JsonProperty("CdcClusterId")]
         public string CdcClusterId{ get; set; }
 
         /// <summary>
-        /// 部署模式 默认0 0-cvm 1-tke
+        /// <p>部署模式 默认0 0-cvm 1-tke</p>
         /// </summary>
         [JsonProperty("DeployModel")]
         public ulong? DeployModel{ get; set; }
 
         /// <summary>
-        /// 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+        /// <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
         /// </summary>
         [JsonProperty("IntranetAccess")]
         public ulong? IntranetAccess{ get; set; }
 
         /// <summary>
-        /// 内网访问的ip
+        /// <p>内网访问的ip</p>
         /// </summary>
         [JsonProperty("IntranetPrivateIpSet")]
         public string[] IntranetPrivateIpSet{ get; set; }
 
         /// <summary>
-        /// 开通内网访问的vpc
+        /// <p>开通内网访问的vpc</p>
         /// </summary>
         [JsonProperty("IntranetVpcId")]
         public string IntranetVpcId{ get; set; }
 
         /// <summary>
-        /// 开通内网访问的subnetId
+        /// <p>开通内网访问的subnetId</p>
         /// </summary>
         [JsonProperty("IntranetSubnetId")]
+        [System.Obsolete]
         public string IntranetSubnetId{ get; set; }
 
         /// <summary>
-        /// 开通内网访问vpc的网段
+        /// <p>开通内网访问的子网集合</p>
+        /// </summary>
+        [JsonProperty("IntranetSubnetIdSet")]
+        public string[] IntranetSubnetIdSet{ get; set; }
+
+        /// <summary>
+        /// <p>开通内网访问vpc的网段</p>
         /// </summary>
         [JsonProperty("IntranetVpcCidr")]
         public string IntranetVpcCidr{ get; set; }
 
         /// <summary>
-        /// 堡垒机内网ip自定义域名
+        /// <p>堡垒机内网ip自定义域名</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 是否共享clb，true-共享clb，false-独享clb
+        /// <p>是否共享clb，true-共享clb，false-独享clb</p>
         /// </summary>
         [JsonProperty("ShareClb")]
         public bool? ShareClb{ get; set; }
 
         /// <summary>
-        /// 共享clb id
+        /// <p>共享clb id</p>
         /// </summary>
         [JsonProperty("OpenClbId")]
         public string OpenClbId{ get; set; }
 
         /// <summary>
-        /// 运营商信息
+        /// <p>运营商信息</p>
         /// </summary>
         [JsonProperty("LbVipIsp")]
         public string LbVipIsp{ get; set; }
 
         /// <summary>
-        /// linux资产命令行运维端口
+        /// <p>linux资产命令行运维端口</p>
         /// </summary>
         [JsonProperty("TUICmdPort")]
         public long? TUICmdPort{ get; set; }
 
         /// <summary>
-        /// linux资产直连端口
+        /// <p>linux资产直连端口</p>
         /// </summary>
         [JsonProperty("TUIDirectPort")]
         public long? TUIDirectPort{ get; set; }
 
         /// <summary>
-        /// 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+        /// <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
         /// </summary>
         [JsonProperty("WebAccess")]
         public ulong? WebAccess{ get; set; }
 
         /// <summary>
-        /// 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+        /// <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
         /// </summary>
         [JsonProperty("ClientAccess")]
         public ulong? ClientAccess{ get; set; }
 
         /// <summary>
-        /// 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+        /// <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
         /// </summary>
         [JsonProperty("ExternalAccess")]
         public ulong? ExternalAccess{ get; set; }
 
         /// <summary>
-        /// 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+        /// <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
         /// </summary>
         [JsonProperty("IOAResource")]
         public ulong? IOAResource{ get; set; }
 
         /// <summary>
-        /// 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+        /// <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
         /// </summary>
         [JsonProperty("PackageIOAUserCount")]
         public ulong? PackageIOAUserCount{ get; set; }
 
         /// <summary>
-        ///  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+        /// <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
         /// </summary>
         [JsonProperty("PackageIOABandwidth")]
         public ulong? PackageIOABandwidth{ get; set; }
 
         /// <summary>
-        /// 堡垒机实例对应的零信任实例id
+        /// <p>堡垒机实例对应的零信任实例id</p>
         /// </summary>
         [JsonProperty("IOAResourceId")]
         public string IOAResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+        /// <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
         /// </summary>
         [JsonProperty("ResourceEdition")]
         public string ResourceEdition{ get; set; }
 
         /// <summary>
-        /// 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+        /// <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 计费时长
+        /// <p>计费时长</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 计费模式 0后付费，1预付费
+        /// <p>计费模式 0后付费，1预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 计费侧地域
+        /// <p>计费侧地域</p>
         /// </summary>
         [JsonProperty("BillingRegion")]
         public string BillingRegion{ get; set; }
 
         /// <summary>
-        /// 计费侧可用区
+        /// <p>计费侧可用区</p>
         /// </summary>
         [JsonProperty("BillingZone")]
         public string BillingZone{ get; set; }
+
+        /// <summary>
+        /// <p>部署的cvm个数</p>
+        /// </summary>
+        [JsonProperty("DeployCvmCount")]
+        public ulong? DeployCvmCount{ get; set; }
+
+        /// <summary>
+        /// <p>堡垒机实例的可用区信息</p>
+        /// </summary>
+        [JsonProperty("ResourceZoneSet")]
+        public ResourceDeployZone[] ResourceZoneSet{ get; set; }
 
 
         /// <summary>
@@ -422,6 +447,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
             this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
             this.SetParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
+            this.SetParamSimple(map, prefix + "EnabledDomainCount", this.EnabledDomainCount);
             this.SetParamSimple(map, prefix + "Trial", this.Trial);
             this.SetParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
             this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
@@ -430,6 +456,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
             this.SetParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
             this.SetParamSimple(map, prefix + "IntranetSubnetId", this.IntranetSubnetId);
+            this.SetParamArraySimple(map, prefix + "IntranetSubnetIdSet.", this.IntranetSubnetIdSet);
             this.SetParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "ShareClb", this.ShareClb);
@@ -450,6 +477,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "BillingRegion", this.BillingRegion);
             this.SetParamSimple(map, prefix + "BillingZone", this.BillingZone);
+            this.SetParamSimple(map, prefix + "DeployCvmCount", this.DeployCvmCount);
+            this.SetParamArrayObj(map, prefix + "ResourceZoneSet.", this.ResourceZoneSet);
         }
     }
 }

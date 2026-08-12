@@ -25,46 +25,52 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 手机
+        /// <p>手机</p>
         /// </summary>
         [JsonProperty("Phone")]
         public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 硬token
+        /// <p>硬token</p>
         /// </summary>
         [JsonProperty("Token")]
         public ulong? Token{ get; set; }
 
         /// <summary>
-        /// 软token
+        /// <p>软token</p>
         /// </summary>
         [JsonProperty("Stoken")]
         public ulong? Stoken{ get; set; }
 
         /// <summary>
-        /// 微信
+        /// <p>微信</p>
         /// </summary>
         [JsonProperty("Wechat")]
         public ulong? Wechat{ get; set; }
 
         /// <summary>
-        /// 自定义
+        /// <p>自定义</p>
         /// </summary>
         [JsonProperty("Custom")]
         public ulong? Custom{ get; set; }
 
         /// <summary>
-        /// 邮件
+        /// <p>邮件</p>
         /// </summary>
         [JsonProperty("Mail")]
         public ulong? Mail{ get; set; }
 
         /// <summary>
-        /// u2f硬件token
+        /// <p>u2f硬件token</p>
         /// </summary>
         [JsonProperty("U2FToken")]
         public ulong? U2FToken{ get; set; }
+
+        /// <summary>
+        /// <p>passkey通行密钥</p>
+        /// </summary>
+        [JsonProperty("Passkey")]
+        public ulong? Passkey{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Custom", this.Custom);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
             this.SetParamSimple(map, prefix + "U2FToken", this.U2FToken);
+            this.SetParamSimple(map, prefix + "Passkey", this.Passkey);
         }
     }
 }

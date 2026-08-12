@@ -61,6 +61,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public InferenceResourceConfigForModify ResourceConfig{ get; set; }
 
         /// <summary>
+        /// <p>推理服务亲和性配置</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
+
+        /// <summary>
         /// <p>描述信息。长度限制不超过 60 个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

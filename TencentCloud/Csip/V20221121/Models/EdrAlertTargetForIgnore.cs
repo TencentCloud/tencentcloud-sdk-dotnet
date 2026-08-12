@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>告警主键ID</p>
+        /// 告警主键ID
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// <p>告警所属账号ID（跨账号，前端必传）</p>
+        /// 告警所属账号ID（跨账号，前端必传）
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// <p>告警唯一标识</p>
+        /// 告警唯一标识
         /// </summary>
         [JsonProperty("AlertId")]
         public string AlertId{ get; set; }
 
         /// <summary>
-        /// <p>主机UUID（可选）</p>
+        /// 主机UUID（可选）
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// <p>实例ID（可选，用于白名单写入）</p>
+        /// 实例ID（可选，用于白名单删除）
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

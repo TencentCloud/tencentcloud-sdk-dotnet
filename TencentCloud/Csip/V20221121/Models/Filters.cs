@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
+        /// 过滤条件名称。取值：Status（执行结果，Values: SUCCESS/FAILED/USER_CANCELED/CHECKING）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

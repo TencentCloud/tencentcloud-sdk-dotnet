@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1442";
+       private const string sdkVersion = "SDK_NET_3.0.1484";
 
         /// <summary>
         /// Client constructor.
@@ -2385,6 +2385,27 @@ namespace TencentCloud.Tcr.V20190924
         public ModifyNamespaceResponse ModifyNamespaceSync(ModifyNamespaceRequest req)
         {
             return InternalRequestAsync<ModifyNamespaceResponse>(req, "ModifyNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实例同步规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReplicationRequest"/></param>
+        /// <returns><see cref="ModifyReplicationResponse"/></returns>
+        public Task<ModifyReplicationResponse> ModifyReplication(ModifyReplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyReplicationResponse>(req, "ModifyReplication");
+        }
+
+        /// <summary>
+        /// 修改实例同步规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReplicationRequest"/></param>
+        /// <returns><see cref="ModifyReplicationResponse"/></returns>
+        public ModifyReplicationResponse ModifyReplicationSync(ModifyReplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyReplicationResponse>(req, "ModifyReplication")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

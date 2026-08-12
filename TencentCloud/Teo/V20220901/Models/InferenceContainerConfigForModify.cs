@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
+        /// <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
         /// <summary>
-        /// TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+        /// <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
         /// </summary>
         [JsonProperty("TcrRepositoryConfig")]
         public InferenceTCRRepositoryConfig TcrRepositoryConfig{ get; set; }
 
         /// <summary>
-        /// 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
+        /// <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
         /// </summary>
         [JsonProperty("StartupCommand")]
         public string StartupCommand{ get; set; }
 
         /// <summary>
-        /// 容器运行时的环境变量。最多支持 10 个变量。
+        /// <p>容器运行时的环境变量。最多支持 10 个变量。</p>
         /// </summary>
         [JsonProperty("EnvironmentVariables")]
         public InferenceEnvironmentVariable[] EnvironmentVariables{ get; set; }

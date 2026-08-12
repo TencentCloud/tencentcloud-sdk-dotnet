@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{607A948B-9C3B-32A9-841D-D5BA33C03322}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1481</VersionPrefix>
+    <VersionPrefix>3.0.1484</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,8 @@
     <Compile Include="V20220802\Models\DeleteAggregateCompliancePackResponse.cs" />
     <Compile Include="V20220802\Models\DeleteAggregateConfigRuleRequest.cs" />
     <Compile Include="V20220802\Models\DeleteAggregateConfigRuleResponse.cs" />
+    <Compile Include="V20220802\Models\DeleteAggregatorsRequest.cs" />
+    <Compile Include="V20220802\Models\DeleteAggregatorsResponse.cs" />
     <Compile Include="V20220802\Models\DeleteAlarmPolicyRequest.cs" />
     <Compile Include="V20220802\Models\DeleteAlarmPolicyResponse.cs" />
     <Compile Include="V20220802\Models\DeleteCompliancePackRequest.cs" />
@@ -192,6 +194,8 @@
     <Compile Include="V20220802\Models\UpdateAggregateConfigDeliverResponse.cs" />
     <Compile Include="V20220802\Models\UpdateAggregateConfigRuleRequest.cs" />
     <Compile Include="V20220802\Models\UpdateAggregateConfigRuleResponse.cs" />
+    <Compile Include="V20220802\Models\UpdateAggregatorRequest.cs" />
+    <Compile Include="V20220802\Models\UpdateAggregatorResponse.cs" />
     <Compile Include="V20220802\Models\UpdateAlarmPolicyRequest.cs" />
     <Compile Include="V20220802\Models\UpdateAlarmPolicyResponse.cs" />
     <Compile Include="V20220802\Models\UpdateCompliancePackRequest.cs" />

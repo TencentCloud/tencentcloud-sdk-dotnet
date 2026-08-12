@@ -312,6 +312,66 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("NetSvcPs")]
         public string NetSvcPs{ get; set; }
 
+        /// <summary>
+        /// <p>容器名称</p>
+        /// </summary>
+        [JsonProperty("ContainerName")]
+        public string ContainerName{ get; set; }
+
+        /// <summary>
+        /// <p>容器镜像名称</p>
+        /// </summary>
+        [JsonProperty("ImageName")]
+        public string ImageName{ get; set; }
+
+        /// <summary>
+        /// <p>集群名称</p>
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+        /// </summary>
+        [JsonProperty("RunStatus")]
+        public string RunStatus{ get; set; }
+
+        /// <summary>
+        /// <p>POD 名称</p>
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// <p>POD IP</p>
+        /// </summary>
+        [JsonProperty("PodIp")]
+        public string PodIp{ get; set; }
+
+        /// <summary>
+        /// <p>命名空间</p>
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// <p>POD 负载类型</p>
+        /// </summary>
+        [JsonProperty("PodWorkloadType")]
+        public string PodWorkloadType{ get; set; }
+
+        /// <summary>
+        /// <p>集群 ca 证书 md5</p>
+        /// </summary>
+        [JsonProperty("ClusterCaMD5")]
+        public string ClusterCaMD5{ get; set; }
+
+        /// <summary>
+        /// <p>POD 唯一 id</p>
+        /// </summary>
+        [JsonProperty("PodUniqueId")]
+        public string PodUniqueId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +426,16 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "VirusFamily", this.VirusFamily);
             this.SetParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
             this.SetParamSimple(map, prefix + "NetSvcPs", this.NetSvcPs);
+            this.SetParamSimple(map, prefix + "ContainerName", this.ContainerName);
+            this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "RunStatus", this.RunStatus);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodIp", this.PodIp);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "PodWorkloadType", this.PodWorkloadType);
+            this.SetParamSimple(map, prefix + "ClusterCaMD5", this.ClusterCaMD5);
+            this.SetParamSimple(map, prefix + "PodUniqueId", this.PodUniqueId);
         }
     }
 }

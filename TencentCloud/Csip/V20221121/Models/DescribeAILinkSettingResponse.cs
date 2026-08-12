@@ -58,12 +58,14 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <p>自选主机Quuid列表</p>
         /// </summary>
         [JsonProperty("Quuids")]
+        [System.Obsolete]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// <p>排除主机Quuid列表</p>
         /// </summary>
         [JsonProperty("ExcludeQuuids")]
+        [System.Obsolete]
         public string[] ExcludeQuuids{ get; set; }
 
         /// <summary>
@@ -71,6 +73,42 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         [JsonProperty("AutoInclude")]
         public ulong? AutoInclude{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("TagIDs")]
+        public string[] TagIDs{ get; set; }
+
+        /// <summary>
+        /// <p>0，1</p><p>枚举值：</p><ul><li>0： 部分</li><li>1： 全部</li></ul>
+        /// </summary>
+        [JsonProperty("TCSSScope")]
+        public ulong? TCSSScope{ get; set; }
+
+        /// <summary>
+        /// <p>集群ID</p>
+        /// </summary>
+        [JsonProperty("ClusterIDs")]
+        public string[] ClusterIDs{ get; set; }
+
+        /// <summary>
+        /// <p>排除集群ID</p>
+        /// </summary>
+        [JsonProperty("ExcludeClusterIDs")]
+        public string[] ExcludeClusterIDs{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// <p>排除实例ID</p>
+        /// </summary>
+        [JsonProperty("ExcludeInstanceIds")]
+        public string[] ExcludeInstanceIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +130,12 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
             this.SetParamArraySimple(map, prefix + "ExcludeQuuids.", this.ExcludeQuuids);
             this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+            this.SetParamArraySimple(map, prefix + "TagIDs.", this.TagIDs);
+            this.SetParamSimple(map, prefix + "TCSSScope", this.TCSSScope);
+            this.SetParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
+            this.SetParamArraySimple(map, prefix + "ExcludeClusterIDs.", this.ExcludeClusterIDs);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

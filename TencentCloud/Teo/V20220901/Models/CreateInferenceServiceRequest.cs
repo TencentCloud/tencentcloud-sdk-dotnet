@@ -55,6 +55,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public InferenceResourceConfig ResourceConfig{ get; set; }
 
         /// <summary>
+        /// <p>推理服务亲和性配置。</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
+
+        /// <summary>
         /// <p>推理服务的请求路径列表。最多支持 20 个路径。</p>
         /// </summary>
         [JsonProperty("RequestPaths")]
@@ -77,6 +83,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ListenPort", this.ListenPort);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }

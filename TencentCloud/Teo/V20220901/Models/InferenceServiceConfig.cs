@@ -25,28 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 模型服务需要监听的端口。
+        /// <p>模型服务需要监听的端口。</p>
         /// </summary>
         [JsonProperty("ListenPort")]
         public long? ListenPort{ get; set; }
 
         /// <summary>
-        /// 推理服务的请求路径列表。
+        /// <p>推理服务的请求路径列表。</p>
         /// </summary>
         [JsonProperty("RequestPaths")]
         public string[] RequestPaths{ get; set; }
 
         /// <summary>
-        /// 推理服务的容器配置。
+        /// <p>推理服务的容器配置。</p>
         /// </summary>
         [JsonProperty("Containers")]
         public InferenceContainerConfig[] Containers{ get; set; }
 
         /// <summary>
-        /// 推理服务的资源配置。
+        /// <p>推理服务的资源配置。</p>
         /// </summary>
         [JsonProperty("ResourceConfig")]
         public InferenceResourceConfig ResourceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>推理服务亲和性配置。</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         }
     }
 }

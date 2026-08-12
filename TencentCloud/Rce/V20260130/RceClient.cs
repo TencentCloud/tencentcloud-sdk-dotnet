@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1482";
+       private const string sdkVersion = "SDK_NET_3.0.1484";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,48 @@ namespace TencentCloud.Rce.V20260130
         public AssessEnvironmentRiskResponse AssessEnvironmentRiskSync(AssessEnvironmentRiskRequest req)
         {
             return InternalRequestAsync<AssessEnvironmentRiskResponse>(req, "AssessEnvironmentRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 事件风险评估
+        /// </summary>
+        /// <param name="req"><see cref="AssessRiskRequest"/></param>
+        /// <returns><see cref="AssessRiskResponse"/></returns>
+        public Task<AssessRiskResponse> AssessRisk(AssessRiskRequest req)
+        {
+            return InternalRequestAsync<AssessRiskResponse>(req, "AssessRisk");
+        }
+
+        /// <summary>
+        /// 事件风险评估
+        /// </summary>
+        /// <param name="req"><see cref="AssessRiskRequest"/></param>
+        /// <returns><see cref="AssessRiskResponse"/></returns>
+        public AssessRiskResponse AssessRiskSync(AssessRiskRequest req)
+        {
+            return InternalRequestAsync<AssessRiskResponse>(req, "AssessRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 事件信息上报
+        /// </summary>
+        /// <param name="req"><see cref="ReportEventRequest"/></param>
+        /// <returns><see cref="ReportEventResponse"/></returns>
+        public Task<ReportEventResponse> ReportEvent(ReportEventRequest req)
+        {
+            return InternalRequestAsync<ReportEventResponse>(req, "ReportEvent");
+        }
+
+        /// <summary>
+        /// 事件信息上报
+        /// </summary>
+        /// <param name="req"><see cref="ReportEventRequest"/></param>
+        /// <returns><see cref="ReportEventResponse"/></returns>
+        public ReportEventResponse ReportEventSync(ReportEventRequest req)
+        {
+            return InternalRequestAsync<ReportEventResponse>(req, "ReportEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

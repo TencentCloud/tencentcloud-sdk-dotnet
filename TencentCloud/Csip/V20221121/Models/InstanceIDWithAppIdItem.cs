@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>APPID</p>
+        /// 机器所属AppId
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// <p>实例ID</p>
+        /// 机器实例ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

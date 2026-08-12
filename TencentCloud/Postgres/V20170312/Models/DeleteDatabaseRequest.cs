@@ -24,12 +24,26 @@ namespace TencentCloud.Postgres.V20170312.Models
     public class DeleteDatabaseRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+        /// </summary>
+        [JsonProperty("DBInstanceId")]
+        public string DBInstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>数据库名称</p>
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         }
     }
 }

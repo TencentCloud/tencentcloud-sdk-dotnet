@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1437";
+       private const string sdkVersion = "SDK_NET_3.0.1484";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Tcbr.V20220217
         public StopVersionInstanceResponse StopVersionInstanceSync(StopVersionInstanceRequest req)
         {
             return InternalRequestAsync<StopVersionInstanceResponse>(req, "StopVersionInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新配置并使用最新镜像发布
+        /// </summary>
+        /// <param name="req"><see cref="SubmitServerConfigChangeDiffRequest"/></param>
+        /// <returns><see cref="SubmitServerConfigChangeDiffResponse"/></returns>
+        public Task<SubmitServerConfigChangeDiffResponse> SubmitServerConfigChangeDiff(SubmitServerConfigChangeDiffRequest req)
+        {
+            return InternalRequestAsync<SubmitServerConfigChangeDiffResponse>(req, "SubmitServerConfigChangeDiff");
+        }
+
+        /// <summary>
+        /// 更新配置并使用最新镜像发布
+        /// </summary>
+        /// <param name="req"><see cref="SubmitServerConfigChangeDiffRequest"/></param>
+        /// <returns><see cref="SubmitServerConfigChangeDiffResponse"/></returns>
+        public SubmitServerConfigChangeDiffResponse SubmitServerConfigChangeDiffSync(SubmitServerConfigChangeDiffRequest req)
+        {
+            return InternalRequestAsync<SubmitServerConfigChangeDiffResponse>(req, "SubmitServerConfigChangeDiff")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

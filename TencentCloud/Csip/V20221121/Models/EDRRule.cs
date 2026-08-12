@@ -222,6 +222,30 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ExcludeInstanceIDs")]
         public string[] ExcludeInstanceIDs{ get; set; }
 
+        /// <summary>
+        /// <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+        /// </summary>
+        [JsonProperty("ClusterIDs")]
+        public string[] ClusterIDs{ get; set; }
+
+        /// <summary>
+        /// <p>排除集群ID列表（空返回 []）</p>
+        /// </summary>
+        [JsonProperty("ExcludeClusterIDs")]
+        public string[] ExcludeClusterIDs{ get; set; }
+
+        /// <summary>
+        /// <p>容器条件匹配</p>
+        /// </summary>
+        [JsonProperty("ConditionMatches")]
+        public ConditionMatch[] ConditionMatches{ get; set; }
+
+        /// <summary>
+        /// <p>安全中心标签</p>
+        /// </summary>
+        [JsonProperty("TagItems")]
+        public EDRRuleTagItem[] TagItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +285,10 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamArraySimple(map, prefix + "InstanceIDs.", this.InstanceIDs);
             this.SetParamArraySimple(map, prefix + "ExcludeInstanceIDs.", this.ExcludeInstanceIDs);
+            this.SetParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
+            this.SetParamArraySimple(map, prefix + "ExcludeClusterIDs.", this.ExcludeClusterIDs);
+            this.SetParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
+            this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         }
     }
 }

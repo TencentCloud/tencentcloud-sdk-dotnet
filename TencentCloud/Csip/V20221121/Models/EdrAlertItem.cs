@@ -115,6 +115,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AlertSource{ get; set; }
 
         /// <summary>
+        /// <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
         /// <p>镜像ID</p>
         /// </summary>
         [JsonProperty("ImageId")]
@@ -186,6 +192,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RaspOpen")]
         public bool? RaspOpen{ get; set; }
 
+        /// <summary>
+        /// <p>容器名称</p>
+        /// </summary>
+        [JsonProperty("ContainerName")]
+        public string ContainerName{ get; set; }
+
+        /// <summary>
+        /// <p>容器镜像名称</p>
+        /// </summary>
+        [JsonProperty("ImageName")]
+        public string ImageName{ get; set; }
+
+        /// <summary>
+        /// <p>集群名称</p>
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +231,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
             this.SetParamSimple(map, prefix + "AlertSource", this.AlertSource);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ContainerId", this.ContainerId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
@@ -219,6 +244,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
             this.SetParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+            this.SetParamSimple(map, prefix + "ContainerName", this.ContainerName);
+            this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

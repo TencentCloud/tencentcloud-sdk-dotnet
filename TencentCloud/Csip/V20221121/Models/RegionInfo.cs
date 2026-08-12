@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>地域</p>
+        /// 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>地域编码</p>
-        /// </summary>
-        [JsonProperty("RegionCode")]
-        public string RegionCode{ get; set; }
-
-        /// <summary>
-        /// <p>地域ID</p>
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public ulong? RegionId{ get; set; }
-
-        /// <summary>
-        /// <p>地域名称</p>
+        /// 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// <p>地域英文名称</p>
+        /// 地域数字 ID。
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// 地域简码，如 gz、sh、bj。
+        /// </summary>
+        [JsonProperty("RegionCode")]
+        public string RegionCode{ get; set; }
+
+        /// <summary>
+        /// 地域英文名。
         /// </summary>
         [JsonProperty("RegionNameEn")]
         public string RegionNameEn{ get; set; }
@@ -61,9 +61,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
             this.SetParamSimple(map, prefix + "RegionNameEn", this.RegionNameEn);
         }
     }

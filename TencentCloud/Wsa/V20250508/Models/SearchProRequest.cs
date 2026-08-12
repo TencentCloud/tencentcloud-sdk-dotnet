@@ -43,13 +43,13 @@ namespace TencentCloud.Wsa.V20250508.Models
         public string Site{ get; set; }
 
         /// <summary>
-        /// <p>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+        /// <p><strong>该参数将于2026.8.17日正式下线</strong><br>起始时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
         /// </summary>
         [JsonProperty("FromTime")]
         public long? FromTime{ get; set; }
 
         /// <summary>
-        /// <p>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
+        /// <p><strong>该参数将于2026.8.17日正式下线</strong><br>结束时间（用于过滤自然检索结果），精确到秒时间戳格式<br>注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效</p>
         /// </summary>
         [JsonProperty("ToTime")]
         public long? ToTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Wsa.V20250508.Models
         public string Industry{ get; set; }
 
         /// <summary>
-        /// <p>搜索实效范围（仅旗舰版参数）</p><ul><li>d[N]：最近N天，N取值1-30整数。</li><li>m[N]：最近N月，N取值1-12整数。</li><li>y[N]：最近N年，N取值1-5整数。</li></ul><p>示例说明：</p><ul><li>d1/m1/y1：当天/当月/当年。<br>例如，2026.6.15分别传参d1/m1/y1进行搜索，则搜索结果的时间范围分别为“2026.6.15”/“2026.6”/“2026”，以此类推。</li><li>d/m/y：N值为空时，默认N=1，即等效入参d1/m1/y1。</li><li>未传参时，默认不生效。</li></ul><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>d： 当天</li><li>m： 当月</li><li>y： 当年</li></ul>
+        /// <p>搜索时效范围（仅旗舰版参数）</p><ul><li><p>d[N]：最近N天，N取值1-30整数。</p></li><li><p>m[N]：最近N月，N取值1-12整数。</p></li><li><p>y[N]：最近N年，N取值1-5整数。</p></li></ul><p>示例说明：</p><ul><li><p>d1/m1/y1：当天/当月/当年。<br>例如，2026.6.15分别传参d1/m1/y1进行搜索，则搜索结果的时间范围分别为“2026.6.15”/“2026.6”/“2026”，以此类推。</p></li><li><p>d/m/y：N值为空时，默认N=1，即等效入参d1/m1/y1。</p></li><li><p>未传参时，默认不生效。</p></li></ul><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>d： 当天</li><li>m： 当月</li><li>y： 当年</li></ul>
         /// </summary>
         [JsonProperty("Freshness")]
         public string Freshness{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1481";
+       private const string sdkVersion = "SDK_NET_3.0.1484";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Config.V20220802
         public DeleteAggregateConfigRuleResponse DeleteAggregateConfigRuleSync(DeleteAggregateConfigRuleRequest req)
         {
             return InternalRequestAsync<DeleteAggregateConfigRuleResponse>(req, "DeleteAggregateConfigRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除账号组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAggregatorsRequest"/></param>
+        /// <returns><see cref="DeleteAggregatorsResponse"/></returns>
+        public Task<DeleteAggregatorsResponse> DeleteAggregators(DeleteAggregatorsRequest req)
+        {
+            return InternalRequestAsync<DeleteAggregatorsResponse>(req, "DeleteAggregators");
+        }
+
+        /// <summary>
+        /// 删除账号组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAggregatorsRequest"/></param>
+        /// <returns><see cref="DeleteAggregatorsResponse"/></returns>
+        public DeleteAggregatorsResponse DeleteAggregatorsSync(DeleteAggregatorsRequest req)
+        {
+            return InternalRequestAsync<DeleteAggregatorsResponse>(req, "DeleteAggregators")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1268,6 +1289,27 @@ namespace TencentCloud.Config.V20220802
         public UpdateAggregateConfigRuleResponse UpdateAggregateConfigRuleSync(UpdateAggregateConfigRuleRequest req)
         {
             return InternalRequestAsync<UpdateAggregateConfigRuleResponse>(req, "UpdateAggregateConfigRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑账号组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAggregatorRequest"/></param>
+        /// <returns><see cref="UpdateAggregatorResponse"/></returns>
+        public Task<UpdateAggregatorResponse> UpdateAggregator(UpdateAggregatorRequest req)
+        {
+            return InternalRequestAsync<UpdateAggregatorResponse>(req, "UpdateAggregator");
+        }
+
+        /// <summary>
+        /// 编辑账号组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAggregatorRequest"/></param>
+        /// <returns><see cref="UpdateAggregatorResponse"/></returns>
+        public UpdateAggregatorResponse UpdateAggregatorSync(UpdateAggregatorRequest req)
+        {
+            return InternalRequestAsync<UpdateAggregatorResponse>(req, "UpdateAggregator")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

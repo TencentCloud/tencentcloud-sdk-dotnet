@@ -25,34 +25,53 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 堡垒机实例id
+        /// <p>堡垒机实例id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 开通内网访问的vpc id
+        /// <p>开通内网访问的vpc id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// vpc的网段
+        /// <p>vpc名称</p>
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
+        /// <p>vpc地域</p>
+        /// </summary>
+        [JsonProperty("VpcRegion")]
+        public string VpcRegion{ get; set; }
+
+        /// <summary>
+        /// <p>vpc的网段</p>
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
-        /// 开通内网访问的subnet id
+        /// <p>开通内网访问的subnet id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
+        [System.Obsolete]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 内网ip的自定义域名，可为空
+        /// <p>内网ip的自定义域名，可为空</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
+
+        /// <summary>
+        /// <p>开通内网的子网信息</p>
+        /// </summary>
+        [JsonProperty("IntranetSubnets")]
+        public ParamInitResourceSubnet[] IntranetSubnets{ get; set; }
 
 
         /// <summary>
@@ -62,9 +81,12 @@ namespace TencentCloud.Bh.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamArrayObj(map, prefix + "IntranetSubnets.", this.IntranetSubnets);
         }
     }
 }

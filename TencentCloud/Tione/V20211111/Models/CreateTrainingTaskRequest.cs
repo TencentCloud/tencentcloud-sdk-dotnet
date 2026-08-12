@@ -198,6 +198,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceSupplyAttribute")]
         public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
 
+        /// <summary>
+        /// <p>队列ID</p>
+        /// </summary>
+        [JsonProperty("Queues")]
+        public string[] Queues{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamObj(map, prefix + "TrainToolConfig.", this.TrainToolConfig);
             this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+            this.SetParamArraySimple(map, prefix + "Queues.", this.Queues);
         }
     }
 }
