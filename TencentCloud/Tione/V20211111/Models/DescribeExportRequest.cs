@@ -25,10 +25,16 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 日志下载任务的ID
+        /// <p>日志下载任务的ID</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }
+
+        /// <summary>
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ExportId", this.ExportId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         }
     }
 }

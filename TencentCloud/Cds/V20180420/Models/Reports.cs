@@ -116,21 +116,18 @@ namespace TencentCloud.Cds.V20180420.Models
 
         /// <summary>
         /// 报表模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
         /// 包含资产
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetsList")]
         public AssetsInfo[] AssetsList{ get; set; }
 
         /// <summary>
         /// 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CntDay")]
         public long? CntDay{ get; set; }

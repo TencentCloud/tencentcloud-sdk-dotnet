@@ -25,73 +25,73 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 库名
+        /// <p>库名</p>
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
-        /// schema名
+        /// <p>schema名</p>
         /// </summary>
         [JsonProperty("Schema")]
         public string Schema{ get; set; }
 
         /// <summary>
-        /// 表名
+        /// <p>表名</p>
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
-        /// 校验结果
+        /// <p>校验结果</p>
         /// </summary>
         [JsonProperty("Conclusion")]
         public string Conclusion{ get; set; }
 
         /// <summary>
-        /// 校验状态。仅全量阶段有意义
+        /// <p>校验状态。仅全量阶段有意义</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 校验进度。仅全量阶段有意义
+        /// <p>校验进度。仅全量阶段有意义</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 不一致行数
+        /// <p>不一致行数</p>
         /// </summary>
         [JsonProperty("RowCount")]
         public long? RowCount{ get; set; }
 
         /// <summary>
-        /// 该表开始校验的时间
+        /// <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("StartedAt")]
         public string StartedAt{ get; set; }
 
         /// <summary>
-        /// 该表校验结束的时间
+        /// <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }
 
         /// <summary>
-        /// 预计该表校验结束的时间
+        /// <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("ExpectedAt")]
         public string ExpectedAt{ get; set; }
 
         /// <summary>
-        /// 源端行数，如果是行数校验此值有意义
+        /// <p>源端行数，如果是行数校验此值有意义</p>
         /// </summary>
         [JsonProperty("SrcItem")]
         public string SrcItem{ get; set; }
 
         /// <summary>
-        /// 目标端行数，如果是行数校验此值有意义
+        /// <p>目标端行数，如果是行数校验此值有意义</p>
         /// </summary>
         [JsonProperty("DstItem")]
         public string DstItem{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobName{ get; set; }
 
         /// <summary>
-        /// <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+        /// <p>期待启动时间，当RunMode取值为timed时，此值必填。</p><p>参数格式：当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
         /// </summary>
         [JsonProperty("ExpectRunTime")]
         public string ExpectRunTime{ get; set; }

@@ -114,6 +114,30 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("Capabilities")]
         public string[] Capabilities{ get; set; }
 
+        /// <summary>
+        /// <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+        /// </summary>
+        [JsonProperty("EnableGraphBuild")]
+        public long? EnableGraphBuild{ get; set; }
+
+        /// <summary>
+        /// <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+        /// </summary>
+        [JsonProperty("EnableTreeBuild")]
+        public long? EnableTreeBuild{ get; set; }
+
+        /// <summary>
+        /// <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+        /// </summary>
+        [JsonProperty("GraphBuildStatus")]
+        public long? GraphBuildStatus{ get; set; }
+
+        /// <summary>
+        /// <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+        /// </summary>
+        [JsonProperty("TreeBuildStatus")]
+        public long? TreeBuildStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +159,10 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
             this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
             this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
+            this.SetParamSimple(map, prefix + "EnableGraphBuild", this.EnableGraphBuild);
+            this.SetParamSimple(map, prefix + "EnableTreeBuild", this.EnableTreeBuild);
+            this.SetParamSimple(map, prefix + "GraphBuildStatus", this.GraphBuildStatus);
+            this.SetParamSimple(map, prefix + "TreeBuildStatus", this.TreeBuildStatus);
         }
     }
 }

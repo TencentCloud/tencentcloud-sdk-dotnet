@@ -25,49 +25,49 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 迁移任务 Id
+        /// <p>迁移任务 Id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 校验任务 Id
+        /// <p>校验任务 Id</p>
         /// </summary>
         [JsonProperty("CompareTaskId")]
         public string CompareTaskId{ get; set; }
 
         /// <summary>
-        /// 数据库名
+        /// <p>数据库名</p>
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }
 
         /// <summary>
-        /// schema名
+        /// <p>schema名</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 数据表名
+        /// <p>数据表名</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 数据分块号
+        /// <p>数据分块号</p>
         /// </summary>
         [JsonProperty("ChunkId")]
         public long? ChunkId{ get; set; }
 
         /// <summary>
-        /// 分页条件，查询结果返回条数
+        /// <p>分页条件，查询结果返回条数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页条件，查询的起始位置
+        /// <p>分页条件，查询的起始位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

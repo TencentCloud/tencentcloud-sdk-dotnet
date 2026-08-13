@@ -25,69 +25,69 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据库名
+        /// <p>数据库名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }
 
         /// <summary>
-        /// schema名
+        /// <p>schema名</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 数据表名
+        /// <p>数据表名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 分块号
+        /// <p>分块号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChunkId")]
         public long? ChunkId{ get; set; }
 
         /// <summary>
-        /// 数据标识符，比如主键信息等
+        /// <p>数据标识符，比如主键信息等</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+        /// <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiffType")]
         public string DiffType{ get; set; }
 
         /// <summary>
-        /// 表结构信息
+        /// <p>表结构信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaInfo")]
         public string[] SchemaInfo{ get; set; }
 
         /// <summary>
-        /// 源端数据
+        /// <p>源端数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcItem")]
         public string[] SrcItem{ get; set; }
 
         /// <summary>
-        /// 目标端数据
+        /// <p>目标端数据</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstItem")]
         public string[] DstItem{ get; set; }
 
         /// <summary>
-        /// 完成时间
+        /// <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedAt")]

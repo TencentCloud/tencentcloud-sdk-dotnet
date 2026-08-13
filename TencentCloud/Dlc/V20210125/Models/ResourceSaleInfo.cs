@@ -44,6 +44,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("MaxSpec")]
         public long? MaxSpec{ get; set; }
 
+        /// <summary>
+        /// <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足（&gt;100）</li><li>NormalStock：余量正常（50~100）</li><li>UnderStock：余量紧张（1~49）</li><li>WithoutStock：无库存（0）</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusCategory")]
+        public string StatusCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamSimple(map, prefix + "Step", this.Step);
             this.SetParamSimple(map, prefix + "MaxSpec", this.MaxSpec);
+            this.SetParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
         }
     }
 }

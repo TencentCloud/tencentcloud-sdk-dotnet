@@ -271,12 +271,6 @@ namespace TencentCloud.Cds.V20180420.Models
         public bool? IsNewCloudAudit{ get; set; }
 
         /// <summary>
-        /// <p>审计功能支持说明</p>
-        /// </summary>
-        [JsonProperty("AuditCapability")]
-        public AuditCapability[] AuditCapability{ get; set; }
-
-        /// <summary>
         /// <p>1</p><p>取值范围：[0, 1]</p>
         /// </summary>
         [JsonProperty("TrafficMirrorOn")]
@@ -293,6 +287,12 @@ namespace TencentCloud.Cds.V20180420.Models
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>该资产所在的资产组</p>
+        /// </summary>
+        [JsonProperty("AssetGroups")]
+        public IdWithName[] AssetGroups{ get; set; }
 
 
         /// <summary>
@@ -341,10 +341,10 @@ namespace TencentCloud.Cds.V20180420.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "AssetGroupId", this.AssetGroupId);
             this.SetParamSimple(map, prefix + "IsNewCloudAudit", this.IsNewCloudAudit);
-            this.SetParamArrayObj(map, prefix + "AuditCapability.", this.AuditCapability);
             this.SetParamSimple(map, prefix + "TrafficMirrorOn", this.TrafficMirrorOn);
             this.SetParamSimple(map, prefix + "AuditScope", this.AuditScope);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+            this.SetParamArrayObj(map, prefix + "AssetGroups.", this.AssetGroups);
         }
     }
 }

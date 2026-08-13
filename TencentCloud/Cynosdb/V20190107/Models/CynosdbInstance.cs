@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>可用区</p>
+        /// <p>集群主可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -314,7 +314,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>主可用区</p>
+        /// <p>读写实例当前所在可用区</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
@@ -381,6 +381,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
+        /// <summary>
+        /// <p>实例当前所在可用区</p>
+        /// </summary>
+        [JsonProperty("RealZone")]
+        public string RealZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -446,6 +452,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
         }
     }
 }

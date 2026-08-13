@@ -25,92 +25,79 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+        /// <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p>
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
-        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
+        /// <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 通知渠道组名称。
+        /// <p>通知渠道组名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 通知类型。可选值：
-        /// <li> Trigger - 告警触发</li>
-        /// <li> Recovery - 告警恢复</li>
-        /// <li> All - 告警触发和告警恢复</li>
+        /// <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 通知接收对象。
+        /// <p>通知接收对象。</p>
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
-        /// 接口回调信息（包括企业微信等）。
+        /// <p>接口回调信息（包括企业微信等）。</p>
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
         /// <summary>
-        /// 通知规则。
-        /// 
-        /// 注意: 
-        /// 
-        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-        /// - 传其中一组数据，则另一组数据置空。
+        /// <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul>
         /// </summary>
         [JsonProperty("NoticeRules")]
         public NoticeRule[] NoticeRules{ get; set; }
 
         /// <summary>
-        /// 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+        /// <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
         /// </summary>
         [JsonProperty("JumpDomain")]
         public string JumpDomain{ get; set; }
 
         /// <summary>
-        /// 投递日志开关。
-        /// 
-        /// 参数值：
-        /// 1：关闭；
-        /// 
-        /// 2：开启 
+        /// <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p>
         /// </summary>
         [JsonProperty("DeliverStatus")]
         public ulong? DeliverStatus{ get; set; }
 
         /// <summary>
-        /// 投递日志配置。
+        /// <p>投递日志配置。</p>
         /// </summary>
         [JsonProperty("DeliverConfig")]
         public DeliverConfig DeliverConfig{ get; set; }
 
         /// <summary>
-        /// 免登录操作告警开关。
-        /// 
-        /// 参数值： 
-        ///         1：关闭
-        ///         2：开启（默认开启）
+        /// <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p>
         /// </summary>
         [JsonProperty("AlarmShieldStatus")]
         public ulong? AlarmShieldStatus{ get; set; }
 
         /// <summary>
-        /// 统一设定自定义回调参数。
-        /// -  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
-        /// -  false:优先使用告警策略中单独配置的请求头及请求内容。
+        /// <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+        /// </summary>
+        [JsonProperty("SecureDetailStatus")]
+        public ulong? SecureDetailStatus{ get; set; }
+
+        /// <summary>
+        /// <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
         /// </summary>
         [JsonProperty("CallbackPrioritize")]
         public bool? CallbackPrioritize{ get; set; }
@@ -132,6 +119,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
             this.SetParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
             this.SetParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+            this.SetParamSimple(map, prefix + "SecureDetailStatus", this.SecureDetailStatus);
             this.SetParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
         }
     }

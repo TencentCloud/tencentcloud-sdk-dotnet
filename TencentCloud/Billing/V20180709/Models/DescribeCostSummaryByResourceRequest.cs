@@ -25,52 +25,64 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+        /// <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+        /// <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 每次获取数据量，最大值为100
+        /// <p>每次获取数据量，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量,默认从0开始
+        /// <p>偏移量,默认从0开始</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 查询账单数据的用户UIN
+        /// <p>查询账单数据的用户UIN</p>
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 是否需要返回记录数量，0不需要，1需要，默认不需要
+        /// <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p>
         /// </summary>
         [JsonProperty("NeedRecordNum")]
         public ulong? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// 是否需要返回过滤条件，0不需要，1需要，默认不需要
+        /// <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p>
         /// </summary>
         [JsonProperty("NeedConditionValue")]
         public ulong? NeedConditionValue{ get; set; }
 
         /// <summary>
-        /// 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
+        /// <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p>
         /// </summary>
         [JsonProperty("Conditions")]
         public Conditions Conditions{ get; set; }
+
+        /// <summary>
+        /// <p>分账标签键，用户自定义</p>
+        /// </summary>
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p>
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
             this.SetParamSimple(map, prefix + "NeedConditionValue", this.NeedConditionValue);
             this.SetParamObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

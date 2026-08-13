@@ -25,121 +25,121 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
+        /// <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 迁移或同步后的库名，默认与源库相同
+        /// <p>迁移或同步后的库名，默认与源库相同</p>
         /// </summary>
         [JsonProperty("NewDbName")]
         public string NewDbName{ get; set; }
 
         /// <summary>
-        /// 迁移或同步的 schema
+        /// <p>迁移或同步的 schema</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 迁移或同步后的 schema name
+        /// <p>迁移或同步后的 schema name</p>
         /// </summary>
         [JsonProperty("NewSchemaName")]
         public string NewSchemaName{ get; set; }
 
         /// <summary>
-        /// DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
+        /// <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
         /// </summary>
         [JsonProperty("DBMode")]
         public string DBMode{ get; set; }
 
         /// <summary>
-        /// schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
+        /// <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
         /// </summary>
         [JsonProperty("SchemaMode")]
         public string SchemaMode{ get; set; }
 
         /// <summary>
-        /// 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
+        /// <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
         /// </summary>
         [JsonProperty("TableMode")]
         public string TableMode{ get; set; }
 
         /// <summary>
-        /// 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+        /// <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
         /// </summary>
         [JsonProperty("Tables")]
         public TableItem[] Tables{ get; set; }
 
         /// <summary>
-        /// 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+        /// <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }
 
         /// <summary>
-        /// 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
+        /// <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
         /// </summary>
         [JsonProperty("Views")]
         public ViewItem[] Views{ get; set; }
 
         /// <summary>
-        /// postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
+        /// <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
         /// </summary>
         [JsonProperty("RoleMode")]
         public string RoleMode{ get; set; }
 
         /// <summary>
-        /// postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
+        /// <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
         /// </summary>
         [JsonProperty("Roles")]
         public RoleItem[] Roles{ get; set; }
 
         /// <summary>
-        /// 选择要同步的模式，partial为部分，all为整选
+        /// <p>选择要同步的模式，partial为部分，all为整选</p>
         /// </summary>
         [JsonProperty("FunctionMode")]
         public string FunctionMode{ get; set; }
 
         /// <summary>
-        /// 选择要同步的模式，partial为部分，all为整选
+        /// <p>选择要同步的模式，partial为部分，all为整选</p>
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
-        /// 选择要同步的模式，partial为部分，all为整选
+        /// <p>选择要同步的模式，partial为部分，all为整选</p>
         /// </summary>
         [JsonProperty("EventMode")]
         public string EventMode{ get; set; }
 
         /// <summary>
-        /// 选择要同步的模式，partial为部分，all为整选
+        /// <p>选择要同步的模式，partial为部分，all为整选</p>
         /// </summary>
         [JsonProperty("ProcedureMode")]
         public string ProcedureMode{ get; set; }
 
         /// <summary>
-        /// FunctionMode取值为partial时需要填写
+        /// <p>FunctionMode取值为partial时需要填写</p>
         /// </summary>
         [JsonProperty("Functions")]
         public string[] Functions{ get; set; }
 
         /// <summary>
-        /// ProcedureMode取值为partial时需要填写
+        /// <p>ProcedureMode取值为partial时需要填写</p>
         /// </summary>
         [JsonProperty("Procedures")]
         public string[] Procedures{ get; set; }
 
         /// <summary>
-        /// EventMode取值为partial时需要填写
+        /// <p>EventMode取值为partial时需要填写</p>
         /// </summary>
         [JsonProperty("Events")]
         public string[] Events{ get; set; }
 
         /// <summary>
-        /// TriggerMode取值为partial时需要填写
+        /// <p>TriggerMode取值为partial时需要填写</p>
         /// </summary>
         [JsonProperty("Triggers")]
         public string[] Triggers{ get; set; }

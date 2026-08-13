@@ -25,37 +25,37 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+        /// <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 同步任务全量导出线程数、有效值为 1-16
+        /// <p>同步任务全量导出线程数、有效值为 1-16</p>
         /// </summary>
         [JsonProperty("DumpThread")]
         public long? DumpThread{ get; set; }
 
         /// <summary>
-        /// 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+        /// <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
         /// </summary>
         [JsonProperty("DumpRps")]
         public long? DumpRps{ get; set; }
 
         /// <summary>
-        /// 同步任务全量导入线程数、有效值为 1-16
+        /// <p>同步任务全量导入线程数、有效值为 1-16</p>
         /// </summary>
         [JsonProperty("LoadThread")]
         public long? LoadThread{ get; set; }
 
         /// <summary>
-        /// 同步任务增量导入线程数、有效值为 1-128
+        /// <p>同步任务增量导入线程数、有效值为 1-128</p>
         /// </summary>
         [JsonProperty("SinkerThread")]
         public long? SinkerThread{ get; set; }
 
         /// <summary>
-        /// 同步任务全量导入的Rps
+        /// <p>同步任务全量导入的Rps</p>
         /// </summary>
         [JsonProperty("LoadRps")]
         public long? LoadRps{ get; set; }

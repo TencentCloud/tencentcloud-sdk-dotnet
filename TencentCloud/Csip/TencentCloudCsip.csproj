@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1485</VersionPrefix>
+    <VersionPrefix>3.0.1486</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,13 +87,18 @@
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CFGViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\CICDToken.cs" />
+    <Compile Include="V20221121\Models\CSIPMachineExtraInfo.cs" />
+    <Compile Include="V20221121\Models\CSIPMalwareScanUuidDetailItem.cs" />
     <Compile Include="V20221121\Models\CSIPTag.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
     <Compile Include="V20221121\Models\CallRecord.cs" />
+    <Compile Include="V20221121\Models\CancelEdrAlertIgnoreRequest.cs" />
+    <Compile Include="V20221121\Models\CancelEdrAlertIgnoreResponse.cs" />
     <Compile Include="V20221121\Models\CheckViewRiskItem.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\ClusterIDWithAppIdItem.cs" />
+    <Compile Include="V20221121\Models\ClusterWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\CommandPluginState.cs" />
     <Compile Include="V20221121\Models\ComponentDetailItem.cs" />
     <Compile Include="V20221121\Models\ConditionMatch.cs" />
@@ -136,6 +141,8 @@
     <Compile Include="V20221121\Models\CreateAccessKeyCheckTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateAccessKeySyncTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateAccessKeySyncTaskResponse.cs" />
+    <Compile Include="V20221121\Models\CreateCSIPManualMalwareScanRequest.cs" />
+    <Compile Include="V20221121\Models\CreateCSIPManualMalwareScanResponse.cs" />
     <Compile Include="V20221121\Models\CreateCosAssetSyncTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateCosAssetSyncTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateCosObjectScanTaskRequest.cs" />
@@ -182,6 +189,10 @@
     <Compile Include="V20221121\Models\CreateDspmRiskExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\CreateDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\CreateEDRManualScanRequest.cs" />
+    <Compile Include="V20221121\Models\CreateEDRManualScanResponse.cs" />
+    <Compile Include="V20221121\Models\CreateEdrAlertExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateEdrAlertExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateHostVulExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateHostVulExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateIaCAccessTokenRequest.cs" />
@@ -204,11 +215,14 @@
     <Compile Include="V20221121\Models\CreateVulReScanResponse.cs" />
     <Compile Include="V20221121\Models\CreateVulScanManualRequest.cs" />
     <Compile Include="V20221121\Models\CreateVulScanManualResponse.cs" />
+    <Compile Include="V20221121\Models\CreatedTaskItem.cs" />
     <Compile Include="V20221121\Models\CredentialEffectScope.cs" />
     <Compile Include="V20221121\Models\CsipRiskCenterStatistics.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
     <Compile Include="V20221121\Models\DataSearchBug.cs" />
     <Compile Include="V20221121\Models\DbAssetInfo.cs" />
+    <Compile Include="V20221121\Models\DeleteCSIPMalwareScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteCSIPMalwareScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DeleteCosAkAssetRequest.cs" />
     <Compile Include="V20221121\Models\DeleteCosAkAssetResponse.cs" />
     <Compile Include="V20221121\Models\DeleteCosPolicyRequest.cs" />
@@ -241,6 +255,10 @@
     <Compile Include="V20221121\Models\DeleteDspmRestoreLogListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteDspmWhitelistStrategyRequest.cs" />
     <Compile Include="V20221121\Models\DeleteDspmWhitelistStrategyResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteEDRRulesRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteEDRRulesResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteEDRScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteEDRScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DeleteIaCAccessTokenRequest.cs" />
     <Compile Include="V20221121\Models\DeleteIaCAccessTokenResponse.cs" />
     <Compile Include="V20221121\Models\DeleteIaCFileRequest.cs" />
@@ -289,6 +307,10 @@
     <Compile Include="V20221121\Models\DescribeCLSLogIndexV3Response.cs" />
     <Compile Include="V20221121\Models\DescribeCLSLogListV3Request.cs" />
     <Compile Include="V20221121\Models\DescribeCLSLogListV3Response.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskProgressRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskProgressResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
@@ -481,10 +503,26 @@
     <Compile Include="V20221121\Models\DescribeDspmWhitelistStrategyResponse.cs" />
     <Compile Include="V20221121\Models\DescribeEDRRuleListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeEDRRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRScanRecordListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRScanRecordListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRScanTaskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEDRScanTaskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertCountForAssetRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertCountForAssetResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertCountForContainerRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertCountForContainerResponse.cs" />
     <Compile Include="V20221121\Models\DescribeEdrAlertInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeEdrAlertInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeEdrAlertListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeEdrAlertListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertMultiAttackStagesRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertMultiAttackStagesResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertSummaryRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrAlertSummaryResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrExportJobDownloadURLRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrExportJobDownloadURLResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrExportJobListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrExportJobListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExposeAssetCategoryRequest.cs" />
     <Compile Include="V20221121\Models\DescribeExposeAssetCategoryResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExposePathRequest.cs" />
@@ -527,6 +565,8 @@
     <Compile Include="V20221121\Models\DescribeListenerListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeNetAttackSettingRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeNetAttackSettingResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNotifyAssetConfigRequest.cs" />
     <Compile Include="V20221121\Models\DescribeNotifyAssetConfigResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNotifySettingAlertRequest.cs" />
@@ -545,6 +585,8 @@
     <Compile Include="V20221121\Models\DescribePublicIpAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRepositoryImageAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeReverseShellSystemPolicyConfigRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeReverseShellSystemPolicyConfigResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskBucketListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskBucketListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCallRecordRequest.cs" />
@@ -718,15 +760,27 @@
     <Compile Include="V20221121\Models\DspmTablePrivilege.cs" />
     <Compile Include="V20221121\Models\DspmUinUser.cs" />
     <Compile Include="V20221121\Models\DspmWhitelistStrategy.cs" />
+    <Compile Include="V20221121\Models\EDRExportJobItem.cs" />
     <Compile Include="V20221121\Models\EDRFilter.cs" />
+    <Compile Include="V20221121\Models\EDRFilters.cs" />
     <Compile Include="V20221121\Models\EDRRule.cs" />
     <Compile Include="V20221121\Models\EDRRuleTagItem.cs" />
+    <Compile Include="V20221121\Models\EDRScanRecordItem.cs" />
+    <Compile Include="V20221121\Models\EDRScanTaskContainerItem.cs" />
+    <Compile Include="V20221121\Models\EDRScanTaskHostItem.cs" />
     <Compile Include="V20221121\Models\EdrAlertCategoryCount.cs" />
+    <Compile Include="V20221121\Models\EdrAlertCountItem.cs" />
     <Compile Include="V20221121\Models\EdrAlertDetail.cs" />
     <Compile Include="V20221121\Models\EdrAlertItem.cs" />
     <Compile Include="V20221121\Models\EdrAlertTarget.cs" />
     <Compile Include="V20221121\Models\EdrAlertTargetForIgnore.cs" />
+    <Compile Include="V20221121\Models\EdrContainerAlertCountItem.cs" />
+    <Compile Include="V20221121\Models\EdrContainerGlobalCount.cs" />
     <Compile Include="V20221121\Models\Element.cs" />
+    <Compile Include="V20221121\Models\ExportCSIPMalwareScanTaskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\ExportCSIPMalwareScanTaskDetailResponse.cs" />
+    <Compile Include="V20221121\Models\ExportEDRRulesRequest.cs" />
+    <Compile Include="V20221121\Models\ExportEDRRulesResponse.cs" />
     <Compile Include="V20221121\Models\ExportTask.cs" />
     <Compile Include="V20221121\Models\ExposeAssetTypeItem.cs" />
     <Compile Include="V20221121\Models\ExposesItem.cs" />
@@ -841,12 +895,22 @@
     <Compile Include="V20221121\Models\ModifyDspmWhitelistStrategyResponse.cs" />
     <Compile Include="V20221121\Models\ModifyEDRRuleRequest.cs" />
     <Compile Include="V20221121\Models\ModifyEDRRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRuleStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRuleStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRulesActionRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEDRRulesActionResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertIsolationRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertIsolationResponse.cs" />
     <Compile Include="V20221121\Models\ModifyEdrAlertPermanentIgnoreRequest.cs" />
     <Compile Include="V20221121\Models\ModifyEdrAlertPermanentIgnoreResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyEdrAlertStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodRequest.cs" />
     <Compile Include="V20221121\Models\ModifyIaCTokenPeriodResponse.cs" />
     <Compile Include="V20221121\Models\ModifyMachineRemarkRequest.cs" />
     <Compile Include="V20221121\Models\ModifyMachineRemarkResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyNetAttackSettingRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyNetAttackSettingResponse.cs" />
     <Compile Include="V20221121\Models\ModifyNotifyAssetConfigRequest.cs" />
     <Compile Include="V20221121\Models\ModifyNotifyAssetConfigResponse.cs" />
     <Compile Include="V20221121\Models\ModifyNotifySettingAlertRequest.cs" />
@@ -857,6 +921,8 @@
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyPolicyStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyPolicyStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyReverseShellSystemPolicyConfigRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyReverseShellSystemPolicyConfigResponse.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskRequest.cs" />
@@ -869,6 +935,7 @@
     <Compile Include="V20221121\Models\ModifyVulWhitelistConfigResponse.cs" />
     <Compile Include="V20221121\Models\ModifyVulWhitelistSwitchRequest.cs" />
     <Compile Include="V20221121\Models\ModifyVulWhitelistSwitchResponse.cs" />
+    <Compile Include="V20221121\Models\MultiAttackStageItem.cs" />
     <Compile Include="V20221121\Models\NICAsset.cs" />
     <Compile Include="V20221121\Models\NetworkCardInfo.cs" />
     <Compile Include="V20221121\Models\NewAlertKey.cs" />
@@ -902,6 +969,10 @@
     <Compile Include="V20221121\Models\RuleContentProcessInfo.cs" />
     <Compile Include="V20221121\Models\RuleContentProcessNetwork.cs" />
     <Compile Include="V20221121\Models\STSCredentialOutput.cs" />
+    <Compile Include="V20221121\Models\ScanCSIPTaskAgainRequest.cs" />
+    <Compile Include="V20221121\Models\ScanCSIPTaskAgainResponse.cs" />
+    <Compile Include="V20221121\Models\ScanEDRTaskAgainRequest.cs" />
+    <Compile Include="V20221121\Models\ScanEDRTaskAgainResponse.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\SendDspmAssetLoginSmsCodeRequest.cs" />
@@ -921,6 +992,10 @@
     <Compile Include="V20221121\Models\StandardItem.cs" />
     <Compile Include="V20221121\Models\StandardTerm.cs" />
     <Compile Include="V20221121\Models\StatisticalFilter.cs" />
+    <Compile Include="V20221121\Models\StopCSIPManualMalwareScanRequest.cs" />
+    <Compile Include="V20221121\Models\StopCSIPManualMalwareScanResponse.cs" />
+    <Compile Include="V20221121\Models\StopEDRScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\StopEDRScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
     <Compile Include="V20221121\Models\StopVulScanTaskRequest.cs" />

@@ -25,46 +25,58 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 检索类型：0:混合搜索 1：向量搜索 2：全文搜索
+        /// <p>检索类型：0:混合搜索 1：向量搜索 2：全文搜索</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 召回数量最大值
+        /// <p>召回数量最大值</p>
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }
 
         /// <summary>
-        /// 权重配置
+        /// <p>权重配置</p>
         /// </summary>
         [JsonProperty("EmbeddingWeight")]
         public float? EmbeddingWeight{ get; set; }
 
         /// <summary>
-        /// 0:关闭 1:开启，默认1
+        /// <p>0:关闭 1:开启，默认1</p>
         /// </summary>
         [JsonProperty("Rerank")]
         public long? Rerank{ get; set; }
 
         /// <summary>
-        /// 0:关闭 1:开启，默认0
+        /// <p>0:关闭 1:开启，默认0</p>
         /// </summary>
         [JsonProperty("AutoRag")]
         public long? AutoRag{ get; set; }
 
         /// <summary>
-        /// AutoRag关联的知识库ID列表
+        /// <p>AutoRag关联的知识库ID列表</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseIds")]
         public string[] KnowledgeBaseIds{ get; set; }
 
         /// <summary>
-        /// AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效
+        /// <p>AutoRag搜索状态：0-未完成，1-已完成。仅当AutoRag=1时，该字段有效</p>
         /// </summary>
         [JsonProperty("SearchStatus")]
         public long? SearchStatus{ get; set; }
+
+        /// <summary>
+        /// <p>0:关闭 1:开启图谱检索，默认0</p>
+        /// </summary>
+        [JsonProperty("EnableGraphSearch")]
+        public long? EnableGraphSearch{ get; set; }
+
+        /// <summary>
+        /// <p>0:关闭 1:开启树检索，默认0</p>
+        /// </summary>
+        [JsonProperty("EnableTreeSearch")]
+        public long? EnableTreeSearch{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "AutoRag", this.AutoRag);
             this.SetParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
             this.SetParamSimple(map, prefix + "SearchStatus", this.SearchStatus);
+            this.SetParamSimple(map, prefix + "EnableGraphSearch", this.EnableGraphSearch);
+            this.SetParamSimple(map, prefix + "EnableTreeSearch", this.EnableTreeSearch);
         }
     }
 }

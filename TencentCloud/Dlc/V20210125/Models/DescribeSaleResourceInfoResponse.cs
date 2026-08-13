@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 可售卖资源规格列表
+        /// 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
         /// </summary>
         [JsonProperty("SaleResourceInfoList")]
         public ResourceSaleInfo[] SaleResourceInfoList{ get; set; }

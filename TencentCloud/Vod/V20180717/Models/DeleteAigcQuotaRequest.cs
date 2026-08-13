@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+        /// <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }

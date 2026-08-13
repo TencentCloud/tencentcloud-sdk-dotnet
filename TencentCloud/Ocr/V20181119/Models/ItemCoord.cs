@@ -37,13 +37,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Y{ get; set; }
 
         /// <summary>
-        /// <p>宽width。</p>
+        /// <p>宽width。</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// <p>高height。</p>
+        /// <p>高height。</p><p>单位：px</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

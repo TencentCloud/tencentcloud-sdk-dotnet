@@ -25,67 +25,67 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据库名
+        /// <p>数据库名</p>
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
-        /// schema
+        /// <p>schema</p>
         /// </summary>
         [JsonProperty("Schema")]
         public string Schema{ get; set; }
 
         /// <summary>
-        /// 表名
+        /// <p>表名</p>
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
-        /// 分块号
+        /// <p>分块号</p>
         /// </summary>
         [JsonProperty("Chunk")]
         public long? Chunk{ get; set; }
 
         /// <summary>
-        /// 源库数值
+        /// <p>源库数值</p>
         /// </summary>
         [JsonProperty("SrcItem")]
         public string SrcItem{ get; set; }
 
         /// <summary>
-        /// 目标库数值
+        /// <p>目标库数值</p>
         /// </summary>
         [JsonProperty("DstItem")]
         public string DstItem{ get; set; }
 
         /// <summary>
-        /// 索引名称
+        /// <p>索引名称</p>
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 索引下边界
+        /// <p>索引下边界</p>
         /// </summary>
         [JsonProperty("LowerBoundary")]
         public string LowerBoundary{ get; set; }
 
         /// <summary>
-        /// 索引上边界
+        /// <p>索引上边界</p>
         /// </summary>
         [JsonProperty("UpperBoundary")]
         public string UpperBoundary{ get; set; }
 
         /// <summary>
-        /// 对比消耗时间,单位为 ms
+        /// <p>对比消耗时间,单位为 ms</p>
         /// </summary>
         [JsonProperty("CostTime")]
         public float? CostTime{ get; set; }
 
         /// <summary>
-        /// 完成时间
+        /// <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 时间与Offset的对应
+        /// <p>时间与Offset的对应</p>
         /// </summary>
         [JsonProperty("Items")]
         public OffsetTimeMap[] Items{ get; set; }

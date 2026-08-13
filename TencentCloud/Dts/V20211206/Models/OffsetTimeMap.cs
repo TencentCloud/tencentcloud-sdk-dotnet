@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// kafka分区编号
+        /// <p>kafka分区编号</p>
         /// </summary>
         [JsonProperty("PartitionNo")]
         public ulong? PartitionNo{ get; set; }
 
         /// <summary>
-        /// kafka offset
+        /// <p>kafka offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

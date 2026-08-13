@@ -25,241 +25,244 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// CHC物理服务器ID。
+        /// <p>CHC物理服务器ID。</p>
         /// </summary>
         [JsonProperty("ChcId")]
         public string ChcId{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 服务器序列号。
+        /// <p>服务器序列号。</p>
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
 
         /// <summary>
-        /// CHC的状态<br/>
-        /// <ul>
-        /// <li>INIT: 设备已录入。还未配置带外和部署网络</li>
-        /// <li>READY: 已配置带外和部署网络</li>
-        /// <li>PREPARED: 可分配云主机</li>
-        /// <li>ONLINE: 已分配云主机</li>
-        /// <li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
-        /// <li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
-        /// </ul>
+        /// <p>CHC的状态<br></p><ul><li>INIT: 设备已录入。还未配置带外和部署网络</li><li>READY: 已配置带外和部署网络</li><li>PREPARED: 可分配云主机</li><li>ONLINE: 已分配云主机</li><li>OPERATING: 设备操作中，如正在配置带外网络等。</li><li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li></ul>
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
-        /// 设备类型。
+        /// <p>设备类型。</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 所属可用区
+        /// <p>所属可用区。</p>
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 带外网络。
+        /// <p>带外网络。</p>
         /// </summary>
         [JsonProperty("BmcVirtualPrivateCloud")]
         public VirtualPrivateCloud BmcVirtualPrivateCloud{ get; set; }
 
         /// <summary>
-        /// 带外网络Ip。
+        /// <p>带外网络IP。</p>
         /// </summary>
         [JsonProperty("BmcIp")]
         public string BmcIp{ get; set; }
 
         /// <summary>
-        /// 带外网络安全组Id。
+        /// <p>带外网络安全组ID。</p>
         /// </summary>
         [JsonProperty("BmcSecurityGroupIds")]
         public string[] BmcSecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 部署网络。
+        /// <p>部署网络。</p>
         /// </summary>
         [JsonProperty("DeployVirtualPrivateCloud")]
         public VirtualPrivateCloud DeployVirtualPrivateCloud{ get; set; }
 
         /// <summary>
-        /// 部署网络Ip。
+        /// <p>部署网络IP。</p>
         /// </summary>
         [JsonProperty("DeployIp")]
         public string DeployIp{ get; set; }
 
         /// <summary>
-        /// 部署网络安全组Id。
+        /// <p>部署网络安全组ID。</p>
         /// </summary>
         [JsonProperty("DeploySecurityGroupIds")]
         public string[] DeploySecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 关联的云主机Id。
+        /// <p>关联的云主机ID。</p>
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
         /// <summary>
-        /// 服务器导入的时间。
+        /// <p>服务器导入的时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 机型的硬件描述，分别为CPU核数，内存容量和磁盘容量
+        /// <p>机型的硬件描述，分别为CPU核数，内存容量和磁盘容量。</p>
         /// </summary>
         [JsonProperty("HardwareDescription")]
         public string HardwareDescription{ get; set; }
 
         /// <summary>
-        /// CHC物理服务器的CPU核数
+        /// <p>CHC物理服务器的CPU核数。</p>
         /// </summary>
         [JsonProperty("CPU")]
         public long? CPU{ get; set; }
 
         /// <summary>
-        /// CHC物理服务器的内存大小，单位为GB
+        /// <p>CHC物理服务器的内存大小，单位为GB。</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// CHC物理服务器的磁盘信息
+        /// <p>CHC物理服务器的磁盘信息。</p>
         /// </summary>
         [JsonProperty("Disk")]
         public string Disk{ get; set; }
 
         /// <summary>
-        /// 带外网络下分配的MAC地址
+        /// <p>带外网络下分配的MAC地址。</p>
         /// </summary>
         [JsonProperty("BmcMAC")]
         public string BmcMAC{ get; set; }
 
         /// <summary>
-        /// 部署网络下分配的MAC地址
+        /// <p>部署网络下分配的MAC地址。</p>
         /// </summary>
         [JsonProperty("DeployMAC")]
         public string DeployMAC{ get; set; }
 
         /// <summary>
-        /// 设备托管类型。
-        /// HOSTING: 托管
-        /// TENANT: 租赁
+        /// <p>设备托管类型。</p><p>枚举值：</p><ul><li>HOSTING： 托管类型。</li><li>TENANT： 租赁类型。</li></ul>
         /// </summary>
         [JsonProperty("TenantType")]
         public string TenantType{ get; set; }
 
         /// <summary>
-        /// chc dhcp选项，用于minios调试。
+        /// <p>CHC DHCP选项，用于客户自建PXE环境。</p>
         /// </summary>
         [JsonProperty("DeployExtraConfig")]
         public ChcDeployExtraConfig DeployExtraConfig{ get; set; }
 
         /// <summary>
-        /// GPU型号。
+        /// <p>GPU型号。</p>
         /// </summary>
         [JsonProperty("Gpu")]
         public string Gpu{ get; set; }
 
         /// <summary>
-        /// 网卡型号。主要指RDMA网卡。
+        /// <p>网卡型号。主要指RDMA网卡。</p>
         /// </summary>
         [JsonProperty("NetworkCard")]
         public string NetworkCard{ get; set; }
 
         /// <summary>
-        /// 是否是预定义机型。
+        /// <p>是否是预定义机型。</p>
         /// </summary>
         [JsonProperty("IsPredefinedType")]
         public bool? IsPredefinedType{ get; set; }
 
         /// <summary>
-        /// CHC云主机机型。
+        /// <p>CHC云主机机型。</p>
         /// </summary>
         [JsonProperty("ChcInstanceType")]
         public string ChcInstanceType{ get; set; }
 
         /// <summary>
-        /// CHC云主机机型簇。
+        /// <p>CHC云主机机型簇。</p>
         /// </summary>
         [JsonProperty("ChcInstanceFamily")]
         public string ChcInstanceFamily{ get; set; }
 
         /// <summary>
-        /// CHC云主机机型簇名称。
+        /// <p>CHC云主机机型簇名称。</p>
         /// </summary>
         [JsonProperty("ChcInstanceFamilyName")]
         public string ChcInstanceFamilyName{ get; set; }
 
         /// <summary>
-        /// 转售客户的AppId。
+        /// <p>转售客户的AppID。</p>
         /// </summary>
         [JsonProperty("ResaleAppId")]
         public string ResaleAppId{ get; set; }
 
         /// <summary>
-        /// 转售客户的账号ID。
+        /// <p>转售客户的账号ID。</p>
         /// </summary>
         [JsonProperty("ResaleAccountId")]
         public string ResaleAccountId{ get; set; }
 
         /// <summary>
-        /// 售卖状态。<br/>
-        /// <ul>
-        /// <li>NOT_FOR_SALE:不可售卖</li>
-        /// <li>AVAILABLE: 可售卖</li>
-        /// <li>SOLD: 已售卖</li>
-        /// </ul>
+        /// <p>售卖状态。<br></p><ul><li>NOT_FOR_SALE:不可售卖</li><li>AVAILABLE: 可售卖</li><li>SOLD: 已售卖</li></ul>
         /// </summary>
         [JsonProperty("SaleStatus")]
         public string SaleStatus{ get; set; }
 
         /// <summary>
-        /// CHC物理服务器关联的标签列表。
+        /// <p>CHC物理服务器关联的标签列表。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 最近操作
+        /// <p>最近操作。</p>
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// 最近操作错误码
+        /// <p>最近操作错误码。</p>
         /// </summary>
         [JsonProperty("LatestOperationErrorCode")]
         public string LatestOperationErrorCode{ get; set; }
 
         /// <summary>
-        /// 最近操作错误详情和建议项
+        /// <p>最近操作错误详情和建议项。</p>
         /// </summary>
         [JsonProperty("LatestOperationErrorMsg")]
         public string LatestOperationErrorMsg{ get; set; }
 
         /// <summary>
-        /// 最近操作名称
+        /// <p>最近操作名称。</p>
         /// </summary>
         [JsonProperty("LatestOperationName")]
         public string LatestOperationName{ get; set; }
 
         /// <summary>
-        /// 最近操作状态
+        /// <p>最近操作状态。</p><p>枚举值：</p><ul><li>SUCCESS： 成功。</li><li>FAILED： 失败。</li></ul>
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
+
+        /// <summary>
+        /// <p>所在的CHC网关的ID，只有专属网关才会返回。</p>
+        /// </summary>
+        [JsonProperty("ChcGatewayId")]
+        public string ChcGatewayId{ get; set; }
+
+        /// <summary>
+        /// <p>所属的CDC集群ID。</p>
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>业务网卡网络模式。</p><p>枚举值：</p><ul><li>DEPLOY： 部署网络模式</li><li>BUSINESS： 业务网络模式</li></ul>
+        /// </summary>
+        [JsonProperty("NetworkMode")]
+        public string NetworkMode{ get; set; }
 
 
         /// <summary>
@@ -304,6 +307,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
             this.SetParamSimple(map, prefix + "LatestOperationName", this.LatestOperationName);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+            this.SetParamSimple(map, prefix + "ChcGatewayId", this.ChcGatewayId);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         }
     }
 }

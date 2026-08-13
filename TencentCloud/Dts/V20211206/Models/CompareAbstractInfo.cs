@@ -25,85 +25,85 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 校验配置参数
+        /// <p>校验配置参数</p>
         /// </summary>
         [JsonProperty("Options")]
         public CompareOptions Options{ get; set; }
 
         /// <summary>
-        /// 一致性校验对比对象
+        /// <p>一致性校验对比对象</p>
         /// </summary>
         [JsonProperty("Objects")]
         public CompareObject Objects{ get; set; }
 
         /// <summary>
-        /// 对比结论: same,different
+        /// <p>对比结论: same,different</p>
         /// </summary>
         [JsonProperty("Conclusion")]
         public string Conclusion{ get; set; }
 
         /// <summary>
-        /// 任务状态: success,failed
+        /// <p>任务状态: success,failed</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 总的表数量
+        /// <p>总的表数量</p>
         /// </summary>
         [JsonProperty("TotalTables")]
         public ulong? TotalTables{ get; set; }
 
         /// <summary>
-        /// 已校验的表数量
+        /// <p>已校验的表数量</p>
         /// </summary>
         [JsonProperty("CheckedTables")]
         public ulong? CheckedTables{ get; set; }
 
         /// <summary>
-        /// 不一致的表数量
+        /// <p>不一致的表数量</p>
         /// </summary>
         [JsonProperty("DifferentTables")]
         public ulong? DifferentTables{ get; set; }
 
         /// <summary>
-        /// 跳过校验的表数量
+        /// <p>跳过校验的表数量</p>
         /// </summary>
         [JsonProperty("SkippedTables")]
         public ulong? SkippedTables{ get; set; }
 
         /// <summary>
-        /// 预估表总数
+        /// <p>预估表总数</p>
         /// </summary>
         [JsonProperty("NearlyTableCount")]
         public ulong? NearlyTableCount{ get; set; }
 
         /// <summary>
-        /// 不一致的数据行数量
+        /// <p>不一致的数据行数量</p>
         /// </summary>
         [JsonProperty("DifferentRows")]
         public ulong? DifferentRows{ get; set; }
 
         /// <summary>
-        /// 源库行数，当对比类型为**行数对比**时此项有意义
+        /// <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
         /// </summary>
         [JsonProperty("SrcSampleRows")]
         public ulong? SrcSampleRows{ get; set; }
 
         /// <summary>
-        /// 目标库行数，当对比类型为**行数对比**时此项有意义
+        /// <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
         /// </summary>
         [JsonProperty("DstSampleRows")]
         public ulong? DstSampleRows{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("StartedAt")]
         public string StartedAt{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }

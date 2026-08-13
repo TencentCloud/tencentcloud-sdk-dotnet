@@ -25,218 +25,218 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步任务id，如：sync-btso140
+        /// <p>同步任务id，如：sync-btso140</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 同步任务名
+        /// <p>同步任务名</p>
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 付款方式，PostPay(按量付费)、PrePay(包年包月)
+        /// <p>付款方式，PostPay(按量付费)、PrePay(包年包月)</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
+        /// <p>运行模式，Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
         /// </summary>
         [JsonProperty("RunMode")]
         public string RunMode{ get; set; }
 
         /// <summary>
-        /// 期待运行时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>期待运行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("ExpectRunTime")]
         public string ExpectRunTime{ get; set; }
 
         /// <summary>
-        /// 支持的所有操作
+        /// <p>支持的所有操作</p>
         /// </summary>
         [JsonProperty("AllActions")]
         public string[] AllActions{ get; set; }
 
         /// <summary>
-        /// 当前状态能进行的操作
+        /// <p>当前状态能进行的操作</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Actions")]
         public string[] Actions{ get; set; }
 
         /// <summary>
-        /// 同步选项
+        /// <p>同步选项</p>
         /// </summary>
         [JsonProperty("Options")]
         public Options Options{ get; set; }
 
         /// <summary>
-        /// 同步库表对象
+        /// <p>同步库表对象</p>
         /// </summary>
         [JsonProperty("Objects")]
         public Objects Objects{ get; set; }
 
         /// <summary>
-        /// 任务规格
+        /// <p>任务规格</p>
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 过期时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>过期时间，格式为 yyyy-mm-dd hh:mm:ss</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 源端地域，如：ap-guangzhou等
+        /// <p>源端地域，如：ap-guangzhou等</p>
         /// </summary>
         [JsonProperty("SrcRegion")]
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+        /// <p>源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。</p>
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+        /// <p>源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)</p>
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
 
         /// <summary>
-        /// 源端信息，单节点数据库使用
+        /// <p>源端信息，单节点数据库使用</p>
         /// </summary>
         [JsonProperty("SrcInfo")]
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
-        /// 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+        /// <p>枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster</p>
         /// </summary>
         [JsonProperty("SrcNodeType")]
         public string SrcNodeType{ get; set; }
 
         /// <summary>
-        /// 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+        /// <p>源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。</p>
         /// </summary>
         [JsonProperty("SrcInfos")]
         public SyncDBEndpointInfos SrcInfos{ get; set; }
 
         /// <summary>
-        /// 目标端地域，如：ap-guangzhou等
+        /// <p>目标端地域，如：ap-guangzhou等</p>
         /// </summary>
         [JsonProperty("DstRegion")]
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+        /// <p>目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。</p>
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+        /// <p>目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)</p>
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
 
         /// <summary>
-        /// 目标端信息，单节点数据库使用
+        /// <p>目标端信息，单节点数据库使用</p>
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
 
         /// <summary>
-        /// 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+        /// <p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
         /// </summary>
         [JsonProperty("DstNodeType")]
         public string DstNodeType{ get; set; }
 
         /// <summary>
-        /// 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+        /// <p>目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。</p>
         /// </summary>
         [JsonProperty("DstInfos")]
         public SyncDBEndpointInfos DstInfos{ get; set; }
 
         /// <summary>
-        /// 创建时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 开始时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+        /// <p>任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 结束时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 标签相关信息
+        /// <p>标签相关信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// 同步任务运行步骤信息
+        /// <p>同步任务运行步骤信息</p>
         /// </summary>
         [JsonProperty("Detail")]
         public SyncDetailInfo Detail{ get; set; }
 
         /// <summary>
-        /// 用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)
+        /// <p>用于计费的状态，可能取值有：Normal(正常状态)、Resizing(变配中)、Renewing(续费中)、Isolating(隔离中)、Isolated(已隔离)、Offlining(下线中)、Offlined(已下线)、NotBilled(未计费)、Recovering(解隔离)、PostPay2Prepaying(按量计费转包年包月中)、PrePay2Postpaying(包年包月转按量计费中)</p>
         /// </summary>
         [JsonProperty("TradeStatus")]
         public string TradeStatus{ get; set; }
 
         /// <summary>
-        /// 同步链路规格，如micro,small,medium,large
+        /// <p>同步链路规格，如micro,small,medium,large</p>
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
-        /// 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）
+        /// <p>自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费）</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 下线时间，格式为 yyyy-mm-dd hh:mm:ss
+        /// <p>下线时间，格式为 yyyy-mm-dd hh:mm:ss</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 动态修改对象，修改任务的状态等
+        /// <p>动态修改对象，修改任务的状态等</p>
         /// </summary>
         [JsonProperty("OptObjStatus")]
         public string OptObjStatus{ get; set; }
 
         /// <summary>
-        /// 自动重试时间段设置
+        /// <p>自动重试时间段设置</p>
         /// </summary>
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
-        /// 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+        /// <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p>
         /// </summary>
         [JsonProperty("DumperResumeCtrl")]
         public string DumperResumeCtrl{ get; set; }

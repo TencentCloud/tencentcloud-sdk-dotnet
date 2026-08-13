@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群详细信息
+        /// <p>集群详细信息</p>
         /// </summary>
         [JsonProperty("Detail")]
         public CynosdbClusterDetail Detail{ get; set; }

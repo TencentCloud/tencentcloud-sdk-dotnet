@@ -49,7 +49,7 @@ namespace TencentCloud.Tms.V20201229.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
+        /// <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul>
         /// </summary>
         [JsonProperty("LibType")]
         public long? LibType{ get; set; }
@@ -85,6 +85,13 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("HitInfos")]
         public HitInfo[] HitInfos{ get; set; }
 
+        /// <summary>
+        /// <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HitSnippetInfos")]
+        public HitSnippetInfo[] HitSnippetInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
+            this.SetParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
         }
     }
 }

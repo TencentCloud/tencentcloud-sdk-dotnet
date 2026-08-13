@@ -25,79 +25,79 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 订阅 ID 筛选，精确匹配
+        /// <p>订阅 ID 筛选，精确匹配</p>
         /// </summary>
         [JsonProperty("SubscribeId")]
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 订阅 ID 筛选，精确匹配
+        /// <p>订阅 ID 筛选，精确匹配</p>
         /// </summary>
         [JsonProperty("SubscribeIds")]
         public string[] SubscribeIds{ get; set; }
 
         /// <summary>
-        /// 订阅名称，前缀模糊匹配
+        /// <p>订阅名称，前缀模糊匹配</p>
         /// </summary>
         [JsonProperty("SubscribeName")]
         public string SubscribeName{ get; set; }
 
         /// <summary>
-        /// 订阅的云上数据库实例的 ID，精确匹配
+        /// <p>订阅的云上数据库实例的 ID，精确匹配</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 订阅的topicName
+        /// <p>订阅的topicName</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 计费模式筛选，可能的值：0-包年包月，1-按量计费
+        /// <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p>
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+        /// <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
+        /// <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p>
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+        /// <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
         /// </summary>
         [JsonProperty("SubsStatus")]
         public string[] SubsStatus{ get; set; }
 
         /// <summary>
-        /// 返回记录的起始偏移量。默认0
+        /// <p>返回记录的起始偏移量。默认0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次返回的记录数量。默认20，最大100
+        /// <p>单次返回的记录数量。默认20，最大100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+        /// <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p>
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// tag 过滤条件，多个 TagFilter 之间关系为且
+        /// <p>tag 过滤条件，多个 TagFilter 之间关系为且</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }

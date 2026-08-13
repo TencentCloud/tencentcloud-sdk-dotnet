@@ -25,7 +25,7 @@ namespace TencentCloud.Cds.V20180420.Models
     {
         
         /// <summary>
-        /// 报表 Id
+        /// <p>报表 Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

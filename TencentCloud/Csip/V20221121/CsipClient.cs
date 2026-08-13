@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1485";
+       private const string sdkVersion = "SDK_NET_3.0.1486";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
+        /// </summary>
+        /// <param name="req"><see cref="CancelEdrAlertIgnoreRequest"/></param>
+        /// <returns><see cref="CancelEdrAlertIgnoreResponse"/></returns>
+        public Task<CancelEdrAlertIgnoreResponse> CancelEdrAlertIgnore(CancelEdrAlertIgnoreRequest req)
+        {
+            return InternalRequestAsync<CancelEdrAlertIgnoreResponse>(req, "CancelEdrAlertIgnore");
+        }
+
+        /// <summary>
+        /// 取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
+        /// </summary>
+        /// <param name="req"><see cref="CancelEdrAlertIgnoreRequest"/></param>
+        /// <returns><see cref="CancelEdrAlertIgnoreResponse"/></returns>
+        public CancelEdrAlertIgnoreResponse CancelEdrAlertIgnoreSync(CancelEdrAlertIgnoreRequest req)
+        {
+            return InternalRequestAsync<CancelEdrAlertIgnoreResponse>(req, "CancelEdrAlertIgnore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 检测AK 异步任务
         /// </summary>
         /// <param name="req"><see cref="CreateAccessKeyCheckTaskRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTaskSync(CreateAccessKeySyncTaskRequest req)
         {
             return InternalRequestAsync<CreateAccessKeySyncTaskResponse>(req, "CreateAccessKeySyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描创建接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSIPManualMalwareScanRequest"/></param>
+        /// <returns><see cref="CreateCSIPManualMalwareScanResponse"/></returns>
+        public Task<CreateCSIPManualMalwareScanResponse> CreateCSIPManualMalwareScan(CreateCSIPManualMalwareScanRequest req)
+        {
+            return InternalRequestAsync<CreateCSIPManualMalwareScanResponse>(req, "CreateCSIPManualMalwareScan");
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描创建接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSIPManualMalwareScanRequest"/></param>
+        /// <returns><see cref="CreateCSIPManualMalwareScanResponse"/></returns>
+        public CreateCSIPManualMalwareScanResponse CreateCSIPManualMalwareScanSync(CreateCSIPManualMalwareScanRequest req)
+        {
+            return InternalRequestAsync<CreateCSIPManualMalwareScanResponse>(req, "CreateCSIPManualMalwareScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +684,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEDRManualScanRequest"/></param>
+        /// <returns><see cref="CreateEDRManualScanResponse"/></returns>
+        public Task<CreateEDRManualScanResponse> CreateEDRManualScan(CreateEDRManualScanRequest req)
+        {
+            return InternalRequestAsync<CreateEDRManualScanResponse>(req, "CreateEDRManualScan");
+        }
+
+        /// <summary>
+        /// 点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEDRManualScanRequest"/></param>
+        /// <returns><see cref="CreateEDRManualScanResponse"/></returns>
+        public CreateEDRManualScanResponse CreateEDRManualScanSync(CreateEDRManualScanRequest req)
+        {
+            return InternalRequestAsync<CreateEDRManualScanResponse>(req, "CreateEDRManualScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建EDR告警导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdrAlertExportJobRequest"/></param>
+        /// <returns><see cref="CreateEdrAlertExportJobResponse"/></returns>
+        public Task<CreateEdrAlertExportJobResponse> CreateEdrAlertExportJob(CreateEdrAlertExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateEdrAlertExportJobResponse>(req, "CreateEdrAlertExportJob");
+        }
+
+        /// <summary>
+        /// 创建EDR告警导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdrAlertExportJobRequest"/></param>
+        /// <returns><see cref="CreateEdrAlertExportJobResponse"/></returns>
+        public CreateEdrAlertExportJobResponse CreateEdrAlertExportJobSync(CreateEdrAlertExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateEdrAlertExportJobResponse>(req, "CreateEdrAlertExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建主机列漏洞表导出任务
         /// </summary>
         /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
@@ -869,6 +953,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateVulScanManualResponse CreateVulScanManualSync(CreateVulScanManualRequest req)
         {
             return InternalRequestAsync<CreateVulScanManualResponse>(req, "CreateVulScanManual")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描任务删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCSIPMalwareScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteCSIPMalwareScanTaskResponse"/></returns>
+        public Task<DeleteCSIPMalwareScanTaskResponse> DeleteCSIPMalwareScanTask(DeleteCSIPMalwareScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCSIPMalwareScanTaskResponse>(req, "DeleteCSIPMalwareScanTask");
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描任务删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCSIPMalwareScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteCSIPMalwareScanTaskResponse"/></returns>
+        public DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTaskSync(DeleteCSIPMalwareScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCSIPMalwareScanTaskResponse>(req, "DeleteCSIPMalwareScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1205,6 +1310,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategySync(DeleteDspmWhitelistStrategyRequest req)
         {
             return InternalRequestAsync<DeleteDspmWhitelistStrategyResponse>(req, "DeleteDspmWhitelistStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除EDR策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEDRRulesRequest"/></param>
+        /// <returns><see cref="DeleteEDRRulesResponse"/></returns>
+        public Task<DeleteEDRRulesResponse> DeleteEDRRules(DeleteEDRRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteEDRRulesResponse>(req, "DeleteEDRRules");
+        }
+
+        /// <summary>
+        /// 删除EDR策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEDRRulesRequest"/></param>
+        /// <returns><see cref="DeleteEDRRulesResponse"/></returns>
+        public DeleteEDRRulesResponse DeleteEDRRulesSync(DeleteEDRRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteEDRRulesResponse>(req, "DeleteEDRRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除已终止的扫描任务（物理删除主表及明细表）。只允许删除终态任务，只有创建者可操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEDRScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteEDRScanTaskResponse"/></returns>
+        public Task<DeleteEDRScanTaskResponse> DeleteEDRScanTask(DeleteEDRScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteEDRScanTaskResponse>(req, "DeleteEDRScanTask");
+        }
+
+        /// <summary>
+        /// 删除已终止的扫描任务（物理删除主表及明细表）。只允许删除终态任务，只有创建者可操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEDRScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteEDRScanTaskResponse"/></returns>
+        public DeleteEDRScanTaskResponse DeleteEDRScanTaskSync(DeleteEDRScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteEDRScanTaskResponse>(req, "DeleteEDRScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1709,6 +1856,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCLSLogListV3Response DescribeCLSLogListV3Sync(DescribeCLSLogListV3Request req)
         {
             return InternalRequestAsync<DescribeCLSLogListV3Response>(req, "DescribeCLSLogListV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CSIP 扫描任务主机详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSIPMalwareScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCSIPMalwareScanTaskDetailResponse"/></returns>
+        public Task<DescribeCSIPMalwareScanTaskDetailResponse> DescribeCSIPMalwareScanTaskDetail(DescribeCSIPMalwareScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCSIPMalwareScanTaskDetailResponse>(req, "DescribeCSIPMalwareScanTaskDetail");
+        }
+
+        /// <summary>
+        /// CSIP 扫描任务主机详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSIPMalwareScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCSIPMalwareScanTaskDetailResponse"/></returns>
+        public DescribeCSIPMalwareScanTaskDetailResponse DescribeCSIPMalwareScanTaskDetailSync(DescribeCSIPMalwareScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCSIPMalwareScanTaskDetailResponse>(req, "DescribeCSIPMalwareScanTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描进度查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSIPMalwareScanTaskProgressRequest"/></param>
+        /// <returns><see cref="DescribeCSIPMalwareScanTaskProgressResponse"/></returns>
+        public Task<DescribeCSIPMalwareScanTaskProgressResponse> DescribeCSIPMalwareScanTaskProgress(DescribeCSIPMalwareScanTaskProgressRequest req)
+        {
+            return InternalRequestAsync<DescribeCSIPMalwareScanTaskProgressResponse>(req, "DescribeCSIPMalwareScanTaskProgress");
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描进度查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSIPMalwareScanTaskProgressRequest"/></param>
+        /// <returns><see cref="DescribeCSIPMalwareScanTaskProgressResponse"/></returns>
+        public DescribeCSIPMalwareScanTaskProgressResponse DescribeCSIPMalwareScanTaskProgressSync(DescribeCSIPMalwareScanTaskProgressRequest req)
+        {
+            return InternalRequestAsync<DescribeCSIPMalwareScanTaskProgressResponse>(req, "DescribeCSIPMalwareScanTaskProgress")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3729,6 +3918,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询扫描任务列表。Filter.Filters支持Name：Keyword(模糊OperatorType=9)、ScanType(MANUAL/CYCLE)、TaskType(HOST/CONTAINER)、Status(WAIT/SCANNING/FINISHED/FAILED/CANCELED)、AppId(账号)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRScanRecordListRequest"/></param>
+        /// <returns><see cref="DescribeEDRScanRecordListResponse"/></returns>
+        public Task<DescribeEDRScanRecordListResponse> DescribeEDRScanRecordList(DescribeEDRScanRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRScanRecordListResponse>(req, "DescribeEDRScanRecordList");
+        }
+
+        /// <summary>
+        /// 查询扫描任务列表。Filter.Filters支持Name：Keyword(模糊OperatorType=9)、ScanType(MANUAL/CYCLE)、TaskType(HOST/CONTAINER)、Status(WAIT/SCANNING/FINISHED/FAILED/CANCELED)、AppId(账号)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRScanRecordListRequest"/></param>
+        /// <returns><see cref="DescribeEDRScanRecordListResponse"/></returns>
+        public DescribeEDRScanRecordListResponse DescribeEDRScanRecordListSync(DescribeEDRScanRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRScanRecordListResponse>(req, "DescribeEDRScanRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询扫描任务详情。Filter.Filters支持Name：Status（资产扫描状态，OperatorType=7 IN匹配，取值WAIT/SCANNING/FINISHED/FAILED）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeEDRScanTaskDetailResponse"/></returns>
+        public Task<DescribeEDRScanTaskDetailResponse> DescribeEDRScanTaskDetail(DescribeEDRScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRScanTaskDetailResponse>(req, "DescribeEDRScanTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询扫描任务详情。Filter.Filters支持Name：Status（资产扫描状态，OperatorType=7 IN匹配，取值WAIT/SCANNING/FINISHED/FAILED）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEDRScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeEDRScanTaskDetailResponse"/></returns>
+        public DescribeEDRScanTaskDetailResponse DescribeEDRScanTaskDetailSync(DescribeEDRScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeEDRScanTaskDetailResponse>(req, "DescribeEDRScanTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取EDR告警数量统计，供资产模块调用。根据传入的MemberId和InstanceIDs，查询EDR告警表并返回告警记录条数信息。当InstanceIDs为空时返回汇总统计，非空时按InstanceIDs粒度分别返回统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertCountForAssetRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertCountForAssetResponse"/></returns>
+        public Task<DescribeEdrAlertCountForAssetResponse> DescribeEdrAlertCountForAsset(DescribeEdrAlertCountForAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertCountForAssetResponse>(req, "DescribeEdrAlertCountForAsset");
+        }
+
+        /// <summary>
+        /// 获取EDR告警数量统计，供资产模块调用。根据传入的MemberId和InstanceIDs，查询EDR告警表并返回告警记录条数信息。当InstanceIDs为空时返回汇总统计，非空时按InstanceIDs粒度分别返回统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertCountForAssetRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertCountForAssetResponse"/></returns>
+        public DescribeEdrAlertCountForAssetResponse DescribeEdrAlertCountForAssetSync(DescribeEdrAlertCountForAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertCountForAssetResponse>(req, "DescribeEdrAlertCountForAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 容器场景告警数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertCountForContainerRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertCountForContainerResponse"/></returns>
+        public Task<DescribeEdrAlertCountForContainerResponse> DescribeEdrAlertCountForContainer(DescribeEdrAlertCountForContainerRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertCountForContainerResponse>(req, "DescribeEdrAlertCountForContainer");
+        }
+
+        /// <summary>
+        /// 容器场景告警数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertCountForContainerRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertCountForContainerResponse"/></returns>
+        public DescribeEdrAlertCountForContainerResponse DescribeEdrAlertCountForContainerSync(DescribeEdrAlertCountForContainerRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertCountForContainerResponse>(req, "DescribeEdrAlertCountForContainer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEdrAlertInfoRequest"/></param>
@@ -3767,6 +4040,90 @@ namespace TencentCloud.Csip.V20221121
         public DescribeEdrAlertListResponse DescribeEdrAlertListSync(DescribeEdrAlertListRequest req)
         {
             return InternalRequestAsync<DescribeEdrAlertListResponse>(req, "DescribeEdrAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// EDR告警多攻击阶段查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertMultiAttackStagesRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertMultiAttackStagesResponse"/></returns>
+        public Task<DescribeEdrAlertMultiAttackStagesResponse> DescribeEdrAlertMultiAttackStages(DescribeEdrAlertMultiAttackStagesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertMultiAttackStagesResponse>(req, "DescribeEdrAlertMultiAttackStages");
+        }
+
+        /// <summary>
+        /// EDR告警多攻击阶段查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertMultiAttackStagesRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertMultiAttackStagesResponse"/></returns>
+        public DescribeEdrAlertMultiAttackStagesResponse DescribeEdrAlertMultiAttackStagesSync(DescribeEdrAlertMultiAttackStagesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertMultiAttackStagesResponse>(req, "DescribeEdrAlertMultiAttackStages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取EDR告警统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertSummaryRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertSummaryResponse"/></returns>
+        public Task<DescribeEdrAlertSummaryResponse> DescribeEdrAlertSummary(DescribeEdrAlertSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertSummaryResponse>(req, "DescribeEdrAlertSummary");
+        }
+
+        /// <summary>
+        /// 获取EDR告警统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertSummaryRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertSummaryResponse"/></returns>
+        public DescribeEdrAlertSummaryResponse DescribeEdrAlertSummarySync(DescribeEdrAlertSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertSummaryResponse>(req, "DescribeEdrAlertSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取EDR导出下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeEdrExportJobDownloadURLResponse"/></returns>
+        public Task<DescribeEdrExportJobDownloadURLResponse> DescribeEdrExportJobDownloadURL(DescribeEdrExportJobDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExportJobDownloadURLResponse>(req, "DescribeEdrExportJobDownloadURL");
+        }
+
+        /// <summary>
+        /// 获取EDR导出下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeEdrExportJobDownloadURLResponse"/></returns>
+        public DescribeEdrExportJobDownloadURLResponse DescribeEdrExportJobDownloadURLSync(DescribeEdrExportJobDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExportJobDownloadURLResponse>(req, "DescribeEdrExportJobDownloadURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出EDR任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExportJobListRequest"/></param>
+        /// <returns><see cref="DescribeEdrExportJobListResponse"/></returns>
+        public Task<DescribeEdrExportJobListResponse> DescribeEdrExportJobList(DescribeEdrExportJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExportJobListResponse>(req, "DescribeEdrExportJobList");
+        }
+
+        /// <summary>
+        /// 导出EDR任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExportJobListRequest"/></param>
+        /// <returns><see cref="DescribeEdrExportJobListResponse"/></returns>
+        public DescribeEdrExportJobListResponse DescribeEdrExportJobListSync(DescribeEdrExportJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExportJobListResponse>(req, "DescribeEdrExportJobList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4212,6 +4569,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询网络攻击检测开关及资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetAttackSettingRequest"/></param>
+        /// <returns><see cref="DescribeNetAttackSettingResponse"/></returns>
+        public Task<DescribeNetAttackSettingResponse> DescribeNetAttackSetting(DescribeNetAttackSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeNetAttackSettingResponse>(req, "DescribeNetAttackSetting");
+        }
+
+        /// <summary>
+        /// 查询网络攻击检测开关及资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetAttackSettingRequest"/></param>
+        /// <returns><see cref="DescribeNetAttackSettingResponse"/></returns>
+        public DescribeNetAttackSettingResponse DescribeNetAttackSettingSync(DescribeNetAttackSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeNetAttackSettingResponse>(req, "DescribeNetAttackSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取通知资产范围配置
         /// </summary>
         /// <param name="req"><see cref="DescribeNotifyAssetConfigRequest"/></param>
@@ -4397,6 +4775,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssetsSync(DescribeRepositoryImageAssetsRequest req)
         {
             return InternalRequestAsync<DescribeRepositoryImageAssetsResponse>(req, "DescribeRepositoryImageAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询反弹Shell内网告警与资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public Task<DescribeReverseShellSystemPolicyConfigResponse> DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig");
+        }
+
+        /// <summary>
+        /// 查询反弹Shell内网告警与资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfigSync(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5514,6 +5913,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 导出CSIP扫描任务主机详情为Excel文件，异步生成后通过DescribeExportMachines查询下载地址
+        /// </summary>
+        /// <param name="req"><see cref="ExportCSIPMalwareScanTaskDetailRequest"/></param>
+        /// <returns><see cref="ExportCSIPMalwareScanTaskDetailResponse"/></returns>
+        public Task<ExportCSIPMalwareScanTaskDetailResponse> ExportCSIPMalwareScanTaskDetail(ExportCSIPMalwareScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<ExportCSIPMalwareScanTaskDetailResponse>(req, "ExportCSIPMalwareScanTaskDetail");
+        }
+
+        /// <summary>
+        /// 导出CSIP扫描任务主机详情为Excel文件，异步生成后通过DescribeExportMachines查询下载地址
+        /// </summary>
+        /// <param name="req"><see cref="ExportCSIPMalwareScanTaskDetailRequest"/></param>
+        /// <returns><see cref="ExportCSIPMalwareScanTaskDetailResponse"/></returns>
+        public ExportCSIPMalwareScanTaskDetailResponse ExportCSIPMalwareScanTaskDetailSync(ExportCSIPMalwareScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<ExportCSIPMalwareScanTaskDetailResponse>(req, "ExportCSIPMalwareScanTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出EDR策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportEDRRulesRequest"/></param>
+        /// <returns><see cref="ExportEDRRulesResponse"/></returns>
+        public Task<ExportEDRRulesResponse> ExportEDRRules(ExportEDRRulesRequest req)
+        {
+            return InternalRequestAsync<ExportEDRRulesResponse>(req, "ExportEDRRules");
+        }
+
+        /// <summary>
+        /// 导出EDR策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportEDRRulesRequest"/></param>
+        /// <returns><see cref="ExportEDRRulesResponse"/></returns>
+        public ExportEDRRulesResponse ExportEDRRulesSync(ExportEDRRulesRequest req)
+        {
+            return InternalRequestAsync<ExportEDRRulesResponse>(req, "ExportEDRRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改AI-Link智链引擎配置
         /// </summary>
         /// <param name="req"><see cref="ModifyAILinkSettingRequest"/></param>
@@ -6207,6 +6648,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改EDR策略开关状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyEDRRuleStatusResponse"/></returns>
+        public Task<ModifyEDRRuleStatusResponse> ModifyEDRRuleStatus(ModifyEDRRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRuleStatusResponse>(req, "ModifyEDRRuleStatus");
+        }
+
+        /// <summary>
+        /// 修改EDR策略开关状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyEDRRuleStatusResponse"/></returns>
+        public ModifyEDRRuleStatusResponse ModifyEDRRuleStatusSync(ModifyEDRRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRuleStatusResponse>(req, "ModifyEDRRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改EDR策略动作
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRulesActionRequest"/></param>
+        /// <returns><see cref="ModifyEDRRulesActionResponse"/></returns>
+        public Task<ModifyEDRRulesActionResponse> ModifyEDRRulesAction(ModifyEDRRulesActionRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRulesActionResponse>(req, "ModifyEDRRulesAction");
+        }
+
+        /// <summary>
+        /// 批量修改EDR策略动作
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEDRRulesActionRequest"/></param>
+        /// <returns><see cref="ModifyEDRRulesActionResponse"/></returns>
+        public ModifyEDRRulesActionResponse ModifyEDRRulesActionSync(ModifyEDRRulesActionRequest req)
+        {
+            return InternalRequestAsync<ModifyEDRRulesActionResponse>(req, "ModifyEDRRulesAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// EDR告警隔离和恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertIsolationRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertIsolationResponse"/></returns>
+        public Task<ModifyEdrAlertIsolationResponse> ModifyEdrAlertIsolation(ModifyEdrAlertIsolationRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertIsolationResponse>(req, "ModifyEdrAlertIsolation");
+        }
+
+        /// <summary>
+        /// EDR告警隔离和恢复
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertIsolationRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertIsolationResponse"/></returns>
+        public ModifyEdrAlertIsolationResponse ModifyEdrAlertIsolationSync(ModifyEdrAlertIsolationRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertIsolationResponse>(req, "ModifyEdrAlertIsolation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
         /// </summary>
         /// <param name="req"><see cref="ModifyEdrAlertPermanentIgnoreRequest"/></param>
@@ -6224,6 +6728,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnoreSync(ModifyEdrAlertPermanentIgnoreRequest req)
         {
             return InternalRequestAsync<ModifyEdrAlertPermanentIgnoreResponse>(req, "ModifyEdrAlertPermanentIgnore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// EDR告警状态处置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertStatusResponse"/></returns>
+        public Task<ModifyEdrAlertStatusResponse> ModifyEdrAlertStatus(ModifyEdrAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertStatusResponse>(req, "ModifyEdrAlertStatus");
+        }
+
+        /// <summary>
+        /// EDR告警状态处置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifyEdrAlertStatusResponse"/></returns>
+        public ModifyEdrAlertStatusResponse ModifyEdrAlertStatusSync(ModifyEdrAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrAlertStatusResponse>(req, "ModifyEdrAlertStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6266,6 +6791,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
         {
             return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改网络攻击检测开关及资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetAttackSettingRequest"/></param>
+        /// <returns><see cref="ModifyNetAttackSettingResponse"/></returns>
+        public Task<ModifyNetAttackSettingResponse> ModifyNetAttackSetting(ModifyNetAttackSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyNetAttackSettingResponse>(req, "ModifyNetAttackSetting");
+        }
+
+        /// <summary>
+        /// 修改网络攻击检测开关及资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetAttackSettingRequest"/></param>
+        /// <returns><see cref="ModifyNetAttackSettingResponse"/></returns>
+        public ModifyNetAttackSettingResponse ModifyNetAttackSettingSync(ModifyNetAttackSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyNetAttackSettingResponse>(req, "ModifyNetAttackSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6371,6 +6917,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyPolicyStatusResponse ModifyPolicyStatusSync(ModifyPolicyStatusRequest req)
         {
             return InternalRequestAsync<ModifyPolicyStatusResponse>(req, "ModifyPolicyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改反弹Shell内网告警与资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellSystemPolicyConfigResponse"/></returns>
+        public Task<ModifyReverseShellSystemPolicyConfigResponse> ModifyReverseShellSystemPolicyConfig(ModifyReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellSystemPolicyConfigResponse>(req, "ModifyReverseShellSystemPolicyConfig");
+        }
+
+        /// <summary>
+        /// 修改反弹Shell内网告警与资产范围配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellSystemPolicyConfigResponse"/></returns>
+        public ModifyReverseShellSystemPolicyConfigResponse ModifyReverseShellSystemPolicyConfigSync(ModifyReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellSystemPolicyConfigResponse>(req, "ModifyReverseShellSystemPolicyConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6564,6 +7131,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// CSIP 手动扫描任务删除接口
+        /// </summary>
+        /// <param name="req"><see cref="ScanCSIPTaskAgainRequest"/></param>
+        /// <returns><see cref="ScanCSIPTaskAgainResponse"/></returns>
+        public Task<ScanCSIPTaskAgainResponse> ScanCSIPTaskAgain(ScanCSIPTaskAgainRequest req)
+        {
+            return InternalRequestAsync<ScanCSIPTaskAgainResponse>(req, "ScanCSIPTaskAgain");
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描任务删除接口
+        /// </summary>
+        /// <param name="req"><see cref="ScanCSIPTaskAgainRequest"/></param>
+        /// <returns><see cref="ScanCSIPTaskAgainResponse"/></returns>
+        public ScanCSIPTaskAgainResponse ScanCSIPTaskAgainSync(ScanCSIPTaskAgainRequest req)
+        {
+            return InternalRequestAsync<ScanCSIPTaskAgainResponse>(req, "ScanCSIPTaskAgain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 基于原任务配置新建扫描任务。AssetId为空时从TaskId获取全部资产信息；AssetId非空时仅含该单资产。
+        /// </summary>
+        /// <param name="req"><see cref="ScanEDRTaskAgainRequest"/></param>
+        /// <returns><see cref="ScanEDRTaskAgainResponse"/></returns>
+        public Task<ScanEDRTaskAgainResponse> ScanEDRTaskAgain(ScanEDRTaskAgainRequest req)
+        {
+            return InternalRequestAsync<ScanEDRTaskAgainResponse>(req, "ScanEDRTaskAgain");
+        }
+
+        /// <summary>
+        /// 基于原任务配置新建扫描任务。AssetId为空时从TaskId获取全部资产信息；AssetId非空时仅含该单资产。
+        /// </summary>
+        /// <param name="req"><see cref="ScanEDRTaskAgainRequest"/></param>
+        /// <returns><see cref="ScanEDRTaskAgainResponse"/></returns>
+        public ScanEDRTaskAgainResponse ScanEDRTaskAgainSync(ScanEDRTaskAgainRequest req)
+        {
+            return InternalRequestAsync<ScanEDRTaskAgainResponse>(req, "ScanEDRTaskAgain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 发送Dspm资产访问验证码
         /// </summary>
         /// <param name="req"><see cref="SendDspmAssetLoginSmsCodeRequest"/></param>
@@ -6581,6 +7190,48 @@ namespace TencentCloud.Csip.V20221121
         public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCodeSync(SendDspmAssetLoginSmsCodeRequest req)
         {
             return InternalRequestAsync<SendDspmAssetLoginSmsCodeResponse>(req, "SendDspmAssetLoginSmsCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描停止接口
+        /// </summary>
+        /// <param name="req"><see cref="StopCSIPManualMalwareScanRequest"/></param>
+        /// <returns><see cref="StopCSIPManualMalwareScanResponse"/></returns>
+        public Task<StopCSIPManualMalwareScanResponse> StopCSIPManualMalwareScan(StopCSIPManualMalwareScanRequest req)
+        {
+            return InternalRequestAsync<StopCSIPManualMalwareScanResponse>(req, "StopCSIPManualMalwareScan");
+        }
+
+        /// <summary>
+        /// CSIP 手动扫描停止接口
+        /// </summary>
+        /// <param name="req"><see cref="StopCSIPManualMalwareScanRequest"/></param>
+        /// <returns><see cref="StopCSIPManualMalwareScanResponse"/></returns>
+        public StopCSIPManualMalwareScanResponse StopCSIPManualMalwareScanSync(StopCSIPManualMalwareScanRequest req)
+        {
+            return InternalRequestAsync<StopCSIPManualMalwareScanResponse>(req, "StopCSIPManualMalwareScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止或取消扫描任务。SCANNING状态调RPC停止，WAIT状态直接改库取消。只有任务创建者可操作。
+        /// </summary>
+        /// <param name="req"><see cref="StopEDRScanTaskRequest"/></param>
+        /// <returns><see cref="StopEDRScanTaskResponse"/></returns>
+        public Task<StopEDRScanTaskResponse> StopEDRScanTask(StopEDRScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopEDRScanTaskResponse>(req, "StopEDRScanTask");
+        }
+
+        /// <summary>
+        /// 停止或取消扫描任务。SCANNING状态调RPC停止，WAIT状态直接改库取消。只有任务创建者可操作。
+        /// </summary>
+        /// <param name="req"><see cref="StopEDRScanTaskRequest"/></param>
+        /// <returns><see cref="StopEDRScanTaskResponse"/></returns>
+        public StopEDRScanTaskResponse StopEDRScanTaskSync(StopEDRScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopEDRScanTaskResponse>(req, "StopEDRScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

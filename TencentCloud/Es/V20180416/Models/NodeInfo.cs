@@ -37,7 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+        /// <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

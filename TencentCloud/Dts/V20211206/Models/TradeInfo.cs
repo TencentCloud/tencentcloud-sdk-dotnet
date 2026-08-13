@@ -25,67 +25,67 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 交易订单号
+        /// <p>交易订单号</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 上一次交易订单号
+        /// <p>上一次交易订单号</p>
         /// </summary>
         [JsonProperty("LastDealName")]
         public string LastDealName{ get; set; }
 
         /// <summary>
-        /// 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
+        /// <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
-        /// 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
+        /// <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
         /// </summary>
         [JsonProperty("TradeStatus")]
         public string TradeStatus{ get; set; }
 
         /// <summary>
-        /// 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
+        /// <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
+        /// <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
+        /// <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 下线原因
+        /// <p>下线原因</p>
         /// </summary>
         [JsonProperty("OfflineReason")]
         public string OfflineReason{ get; set; }
 
         /// <summary>
-        /// 隔离原因
+        /// <p>隔离原因</p>
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
-        /// 付费类型，包括：postpay(后付费)、prepay(预付费)
+        /// <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
-        /// 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+        /// <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
         /// </summary>
         [JsonProperty("BillingType")]
         public string BillingType{ get; set; }

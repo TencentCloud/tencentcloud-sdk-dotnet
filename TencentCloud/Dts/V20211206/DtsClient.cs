@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1480";
+       private const string sdkVersion = "SDK_NET_3.0.1486";
 
         /// <summary>
         /// Client constructor.
@@ -589,9 +589,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
-        /// 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
-        /// 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
+        /// 本接口用于创建校验后，获取校验的结果，能查询到当前校验的状态和进度。
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationCheckJobRequest"/></param>
         /// <returns><see cref="DescribeMigrationCheckJobResponse"/></returns>
@@ -601,9 +599,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
-        /// 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
-        /// 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
+        /// 本接口用于创建校验后，获取校验的结果，能查询到当前校验的状态和进度。
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationCheckJobRequest"/></param>
         /// <returns><see cref="DescribeMigrationCheckJobResponse"/></returns>

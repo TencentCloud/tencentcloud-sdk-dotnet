@@ -25,33 +25,33 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数据是否准备好，0未准备好，1准备好
+        /// <p>数据是否准备好，0未准备好，1准备好</p>
         /// </summary>
         [JsonProperty("Ready")]
         public ulong? Ready{ get; set; }
 
         /// <summary>
-        /// 消耗详情
+        /// <p>消耗详情</p>
         /// </summary>
         [JsonProperty("Total")]
         public ConsumptionSummaryTotal Total{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// <p>过滤条件</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionValue")]
         public ConsumptionResourceSummaryConditionValue ConditionValue{ get; set; }
 
         /// <summary>
-        /// 记录数量
+        /// <p>记录数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }
 
         /// <summary>
-        /// 资源消耗详情
+        /// <p>资源消耗详情</p>
         /// </summary>
         [JsonProperty("Data")]
         public ConsumptionResourceSummaryDataItem[] Data{ get; set; }

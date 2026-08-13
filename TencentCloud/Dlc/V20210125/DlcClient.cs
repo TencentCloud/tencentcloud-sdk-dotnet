@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1484";
+       private const string sdkVersion = "SDK_NET_3.0.1486";
 
         /// <summary>
         /// Client constructor.
@@ -2956,7 +2956,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询当前地域可售卖的资源规格和最大配额
+        /// 查询当前地域可售卖的资源规格、最大配额，以及库存情况。StatusCategory 与 DescribePartitionAvailableQuota 数据同源，将实时可新增数量映射为库存分级；当请求 Region 与资源池实际部署地域不一致，或服务 cold-start 快照尚未就绪时，StatusCategory 为 null。
         /// </summary>
         /// <param name="req"><see cref="DescribeSaleResourceInfoRequest"/></param>
         /// <returns><see cref="DescribeSaleResourceInfoResponse"/></returns>
@@ -2966,7 +2966,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询当前地域可售卖的资源规格和最大配额
+        /// 查询当前地域可售卖的资源规格、最大配额，以及库存情况。StatusCategory 与 DescribePartitionAvailableQuota 数据同源，将实时可新增数量映射为库存分级；当请求 Region 与资源池实际部署地域不一致，或服务 cold-start 快照尚未就绪时，StatusCategory 为 null。
         /// </summary>
         /// <param name="req"><see cref="DescribeSaleResourceInfoRequest"/></param>
         /// <returns><see cref="DescribeSaleResourceInfoResponse"/></returns>
@@ -4737,6 +4737,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListExamplesResponse ListExamplesSync(ListExamplesRequest req)
         {
             return InternalRequestAsync<ListExamplesResponse>(req, "ListExamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出所有镜像
+        /// </summary>
+        /// <param name="req"><see cref="ListImagesRequest"/></param>
+        /// <returns><see cref="ListImagesResponse"/></returns>
+        public Task<ListImagesResponse> ListImages(ListImagesRequest req)
+        {
+            return InternalRequestAsync<ListImagesResponse>(req, "ListImages");
+        }
+
+        /// <summary>
+        /// 列出所有镜像
+        /// </summary>
+        /// <param name="req"><see cref="ListImagesRequest"/></param>
+        /// <returns><see cref="ListImagesResponse"/></returns>
+        public ListImagesResponse ListImagesSync(ListImagesRequest req)
+        {
+            return InternalRequestAsync<ListImagesResponse>(req, "ListImages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

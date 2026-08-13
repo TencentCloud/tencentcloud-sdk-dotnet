@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 一致性校验列表
+        /// <p>一致性校验列表</p>
         /// </summary>
         [JsonProperty("Items")]
         public CompareTaskItem[] Items{ get; set; }

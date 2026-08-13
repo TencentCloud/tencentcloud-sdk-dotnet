@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 符合查询条件的实例总数
+        /// <p>符合查询条件的实例总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的信息列表
+        /// <p>数据订阅实例的信息列表</p>
         /// </summary>
         [JsonProperty("Items")]
         public SubscribeInfo[] Items{ get; set; }

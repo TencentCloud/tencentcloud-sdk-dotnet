@@ -151,6 +151,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? ApiStatus{ get; set; }
 
         /// <summary>
+        /// <p>LLMWAF开关</p>
+        /// </summary>
+        [JsonProperty("LLMStatus")]
+        public long? LLMStatus{ get; set; }
+
+        /// <summary>
         /// <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
         /// </summary>
         [JsonProperty("ObjectFlowMode")]
@@ -243,6 +249,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "BotStatus", this.BotStatus);
             this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+            this.SetParamSimple(map, prefix + "LLMStatus", this.LLMStatus);
             this.SetParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);

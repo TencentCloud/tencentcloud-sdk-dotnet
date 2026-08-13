@@ -85,6 +85,18 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("EnableExtractDb")]
         public long? EnableExtractDb{ get; set; }
 
+        /// <summary>
+        /// <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+        /// </summary>
+        [JsonProperty("EnableGraphBuild")]
+        public long? EnableGraphBuild{ get; set; }
+
+        /// <summary>
+        /// <p>0:关闭 1:开启树构建（入库时），默认0</p>
+        /// </summary>
+        [JsonProperty("EnableTreeBuild")]
+        public long? EnableTreeBuild{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +113,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "GenParaSummary", this.GenParaSummary);
             this.SetParamSimple(map, prefix + "EnableImageUnderstanding", this.EnableImageUnderstanding);
             this.SetParamSimple(map, prefix + "EnableExtractDb", this.EnableExtractDb);
+            this.SetParamSimple(map, prefix + "EnableGraphBuild", this.EnableGraphBuild);
+            this.SetParamSimple(map, prefix + "EnableTreeBuild", this.EnableTreeBuild);
         }
     }
 }

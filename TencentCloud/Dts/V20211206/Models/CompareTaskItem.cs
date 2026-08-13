@@ -25,85 +25,85 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 对比任务 Id
+        /// <p>对比任务 Id</p>
         /// </summary>
         [JsonProperty("CompareTaskId")]
         public string CompareTaskId{ get; set; }
 
         /// <summary>
-        /// 对比任务名称
+        /// <p>对比任务名称</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+        /// <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 对比任务配置
+        /// <p>对比任务配置</p>
         /// </summary>
         [JsonProperty("Config")]
         public CompareObject Config{ get; set; }
 
         /// <summary>
-        /// 对比任务校验详情
+        /// <p>对比任务校验详情</p>
         /// </summary>
         [JsonProperty("CheckProcess")]
         public ProcessProgress CheckProcess{ get; set; }
 
         /// <summary>
-        /// 对比任务运行详情
+        /// <p>对比任务运行详情</p>
         /// </summary>
         [JsonProperty("CompareProcess")]
         public ProcessProgress CompareProcess{ get; set; }
 
         /// <summary>
-        /// 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
+        /// <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
         /// </summary>
         [JsonProperty("Conclusion")]
         public string Conclusion{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 任务启动时间
+        /// <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("StartedAt")]
         public string StartedAt{ get; set; }
 
         /// <summary>
-        /// 对比结束时间
+        /// <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
         /// </summary>
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }
 
         /// <summary>
-        /// 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+        /// <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 对比配置信息
+        /// <p>对比配置信息</p>
         /// </summary>
         [JsonProperty("Options")]
         public CompareOptions Options{ get; set; }
 
         /// <summary>
-        /// 一致性校验提示信息
+        /// <p>一致性校验提示信息</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 任务数目
+        /// <p>任务数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务详情数组
+        /// <p>任务详情数组</p>
         /// </summary>
         [JsonProperty("JobList")]
         public SyncJobInfo[] JobList{ get; set; }
