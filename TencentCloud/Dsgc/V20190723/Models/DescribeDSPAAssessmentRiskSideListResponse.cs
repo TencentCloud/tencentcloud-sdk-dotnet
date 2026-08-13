@@ -25,14 +25,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// 风险面列表
+        /// <p>风险面列表</p>
         /// </summary>
         [JsonProperty("RiskSideItmeList")]
         [System.Obsolete]
         public Note[] RiskSideItmeList{ get; set; }
 
         /// <summary>
-        /// 风险面列表
+        /// <p>风险面列表</p>
         /// </summary>
         [JsonProperty("RiskSideItemList")]
         public Note[] RiskSideItemList{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 代码内容
+        /// <p>base64编码的代码内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeInfo")]
         public string CodeInfo{ get; set; }
 
         /// <summary>
-        /// 代码文件大小，单位KB
+        /// <p>代码文件大小，单位KB</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeFileSize")]

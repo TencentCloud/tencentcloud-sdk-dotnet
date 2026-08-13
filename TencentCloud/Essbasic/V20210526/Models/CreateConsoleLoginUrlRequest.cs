@@ -115,7 +115,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? AutoActive{ get; set; }
 
         /// <summary>
-        /// <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+        /// <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
         /// </summary>
         [JsonProperty("BusinessLicense")]
         public string BusinessLicense{ get; set; }
@@ -169,6 +169,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ProxyOrganizationIdCardType")]
         public string ProxyOrganizationIdCardType{ get; set; }
 
+        /// <summary>
+        /// <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+        /// </summary>
+        [JsonProperty("BusinessLicenseId")]
+        public string BusinessLicenseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +205,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
             this.SetParamSimple(map, prefix + "ProxyOrganizationIdCardType", this.ProxyOrganizationIdCardType);
+            this.SetParamSimple(map, prefix + "BusinessLicenseId", this.BusinessLicenseId);
         }
     }
 }

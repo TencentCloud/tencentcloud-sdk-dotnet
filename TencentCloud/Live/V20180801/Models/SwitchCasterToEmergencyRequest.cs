@@ -25,10 +25,16 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 导播台ID。
+        /// <p>导播台ID。</p>
         /// </summary>
         [JsonProperty("CasterId")]
         public ulong? CasterId{ get; set; }
+
+        /// <summary>
+        /// <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("FromBeginning")]
+        public bool? FromBeginning{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
+            this.SetParamSimple(map, prefix + "FromBeginning", this.FromBeginning);
         }
     }
 }

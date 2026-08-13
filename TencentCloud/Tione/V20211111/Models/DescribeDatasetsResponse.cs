@@ -25,28 +25,28 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 数据集总量（名称维度）
+        /// <p>数据集总量（名称维度）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 数据集按照数据集名称聚合的分组
+        /// <p>数据集按照数据集名称聚合的分组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasetGroups")]
         public DatasetGroup[] DatasetGroups{ get; set; }
 
         /// <summary>
-        /// 数据集ID总量
+        /// <p>数据集ID总量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasetIdNums")]
         public ulong? DatasetIdNums{ get; set; }
 
         /// <summary>
-        /// 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+        /// <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
         /// </summary>
         [JsonProperty("CFSNotReady")]
         public bool? CFSNotReady{ get; set; }

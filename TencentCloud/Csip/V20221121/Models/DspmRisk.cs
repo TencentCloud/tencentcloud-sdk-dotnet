@@ -25,160 +25,180 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 风险id
+        /// <p>风险id</p>
         /// </summary>
         [JsonProperty("RiskId")]
         public string RiskId{ get; set; }
 
         /// <summary>
-        /// 风险名称
+        /// <p>风险名称</p>
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
-        /// 风险英文名称
+        /// <p>风险英文名称</p>
         /// </summary>
         [JsonProperty("RiskNameEn")]
         public string RiskNameEn{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// <p>策略类型</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// 策略类别
+        /// <p>策略类别</p>
         /// </summary>
         [JsonProperty("StrategyCategory")]
         public string StrategyCategory{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// <p>风险等级</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 资产实例Id
+        /// <p>资产实例Id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 资产类型
+        /// <p>资产类型</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// 资产名
+        /// <p>资产名</p>
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("AssetRegion")]
         public string AssetRegion{ get; set; }
 
         /// <summary>
-        /// 资产账号
+        /// <p>资产账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 主机地址
+        /// <p>主机地址</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 账号类型
+        /// <p>账号类型</p>
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// 风险检出时间
+        /// <p>风险检出时间</p>
         /// </summary>
         [JsonProperty("DetectTime")]
         public string DetectTime{ get; set; }
 
         /// <summary>
-        /// 处理状态 0-未处理 1-已处置 2-已忽略
+        /// <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 身份id
+        /// <p>身份id</p>
         /// </summary>
         [JsonProperty("IdentifyId")]
         public string IdentifyId{ get; set; }
 
         /// <summary>
-        /// 所属云账号uin用户
+        /// <p>所属云账号uin用户</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public DspmUinUser OwnerUin{ get; set; }
 
         /// <summary>
-        /// 所属个人用户信息
+        /// <p>所属个人用户信息</p>
         /// </summary>
         [JsonProperty("Person")]
         public DspmPersonUser Person{ get; set; }
 
         /// <summary>
-        /// 风险数据。
+        /// <p>风险数据。</p>
         /// </summary>
         [JsonProperty("RiskData")]
         public string RiskData{ get; set; }
 
         /// <summary>
-        /// 是否资产管理员
+        /// <p>是否资产管理员</p>
         /// </summary>
         [JsonProperty("IsAssetManager")]
         public long? IsAssetManager{ get; set; }
 
         /// <summary>
-        /// 数据起始时间
+        /// <p>数据起始时间</p>
         /// </summary>
         [JsonProperty("DataBeginTime")]
         public string DataBeginTime{ get; set; }
 
         /// <summary>
-        /// 数据结束时间
+        /// <p>数据结束时间</p>
         /// </summary>
         [JsonProperty("DataEndTime")]
         public string DataEndTime{ get; set; }
 
         /// <summary>
-        /// 风险类型。risk-风险；alarm-告警。
+        /// <p>风险类型。risk-风险；alarm-告警。</p>
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// 资产所属账号app id
+        /// <p>资产所属账号app id</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 账号昵称
+        /// <p>账号昵称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 资产所属账号uin
+        /// <p>资产所属账号uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>集群ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>集群名</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
 
         /// <summary>
@@ -212,6 +232,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

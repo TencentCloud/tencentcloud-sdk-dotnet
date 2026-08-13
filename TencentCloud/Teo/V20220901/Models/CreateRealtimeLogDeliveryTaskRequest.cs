@@ -73,6 +73,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
+        /// <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+        /// </summary>
+        [JsonProperty("CustomExpressionFields")]
+        public CustomExpressionField[] CustomExpressionFields{ get; set; }
+
+        /// <summary>
         /// <p>日志投递的过滤条件，不填表示投递全量日志。</p>
         /// </summary>
         [JsonProperty("DeliveryConditions")]
@@ -122,6 +128,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "EntityList.", this.EntityList);
             this.SetParamArraySimple(map, prefix + "Fields.", this.Fields);
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
+            this.SetParamArrayObj(map, prefix + "CustomExpressionFields.", this.CustomExpressionFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
             this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 备份日志Id
+        /// <p>备份日志Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }

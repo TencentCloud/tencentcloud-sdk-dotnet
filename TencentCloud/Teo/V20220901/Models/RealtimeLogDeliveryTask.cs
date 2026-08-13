@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string DeliveryStatus{ get; set; }
 
         /// <summary>
-        /// <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+        /// <p>实时日志投递任务类型，取值有： <ul><li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 S3 兼容（兼容 SigV4 鉴权算法）的对象存储的地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></ul></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -79,6 +79,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
+        /// <p>投递的自定义表达式字段列表。</p>
+        /// </summary>
+        [JsonProperty("CustomExpressionFields")]
+        public CustomExpressionField[] CustomExpressionFields{ get; set; }
+
+        /// <summary>
         /// <p>日志投递的过滤条件。</p>
         /// </summary>
         [JsonProperty("DeliveryConditions")]
@@ -112,7 +118,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// <p>AWS S3 兼容存储桶的配置信息。</p>
+        /// <p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3")]
@@ -145,6 +151,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArraySimple(map, prefix + "Fields.", this.Fields);
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
+            this.SetParamArrayObj(map, prefix + "CustomExpressionFields.", this.CustomExpressionFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
             this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);

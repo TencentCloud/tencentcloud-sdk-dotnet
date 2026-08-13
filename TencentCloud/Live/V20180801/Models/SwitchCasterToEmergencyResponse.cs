@@ -25,10 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 备播状态，范围[0,1,2]
-        /// 0. 正常直播状态
-        /// 1. 备播状态
-        /// 2. 备播切换正常直播中，在配置了延播时长时出现
+        /// <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
         /// </summary>
         [JsonProperty("EmergencyStatus")]
         public long? EmergencyStatus{ get; set; }

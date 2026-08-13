@@ -25,109 +25,109 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 服务id
+        /// <p>服务id</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>服务名称</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 服务状态
+        /// <p>服务状态</p>
         /// </summary>
         [JsonProperty("ServiceState")]
         public string ServiceState{ get; set; }
 
         /// <summary>
-        /// 运行中的副本数
+        /// <p>运行中的副本数</p>
         /// </summary>
         [JsonProperty("RunningReplicas")]
         public ulong? RunningReplicas{ get; set; }
 
         /// <summary>
-        /// 期望的副本总数
+        /// <p>期望的副本总数</p>
         /// </summary>
         [JsonProperty("TotalReplicas")]
         public ulong? TotalReplicas{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 算力套餐详情
+        /// <p>算力套餐详情</p>
         /// </summary>
         [JsonProperty("ComputeSet")]
         public ComputeDetail[] ComputeSet{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 服务部署信息
+        /// <p>服务部署信息</p>
         /// </summary>
         [JsonProperty("DeploymentConfigs")]
         public DeploymentConfig[] DeploymentConfigs{ get; set; }
 
         /// <summary>
-        /// 服务超参数配置
+        /// <p>服务超参数配置</p>
         /// </summary>
         [JsonProperty("HyperParam")]
         public HyperParam HyperParam{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>安全类型</p>
         /// </summary>
         [JsonProperty("SecurityType")]
         public string SecurityType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>角色算力配置列表</p>
         /// </summary>
         [JsonProperty("RoleComputeSet")]
         public ComputeDetail[] RoleComputeSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>目标副本数</p>
         /// </summary>
         [JsonProperty("TargetReplicas")]
         public ulong? TargetReplicas{ get; set; }
 
         /// <summary>
-        /// 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+        /// <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 到期时间(包月)，按量为空
+        /// <p>到期时间(包月)，按量为空</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标识(包月)
+        /// <p>自动续费标识(包月)</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 受限状态(如欠费隔离)
+        /// <p>受限状态(如欠费隔离)</p>
         /// </summary>
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
         /// <summary>
-        /// 是否自定义部署：1是 0否
+        /// <p>是否自定义部署：1是 0否</p>
         /// </summary>
         [JsonProperty("IsCustomDeploy")]
         public long? IsCustomDeploy{ get; set; }

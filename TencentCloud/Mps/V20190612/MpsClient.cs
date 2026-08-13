@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1483";
+       private const string sdkVersion = "SDK_NET_3.0.1485";
 
         /// <summary>
         /// Client constructor.
@@ -2048,6 +2048,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAigcImageTaskResponse DescribeAigcImageTaskSync(DescribeAigcImageTaskRequest req)
         {
             return InternalRequestAsync<DescribeAigcImageTaskResponse>(req, "DescribeAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AIGC任务列表详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskListResponse"/></returns>
+        public Task<DescribeAigcTaskListResponse> DescribeAigcTaskList(DescribeAigcTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskListResponse>(req, "DescribeAigcTaskList");
+        }
+
+        /// <summary>
+        /// 查询AIGC任务列表详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskListResponse"/></returns>
+        public DescribeAigcTaskListResponse DescribeAigcTaskListSync(DescribeAigcTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskListResponse>(req, "DescribeAigcTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

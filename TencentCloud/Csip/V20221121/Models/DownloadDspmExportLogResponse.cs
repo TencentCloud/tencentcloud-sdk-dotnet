@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 下载URL
+        /// <p>下载URL</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

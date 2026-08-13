@@ -210,6 +210,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TemplateDataModifyAction")]
         public string TemplateDataModifyAction{ get; set; }
 
+        /// <summary>
+        /// <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterfaces[] NetworkInterfaces{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

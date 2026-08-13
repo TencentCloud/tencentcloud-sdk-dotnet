@@ -156,6 +156,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LaunchTemplate")]
         public LaunchTemplate LaunchTemplate{ get; set; }
 
+        /// <summary>
+        /// <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterfaces[] NetworkInterfaces{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

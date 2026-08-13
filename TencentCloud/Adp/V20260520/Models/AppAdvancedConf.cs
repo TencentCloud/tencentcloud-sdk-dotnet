@@ -25,25 +25,32 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 是否开启上下文改写
+        /// <p>是否开启上下文改写</p>
         /// </summary>
         [JsonProperty("EnableContextRewrite")]
         public bool? EnableContextRewrite{ get; set; }
 
         /// <summary>
-        /// 是否开启图文检索
+        /// <p>是否开启图文检索</p>
         /// </summary>
         [JsonProperty("EnableImageTextRetrieval")]
         public bool? EnableImageTextRetrieval{ get; set; }
 
         /// <summary>
-        /// 回复灵活度
+        /// <p>回复灵活度</p>
         /// </summary>
         [JsonProperty("ReplyFlexibility")]
         public ulong? ReplyFlexibility{ get; set; }
 
         /// <summary>
-        /// 意图达成优先级
+        /// <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DialogCustomConfig")]
+        public DialogCustomConfig DialogCustomConfig{ get; set; }
+
+        /// <summary>
+        /// <p>意图达成优先级</p>
         /// </summary>
         [JsonProperty("IntentAchievement")]
         public IntentAchievementInfo[] IntentAchievement{ get; set; }
@@ -57,6 +64,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "EnableContextRewrite", this.EnableContextRewrite);
             this.SetParamSimple(map, prefix + "EnableImageTextRetrieval", this.EnableImageTextRetrieval);
             this.SetParamSimple(map, prefix + "ReplyFlexibility", this.ReplyFlexibility);
+            this.SetParamObj(map, prefix + "DialogCustomConfig.", this.DialogCustomConfig);
             this.SetParamArrayObj(map, prefix + "IntentAchievement.", this.IntentAchievement);
         }
     }

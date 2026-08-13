@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 集团账号的成员id
+        /// <p>集团账号的成员id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 备份日志保留时长
+        /// <p>备份日志保留时长</p>
         /// </summary>
         [JsonProperty("BackupLogSaveTime")]
         public long? BackupLogSaveTime{ get; set; }
 
         /// <summary>
-        /// 恢复日志保留时长
+        /// <p>恢复日志保留时长</p>
         /// </summary>
         [JsonProperty("RestoreLogSaveTime")]
         public long? RestoreLogSaveTime{ get; set; }
 
         /// <summary>
-        /// 日志最大生命周期限制
+        /// <p>日志最大生命周期限制</p>
         /// </summary>
         [JsonProperty("LogMaxSaveTime")]
         public long? LogMaxSaveTime{ get; set; }
 
         /// <summary>
-        /// 在线日志最大天数限制
+        /// <p>在线日志最大天数限制</p>
         /// </summary>
         [JsonProperty("OnlineLogMaxSaveTime")]
         public long? OnlineLogMaxSaveTime{ get; set; }

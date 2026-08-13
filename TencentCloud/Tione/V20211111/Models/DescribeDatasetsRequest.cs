@@ -25,57 +25,61 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 数据集id列表
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>数据集id列表</p>
         /// </summary>
         [JsonProperty("DatasetIds")]
         public string[] DatasetIds{ get; set; }
 
         /// <summary>
-        /// 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-        /// DatasetName，数据集名称
-        /// DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
+        /// <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 标签过滤条件
+        /// <p>标签过滤条件</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 排序值，支持Asc或Desc，默认Desc
+        /// <p>排序值，支持Asc或Desc，默认Desc</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持CreateTime或UpdateTime，默认CreateTime
+        /// <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 偏移值
+        /// <p>偏移值</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数据个数，默认20，最大支持200
+        /// <p>返回数据个数，默认20，最大支持200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+        /// <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
         /// </summary>
         [JsonProperty("CFSChecking")]
         public bool? CFSChecking{ get; set; }
 
         /// <summary>
-        /// 是否返回CFS详情。
+        /// <p>是否返回CFS详情。</p>
         /// </summary>
         [JsonProperty("CFSDetail")]
         public bool? CFSDetail{ get; set; }
@@ -86,6 +90,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArraySimple(map, prefix + "DatasetIds.", this.DatasetIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);

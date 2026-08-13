@@ -222,6 +222,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("EnableJumboFrame")]
         public bool? EnableJumboFrame{ get; set; }
 
+        /// <summary>
+        /// <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterfaces[] NetworkInterfaces{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +267,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

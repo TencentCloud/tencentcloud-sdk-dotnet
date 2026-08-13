@@ -25,13 +25,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// DSPA实例ID
+        /// <p>DSPA实例ID</p>
         /// </summary>
         [JsonProperty("DspaId")]
         public string DspaId{ get; set; }
 
         /// <summary>
-        /// 评估模板id
+        /// <p>评估模板id</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

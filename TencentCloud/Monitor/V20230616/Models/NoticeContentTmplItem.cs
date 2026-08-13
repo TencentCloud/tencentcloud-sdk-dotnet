@@ -85,6 +85,12 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("SlackRobot")]
         public SlackRobotNoticeTmplMatcher[] SlackRobot{ get; set; }
 
+        /// <summary>
+        /// <p>Teams 工作流渠道</p>
+        /// </summary>
+        [JsonProperty("TeamsWorkflowRobot")]
+        public TeamsWorkflowRobotNoticeTmplMatcher[] TeamsWorkflowRobot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
             this.SetParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
             this.SetParamArrayObj(map, prefix + "SlackRobot.", this.SlackRobot);
+            this.SetParamArrayObj(map, prefix + "TeamsWorkflowRobot.", this.TeamsWorkflowRobot);
         }
     }
 }
