@@ -24,12 +24,36 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class GpuSummaryItem : AbstractModel
     {
         
+        /// <summary>
+        /// <p>GPU 型号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GpuType")]
+        public string GpuType{ get; set; }
+
+        /// <summary>
+        /// <p>GPU 总数（gpuNum × replicas）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GpuCount")]
+        public long? GpuCount{ get; set; }
+
+        /// <summary>
+        /// <p>运行中的副本数</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Replicas")]
+        public long? Replicas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
+            this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
         }
     }
 }

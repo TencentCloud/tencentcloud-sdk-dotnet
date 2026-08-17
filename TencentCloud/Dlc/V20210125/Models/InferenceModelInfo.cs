@@ -183,6 +183,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
+        /// <summary>
+        /// <p>系统标签列表（TagKey-TagValue）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +219,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

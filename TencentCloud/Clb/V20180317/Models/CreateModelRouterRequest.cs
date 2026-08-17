@@ -73,7 +73,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public RateLimitConfigForModelRouter RateLimitConfig{ get; set; }
 
         /// <summary>
-        /// <p>路由配置</p>
+        /// <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
         /// </summary>
         [JsonProperty("RouterSetting")]
         public RouterSettingWithoutFallBack RouterSetting{ get; set; }
@@ -114,6 +114,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// <p>弹性公网IP的ID</p>
+        /// </summary>
+        [JsonProperty("EipAddressId")]
+        public string EipAddressId{ get; set; }
+
+        /// <summary>
+        /// <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamObj(map, prefix + "ModelRouterBillingConfig.", this.ModelRouterBillingConfig);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

@@ -43,6 +43,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long?[] Severities{ get; set; }
 
         /// <summary>
+        /// <p>诊断项列表，对于MySQL支持Connectivity,IUDSlow,SlowSql,SlowQueries,WaitRowLock,TrxNotCommit,DDLWaitMDL,IUDWaitMDL,QueryWaitMDL,DeadLock,ReadLock,SqlWaitMDL,FlushWaitLock,HighActiveSession,HighRequest,ManyPrepareStatement,SpaceUsage,MemoryUsage,CpuUsage,DbHealthCheck,LowTableOpenCacheHit,RiskAccount,BigTable,ReplIOError,ReplROResources,ReplSqlError,ReplDelayByDDL,ReplDelayByTrx,ReplDelayByRLock,AutoIncrement,AutoIncrementOverflowV2,BinlogDumpNonGtid,ReplDelay,Switch,BackendInstanceMigration,RoRemove,OutOfStorage,OutOfMemory,CpuUsagePeak,MemoryUsagePeak,SpaceUsagePeak,SqlJoinColumnTypeInconsistent,HighLatencyInTimeWindow</p>
+        /// </summary>
+        [JsonProperty("DiagItems")]
+        public string[] DiagItems{ get; set; }
+
+        /// <summary>
         /// <p>实例ID列表。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。<br>查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&amp;Shard实例ID，如：dcdbt-157xxxk&amp;shard-qxxxx</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "Severities.", this.Severities);
+            this.SetParamArraySimple(map, prefix + "DiagItems.", this.DiagItems);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

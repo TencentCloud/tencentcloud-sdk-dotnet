@@ -372,6 +372,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DisableAiAbility")]
         public long? DisableAiAbility{ get; set; }
 
+        /// <summary>
+        /// <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+        /// </summary>
+        [JsonProperty("CrossAccountStatus")]
+        public long? CrossAccountStatus{ get; set; }
+
+        /// <summary>
+        /// <p>跨账号关联ID</p>
+        /// </summary>
+        [JsonProperty("CrossAccountPeerId")]
+        public string CrossAccountPeerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -436,6 +448,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
             this.SetParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
             this.SetParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
+            this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
+            this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
         }
     }
 }

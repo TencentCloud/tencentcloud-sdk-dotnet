@@ -171,6 +171,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }
 
+        /// <summary>
+        /// <p>计费信息</p>
+        /// </summary>
+        [JsonProperty("BillingConfig")]
+        public ModelRouterBillingConfigOutput BillingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -201,6 +207,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+            this.SetParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
         }
     }
 }

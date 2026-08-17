@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1484";
+       private const string sdkVersion = "SDK_NET_3.0.1487";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,31 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 创建客户自有网关集群。
+        /// 
+        /// 用于承载客户侧的自有网关实例，创建成功后返回集群 ID。
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="AddCustomerGatewayClusterResponse"/></returns>
+        public Task<AddCustomerGatewayClusterResponse> AddCustomerGatewayCluster(AddCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<AddCustomerGatewayClusterResponse>(req, "AddCustomerGatewayCluster");
+        }
+
+        /// <summary>
+        /// 创建客户自有网关集群。
+        /// 
+        /// 用于承载客户侧的自有网关实例，创建成功后返回集群 ID。
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="AddCustomerGatewayClusterResponse"/></returns>
+        public AddCustomerGatewayClusterResponse AddCustomerGatewayClusterSync(AddCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<AddCustomerGatewayClusterResponse>(req, "AddCustomerGatewayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建设备记录
         /// </summary>
         /// <param name="req"><see cref="AddDeviceRequest"/></param>
@@ -113,6 +138,31 @@ namespace TencentCloud.Mna.V20210119
         public AddDeviceResponse AddDeviceSync(AddDeviceRequest req)
         {
             return InternalRequestAsync<AddDeviceResponse>(req, "AddDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 向指定的客户自有网关集群注册一个网关实例。
+        /// 
+        /// 注册成功后返回网关实例 ID、鉴权 Token 及 Agent 相关地址信息，用于后续网关 Agent 上报。
+        /// </summary>
+        /// <param name="req"><see cref="AddGatewayRequest"/></param>
+        /// <returns><see cref="AddGatewayResponse"/></returns>
+        public Task<AddGatewayResponse> AddGateway(AddGatewayRequest req)
+        {
+            return InternalRequestAsync<AddGatewayResponse>(req, "AddGateway");
+        }
+
+        /// <summary>
+        /// 向指定的客户自有网关集群注册一个网关实例。
+        /// 
+        /// 注册成功后返回网关实例 ID、鉴权 Token 及 Agent 相关地址信息，用于后续网关 Agent 上报。
+        /// </summary>
+        /// <param name="req"><see cref="AddGatewayRequest"/></param>
+        /// <returns><see cref="AddGatewayResponse"/></returns>
+        public AddGatewayResponse AddGatewaySync(AddGatewayRequest req)
+        {
+            return InternalRequestAsync<AddGatewayResponse>(req, "AddGateway")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +272,31 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 删除客户自有网关集群。
+        /// 
+        /// 删除指定的客户自有网关集群，操作不可逆。调用接口后，若通过 GetCustomerGatewayClusterList 接口查询不到对应集群，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="DeleteCustomerGatewayClusterResponse"/></returns>
+        public Task<DeleteCustomerGatewayClusterResponse> DeleteCustomerGatewayCluster(DeleteCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomerGatewayClusterResponse>(req, "DeleteCustomerGatewayCluster");
+        }
+
+        /// <summary>
+        /// 删除客户自有网关集群。
+        /// 
+        /// 删除指定的客户自有网关集群，操作不可逆。调用接口后，若通过 GetCustomerGatewayClusterList 接口查询不到对应集群，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="DeleteCustomerGatewayClusterResponse"/></returns>
+        public DeleteCustomerGatewayClusterResponse DeleteCustomerGatewayClusterSync(DeleteCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomerGatewayClusterResponse>(req, "DeleteCustomerGatewayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除设备信息
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
@@ -239,6 +314,31 @@ namespace TencentCloud.Mna.V20210119
         public DeleteDeviceResponse DeleteDeviceSync(DeleteDeviceRequest req)
         {
             return InternalRequestAsync<DeleteDeviceResponse>(req, "DeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从指定集群下删除一个客户自有网关实例。
+        /// 
+        /// 删除后，通过 GetCustomerGatewayClusterList 查询不到对应实例，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayRequest"/></param>
+        /// <returns><see cref="DeleteGatewayResponse"/></returns>
+        public Task<DeleteGatewayResponse> DeleteGateway(DeleteGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteGatewayResponse>(req, "DeleteGateway");
+        }
+
+        /// <summary>
+        /// 从指定集群下删除一个客户自有网关实例。
+        /// 
+        /// 删除后，通过 GetCustomerGatewayClusterList 查询不到对应实例，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayRequest"/></param>
+        /// <returns><see cref="DeleteGatewayResponse"/></returns>
+        public DeleteGatewayResponse DeleteGatewaySync(DeleteGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteGatewayResponse>(req, "DeleteGateway")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -281,6 +381,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
         {
             return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用来查询接入点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointListRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointListResponse"/></returns>
+        public Task<DescribeAccessPointListResponse> DescribeAccessPointList(DescribeAccessPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPointListResponse>(req, "DescribeAccessPointList");
+        }
+
+        /// <summary>
+        /// 此接口用来查询接入点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointListRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointListResponse"/></returns>
+        public DescribeAccessPointListResponse DescribeAccessPointListSync(DescribeAccessPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPointListResponse>(req, "DescribeAccessPointList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -365,6 +486,31 @@ namespace TencentCloud.Mna.V20210119
         public GetApplicationResponse GetApplicationSync(GetApplicationRequest req)
         {
             return InternalRequestAsync<GetApplicationResponse>(req, "GetApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询客户自有网关集群列表。
+        /// 
+        /// 支持按集群名称关键字过滤，使用 Offset/Limit 分页返回集群及其下网关实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomerGatewayClusterListRequest"/></param>
+        /// <returns><see cref="GetCustomerGatewayClusterListResponse"/></returns>
+        public Task<GetCustomerGatewayClusterListResponse> GetCustomerGatewayClusterList(GetCustomerGatewayClusterListRequest req)
+        {
+            return InternalRequestAsync<GetCustomerGatewayClusterListResponse>(req, "GetCustomerGatewayClusterList");
+        }
+
+        /// <summary>
+        /// 查询客户自有网关集群列表。
+        /// 
+        /// 支持按集群名称关键字过滤，使用 Offset/Limit 分页返回集群及其下网关实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomerGatewayClusterListRequest"/></param>
+        /// <returns><see cref="GetCustomerGatewayClusterListResponse"/></returns>
+        public GetCustomerGatewayClusterListResponse GetCustomerGatewayClusterListSync(GetCustomerGatewayClusterListRequest req)
+        {
+            return InternalRequestAsync<GetCustomerGatewayClusterListResponse>(req, "GetCustomerGatewayClusterList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +1082,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 修改设备接入网关类型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessScopeRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessScopeResponse"/></returns>
+        public Task<ModifyDeviceAccessScopeResponse> ModifyDeviceAccessScope(ModifyDeviceAccessScopeRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessScopeResponse>(req, "ModifyDeviceAccessScope");
+        }
+
+        /// <summary>
+        /// 修改设备接入网关类型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessScopeRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessScopeResponse"/></returns>
+        public ModifyDeviceAccessScopeResponse ModifyDeviceAccessScopeSync(ModifyDeviceAccessScopeRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessScopeResponse>(req, "ModifyDeviceAccessScope")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
         /// </summary>
         /// <param name="req"><see cref="ModifyPackageRenewFlagRequest"/></param>
@@ -1079,6 +1246,31 @@ namespace TencentCloud.Mna.V20210119
         public UpdateApplicationKeyResponse UpdateApplicationKeySync(UpdateApplicationKeyRequest req)
         {
             return InternalRequestAsync<UpdateApplicationKeyResponse>(req, "UpdateApplicationKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新客户自有网关集群配置。
+        /// 
+        /// 目前仅支持修改集群的公网访问 IP。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="UpdateCustomerGatewayClusterResponse"/></returns>
+        public Task<UpdateCustomerGatewayClusterResponse> UpdateCustomerGatewayCluster(UpdateCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomerGatewayClusterResponse>(req, "UpdateCustomerGatewayCluster");
+        }
+
+        /// <summary>
+        /// 更新客户自有网关集群配置。
+        /// 
+        /// 目前仅支持修改集群的公网访问 IP。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomerGatewayClusterRequest"/></param>
+        /// <returns><see cref="UpdateCustomerGatewayClusterResponse"/></returns>
+        public UpdateCustomerGatewayClusterResponse UpdateCustomerGatewayClusterSync(UpdateCustomerGatewayClusterRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomerGatewayClusterResponse>(req, "UpdateCustomerGatewayCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -90,6 +90,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("UploadMethod")]
         public string UploadMethod{ get; set; }
 
+        /// <summary>
+        /// <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+        /// </summary>
+        [JsonProperty("UploadTarget")]
+        public string UploadTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "MaxInvokeCount", this.MaxInvokeCount);
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamSimple(map, prefix + "UploadMethod", this.UploadMethod);
+            this.SetParamSimple(map, prefix + "UploadTarget", this.UploadTarget);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// <p>下一次请求数据</p>
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }
     }
 }

@@ -379,22 +379,34 @@ namespace TencentCloud.Apm.V20210622.Models
         public bool? UseDefaultFuseConfig{ get; set; }
 
         /// <summary>
-        /// <p>是否开启探针头采样</p>
+        /// <p>是否开启探针头采样</p><p>（受限）</p>
         /// </summary>
         [JsonProperty("EnableHeadSampler")]
         public bool? EnableHeadSampler{ get; set; }
 
         /// <summary>
-        /// <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+        /// <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
         /// </summary>
         [JsonProperty("HeadSamplerType")]
         public string HeadSamplerType{ get; set; }
 
         /// <summary>
-        /// <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+        /// <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
         /// </summary>
         [JsonProperty("HeadSamplerArg")]
         public long? HeadSamplerArg{ get; set; }
+
+        /// <summary>
+        /// <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+        /// </summary>
+        [JsonProperty("CrossAccountStatus")]
+        public long? CrossAccountStatus{ get; set; }
+
+        /// <summary>
+        /// <p>跨账号关联ID</p>
+        /// </summary>
+        [JsonProperty("CrossAccountPeerId")]
+        public string CrossAccountPeerId{ get; set; }
 
 
         /// <summary>
@@ -464,6 +476,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
             this.SetParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
             this.SetParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+            this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
+            this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
         }
     }
 }

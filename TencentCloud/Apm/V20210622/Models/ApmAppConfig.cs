@@ -443,6 +443,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("HeadSamplerArg")]
         public long? HeadSamplerArg{ get; set; }
 
+        /// <summary>
+        /// <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+        /// </summary>
+        [JsonProperty("CrossAccountStatus")]
+        public long? CrossAccountStatus{ get; set; }
+
+        /// <summary>
+        /// <p>跨账号关联ID</p>
+        /// </summary>
+        [JsonProperty("CrossAccountPeerId")]
+        public string CrossAccountPeerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -515,6 +527,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
             this.SetParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
             this.SetParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+            this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
+            this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
         }
     }
 }

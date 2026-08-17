@@ -54,6 +54,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UseCustomStorage")]
         public bool? UseCustomStorage{ get; set; }
 
+        /// <summary>
+        /// <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+        /// </summary>
+        [JsonProperty("GooseFSConfig")]
+        public GooseFSConfig GooseFSConfig{ get; set; }
+
+        /// <summary>
+        /// <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "StorageUri", this.StorageUri);
             this.SetParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
+            this.SetParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

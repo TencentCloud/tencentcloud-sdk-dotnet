@@ -90,6 +90,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ModelUid")]
         public string ModelUid{ get; set; }
 
+        /// <summary>
+        /// <p>系统标签列表（TagKey-TagValue）</p>
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// <p>模型文件来源于goosefs</p>
+        /// </summary>
+        [JsonProperty("GooseFSConfig")]
+        public GooseFSConfig GooseFSConfig{ get; set; }
+
+        /// <summary>
+        /// <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
             this.SetParamArraySimple(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "ModelUid", this.ModelUid);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

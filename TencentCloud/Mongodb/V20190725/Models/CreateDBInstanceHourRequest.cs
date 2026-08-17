@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
+        /// <ul><li><strong>产品推荐规格类型</strong><ul><li>GE.LD.T1：本地盘（通用 I 型）。</li><li>GE.CD.T1：云盘（通用 I 型）。</li></ul></li><li><strong>产品受限白名单规格类型</strong><ul><li>HIO10G：本地盘（高 IO 万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul></li></ul>            <blockquote class="d-mod-explain">              <div class="d-mod-title d-explain-title">                <i class="d-icon-explain"></i>说明：              </div>               <p> 受限白名单规格类型需白名单权限，如需开通，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>            </blockquote>            
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -67,16 +67,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// <p>可用区信息，输入格式如：ap-guangzhou-2。</p><ul><li>具体信息，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。</li><li>该参数为主可用区，如果多可用区部署，Zone必须是AvailabilityZoneList中的一个。</li></ul>
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
         /// <p>实例架构类型。</p><ul><li>REPLSET：副本集。</li><li>SHARD：分片集群。</li></ul>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>可用区信息，输入格式如：ap-guangzhou-2。</p><ul><li>具体信息，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。</li><li>该参数为主可用区，如果多可用区部署，Zone必须是AvailabilityZoneList中的一个。</li></ul>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
         /// <p>私有网络ID。</p><ul><li>仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录<a href="https://console.cloud.tencent.com/vpc">私有网络控制台</a>获取可使用的私有网络 ID。</li><li>实例创建成功之后，支持更换私有网络。具体操作，请参见<a href="https://cloud.tencent.com/document/product/239/30910">更换网络</a>。</li></ul>
@@ -229,8 +229,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "MongoVersion", this.MongoVersion);
             this.SetParamSimple(map, prefix + "MachineCode", this.MachineCode);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Password", this.Password);

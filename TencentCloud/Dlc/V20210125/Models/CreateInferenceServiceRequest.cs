@@ -132,6 +132,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ApiKeyIds")]
         public string[] ApiKeyIds{ get; set; }
 
+        /// <summary>
+        /// <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+        /// </summary>
+        [JsonProperty("AdvancedOptions")]
+        public string AdvancedOptions{ get; set; }
+
+        /// <summary>
+        /// <p>系统标签列表（TagKey-TagValue）</p>
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// <p>自定义RayServe提交</p>
+        /// </summary>
+        [JsonProperty("IsCustom")]
+        public bool? IsCustom{ get; set; }
+
+        /// <summary>
+        /// <p>python runtime env</p>
+        /// </summary>
+        [JsonProperty("RuntimeEnv")]
+        public string RuntimeEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +180,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
             this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamArraySimple(map, prefix + "ApiKeyIds.", this.ApiKeyIds);
+            this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "IsCustom", this.IsCustom);
+            this.SetParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
         }
     }
 }

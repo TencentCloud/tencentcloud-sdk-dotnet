@@ -54,6 +54,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>系统标签列表（TagKey-TagValue）</p>
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ParameterSize", this.ParameterSize);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

@@ -54,6 +54,24 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("PeakPrice")]
         public string PeakPrice{ get; set; }
 
+        /// <summary>
+        /// <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+        /// </summary>
+        [JsonProperty("Specification")]
+        public string Specification{ get; set; }
+
+        /// <summary>
+        /// <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+        /// </summary>
+        [JsonProperty("Usage")]
+        public string Usage{ get; set; }
+
+        /// <summary>
+        /// <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+        /// </summary>
+        [JsonProperty("ReferencePrice")]
+        public string ReferencePrice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
             this.SetParamSimple(map, prefix + "PeakPrice", this.PeakPrice);
+            this.SetParamSimple(map, prefix + "Specification", this.Specification);
+            this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamSimple(map, prefix + "ReferencePrice", this.ReferencePrice);
         }
     }
 }

@@ -130,6 +130,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// <p>带宽</p><p>单位：Mbps</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
@@ -139,6 +140,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }
+
+        /// <summary>
+        /// <p>计费信息</p>
+        /// </summary>
+        [JsonProperty("BillingConfig")]
+        public ModelRouterBillingConfigOutput BillingConfig{ get; set; }
 
 
         /// <summary>
@@ -165,6 +172,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+            this.SetParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
         }
     }
 }

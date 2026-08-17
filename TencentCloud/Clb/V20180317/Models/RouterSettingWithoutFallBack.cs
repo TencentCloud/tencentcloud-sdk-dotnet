@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NumRetries")]
         public ulong? NumRetries{ get; set; }
 
+        /// <summary>
+        /// <p>粘连路由配置参数</p>
+        /// </summary>
+        [JsonProperty("StickyConfig")]
+        public StickyConfig StickyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
             this.SetParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
             this.SetParamSimple(map, prefix + "NumRetries", this.NumRetries);
+            this.SetParamObj(map, prefix + "StickyConfig.", this.StickyConfig);
         }
     }
 }

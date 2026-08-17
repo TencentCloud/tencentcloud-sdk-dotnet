@@ -197,6 +197,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string ResourceConfig{ get; set; }
 
         /// <summary>
+        /// <p>部署模式</p>
+        /// </summary>
+        [JsonProperty("DeploymentMode")]
+        public string DeploymentMode{ get; set; }
+
+        /// <summary>
+        /// <p>是否为自定义代码部署</p>
+        /// </summary>
+        [JsonProperty("IsCustom")]
+        public bool? IsCustom{ get; set; }
+
+        /// <summary>
+        /// <p>系统标签列表（TagKey-TagValue）</p>
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -233,6 +251,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamObj(map, prefix + "CpuResourceSummary.", this.CpuResourceSummary);
             this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
+            this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+            this.SetParamSimple(map, prefix + "IsCustom", this.IsCustom);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

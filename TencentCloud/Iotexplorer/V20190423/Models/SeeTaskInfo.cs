@@ -25,109 +25,100 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 任务 ID
+        /// <p>任务 ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态。可能取值：
-        /// 
-        /// - `1`：失败
-        /// - `2`：空结果
-        /// - `3`：有效结果
-        /// - `4`：处理中
+        /// <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 任务元数据
+        /// <p>任务元数据</p>
         /// </summary>
         [JsonProperty("Metadata")]
         public SeeTaskMetadata Metadata{ get; set; }
 
         /// <summary>
-        /// 算法类目。可能取值：
-        /// 
-        /// - `COMPREHENSION`：视觉理解
-        /// - `HIGHLIGHT`：视频浓缩
+        /// <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
         /// </summary>
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
 
         /// <summary>
-        /// 算法类型。可能取值：
-        /// 
-        /// - `VID_COMP`：视频理解
-        /// - `IMG_COMP`：图片理解
-        /// - `COMP_HIGHLIGHT`：视频浓缩
+        /// <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 套餐规格。可能取值：
-        /// 
-        /// - `POSTPAID`：后付费（适用于视频理解、图片理解）
-        /// - `BASIC`：包年包月基础版（适用于视频理解）
+        /// <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
         /// </summary>
         [JsonProperty("ServiceTier")]
         public string ServiceTier{ get; set; }
 
         /// <summary>
-        /// 视觉理解结果（适用于视频理解、图片理解）
+        /// <p>视觉理解结果（适用于视频理解、图片理解）</p>
         /// </summary>
         [JsonProperty("ComprehensionResult")]
         public SeeComprehensionResult ComprehensionResult{ get; set; }
 
         /// <summary>
-        /// 视频语义浓缩结果（适用于视频语义浓缩）
+        /// <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
         /// </summary>
         [JsonProperty("CompHighlightResult")]
         public SeeCompHighlightResult CompHighlightResult{ get; set; }
 
         /// <summary>
-        /// 标签持续检测结果
+        /// <p>标签持续检测结果</p>
         /// </summary>
         [JsonProperty("DetectContinuousResult")]
         public SeeDetectContinuousResult DetectContinuousResult{ get; set; }
 
         /// <summary>
-        /// 完成该任务所消耗的基础能力额度
+        /// <p>完成该任务所消耗的基础能力额度</p>
         /// </summary>
         [JsonProperty("CostBasic")]
         public long? CostBasic{ get; set; }
 
         /// <summary>
-        /// 完成该任务所消耗的高级能力额度
+        /// <p>完成该任务所消耗的高级能力额度</p>
         /// </summary>
         [JsonProperty("CostAdvanced")]
         public long? CostAdvanced{ get; set; }
 
         /// <summary>
-        /// 输出文件名列表
+        /// <p>输出文件名列表</p>
         /// </summary>
         [JsonProperty("Files")]
         public string[] Files{ get; set; }
 
         /// <summary>
-        /// 输出文件详情列表
+        /// <p>输出文件详情列表</p>
         /// </summary>
         [JsonProperty("FilesInfo")]
         public CloudStorageAIServiceTaskFileInfo[] FilesInfo{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后更新时间
+        /// <p>最后更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>直传 COS 的对象 URI</p>
+        /// </summary>
+        [JsonProperty("COSURI")]
+        public string COSURI{ get; set; }
 
 
         /// <summary>
@@ -150,6 +141,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "COSURI", this.COSURI);
         }
     }
 }

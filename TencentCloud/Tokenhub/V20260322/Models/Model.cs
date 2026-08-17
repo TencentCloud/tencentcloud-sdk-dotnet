@@ -37,6 +37,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string ModelId{ get; set; }
 
         /// <summary>
+        /// <p>模型id别名列表</p>
+        /// </summary>
+        [JsonProperty("ExtraModelIds")]
+        public string[] ExtraModelIds{ get; set; }
+
+        /// <summary>
         /// <p>模型显示名称。</p>
         /// </summary>
         [JsonProperty("DisplayName")]
@@ -146,6 +152,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         {
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamArraySimple(map, prefix + "ExtraModelIds.", this.ExtraModelIds);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);

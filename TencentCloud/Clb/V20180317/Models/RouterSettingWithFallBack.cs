@@ -59,6 +59,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("RoutingStrategyArgs")]
         public RoutingStrategyArgs RoutingStrategyArgs{ get; set; }
 
+        /// <summary>
+        /// <p>粘连配置参数</p>
+        /// </summary>
+        [JsonProperty("StickyConfig")]
+        public StickyConfig StickyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RoutingStrategy", this.RoutingStrategy);
             this.SetParamSimple(map, prefix + "NumRetries", this.NumRetries);
             this.SetParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
+            this.SetParamObj(map, prefix + "StickyConfig.", this.StickyConfig);
         }
     }
 }

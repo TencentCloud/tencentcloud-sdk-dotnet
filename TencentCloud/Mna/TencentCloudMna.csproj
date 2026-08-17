@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1484</VersionPrefix>
+    <VersionPrefix>3.0.1487</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,14 +48,19 @@
 
   <ItemGroup>
     <Compile Include="V20210119\MnaClient.cs" />
+    <Compile Include="V20210119\Models\AccessPointInfo.cs" />
     <Compile Include="V20210119\Models\ActivateHardware.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareRequest.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareResponse.cs" />
     <Compile Include="V20210119\Models\ActiveDeviceList.cs" />
     <Compile Include="V20210119\Models\AddApplicationRequest.cs" />
     <Compile Include="V20210119\Models\AddApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\AddCustomerGatewayClusterRequest.cs" />
+    <Compile Include="V20210119\Models\AddCustomerGatewayClusterResponse.cs" />
     <Compile Include="V20210119\Models\AddDeviceRequest.cs" />
     <Compile Include="V20210119\Models\AddDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\AddGatewayRequest.cs" />
+    <Compile Include="V20210119\Models\AddGatewayResponse.cs" />
     <Compile Include="V20210119\Models\AddGroupRequest.cs" />
     <Compile Include="V20210119\Models\AddGroupResponse.cs" />
     <Compile Include="V20210119\Models\AddHardwareRequest.cs" />
@@ -67,12 +72,18 @@
     <Compile Include="V20210119\Models\DelApplicationList.cs" />
     <Compile Include="V20210119\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20210119\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteCustomerGatewayClusterRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteCustomerGatewayClusterResponse.cs" />
     <Compile Include="V20210119\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20210119\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteGatewayRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteGatewayResponse.cs" />
     <Compile Include="V20210119\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20210119\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnRequest.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\DescribeAccessPointListRequest.cs" />
+    <Compile Include="V20210119\Models\DescribeAccessPointListResponse.cs" />
     <Compile Include="V20210119\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="V20210119\Models\DescribeAccessRegionsResponse.cs" />
     <Compile Include="V20210119\Models\DestIpInfo.cs" />
@@ -84,11 +95,14 @@
     <Compile Include="V20210119\Models\DownloadActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\FlowDetails.cs" />
     <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
+    <Compile Include="V20210119\Models\GatewayClusterInfo.cs" />
     <Compile Include="V20210119\Models\GatewayInfo.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountRequest.cs" />
     <Compile Include="V20210119\Models\GetActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\GetApplicationRequest.cs" />
     <Compile Include="V20210119\Models\GetApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\GetCustomerGatewayClusterListRequest.cs" />
+    <Compile Include="V20210119\Models\GetCustomerGatewayClusterListResponse.cs" />
     <Compile Include="V20210119\Models\GetDestIPByNameRequest.cs" />
     <Compile Include="V20210119\Models\GetDestIPByNameResponse.cs" />
     <Compile Include="V20210119\Models\GetDevicePayModeRequest.cs" />
@@ -147,6 +161,8 @@
     <Compile Include="V20210119\Models\L3ConnInfo.cs" />
     <Compile Include="V20210119\Models\ModifyDeviceAccessRegionsRequest.cs" />
     <Compile Include="V20210119\Models\ModifyDeviceAccessRegionsResponse.cs" />
+    <Compile Include="V20210119\Models\ModifyDeviceAccessScopeRequest.cs" />
+    <Compile Include="V20210119\Models\ModifyDeviceAccessScopeResponse.cs" />
     <Compile Include="V20210119\Models\ModifyPackageRenewFlagRequest.cs" />
     <Compile Include="V20210119\Models\ModifyPackageRenewFlagResponse.cs" />
     <Compile Include="V20210119\Models\MonitorData.cs" />
@@ -166,6 +182,8 @@
     <Compile Include="V20210119\Models\UpdateApplicationInfoResponse.cs" />
     <Compile Include="V20210119\Models\UpdateApplicationKeyRequest.cs" />
     <Compile Include="V20210119\Models\UpdateApplicationKeyResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateCustomerGatewayClusterRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateCustomerGatewayClusterResponse.cs" />
     <Compile Include="V20210119\Models\UpdateDeviceRequest.cs" />
     <Compile Include="V20210119\Models\UpdateDeviceResponse.cs" />
     <Compile Include="V20210119\Models\UpdateGroupRequest.cs" />

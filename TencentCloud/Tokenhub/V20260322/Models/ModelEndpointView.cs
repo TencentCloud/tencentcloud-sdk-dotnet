@@ -43,6 +43,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string ModelId{ get; set; }
 
         /// <summary>
+        /// <p>模型id别名列表</p>
+        /// </summary>
+        [JsonProperty("ExtraModelIds")]
+        public string[] ExtraModelIds{ get; set; }
+
+        /// <summary>
         /// <p>模型名称。</p>
         /// </summary>
         [JsonProperty("ModelName")]
@@ -53,6 +59,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+        /// </summary>
+        [JsonProperty("ModelStatus")]
+        public string ModelStatus{ get; set; }
 
         /// <summary>
         /// <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
@@ -105,8 +117,10 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "EndpointId", this.EndpointId);
             this.SetParamSimple(map, prefix + "EndpointName", this.EndpointName);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamArraySimple(map, prefix + "ExtraModelIds.", this.ExtraModelIds);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "PaymentEnabled", this.PaymentEnabled);

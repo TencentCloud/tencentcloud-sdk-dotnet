@@ -25,13 +25,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 任务列表
+        /// <p>任务列表</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public SeeTaskInfo[] Tasks{ get; set; }
 
         /// <summary>
-        /// 任务数量
+        /// <p>任务数量</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
