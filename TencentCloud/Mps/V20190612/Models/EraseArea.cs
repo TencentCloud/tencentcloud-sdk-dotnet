@@ -25,37 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 区域左上角X坐标。
-        /// 如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
+        /// <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
         /// </summary>
         [JsonProperty("LeftTopX")]
         public float? LeftTopX{ get; set; }
 
         /// <summary>
-        /// 区域左上角Y坐标。
-        /// 如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
+        /// <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
         /// </summary>
         [JsonProperty("LeftTopY")]
         public float? LeftTopY{ get; set; }
 
         /// <summary>
-        /// 区域右下角X坐标。
-        /// 如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
+        /// <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
         /// </summary>
         [JsonProperty("RightBottomX")]
         public float? RightBottomX{ get; set; }
 
         /// <summary>
-        /// 区域右下角Y坐标。
-        /// 如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
+        /// <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
         /// </summary>
         [JsonProperty("RightBottomY")]
         public float? RightBottomY{ get; set; }
 
         /// <summary>
-        /// 坐标单位
-        /// - 1 百分比
-        /// - 2 像素值
+        /// <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
         /// </summary>
         [JsonProperty("Unit")]
         public ulong? Unit{ get; set; }

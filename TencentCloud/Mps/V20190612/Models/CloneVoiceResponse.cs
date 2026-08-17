@@ -55,6 +55,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
+        /// <p>扩展信息，json字符串</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

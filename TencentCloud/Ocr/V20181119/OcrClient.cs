@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1486";
+       private const string sdkVersion = "SDK_NET_3.0.1488";
 
         /// <summary>
         /// Client constructor.
@@ -2861,6 +2861,27 @@ namespace TencentCloud.Ocr.V20181119
         public VerifyBizLicenseEnterprise4Response VerifyBizLicenseEnterprise4Sync(VerifyBizLicenseEnterprise4Request req)
         {
             return InternalRequestAsync<VerifyBizLicenseEnterprise4Response>(req, "VerifyBizLicenseEnterprise4")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提供针对卡证（如身份证、营业执照等）图片的PS篡改、AIGC合成、图片质量检测能力，可应用于业务流程中对卡证图片真实性、有效性校验的场景。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyGeneralCardWarnRequest"/></param>
+        /// <returns><see cref="VerifyGeneralCardWarnResponse"/></returns>
+        public Task<VerifyGeneralCardWarnResponse> VerifyGeneralCardWarn(VerifyGeneralCardWarnRequest req)
+        {
+            return InternalRequestAsync<VerifyGeneralCardWarnResponse>(req, "VerifyGeneralCardWarn");
+        }
+
+        /// <summary>
+        /// 提供针对卡证（如身份证、营业执照等）图片的PS篡改、AIGC合成、图片质量检测能力，可应用于业务流程中对卡证图片真实性、有效性校验的场景。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyGeneralCardWarnRequest"/></param>
+        /// <returns><see cref="VerifyGeneralCardWarnResponse"/></returns>
+        public VerifyGeneralCardWarnResponse VerifyGeneralCardWarnSync(VerifyGeneralCardWarnRequest req)
+        {
+            return InternalRequestAsync<VerifyGeneralCardWarnResponse>(req, "VerifyGeneralCardWarn")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
