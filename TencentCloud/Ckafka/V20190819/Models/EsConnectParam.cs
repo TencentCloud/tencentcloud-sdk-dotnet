@@ -25,53 +25,77 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Es的连接port
+        /// <p>Es的连接port</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Es连接源的用户名
+        /// <p>Es连接源的用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Es连接源的密码
+        /// <p>Es连接源的密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Es连接源的实例资源
+        /// <p>Es连接源的实例资源</p>
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// Es连接源是否为自建集群
+        /// <p>Es连接源是否为自建集群</p>
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }
 
         /// <summary>
-        /// Es连接源的实例vip，当为腾讯云实例时，必填
+        /// <p>Es连接源的实例vip，当为腾讯云实例时，必填</p>
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
-        /// Es连接源的vpcId，当为腾讯云实例时，必填
+        /// <p>Es连接源的vpcId，当为腾讯云实例时，必填</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 是否更新到关联的Datahub任务
+        /// <p>是否更新到关联的Datahub任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdate")]
         public bool? IsUpdate{ get; set; }
+
+        /// <summary>
+        /// <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul>
+        /// </summary>
+        [JsonProperty("EsType")]
+        public string EsType{ get; set; }
+
+        /// <summary>
+        /// <p>es版本</p><p>默认值：7.14.2</p>
+        /// </summary>
+        [JsonProperty("EsVersion")]
+        public string EsVersion{ get; set; }
+
+        /// <summary>
+        /// <p>endpointUrl，es的serverless版本的访问入口地址</p>
+        /// </summary>
+        [JsonProperty("EndpointUrl")]
+        public string EndpointUrl{ get; set; }
+
+        /// <summary>
+        /// <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
 
         /// <summary>
@@ -87,6 +111,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
+            this.SetParamSimple(map, prefix + "EsType", this.EsType);
+            this.SetParamSimple(map, prefix + "EsVersion", this.EsVersion);
+            this.SetParamSimple(map, prefix + "EndpointUrl", this.EndpointUrl);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

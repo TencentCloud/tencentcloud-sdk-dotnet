@@ -164,10 +164,22 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public MqttConnectParam MqttConnectParam{ get; set; }
 
         /// <summary>
+        /// <p>Iceberg配置，Type为ICEBERG时返回</p>
+        /// </summary>
+        [JsonProperty("IcebergConnectParam")]
+        public IcebergConnectParam IcebergConnectParam{ get; set; }
+
+        /// <summary>
         /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>iceberg数据库和表信息</p>
+        /// </summary>
+        [JsonProperty("IcebergDatabases")]
+        public IcebergDatabaseInfo[] IcebergDatabases{ get; set; }
 
 
         /// <summary>
@@ -196,7 +208,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
             this.SetParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
             this.SetParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+            this.SetParamObj(map, prefix + "IcebergConnectParam.", this.IcebergConnectParam);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "IcebergDatabases.", this.IcebergDatabases);
         }
     }
 }

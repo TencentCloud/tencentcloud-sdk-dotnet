@@ -85,6 +85,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string DNSStatus{ get; set; }
 
         /// <summary>
+        /// <p>是否CNAME到平台任一网关入口，默认接入/CDN/EO，不含CustomCname</p><p>枚举值：</p><ul><li>EMPTY： 解析为空</li><li>OK： 命中</li><li>INVALID：  解析到其他非目标地址</li></ul>
+        /// </summary>
+        [JsonProperty("PlatformCnameDNSStatus")]
+        public string PlatformCnameDNSStatus{ get; set; }
+
+        /// <summary>
         /// <p>HTTP访问服务路由信息</p>
         /// </summary>
         [JsonProperty("Routes")]
@@ -97,13 +103,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public HTTPServiceExtension Extension{ get; set; }
 
         /// <summary>
-        /// <p>域名创建时间</p>
+        /// <p>域名创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>域名更新时间</p>
+        /// <p>域名更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -124,6 +130,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DNSStatus", this.DNSStatus);
+            this.SetParamSimple(map, prefix + "PlatformCnameDNSStatus", this.PlatformCnameDNSStatus);
             this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
             this.SetParamObj(map, prefix + "Extension.", this.Extension);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

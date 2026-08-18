@@ -25,109 +25,116 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 工作流id
+        /// <p>工作流id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 责任人user UIN
+        /// <p>责任人user UIN</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserUinInCharge")]
         public string UserUinInCharge{ get; set; }
 
         /// <summary>
-        /// 责任人名称
+        /// <p>责任人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserNameInCharge")]
         public string UserNameInCharge{ get; set; }
 
         /// <summary>
-        /// 文件夹ID
+        /// <p>文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 文件夹名称
+        /// <p>文件夹名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 任务类型ID
+        /// <p>任务类型ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeId")]
         public ulong? TaskTypeId{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionState")]
         public string ExecutionState{ get; set; }
 
         /// <summary>
-        /// 运行开始时间
+        /// <p>运行开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 依赖策略
+        /// <p>依赖策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependencyTriggerPolicy")]
         public string DependencyTriggerPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>运行账号ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
 
 
         /// <summary>
@@ -150,6 +157,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
             this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         }
     }
 }

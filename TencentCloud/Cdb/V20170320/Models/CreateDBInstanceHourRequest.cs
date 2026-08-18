@@ -265,6 +265,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DiskType{ get; set; }
 
         /// <summary>
+        /// <p>CDC集群ID，非CDC场景无需指定该入参</p>
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
         /// <p>集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群</p>
         /// </summary>
         [JsonProperty("ClusterType")]
@@ -334,6 +340,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DataProtectVolume", this.DataProtectVolume);
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);

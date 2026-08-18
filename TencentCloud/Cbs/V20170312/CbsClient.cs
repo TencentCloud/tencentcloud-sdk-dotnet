@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1467";
+       private const string sdkVersion = "SDK_NET_3.0.1489";
 
         /// <summary>
         /// Client constructor.
@@ -535,6 +535,27 @@ namespace TencentCloud.Cbs.V20170312
         public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPoliciesSync(DescribeAutoSnapshotPoliciesRequest req)
         {
             return InternalRequestAsync<DescribeAutoSnapshotPoliciesResponse>(req, "DescribeAutoSnapshotPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 CVM CDC 独享集群云硬盘统计信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClusterDiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClusterDiskStatisticsResponse"/></returns>
+        public Task<DescribeDedicatedClusterDiskStatisticsResponse> DescribeDedicatedClusterDiskStatistics(DescribeDedicatedClusterDiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClusterDiskStatisticsResponse>(req, "DescribeDedicatedClusterDiskStatistics");
+        }
+
+        /// <summary>
+        /// 查询 CVM CDC 独享集群云硬盘统计信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClusterDiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClusterDiskStatisticsResponse"/></returns>
+        public DescribeDedicatedClusterDiskStatisticsResponse DescribeDedicatedClusterDiskStatisticsSync(DescribeDedicatedClusterDiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClusterDiskStatisticsResponse>(req, "DescribeDedicatedClusterDiskStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

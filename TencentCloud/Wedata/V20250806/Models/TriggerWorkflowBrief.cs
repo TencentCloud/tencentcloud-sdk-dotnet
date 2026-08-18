@@ -25,73 +25,80 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 工作ID
+        /// <p>工作ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 任务数量
+        /// <p>任务数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
         /// <summary>
-        /// 文件夹ID
+        /// <p>文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 文件夹名称
+        /// <p>文件夹名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 调度配置
+        /// <p>调度配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowTriggerConfig")]
         public WorkflowTriggerConfig WorkflowTriggerConfig{ get; set; }
 
         /// <summary>
-        /// 责任人
+        /// <p>责任人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserNameInCharge")]
         public string UserNameInCharge{ get; set; }
 
         /// <summary>
-        /// 责任人ID
+        /// <p>责任人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserUinInCharge")]
         public string UserUinInCharge{ get; set; }
 
         /// <summary>
-        /// 工作流参数
+        /// <p>工作流参数</p>
         /// </summary>
         [JsonProperty("WorkflowParams")]
         public string WorkflowParams{ get; set; }
+
+        /// <summary>
+        /// <p>运行账号ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
 
 
         /// <summary>
@@ -109,6 +116,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "UserNameInCharge", this.UserNameInCharge);
             this.SetParamSimple(map, prefix + "UserUinInCharge", this.UserUinInCharge);
             this.SetParamSimple(map, prefix + "WorkflowParams", this.WorkflowParams);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         }
     }
 }

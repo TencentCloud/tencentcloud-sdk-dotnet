@@ -115,6 +115,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
+        /// <summary>
+        /// <p>运行账号ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
             this.SetParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
             this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         }
     }
 }

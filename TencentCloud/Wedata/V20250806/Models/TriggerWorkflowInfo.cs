@@ -25,60 +25,67 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 负责人ID
+        /// <p>负责人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最新修改时间
+        /// <p>最新修改时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 最后更新人ID
+        /// <p>最后更新人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUserUin")]
         public string UpdateUserUin{ get; set; }
 
         /// <summary>
-        /// 工作流描述
+        /// <p>工作流描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowDesc")]
         public string WorkflowDesc{ get; set; }
 
         /// <summary>
-        /// 创建人ID
+        /// <p>创建人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
+
+        /// <summary>
+        /// <p>运行账号ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
 
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "UpdateUserUin", this.UpdateUserUin);
             this.SetParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
             this.SetParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         }
     }
 }

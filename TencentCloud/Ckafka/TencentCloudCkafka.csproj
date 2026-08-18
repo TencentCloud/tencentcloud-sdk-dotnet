@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1480</VersionPrefix>
+    <VersionPrefix>3.0.1489</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -292,6 +292,9 @@
     <Compile Include="V20190819\Models\GroupOffsetResponse.cs" />
     <Compile Include="V20190819\Models\GroupOffsetTopic.cs" />
     <Compile Include="V20190819\Models\GroupResponse.cs" />
+    <Compile Include="V20190819\Models\IcebergConnectParam.cs" />
+    <Compile Include="V20190819\Models\IcebergDatabaseInfo.cs" />
+    <Compile Include="V20190819\Models\IcebergParam.cs" />
     <Compile Include="V20190819\Models\InquireCkafkaPriceRequest.cs" />
     <Compile Include="V20190819\Models\InquireCkafkaPriceResp.cs" />
     <Compile Include="V20190819\Models\InquireCkafkaPriceResponse.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 查询工作流分页信息
+        /// <p>查询工作流分页信息</p>
         /// </summary>
         [JsonProperty("Data")]
         public ListTriggerWorkflowInfo Data{ get; set; }

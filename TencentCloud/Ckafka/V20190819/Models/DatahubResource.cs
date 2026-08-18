@@ -25,157 +25,135 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 资源类型  type类型如下: 
-        /// KAFKA,
-        /// EB_ES,
-        /// EB_COS,
-        /// EB_CLS,
-        /// EB_,
-        /// MONGODB,
-        /// HTTP,
-        /// TDW,
-        /// ES,
-        /// CLICKHOUSE,
-        /// DTS,
-        /// CLS,
-        /// COS,
-        /// TOPIC,
-        /// MYSQL,
-        /// MQTT,
-        /// MYSQL_DATA,
-        /// DORIS,
-        /// POSTGRESQL,
-        /// TDSQL_C_POSTGRESQL,
-        /// TDSQL_POSTGRESQL,
-        /// WAREHOUSE_POSTGRESQL,
-        /// TDSQL_C_MYSQL,
-        /// MARIADB,
-        /// SQLSERVER,
-        /// CTSDB,
-        /// SCF
-        /// 
+        /// <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// ckafka配置，Type为KAFKA时必填
+        /// <p>ckafka配置，Type为KAFKA时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaParam")]
         public KafkaParam KafkaParam{ get; set; }
 
         /// <summary>
-        /// EB配置，Type为EB时必填
+        /// <p>EB配置，Type为EB时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventBusParam")]
         public EventBusParam EventBusParam{ get; set; }
 
         /// <summary>
-        /// MongoDB配置，Type为MONGODB时必填
+        /// <p>MongoDB配置，Type为MONGODB时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoDBParam")]
         public MongoDBParam MongoDBParam{ get; set; }
 
         /// <summary>
-        /// Es配置，Type为ES时必填
+        /// <p>Es配置，Type为ES时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsParam")]
         public EsParam EsParam{ get; set; }
 
         /// <summary>
-        /// Tdw配置，Type为TDW时必填
+        /// <p>Tdw配置，Type为TDW时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TdwParam")]
         public TdwParam TdwParam{ get; set; }
 
         /// <summary>
-        /// Dts配置，Type为DTS时必填
+        /// <p>Dts配置，Type为DTS时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DtsParam")]
         public DtsParam DtsParam{ get; set; }
 
         /// <summary>
-        /// ClickHouse配置，Type为CLICKHOUSE时必填
+        /// <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClickHouseParam")]
         public ClickHouseParam ClickHouseParam{ get; set; }
 
         /// <summary>
-        /// Cls配置，Type为CLS时必填
+        /// <p>Cls配置，Type为CLS时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsParam")]
         public ClsParam ClsParam{ get; set; }
 
         /// <summary>
-        /// Cos配置，Type为COS时必填
+        /// <p>Cos配置，Type为COS时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosParam")]
         public CosParam CosParam{ get; set; }
 
         /// <summary>
-        /// MySQL配置，Type为MYSQL时必填
+        /// <p>MySQL配置，Type为MYSQL时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MySQLParam")]
         public MySQLParam MySQLParam{ get; set; }
 
         /// <summary>
-        /// PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+        /// <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostgreSQLParam")]
         public PostgreSQLParam PostgreSQLParam{ get; set; }
 
         /// <summary>
-        /// Topic配置，Type为Topic时必填
+        /// <p>Topic配置，Type为Topic时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicParam")]
         public TopicParam TopicParam{ get; set; }
 
         /// <summary>
-        /// MariaDB配置，Type为MARIADB时必填
+        /// <p>MariaDB配置，Type为MARIADB时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MariaDBParam")]
         public MariaDBParam MariaDBParam{ get; set; }
 
         /// <summary>
-        /// SQLServer配置，Type为SQLSERVER时必填
+        /// <p>SQLServer配置，Type为SQLSERVER时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SQLServerParam")]
         public SQLServerParam SQLServerParam{ get; set; }
 
         /// <summary>
-        /// Ctsdb配置，Type为CTSDB时必填
+        /// <p>Ctsdb配置，Type为CTSDB时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CtsdbParam")]
         public CtsdbParam CtsdbParam{ get; set; }
 
         /// <summary>
-        /// Scf配置，Type为SCF时必填
+        /// <p>Scf配置，Type为SCF时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfParam")]
         public ScfParam ScfParam{ get; set; }
 
         /// <summary>
-        /// MQTT配置，Type为 MQTT 时必填
+        /// <p>MQTT配置，Type为 MQTT 时必填</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MqttParam")]
         public MqttParam MqttParam{ get; set; }
+
+        /// <summary>
+        /// <p>IceBerg配置</p>
+        /// </summary>
+        [JsonProperty("IcebergParam")]
+        public IcebergParam IcebergParam{ get; set; }
 
 
         /// <summary>
@@ -201,6 +179,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
             this.SetParamObj(map, prefix + "ScfParam.", this.ScfParam);
             this.SetParamObj(map, prefix + "MqttParam.", this.MqttParam);
+            this.SetParamObj(map, prefix + "IcebergParam.", this.IcebergParam);
         }
     }
 }

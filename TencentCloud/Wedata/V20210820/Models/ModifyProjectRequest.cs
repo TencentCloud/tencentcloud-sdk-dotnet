@@ -25,67 +25,67 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 目标修改的项目ID
+        /// <p>目标修改的项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目显示名称，可以为中文名,需要租户范围内唯一
+        /// <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// true/false则修改，不带该参数不修改。
+        /// <p>true/false则修改，不带该参数不修改。</p>
         /// </summary>
         [JsonProperty("TaskSubmitApproval")]
         public bool? TaskSubmitApproval{ get; set; }
 
         /// <summary>
-        /// 资源池信息
+        /// <p>资源池信息</p>
         /// </summary>
         [JsonProperty("ResourcePoolInfo")]
         public ResourcePoolInfo ResourcePoolInfo{ get; set; }
 
         /// <summary>
-        /// 项目管理员
+        /// <p>项目管理员</p>
         /// </summary>
         [JsonProperty("ProjectManagers")]
         public string[] ProjectManagers{ get; set; }
 
         /// <summary>
-        /// 调度任务严格模式
+        /// <p>调度任务严格模式</p>
         /// </summary>
         [JsonProperty("TaskStrictMode")]
         public bool? TaskStrictMode{ get; set; }
 
         /// <summary>
-        /// 以后新增选项可以直接通过前端的json格式写入去实现
+        /// <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
         /// </summary>
         [JsonProperty("ExtraOptions")]
         public string ExtraOptions{ get; set; }
 
         /// <summary>
-        /// 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+        /// <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 项目负责人
+        /// <p>项目负责人</p>
         /// </summary>
         [JsonProperty("ProjectOwner")]
         public string[] ProjectOwner{ get; set; }
 
         /// <summary>
-        /// 更新类型
+        /// <p>更新类型</p>
         /// </summary>
         [JsonProperty("ModifyType")]
         public string ModifyType{ get; set; }

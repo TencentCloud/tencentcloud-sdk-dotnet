@@ -25,61 +25,67 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 请求的数据页数。默认值为1，取值大于等于1
+        /// <p>请求的数据页数。默认值为1，取值大于等于1</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+        /// <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 搜索关键词
+        /// <p>搜索关键词</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 工作流所属文件夹
+        /// <p>工作流所属文件夹</p>
         /// </summary>
         [JsonProperty("ParentFolderPath")]
         public string ParentFolderPath{ get; set; }
 
         /// <summary>
-        /// bundleId项
+        /// <p>bundleId项</p>
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// 负责人ID
+        /// <p>负责人ID</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 创建人ID
+        /// <p>创建人ID</p>
         /// </summary>
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
 
         /// <summary>
-        /// 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+        /// <p>运行账号ID</p>
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
+
+        /// <summary>
+        /// <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string[] ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+        /// <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string[] CreateTime{ get; set; }
@@ -98,6 +104,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
             this.SetParamArraySimple(map, prefix + "ModifyTime.", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "CreateTime.", this.CreateTime);
         }

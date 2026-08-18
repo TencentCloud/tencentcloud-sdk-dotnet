@@ -25,91 +25,91 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// Tag名称
+        /// <p>Tag名称</p>
         /// </summary>
         [JsonProperty("TagName")]
         public string TagName{ get; set; }
 
         /// <summary>
-        /// 制品的 ID
+        /// <p>制品的 ID</p>
         /// </summary>
         [JsonProperty("TagId")]
         public string TagId{ get; set; }
 
         /// <summary>
-        /// docker image 可以看到的id
+        /// <p>docker image 可以看到的id</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 大小
+        /// <p>大小</p>
         /// </summary>
         [JsonProperty("Size")]
         public string Size{ get; set; }
 
         /// <summary>
-        /// 制品的创建时间
+        /// <p>制品的创建时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 制品创建至今时间长度
+        /// <p>制品创建至今时间长度</p>
         /// </summary>
         [JsonProperty("DurationDays")]
         public string DurationDays{ get; set; }
 
         /// <summary>
-        /// 标注的制品作者
+        /// <p>标注的制品作者</p>
         /// </summary>
         [JsonProperty("Author")]
         public string Author{ get; set; }
 
         /// <summary>
-        /// 标注的制品平台
+        /// <p>标注的制品平台</p>
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// 创建制品的 Docker 版本
+        /// <p>创建制品的 Docker 版本</p>
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// 标注的制品操作系统
+        /// <p>标注的制品操作系统</p>
         /// </summary>
         [JsonProperty("OS")]
         public string OS{ get; set; }
 
         /// <summary>
-        /// 制品大小
+        /// <p>制品大小，单位：Byte</p>
         /// </summary>
         [JsonProperty("SizeByte")]
         public long? SizeByte{ get; set; }
 
         /// <summary>
-        /// 序号
+        /// <p>序号</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 数据更新时间
+        /// <p>数据更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 制品更新时间
+        /// <p>制品更新时间</p>
         /// </summary>
         [JsonProperty("PushTime")]
         public string PushTime{ get; set; }
 
         /// <summary>
-        /// 制品类型
+        /// <p>制品类型</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

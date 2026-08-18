@@ -25,228 +25,256 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 用户AppId
+        /// <p>用户AppId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流运行ID
+        /// <p>工作流运行ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionId")]
         public string ExecutionId{ get; set; }
 
         /// <summary>
-        /// 触发器ID
+        /// <p>触发器ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerId")]
         public string TriggerId{ get; set; }
 
         /// <summary>
-        /// 触发方式:调度触发Scheduler、手动触发ManualTrigger、事件触发Event
+        /// <p>触发方式:调度触发Scheduler、手动触发ManualTrigger、事件触发Event</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }
 
         /// <summary>
-        /// 工作流触发时间
+        /// <p>工作流触发时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 计划调度时间
+        /// <p>计划调度时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTime")]
         public string ScheduleTime{ get; set; }
 
         /// <summary>
-        /// 执行开始时间戳
+        /// <p>执行开始时间戳</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 执行结束时间戳
+        /// <p>执行结束时间戳</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 运行时长，单位秒
+        /// <p>运行时长，单位秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionCostTime")]
         public string ExecutionCostTime{ get; set; }
 
         /// <summary>
-        /// 并发排队花费时间，单位秒
+        /// <p>并发排队花费时间，单位秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueCostTime")]
         public string QueueCostTime{ get; set; }
 
         /// <summary>
-        /// 等待资源花费时间，单位秒
+        /// <p>等待资源花费时间，单位秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingCostTime")]
         public string PendingCostTime{ get; set; }
 
         /// <summary>
-        /// 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIPED、运行中:RUNNING
+        /// <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIPED、运行中:RUNNING</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionState")]
         public string ExecutionState{ get; set; }
 
         /// <summary>
-        /// 运行用户UIN
+        /// <p>运行用户UIN</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteUserUin")]
         public string ExecuteUserUin{ get; set; }
 
         /// <summary>
-        /// 运行用户名称
+        /// <p>运行用户名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteUserName")]
         public string ExecuteUserName{ get; set; }
 
         /// <summary>
-        /// 错误码
+        /// <p>错误码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorCodeStr")]
         public string ErrorCodeStr{ get; set; }
 
         /// <summary>
-        /// 运行参数
+        /// <p>运行参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowParams")]
         public string WorkflowParams{ get; set; }
 
         /// <summary>
-        /// 工作流版本信息ID
+        /// <p>工作流版本信息ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowVersionId")]
         public string WorkflowVersionId{ get; set; }
 
         /// <summary>
-        /// 是否支持重跑
+        /// <p>是否支持重跑</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportRerun")]
         public bool? SupportRerun{ get; set; }
 
         /// <summary>
-        /// 重跑次数
+        /// <p>重跑次数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RerunTimes")]
         public ulong? RerunTimes{ get; set; }
 
         /// <summary>
-        /// 运行的任务范围,逗号分隔的任务ID列表
+        /// <p>运行的任务范围,逗号分隔的任务ID列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelectedTaskIds")]
         public string[] SelectedTaskIds{ get; set; }
 
         /// <summary>
-        /// 等待并发开始时间
+        /// <p>等待并发开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingStartTime")]
         public string PendingStartTime{ get; set; }
 
         /// <summary>
-        /// 排队等待开始时间
+        /// <p>排队等待开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueStartTime")]
         public string QueueStartTime{ get; set; }
 
         /// <summary>
-        /// 运行结束时间
+        /// <p>运行结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 文件夹ID
+        /// <p>文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 文件夹名称
+        /// <p>文件夹名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 计划调度时间
+        /// <p>计划调度时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlannedSchedulingTime")]
         public string PlannedSchedulingTime{ get; set; }
 
         /// <summary>
-        /// 周期类型
+        /// <p>周期类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// 责任人名称
+        /// <p>责任人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserNameInCharge")]
         public string UserNameInCharge{ get; set; }
 
         /// <summary>
-        /// 责任人ID
+        /// <p>责任人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserUinInCharge")]
         public string UserUinInCharge{ get; set; }
+
+        /// <summary>
+        /// <p>关联实体是否存在</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssociatedEntityExist")]
+        public bool? AssociatedEntityExist{ get; set; }
+
+        /// <summary>
+        /// <p>父工作流运行ID 【由嵌套工作流触发独有】</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentWorkflowExecutionId")]
+        public string ParentWorkflowExecutionId{ get; set; }
+
+        /// <summary>
+        /// <p>父任务运行ID 【由嵌套工作流触发独有】</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentTaskExecutionId")]
+        public string ParentTaskExecutionId{ get; set; }
+
+        /// <summary>
+        /// <p>父任务运行名称 【由嵌套工作流触发独有】</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentTaskExecutionName")]
+        public string ParentTaskExecutionName{ get; set; }
 
 
         /// <summary>
@@ -286,6 +314,10 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CycleType", this.CycleType);
             this.SetParamSimple(map, prefix + "UserNameInCharge", this.UserNameInCharge);
             this.SetParamSimple(map, prefix + "UserUinInCharge", this.UserUinInCharge);
+            this.SetParamSimple(map, prefix + "AssociatedEntityExist", this.AssociatedEntityExist);
+            this.SetParamSimple(map, prefix + "ParentWorkflowExecutionId", this.ParentWorkflowExecutionId);
+            this.SetParamSimple(map, prefix + "ParentTaskExecutionId", this.ParentTaskExecutionId);
+            this.SetParamSimple(map, prefix + "ParentTaskExecutionName", this.ParentTaskExecutionName);
         }
     }
 }

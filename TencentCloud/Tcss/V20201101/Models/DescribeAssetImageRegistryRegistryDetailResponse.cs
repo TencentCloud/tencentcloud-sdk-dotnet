@@ -91,7 +91,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
 
         /// <summary>
-        /// <p>tcr情况下instance_id</p>
+        /// <p>TCR实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1466</VersionPrefix>
+    <VersionPrefix>3.0.1489</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,8 +142,11 @@
     <Compile Include="V20230321\Models\GooseFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\GooseFSxOption.cs" />
     <Compile Include="V20230321\Models\GooseFSxOptionOverview.cs" />
+    <Compile Include="V20230321\Models\InquirePriceModifyWorkspacesChargeTypeRequest.cs" />
+    <Compile Include="V20230321\Models\InquirePriceModifyWorkspacesChargeTypeResponse.cs" />
     <Compile Include="V20230321\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20230321\Models\InternetAccessible.cs" />
+    <Compile Include="V20230321\Models\ItemPrice.cs" />
     <Compile Include="V20230321\Models\Job.cs" />
     <Compile Include="V20230321\Models\JobView.cs" />
     <Compile Include="V20230321\Models\LoginNode.cs" />
@@ -159,6 +162,8 @@
     <Compile Include="V20230321\Models\ModifyNodeAttributeResponse.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesAttributeRequest.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesAttributeResponse.cs" />
+    <Compile Include="V20230321\Models\ModifyWorkspacesChargeTypeRequest.cs" />
+    <Compile Include="V20230321\Models\ModifyWorkspacesChargeTypeResponse.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesRenewFlagRequest.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesRenewFlagResponse.cs" />
     <Compile Include="V20230321\Models\NodeActivity.cs" />
@@ -166,6 +171,7 @@
     <Compile Include="V20230321\Models\NodeScript.cs" />
     <Compile Include="V20230321\Models\OutputRedirect.cs" />
     <Compile Include="V20230321\Models\Placement.cs" />
+    <Compile Include="V20230321\Models\Price.cs" />
     <Compile Include="V20230321\Models\QueueConfig.cs" />
     <Compile Include="V20230321\Models\QueueConfigOverview.cs" />
     <Compile Include="V20230321\Models\QueueOverview.cs" />

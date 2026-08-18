@@ -25,10 +25,17 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
+
+        /// <summary>
+        /// <p>DatahubId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatahubId")]
+        public string DatahubId{ get; set; }
 
 
         /// <summary>
@@ -37,6 +44,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "DatahubId", this.DatahubId);
         }
     }
 }

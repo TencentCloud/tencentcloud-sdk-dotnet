@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// true代表成功，false代表失败
+        /// <p>true代表成功，false代表失败</p>
         /// </summary>
         [JsonProperty("Data")]
         public UpdateTriggerWorkflowResult Data{ get; set; }

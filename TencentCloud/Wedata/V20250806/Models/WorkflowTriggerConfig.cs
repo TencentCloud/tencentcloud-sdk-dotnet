@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+        /// <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
@@ -95,25 +95,39 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string FileArrivalPath{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TriggerMinimumIntervalSecond")]
-        public ulong? TriggerMinimumIntervalSecond{ get; set; }
-
-        /// <summary>
-        /// <p>文件到达模式下    触发等待时间（单位：秒）</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TriggerWaitTimeSecond")]
-        public ulong? TriggerWaitTimeSecond{ get; set; }
-
-        /// <summary>
         /// <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerStatus")]
         public string SchedulerStatus{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileNamePattern")]
+        public string FileNamePattern{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Recursive")]
+        public long? Recursive{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerMinimumIntervalSecond")]
+        public long? TriggerMinimumIntervalSecond{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerWaitTimeSecond")]
+        public long? TriggerWaitTimeSecond{ get; set; }
 
 
         /// <summary>
@@ -131,9 +145,11 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
             this.SetParamSimple(map, prefix + "TriggerId", this.TriggerId);
             this.SetParamSimple(map, prefix + "FileArrivalPath", this.FileArrivalPath);
+            this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+            this.SetParamSimple(map, prefix + "FileNamePattern", this.FileNamePattern);
+            this.SetParamSimple(map, prefix + "Recursive", this.Recursive);
             this.SetParamSimple(map, prefix + "TriggerMinimumIntervalSecond", this.TriggerMinimumIntervalSecond);
             this.SetParamSimple(map, prefix + "TriggerWaitTimeSecond", this.TriggerWaitTimeSecond);
-            this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         }
     }
 }

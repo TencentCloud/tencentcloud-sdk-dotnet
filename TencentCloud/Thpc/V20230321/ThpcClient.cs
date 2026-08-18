@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1466";
+       private const string sdkVersion = "SDK_NET_3.0.1489";
 
         /// <summary>
         /// Client constructor.
@@ -551,6 +551,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 查询按量计费工作空间转换为包年包月的价格。不会创建订单或变更资源。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyWorkspacesChargeTypeRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyWorkspacesChargeTypeResponse"/></returns>
+        public Task<InquirePriceModifyWorkspacesChargeTypeResponse> InquirePriceModifyWorkspacesChargeType(InquirePriceModifyWorkspacesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyWorkspacesChargeTypeResponse>(req, "InquirePriceModifyWorkspacesChargeType");
+        }
+
+        /// <summary>
+        /// 查询按量计费工作空间转换为包年包月的价格。不会创建订单或变更资源。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyWorkspacesChargeTypeRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyWorkspacesChargeTypeResponse"/></returns>
+        public InquirePriceModifyWorkspacesChargeTypeResponse InquirePriceModifyWorkspacesChargeTypeSync(InquirePriceModifyWorkspacesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyWorkspacesChargeTypeResponse>(req, "InquirePriceModifyWorkspacesChargeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改集群删除保护状态
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterDeletionProtectionRequest"/></param>
@@ -631,6 +652,27 @@ namespace TencentCloud.Thpc.V20230321
         public ModifyWorkspacesAttributeResponse ModifyWorkspacesAttributeSync(ModifyWorkspacesAttributeRequest req)
         {
             return InternalRequestAsync<ModifyWorkspacesAttributeResponse>(req, "ModifyWorkspacesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 正式提交按量计费工作空间转包年包月订单。仅支持 ONLINE 且计费模式为 POSTPAID_BY_HOUR 的工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesChargeTypeResponse"/></returns>
+        public Task<ModifyWorkspacesChargeTypeResponse> ModifyWorkspacesChargeType(ModifyWorkspacesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesChargeTypeResponse>(req, "ModifyWorkspacesChargeType");
+        }
+
+        /// <summary>
+        /// 正式提交按量计费工作空间转包年包月订单。仅支持 ONLINE 且计费模式为 POSTPAID_BY_HOUR 的工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesChargeTypeResponse"/></returns>
+        public ModifyWorkspacesChargeTypeResponse ModifyWorkspacesChargeTypeSync(ModifyWorkspacesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesChargeTypeResponse>(req, "ModifyWorkspacesChargeType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

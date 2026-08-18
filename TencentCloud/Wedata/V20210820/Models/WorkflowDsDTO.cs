@@ -25,133 +25,144 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 责任人
+        /// <p>责任人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 责任人ID
+        /// <p>责任人ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerId")]
         public string OwnerId{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目标识
+        /// <p>项目标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectIdent")]
         public string ProjectIdent{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 工作流描述
+        /// <p>工作流描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowDesc")]
         public string WorkflowDesc{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 文件夹ID
+        /// <p>文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// SparkSQL参数
+        /// <p>SparkSQL参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SparkParams")]
         public string SparkParams{ get; set; }
 
         /// <summary>
-        /// 任务列表
+        /// <p>任务列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public TaskDsDTO[] Tasks{ get; set; }
 
         /// <summary>
-        /// 任务链接列表
+        /// <p>任务链接列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Links")]
         public TaskLinkDsDTO[] Links{ get; set; }
 
         /// <summary>
-        /// 参数列表
+        /// <p>参数列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Params")]
         public ParameterTaskDsDto[] Params{ get; set; }
 
         /// <summary>
-        /// 工作流类型, 取值示例
-        /// 
-        /// - cycle 周期工作流
-        /// - manual 手动工作流
+        /// <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
         /// <summary>
-        /// 最近更新人名称
+        /// <p>最近更新人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// 最近更新人id
+        /// <p>最近更新人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUserId")]
         public string UpdateUserId{ get; set; }
 
         /// <summary>
-        /// BundleId CI/CD工程生成的bundle唯一标识	
+        /// <p>BundleId CI/CD工程生成的bundle唯一标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// BundleId信息
+        /// <p>BundleId信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleInfo")]
         public string BundleInfo{ get; set; }
+
+        /// <summary>
+        /// <p>运行账号ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserUin")]
+        public string ExecuteUserUin{ get; set; }
+
+        /// <summary>
+        /// <p>运行账号名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecuteUserName")]
+        public string ExecuteUserName{ get; set; }
 
 
         /// <summary>
@@ -177,6 +188,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
             this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
+            this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+            this.SetParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
         }
     }
 }

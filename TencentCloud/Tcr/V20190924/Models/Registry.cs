@@ -79,7 +79,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public bool? EnableAnonymous{ get; set; }
 
         /// <summary>
-        /// <p>Token有效时间</p>
+        /// <p>Token有效时间，单位：小时</p>
         /// </summary>
         [JsonProperty("TokenValidTime")]
         public ulong? TokenValidTime{ get; set; }

@@ -25,45 +25,45 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 单独售卖Topic的Topic名称
+        /// <p>单独售卖Topic的Topic名称</p>
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+        /// <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetType")]
         public string OffsetType{ get; set; }
 
         /// <summary>
-        /// Offset类型为timestamp时必传，传时间戳，精确到秒
+        /// <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Topic的TopicId【出参】
+        /// <p>Topic的TopicId【出参】</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+        /// <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
         /// </summary>
         [JsonProperty("CompressionType")]
         public string CompressionType{ get; set; }
 
         /// <summary>
-        /// 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+        /// <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
         /// </summary>
         [JsonProperty("UseAutoCreateTopic")]
         public bool? UseAutoCreateTopic{ get; set; }
 
         /// <summary>
-        /// 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+        /// <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
         /// </summary>
         [JsonProperty("MsgMultiple")]
         public long? MsgMultiple{ get; set; }
