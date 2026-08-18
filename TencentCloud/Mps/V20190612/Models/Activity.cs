@@ -31,6 +31,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ActivityType{ get; set; }
 
         /// <summary>
+        /// <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+        /// </summary>
+        [JsonProperty("PredriveIndex")]
+        public long?[] PredriveIndex{ get; set; }
+
+        /// <summary>
         /// <p>后驱节点索引数组</p>
         /// </summary>
         [JsonProperty("ReardriveIndex")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ActivityType", this.ActivityType);
+            this.SetParamArraySimple(map, prefix + "PredriveIndex.", this.PredriveIndex);
             this.SetParamArraySimple(map, prefix + "ReardriveIndex.", this.ReardriveIndex);
             this.SetParamObj(map, prefix + "ActivityPara.", this.ActivityPara);
         }

@@ -48,6 +48,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
+        /// <summary>
+        /// <p>附加参数。</p>
+        /// </summary>
+        [JsonProperty("AdditionalParameters")]
+        public string AdditionalParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+            this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
         }
     }
 }
