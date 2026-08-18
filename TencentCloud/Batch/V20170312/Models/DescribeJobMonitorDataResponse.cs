@@ -25,13 +25,13 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 监控数据粒度，单位:秒；时间粒度随着查询的时间范围变化，查询时间范围越小，时间粒度越小。
+        /// <p>监控数据粒度，单位:秒；时间粒度随着查询的时间范围变化，查询时间范围越小，时间粒度越小。</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 监控采集的数据。时间戳和对应的值一一对应；如果查询的任务重试，采集时间段涉及多个实例的话，某些时间段内的值为null, 表示对应时间点没有实例存在，也不存在对应的监控数据；相邻监控时间段之间的空值数量最多为10。
+        /// <p>监控采集的数据。时间戳和对应的值一一对应；如果查询的任务重试，采集时间段涉及多个实例的话，某些时间段内的值为null, 表示对应时间点没有实例存在，也不存在对应的监控数据；相邻监控时间段之间的空值数量最多为10。</p>
         /// </summary>
         [JsonProperty("DataPoints")]
         public DataPointView DataPoints{ get; set; }

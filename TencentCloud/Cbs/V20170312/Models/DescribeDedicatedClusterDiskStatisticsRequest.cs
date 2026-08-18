@@ -24,12 +24,19 @@ namespace TencentCloud.Cbs.V20170312.Models
     public class DescribeDedicatedClusterDiskStatisticsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>云服务器独享集群ID。</p>
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

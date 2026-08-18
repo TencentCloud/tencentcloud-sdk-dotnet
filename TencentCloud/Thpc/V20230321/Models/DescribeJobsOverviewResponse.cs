@@ -25,19 +25,19 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 作业任务数量
+        /// <p>作业任务数量</p>
         /// </summary>
         [JsonProperty("JobTotal")]
         public ulong? JobTotal{ get; set; }
 
         /// <summary>
-        /// 排队中的作业任务数量
+        /// <p>排队中的作业任务数量</p>
         /// </summary>
         [JsonProperty("QueuingJobTotal")]
         public ulong? QueuingJobTotal{ get; set; }
 
         /// <summary>
-        /// 运行中的作业数量
+        /// <p>运行中的作业数量</p>
         /// </summary>
         [JsonProperty("RunningJobTotal")]
         public ulong? RunningJobTotal{ get; set; }

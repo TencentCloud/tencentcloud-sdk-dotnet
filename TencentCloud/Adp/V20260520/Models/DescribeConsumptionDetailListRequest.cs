@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuerySceneListRequest : AbstractModel
+    public class DescribeConsumptionDetailListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>查询时间范围（Unix 秒）</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TimeRange")]
+        public TimeRange TimeRange{ get; set; }
 
         /// <summary>
-        /// 场景id
+        /// <p>视图范围：企业视图 / 空间视图</p>
         /// </summary>
-        [JsonProperty("SceneId")]
-        public string SceneId{ get; set; }
+        [JsonProperty("ViewScope")]
+        public ViewScope ViewScope{ get; set; }
 
         /// <summary>
-        /// 场景名称
+        /// <p>扩展过滤。Filter 组合规则：多项 AND，同项 value_list OR。支持 Name：metric_source_type（METRIC_SOURCE_TYPE_* 或整数）、source_ids（多选来源ID）、resource_id/source_id（单选来源ID，source_ids 未传时生效）、space_id、user_id</p>
         /// </summary>
-        [JsonProperty("SceneName")]
-        public string SceneName{ get; set; }
+        [JsonProperty("FilterList")]
+        public Filter[] FilterList{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// <p>页码，从 0 开始</p>
         /// </summary>
-        [JsonProperty("Page")]
-        public long? Page{ get; set; }
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 页的大小
+        /// <p>每页数量，最大 100</p>
         /// </summary>
         [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
+        public ulong? PageSize{ get; set; }
 
 
         /// <summary>
@@ -60,10 +60,10 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
-            this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
-            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamObj(map, prefix + "TimeRange.", this.TimeRange);
+            this.SetParamObj(map, prefix + "ViewScope.", this.ViewScope);
+            this.SetParamArrayObj(map, prefix + "FilterList.", this.FilterList);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }

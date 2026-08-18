@@ -25,44 +25,43 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 监听器 ID。
+        /// <p>监听器 ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 绑定端口。
+        /// <p>绑定端口。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 子机 ID。表示绑定主网卡主 IP。
+        /// <p>子机 ID。表示绑定主网卡主 IP。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-        /// 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+        /// <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p>
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+        /// <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p>
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 七层规则 ID。7层负载均衡该参数必填
+        /// <p>七层规则 ID。7层负载均衡该参数必填</p>
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 标签。
+        /// <p>标签。</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

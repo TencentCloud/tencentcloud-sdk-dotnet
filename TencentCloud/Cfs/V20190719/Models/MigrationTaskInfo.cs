@@ -85,7 +85,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// <p>文件系统路径</p>
+        /// <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
         /// </summary>
         [JsonProperty("FsPath")]
         public string FsPath{ get; set; }

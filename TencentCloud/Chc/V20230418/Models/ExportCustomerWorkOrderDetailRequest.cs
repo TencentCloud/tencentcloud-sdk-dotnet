@@ -25,22 +25,22 @@ namespace TencentCloud.Chc.V20230418.Models
     {
         
         /// <summary>
-        /// 服务工单类型
-        /// </summary>
-        [JsonProperty("WorkOrderType")]
-        public string[] WorkOrderType{ get; set; }
-
-        /// <summary>
-        /// 要导出的工单的起始时间
+        /// <p>要导出的工单的起始时间</p>
         /// </summary>
         [JsonProperty("BeginDateTime")]
         public string BeginDateTime{ get; set; }
 
         /// <summary>
-        /// 要导出的工单的结束时间
+        /// <p>要导出的工单的结束时间</p>
         /// </summary>
         [JsonProperty("EndDateTime")]
         public string EndDateTime{ get; set; }
+
+        /// <summary>
+        /// <p>服务工单类型</p>
+        /// </summary>
+        [JsonProperty("WorkOrderType")]
+        public string[] WorkOrderType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Chc.V20230418.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "WorkOrderType.", this.WorkOrderType);
             this.SetParamSimple(map, prefix + "BeginDateTime", this.BeginDateTime);
             this.SetParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
+            this.SetParamArraySimple(map, prefix + "WorkOrderType.", this.WorkOrderType);
         }
     }
 }

@@ -25,28 +25,28 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 表的列名列表
+        /// <p>表的列名列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColumnNames")]
         public string[] ColumnNames{ get; set; }
 
         /// <summary>
-        /// 表的行数据列表
+        /// <p>表的行数据列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableRecordSet")]
         public TableRecord[] TableRecordSet{ get; set; }
 
         /// <summary>
-        /// 异步预览任务ID
+        /// <p>异步预览任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+        /// <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncState")]

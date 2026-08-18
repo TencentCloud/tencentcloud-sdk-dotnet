@@ -78,6 +78,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("EncryptType")]
         public ulong? EncryptType{ get; set; }
 
+        /// <summary>
+        /// <p>云产品实例 ID</p>
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }

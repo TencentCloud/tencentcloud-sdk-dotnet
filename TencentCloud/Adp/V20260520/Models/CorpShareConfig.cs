@@ -31,7 +31,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+        /// <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
         /// </summary>
         [JsonProperty("ShareScope")]
         public long? ShareScope{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("TagIdList")]
         public string[] TagIdList{ get; set; }
 
+        /// <summary>
+        /// <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+        /// </summary>
+        [JsonProperty("ShareScopeList")]
+        public Identity[] ShareScopeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
             this.SetParamArraySimple(map, prefix + "TagIdList.", this.TagIdList);
+            this.SetParamArrayObj(map, prefix + "ShareScopeList.", this.ShareScopeList);
         }
     }
 }

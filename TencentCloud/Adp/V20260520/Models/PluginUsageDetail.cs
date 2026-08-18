@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateSceneRequest : AbstractModel
+    public class PluginUsageDetail : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>插件名称</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PluginName")]
+        public string PluginName{ get; set; }
 
         /// <summary>
-        /// 场景
+        /// <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
         /// </summary>
-        [JsonProperty("Scene")]
-        public Scene Scene{ get; set; }
+        [JsonProperty("ResourceConsumptionList")]
+        public ResourceConsumption[] ResourceConsumptionList{ get; set; }
+
+        /// <summary>
+        /// <p>插件工具名（tool_name）</p>
+        /// </summary>
+        [JsonProperty("ToolName")]
+        public string ToolName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamObj(map, prefix + "Scene.", this.Scene);
+            this.SetParamSimple(map, prefix + "PluginName", this.PluginName);
+            this.SetParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
+            this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
         }
     }
 }

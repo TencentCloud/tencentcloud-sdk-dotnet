@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1486</VersionPrefix>
+    <VersionPrefix>3.0.1491</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,8 +50,6 @@
     <Compile Include="V20250513\DataagentClient.cs" />
     <Compile Include="V20250513\Models\AddChunkRequest.cs" />
     <Compile Include="V20250513\Models\AddChunkResponse.cs" />
-    <Compile Include="V20250513\Models\AddSceneRequest.cs" />
-    <Compile Include="V20250513\Models\AddSceneResponse.cs" />
     <Compile Include="V20250513\Models\AppendDocument.cs" />
     <Compile Include="V20250513\Models\AppendKnowledgeTaskRequest.cs" />
     <Compile Include="V20250513\Models\AppendKnowledgeTaskResponse.cs" />
@@ -66,9 +64,6 @@
     <Compile Include="V20250513\Models\DeleteChunkResponse.cs" />
     <Compile Include="V20250513\Models\DeleteDataAgentSessionRequest.cs" />
     <Compile Include="V20250513\Models\DeleteDataAgentSessionResponse.cs" />
-    <Compile Include="V20250513\Models\DeleteSceneRequest.cs" />
-    <Compile Include="V20250513\Models\DeleteSceneResponse.cs" />
-    <Compile Include="V20250513\Models\ExampleQA.cs" />
     <Compile Include="V20250513\Models\ExecuteAgentApiRequest.cs" />
     <Compile Include="V20250513\Models\ExecuteAgentApiResponse.cs" />
     <Compile Include="V20250513\Models\ExecuteAgentApiV1Request.cs" />
@@ -103,20 +98,14 @@
     <Compile Include="V20250513\Models\QueryKnowledgeTaskResponse.cs" />
     <Compile Include="V20250513\Models\QueryModelsRequest.cs" />
     <Compile Include="V20250513\Models\QueryModelsResponse.cs" />
-    <Compile Include="V20250513\Models\QuerySceneListRequest.cs" />
-    <Compile Include="V20250513\Models\QuerySceneListResponse.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityRequest.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityResponse.cs" />
     <Compile Include="V20250513\Models\Record.cs" />
-    <Compile Include="V20250513\Models\Scene.cs" />
-    <Compile Include="V20250513\Models\SearchConfig.cs" />
     <Compile Include="V20250513\Models\StepExpand.cs" />
     <Compile Include="V20250513\Models\StepInfo.cs" />
     <Compile Include="V20250513\Models\StopChatAIRequest.cs" />
     <Compile Include="V20250513\Models\StopChatAIResponse.cs" />
     <Compile Include="V20250513\Models\Task.cs" />
-    <Compile Include="V20250513\Models\UpdateSceneRequest.cs" />
-    <Compile Include="V20250513\Models\UpdateSceneResponse.cs" />
     <Compile Include="V20250513\Models\UploadAndCommitFileRequest.cs" />
     <Compile Include="V20250513\Models\UploadAndCommitFileResponse.cs" />
     <Compile Include="V20250513\Models\UploadJob.cs" />

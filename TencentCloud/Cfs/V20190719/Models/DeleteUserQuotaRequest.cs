@@ -25,25 +25,25 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+        /// <p>文件系统ID，通过查询文件系统列表获取；<a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a></p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
+        /// <p>指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）</p>
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// UID/GID信息，和DirectoryPath参数，两者必须填写一个
+        /// <p>UID/GID信息，和DirectoryPath参数，两者必须填写一个</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
+        /// <p>需删除配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。该参数与 UserId 参数至少填写一个。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需删除挂载路径下 test1/test2 的配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
         /// </summary>
         [JsonProperty("DirectoryPath")]
         public string DirectoryPath{ get; set; }

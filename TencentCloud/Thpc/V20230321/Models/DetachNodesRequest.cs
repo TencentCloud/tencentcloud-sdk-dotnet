@@ -25,13 +25,13 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群中的节点id
+        /// <p>集群中的节点id</p>
         /// </summary>
         [JsonProperty("NodeIds")]
         public string[] NodeIds{ get; set; }

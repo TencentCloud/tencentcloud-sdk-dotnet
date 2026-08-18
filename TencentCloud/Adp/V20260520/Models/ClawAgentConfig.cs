@@ -25,13 +25,6 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CustomConfig")]
-        public ClawAgentCustomConfig CustomConfig{ get; set; }
-
-        /// <summary>
         /// Agent团队协作配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -51,7 +44,6 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "CustomConfig.", this.CustomConfig);
             this.SetParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
             this.SetParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
         }

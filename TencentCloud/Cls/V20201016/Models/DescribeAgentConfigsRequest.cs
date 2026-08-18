@@ -25,25 +25,25 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// agent的版本号
+        /// <p>agent的版本号</p>
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// agent的IP地址
+        /// <p>agent的IP地址</p>
         /// </summary>
         [JsonProperty("AgentIp")]
         public string AgentIp{ get; set; }
 
         /// <summary>
-        /// 机器组标签列表
+        /// <p>机器组标签列表</p>
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// agent的instance id
+        /// <p>agent的instance id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

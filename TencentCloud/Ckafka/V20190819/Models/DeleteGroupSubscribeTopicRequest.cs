@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka集群实例Id
+        /// <p>ckafka集群实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费分组名称
+        /// <p>消费分组名称</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 主题名
+        /// <p>主题名</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }

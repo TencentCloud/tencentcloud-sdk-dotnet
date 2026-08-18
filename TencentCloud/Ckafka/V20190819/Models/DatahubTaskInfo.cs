@@ -120,6 +120,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AutoExpandFlag")]
         public bool? AutoExpandFlag{ get; set; }
 
+        /// <summary>
+        /// <p>不影响任务执行的警告信息</p>
+        /// </summary>
+        [JsonProperty("WarnMessage")]
+        public string WarnMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TaskMax", this.TaskMax);
             this.SetParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
             this.SetParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
+            this.SetParamSimple(map, prefix + "WarnMessage", this.WarnMessage);
         }
     }
 }

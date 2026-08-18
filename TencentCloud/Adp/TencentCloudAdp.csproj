@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1485</VersionPrefix>
+    <VersionPrefix>3.0.1491</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,14 +122,18 @@
     <Compile Include="V20260520\Models\BackgroundImage.cs" />
     <Compile Include="V20260520\Models\BasicBilling.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
+    <Compile Include="V20260520\Models\CallSource.cs" />
     <Compile Include="V20260520\Models\CamAuthConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentAgentTeamConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
-    <Compile Include="V20260520\Models\ClawAgentCustomConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentLongMemoryConfig.cs" />
     <Compile Include="V20260520\Models\CodeToolConfig.cs" />
     <Compile Include="V20260520\Models\ComplexBilling.cs" />
     <Compile Include="V20260520\Models\ComplexBillingItem.cs" />
+    <Compile Include="V20260520\Models\ConcurrencyLimitDetail.cs" />
+    <Compile Include="V20260520\Models\ConsumptionClassification.cs" />
+    <Compile Include="V20260520\Models\ConsumptionDetail.cs" />
+    <Compile Include="V20260520\Models\ConsumptionUsage.cs" />
     <Compile Include="V20260520\Models\Conversation.cs" />
     <Compile Include="V20260520\Models\ConversationAgentTask.cs" />
     <Compile Include="V20260520\Models\ConversationContent.cs" />
@@ -216,6 +220,10 @@
     <Compile Include="V20260520\Models\DescribeAuditLogListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogMetaRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogMetaResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeConcurrencyLimitDetailListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeConcurrencyLimitDetailListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeConsumptionDetailListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeConsumptionDetailListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConversationListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeConversationListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConversationMessageListRequest.cs" />
@@ -224,6 +232,8 @@
     <Compile Include="V20260520\Models\DescribeConversationResponse.cs" />
     <Compile Include="V20260520\Models\DescribeLatestReleaseRequest.cs" />
     <Compile Include="V20260520\Models\DescribeLatestReleaseResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeMetricOverviewListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeMetricOverviewListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeModelListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeModelListResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginRequest.cs" />
@@ -246,6 +256,10 @@
     <Compile Include="V20260520\Models\DescribeSpaceListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeSystemVariableListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeUsageDetailListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeUsageDetailListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeUsageSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeUsageSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
@@ -262,12 +276,14 @@
     <Compile Include="V20260520\Models\FileParseModel.cs" />
     <Compile Include="V20260520\Models\Filter.cs" />
     <Compile Include="V20260520\Models\GenerateModel.cs" />
+    <Compile Include="V20260520\Models\Identity.cs" />
     <Compile Include="V20260520\Models\InputBoxConfig.cs" />
     <Compile Include="V20260520\Models\IntentAchievementInfo.cs" />
     <Compile Include="V20260520\Models\IntervalSchedule.cs" />
     <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
     <Compile Include="V20260520\Models\ManualOnlySchedule.cs" />
+    <Compile Include="V20260520\Models\MetricOverview.cs" />
     <Compile Include="V20260520\Models\Model.cs" />
     <Compile Include="V20260520\Models\ModelBadge.cs" />
     <Compile Include="V20260520\Models\ModelBasic.cs" />
@@ -279,6 +295,8 @@
     <Compile Include="V20260520\Models\ModelProperty.cs" />
     <Compile Include="V20260520\Models\ModelProviderBasic.cs" />
     <Compile Include="V20260520\Models\ModelStatus.cs" />
+    <Compile Include="V20260520\Models\ModelUsageDetail.cs" />
+    <Compile Include="V20260520\Models\ModelUsageSummary.cs" />
     <Compile Include="V20260520\Models\ModifyAgentRequest.cs" />
     <Compile Include="V20260520\Models\ModifyAgentResponse.cs" />
     <Compile Include="V20260520\Models\ModifyAppRequest.cs" />
@@ -302,6 +320,7 @@
     <Compile Include="V20260520\Models\OnceSchedule.cs" />
     <Compile Include="V20260520\Models\PauseAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\PauseAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\PlatformUsageSummary.cs" />
     <Compile Include="V20260520\Models\Plugin.cs" />
     <Compile Include="V20260520\Models\PluginConfig.cs" />
     <Compile Include="V20260520\Models\PluginOperation.cs" />
@@ -309,6 +328,8 @@
     <Compile Include="V20260520\Models\PluginProfile.cs" />
     <Compile Include="V20260520\Models\PluginStatistics.cs" />
     <Compile Include="V20260520\Models\PluginSummary.cs" />
+    <Compile Include="V20260520\Models\PluginUsageDetail.cs" />
+    <Compile Include="V20260520\Models\PluginUsageSummary.cs" />
     <Compile Include="V20260520\Models\PluginUserState.cs" />
     <Compile Include="V20260520\Models\PromptRewriteModel.cs" />
     <Compile Include="V20260520\Models\ReleaseRecord.cs" />
@@ -318,6 +339,7 @@
     <Compile Include="V20260520\Models\RequestParam.cs" />
     <Compile Include="V20260520\Models\ResetConversationRequest.cs" />
     <Compile Include="V20260520\Models\ResetConversationResponse.cs" />
+    <Compile Include="V20260520\Models\ResourceConsumption.cs" />
     <Compile Include="V20260520\Models\ResponseParam.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerResponse.cs" />
@@ -346,6 +368,7 @@
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
     <Compile Include="V20260520\Models\ThinkModel.cs" />
+    <Compile Include="V20260520\Models\TimeRange.cs" />
     <Compile Include="V20260520\Models\TimerPushConfig.cs" />
     <Compile Include="V20260520\Models\TimerScheduleConfig.cs" />
     <Compile Include="V20260520\Models\Tool.cs" />
@@ -359,7 +382,10 @@
     <Compile Include="V20260520\Models\UnfavoritePluginResponse.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillRequest.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillResponse.cs" />
+    <Compile Include="V20260520\Models\UsageDetail.cs" />
+    <Compile Include="V20260520\Models\UsageSummary.cs" />
     <Compile Include="V20260520\Models\Variable.cs" />
+    <Compile Include="V20260520\Models\ViewScope.cs" />
     <Compile Include="V20260520\Models\VoiceConfig.cs" />
     <Compile Include="V20260520\Models\WeeklySchedule.cs" />
     <Compile Include="V20260520\Models\WeeklyTime.cs" />

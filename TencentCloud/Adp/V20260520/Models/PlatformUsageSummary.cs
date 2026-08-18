@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateSceneResponse : AbstractModel
+    public class PlatformUsageSummary : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>PLATFORM 域消耗计量列表（权威字段）：按单位+label 分项列出每类计量，label 取 PlatformBizType 枚举名称字符串；典型如 unit=TIMES + label=PLATFORM_BIZ_TYPE_SECURITY_AUDIT/WEB_SEARCH/OPEN_CLAW/APP_INVOKE，unit=ITEM + label=PLATFORM_BIZ_TYPE_LONG_TERM_MEMORY</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ResourceConsumptionList")]
+        public ResourceConsumption[] ResourceConsumptionList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
         }
     }
 }

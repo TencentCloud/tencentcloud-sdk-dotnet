@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1485";
+       private const string sdkVersion = "SDK_NET_3.0.1491";
 
         /// <summary>
         /// Client constructor.
@@ -3187,6 +3187,27 @@ namespace TencentCloud.Monitor.V20180724
         public ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotificationSync(ModifyPrometheusGlobalNotificationRequest req)
         {
             return InternalRequestAsync<ModifyPrometheusGlobalNotificationResponse>(req, "ModifyPrometheusGlobalNotification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ModifyPrometheusInstanceAccessPoints 用于管理 Prometheus 实例的访问入口，当前支持 HTTP 与 HTTPS 两种协议：默认启用 HTTP，HTTPS（mTLS）为可选项，但至少需启用一种协议。现阶段对 Prometheus 的读写均通过私有网络入口完成；由于 HTTPS 依赖 mTLS，配置与运维复杂度更高，且在绝大多数场景下并无必要，因此通常不建议启用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusInstanceAccessPointsRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusInstanceAccessPointsResponse"/></returns>
+        public Task<ModifyPrometheusInstanceAccessPointsResponse> ModifyPrometheusInstanceAccessPoints(ModifyPrometheusInstanceAccessPointsRequest req)
+        {
+            return InternalRequestAsync<ModifyPrometheusInstanceAccessPointsResponse>(req, "ModifyPrometheusInstanceAccessPoints");
+        }
+
+        /// <summary>
+        /// ModifyPrometheusInstanceAccessPoints 用于管理 Prometheus 实例的访问入口，当前支持 HTTP 与 HTTPS 两种协议：默认启用 HTTP，HTTPS（mTLS）为可选项，但至少需启用一种协议。现阶段对 Prometheus 的读写均通过私有网络入口完成；由于 HTTPS 依赖 mTLS，配置与运维复杂度更高，且在绝大多数场景下并无必要，因此通常不建议启用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusInstanceAccessPointsRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusInstanceAccessPointsResponse"/></returns>
+        public ModifyPrometheusInstanceAccessPointsResponse ModifyPrometheusInstanceAccessPointsSync(ModifyPrometheusInstanceAccessPointsRequest req)
+        {
+            return InternalRequestAsync<ModifyPrometheusInstanceAccessPointsResponse>(req, "ModifyPrometheusInstanceAccessPoints")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

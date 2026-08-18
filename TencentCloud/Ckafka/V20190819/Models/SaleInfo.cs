@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 手动设置的flag标志，true表示售罄，false表示可售。
+        /// <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// ckafka版本号(1.1.1/2.4.2/0.10.2)
+        /// <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 专业版、标准版标志
+        /// <p>专业版、标准版标志</p>
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 售罄标志：true售罄
+        /// <p>售罄标志：true售罄</p>
         /// </summary>
         [JsonProperty("SoldOut")]
         public bool? SoldOut{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1489";
+       private const string sdkVersion = "SDK_NET_3.0.1491";
 
         /// <summary>
         /// Client constructor.
@@ -539,7 +539,7 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 查询 CVM CDC 独享集群云硬盘统计信息。
+        /// 查询云服务器独享集群云硬盘统计信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterDiskStatisticsRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterDiskStatisticsResponse"/></returns>
@@ -549,7 +549,7 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 查询 CVM CDC 独享集群云硬盘统计信息。
+        /// 查询云服务器独享集群云硬盘统计信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterDiskStatisticsRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterDiskStatisticsResponse"/></returns>

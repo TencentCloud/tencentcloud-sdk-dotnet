@@ -78,6 +78,24 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ClusterMountSet")]
         public ClusterMountAttr[] ClusterMountSet{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MountStorageNum")]
+        public ulong? MountStorageNum{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StorageFileSystemId")]
+        public string StorageFileSystemId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamArrayObj(map, prefix + "ManagerNodes.", this.ManagerNodes);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "ClusterMountSet.", this.ClusterMountSet);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "MountStorageNum", this.MountStorageNum);
+            this.SetParamSimple(map, prefix + "StorageFileSystemId", this.StorageFileSystemId);
         }
     }
 }

@@ -92,7 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? DeleteProtectionEnable{ get; set; }
 
         /// <summary>
-        /// <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+        /// <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
@@ -104,7 +104,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? AdminSecurity{ get; set; }
 
         /// <summary>
-        /// <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>取值范围：[3600000, 604800000]<br>单位：ms
+        /// <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>取值范围：[3600000, 604800000]</p><p>单位：ms</p>
         /// </summary>
         [JsonProperty("TransactionalIdExpirationMs")]
         public long? TransactionalIdExpirationMs{ get; set; }

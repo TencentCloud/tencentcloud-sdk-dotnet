@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSceneRequest : AbstractModel
+    public class RemoteDiskDetail : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>单副本SSD硬盘所在的位置。</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 场景id
-        /// </summary>
-        [JsonProperty("SceneId")]
-        public string SceneId{ get; set; }
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
+            this.SetParamObj(map, prefix + "Placement.", this.Placement);
         }
     }
 }

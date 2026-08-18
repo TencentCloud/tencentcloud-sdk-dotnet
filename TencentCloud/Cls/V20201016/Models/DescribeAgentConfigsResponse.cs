@@ -25,42 +25,42 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 采集配置
+        /// <p>采集配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogConfigs")]
         public LogConfigInfo[] LogConfigs{ get; set; }
 
         /// <summary>
-        /// 服务日志的配置信息
+        /// <p>服务日志的配置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceLogConfigs")]
         public ServiceLogConfigInfo[] ServiceLogConfigs{ get; set; }
 
         /// <summary>
-        /// 弃用
+        /// <p>弃用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastVersion")]
         public string LastVersion{ get; set; }
 
         /// <summary>
-        /// 弃用
+        /// <p>弃用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedUpdate")]
         public bool? NeedUpdate{ get; set; }
 
         /// <summary>
-        /// 弃用
+        /// <p>弃用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
-        /// 弃用
+        /// <p>弃用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMd5")]

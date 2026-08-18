@@ -25,64 +25,82 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 表ID
+        /// <p>表ID</p>
         /// </summary>
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
         /// <summary>
-        /// 组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA
+        /// <p>组件类型枚举值，支持的值有 HDFS/HBASE/HIVE/KAFKA</p>
         /// </summary>
         [JsonProperty("TechnologyType")]
         public string TechnologyType{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE
+        /// <p>资源类型枚举值，支持的值有TOPIC/PATH/TABLE/DATABASE</p>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 表名
+        /// <p>表名</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 预览的行数，默认10行
+        /// <p>预览的行数，默认10行</p>
         /// </summary>
         [JsonProperty("RowNum")]
         public long? RowNum{ get; set; }
 
         /// <summary>
-        /// 数据库名，kafka或其他无数据库概念的不填
+        /// <p>数据库名，kafka或其他无数据库概念的不填</p>
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 异步查询预览结果时填写
+        /// <p>异步查询预览结果时填写</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 分区信息
+        /// <p>分区信息</p>
         /// </summary>
         [JsonProperty("PartitionName")]
         public string PartitionName{ get; set; }
+
+        /// <summary>
+        /// <p>资源组ID</p>
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>执行SQL</p>
+        /// </summary>
+        [JsonProperty("Sql")]
+        public string Sql{ get; set; }
+
+        /// <summary>
+        /// <p>引擎名</p>
+        /// </summary>
+        [JsonProperty("EngineId")]
+        public string EngineId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +118,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "PartitionName", this.PartitionName);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "Sql", this.Sql);
+            this.SetParamSimple(map, prefix + "EngineId", this.EngineId);
         }
     }
 }

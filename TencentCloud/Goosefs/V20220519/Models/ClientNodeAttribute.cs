@@ -72,6 +72,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MountPoints")]
+        public MountPointEntry[] MountPoints{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "MountPoint", this.MountPoint);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "MountPoints.", this.MountPoints);
         }
     }
 }

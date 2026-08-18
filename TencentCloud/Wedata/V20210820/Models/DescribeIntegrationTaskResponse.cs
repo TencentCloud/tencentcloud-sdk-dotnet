@@ -25,25 +25,31 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务信息
+        /// <p>任务信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskInfo")]
         public IntegrationTaskInfo TaskInfo{ get; set; }
 
         /// <summary>
-        /// 采集器统计信息
+        /// <p>采集器统计信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentStatus")]
         public AgentStatus AgentStatus{ get; set; }
 
         /// <summary>
-        /// 任务版本信息
+        /// <p>任务版本信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskVersion")]
         public TaskVersionInstance TaskVersion{ get; set; }
+
+        /// <summary>
+        /// <p>历史实例信息</p>
+        /// </summary>
+        [JsonProperty("TaskVersionList")]
+        public RealtimeTaskInstanceVO[] TaskVersionList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,6 +66,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
             this.SetParamObj(map, prefix + "AgentStatus.", this.AgentStatus);
             this.SetParamObj(map, prefix + "TaskVersion.", this.TaskVersion);
+            this.SetParamArrayObj(map, prefix + "TaskVersionList.", this.TaskVersionList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

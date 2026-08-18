@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+        /// <p>实例接入方式<br>0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)<br>1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）<br>2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）<br>3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// <p>搜索topic时是否忽略大小写敏感</p>
+        /// </summary>
+        [JsonProperty("SearchWordIgnoreCaseFlag")]
+        public bool? SearchWordIgnoreCaseFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SearchWordIgnoreCaseFlag", this.SearchWordIgnoreCaseFlag);
         }
     }
 }

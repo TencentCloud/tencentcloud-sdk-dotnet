@@ -25,37 +25,37 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+        /// <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+        /// <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// UID/GID信息
+        /// <p>UID/GID信息</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 容量硬限制，单位GiB。设置范围10-10000000。
+        /// <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
         /// </summary>
         [JsonProperty("CapacityHardLimit")]
         public ulong? CapacityHardLimit{ get; set; }
 
         /// <summary>
-        /// 文件硬限制，单位个。设置范围1000-100000000
+        /// <p>文件硬限制，单位个。设置范围1000-100000000</p>
         /// </summary>
         [JsonProperty("FileHardLimit")]
         public ulong? FileHardLimit{ get; set; }
 
         /// <summary>
-        /// 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+        /// <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
         /// </summary>
         [JsonProperty("DirectoryPath")]
         public string DirectoryPath{ get; set; }

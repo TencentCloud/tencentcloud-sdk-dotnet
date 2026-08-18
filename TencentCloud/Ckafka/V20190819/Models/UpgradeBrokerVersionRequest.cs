@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+        /// <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li><li>5： 小版原地升级</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

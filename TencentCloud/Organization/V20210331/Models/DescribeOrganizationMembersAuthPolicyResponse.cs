@@ -25,14 +25,14 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 访问授权策略列表。
+        /// <p>访问授权策略列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public OrgMembersAuthPolicy[] Items{ get; set; }
 
         /// <summary>
-        /// 总数目。
+        /// <p>总数目。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]

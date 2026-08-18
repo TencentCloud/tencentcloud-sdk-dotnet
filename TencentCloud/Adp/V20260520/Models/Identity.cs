@@ -21,14 +21,32 @@ namespace TencentCloud.Adp.V20260520.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClawAgentCustomConfig : AbstractModel
+    public class Identity : AbstractModel
     {
         
         /// <summary>
-        /// <p>是否允许C端用户在对话时动态传入自定义Agent配置</p>
+        /// <p>描述</p>
         /// </summary>
-        [JsonProperty("Enabled")]
-        public bool? Enabled{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>数字 ID</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// <p>名称</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>字符串 ID</p>
+        /// </summary>
+        [JsonProperty("StrId")]
+        public string StrId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "StrId", this.StrId);
         }
     }
 }

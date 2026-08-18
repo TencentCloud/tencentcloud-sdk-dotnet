@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 词表ID数据
+        /// <p>词表ID数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public KeyWordLibIdData Data{ get; set; }

@@ -325,6 +325,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogCOSBucket")]
         public string LogCOSBucket{ get; set; }
 
+        /// <summary>
+        /// <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+        /// </summary>
+        [JsonProperty("IsLocked")]
+        public long? IsLocked{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -375,6 +381,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
             this.SetParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
             this.SetParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
+            this.SetParamSimple(map, prefix + "IsLocked", this.IsLocked);
         }
     }
 }

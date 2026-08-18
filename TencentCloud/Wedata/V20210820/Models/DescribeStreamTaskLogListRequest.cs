@@ -90,6 +90,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
 
+        /// <summary>
+        /// <p>滚动查询游标</p>
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
         }
     }
 }

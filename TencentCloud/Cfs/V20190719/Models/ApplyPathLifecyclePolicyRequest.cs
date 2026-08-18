@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 生命周期管理策略ID
+        /// <p>生命周期管理策略ID</p>
         /// </summary>
         [JsonProperty("LifecyclePolicyID")]
         public string LifecyclePolicyID{ get; set; }
 
         /// <summary>
-        /// 生命周期管理策略关联目录的绝对路径列表
+        /// <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
         /// </summary>
         [JsonProperty("Paths")]
         public PathInfo[] Paths{ get; set; }

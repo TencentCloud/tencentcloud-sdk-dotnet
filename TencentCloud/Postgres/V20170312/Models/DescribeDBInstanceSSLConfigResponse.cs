@@ -25,22 +25,40 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// true 代表开通 ，false 代表未开通
+        /// <p>true 代表开通 ，false 代表未开通</p>
         /// </summary>
         [JsonProperty("SSLEnabled")]
         public bool? SSLEnabled{ get; set; }
 
         /// <summary>
-        /// 云端根证书下载链接
+        /// <p>云端根证书下载链接</p>
         /// </summary>
         [JsonProperty("CAUrl")]
         public string CAUrl{ get; set; }
 
         /// <summary>
-        /// 服务器证书中配置的内网或外网连接地址
+        /// <p>服务器证书中配置的内网或外网连接地址</p>
         /// </summary>
         [JsonProperty("ConnectAddress")]
         public string ConnectAddress{ get; set; }
+
+        /// <summary>
+        /// <p>CA证书公钥，仅云盘版</p>
+        /// </summary>
+        [JsonProperty("CACert")]
+        public string CACert{ get; set; }
+
+        /// <summary>
+        /// <p>JKS公钥，仅云盘版</p>
+        /// </summary>
+        [JsonProperty("CAJKS")]
+        public string CAJKS{ get; set; }
+
+        /// <summary>
+        /// <p>CAP7B公钥，仅云盘版</p>
+        /// </summary>
+        [JsonProperty("CAP7B")]
+        public string CAP7B{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +75,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SSLEnabled", this.SSLEnabled);
             this.SetParamSimple(map, prefix + "CAUrl", this.CAUrl);
             this.SetParamSimple(map, prefix + "ConnectAddress", this.ConnectAddress);
+            this.SetParamSimple(map, prefix + "CACert", this.CACert);
+            this.SetParamSimple(map, prefix + "CAJKS", this.CAJKS);
+            this.SetParamSimple(map, prefix + "CAP7B", this.CAP7B);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

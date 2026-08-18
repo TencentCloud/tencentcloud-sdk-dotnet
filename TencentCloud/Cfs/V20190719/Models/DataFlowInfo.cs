@@ -25,98 +25,91 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 数据流动管理 ID
+        /// <p>数据流动管理 ID</p>
         /// </summary>
         [JsonProperty("DataFlowId")]
         public string DataFlowId{ get; set; }
 
         /// <summary>
-        /// 数据流动名称
+        /// <p>数据流动名称</p>
         /// </summary>
         [JsonProperty("DataFlowName")]
         public string DataFlowName{ get; set; }
 
         /// <summary>
-        /// 源端数据类型
+        /// <p>源端数据类型</p>
         /// </summary>
         [JsonProperty("SourceStorageType")]
         public string SourceStorageType{ get; set; }
 
         /// <summary>
-        /// 源端存储地址
+        /// <p>源端存储地址</p>
         /// </summary>
         [JsonProperty("SourceStorageAddress")]
         public string SourceStorageAddress{ get; set; }
 
         /// <summary>
-        /// 源端路径
+        /// <p>源端路径</p>
         /// </summary>
         [JsonProperty("SourcePath")]
         public string SourcePath{ get; set; }
 
         /// <summary>
-        /// 目录路径
+        /// <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// available：已生效
-        /// pending：配置中
-        /// unavailable：失效
-        /// deleting：删除中
+        /// <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 文件系统 ID
+        /// <p>文件系统 ID</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 0：不开启自动更新
-        /// 
-        /// 1：开启自动更新
+        /// <p>0：不开启自动更新</p><p>1：开启自动更新</p>
         /// </summary>
         [JsonProperty("AutoRefresh")]
         public ulong? AutoRefresh{ get; set; }
 
         /// <summary>
-        /// KafkaConsumer 消费时使用的Topic参数
+        /// <p>KafkaConsumer 消费时使用的Topic参数</p>
         /// </summary>
         [JsonProperty("UserKafkaTopic")]
         public string UserKafkaTopic{ get; set; }
 
         /// <summary>
-        /// 服务地址
+        /// <p>服务地址</p>
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Kafka消费用户名
+        /// <p>Kafka消费用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 自动刷新的状态，available：已生效
-        /// pending：配置中
-        /// unavailable：失效
+        /// <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
         /// </summary>
         [JsonProperty("AutoRefreshStatus")]
         public string AutoRefreshStatus{ get; set; }
 
         /// <summary>
-        /// 自动刷新开启时间
+        /// <p>自动刷新开启时间</p>
         /// </summary>
         [JsonProperty("AutoRefreshTime")]
         public string AutoRefreshTime{ get; set; }

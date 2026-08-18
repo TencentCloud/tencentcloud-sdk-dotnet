@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1477";
+       private const string sdkVersion = "SDK_NET_3.0.1491";
 
         /// <summary>
         /// Client constructor.
@@ -1139,7 +1139,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
+        /// 设置文件系统配额，提供UID/GID的配额设置的接口（仅指定版本的Turbo实例能使用，若调用失败请提交工单与我们联系）
         /// </summary>
         /// <param name="req"><see cref="SetUserQuotaRequest"/></param>
         /// <returns><see cref="SetUserQuotaResponse"/></returns>
@@ -1149,7 +1149,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
+        /// 设置文件系统配额，提供UID/GID的配额设置的接口（仅指定版本的Turbo实例能使用，若调用失败请提交工单与我们联系）
         /// </summary>
         /// <param name="req"><see cref="SetUserQuotaRequest"/></param>
         /// <returns><see cref="SetUserQuotaResponse"/></returns>

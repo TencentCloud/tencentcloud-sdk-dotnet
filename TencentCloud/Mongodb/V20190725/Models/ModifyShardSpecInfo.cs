@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddSceneResponse : AbstractModel
+    public class ModifyShardSpecInfo : AbstractModel
     {
         
         /// <summary>
-        /// 场景id
+        /// <p>分片ID</p>
         /// </summary>
-        [JsonProperty("SceneId")]
-        public string SceneId{ get; set; }
+        [JsonProperty("ReplicaSetId")]
+        public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>CPU核数。单位：C。</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
+        /// <summary>
+        /// <p>内存大小，单位：GB。</p>
+        /// </summary>
+        [JsonProperty("Memory")]
+        public ulong? Memory{ get; set; }
+
+        /// <summary>
+        /// <p>硬盘大小，单位：GB。</p>
+        /// </summary>
+        [JsonProperty("Volume")]
+        public ulong? Volume{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

@@ -37,6 +37,18 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EncryptionPublicKey")]
+        public string EncryptionPublicKey{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EncryptionAlgorithm")]
+        public string EncryptionAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +57,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+            this.SetParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
         }
     }
 }

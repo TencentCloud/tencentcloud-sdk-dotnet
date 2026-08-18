@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 有规则冲突时返回的已有冲突规则信息
+        /// <p>有规则冲突时返回的已有冲突规则信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResults")]

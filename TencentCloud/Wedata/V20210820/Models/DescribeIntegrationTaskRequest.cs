@@ -25,31 +25,31 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+        /// <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// 提交版本号
+        /// <p>提交版本号</p>
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public long? InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 额外参数
+        /// <p>额外参数</p>
         /// </summary>
         [JsonProperty("ExtConfig")]
         public RecordField[] ExtConfig{ get; set; }

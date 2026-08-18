@@ -25,31 +25,31 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 偏移量。取值是limit的整数倍。默认值 : 0。
+        /// <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目。取值范围：1~50。默认值：10。
+        /// <p>限制数目。取值范围：1~50。默认值：10。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 成员uin。
+        /// <p>成员uin。</p>
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 集团管理员子账号uin。
+        /// <p>集团管理员子账号uin。</p>
         /// </summary>
         [JsonProperty("OrgSubAccountUin")]
         public long? OrgSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 成员访问策略Id。
+        /// <p>成员访问策略Id。</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

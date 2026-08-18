@@ -25,18 +25,13 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 词表名称，长度在1-20之间
-        /// 仅限中英文数字-_
+        /// <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 词文件（纯文本文件）的二进制base64编码，以行分隔
-        /// 格式要求：TXT
-        /// 每行只有一个词，不满足格式则报错无法上传
-        /// 每个词限制**5个汉字，15个字符**，单个词库最多不超过100个词
-        /// 注意不要有空行，尤其是最后一行
+        /// <p>词文件（纯文本文件）的二进制base64编码，以行分隔<br>格式要求：TXT<br>每行只有一个词，不满足格式则报错无法上传<br>每个词限制<strong>5个汉字，15个字符</strong>，单个词库最多不超过100个词<br>注意不要有空行，尤其是最后一行</p>
         /// </summary>
         [JsonProperty("KeyWordFile")]
         public string KeyWordFile{ get; set; }

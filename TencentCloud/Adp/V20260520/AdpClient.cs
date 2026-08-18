@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1485";
+       private const string sdkVersion = "SDK_NET_3.0.1491";
 
         /// <summary>
         /// Client constructor.
@@ -789,6 +789,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyLimitDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyLimitDetailListResponse"/></returns>
+        public Task<DescribeConcurrencyLimitDetailListResponse> DescribeConcurrencyLimitDetailList(DescribeConcurrencyLimitDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyLimitDetailListResponse>(req, "DescribeConcurrencyLimitDetailList");
+        }
+
+        /// <summary>
+        /// 查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyLimitDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyLimitDetailListResponse"/></returns>
+        public DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailListSync(DescribeConcurrencyLimitDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyLimitDetailListResponse>(req, "DescribeConcurrencyLimitDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumptionDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConsumptionDetailListResponse"/></returns>
+        public Task<DescribeConsumptionDetailListResponse> DescribeConsumptionDetailList(DescribeConsumptionDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumptionDetailListResponse>(req, "DescribeConsumptionDetailList");
+        }
+
+        /// <summary>
+        /// 查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumptionDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConsumptionDetailListResponse"/></returns>
+        public DescribeConsumptionDetailListResponse DescribeConsumptionDetailListSync(DescribeConsumptionDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumptionDetailListResponse>(req, "DescribeConsumptionDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看会话信息
         /// </summary>
         /// <param name="req"><see cref="DescribeConversationRequest"/></param>
@@ -869,6 +911,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeLatestReleaseResponse DescribeLatestReleaseSync(DescribeLatestReleaseRequest req)
         {
             return InternalRequestAsync<DescribeLatestReleaseResponse>(req, "DescribeLatestRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricOverviewListRequest"/></param>
+        /// <returns><see cref="DescribeMetricOverviewListResponse"/></returns>
+        public Task<DescribeMetricOverviewListResponse> DescribeMetricOverviewList(DescribeMetricOverviewListRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricOverviewListResponse>(req, "DescribeMetricOverviewList");
+        }
+
+        /// <summary>
+        /// 查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricOverviewListRequest"/></param>
+        /// <returns><see cref="DescribeMetricOverviewListResponse"/></returns>
+        public DescribeMetricOverviewListResponse DescribeMetricOverviewListSync(DescribeMetricOverviewListRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricOverviewListResponse>(req, "DescribeMetricOverviewList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1100,6 +1163,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeSystemVariableListResponse DescribeSystemVariableListSync(DescribeSystemVariableListRequest req)
         {
             return InternalRequestAsync<DescribeSystemVariableListResponse>(req, "DescribeSystemVariableList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源调用时序明细，支持模型和插件两类资源，按时间顺序返回每条调用记录的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeUsageDetailListResponse"/></returns>
+        public Task<DescribeUsageDetailListResponse> DescribeUsageDetailList(DescribeUsageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDetailListResponse>(req, "DescribeUsageDetailList");
+        }
+
+        /// <summary>
+        /// 查询资源调用时序明细，支持模型和插件两类资源，按时间顺序返回每条调用记录的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeUsageDetailListResponse"/></returns>
+        public DescribeUsageDetailListResponse DescribeUsageDetailListSync(DescribeUsageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDetailListResponse>(req, "DescribeUsageDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeUsageSummaryListResponse"/></returns>
+        public Task<DescribeUsageSummaryListResponse> DescribeUsageSummaryList(DescribeUsageSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageSummaryListResponse>(req, "DescribeUsageSummaryList");
+        }
+
+        /// <summary>
+        /// 查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeUsageSummaryListResponse"/></returns>
+        public DescribeUsageSummaryListResponse DescribeUsageSummaryListSync(DescribeUsageSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageSummaryListResponse>(req, "DescribeUsageSummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

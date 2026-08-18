@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddSceneRequest : AbstractModel
+    public class ConsumptionClassification : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>消耗场景（如推理/训练/评测等）</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ConsumptionScene")]
+        public string ConsumptionScene{ get; set; }
 
         /// <summary>
-        /// 场景
+        /// <p>消耗目标（如具体模型名/插件名/平台功能名）</p>
         /// </summary>
-        [JsonProperty("Scene")]
-        public Scene Scene{ get; set; }
+        [JsonProperty("ConsumptionTarget")]
+        public string ConsumptionTarget{ get; set; }
 
         /// <summary>
-        /// 1仅自己使用，2指定用户，0全员
+        /// <p>消耗类型，取值集合由业务方定义（如 model/plugin/platform 等）</p>
         /// </summary>
-        [JsonProperty("UseScope")]
-        public long? UseScope{ get; set; }
+        [JsonProperty("ConsumptionType")]
+        public string ConsumptionType{ get; set; }
 
         /// <summary>
-        /// 可使用用户列表
+        /// <p>套餐包名称</p>
         /// </summary>
-        [JsonProperty("AuthorityUins")]
-        public string[] AuthorityUins{ get; set; }
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamObj(map, prefix + "Scene.", this.Scene);
-            this.SetParamSimple(map, prefix + "UseScope", this.UseScope);
-            this.SetParamArraySimple(map, prefix + "AuthorityUins.", this.AuthorityUins);
+            this.SetParamSimple(map, prefix + "ConsumptionScene", this.ConsumptionScene);
+            this.SetParamSimple(map, prefix + "ConsumptionTarget", this.ConsumptionTarget);
+            this.SetParamSimple(map, prefix + "ConsumptionType", this.ConsumptionType);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
         }
     }
 }

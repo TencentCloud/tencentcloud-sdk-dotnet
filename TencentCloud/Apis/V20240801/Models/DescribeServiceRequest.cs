@@ -25,13 +25,13 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 业务ID
+        /// <p>业务ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }

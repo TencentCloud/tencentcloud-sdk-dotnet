@@ -156,6 +156,36 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("RawLogKey")]
         public string RawLogKey{ get; set; }
 
+        /// <summary>
+        /// <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+        /// </summary>
+        [JsonProperty("Units")]
+        public string[] Units{ get; set; }
+
+        /// <summary>
+        /// <p>是否采集内核日志</p><p>默认值：true</p>
+        /// </summary>
+        [JsonProperty("IncludeKernel")]
+        public bool? IncludeKernel{ get; set; }
+
+        /// <summary>
+        /// <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("UseJournalTime")]
+        public bool? UseJournalTime{ get; set; }
+
+        /// <summary>
+        /// <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+        /// </summary>
+        [JsonProperty("KeysDelimiter")]
+        public string[] KeysDelimiter{ get; set; }
+
+        /// <summary>
+        /// <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+        /// </summary>
+        [JsonProperty("KeysFlag")]
+        public long?[] KeysFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +213,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
             this.SetParamArrayObj(map, prefix + "AdvanceFilterRules.", this.AdvanceFilterRules);
             this.SetParamSimple(map, prefix + "RawLogKey", this.RawLogKey);
+            this.SetParamArraySimple(map, prefix + "Units.", this.Units);
+            this.SetParamSimple(map, prefix + "IncludeKernel", this.IncludeKernel);
+            this.SetParamSimple(map, prefix + "UseJournalTime", this.UseJournalTime);
+            this.SetParamArraySimple(map, prefix + "KeysDelimiter.", this.KeysDelimiter);
+            this.SetParamArraySimple(map, prefix + "KeysFlag.", this.KeysFlag);
         }
     }
 }

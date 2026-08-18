@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// UID/GID信息
+        /// <p>UID/GID信息</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

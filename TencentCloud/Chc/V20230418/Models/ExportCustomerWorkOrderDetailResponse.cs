@@ -25,7 +25,7 @@ namespace TencentCloud.Chc.V20230418.Models
     {
         
         /// <summary>
-        /// 返回下载地址
+        /// <p>返回下载地址</p>
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1487";
+       private const string sdkVersion = "SDK_NET_3.0.1491";
 
         /// <summary>
         /// Client constructor.
@@ -494,6 +494,27 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeModelListResponse DescribeModelListSync(DescribeModelListRequest req)
         {
             return InternalRequestAsync<DescribeModelListResponse>(req, "DescribeModelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定模型的 TPM 和 QPM 配额上限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelQuotaRequest"/></param>
+        /// <returns><see cref="DescribeModelQuotaResponse"/></returns>
+        public Task<DescribeModelQuotaResponse> DescribeModelQuota(DescribeModelQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeModelQuotaResponse>(req, "DescribeModelQuota");
+        }
+
+        /// <summary>
+        /// 查询指定模型的 TPM 和 QPM 配额上限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelQuotaRequest"/></param>
+        /// <returns><see cref="DescribeModelQuotaResponse"/></returns>
+        public DescribeModelQuotaResponse DescribeModelQuotaSync(DescribeModelQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeModelQuotaResponse>(req, "DescribeModelQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -120,6 +120,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DelayReplicationTime")]
         public long? DelayReplicationTime{ get; set; }
 
+        /// <summary>
+        /// <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+        /// </summary>
+        [JsonProperty("RoGroupType")]
+        public string RoGroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RoGroupRegion", this.RoGroupRegion);
             this.SetParamSimple(map, prefix + "RoGroupZone", this.RoGroupZone);
             this.SetParamSimple(map, prefix + "DelayReplicationTime", this.DelayReplicationTime);
+            this.SetParamSimple(map, prefix + "RoGroupType", this.RoGroupType);
         }
     }
 }
