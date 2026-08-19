@@ -25,32 +25,37 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 对话的目标模型ID。
-        /// 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
+        /// <p>对话的目标模型ID。<br>自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
+        /// <p>输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。</p>
         /// </summary>
         [JsonProperty("Messages")]
         public Message[] Messages{ get; set; }
 
         /// <summary>
-        /// 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。</p>
         /// </summary>
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }
 
         /// <summary>
-        /// 仅当模型为自行部署的开源大模型时生效。核采样，默认值为1，取值范围[0,1]。指的是预先设置一个概率界限 p，然后将所有可能生成的token，根据概率大小从高到低排列，依次选取。当这些选取的token的累积概率大于或等于 p 值时停止，然后从已经选取的token中进行采样，生成下一个token。例如top_p为0.1时意味着模型只考虑累积概率为10%的token。建议仅修改此参数或Temperature，不建议两者都修改。
+        /// <p>仅当模型为自行部署的开源大模型时生效。核采样，默认值为1，取值范围[0,1]。指的是预先设置一个概率界限 p，然后将所有可能生成的token，根据概率大小从高到低排列，依次选取。当这些选取的token的累积概率大于或等于 p 值时停止，然后从已经选取的token中进行采样，生成下一个token。例如top_p为0.1时意味着模型只考虑累积概率为10%的token。建议仅修改此参数或Temperature，不建议两者都修改。</p>
         /// </summary>
         [JsonProperty("TopP")]
         public float? TopP{ get; set; }
 
         /// <summary>
-        /// 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
+        /// <p>仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。</p>
         /// </summary>
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }
@@ -63,6 +68,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "Messages.", this.Messages);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
             this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);

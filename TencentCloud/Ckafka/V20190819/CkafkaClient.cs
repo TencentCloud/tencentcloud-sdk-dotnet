@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1492";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ckafka.V20190819
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 绑定路由安全组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateRoutesSecurityGroupRequest"/></param>
+        /// <returns><see cref="AssociateRoutesSecurityGroupResponse"/></returns>
+        public Task<AssociateRoutesSecurityGroupResponse> AssociateRoutesSecurityGroup(AssociateRoutesSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<AssociateRoutesSecurityGroupResponse>(req, "AssociateRoutesSecurityGroup");
+        }
+
+        /// <summary>
+        /// 绑定路由安全组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateRoutesSecurityGroupRequest"/></param>
+        /// <returns><see cref="AssociateRoutesSecurityGroupResponse"/></returns>
+        public AssociateRoutesSecurityGroupResponse AssociateRoutesSecurityGroupSync(AssociateRoutesSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<AssociateRoutesSecurityGroupResponse>(req, "AssociateRoutesSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1652,6 +1673,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 解绑路由安全组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateRoutesSecurityGroupRequest"/></param>
+        /// <returns><see cref="DisassociateRoutesSecurityGroupResponse"/></returns>
+        public Task<DisassociateRoutesSecurityGroupResponse> DisassociateRoutesSecurityGroup(DisassociateRoutesSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DisassociateRoutesSecurityGroupResponse>(req, "DisassociateRoutesSecurityGroup");
+        }
+
+        /// <summary>
+        /// 解绑路由安全组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateRoutesSecurityGroupRequest"/></param>
+        /// <returns><see cref="DisassociateRoutesSecurityGroupResponse"/></returns>
+        public DisassociateRoutesSecurityGroupResponse DisassociateRoutesSecurityGroupSync(DisassociateRoutesSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DisassociateRoutesSecurityGroupResponse>(req, "DisassociateRoutesSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据指定offset位置的消息
         /// </summary>
         /// <param name="req"><see cref="FetchDatahubMessageByOffsetRequest"/></param>
@@ -2005,6 +2047,27 @@ namespace TencentCloud.Ckafka.V20190819
         public ModifyPasswordResponse ModifyPasswordSync(ModifyPasswordRequest req)
         {
             return InternalRequestAsync<ModifyPasswordResponse>(req, "ModifyPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改路由安全组关联
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyRouteSecurityGroupsResponse"/></returns>
+        public Task<ModifyRouteSecurityGroupsResponse> ModifyRouteSecurityGroups(ModifyRouteSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyRouteSecurityGroupsResponse>(req, "ModifyRouteSecurityGroups");
+        }
+
+        /// <summary>
+        /// 修改路由安全组关联
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyRouteSecurityGroupsResponse"/></returns>
+        public ModifyRouteSecurityGroupsResponse ModifyRouteSecurityGroupsSync(ModifyRouteSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyRouteSecurityGroupsResponse>(req, "ModifyRouteSecurityGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

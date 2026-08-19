@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1489";
+       private const string sdkVersion = "SDK_NET_3.0.1492";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建/修改SMTP邮箱接入请求
+        /// </summary>
+        /// <param name="req"><see cref="AccessAIAnalysisSMTPRequest"/></param>
+        /// <returns><see cref="AccessAIAnalysisSMTPResponse"/></returns>
+        public Task<AccessAIAnalysisSMTPResponse> AccessAIAnalysisSMTP(AccessAIAnalysisSMTPRequest req)
+        {
+            return InternalRequestAsync<AccessAIAnalysisSMTPResponse>(req, "AccessAIAnalysisSMTP");
+        }
+
+        /// <summary>
+        /// 创建/修改SMTP邮箱接入请求
+        /// </summary>
+        /// <param name="req"><see cref="AccessAIAnalysisSMTPRequest"/></param>
+        /// <returns><see cref="AccessAIAnalysisSMTPResponse"/></returns>
+        public AccessAIAnalysisSMTPResponse AccessAIAnalysisSMTPSync(AccessAIAnalysisSMTPRequest req)
+        {
+            return InternalRequestAsync<AccessAIAnalysisSMTPResponse>(req, "AccessAIAnalysisSMTP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 添加资产管理员
         /// </summary>
         /// <param name="req"><see cref="AddDspmAssetManagerRequest"/></param>
@@ -71,6 +92,27 @@ namespace TencentCloud.Csip.V20221121
         public AddDspmAssetManagerResponse AddDspmAssetManagerSync(AddDspmAssetManagerRequest req)
         {
             return InternalRequestAsync<AddDspmAssetManagerResponse>(req, "AddDspmAssetManager")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量添加异地登录白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddLoginWhiteListsRequest"/></param>
+        /// <returns><see cref="AddLoginWhiteListsResponse"/></returns>
+        public Task<AddLoginWhiteListsResponse> AddLoginWhiteLists(AddLoginWhiteListsRequest req)
+        {
+            return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists");
+        }
+
+        /// <summary>
+        /// 批量添加异地登录白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddLoginWhiteListsRequest"/></param>
+        /// <returns><see cref="AddLoginWhiteListsResponse"/></returns>
+        public AddLoginWhiteListsResponse AddLoginWhiteListsSync(AddLoginWhiteListsRequest req)
+        {
+            return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -117,6 +159,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 批量修改基线策略的“周期扫描配置 / 自动同步新增检测项 / 检测项命中配置 / 自定义检测项”等设置。仅修改请求中传入的字段。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyBaselinePolicyRequest"/></param>
+        /// <returns><see cref="BatchModifyBaselinePolicyResponse"/></returns>
+        public Task<BatchModifyBaselinePolicyResponse> BatchModifyBaselinePolicy(BatchModifyBaselinePolicyRequest req)
+        {
+            return InternalRequestAsync<BatchModifyBaselinePolicyResponse>(req, "BatchModifyBaselinePolicy");
+        }
+
+        /// <summary>
+        /// 批量修改基线策略的“周期扫描配置 / 自动同步新增检测项 / 检测项命中配置 / 自定义检测项”等设置。仅修改请求中传入的字段。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyBaselinePolicyRequest"/></param>
+        /// <returns><see cref="BatchModifyBaselinePolicyResponse"/></returns>
+        public BatchModifyBaselinePolicyResponse BatchModifyBaselinePolicySync(BatchModifyBaselinePolicyRequest req)
+        {
+            return InternalRequestAsync<BatchModifyBaselinePolicyResponse>(req, "BatchModifyBaselinePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定集群负责人
+        /// </summary>
+        /// <param name="req"><see cref="BindClusterOwnerRequest"/></param>
+        /// <returns><see cref="BindClusterOwnerResponse"/></returns>
+        public Task<BindClusterOwnerResponse> BindClusterOwner(BindClusterOwnerRequest req)
+        {
+            return InternalRequestAsync<BindClusterOwnerResponse>(req, "BindClusterOwner");
+        }
+
+        /// <summary>
+        /// 绑定集群负责人
+        /// </summary>
+        /// <param name="req"><see cref="BindClusterOwnerRequest"/></param>
+        /// <returns><see cref="BindClusterOwnerResponse"/></returns>
+        public BindClusterOwnerResponse BindClusterOwnerSync(BindClusterOwnerRequest req)
+        {
+            return InternalRequestAsync<BindClusterOwnerResponse>(req, "BindClusterOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
         /// </summary>
         /// <param name="req"><see cref="CancelEdrAlertIgnoreRequest"/></param>
@@ -134,6 +218,94 @@ namespace TencentCloud.Csip.V20221121
         public CancelEdrAlertIgnoreResponse CancelEdrAlertIgnoreSync(CancelEdrAlertIgnoreRequest req)
         {
             return InternalRequestAsync<CancelEdrAlertIgnoreResponse>(req, "CancelEdrAlertIgnore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 判断当前用户是否旗舰版(适用于主机)
+        /// </summary>
+        /// <param name="req"><see cref="CheckCWPExposePathPermissionRequest"/></param>
+        /// <returns><see cref="CheckCWPExposePathPermissionResponse"/></returns>
+        public Task<CheckCWPExposePathPermissionResponse> CheckCWPExposePathPermission(CheckCWPExposePathPermissionRequest req)
+        {
+            return InternalRequestAsync<CheckCWPExposePathPermissionResponse>(req, "CheckCWPExposePathPermission");
+        }
+
+        /// <summary>
+        /// 判断当前用户是否旗舰版(适用于主机)
+        /// </summary>
+        /// <param name="req"><see cref="CheckCWPExposePathPermissionRequest"/></param>
+        /// <returns><see cref="CheckCWPExposePathPermissionResponse"/></returns>
+        public CheckCWPExposePathPermissionResponse CheckCWPExposePathPermissionSync(CheckCWPExposePathPermissionRequest req)
+        {
+            return InternalRequestAsync<CheckCWPExposePathPermissionResponse>(req, "CheckCWPExposePathPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 判断当前用户是否旗舰版
+        /// </summary>
+        /// <param name="req"><see cref="CheckIsUltimateVersionRequest"/></param>
+        /// <returns><see cref="CheckIsUltimateVersionResponse"/></returns>
+        public Task<CheckIsUltimateVersionResponse> CheckIsUltimateVersion(CheckIsUltimateVersionRequest req)
+        {
+            return InternalRequestAsync<CheckIsUltimateVersionResponse>(req, "CheckIsUltimateVersion");
+        }
+
+        /// <summary>
+        /// 判断当前用户是否旗舰版
+        /// </summary>
+        /// <param name="req"><see cref="CheckIsUltimateVersionRequest"/></param>
+        /// <returns><see cref="CheckIsUltimateVersionResponse"/></returns>
+        public CheckIsUltimateVersionResponse CheckIsUltimateVersionSync(CheckIsUltimateVersionRequest req)
+        {
+            return InternalRequestAsync<CheckIsUltimateVersionResponse>(req, "CheckIsUltimateVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 风险验证示例
+        /// </summary>
+        /// <param name="req"><see cref="CheckRiskRequest"/></param>
+        /// <returns><see cref="CheckRiskResponse"/></returns>
+        public Task<CheckRiskResponse> CheckRisk(CheckRiskRequest req)
+        {
+            return InternalRequestAsync<CheckRiskResponse>(req, "CheckRisk");
+        }
+
+        /// <summary>
+        /// 风险验证示例
+        /// </summary>
+        /// <param name="req"><see cref="CheckRiskRequest"/></param>
+        /// <returns><see cref="CheckRiskResponse"/></returns>
+        public CheckRiskResponse CheckRiskSync(CheckRiskRequest req)
+        {
+            return InternalRequestAsync<CheckRiskResponse>(req, "CheckRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建AI 定时任务。
+        /// 
+        /// 创建一个新的AI 定时任务，需传入任务名称、执行提示词和触发器配置。创建成功后返回AI 定时任务 ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIScheduleRequest"/></param>
+        /// <returns><see cref="CreateAIScheduleResponse"/></returns>
+        public Task<CreateAIScheduleResponse> CreateAISchedule(CreateAIScheduleRequest req)
+        {
+            return InternalRequestAsync<CreateAIScheduleResponse>(req, "CreateAISchedule");
+        }
+
+        /// <summary>
+        /// 创建AI 定时任务。
+        /// 
+        /// 创建一个新的AI 定时任务，需传入任务名称、执行提示词和触发器配置。创建成功后返回AI 定时任务 ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIScheduleRequest"/></param>
+        /// <returns><see cref="CreateAIScheduleResponse"/></returns>
+        public CreateAIScheduleResponse CreateAIScheduleSync(CreateAIScheduleRequest req)
+        {
+            return InternalRequestAsync<CreateAIScheduleResponse>(req, "CreateAISchedule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +352,237 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建全部资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateAllAssetsExportJobResponse"/></returns>
+        public Task<CreateAllAssetsExportJobResponse> CreateAllAssetsExportJob(CreateAllAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAllAssetsExportJobResponse>(req, "CreateAllAssetsExportJob");
+        }
+
+        /// <summary>
+        /// 创建全部资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateAllAssetsExportJobResponse"/></returns>
+        public CreateAllAssetsExportJobResponse CreateAllAssetsExportJobSync(CreateAllAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAllAssetsExportJobResponse>(req, "CreateAllAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetFilterViewRequest"/></param>
+        /// <returns><see cref="CreateAssetFilterViewResponse"/></returns>
+        public Task<CreateAssetFilterViewResponse> CreateAssetFilterView(CreateAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<CreateAssetFilterViewResponse>(req, "CreateAssetFilterView");
+        }
+
+        /// <summary>
+        /// 创建资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetFilterViewRequest"/></param>
+        /// <returns><see cref="CreateAssetFilterViewResponse"/></returns>
+        public CreateAssetFilterViewResponse CreateAssetFilterViewSync(CreateAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<CreateAssetFilterViewResponse>(req, "CreateAssetFilterView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建主机进程列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetProcessExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetProcessExportJobResponse"/></returns>
+        public Task<CreateAssetProcessExportJobResponse> CreateAssetProcessExportJob(CreateAssetProcessExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetProcessExportJobResponse>(req, "CreateAssetProcessExportJob");
+        }
+
+        /// <summary>
+        /// 创建主机进程列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetProcessExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetProcessExportJobResponse"/></returns>
+        public CreateAssetProcessExportJobResponse CreateAssetProcessExportJobSync(CreateAssetProcessExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetProcessExportJobResponse>(req, "CreateAssetProcessExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateAssetSyncTaskResponse"/></returns>
+        public Task<CreateAssetSyncTaskResponse> CreateAssetSyncTask(CreateAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAssetSyncTaskResponse>(req, "CreateAssetSyncTask");
+        }
+
+        /// <summary>
+        /// 创建资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateAssetSyncTaskResponse"/></returns>
+        public CreateAssetSyncTaskResponse CreateAssetSyncTaskSync(CreateAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAssetSyncTaskResponse>(req, "CreateAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetTagRequest"/></param>
+        /// <returns><see cref="CreateAssetTagResponse"/></returns>
+        public Task<CreateAssetTagResponse> CreateAssetTag(CreateAssetTagRequest req)
+        {
+            return InternalRequestAsync<CreateAssetTagResponse>(req, "CreateAssetTag");
+        }
+
+        /// <summary>
+        /// 创建资产标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetTagRequest"/></param>
+        /// <returns><see cref="CreateAssetTagResponse"/></returns>
+        public CreateAssetTagResponse CreateAssetTagSync(CreateAssetTagRequest req)
+        {
+            return InternalRequestAsync<CreateAssetTagResponse>(req, "CreateAssetTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetViewRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetViewRisksExportJobResponse"/></returns>
+        public Task<CreateAssetViewRisksExportJobResponse> CreateAssetViewRisksExportJob(CreateAssetViewRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetViewRisksExportJobResponse>(req, "CreateAssetViewRisksExportJob");
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetViewRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetViewRisksExportJobResponse"/></returns>
+        public CreateAssetViewRisksExportJobResponse CreateAssetViewRisksExportJobSync(CreateAssetViewRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetViewRisksExportJobResponse>(req, "CreateAssetViewRisksExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建基线聚合检测项导出任务。通过 ExportType 选择导出统计结果或风险明细，可按策略、分类等条件限定范围；任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineAggregatedItemExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineAggregatedItemExportJobResponse"/></returns>
+        public Task<CreateBaselineAggregatedItemExportJobResponse> CreateBaselineAggregatedItemExportJob(CreateBaselineAggregatedItemExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineAggregatedItemExportJobResponse>(req, "CreateBaselineAggregatedItemExportJob");
+        }
+
+        /// <summary>
+        /// 创建基线聚合检测项导出任务。通过 ExportType 选择导出统计结果或风险明细，可按策略、分类等条件限定范围；任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineAggregatedItemExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineAggregatedItemExportJobResponse"/></returns>
+        public CreateBaselineAggregatedItemExportJobResponse CreateBaselineAggregatedItemExportJobSync(CreateBaselineAggregatedItemExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineAggregatedItemExportJobResponse>(req, "CreateBaselineAggregatedItemExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建基线修复记录导出任务，导出已修复检测项的记录数据（含检测项信息、资产信息、修复时间等）。任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineFixRecordExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineFixRecordExportJobResponse"/></returns>
+        public Task<CreateBaselineFixRecordExportJobResponse> CreateBaselineFixRecordExportJob(CreateBaselineFixRecordExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineFixRecordExportJobResponse>(req, "CreateBaselineFixRecordExportJob");
+        }
+
+        /// <summary>
+        /// 创建基线修复记录导出任务，导出已修复检测项的记录数据（含检测项信息、资产信息、修复时间等）。任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineFixRecordExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineFixRecordExportJobResponse"/></returns>
+        public CreateBaselineFixRecordExportJobResponse CreateBaselineFixRecordExportJobSync(CreateBaselineFixRecordExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineFixRecordExportJobResponse>(req, "CreateBaselineFixRecordExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建基线主任务导出任务，导出指定主任务下的检测项与子任务数据。任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineMainTaskExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineMainTaskExportJobResponse"/></returns>
+        public Task<CreateBaselineMainTaskExportJobResponse> CreateBaselineMainTaskExportJob(CreateBaselineMainTaskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineMainTaskExportJobResponse>(req, "CreateBaselineMainTaskExportJob");
+        }
+
+        /// <summary>
+        /// 创建基线主任务导出任务，导出指定主任务下的检测项与子任务数据。任务在后台异步执行，完成后可在导出任务列表中下载结果文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineMainTaskExportJobRequest"/></param>
+        /// <returns><see cref="CreateBaselineMainTaskExportJobResponse"/></returns>
+        public CreateBaselineMainTaskExportJobResponse CreateBaselineMainTaskExportJobSync(CreateBaselineMainTaskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateBaselineMainTaskExportJobResponse>(req, "CreateBaselineMainTaskExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云资源配置检测PDF报告导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCFGRiskPDFReportExportJobRequest"/></param>
+        /// <returns><see cref="CreateCFGRiskPDFReportExportJobResponse"/></returns>
+        public Task<CreateCFGRiskPDFReportExportJobResponse> CreateCFGRiskPDFReportExportJob(CreateCFGRiskPDFReportExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCFGRiskPDFReportExportJobResponse>(req, "CreateCFGRiskPDFReportExportJob");
+        }
+
+        /// <summary>
+        /// 创建云资源配置检测PDF报告导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCFGRiskPDFReportExportJobRequest"/></param>
+        /// <returns><see cref="CreateCFGRiskPDFReportExportJobResponse"/></returns>
+        public CreateCFGRiskPDFReportExportJobResponse CreateCFGRiskPDFReportExportJobSync(CreateCFGRiskPDFReportExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCFGRiskPDFReportExportJobResponse>(req, "CreateCFGRiskPDFReportExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCFGRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateCFGRisksExportJobResponse"/></returns>
+        public Task<CreateCFGRisksExportJobResponse> CreateCFGRisksExportJob(CreateCFGRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCFGRisksExportJobResponse>(req, "CreateCFGRisksExportJob");
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCFGRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateCFGRisksExportJobResponse"/></returns>
+        public CreateCFGRisksExportJobResponse CreateCFGRisksExportJobSync(CreateCFGRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCFGRisksExportJobResponse>(req, "CreateCFGRisksExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CSIP 手动扫描创建接口
         /// </summary>
         /// <param name="req"><see cref="CreateCSIPManualMalwareScanRequest"/></param>
@@ -197,6 +600,174 @@ namespace TencentCloud.Csip.V20221121
         public CreateCSIPManualMalwareScanResponse CreateCSIPManualMalwareScanSync(CreateCSIPManualMalwareScanRequest req)
         {
             return InternalRequestAsync<CreateCSIPManualMalwareScanResponse>(req, "CreateCSIPManualMalwareScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCheckViewRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateCheckViewRisksExportJobResponse"/></returns>
+        public Task<CreateCheckViewRisksExportJobResponse> CreateCheckViewRisksExportJob(CreateCheckViewRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCheckViewRisksExportJobResponse>(req, "CreateCheckViewRisksExportJob");
+        }
+
+        /// <summary>
+        /// 创建资产视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCheckViewRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateCheckViewRisksExportJobResponse"/></returns>
+        public CreateCheckViewRisksExportJobResponse CreateCheckViewRisksExportJobSync(CreateCheckViewRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCheckViewRisksExportJobResponse>(req, "CreateCheckViewRisksExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云函数导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudFunctionExportJobRequest"/></param>
+        /// <returns><see cref="CreateCloudFunctionExportJobResponse"/></returns>
+        public Task<CreateCloudFunctionExportJobResponse> CreateCloudFunctionExportJob(CreateCloudFunctionExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCloudFunctionExportJobResponse>(req, "CreateCloudFunctionExportJob");
+        }
+
+        /// <summary>
+        /// 创建云函数导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudFunctionExportJobRequest"/></param>
+        /// <returns><see cref="CreateCloudFunctionExportJobResponse"/></returns>
+        public CreateCloudFunctionExportJobResponse CreateCloudFunctionExportJobSync(CreateCloudFunctionExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateCloudFunctionExportJobResponse>(req, "CreateCloudFunctionExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateClusterAssetSyncTaskResponse"/></returns>
+        public Task<CreateClusterAssetSyncTaskResponse> CreateClusterAssetSyncTask(CreateClusterAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAssetSyncTaskResponse>(req, "CreateClusterAssetSyncTask");
+        }
+
+        /// <summary>
+        /// 创建集群资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateClusterAssetSyncTaskResponse"/></returns>
+        public CreateClusterAssetSyncTaskResponse CreateClusterAssetSyncTaskSync(CreateClusterAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAssetSyncTaskResponse>(req, "CreateClusterAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群容器列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterContainerListExportJobResponse"/></returns>
+        public Task<CreateClusterContainerListExportJobResponse> CreateClusterContainerListExportJob(CreateClusterContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterContainerListExportJobResponse>(req, "CreateClusterContainerListExportJob");
+        }
+
+        /// <summary>
+        /// 创建集群容器列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterContainerListExportJobResponse"/></returns>
+        public CreateClusterContainerListExportJobResponse CreateClusterContainerListExportJobSync(CreateClusterContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterContainerListExportJobResponse>(req, "CreateClusterContainerListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterListExportJobResponse"/></returns>
+        public Task<CreateClusterListExportJobResponse> CreateClusterListExportJob(CreateClusterListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterListExportJobResponse>(req, "CreateClusterListExportJob");
+        }
+
+        /// <summary>
+        /// 创建集群列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterListExportJobResponse"/></returns>
+        public CreateClusterListExportJobResponse CreateClusterListExportJobSync(CreateClusterListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterListExportJobResponse>(req, "CreateClusterListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群命名空间列表导出任务。导出字段包含命名空间名称、Labels、创建时间。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNamespaceListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterNamespaceListExportJobResponse"/></returns>
+        public Task<CreateClusterNamespaceListExportJobResponse> CreateClusterNamespaceListExportJob(CreateClusterNamespaceListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterNamespaceListExportJobResponse>(req, "CreateClusterNamespaceListExportJob");
+        }
+
+        /// <summary>
+        /// 创建集群命名空间列表导出任务。导出字段包含命名空间名称、Labels、创建时间。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNamespaceListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterNamespaceListExportJobResponse"/></returns>
+        public CreateClusterNamespaceListExportJobResponse CreateClusterNamespaceListExportJobSync(CreateClusterNamespaceListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterNamespaceListExportJobResponse>(req, "CreateClusterNamespaceListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建集群节点列表导出任务。导出字段包含节点ID、节点名称、公网IP、内网IP、节点类型、核数、客户端状态、运行状态。NodeType和ClientStatus、RunStatus均经过国际化翻译。支持Filter过滤（含ClientStatus内存过滤）。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodeListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterNodeListExportJobResponse"/></returns>
+        public Task<CreateClusterNodeListExportJobResponse> CreateClusterNodeListExportJob(CreateClusterNodeListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterNodeListExportJobResponse>(req, "CreateClusterNodeListExportJob");
+        }
+
+        /// <summary>
+        /// 创建集群节点列表导出任务。导出字段包含节点ID、节点名称、公网IP、内网IP、节点类型、核数、客户端状态、运行状态。NodeType和ClientStatus、RunStatus均经过国际化翻译。支持Filter过滤（含ClientStatus内存过滤）。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodeListExportJobRequest"/></param>
+        /// <returns><see cref="CreateClusterNodeListExportJobResponse"/></returns>
+        public CreateClusterNodeListExportJobResponse CreateClusterNodeListExportJobSync(CreateClusterNodeListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateClusterNodeListExportJobResponse>(req, "CreateClusterNodeListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建合规标准聚合视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateComplianceRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateComplianceRiskExportJobResponse"/></returns>
+        public Task<CreateComplianceRiskExportJobResponse> CreateComplianceRiskExportJob(CreateComplianceRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateComplianceRiskExportJobResponse>(req, "CreateComplianceRiskExportJob");
+        }
+
+        /// <summary>
+        /// 创建合规标准聚合视角下风险列表导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateComplianceRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateComplianceRiskExportJobResponse"/></returns>
+        public CreateComplianceRiskExportJobResponse CreateComplianceRiskExportJobSync(CreateComplianceRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateComplianceRiskExportJobResponse>(req, "CreateComplianceRiskExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -684,6 +1255,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建公网资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateDynamicAssetsExportJobResponse"/></returns>
+        public Task<CreateDynamicAssetsExportJobResponse> CreateDynamicAssetsExportJob(CreateDynamicAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicAssetsExportJobResponse>(req, "CreateDynamicAssetsExportJob");
+        }
+
+        /// <summary>
+        /// 创建公网资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreateDynamicAssetsExportJobResponse"/></returns>
+        public CreateDynamicAssetsExportJobResponse CreateDynamicAssetsExportJobSync(CreateDynamicAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicAssetsExportJobResponse>(req, "CreateDynamicAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
         /// </summary>
         /// <param name="req"><see cref="CreateEDRManualScanRequest"/></param>
@@ -722,6 +1314,90 @@ namespace TencentCloud.Csip.V20221121
         public CreateEdrAlertExportJobResponse CreateEdrAlertExportJobSync(CreateEdrAlertExportJobRequest req)
         {
             return InternalRequestAsync<CreateEdrAlertExportJobResponse>(req, "CreateEdrAlertExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建EDR告警普通导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdrLessAlertExportJobRequest"/></param>
+        /// <returns><see cref="CreateEdrLessAlertExportJobResponse"/></returns>
+        public Task<CreateEdrLessAlertExportJobResponse> CreateEdrLessAlertExportJob(CreateEdrLessAlertExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateEdrLessAlertExportJobResponse>(req, "CreateEdrLessAlertExportJob");
+        }
+
+        /// <summary>
+        /// 创建EDR告警普通导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdrLessAlertExportJobRequest"/></param>
+        /// <returns><see cref="CreateEdrLessAlertExportJobResponse"/></returns>
+        public CreateEdrLessAlertExportJobResponse CreateEdrLessAlertExportJobSync(CreateEdrLessAlertExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateEdrLessAlertExportJobResponse>(req, "CreateEdrLessAlertExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-创建规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="CreateExposureAutoTagRuleResponse"/></returns>
+        public Task<CreateExposureAutoTagRuleResponse> CreateExposureAutoTagRule(CreateExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<CreateExposureAutoTagRuleResponse>(req, "CreateExposureAutoTagRule");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-创建规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="CreateExposureAutoTagRuleResponse"/></returns>
+        public CreateExposureAutoTagRuleResponse CreateExposureAutoTagRuleSync(CreateExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<CreateExposureAutoTagRuleResponse>(req, "CreateExposureAutoTagRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暴露资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExposuresExportJobRequest"/></param>
+        /// <returns><see cref="CreateExposuresExportJobResponse"/></returns>
+        public Task<CreateExposuresExportJobResponse> CreateExposuresExportJob(CreateExposuresExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateExposuresExportJobResponse>(req, "CreateExposuresExportJob");
+        }
+
+        /// <summary>
+        /// 暴露资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExposuresExportJobRequest"/></param>
+        /// <returns><see cref="CreateExposuresExportJobResponse"/></returns>
+        public CreateExposuresExportJobResponse CreateExposuresExportJobSync(CreateExposuresExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateExposuresExportJobResponse>(req, "CreateExposuresExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建高危基线风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighBaseLineRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateHighBaseLineRisksExportJobResponse"/></returns>
+        public Task<CreateHighBaseLineRisksExportJobResponse> CreateHighBaseLineRisksExportJob(CreateHighBaseLineRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHighBaseLineRisksExportJobResponse>(req, "CreateHighBaseLineRisksExportJob");
+        }
+
+        /// <summary>
+        /// 创建高危基线风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighBaseLineRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateHighBaseLineRisksExportJobResponse"/></returns>
+        public CreateHighBaseLineRisksExportJobResponse CreateHighBaseLineRisksExportJobSync(CreateHighBaseLineRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHighBaseLineRisksExportJobResponse>(req, "CreateHighBaseLineRisksExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,6 +1486,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建Pod关联容器列表导出任务。导出字段包含容器ID、容器名称、运行状态、节点ID、节点类型、镜像ID、镜像名称、隔离状态。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePodContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreatePodContainerListExportJobResponse"/></returns>
+        public Task<CreatePodContainerListExportJobResponse> CreatePodContainerListExportJob(CreatePodContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePodContainerListExportJobResponse>(req, "CreatePodContainerListExportJob");
+        }
+
+        /// <summary>
+        /// 创建Pod关联容器列表导出任务。导出字段包含容器ID、容器名称、运行状态、节点ID、节点类型、镜像ID、镜像名称、隔离状态。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePodContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreatePodContainerListExportJobResponse"/></returns>
+        public CreatePodContainerListExportJobResponse CreatePodContainerListExportJobSync(CreatePodContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePodContainerListExportJobResponse>(req, "CreatePodContainerListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Pod关联服务列表导出任务。导出字段包含服务名称、类型、Selector、命名空间、创建时间。支持Filter过滤。当传入PodUniqueID时，复用DescribeClusterServiceList的Pod关联匹配逻辑。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePodServiceListExportJobRequest"/></param>
+        /// <returns><see cref="CreatePodServiceListExportJobResponse"/></returns>
+        public Task<CreatePodServiceListExportJobResponse> CreatePodServiceListExportJob(CreatePodServiceListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePodServiceListExportJobResponse>(req, "CreatePodServiceListExportJob");
+        }
+
+        /// <summary>
+        /// 创建Pod关联服务列表导出任务。导出字段包含服务名称、类型、Selector、命名空间、创建时间。支持Filter过滤。当传入PodUniqueID时，复用DescribeClusterServiceList的Pod关联匹配逻辑。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePodServiceListExportJobRequest"/></param>
+        /// <returns><see cref="CreatePodServiceListExportJobResponse"/></returns>
+        public CreatePodServiceListExportJobResponse CreatePodServiceListExportJobSync(CreatePodServiceListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePodServiceListExportJobResponse>(req, "CreatePodServiceListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建公网资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublicAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreatePublicAssetsExportJobResponse"/></returns>
+        public Task<CreatePublicAssetsExportJobResponse> CreatePublicAssetsExportJob(CreatePublicAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePublicAssetsExportJobResponse>(req, "CreatePublicAssetsExportJob");
+        }
+
+        /// <summary>
+        /// 创建公网资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublicAssetsExportJobRequest"/></param>
+        /// <returns><see cref="CreatePublicAssetsExportJobResponse"/></returns>
+        public CreatePublicAssetsExportJobResponse CreatePublicAssetsExportJobSync(CreatePublicAssetsExportJobRequest req)
+        {
+            return InternalRequestAsync<CreatePublicAssetsExportJobResponse>(req, "CreatePublicAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建风险中心扫描任务
         /// </summary>
         /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
@@ -827,6 +1566,69 @@ namespace TencentCloud.Csip.V20221121
         public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTaskSync(CreateRiskCenterScanTaskRequest req)
         {
             return InternalRequestAsync<CreateRiskCenterScanTaskResponse>(req, "CreateRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云资源配置检查风险详情导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskDetailExportJobRequest"/></param>
+        /// <returns><see cref="CreateRiskDetailExportJobResponse"/></returns>
+        public Task<CreateRiskDetailExportJobResponse> CreateRiskDetailExportJob(CreateRiskDetailExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateRiskDetailExportJobResponse>(req, "CreateRiskDetailExportJob");
+        }
+
+        /// <summary>
+        /// 创建云资源配置检查风险详情导出任务示例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskDetailExportJobRequest"/></param>
+        /// <returns><see cref="CreateRiskDetailExportJobResponse"/></returns>
+        public CreateRiskDetailExportJobResponse CreateRiskDetailExportJobSync(CreateRiskDetailExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateRiskDetailExportJobResponse>(req, "CreateRiskDetailExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 暴露面扫描结果导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanStatisticExportJobRequest"/></param>
+        /// <returns><see cref="CreateScanStatisticExportJobResponse"/></returns>
+        public Task<CreateScanStatisticExportJobResponse> CreateScanStatisticExportJob(CreateScanStatisticExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateScanStatisticExportJobResponse>(req, "CreateScanStatisticExportJob");
+        }
+
+        /// <summary>
+        /// 暴露面扫描结果导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanStatisticExportJobRequest"/></param>
+        /// <returns><see cref="CreateScanStatisticExportJobResponse"/></returns>
+        public CreateScanStatisticExportJobResponse CreateScanStatisticExportJobSync(CreateScanStatisticExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateScanStatisticExportJobResponse>(req, "CreateScanStatisticExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建立即检测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanTaskRequest"/></param>
+        /// <returns><see cref="CreateScanTaskResponse"/></returns>
+        public Task<CreateScanTaskResponse> CreateScanTask(CreateScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateScanTaskResponse>(req, "CreateScanTask");
+        }
+
+        /// <summary>
+        /// 创建立即检测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanTaskRequest"/></param>
+        /// <returns><see cref="CreateScanTaskResponse"/></returns>
+        public CreateScanTaskResponse CreateScanTaskSync(CreateScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateScanTaskResponse>(req, "CreateScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +1738,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建漏洞风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulRisksExportJobResponse"/></returns>
+        public Task<CreateVulRisksExportJobResponse> CreateVulRisksExportJob(CreateVulRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulRisksExportJobResponse>(req, "CreateVulRisksExportJob");
+        }
+
+        /// <summary>
+        /// 创建漏洞风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulRisksExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulRisksExportJobResponse"/></returns>
+        public CreateVulRisksExportJobResponse CreateVulRisksExportJobSync(CreateVulRisksExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulRisksExportJobResponse>(req, "CreateVulRisksExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建漏洞扫描（一键扫描）
         /// </summary>
         /// <param name="req"><see cref="CreateVulScanManualRequest"/></param>
@@ -957,6 +1780,94 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 删除AI助手的SMTP邮箱接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIAnalysisSMTPAccessRequest"/></param>
+        /// <returns><see cref="DeleteAIAnalysisSMTPAccessResponse"/></returns>
+        public Task<DeleteAIAnalysisSMTPAccessResponse> DeleteAIAnalysisSMTPAccess(DeleteAIAnalysisSMTPAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteAIAnalysisSMTPAccessResponse>(req, "DeleteAIAnalysisSMTPAccess");
+        }
+
+        /// <summary>
+        /// 删除AI助手的SMTP邮箱接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIAnalysisSMTPAccessRequest"/></param>
+        /// <returns><see cref="DeleteAIAnalysisSMTPAccessResponse"/></returns>
+        public DeleteAIAnalysisSMTPAccessResponse DeleteAIAnalysisSMTPAccessSync(DeleteAIAnalysisSMTPAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteAIAnalysisSMTPAccessResponse>(req, "DeleteAIAnalysisSMTPAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除AI 定时任务。
+        /// 
+        /// 根据指定的AI 定时任务 ID 删除对应的定时任务。删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIScheduleRequest"/></param>
+        /// <returns><see cref="DeleteAIScheduleResponse"/></returns>
+        public Task<DeleteAIScheduleResponse> DeleteAISchedule(DeleteAIScheduleRequest req)
+        {
+            return InternalRequestAsync<DeleteAIScheduleResponse>(req, "DeleteAISchedule");
+        }
+
+        /// <summary>
+        /// 删除AI 定时任务。
+        /// 
+        /// 根据指定的AI 定时任务 ID 删除对应的定时任务。删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIScheduleRequest"/></param>
+        /// <returns><see cref="DeleteAIScheduleResponse"/></returns>
+        public DeleteAIScheduleResponse DeleteAIScheduleSync(DeleteAIScheduleRequest req)
+        {
+            return InternalRequestAsync<DeleteAIScheduleResponse>(req, "DeleteAISchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户创建的指定资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetFilterViewRequest"/></param>
+        /// <returns><see cref="DeleteAssetFilterViewResponse"/></returns>
+        public Task<DeleteAssetFilterViewResponse> DeleteAssetFilterView(DeleteAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetFilterViewResponse>(req, "DeleteAssetFilterView");
+        }
+
+        /// <summary>
+        /// 删除用户创建的指定资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetFilterViewRequest"/></param>
+        /// <returns><see cref="DeleteAssetFilterViewResponse"/></returns>
+        public DeleteAssetFilterViewResponse DeleteAssetFilterViewSync(DeleteAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetFilterViewResponse>(req, "DeleteAssetFilterView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除资产标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetTagRequest"/></param>
+        /// <returns><see cref="DeleteAssetTagResponse"/></returns>
+        public Task<DeleteAssetTagResponse> DeleteAssetTag(DeleteAssetTagRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetTagResponse>(req, "DeleteAssetTag");
+        }
+
+        /// <summary>
+        /// 删除资产标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssetTagRequest"/></param>
+        /// <returns><see cref="DeleteAssetTagResponse"/></returns>
+        public DeleteAssetTagResponse DeleteAssetTagSync(DeleteAssetTagRequest req)
+        {
+            return InternalRequestAsync<DeleteAssetTagResponse>(req, "DeleteAssetTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CSIP 手动扫描任务删除接口
         /// </summary>
         /// <param name="req"><see cref="DeleteCSIPMalwareScanTaskRequest"/></param>
@@ -974,6 +1885,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTaskSync(DeleteCSIPMalwareScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteCSIPMalwareScanTaskResponse>(req, "DeleteCSIPMalwareScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterRequest"/></param>
+        /// <returns><see cref="DeleteClusterResponse"/></returns>
+        public Task<DeleteClusterResponse> DeleteCluster(DeleteClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterResponse>(req, "DeleteCluster");
+        }
+
+        /// <summary>
+        /// 删除集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterRequest"/></param>
+        /// <returns><see cref="DeleteClusterResponse"/></returns>
+        public DeleteClusterResponse DeleteClusterSync(DeleteClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterResponse>(req, "DeleteCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1356,6 +2288,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 批量删除EDR日志采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdrLogCollectPathsRequest"/></param>
+        /// <returns><see cref="DeleteEdrLogCollectPathsResponse"/></returns>
+        public Task<DeleteEdrLogCollectPathsResponse> DeleteEdrLogCollectPaths(DeleteEdrLogCollectPathsRequest req)
+        {
+            return InternalRequestAsync<DeleteEdrLogCollectPathsResponse>(req, "DeleteEdrLogCollectPaths");
+        }
+
+        /// <summary>
+        /// 批量删除EDR日志采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdrLogCollectPathsRequest"/></param>
+        /// <returns><see cref="DeleteEdrLogCollectPathsResponse"/></returns>
+        public DeleteEdrLogCollectPathsResponse DeleteEdrLogCollectPathsSync(DeleteEdrLogCollectPathsRequest req)
+        {
+            return InternalRequestAsync<DeleteEdrLogCollectPathsResponse>(req, "DeleteEdrLogCollectPaths")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="DeleteExposureAutoTagRuleResponse"/></returns>
+        public Task<DeleteExposureAutoTagRuleResponse> DeleteExposureAutoTagRule(DeleteExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteExposureAutoTagRuleResponse>(req, "DeleteExposureAutoTagRule");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="DeleteExposureAutoTagRuleResponse"/></returns>
+        public DeleteExposureAutoTagRuleResponse DeleteExposureAutoTagRuleSync(DeleteExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteExposureAutoTagRuleResponse>(req, "DeleteExposureAutoTagRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除IaC检测接入Token
         /// </summary>
         /// <param name="req"><see cref="DeleteIaCAccessTokenRequest"/></param>
@@ -1394,6 +2368,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteIaCFileResponse DeleteIaCFileSync(DeleteIaCFileRequest req)
         {
             return InternalRequestAsync<DeleteIaCFileResponse>(req, "DeleteIaCFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于删除异地登录白名单规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
+        public Task<DeleteLoginWhiteListResponse> DeleteLoginWhiteList(DeleteLoginWhiteListRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteListResponse>(req, "DeleteLoginWhiteList");
+        }
+
+        /// <summary>
+        /// 本接口用于删除异地登录白名单规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
+        public DeleteLoginWhiteListResponse DeleteLoginWhiteListSync(DeleteLoginWhiteListRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteListResponse>(req, "DeleteLoginWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除机器清理记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMachineClearHistoryRequest"/></param>
+        /// <returns><see cref="DeleteMachineClearHistoryResponse"/></returns>
+        public Task<DeleteMachineClearHistoryResponse> DeleteMachineClearHistory(DeleteMachineClearHistoryRequest req)
+        {
+            return InternalRequestAsync<DeleteMachineClearHistoryResponse>(req, "DeleteMachineClearHistory");
+        }
+
+        /// <summary>
+        /// 删除机器清理记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMachineClearHistoryRequest"/></param>
+        /// <returns><see cref="DeleteMachineClearHistoryResponse"/></returns>
+        public DeleteMachineClearHistoryResponse DeleteMachineClearHistorySync(DeleteMachineClearHistoryRequest req)
+        {
+            return InternalRequestAsync<DeleteMachineClearHistoryResponse>(req, "DeleteMachineClearHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +2477,115 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取 AI 分析文件的临时下载链接。
+        /// 
+        /// 传入文件的原始地址，返回带签名的临时下载链接，链接有效期为 2 小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisFileDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisFileDownloadURLResponse"/></returns>
+        public Task<DescribeAIAnalysisFileDownloadURLResponse> DescribeAIAnalysisFileDownloadURL(DescribeAIAnalysisFileDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisFileDownloadURLResponse>(req, "DescribeAIAnalysisFileDownloadURL");
+        }
+
+        /// <summary>
+        /// 获取 AI 分析文件的临时下载链接。
+        /// 
+        /// 传入文件的原始地址，返回带签名的临时下载链接，链接有效期为 2 小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisFileDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisFileDownloadURLResponse"/></returns>
+        public DescribeAIAnalysisFileDownloadURLResponse DescribeAIAnalysisFileDownloadURLSync(DescribeAIAnalysisFileDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisFileDownloadURLResponse>(req, "DescribeAIAnalysisFileDownloadURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云安全AI助手历史分析记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisHistoryResponse"/></returns>
+        public Task<DescribeAIAnalysisHistoryResponse> DescribeAIAnalysisHistory(DescribeAIAnalysisHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisHistoryResponse>(req, "DescribeAIAnalysisHistory");
+        }
+
+        /// <summary>
+        /// 获取云安全AI助手历史分析记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisHistoryResponse"/></returns>
+        public DescribeAIAnalysisHistoryResponse DescribeAIAnalysisHistorySync(DescribeAIAnalysisHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisHistoryResponse>(req, "DescribeAIAnalysisHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取AI问答推荐问题
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisRecommendQuestionsRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisRecommendQuestionsResponse"/></returns>
+        public Task<DescribeAIAnalysisRecommendQuestionsResponse> DescribeAIAnalysisRecommendQuestions(DescribeAIAnalysisRecommendQuestionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisRecommendQuestionsResponse>(req, "DescribeAIAnalysisRecommendQuestions");
+        }
+
+        /// <summary>
+        /// 获取AI问答推荐问题
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisRecommendQuestionsRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisRecommendQuestionsResponse"/></returns>
+        public DescribeAIAnalysisRecommendQuestionsResponse DescribeAIAnalysisRecommendQuestionsSync(DescribeAIAnalysisRecommendQuestionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisRecommendQuestionsResponse>(req, "DescribeAIAnalysisRecommendQuestions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云安全AI助手基础信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisRobotInfoRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisRobotInfoResponse"/></returns>
+        public Task<DescribeAIAnalysisRobotInfoResponse> DescribeAIAnalysisRobotInfo(DescribeAIAnalysisRobotInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisRobotInfoResponse>(req, "DescribeAIAnalysisRobotInfo");
+        }
+
+        /// <summary>
+        /// 获取云安全AI助手基础信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisRobotInfoRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisRobotInfoResponse"/></returns>
+        public DescribeAIAnalysisRobotInfoResponse DescribeAIAnalysisRobotInfoSync(DescribeAIAnalysisRobotInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisRobotInfoResponse>(req, "DescribeAIAnalysisRobotInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI助手的SMTP邮箱接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisSMTPRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisSMTPResponse"/></returns>
+        public Task<DescribeAIAnalysisSMTPResponse> DescribeAIAnalysisSMTP(DescribeAIAnalysisSMTPRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisSMTPResponse>(req, "DescribeAIAnalysisSMTP");
+        }
+
+        /// <summary>
+        /// 查询AI助手的SMTP邮箱接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisSMTPRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisSMTPResponse"/></returns>
+        public DescribeAIAnalysisSMTPResponse DescribeAIAnalysisSMTPSync(DescribeAIAnalysisSMTPRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisSMTPResponse>(req, "DescribeAIAnalysisSMTP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询AI-Link智链引擎配置
         /// </summary>
         /// <param name="req"><see cref="DescribeAILinkSettingRequest"/></param>
@@ -1482,6 +2607,131 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询AI 定时任务列表。
+        /// 
+        /// 支持分页查询和状态过滤，返回定时任务列表及总条数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleListRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleListResponse"/></returns>
+        public Task<DescribeAIScheduleListResponse> DescribeAIScheduleList(DescribeAIScheduleListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleListResponse>(req, "DescribeAIScheduleList");
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务列表。
+        /// 
+        /// 支持分页查询和状态过滤，返回定时任务列表及总条数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleListRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleListResponse"/></returns>
+        public DescribeAIScheduleListResponse DescribeAIScheduleListSync(DescribeAIScheduleListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleListResponse>(req, "DescribeAIScheduleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务触发计划。
+        /// 
+        /// 查询指定AI 定时任务在给定时间窗口内的未来触发计划列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAISchedulePlanListRequest"/></param>
+        /// <returns><see cref="DescribeAISchedulePlanListResponse"/></returns>
+        public Task<DescribeAISchedulePlanListResponse> DescribeAISchedulePlanList(DescribeAISchedulePlanListRequest req)
+        {
+            return InternalRequestAsync<DescribeAISchedulePlanListResponse>(req, "DescribeAISchedulePlanList");
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务触发计划。
+        /// 
+        /// 查询指定AI 定时任务在给定时间窗口内的未来触发计划列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAISchedulePlanListRequest"/></param>
+        /// <returns><see cref="DescribeAISchedulePlanListResponse"/></returns>
+        public DescribeAISchedulePlanListResponse DescribeAISchedulePlanListSync(DescribeAISchedulePlanListRequest req)
+        {
+            return InternalRequestAsync<DescribeAISchedulePlanListResponse>(req, "DescribeAISchedulePlanList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务统计信息。
+        /// 
+        /// 返回当前用户的定时任务总数和当前运行中的任务数量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleStatsRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleStatsResponse"/></returns>
+        public Task<DescribeAIScheduleStatsResponse> DescribeAIScheduleStats(DescribeAIScheduleStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleStatsResponse>(req, "DescribeAIScheduleStats");
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务统计信息。
+        /// 
+        /// 返回当前用户的定时任务总数和当前运行中的任务数量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleStatsRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleStatsResponse"/></returns>
+        public DescribeAIScheduleStatsResponse DescribeAIScheduleStatsSync(DescribeAIScheduleStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleStatsResponse>(req, "DescribeAIScheduleStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务执行详情。
+        /// 
+        /// 根据任务 ID 查询指定执行任务的详细信息，包括执行状态、结果等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleTaskDetailResponse"/></returns>
+        public Task<DescribeAIScheduleTaskDetailResponse> DescribeAIScheduleTaskDetail(DescribeAIScheduleTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleTaskDetailResponse>(req, "DescribeAIScheduleTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务执行详情。
+        /// 
+        /// 根据任务 ID 查询指定执行任务的详细信息，包括执行状态、结果等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleTaskDetailResponse"/></returns>
+        public DescribeAIScheduleTaskDetailResponse DescribeAIScheduleTaskDetailSync(DescribeAIScheduleTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleTaskDetailResponse>(req, "DescribeAIScheduleTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务执行列表。
+        /// 
+        /// 查询AI 定时任务的历史执行记录，支持分页和按定时任务 ID 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleTaskListResponse"/></returns>
+        public Task<DescribeAIScheduleTaskListResponse> DescribeAIScheduleTaskList(DescribeAIScheduleTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleTaskListResponse>(req, "DescribeAIScheduleTaskList");
+        }
+
+        /// <summary>
+        /// 查询AI 定时任务执行列表。
+        /// 
+        /// 查询AI 定时任务的历史执行记录，支持分页和按定时任务 ID 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIScheduleTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAIScheduleTaskListResponse"/></returns>
+        public DescribeAIScheduleTaskListResponse DescribeAIScheduleTaskListSync(DescribeAIScheduleTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIScheduleTaskListResponse>(req, "DescribeAIScheduleTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 访问密钥告警记录AI分析结果详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAKAnalysisDetailRequest"/></param>
@@ -1499,6 +2749,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetailSync(DescribeAKAnalysisDetailRequest req)
         {
             return InternalRequestAsync<DescribeAKAnalysisDetailResponse>(req, "DescribeAKAnalysisDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 判断用户是否灰度用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbTestUserRequest"/></param>
+        /// <returns><see cref="DescribeAbTestUserResponse"/></returns>
+        public Task<DescribeAbTestUserResponse> DescribeAbTestUser(DescribeAbTestUserRequest req)
+        {
+            return InternalRequestAsync<DescribeAbTestUserResponse>(req, "DescribeAbTestUser");
+        }
+
+        /// <summary>
+        /// 判断用户是否灰度用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbTestUserRequest"/></param>
+        /// <returns><see cref="DescribeAbTestUserResponse"/></returns>
+        public DescribeAbTestUserResponse DescribeAbTestUserSync(DescribeAbTestUserRequest req)
+        {
+            return InternalRequestAsync<DescribeAbTestUserResponse>(req, "DescribeAbTestUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1671,6 +2942,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询客户端配置设置（配置组），从DescribeAgentRunMode拆分出的独立接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentConfigSettingRequest"/></param>
+        /// <returns><see cref="DescribeAgentConfigSettingResponse"/></returns>
+        public Task<DescribeAgentConfigSettingResponse> DescribeAgentConfigSetting(DescribeAgentConfigSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentConfigSettingResponse>(req, "DescribeAgentConfigSetting");
+        }
+
+        /// <summary>
+        /// 查询客户端配置设置（配置组），从DescribeAgentRunMode拆分出的独立接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentConfigSettingRequest"/></param>
+        /// <returns><see cref="DescribeAgentConfigSettingResponse"/></returns>
+        public DescribeAgentConfigSettingResponse DescribeAgentConfigSettingSync(DescribeAgentConfigSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentConfigSettingResponse>(req, "DescribeAgentConfigSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取客户端运行模式和运行配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRunModeRequest"/></param>
+        /// <returns><see cref="DescribeAgentRunModeResponse"/></returns>
+        public Task<DescribeAgentRunModeResponse> DescribeAgentRunMode(DescribeAgentRunModeRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRunModeResponse>(req, "DescribeAgentRunMode");
+        }
+
+        /// <summary>
+        /// 获取客户端运行模式和运行配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRunModeRequest"/></param>
+        /// <returns><see cref="DescribeAgentRunModeResponse"/></returns>
+        public DescribeAgentRunModeResponse DescribeAgentRunModeSync(DescribeAgentRunModeRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRunModeResponse>(req, "DescribeAgentRunMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询客户端运行策略（策略组），从DescribeAgentRunMode拆分出的独立接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRunPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAgentRunPolicyResponse"/></returns>
+        public Task<DescribeAgentRunPolicyResponse> DescribeAgentRunPolicy(DescribeAgentRunPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRunPolicyResponse>(req, "DescribeAgentRunPolicy");
+        }
+
+        /// <summary>
+        /// 查询客户端运行策略（策略组），从DescribeAgentRunMode拆分出的独立接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRunPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAgentRunPolicyResponse"/></returns>
+        public DescribeAgentRunPolicyResponse DescribeAgentRunPolicySync(DescribeAgentRunPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRunPolicyResponse>(req, "DescribeAgentRunPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 告警中心全量告警列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribeAlertListRequest"/></param>
@@ -1688,6 +3022,111 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAlertListResponse DescribeAlertListSync(DescribeAlertListRequest req)
         {
             return InternalRequestAsync<DescribeAlertListResponse>(req, "DescribeAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetDetailRequest"/></param>
+        /// <returns><see cref="DescribeAssetDetailResponse"/></returns>
+        public Task<DescribeAssetDetailResponse> DescribeAssetDetail(DescribeAssetDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetDetailResponse>(req, "DescribeAssetDetail");
+        }
+
+        /// <summary>
+        /// 资产详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetDetailRequest"/></param>
+        /// <returns><see cref="DescribeAssetDetailResponse"/></returns>
+        public DescribeAssetDetailResponse DescribeAssetDetailSync(DescribeAssetDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetDetailResponse>(req, "DescribeAssetDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetFilterViewsRequest"/></param>
+        /// <returns><see cref="DescribeAssetFilterViewsResponse"/></returns>
+        public Task<DescribeAssetFilterViewsResponse> DescribeAssetFilterViews(DescribeAssetFilterViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetFilterViewsResponse>(req, "DescribeAssetFilterViews");
+        }
+
+        /// <summary>
+        /// 资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetFilterViewsRequest"/></param>
+        /// <returns><see cref="DescribeAssetFilterViewsResponse"/></returns>
+        public DescribeAssetFilterViewsResponse DescribeAssetFilterViewsSync(DescribeAssetFilterViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetFilterViewsResponse>(req, "DescribeAssetFilterViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetInfoRequest"/></param>
+        /// <returns><see cref="DescribeAssetInfoResponse"/></returns>
+        public Task<DescribeAssetInfoResponse> DescribeAssetInfo(DescribeAssetInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetInfoResponse>(req, "DescribeAssetInfo");
+        }
+
+        /// <summary>
+        /// 资产信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetInfoRequest"/></param>
+        /// <returns><see cref="DescribeAssetInfoResponse"/></returns>
+        public DescribeAssetInfoResponse DescribeAssetInfoSync(DescribeAssetInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetInfoResponse>(req, "DescribeAssetInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产最近同步时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetLastSyncTimeRequest"/></param>
+        /// <returns><see cref="DescribeAssetLastSyncTimeResponse"/></returns>
+        public Task<DescribeAssetLastSyncTimeResponse> DescribeAssetLastSyncTime(DescribeAssetLastSyncTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetLastSyncTimeResponse>(req, "DescribeAssetLastSyncTime");
+        }
+
+        /// <summary>
+        /// 资产最近同步时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetLastSyncTimeRequest"/></param>
+        /// <returns><see cref="DescribeAssetLastSyncTimeResponse"/></returns>
+        public DescribeAssetLastSyncTimeResponse DescribeAssetLastSyncTimeSync(DescribeAssetLastSyncTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetLastSyncTimeResponse>(req, "DescribeAssetLastSyncTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产概览统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAssetOverviewResponse"/></returns>
+        public Task<DescribeAssetOverviewResponse> DescribeAssetOverview(DescribeAssetOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetOverviewResponse>(req, "DescribeAssetOverview");
+        }
+
+        /// <summary>
+        /// 资产概览统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAssetOverviewResponse"/></returns>
+        public DescribeAssetOverviewResponse DescribeAssetOverviewSync(DescribeAssetOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetOverviewResponse>(req, "DescribeAssetOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1713,6 +3152,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 资产风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAssetRiskDetailResponse"/></returns>
+        public Task<DescribeAssetRiskDetailResponse> DescribeAssetRiskDetail(DescribeAssetRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetRiskDetailResponse>(req, "DescribeAssetRiskDetail");
+        }
+
+        /// <summary>
+        /// 资产风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeAssetRiskDetailResponse"/></returns>
+        public DescribeAssetRiskDetailResponse DescribeAssetRiskDetailSync(DescribeAssetRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetRiskDetailResponse>(req, "DescribeAssetRiskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 资产视角下云资源配置风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetRiskListRequest"/></param>
@@ -1730,6 +3190,111 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAssetRiskListResponse DescribeAssetRiskListSync(DescribeAssetRiskListRequest req)
         {
             return InternalRequestAsync<DescribeAssetRiskListResponse>(req, "DescribeAssetRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产同步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncTaskStatusResponse"/></returns>
+        public Task<DescribeAssetSyncTaskStatusResponse> DescribeAssetSyncTaskStatus(DescribeAssetSyncTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSyncTaskStatusResponse>(req, "DescribeAssetSyncTaskStatus");
+        }
+
+        /// <summary>
+        /// 资产同步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncTaskStatusResponse"/></returns>
+        public DescribeAssetSyncTaskStatusResponse DescribeAssetSyncTaskStatusSync(DescribeAssetSyncTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSyncTaskStatusResponse>(req, "DescribeAssetSyncTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取资产标签属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagAttributesRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagAttributesResponse"/></returns>
+        public Task<DescribeAssetTagAttributesResponse> DescribeAssetTagAttributes(DescribeAssetTagAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagAttributesResponse>(req, "DescribeAssetTagAttributes");
+        }
+
+        /// <summary>
+        /// 获取资产标签属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagAttributesRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagAttributesResponse"/></returns>
+        public DescribeAssetTagAttributesResponse DescribeAssetTagAttributesSync(DescribeAssetTagAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagAttributesResponse>(req, "DescribeAssetTagAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产标签树结构数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagTreeRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagTreeResponse"/></returns>
+        public Task<DescribeAssetTagTreeResponse> DescribeAssetTagTree(DescribeAssetTagTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagTreeResponse>(req, "DescribeAssetTagTree");
+        }
+
+        /// <summary>
+        /// 资产标签树结构数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagTreeRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagTreeResponse"/></returns>
+        public DescribeAssetTagTreeResponse DescribeAssetTagTreeSync(DescribeAssetTagTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagTreeResponse>(req, "DescribeAssetTagTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 全部资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagsRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagsResponse"/></returns>
+        public Task<DescribeAssetTagsResponse> DescribeAssetTags(DescribeAssetTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagsResponse>(req, "DescribeAssetTags");
+        }
+
+        /// <summary>
+        /// 全部资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTagsRequest"/></param>
+        /// <returns><see cref="DescribeAssetTagsResponse"/></returns>
+        public DescribeAssetTagsResponse DescribeAssetTagsSync(DescribeAssetTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTagsResponse>(req, "DescribeAssetTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资产树结构
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTreeRequest"/></param>
+        /// <returns><see cref="DescribeAssetTreeResponse"/></returns>
+        public Task<DescribeAssetTreeResponse> DescribeAssetTree(DescribeAssetTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTreeResponse>(req, "DescribeAssetTree");
+        }
+
+        /// <summary>
+        /// 资产树结构
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetTreeRequest"/></param>
+        /// <returns><see cref="DescribeAssetTreeResponse"/></returns>
+        public DescribeAssetTreeResponse DescribeAssetTreeSync(DescribeAssetTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetTreeResponse>(req, "DescribeAssetTree")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1776,6 +3341,321 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取爆破阻断模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBanModeRequest"/></param>
+        /// <returns><see cref="DescribeBanModeResponse"/></returns>
+        public Task<DescribeBanModeResponse> DescribeBanMode(DescribeBanModeRequest req)
+        {
+            return InternalRequestAsync<DescribeBanModeResponse>(req, "DescribeBanMode");
+        }
+
+        /// <summary>
+        /// 获取爆破阻断模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBanModeRequest"/></param>
+        /// <returns><see cref="DescribeBanModeResponse"/></returns>
+        public DescribeBanModeResponse DescribeBanModeSync(DescribeBanModeRequest req)
+        {
+            return InternalRequestAsync<DescribeBanModeResponse>(req, "DescribeBanMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取阻断按钮状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBanStatusRequest"/></param>
+        /// <returns><see cref="DescribeBanStatusResponse"/></returns>
+        public Task<DescribeBanStatusResponse> DescribeBanStatus(DescribeBanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBanStatusResponse>(req, "DescribeBanStatus");
+        }
+
+        /// <summary>
+        /// 获取阻断按钮状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBanStatusRequest"/></param>
+        /// <returns><see cref="DescribeBanStatusResponse"/></returns>
+        public DescribeBanStatusResponse DescribeBanStatusSync(DescribeBanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBanStatusResponse>(req, "DescribeBanStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取检测项维度的聚合扫描结果列表，用于策略详情页“检测项”Tab 按检测项展示通过/未通过资产数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAggregatedItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAggregatedItemListResponse"/></returns>
+        public Task<DescribeBaselineAggregatedItemListResponse> DescribeBaselineAggregatedItemList(DescribeBaselineAggregatedItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAggregatedItemListResponse>(req, "DescribeBaselineAggregatedItemList");
+        }
+
+        /// <summary>
+        /// 获取检测项维度的聚合扫描结果列表，用于策略详情页“检测项”Tab 按检测项展示通过/未通过资产数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAggregatedItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAggregatedItemListResponse"/></returns>
+        public DescribeBaselineAggregatedItemListResponse DescribeBaselineAggregatedItemListSync(DescribeBaselineAggregatedItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAggregatedItemListResponse>(req, "DescribeBaselineAggregatedItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取基线策略维度的聚合扫描结果列表，用于概览页“基线扫描策略”模块按策略展示通过/未通过情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAggregatedPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAggregatedPolicyListResponse"/></returns>
+        public Task<DescribeBaselineAggregatedPolicyListResponse> DescribeBaselineAggregatedPolicyList(DescribeBaselineAggregatedPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAggregatedPolicyListResponse>(req, "DescribeBaselineAggregatedPolicyList");
+        }
+
+        /// <summary>
+        /// 获取基线策略维度的聚合扫描结果列表，用于概览页“基线扫描策略”模块按策略展示通过/未通过情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAggregatedPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAggregatedPolicyListResponse"/></returns>
+        public DescribeBaselineAggregatedPolicyListResponse DescribeBaselineAggregatedPolicyListSync(DescribeBaselineAggregatedPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAggregatedPolicyListResponse>(req, "DescribeBaselineAggregatedPolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取分类检测项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineCategoryItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineCategoryItemListResponse"/></returns>
+        public Task<DescribeBaselineCategoryItemListResponse> DescribeBaselineCategoryItemList(DescribeBaselineCategoryItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineCategoryItemListResponse>(req, "DescribeBaselineCategoryItemList");
+        }
+
+        /// <summary>
+        /// 获取分类检测项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineCategoryItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineCategoryItemListResponse"/></returns>
+        public DescribeBaselineCategoryItemListResponse DescribeBaselineCategoryItemListSync(DescribeBaselineCategoryItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineCategoryItemListResponse>(req, "DescribeBaselineCategoryItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取检测项维度的风险记录列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemRiskListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemRiskListResponse"/></returns>
+        public Task<DescribeBaselineItemRiskListResponse> DescribeBaselineItemRiskList(DescribeBaselineItemRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemRiskListResponse>(req, "DescribeBaselineItemRiskList");
+        }
+
+        /// <summary>
+        /// 获取检测项维度的风险记录列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemRiskListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemRiskListResponse"/></returns>
+        public DescribeBaselineItemRiskListResponse DescribeBaselineItemRiskListSync(DescribeBaselineItemRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemRiskListResponse>(req, "DescribeBaselineItemRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取系统内置基线分类的检测项列表（父分类 → 子分类 → 内置检测项 ID 列表），用于策略编辑页选择基线检测项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineMainTaskItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineMainTaskItemListResponse"/></returns>
+        public Task<DescribeBaselineMainTaskItemListResponse> DescribeBaselineMainTaskItemList(DescribeBaselineMainTaskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineMainTaskItemListResponse>(req, "DescribeBaselineMainTaskItemList");
+        }
+
+        /// <summary>
+        /// 获取系统内置基线分类的检测项列表（父分类 → 子分类 → 内置检测项 ID 列表），用于策略编辑页选择基线检测项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineMainTaskItemListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineMainTaskItemListResponse"/></returns>
+        public DescribeBaselineMainTaskItemListResponse DescribeBaselineMainTaskItemListSync(DescribeBaselineMainTaskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineMainTaskItemListResponse>(req, "DescribeBaselineMainTaskItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫描主任务列表，用于“任务记录”页展示一键扫描 / 周期扫描 / 分散扫描的历史记录及结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineMainTaskListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineMainTaskListResponse"/></returns>
+        public Task<DescribeBaselineMainTaskListResponse> DescribeBaselineMainTaskList(DescribeBaselineMainTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineMainTaskListResponse>(req, "DescribeBaselineMainTaskList");
+        }
+
+        /// <summary>
+        /// 获取扫描主任务列表，用于“任务记录”页展示一键扫描 / 周期扫描 / 分散扫描的历史记录及结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineMainTaskListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineMainTaskListResponse"/></returns>
+        public DescribeBaselineMainTaskListResponse DescribeBaselineMainTaskListSync(DescribeBaselineMainTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineMainTaskListResponse>(req, "DescribeBaselineMainTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取基线概览页的头部数据，含未通过检测项总数、近一年修复数、最近一次扫描时间、当前是否启用周期扫描等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBaselineOverviewResponse"/></returns>
+        public Task<DescribeBaselineOverviewResponse> DescribeBaselineOverview(DescribeBaselineOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineOverviewResponse>(req, "DescribeBaselineOverview");
+        }
+
+        /// <summary>
+        /// 获取基线概览页的头部数据，含未通过检测项总数、近一年修复数、最近一次扫描时间、当前是否启用周期扫描等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBaselineOverviewResponse"/></returns>
+        public DescribeBaselineOverviewResponse DescribeBaselineOverviewSync(DescribeBaselineOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineOverviewResponse>(req, "DescribeBaselineOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取基线策略列表，用于“周期计划管理”等列表页展示系统/自定义策略及其配置情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselinePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselinePolicyListResponse"/></returns>
+        public Task<DescribeBaselinePolicyListResponse> DescribeBaselinePolicyList(DescribeBaselinePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselinePolicyListResponse>(req, "DescribeBaselinePolicyList");
+        }
+
+        /// <summary>
+        /// 获取基线策略列表，用于“周期计划管理”等列表页展示系统/自定义策略及其配置情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselinePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselinePolicyListResponse"/></returns>
+        public DescribeBaselinePolicyListResponse DescribeBaselinePolicyListSync(DescribeBaselinePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselinePolicyListResponse>(req, "DescribeBaselinePolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取当前账号（管理员）的基线同步配置。仅集团管理员可调用，普通成员账号请使用 DescribeBaselineUserOtherConf。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineSyncConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineSyncConfResponse"/></returns>
+        public Task<DescribeBaselineSyncConfResponse> DescribeBaselineSyncConf(DescribeBaselineSyncConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineSyncConfResponse>(req, "DescribeBaselineSyncConf");
+        }
+
+        /// <summary>
+        /// 获取当前账号（管理员）的基线同步配置。仅集团管理员可调用，普通成员账号请使用 DescribeBaselineUserOtherConf。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineSyncConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineSyncConfResponse"/></returns>
+        public DescribeBaselineSyncConfResponse DescribeBaselineSyncConfSync(DescribeBaselineSyncConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineSyncConfResponse>(req, "DescribeBaselineSyncConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取系统内置基线分类树（父分类 → 子分类 → 内置检测项 ID 列表），用于策略编辑页选择基线检测项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineSystemCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineSystemCategoryListResponse"/></returns>
+        public Task<DescribeBaselineSystemCategoryListResponse> DescribeBaselineSystemCategoryList(DescribeBaselineSystemCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineSystemCategoryListResponse>(req, "DescribeBaselineSystemCategoryList");
+        }
+
+        /// <summary>
+        /// 获取系统内置基线分类树（父分类 → 子分类 → 内置检测项 ID 列表），用于策略编辑页选择基线检测项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineSystemCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineSystemCategoryListResponse"/></returns>
+        public DescribeBaselineSystemCategoryListResponse DescribeBaselineSystemCategoryListSync(DescribeBaselineSystemCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineSystemCategoryListResponse>(req, "DescribeBaselineSystemCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取当前账号的用户级基线配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineUserOtherConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineUserOtherConfResponse"/></returns>
+        public Task<DescribeBaselineUserOtherConfResponse> DescribeBaselineUserOtherConf(DescribeBaselineUserOtherConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineUserOtherConfResponse>(req, "DescribeBaselineUserOtherConf");
+        }
+
+        /// <summary>
+        /// 获取当前账号的用户级基线配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineUserOtherConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineUserOtherConfResponse"/></returns>
+        public DescribeBaselineUserOtherConfResponse DescribeBaselineUserOtherConfSync(DescribeBaselineUserOtherConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineUserOtherConfResponse>(req, "DescribeBaselineUserOtherConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取当前账号的“用户弱口令”自定义字典（服务端解密后返回明文）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineUserWeakPasswordConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineUserWeakPasswordConfResponse"/></returns>
+        public Task<DescribeBaselineUserWeakPasswordConfResponse> DescribeBaselineUserWeakPasswordConf(DescribeBaselineUserWeakPasswordConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineUserWeakPasswordConfResponse>(req, "DescribeBaselineUserWeakPasswordConf");
+        }
+
+        /// <summary>
+        /// 获取当前账号的“用户弱口令”自定义字典（服务端解密后返回明文）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineUserWeakPasswordConfRequest"/></param>
+        /// <returns><see cref="DescribeBaselineUserWeakPasswordConfResponse"/></returns>
+        public DescribeBaselineUserWeakPasswordConfResponse DescribeBaselineUserWeakPasswordConfSync(DescribeBaselineUserWeakPasswordConfRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineUserWeakPasswordConfResponse>(req, "DescribeBaselineUserWeakPasswordConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取爆破破解规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBruteAttackRulesRequest"/></param>
+        /// <returns><see cref="DescribeBruteAttackRulesResponse"/></returns>
+        public Task<DescribeBruteAttackRulesResponse> DescribeBruteAttackRules(DescribeBruteAttackRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBruteAttackRulesResponse>(req, "DescribeBruteAttackRules");
+        }
+
+        /// <summary>
+        /// 获取爆破破解规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBruteAttackRulesRequest"/></param>
+        /// <returns><see cref="DescribeBruteAttackRulesResponse"/></returns>
+        public DescribeBruteAttackRulesResponse DescribeBruteAttackRulesSync(DescribeBruteAttackRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBruteAttackRulesResponse>(req, "DescribeBruteAttackRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看存储桶调用源ip列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBucketInvokeIpListRequest"/></param>
@@ -1793,6 +3673,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpListSync(DescribeBucketInvokeIpListRequest req)
         {
             return InternalRequestAsync<DescribeBucketInvokeIpListResponse>(req, "DescribeBucketInvokeIpList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源配置检查报告风险统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFGRiskReportStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFGRiskReportStatisticsResponse"/></returns>
+        public Task<DescribeCFGRiskReportStatisticsResponse> DescribeCFGRiskReportStatistics(DescribeCFGRiskReportStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFGRiskReportStatisticsResponse>(req, "DescribeCFGRiskReportStatistics");
+        }
+
+        /// <summary>
+        /// 云资源配置检查报告风险统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFGRiskReportStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFGRiskReportStatisticsResponse"/></returns>
+        public DescribeCFGRiskReportStatisticsResponse DescribeCFGRiskReportStatisticsSync(DescribeCFGRiskReportStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFGRiskReportStatisticsResponse>(req, "DescribeCFGRiskReportStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫描结果统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFGRiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFGRiskStatisticsResponse"/></returns>
+        public Task<DescribeCFGRiskStatisticsResponse> DescribeCFGRiskStatistics(DescribeCFGRiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFGRiskStatisticsResponse>(req, "DescribeCFGRiskStatistics");
+        }
+
+        /// <summary>
+        /// 获取扫描结果统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFGRiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFGRiskStatisticsResponse"/></returns>
+        public DescribeCFGRiskStatisticsResponse DescribeCFGRiskStatisticsSync(DescribeCFGRiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFGRiskStatisticsResponse>(req, "DescribeCFGRiskStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1965,6 +3887,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询云边界分析路径节点(主机专用)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPExposePathRequest"/></param>
+        /// <returns><see cref="DescribeCWPExposePathResponse"/></returns>
+        public Task<DescribeCWPExposePathResponse> DescribeCWPExposePath(DescribeCWPExposePathRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPExposePathResponse>(req, "DescribeCWPExposePath");
+        }
+
+        /// <summary>
+        /// 查询云边界分析路径节点(主机专用)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPExposePathRequest"/></param>
+        /// <returns><see cref="DescribeCWPExposePathResponse"/></returns>
+        public DescribeCWPExposePathResponse DescribeCWPExposePathSync(DescribeCWPExposePathRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPExposePathResponse>(req, "DescribeCWPExposePath")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界分析资产列表(适用于主机资产)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPExposuresRequest"/></param>
+        /// <returns><see cref="DescribeCWPExposuresResponse"/></returns>
+        public Task<DescribeCWPExposuresResponse> DescribeCWPExposures(DescribeCWPExposuresRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPExposuresResponse>(req, "DescribeCWPExposures");
+        }
+
+        /// <summary>
+        /// 云边界分析资产列表(适用于主机资产)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPExposuresRequest"/></param>
+        /// <returns><see cref="DescribeCWPExposuresResponse"/></returns>
+        public DescribeCWPExposuresResponse DescribeCWPExposuresSync(DescribeCWPExposuresRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPExposuresResponse>(req, "DescribeCWPExposures")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询授权绑定任务的进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPLicenseBindScheduleRequest"/></param>
+        /// <returns><see cref="DescribeCWPLicenseBindScheduleResponse"/></returns>
+        public Task<DescribeCWPLicenseBindScheduleResponse> DescribeCWPLicenseBindSchedule(DescribeCWPLicenseBindScheduleRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPLicenseBindScheduleResponse>(req, "DescribeCWPLicenseBindSchedule");
+        }
+
+        /// <summary>
+        /// 查询授权绑定任务的进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPLicenseBindScheduleRequest"/></param>
+        /// <returns><see cref="DescribeCWPLicenseBindScheduleResponse"/></returns>
+        public DescribeCWPLicenseBindScheduleResponse DescribeCWPLicenseBindScheduleSync(DescribeCWPLicenseBindScheduleRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPLicenseBindScheduleResponse>(req, "DescribeCWPLicenseBindSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 主机详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCWPMachineDetailRequest"/></param>
@@ -1986,6 +3971,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询可筛选操作系统列表.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachineOsListRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachineOsListResponse"/></returns>
+        public Task<DescribeCWPMachineOsListResponse> DescribeCWPMachineOsList(DescribeCWPMachineOsListRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachineOsListResponse>(req, "DescribeCWPMachineOsList");
+        }
+
+        /// <summary>
+        /// 查询可筛选操作系统列表.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPMachineOsListRequest"/></param>
+        /// <returns><see cref="DescribeCWPMachineOsListResponse"/></returns>
+        public DescribeCWPMachineOsListResponse DescribeCWPMachineOsListSync(DescribeCWPMachineOsListRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPMachineOsListResponse>(req, "DescribeCWPMachineOsList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 主机列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCWPMachinesRequest"/></param>
@@ -2003,6 +4009,69 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCWPMachinesResponse DescribeCWPMachinesSync(DescribeCWPMachinesRequest req)
         {
             return InternalRequestAsync<DescribeCWPMachinesResponse>(req, "DescribeCWPMachines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源订单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPOrderListRequest"/></param>
+        /// <returns><see cref="DescribeCWPOrderListResponse"/></returns>
+        public Task<DescribeCWPOrderListResponse> DescribeCWPOrderList(DescribeCWPOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPOrderListResponse>(req, "DescribeCWPOrderList");
+        }
+
+        /// <summary>
+        /// 查询资源订单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPOrderListRequest"/></param>
+        /// <returns><see cref="DescribeCWPOrderListResponse"/></returns>
+        public DescribeCWPOrderListResponse DescribeCWPOrderListSync(DescribeCWPOrderListRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPOrderListResponse>(req, "DescribeCWPOrderList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询腾讯云扫描IP信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPScanIpInfoRequest"/></param>
+        /// <returns><see cref="DescribeCWPScanIpInfoResponse"/></returns>
+        public Task<DescribeCWPScanIpInfoResponse> DescribeCWPScanIpInfo(DescribeCWPScanIpInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPScanIpInfoResponse>(req, "DescribeCWPScanIpInfo");
+        }
+
+        /// <summary>
+        /// 查询腾讯云扫描IP信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPScanIpInfoRequest"/></param>
+        /// <returns><see cref="DescribeCWPScanIpInfoResponse"/></returns>
+        public DescribeCWPScanIpInfoResponse DescribeCWPScanIpInfoSync(DescribeCWPScanIpInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPScanIpInfoResponse>(req, "DescribeCWPScanIpInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取任务下发时长
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPTaskDurationRequest"/></param>
+        /// <returns><see cref="DescribeCWPTaskDurationResponse"/></returns>
+        public Task<DescribeCWPTaskDurationResponse> DescribeCWPTaskDuration(DescribeCWPTaskDurationRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPTaskDurationResponse>(req, "DescribeCWPTaskDuration");
+        }
+
+        /// <summary>
+        /// 获取任务下发时长
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCWPTaskDurationRequest"/></param>
+        /// <returns><see cref="DescribeCWPTaskDurationResponse"/></returns>
+        public DescribeCWPTaskDurationResponse DescribeCWPTaskDurationSync(DescribeCWPTaskDurationRequest req)
+        {
+            return InternalRequestAsync<DescribeCWPTaskDurationResponse>(req, "DescribeCWPTaskDuration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2049,6 +4118,153 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询腾讯云指定CLB实例对应的监听器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbListenerListRequest"/></param>
+        /// <returns><see cref="DescribeClbListenerListResponse"/></returns>
+        public Task<DescribeClbListenerListResponse> DescribeClbListenerList(DescribeClbListenerListRequest req)
+        {
+            return InternalRequestAsync<DescribeClbListenerListResponse>(req, "DescribeClbListenerList");
+        }
+
+        /// <summary>
+        /// 查询腾讯云指定CLB实例对应的监听器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbListenerListRequest"/></param>
+        /// <returns><see cref="DescribeClbListenerListResponse"/></returns>
+        public DescribeClbListenerListResponse DescribeClbListenerListSync(DescribeClbListenerListRequest req)
+        {
+            return InternalRequestAsync<DescribeClbListenerListResponse>(req, "DescribeClbListenerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询腾讯云指定CLB实例对应的七层转发规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbListenerRulesRequest"/></param>
+        /// <returns><see cref="DescribeClbListenerRulesResponse"/></returns>
+        public Task<DescribeClbListenerRulesResponse> DescribeClbListenerRules(DescribeClbListenerRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeClbListenerRulesResponse>(req, "DescribeClbListenerRules");
+        }
+
+        /// <summary>
+        /// 查询腾讯云指定CLB实例对应的七层转发规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbListenerRulesRequest"/></param>
+        /// <returns><see cref="DescribeClbListenerRulesResponse"/></returns>
+        public DescribeClbListenerRulesResponse DescribeClbListenerRulesSync(DescribeClbListenerRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeClbListenerRulesResponse>(req, "DescribeClbListenerRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CLB后端服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbTargetsRequest"/></param>
+        /// <returns><see cref="DescribeClbTargetsResponse"/></returns>
+        public Task<DescribeClbTargetsResponse> DescribeClbTargets(DescribeClbTargetsRequest req)
+        {
+            return InternalRequestAsync<DescribeClbTargetsResponse>(req, "DescribeClbTargets");
+        }
+
+        /// <summary>
+        /// 查询CLB后端服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClbTargetsRequest"/></param>
+        /// <returns><see cref="DescribeClbTargetsResponse"/></returns>
+        public DescribeClbTargetsResponse DescribeClbTargetsSync(DescribeClbTargetsRequest req)
+        {
+            return InternalRequestAsync<DescribeClbTargetsResponse>(req, "DescribeClbTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 全部资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAssetsRequest"/></param>
+        /// <returns><see cref="DescribeCloudAssetsResponse"/></returns>
+        public Task<DescribeCloudAssetsResponse> DescribeCloudAssets(DescribeCloudAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAssetsResponse>(req, "DescribeCloudAssets");
+        }
+
+        /// <summary>
+        /// 全部资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudAssetsRequest"/></param>
+        /// <returns><see cref="DescribeCloudAssetsResponse"/></returns>
+        public DescribeCloudAssetsResponse DescribeCloudAssetsSync(DescribeCloudAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudAssetsResponse>(req, "DescribeCloudAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云函数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudFunctionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudFunctionListResponse"/></returns>
+        public Task<DescribeCloudFunctionListResponse> DescribeCloudFunctionList(DescribeCloudFunctionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudFunctionListResponse>(req, "DescribeCloudFunctionList");
+        }
+
+        /// <summary>
+        /// 云函数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudFunctionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudFunctionListResponse"/></returns>
+        public DescribeCloudFunctionListResponse DescribeCloudFunctionListSync(DescribeCloudFunctionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudFunctionListResponse>(req, "DescribeCloudFunctionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器集群资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetListRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetListResponse"/></returns>
+        public Task<DescribeClusterAssetListResponse> DescribeClusterAssetList(DescribeClusterAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetListResponse>(req, "DescribeClusterAssetList");
+        }
+
+        /// <summary>
+        /// 查询容器集群资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetListRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetListResponse"/></returns>
+        public DescribeClusterAssetListResponse DescribeClusterAssetListSync(DescribeClusterAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetListResponse>(req, "DescribeClusterAssetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群资产同步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetSyncTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetSyncTaskStatusResponse"/></returns>
+        public Task<DescribeClusterAssetSyncTaskStatusResponse> DescribeClusterAssetSyncTaskStatus(DescribeClusterAssetSyncTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetSyncTaskStatusResponse>(req, "DescribeClusterAssetSyncTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询集群资产同步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetSyncTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetSyncTaskStatusResponse"/></returns>
+        public DescribeClusterAssetSyncTaskStatusResponse DescribeClusterAssetSyncTaskStatusSync(DescribeClusterAssetSyncTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetSyncTaskStatusResponse>(req, "DescribeClusterAssetSyncTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterAssetsRequest"/></param>
@@ -2070,6 +4286,258 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询容器关联应用列表。通过容器ID获取关联的应用服务信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerAppListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerAppListResponse"/></returns>
+        public Task<DescribeClusterContainerAppListResponse> DescribeClusterContainerAppList(DescribeClusterContainerAppListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerAppListResponse>(req, "DescribeClusterContainerAppList");
+        }
+
+        /// <summary>
+        /// 查询容器关联应用列表。通过容器ID获取关联的应用服务信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerAppListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerAppListResponse"/></returns>
+        public DescribeClusterContainerAppListResponse DescribeClusterContainerAppListSync(DescribeClusterContainerAppListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerAppListResponse>(req, "DescribeClusterContainerAppList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器关联组件列表。通过容器ID获取关联的组件信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerComponentListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerComponentListResponse"/></returns>
+        public Task<DescribeClusterContainerComponentListResponse> DescribeClusterContainerComponentList(DescribeClusterContainerComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerComponentListResponse>(req, "DescribeClusterContainerComponentList");
+        }
+
+        /// <summary>
+        /// 查询容器关联组件列表。通过容器ID获取关联的组件信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerComponentListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerComponentListResponse"/></returns>
+        public DescribeClusterContainerComponentListResponse DescribeClusterContainerComponentListSync(DescribeClusterContainerComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerComponentListResponse>(req, "DescribeClusterContainerComponentList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群容器详情。通过容器ID获取容器基本信息、镜像信息、挂载信息、网络信息以及关联节点信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerDetailResponse"/></returns>
+        public Task<DescribeClusterContainerDetailResponse> DescribeClusterContainerDetail(DescribeClusterContainerDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerDetailResponse>(req, "DescribeClusterContainerDetail");
+        }
+
+        /// <summary>
+        /// 查询集群容器详情。通过容器ID获取容器基本信息、镜像信息、挂载信息、网络信息以及关联节点信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerDetailResponse"/></returns>
+        public DescribeClusterContainerDetailResponse DescribeClusterContainerDetailSync(DescribeClusterContainerDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerDetailResponse>(req, "DescribeClusterContainerDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerListResponse"/></returns>
+        public Task<DescribeClusterContainerListResponse> DescribeClusterContainerList(DescribeClusterContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerListResponse>(req, "DescribeClusterContainerList");
+        }
+
+        /// <summary>
+        /// 查询集群容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerListResponse"/></returns>
+        public DescribeClusterContainerListResponse DescribeClusterContainerListSync(DescribeClusterContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerListResponse>(req, "DescribeClusterContainerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器关联端口列表。通过容器ID获取关联的端口信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerPortListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerPortListResponse"/></returns>
+        public Task<DescribeClusterContainerPortListResponse> DescribeClusterContainerPortList(DescribeClusterContainerPortListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerPortListResponse>(req, "DescribeClusterContainerPortList");
+        }
+
+        /// <summary>
+        /// 查询容器关联端口列表。通过容器ID获取关联的端口信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerPortListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerPortListResponse"/></returns>
+        public DescribeClusterContainerPortListResponse DescribeClusterContainerPortListSync(DescribeClusterContainerPortListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerPortListResponse>(req, "DescribeClusterContainerPortList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器关联进程列表。通过容器ID获取关联的进程信息，支持按启动时间排序和分页。Filter.By支持StartTime；Filter.Order支持ASC/DESC。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerProcessListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerProcessListResponse"/></returns>
+        public Task<DescribeClusterContainerProcessListResponse> DescribeClusterContainerProcessList(DescribeClusterContainerProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerProcessListResponse>(req, "DescribeClusterContainerProcessList");
+        }
+
+        /// <summary>
+        /// 查询容器关联进程列表。通过容器ID获取关联的进程信息，支持按启动时间排序和分页。Filter.By支持StartTime；Filter.Order支持ASC/DESC。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerProcessListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerProcessListResponse"/></returns>
+        public DescribeClusterContainerProcessListResponse DescribeClusterContainerProcessListSync(DescribeClusterContainerProcessListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerProcessListResponse>(req, "DescribeClusterContainerProcessList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器关联Web服务列表。通过容器ID获取关联的Web服务信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerWebServiceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerWebServiceListResponse"/></returns>
+        public Task<DescribeClusterContainerWebServiceListResponse> DescribeClusterContainerWebServiceList(DescribeClusterContainerWebServiceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerWebServiceListResponse>(req, "DescribeClusterContainerWebServiceList");
+        }
+
+        /// <summary>
+        /// 查询容器关联Web服务列表。通过容器ID获取关联的Web服务信息，支持分页。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterContainerWebServiceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterContainerWebServiceListResponse"/></returns>
+        public DescribeClusterContainerWebServiceListResponse DescribeClusterContainerWebServiceListSync(DescribeClusterContainerWebServiceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterContainerWebServiceListResponse>(req, "DescribeClusterContainerWebServiceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
+        public Task<DescribeClusterDetailResponse> DescribeClusterDetail(DescribeClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDetailResponse>(req, "DescribeClusterDetail");
+        }
+
+        /// <summary>
+        /// 查询集群详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
+        public DescribeClusterDetailResponse DescribeClusterDetailSync(DescribeClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDetailResponse>(req, "DescribeClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群安装命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstallCommandResponse"/></returns>
+        public Task<DescribeClusterInstallCommandResponse> DescribeClusterInstallCommand(DescribeClusterInstallCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstallCommandResponse>(req, "DescribeClusterInstallCommand");
+        }
+
+        /// <summary>
+        /// 查询集群安装命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstallCommandResponse"/></returns>
+        public DescribeClusterInstallCommandResponse DescribeClusterInstallCommandSync(DescribeClusterInstallCommandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstallCommandResponse>(req, "DescribeClusterInstallCommand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterListV2Request"/></param>
+        /// <returns><see cref="DescribeClusterListV2Response"/></returns>
+        public Task<DescribeClusterListV2Response> DescribeClusterListV2(DescribeClusterListV2Request req)
+        {
+            return InternalRequestAsync<DescribeClusterListV2Response>(req, "DescribeClusterListV2");
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterListV2Request"/></param>
+        /// <returns><see cref="DescribeClusterListV2Response"/></returns>
+        public DescribeClusterListV2Response DescribeClusterListV2Sync(DescribeClusterListV2Request req)
+        {
+            return InternalRequestAsync<DescribeClusterListV2Response>(req, "DescribeClusterListV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
+        public Task<DescribeClusterNamespaceListResponse> DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNamespaceListResponse>(req, "DescribeClusterNamespaceList");
+        }
+
+        /// <summary>
+        /// 查询集群命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
+        public DescribeClusterNamespaceListResponse DescribeClusterNamespaceListSync(DescribeClusterNamespaceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNamespaceListResponse>(req, "DescribeClusterNamespaceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodeListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodeListResponse"/></returns>
+        public Task<DescribeClusterNodeListResponse> DescribeClusterNodeList(DescribeClusterNodeListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNodeListResponse>(req, "DescribeClusterNodeList");
+        }
+
+        /// <summary>
+        /// 查询集群节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodeListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodeListResponse"/></returns>
+        public DescribeClusterNodeListResponse DescribeClusterNodeListSync(DescribeClusterNodeListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNodeListResponse>(req, "DescribeClusterNodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 集群pod列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
@@ -2087,6 +4555,195 @@ namespace TencentCloud.Csip.V20221121
         public DescribeClusterPodAssetsResponse DescribeClusterPodAssetsSync(DescribeClusterPodAssetsRequest req)
         {
             return InternalRequestAsync<DescribeClusterPodAssetsResponse>(req, "DescribeClusterPodAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群 Pod 详情。容器资产改版 A 类新接口，为 Pod 资产详情页主入口。入参仅 UniqueID；出参覆盖资产信息、所属集群、命名空间、节点、Workload、以及按四个风险等级分组的风险事件数和告警事件数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodDetailResponse"/></returns>
+        public Task<DescribeClusterPodDetailResponse> DescribeClusterPodDetail(DescribeClusterPodDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPodDetailResponse>(req, "DescribeClusterPodDetail");
+        }
+
+        /// <summary>
+        /// 查询集群 Pod 详情。容器资产改版 A 类新接口，为 Pod 资产详情页主入口。入参仅 UniqueID；出参覆盖资产信息、所属集群、命名空间、节点、Workload、以及按四个风险等级分组的风险事件数和告警事件数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodDetailResponse"/></returns>
+        public DescribeClusterPodDetailResponse DescribeClusterPodDetailSync(DescribeClusterPodDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPodDetailResponse>(req, "DescribeClusterPodDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodListRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodListResponse"/></returns>
+        public Task<DescribeClusterPodListResponse> DescribeClusterPodList(DescribeClusterPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPodListResponse>(req, "DescribeClusterPodList");
+        }
+
+        /// <summary>
+        /// 查询集群pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodListRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodListResponse"/></returns>
+        public DescribeClusterPodListResponse DescribeClusterPodListSync(DescribeClusterPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterPodListResponse>(req, "DescribeClusterPodList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群service列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterServiceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterServiceListResponse"/></returns>
+        public Task<DescribeClusterServiceListResponse> DescribeClusterServiceList(DescribeClusterServiceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterServiceListResponse>(req, "DescribeClusterServiceList");
+        }
+
+        /// <summary>
+        /// 查询集群service列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterServiceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterServiceListResponse"/></returns>
+        public DescribeClusterServiceListResponse DescribeClusterServiceListSync(DescribeClusterServiceListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterServiceListResponse>(req, "DescribeClusterServiceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群概览数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSummaryRequest"/></param>
+        /// <returns><see cref="DescribeClusterSummaryResponse"/></returns>
+        public Task<DescribeClusterSummaryResponse> DescribeClusterSummary(DescribeClusterSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSummaryResponse>(req, "DescribeClusterSummary");
+        }
+
+        /// <summary>
+        /// 查询集群概览数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSummaryRequest"/></param>
+        /// <returns><see cref="DescribeClusterSummaryResponse"/></returns>
+        public DescribeClusterSummaryResponse DescribeClusterSummarySync(DescribeClusterSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSummaryResponse>(req, "DescribeClusterSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群超级节点详情，返回基本信息（所属地域/可用区/资产最后更新时间/节点来源/子网/核数）与所属集群信息（集群名称/集群ID/集群状态/Kubernetes版本/Kubelet版本）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSuperNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterSuperNodeInfoResponse"/></returns>
+        public Task<DescribeClusterSuperNodeInfoResponse> DescribeClusterSuperNodeInfo(DescribeClusterSuperNodeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSuperNodeInfoResponse>(req, "DescribeClusterSuperNodeInfo");
+        }
+
+        /// <summary>
+        /// 查询集群超级节点详情，返回基本信息（所属地域/可用区/资产最后更新时间/节点来源/子网/核数）与所属集群信息（集群名称/集群ID/集群状态/Kubernetes版本/Kubelet版本）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSuperNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterSuperNodeInfoResponse"/></returns>
+        public DescribeClusterSuperNodeInfoResponse DescribeClusterSuperNodeInfoSync(DescribeClusterSuperNodeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSuperNodeInfoResponse>(req, "DescribeClusterSuperNodeInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源配置检测合规概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceOverviewRequest"/></param>
+        /// <returns><see cref="DescribeComplianceOverviewResponse"/></returns>
+        public Task<DescribeComplianceOverviewResponse> DescribeComplianceOverview(DescribeComplianceOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceOverviewResponse>(req, "DescribeComplianceOverview");
+        }
+
+        /// <summary>
+        /// 云资源配置检测合规概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceOverviewRequest"/></param>
+        /// <returns><see cref="DescribeComplianceOverviewResponse"/></returns>
+        public DescribeComplianceOverviewResponse DescribeComplianceOverviewSync(DescribeComplianceOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceOverviewResponse>(req, "DescribeComplianceOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 合规标准聚合视角下云资源配置风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceRiskListRequest"/></param>
+        /// <returns><see cref="DescribeComplianceRiskListResponse"/></returns>
+        public Task<DescribeComplianceRiskListResponse> DescribeComplianceRiskList(DescribeComplianceRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceRiskListResponse>(req, "DescribeComplianceRiskList");
+        }
+
+        /// <summary>
+        /// 合规标准聚合视角下云资源配置风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceRiskListRequest"/></param>
+        /// <returns><see cref="DescribeComplianceRiskListResponse"/></returns>
+        public DescribeComplianceRiskListResponse DescribeComplianceRiskListSync(DescribeComplianceRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceRiskListResponse>(req, "DescribeComplianceRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源配置检测标准章节条款树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceStandardTermTreeRequest"/></param>
+        /// <returns><see cref="DescribeComplianceStandardTermTreeResponse"/></returns>
+        public Task<DescribeComplianceStandardTermTreeResponse> DescribeComplianceStandardTermTree(DescribeComplianceStandardTermTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceStandardTermTreeResponse>(req, "DescribeComplianceStandardTermTree");
+        }
+
+        /// <summary>
+        /// 云资源配置检测标准章节条款树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceStandardTermTreeRequest"/></param>
+        /// <returns><see cref="DescribeComplianceStandardTermTreeResponse"/></returns>
+        public DescribeComplianceStandardTermTreeResponse DescribeComplianceStandardTermTreeSync(DescribeComplianceStandardTermTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceStandardTermTreeResponse>(req, "DescribeComplianceStandardTermTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云资源配置检测规范分类统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeComplianceStatisticsResponse"/></returns>
+        public Task<DescribeComplianceStatisticsResponse> DescribeComplianceStatistics(DescribeComplianceStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceStatisticsResponse>(req, "DescribeComplianceStatistics");
+        }
+
+        /// <summary>
+        /// 云资源配置检测规范分类统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeComplianceStatisticsResponse"/></returns>
+        public DescribeComplianceStatisticsResponse DescribeComplianceStatisticsSync(DescribeComplianceStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeComplianceStatisticsResponse>(req, "DescribeComplianceStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2696,6 +5353,90 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCosSourceIpResponse DescribeCosSourceIpSync(DescribeCosSourceIpRequest req)
         {
             return InternalRequestAsync<DescribeCosSourceIpResponse>(req, "DescribeCosSourceIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取CSPM自动配额共享配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCspmShardConfigRequest"/></param>
+        /// <returns><see cref="DescribeCspmShardConfigResponse"/></returns>
+        public Task<DescribeCspmShardConfigResponse> DescribeCspmShardConfig(DescribeCspmShardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeCspmShardConfigResponse>(req, "DescribeCspmShardConfig");
+        }
+
+        /// <summary>
+        /// 获取CSPM自动配额共享配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCspmShardConfigRequest"/></param>
+        /// <returns><see cref="DescribeCspmShardConfigResponse"/></returns>
+        public DescribeCspmShardConfigResponse DescribeCspmShardConfigSync(DescribeCspmShardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeCspmShardConfigResponse>(req, "DescribeCspmShardConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户自定义 标签数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAssetTagCountRequest"/></param>
+        /// <returns><see cref="DescribeCustomAssetTagCountResponse"/></returns>
+        public Task<DescribeCustomAssetTagCountResponse> DescribeCustomAssetTagCount(DescribeCustomAssetTagCountRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomAssetTagCountResponse>(req, "DescribeCustomAssetTagCount");
+        }
+
+        /// <summary>
+        /// 用户自定义 标签数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAssetTagCountRequest"/></param>
+        /// <returns><see cref="DescribeCustomAssetTagCountResponse"/></returns>
+        public DescribeCustomAssetTagCountResponse DescribeCustomAssetTagCountSync(DescribeCustomAssetTagCountRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomAssetTagCountResponse>(req, "DescribeCustomAssetTagCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自定义风险规则配置详情列表示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRiskRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomRiskRuleDetailResponse"/></returns>
+        public Task<DescribeCustomRiskRuleDetailResponse> DescribeCustomRiskRuleDetail(DescribeCustomRiskRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomRiskRuleDetailResponse>(req, "DescribeCustomRiskRuleDetail");
+        }
+
+        /// <summary>
+        /// 自定义风险规则配置详情列表示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRiskRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomRiskRuleDetailResponse"/></returns>
+        public DescribeCustomRiskRuleDetailResponse DescribeCustomRiskRuleDetailSync(DescribeCustomRiskRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomRiskRuleDetailResponse>(req, "DescribeCustomRiskRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自定义风险规则配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRiskRulesRequest"/></param>
+        /// <returns><see cref="DescribeCustomRiskRulesResponse"/></returns>
+        public Task<DescribeCustomRiskRulesResponse> DescribeCustomRiskRules(DescribeCustomRiskRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomRiskRulesResponse>(req, "DescribeCustomRiskRules");
+        }
+
+        /// <summary>
+        /// 自定义风险规则配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRiskRulesRequest"/></param>
+        /// <returns><see cref="DescribeCustomRiskRulesResponse"/></returns>
+        public DescribeCustomRiskRulesResponse DescribeCustomRiskRulesSync(DescribeCustomRiskRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomRiskRulesResponse>(req, "DescribeCustomRiskRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3897,6 +6638,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 指定资产类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDynamicAssetsResponse"/></returns>
+        public Task<DescribeDynamicAssetsResponse> DescribeDynamicAssets(DescribeDynamicAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicAssetsResponse>(req, "DescribeDynamicAssets");
+        }
+
+        /// <summary>
+        /// 指定资产类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDynamicAssetsResponse"/></returns>
+        public DescribeDynamicAssetsResponse DescribeDynamicAssetsSync(DescribeDynamicAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicAssetsResponse>(req, "DescribeDynamicAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取EDR策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEDRRuleListRequest"/></param>
@@ -4086,6 +6848,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// EDR告警标签批量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertThreatTagsRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertThreatTagsResponse"/></returns>
+        public Task<DescribeEdrAlertThreatTagsResponse> DescribeEdrAlertThreatTags(DescribeEdrAlertThreatTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertThreatTagsResponse>(req, "DescribeEdrAlertThreatTags");
+        }
+
+        /// <summary>
+        /// EDR告警标签批量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrAlertThreatTagsRequest"/></param>
+        /// <returns><see cref="DescribeEdrAlertThreatTagsResponse"/></returns>
+        public DescribeEdrAlertThreatTagsResponse DescribeEdrAlertThreatTagsSync(DescribeEdrAlertThreatTagsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrAlertThreatTagsResponse>(req, "DescribeEdrAlertThreatTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询EDR日志采集例外网段配置，添加至例外名单的网段，其TCP日志将不被采集。如果用户未配置过，则返回系统推荐的默认网段
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExcludeNetworkSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeEdrExcludeNetworkSegmentsResponse"/></returns>
+        public Task<DescribeEdrExcludeNetworkSegmentsResponse> DescribeEdrExcludeNetworkSegments(DescribeEdrExcludeNetworkSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExcludeNetworkSegmentsResponse>(req, "DescribeEdrExcludeNetworkSegments");
+        }
+
+        /// <summary>
+        /// 查询EDR日志采集例外网段配置，添加至例外名单的网段，其TCP日志将不被采集。如果用户未配置过，则返回系统推荐的默认网段
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrExcludeNetworkSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeEdrExcludeNetworkSegmentsResponse"/></returns>
+        public DescribeEdrExcludeNetworkSegmentsResponse DescribeEdrExcludeNetworkSegmentsSync(DescribeEdrExcludeNetworkSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrExcludeNetworkSegmentsResponse>(req, "DescribeEdrExcludeNetworkSegments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取EDR导出下载链接
         /// </summary>
         /// <param name="req"><see cref="DescribeEdrExportJobDownloadURLRequest"/></param>
@@ -4128,6 +6932,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrLogCollectPathsRequest"/></param>
+        /// <returns><see cref="DescribeEdrLogCollectPathsResponse"/></returns>
+        public Task<DescribeEdrLogCollectPathsResponse> DescribeEdrLogCollectPaths(DescribeEdrLogCollectPathsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrLogCollectPathsResponse>(req, "DescribeEdrLogCollectPaths");
+        }
+
+        /// <summary>
+        /// 查询采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrLogCollectPathsRequest"/></param>
+        /// <returns><see cref="DescribeEdrLogCollectPathsResponse"/></returns>
+        public DescribeEdrLogCollectPathsResponse DescribeEdrLogCollectPathsSync(DescribeEdrLogCollectPathsRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrLogCollectPathsResponse>(req, "DescribeEdrLogCollectPaths")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出任务结果下载URL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeExportJobDownloadURLResponse"/></returns>
+        public Task<DescribeExportJobDownloadURLResponse> DescribeExportJobDownloadURL(DescribeExportJobDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeExportJobDownloadURLResponse>(req, "DescribeExportJobDownloadURL");
+        }
+
+        /// <summary>
+        /// 导出任务结果下载URL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeExportJobDownloadURLResponse"/></returns>
+        public DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURLSync(DescribeExportJobDownloadURLRequest req)
+        {
+            return InternalRequestAsync<DescribeExportJobDownloadURLResponse>(req, "DescribeExportJobDownloadURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobManageListRequest"/></param>
+        /// <returns><see cref="DescribeExportJobManageListResponse"/></returns>
+        public Task<DescribeExportJobManageListResponse> DescribeExportJobManageList(DescribeExportJobManageListRequest req)
+        {
+            return InternalRequestAsync<DescribeExportJobManageListResponse>(req, "DescribeExportJobManageList");
+        }
+
+        /// <summary>
+        /// 导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobManageListRequest"/></param>
+        /// <returns><see cref="DescribeExportJobManageListResponse"/></returns>
+        public DescribeExportJobManageListResponse DescribeExportJobManageListSync(DescribeExportJobManageListRequest req)
+        {
+            return InternalRequestAsync<DescribeExportJobManageListResponse>(req, "DescribeExportJobManageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 云边界分析资产分类
         /// </summary>
         /// <param name="req"><see cref="DescribeExposeAssetCategoryRequest"/></param>
@@ -4166,6 +7033,132 @@ namespace TencentCloud.Csip.V20221121
         public DescribeExposePathResponse DescribeExposePathSync(DescribeExposePathRequest req)
         {
             return InternalRequestAsync<DescribeExposePathResponse>(req, "DescribeExposePath")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界风险待治理风险
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeExposeRiskStatisticsResponse"/></returns>
+        public Task<DescribeExposeRiskStatisticsResponse> DescribeExposeRiskStatistics(DescribeExposeRiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRiskStatisticsResponse>(req, "DescribeExposeRiskStatistics");
+        }
+
+        /// <summary>
+        /// 云边界风险待治理风险
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRiskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeExposeRiskStatisticsResponse"/></returns>
+        public DescribeExposeRiskStatisticsResponse DescribeExposeRiskStatisticsSync(DescribeExposeRiskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRiskStatisticsResponse>(req, "DescribeExposeRiskStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界待处理风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRisksRequest"/></param>
+        /// <returns><see cref="DescribeExposeRisksResponse"/></returns>
+        public Task<DescribeExposeRisksResponse> DescribeExposeRisks(DescribeExposeRisksRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRisksResponse>(req, "DescribeExposeRisks");
+        }
+
+        /// <summary>
+        /// 云边界待处理风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRisksRequest"/></param>
+        /// <returns><see cref="DescribeExposeRisksResponse"/></returns>
+        public DescribeExposeRisksResponse DescribeExposeRisksSync(DescribeExposeRisksRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRisksResponse>(req, "DescribeExposeRisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 边界规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRulesRequest"/></param>
+        /// <returns><see cref="DescribeExposeRulesResponse"/></returns>
+        public Task<DescribeExposeRulesResponse> DescribeExposeRules(DescribeExposeRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRulesResponse>(req, "DescribeExposeRules");
+        }
+
+        /// <summary>
+        /// 边界规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposeRulesRequest"/></param>
+        /// <returns><see cref="DescribeExposeRulesResponse"/></returns>
+        public DescribeExposeRulesResponse DescribeExposeRulesSync(DescribeExposeRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeExposeRulesResponse>(req, "DescribeExposeRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-规则属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureAutoTagAttributeRequest"/></param>
+        /// <returns><see cref="DescribeExposureAutoTagAttributeResponse"/></returns>
+        public Task<DescribeExposureAutoTagAttributeResponse> DescribeExposureAutoTagAttribute(DescribeExposureAutoTagAttributeRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureAutoTagAttributeResponse>(req, "DescribeExposureAutoTagAttribute");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-规则属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureAutoTagAttributeRequest"/></param>
+        /// <returns><see cref="DescribeExposureAutoTagAttributeResponse"/></returns>
+        public DescribeExposureAutoTagAttributeResponse DescribeExposureAutoTagAttributeSync(DescribeExposureAutoTagAttributeRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureAutoTagAttributeResponse>(req, "DescribeExposureAutoTagAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureAutoTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeExposureAutoTagRulesResponse"/></returns>
+        public Task<DescribeExposureAutoTagRulesResponse> DescribeExposureAutoTagRules(DescribeExposureAutoTagRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureAutoTagRulesResponse>(req, "DescribeExposureAutoTagRules");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureAutoTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeExposureAutoTagRulesResponse"/></returns>
+        public DescribeExposureAutoTagRulesResponse DescribeExposureAutoTagRulesSync(DescribeExposureAutoTagRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureAutoTagRulesResponse>(req, "DescribeExposureAutoTagRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询互联网暴露周期数量趋势统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureTrendRequest"/></param>
+        /// <returns><see cref="DescribeExposureTrendResponse"/></returns>
+        public Task<DescribeExposureTrendResponse> DescribeExposureTrend(DescribeExposureTrendRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureTrendResponse>(req, "DescribeExposureTrend");
+        }
+
+        /// <summary>
+        /// 查询互联网暴露周期数量趋势统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExposureTrendRequest"/></param>
+        /// <returns><see cref="DescribeExposureTrendResponse"/></returns>
+        public DescribeExposureTrendResponse DescribeExposureTrendSync(DescribeExposureTrendRequest req)
+        {
+            return InternalRequestAsync<DescribeExposureTrendResponse>(req, "DescribeExposureTrend")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4527,6 +7520,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取最近一次立即检测任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLastScanTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeLastScanTaskInfoResponse"/></returns>
+        public Task<DescribeLastScanTaskInfoResponse> DescribeLastScanTaskInfo(DescribeLastScanTaskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeLastScanTaskInfoResponse>(req, "DescribeLastScanTaskInfo");
+        }
+
+        /// <summary>
+        /// 获取最近一次立即检测任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLastScanTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeLastScanTaskInfoResponse"/></returns>
+        public DescribeLastScanTaskInfoResponse DescribeLastScanTaskInfoSync(DescribeLastScanTaskInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeLastScanTaskInfoResponse>(req, "DescribeLastScanTaskInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询轻量应用服务器防火墙规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLighthouseFirewallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLighthouseFirewallRulesResponse"/></returns>
+        public Task<DescribeLighthouseFirewallRulesResponse> DescribeLighthouseFirewallRules(DescribeLighthouseFirewallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLighthouseFirewallRulesResponse>(req, "DescribeLighthouseFirewallRules");
+        }
+
+        /// <summary>
+        /// 查询轻量应用服务器防火墙规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLighthouseFirewallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLighthouseFirewallRulesResponse"/></returns>
+        public DescribeLighthouseFirewallRulesResponse DescribeLighthouseFirewallRulesSync(DescribeLighthouseFirewallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLighthouseFirewallRulesResponse>(req, "DescribeLighthouseFirewallRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询clb监听器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeListenerListRequest"/></param>
@@ -4548,6 +7583,258 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public Task<DescribeLoginTypeGlobalConfResponse> DescribeLoginTypeGlobalConf(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf");
+        }
+
+        /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConfSync(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public Task<DescribeLoginTypeHostResponse> DescribeLoginTypeHost(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost");
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public DescribeLoginTypeHostResponse DescribeLoginTypeHostSync(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取异地登录白名单合并后列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCombinedListRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCombinedListResponse"/></returns>
+        public Task<DescribeLoginWhiteCombinedListResponse> DescribeLoginWhiteCombinedList(DescribeLoginWhiteCombinedListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCombinedListResponse>(req, "DescribeLoginWhiteCombinedList");
+        }
+
+        /// <summary>
+        /// 获取异地登录白名单合并后列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCombinedListRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCombinedListResponse"/></returns>
+        public DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedListSync(DescribeLoginWhiteCombinedListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCombinedListResponse>(req, "DescribeLoginWhiteCombinedList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询合并后白名单机器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteHostListRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteHostListResponse"/></returns>
+        public Task<DescribeLoginWhiteHostListResponse> DescribeLoginWhiteHostList(DescribeLoginWhiteHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteHostListResponse>(req, "DescribeLoginWhiteHostList");
+        }
+
+        /// <summary>
+        /// 查询合并后白名单机器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteHostListRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteHostListResponse"/></returns>
+        public DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostListSync(DescribeLoginWhiteHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteHostListResponse>(req, "DescribeLoginWhiteHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询机器清理历史记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineClearHistoryRequest"/></param>
+        /// <returns><see cref="DescribeMachineClearHistoryResponse"/></returns>
+        public Task<DescribeMachineClearHistoryResponse> DescribeMachineClearHistory(DescribeMachineClearHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineClearHistoryResponse>(req, "DescribeMachineClearHistory");
+        }
+
+        /// <summary>
+        /// 查询机器清理历史记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineClearHistoryRequest"/></param>
+        /// <returns><see cref="DescribeMachineClearHistoryResponse"/></returns>
+        public DescribeMachineClearHistoryResponse DescribeMachineClearHistorySync(DescribeMachineClearHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineClearHistoryResponse>(req, "DescribeMachineClearHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询主机概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineGeneralRequest"/></param>
+        /// <returns><see cref="DescribeMachineGeneralResponse"/></returns>
+        public Task<DescribeMachineGeneralResponse> DescribeMachineGeneral(DescribeMachineGeneralRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineGeneralResponse>(req, "DescribeMachineGeneral");
+        }
+
+        /// <summary>
+        /// 查询主机概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineGeneralRequest"/></param>
+        /// <returns><see cref="DescribeMachineGeneralResponse"/></returns>
+        public DescribeMachineGeneralResponse DescribeMachineGeneralSync(DescribeMachineGeneralRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineGeneralResponse>(req, "DescribeMachineGeneral")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取主机登录方式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineLoginTypeRequest"/></param>
+        /// <returns><see cref="DescribeMachineLoginTypeResponse"/></returns>
+        public Task<DescribeMachineLoginTypeResponse> DescribeMachineLoginType(DescribeMachineLoginTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineLoginTypeResponse>(req, "DescribeMachineLoginType");
+        }
+
+        /// <summary>
+        /// 获取主机登录方式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineLoginTypeRequest"/></param>
+        /// <returns><see cref="DescribeMachineLoginTypeResponse"/></returns>
+        public DescribeMachineLoginTypeResponse DescribeMachineLoginTypeSync(DescribeMachineLoginTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineLoginTypeResponse>(req, "DescribeMachineLoginType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文件查杀定时扫描配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMalwareTimingScanSettingRequest"/></param>
+        /// <returns><see cref="DescribeMalwareTimingScanSettingResponse"/></returns>
+        public Task<DescribeMalwareTimingScanSettingResponse> DescribeMalwareTimingScanSetting(DescribeMalwareTimingScanSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeMalwareTimingScanSettingResponse>(req, "DescribeMalwareTimingScanSetting");
+        }
+
+        /// <summary>
+        /// 查询文件查杀定时扫描配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMalwareTimingScanSettingRequest"/></param>
+        /// <returns><see cref="DescribeMalwareTimingScanSettingResponse"/></returns>
+        public DescribeMalwareTimingScanSettingResponse DescribeMalwareTimingScanSettingSync(DescribeMalwareTimingScanSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeMalwareTimingScanSettingResponse>(req, "DescribeMalwareTimingScanSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 展示企业必修漏洞情报
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMandatoryVulSetRequest"/></param>
+        /// <returns><see cref="DescribeMandatoryVulSetResponse"/></returns>
+        public Task<DescribeMandatoryVulSetResponse> DescribeMandatoryVulSet(DescribeMandatoryVulSetRequest req)
+        {
+            return InternalRequestAsync<DescribeMandatoryVulSetResponse>(req, "DescribeMandatoryVulSet");
+        }
+
+        /// <summary>
+        /// 展示企业必修漏洞情报
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMandatoryVulSetRequest"/></param>
+        /// <returns><see cref="DescribeMandatoryVulSetResponse"/></returns>
+        public DescribeMandatoryVulSetResponse DescribeMandatoryVulSetSync(DescribeMandatoryVulSetRequest req)
+        {
+            return InternalRequestAsync<DescribeMandatoryVulSetResponse>(req, "DescribeMandatoryVulSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取批量修改主机登录方式任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyMachinesLoginTypeTasksRequest"/></param>
+        /// <returns><see cref="DescribeModifyMachinesLoginTypeTasksResponse"/></returns>
+        public Task<DescribeModifyMachinesLoginTypeTasksResponse> DescribeModifyMachinesLoginTypeTasks(DescribeModifyMachinesLoginTypeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyMachinesLoginTypeTasksResponse>(req, "DescribeModifyMachinesLoginTypeTasks");
+        }
+
+        /// <summary>
+        /// 获取批量修改主机登录方式任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyMachinesLoginTypeTasksRequest"/></param>
+        /// <returns><see cref="DescribeModifyMachinesLoginTypeTasksResponse"/></returns>
+        public DescribeModifyMachinesLoginTypeTasksResponse DescribeModifyMachinesLoginTypeTasksSync(DescribeModifyMachinesLoginTypeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyMachinesLoginTypeTasksResponse>(req, "DescribeModifyMachinesLoginTypeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取NFS扫描全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNFSScanConfRequest"/></param>
+        /// <returns><see cref="DescribeNFSScanConfResponse"/></returns>
+        public Task<DescribeNFSScanConfResponse> DescribeNFSScanConf(DescribeNFSScanConfRequest req)
+        {
+            return InternalRequestAsync<DescribeNFSScanConfResponse>(req, "DescribeNFSScanConf");
+        }
+
+        /// <summary>
+        /// 获取NFS扫描全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNFSScanConfRequest"/></param>
+        /// <returns><see cref="DescribeNFSScanConfResponse"/></returns>
+        public DescribeNFSScanConfResponse DescribeNFSScanConfSync(DescribeNFSScanConfRequest req)
+        {
+            return InternalRequestAsync<DescribeNFSScanConfResponse>(req, "DescribeNFSScanConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNFSScanHostRequest"/></param>
+        /// <returns><see cref="DescribeNFSScanHostResponse"/></returns>
+        public Task<DescribeNFSScanHostResponse> DescribeNFSScanHost(DescribeNFSScanHostRequest req)
+        {
+            return InternalRequestAsync<DescribeNFSScanHostResponse>(req, "DescribeNFSScanHost");
+        }
+
+        /// <summary>
+        /// 获取扫码登录主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNFSScanHostRequest"/></param>
+        /// <returns><see cref="DescribeNFSScanHostResponse"/></returns>
+        public DescribeNFSScanHostResponse DescribeNFSScanHostSync(DescribeNFSScanHostRequest req)
+        {
+            return InternalRequestAsync<DescribeNFSScanHostResponse>(req, "DescribeNFSScanHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取网卡列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNICAssetsRequest"/></param>
@@ -4565,6 +7852,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeNICAssetsResponse DescribeNICAssetsSync(DescribeNICAssetsRequest req)
         {
             return InternalRequestAsync<DescribeNICAssetsResponse>(req, "DescribeNICAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询腾讯云nat网关实例对应的NAT策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatRulesResponse"/></returns>
+        public Task<DescribeNatRulesResponse> DescribeNatRules(DescribeNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatRulesResponse>(req, "DescribeNatRules");
+        }
+
+        /// <summary>
+        /// 查询腾讯云nat网关实例对应的NAT策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatRulesResponse"/></returns>
+        public DescribeNatRulesResponse DescribeNatRulesSync(DescribeNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatRulesResponse>(req, "DescribeNatRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4716,6 +8024,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询 Pod 关联容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodContainerListRequest"/></param>
+        /// <returns><see cref="DescribePodContainerListResponse"/></returns>
+        public Task<DescribePodContainerListResponse> DescribePodContainerList(DescribePodContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribePodContainerListResponse>(req, "DescribePodContainerList");
+        }
+
+        /// <summary>
+        /// 查询 Pod 关联容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodContainerListRequest"/></param>
+        /// <returns><see cref="DescribePodContainerListResponse"/></returns>
+        public DescribePodContainerListResponse DescribePodContainerListSync(DescribePodContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribePodContainerListResponse>(req, "DescribePodContainerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 按日期查看策略命中详情
         /// </summary>
         /// <param name="req"><see cref="DescribePolicyHitDataRequest"/></param>
@@ -4737,6 +8066,132 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 端口探测列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortDetectListRequest"/></param>
+        /// <returns><see cref="DescribePortDetectListResponse"/></returns>
+        public Task<DescribePortDetectListResponse> DescribePortDetectList(DescribePortDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribePortDetectListResponse>(req, "DescribePortDetectList");
+        }
+
+        /// <summary>
+        /// 端口探测列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortDetectListRequest"/></param>
+        /// <returns><see cref="DescribePortDetectListResponse"/></returns>
+        public DescribePortDetectListResponse DescribePortDetectListSync(DescribePortDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribePortDetectListResponse>(req, "DescribePortDetectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前账号下端口扫描任务次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortScanTaskCountRequest"/></param>
+        /// <returns><see cref="DescribePortScanTaskCountResponse"/></returns>
+        public Task<DescribePortScanTaskCountResponse> DescribePortScanTaskCount(DescribePortScanTaskCountRequest req)
+        {
+            return InternalRequestAsync<DescribePortScanTaskCountResponse>(req, "DescribePortScanTaskCount");
+        }
+
+        /// <summary>
+        /// 查询当前账号下端口扫描任务次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortScanTaskCountRequest"/></param>
+        /// <returns><see cref="DescribePortScanTaskCountResponse"/></returns>
+        public DescribePortScanTaskCountResponse DescribePortScanTaskCountSync(DescribePortScanTaskCountRequest req)
+        {
+            return InternalRequestAsync<DescribePortScanTaskCountResponse>(req, "DescribePortScanTaskCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreventUninstallGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribePreventUninstallGlobalConfResponse"/></returns>
+        public Task<DescribePreventUninstallGlobalConfResponse> DescribePreventUninstallGlobalConf(DescribePreventUninstallGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribePreventUninstallGlobalConfResponse>(req, "DescribePreventUninstallGlobalConf");
+        }
+
+        /// <summary>
+        /// 获取防卸载全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreventUninstallGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribePreventUninstallGlobalConfResponse"/></returns>
+        public DescribePreventUninstallGlobalConfResponse DescribePreventUninstallGlobalConfSync(DescribePreventUninstallGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribePreventUninstallGlobalConfResponse>(req, "DescribePreventUninstallGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取防卸载主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreventUninstallHostRequest"/></param>
+        /// <returns><see cref="DescribePreventUninstallHostResponse"/></returns>
+        public Task<DescribePreventUninstallHostResponse> DescribePreventUninstallHost(DescribePreventUninstallHostRequest req)
+        {
+            return InternalRequestAsync<DescribePreventUninstallHostResponse>(req, "DescribePreventUninstallHost");
+        }
+
+        /// <summary>
+        /// 获取防卸载主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreventUninstallHostRequest"/></param>
+        /// <returns><see cref="DescribePreventUninstallHostResponse"/></returns>
+        public DescribePreventUninstallHostResponse DescribePreventUninstallHostSync(DescribePreventUninstallHostRequest req)
+        {
+            return InternalRequestAsync<DescribePreventUninstallHostResponse>(req, "DescribePreventUninstallHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取进程防护全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessDaemonGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeProcessDaemonGlobalConfResponse"/></returns>
+        public Task<DescribeProcessDaemonGlobalConfResponse> DescribeProcessDaemonGlobalConf(DescribeProcessDaemonGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessDaemonGlobalConfResponse>(req, "DescribeProcessDaemonGlobalConf");
+        }
+
+        /// <summary>
+        /// 获取进程防护全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessDaemonGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeProcessDaemonGlobalConfResponse"/></returns>
+        public DescribeProcessDaemonGlobalConfResponse DescribeProcessDaemonGlobalConfSync(DescribeProcessDaemonGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessDaemonGlobalConfResponse>(req, "DescribeProcessDaemonGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取进程守护主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessDaemonHostRequest"/></param>
+        /// <returns><see cref="DescribeProcessDaemonHostResponse"/></returns>
+        public Task<DescribeProcessDaemonHostResponse> DescribeProcessDaemonHost(DescribeProcessDaemonHostRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessDaemonHostResponse>(req, "DescribeProcessDaemonHost");
+        }
+
+        /// <summary>
+        /// 获取进程守护主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessDaemonHostRequest"/></param>
+        /// <returns><see cref="DescribeProcessDaemonHostResponse"/></returns>
+        public DescribeProcessDaemonHostResponse DescribeProcessDaemonHostSync(DescribeProcessDaemonHostRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessDaemonHostResponse>(req, "DescribeProcessDaemonHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// ip公网列表
         /// </summary>
         /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>
@@ -4754,6 +8209,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribePublicIpAssetsResponse DescribePublicIpAssetsSync(DescribePublicIpAssetsRequest req)
         {
             return InternalRequestAsync<DescribePublicIpAssetsResponse>(req, "DescribePublicIpAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用防护授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public Task<DescribeRaspLicenseListResponse> DescribeRaspLicenseList(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList");
+        }
+
+        /// <summary>
+        /// 查询应用防护授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public DescribeRaspLicenseListResponse DescribeRaspLicenseListSync(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4968,6 +8444,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取风险趋势分析示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterRiskTrendAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterRiskTrendAnalysisResponse"/></returns>
+        public Task<DescribeRiskCenterRiskTrendAnalysisResponse> DescribeRiskCenterRiskTrendAnalysis(DescribeRiskCenterRiskTrendAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskCenterRiskTrendAnalysisResponse>(req, "DescribeRiskCenterRiskTrendAnalysis");
+        }
+
+        /// <summary>
+        /// 获取风险趋势分析示例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterRiskTrendAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterRiskTrendAnalysisResponse"/></returns>
+        public DescribeRiskCenterRiskTrendAnalysisResponse DescribeRiskCenterRiskTrendAnalysisSync(DescribeRiskCenterRiskTrendAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskCenterRiskTrendAnalysisResponse>(req, "DescribeRiskCenterRiskTrendAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取风险服务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterServerRiskListRequest"/></param>
@@ -5115,6 +8612,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取风险扫描周期计划
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskScanCronConfigRequest"/></param>
+        /// <returns><see cref="DescribeRiskScanCronConfigResponse"/></returns>
+        public Task<DescribeRiskScanCronConfigResponse> DescribeRiskScanCronConfig(DescribeRiskScanCronConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskScanCronConfigResponse>(req, "DescribeRiskScanCronConfig");
+        }
+
+        /// <summary>
+        /// 获取风险扫描周期计划
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskScanCronConfigRequest"/></param>
+        /// <returns><see cref="DescribeRiskScanCronConfigResponse"/></returns>
+        public DescribeRiskScanCronConfigResponse DescribeRiskScanCronConfigSync(DescribeRiskScanCronConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskScanCronConfigResponse>(req, "DescribeRiskScanCronConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看风险趋势图
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskTrendDataRequest"/></param>
@@ -5199,6 +8717,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询扫描任务记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanTaskRecordListRequest"/></param>
+        /// <returns><see cref="DescribeScanTaskRecordListResponse"/></returns>
+        public Task<DescribeScanTaskRecordListResponse> DescribeScanTaskRecordList(DescribeScanTaskRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeScanTaskRecordListResponse>(req, "DescribeScanTaskRecordList");
+        }
+
+        /// <summary>
+        /// 查询扫描任务记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanTaskRecordListRequest"/></param>
+        /// <returns><see cref="DescribeScanTaskRecordListResponse"/></returns>
+        public DescribeScanTaskRecordListResponse DescribeScanTaskRecordListSync(DescribeScanTaskRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeScanTaskRecordListResponse>(req, "DescribeScanTaskRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询腾讯云SCF自定义域名端点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScfCustomDomainEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeScfCustomDomainEndpointsResponse"/></returns>
+        public Task<DescribeScfCustomDomainEndpointsResponse> DescribeScfCustomDomainEndpoints(DescribeScfCustomDomainEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeScfCustomDomainEndpointsResponse>(req, "DescribeScfCustomDomainEndpoints");
+        }
+
+        /// <summary>
+        /// 查询腾讯云SCF自定义域名端点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScfCustomDomainEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeScfCustomDomainEndpointsResponse"/></returns>
+        public DescribeScfCustomDomainEndpointsResponse DescribeScfCustomDomainEndpointsSync(DescribeScfCustomDomainEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeScfCustomDomainEndpointsResponse>(req, "DescribeScfCustomDomainEndpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 立体防护中心查询漏洞信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSearchBugInfoRequest"/></param>
@@ -5216,6 +8776,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
         {
             return InternalRequestAsync<DescribeSearchBugInfoResponse>(req, "DescribeSearchBugInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定安全组ID对应安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupPolicyResponse"/></returns>
+        public Task<DescribeSecurityGroupPolicyResponse> DescribeSecurityGroupPolicy(DescribeSecurityGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupPolicyResponse>(req, "DescribeSecurityGroupPolicy");
+        }
+
+        /// <summary>
+        /// 查询指定安全组ID对应安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupPolicyResponse"/></returns>
+        public DescribeSecurityGroupPolicyResponse DescribeSecurityGroupPolicySync(DescribeSecurityGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupPolicyResponse>(req, "DescribeSecurityGroupPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5325,6 +8906,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 打标策略生效资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRuleAssetsRequest"/></param>
+        /// <returns><see cref="DescribeTagRuleAssetsResponse"/></returns>
+        public Task<DescribeTagRuleAssetsResponse> DescribeTagRuleAssets(DescribeTagRuleAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeTagRuleAssetsResponse>(req, "DescribeTagRuleAssets");
+        }
+
+        /// <summary>
+        /// 打标策略生效资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRuleAssetsRequest"/></param>
+        /// <returns><see cref="DescribeTagRuleAssetsResponse"/></returns>
+        public DescribeTagRuleAssetsResponse DescribeTagRuleAssetsSync(DescribeTagRuleAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeTagRuleAssetsResponse>(req, "DescribeTagRuleAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取任务扫描报告列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLogListRequest"/></param>
@@ -5367,6 +8969,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取扫描预消耗配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskPredictCostQuotaRequest"/></param>
+        /// <returns><see cref="DescribeTaskPredictCostQuotaResponse"/></returns>
+        public Task<DescribeTaskPredictCostQuotaResponse> DescribeTaskPredictCostQuota(DescribeTaskPredictCostQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskPredictCostQuotaResponse>(req, "DescribeTaskPredictCostQuota");
+        }
+
+        /// <summary>
+        /// 获取扫描预消耗配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskPredictCostQuotaRequest"/></param>
+        /// <returns><see cref="DescribeTaskPredictCostQuotaResponse"/></returns>
+        public DescribeTaskPredictCostQuotaResponse DescribeTaskPredictCostQuotaSync(DescribeTaskPredictCostQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskPredictCostQuotaResponse>(req, "DescribeTaskPredictCostQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询TOP攻击信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopAttackInfoRequest"/></param>
@@ -5388,6 +9011,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询用户行为分析的行为概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaBehaviorSummaryRequest"/></param>
+        /// <returns><see cref="DescribeUebaBehaviorSummaryResponse"/></returns>
+        public Task<DescribeUebaBehaviorSummaryResponse> DescribeUebaBehaviorSummary(DescribeUebaBehaviorSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaBehaviorSummaryResponse>(req, "DescribeUebaBehaviorSummary");
+        }
+
+        /// <summary>
+        /// 查询用户行为分析的行为概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaBehaviorSummaryRequest"/></param>
+        /// <returns><see cref="DescribeUebaBehaviorSummaryResponse"/></returns>
+        public DescribeUebaBehaviorSummaryResponse DescribeUebaBehaviorSummarySync(DescribeUebaBehaviorSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaBehaviorSummaryResponse>(req, "DescribeUebaBehaviorSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户行为分析策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUebaRuleRequest"/></param>
@@ -5405,6 +9049,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeUebaRuleResponse DescribeUebaRuleSync(DescribeUebaRuleRequest req)
         {
             return InternalRequestAsync<DescribeUebaRuleResponse>(req, "DescribeUebaRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户行为分析模块的用户概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaUserSummaryRequest"/></param>
+        /// <returns><see cref="DescribeUebaUserSummaryResponse"/></returns>
+        public Task<DescribeUebaUserSummaryResponse> DescribeUebaUserSummary(DescribeUebaUserSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaUserSummaryResponse>(req, "DescribeUebaUserSummary");
+        }
+
+        /// <summary>
+        /// 获取用户行为分析模块的用户概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaUserSummaryRequest"/></param>
+        /// <returns><see cref="DescribeUebaUserSummaryResponse"/></returns>
+        public DescribeUebaUserSummaryResponse DescribeUebaUserSummarySync(DescribeUebaUserSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaUserSummaryResponse>(req, "DescribeUebaUserSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账号CSPM信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCSPMInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserCSPMInfoListResponse"/></returns>
+        public Task<DescribeUserCSPMInfoListResponse> DescribeUserCSPMInfoList(DescribeUserCSPMInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCSPMInfoListResponse>(req, "DescribeUserCSPMInfoList");
+        }
+
+        /// <summary>
+        /// 获取账号CSPM信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCSPMInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserCSPMInfoListResponse"/></returns>
+        public DescribeUserCSPMInfoListResponse DescribeUserCSPMInfoListSync(DescribeUserCSPMInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCSPMInfoListResponse>(req, "DescribeUserCSPMInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5447,6 +9133,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeUserDspmInfoListResponse DescribeUserDspmInfoListSync(DescribeUserDspmInfoListRequest req)
         {
             return InternalRequestAsync<DescribeUserDspmInfoListResponse>(req, "DescribeUserDspmInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户CSPM配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public Task<DescribeUserInfoResponse> DescribeUserInfo(DescribeUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo");
+        }
+
+        /// <summary>
+        /// 用户CSPM配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public DescribeUserInfoResponse DescribeUserInfoSync(DescribeUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5510,6 +9217,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVULRiskDetailResponse DescribeVULRiskDetailSync(DescribeVULRiskDetailRequest req)
         {
             return InternalRequestAsync<DescribeVULRiskDetailResponse>(req, "DescribeVULRiskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取病毒库及POC的更新信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVdbAndPocInfoRequest"/></param>
+        /// <returns><see cref="DescribeVdbAndPocInfoResponse"/></returns>
+        public Task<DescribeVdbAndPocInfoResponse> DescribeVdbAndPocInfo(DescribeVdbAndPocInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVdbAndPocInfoResponse>(req, "DescribeVdbAndPocInfo");
+        }
+
+        /// <summary>
+        /// 获取病毒库及POC的更新信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVdbAndPocInfoRequest"/></param>
+        /// <returns><see cref="DescribeVdbAndPocInfoResponse"/></returns>
+        public DescribeVdbAndPocInfoResponse DescribeVdbAndPocInfoSync(DescribeVdbAndPocInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVdbAndPocInfoResponse>(req, "DescribeVdbAndPocInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5892,6 +9620,31 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 停用AI 定时任务。
+        /// 
+        /// 将指定的AI 定时任务状态设置为已停用，停用后任务将暂停自动执行。
+        /// </summary>
+        /// <param name="req"><see cref="DisableAIScheduleRequest"/></param>
+        /// <returns><see cref="DisableAIScheduleResponse"/></returns>
+        public Task<DisableAIScheduleResponse> DisableAISchedule(DisableAIScheduleRequest req)
+        {
+            return InternalRequestAsync<DisableAIScheduleResponse>(req, "DisableAISchedule");
+        }
+
+        /// <summary>
+        /// 停用AI 定时任务。
+        /// 
+        /// 将指定的AI 定时任务状态设置为已停用，停用后任务将暂停自动执行。
+        /// </summary>
+        /// <param name="req"><see cref="DisableAIScheduleRequest"/></param>
+        /// <returns><see cref="DisableAIScheduleResponse"/></returns>
+        public DisableAIScheduleResponse DisableAIScheduleSync(DisableAIScheduleRequest req)
+        {
+            return InternalRequestAsync<DisableAIScheduleResponse>(req, "DisableAISchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 下载导出日志
         /// </summary>
         /// <param name="req"><see cref="DownloadDspmExportLogRequest"/></param>
@@ -5909,6 +9662,31 @@ namespace TencentCloud.Csip.V20221121
         public DownloadDspmExportLogResponse DownloadDspmExportLogSync(DownloadDspmExportLogRequest req)
         {
             return InternalRequestAsync<DownloadDspmExportLogResponse>(req, "DownloadDspmExportLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用AI 定时任务。
+        /// 
+        /// 将指定的AI 定时任务状态设置为已启用，启用后任务将按触发器配置自动执行。
+        /// </summary>
+        /// <param name="req"><see cref="EnableAIScheduleRequest"/></param>
+        /// <returns><see cref="EnableAIScheduleResponse"/></returns>
+        public Task<EnableAIScheduleResponse> EnableAISchedule(EnableAIScheduleRequest req)
+        {
+            return InternalRequestAsync<EnableAIScheduleResponse>(req, "EnableAISchedule");
+        }
+
+        /// <summary>
+        /// 启用AI 定时任务。
+        /// 
+        /// 将指定的AI 定时任务状态设置为已启用，启用后任务将按触发器配置自动执行。
+        /// </summary>
+        /// <param name="req"><see cref="EnableAIScheduleRequest"/></param>
+        /// <returns><see cref="EnableAIScheduleResponse"/></returns>
+        public EnableAIScheduleResponse EnableAIScheduleSync(EnableAIScheduleRequest req)
+        {
+            return InternalRequestAsync<EnableAIScheduleResponse>(req, "EnableAISchedule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5934,6 +9712,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 客户端设置主机列表导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportClientSettingHostListRequest"/></param>
+        /// <returns><see cref="ExportClientSettingHostListResponse"/></returns>
+        public Task<ExportClientSettingHostListResponse> ExportClientSettingHostList(ExportClientSettingHostListRequest req)
+        {
+            return InternalRequestAsync<ExportClientSettingHostListResponse>(req, "ExportClientSettingHostList");
+        }
+
+        /// <summary>
+        /// 客户端设置主机列表导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportClientSettingHostListRequest"/></param>
+        /// <returns><see cref="ExportClientSettingHostListResponse"/></returns>
+        public ExportClientSettingHostListResponse ExportClientSettingHostListSync(ExportClientSettingHostListRequest req)
+        {
+            return InternalRequestAsync<ExportClientSettingHostListResponse>(req, "ExportClientSettingHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 导出EDR策略列表
         /// </summary>
         /// <param name="req"><see cref="ExportEDRRulesRequest"/></param>
@@ -5951,6 +9750,60 @@ namespace TencentCloud.Csip.V20221121
         public ExportEDRRulesResponse ExportEDRRulesSync(ExportEDRRulesRequest req)
         {
             return InternalRequestAsync<ExportEDRRulesResponse>(req, "ExportEDRRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于异步导出数据量大的日志文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportTasksRequest"/></param>
+        /// <returns><see cref="ExportTasksResponse"/></returns>
+        public Task<ExportTasksResponse> ExportTasks(ExportTasksRequest req)
+        {
+            return InternalRequestAsync<ExportTasksResponse>(req, "ExportTasks");
+        }
+
+        /// <summary>
+        /// 用于异步导出数据量大的日志文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportTasksRequest"/></param>
+        /// <returns><see cref="ExportTasksResponse"/></returns>
+        public ExportTasksResponse ExportTasksSync(ExportTasksRequest req)
+        {
+            return InternalRequestAsync<ExportTasksResponse>(req, "ExportTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 安装集群容器安全Agent（平行容器方式安装 Agent）。
+        /// 
+        /// capi 层处理流程：
+        /// 1. 按 ClusterCaMD5List 查询 DB 集群列表（仅用于解析每个集群归属的 appid，不做存在性/类型校验）
+        /// 2. 按 appid 分组透传到接入侧 ClusterInstall RPC
+        /// 
+        /// 说明（容器资产改版 2026 H1）：本接口为透传接口，capi 层不对 ClusterCaMD5 做存在性/类型/格式校验；DB 中未命中的 ClusterCaMD5 静默跳过、不报错。
+        /// </summary>
+        /// <param name="req"><see cref="InstallClusterAgentRequest"/></param>
+        /// <returns><see cref="InstallClusterAgentResponse"/></returns>
+        public Task<InstallClusterAgentResponse> InstallClusterAgent(InstallClusterAgentRequest req)
+        {
+            return InternalRequestAsync<InstallClusterAgentResponse>(req, "InstallClusterAgent");
+        }
+
+        /// <summary>
+        /// 安装集群容器安全Agent（平行容器方式安装 Agent）。
+        /// 
+        /// capi 层处理流程：
+        /// 1. 按 ClusterCaMD5List 查询 DB 集群列表（仅用于解析每个集群归属的 appid，不做存在性/类型校验）
+        /// 2. 按 appid 分组透传到接入侧 ClusterInstall RPC
+        /// 
+        /// 说明（容器资产改版 2026 H1）：本接口为透传接口，capi 层不对 ClusterCaMD5 做存在性/类型/格式校验；DB 中未命中的 ClusterCaMD5 静默跳过、不报错。
+        /// </summary>
+        /// <param name="req"><see cref="InstallClusterAgentRequest"/></param>
+        /// <returns><see cref="InstallClusterAgentResponse"/></returns>
+        public InstallClusterAgentResponse InstallClusterAgentSync(InstallClusterAgentRequest req)
+        {
+            return InternalRequestAsync<InstallClusterAgentResponse>(req, "InstallClusterAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5976,6 +9829,94 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改AI 定时任务。
+        /// 
+        /// 支持部分更新，仅更新传入的可选字段。触发器列表通过 UpdateTriggers 标志控制是否全量替换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIScheduleRequest"/></param>
+        /// <returns><see cref="ModifyAIScheduleResponse"/></returns>
+        public Task<ModifyAIScheduleResponse> ModifyAISchedule(ModifyAIScheduleRequest req)
+        {
+            return InternalRequestAsync<ModifyAIScheduleResponse>(req, "ModifyAISchedule");
+        }
+
+        /// <summary>
+        /// 修改AI 定时任务。
+        /// 
+        /// 支持部分更新，仅更新传入的可选字段。触发器列表通过 UpdateTriggers 标志控制是否全量替换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIScheduleRequest"/></param>
+        /// <returns><see cref="ModifyAIScheduleResponse"/></returns>
+        public ModifyAIScheduleResponse ModifyAIScheduleSync(ModifyAIScheduleRequest req)
+        {
+            return InternalRequestAsync<ModifyAIScheduleResponse>(req, "ModifyAISchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改客户端日志采集配置（CSIP专属），支持设置日志采集类型和生效资产范围
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentConfigSettingRequest"/></param>
+        /// <returns><see cref="ModifyAgentConfigSettingResponse"/></returns>
+        public Task<ModifyAgentConfigSettingResponse> ModifyAgentConfigSetting(ModifyAgentConfigSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentConfigSettingResponse>(req, "ModifyAgentConfigSetting");
+        }
+
+        /// <summary>
+        /// 修改客户端日志采集配置（CSIP专属），支持设置日志采集类型和生效资产范围
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentConfigSettingRequest"/></param>
+        /// <returns><see cref="ModifyAgentConfigSettingResponse"/></returns>
+        public ModifyAgentConfigSettingResponse ModifyAgentConfigSettingSync(ModifyAgentConfigSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentConfigSettingResponse>(req, "ModifyAgentConfigSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置客户端运行模式以及配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRunModeRequest"/></param>
+        /// <returns><see cref="ModifyAgentRunModeResponse"/></returns>
+        public Task<ModifyAgentRunModeResponse> ModifyAgentRunMode(ModifyAgentRunModeRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentRunModeResponse>(req, "ModifyAgentRunMode");
+        }
+
+        /// <summary>
+        /// 设置客户端运行模式以及配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRunModeRequest"/></param>
+        /// <returns><see cref="ModifyAgentRunModeResponse"/></returns>
+        public ModifyAgentRunModeResponse ModifyAgentRunModeSync(ModifyAgentRunModeRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentRunModeResponse>(req, "ModifyAgentRunMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改客户端运行策略（策略组），支持设置自定义策略及关联机器列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRunPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAgentRunPolicyResponse"/></returns>
+        public Task<ModifyAgentRunPolicyResponse> ModifyAgentRunPolicy(ModifyAgentRunPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentRunPolicyResponse>(req, "ModifyAgentRunPolicy");
+        }
+
+        /// <summary>
+        /// 修改客户端运行策略（策略组），支持设置自定义策略及关联机器列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentRunPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAgentRunPolicyResponse"/></returns>
+        public ModifyAgentRunPolicyResponse ModifyAgentRunPolicySync(ModifyAgentRunPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAgentRunPolicyResponse>(req, "ModifyAgentRunPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改或者更改处置状态
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
@@ -5993,6 +9934,195 @@ namespace TencentCloud.Csip.V20221121
         public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatusSync(ModifyAlarmRiskStatusRequest req)
         {
             return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 标记资产是否核心
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetCoreAttributeRequest"/></param>
+        /// <returns><see cref="ModifyAssetCoreAttributeResponse"/></returns>
+        public Task<ModifyAssetCoreAttributeResponse> ModifyAssetCoreAttribute(ModifyAssetCoreAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetCoreAttributeResponse>(req, "ModifyAssetCoreAttribute");
+        }
+
+        /// <summary>
+        /// 标记资产是否核心
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetCoreAttributeRequest"/></param>
+        /// <returns><see cref="ModifyAssetCoreAttributeResponse"/></returns>
+        public ModifyAssetCoreAttributeResponse ModifyAssetCoreAttributeSync(ModifyAssetCoreAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetCoreAttributeResponse>(req, "ModifyAssetCoreAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetFilterViewRequest"/></param>
+        /// <returns><see cref="ModifyAssetFilterViewResponse"/></returns>
+        public Task<ModifyAssetFilterViewResponse> ModifyAssetFilterView(ModifyAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetFilterViewResponse>(req, "ModifyAssetFilterView");
+        }
+
+        /// <summary>
+        /// 更新资产搜索视图
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetFilterViewRequest"/></param>
+        /// <returns><see cref="ModifyAssetFilterViewResponse"/></returns>
+        public ModifyAssetFilterViewResponse ModifyAssetFilterViewSync(ModifyAssetFilterViewRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetFilterViewResponse>(req, "ModifyAssetFilterView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑资产标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagResponse"/></returns>
+        public Task<ModifyAssetTagResponse> ModifyAssetTag(ModifyAssetTagRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagResponse>(req, "ModifyAssetTag");
+        }
+
+        /// <summary>
+        /// 编辑资产标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagResponse"/></returns>
+        public ModifyAssetTagResponse ModifyAssetTagSync(ModifyAssetTagRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagResponse>(req, "ModifyAssetTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 操作资产编辑标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagsRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagsResponse"/></returns>
+        public Task<ModifyAssetTagsResponse> ModifyAssetTags(ModifyAssetTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagsResponse>(req, "ModifyAssetTags");
+        }
+
+        /// <summary>
+        /// 操作资产编辑标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagsRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagsResponse"/></returns>
+        public ModifyAssetTagsResponse ModifyAssetTagsSync(ModifyAssetTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagsResponse>(req, "ModifyAssetTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 操作资产编辑标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagsByAssetInfoRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagsByAssetInfoResponse"/></returns>
+        public Task<ModifyAssetTagsByAssetInfoResponse> ModifyAssetTagsByAssetInfo(ModifyAssetTagsByAssetInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagsByAssetInfoResponse>(req, "ModifyAssetTagsByAssetInfo");
+        }
+
+        /// <summary>
+        /// 操作资产编辑标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetTagsByAssetInfoRequest"/></param>
+        /// <returns><see cref="ModifyAssetTagsByAssetInfoResponse"/></returns>
+        public ModifyAssetTagsByAssetInfoResponse ModifyAssetTagsByAssetInfoSync(ModifyAssetTagsByAssetInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAssetTagsByAssetInfoResponse>(req, "ModifyAssetTagsByAssetInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改爆破阻断模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBanModeRequest"/></param>
+        /// <returns><see cref="ModifyBanModeResponse"/></returns>
+        public Task<ModifyBanModeResponse> ModifyBanMode(ModifyBanModeRequest req)
+        {
+            return InternalRequestAsync<ModifyBanModeResponse>(req, "ModifyBanMode");
+        }
+
+        /// <summary>
+        /// 修改爆破阻断模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBanModeRequest"/></param>
+        /// <returns><see cref="ModifyBanModeResponse"/></returns>
+        public ModifyBanModeResponse ModifyBanModeSync(ModifyBanModeRequest req)
+        {
+            return InternalRequestAsync<ModifyBanModeResponse>(req, "ModifyBanMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新建或编辑一条基线策略。Policy.ID 为 0 视为新建，非 0 视为编辑；新建/编辑时 Name 必填，CheckAssetType 与 Type 需符合 CheckAssetType / PolicyType 枚举。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselinePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselinePolicyResponse"/></returns>
+        public Task<ModifyBaselinePolicyResponse> ModifyBaselinePolicy(ModifyBaselinePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselinePolicyResponse>(req, "ModifyBaselinePolicy");
+        }
+
+        /// <summary>
+        /// 新建或编辑一条基线策略。Policy.ID 为 0 视为新建，非 0 视为编辑；新建/编辑时 Name 必填，CheckAssetType 与 Type 需符合 CheckAssetType / PolicyType 枚举。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselinePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselinePolicyResponse"/></returns>
+        public ModifyBaselinePolicyResponse ModifyBaselinePolicySync(ModifyBaselinePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselinePolicyResponse>(req, "ModifyBaselinePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置暴力破解阻断开关状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBruteAttackBanStatusRequest"/></param>
+        /// <returns><see cref="ModifyBruteAttackBanStatusResponse"/></returns>
+        public Task<ModifyBruteAttackBanStatusResponse> ModifyBruteAttackBanStatus(ModifyBruteAttackBanStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBruteAttackBanStatusResponse>(req, "ModifyBruteAttackBanStatus");
+        }
+
+        /// <summary>
+        /// 设置暴力破解阻断开关状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBruteAttackBanStatusRequest"/></param>
+        /// <returns><see cref="ModifyBruteAttackBanStatusResponse"/></returns>
+        public ModifyBruteAttackBanStatusResponse ModifyBruteAttackBanStatusSync(ModifyBruteAttackBanStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyBruteAttackBanStatusResponse>(req, "ModifyBruteAttackBanStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改暴力破解规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBruteAttackRulesRequest"/></param>
+        /// <returns><see cref="ModifyBruteAttackRulesResponse"/></returns>
+        public Task<ModifyBruteAttackRulesResponse> ModifyBruteAttackRules(ModifyBruteAttackRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyBruteAttackRulesResponse>(req, "ModifyBruteAttackRules");
+        }
+
+        /// <summary>
+        /// 修改暴力破解规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBruteAttackRulesRequest"/></param>
+        /// <returns><see cref="ModifyBruteAttackRulesResponse"/></returns>
+        public ModifyBruteAttackRulesResponse ModifyBruteAttackRulesSync(ModifyBruteAttackRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyBruteAttackRulesResponse>(req, "ModifyBruteAttackRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6098,6 +10228,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyCosMarkInfoResponse ModifyCosMarkInfoSync(ModifyCosMarkInfoRequest req)
         {
             return InternalRequestAsync<ModifyCosMarkInfoResponse>(req, "ModifyCosMarkInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新CSPM自动配额管理者共享开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCspmShardConfigRequest"/></param>
+        /// <returns><see cref="ModifyCspmShardConfigResponse"/></returns>
+        public Task<ModifyCspmShardConfigResponse> ModifyCspmShardConfig(ModifyCspmShardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCspmShardConfigResponse>(req, "ModifyCspmShardConfig");
+        }
+
+        /// <summary>
+        /// 更新CSPM自动配额管理者共享开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCspmShardConfigRequest"/></param>
+        /// <returns><see cref="ModifyCspmShardConfigResponse"/></returns>
+        public ModifyCspmShardConfigResponse ModifyCspmShardConfigSync(ModifyCspmShardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCspmShardConfigResponse>(req, "ModifyCspmShardConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6753,6 +10904,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改日志采集例外网段配置，支持IP/IP段/CIDR格式，最多可添加100条
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrExcludeNetworkSegmentsRequest"/></param>
+        /// <returns><see cref="ModifyEdrExcludeNetworkSegmentsResponse"/></returns>
+        public Task<ModifyEdrExcludeNetworkSegmentsResponse> ModifyEdrExcludeNetworkSegments(ModifyEdrExcludeNetworkSegmentsRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrExcludeNetworkSegmentsResponse>(req, "ModifyEdrExcludeNetworkSegments");
+        }
+
+        /// <summary>
+        /// 修改日志采集例外网段配置，支持IP/IP段/CIDR格式，最多可添加100条
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrExcludeNetworkSegmentsRequest"/></param>
+        /// <returns><see cref="ModifyEdrExcludeNetworkSegmentsResponse"/></returns>
+        public ModifyEdrExcludeNetworkSegmentsResponse ModifyEdrExcludeNetworkSegmentsSync(ModifyEdrExcludeNetworkSegmentsRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrExcludeNetworkSegmentsResponse>(req, "ModifyEdrExcludeNetworkSegments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改应用日志采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrLogCollectPathRequest"/></param>
+        /// <returns><see cref="ModifyEdrLogCollectPathResponse"/></returns>
+        public Task<ModifyEdrLogCollectPathResponse> ModifyEdrLogCollectPath(ModifyEdrLogCollectPathRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrLogCollectPathResponse>(req, "ModifyEdrLogCollectPath");
+        }
+
+        /// <summary>
+        /// 修改应用日志采集路径配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdrLogCollectPathRequest"/></param>
+        /// <returns><see cref="ModifyEdrLogCollectPathResponse"/></returns>
+        public ModifyEdrLogCollectPathResponse ModifyEdrLogCollectPathSync(ModifyEdrLogCollectPathRequest req)
+        {
+            return InternalRequestAsync<ModifyEdrLogCollectPathResponse>(req, "ModifyEdrLogCollectPath")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-更新规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="ModifyExposureAutoTagRuleResponse"/></returns>
+        public Task<ModifyExposureAutoTagRuleResponse> ModifyExposureAutoTagRule(ModifyExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureAutoTagRuleResponse>(req, "ModifyExposureAutoTagRule");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-更新规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureAutoTagRuleRequest"/></param>
+        /// <returns><see cref="ModifyExposureAutoTagRuleResponse"/></returns>
+        public ModifyExposureAutoTagRuleResponse ModifyExposureAutoTagRuleSync(ModifyExposureAutoTagRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureAutoTagRuleResponse>(req, "ModifyExposureAutoTagRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云边界自动打标-启停规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureAutoTagRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyExposureAutoTagRuleStatusResponse"/></returns>
+        public Task<ModifyExposureAutoTagRuleStatusResponse> ModifyExposureAutoTagRuleStatus(ModifyExposureAutoTagRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureAutoTagRuleStatusResponse>(req, "ModifyExposureAutoTagRuleStatus");
+        }
+
+        /// <summary>
+        /// 云边界自动打标-启停规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureAutoTagRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyExposureAutoTagRuleStatusResponse"/></returns>
+        public ModifyExposureAutoTagRuleStatusResponse ModifyExposureAutoTagRuleStatusSync(ModifyExposureAutoTagRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureAutoTagRuleStatusResponse>(req, "ModifyExposureAutoTagRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新云边界自定义标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureTagRequest"/></param>
+        /// <returns><see cref="ModifyExposureTagResponse"/></returns>
+        public Task<ModifyExposureTagResponse> ModifyExposureTag(ModifyExposureTagRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureTagResponse>(req, "ModifyExposureTag");
+        }
+
+        /// <summary>
+        /// 更新云边界自定义标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExposureTagRequest"/></param>
+        /// <returns><see cref="ModifyExposureTagResponse"/></returns>
+        public ModifyExposureTagResponse ModifyExposureTagSync(ModifyExposureTagRequest req)
+        {
+            return InternalRequestAsync<ModifyExposureTagResponse>(req, "ModifyExposureTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改IaC检测接入Token存储周期
         /// </summary>
         /// <param name="req"><see cref="ModifyIaCTokenPeriodRequest"/></param>
@@ -6774,6 +11030,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 更新合并后登录审计白名单信息（服务器列表数目应小于1000）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteRecordRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteRecordResponse"/></returns>
+        public Task<ModifyLoginWhiteRecordResponse> ModifyLoginWhiteRecord(ModifyLoginWhiteRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteRecordResponse>(req, "ModifyLoginWhiteRecord");
+        }
+
+        /// <summary>
+        /// 更新合并后登录审计白名单信息（服务器列表数目应小于1000）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteRecordRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteRecordResponse"/></returns>
+        public ModifyLoginWhiteRecordResponse ModifyLoginWhiteRecordSync(ModifyLoginWhiteRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteRecordResponse>(req, "ModifyLoginWhiteRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改机器清理配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineAutoClearConfigRequest"/></param>
+        /// <returns><see cref="ModifyMachineAutoClearConfigResponse"/></returns>
+        public Task<ModifyMachineAutoClearConfigResponse> ModifyMachineAutoClearConfig(ModifyMachineAutoClearConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineAutoClearConfigResponse>(req, "ModifyMachineAutoClearConfig");
+        }
+
+        /// <summary>
+        /// 修改机器清理配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineAutoClearConfigRequest"/></param>
+        /// <returns><see cref="ModifyMachineAutoClearConfigResponse"/></returns>
+        public ModifyMachineAutoClearConfigResponse ModifyMachineAutoClearConfigSync(ModifyMachineAutoClearConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineAutoClearConfigResponse>(req, "ModifyMachineAutoClearConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改主机资产备注信息
         /// </summary>
         /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
@@ -6791,6 +11089,90 @@ namespace TencentCloud.Csip.V20221121
         public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
         {
             return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改主机登录方式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachinesLoginTypeRequest"/></param>
+        /// <returns><see cref="ModifyMachinesLoginTypeResponse"/></returns>
+        public Task<ModifyMachinesLoginTypeResponse> ModifyMachinesLoginType(ModifyMachinesLoginTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyMachinesLoginTypeResponse>(req, "ModifyMachinesLoginType");
+        }
+
+        /// <summary>
+        /// 批量修改主机登录方式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachinesLoginTypeRequest"/></param>
+        /// <returns><see cref="ModifyMachinesLoginTypeResponse"/></returns>
+        public ModifyMachinesLoginTypeResponse ModifyMachinesLoginTypeSync(ModifyMachinesLoginTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyMachinesLoginTypeResponse>(req, "ModifyMachinesLoginType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改文件查杀定时扫描配置，包含扫描周期、检测模式、资产范围、引擎选择、隔离配置等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>
+        /// <returns><see cref="ModifyMalwareTimingScanSettingsResponse"/></returns>
+        public Task<ModifyMalwareTimingScanSettingsResponse> ModifyMalwareTimingScanSettings(ModifyMalwareTimingScanSettingsRequest req)
+        {
+            return InternalRequestAsync<ModifyMalwareTimingScanSettingsResponse>(req, "ModifyMalwareTimingScanSettings");
+        }
+
+        /// <summary>
+        /// 修改文件查杀定时扫描配置，包含扫描周期、检测模式、资产范围、引擎选择、隔离配置等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>
+        /// <returns><see cref="ModifyMalwareTimingScanSettingsResponse"/></returns>
+        public ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettingsSync(ModifyMalwareTimingScanSettingsRequest req)
+        {
+            return InternalRequestAsync<ModifyMalwareTimingScanSettingsResponse>(req, "ModifyMalwareTimingScanSettings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增或更新NFS扫描全局配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNFSScanConfRequest"/></param>
+        /// <returns><see cref="ModifyNFSScanConfResponse"/></returns>
+        public Task<ModifyNFSScanConfResponse> ModifyNFSScanConf(ModifyNFSScanConfRequest req)
+        {
+            return InternalRequestAsync<ModifyNFSScanConfResponse>(req, "ModifyNFSScanConf");
+        }
+
+        /// <summary>
+        /// 新增或更新NFS扫描全局配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNFSScanConfRequest"/></param>
+        /// <returns><see cref="ModifyNFSScanConfResponse"/></returns>
+        public ModifyNFSScanConfResponse ModifyNFSScanConfSync(ModifyNFSScanConfRequest req)
+        {
+            return InternalRequestAsync<ModifyNFSScanConfResponse>(req, "ModifyNFSScanConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭进程守护功能
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNFSScanHostRequest"/></param>
+        /// <returns><see cref="ModifyNFSScanHostResponse"/></returns>
+        public Task<ModifyNFSScanHostResponse> ModifyNFSScanHost(ModifyNFSScanHostRequest req)
+        {
+            return InternalRequestAsync<ModifyNFSScanHostResponse>(req, "ModifyNFSScanHost");
+        }
+
+        /// <summary>
+        /// 关闭进程守护功能
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNFSScanHostRequest"/></param>
+        /// <returns><see cref="ModifyNFSScanHostResponse"/></returns>
+        public ModifyNFSScanHostResponse ModifyNFSScanHostSync(ModifyNFSScanHostRequest req)
+        {
+            return InternalRequestAsync<ModifyNFSScanHostResponse>(req, "ModifyNFSScanHost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6921,6 +11303,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 重保防护包防护设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionSettingRequest"/></param>
+        /// <returns><see cref="ModifyProtectionSettingResponse"/></returns>
+        public Task<ModifyProtectionSettingResponse> ModifyProtectionSetting(ModifyProtectionSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectionSettingResponse>(req, "ModifyProtectionSetting");
+        }
+
+        /// <summary>
+        /// 重保防护包防护设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionSettingRequest"/></param>
+        /// <returns><see cref="ModifyProtectionSettingResponse"/></returns>
+        public ModifyProtectionSettingResponse ModifyProtectionSettingSync(ModifyProtectionSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectionSettingResponse>(req, "ModifyProtectionSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重保防护授权包绑定
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspLicenseBindsRequest"/></param>
+        /// <returns><see cref="ModifyRaspLicenseBindsResponse"/></returns>
+        public Task<ModifyRaspLicenseBindsResponse> ModifyRaspLicenseBinds(ModifyRaspLicenseBindsRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspLicenseBindsResponse>(req, "ModifyRaspLicenseBinds");
+        }
+
+        /// <summary>
+        /// 重保防护授权包绑定
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspLicenseBindsRequest"/></param>
+        /// <returns><see cref="ModifyRaspLicenseBindsResponse"/></returns>
+        public ModifyRaspLicenseBindsResponse ModifyRaspLicenseBindsSync(ModifyRaspLicenseBindsRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspLicenseBindsResponse>(req, "ModifyRaspLicenseBinds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改反弹Shell内网告警与资产范围配置
         /// </summary>
         /// <param name="req"><see cref="ModifyReverseShellSystemPolicyConfigRequest"/></param>
@@ -6980,6 +11404,48 @@ namespace TencentCloud.Csip.V20221121
         public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTaskSync(ModifyRiskCenterScanTaskRequest req)
         {
             return InternalRequestAsync<ModifyRiskCenterScanTaskResponse>(req, "ModifyRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新周期扫描计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskScanCronConfigRequest"/></param>
+        /// <returns><see cref="ModifyRiskScanCronConfigResponse"/></returns>
+        public Task<ModifyRiskScanCronConfigResponse> ModifyRiskScanCronConfig(ModifyRiskScanCronConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskScanCronConfigResponse>(req, "ModifyRiskScanCronConfig");
+        }
+
+        /// <summary>
+        /// 更新周期扫描计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskScanCronConfigRequest"/></param>
+        /// <returns><see cref="ModifyRiskScanCronConfigResponse"/></returns>
+        public ModifyRiskScanCronConfigResponse ModifyRiskScanCronConfigSync(ModifyRiskScanCronConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskScanCronConfigResponse>(req, "ModifyRiskScanCronConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑CSPM共享账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserCSPMRequest"/></param>
+        /// <returns><see cref="ModifyShareUserCSPMResponse"/></returns>
+        public Task<ModifyShareUserCSPMResponse> ModifyShareUserCSPM(ModifyShareUserCSPMRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserCSPMResponse>(req, "ModifyShareUserCSPM");
+        }
+
+        /// <summary>
+        /// 编辑CSPM共享账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserCSPMRequest"/></param>
+        /// <returns><see cref="ModifyShareUserCSPMResponse"/></returns>
+        public ModifyShareUserCSPMResponse ModifyShareUserCSPMSync(ModifyShareUserCSPMRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserCSPMResponse>(req, "ModifyShareUserCSPM")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7068,6 +11534,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 风险操作示例
+        /// </summary>
+        /// <param name="req"><see cref="OperateRiskRequest"/></param>
+        /// <returns><see cref="OperateRiskResponse"/></returns>
+        public Task<OperateRiskResponse> OperateRisk(OperateRiskRequest req)
+        {
+            return InternalRequestAsync<OperateRiskResponse>(req, "OperateRisk");
+        }
+
+        /// <summary>
+        /// 风险操作示例
+        /// </summary>
+        /// <param name="req"><see cref="OperateRiskRequest"/></param>
+        /// <returns><see cref="OperateRiskResponse"/></returns>
+        public OperateRiskResponse OperateRiskSync(OperateRiskRequest req)
+        {
+            return InternalRequestAsync<OperateRiskResponse>(req, "OperateRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 自定义风险规则
+        /// </summary>
+        /// <param name="req"><see cref="OperateRiskRulePolicyRequest"/></param>
+        /// <returns><see cref="OperateRiskRulePolicyResponse"/></returns>
+        public Task<OperateRiskRulePolicyResponse> OperateRiskRulePolicy(OperateRiskRulePolicyRequest req)
+        {
+            return InternalRequestAsync<OperateRiskRulePolicyResponse>(req, "OperateRiskRulePolicy");
+        }
+
+        /// <summary>
+        /// 自定义风险规则
+        /// </summary>
+        /// <param name="req"><see cref="OperateRiskRulePolicyRequest"/></param>
+        /// <returns><see cref="OperateRiskRulePolicyResponse"/></returns>
+        public OperateRiskRulePolicyResponse OperateRiskRulePolicySync(OperateRiskRulePolicyRequest req)
+        {
+            return InternalRequestAsync<OperateRiskRulePolicyResponse>(req, "OperateRiskRulePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重置Dspm资产账号密码
         /// </summary>
         /// <param name="req"><see cref="ResetDspmAssetAccountPasswordRequest"/></param>
@@ -7127,6 +11635,48 @@ namespace TencentCloud.Csip.V20221121
         public RevertDspmAssetAccountResponse RevertDspmAssetAccountSync(RevertDspmAssetAccountRequest req)
         {
             return InternalRequestAsync<RevertDspmAssetAccountResponse>(req, "RevertDspmAssetAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对单个资产的部分检测项发起重新扫描（资产详情页“重新扫描”入口）。
+        /// </summary>
+        /// <param name="req"><see cref="ScanBaselineAssetItemListRequest"/></param>
+        /// <returns><see cref="ScanBaselineAssetItemListResponse"/></returns>
+        public Task<ScanBaselineAssetItemListResponse> ScanBaselineAssetItemList(ScanBaselineAssetItemListRequest req)
+        {
+            return InternalRequestAsync<ScanBaselineAssetItemListResponse>(req, "ScanBaselineAssetItemList");
+        }
+
+        /// <summary>
+        /// 对单个资产的部分检测项发起重新扫描（资产详情页“重新扫描”入口）。
+        /// </summary>
+        /// <param name="req"><see cref="ScanBaselineAssetItemListRequest"/></param>
+        /// <returns><see cref="ScanBaselineAssetItemListResponse"/></returns>
+        public ScanBaselineAssetItemListResponse ScanBaselineAssetItemListSync(ScanBaselineAssetItemListRequest req)
+        {
+            return InternalRequestAsync<ScanBaselineAssetItemListResponse>(req, "ScanBaselineAssetItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对指定策略下的一批检测项发起重新扫描（策略详情页“检测项”维度的复扫入口）。
+        /// </summary>
+        /// <param name="req"><see cref="ScanBaselineItemListRequest"/></param>
+        /// <returns><see cref="ScanBaselineItemListResponse"/></returns>
+        public Task<ScanBaselineItemListResponse> ScanBaselineItemList(ScanBaselineItemListRequest req)
+        {
+            return InternalRequestAsync<ScanBaselineItemListResponse>(req, "ScanBaselineItemList");
+        }
+
+        /// <summary>
+        /// 对指定策略下的一批检测项发起重新扫描（策略详情页“检测项”维度的复扫入口）。
+        /// </summary>
+        /// <param name="req"><see cref="ScanBaselineItemListRequest"/></param>
+        /// <returns><see cref="ScanBaselineItemListResponse"/></returns>
+        public ScanBaselineItemListResponse ScanBaselineItemListSync(ScanBaselineItemListRequest req)
+        {
+            return InternalRequestAsync<ScanBaselineItemListResponse>(req, "ScanBaselineItemList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7194,6 +11744,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 开启或者修改防卸载功能配置
+        /// </summary>
+        /// <param name="req"><see cref="StartOrModifyPreventUninstallRequest"/></param>
+        /// <returns><see cref="StartOrModifyPreventUninstallResponse"/></returns>
+        public Task<StartOrModifyPreventUninstallResponse> StartOrModifyPreventUninstall(StartOrModifyPreventUninstallRequest req)
+        {
+            return InternalRequestAsync<StartOrModifyPreventUninstallResponse>(req, "StartOrModifyPreventUninstall");
+        }
+
+        /// <summary>
+        /// 开启或者修改防卸载功能配置
+        /// </summary>
+        /// <param name="req"><see cref="StartOrModifyPreventUninstallRequest"/></param>
+        /// <returns><see cref="StartOrModifyPreventUninstallResponse"/></returns>
+        public StartOrModifyPreventUninstallResponse StartOrModifyPreventUninstallSync(StartOrModifyPreventUninstallRequest req)
+        {
+            return InternalRequestAsync<StartOrModifyPreventUninstallResponse>(req, "StartOrModifyPreventUninstall")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启或者修改进程守护功能配置
+        /// </summary>
+        /// <param name="req"><see cref="StartOrModifyProcessDaemonRequest"/></param>
+        /// <returns><see cref="StartOrModifyProcessDaemonResponse"/></returns>
+        public Task<StartOrModifyProcessDaemonResponse> StartOrModifyProcessDaemon(StartOrModifyProcessDaemonRequest req)
+        {
+            return InternalRequestAsync<StartOrModifyProcessDaemonResponse>(req, "StartOrModifyProcessDaemon");
+        }
+
+        /// <summary>
+        /// 开启或者修改进程守护功能配置
+        /// </summary>
+        /// <param name="req"><see cref="StartOrModifyProcessDaemonRequest"/></param>
+        /// <returns><see cref="StartOrModifyProcessDaemonResponse"/></returns>
+        public StartOrModifyProcessDaemonResponse StartOrModifyProcessDaemonSync(StartOrModifyProcessDaemonRequest req)
+        {
+            return InternalRequestAsync<StartOrModifyProcessDaemonResponse>(req, "StartOrModifyProcessDaemon")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止指定的基线扫描主任务，仅对处于 INIT / SUBTASK_CREATING / SCANNING 状态的任务生效。
+        /// </summary>
+        /// <param name="req"><see cref="StopBaselineScanTaskRequest"/></param>
+        /// <returns><see cref="StopBaselineScanTaskResponse"/></returns>
+        public Task<StopBaselineScanTaskResponse> StopBaselineScanTask(StopBaselineScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopBaselineScanTaskResponse>(req, "StopBaselineScanTask");
+        }
+
+        /// <summary>
+        /// 停止指定的基线扫描主任务，仅对处于 INIT / SUBTASK_CREATING / SCANNING 状态的任务生效。
+        /// </summary>
+        /// <param name="req"><see cref="StopBaselineScanTaskRequest"/></param>
+        /// <returns><see cref="StopBaselineScanTaskResponse"/></returns>
+        public StopBaselineScanTaskResponse StopBaselineScanTaskSync(StopBaselineScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopBaselineScanTaskResponse>(req, "StopBaselineScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CSIP 手动扫描停止接口
         /// </summary>
         /// <param name="req"><see cref="StopCSIPManualMalwareScanRequest"/></param>
@@ -7232,6 +11845,48 @@ namespace TencentCloud.Csip.V20221121
         public StopEDRScanTaskResponse StopEDRScanTaskSync(StopEDRScanTaskRequest req)
         {
             return InternalRequestAsync<StopEDRScanTaskResponse>(req, "StopEDRScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭防卸载功能
+        /// </summary>
+        /// <param name="req"><see cref="StopPreventUninstallRequest"/></param>
+        /// <returns><see cref="StopPreventUninstallResponse"/></returns>
+        public Task<StopPreventUninstallResponse> StopPreventUninstall(StopPreventUninstallRequest req)
+        {
+            return InternalRequestAsync<StopPreventUninstallResponse>(req, "StopPreventUninstall");
+        }
+
+        /// <summary>
+        /// 关闭防卸载功能
+        /// </summary>
+        /// <param name="req"><see cref="StopPreventUninstallRequest"/></param>
+        /// <returns><see cref="StopPreventUninstallResponse"/></returns>
+        public StopPreventUninstallResponse StopPreventUninstallSync(StopPreventUninstallRequest req)
+        {
+            return InternalRequestAsync<StopPreventUninstallResponse>(req, "StopPreventUninstall")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭进程守护功能
+        /// </summary>
+        /// <param name="req"><see cref="StopProcessDaemonRequest"/></param>
+        /// <returns><see cref="StopProcessDaemonResponse"/></returns>
+        public Task<StopProcessDaemonResponse> StopProcessDaemon(StopProcessDaemonRequest req)
+        {
+            return InternalRequestAsync<StopProcessDaemonResponse>(req, "StopProcessDaemon");
+        }
+
+        /// <summary>
+        /// 关闭进程守护功能
+        /// </summary>
+        /// <param name="req"><see cref="StopProcessDaemonRequest"/></param>
+        /// <returns><see cref="StopProcessDaemonResponse"/></returns>
+        public StopProcessDaemonResponse StopProcessDaemonSync(StopProcessDaemonRequest req)
+        {
+            return InternalRequestAsync<StopProcessDaemonResponse>(req, "StopProcessDaemon")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7320,6 +11975,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 卸载集群容器安全Agent。
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterAgentRequest"/></param>
+        /// <returns><see cref="UninstallClusterAgentResponse"/></returns>
+        public Task<UninstallClusterAgentResponse> UninstallClusterAgent(UninstallClusterAgentRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterAgentResponse>(req, "UninstallClusterAgent");
+        }
+
+        /// <summary>
+        /// 卸载集群容器安全Agent。
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterAgentRequest"/></param>
+        /// <returns><see cref="UninstallClusterAgentResponse"/></returns>
+        public UninstallClusterAgentResponse UninstallClusterAgentSync(UninstallClusterAgentRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterAgentResponse>(req, "UninstallClusterAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 标记风险或者告警为 已处置/已忽略
         /// </summary>
         /// <param name="req"><see cref="UpdateAccessKeyAlarmStatusRequest"/></param>
@@ -7379,6 +12055,27 @@ namespace TencentCloud.Csip.V20221121
         public UpdateAlertStatusListResponse UpdateAlertStatusListSync(UpdateAlertStatusListRequest req)
         {
             return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定、更新集群负责人
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterOwnerRequest"/></param>
+        /// <returns><see cref="UpdateClusterOwnerResponse"/></returns>
+        public Task<UpdateClusterOwnerResponse> UpdateClusterOwner(UpdateClusterOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterOwnerResponse>(req, "UpdateClusterOwner");
+        }
+
+        /// <summary>
+        /// 绑定、更新集群负责人
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterOwnerRequest"/></param>
+        /// <returns><see cref="UpdateClusterOwnerResponse"/></returns>
+        public UpdateClusterOwnerResponse UpdateClusterOwnerSync(UpdateClusterOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateClusterOwnerResponse>(req, "UpdateClusterOwner")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

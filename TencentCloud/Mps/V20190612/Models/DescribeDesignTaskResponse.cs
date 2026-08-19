@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>错误码，成功时返回0</p>
+        /// <p>错误码，成功时返回0，处理中返回100</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }

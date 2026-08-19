@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1491</VersionPrefix>
+    <VersionPrefix>3.0.1492</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20190819\Models\AclRuleResp.cs" />
     <Compile Include="V20190819\Models\AnalyseParam.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\AssociateRoutesSecurityGroupRequest.cs" />
+    <Compile Include="V20190819\Models\AssociateRoutesSecurityGroupResponse.cs" />
     <Compile Include="V20190819\Models\AuthorizeTokenRequest.cs" />
     <Compile Include="V20190819\Models\AuthorizeTokenResponse.cs" />
     <Compile Include="V20190819\Models\BatchAnalyseParam.cs" />
@@ -256,6 +258,8 @@
     <Compile Include="V20190819\Models\DescribeTypeInstancesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20190819\Models\DisassociateRoutesSecurityGroupRequest.cs" />
+    <Compile Include="V20190819\Models\DisassociateRoutesSecurityGroupResponse.cs" />
     <Compile Include="V20190819\Models\DorisConnectParam.cs" />
     <Compile Include="V20190819\Models\DorisModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\DropCls.cs" />
@@ -350,6 +354,8 @@
     <Compile Include="V20190819\Models\ModifyInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordRequest.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyRouteSecurityGroupsRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyRouteSecurityGroupsResponse.cs" />
     <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskRequest.cs" />
     <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskResponse.cs" />
     <Compile Include="V20190819\Models\ModifyThrottleRuleRequest.cs" />
@@ -402,6 +408,7 @@
     <Compile Include="V20190819\Models\ScfParam.cs" />
     <Compile Include="V20190819\Models\SecondaryAnalyseParam.cs" />
     <Compile Include="V20190819\Models\SecurityGroupRoute.cs" />
+    <Compile Include="V20190819\Models\SecurityGroupRouteOperateResp.cs" />
     <Compile Include="V20190819\Models\SecurityGroupRouteResp.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />
     <Compile Include="V20190819\Models\SendMessageResponse.cs" />

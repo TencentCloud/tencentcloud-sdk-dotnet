@@ -25,25 +25,25 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 对话的模型服务组ID
+        /// <p>对话的模型服务组ID</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 本次问答的答案。
+        /// <p>本次问答的答案。</p>
         /// </summary>
         [JsonProperty("Choices")]
         public Choice[] Choices{ get; set; }
 
         /// <summary>
-        /// 会话Id。
+        /// <p>会话Id。</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// token统计
+        /// <p>token统计</p>
         /// </summary>
         [JsonProperty("Usage")]
         public Usage Usage{ get; set; }

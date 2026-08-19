@@ -25,36 +25,40 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 日志主题的名称。
+        /// <p>日志主题的名称。</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+        /// <p>主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。</p>
         /// </summary>
         [JsonProperty("PartitionCount")]
         public ulong? PartitionCount{ get; set; }
 
         /// <summary>
-        /// 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+        /// <p>日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。</p>
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 存储时间，单位天，默认为 30。
-        /// - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-        /// - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+        /// <p>存储时间，单位天，默认为 30。</p><ul><li>日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li></ul>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+        /// <p>日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p><p>最多支持一次传入20个</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

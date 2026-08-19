@@ -25,32 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// <p>返回数量，默认为10，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+        /// <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
+        /// <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// 排序升序还是倒序，DESC有ASC、
+        /// <p>排序升序还是倒序，DESC有ASC、</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

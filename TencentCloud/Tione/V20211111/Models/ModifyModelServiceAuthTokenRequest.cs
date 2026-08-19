@@ -25,19 +25,25 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 服务组 id
+        /// <p>服务组 id</p>
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
         /// <summary>
-        /// 是否需要重置，如果为 true，重置 token 值
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>是否需要重置，如果为 true，重置 token 值</p>
         /// </summary>
         [JsonProperty("NeedReset")]
         public bool? NeedReset{ get; set; }
 
         /// <summary>
-        /// AuthToken 数据
+        /// <p>AuthToken 数据</p>
         /// </summary>
         [JsonProperty("AuthToken")]
         public AuthToken AuthToken{ get; set; }
@@ -49,6 +55,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "NeedReset", this.NeedReset);
             this.SetParamObj(map, prefix + "AuthToken.", this.AuthToken);
         }

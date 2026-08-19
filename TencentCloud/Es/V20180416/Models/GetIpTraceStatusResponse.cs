@@ -25,37 +25,37 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 是否开启IP溯源
+        /// <p>是否开启IP溯源</p>
         /// </summary>
         [JsonProperty("OpenIpTrace")]
         public bool? OpenIpTrace{ get; set; }
 
         /// <summary>
-        /// IP溯源开启持续时间，单位：秒
+        /// <p>IP溯源开启持续时间，单位：秒</p>
         /// </summary>
         [JsonProperty("DurationTime")]
         public long? DurationTime{ get; set; }
 
         /// <summary>
-        /// IP溯源配置
+        /// <p>IP溯源配置</p>
         /// </summary>
         [JsonProperty("IpTraceConfig")]
         public IpTraceConfig IpTraceConfig{ get; set; }
 
         /// <summary>
-        /// 上次执行时间
+        /// <p>上次执行时间</p>
         /// </summary>
         [JsonProperty("LastStartTime")]
         public string LastStartTime{ get; set; }
 
         /// <summary>
-        /// 上次关闭时间
+        /// <p>上次关闭时间</p>
         /// </summary>
         [JsonProperty("LastEndTime")]
         public string LastEndTime{ get; set; }
 
         /// <summary>
-        /// 是否过滤Kibana节点IP
+        /// <p>是否过滤Kibana节点IP</p>
         /// </summary>
         [JsonProperty("FilterKibanaIp")]
         public bool? FilterKibanaIp{ get; set; }

@@ -25,6 +25,48 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
+        /// <p>模型 ID。</p>
+        /// </summary>
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
+
+        /// <summary>
+        /// <p>TPM 限制（Tokens Per Minute）。模型无配额配置时不返回此字段。</p>
+        /// </summary>
+        [JsonProperty("TPMLimit")]
+        public long? TPMLimit{ get; set; }
+
+        /// <summary>
+        /// <p>RPM 限制（Request Per Minute）。模型无配额配置时不返回此字段。</p>
+        /// </summary>
+        [JsonProperty("RPMLimit")]
+        public long? RPMLimit{ get; set; }
+
+        /// <summary>
+        /// <p>TPM 保障包 input 配额</p>
+        /// </summary>
+        [JsonProperty("TPMInputQuotaLimit")]
+        public long? TPMInputQuotaLimit{ get; set; }
+
+        /// <summary>
+        /// <p>TPM 保障包 output 配额</p>
+        /// </summary>
+        [JsonProperty("TPMOutputQuotaLimit")]
+        public long? TPMOutputQuotaLimit{ get; set; }
+
+        /// <summary>
+        /// <p>TPM 预留 input 配额</p>
+        /// </summary>
+        [JsonProperty("TPMInputReserveLimit")]
+        public long? TPMInputReserveLimit{ get; set; }
+
+        /// <summary>
+        /// <p>TPM 预留 output 配额</p>
+        /// </summary>
+        [JsonProperty("TPMOutputReserveLimit")]
+        public long? TPMOutputReserveLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +78,13 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "TPMLimit", this.TPMLimit);
+            this.SetParamSimple(map, prefix + "RPMLimit", this.RPMLimit);
+            this.SetParamSimple(map, prefix + "TPMInputQuotaLimit", this.TPMInputQuotaLimit);
+            this.SetParamSimple(map, prefix + "TPMOutputQuotaLimit", this.TPMOutputQuotaLimit);
+            this.SetParamSimple(map, prefix + "TPMInputReserveLimit", this.TPMInputReserveLimit);
+            this.SetParamSimple(map, prefix + "TPMOutputReserveLimit", this.TPMOutputReserveLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,13 +25,19 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 服务组 id
+        /// <p>服务组 id</p>
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
         /// <summary>
-        /// token 值
+        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>token 值</p>
         /// </summary>
         [JsonProperty("AuthTokenValue")]
         public string AuthTokenValue{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "AuthTokenValue", this.AuthTokenValue);
         }
     }

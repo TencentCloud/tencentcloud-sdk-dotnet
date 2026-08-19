@@ -25,35 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// <p>需要返回的数量，默认为10，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数:
-        /// EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-        /// Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-        /// ImageID: 镜像id
-        /// ImageName:镜像名称
+        /// <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 升序降序,asc desc
+        /// <p>升序降序,asc desc</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// <p>排序字段</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

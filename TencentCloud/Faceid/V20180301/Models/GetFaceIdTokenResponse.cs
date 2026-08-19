@@ -25,10 +25,16 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// token值。- 有效期 10分钟。- 只能完成1次核身。
+        /// <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
         /// </summary>
         [JsonProperty("FaceIdToken")]
         public string FaceIdToken{ get; set; }
+
+        /// <summary>
+        /// <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+        /// </summary>
+        [JsonProperty("ClientConfig")]
+        public string ClientConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
+            this.SetParamSimple(map, prefix + "ClientConfig", this.ClientConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

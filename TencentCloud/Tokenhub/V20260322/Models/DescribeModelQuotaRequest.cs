@@ -24,12 +24,19 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     public class DescribeModelQuotaRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>模型 ID。可通过 DescribeModelList 获取。</p>
+        /// </summary>
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
         }
     }
 }

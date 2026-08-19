@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// IP溯源日志列表
+        /// <p>IP溯源日志列表</p>
         /// </summary>
         [JsonProperty("IpTraceLogList")]
         public IpTraceLogEntry[] IpTraceLogList{ get; set; }

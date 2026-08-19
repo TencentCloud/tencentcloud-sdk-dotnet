@@ -55,6 +55,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string NegativePrompt{ get; set; }
 
         /// <summary>
+        /// <p>参考音频信息</p>
+        /// </summary>
+        [JsonProperty("AudioInfos")]
+        public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
+
+        /// <summary>
+        /// <p>参考视频信息</p>
+        /// </summary>
+        [JsonProperty("VideoInfos")]
+        public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
+
+        /// <summary>
         /// <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
@@ -83,6 +95,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+            this.SetParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
+            this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

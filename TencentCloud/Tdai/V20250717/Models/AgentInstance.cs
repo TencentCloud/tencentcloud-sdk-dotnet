@@ -144,6 +144,24 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("CreatingProgress")]
         public CreatingProgress CreatingProgress{ get; set; }
 
+        /// <summary>
+        /// <p>实例关联的角色名称</p>
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
+        /// <summary>
+        /// <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+        /// </summary>
+        [JsonProperty("OfflineTime")]
+        public string OfflineTime{ get; set; }
+
+        /// <summary>
+        /// <p>商业化资源归属</p>
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +188,9 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "CreatingProgress.", this.CreatingProgress);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

@@ -96,6 +96,12 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("TokenTime")]
         public string TokenTime{ get; set; }
 
+        /// <summary>
+        /// <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+        /// </summary>
+        [JsonProperty("PrivacyBrowser")]
+        public string PrivacyBrowser{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamSimple(map, prefix + "SdkBuildVersion", this.SdkBuildVersion);
             this.SetParamSimple(map, prefix + "SignToken", this.SignToken);
             this.SetParamSimple(map, prefix + "TokenTime", this.TokenTime);
+            this.SetParamSimple(map, prefix + "PrivacyBrowser", this.PrivacyBrowser);
         }
     }
 }

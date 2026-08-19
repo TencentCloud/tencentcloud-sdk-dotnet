@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// IP时间列表
+        /// <p>IP时间列表</p>
         /// </summary>
         [JsonProperty("IpTraceList")]
         public IpTimePair[] IpTraceList{ get; set; }

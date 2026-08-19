@@ -84,6 +84,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>企业版是否使用平台大账号模式发货</p>
+        /// </summary>
+        [JsonProperty("UsePlatformAccount")]
+        public bool? UsePlatformAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamArraySimple(map, prefix + "Skills.", this.Skills);
             this.SetParamSimple(map, prefix + "SoulId", this.SoulId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "UsePlatformAccount", this.UsePlatformAccount);
         }
     }
 }

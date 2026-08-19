@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 列表内容
+        /// <p>列表内容</p>
         /// </summary>
         [JsonProperty("List")]
         public ReverseShellRuleAggregation[] List{ get; set; }
 
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

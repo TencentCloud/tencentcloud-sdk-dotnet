@@ -106,6 +106,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UnderstandImageConfig")]
         public UnderstandImageConfig UnderstandImageConfig{ get; set; }
 
+        /// <summary>
+        /// <p>图片质量评估配置</p>
+        /// </summary>
+        [JsonProperty("ImageQualityConfig")]
+        public ImageQualityConfig ImageQualityConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +131,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
             this.SetParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
             this.SetParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
+            this.SetParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 风险容器镜像列表
+        /// <p>风险容器镜像列表</p>
         /// </summary>
         [JsonProperty("List")]
         public EventEscapeImageInfo[] List{ get; set; }
 
         /// <summary>
-        /// 事件总数量
+        /// <p>事件总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

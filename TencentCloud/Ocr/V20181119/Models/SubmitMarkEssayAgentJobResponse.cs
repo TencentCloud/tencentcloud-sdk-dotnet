@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 任务唯一ID。由服务端生成。 示例值：1334797167793684480
+        /// <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p>
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }

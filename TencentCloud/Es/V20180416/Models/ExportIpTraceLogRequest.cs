@@ -25,73 +25,73 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES集群ID
+        /// <p>ES集群ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 起始偏移量
+        /// <p>起始偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 数据条数
+        /// <p>数据条数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 访问IP
+        /// <p>访问IP</p>
         /// </summary>
         [JsonProperty("RemoteIp")]
         public string[] RemoteIp{ get; set; }
 
         /// <summary>
-        /// Request/Response 请求/返回, 非必填
+        /// <p>Request/Response 请求/返回, 非必填</p>
         /// </summary>
         [JsonProperty("TraceType")]
         public string[] TraceType{ get; set; }
 
         /// <summary>
-        /// Public/Private 公网访问/内网访问, 非必填
+        /// <p>Public/Private 公网访问/内网访问, 非必填</p>
         /// </summary>
         [JsonProperty("NetType")]
         public string[] NetType{ get; set; }
 
         /// <summary>
-        /// POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
+        /// <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
         /// </summary>
         [JsonProperty("ReqTypeOrRspStatus")]
         public string[] ReqTypeOrRspStatus{ get; set; }
 
         /// <summary>
-        /// 关键字模糊查询，支持Lucene Query String
+        /// <p>关键字模糊查询，支持Lucene Query String</p>
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// uri搜索
+        /// <p>uri搜索</p>
         /// </summary>
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
         /// <summary>
-        /// 集群节点IP
+        /// <p>集群节点IP</p>
         /// </summary>
         [JsonProperty("NodeIp")]
         public string[] NodeIp{ get; set; }

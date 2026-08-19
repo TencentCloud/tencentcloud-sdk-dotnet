@@ -25,31 +25,31 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID。该字段为必填字段。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// IP溯源配置开关
+        /// <p>IP溯源配置开关。该字段为必填字段。</p>
         /// </summary>
         [JsonProperty("OpenIpTrace")]
         public bool? OpenIpTrace{ get; set; }
 
         /// <summary>
-        /// IP溯源开启持续时间，单位：秒
+        /// <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
         /// </summary>
         [JsonProperty("DurationTime")]
         public long? DurationTime{ get; set; }
 
         /// <summary>
-        /// IP溯源配置
+        /// <p>IP溯源配置。该字段为必填字段。</p>
         /// </summary>
         [JsonProperty("IpTraceConfig")]
         public IpTraceConfig IpTraceConfig{ get; set; }
 
         /// <summary>
-        /// 是否过滤kibana节点IP
+        /// <p>是否过滤kibana节点IP。</p>
         /// </summary>
         [JsonProperty("FilterKibanaIp")]
         public bool? FilterKibanaIp{ get; set; }

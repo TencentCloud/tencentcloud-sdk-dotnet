@@ -25,35 +25,31 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// SDK人脸核身流程的标识。
-        /// - 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
+        /// <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
         /// </summary>
         [JsonProperty("FaceIdToken")]
         public string FaceIdToken{ get; set; }
 
         /// <summary>
-        /// 是否需要拉取视频。
-        /// - 默认false：不需要。
+        /// <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
         /// </summary>
         [JsonProperty("IsNeedVideo")]
         public bool? IsNeedVideo{ get; set; }
 
         /// <summary>
-        /// 是否需要拉取截帧。
-        /// - 默认false：不需要。
+        /// <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
         /// </summary>
         [JsonProperty("IsNeedBestFrame")]
         public bool? IsNeedBestFrame{ get; set; }
 
         /// <summary>
-        /// 是否对回包整体进行加密。
+        /// <p>是否对回包整体进行加密。</p>
         /// </summary>
         [JsonProperty("IsEncryptResponse")]
         public bool? IsEncryptResponse{ get; set; }
 
         /// <summary>
-        /// 是否需要对返回中的敏感信息进行加密。  
-        /// 只需指定加密算法Algorithm即可，其余字段传入默认值。
+        /// <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
