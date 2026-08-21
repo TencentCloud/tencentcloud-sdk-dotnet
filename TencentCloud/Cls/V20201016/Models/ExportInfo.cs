@@ -114,6 +114,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("DerivedFields")]
         public string[] DerivedFields{ get; set; }
 
+        /// <summary>
+        /// <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+        /// </summary>
+        [JsonProperty("CreateTimestamp")]
+        public ulong? CreateTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
             this.SetParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
+            this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
         }
     }
 }

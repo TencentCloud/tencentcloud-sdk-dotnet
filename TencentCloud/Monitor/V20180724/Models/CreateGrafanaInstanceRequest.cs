@@ -25,44 +25,49 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例名
+        /// <p>实例名</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VPC ID (私有网络 ID)
+        /// <p>VPC ID (私有网络 ID)</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-        /// 注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+        /// <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 是否启用外网
+        /// <p>是否启用外网</p>
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
-        /// Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+        /// <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p>
         /// </summary>
         [JsonProperty("GrafanaInitPassword")]
         public string GrafanaInitPassword{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("TagSpecification")]
         public PrometheusTag[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 是否自动选择代金券，默认为 false
+        /// <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p>
+        /// </summary>
+        [JsonProperty("DockerImage")]
+        public string DockerImage{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动选择代金券，默认为 false</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
@@ -79,6 +84,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
             this.SetParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "DockerImage", this.DockerImage);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         }
     }

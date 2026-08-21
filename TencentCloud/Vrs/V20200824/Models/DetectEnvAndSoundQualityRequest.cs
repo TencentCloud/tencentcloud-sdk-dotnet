@@ -25,40 +25,37 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 标注文本信息 ID
+        /// <p>标注文本信息 ID</p>
         /// </summary>
         [JsonProperty("TextId")]
         public string TextId{ get; set; }
 
         /// <summary>
-        /// 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
+        /// <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
 
         /// <summary>
-        /// 1:环境检测 2:音质检测
+        /// <p>1:环境检测 2:音质检测</p>
         /// </summary>
         [JsonProperty("TypeId")]
         public long? TypeId{ get; set; }
 
         /// <summary>
-        /// 音频格式，音频类型(wav,mp3,aac,m4a)
+        /// <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 音频采样率。
-        /// 16000：16k（默认）；
-        /// 24000：24k（仅一句话声音复刻支持）；
-        /// 48000：48k（仅一句话声音复刻支持）。
+        /// <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 复刻类型。5 - 一句话声音复刻。
+        /// <p>复刻类型。5 - 一句话声音复刻。</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1492";
+       private const string sdkVersion = "SDK_NET_3.0.1493";
 
         /// <summary>
         /// Client constructor.
@@ -273,7 +273,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// 创建 AIGC 调用 API 的 Token。创建后数据同步有延时，约30秒后可查询或删除。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
         /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
@@ -283,7 +283,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// 创建 AIGC 调用 API 的 Token。创建后数据同步有延时，约30秒后可查询或删除。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
         /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 调用该接口，用于创建AI生音频任务。
+        /// 调用该接口，用于创建 AI 生音频任务。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
         /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
@@ -325,7 +325,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 调用该接口，用于创建AI生音频任务。
+        /// 调用该接口，用于创建 AI 生音频任务。
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
         /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
@@ -1359,7 +1359,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除 AIGC API Token
+        /// 删除 AIGC API Token。与该 Token 关联的 AIGC 配额也会被删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
         /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>
@@ -1369,7 +1369,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除 AIGC API Token
+        /// 删除 AIGC API Token。与该 Token 关联的 AIGC 配额也会被删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
         /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>

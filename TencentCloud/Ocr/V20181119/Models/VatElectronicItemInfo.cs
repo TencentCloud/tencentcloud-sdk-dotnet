@@ -25,130 +25,142 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("Quantity")]
         public string Quantity{ get; set; }
 
         /// <summary>
-        /// 规格型号
+        /// <p>规格型号</p>
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 单价
+        /// <p>单价</p>
         /// </summary>
         [JsonProperty("Price")]
         public string Price{ get; set; }
 
         /// <summary>
-        /// 金额
+        /// <p>金额</p>
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 税率
+        /// <p>税率</p>
         /// </summary>
         [JsonProperty("TaxRate")]
         public string TaxRate{ get; set; }
 
         /// <summary>
-        /// 税额
+        /// <p>税额</p>
         /// </summary>
         [JsonProperty("Tax")]
         public string Tax{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// <p>单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 运输工具类型
+        /// <p>运输工具类型</p>
         /// </summary>
         [JsonProperty("VehicleType")]
         public string VehicleType{ get; set; }
 
         /// <summary>
-        /// 运输工具牌号
+        /// <p>运输工具牌号</p>
         /// </summary>
         [JsonProperty("VehicleBrand")]
         public string VehicleBrand{ get; set; }
 
         /// <summary>
-        /// 起始地
+        /// <p>起始地</p>
         /// </summary>
         [JsonProperty("DeparturePlace")]
         public string DeparturePlace{ get; set; }
 
         /// <summary>
-        /// 到达地
+        /// <p>到达地</p>
         /// </summary>
         [JsonProperty("ArrivalPlace")]
         public string ArrivalPlace{ get; set; }
 
         /// <summary>
-        /// 运输货物名称，仅货物运输服务发票返回
+        /// <p>运输货物名称，仅货物运输服务发票返回</p>
         /// </summary>
         [JsonProperty("TransportItemsName")]
         public string TransportItemsName{ get; set; }
 
         /// <summary>
-        /// 建筑服务发生地，仅建筑发票返回
+        /// <p>建筑服务发生地，仅建筑发票返回</p>
         /// </summary>
         [JsonProperty("PlaceOfBuildingService")]
         public string PlaceOfBuildingService{ get; set; }
 
         /// <summary>
-        /// 建筑项目名称，仅建筑发票返回
+        /// <p>建筑项目名称，仅建筑发票返回</p>
         /// </summary>
         [JsonProperty("BuildingName")]
         public string BuildingName{ get; set; }
 
         /// <summary>
-        /// 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
+        /// <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
         /// </summary>
         [JsonProperty("EstateNumber")]
         public string EstateNumber{ get; set; }
 
         /// <summary>
-        /// 面积单位，仅不动产经营租赁服务发票返回
+        /// <p>面积单位，仅不动产经营租赁服务发票返回</p>
         /// </summary>
         [JsonProperty("AreaUnit")]
         public string AreaUnit{ get; set; }
 
         /// <summary>
-        /// 出行人，仅旅客运输服务发票返回
+        /// <p>出行人，仅旅客运输服务发票返回</p>
         /// </summary>
         [JsonProperty("Traveler")]
         public string Traveler{ get; set; }
 
         /// <summary>
-        /// 有效身份证件号，仅旅客运输服务发票返回
+        /// <p>有效身份证件号，仅旅客运输服务发票返回</p>
         /// </summary>
         [JsonProperty("TravelerID")]
         public string TravelerID{ get; set; }
 
         /// <summary>
-        /// 出行日期，仅旅客运输服务发票返回
+        /// <p>出行日期，仅旅客运输服务发票返回</p>
         /// </summary>
         [JsonProperty("TravelDate")]
         public string TravelDate{ get; set; }
 
         /// <summary>
-        /// 等级，仅旅客运输服务发票返回
+        /// <p>等级，仅旅客运输服务发票返回</p>
         /// </summary>
         [JsonProperty("TravelLevel")]
         public string TravelLevel{ get; set; }
+
+        /// <summary>
+        /// <p>通行日期起</p>
+        /// </summary>
+        [JsonProperty("DateStart")]
+        public string DateStart{ get; set; }
+
+        /// <summary>
+        /// <p>通行日期止</p>
+        /// </summary>
+        [JsonProperty("DateEnd")]
+        public string DateEnd{ get; set; }
 
 
         /// <summary>
@@ -177,6 +189,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TravelerID", this.TravelerID);
             this.SetParamSimple(map, prefix + "TravelDate", this.TravelDate);
             this.SetParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
+            this.SetParamSimple(map, prefix + "DateStart", this.DateStart);
+            this.SetParamSimple(map, prefix + "DateEnd", this.DateEnd);
         }
     }
 }

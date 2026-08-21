@@ -25,7 +25,7 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 安卓实例 ID 列表
+        /// <p>安卓实例 ID 列表</p>
         /// </summary>
         [JsonProperty("AndroidInstanceIds")]
         public string[] AndroidInstanceIds{ get; set; }

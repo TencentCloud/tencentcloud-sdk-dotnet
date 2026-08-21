@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
+        /// <p>任务的配额数。</p><p>单位：张/秒/token数。</p><ul><li>当 QuotaType 为 Image 时，单位为张；</li><li>当 QuotaType 为 Video 时，单位为秒；</li><li>当 QuotaType 为 Text 时，单位为 token 数。</li></ul>
         /// </summary>
         [JsonProperty("QuotaLimit")]
         public ulong? QuotaLimit{ get; set; }

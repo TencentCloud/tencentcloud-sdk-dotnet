@@ -25,55 +25,55 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 安卓应用 Id
+        /// <p>安卓应用 Id</p>
         /// </summary>
         [JsonProperty("AndroidAppId")]
         public string AndroidAppId{ get; set; }
 
         /// <summary>
-        /// 安卓应用名称
+        /// <p>安卓应用名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 安卓应用状态（上架、下架）
+        /// <p>安卓应用状态（上架、下架）</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 安卓应用版本列表
+        /// <p>安卓应用版本列表</p>
         /// </summary>
         [JsonProperty("AndroidAppVersionInfo")]
         public AndroidAppVersionInfo[] AndroidAppVersionInfo{ get; set; }
 
         /// <summary>
-        /// 安卓应用创建时间
+        /// <p>安卓应用创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 用户 Id
+        /// <p>用户 Id</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+        /// <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
         /// </summary>
         [JsonProperty("AppMode")]
         public string AppMode{ get; set; }
 
         /// <summary>
-        /// 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+        /// <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
         /// </summary>
         [JsonProperty("UpdateState")]
         public string UpdateState{ get; set; }
 
         /// <summary>
-        /// 安卓应用包名
+        /// <p>安卓应用包名</p>
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }

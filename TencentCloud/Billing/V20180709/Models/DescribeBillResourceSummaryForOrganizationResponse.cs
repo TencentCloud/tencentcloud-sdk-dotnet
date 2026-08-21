@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 资源汇总列表
+        /// <p>资源汇总列表</p>
         /// </summary>
         [JsonProperty("ResourceSummarySet")]
         public BillDistributionResourceSummary[] ResourceSummarySet{ get; set; }
 
         /// <summary>
-        /// 资源汇总列表总数，入参NeedRecordNum为0时不返回
+        /// <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]

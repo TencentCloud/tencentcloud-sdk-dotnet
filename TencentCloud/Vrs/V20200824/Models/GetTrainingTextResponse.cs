@@ -25,7 +25,7 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 文本列表
+        /// <p>文本列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public TrainingTexts Data{ get; set; }

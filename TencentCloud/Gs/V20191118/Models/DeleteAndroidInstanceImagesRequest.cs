@@ -25,7 +25,7 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 镜像 ID 列表
+        /// <p>镜像 ID 列表</p>
         /// </summary>
         [JsonProperty("AndroidInstanceImageIds")]
         public string[] AndroidInstanceImageIds{ get; set; }

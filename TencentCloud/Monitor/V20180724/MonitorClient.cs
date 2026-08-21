@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1493";
 
         /// <summary>
         /// Client constructor.
@@ -1714,6 +1714,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannelsSync(DescribeGrafanaNotificationChannelsRequest req)
         {
             return InternalRequestAsync<DescribeGrafanaNotificationChannelsResponse>(req, "DescribeGrafanaNotificationChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出 Grafana 版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaVersionsResponse"/></returns>
+        public Task<DescribeGrafanaVersionsResponse> DescribeGrafanaVersions(DescribeGrafanaVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGrafanaVersionsResponse>(req, "DescribeGrafanaVersions");
+        }
+
+        /// <summary>
+        /// 列出 Grafana 版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaVersionsResponse"/></returns>
+        public DescribeGrafanaVersionsResponse DescribeGrafanaVersionsSync(DescribeGrafanaVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGrafanaVersionsResponse>(req, "DescribeGrafanaVersions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

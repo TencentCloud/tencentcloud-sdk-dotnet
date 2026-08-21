@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1489</VersionPrefix>
+    <VersionPrefix>3.0.1493</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\BaasPackageInfo.cs" />
     <Compile Include="V20180608\Models\BanConfig.cs" />
+    <Compile Include="V20180608\Models\BindClsRequest.cs" />
+    <Compile Include="V20180608\Models\BindClsResponse.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceRequest.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\BuildCommands.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 任务集合
+        /// <p>任务集合</p>
         /// </summary>
         [JsonProperty("TaskSet")]
         public AndroidInstanceTask[] TaskSet{ get; set; }

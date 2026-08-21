@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1492</VersionPrefix>
+    <VersionPrefix>3.0.1493</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -112,6 +112,7 @@
     <Compile Include="Cloudaudit\**\*.cs" />
     <Compile Include="Cloudhsm\**\*.cs" />
     <Compile Include="Cloudmate\**\*.cs" />
+    <Compile Include="Cloudrc\**\*.cs" />
     <Compile Include="Cloudstudio\**\*.cs" />
     <Compile Include="Cls\**\*.cs" />
     <Compile Include="Cme\**\*.cs" />
@@ -216,6 +217,7 @@
     <Compile Include="Omics\**\*.cs" />
     <Compile Include="Organization\**\*.cs" />
     <Compile Include="Partners\**\*.cs" />
+    <Compile Include="Portal\**\*.cs" />
     <Compile Include="Postgres\**\*.cs" />
     <Compile Include="Privatedns\**\*.cs" />
     <Compile Include="Pts\**\*.cs" />

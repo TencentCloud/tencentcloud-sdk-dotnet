@@ -156,7 +156,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// <p>部署组资源类型</p>
+        /// <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
@@ -312,6 +312,180 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("LivenessAutoRestart")]
         public bool? LivenessAutoRestart{ get; set; }
 
+        /// <summary>
+        /// <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+        /// </summary>
+        [JsonProperty("MeshSidecarVersion")]
+        public string MeshSidecarVersion{ get; set; }
+
+        /// <summary>
+        /// <p>业务日志配置 ID 列表</p>
+        /// </summary>
+        [JsonProperty("BusinessLogConfigIdList")]
+        public string BusinessLogConfigIdList{ get; set; }
+
+        /// <summary>
+        /// <p>业务系统 ID</p>
+        /// </summary>
+        [JsonProperty("BusinessLogDeliveryConfigIdList")]
+        public string BusinessLogDeliveryConfigIdList{ get; set; }
+
+        /// <summary>
+        /// <p>String型普通说明场景</p>
+        /// </summary>
+        [JsonProperty("BusinessSystemId")]
+        public string BusinessSystemId{ get; set; }
+
+        /// <summary>
+        /// <p>业务系统名称</p>
+        /// </summary>
+        [JsonProperty("BusinessSystemName")]
+        public string BusinessSystemName{ get; set; }
+
+        /// <summary>
+        /// <p>CLS 机器组 ID</p>
+        /// </summary>
+        [JsonProperty("ClsMachineGroupId")]
+        public string ClsMachineGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启服务治理</p>
+        /// </summary>
+        [JsonProperty("EnableGovernance")]
+        public bool? EnableGovernance{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启可观测</p>
+        /// </summary>
+        [JsonProperty("EnableTelemetry")]
+        public bool? EnableTelemetry{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启 OT Agent</p>
+        /// </summary>
+        [JsonProperty("EnableTelemetryAgent")]
+        public bool? EnableTelemetryAgent{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启单元化</p>
+        /// </summary>
+        [JsonProperty("EnabledUnit")]
+        public bool? EnabledUnit{ get; set; }
+
+        /// <summary>
+        /// <p>独享注册中心/配置中心实例列表</p>
+        /// </summary>
+        [JsonProperty("ExclusiveInstances")]
+        public ExclusiveInstance[] ExclusiveInstances{ get; set; }
+
+        /// <summary>
+        /// <p>框架接入类型</p>
+        /// </summary>
+        [JsonProperty("FrameworkType")]
+        public string FrameworkType{ get; set; }
+
+        /// <summary>
+        /// <p>服务治理实例模式</p>
+        /// </summary>
+        [JsonProperty("GovernanceType")]
+        public string GovernanceType{ get; set; }
+
+        /// <summary>
+        /// <p>部署组关联实例 ID 列表</p>
+        /// </summary>
+        [JsonProperty("InstanceIdList")]
+        public string[] InstanceIdList{ get; set; }
+
+        /// <summary>
+        /// <p>部署组是否处于停止状态</p>
+        /// </summary>
+        [JsonProperty("IsStop")]
+        public string IsStop{ get; set; }
+
+        /// <summary>
+        /// <p>K8s 命名空间名称</p>
+        /// </summary>
+        [JsonProperty("K8sNamespaceName")]
+        public string K8sNamespaceName{ get; set; }
+
+        /// <summary>
+        /// <p>请求语言</p>
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
+
+        /// <summary>
+        /// <p>微服务子类型</p>
+        /// </summary>
+        [JsonProperty("MicroserviceSubType")]
+        public string MicroserviceSubType{ get; set; }
+
+        /// <summary>
+        /// <p>非侵入接入子类型</p>
+        /// </summary>
+        [JsonProperty("NonInvasiveType")]
+        public string NonInvasiveType{ get; set; }
+
+        /// <summary>
+        /// <p>预停止脚本内容</p>
+        /// </summary>
+        [JsonProperty("PreStopScript")]
+        public string PreStopScript{ get; set; }
+
+        /// <summary>
+        /// <p>实际使用的 K8s 命名空间名称</p>
+        /// </summary>
+        [JsonProperty("RealNamespaceName")]
+        public string RealNamespaceName{ get; set; }
+
+        /// <summary>
+        /// <p>Mesh 服务端口与健康检查配置列表</p>
+        /// </summary>
+        [JsonProperty("ServiceConfigList")]
+        public ServiceConfig[] ServiceConfigList{ get; set; }
+
+        /// <summary>
+        /// <p>服务治理配置聚合对象</p>
+        /// </summary>
+        [JsonProperty("ServiceGovernanceConfig")]
+        public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>部署组标签列表</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>Tapm OT Agent 版本</p>
+        /// </summary>
+        [JsonProperty("TapmOtAgentVersion")]
+        public string TapmOtAgentVersion{ get; set; }
+
+        /// <summary>
+        /// <p>单元环境类型</p>
+        /// </summary>
+        [JsonProperty("UnitEnvType")]
+        public string UnitEnvType{ get; set; }
+
+        /// <summary>
+        /// <p>单元 ID</p>
+        /// </summary>
+        [JsonProperty("UnitId")]
+        public string UnitId{ get; set; }
+
+        /// <summary>
+        /// <p>单元类型</p>
+        /// </summary>
+        [JsonProperty("UnitName")]
+        public string UnitName{ get; set; }
+
+        /// <summary>
+        /// <p>部署组资源类型</p>
+        /// </summary>
+        [JsonProperty("UnitType")]
+        public string UnitType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -364,6 +538,35 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
             this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
             this.SetParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
+            this.SetParamSimple(map, prefix + "MeshSidecarVersion", this.MeshSidecarVersion);
+            this.SetParamSimple(map, prefix + "BusinessLogConfigIdList", this.BusinessLogConfigIdList);
+            this.SetParamSimple(map, prefix + "BusinessLogDeliveryConfigIdList", this.BusinessLogDeliveryConfigIdList);
+            this.SetParamSimple(map, prefix + "BusinessSystemId", this.BusinessSystemId);
+            this.SetParamSimple(map, prefix + "BusinessSystemName", this.BusinessSystemName);
+            this.SetParamSimple(map, prefix + "ClsMachineGroupId", this.ClsMachineGroupId);
+            this.SetParamSimple(map, prefix + "EnableGovernance", this.EnableGovernance);
+            this.SetParamSimple(map, prefix + "EnableTelemetry", this.EnableTelemetry);
+            this.SetParamSimple(map, prefix + "EnableTelemetryAgent", this.EnableTelemetryAgent);
+            this.SetParamSimple(map, prefix + "EnabledUnit", this.EnabledUnit);
+            this.SetParamArrayObj(map, prefix + "ExclusiveInstances.", this.ExclusiveInstances);
+            this.SetParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+            this.SetParamSimple(map, prefix + "GovernanceType", this.GovernanceType);
+            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamSimple(map, prefix + "IsStop", this.IsStop);
+            this.SetParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamSimple(map, prefix + "MicroserviceSubType", this.MicroserviceSubType);
+            this.SetParamSimple(map, prefix + "NonInvasiveType", this.NonInvasiveType);
+            this.SetParamSimple(map, prefix + "PreStopScript", this.PreStopScript);
+            this.SetParamSimple(map, prefix + "RealNamespaceName", this.RealNamespaceName);
+            this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+            this.SetParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TapmOtAgentVersion", this.TapmOtAgentVersion);
+            this.SetParamSimple(map, prefix + "UnitEnvType", this.UnitEnvType);
+            this.SetParamSimple(map, prefix + "UnitId", this.UnitId);
+            this.SetParamSimple(map, prefix + "UnitName", this.UnitName);
+            this.SetParamSimple(map, prefix + "UnitType", this.UnitType);
         }
     }
 }

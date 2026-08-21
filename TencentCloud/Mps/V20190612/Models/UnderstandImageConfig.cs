@@ -36,6 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
+        /// <summary>
+        /// <p>图片理解模型参数，类型为 JSON 字符串。</p>
+        /// </summary>
+        [JsonProperty("Parameters")]
+        public string Parameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
         }
     }
 }

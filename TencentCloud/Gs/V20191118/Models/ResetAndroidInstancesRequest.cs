@@ -25,24 +25,19 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 实例ID列表
+        /// <p>实例ID列表</p>
         /// </summary>
         [JsonProperty("AndroidInstanceIds")]
         public string[] AndroidInstanceIds{ get; set; }
 
         /// <summary>
-        /// 指定有效的镜像 ID。
-        /// 默认取值：默认使用当前镜像。
+        /// <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
         /// </summary>
         [JsonProperty("AndroidInstanceImageId")]
         public string AndroidInstanceImageId{ get; set; }
 
         /// <summary>
-        /// 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-        /// 
-        /// CleanData：默认选项，清理系统属性和用户数据
-        /// KeepSystemProperties：只保留系统属性
-        /// KeepData: 保留系统属性和用户数据
+        /// <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

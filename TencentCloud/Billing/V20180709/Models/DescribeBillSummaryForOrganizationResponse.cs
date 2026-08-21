@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+        /// <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
         /// </summary>
         [JsonProperty("Ready")]
         public ulong? Ready{ get; set; }
 
         /// <summary>
-        /// 账单多维度汇总消费详情
+        /// <p>账单多维度汇总消费详情</p>
         /// </summary>
         [JsonProperty("SummaryDetail")]
         public SummaryDetail[] SummaryDetail{ get; set; }

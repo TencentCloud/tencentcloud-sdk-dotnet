@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1491</VersionPrefix>
+    <VersionPrefix>3.0.1493</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -124,6 +124,7 @@
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
     <Compile Include="V20260520\Models\CallSource.cs" />
     <Compile Include="V20260520\Models\CamAuthConfig.cs" />
+    <Compile Include="V20260520\Models\CategoryPermission.cs" />
     <Compile Include="V20260520\Models\ClawAgentAgentTeamConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentLongMemoryConfig.cs" />
@@ -160,6 +161,8 @@
     <Compile Include="V20260520\Models\CreateAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\CreateConversationRequest.cs" />
     <Compile Include="V20260520\Models\CreateConversationResponse.cs" />
+    <Compile Include="V20260520\Models\CreateMsgRecordCategoryRequest.cs" />
+    <Compile Include="V20260520\Models\CreateMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\CreatePluginRequest.cs" />
     <Compile Include="V20260520\Models\CreatePluginResponse.cs" />
     <Compile Include="V20260520\Models\CreateReleaseRequest.cs" />
@@ -186,6 +189,8 @@
     <Compile Include="V20260520\Models\DeleteAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\DeleteConversationRequest.cs" />
     <Compile Include="V20260520\Models\DeleteConversationResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteMsgRecordCategoryRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\DeletePluginRequest.cs" />
     <Compile Include="V20260520\Models\DeletePluginResponse.cs" />
     <Compile Include="V20260520\Models\DeleteSkillRequest.cs" />
@@ -236,6 +241,10 @@
     <Compile Include="V20260520\Models\DescribeMetricOverviewListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeModelListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeModelListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeMsgRecordCategoryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeMsgRecordCategoryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeMsgRecordListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeMsgRecordListResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginRequest.cs" />
     <Compile Include="V20260520\Models\DescribePluginResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginSummaryListRequest.cs" />
@@ -305,6 +314,8 @@
     <Compile Include="V20260520\Models\ModifyAppTriggerResponse.cs" />
     <Compile Include="V20260520\Models\ModifyConversationRequest.cs" />
     <Compile Include="V20260520\Models\ModifyConversationResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyMsgRecordCategoryRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\ModifyPluginRequest.cs" />
     <Compile Include="V20260520\Models\ModifyPluginResponse.cs" />
     <Compile Include="V20260520\Models\ModifySkillRequest.cs" />
@@ -313,6 +324,10 @@
     <Compile Include="V20260520\Models\ModifySpaceResponse.cs" />
     <Compile Include="V20260520\Models\ModifyVariableRequest.cs" />
     <Compile Include="V20260520\Models\ModifyVariableResponse.cs" />
+    <Compile Include="V20260520\Models\MsgRecord.cs" />
+    <Compile Include="V20260520\Models\MsgRecordCategory.cs" />
+    <Compile Include="V20260520\Models\MsgRecordResult.cs" />
+    <Compile Include="V20260520\Models\MsgRecordSource.cs" />
     <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
     <Compile Include="V20260520\Models\MultiModalQAModel.cs" />
     <Compile Include="V20260520\Models\MultiModalUnderstandingModel.cs" />
@@ -363,6 +378,7 @@
     <Compile Include="V20260520\Models\SkillShare.cs" />
     <Compile Include="V20260520\Models\SkillSummary.cs" />
     <Compile Include="V20260520\Models\SkillVersion.cs" />
+    <Compile Include="V20260520\Models\Sort.cs" />
     <Compile Include="V20260520\Models\Space.cs" />
     <Compile Include="V20260520\Models\SpecialStatusInfo.cs" />
     <Compile Include="V20260520\Models\SupportedFileType.cs" />

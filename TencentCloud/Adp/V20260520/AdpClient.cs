@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1493";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Adp.V20260520
         public CreateConversationResponse CreateConversationSync(CreateConversationRequest req)
         {
             return InternalRequestAsync<CreateConversationResponse>(req, "CreateConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
+        /// </summary>
+        /// <param name="req"><see cref="CreateMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="CreateMsgRecordCategoryResponse"/></returns>
+        public Task<CreateMsgRecordCategoryResponse> CreateMsgRecordCategory(CreateMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateMsgRecordCategoryResponse>(req, "CreateMsgRecordCategory");
+        }
+
+        /// <summary>
+        /// 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
+        /// </summary>
+        /// <param name="req"><see cref="CreateMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="CreateMsgRecordCategoryResponse"/></returns>
+        public CreateMsgRecordCategoryResponse CreateMsgRecordCategorySync(CreateMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateMsgRecordCategoryResponse>(req, "CreateMsgRecordCategory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -428,6 +449,27 @@ namespace TencentCloud.Adp.V20260520
         public DeleteConversationResponse DeleteConversationSync(DeleteConversationRequest req)
         {
             return InternalRequestAsync<DeleteConversationResponse>(req, "DeleteConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定的消息记录分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="DeleteMsgRecordCategoryResponse"/></returns>
+        public Task<DeleteMsgRecordCategoryResponse> DeleteMsgRecordCategory(DeleteMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteMsgRecordCategoryResponse>(req, "DeleteMsgRecordCategory");
+        }
+
+        /// <summary>
+        /// 删除指定的消息记录分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="DeleteMsgRecordCategoryResponse"/></returns>
+        public DeleteMsgRecordCategoryResponse DeleteMsgRecordCategorySync(DeleteMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteMsgRecordCategoryResponse>(req, "DeleteMsgRecordCategory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -957,6 +999,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查询应用的消息记录分类树，返回分类及子分类、各分类下记录数量与操作权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordCategoryListResponse"/></returns>
+        public Task<DescribeMsgRecordCategoryListResponse> DescribeMsgRecordCategoryList(DescribeMsgRecordCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordCategoryListResponse>(req, "DescribeMsgRecordCategoryList");
+        }
+
+        /// <summary>
+        /// 查询应用的消息记录分类树，返回分类及子分类、各分类下记录数量与操作权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordCategoryListResponse"/></returns>
+        public DescribeMsgRecordCategoryListResponse DescribeMsgRecordCategoryListSync(DescribeMsgRecordCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordCategoryListResponse>(req, "DescribeMsgRecordCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordListResponse"/></returns>
+        public Task<DescribeMsgRecordListResponse> DescribeMsgRecordList(DescribeMsgRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordListResponse>(req, "DescribeMsgRecordList");
+        }
+
+        /// <summary>
+        /// 查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordListResponse"/></returns>
+        public DescribeMsgRecordListResponse DescribeMsgRecordListSync(DescribeMsgRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordListResponse>(req, "DescribeMsgRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取插件详情
         /// </summary>
         /// <param name="req"><see cref="DescribePluginRequest"/></param>
@@ -1373,6 +1457,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyConversationResponse ModifyConversationSync(ModifyConversationRequest req)
         {
             return InternalRequestAsync<ModifyConversationResponse>(req, "ModifyConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改指定消息记录分类的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="ModifyMsgRecordCategoryResponse"/></returns>
+        public Task<ModifyMsgRecordCategoryResponse> ModifyMsgRecordCategory(ModifyMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyMsgRecordCategoryResponse>(req, "ModifyMsgRecordCategory");
+        }
+
+        /// <summary>
+        /// 修改指定消息记录分类的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="ModifyMsgRecordCategoryResponse"/></returns>
+        public ModifyMsgRecordCategoryResponse ModifyMsgRecordCategorySync(ModifyMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyMsgRecordCategoryResponse>(req, "ModifyMsgRecordCategory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

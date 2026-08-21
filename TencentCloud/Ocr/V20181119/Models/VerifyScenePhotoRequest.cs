@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照</p>
+        /// <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照    </p><p><strong>车牌业务照</strong><br>0201 车牌</p>
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }

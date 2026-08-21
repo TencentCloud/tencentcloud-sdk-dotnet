@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1487";
+       private const string sdkVersion = "SDK_NET_3.0.1493";
 
         /// <summary>
         /// Client constructor.
@@ -1449,6 +1449,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteTWeSeeCallbackResponse DeleteTWeSeeCallbackSync(DeleteTWeSeeCallbackRequest req)
         {
             return InternalRequestAsync<DeleteTWeSeeCallbackResponse>(req, "DeleteTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeTasksByConditionRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeTasksByConditionResponse"/></returns>
+        public Task<DeleteTWeSeeTasksByConditionResponse> DeleteTWeSeeTasksByCondition(DeleteTWeSeeTasksByConditionRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeTasksByConditionResponse>(req, "DeleteTWeSeeTasksByCondition");
+        }
+
+        /// <summary>
+        /// 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeTasksByConditionRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeTasksByConditionResponse"/></returns>
+        public DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByConditionSync(DeleteTWeSeeTasksByConditionRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeTasksByConditionResponse>(req, "DeleteTWeSeeTasksByCondition")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

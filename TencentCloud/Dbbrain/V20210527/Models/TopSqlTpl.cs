@@ -141,7 +141,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IoWaitTimeMin")]
-        public long? IoWaitTimeMin{ get; set; }
+        public float? IoWaitTimeMin{ get; set; }
 
         /// <summary>
         /// <p>最大执行时间，单位秒</p>

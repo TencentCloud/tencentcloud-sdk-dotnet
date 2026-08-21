@@ -25,40 +25,37 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+        /// <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+        /// <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-        /// 使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。
+        /// <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p>
         /// </summary>
         [JsonProperty("SubscribeList")]
         public TranscriptionUserInfoParams[] SubscribeList{ get; set; }
 
         /// <summary>
-        /// 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-        /// 同一个用户同时在黑白名单时，以黑名单为主。
+        /// <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p>
         /// </summary>
         [JsonProperty("UnSubscribeList")]
         public TranscriptionUserInfoParams[] UnSubscribeList{ get; set; }
 
         /// <summary>
-        /// 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+        /// <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p>
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-        /// 不填默认为0，表示不开启自定义数据。
+        /// <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p>
         /// </summary>
         [JsonProperty("SendCustomMode")]
         public ulong? SendCustomMode{ get; set; }

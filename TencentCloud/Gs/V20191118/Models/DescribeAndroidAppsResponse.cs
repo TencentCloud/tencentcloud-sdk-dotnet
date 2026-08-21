@@ -25,13 +25,13 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 安卓应用列表
+        /// <p>安卓应用列表</p>
         /// </summary>
         [JsonProperty("Apps")]
         public AndroidApp[] Apps{ get; set; }
 
         /// <summary>
-        /// 安卓应用列表长度
+        /// <p>安卓应用列表长度</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

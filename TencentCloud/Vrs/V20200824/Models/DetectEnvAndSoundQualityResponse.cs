@@ -25,7 +25,7 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 检测结果
+        /// <p>检测结果</p>
         /// </summary>
         [JsonProperty("Data")]
         public DetectionEnvAndSoundQualityRespData Data{ get; set; }

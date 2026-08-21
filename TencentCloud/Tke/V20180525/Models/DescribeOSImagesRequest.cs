@@ -24,12 +24,19 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DescribeOSImagesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>镜像拉取接口增加过滤字段</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

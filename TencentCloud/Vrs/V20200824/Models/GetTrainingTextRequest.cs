@@ -25,25 +25,19 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 复刻类型。
-        /// 5 - 一句话声音复刻。
+        /// <p>复刻类型。<br>5 - 一句话声音复刻。</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-        /// 0 - 通用场景（默认）； 
-        /// 1 - 聊天场景； 
-        /// 2 - 阅读场景； 
-        /// 3 - 资讯播报场景。
+        /// <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public long? Domain{ get; set; }
 
         /// <summary>
-        /// 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-        /// 1 - 中文（默认）。
+        /// <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p>
         /// </summary>
         [JsonProperty("TextLanguage")]
         public long? TextLanguage{ get; set; }

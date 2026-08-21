@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1489";
+       private const string sdkVersion = "SDK_NET_3.0.1493";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,31 @@ namespace TencentCloud.Tcb.V20180608
         public AssumeRoleForAllocatedEnvResponse AssumeRoleForAllocatedEnvSync(AssumeRoleForAllocatedEnvRequest req)
         {
             return InternalRequestAsync<AssumeRoleForAllocatedEnvResponse>(req, "AssumeRoleForAllocatedEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定自定义CLS日志主题
+        /// 
+        /// **绑定自定义 CLS 日志主题需调用腾讯云 CLS「[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)」接口，按传入的 `Region` 拉取用户日志主题列表，仅筛选 `AssumerName` 为空的自有主题，并将其 `LogsetId`、`TopicId` 分别回填为绑定参数 `ClsLogsetId`、`ClsTopicId`（地域取请求参数 `Region` 作为 `ClsRegion`）。**
+        /// </summary>
+        /// <param name="req"><see cref="BindClsRequest"/></param>
+        /// <returns><see cref="BindClsResponse"/></returns>
+        public Task<BindClsResponse> BindCls(BindClsRequest req)
+        {
+            return InternalRequestAsync<BindClsResponse>(req, "BindCls");
+        }
+
+        /// <summary>
+        /// 绑定自定义CLS日志主题
+        /// 
+        /// **绑定自定义 CLS 日志主题需调用腾讯云 CLS「[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)」接口，按传入的 `Region` 拉取用户日志主题列表，仅筛选 `AssumerName` 为空的自有主题，并将其 `LogsetId`、`TopicId` 分别回填为绑定参数 `ClsLogsetId`、`ClsTopicId`（地域取请求参数 `Region` 作为 `ClsRegion`）。**
+        /// </summary>
+        /// <param name="req"><see cref="BindClsRequest"/></param>
+        /// <returns><see cref="BindClsResponse"/></returns>
+        public BindClsResponse BindClsSync(BindClsRequest req)
+        {
+            return InternalRequestAsync<BindClsResponse>(req, "BindCls")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

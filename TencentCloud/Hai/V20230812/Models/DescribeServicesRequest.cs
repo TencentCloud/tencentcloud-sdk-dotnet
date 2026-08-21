@@ -42,6 +42,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul>
+        /// </summary>
+        [JsonProperty("States")]
+        public string[] States{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamArraySimple(map, prefix + "ServiceIds.", this.ServiceIds);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArraySimple(map, prefix + "States.", this.States);
         }
     }
 }

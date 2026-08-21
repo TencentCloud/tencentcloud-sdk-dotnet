@@ -25,55 +25,55 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// 算力套餐ID
+        /// <p>算力套餐ID</p>
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 显卡数量
+        /// <p>显卡数量</p>
         /// </summary>
         [JsonProperty("GPUCount")]
         public string GPUCount{ get; set; }
 
         /// <summary>
-        /// 显存
+        /// <p>显存</p>
         /// </summary>
         [JsonProperty("GPUMemory")]
         public string GPUMemory{ get; set; }
 
         /// <summary>
-        /// 算力
+        /// <p>算力</p>
         /// </summary>
         [JsonProperty("GPUPerformance")]
         public string GPUPerformance{ get; set; }
 
         /// <summary>
-        /// CPU核数
+        /// <p>CPU核数</p>
         /// </summary>
         [JsonProperty("CPU")]
         public string CPU{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// <p>内存</p>
         /// </summary>
         [JsonProperty("Memory")]
         public string Memory{ get; set; }
 
         /// <summary>
-        /// 该套餐是否支持包年包月
+        /// <p>该套餐是否支持包年包月</p>
         /// </summary>
         [JsonProperty("PrepaidEnable")]
         public bool? PrepaidEnable{ get; set; }
 
         /// <summary>
-        /// 该套餐是否支持按量计费
+        /// <p>该套餐是否支持按量计费</p>
         /// </summary>
         [JsonProperty("PostpaidEnable")]
         public bool? PostpaidEnable{ get; set; }

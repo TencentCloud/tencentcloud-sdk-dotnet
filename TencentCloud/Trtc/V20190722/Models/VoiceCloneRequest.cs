@@ -67,6 +67,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
+        /// <summary>
+        /// <p>拓展参数</p>
+        /// </summary>
+        [JsonProperty("ExtraParams")]
+        public string ExtraParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PromptText", this.PromptText);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("AndroidInstanceIds")]
         public string[] AndroidInstanceIds{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AndroidAppId")]
         public string AndroidAppId{ get; set; }
 
         /// <summary>
-        /// 包名
+        /// <p>包名</p>
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }

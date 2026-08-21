@@ -25,25 +25,25 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 分页偏移
+        /// <p>分页偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// <p>每页数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 应用ID数组
+        /// <p>应用ID数组</p>
         /// </summary>
         [JsonProperty("AndroidAppIds")]
         public string[] AndroidAppIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+        /// <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

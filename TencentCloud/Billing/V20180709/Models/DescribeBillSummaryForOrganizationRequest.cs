@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单月份，格式为2023-04
+        /// <p>账单月份，格式为2023-04</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 账单维度类型，枚举值如下：business、project、region、payMode、tag
+        /// <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 标签键，GroupType=tag获取标签维度账单时传
+        /// <p>标签键，GroupType=tag获取标签维度账单时传</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }

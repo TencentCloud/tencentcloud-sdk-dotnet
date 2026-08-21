@@ -25,7 +25,7 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 声音复刻任务结果
+        /// <p>声音复刻任务结果</p>
         /// </summary>
         [JsonProperty("Data")]
         public DescribeVRSTaskStatusRespData Data{ get; set; }

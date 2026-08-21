@@ -25,40 +25,46 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// os聚合名称
+        /// <p>os聚合名称</p>
         /// </summary>
         [JsonProperty("SeriesName")]
         public string SeriesName{ get; set; }
 
         /// <summary>
-        /// os别名
+        /// <p>os别名</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// os名称
+        /// <p>os名称</p>
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
+        /// <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// os是否下线(online表示在线,offline表示下线)
+        /// <p>os是否下线(online表示在线,offline表示下线)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 镜像id
+        /// <p>镜像id</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
+
+        /// <summary>
+        /// <p>架构</p>
+        /// </summary>
+        [JsonProperty("Arch")]
+        public string Arch{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "Arch", this.Arch);
         }
     }
 }
