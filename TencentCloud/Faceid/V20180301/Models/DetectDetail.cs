@@ -116,7 +116,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string CompareLibType{ get; set; }
 
         /// <summary>
-        /// <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+        /// <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivenessMode")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+        /// <p>主机唯一标识 QUUID。</p>
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }

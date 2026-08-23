@@ -97,6 +97,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupName{ get; set; }
 
         /// <summary>
+        /// <p>备份文件所在地域</p>
+        /// </summary>
+        [JsonProperty("ExistRegions")]
+        public BackupRegionAndIds[] ExistRegions{ get; set; }
+
+        /// <summary>
         /// <p>投递状态</p>
         /// </summary>
         [JsonProperty("CopyStatus")]
@@ -144,6 +150,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamArrayObj(map, prefix + "ExistRegions.", this.ExistRegions);
             this.SetParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
             this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
             this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);

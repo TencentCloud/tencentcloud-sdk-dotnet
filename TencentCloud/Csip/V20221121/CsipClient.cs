@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1493";
+       private const string sdkVersion = "SDK_NET_3.0.1494";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Csip.V20221121
         public AddDspmAssetManagerResponse AddDspmAssetManagerSync(AddDspmAssetManagerRequest req)
         {
             return InternalRequestAsync<AddDspmAssetManagerResponse>(req, "AddDspmAssetManager")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="AddImageRegistryRequest"/></param>
+        /// <returns><see cref="AddImageRegistryResponse"/></returns>
+        public Task<AddImageRegistryResponse> AddImageRegistry(AddImageRegistryRequest req)
+        {
+            return InternalRequestAsync<AddImageRegistryResponse>(req, "AddImageRegistry");
+        }
+
+        /// <summary>
+        /// 添加镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="AddImageRegistryRequest"/></param>
+        /// <returns><see cref="AddImageRegistryResponse"/></returns>
+        public AddImageRegistryResponse AddImageRegistrySync(AddImageRegistryRequest req)
+        {
+            return InternalRequestAsync<AddImageRegistryResponse>(req, "AddImageRegistry")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +201,90 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 批量修改镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="BatchModifyImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public Task<BatchModifyImageRegistryTimedScanTaskConfigResponse> BatchModifyImageRegistryTimedScanTaskConfig(BatchModifyImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageRegistryTimedScanTaskConfigResponse>(req, "BatchModifyImageRegistryTimedScanTaskConfig");
+        }
+
+        /// <summary>
+        /// 批量修改镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="BatchModifyImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public BatchModifyImageRegistryTimedScanTaskConfigResponse BatchModifyImageRegistryTimedScanTaskConfigSync(BatchModifyImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageRegistryTimedScanTaskConfigResponse>(req, "BatchModifyImageRegistryTimedScanTaskConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageSensitiveWhitelistResponse"/></returns>
+        public Task<BatchModifyImageSensitiveWhitelistResponse> BatchModifyImageSensitiveWhitelist(BatchModifyImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageSensitiveWhitelistResponse>(req, "BatchModifyImageSensitiveWhitelist");
+        }
+
+        /// <summary>
+        /// 批量修改容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageSensitiveWhitelistResponse"/></returns>
+        public BatchModifyImageSensitiveWhitelistResponse BatchModifyImageSensitiveWhitelistSync(BatchModifyImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageSensitiveWhitelistResponse>(req, "BatchModifyImageSensitiveWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageVirusWhitelistResponse"/></returns>
+        public Task<BatchModifyImageVirusWhitelistResponse> BatchModifyImageVirusWhitelist(BatchModifyImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageVirusWhitelistResponse>(req, "BatchModifyImageVirusWhitelist");
+        }
+
+        /// <summary>
+        /// 批量修改镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageVirusWhitelistResponse"/></returns>
+        public BatchModifyImageVirusWhitelistResponse BatchModifyImageVirusWhitelistSync(BatchModifyImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageVirusWhitelistResponse>(req, "BatchModifyImageVirusWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageVulWhitelistResponse"/></returns>
+        public Task<BatchModifyImageVulWhitelistResponse> BatchModifyImageVulWhitelist(BatchModifyImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageVulWhitelistResponse>(req, "BatchModifyImageVulWhitelist");
+        }
+
+        /// <summary>
+        /// 批量修改容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="BatchModifyImageVulWhitelistResponse"/></returns>
+        public BatchModifyImageVulWhitelistResponse BatchModifyImageVulWhitelistSync(BatchModifyImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<BatchModifyImageVulWhitelistResponse>(req, "BatchModifyImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 绑定集群负责人
         /// </summary>
         /// <param name="req"><see cref="BindClusterOwnerRequest"/></param>
@@ -239,6 +344,27 @@ namespace TencentCloud.Csip.V20221121
         public CheckCWPExposePathPermissionResponse CheckCWPExposePathPermissionSync(CheckCWPExposePathPermissionRequest req)
         {
             return InternalRequestAsync<CheckCWPExposePathPermissionResponse>(req, "CheckCWPExposePathPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查镜像仓库实例名是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckImageRegistryInstanceNameDuplicateRequest"/></param>
+        /// <returns><see cref="CheckImageRegistryInstanceNameDuplicateResponse"/></returns>
+        public Task<CheckImageRegistryInstanceNameDuplicateResponse> CheckImageRegistryInstanceNameDuplicate(CheckImageRegistryInstanceNameDuplicateRequest req)
+        {
+            return InternalRequestAsync<CheckImageRegistryInstanceNameDuplicateResponse>(req, "CheckImageRegistryInstanceNameDuplicate");
+        }
+
+        /// <summary>
+        /// 检查镜像仓库实例名是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckImageRegistryInstanceNameDuplicateRequest"/></param>
+        /// <returns><see cref="CheckImageRegistryInstanceNameDuplicateResponse"/></returns>
+        public CheckImageRegistryInstanceNameDuplicateResponse CheckImageRegistryInstanceNameDuplicateSync(CheckImageRegistryInstanceNameDuplicateRequest req)
+        {
+            return InternalRequestAsync<CheckImageRegistryInstanceNameDuplicateResponse>(req, "CheckImageRegistryInstanceNameDuplicate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +516,48 @@ namespace TencentCloud.Csip.V20221121
         public CreateAllAssetsExportJobResponse CreateAllAssetsExportJobSync(CreateAllAssetsExportJobRequest req)
         {
             return InternalRequestAsync<CreateAllAssetsExportJobResponse>(req, "CreateAllAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像资产中组件列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetComponentListExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetComponentListExportJobResponse"/></returns>
+        public Task<CreateAssetComponentListExportJobResponse> CreateAssetComponentListExportJob(CreateAssetComponentListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetComponentListExportJobResponse>(req, "CreateAssetComponentListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像资产中组件列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetComponentListExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetComponentListExportJobResponse"/></returns>
+        public CreateAssetComponentListExportJobResponse CreateAssetComponentListExportJobSync(CreateAssetComponentListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetComponentListExportJobResponse>(req, "CreateAssetComponentListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像仓库组件关联镜像列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetComponentRelatedImageListExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetComponentRelatedImageListExportJobResponse"/></returns>
+        public Task<CreateAssetComponentRelatedImageListExportJobResponse> CreateAssetComponentRelatedImageListExportJob(CreateAssetComponentRelatedImageListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetComponentRelatedImageListExportJobResponse>(req, "CreateAssetComponentRelatedImageListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像仓库组件关联镜像列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetComponentRelatedImageListExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetComponentRelatedImageListExportJobResponse"/></returns>
+        public CreateAssetComponentRelatedImageListExportJobResponse CreateAssetComponentRelatedImageListExportJobSync(CreateAssetComponentRelatedImageListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetComponentRelatedImageListExportJobResponse>(req, "CreateAssetComponentRelatedImageListExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1507,6 +1675,342 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建镜像资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssetListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssetListExportJobResponse"/></returns>
+        public Task<CreateImageAssetListExportJobResponse> CreateImageAssetListExportJob(CreateImageAssetListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssetListExportJobResponse>(req, "CreateImageAssetListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssetListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssetListExportJobResponse"/></returns>
+        public CreateImageAssetListExportJobResponse CreateImageAssetListExportJobSync(CreateImageAssetListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssetListExportJobResponse>(req, "CreateImageAssetListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像关联容器资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssociatedContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssociatedContainerListExportJobResponse"/></returns>
+        public Task<CreateImageAssociatedContainerListExportJobResponse> CreateImageAssociatedContainerListExportJob(CreateImageAssociatedContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssociatedContainerListExportJobResponse>(req, "CreateImageAssociatedContainerListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像关联容器资产导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssociatedContainerListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssociatedContainerListExportJobResponse"/></returns>
+        public CreateImageAssociatedContainerListExportJobResponse CreateImageAssociatedContainerListExportJobSync(CreateImageAssociatedContainerListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssociatedContainerListExportJobResponse>(req, "CreateImageAssociatedContainerListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像关联主机资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssociatedHostListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssociatedHostListExportJobResponse"/></returns>
+        public Task<CreateImageAssociatedHostListExportJobResponse> CreateImageAssociatedHostListExportJob(CreateImageAssociatedHostListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssociatedHostListExportJobResponse>(req, "CreateImageAssociatedHostListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像关联主机资产列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageAssociatedHostListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageAssociatedHostListExportJobResponse"/></returns>
+        public CreateImageAssociatedHostListExportJobResponse CreateImageAssociatedHostListExportJobSync(CreateImageAssociatedHostListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageAssociatedHostListExportJobResponse>(req, "CreateImageAssociatedHostListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像组件列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageComponentListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageComponentListExportJobResponse"/></returns>
+        public Task<CreateImageComponentListExportJobResponse> CreateImageComponentListExportJob(CreateImageComponentListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageComponentListExportJobResponse>(req, "CreateImageComponentListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像组件列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageComponentListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageComponentListExportJobResponse"/></returns>
+        public CreateImageComponentListExportJobResponse CreateImageComponentListExportJobSync(CreateImageComponentListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageComponentListExportJobResponse>(req, "CreateImageComponentListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像层漏洞列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageLayerVulListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageLayerVulListExportJobResponse"/></returns>
+        public Task<CreateImageLayerVulListExportJobResponse> CreateImageLayerVulListExportJob(CreateImageLayerVulListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageLayerVulListExportJobResponse>(req, "CreateImageLayerVulListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像层漏洞列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageLayerVulListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageLayerVulListExportJobResponse"/></returns>
+        public CreateImageLayerVulListExportJobResponse CreateImageLayerVulListExportJobSync(CreateImageLayerVulListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageLayerVulListExportJobResponse>(req, "CreateImageLayerVulListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像仓库联通性检查任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryConnectivityTaskRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryConnectivityTaskResponse"/></returns>
+        public Task<CreateImageRegistryConnectivityTaskResponse> CreateImageRegistryConnectivityTask(CreateImageRegistryConnectivityTaskRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryConnectivityTaskResponse>(req, "CreateImageRegistryConnectivityTask");
+        }
+
+        /// <summary>
+        /// 创建镜像仓库联通性检查任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryConnectivityTaskRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryConnectivityTaskResponse"/></returns>
+        public CreateImageRegistryConnectivityTaskResponse CreateImageRegistryConnectivityTaskSync(CreateImageRegistryConnectivityTaskRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryConnectivityTaskResponse>(req, "CreateImageRegistryConnectivityTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像仓库列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryListExportJobResponse"/></returns>
+        public Task<CreateImageRegistryListExportJobResponse> CreateImageRegistryListExportJob(CreateImageRegistryListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryListExportJobResponse>(req, "CreateImageRegistryListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像仓库列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryListExportJobResponse"/></returns>
+        public CreateImageRegistryListExportJobResponse CreateImageRegistryListExportJobSync(CreateImageRegistryListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryListExportJobResponse>(req, "CreateImageRegistryListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryScanTaskResponse"/></returns>
+        public Task<CreateImageRegistryScanTaskResponse> CreateImageRegistryScanTask(CreateImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryScanTaskResponse>(req, "CreateImageRegistryScanTask");
+        }
+
+        /// <summary>
+        /// 创建镜像扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryScanTaskResponse"/></returns>
+        public CreateImageRegistryScanTaskResponse CreateImageRegistryScanTaskSync(CreateImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryScanTaskResponse>(req, "CreateImageRegistryScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像仓库镜像扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public Task<CreateImageRegistryTimedScanTaskConfigResponse> CreateImageRegistryTimedScanTaskConfig(CreateImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryTimedScanTaskConfigResponse>(req, "CreateImageRegistryTimedScanTaskConfig");
+        }
+
+        /// <summary>
+        /// 创建镜像仓库镜像扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="CreateImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public CreateImageRegistryTimedScanTaskConfigResponse CreateImageRegistryTimedScanTaskConfigSync(CreateImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<CreateImageRegistryTimedScanTaskConfigResponse>(req, "CreateImageRegistryTimedScanTaskConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像敏感信息列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageSensitiveInfoListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageSensitiveInfoListExportJobResponse"/></returns>
+        public Task<CreateImageSensitiveInfoListExportJobResponse> CreateImageSensitiveInfoListExportJob(CreateImageSensitiveInfoListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageSensitiveInfoListExportJobResponse>(req, "CreateImageSensitiveInfoListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像敏感信息列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageSensitiveInfoListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageSensitiveInfoListExportJobResponse"/></returns>
+        public CreateImageSensitiveInfoListExportJobResponse CreateImageSensitiveInfoListExportJobSync(CreateImageSensitiveInfoListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageSensitiveInfoListExportJobResponse>(req, "CreateImageSensitiveInfoListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageSensitiveWhitelistResponse"/></returns>
+        public Task<CreateImageSensitiveWhitelistResponse> CreateImageSensitiveWhitelist(CreateImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageSensitiveWhitelistResponse>(req, "CreateImageSensitiveWhitelist");
+        }
+
+        /// <summary>
+        /// 创建容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageSensitiveWhitelistResponse"/></returns>
+        public CreateImageSensitiveWhitelistResponse CreateImageSensitiveWhitelistSync(CreateImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageSensitiveWhitelistResponse>(req, "CreateImageSensitiveWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像木马病毒列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVirusListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVirusListExportJobResponse"/></returns>
+        public Task<CreateImageVirusListExportJobResponse> CreateImageVirusListExportJob(CreateImageVirusListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVirusListExportJobResponse>(req, "CreateImageVirusListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像木马病毒列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVirusListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVirusListExportJobResponse"/></returns>
+        public CreateImageVirusListExportJobResponse CreateImageVirusListExportJobSync(CreateImageVirusListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVirusListExportJobResponse>(req, "CreateImageVirusListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageVirusWhitelistResponse"/></returns>
+        public Task<CreateImageVirusWhitelistResponse> CreateImageVirusWhitelist(CreateImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageVirusWhitelistResponse>(req, "CreateImageVirusWhitelist");
+        }
+
+        /// <summary>
+        /// 创建镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageVirusWhitelistResponse"/></returns>
+        public CreateImageVirusWhitelistResponse CreateImageVirusWhitelistSync(CreateImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageVirusWhitelistResponse>(req, "CreateImageVirusWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像漏洞列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVulListExportJobResponse"/></returns>
+        public Task<CreateImageVulListExportJobResponse> CreateImageVulListExportJob(CreateImageVulListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulListExportJobResponse>(req, "CreateImageVulListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像漏洞列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVulListExportJobResponse"/></returns>
+        public CreateImageVulListExportJobResponse CreateImageVulListExportJobSync(CreateImageVulListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulListExportJobResponse>(req, "CreateImageVulListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像漏洞概览列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulSummaryListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVulSummaryListExportJobResponse"/></returns>
+        public Task<CreateImageVulSummaryListExportJobResponse> CreateImageVulSummaryListExportJob(CreateImageVulSummaryListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulSummaryListExportJobResponse>(req, "CreateImageVulSummaryListExportJob");
+        }
+
+        /// <summary>
+        /// 创建镜像漏洞概览列表导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulSummaryListExportJobRequest"/></param>
+        /// <returns><see cref="CreateImageVulSummaryListExportJobResponse"/></returns>
+        public CreateImageVulSummaryListExportJobResponse CreateImageVulSummaryListExportJobSync(CreateImageVulSummaryListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulSummaryListExportJobResponse>(req, "CreateImageVulSummaryListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageVulWhitelistResponse"/></returns>
+        public Task<CreateImageVulWhitelistResponse> CreateImageVulWhitelist(CreateImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulWhitelistResponse>(req, "CreateImageVulWhitelist");
+        }
+
+        /// <summary>
+        /// 创建容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="CreateImageVulWhitelistResponse"/></returns>
+        public CreateImageVulWhitelistResponse CreateImageVulWhitelistSync(CreateImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<CreateImageVulWhitelistResponse>(req, "CreateImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建Pod关联容器列表导出任务。导出字段包含容器ID、容器名称、运行状态、节点ID、节点类型、镜像ID、镜像名称、隔离状态。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
         /// </summary>
         /// <param name="req"><see cref="CreatePodContainerListExportJobRequest"/></param>
@@ -2414,6 +2918,132 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 删除镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryResponse"/></returns>
+        public Task<DeleteImageRegistryResponse> DeleteImageRegistry(DeleteImageRegistryRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryResponse>(req, "DeleteImageRegistry");
+        }
+
+        /// <summary>
+        /// 删除镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryResponse"/></returns>
+        public DeleteImageRegistryResponse DeleteImageRegistrySync(DeleteImageRegistryRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryResponse>(req, "DeleteImageRegistry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除镜像仓库扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryScanTaskResponse"/></returns>
+        public Task<DeleteImageRegistryScanTaskResponse> DeleteImageRegistryScanTask(DeleteImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryScanTaskResponse>(req, "DeleteImageRegistryScanTask");
+        }
+
+        /// <summary>
+        /// 删除镜像仓库扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryScanTaskResponse"/></returns>
+        public DeleteImageRegistryScanTaskResponse DeleteImageRegistryScanTaskSync(DeleteImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryScanTaskResponse>(req, "DeleteImageRegistryScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public Task<DeleteImageRegistryTimedScanTaskConfigResponse> DeleteImageRegistryTimedScanTaskConfig(DeleteImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryTimedScanTaskConfigResponse>(req, "DeleteImageRegistryTimedScanTaskConfig");
+        }
+
+        /// <summary>
+        /// 删除镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="DeleteImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public DeleteImageRegistryTimedScanTaskConfigResponse DeleteImageRegistryTimedScanTaskConfigSync(DeleteImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteImageRegistryTimedScanTaskConfigResponse>(req, "DeleteImageRegistryTimedScanTaskConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageSensitiveWhitelistResponse"/></returns>
+        public Task<DeleteImageSensitiveWhitelistResponse> DeleteImageSensitiveWhitelist(DeleteImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageSensitiveWhitelistResponse>(req, "DeleteImageSensitiveWhitelist");
+        }
+
+        /// <summary>
+        /// 删除容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageSensitiveWhitelistResponse"/></returns>
+        public DeleteImageSensitiveWhitelistResponse DeleteImageSensitiveWhitelistSync(DeleteImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageSensitiveWhitelistResponse>(req, "DeleteImageSensitiveWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageVirusWhitelistResponse"/></returns>
+        public Task<DeleteImageVirusWhitelistResponse> DeleteImageVirusWhitelist(DeleteImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageVirusWhitelistResponse>(req, "DeleteImageVirusWhitelist");
+        }
+
+        /// <summary>
+        /// 删除镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageVirusWhitelistResponse"/></returns>
+        public DeleteImageVirusWhitelistResponse DeleteImageVirusWhitelistSync(DeleteImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageVirusWhitelistResponse>(req, "DeleteImageVirusWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageVulWhitelistResponse"/></returns>
+        public Task<DeleteImageVulWhitelistResponse> DeleteImageVulWhitelist(DeleteImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageVulWhitelistResponse>(req, "DeleteImageVulWhitelist");
+        }
+
+        /// <summary>
+        /// 删除容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteImageVulWhitelistResponse"/></returns>
+        public DeleteImageVulWhitelistResponse DeleteImageVulWhitelistSync(DeleteImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteImageVulWhitelistResponse>(req, "DeleteImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
@@ -2473,6 +3103,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxLLMAuditRuleResponse"/></returns>
+        public Task<DeleteSandboxLLMAuditRuleResponse> DeleteSandboxLLMAuditRule(DeleteSandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxLLMAuditRuleResponse>(req, "DeleteSandboxLLMAuditRule");
+        }
+
+        /// <summary>
+        /// 批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxLLMAuditRuleResponse"/></returns>
+        public DeleteSandboxLLMAuditRuleResponse DeleteSandboxLLMAuditRuleSync(DeleteSandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxLLMAuditRuleResponse>(req, "DeleteSandboxLLMAuditRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2557,6 +3208,69 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAIAgentAssetListResponse DescribeAIAgentAssetListSync(DescribeAIAgentAssetListRequest req)
         {
             return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 AIAgent 资产凭据扫描列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentCredentialListResponse"/></returns>
+        public Task<DescribeAIAgentCredentialListResponse> DescribeAIAgentCredentialList(DescribeAIAgentCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentCredentialListResponse>(req, "DescribeAIAgentCredentialList");
+        }
+
+        /// <summary>
+        /// 获取 AIAgent 资产凭据扫描列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentCredentialListResponse"/></returns>
+        public DescribeAIAgentCredentialListResponse DescribeAIAgentCredentialListSync(DescribeAIAgentCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentCredentialListResponse>(req, "DescribeAIAgentCredentialList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按凭据组行 ID 分页查询单个凭据的泄露位置列表。用于配合 DescribeAIAgentCredentialList 接口拆分后的展开场景，避免单接口在数据倾斜场景下一次拉取几十万行 location 导致性能问题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentCredentialLocationListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentCredentialLocationListResponse"/></returns>
+        public Task<DescribeAIAgentCredentialLocationListResponse> DescribeAIAgentCredentialLocationList(DescribeAIAgentCredentialLocationListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentCredentialLocationListResponse>(req, "DescribeAIAgentCredentialLocationList");
+        }
+
+        /// <summary>
+        /// 按凭据组行 ID 分页查询单个凭据的泄露位置列表。用于配合 DescribeAIAgentCredentialList 接口拆分后的展开场景，避免单接口在数据倾斜场景下一次拉取几十万行 location 导致性能问题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentCredentialLocationListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentCredentialLocationListResponse"/></returns>
+        public DescribeAIAgentCredentialLocationListResponse DescribeAIAgentCredentialLocationListSync(DescribeAIAgentCredentialLocationListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentCredentialLocationListResponse>(req, "DescribeAIAgentCredentialLocationList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 AI Agent skill 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentSkillListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentSkillListResponse"/></returns>
+        public Task<DescribeAIAgentSkillListResponse> DescribeAIAgentSkillList(DescribeAIAgentSkillListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentSkillListResponse>(req, "DescribeAIAgentSkillList");
+        }
+
+        /// <summary>
+        /// 获取 AI Agent skill 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentSkillListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentSkillListResponse"/></returns>
+        public DescribeAIAgentSkillListResponse DescribeAIAgentSkillListSync(DescribeAIAgentSkillListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentSkillListResponse>(req, "DescribeAIAgentSkillList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3110,6 +3824,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询资产中组件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetComponentListRequest"/></param>
+        /// <returns><see cref="DescribeAssetComponentListResponse"/></returns>
+        public Task<DescribeAssetComponentListResponse> DescribeAssetComponentList(DescribeAssetComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetComponentListResponse>(req, "DescribeAssetComponentList");
+        }
+
+        /// <summary>
+        /// 查询资产中组件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetComponentListRequest"/></param>
+        /// <returns><see cref="DescribeAssetComponentListResponse"/></returns>
+        public DescribeAssetComponentListResponse DescribeAssetComponentListSync(DescribeAssetComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetComponentListResponse>(req, "DescribeAssetComponentList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库组件关联的镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetComponentRelatedImageListRequest"/></param>
+        /// <returns><see cref="DescribeAssetComponentRelatedImageListResponse"/></returns>
+        public Task<DescribeAssetComponentRelatedImageListResponse> DescribeAssetComponentRelatedImageList(DescribeAssetComponentRelatedImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetComponentRelatedImageListResponse>(req, "DescribeAssetComponentRelatedImageList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库组件关联的镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetComponentRelatedImageListRequest"/></param>
+        /// <returns><see cref="DescribeAssetComponentRelatedImageListResponse"/></returns>
+        public DescribeAssetComponentRelatedImageListResponse DescribeAssetComponentRelatedImageListSync(DescribeAssetComponentRelatedImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetComponentRelatedImageListResponse>(req, "DescribeAssetComponentRelatedImageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 资产详情信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetDetailRequest"/></param>
@@ -3421,6 +4177,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAssumeRoleResponse DescribeAssumeRoleSync(DescribeAssumeRoleRequest req)
         {
             return InternalRequestAsync<DescribeAssumeRoleResponse>(req, "DescribeAssumeRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询后台扫描引擎地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackendScanEngineRegionListRequest"/></param>
+        /// <returns><see cref="DescribeBackendScanEngineRegionListResponse"/></returns>
+        public Task<DescribeBackendScanEngineRegionListResponse> DescribeBackendScanEngineRegionList(DescribeBackendScanEngineRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeBackendScanEngineRegionListResponse>(req, "DescribeBackendScanEngineRegionList");
+        }
+
+        /// <summary>
+        /// 查询后台扫描引擎地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackendScanEngineRegionListRequest"/></param>
+        /// <returns><see cref="DescribeBackendScanEngineRegionListResponse"/></returns>
+        public DescribeBackendScanEngineRegionListResponse DescribeBackendScanEngineRegionListSync(DescribeBackendScanEngineRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeBackendScanEngineRegionListResponse>(req, "DescribeBackendScanEngineRegionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4324,6 +5101,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCallRecordResponse DescribeCallRecordSync(DescribeCallRecordRequest req)
         {
             return InternalRequestAsync<DescribeCallRecordResponse>(req, "DescribeCallRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询联通性检测主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCheckConnectivityHostListRequest"/></param>
+        /// <returns><see cref="DescribeCheckConnectivityHostListResponse"/></returns>
+        public Task<DescribeCheckConnectivityHostListResponse> DescribeCheckConnectivityHostList(DescribeCheckConnectivityHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeCheckConnectivityHostListResponse>(req, "DescribeCheckConnectivityHostList");
+        }
+
+        /// <summary>
+        /// 查询联通性检测主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCheckConnectivityHostListRequest"/></param>
+        /// <returns><see cref="DescribeCheckConnectivityHostListResponse"/></returns>
+        public DescribeCheckConnectivityHostListResponse DescribeCheckConnectivityHostListSync(DescribeCheckConnectivityHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeCheckConnectivityHostListResponse>(req, "DescribeCheckConnectivityHostList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7646,6 +8444,531 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询镜像资产详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssetDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageAssetDetailResponse"/></returns>
+        public Task<DescribeImageAssetDetailResponse> DescribeImageAssetDetail(DescribeImageAssetDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssetDetailResponse>(req, "DescribeImageAssetDetail");
+        }
+
+        /// <summary>
+        /// 查询镜像资产详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssetDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageAssetDetailResponse"/></returns>
+        public DescribeImageAssetDetailResponse DescribeImageAssetDetailSync(DescribeImageAssetDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssetDetailResponse>(req, "DescribeImageAssetDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssetListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssetListResponse"/></returns>
+        public Task<DescribeImageAssetListResponse> DescribeImageAssetList(DescribeImageAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssetListResponse>(req, "DescribeImageAssetList");
+        }
+
+        /// <summary>
+        /// 查询镜像资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssetListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssetListResponse"/></returns>
+        public DescribeImageAssetListResponse DescribeImageAssetListSync(DescribeImageAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssetListResponse>(req, "DescribeImageAssetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像关联资产数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedAssetCountRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedAssetCountResponse"/></returns>
+        public Task<DescribeImageAssociatedAssetCountResponse> DescribeImageAssociatedAssetCount(DescribeImageAssociatedAssetCountRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedAssetCountResponse>(req, "DescribeImageAssociatedAssetCount");
+        }
+
+        /// <summary>
+        /// 查询镜像关联资产数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedAssetCountRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedAssetCountResponse"/></returns>
+        public DescribeImageAssociatedAssetCountResponse DescribeImageAssociatedAssetCountSync(DescribeImageAssociatedAssetCountRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedAssetCountResponse>(req, "DescribeImageAssociatedAssetCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像关联容器资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedContainerListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedContainerListResponse"/></returns>
+        public Task<DescribeImageAssociatedContainerListResponse> DescribeImageAssociatedContainerList(DescribeImageAssociatedContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedContainerListResponse>(req, "DescribeImageAssociatedContainerList");
+        }
+
+        /// <summary>
+        /// 查询镜像关联容器资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedContainerListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedContainerListResponse"/></returns>
+        public DescribeImageAssociatedContainerListResponse DescribeImageAssociatedContainerListSync(DescribeImageAssociatedContainerListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedContainerListResponse>(req, "DescribeImageAssociatedContainerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像关联主机资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedHostListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedHostListResponse"/></returns>
+        public Task<DescribeImageAssociatedHostListResponse> DescribeImageAssociatedHostList(DescribeImageAssociatedHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedHostListResponse>(req, "DescribeImageAssociatedHostList");
+        }
+
+        /// <summary>
+        /// 查询镜像关联主机资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageAssociatedHostListRequest"/></param>
+        /// <returns><see cref="DescribeImageAssociatedHostListResponse"/></returns>
+        public DescribeImageAssociatedHostListResponse DescribeImageAssociatedHostListSync(DescribeImageAssociatedHostListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageAssociatedHostListResponse>(req, "DescribeImageAssociatedHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像组件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageComponentListRequest"/></param>
+        /// <returns><see cref="DescribeImageComponentListResponse"/></returns>
+        public Task<DescribeImageComponentListResponse> DescribeImageComponentList(DescribeImageComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageComponentListResponse>(req, "DescribeImageComponentList");
+        }
+
+        /// <summary>
+        /// 查询镜像组件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageComponentListRequest"/></param>
+        /// <returns><see cref="DescribeImageComponentListResponse"/></returns>
+        public DescribeImageComponentListResponse DescribeImageComponentListSync(DescribeImageComponentListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageComponentListResponse>(req, "DescribeImageComponentList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageExportJobListRequest"/></param>
+        /// <returns><see cref="DescribeImageExportJobListResponse"/></returns>
+        public Task<DescribeImageExportJobListResponse> DescribeImageExportJobList(DescribeImageExportJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageExportJobListResponse>(req, "DescribeImageExportJobList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库导出任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageExportJobListRequest"/></param>
+        /// <returns><see cref="DescribeImageExportJobListResponse"/></returns>
+        public DescribeImageExportJobListResponse DescribeImageExportJobListSync(DescribeImageExportJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageExportJobListResponse>(req, "DescribeImageExportJobList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像层信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLayerListRequest"/></param>
+        /// <returns><see cref="DescribeImageLayerListResponse"/></returns>
+        public Task<DescribeImageLayerListResponse> DescribeImageLayerList(DescribeImageLayerListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageLayerListResponse>(req, "DescribeImageLayerList");
+        }
+
+        /// <summary>
+        /// 查询镜像层信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLayerListRequest"/></param>
+        /// <returns><see cref="DescribeImageLayerListResponse"/></returns>
+        public DescribeImageLayerListResponse DescribeImageLayerListSync(DescribeImageLayerListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageLayerListResponse>(req, "DescribeImageLayerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像层漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLayerVulListRequest"/></param>
+        /// <returns><see cref="DescribeImageLayerVulListResponse"/></returns>
+        public Task<DescribeImageLayerVulListResponse> DescribeImageLayerVulList(DescribeImageLayerVulListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageLayerVulListResponse>(req, "DescribeImageLayerVulList");
+        }
+
+        /// <summary>
+        /// 查询镜像层漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLayerVulListRequest"/></param>
+        /// <returns><see cref="DescribeImageLayerVulListResponse"/></returns>
+        public DescribeImageLayerVulListResponse DescribeImageLayerVulListSync(DescribeImageLayerVulListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageLayerVulListResponse>(req, "DescribeImageLayerVulList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库资产总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryAssetOverviewRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryAssetOverviewResponse"/></returns>
+        public Task<DescribeImageRegistryAssetOverviewResponse> DescribeImageRegistryAssetOverview(DescribeImageRegistryAssetOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryAssetOverviewResponse>(req, "DescribeImageRegistryAssetOverview");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库资产总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryAssetOverviewRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryAssetOverviewResponse"/></returns>
+        public DescribeImageRegistryAssetOverviewResponse DescribeImageRegistryAssetOverviewSync(DescribeImageRegistryAssetOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryAssetOverviewResponse>(req, "DescribeImageRegistryAssetOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库联通性检查任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryConnectivityTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryConnectivityTaskResultResponse"/></returns>
+        public Task<DescribeImageRegistryConnectivityTaskResultResponse> DescribeImageRegistryConnectivityTaskResult(DescribeImageRegistryConnectivityTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryConnectivityTaskResultResponse>(req, "DescribeImageRegistryConnectivityTaskResult");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库联通性检查任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryConnectivityTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryConnectivityTaskResultResponse"/></returns>
+        public DescribeImageRegistryConnectivityTaskResultResponse DescribeImageRegistryConnectivityTaskResultSync(DescribeImageRegistryConnectivityTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryConnectivityTaskResultResponse>(req, "DescribeImageRegistryConnectivityTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryListResponse"/></returns>
+        public Task<DescribeImageRegistryListResponse> DescribeImageRegistryList(DescribeImageRegistryListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryListResponse>(req, "DescribeImageRegistryList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryListResponse"/></returns>
+        public DescribeImageRegistryListResponse DescribeImageRegistryListSync(DescribeImageRegistryListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryListResponse>(req, "DescribeImageRegistryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>
+        public Task<DescribeImageRegistryNamespaceListResponse> DescribeImageRegistryNamespaceList(DescribeImageRegistryNamespaceListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryNamespaceListResponse>(req, "DescribeImageRegistryNamespaceList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>
+        public DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceListSync(DescribeImageRegistryNamespaceListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryNamespaceListResponse>(req, "DescribeImageRegistryNamespaceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库扫描子任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryScanSubTaskListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryScanSubTaskListResponse"/></returns>
+        public Task<DescribeImageRegistryScanSubTaskListResponse> DescribeImageRegistryScanSubTaskList(DescribeImageRegistryScanSubTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryScanSubTaskListResponse>(req, "DescribeImageRegistryScanSubTaskList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库扫描子任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryScanSubTaskListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryScanSubTaskListResponse"/></returns>
+        public DescribeImageRegistryScanSubTaskListResponse DescribeImageRegistryScanSubTaskListSync(DescribeImageRegistryScanSubTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryScanSubTaskListResponse>(req, "DescribeImageRegistryScanSubTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库镜像扫描任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryScanTaskListResponse"/></returns>
+        public Task<DescribeImageRegistryScanTaskListResponse> DescribeImageRegistryScanTaskList(DescribeImageRegistryScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryScanTaskListResponse>(req, "DescribeImageRegistryScanTaskList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库镜像扫描任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryScanTaskListResponse"/></returns>
+        public DescribeImageRegistryScanTaskListResponse DescribeImageRegistryScanTaskListSync(DescribeImageRegistryScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryScanTaskListResponse>(req, "DescribeImageRegistryScanTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public Task<DescribeImageRegistryTimedScanTaskConfigResponse> DescribeImageRegistryTimedScanTaskConfig(DescribeImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryTimedScanTaskConfigResponse>(req, "DescribeImageRegistryTimedScanTaskConfig");
+        }
+
+        /// <summary>
+        /// 查看镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public DescribeImageRegistryTimedScanTaskConfigResponse DescribeImageRegistryTimedScanTaskConfigSync(DescribeImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryTimedScanTaskConfigResponse>(req, "DescribeImageRegistryTimedScanTaskConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库定时扫描任务预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryTimedScanTaskPreviewRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryTimedScanTaskPreviewResponse"/></returns>
+        public Task<DescribeImageRegistryTimedScanTaskPreviewResponse> DescribeImageRegistryTimedScanTaskPreview(DescribeImageRegistryTimedScanTaskPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryTimedScanTaskPreviewResponse>(req, "DescribeImageRegistryTimedScanTaskPreview");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库定时扫描任务预览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryTimedScanTaskPreviewRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryTimedScanTaskPreviewResponse"/></returns>
+        public DescribeImageRegistryTimedScanTaskPreviewResponse DescribeImageRegistryTimedScanTaskPreviewSync(DescribeImageRegistryTimedScanTaskPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeImageRegistryTimedScanTaskPreviewResponse>(req, "DescribeImageRegistryTimedScanTaskPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像敏感信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageSensitiveInfoListRequest"/></param>
+        /// <returns><see cref="DescribeImageSensitiveInfoListResponse"/></returns>
+        public Task<DescribeImageSensitiveInfoListResponse> DescribeImageSensitiveInfoList(DescribeImageSensitiveInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageSensitiveInfoListResponse>(req, "DescribeImageSensitiveInfoList");
+        }
+
+        /// <summary>
+        /// 查询镜像敏感信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageSensitiveInfoListRequest"/></param>
+        /// <returns><see cref="DescribeImageSensitiveInfoListResponse"/></returns>
+        public DescribeImageSensitiveInfoListResponse DescribeImageSensitiveInfoListSync(DescribeImageSensitiveInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageSensitiveInfoListResponse>(req, "DescribeImageSensitiveInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageSensitiveWhitelistResponse"/></returns>
+        public Task<DescribeImageSensitiveWhitelistResponse> DescribeImageSensitiveWhitelist(DescribeImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageSensitiveWhitelistResponse>(req, "DescribeImageSensitiveWhitelist");
+        }
+
+        /// <summary>
+        /// 查询容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageSensitiveWhitelistResponse"/></returns>
+        public DescribeImageSensitiveWhitelistResponse DescribeImageSensitiveWhitelistSync(DescribeImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageSensitiveWhitelistResponse>(req, "DescribeImageSensitiveWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像木马病毒列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusListRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusListResponse"/></returns>
+        public Task<DescribeImageVirusListResponse> DescribeImageVirusList(DescribeImageVirusListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusListResponse>(req, "DescribeImageVirusList");
+        }
+
+        /// <summary>
+        /// 查询镜像木马病毒列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusListRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusListResponse"/></returns>
+        public DescribeImageVirusListResponse DescribeImageVirusListSync(DescribeImageVirusListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusListResponse>(req, "DescribeImageVirusList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusWhitelistResponse"/></returns>
+        public Task<DescribeImageVirusWhitelistResponse> DescribeImageVirusWhitelist(DescribeImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusWhitelistResponse>(req, "DescribeImageVirusWhitelist");
+        }
+
+        /// <summary>
+        /// 查询镜像木马白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusWhitelistResponse"/></returns>
+        public DescribeImageVirusWhitelistResponse DescribeImageVirusWhitelistSync(DescribeImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusWhitelistResponse>(req, "DescribeImageVirusWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像木马白名单详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusWhitelistDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusWhitelistDetailResponse"/></returns>
+        public Task<DescribeImageVirusWhitelistDetailResponse> DescribeImageVirusWhitelistDetail(DescribeImageVirusWhitelistDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusWhitelistDetailResponse>(req, "DescribeImageVirusWhitelistDetail");
+        }
+
+        /// <summary>
+        /// 查询镜像木马白名单详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVirusWhitelistDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageVirusWhitelistDetailResponse"/></returns>
+        public DescribeImageVirusWhitelistDetailResponse DescribeImageVirusWhitelistDetailSync(DescribeImageVirusWhitelistDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVirusWhitelistDetailResponse>(req, "DescribeImageVirusWhitelistDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulListRequest"/></param>
+        /// <returns><see cref="DescribeImageVulListResponse"/></returns>
+        public Task<DescribeImageVulListResponse> DescribeImageVulList(DescribeImageVulListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulListResponse>(req, "DescribeImageVulList");
+        }
+
+        /// <summary>
+        /// 查询镜像漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulListRequest"/></param>
+        /// <returns><see cref="DescribeImageVulListResponse"/></returns>
+        public DescribeImageVulListResponse DescribeImageVulListSync(DescribeImageVulListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulListResponse>(req, "DescribeImageVulList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像漏洞概览列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeImageVulSummaryListResponse"/></returns>
+        public Task<DescribeImageVulSummaryListResponse> DescribeImageVulSummaryList(DescribeImageVulSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulSummaryListResponse>(req, "DescribeImageVulSummaryList");
+        }
+
+        /// <summary>
+        /// 查询镜像漏洞概览列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeImageVulSummaryListResponse"/></returns>
+        public DescribeImageVulSummaryListResponse DescribeImageVulSummaryListSync(DescribeImageVulSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulSummaryListResponse>(req, "DescribeImageVulSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageVulWhitelistResponse"/></returns>
+        public Task<DescribeImageVulWhitelistResponse> DescribeImageVulWhitelist(DescribeImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulWhitelistResponse>(req, "DescribeImageVulWhitelist");
+        }
+
+        /// <summary>
+        /// 查询容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeImageVulWhitelistResponse"/></returns>
+        public DescribeImageVulWhitelistResponse DescribeImageVulWhitelistSync(DescribeImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeImageVulWhitelistResponse>(req, "DescribeImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 对象存储异常检测调用记录信息
         /// </summary>
         /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
@@ -8255,6 +9578,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取通知设置（云API风险治理）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingAkRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingAkResponse"/></returns>
+        public Task<DescribeNotifySettingAkResponse> DescribeNotifySettingAk(DescribeNotifySettingAkRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingAkResponse>(req, "DescribeNotifySettingAk");
+        }
+
+        /// <summary>
+        /// 获取通知设置（云API风险治理）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotifySettingAkRequest"/></param>
+        /// <returns><see cref="DescribeNotifySettingAkResponse"/></returns>
+        public DescribeNotifySettingAkResponse DescribeNotifySettingAkSync(DescribeNotifySettingAkRequest req)
+        {
+            return InternalRequestAsync<DescribeNotifySettingAkResponse>(req, "DescribeNotifySettingAk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取告警中心通知高级配置
         /// </summary>
         /// <param name="req"><see cref="DescribeNotifySettingAlertRequest"/></param>
@@ -8566,6 +9910,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeRaspLicenseListResponse DescribeRaspLicenseListSync(DescribeRaspLicenseListRequest req)
         {
             return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询仓库总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistryOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRegistryOverviewResponse"/></returns>
+        public Task<DescribeRegistryOverviewResponse> DescribeRegistryOverview(DescribeRegistryOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRegistryOverviewResponse>(req, "DescribeRegistryOverview");
+        }
+
+        /// <summary>
+        /// 查询仓库总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistryOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRegistryOverviewResponse"/></returns>
+        public DescribeRegistryOverviewResponse DescribeRegistryOverviewSync(DescribeRegistryOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRegistryOverviewResponse>(req, "DescribeRegistryOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像仓库地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistryRegionListRequest"/></param>
+        /// <returns><see cref="DescribeRegistryRegionListResponse"/></returns>
+        public Task<DescribeRegistryRegionListResponse> DescribeRegistryRegionList(DescribeRegistryRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeRegistryRegionListResponse>(req, "DescribeRegistryRegionList");
+        }
+
+        /// <summary>
+        /// 查询镜像仓库地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistryRegionListRequest"/></param>
+        /// <returns><see cref="DescribeRegistryRegionListResponse"/></returns>
+        public DescribeRegistryRegionListResponse DescribeRegistryRegionListSync(DescribeRegistryRegionListRequest req)
+        {
+            return InternalRequestAsync<DescribeRegistryRegionListResponse>(req, "DescribeRegistryRegionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9074,6 +10460,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 分页查询 ACL 访问控制告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLAlertListResponse"/></returns>
+        public Task<DescribeSandboxACLAlertListResponse> DescribeSandboxACLAlertList(DescribeSandboxACLAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLAlertListResponse>(req, "DescribeSandboxACLAlertList");
+        }
+
+        /// <summary>
+        /// 分页查询 ACL 访问控制告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLAlertListResponse"/></returns>
+        public DescribeSandboxACLAlertListResponse DescribeSandboxACLAlertListSync(DescribeSandboxACLAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLAlertListResponse>(req, "DescribeSandboxACLAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户的 ACL 用户访问控制规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLRuleListResponse"/></returns>
+        public Task<DescribeSandboxACLRuleListResponse> DescribeSandboxACLRuleList(DescribeSandboxACLRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLRuleListResponse>(req, "DescribeSandboxACLRuleList");
+        }
+
+        /// <summary>
+        /// 查询当前租户的 ACL 用户访问控制规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLRuleListResponse"/></returns>
+        public DescribeSandboxACLRuleListResponse DescribeSandboxACLRuleListSync(DescribeSandboxACLRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLRuleListResponse>(req, "DescribeSandboxACLRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询流量沙箱访问控制（ACL）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLSystemRuleListResponse"/></returns>
+        public Task<DescribeSandboxACLSystemRuleListResponse> DescribeSandboxACLSystemRuleList(DescribeSandboxACLSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLSystemRuleListResponse>(req, "DescribeSandboxACLSystemRuleList");
+        }
+
+        /// <summary>
+        /// 查询流量沙箱访问控制（ACL）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxACLSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxACLSystemRuleListResponse"/></returns>
+        public DescribeSandboxACLSystemRuleListResponse DescribeSandboxACLSystemRuleListSync(DescribeSandboxACLSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxACLSystemRuleListResponse>(req, "DescribeSandboxACLSystemRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPSystemRuleListResponse"/></returns>
+        public Task<DescribeSandboxDLPSystemRuleListResponse> DescribeSandboxDLPSystemRuleList(DescribeSandboxDLPSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPSystemRuleListResponse>(req, "DescribeSandboxDLPSystemRuleList");
+        }
+
+        /// <summary>
+        /// 查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPSystemRuleListResponse"/></returns>
+        public DescribeSandboxDLPSystemRuleListResponse DescribeSandboxDLPSystemRuleListSync(DescribeSandboxDLPSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPSystemRuleListResponse>(req, "DescribeSandboxDLPSystemRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取命令沙箱文件规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxFileRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxFileRuleListResponse"/></returns>
+        public Task<DescribeSandboxFileRuleListResponse> DescribeSandboxFileRuleList(DescribeSandboxFileRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxFileRuleListResponse>(req, "DescribeSandboxFileRuleList");
+        }
+
+        /// <summary>
+        /// 获取命令沙箱文件规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxFileRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxFileRuleListResponse"/></returns>
+        public DescribeSandboxFileRuleListResponse DescribeSandboxFileRuleListSync(DescribeSandboxFileRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxFileRuleListResponse>(req, "DescribeSandboxFileRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取扫描报告列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScanReportListRequest"/></param>
@@ -9284,6 +10775,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询 Skill 安全检测告警详情，包含本地告警信息和引擎实时检测数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanAlertDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanAlertDetailResponse"/></returns>
+        public Task<DescribeSkillScanAlertDetailResponse> DescribeSkillScanAlertDetail(DescribeSkillScanAlertDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanAlertDetailResponse>(req, "DescribeSkillScanAlertDetail");
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测告警详情，包含本地告警信息和引擎实时检测数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanAlertDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanAlertDetailResponse"/></returns>
+        public DescribeSkillScanAlertDetailResponse DescribeSkillScanAlertDetailSync(DescribeSkillScanAlertDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanAlertDetailResponse>(req, "DescribeSkillScanAlertDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测告警列表，支持分页、过滤和排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanAlertListResponse"/></returns>
+        public Task<DescribeSkillScanAlertListResponse> DescribeSkillScanAlertList(DescribeSkillScanAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanAlertListResponse>(req, "DescribeSkillScanAlertList");
+        }
+
+        /// <summary>
+        /// 查询 Skill 安全检测告警列表，支持分页、过滤和排序
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanAlertListResponse"/></returns>
+        public DescribeSkillScanAlertListResponse DescribeSkillScanAlertListSync(DescribeSkillScanAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanAlertListResponse>(req, "DescribeSkillScanAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
@@ -9385,6 +10918,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSubnetAssetsResponse DescribeSubnetAssetsSync(DescribeSubnetAssetsRequest req)
         {
             return InternalRequestAsync<DescribeSubnetAssetsResponse>(req, "DescribeSubnetAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取TCR实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTCRInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeTCRInstanceListResponse"/></returns>
+        public Task<DescribeTCRInstanceListResponse> DescribeTCRInstanceList(DescribeTCRInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeTCRInstanceListResponse>(req, "DescribeTCRInstanceList");
+        }
+
+        /// <summary>
+        /// 获取TCR实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTCRInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeTCRInstanceListResponse"/></returns>
+        public DescribeTCRInstanceListResponse DescribeTCRInstanceListSync(DescribeTCRInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeTCRInstanceListResponse>(req, "DescribeTCRInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -11723,6 +13277,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageRegistryRequest"/></param>
+        /// <returns><see cref="ModifyImageRegistryResponse"/></returns>
+        public Task<ModifyImageRegistryResponse> ModifyImageRegistry(ModifyImageRegistryRequest req)
+        {
+            return InternalRequestAsync<ModifyImageRegistryResponse>(req, "ModifyImageRegistry");
+        }
+
+        /// <summary>
+        /// 修改镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageRegistryRequest"/></param>
+        /// <returns><see cref="ModifyImageRegistryResponse"/></returns>
+        public ModifyImageRegistryResponse ModifyImageRegistrySync(ModifyImageRegistryRequest req)
+        {
+            return InternalRequestAsync<ModifyImageRegistryResponse>(req, "ModifyImageRegistry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="ModifyImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public Task<ModifyImageRegistryTimedScanTaskConfigResponse> ModifyImageRegistryTimedScanTaskConfig(ModifyImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyImageRegistryTimedScanTaskConfigResponse>(req, "ModifyImageRegistryTimedScanTaskConfig");
+        }
+
+        /// <summary>
+        /// 修改镜像仓库定时扫描任务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageRegistryTimedScanTaskConfigRequest"/></param>
+        /// <returns><see cref="ModifyImageRegistryTimedScanTaskConfigResponse"/></returns>
+        public ModifyImageRegistryTimedScanTaskConfigResponse ModifyImageRegistryTimedScanTaskConfigSync(ModifyImageRegistryTimedScanTaskConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyImageRegistryTimedScanTaskConfigResponse>(req, "ModifyImageRegistryTimedScanTaskConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageSensitiveWhitelistResponse"/></returns>
+        public Task<ModifyImageSensitiveWhitelistResponse> ModifyImageSensitiveWhitelist(ModifyImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSensitiveWhitelistResponse>(req, "ModifyImageSensitiveWhitelist");
+        }
+
+        /// <summary>
+        /// 修改容器镜像敏感信息白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSensitiveWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageSensitiveWhitelistResponse"/></returns>
+        public ModifyImageSensitiveWhitelistResponse ModifyImageSensitiveWhitelistSync(ModifyImageSensitiveWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSensitiveWhitelistResponse>(req, "ModifyImageSensitiveWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资产数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageVirusWhitelistResponse"/></returns>
+        public Task<ModifyImageVirusWhitelistResponse> ModifyImageVirusWhitelist(ModifyImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageVirusWhitelistResponse>(req, "ModifyImageVirusWhitelist");
+        }
+
+        /// <summary>
+        /// 查询资产数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageVirusWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageVirusWhitelistResponse"/></returns>
+        public ModifyImageVirusWhitelistResponse ModifyImageVirusWhitelistSync(ModifyImageVirusWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageVirusWhitelistResponse>(req, "ModifyImageVirusWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageVulWhitelistResponse"/></returns>
+        public Task<ModifyImageVulWhitelistResponse> ModifyImageVulWhitelist(ModifyImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageVulWhitelistResponse>(req, "ModifyImageVulWhitelist");
+        }
+
+        /// <summary>
+        /// 修改容器镜像漏洞白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageVulWhitelistRequest"/></param>
+        /// <returns><see cref="ModifyImageVulWhitelistResponse"/></returns>
+        public ModifyImageVulWhitelistResponse ModifyImageVulWhitelistSync(ModifyImageVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<ModifyImageVulWhitelistResponse>(req, "ModifyImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新合并后登录审计白名单信息（服务器列表数目应小于1000）
         /// </summary>
         /// <param name="req"><see cref="ModifyLoginWhiteRecordRequest"/></param>
@@ -11933,6 +13592,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改通知成员账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifyMemberRequest"/></param>
+        /// <returns><see cref="ModifyNotifyMemberResponse"/></returns>
+        public Task<ModifyNotifyMemberResponse> ModifyNotifyMember(ModifyNotifyMemberRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifyMemberResponse>(req, "ModifyNotifyMember");
+        }
+
+        /// <summary>
+        /// 修改通知成员账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifyMemberRequest"/></param>
+        /// <returns><see cref="ModifyNotifyMemberResponse"/></returns>
+        public ModifyNotifyMemberResponse ModifyNotifyMemberSync(ModifyNotifyMemberRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifyMemberResponse>(req, "ModifyNotifyMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改通知设置
         /// </summary>
         /// <param name="req"><see cref="ModifyNotifySettingRequest"/></param>
@@ -11950,6 +13630,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyNotifySettingResponse ModifyNotifySettingSync(ModifyNotifySettingRequest req)
         {
             return InternalRequestAsync<ModifyNotifySettingResponse>(req, "ModifyNotifySetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改通知设置（云API风险治理）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingAkRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingAkResponse"/></returns>
+        public Task<ModifyNotifySettingAkResponse> ModifyNotifySettingAk(ModifyNotifySettingAkRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingAkResponse>(req, "ModifyNotifySettingAk");
+        }
+
+        /// <summary>
+        /// 修改通知设置（云API风险治理）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotifySettingAkRequest"/></param>
+        /// <returns><see cref="ModifyNotifySettingAkResponse"/></returns>
+        public ModifyNotifySettingAkResponse ModifyNotifySettingAkSync(ModifyNotifySettingAkRequest req)
+        {
+            return InternalRequestAsync<ModifyNotifySettingAkResponse>(req, "ModifyNotifySettingAk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12182,6 +13883,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxLLMAuditRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxLLMAuditRuleStatusResponse"/></returns>
+        public Task<ModifySandboxLLMAuditRuleStatusResponse> ModifySandboxLLMAuditRuleStatus(ModifySandboxLLMAuditRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxLLMAuditRuleStatusResponse>(req, "ModifySandboxLLMAuditRuleStatus");
+        }
+
+        /// <summary>
+        /// 批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxLLMAuditRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxLLMAuditRuleStatusResponse"/></returns>
+        public ModifySandboxLLMAuditRuleStatusResponse ModifySandboxLLMAuditRuleStatusSync(ModifySandboxLLMAuditRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxLLMAuditRuleStatusResponse>(req, "ModifySandboxLLMAuditRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改安全评分规则，必须传入完整规则集
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityScoreRuleRequest"/></param>
@@ -12220,6 +13942,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyShareUserCSPMResponse ModifyShareUserCSPMSync(ModifyShareUserCSPMRequest req)
         {
             return InternalRequestAsync<ModifyShareUserCSPMResponse>(req, "ModifyShareUserCSPM")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改 Skill 安全检测告警的处理状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillScanAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifySkillScanAlertStatusResponse"/></returns>
+        public Task<ModifySkillScanAlertStatusResponse> ModifySkillScanAlertStatus(ModifySkillScanAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySkillScanAlertStatusResponse>(req, "ModifySkillScanAlertStatus");
+        }
+
+        /// <summary>
+        /// 批量修改 Skill 安全检测告警的处理状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillScanAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifySkillScanAlertStatusResponse"/></returns>
+        public ModifySkillScanAlertStatusResponse ModifySkillScanAlertStatusSync(ModifySkillScanAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySkillScanAlertStatusResponse>(req, "ModifySkillScanAlertStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12728,6 +14471,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 停止镜像仓库镜像扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="StopImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="StopImageRegistryScanTaskResponse"/></returns>
+        public Task<StopImageRegistryScanTaskResponse> StopImageRegistryScanTask(StopImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopImageRegistryScanTaskResponse>(req, "StopImageRegistryScanTask");
+        }
+
+        /// <summary>
+        /// 停止镜像仓库镜像扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="StopImageRegistryScanTaskRequest"/></param>
+        /// <returns><see cref="StopImageRegistryScanTaskResponse"/></returns>
+        public StopImageRegistryScanTaskResponse StopImageRegistryScanTaskSync(StopImageRegistryScanTaskRequest req)
+        {
+            return InternalRequestAsync<StopImageRegistryScanTaskResponse>(req, "StopImageRegistryScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 关闭防卸载功能
         /// </summary>
         /// <param name="req"><see cref="StopPreventUninstallRequest"/></param>
@@ -12850,6 +14614,27 @@ namespace TencentCloud.Csip.V20221121
         public SyncDspmUsersResponse SyncDspmUsersSync(SyncDspmUsersRequest req)
         {
             return InternalRequestAsync<SyncDspmUsersResponse>(req, "SyncDspmUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 镜像仓库同步
+        /// </summary>
+        /// <param name="req"><see cref="SyncImageRegistryRequest"/></param>
+        /// <returns><see cref="SyncImageRegistryResponse"/></returns>
+        public Task<SyncImageRegistryResponse> SyncImageRegistry(SyncImageRegistryRequest req)
+        {
+            return InternalRequestAsync<SyncImageRegistryResponse>(req, "SyncImageRegistry");
+        }
+
+        /// <summary>
+        /// 镜像仓库同步
+        /// </summary>
+        /// <param name="req"><see cref="SyncImageRegistryRequest"/></param>
+        /// <returns><see cref="SyncImageRegistryResponse"/></returns>
+        public SyncImageRegistryResponse SyncImageRegistrySync(SyncImageRegistryRequest req)
+        {
+            return InternalRequestAsync<SyncImageRegistryResponse>(req, "SyncImageRegistry")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

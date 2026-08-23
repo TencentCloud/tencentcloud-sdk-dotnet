@@ -78,6 +78,54 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ConnectionPoolLimit")]
         public ulong? ConnectionPoolLimit{ get; set; }
 
+        /// <summary>
+        /// <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+        /// </summary>
+        [JsonProperty("RwSplitEnable")]
+        public bool? RwSplitEnable{ get; set; }
+
+        /// <summary>
+        /// <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+        /// </summary>
+        [JsonProperty("WeightMode")]
+        public string WeightMode{ get; set; }
+
+        /// <summary>
+        /// <p>新增只读是否自动加入读写分离</p>
+        /// </summary>
+        [JsonProperty("RoAutoAdd")]
+        public bool? RoAutoAdd{ get; set; }
+
+        /// <summary>
+        /// <p>延迟剔除开关</p>
+        /// </summary>
+        [JsonProperty("LatencyRemove")]
+        public bool? LatencyRemove{ get; set; }
+
+        /// <summary>
+        /// <p>延迟剔除阈值</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("LatencyRemoveTime")]
+        public ulong? LatencyRemoveTime{ get; set; }
+
+        /// <summary>
+        /// <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+        /// </summary>
+        [JsonProperty("MinRouteNum")]
+        public ulong? MinRouteNum{ get; set; }
+
+        /// <summary>
+        /// <p>只读全部异常时是否回切到主</p>
+        /// </summary>
+        [JsonProperty("FailOver")]
+        public bool? FailOver{ get; set; }
+
+        /// <summary>
+        /// <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+        /// </summary>
+        [JsonProperty("LoadBalancePolicy")]
+        public long? LoadBalancePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +141,14 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
             this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
             this.SetParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+            this.SetParamSimple(map, prefix + "RwSplitEnable", this.RwSplitEnable);
+            this.SetParamSimple(map, prefix + "WeightMode", this.WeightMode);
+            this.SetParamSimple(map, prefix + "RoAutoAdd", this.RoAutoAdd);
+            this.SetParamSimple(map, prefix + "LatencyRemove", this.LatencyRemove);
+            this.SetParamSimple(map, prefix + "LatencyRemoveTime", this.LatencyRemoveTime);
+            this.SetParamSimple(map, prefix + "MinRouteNum", this.MinRouteNum);
+            this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
+            this.SetParamSimple(map, prefix + "LoadBalancePolicy", this.LoadBalancePolicy);
         }
     }
 }

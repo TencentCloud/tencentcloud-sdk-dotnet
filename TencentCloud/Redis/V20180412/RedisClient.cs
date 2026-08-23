@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1481";
+       private const string sdkVersion = "SDK_NET_3.0.1494";
 
         /// <summary>
         /// Client constructor.
@@ -2070,6 +2070,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstancePasswordResponse ModifyInstancePasswordSync(ModifyInstancePasswordRequest req)
         {
             return InternalRequestAsync<ModifyInstancePasswordResponse>(req, "ModifyInstancePassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancePasswordPolicy）用于修改实例密码复杂度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordPolicyResponse"/></returns>
+        public Task<ModifyInstancePasswordPolicyResponse> ModifyInstancePasswordPolicy(ModifyInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordPolicyResponse>(req, "ModifyInstancePasswordPolicy");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancePasswordPolicy）用于修改实例密码复杂度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordPolicyResponse"/></returns>
+        public ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicySync(ModifyInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordPolicyResponse>(req, "ModifyInstancePasswordPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

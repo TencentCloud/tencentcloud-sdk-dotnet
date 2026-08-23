@@ -54,6 +54,48 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
+        /// <summary>
+        /// <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p>
+        /// </summary>
+        [JsonProperty("WeightMode")]
+        public string WeightMode{ get; set; }
+
+        /// <summary>
+        /// <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p>
+        /// </summary>
+        [JsonProperty("ProxyAllocation")]
+        public ProxyRoute[] ProxyAllocation{ get; set; }
+
+        /// <summary>
+        /// <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p>
+        /// </summary>
+        [JsonProperty("RoAutoAdd")]
+        public bool? RoAutoAdd{ get; set; }
+
+        /// <summary>
+        /// <p>延迟剔除开关</p>
+        /// </summary>
+        [JsonProperty("LatencyRemove")]
+        public bool? LatencyRemove{ get; set; }
+
+        /// <summary>
+        /// <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("LatencyRemoveTime")]
+        public ulong? LatencyRemoveTime{ get; set; }
+
+        /// <summary>
+        /// <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+        /// </summary>
+        [JsonProperty("MinRouteNum")]
+        public ulong? MinRouteNum{ get; set; }
+
+        /// <summary>
+        /// <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+        /// </summary>
+        [JsonProperty("LoadBalancePolicy")]
+        public long? LoadBalancePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +107,13 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
+            this.SetParamSimple(map, prefix + "WeightMode", this.WeightMode);
+            this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+            this.SetParamSimple(map, prefix + "RoAutoAdd", this.RoAutoAdd);
+            this.SetParamSimple(map, prefix + "LatencyRemove", this.LatencyRemove);
+            this.SetParamSimple(map, prefix + "LatencyRemoveTime", this.LatencyRemoveTime);
+            this.SetParamSimple(map, prefix + "MinRouteNum", this.MinRouteNum);
+            this.SetParamSimple(map, prefix + "LoadBalancePolicy", this.LoadBalancePolicy);
         }
     }
 }

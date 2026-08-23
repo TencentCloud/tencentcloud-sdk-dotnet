@@ -42,6 +42,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
+        /// <summary>
+        /// <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("Force")]
+        public bool? Force{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamSimple(map, prefix + "Force", this.Force);
         }
     }
 }

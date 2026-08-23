@@ -25,51 +25,58 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+        /// <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
         /// <summary>
-        /// 镜像地址
+        /// <p>镜像地址</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// TCR镜像对应的地域
+        /// <p>TCR镜像对应的地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// TCR镜像对应的实例id
+        /// <p>TCR镜像对应的实例id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 是否允许导出全部内容
+        /// <p>是否允许导出全部内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowSaveAllContent")]
         public bool? AllowSaveAllContent{ get; set; }
 
         /// <summary>
-        /// 镜像名称
+        /// <p>镜像名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 是否支持数据构建
+        /// <p>是否支持数据构建</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportDataPipeline")]
         public bool? SupportDataPipeline{ get; set; }
+
+        /// <summary>
+        /// <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageSecret")]
+        public ImageSecret ImageSecret{ get; set; }
 
 
         /// <summary>
@@ -84,6 +91,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
+            this.SetParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// <p>路由状态：available/unavailable</p>
+        /// <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

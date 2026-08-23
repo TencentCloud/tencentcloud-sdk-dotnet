@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1493";
+       private const string sdkVersion = "SDK_NET_3.0.1494";
 
         /// <summary>
         /// Client constructor.
@@ -543,6 +543,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfosSync(DescribeZoneInstanceConfigInfosRequest req)
         {
             return InternalRequestAsync<DescribeZoneInstanceConfigInfosResponse>(req, "DescribeZoneInstanceConfigInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑原生节点 Application Role
+        /// </summary>
+        /// <param name="req"><see cref="DetachApplicationRoleRequest"/></param>
+        /// <returns><see cref="DetachApplicationRoleResponse"/></returns>
+        public Task<DetachApplicationRoleResponse> DetachApplicationRole(DetachApplicationRoleRequest req)
+        {
+            return InternalRequestAsync<DetachApplicationRoleResponse>(req, "DetachApplicationRole");
+        }
+
+        /// <summary>
+        /// 解绑原生节点 Application Role
+        /// </summary>
+        /// <param name="req"><see cref="DetachApplicationRoleRequest"/></param>
+        /// <returns><see cref="DetachApplicationRoleResponse"/></returns>
+        public DetachApplicationRoleResponse DetachApplicationRoleSync(DetachApplicationRoleRequest req)
+        {
+            return InternalRequestAsync<DetachApplicationRoleResponse>(req, "DetachApplicationRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1492";
+       private const string sdkVersion = "SDK_NET_3.0.1494";
 
         /// <summary>
         /// Client constructor.
@@ -1814,6 +1814,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterServerlessScalePlansResponse DescribeClusterServerlessScalePlansSync(DescribeClusterServerlessScalePlansRequest req)
         {
             return InternalRequestAsync<DescribeClusterServerlessScalePlansResponse>(req, "DescribeClusterServerlessScalePlans")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterStorageAutoExpand）用于查询自动库容配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageAutoExpandRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageAutoExpandResponse"/></returns>
+        public Task<DescribeClusterStorageAutoExpandResponse> DescribeClusterStorageAutoExpand(DescribeClusterStorageAutoExpandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterStorageAutoExpandResponse>(req, "DescribeClusterStorageAutoExpand");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterStorageAutoExpand）用于查询自动库容配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageAutoExpandRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageAutoExpandResponse"/></returns>
+        public DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpandSync(DescribeClusterStorageAutoExpandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterStorageAutoExpandResponse>(req, "DescribeClusterStorageAutoExpand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1493</VersionPrefix>
+    <VersionPrefix>3.0.1494</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -838,6 +838,8 @@
     <Compile Include="V20220501\Models\DescribeNodePoolsResponse.cs" />
     <Compile Include="V20220501\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="V20220501\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
+    <Compile Include="V20220501\Models\DetachApplicationRoleRequest.cs" />
+    <Compile Include="V20220501\Models\DetachApplicationRoleResponse.cs" />
     <Compile Include="V20220501\Models\Disk.cs" />
     <Compile Include="V20220501\Models\ExternalNodeInfo.cs" />
     <Compile Include="V20220501\Models\ExternalNodePoolInfo.cs" />

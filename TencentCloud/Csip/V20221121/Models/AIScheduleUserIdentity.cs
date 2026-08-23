@@ -25,43 +25,43 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>账号Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>子账号uin</p>
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>机器人ID</p>
         /// </summary>
         [JsonProperty("BotId")]
         public string BotId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>聊天ID</p>
         /// </summary>
         [JsonProperty("ChatId")]
         public string ChatId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
