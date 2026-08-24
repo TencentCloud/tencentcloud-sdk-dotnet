@@ -25,66 +25,72 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目标识，英文名
+        /// <p>项目标识，英文名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 项目显示名称，可以为中文名
+        /// <p>项目显示名称，可以为中文名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 项目创建人id
+        /// <p>项目创建人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 项目责任人id
+        /// <p>项目责任人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectOwnerUin")]
         public string ProjectOwnerUin{ get; set; }
 
         /// <summary>
-        /// 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+        /// <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+        /// <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectModel")]
         public string ProjectModel{ get; set; }
+
+        /// <summary>
+        /// <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+        /// </summary>
+        [JsonProperty("WorkspaceExt")]
+        public WorkspaceExt[] WorkspaceExt{ get; set; }
 
 
         /// <summary>
@@ -101,6 +107,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ProjectOwnerUin", this.ProjectOwnerUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
+            this.SetParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
         }
     }
 }

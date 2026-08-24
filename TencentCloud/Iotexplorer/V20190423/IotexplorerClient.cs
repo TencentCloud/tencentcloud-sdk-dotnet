@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1493";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -949,6 +949,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建一个 TWeSee 人员，可关联已导入的人脸。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeePersonRequest"/></param>
+        /// <returns><see cref="CreateTWeSeePersonResponse"/></returns>
+        public Task<CreateTWeSeePersonResponse> CreateTWeSeePerson(CreateTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeePersonResponse>(req, "CreateTWeSeePerson");
+        }
+
+        /// <summary>
+        /// 创建一个 TWeSee 人员，可关联已导入的人脸。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTWeSeePersonRequest"/></param>
+        /// <returns><see cref="CreateTWeSeePersonResponse"/></returns>
+        public CreateTWeSeePersonResponse CreateTWeSeePersonSync(CreateTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<CreateTWeSeePersonResponse>(req, "CreateTWeSeePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开通 TWeSee 后付费服务
         /// </summary>
         /// <param name="req"><see cref="CreateTWeSeePostPaidServiceRequest"/></param>
@@ -1449,6 +1470,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeleteTWeSeeCallbackResponse DeleteTWeSeeCallbackSync(DeleteTWeSeeCallbackRequest req)
         {
             return InternalRequestAsync<DeleteTWeSeeCallbackResponse>(req, "DeleteTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定 TWeSee 人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeFaceResponse"/></returns>
+        public Task<DeleteTWeSeeFaceResponse> DeleteTWeSeeFace(DeleteTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeFaceResponse>(req, "DeleteTWeSeeFace");
+        }
+
+        /// <summary>
+        /// 删除指定 TWeSee 人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeeFaceResponse"/></returns>
+        public DeleteTWeSeeFaceResponse DeleteTWeSeeFaceSync(DeleteTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeeFaceResponse>(req, "DeleteTWeSeeFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定 TWeSee 人员，可选择同时删除其关联人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeePersonResponse"/></returns>
+        public Task<DeleteTWeSeePersonResponse> DeleteTWeSeePerson(DeleteTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeePersonResponse>(req, "DeleteTWeSeePerson");
+        }
+
+        /// <summary>
+        /// 删除指定 TWeSee 人员，可选择同时删除其关联人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DeleteTWeSeePersonResponse"/></returns>
+        public DeleteTWeSeePersonResponse DeleteTWeSeePersonSync(DeleteTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DeleteTWeSeePersonResponse>(req, "DeleteTWeSeePerson")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2797,6 +2860,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询指定 TWeSee 人脸详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeFaceResponse"/></returns>
+        public Task<DescribeTWeSeeFaceResponse> DescribeTWeSeeFace(DescribeTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeFaceResponse>(req, "DescribeTWeSeeFace");
+        }
+
+        /// <summary>
+        /// 查询指定 TWeSee 人脸详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeFaceResponse"/></returns>
+        public DescribeTWeSeeFaceResponse DescribeTWeSeeFaceSync(DescribeTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeFaceResponse>(req, "DescribeTWeSeeFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 TWeSee 人员详情及其代表人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeePersonResponse"/></returns>
+        public Task<DescribeTWeSeePersonResponse> DescribeTWeSeePerson(DescribeTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeePersonResponse>(req, "DescribeTWeSeePerson");
+        }
+
+        /// <summary>
+        /// 查询指定 TWeSee 人员详情及其代表人脸。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeePersonResponse"/></returns>
+        public DescribeTWeSeePersonResponse DescribeTWeSeePersonSync(DescribeTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeePersonResponse>(req, "DescribeTWeSeePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 TWeSee 后付费服务
         /// </summary>
         /// <param name="req"><see cref="DescribeTWeSeePostPaidServiceRequest"/></param>
@@ -3704,6 +3809,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 检测图片中的人脸，并返回可用于人员管理的人脸元数据。
+        /// </summary>
+        /// <param name="req"><see cref="ImportTWeSeeFacesRequest"/></param>
+        /// <returns><see cref="ImportTWeSeeFacesResponse"/></returns>
+        public Task<ImportTWeSeeFacesResponse> ImportTWeSeeFaces(ImportTWeSeeFacesRequest req)
+        {
+            return InternalRequestAsync<ImportTWeSeeFacesResponse>(req, "ImportTWeSeeFaces");
+        }
+
+        /// <summary>
+        /// 检测图片中的人脸，并返回可用于人员管理的人脸元数据。
+        /// </summary>
+        /// <param name="req"><see cref="ImportTWeSeeFacesRequest"/></param>
+        /// <returns><see cref="ImportTWeSeeFacesResponse"/></returns>
+        public ImportTWeSeeFacesResponse ImportTWeSeeFacesSync(ImportTWeSeeFacesRequest req)
+        {
+            return InternalRequestAsync<ImportTWeSeeFacesResponse>(req, "ImportTWeSeeFaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 继承云存用户
         /// </summary>
         /// <param name="req"><see cref="InheritCloudStorageUserRequest"/></param>
@@ -4015,6 +4141,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ListTWeSeeCallbackResponse ListTWeSeeCallbackSync(ListTWeSeeCallbackRequest req)
         {
             return InternalRequestAsync<ListTWeSeeCallbackResponse>(req, "ListTWeSeeCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定设备的 TWeSee 人员列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeePersonsRequest"/></param>
+        /// <returns><see cref="ListTWeSeePersonsResponse"/></returns>
+        public Task<ListTWeSeePersonsResponse> ListTWeSeePersons(ListTWeSeePersonsRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeePersonsResponse>(req, "ListTWeSeePersons");
+        }
+
+        /// <summary>
+        /// 查询指定设备的 TWeSee 人员列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListTWeSeePersonsRequest"/></param>
+        /// <returns><see cref="ListTWeSeePersonsResponse"/></returns>
+        public ListTWeSeePersonsResponse ListTWeSeePersonsSync(ListTWeSeePersonsRequest req)
+        {
+            return InternalRequestAsync<ListTWeSeePersonsResponse>(req, "ListTWeSeePersons")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4393,6 +4540,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyTWeSeeConfigResponse ModifyTWeSeeConfigSync(ModifyTWeSeeConfigRequest req)
         {
             return InternalRequestAsync<ModifyTWeSeeConfigResponse>(req, "ModifyTWeSeeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将 TWeSee 人脸关联到指定人员，或修改其代表人脸状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeFaceResponse"/></returns>
+        public Task<ModifyTWeSeeFaceResponse> ModifyTWeSeeFace(ModifyTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeFaceResponse>(req, "ModifyTWeSeeFace");
+        }
+
+        /// <summary>
+        /// 将 TWeSee 人脸关联到指定人员，或修改其代表人脸状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeeFaceRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeeFaceResponse"/></returns>
+        public ModifyTWeSeeFaceResponse ModifyTWeSeeFaceSync(ModifyTWeSeeFaceRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeeFaceResponse>(req, "ModifyTWeSeeFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改指定 TWeSee 人员的名称或记忆状态。Name、IsRemembered 至少传入一项，不支持取消持久记忆。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeePersonRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeePersonResponse"/></returns>
+        public Task<ModifyTWeSeePersonResponse> ModifyTWeSeePerson(ModifyTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeePersonResponse>(req, "ModifyTWeSeePerson");
+        }
+
+        /// <summary>
+        /// 修改指定 TWeSee 人员的名称或记忆状态。Name、IsRemembered 至少传入一项，不支持取消持久记忆。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTWeSeePersonRequest"/></param>
+        /// <returns><see cref="ModifyTWeSeePersonResponse"/></returns>
+        public ModifyTWeSeePersonResponse ModifyTWeSeePersonSync(ModifyTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<ModifyTWeSeePersonResponse>(req, "ModifyTWeSeePerson")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

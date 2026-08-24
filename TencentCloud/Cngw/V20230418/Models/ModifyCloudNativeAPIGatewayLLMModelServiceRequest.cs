@@ -192,6 +192,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// <p>自定义供应商名称</p>
+        /// </summary>
+        [JsonProperty("CustomProviderName")]
+        public string CustomProviderName{ get; set; }
+
+        /// <summary>
+        /// <p>负载均衡配置</p>
+        /// </summary>
+        [JsonProperty("LoadBalanceConfig")]
+        public AIGWLoadBalanceConfig LoadBalanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +238,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
+            this.SetParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
         }
     }
 }

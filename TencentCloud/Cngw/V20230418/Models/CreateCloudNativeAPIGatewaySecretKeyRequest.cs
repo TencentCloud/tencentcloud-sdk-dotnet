@@ -102,6 +102,42 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("SecretValue")]
         public string SecretValue{ get; set; }
 
+        /// <summary>
+        /// <p>AK/SK凭证配置</p>
+        /// </summary>
+        [JsonProperty("AKSKCredentialConfig")]
+        public AIGWAKSKCredentialConfig AKSKCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CAM凭证配置</p>
+        /// </summary>
+        [JsonProperty("CAMCredentialConfig")]
+        public AIGWCAMCredentialConfig CAMCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Bearer Token凭证配置</p>
+        /// </summary>
+        [JsonProperty("BearerTokenCredentialConfig")]
+        public AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Header凭证配置</p>
+        /// </summary>
+        [JsonProperty("CustomHeaderCredentialConfig")]
+        public AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Query参数凭证配置</p>
+        /// </summary>
+        [JsonProperty("QueryParamCredentialConfig")]
+        public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Basic Auth凭证配置</p>
+        /// </summary>
+        [JsonProperty("BasicCredentialConfig")]
+        public AIGWBasicCredentialConfig BasicCredentialConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +157,12 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
+            this.SetParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+            this.SetParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+            this.SetParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+            this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+            this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+            this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
         }
     }
 }

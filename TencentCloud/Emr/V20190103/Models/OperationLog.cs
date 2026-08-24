@@ -25,58 +25,64 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// EMR实例ID
+        /// <p>EMR实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public long? InstanceId{ get; set; }
 
         /// <summary>
-        /// 操作名称
+        /// <p>操作名称</p>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 操作类型
+        /// <p>操作类型</p>
         /// </summary>
         [JsonProperty("OperationType")]
         public long? OperationType{ get; set; }
 
         /// <summary>
-        /// 用户类型
+        /// <p>用户类型</p>
         /// </summary>
         [JsonProperty("UserType")]
         public long? UserType{ get; set; }
 
         /// <summary>
-        /// 操作者
+        /// <p>操作者</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 操作时间
+        /// <p>操作时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 操作对象
+        /// <p>操作对象</p>
         /// </summary>
         [JsonProperty("Operand")]
         public string Operand{ get; set; }
 
         /// <summary>
-        /// 操作详情
+        /// <p>操作详情</p>
         /// </summary>
         [JsonProperty("OperationDesc")]
         public string OperationDesc{ get; set; }
 
         /// <summary>
-        /// 安全级别
+        /// <p>安全级别</p>
         /// </summary>
         [JsonProperty("SecurityLevel")]
         public string SecurityLevel{ get; set; }
+
+        /// <summary>
+        /// <p>操作者名称</p>
+        /// </summary>
+        [JsonProperty("OperatorName")]
+        public string OperatorName{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Operand", this.Operand);
             this.SetParamSimple(map, prefix + "OperationDesc", this.OperationDesc);
             this.SetParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
+            this.SetParamSimple(map, prefix + "OperatorName", this.OperatorName);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>用户账号 ID ，例如：10000000</p>
+        /// <p>用户子账号 ID ，例如：10000000</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

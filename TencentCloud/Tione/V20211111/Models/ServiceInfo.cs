@@ -297,6 +297,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }
 
+        /// <summary>
+        /// <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+        /// </summary>
+        [JsonProperty("InferTemplateId")]
+        public string InferTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -344,6 +350,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
             this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
         }
     }
 }

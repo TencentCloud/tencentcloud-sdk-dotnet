@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1478</VersionPrefix>
+    <VersionPrefix>3.0.1495</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,14 +49,20 @@
   <ItemGroup>
     <Compile Include="V20250920\AgsClient.cs" />
     <Compile Include="V20250920\Models\APIKeyInfo.cs" />
+    <Compile Include="V20250920\Models\AcquireDeploymentTokenRequest.cs" />
+    <Compile Include="V20250920\Models\AcquireDeploymentTokenResponse.cs" />
     <Compile Include="V20250920\Models\AcquireSandboxInstanceTokenRequest.cs" />
     <Compile Include="V20250920\Models\AcquireSandboxInstanceTokenResponse.cs" />
+    <Compile Include="V20250920\Models\AffinityConfiguration.cs" />
     <Compile Include="V20250920\Models\AgentBucketStorageSource.cs" />
     <Compile Include="V20250920\Models\CLSConfig.cs" />
     <Compile Include="V20250920\Models\CfsStorageSource.cs" />
+    <Compile Include="V20250920\Models\ComputerConfiguration.cs" />
     <Compile Include="V20250920\Models\CosStorageSource.cs" />
     <Compile Include="V20250920\Models\CreateAPIKeyRequest.cs" />
     <Compile Include="V20250920\Models\CreateAPIKeyResponse.cs" />
+    <Compile Include="V20250920\Models\CreateDeploymentRequest.cs" />
+    <Compile Include="V20250920\Models\CreateDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\CreatePreCacheImageTaskRequest.cs" />
     <Compile Include="V20250920\Models\CreatePreCacheImageTaskResponse.cs" />
     <Compile Include="V20250920\Models\CreateSandboxToolRequest.cs" />
@@ -66,10 +72,17 @@
     <Compile Include="V20250920\Models\DNSConfig.cs" />
     <Compile Include="V20250920\Models\DeleteAPIKeyRequest.cs" />
     <Compile Include="V20250920\Models\DeleteAPIKeyResponse.cs" />
+    <Compile Include="V20250920\Models\DeleteDeploymentRequest.cs" />
+    <Compile Include="V20250920\Models\DeleteDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\DeleteSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\DeleteSandboxToolResponse.cs" />
+    <Compile Include="V20250920\Models\Deployment.cs" />
     <Compile Include="V20250920\Models\DescribeAPIKeyListRequest.cs" />
     <Compile Include="V20250920\Models\DescribeAPIKeyListResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeDeploymentListRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeDeploymentListResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeDeploymentRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskRequest.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskResponse.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxInstanceListRequest.cs" />
@@ -80,9 +93,12 @@
     <Compile Include="V20250920\Models\Filter.cs" />
     <Compile Include="V20250920\Models\HttpGetAction.cs" />
     <Compile Include="V20250920\Models\ImageStorageSource.cs" />
+    <Compile Include="V20250920\Models\LifecycleConfiguration.cs" />
     <Compile Include="V20250920\Models\LogConfiguration.cs" />
     <Compile Include="V20250920\Models\LogSources.cs" />
     <Compile Include="V20250920\Models\MetadataVar.cs" />
+    <Compile Include="V20250920\Models\ModifyDeploymentRequest.cs" />
+    <Compile Include="V20250920\Models\ModifyDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\MountOption.cs" />
     <Compile Include="V20250920\Models\NetworkConfiguration.cs" />
     <Compile Include="V20250920\Models\PauseSandboxInstanceRequest.cs" />
@@ -94,6 +110,7 @@
     <Compile Include="V20250920\Models\ResumeSandboxInstanceResponse.cs" />
     <Compile Include="V20250920\Models\SandboxInstance.cs" />
     <Compile Include="V20250920\Models\SandboxTool.cs" />
+    <Compile Include="V20250920\Models\ScalingConfiguration.cs" />
     <Compile Include="V20250920\Models\StartSandboxInstanceRequest.cs" />
     <Compile Include="V20250920\Models\StartSandboxInstanceResponse.cs" />
     <Compile Include="V20250920\Models\StopSandboxInstanceRequest.cs" />
@@ -106,5 +123,6 @@
     <Compile Include="V20250920\Models\UpdateSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\UpdateSandboxToolResponse.cs" />
     <Compile Include="V20250920\Models\VPCConfig.cs" />
+    <Compile Include="V20250920\Models\WAAConfiguration.cs" />
   </ItemGroup>
 </Project>

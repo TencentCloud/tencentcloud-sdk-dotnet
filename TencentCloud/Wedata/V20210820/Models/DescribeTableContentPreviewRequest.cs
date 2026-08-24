@@ -102,6 +102,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EngineId")]
         public string EngineId{ get; set; }
 
+        /// <summary>
+        /// <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "Sql", this.Sql);
             this.SetParamSimple(map, prefix + "EngineId", this.EngineId);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         }
     }
 }

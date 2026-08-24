@@ -150,6 +150,30 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ForwardDesensitizeConfig")]
         public AIGWForwardDesensitizeConfig ForwardDesensitizeConfig{ get; set; }
 
+        /// <summary>
+        /// <p>rerank documents 上限</p>
+        /// </summary>
+        [JsonProperty("MaxDocumentsConfig")]
+        public AIGWRerankMaxDocumentsConfig MaxDocumentsConfig{ get; set; }
+
+        /// <summary>
+        /// <p>敏感词路由配置</p>
+        /// </summary>
+        [JsonProperty("SensitiveWordRoute")]
+        public AIGWSensitiveWordRoute SensitiveWordRoute{ get; set; }
+
+        /// <summary>
+        /// <p>消费者组模型范围</p>
+        /// </summary>
+        [JsonProperty("ConsumerGroupModelScopes")]
+        public AIGWAuthModelScopeItem[] ConsumerGroupModelScopes{ get; set; }
+
+        /// <summary>
+        /// <p>消费者继承的模型范围</p>
+        /// </summary>
+        [JsonProperty("ConsumerInheritModelScope")]
+        public AIGWConsumerModelScope ConsumerInheritModelScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +201,10 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
             this.SetParamObj(map, prefix + "LogDesensitizeConfig.", this.LogDesensitizeConfig);
             this.SetParamObj(map, prefix + "ForwardDesensitizeConfig.", this.ForwardDesensitizeConfig);
+            this.SetParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
+            this.SetParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
+            this.SetParamArrayObj(map, prefix + "ConsumerGroupModelScopes.", this.ConsumerGroupModelScopes);
+            this.SetParamObj(map, prefix + "ConsumerInheritModelScope.", this.ConsumerInheritModelScope);
         }
     }
 }

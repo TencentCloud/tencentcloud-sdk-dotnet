@@ -192,6 +192,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ExternalInstanceId")]
         public string ExternalInstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
+        /// </summary>
+        [JsonProperty("CustomProviderName")]
+        public string CustomProviderName{ get; set; }
+
+        /// <summary>
+        /// <p>负载均衡配置</p>
+        /// </summary>
+        [JsonProperty("LoadBalanceConfig")]
+        public AIGWLoadBalanceConfig LoadBalanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +238,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
             this.SetParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+            this.SetParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
+            this.SetParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
         }
     }
 }

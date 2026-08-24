@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1491</VersionPrefix>
+    <VersionPrefix>3.0.1495</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -690,6 +690,7 @@
     <Compile Include="V20250806\Models\WorkflowSchedulerConfiguration.cs" />
     <Compile Include="V20250806\Models\WorkflowSchedulerConfigurationInfo.cs" />
     <Compile Include="V20250806\Models\WorkflowTriggerConfig.cs" />
+    <Compile Include="V20250806\Models\WorkspaceExt.cs" />
     <Compile Include="V20210820\WedataClient.cs" />
     <Compile Include="V20210820\Models\AddProjectUserRoleRequest.cs" />
     <Compile Include="V20210820\Models\AddProjectUserRoleResponse.cs" />

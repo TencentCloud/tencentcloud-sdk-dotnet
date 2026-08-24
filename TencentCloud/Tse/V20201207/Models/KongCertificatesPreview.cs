@@ -25,72 +25,88 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 证书名称
+        /// <p>证书名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Id
+        /// <p>Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 绑定的域名
+        /// <p>绑定的域名</p>
         /// </summary>
         [JsonProperty("BindDomains")]
         public string[] BindDomains{ get; set; }
 
         /// <summary>
-        /// 证书状态：expired(已过期)
-        ///                    active(生效中)
+        /// <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 证书pem格式
+        /// <p>证书pem格式</p>
         /// </summary>
         [JsonProperty("Crt")]
         public string Crt{ get; set; }
 
         /// <summary>
-        /// 证书私钥
+        /// <p>证书私钥</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 证书过期时间
+        /// <p>证书过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 证书上传时间
+        /// <p>证书上传时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 证书签发时间
+        /// <p>证书签发时间</p>
         /// </summary>
         [JsonProperty("IssueTime")]
         public string IssueTime{ get; set; }
 
         /// <summary>
-        /// 证书来源：native(kong自定义证书)
-        ///                     ssl(ssl平台证书)
+        /// <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
         /// </summary>
         [JsonProperty("CertSource")]
         public string CertSource{ get; set; }
 
         /// <summary>
-        /// ssl平台证书Id
+        /// <p>ssl平台证书Id</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertType")]
+        public string CertType{ get; set; }
+
+        /// <summary>
+        /// <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertUsage")]
+        public string CertUsage{ get; set; }
+
+        /// <summary>
+        /// <p>证书被引用的次数</p>
+        /// </summary>
+        [JsonProperty("ReferCount")]
+        public ulong? ReferCount{ get; set; }
 
 
         /// <summary>
@@ -109,6 +125,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "IssueTime", this.IssueTime);
             this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "CertUsage", this.CertUsage);
+            this.SetParamSimple(map, prefix + "ReferCount", this.ReferCount);
         }
     }
 }

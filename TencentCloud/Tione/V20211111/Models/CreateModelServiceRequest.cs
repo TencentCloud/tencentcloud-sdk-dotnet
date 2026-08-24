@@ -306,6 +306,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceSupplyAttribute")]
         public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
 
+        /// <summary>
+        /// <p>推理模板 ID</p>
+        /// </summary>
+        [JsonProperty("InferTemplateId")]
+        public string InferTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -359,6 +365,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
             this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+            this.SetParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
         }
     }
 }

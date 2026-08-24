@@ -102,6 +102,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("HealthCheck")]
         public AIGWHealthCheckSetting HealthCheck{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启保留原Host功能</p>
+        /// </summary>
+        [JsonProperty("PreserveHost")]
+        public bool? PreserveHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+            this.SetParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
         }
     }
 }

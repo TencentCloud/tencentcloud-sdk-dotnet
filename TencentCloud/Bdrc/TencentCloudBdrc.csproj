@@ -1,0 +1,268 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{50082A07-4E5E-30DC-A824-787273FE6B94}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1495</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Bdrc</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260330\BdrcClient.cs" />
+    <Compile Include="V20260330\Models\AdvancedRetentionPolicy.cs" />
+    <Compile Include="V20260330\Models\ApplyBackupGroupRequest.cs" />
+    <Compile Include="V20260330\Models\ApplyBackupGroupResponse.cs" />
+    <Compile Include="V20260330\Models\ApplyDisk.cs" />
+    <Compile Include="V20260330\Models\AspInfo.cs" />
+    <Compile Include="V20260330\Models\AutoBackupPolicy.cs" />
+    <Compile Include="V20260330\Models\AutomationServiceEnabled.cs" />
+    <Compile Include="V20260330\Models\BackupDeniedAction.cs" />
+    <Compile Include="V20260330\Models\BackupDetail.cs" />
+    <Compile Include="V20260330\Models\BackupGroup.cs" />
+    <Compile Include="V20260330\Models\BackupGroupDeniedAction.cs" />
+    <Compile Include="V20260330\Models\BackupGroupRollbackTask.cs" />
+    <Compile Include="V20260330\Models\BackupInfo.cs" />
+    <Compile Include="V20260330\Models\BackupInstance.cs" />
+    <Compile Include="V20260330\Models\BackupPlan.cs" />
+    <Compile Include="V20260330\Models\BackupPolicyOverview.cs" />
+    <Compile Include="V20260330\Models\BackupVault.cs" />
+    <Compile Include="V20260330\Models\BackupVaultOverview.cs" />
+    <Compile Include="V20260330\Models\BasicServicesSettings.cs" />
+    <Compile Include="V20260330\Models\BindAutoBackupPolicyRequest.cs" />
+    <Compile Include="V20260330\Models\BindAutoBackupPolicyResponse.cs" />
+    <Compile Include="V20260330\Models\CommonBackupPoint.cs" />
+    <Compile Include="V20260330\Models\CopyPair.cs" />
+    <Compile Include="V20260330\Models\CopyPairDeniedAction.cs" />
+    <Compile Include="V20260330\Models\CopyPairPrice.cs" />
+    <Compile Include="V20260330\Models\CopyPairPriceDetail.cs" />
+    <Compile Include="V20260330\Models\CreateAutoBackupPolicyRequest.cs" />
+    <Compile Include="V20260330\Models\CreateAutoBackupPolicyResponse.cs" />
+    <Compile Include="V20260330\Models\CreateBackupGroupRequest.cs" />
+    <Compile Include="V20260330\Models\CreateBackupGroupResponse.cs" />
+    <Compile Include="V20260330\Models\CreateBackupVaultRequest.cs" />
+    <Compile Include="V20260330\Models\CreateBackupVaultResponse.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoveryProtectGroupRequest.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoveryProtectGroupResponse.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoverySitePairRequest.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoverySitePairResponse.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoveryVpcMappingRequest.cs" />
+    <Compile Include="V20260330\Models\CreateDisasterRecoveryVpcMappingResponse.cs" />
+    <Compile Include="V20260330\Models\CreateFileBackupPlanRequest.cs" />
+    <Compile Include="V20260330\Models\CreateFileBackupPlanResponse.cs" />
+    <Compile Include="V20260330\Models\CreateFileBackupRequest.cs" />
+    <Compile Include="V20260330\Models\CreateFileBackupResponse.cs" />
+    <Compile Include="V20260330\Models\CreateFileRestoreTaskRequest.cs" />
+    <Compile Include="V20260330\Models\CreateFileRestoreTaskResponse.cs" />
+    <Compile Include="V20260330\Models\CreateInstanceCopyPairRequest.cs" />
+    <Compile Include="V20260330\Models\CreateInstanceCopyPairResponse.cs" />
+    <Compile Include="V20260330\Models\CreateInstanceDrillPairsRequest.cs" />
+    <Compile Include="V20260330\Models\CreateInstanceDrillPairsResponse.cs" />
+    <Compile Include="V20260330\Models\CreateInstanceModel.cs" />
+    <Compile Include="V20260330\Models\CreateSecurityGroupMappingRequest.cs" />
+    <Compile Include="V20260330\Models\CreateSecurityGroupMappingResponse.cs" />
+    <Compile Include="V20260330\Models\CrossCloudDetails.cs" />
+    <Compile Include="V20260330\Models\DeleteAutoBackupPoliciesRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteAutoBackupPoliciesResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteBackupGroupsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteBackupGroupsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteBackupVaultsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteBackupVaultsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteCopyPairsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteCopyPairsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoveryProtectGroupsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoveryProtectGroupsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoverySitePairsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoverySitePairsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoveryVpcMappingRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteDisasterRecoveryVpcMappingResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteDrillPairResult.cs" />
+    <Compile Include="V20260330\Models\DeleteDrillPairsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteDrillPairsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteFileBackupPlansRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteFileBackupPlansResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteFileBackupsRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteFileBackupsResponse.cs" />
+    <Compile Include="V20260330\Models\DeleteSecurityGroupMappingRequest.cs" />
+    <Compile Include="V20260330\Models\DeleteSecurityGroupMappingResponse.cs" />
+    <Compile Include="V20260330\Models\DeniedAction.cs" />
+    <Compile Include="V20260330\Models\DescribeAutoBackupPoliciesRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeAutoBackupPoliciesResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupRollbackTasksRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupRollbackTasksResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupGroupsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupInstancesRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupInstancesResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupOverviewGeneralRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupOverviewGeneralResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupPlansRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupPlansResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupVaultsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupVaultsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupVaultsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeBackupVaultsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeCommonBackupPointsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeCommonBackupPointsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeCopyPairsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeCopyPairsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeCopyPairsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeCopyPairsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryDrillGroupsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryDrillGroupsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryOverviewRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryOverviewResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryProtectGroupsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoveryProtectGroupsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySitePairsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySitePairsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySitePairsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySitePairsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySupportRegionRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisasterRecoverySupportRegionResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDisksRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDisksResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDrillPairsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDrillPairsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeDrillPairsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeDrillPairsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupObjectsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupObjectsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupPlansRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupPlansResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeFileBackupsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeFileRestoreTasksRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeFileRestoreTasksResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeJobsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeJobsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribePriceCreateCopyPairsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribePriceCreateCopyPairsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeProtectGroupsDeniedActionsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeProtectGroupsDeniedActionsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeProtectedInstancesRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeProtectedInstancesResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeSecurityGroupMappingsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeSecurityGroupMappingsResponse.cs" />
+    <Compile Include="V20260330\Models\DescribeVpcMappingsRequest.cs" />
+    <Compile Include="V20260330\Models\DescribeVpcMappingsResponse.cs" />
+    <Compile Include="V20260330\Models\DisasterRecoveryDrillGroup.cs" />
+    <Compile Include="V20260330\Models\DisasterRecoveryOverview.cs" />
+    <Compile Include="V20260330\Models\DiskCopyPairForCvm.cs" />
+    <Compile Include="V20260330\Models\DiskInfo.cs" />
+    <Compile Include="V20260330\Models\DiskModel.cs" />
+    <Compile Include="V20260330\Models\DrillPair.cs" />
+    <Compile Include="V20260330\Models\DrillPairDeniedAction.cs" />
+    <Compile Include="V20260330\Models\DrilledResourceStatus.cs" />
+    <Compile Include="V20260330\Models\EnhancedService.cs" />
+    <Compile Include="V20260330\Models\FileBackupOverview.cs" />
+    <Compile Include="V20260330\Models\FilterModel.cs" />
+    <Compile Include="V20260330\Models\FinishFailoverCopyPairsRequest.cs" />
+    <Compile Include="V20260330\Models\FinishFailoverCopyPairsResponse.cs" />
+    <Compile Include="V20260330\Models\FlowControlRule.cs" />
+    <Compile Include="V20260330\Models\InstanceBackupOverview.cs" />
+    <Compile Include="V20260330\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20260330\Models\InternetAccessible.cs" />
+    <Compile Include="V20260330\Models\LoginSettings.cs" />
+    <Compile Include="V20260330\Models\ModifyAutoBackupPolicyAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyAutoBackupPolicyAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyBackupAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyBackupAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyBackupVaultAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyBackupVaultAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyCopyPairAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyCopyPairAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyDrillGroupAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyDrillGroupAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyDrillPairAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyDrillPairAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyFileBackupAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyFileBackupAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyFileBackupPlanRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyFileBackupPlanResponse.cs" />
+    <Compile Include="V20260330\Models\ModifyProtectGroupAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifyProtectGroupAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\ModifySitePairAttributeRequest.cs" />
+    <Compile Include="V20260330\Models\ModifySitePairAttributeResponse.cs" />
+    <Compile Include="V20260330\Models\Placement.cs" />
+    <Compile Include="V20260330\Models\PlanInfo.cs" />
+    <Compile Include="V20260330\Models\Policy.cs" />
+    <Compile Include="V20260330\Models\ProtectGroup.cs" />
+    <Compile Include="V20260330\Models\ProtectGroupDeniedAction.cs" />
+    <Compile Include="V20260330\Models\ProtectInstance.cs" />
+    <Compile Include="V20260330\Models\ProtectedResource.cs" />
+    <Compile Include="V20260330\Models\ProtectedResourceOverview.cs" />
+    <Compile Include="V20260330\Models\ProtectedResourceStatus.cs" />
+    <Compile Include="V20260330\Models\ReportAgentMetricsRequest.cs" />
+    <Compile Include="V20260330\Models\ReportAgentMetricsResponse.cs" />
+    <Compile Include="V20260330\Models\ReportGatewayHeartbeatRequest.cs" />
+    <Compile Include="V20260330\Models\ReportGatewayHeartbeatResponse.cs" />
+    <Compile Include="V20260330\Models\ReportJobProgressRequest.cs" />
+    <Compile Include="V20260330\Models\ReportJobProgressResponse.cs" />
+    <Compile Include="V20260330\Models\ResourcePlan.cs" />
+    <Compile Include="V20260330\Models\ResourceProtectStat.cs" />
+    <Compile Include="V20260330\Models\RestoreTask.cs" />
+    <Compile Include="V20260330\Models\RunCopyPairTasksRequest.cs" />
+    <Compile Include="V20260330\Models\RunCopyPairTasksResponse.cs" />
+    <Compile Include="V20260330\Models\RunFailoverCopyPairsRequest.cs" />
+    <Compile Include="V20260330\Models\RunFailoverCopyPairsResponse.cs" />
+    <Compile Include="V20260330\Models\RunInstancesWithBackupGroupRequest.cs" />
+    <Compile Include="V20260330\Models\RunInstancesWithBackupGroupResponse.cs" />
+    <Compile Include="V20260330\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20260330\Models\SecurityGroupMapping.cs" />
+    <Compile Include="V20260330\Models\SitePair.cs" />
+    <Compile Include="V20260330\Models\SitePairDeniedAction.cs" />
+    <Compile Include="V20260330\Models\StopCopyPairTasksRequest.cs" />
+    <Compile Include="V20260330\Models\StopCopyPairTasksResponse.cs" />
+    <Compile Include="V20260330\Models\SupportRegionInfo.cs" />
+    <Compile Include="V20260330\Models\SupportZoneRule.cs" />
+    <Compile Include="V20260330\Models\TypeCount.cs" />
+    <Compile Include="V20260330\Models\UnbindAutoBackupPolicyRequest.cs" />
+    <Compile Include="V20260330\Models\UnbindAutoBackupPolicyResponse.cs" />
+    <Compile Include="V20260330\Models\VaultDeniedAction.cs" />
+    <Compile Include="V20260330\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20260330\Models\VpcMapping.cs" />
+  </ItemGroup>
+</Project>

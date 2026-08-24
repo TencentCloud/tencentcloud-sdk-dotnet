@@ -97,6 +97,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public CustomConfigurationDetail CustomConfiguration{ get; set; }
 
         /// <summary>
+        /// <p>桌面电脑环境类沙箱配置</p>
+        /// </summary>
+        [JsonProperty("ComputerConfiguration")]
+        public ComputerConfiguration ComputerConfiguration{ get; set; }
+
+        /// <summary>
         /// <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
         /// </summary>
         [JsonProperty("NetworkMode")]
@@ -132,6 +138,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+            this.SetParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);

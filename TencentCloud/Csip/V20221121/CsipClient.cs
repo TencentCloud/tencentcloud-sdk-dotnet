@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -1192,6 +1192,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmAuditFilterStrategyResponse"/></returns>
+        public Task<CreateDspmAuditFilterStrategyResponse> CreateDspmAuditFilterStrategy(CreateDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAuditFilterStrategyResponse>(req, "CreateDspmAuditFilterStrategy");
+        }
+
+        /// <summary>
+        /// 创建Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmAuditFilterStrategyResponse"/></returns>
+        public CreateDspmAuditFilterStrategyResponse CreateDspmAuditFilterStrategySync(CreateDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmAuditFilterStrategyResponse>(req, "CreateDspmAuditFilterStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建日志导出任务
         /// </summary>
         /// <param name="req"><see cref="CreateDspmExportTaskRequest"/></param>
@@ -1402,6 +1423,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建Dspm实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmResourceRequest"/></param>
+        /// <returns><see cref="CreateDspmResourceResponse"/></returns>
+        public Task<CreateDspmResourceResponse> CreateDspmResource(CreateDspmResourceRequest req)
+        {
+            return InternalRequestAsync<CreateDspmResourceResponse>(req, "CreateDspmResource");
+        }
+
+        /// <summary>
+        /// 创建Dspm实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmResourceRequest"/></param>
+        /// <returns><see cref="CreateDspmResourceResponse"/></returns>
+        public CreateDspmResourceResponse CreateDspmResourceSync(CreateDspmResourceRequest req)
+        {
+            return InternalRequestAsync<CreateDspmResourceResponse>(req, "CreateDspmResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建Dspm风险导出任务
         /// </summary>
         /// <param name="req"><see cref="CreateDspmRiskExportJobRequest"/></param>
@@ -1419,6 +1461,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateDspmRiskExportJobResponse CreateDspmRiskExportJobSync(CreateDspmRiskExportJobRequest req)
         {
             return InternalRequestAsync<CreateDspmRiskExportJobResponse>(req, "CreateDspmRiskExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Dspm自定义风险策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmRiskStrategyResponse"/></returns>
+        public Task<CreateDspmRiskStrategyResponse> CreateDspmRiskStrategy(CreateDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmRiskStrategyResponse>(req, "CreateDspmRiskStrategy");
+        }
+
+        /// <summary>
+        /// 创建Dspm自定义风险策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDspmRiskStrategyResponse"/></returns>
+        public CreateDspmRiskStrategyResponse CreateDspmRiskStrategySync(CreateDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDspmRiskStrategyResponse>(req, "CreateDspmRiskStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2561,6 +2624,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 删除Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmAuditFilterStrategyResponse"/></returns>
+        public Task<DeleteDspmAuditFilterStrategyResponse> DeleteDspmAuditFilterStrategy(DeleteDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmAuditFilterStrategyResponse>(req, "DeleteDspmAuditFilterStrategy");
+        }
+
+        /// <summary>
+        /// 删除Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmAuditFilterStrategyResponse"/></returns>
+        public DeleteDspmAuditFilterStrategyResponse DeleteDspmAuditFilterStrategySync(DeleteDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmAuditFilterStrategyResponse>(req, "DeleteDspmAuditFilterStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除备份日志
         /// </summary>
         /// <param name="req"><see cref="DeleteDspmBackupLogListRequest"/></param>
@@ -2578,6 +2662,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDspmBackupLogListResponse DeleteDspmBackupLogListSync(DeleteDspmBackupLogListRequest req)
         {
             return InternalRequestAsync<DeleteDspmBackupLogListResponse>(req, "DeleteDspmBackupLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消日志投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmCkafkaConfigRequest"/></param>
+        /// <returns><see cref="DeleteDspmCkafkaConfigResponse"/></returns>
+        public Task<DeleteDspmCkafkaConfigResponse> DeleteDspmCkafkaConfig(DeleteDspmCkafkaConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmCkafkaConfigResponse>(req, "DeleteDspmCkafkaConfig");
+        }
+
+        /// <summary>
+        /// 取消日志投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmCkafkaConfigRequest"/></param>
+        /// <returns><see cref="DeleteDspmCkafkaConfigResponse"/></returns>
+        public DeleteDspmCkafkaConfigResponse DeleteDspmCkafkaConfigSync(DeleteDspmCkafkaConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmCkafkaConfigResponse>(req, "DeleteDspmCkafkaConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2767,6 +2872,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogListSync(DeleteDspmRestoreLogListRequest req)
         {
             return InternalRequestAsync<DeleteDspmRestoreLogListResponse>(req, "DeleteDspmRestoreLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Dspm自定义风险策略。仅支持删除自定义策略（rule_source=custom）；内置策略不可删除，请通过 ModifyDspmRiskStrategy 的 IsEnabled 禁用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmRiskStrategyResponse"/></returns>
+        public Task<DeleteDspmRiskStrategyResponse> DeleteDspmRiskStrategy(DeleteDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmRiskStrategyResponse>(req, "DeleteDspmRiskStrategy");
+        }
+
+        /// <summary>
+        /// 删除Dspm自定义风险策略。仅支持删除自定义策略（rule_source=custom）；内置策略不可删除，请通过 ModifyDspmRiskStrategy 的 IsEnabled 禁用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmRiskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDspmRiskStrategyResponse"/></returns>
+        public DeleteDspmRiskStrategyResponse DeleteDspmRiskStrategySync(DeleteDspmRiskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmRiskStrategyResponse>(req, "DeleteDspmRiskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除dspmg共享账号数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmShareUserDataRequest"/></param>
+        /// <returns><see cref="DeleteDspmShareUserDataResponse"/></returns>
+        public Task<DeleteDspmShareUserDataResponse> DeleteDspmShareUserData(DeleteDspmShareUserDataRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmShareUserDataResponse>(req, "DeleteDspmShareUserData");
+        }
+
+        /// <summary>
+        /// 删除dspmg共享账号数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDspmShareUserDataRequest"/></param>
+        /// <returns><see cref="DeleteDspmShareUserDataResponse"/></returns>
+        public DeleteDspmShareUserDataResponse DeleteDspmShareUserDataSync(DeleteDspmShareUserDataRequest req)
+        {
+            return InternalRequestAsync<DeleteDspmShareUserDataResponse>(req, "DeleteDspmShareUserData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7058,6 +7205,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAuditFilterStrategyResponse"/></returns>
+        public Task<DescribeDspmAuditFilterStrategyResponse> DescribeDspmAuditFilterStrategy(DescribeDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAuditFilterStrategyResponse>(req, "DescribeDspmAuditFilterStrategy");
+        }
+
+        /// <summary>
+        /// 查询dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDspmAuditFilterStrategyResponse"/></returns>
+        public DescribeDspmAuditFilterStrategyResponse DescribeDspmAuditFilterStrategySync(DescribeDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAuditFilterStrategyResponse>(req, "DescribeDspmAuditFilterStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询备份日志列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmBackupLogListRequest"/></param>
@@ -7096,6 +7264,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmBackupSettingResponse DescribeDspmBackupSettingSync(DescribeDspmBackupSettingRequest req)
         {
             return InternalRequestAsync<DescribeDspmBackupSettingResponse>(req, "DescribeDspmBackupSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Ckafka实例的路由信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmCkafkaRouteListRequest"/></param>
+        /// <returns><see cref="DescribeDspmCkafkaRouteListResponse"/></returns>
+        public Task<DescribeDspmCkafkaRouteListResponse> DescribeDspmCkafkaRouteList(DescribeDspmCkafkaRouteListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmCkafkaRouteListResponse>(req, "DescribeDspmCkafkaRouteList");
+        }
+
+        /// <summary>
+        /// 查询Ckafka实例的路由信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmCkafkaRouteListRequest"/></param>
+        /// <returns><see cref="DescribeDspmCkafkaRouteListResponse"/></returns>
+        public DescribeDspmCkafkaRouteListResponse DescribeDspmCkafkaRouteListSync(DescribeDspmCkafkaRouteListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmCkafkaRouteListResponse>(req, "DescribeDspmCkafkaRouteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例的主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmCkafkaTopicListRequest"/></param>
+        /// <returns><see cref="DescribeDspmCkafkaTopicListResponse"/></returns>
+        public Task<DescribeDspmCkafkaTopicListResponse> DescribeDspmCkafkaTopicList(DescribeDspmCkafkaTopicListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmCkafkaTopicListResponse>(req, "DescribeDspmCkafkaTopicList");
+        }
+
+        /// <summary>
+        /// 查询实例的主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmCkafkaTopicListRequest"/></param>
+        /// <returns><see cref="DescribeDspmCkafkaTopicListResponse"/></returns>
+        public DescribeDspmCkafkaTopicListResponse DescribeDspmCkafkaTopicListSync(DescribeDspmCkafkaTopicListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmCkafkaTopicListResponse>(req, "DescribeDspmCkafkaTopicList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7394,6 +7604,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询日志投递的日志类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogDeliveryTypeRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogDeliveryTypeResponse"/></returns>
+        public Task<DescribeDspmLogDeliveryTypeResponse> DescribeDspmLogDeliveryType(DescribeDspmLogDeliveryTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogDeliveryTypeResponse>(req, "DescribeDspmLogDeliveryType");
+        }
+
+        /// <summary>
+        /// 查询日志投递的日志类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogDeliveryTypeRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogDeliveryTypeResponse"/></returns>
+        public DescribeDspmLogDeliveryTypeResponse DescribeDspmLogDeliveryTypeSync(DescribeDspmLogDeliveryTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogDeliveryTypeResponse>(req, "DescribeDspmLogDeliveryType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询日志列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmLogListRequest"/></param>
@@ -7411,6 +7642,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmLogListResponse DescribeDspmLogListSync(DescribeDspmLogListRequest req)
         {
             return InternalRequestAsync<DescribeDspmLogListResponse>(req, "DescribeDspmLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询租户日志投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogTypeConfigListRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogTypeConfigListResponse"/></returns>
+        public Task<DescribeDspmLogTypeConfigListResponse> DescribeDspmLogTypeConfigList(DescribeDspmLogTypeConfigListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogTypeConfigListResponse>(req, "DescribeDspmLogTypeConfigList");
+        }
+
+        /// <summary>
+        /// 查询租户日志投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmLogTypeConfigListRequest"/></param>
+        /// <returns><see cref="DescribeDspmLogTypeConfigListResponse"/></returns>
+        public DescribeDspmLogTypeConfigListResponse DescribeDspmLogTypeConfigListSync(DescribeDspmLogTypeConfigListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmLogTypeConfigListResponse>(req, "DescribeDspmLogTypeConfigList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7474,6 +7726,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmPersonalIdentifyListResponse DescribeDspmPersonalIdentifyListSync(DescribeDspmPersonalIdentifyListRequest req)
         {
             return InternalRequestAsync<DescribeDspmPersonalIdentifyListResponse>(req, "DescribeDspmPersonalIdentifyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Dspm实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmResourceRequest"/></param>
+        /// <returns><see cref="DescribeDspmResourceResponse"/></returns>
+        public Task<DescribeDspmResourceResponse> DescribeDspmResource(DescribeDspmResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmResourceResponse>(req, "DescribeDspmResource");
+        }
+
+        /// <summary>
+        /// 查询Dspm实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmResourceRequest"/></param>
+        /// <returns><see cref="DescribeDspmResourceResponse"/></returns>
+        public DescribeDspmResourceResponse DescribeDspmResourceSync(DescribeDspmResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmResourceResponse>(req, "DescribeDspmResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7583,6 +7856,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询审计会话列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSessionListRequest"/></param>
+        /// <returns><see cref="DescribeDspmSessionListResponse"/></returns>
+        public Task<DescribeDspmSessionListResponse> DescribeDspmSessionList(DescribeDspmSessionListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSessionListResponse>(req, "DescribeDspmSessionList");
+        }
+
+        /// <summary>
+        /// 查询审计会话列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmSessionListRequest"/></param>
+        /// <returns><see cref="DescribeDspmSessionListResponse"/></returns>
+        public DescribeDspmSessionListResponse DescribeDspmSessionListSync(DescribeDspmSessionListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmSessionListResponse>(req, "DescribeDspmSessionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询Dspm统计信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmStatisticsRequest"/></param>
@@ -7663,6 +7957,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatusSync(DescribeDspmSyncUsersStatusRequest req)
         {
             return InternalRequestAsync<DescribeDspmSyncUsersStatusResponse>(req, "DescribeDspmSyncUsersStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询租户ckafka实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmUserCkafkaInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDspmUserCkafkaInstanceListResponse"/></returns>
+        public Task<DescribeDspmUserCkafkaInstanceListResponse> DescribeDspmUserCkafkaInstanceList(DescribeDspmUserCkafkaInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmUserCkafkaInstanceListResponse>(req, "DescribeDspmUserCkafkaInstanceList");
+        }
+
+        /// <summary>
+        /// 查询租户ckafka实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmUserCkafkaInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDspmUserCkafkaInstanceListResponse"/></returns>
+        public DescribeDspmUserCkafkaInstanceListResponse DescribeDspmUserCkafkaInstanceListSync(DescribeDspmUserCkafkaInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmUserCkafkaInstanceListResponse>(req, "DescribeDspmUserCkafkaInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12689,6 +13004,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmAuditFilterStrategyResponse"/></returns>
+        public Task<ModifyDspmAuditFilterStrategyResponse> ModifyDspmAuditFilterStrategy(ModifyDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAuditFilterStrategyResponse>(req, "ModifyDspmAuditFilterStrategy");
+        }
+
+        /// <summary>
+        /// 修改Dspm审计过滤策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmAuditFilterStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDspmAuditFilterStrategyResponse"/></returns>
+        public ModifyDspmAuditFilterStrategyResponse ModifyDspmAuditFilterStrategySync(ModifyDspmAuditFilterStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmAuditFilterStrategyResponse>(req, "ModifyDspmAuditFilterStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改日志备份设置
         /// </summary>
         /// <param name="req"><see cref="ModifyDspmBackupSettingRequest"/></param>
@@ -12706,6 +13042,69 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmBackupSettingResponse ModifyDspmBackupSettingSync(ModifyDspmBackupSettingRequest req)
         {
             return InternalRequestAsync<ModifyDspmBackupSettingResponse>(req, "ModifyDspmBackupSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 租户Ckafka配置保存
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaSaveRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaSaveResponse"/></returns>
+        public Task<ModifyDspmCkafkaSaveResponse> ModifyDspmCkafkaSave(ModifyDspmCkafkaSaveRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaSaveResponse>(req, "ModifyDspmCkafkaSave");
+        }
+
+        /// <summary>
+        /// 租户Ckafka配置保存
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaSaveRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaSaveResponse"/></returns>
+        public ModifyDspmCkafkaSaveResponse ModifyDspmCkafkaSaveSync(ModifyDspmCkafkaSaveRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaSaveResponse>(req, "ModifyDspmCkafkaSave")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志投递开启
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaStartRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaStartResponse"/></returns>
+        public Task<ModifyDspmCkafkaStartResponse> ModifyDspmCkafkaStart(ModifyDspmCkafkaStartRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaStartResponse>(req, "ModifyDspmCkafkaStart");
+        }
+
+        /// <summary>
+        /// 日志投递开启
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaStartRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaStartResponse"/></returns>
+        public ModifyDspmCkafkaStartResponse ModifyDspmCkafkaStartSync(ModifyDspmCkafkaStartRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaStartResponse>(req, "ModifyDspmCkafkaStart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 日志类型投递关闭
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaStopRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaStopResponse"/></returns>
+        public Task<ModifyDspmCkafkaStopResponse> ModifyDspmCkafkaStop(ModifyDspmCkafkaStopRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaStopResponse>(req, "ModifyDspmCkafkaStop");
+        }
+
+        /// <summary>
+        /// 日志类型投递关闭
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmCkafkaStopRequest"/></param>
+        /// <returns><see cref="ModifyDspmCkafkaStopResponse"/></returns>
+        public ModifyDspmCkafkaStopResponse ModifyDspmCkafkaStopSync(ModifyDspmCkafkaStopRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmCkafkaStopResponse>(req, "ModifyDspmCkafkaStop")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12916,6 +13315,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyDspmIpInfoResponse ModifyDspmIpInfoSync(ModifyDspmIpInfoRequest req)
         {
             return InternalRequestAsync<ModifyDspmIpInfoResponse>(req, "ModifyDspmIpInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改日志投递配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmLogDeliveryTypeRequest"/></param>
+        /// <returns><see cref="ModifyDspmLogDeliveryTypeResponse"/></returns>
+        public Task<ModifyDspmLogDeliveryTypeResponse> ModifyDspmLogDeliveryType(ModifyDspmLogDeliveryTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmLogDeliveryTypeResponse>(req, "ModifyDspmLogDeliveryType");
+        }
+
+        /// <summary>
+        /// 修改日志投递配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDspmLogDeliveryTypeRequest"/></param>
+        /// <returns><see cref="ModifyDspmLogDeliveryTypeResponse"/></returns>
+        public ModifyDspmLogDeliveryTypeResponse ModifyDspmLogDeliveryTypeSync(ModifyDspmLogDeliveryTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyDspmLogDeliveryTypeResponse>(req, "ModifyDspmLogDeliveryType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -13946,6 +14366,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 编辑dspm监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserDspmRequest"/></param>
+        /// <returns><see cref="ModifyShareUserDspmResponse"/></returns>
+        public Task<ModifyShareUserDspmResponse> ModifyShareUserDspm(ModifyShareUserDspmRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserDspmResponse>(req, "ModifyShareUserDspm");
+        }
+
+        /// <summary>
+        /// 编辑dspm监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserDspmRequest"/></param>
+        /// <returns><see cref="ModifyShareUserDspmResponse"/></returns>
+        public ModifyShareUserDspmResponse ModifyShareUserDspmSync(ModifyShareUserDspmRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserDspmResponse>(req, "ModifyShareUserDspm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量修改 Skill 安全检测告警的处理状态
         /// </summary>
         /// <param name="req"><see cref="ModifySkillScanAlertStatusRequest"/></param>
@@ -14362,6 +14803,27 @@ namespace TencentCloud.Csip.V20221121
         public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCodeSync(SendDspmAssetLoginSmsCodeRequest req)
         {
             return InternalRequestAsync<SendDspmAssetLoginSmsCodeResponse>(req, "SendDspmAssetLoginSmsCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 租户Ckafka联通性测试
+        /// </summary>
+        /// <param name="req"><see cref="SendDspmCkafkaTestRequest"/></param>
+        /// <returns><see cref="SendDspmCkafkaTestResponse"/></returns>
+        public Task<SendDspmCkafkaTestResponse> SendDspmCkafkaTest(SendDspmCkafkaTestRequest req)
+        {
+            return InternalRequestAsync<SendDspmCkafkaTestResponse>(req, "SendDspmCkafkaTest");
+        }
+
+        /// <summary>
+        /// 租户Ckafka联通性测试
+        /// </summary>
+        /// <param name="req"><see cref="SendDspmCkafkaTestRequest"/></param>
+        /// <returns><see cref="SendDspmCkafkaTestResponse"/></returns>
+        public SendDspmCkafkaTestResponse SendDspmCkafkaTestSync(SendDspmCkafkaTestRequest req)
+        {
+            return InternalRequestAsync<SendDspmCkafkaTestResponse>(req, "SendDspmCkafkaTest")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

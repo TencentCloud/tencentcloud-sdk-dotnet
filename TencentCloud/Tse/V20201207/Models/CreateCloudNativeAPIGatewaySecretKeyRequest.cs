@@ -97,6 +97,42 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
 
         /// <summary>
+        /// <p>AK/SK凭证配置</p>
+        /// </summary>
+        [JsonProperty("AKSKCredentialConfig")]
+        public AIGWAKSKCredentialConfig AKSKCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CAM凭证配置</p>
+        /// </summary>
+        [JsonProperty("CAMCredentialConfig")]
+        public AIGWCAMCredentialConfig CAMCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Bearer Token凭证配置</p>
+        /// </summary>
+        [JsonProperty("BearerTokenCredentialConfig")]
+        public AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Header凭证配置</p>
+        /// </summary>
+        [JsonProperty("CustomHeaderCredentialConfig")]
+        public AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Query参数凭证配置</p>
+        /// </summary>
+        [JsonProperty("QueryParamCredentialConfig")]
+        public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Basic Auth凭证配置</p>
+        /// </summary>
+        [JsonProperty("BasicCredentialConfig")]
+        public AIGWBasicCredentialConfig BasicCredentialConfig{ get; set; }
+
+        /// <summary>
         /// <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
         /// </summary>
         [JsonProperty("Provider")]
@@ -120,6 +156,12 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
             this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+            this.SetParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+            this.SetParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+            this.SetParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+            this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+            this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+            this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
         }
     }

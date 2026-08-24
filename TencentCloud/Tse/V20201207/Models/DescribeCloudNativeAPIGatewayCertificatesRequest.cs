@@ -25,28 +25,40 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关ID
+        /// <p>网关ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 列表数量
+        /// <p>列表数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 列表offset
+        /// <p>列表offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+        /// <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
         /// </summary>
         [JsonProperty("Filters")]
         public ListFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertType")]
+        public string CertType{ get; set; }
+
+        /// <summary>
+        /// <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertUsage")]
+        public string CertUsage{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "CertUsage", this.CertUsage);
         }
     }
 }

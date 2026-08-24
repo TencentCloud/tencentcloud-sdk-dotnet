@@ -25,47 +25,65 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 分组id
+        /// <p>分组id</p>
         /// </summary>
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// <p>名字</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 状态Disable/Enable
+        /// <p>状态Disable/Enable</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间 yyyy-MM-dd hh:mm:ss
+        /// <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 绑定的消费者数量
+        /// <p>绑定的消费者数量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindCount")]
         public ulong? BindCount{ get; set; }
+
+        /// <summary>
+        /// <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
 
 
         /// <summary>
@@ -80,6 +98,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
         }
     }
 }

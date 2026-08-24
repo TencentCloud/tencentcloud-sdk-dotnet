@@ -25,37 +25,37 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 云盘版实例的读写地址信息。
+        /// <p>云盘版实例的读写地址信息。</p>
         /// </summary>
         [JsonProperty("ReadWriteAddress")]
         public AddressInfo ReadWriteAddress{ get; set; }
 
         /// <summary>
-        /// 云盘版实例的只读地址信息。
+        /// <p>云盘版实例的只读地址信息。</p>
         /// </summary>
         [JsonProperty("ReadOnlyAddress")]
         public AddressInfo[] ReadOnlyAddress{ get; set; }
 
         /// <summary>
-        /// 云盘版实例的节点列表信息。
+        /// <p>云盘版实例的节点列表信息。</p>
         /// </summary>
         [JsonProperty("NodeList")]
         public ClusterNodeInfo[] NodeList{ get; set; }
 
         /// <summary>
-        /// 只读空间保护阈值,单位GB
+        /// <p>只读空间保护阈值,单位GB</p>
         /// </summary>
         [JsonProperty("ReadonlyLimit")]
         public long? ReadonlyLimit{ get; set; }
 
         /// <summary>
-        /// 实例节点数。
+        /// <p>实例节点数。</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }

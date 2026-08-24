@@ -246,6 +246,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TargetProjectId")]
         public long? TargetProjectId{ get; set; }
 
+        /// <summary>
+        /// <p>推理模板 ID，在内置大模型场景下使用</p>
+        /// </summary>
+        [JsonProperty("InferTemplateId")]
+        public string InferTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +295,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
             this.SetParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
             this.SetParamSimple(map, prefix + "TargetProjectId", this.TargetProjectId);
+            this.SetParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 表名
+        /// <p>表名</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// FlexDB实例ID
+        /// <p>FlexDB实例ID</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 待删除索引信息
+        /// <p>待删除索引信息</p>
         /// </summary>
         [JsonProperty("DropIndexes")]
         public DropIndex[] DropIndexes{ get; set; }
 
         /// <summary>
-        /// 待创建索引信息
+        /// <p>待创建索引信息</p>
         /// </summary>
         [JsonProperty("CreateIndexes")]
         public CreateIndex[] CreateIndexes{ get; set; }
 
         /// <summary>
-        /// 云开发环境ID
+        /// <p>云开发环境ID</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// MongoDB连接器配置
+        /// <p>MongoDB连接器配置</p>
         /// </summary>
         [JsonProperty("MongoConnector")]
         public MongoConnector MongoConnector{ get; set; }

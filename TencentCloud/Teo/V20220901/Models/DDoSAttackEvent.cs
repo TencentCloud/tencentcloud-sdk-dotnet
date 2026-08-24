@@ -25,76 +25,80 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 事件ID。
+        /// <p>事件 ID。</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 攻击类型(对应交互事件名称)。
+        /// <p>攻击类型。</p>
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 攻击状态。
+        /// <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
         /// </summary>
         [JsonProperty("AttackStatus")]
         public long? AttackStatus{ get; set; }
 
         /// <summary>
-        /// 攻击最大带宽，单位为 bps。
+        /// <p>攻击最大带宽，单位为 bps。</p>
         /// </summary>
         [JsonProperty("AttackMaxBandWidth")]
         public long? AttackMaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 攻击包速率峰值，单位为 pps。
+        /// <p>攻击包速率峰值，单位为 pps。</p>
         /// </summary>
         [JsonProperty("AttackPacketMaxRate")]
         public long? AttackPacketMaxRate{ get; set; }
 
         /// <summary>
-        /// 攻击开始时间，单位为s。
+        /// <p>攻击开始时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("AttackStartTime")]
         public long? AttackStartTime{ get; set; }
 
         /// <summary>
-        /// 攻击结束时间，单位为s。
+        /// <p>攻击结束时间戳。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("AttackEndTime")]
         public long? AttackEndTime{ get; set; }
 
         /// <summary>
-        /// DDoS策略组ID。
+        /// <p>DDoS 策略组 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
-        /// 站点ID。
+        /// <p>站点 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 攻击事件所属地区，取值有：
-        /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据。</li>
+        /// <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 封禁解封信息。
+        /// <p>封禁解封信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DDoSBlockData")]
         public DDoSBlockData[] DDoSBlockData{ get; set; }
+
+        /// <summary>
+        /// <p>被 DDoS 攻击的目的 IP 列表。</p>
+        /// </summary>
+        [JsonProperty("DDoSAttackDips")]
+        public string[] DDoSAttackDips{ get; set; }
 
 
         /// <summary>
@@ -113,6 +117,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArrayObj(map, prefix + "DDoSBlockData.", this.DDoSBlockData);
+            this.SetParamArraySimple(map, prefix + "DDoSAttackDips.", this.DDoSAttackDips);
         }
     }
 }

@@ -25,31 +25,31 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>转发脱敏开关</p>
+        /// <p>转发脱敏配置总开关</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
+        /// <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
         /// </summary>
         [JsonProperty("PredefinedRuleTypes")]
         public string[] PredefinedRuleTypes{ get; set; }
 
         /// <summary>
-        /// <p>自定义脱敏规则</p>
+        /// <p>自定义规则，最多 20 条</p>
         /// </summary>
         [JsonProperty("CustomRules")]
         public AIGWCustomDesensitizeRule[] CustomRules{ get; set; }
 
         /// <summary>
-        /// <p>掩码</p>
+        /// <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p>
         /// </summary>
         [JsonProperty("PlaceholderFormat")]
         public string PlaceholderFormat{ get; set; }
 
         /// <summary>
-        /// <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul>
+        /// <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p>
         /// </summary>
         [JsonProperty("OnFailure")]
         public string OnFailure{ get; set; }

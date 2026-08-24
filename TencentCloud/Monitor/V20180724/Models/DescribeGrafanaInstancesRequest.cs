@@ -25,37 +25,37 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 查询偏移量
+        /// <p>查询偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询数量
+        /// <p>查询数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Grafana 实例 ID 数组
+        /// <p>Grafana 实例 ID 数组</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Grafana 实例名，支持前缀模糊搜索
+        /// <p>Grafana 实例名，支持前缀模糊搜索</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 查询状态
+        /// <p>查询状态</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public long?[] InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 标签过滤数组
+        /// <p>标签过滤数组</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public PrometheusTag[] TagFilters{ get; set; }

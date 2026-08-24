@@ -42,6 +42,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>密钥凭证ID</p>
+        /// </summary>
+        [JsonProperty("SecretKeyId")]
+        public string SecretKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
         }
     }
 }

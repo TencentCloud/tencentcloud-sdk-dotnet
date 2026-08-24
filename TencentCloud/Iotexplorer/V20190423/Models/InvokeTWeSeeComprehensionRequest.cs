@@ -25,40 +25,37 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 输入视频 / 图片的 URL
+        /// <p>输入视频 / 图片的 URL</p>
         /// </summary>
         [JsonProperty("InputURL")]
         public string InputURL{ get; set; }
 
         /// <summary>
-        /// 算法类型。可选值：
-        /// 
-        /// - `VID_COMP`：视频理解
-        /// - `IMG_COMP`：图片理解
+        /// <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 任务元数据
+        /// <p>任务元数据</p>
         /// </summary>
         [JsonProperty("Metadata")]
         public SeeTaskMetadata Metadata{ get; set; }
 
         /// <summary>
-        /// 视觉理解配置项
+        /// <p>视觉理解配置项</p>
         /// </summary>
         [JsonProperty("ComprehensionConfig")]
         public SeeComprehensionConfig ComprehensionConfig{ get; set; }
 
         /// <summary>
-        /// 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
+        /// <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
         /// </summary>
         [JsonProperty("WaitResultTimeout")]
         public long? WaitResultTimeout{ get; set; }
 
         /// <summary>
-        /// 回调目标 ID
+        /// <p>回调目标 ID</p>
         /// </summary>
         [JsonProperty("CallbackId")]
         public string CallbackId{ get; set; }

@@ -84,6 +84,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("MessageEndpoint")]
         public string MessageEndpoint{ get; set; }
 
+        /// <summary>
+        /// <p>TLS认证配置</p>
+        /// </summary>
+        [JsonProperty("TLSConfig")]
+        public AIGWUpstreamTLSConfig TLSConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "ServiceGroup", this.ServiceGroup);
             this.SetParamSimple(map, prefix + "MCPEndpoint", this.MCPEndpoint);
             this.SetParamSimple(map, prefix + "MessageEndpoint", this.MessageEndpoint);
+            this.SetParamObj(map, prefix + "TLSConfig.", this.TLSConfig);
         }
     }
 }

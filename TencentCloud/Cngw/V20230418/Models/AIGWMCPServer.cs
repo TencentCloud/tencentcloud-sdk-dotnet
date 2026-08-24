@@ -147,6 +147,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("MarketStatus")]
         public string MarketStatus{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启保留原Host功能</p>
+        /// </summary>
+        [JsonProperty("PreserveHost")]
+        public bool? PreserveHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "ToolCountLimit", this.ToolCountLimit);
             this.SetParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
             this.SetParamSimple(map, prefix + "MarketStatus", this.MarketStatus);
+            this.SetParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
         }
     }
 }

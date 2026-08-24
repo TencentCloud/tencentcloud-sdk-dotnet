@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+        /// <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
@@ -59,6 +59,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("TemplateProvider")]
         public SMSProviderTemplateConfig TemplateProvider{ get; set; }
 
+        /// <summary>
+        /// <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudFunction")]
+        public SMSCloudFunctionConfig CloudFunction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "SmsDayLimit", this.SmsDayLimit);
             this.SetParamObj(map, prefix + "TemplateProvider.", this.TemplateProvider);
+            this.SetParamObj(map, prefix + "CloudFunction.", this.CloudFunction);
         }
     }
 }

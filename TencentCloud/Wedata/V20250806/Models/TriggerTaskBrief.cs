@@ -136,6 +136,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ExecuteUserUin")]
         public string ExecuteUserUin{ get; set; }
 
+        /// <summary>
+        /// <p>周期类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CycleType")]
+        public string CycleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
             this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+            this.SetParamSimple(map, prefix + "CycleType", this.CycleType);
         }
     }
 }

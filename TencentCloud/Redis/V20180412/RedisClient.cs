@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -1037,6 +1037,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定实例当前密码复杂度配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordPolicyResponse"/></returns>
+        public Task<DescribeInstancePasswordPolicyResponse> DescribeInstancePasswordPolicy(DescribeInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordPolicyResponse>(req, "DescribeInstancePasswordPolicy");
+        }
+
+        /// <summary>
+        /// 查询指定实例当前密码复杂度配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordPolicyResponse"/></returns>
+        public DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicySync(DescribeInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordPolicyResponse>(req, "DescribeInstancePasswordPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

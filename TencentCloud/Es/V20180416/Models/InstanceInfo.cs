@@ -713,6 +713,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ServerCertSource")]
         public string ServerCertSource{ get; set; }
 
+        /// <summary>
+        /// <p>集群待迁移的VIP</p>
+        /// </summary>
+        [JsonProperty("OldEsVip")]
+        public string OldEsVip{ get; set; }
+
+        /// <summary>
+        /// <p>集群待迁移的TCP地址</p>
+        /// </summary>
+        [JsonProperty("OldEsPrivateTcpUrl")]
+        public string OldEsPrivateTcpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -824,6 +836,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableAutoReplace", this.EnableAutoReplace);
             this.SetParamSimple(map, prefix + "OpenMTLS", this.OpenMTLS);
             this.SetParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
+            this.SetParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
+            this.SetParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
         }
     }
 }

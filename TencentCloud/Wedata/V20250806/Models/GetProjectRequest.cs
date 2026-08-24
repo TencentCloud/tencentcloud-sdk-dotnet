@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+        /// <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

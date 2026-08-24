@@ -136,6 +136,60 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
+        /// <summary>
+        /// <p>AK/SK凭证配置</p>
+        /// </summary>
+        [JsonProperty("AKSKCredentialConfig")]
+        public AIGWAKSKCredentialConfig AKSKCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CAM凭证配置</p>
+        /// </summary>
+        [JsonProperty("CAMCredentialConfig")]
+        public AIGWCAMCredentialConfig CAMCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Bearer Token凭证配置</p>
+        /// </summary>
+        [JsonProperty("BearerTokenCredentialConfig")]
+        public AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Basic Auth凭证配置</p>
+        /// </summary>
+        [JsonProperty("BasicCredentialConfig")]
+        public AIGWBasicCredentialConfig BasicCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Header凭证配置</p>
+        /// </summary>
+        [JsonProperty("CustomHeaderCredentialConfig")]
+        public AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Query参数凭证配置</p>
+        /// </summary>
+        [JsonProperty("QueryParamCredentialConfig")]
+        public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>同步状态</p>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>来源类型</p>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>已同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +214,15 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+            this.SetParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+            this.SetParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+            this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
+            this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+            this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
         }
     }
 }

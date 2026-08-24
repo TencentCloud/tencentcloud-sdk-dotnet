@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志导出ID。
+        /// <p>日志导出ID。</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 已废弃，请使用 Instances
+        /// <p>已废弃，请使用 Instances</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public GrafanaInstanceInfo[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的实例总数
+        /// <p>符合查询条件的实例总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例列表
+        /// <p>实例列表</p>
         /// </summary>
         [JsonProperty("Instances")]
         public GrafanaInstanceInfo[] Instances{ get; set; }

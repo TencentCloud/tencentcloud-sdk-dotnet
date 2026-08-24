@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1478";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ags.V20250920
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 获取 Deployment 访问 Token
+        /// </summary>
+        /// <param name="req"><see cref="AcquireDeploymentTokenRequest"/></param>
+        /// <returns><see cref="AcquireDeploymentTokenResponse"/></returns>
+        public Task<AcquireDeploymentTokenResponse> AcquireDeploymentToken(AcquireDeploymentTokenRequest req)
+        {
+            return InternalRequestAsync<AcquireDeploymentTokenResponse>(req, "AcquireDeploymentToken");
+        }
+
+        /// <summary>
+        /// 获取 Deployment 访问 Token
+        /// </summary>
+        /// <param name="req"><see cref="AcquireDeploymentTokenRequest"/></param>
+        /// <returns><see cref="AcquireDeploymentTokenResponse"/></returns>
+        public AcquireDeploymentTokenResponse AcquireDeploymentTokenSync(AcquireDeploymentTokenRequest req)
+        {
+            return InternalRequestAsync<AcquireDeploymentTokenResponse>(req, "AcquireDeploymentToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -94,6 +115,27 @@ namespace TencentCloud.Ags.V20250920
         public CreateAPIKeyResponse CreateAPIKeySync(CreateAPIKeyRequest req)
         {
             return InternalRequestAsync<CreateAPIKeyResponse>(req, "CreateAPIKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeploymentRequest"/></param>
+        /// <returns><see cref="CreateDeploymentResponse"/></returns>
+        public Task<CreateDeploymentResponse> CreateDeployment(CreateDeploymentRequest req)
+        {
+            return InternalRequestAsync<CreateDeploymentResponse>(req, "CreateDeployment");
+        }
+
+        /// <summary>
+        /// 创建 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeploymentRequest"/></param>
+        /// <returns><see cref="CreateDeploymentResponse"/></returns>
+        public CreateDeploymentResponse CreateDeploymentSync(CreateDeploymentRequest req)
+        {
+            return InternalRequestAsync<CreateDeploymentResponse>(req, "CreateDeployment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -161,6 +203,27 @@ namespace TencentCloud.Ags.V20250920
         }
 
         /// <summary>
+        /// 删除 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeploymentRequest"/></param>
+        /// <returns><see cref="DeleteDeploymentResponse"/></returns>
+        public Task<DeleteDeploymentResponse> DeleteDeployment(DeleteDeploymentRequest req)
+        {
+            return InternalRequestAsync<DeleteDeploymentResponse>(req, "DeleteDeployment");
+        }
+
+        /// <summary>
+        /// 删除 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeploymentRequest"/></param>
+        /// <returns><see cref="DeleteDeploymentResponse"/></returns>
+        public DeleteDeploymentResponse DeleteDeploymentSync(DeleteDeploymentRequest req)
+        {
+            return InternalRequestAsync<DeleteDeploymentResponse>(req, "DeleteDeployment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除沙箱工具
         /// </summary>
         /// <param name="req"><see cref="DeleteSandboxToolRequest"/></param>
@@ -199,6 +262,48 @@ namespace TencentCloud.Ags.V20250920
         public DescribeAPIKeyListResponse DescribeAPIKeyListSync(DescribeAPIKeyListRequest req)
         {
             return InternalRequestAsync<DescribeAPIKeyListResponse>(req, "DescribeAPIKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Deployment 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeploymentRequest"/></param>
+        /// <returns><see cref="DescribeDeploymentResponse"/></returns>
+        public Task<DescribeDeploymentResponse> DescribeDeployment(DescribeDeploymentRequest req)
+        {
+            return InternalRequestAsync<DescribeDeploymentResponse>(req, "DescribeDeployment");
+        }
+
+        /// <summary>
+        /// 查询 Deployment 信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeploymentRequest"/></param>
+        /// <returns><see cref="DescribeDeploymentResponse"/></returns>
+        public DescribeDeploymentResponse DescribeDeploymentSync(DescribeDeploymentRequest req)
+        {
+            return InternalRequestAsync<DescribeDeploymentResponse>(req, "DescribeDeployment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Deployment 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeploymentListRequest"/></param>
+        /// <returns><see cref="DescribeDeploymentListResponse"/></returns>
+        public Task<DescribeDeploymentListResponse> DescribeDeploymentList(DescribeDeploymentListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeploymentListResponse>(req, "DescribeDeploymentList");
+        }
+
+        /// <summary>
+        /// 查询 Deployment 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeploymentListRequest"/></param>
+        /// <returns><see cref="DescribeDeploymentListResponse"/></returns>
+        public DescribeDeploymentListResponse DescribeDeploymentListSync(DescribeDeploymentListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeploymentListResponse>(req, "DescribeDeploymentList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -262,6 +367,27 @@ namespace TencentCloud.Ags.V20250920
         public DescribeSandboxToolListResponse DescribeSandboxToolListSync(DescribeSandboxToolListRequest req)
         {
             return InternalRequestAsync<DescribeSandboxToolListResponse>(req, "DescribeSandboxToolList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeploymentRequest"/></param>
+        /// <returns><see cref="ModifyDeploymentResponse"/></returns>
+        public Task<ModifyDeploymentResponse> ModifyDeployment(ModifyDeploymentRequest req)
+        {
+            return InternalRequestAsync<ModifyDeploymentResponse>(req, "ModifyDeployment");
+        }
+
+        /// <summary>
+        /// 修改 Deployment
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeploymentRequest"/></param>
+        /// <returns><see cref="ModifyDeploymentResponse"/></returns>
+        public ModifyDeploymentResponse ModifyDeploymentSync(ModifyDeploymentRequest req)
+        {
+            return InternalRequestAsync<ModifyDeploymentResponse>(req, "ModifyDeployment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 无
+        /// <p>无</p>
         /// </summary>
         [JsonProperty("Result")]
         public KongCertificatesList Result{ get; set; }

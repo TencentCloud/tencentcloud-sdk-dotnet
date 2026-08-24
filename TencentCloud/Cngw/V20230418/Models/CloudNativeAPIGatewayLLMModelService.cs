@@ -228,6 +228,60 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ExternalInstanceId")]
         public string ExternalInstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>负载均衡配置。</p>
+        /// </summary>
+        [JsonProperty("LoadBalanceConfig")]
+        public AIGWLoadBalanceConfig LoadBalanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>是否可以发布到广场</p>
+        /// </summary>
+        [JsonProperty("CanPublish")]
+        public bool? CanPublish{ get; set; }
+
+        /// <summary>
+        /// <p>发布状态</p><p>枚举值：</p><ul><li>Unpublished： 未发布</li><li>Published： 已发布</li></ul>
+        /// </summary>
+        [JsonProperty("PublishStatus")]
+        public string PublishStatus{ get; set; }
+
+        /// <summary>
+        /// <p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
+
+        /// <summary>
+        /// <p>模型服务状态</p><p>枚举值：</p><ul><li>Online：  已上线</li><li>Offline： 已下线</li><li>Error： 健康检查异常</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>是否启用健康检查</p>
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查配置</p>
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public AIGWLLMHealthCheckSetting HealthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -268,6 +322,15 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
             this.SetParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+            this.SetParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
+            this.SetParamSimple(map, prefix + "CanPublish", this.CanPublish);
+            this.SetParamSimple(map, prefix + "PublishStatus", this.PublishStatus);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         }
     }
 }

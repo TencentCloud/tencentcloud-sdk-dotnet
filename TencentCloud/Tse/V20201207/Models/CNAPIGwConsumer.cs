@@ -49,6 +49,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
+        /// <p>消费者优先级</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+        /// </summary>
+        [JsonProperty("Priority")]
+        public string Priority{ get; set; }
+
+        /// <summary>
         /// <p>描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -62,6 +68,24 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConsumerGroups")]
         public CNAPIGwConsumerGroup[] ConsumerGroups{ get; set; }
 
+        /// <summary>
+        /// <p>同步状态</p><p>枚举值：</p><ul><li>Success： 成功</li><li>Fail： 失败</li></ul>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 已删除</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,8 +96,12 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "ConsumerGroups.", this.ConsumerGroups);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
         }
     }
 }

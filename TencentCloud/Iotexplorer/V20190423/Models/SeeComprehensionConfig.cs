@@ -78,6 +78,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("SummaryPrompt")]
         public string SummaryPrompt{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启人脸检测</p>
+        /// </summary>
+        [JsonProperty("EnableFaceDetection")]
+        public bool? EnableFaceDetection{ get; set; }
+
+        /// <summary>
+        /// <p>画面旋转角度</p><p>枚举值：</p><ul><li>0： 不旋转</li><li>90： 顺时针旋转90度</li><li>-90： 逆时针旋转90度</li><li>180： 旋转180度</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("InputRotateDegree")]
+        public long? InputRotateDegree{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
             this.SetParamSimple(map, prefix + "EnableKeywords", this.EnableKeywords);
             this.SetParamSimple(map, prefix + "SummaryPrompt", this.SummaryPrompt);
+            this.SetParamSimple(map, prefix + "EnableFaceDetection", this.EnableFaceDetection);
+            this.SetParamSimple(map, prefix + "InputRotateDegree", this.InputRotateDegree);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1486";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -2935,6 +2935,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 开关开启后，会将客户端的ip和port透传到后端
+        /// </summary>
+        /// <param name="req"><see cref="EnableClientMsgRequest"/></param>
+        /// <returns><see cref="EnableClientMsgResponse"/></returns>
+        public Task<EnableClientMsgResponse> EnableClientMsg(EnableClientMsgRequest req)
+        {
+            return InternalRequestAsync<EnableClientMsgResponse>(req, "EnableClientMsg");
+        }
+
+        /// <summary>
+        /// 开关开启后，会将客户端的ip和port透传到后端
+        /// </summary>
+        /// <param name="req"><see cref="EnableClientMsgRequest"/></param>
+        /// <returns><see cref="EnableClientMsgResponse"/></returns>
+        public EnableClientMsgResponse EnableClientMsgSync(EnableClientMsgRequest req)
+        {
+            return InternalRequestAsync<EnableClientMsgResponse>(req, "EnableClientMsg")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量更改自研版限流规则开关
         /// </summary>
         /// <param name="req"><see cref="EnableRateLimitsV2Request"/></param>
@@ -4445,6 +4466,27 @@ namespace TencentCloud.Waf.V20180125
         public QueryBypassAllStatusResponse QueryBypassAllStatusSync(QueryBypassAllStatusRequest req)
         {
             return InternalRequestAsync<QueryBypassAllStatusResponse>(req, "QueryBypassAllStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询是否开启透传客户端信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryClientMsgRequest"/></param>
+        /// <returns><see cref="QueryClientMsgResponse"/></returns>
+        public Task<QueryClientMsgResponse> QueryClientMsg(QueryClientMsgRequest req)
+        {
+            return InternalRequestAsync<QueryClientMsgResponse>(req, "QueryClientMsg");
+        }
+
+        /// <summary>
+        /// 查询是否开启透传客户端信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryClientMsgRequest"/></param>
+        /// <returns><see cref="QueryClientMsgResponse"/></returns>
+        public QueryClientMsgResponse QueryClientMsgSync(QueryClientMsgRequest req)
+        {
+            return InternalRequestAsync<QueryClientMsgResponse>(req, "QueryClientMsg")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

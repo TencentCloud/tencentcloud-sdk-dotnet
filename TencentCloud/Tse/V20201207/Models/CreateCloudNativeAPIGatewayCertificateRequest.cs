@@ -25,38 +25,50 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关ID
+        /// <p>网关ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 绑定的域名
-        /// </summary>
-        [JsonProperty("BindDomains")]
-        public string[] BindDomains{ get; set; }
-
-        /// <summary>
-        /// ssl平台证书 Id
+        /// <p>ssl平台证书 Id</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 证书名称
+        /// <p>绑定的域名</p>
+        /// </summary>
+        [JsonProperty("BindDomains")]
+        public string[] BindDomains{ get; set; }
+
+        /// <summary>
+        /// <p>证书名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 证书私钥
+        /// <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertType")]
+        public string CertType{ get; set; }
+
+        /// <summary>
+        /// <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertUsage")]
+        public string CertUsage{ get; set; }
+
+        /// <summary>
+        /// <p>证书私钥</p>
         /// </summary>
         [JsonProperty("Key")]
         [System.Obsolete]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 证书pem格式
+        /// <p>证书pem格式</p>
         /// </summary>
         [JsonProperty("Crt")]
         [System.Obsolete]
@@ -69,9 +81,11 @@ namespace TencentCloud.Tse.V20201207.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
-            this.SetParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "CertUsage", this.CertUsage);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Crt", this.Crt);
         }

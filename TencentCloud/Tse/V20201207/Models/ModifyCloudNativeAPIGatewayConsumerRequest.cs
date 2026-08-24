@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关实例id
+        /// <p>网关实例id</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
@@ -43,6 +43,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+        /// </summary>
+        [JsonProperty("Priority")]
+        public string Priority{ get; set; }
+
+        /// <summary>
         /// <p>消费者描述。最长 200 字符。</p>
         /// </summary>
         [JsonProperty("Description")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

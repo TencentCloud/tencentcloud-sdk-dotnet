@@ -115,6 +115,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public LogConfiguration LogConfiguration{ get; set; }
 
         /// <summary>
+        /// <p>桌面电脑环境类沙箱配置</p>
+        /// </summary>
+        [JsonProperty("ComputerConfiguration")]
+        public ComputerConfiguration ComputerConfiguration{ get; set; }
+
+        /// <summary>
         /// <p>用于说明沙箱工具处于该状态的原因</p>
         /// </summary>
         [JsonProperty("StatusReason")]
@@ -141,6 +147,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
             this.SetParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
+            this.SetParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
             this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
         }
     }

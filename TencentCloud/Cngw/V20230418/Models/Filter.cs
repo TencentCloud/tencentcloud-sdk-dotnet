@@ -25,13 +25,13 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// <p>过滤参数名</p>
+        /// 过滤参数名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>过滤参数值</p>
+        /// 过滤参数值
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

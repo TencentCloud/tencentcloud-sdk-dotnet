@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1493</VersionPrefix>
+    <VersionPrefix>3.0.1495</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -147,6 +147,8 @@
     <Compile Include="V20190423\Models\CreateTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeDirectUploadCredentialRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeDirectUploadCredentialResponse.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeePersonRequest.cs" />
+    <Compile Include="V20190423\Models\CreateTWeSeePersonResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeePostPaidServiceResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeSeeRecognitionTaskRequest.cs" />
@@ -197,6 +199,10 @@
     <Compile Include="V20190423\Models\DeleteStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeSeeCallbackRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTWeSeeCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeeFaceRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeeFaceResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeePersonRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteTWeSeePersonResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeSeeTasksByConditionRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTWeSeeTasksByConditionResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkAIBotRequest.cs" />
@@ -325,6 +331,10 @@
     <Compile Include="V20190423\Models\DescribeTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeFaceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeeFaceResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeePersonRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTWeSeePersonResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeePostPaidServiceRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeePostPaidServiceResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeSeeRecognitionTaskRequest.cs" />
@@ -433,6 +443,8 @@
     <Compile Include="V20190423\Models\GetWechatDeviceTicketRequest.cs" />
     <Compile Include="V20190423\Models\GetWechatDeviceTicketResponse.cs" />
     <Compile Include="V20190423\Models\IdleResponseInfo.cs" />
+    <Compile Include="V20190423\Models\ImportTWeSeeFacesRequest.cs" />
+    <Compile Include="V20190423\Models\ImportTWeSeeFacesResponse.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserResponse.cs" />
     <Compile Include="V20190423\Models\InquireTWeSeeSubscriptionCreatePriceRequest.cs" />
@@ -468,6 +480,8 @@
     <Compile Include="V20190423\Models\ListProductOtaModulesResponse.cs" />
     <Compile Include="V20190423\Models\ListTWeSeeCallbackRequest.cs" />
     <Compile Include="V20190423\Models\ListTWeSeeCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeePersonsRequest.cs" />
+    <Compile Include="V20190423\Models\ListTWeSeePersonsResponse.cs" />
     <Compile Include="V20190423\Models\ListTWeSeeTasksRequest.cs" />
     <Compile Include="V20190423\Models\ListTWeSeeTasksResponse.cs" />
     <Compile Include="V20190423\Models\ListTopicPolicyRequest.cs" />
@@ -507,6 +521,10 @@
     <Compile Include="V20190423\Models\ModifyTWeSeeCallbackResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeConfigResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeFaceRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeeFaceResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeePersonRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTWeSeePersonResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRenewFlagRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRenewFlagResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionRequest.cs" />
@@ -584,9 +602,14 @@
     <Compile Include="V20190423\Models\SeeDetectContinuousConfig.cs" />
     <Compile Include="V20190423\Models\SeeDetectContinuousResult.cs" />
     <Compile Include="V20190423\Models\SeeEventIdFilterConfig.cs" />
+    <Compile Include="V20190423\Models\SeeFaceInfo.cs" />
+    <Compile Include="V20190423\Models\SeeFaceRecognitionResult.cs" />
+    <Compile Include="V20190423\Models\SeePersonInfo.cs" />
     <Compile Include="V20190423\Models\SeeStatItem.cs" />
+    <Compile Include="V20190423\Models\SeeTaskFaceInfo.cs" />
     <Compile Include="V20190423\Models\SeeTaskInfo.cs" />
     <Compile Include="V20190423\Models\SeeTaskMetadata.cs" />
+    <Compile Include="V20190423\Models\SeeTaskPersonInfo.cs" />
     <Compile Include="V20190423\Models\ShareDeviceToUserRequest.cs" />
     <Compile Include="V20190423\Models\ShareDeviceToUserResponse.cs" />
     <Compile Include="V20190423\Models\SubscribedTopicItem.cs" />

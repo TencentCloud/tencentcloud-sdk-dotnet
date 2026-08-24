@@ -24,12 +24,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     public class TransferClusterPrepayToPostpayRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

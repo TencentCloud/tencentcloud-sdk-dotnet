@@ -89,7 +89,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>OAuth凭证配置</p>
+        /// <p>OAuth2凭证配置</p>
         /// </summary>
         [JsonProperty("OAuthCredentialConfig")]
         public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
@@ -101,7 +101,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
 
         /// <summary>
-        /// <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+        /// <p>Agent 密钥类型</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -136,6 +136,60 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
+
+        /// <summary>
+        /// <p>AK/SK凭证配置</p>
+        /// </summary>
+        [JsonProperty("AKSKCredentialConfig")]
+        public AIGWAKSKCredentialConfig AKSKCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CAM凭证配置</p>
+        /// </summary>
+        [JsonProperty("CAMCredentialConfig")]
+        public AIGWCAMCredentialConfig CAMCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Bearer Token凭证配置</p>
+        /// </summary>
+        [JsonProperty("BearerTokenCredentialConfig")]
+        public AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Basic Auth凭证配置</p>
+        /// </summary>
+        [JsonProperty("BasicCredentialConfig")]
+        public AIGWBasicCredentialConfig BasicCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Header凭证配置</p>
+        /// </summary>
+        [JsonProperty("CustomHeaderCredentialConfig")]
+        public AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义Query参数凭证配置</p>
+        /// </summary>
+        [JsonProperty("QueryParamCredentialConfig")]
+        public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +214,15 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+            this.SetParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+            this.SetParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+            this.SetParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+            this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
+            this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+            this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
         }
     }
 }

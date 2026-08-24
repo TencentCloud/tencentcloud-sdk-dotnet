@@ -49,13 +49,13 @@ namespace TencentCloud.Bh.V20230418.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// <p>需要开通服务的子网ID</p>
+        /// <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>需要开通服务的子网网段</p>
+        /// <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
-        /// <p>需要开通服务的子网名称</p>
+        /// <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? ExternalAccess{ get; set; }
 
         /// <summary>
-        /// <p>开通堡垒机的子网信息</p>
+        /// <p>开通堡垒机的子网信息，最多支持2个子网</p>
         /// </summary>
         [JsonProperty("DeploySubnets")]
         public ParamInitResourceSubnet[] DeploySubnets{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public string IntranetVpcName{ get; set; }
 
         /// <summary>
-        /// <p>开通内网访问的子网信息</p>
+        /// <p>开通内网访问的子网信息，最多支持2个子网</p>
         /// </summary>
         [JsonProperty("IntranetSubnets")]
         public ParamInitResourceSubnet[] IntranetSubnets{ get; set; }

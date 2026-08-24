@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1492";
+       private const string sdkVersion = "SDK_NET_3.0.1495";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 事件风险评估
+        /// 事件风险评估。用于实时获取事件的风险信息，您可以在业务的关键事件中获取到我们根据设备风险、环境风险、账号风险、行为风险以及历史上报的事件信息评估出来的风险决策结果、风险评分和风险标签等。
         /// </summary>
         /// <param name="req"><see cref="AssessRiskRequest"/></param>
         /// <returns><see cref="AssessRiskResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 事件风险评估
+        /// 事件风险评估。用于实时获取事件的风险信息，您可以在业务的关键事件中获取到我们根据设备风险、环境风险、账号风险、行为风险以及历史上报的事件信息评估出来的风险决策结果、风险评分和风险标签等。
         /// </summary>
         /// <param name="req"><see cref="AssessRiskRequest"/></param>
         /// <returns><see cref="AssessRiskResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 事件信息上报
+        /// 事件信息上报。用于上报您业务中无需实时决策的事件，我们会通过引擎计算、机器学习挖掘风险特征用于实时事件风险评估。
         /// </summary>
         /// <param name="req"><see cref="ReportEventRequest"/></param>
         /// <returns><see cref="ReportEventResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 事件信息上报
+        /// 事件信息上报。用于上报您业务中无需实时决策的事件，我们会通过引擎计算、机器学习挖掘风险特征用于实时事件风险评估。
         /// </summary>
         /// <param name="req"><see cref="ReportEventRequest"/></param>
         /// <returns><see cref="ReportEventResponse"/></returns>

@@ -25,57 +25,55 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题Id
-        /// - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+        /// <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志导出数量,  最大值5000万
+        /// <p>日志导出数量,  最大值5000万</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+        /// <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 日志导出起始时间，毫秒时间戳
+        /// <p>日志导出起始时间，毫秒时间戳</p>
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 日志导出结束时间，毫秒时间戳
+        /// <p>日志导出结束时间，毫秒时间戳</p>
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
 
         /// <summary>
-        /// 日志导出时间排序。desc，asc，默认为desc
+        /// <p>日志导出时间排序。desc，asc，默认为desc</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 日志导出数据格式。json，csv，默认为json
+        /// <p>日志导出数据格式。json，csv，默认为json</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 语法规则,  默认值为0。
-        /// 0：Lucene语法，1：CQL语法。
+        /// <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
         /// <summary>
-        /// 导出字段
+        /// <p>导出字段</p>
         /// </summary>
         [JsonProperty("DerivedFields")]
         public string[] DerivedFields{ get; set; }

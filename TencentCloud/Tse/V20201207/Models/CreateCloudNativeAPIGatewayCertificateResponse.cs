@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 创建证书结果
+        /// <p>创建证书结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public CertificateInfo Result{ get; set; }

@@ -60,6 +60,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ResponseLogPayloadMode")]
         public string ResponseLogPayloadMode{ get; set; }
 
+        /// <summary>
+        /// <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+        /// </summary>
+        [JsonProperty("RequestLogPayloadTruncationPolicy")]
+        public string RequestLogPayloadTruncationPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+        /// </summary>
+        [JsonProperty("ResponseLogPayloadTruncationPolicy")]
+        public string ResponseLogPayloadTruncationPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ResponseLogPayloadMaxSize", this.ResponseLogPayloadMaxSize);
             this.SetParamSimple(map, prefix + "RequestLogPayloadMode", this.RequestLogPayloadMode);
             this.SetParamSimple(map, prefix + "ResponseLogPayloadMode", this.ResponseLogPayloadMode);
+            this.SetParamSimple(map, prefix + "RequestLogPayloadTruncationPolicy", this.RequestLogPayloadTruncationPolicy);
+            this.SetParamSimple(map, prefix + "ResponseLogPayloadTruncationPolicy", this.ResponseLogPayloadTruncationPolicy);
         }
     }
 }

@@ -79,6 +79,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeDetectContinuousResult DetectContinuousResult{ get; set; }
 
         /// <summary>
+        /// <p>人脸检测结果</p>
+        /// </summary>
+        [JsonProperty("FaceRecognitionResult")]
+        public SeeFaceRecognitionResult FaceRecognitionResult{ get; set; }
+
+        /// <summary>
         /// <p>完成该任务所消耗的基础能力额度</p>
         /// </summary>
         [JsonProperty("CostBasic")]
@@ -135,6 +141,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
             this.SetParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
             this.SetParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
+            this.SetParamObj(map, prefix + "FaceRecognitionResult.", this.FaceRecognitionResult);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);

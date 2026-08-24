@@ -64,6 +64,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SoftwareConfig")]
         public ServiceDeploy[] SoftwareConfig{ get; set; }
 
+        /// <summary>
+        /// <p>自定义主机名</p>
+        /// </summary>
+        [JsonProperty("CustomNodeName")]
+        public string CustomNodeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
             this.SetParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
             this.SetParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
+            this.SetParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
         }
     }
 }

@@ -96,6 +96,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("LogConfig")]
         public AIGWLogConfig LogConfig{ get; set; }
 
+        /// <summary>
+        /// <p>AI 网关Rerank场景最大文档数限制配置</p>
+        /// </summary>
+        [JsonProperty("MaxDocumentsConfig")]
+        public AIGWRerankMaxDocumentsConfig MaxDocumentsConfig{ get; set; }
+
+        /// <summary>
+        /// <p>敏感词路由配置</p>
+        /// </summary>
+        [JsonProperty("SensitiveWordRoute")]
+        public AIGWSensitiveWordRoute SensitiveWordRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
             this.SetParamObj(map, prefix + "TagFilter.", this.TagFilter);
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
+            this.SetParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
+            this.SetParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
         }
     }
 }

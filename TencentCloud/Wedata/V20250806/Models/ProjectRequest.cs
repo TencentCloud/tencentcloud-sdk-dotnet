@@ -25,22 +25,28 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+        /// <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+        /// <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+        /// <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
         /// </summary>
         [JsonProperty("ProjectModel")]
         public string ProjectModel{ get; set; }
+
+        /// <summary>
+        /// <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+        /// </summary>
+        [JsonProperty("ScheduleMode")]
+        public string ScheduleMode{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
+            this.SetParamSimple(map, prefix + "ScheduleMode", this.ScheduleMode);
         }
     }
 }

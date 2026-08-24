@@ -25,36 +25,31 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 任务 ID
+        /// <p>任务 ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态。可能取值：
-        /// 
-        /// - `1`：失败
-        /// - `2`：空结果
-        /// - `3`：有效结果
-        /// - `4`：处理中
+        /// <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 视觉理解结果
+        /// <p>视觉理解结果</p>
         /// </summary>
         [JsonProperty("ComprehensionResult")]
         public SeeComprehensionResult ComprehensionResult{ get; set; }
 
         /// <summary>
-        /// 完成该任务所消耗的基础能力额度
+        /// <p>完成该任务所消耗的基础能力额度</p>
         /// </summary>
         [JsonProperty("CostBasic")]
         public long? CostBasic{ get; set; }
 
         /// <summary>
-        /// 完成该任务所消耗的高级能力额度
+        /// <p>完成该任务所消耗的高级能力额度</p>
         /// </summary>
         [JsonProperty("CostAdvanced")]
         public long? CostAdvanced{ get; set; }

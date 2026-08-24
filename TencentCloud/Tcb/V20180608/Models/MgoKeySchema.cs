@@ -25,22 +25,28 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 索引字段
+        /// <p>索引字段</p>
         /// </summary>
         [JsonProperty("MgoIndexKeys")]
         public MgoIndexKeys[] MgoIndexKeys{ get; set; }
 
         /// <summary>
-        /// 是否唯一索引
+        /// <p>是否唯一索引</p>
         /// </summary>
         [JsonProperty("MgoIsUnique")]
         public bool? MgoIsUnique{ get; set; }
 
         /// <summary>
-        /// 是否稀疏索引
+        /// <p>是否稀疏索引</p>
         /// </summary>
         [JsonProperty("MgoIsSparse")]
         public bool? MgoIsSparse{ get; set; }
+
+        /// <summary>
+        /// <p>稀疏索引表达式</p>
+        /// </summary>
+        [JsonProperty("PartialFilterExpression")]
+        public string PartialFilterExpression{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "MgoIndexKeys.", this.MgoIndexKeys);
             this.SetParamSimple(map, prefix + "MgoIsUnique", this.MgoIsUnique);
             this.SetParamSimple(map, prefix + "MgoIsSparse", this.MgoIsSparse);
+            this.SetParamSimple(map, prefix + "PartialFilterExpression", this.PartialFilterExpression);
         }
     }
 }

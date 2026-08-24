@@ -25,25 +25,25 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>自定义脱敏规则名称</p>
+        /// <p>规则名称，同一配置内唯一，最长 64</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>自定义脱敏规则匹配正则</p>
+        /// <p>RE2 兼容的正则表达式</p>
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// <p>自定义脱敏规则掩码</p>
+        /// <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
         /// </summary>
         [JsonProperty("MaskFormat")]
         public string MaskFormat{ get; set; }
 
         /// <summary>
-        /// <p>自定义脱敏规则开关</p>
+        /// <p>单条自定义规则是否启用</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
