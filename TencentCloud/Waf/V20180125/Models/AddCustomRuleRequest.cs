@@ -26,12 +26,14 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 规则名称
+        /// 入参限制：1-128个字符，不允许特殊字符
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 优先级
+        /// 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+        /// 默认值：0
         /// </summary>
         [JsonProperty("SortId")]
         public string SortId{ get; set; }
@@ -49,7 +51,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+        /// 动作类型
+        /// 取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+        /// 入参限制：必填，取值范围为1-8
+        /// 约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -61,7 +66,9 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Redirect{ get; set; }
 
         /// <summary>
-        /// 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+        /// 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+        /// 取值说明：0表示永不过期
+        /// 默认值：0（解析失败时也默认为0）
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -123,12 +130,16 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+        /// 默认值：and
+        /// 入参限制：不区分大小写，仅支持and或or
         /// </summary>
         [JsonProperty("LogicalOp")]
         public string LogicalOp{ get; set; }
 
         /// <summary>
-        /// 按照动作灰度的比例，默认是100
+        /// 动作灰度比例，即规则命中后执行动作的流量百分比
+        /// 取值范围：1-100
+        /// 默认值：100（全量生效）
         /// </summary>
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }

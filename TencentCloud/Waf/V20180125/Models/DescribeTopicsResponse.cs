@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 日志主题列表
+        /// <p>日志主题列表</p>
         /// </summary>
         [JsonProperty("Topics")]
         public TopicInfo[] Topics{ get; set; }
 
         /// <summary>
-        /// 总数目
+        /// <p>总数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

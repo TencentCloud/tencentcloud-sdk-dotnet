@@ -25,28 +25,40 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// appid
+        /// <p>appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 存储桶名
+        /// <p>存储桶名</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 最后一次扫描时间
+        /// <p>最后一次扫描时间</p>
         /// </summary>
         [JsonProperty("LastScanTime")]
         public long? LastScanTime{ get; set; }
+
+        /// <summary>
+        /// <p>识别文件数量</p>
+        /// </summary>
+        [JsonProperty("IdentifyFileCount")]
+        public ulong? IdentifyFileCount{ get; set; }
+
+        /// <summary>
+        /// <p>敏感文件数量</p>
+        /// </summary>
+        [JsonProperty("SensitiveFileCount")]
+        public ulong? SensitiveFileCount{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+            this.SetParamSimple(map, prefix + "IdentifyFileCount", this.IdentifyFileCount);
+            this.SetParamSimple(map, prefix + "SensitiveFileCount", this.SensitiveFileCount);
         }
     }
 }

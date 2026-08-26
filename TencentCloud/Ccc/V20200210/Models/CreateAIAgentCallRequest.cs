@@ -25,51 +25,53 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// AI智能体ID
+        /// <p>AI智能体ID</p>
         /// </summary>
         [JsonProperty("AIAgentId")]
         public ulong? AIAgentId{ get; set; }
 
         /// <summary>
-        /// 被叫号码
+        /// <p>被叫号码</p>
         /// </summary>
         [JsonProperty("Callee")]
         public string Callee{ get; set; }
 
         /// <summary>
-        /// 主叫号码列表
+        /// <p>主叫号码列表</p>
         /// </summary>
         [JsonProperty("Callers")]
         public string[] Callers{ get; set; }
 
         /// <summary>
-        /// 提示词变量
+        /// <p>提示词变量</p>
         /// </summary>
         [JsonProperty("PromptVariables")]
         [System.Obsolete]
         public Variable[] PromptVariables{ get; set; }
 
         /// <summary>
-        /// 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-        /// 
-        /// 1. dify-inputs-xxx 为dify的inputs变量
-        /// 2.  dify-inputs-user 为dify的user值
-        /// 3.  dify-inputs-conversation_id 为dify的conversation_id值
+        /// <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
         /// </summary>
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
         /// <summary>
-        /// 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+        /// <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
         /// </summary>
         [JsonProperty("MaxRingTimeoutSecond")]
         public long? MaxRingTimeoutSecond{ get; set; }
+
+        /// <summary>
+        /// <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+        /// </summary>
+        [JsonProperty("AcquireTimeoutSecond")]
+        public ulong? AcquireTimeoutSecond{ get; set; }
 
 
         /// <summary>
@@ -84,6 +86,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
             this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+            this.SetParamSimple(map, prefix + "AcquireTimeoutSecond", this.AcquireTimeoutSecond);
         }
     }
 }

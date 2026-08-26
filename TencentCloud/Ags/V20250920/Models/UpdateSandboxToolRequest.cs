@@ -54,6 +54,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("CustomConfiguration")]
         public CustomConfiguration CustomConfiguration{ get; set; }
 
+        /// <summary>
+        /// <p>桌面电脑环境类沙箱配置</p>
+        /// </summary>
+        [JsonProperty("ComputerConfiguration")]
+        public ComputerConfiguration ComputerConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "NetworkConfiguration.", this.NetworkConfiguration);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+            this.SetParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
         }
     }
 }

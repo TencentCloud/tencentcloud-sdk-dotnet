@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1496";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Monitor.V20180724
         public CleanGrafanaInstanceResponse CleanGrafanaInstanceSync(CleanGrafanaInstanceRequest req)
         {
             return InternalRequestAsync<CleanGrafanaInstanceResponse>(req, "CleanGrafanaInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmHistoryShieldResponse"/></returns>
+        public Task<CreateAlarmHistoryShieldResponse> CreateAlarmHistoryShield(CreateAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmHistoryShieldResponse>(req, "CreateAlarmHistoryShield");
+        }
+
+        /// <summary>
+        /// 创建小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmHistoryShieldResponse"/></returns>
+        public CreateAlarmHistoryShieldResponse CreateAlarmHistoryShieldSync(CreateAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmHistoryShieldResponse>(req, "CreateAlarmHistoryShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -677,6 +698,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 删除小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmHistoryShieldsRequest"/></param>
+        /// <returns><see cref="DeleteAlarmHistoryShieldsResponse"/></returns>
+        public Task<DeleteAlarmHistoryShieldsResponse> DeleteAlarmHistoryShields(DeleteAlarmHistoryShieldsRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmHistoryShieldsResponse>(req, "DeleteAlarmHistoryShields");
+        }
+
+        /// <summary>
+        /// 删除小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmHistoryShieldsRequest"/></param>
+        /// <returns><see cref="DeleteAlarmHistoryShieldsResponse"/></returns>
+        public DeleteAlarmHistoryShieldsResponse DeleteAlarmHistoryShieldsSync(DeleteAlarmHistoryShieldsRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmHistoryShieldsResponse>(req, "DeleteAlarmHistoryShields")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除告警通知模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticesRequest"/></param>
@@ -1189,6 +1231,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeAlarmHistoriesResponse DescribeAlarmHistoriesSync(DescribeAlarmHistoriesRequest req)
         {
             return InternalRequestAsync<DescribeAlarmHistoriesResponse>(req, "DescribeAlarmHistories")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoryShieldResponse"/></returns>
+        public Task<DescribeAlarmHistoryShieldResponse> DescribeAlarmHistoryShield(DescribeAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmHistoryShieldResponse>(req, "DescribeAlarmHistoryShield");
+        }
+
+        /// <summary>
+        /// 获取小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoryShieldResponse"/></returns>
+        public DescribeAlarmHistoryShieldResponse DescribeAlarmHistoryShieldSync(DescribeAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmHistoryShieldResponse>(req, "DescribeAlarmHistoryShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2931,6 +2994,27 @@ namespace TencentCloud.Monitor.V20180724
         public InstallPluginsResponse InstallPluginsSync(InstallPluginsRequest req)
         {
             return InternalRequestAsync<InstallPluginsResponse>(req, "InstallPlugins")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmHistoryShieldResponse"/></returns>
+        public Task<ModifyAlarmHistoryShieldResponse> ModifyAlarmHistoryShield(ModifyAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmHistoryShieldResponse>(req, "ModifyAlarmHistoryShield");
+        }
+
+        /// <summary>
+        /// 修改小程序告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmHistoryShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmHistoryShieldResponse"/></returns>
+        public ModifyAlarmHistoryShieldResponse ModifyAlarmHistoryShieldSync(ModifyAlarmHistoryShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmHistoryShieldResponse>(req, "ModifyAlarmHistoryShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1495</VersionPrefix>
+    <VersionPrefix>3.0.1496</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,7 @@
     <Compile Include="V20221121\Models\AccessKeyAsset.cs" />
     <Compile Include="V20221121\Models\AccessKeyRisk.cs" />
     <Compile Include="V20221121\Models\AccessKeyUser.cs" />
+    <Compile Include="V20221121\Models\AccessKeyWhiteList.cs" />
     <Compile Include="V20221121\Models\AccountBriefInfo.cs" />
     <Compile Include="V20221121\Models\AddDspmAssetManagerRequest.cs" />
     <Compile Include="V20221121\Models\AddDspmAssetManagerResponse.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="V20221121\Models\CosBucketTaskInfo.cs" />
     <Compile Include="V20221121\Models\CosDictionary.cs" />
     <Compile Include="V20221121\Models\CosIdentifyCategoryDetail.cs" />
+    <Compile Include="V20221121\Models\CosIdentifyLevelDetail.cs" />
     <Compile Include="V20221121\Models\CosIdentifyRuleDetail.cs" />
     <Compile Include="V20221121\Models\CosInvokeDetailInfo.cs" />
     <Compile Include="V20221121\Models\CosInvokeIpVpcInfo.cs" />
@@ -373,6 +375,8 @@
     <Compile Include="V20221121\Models\CreateExposuresExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateHighBaseLineRisksExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateHighBaseLineRisksExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateHostImageListExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateHostImageListExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateHostVulExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateHostVulExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateIaCAccessTokenRequest.cs" />
@@ -423,6 +427,14 @@
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskDetailExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskDetailExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxACLRuleRequest.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxACLRuleResponse.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxDLPRuleRequest.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxDLPRuleResponse.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxFileRuleRequest.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxFileRuleResponse.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxLLMAuditRuleRequest.cs" />
+    <Compile Include="V20221121\Models\CreateSandboxLLMAuditRuleResponse.cs" />
     <Compile Include="V20221121\Models\CreateScanStatisticExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateScanStatisticExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateScanTaskRequest.cs" />
@@ -536,6 +548,12 @@
     <Compile Include="V20221121\Models\DeleteMachineClearHistoryResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxACLRuleRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxACLRuleResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxDLPRuleRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxDLPRuleResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxFileRuleRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteSandboxFileRuleResponse.cs" />
     <Compile Include="V20221121\Models\DeleteSandboxLLMAuditRuleRequest.cs" />
     <Compile Include="V20221121\Models\DeleteSandboxLLMAuditRuleResponse.cs" />
     <Compile Include="V20221121\Models\DeleteVulWhitelistRequest.cs" />
@@ -594,6 +612,8 @@
     <Compile Include="V20221121\Models\DescribeAccessKeyUserDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAccessKeyUserListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAccessKeyUserListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyWhiteListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAccessKeyWhiteListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAgentConfigSettingRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAgentConfigSettingResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAgentRunModeRequest.cs" />
@@ -692,6 +712,8 @@
     <Compile Include="V20221121\Models\DescribeCLSLogIndexV3Response.cs" />
     <Compile Include="V20221121\Models\DescribeCLSLogListV3Request.cs" />
     <Compile Include="V20221121\Models\DescribeCLSLogListV3Response.cs" />
+    <Compile Include="V20221121\Models\DescribeCSCPayInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCSCPayInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPLicenseBindScheduleRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPLicenseBindScheduleResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskDetailRequest.cs" />
@@ -700,6 +722,8 @@
     <Compile Include="V20221121\Models\DescribeCSIPMalwareScanTaskProgressResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCSIPRiskStatisticsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCSPMPayInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCSPMPayInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
@@ -1258,10 +1282,20 @@
     <Compile Include="V20221121\Models\DescribeSandboxACLRuleListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxACLSystemRuleListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxACLSystemRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxDLPAlertListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxDLPAlertListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxDLPRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxDLPRuleListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxDLPSystemRuleListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxDLPSystemRuleListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxFileRuleListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSandboxFileRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditAlertListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditAlertListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditRuleListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditSystemRuleListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSandboxLLMAuditSystemRuleListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanStatisticRequest.cs" />
@@ -1292,6 +1326,8 @@
     <Compile Include="V20221121\Models\DescribeSkillScanResultResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSourceIPDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSourceIPDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubUserInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSubUserInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsRequest.cs" />
@@ -1314,6 +1350,8 @@
     <Compile Include="V20221121\Models\DescribeUebaRuleResponse.cs" />
     <Compile Include="V20221121\Models\DescribeUebaUserSummaryRequest.cs" />
     <Compile Include="V20221121\Models\DescribeUebaUserSummaryResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeUserAKInfoListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeUserAKInfoListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeUserCSPMInfoListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeUserCSPMInfoListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeUserCallRecordRequest.cs" />
@@ -1330,6 +1368,8 @@
     <Compile Include="V20221121\Models\DescribeVULRiskDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVdbAndPocInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVdbAndPocInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVoucherEligibilityRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVoucherEligibilityResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVulComponentRelateHostRequest.cs" />
@@ -1536,6 +1576,10 @@
     <Compile Include="V20221121\Models\InquireInfo.cs" />
     <Compile Include="V20221121\Models\InstallClusterAgentRequest.cs" />
     <Compile Include="V20221121\Models\InstallClusterAgentResponse.cs" />
+    <Compile Include="V20221121\Models\InstallKeySandboxSkillRequest.cs" />
+    <Compile Include="V20221121\Models\InstallKeySandboxSkillResponse.cs" />
+    <Compile Include="V20221121\Models\InstallSandboxPluginRequest.cs" />
+    <Compile Include="V20221121\Models\InstallSandboxPluginResponse.cs" />
     <Compile Include="V20221121\Models\InstanceIDWithAppIdItem.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
     <Compile Include="V20221121\Models\KBDetail.cs" />
@@ -1628,6 +1672,8 @@
     <Compile Include="V20221121\Models\ModifyCSIPRaspLicenseBindsResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCSIPRaspLicenseUnBindsRequest.cs" />
     <Compile Include="V20221121\Models\ModifyCSIPRaspLicenseUnBindsResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyClusterDefendStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyClusterDefendStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditBucketMonitorStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditBucketMonitorStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyCosAuditMonitorAccountRequest.cs" />
@@ -1784,10 +1830,28 @@
     <Compile Include="V20221121\Models\ModifyRiskScanCronConfigRequest.cs" />
     <Compile Include="V20221121\Models\ModifyRiskScanCronConfigResponse.cs" />
     <Compile Include="V20221121\Models\ModifyRuleItem.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxACLRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxACLRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxACLRuleStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxACLRuleStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxAlertStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxAlertStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxDLPRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxDLPRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxDLPRuleStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxDLPRuleStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxFileRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxFileRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxFileRuleStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxFileRuleStatusResponse.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxLLMAuditRuleRequest.cs" />
+    <Compile Include="V20221121\Models\ModifySandboxLLMAuditRuleResponse.cs" />
     <Compile Include="V20221121\Models\ModifySandboxLLMAuditRuleStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifySandboxLLMAuditRuleStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifySecurityScoreRuleRequest.cs" />
     <Compile Include="V20221121\Models\ModifySecurityScoreRuleResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyShareUserAKRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyShareUserAKResponse.cs" />
     <Compile Include="V20221121\Models\ModifyShareUserCSPMRequest.cs" />
     <Compile Include="V20221121\Models\ModifyShareUserCSPMResponse.cs" />
     <Compile Include="V20221121\Models\ModifyShareUserDspmRequest.cs" />
@@ -1824,6 +1888,7 @@
     <Compile Include="V20221121\Models\OperateRiskRulePolicyRequest.cs" />
     <Compile Include="V20221121\Models\OperateRiskRulePolicyResponse.cs" />
     <Compile Include="V20221121\Models\OrderDetail.cs" />
+    <Compile Include="V20221121\Models\OrderQuotaInfo.cs" />
     <Compile Include="V20221121\Models\OrganizationInfo.cs" />
     <Compile Include="V20221121\Models\OrganizationUserInfo.cs" />
     <Compile Include="V20221121\Models\OsName.cs" />
@@ -1967,9 +2032,20 @@
     <Compile Include="V20221121\Models\TrafficSandboxACLSystemRuleItem.cs" />
     <Compile Include="V20221121\Models\TrafficSandboxACLURLRule.cs" />
     <Compile Include="V20221121\Models\TrafficSandboxAssetScope.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPAlertInfo.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPFileSizeRange.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPRuleContentItem.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPRuleInfo.cs" />
     <Compile Include="V20221121\Models\TrafficSandboxDLPSystemRuleItem.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPTrafficRuleItem.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPURLRuleItem.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxDLPUserRuleInfo.cs" />
     <Compile Include="V20221121\Models\TrafficSandboxEffectScope.cs" />
     <Compile Include="V20221121\Models\TrafficSandboxInactiveAsset.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxLLMAuditAlertInfo.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxLLMAuditRuleInfo.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxLLMAuditRuleRef.cs" />
+    <Compile Include="V20221121\Models\TrafficSandboxLLMAuditSystemRuleItem.cs" />
     <Compile Include="V20221121\Models\TrendDataPoint.cs" />
     <Compile Include="V20221121\Models\UebaCustomRule.cs" />
     <Compile Include="V20221121\Models\UebaEventContent.cs" />
@@ -1979,6 +2055,8 @@
     <Compile Include="V20221121\Models\UltimateAppItem.cs" />
     <Compile Include="V20221121\Models\UninstallClusterAgentRequest.cs" />
     <Compile Include="V20221121\Models\UninstallClusterAgentResponse.cs" />
+    <Compile Include="V20221121\Models\UninstallKeySandboxSkillRequest.cs" />
+    <Compile Include="V20221121\Models\UninstallKeySandboxSkillResponse.cs" />
     <Compile Include="V20221121\Models\UpdateAccessKeyAlarmStatusRequest.cs" />
     <Compile Include="V20221121\Models\UpdateAccessKeyAlarmStatusResponse.cs" />
     <Compile Include="V20221121\Models\UpdateAccessKeyRemarkRequest.cs" />
@@ -1987,6 +2065,7 @@
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
     <Compile Include="V20221121\Models\UpdateClusterOwnerRequest.cs" />
     <Compile Include="V20221121\Models\UpdateClusterOwnerResponse.cs" />
+    <Compile Include="V20221121\Models\UserAKInfo.cs" />
     <Compile Include="V20221121\Models\UserCSPMInfo.cs" />
     <Compile Include="V20221121\Models\UserCallRecord.cs" />
     <Compile Include="V20221121\Models\UserConfSyncStatus.cs" />

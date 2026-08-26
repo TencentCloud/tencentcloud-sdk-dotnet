@@ -32,6 +32,8 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 删除的规则ID
+        /// 说明：支持批量删除，多个规则ID用英文逗号分隔
+        /// 与DomainRuleIdList二选一，优先使用DomainRuleIdList
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -44,6 +46,7 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 批量删除的规则列表
+        /// 说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
         /// </summary>
         [JsonProperty("DomainRuleIdList")]
         public DomainRuleId[] DomainRuleIdList{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1496";
 
         /// <summary>
         /// Client constructor.
@@ -4770,7 +4770,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf  会话定义 Upsert接口
+        /// 新增或更新WAF会话（Session）定义
+        /// 说明：SessionID传-1时为新增，传已有ID时为更新。每个域名最多支持10条会话规则。
         /// </summary>
         /// <param name="req"><see cref="UpsertSessionRequest"/></param>
         /// <returns><see cref="UpsertSessionResponse"/></returns>
@@ -4780,7 +4781,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf  会话定义 Upsert接口
+        /// 新增或更新WAF会话（Session）定义
+        /// 说明：SessionID传-1时为新增，传已有ID时为更新。每个域名最多支持10条会话规则。
         /// </summary>
         /// <param name="req"><see cref="UpsertSessionRequest"/></param>
         /// <returns><see cref="UpsertSessionResponse"/></returns>

@@ -25,61 +25,61 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
+        /// <p>会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。</p>
         /// </summary>
         [JsonProperty("Messages")]
         public Message[] Messages{ get; set; }
 
         /// <summary>
-        /// 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
+        /// <p>模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 是否以流式接口的形式返回数据，默认true。
+        /// <p>是否以流式接口的形式返回数据，默认true。</p>
         /// </summary>
         [JsonProperty("Stream")]
         public bool? Stream{ get; set; }
 
         /// <summary>
-        /// 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
+        /// <p>取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。</p>
         /// </summary>
         [JsonProperty("TopP")]
         public float? TopP{ get; set; }
 
         /// <summary>
-        /// 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
+        /// <p>取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。</p>
         /// </summary>
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }
 
         /// <summary>
-        /// 是否开启联网搜索。默认为 false。
+        /// <p>是否开启联网搜索。默认为 false。</p>
         /// </summary>
         [JsonProperty("OnlineSearch")]
         public bool? OnlineSearch{ get; set; }
 
         /// <summary>
-        /// 当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
+        /// <p>当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。</p>
         /// </summary>
         [JsonProperty("OnlineSearchOptions")]
         public OnlineSearchOptions OnlineSearchOptions{ get; set; }
 
         /// <summary>
-        /// 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+        /// <p>可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。</p>
         /// </summary>
         [JsonProperty("Tools")]
         public Tool[] Tools{ get; set; }
 
         /// <summary>
-        /// 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+        /// <p>工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto</p>
         /// </summary>
         [JsonProperty("ToolChoice")]
         public string ToolChoice{ get; set; }
 
         /// <summary>
-        /// 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+        /// <p>强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填</p>
         /// </summary>
         [JsonProperty("CustomTool")]
         public Tool CustomTool{ get; set; }

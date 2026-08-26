@@ -25,25 +25,25 @@ namespace TencentCloud.Es.V20250101.Models
     {
         
         /// <summary>
-        /// 此次请求的id
+        /// <p>此次请求的id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 回复内容
+        /// <p>回复内容</p>
         /// </summary>
         [JsonProperty("Choices")]
         public Choice[] Choices{ get; set; }
 
         /// <summary>
-        /// token使用量
+        /// <p>token使用量</p>
         /// </summary>
         [JsonProperty("Usage")]
         public TokenUsage Usage{ get; set; }
 
         /// <summary>
-        /// 联网搜索结果。
+        /// <p>联网搜索结果。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnlineSearchContent")]

@@ -108,6 +108,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EngineTypeDetail")]
         public string EngineTypeDetail{ get; set; }
 
+        /// <summary>
+        /// <p>数据源ID</p>
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public ulong? DatasourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Sql", this.Sql);
             this.SetParamSimple(map, prefix + "EngineId", this.EngineId);
             this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         }
     }
 }

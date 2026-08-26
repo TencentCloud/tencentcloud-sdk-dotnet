@@ -25,94 +25,89 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 转码后文件的目标存储。
+        /// <p>转码后文件的目标存储。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 转码后的视频文件路径。
+        /// <p>转码后的视频文件路径。</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+        /// <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+        /// <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// 视频流高度的最大值，单位：px。
+        /// <p>视频流高度的最大值，单位：px。</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 视频流宽度的最大值，单位：px。
+        /// <p>视频流宽度的最大值，单位：px。</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+        /// <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 视频时长，单位：秒。
+        /// <p>视频时长，单位：秒。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 容器类型，例如 m4a，mp4 等。
+        /// <p>容器类型，例如 m4a，mp4 等。</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 视频的 md5 值。
+        /// <p>视频的 md5 值。</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 音频流信息。
+        /// <p>音频流信息。</p>
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// 视频流信息。
+        /// <p>视频流信息。</p>
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
         /// <summary>
-        /// 视频转码使用增强项说明，增强项解释
-        /// <li>hdr：HDR配置</li>
-        /// <li>wd_fps：插帧帧率配置</li>
-        /// <li>video_super_resolution：	超分配置</li>
-        /// <li>repair：综合增强配置</li>
-        /// <li>denoise：视频降噪配置</li>
-        /// <li>color_enhance：色彩增强配置</li>
-        /// <li>scratch：去划痕配置</li>
-        /// <li>artifact：去伪影（毛刺）配置</li>
-        /// <li>sharp：细节增强配置</li>
-        /// <li>low_light：低光照增强配置</li>
-        /// <li>face_enhance：人脸增强配置</li>
+        /// <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallBackExtInfo")]
         public string CallBackExtInfo{ get; set; }
+
+        /// <summary>
+        /// <p>MediaTranscodeItem</p>
+        /// </summary>
+        [JsonProperty("Usage")]
+        public MediaUsageItem Usage{ get; set; }
 
 
         /// <summary>
@@ -133,6 +128,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
             this.SetParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
+            this.SetParamObj(map, prefix + "Usage.", this.Usage);
         }
     }
 }

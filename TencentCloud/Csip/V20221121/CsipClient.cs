@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1496";
 
         /// <summary>
         /// Client constructor.
@@ -1654,6 +1654,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建本地镜像列表导出任务。导出字段包含镜像ID、镜像名、镜像版本、关联容器数、关联主机数、创建时间、所属账号昵称，以及扫描状态/漏洞/木马/敏感信息等风险字段。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。单账号模式下自动排除NickName字段。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostImageListExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostImageListExportJobResponse"/></returns>
+        public Task<CreateHostImageListExportJobResponse> CreateHostImageListExportJob(CreateHostImageListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostImageListExportJobResponse>(req, "CreateHostImageListExportJob");
+        }
+
+        /// <summary>
+        /// 创建本地镜像列表导出任务。导出字段包含镜像ID、镜像名、镜像版本、关联容器数、关联主机数、创建时间、所属账号昵称，以及扫描状态/漏洞/木马/敏感信息等风险字段。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。单账号模式下自动排除NickName字段。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostImageListExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostImageListExportJobResponse"/></returns>
+        public CreateHostImageListExportJobResponse CreateHostImageListExportJobSync(CreateHostImageListExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostImageListExportJobResponse>(req, "CreateHostImageListExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建主机列漏洞表导出任务
         /// </summary>
         /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
@@ -2175,6 +2196,90 @@ namespace TencentCloud.Csip.V20221121
         public CreateRiskDetailExportJobResponse CreateRiskDetailExportJobSync(CreateRiskDetailExportJobRequest req)
         {
             return InternalRequestAsync<CreateRiskDetailExportJobResponse>(req, "CreateRiskDetailExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一条 ACL 用户访问控制规则。可选择引用若干条系统规则，亦可自定义规则，两者至少提供其一
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxACLRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxACLRuleResponse"/></returns>
+        public Task<CreateSandboxACLRuleResponse> CreateSandboxACLRule(CreateSandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxACLRuleResponse>(req, "CreateSandboxACLRule");
+        }
+
+        /// <summary>
+        /// 创建一条 ACL 用户访问控制规则。可选择引用若干条系统规则，亦可自定义规则，两者至少提供其一
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxACLRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxACLRuleResponse"/></returns>
+        public CreateSandboxACLRuleResponse CreateSandboxACLRuleSync(CreateSandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxACLRuleResponse>(req, "CreateSandboxACLRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一条 DLP 用户规则。可引用若干系统规则（SystemRuleIDList），亦可自定义规则（UserRuleContent，名称 + 正则），两者至少提供其一；UserRuleInfo 为新增可选的结构化入参，与 UserRuleContent 同时传入时以 UserRuleInfo 为准
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxDLPRuleResponse"/></returns>
+        public Task<CreateSandboxDLPRuleResponse> CreateSandboxDLPRule(CreateSandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxDLPRuleResponse>(req, "CreateSandboxDLPRule");
+        }
+
+        /// <summary>
+        /// 创建一条 DLP 用户规则。可引用若干系统规则（SystemRuleIDList），亦可自定义规则（UserRuleContent，名称 + 正则），两者至少提供其一；UserRuleInfo 为新增可选的结构化入参，与 UserRuleContent 同时传入时以 UserRuleInfo 为准
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxDLPRuleResponse"/></returns>
+        public CreateSandboxDLPRuleResponse CreateSandboxDLPRuleSync(CreateSandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxDLPRuleResponse>(req, "CreateSandboxDLPRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxFileRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxFileRuleResponse"/></returns>
+        public Task<CreateSandboxFileRuleResponse> CreateSandboxFileRule(CreateSandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxFileRuleResponse>(req, "CreateSandboxFileRule");
+        }
+
+        /// <summary>
+        /// 创建命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxFileRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxFileRuleResponse"/></returns>
+        public CreateSandboxFileRuleResponse CreateSandboxFileRuleSync(CreateSandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxFileRuleResponse>(req, "CreateSandboxFileRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一条 LLM 审计用户规则。必须引用至少一条系统规则，不支持用户自定义规则内容
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxLLMAuditRuleResponse"/></returns>
+        public Task<CreateSandboxLLMAuditRuleResponse> CreateSandboxLLMAuditRule(CreateSandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxLLMAuditRuleResponse>(req, "CreateSandboxLLMAuditRule");
+        }
+
+        /// <summary>
+        /// 创建一条 LLM 审计用户规则。必须引用至少一条系统规则，不支持用户自定义规则内容
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateSandboxLLMAuditRuleResponse"/></returns>
+        public CreateSandboxLLMAuditRuleResponse CreateSandboxLLMAuditRuleSync(CreateSandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxLLMAuditRuleResponse>(req, "CreateSandboxLLMAuditRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3254,6 +3359,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 批量删除 ACL 用户规则。删除后规则不再返回到列表查询，并不再对流量生效。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxACLRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxACLRuleResponse"/></returns>
+        public Task<DeleteSandboxACLRuleResponse> DeleteSandboxACLRule(DeleteSandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxACLRuleResponse>(req, "DeleteSandboxACLRule");
+        }
+
+        /// <summary>
+        /// 批量删除 ACL 用户规则。删除后规则不再返回到列表查询，并不再对流量生效。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxACLRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxACLRuleResponse"/></returns>
+        public DeleteSandboxACLRuleResponse DeleteSandboxACLRuleSync(DeleteSandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxACLRuleResponse>(req, "DeleteSandboxACLRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 DLP 用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxDLPRuleResponse"/></returns>
+        public Task<DeleteSandboxDLPRuleResponse> DeleteSandboxDLPRule(DeleteSandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxDLPRuleResponse>(req, "DeleteSandboxDLPRule");
+        }
+
+        /// <summary>
+        /// 批量删除 DLP 用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxDLPRuleResponse"/></returns>
+        public DeleteSandboxDLPRuleResponse DeleteSandboxDLPRuleSync(DeleteSandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxDLPRuleResponse>(req, "DeleteSandboxDLPRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxFileRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxFileRuleResponse"/></returns>
+        public Task<DeleteSandboxFileRuleResponse> DeleteSandboxFileRule(DeleteSandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxFileRuleResponse>(req, "DeleteSandboxFileRule");
+        }
+
+        /// <summary>
+        /// 创建命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxFileRuleRequest"/></param>
+        /// <returns><see cref="DeleteSandboxFileRuleResponse"/></returns>
+        public DeleteSandboxFileRuleResponse DeleteSandboxFileRuleSync(DeleteSandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxFileRuleResponse>(req, "DeleteSandboxFileRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
         /// </summary>
         /// <param name="req"><see cref="DeleteSandboxLLMAuditRuleRequest"/></param>
@@ -3883,6 +4051,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAccessKeyUserListResponse DescribeAccessKeyUserListSync(DescribeAccessKeyUserListRequest req)
         {
             return InternalRequestAsync<DescribeAccessKeyUserListResponse>(req, "DescribeAccessKeyUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyWhiteListResponse"/></returns>
+        public Task<DescribeAccessKeyWhiteListResponse> DescribeAccessKeyWhiteList(DescribeAccessKeyWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyWhiteListResponse>(req, "DescribeAccessKeyWhiteList");
+        }
+
+        /// <summary>
+        /// 访问密钥告警记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessKeyWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeAccessKeyWhiteListResponse"/></returns>
+        public DescribeAccessKeyWhiteListResponse DescribeAccessKeyWhiteListSync(DescribeAccessKeyWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessKeyWhiteListResponse>(req, "DescribeAccessKeyWhiteList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4916,6 +5105,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSCPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCSCPayInfoResponse"/></returns>
+        public Task<DescribeCSCPayInfoResponse> DescribeCSCPayInfo(DescribeCSCPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCSCPayInfoResponse>(req, "DescribeCSCPayInfo");
+        }
+
+        /// <summary>
+        /// 查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSCPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCSCPayInfoResponse"/></returns>
+        public DescribeCSCPayInfoResponse DescribeCSCPayInfoSync(DescribeCSCPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCSCPayInfoResponse>(req, "DescribeCSCPayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询ModifyCSIPLicenseBinds返回的异步绑定任务进度。
         /// </summary>
         /// <param name="req"><see cref="DescribeCSIPLicenseBindScheduleRequest"/></param>
@@ -4996,6 +5206,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatisticsSync(DescribeCSIPRiskStatisticsRequest req)
         {
             return InternalRequestAsync<DescribeCSIPRiskStatisticsResponse>(req, "DescribeCSIPRiskStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取已购CSPM订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSPMPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCSPMPayInfoResponse"/></returns>
+        public Task<DescribeCSPMPayInfoResponse> DescribeCSPMPayInfo(DescribeCSPMPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCSPMPayInfoResponse>(req, "DescribeCSPMPayInfo");
+        }
+
+        /// <summary>
+        /// 获取已购CSPM订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSPMPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCSPMPayInfoResponse"/></returns>
+        public DescribeCSPMPayInfoResponse DescribeCSPMPayInfoSync(DescribeCSPMPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCSPMPayInfoResponse>(req, "DescribeCSPMPayInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10838,6 +11069,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 分页查询 DLP 数据泄露告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPAlertListResponse"/></returns>
+        public Task<DescribeSandboxDLPAlertListResponse> DescribeSandboxDLPAlertList(DescribeSandboxDLPAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPAlertListResponse>(req, "DescribeSandboxDLPAlertList");
+        }
+
+        /// <summary>
+        /// 分页查询 DLP 数据泄露告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPAlertListResponse"/></returns>
+        public DescribeSandboxDLPAlertListResponse DescribeSandboxDLPAlertListSync(DescribeSandboxDLPAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPAlertListResponse>(req, "DescribeSandboxDLPAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户的 DLP 用户规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPRuleListResponse"/></returns>
+        public Task<DescribeSandboxDLPRuleListResponse> DescribeSandboxDLPRuleList(DescribeSandboxDLPRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPRuleListResponse>(req, "DescribeSandboxDLPRuleList");
+        }
+
+        /// <summary>
+        /// 查询当前租户的 DLP 用户规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxDLPRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxDLPRuleListResponse"/></returns>
+        public DescribeSandboxDLPRuleListResponse DescribeSandboxDLPRuleListSync(DescribeSandboxDLPRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxDLPRuleListResponse>(req, "DescribeSandboxDLPRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
         /// </summary>
         /// <param name="req"><see cref="DescribeSandboxDLPSystemRuleListRequest"/></param>
@@ -10876,6 +11149,69 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSandboxFileRuleListResponse DescribeSandboxFileRuleListSync(DescribeSandboxFileRuleListRequest req)
         {
             return InternalRequestAsync<DescribeSandboxFileRuleListResponse>(req, "DescribeSandboxFileRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询 LLM 审计告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditAlertListResponse"/></returns>
+        public Task<DescribeSandboxLLMAuditAlertListResponse> DescribeSandboxLLMAuditAlertList(DescribeSandboxLLMAuditAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditAlertListResponse>(req, "DescribeSandboxLLMAuditAlertList");
+        }
+
+        /// <summary>
+        /// 分页查询 LLM 审计告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditAlertListResponse"/></returns>
+        public DescribeSandboxLLMAuditAlertListResponse DescribeSandboxLLMAuditAlertListSync(DescribeSandboxLLMAuditAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditAlertListResponse>(req, "DescribeSandboxLLMAuditAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询当前租户的 LLM 审计用户规则列表。LLM 审计规则不支持用户自定义内容，只能引用系统规则组合。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditRuleListResponse"/></returns>
+        public Task<DescribeSandboxLLMAuditRuleListResponse> DescribeSandboxLLMAuditRuleList(DescribeSandboxLLMAuditRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditRuleListResponse>(req, "DescribeSandboxLLMAuditRuleList");
+        }
+
+        /// <summary>
+        /// 查询当前租户的 LLM 审计用户规则列表。LLM 审计规则不支持用户自定义内容，只能引用系统规则组合。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditRuleListResponse"/></returns>
+        public DescribeSandboxLLMAuditRuleListResponse DescribeSandboxLLMAuditRuleListSync(DescribeSandboxLLMAuditRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditRuleListResponse>(req, "DescribeSandboxLLMAuditRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 LLM 审计系统规则列表，系统规则由 CSIP 平台内置（来源于 LLM 审计系统规则库），按 LLM 推理防护 / ToolCall 防护拆分为两个扁平规则数组返回，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditSystemRuleListResponse"/></returns>
+        public Task<DescribeSandboxLLMAuditSystemRuleListResponse> DescribeSandboxLLMAuditSystemRuleList(DescribeSandboxLLMAuditSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditSystemRuleListResponse>(req, "DescribeSandboxLLMAuditSystemRuleList");
+        }
+
+        /// <summary>
+        /// 查询 LLM 审计系统规则列表，系统规则由 CSIP 平台内置（来源于 LLM 审计系统规则库），按 LLM 推理防护 / ToolCall 防护拆分为两个扁平规则数组返回，可被用户规则引用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxLLMAuditSystemRuleListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxLLMAuditSystemRuleListResponse"/></returns>
+        public DescribeSandboxLLMAuditSystemRuleListResponse DescribeSandboxLLMAuditSystemRuleListSync(DescribeSandboxLLMAuditSystemRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxLLMAuditSystemRuleListResponse>(req, "DescribeSandboxLLMAuditSystemRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -11195,6 +11531,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取用户访问密钥资产列表（源IP视角）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceIPDetailRequest"/></param>
+        /// <returns><see cref="DescribeSourceIPDetailResponse"/></returns>
+        public Task<DescribeSourceIPDetailResponse> DescribeSourceIPDetail(DescribeSourceIPDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceIPDetailResponse>(req, "DescribeSourceIPDetail");
+        }
+
+        /// <summary>
+        /// 获取用户访问密钥资产列表（源IP视角）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceIPDetailRequest"/></param>
+        /// <returns><see cref="DescribeSourceIPDetailResponse"/></returns>
+        public DescribeSourceIPDetailResponse DescribeSourceIPDetailSync(DescribeSourceIPDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceIPDetailResponse>(req, "DescribeSourceIPDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询集团的子账号列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
@@ -11426,6 +11783,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取账号AK信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAKInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserAKInfoListResponse"/></returns>
+        public Task<DescribeUserAKInfoListResponse> DescribeUserAKInfoList(DescribeUserAKInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAKInfoListResponse>(req, "DescribeUserAKInfoList");
+        }
+
+        /// <summary>
+        /// 获取账号AK信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAKInfoListRequest"/></param>
+        /// <returns><see cref="DescribeUserAKInfoListResponse"/></returns>
+        public DescribeUserAKInfoListResponse DescribeUserAKInfoListSync(DescribeUserAKInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAKInfoListResponse>(req, "DescribeUserAKInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取账号CSPM信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserCSPMInfoListRequest"/></param>
@@ -11590,6 +11968,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVdbAndPocInfoResponse DescribeVdbAndPocInfoSync(DescribeVdbAndPocInfoRequest req)
         {
             return InternalRequestAsync<DescribeVdbAndPocInfoResponse>(req, "DescribeVdbAndPocInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查当前用户是否有资格领取指定活动的代金券。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherEligibilityRequest"/></param>
+        /// <returns><see cref="DescribeVoucherEligibilityResponse"/></returns>
+        public Task<DescribeVoucherEligibilityResponse> DescribeVoucherEligibility(DescribeVoucherEligibilityRequest req)
+        {
+            return InternalRequestAsync<DescribeVoucherEligibilityResponse>(req, "DescribeVoucherEligibility");
+        }
+
+        /// <summary>
+        /// 检查当前用户是否有资格领取指定活动的代金券。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherEligibilityRequest"/></param>
+        /// <returns><see cref="DescribeVoucherEligibilityResponse"/></returns>
+        public DescribeVoucherEligibilityResponse DescribeVoucherEligibilitySync(DescribeVoucherEligibilityRequest req)
+        {
+            return InternalRequestAsync<DescribeVoucherEligibilityResponse>(req, "DescribeVoucherEligibility")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12202,6 +12601,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 在指定的机器实例上安装密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。安装后，目标机器上的AI Agent即可通过密钥沙箱代理访问凭据，无需接触明文密钥。已安装的实例重复调用不会报错（幂等），直接视为成功。
+        /// </summary>
+        /// <param name="req"><see cref="InstallKeySandboxSkillRequest"/></param>
+        /// <returns><see cref="InstallKeySandboxSkillResponse"/></returns>
+        public Task<InstallKeySandboxSkillResponse> InstallKeySandboxSkill(InstallKeySandboxSkillRequest req)
+        {
+            return InternalRequestAsync<InstallKeySandboxSkillResponse>(req, "InstallKeySandboxSkill");
+        }
+
+        /// <summary>
+        /// 在指定的机器实例上安装密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。安装后，目标机器上的AI Agent即可通过密钥沙箱代理访问凭据，无需接触明文密钥。已安装的实例重复调用不会报错（幂等），直接视为成功。
+        /// </summary>
+        /// <param name="req"><see cref="InstallKeySandboxSkillRequest"/></param>
+        /// <returns><see cref="InstallKeySandboxSkillResponse"/></returns>
+        public InstallKeySandboxSkillResponse InstallKeySandboxSkillSync(InstallKeySandboxSkillRequest req)
+        {
+            return InternalRequestAsync<InstallKeySandboxSkillResponse>(req, "InstallKeySandboxSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 触发将流量沙箱插件安装到指定范围内的 AI Agent 资产。通过 BelongAssetType 区分主机/容器维度，通过 EffectScope 指定安装目标（INCLUDE=仅安装到指定资产，EXCLUDE=全部资产减去指定资产）。接口仅触发下发动作，不等待完成
+        /// </summary>
+        /// <param name="req"><see cref="InstallSandboxPluginRequest"/></param>
+        /// <returns><see cref="InstallSandboxPluginResponse"/></returns>
+        public Task<InstallSandboxPluginResponse> InstallSandboxPlugin(InstallSandboxPluginRequest req)
+        {
+            return InternalRequestAsync<InstallSandboxPluginResponse>(req, "InstallSandboxPlugin");
+        }
+
+        /// <summary>
+        /// 触发将流量沙箱插件安装到指定范围内的 AI Agent 资产。通过 BelongAssetType 区分主机/容器维度，通过 EffectScope 指定安装目标（INCLUDE=仅安装到指定资产，EXCLUDE=全部资产减去指定资产）。接口仅触发下发动作，不等待完成
+        /// </summary>
+        /// <param name="req"><see cref="InstallSandboxPluginRequest"/></param>
+        /// <returns><see cref="InstallSandboxPluginResponse"/></returns>
+        public InstallSandboxPluginResponse InstallSandboxPluginSync(InstallSandboxPluginRequest req)
+        {
+            return InternalRequestAsync<InstallSandboxPluginResponse>(req, "InstallSandboxPlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改AI-Link智链引擎配置
         /// </summary>
         /// <param name="req"><see cref="ModifyAILinkSettingRequest"/></param>
@@ -12685,6 +13126,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBindsSync(ModifyCSIPRaspLicenseUnBindsRequest req)
         {
             return InternalRequestAsync<ModifyCSIPRaspLicenseUnBindsResponse>(req, "ModifyCSIPRaspLicenseUnBinds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyClusterDefendStatusResponse"/></returns>
+        public Task<ModifyClusterDefendStatusResponse> ModifyClusterDefendStatus(ModifyClusterDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterDefendStatusResponse>(req, "ModifyClusterDefendStatus");
+        }
+
+        /// <summary>
+        /// 修改集群防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyClusterDefendStatusResponse"/></returns>
+        public ModifyClusterDefendStatusResponse ModifyClusterDefendStatusSync(ModifyClusterDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterDefendStatusResponse>(req, "ModifyClusterDefendStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -14303,6 +14765,174 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改已有的 ACL 用户规则。未传字段保持原值，支持部分字段更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxACLRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxACLRuleResponse"/></returns>
+        public Task<ModifySandboxACLRuleResponse> ModifySandboxACLRule(ModifySandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxACLRuleResponse>(req, "ModifySandboxACLRule");
+        }
+
+        /// <summary>
+        /// 修改已有的 ACL 用户规则。未传字段保持原值，支持部分字段更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxACLRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxACLRuleResponse"/></returns>
+        public ModifySandboxACLRuleResponse ModifySandboxACLRuleSync(ModifySandboxACLRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxACLRuleResponse>(req, "ModifySandboxACLRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量切换 ACL 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxACLRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxACLRuleStatusResponse"/></returns>
+        public Task<ModifySandboxACLRuleStatusResponse> ModifySandboxACLRuleStatus(ModifySandboxACLRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxACLRuleStatusResponse>(req, "ModifySandboxACLRuleStatus");
+        }
+
+        /// <summary>
+        /// 批量切换 ACL 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxACLRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxACLRuleStatusResponse"/></returns>
+        public ModifySandboxACLRuleStatusResponse ModifySandboxACLRuleStatusSync(ModifySandboxACLRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxACLRuleStatusResponse>(req, "ModifySandboxACLRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量更新流量沙箱告警（覆盖 ACL / DLP / LLM 审计三类）。通过 AlertType + BelongAssetType 定位告警来源。Status 支持 HANDLED / IGNORE 修改状态，以及 DELETE 删除。任一告警 ID 不存在或属于其他租户时整体返回错误。注：加白（PASS）不经本接口，由 Create/Modify***Rule 通过 AlertID 回写触发
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxAlertStatusResponse"/></returns>
+        public Task<ModifySandboxAlertStatusResponse> ModifySandboxAlertStatus(ModifySandboxAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxAlertStatusResponse>(req, "ModifySandboxAlertStatus");
+        }
+
+        /// <summary>
+        /// 批量更新流量沙箱告警（覆盖 ACL / DLP / LLM 审计三类）。通过 AlertType + BelongAssetType 定位告警来源。Status 支持 HANDLED / IGNORE 修改状态，以及 DELETE 删除。任一告警 ID 不存在或属于其他租户时整体返回错误。注：加白（PASS）不经本接口，由 Create/Modify***Rule 通过 AlertID 回写触发
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxAlertStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxAlertStatusResponse"/></returns>
+        public ModifySandboxAlertStatusResponse ModifySandboxAlertStatusSync(ModifySandboxAlertStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxAlertStatusResponse>(req, "ModifySandboxAlertStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改已存在的 DLP 用户规则。未传字段保持原值，支持部分字段更新；不支持修改 BelongAssetType
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxDLPRuleResponse"/></returns>
+        public Task<ModifySandboxDLPRuleResponse> ModifySandboxDLPRule(ModifySandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxDLPRuleResponse>(req, "ModifySandboxDLPRule");
+        }
+
+        /// <summary>
+        /// 修改已存在的 DLP 用户规则。未传字段保持原值，支持部分字段更新；不支持修改 BelongAssetType
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxDLPRuleResponse"/></returns>
+        public ModifySandboxDLPRuleResponse ModifySandboxDLPRuleSync(ModifySandboxDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxDLPRuleResponse>(req, "ModifySandboxDLPRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量切换 DLP 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxDLPRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxDLPRuleStatusResponse"/></returns>
+        public Task<ModifySandboxDLPRuleStatusResponse> ModifySandboxDLPRuleStatus(ModifySandboxDLPRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxDLPRuleStatusResponse>(req, "ModifySandboxDLPRuleStatus");
+        }
+
+        /// <summary>
+        /// 批量切换 DLP 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxDLPRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxDLPRuleStatusResponse"/></returns>
+        public ModifySandboxDLPRuleStatusResponse ModifySandboxDLPRuleStatusSync(ModifySandboxDLPRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxDLPRuleStatusResponse>(req, "ModifySandboxDLPRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxFileRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxFileRuleResponse"/></returns>
+        public Task<ModifySandboxFileRuleResponse> ModifySandboxFileRule(ModifySandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxFileRuleResponse>(req, "ModifySandboxFileRule");
+        }
+
+        /// <summary>
+        /// 修改命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxFileRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxFileRuleResponse"/></returns>
+        public ModifySandboxFileRuleResponse ModifySandboxFileRuleSync(ModifySandboxFileRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxFileRuleResponse>(req, "ModifySandboxFileRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量启用或禁用命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxFileRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxFileRuleStatusResponse"/></returns>
+        public Task<ModifySandboxFileRuleStatusResponse> ModifySandboxFileRuleStatus(ModifySandboxFileRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxFileRuleStatusResponse>(req, "ModifySandboxFileRuleStatus");
+        }
+
+        /// <summary>
+        /// 批量启用或禁用命令沙箱文件访问规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxFileRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySandboxFileRuleStatusResponse"/></returns>
+        public ModifySandboxFileRuleStatusResponse ModifySandboxFileRuleStatusSync(ModifySandboxFileRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxFileRuleStatusResponse>(req, "ModifySandboxFileRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改已有的 LLM 审计用户规则。未传字段保持原值，支持部分字段更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxLLMAuditRuleResponse"/></returns>
+        public Task<ModifySandboxLLMAuditRuleResponse> ModifySandboxLLMAuditRule(ModifySandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxLLMAuditRuleResponse>(req, "ModifySandboxLLMAuditRule");
+        }
+
+        /// <summary>
+        /// 修改已有的 LLM 审计用户规则。未传字段保持原值，支持部分字段更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifySandboxLLMAuditRuleRequest"/></param>
+        /// <returns><see cref="ModifySandboxLLMAuditRuleResponse"/></returns>
+        public ModifySandboxLLMAuditRuleResponse ModifySandboxLLMAuditRuleSync(ModifySandboxLLMAuditRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySandboxLLMAuditRuleResponse>(req, "ModifySandboxLLMAuditRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
         /// </summary>
         /// <param name="req"><see cref="ModifySandboxLLMAuditRuleStatusRequest"/></param>
@@ -14341,6 +14971,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifySecurityScoreRuleResponse ModifySecurityScoreRuleSync(ModifySecurityScoreRuleRequest req)
         {
             return InternalRequestAsync<ModifySecurityScoreRuleResponse>(req, "ModifySecurityScoreRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑ak监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserAKRequest"/></param>
+        /// <returns><see cref="ModifyShareUserAKResponse"/></returns>
+        public Task<ModifyShareUserAKResponse> ModifyShareUserAK(ModifyShareUserAKRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserAKResponse>(req, "ModifyShareUserAK");
+        }
+
+        /// <summary>
+        /// 编辑ak监测账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShareUserAKRequest"/></param>
+        /// <returns><see cref="ModifyShareUserAKResponse"/></returns>
+        public ModifyShareUserAKResponse ModifyShareUserAKSync(ModifyShareUserAKRequest req)
+        {
+            return InternalRequestAsync<ModifyShareUserAKResponse>(req, "ModifyShareUserAK")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -15139,6 +15790,27 @@ namespace TencentCloud.Csip.V20221121
         public UninstallClusterAgentResponse UninstallClusterAgentSync(UninstallClusterAgentRequest req)
         {
             return InternalRequestAsync<UninstallClusterAgentResponse>(req, "UninstallClusterAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从指定的机器实例上卸载密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。卸载后，目标机器上的AI Agent将无法再通过密钥沙箱代理访问凭据。未安装的实例重复调用不会报错（幂等），直接视为成功。
+        /// </summary>
+        /// <param name="req"><see cref="UninstallKeySandboxSkillRequest"/></param>
+        /// <returns><see cref="UninstallKeySandboxSkillResponse"/></returns>
+        public Task<UninstallKeySandboxSkillResponse> UninstallKeySandboxSkill(UninstallKeySandboxSkillRequest req)
+        {
+            return InternalRequestAsync<UninstallKeySandboxSkillResponse>(req, "UninstallKeySandboxSkill");
+        }
+
+        /// <summary>
+        /// 从指定的机器实例上卸载密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。卸载后，目标机器上的AI Agent将无法再通过密钥沙箱代理访问凭据。未安装的实例重复调用不会报错（幂等），直接视为成功。
+        /// </summary>
+        /// <param name="req"><see cref="UninstallKeySandboxSkillRequest"/></param>
+        /// <returns><see cref="UninstallKeySandboxSkillResponse"/></returns>
+        public UninstallKeySandboxSkillResponse UninstallKeySandboxSkillSync(UninstallKeySandboxSkillRequest req)
+        {
+            return InternalRequestAsync<UninstallKeySandboxSkillResponse>(req, "UninstallKeySandboxSkill")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

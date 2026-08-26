@@ -108,6 +108,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("PostProductList")]
         public long?[] PostProductList{ get; set; }
 
+        /// <summary>
+        /// <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+        /// </summary>
+        [JsonProperty("DefaultSampleRate")]
+        public float? DefaultSampleRate{ get; set; }
+
+        /// <summary>
+        /// <p>是否白名单，仅用于控制前端范围和精度</p>
+        /// </summary>
+        [JsonProperty("BucketSamplingRateWhitelist")]
+        public bool? BucketSamplingRateWhitelist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IsHaveNewPostOrder", this.IsHaveNewPostOrder);
             this.SetParamSimple(map, prefix + "IsHaveOldPostOrder", this.IsHaveOldPostOrder);
             this.SetParamArraySimple(map, prefix + "PostProductList.", this.PostProductList);
+            this.SetParamSimple(map, prefix + "DefaultSampleRate", this.DefaultSampleRate);
+            this.SetParamSimple(map, prefix + "BucketSamplingRateWhitelist", this.BucketSamplingRateWhitelist);
         }
     }
 }

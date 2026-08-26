@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 备份计划 ID 列表
+        /// <p>备份计划 ID 列表</p>
         /// </summary>
         [JsonProperty("PlanIds")]
         public string[] PlanIds{ get; set; }

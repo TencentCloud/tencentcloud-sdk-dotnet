@@ -38,12 +38,16 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 编辑的规则名称
+        /// 入参限制：1-128个字符，不允许特殊字符
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+        /// 动作类型
+        /// 取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+        /// 入参限制：必填，取值范围为1-8
+        /// 约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
@@ -120,12 +124,16 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+        /// 默认值：and
+        /// 入参限制：不区分大小写，仅支持and或or
         /// </summary>
         [JsonProperty("LogicalOp")]
         public string LogicalOp{ get; set; }
 
         /// <summary>
-        /// 规则生效比例
+        /// 动作灰度比例，即规则命中后执行动作的流量百分比
+        /// 取值范围：1-100
+        /// 默认值：100（全量生效）
         /// </summary>
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }

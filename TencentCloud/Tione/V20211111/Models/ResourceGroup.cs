@@ -25,52 +25,52 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 资源组id
+        /// <p>资源组id</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 资源组名称
+        /// <p>资源组名称</p>
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 可用节点个数(运行中的节点)
+        /// <p>可用节点个数(运行中的节点)</p>
         /// </summary>
         [JsonProperty("FreeInstance")]
         public ulong? FreeInstance{ get; set; }
 
         /// <summary>
-        /// 总节点个数(所有节点)
+        /// <p>总节点个数(所有节点)</p>
         /// </summary>
         [JsonProperty("TotalInstance")]
         public ulong? TotalInstance{ get; set; }
 
         /// <summary>
-        /// 资源组已用的资源
+        /// <p>资源组已用的资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedResource")]
         public GroupResource UsedResource{ get; set; }
 
         /// <summary>
-        /// 资源组总资源
+        /// <p>资源组总资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalResource")]
         public GroupResource TotalResource{ get; set; }
 
         /// <summary>
-        /// 节点信息
+        /// <p>节点信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceSet")]
         public Instance[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]

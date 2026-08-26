@@ -150,6 +150,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("EnableSparkAppMonitorInfo")]
         public EnableSparkAppMonitorInfo EnableSparkAppMonitorInfo{ get; set; }
 
+        /// <summary>
+        /// <p>已有EMR资源节点组Id列表</p>
+        /// </summary>
+        [JsonProperty("ComputeResourceGroupIds")]
+        public string[] ComputeResourceGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启实例保护</p>
+        /// </summary>
+        [JsonProperty("TerminateProtection")]
+        public bool? TerminateProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
             this.SetParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
             this.SetParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
+            this.SetParamArraySimple(map, prefix + "ComputeResourceGroupIds.", this.ComputeResourceGroupIds);
+            this.SetParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
         }
     }
 }

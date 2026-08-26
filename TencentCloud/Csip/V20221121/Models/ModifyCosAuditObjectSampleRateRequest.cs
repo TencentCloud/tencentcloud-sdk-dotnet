@@ -36,6 +36,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("SampleRateSet")]
         public float?[] SampleRateSet{ get; set; }
 
+        /// <summary>
+        /// <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+        /// </summary>
+        [JsonProperty("TargetAppId")]
+        public ulong? TargetAppId{ get; set; }
+
+        /// <summary>
+        /// <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+        /// </summary>
+        [JsonProperty("DefaultSampleRate")]
+        public float? DefaultSampleRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Csip.V20221121.Models
         {
             this.SetParamArraySimple(map, prefix + "BucketIdSet.", this.BucketIdSet);
             this.SetParamArraySimple(map, prefix + "SampleRateSet.", this.SampleRateSet);
+            this.SetParamSimple(map, prefix + "TargetAppId", this.TargetAppId);
+            this.SetParamSimple(map, prefix + "DefaultSampleRate", this.DefaultSampleRate);
         }
     }
 }

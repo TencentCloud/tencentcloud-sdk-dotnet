@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? CreateSnapshot{ get; set; }
 
         /// <summary>
-        /// <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+        /// <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }

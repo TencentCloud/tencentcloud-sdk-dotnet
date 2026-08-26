@@ -48,6 +48,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+        /// </summary>
+        [JsonProperty("OperationSource")]
+        public string OperationSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "OperationSource", this.OperationSource);
         }
     }
 }

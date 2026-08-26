@@ -25,58 +25,64 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产总数
+        /// <p>资产总数</p>
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
-        /// 需要立即处理的资产数
+        /// <p>需要立即处理的资产数</p>
         /// </summary>
         [JsonProperty("AlarmAssetCount")]
         public long? AlarmAssetCount{ get; set; }
 
         /// <summary>
-        /// 需要加固的资产数
+        /// <p>需要加固的资产数</p>
         /// </summary>
         [JsonProperty("RiskAssetCount")]
         public long? RiskAssetCount{ get; set; }
 
         /// <summary>
-        /// 告警总数
+        /// <p>告警总数</p>
         /// </summary>
         [JsonProperty("AlarmCount")]
         public long? AlarmCount{ get; set; }
 
         /// <summary>
-        /// 当日新增告警总数
+        /// <p>当日新增告警总数</p>
         /// </summary>
         [JsonProperty("IncrementAlarmCount")]
         public long? IncrementAlarmCount{ get; set; }
 
         /// <summary>
-        /// 风险总数
+        /// <p>风险总数</p>
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }
 
         /// <summary>
-        /// 当日新增告警总数
+        /// <p>当日新增告警总数</p>
         /// </summary>
         [JsonProperty("IncrementRiskCount")]
         public long? IncrementRiskCount{ get; set; }
 
         /// <summary>
-        /// 风险top详情
+        /// <p>风险top详情</p>
         /// </summary>
         [JsonProperty("RiskTop")]
         public CosRiskInfo[] RiskTop{ get; set; }
 
         /// <summary>
-        /// 告警风险top
+        /// <p>告警风险top</p>
         /// </summary>
         [JsonProperty("AlarmTop")]
         public CosRiskInfo[] AlarmTop{ get; set; }
+
+        /// <summary>
+        /// <p>高等级敏感文件数</p>
+        /// </summary>
+        [JsonProperty("HighLevelSensitiveFileCount")]
+        public long? HighLevelSensitiveFileCount{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IncrementRiskCount", this.IncrementRiskCount);
             this.SetParamArrayObj(map, prefix + "RiskTop.", this.RiskTop);
             this.SetParamArrayObj(map, prefix + "AlarmTop.", this.AlarmTop);
+            this.SetParamSimple(map, prefix + "HighLevelSensitiveFileCount", this.HighLevelSensitiveFileCount);
         }
     }
 }

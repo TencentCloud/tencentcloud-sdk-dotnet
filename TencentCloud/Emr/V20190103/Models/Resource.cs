@@ -116,6 +116,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("HCCHpcClusterId")]
         public string HCCHpcClusterId{ get; set; }
 
+        /// <summary>
+        /// <p>自定义主机名</p>
+        /// </summary>
+        [JsonProperty("CustomNodeName")]
+        public string CustomNodeName{ get; set; }
+
+        /// <summary>
+        /// <p>GPU镜像驱动配置</p>
+        /// </summary>
+        [JsonProperty("GpuImageDriver")]
+        public GpuImageDriverSpec GpuImageDriver{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +149,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
+            this.SetParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
+            this.SetParamObj(map, prefix + "GpuImageDriver.", this.GpuImageDriver);
         }
     }
 }

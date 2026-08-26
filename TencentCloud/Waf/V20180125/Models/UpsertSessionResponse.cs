@@ -31,7 +31,8 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// SessionID
+        /// 会话ID
+        /// 说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
         /// </summary>
         [JsonProperty("SessionID")]
         public long? SessionID{ get; set; }

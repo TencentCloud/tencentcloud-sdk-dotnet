@@ -31,31 +31,25 @@ namespace TencentCloud.Waf.V20180125.Models
         public FilterCls[] Filters{ get; set; }
 
         /// <summary>
-        /// 分页的偏移量，默认值为0。
+        /// <p>分页的偏移量，默认值为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页单页限制数目，默认值为20，最大值100。
+        /// <p>分页单页限制数目，默认值为20，最大值100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 控制Filters相关字段是否为精确匹配。
-        /// <ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-        /// <li>1: topicName   精确匹配</li>
-        /// <li>2: logsetName精确匹配</li>
-        /// <li>3: topicName 和logsetName 都精确匹配</li></ul>
+        /// <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul>
         /// </summary>
         [JsonProperty("PreciseSearch")]
         public ulong? PreciseSearch{ get; set; }
 
         /// <summary>
-        /// 主题类型
-        /// <ul><li>0:日志主题，默认值</li>
-        /// <li>1:指标主题</li></ul>
+        /// <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }

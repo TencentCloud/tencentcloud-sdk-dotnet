@@ -42,6 +42,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Filters")]
         public WhereFilter[] Filters{ get; set; }
 
+        /// <summary>
+        /// <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+        /// </summary>
+        [JsonProperty("OperationSource")]
+        public string OperationSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "DictType", this.DictType);
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "OperationSource", this.OperationSource);
         }
     }
 }

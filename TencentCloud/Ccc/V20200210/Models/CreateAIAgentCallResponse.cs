@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 新创建的会话 ID
+        /// <p>新创建的会话 ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

@@ -75,7 +75,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }

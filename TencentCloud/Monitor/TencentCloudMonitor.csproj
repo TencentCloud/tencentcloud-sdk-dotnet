@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1495</VersionPrefix>
+    <VersionPrefix>3.0.1496</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,6 +82,8 @@
     <Compile Include="V20180724\Models\Condition.cs" />
     <Compile Include="V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="V20180724\Models\CoverStaffInfo.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmHistoryShieldRequest.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmHistoryShieldResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlarmPolicyRequest.cs" />
@@ -133,6 +135,8 @@
     <Compile Include="V20180724\Models\CreateSSOAccountRequest.cs" />
     <Compile Include="V20180724\Models\CreateSSOAccountResponse.cs" />
     <Compile Include="V20180724\Models\DataPoint.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmHistoryShieldsRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmHistoryShieldsResponse.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmNoticesRequest.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmNoticesResponse.cs" />
     <Compile Include="V20180724\Models\DeleteAlarmPolicyRequest.cs" />
@@ -182,6 +186,8 @@
     <Compile Include="V20180724\Models\DescribeAlarmEventsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmHistoriesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmHistoriesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmHistoryShieldRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmHistoryShieldResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmMetricsRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmMetricsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmNoticeCallbacksRequest.cs" />
@@ -400,6 +406,8 @@
     <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="V20180724\Models\MetricSet.cs" />
     <Compile Include="V20180724\Models\MidQueryCondition.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmHistoryShieldRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmHistoryShieldResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
@@ -513,6 +521,7 @@
     <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\ShieldMetric.cs" />
     <Compile Include="V20180724\Models\SingleOrderedDataPoint.cs" />
     <Compile Include="V20180724\Models\StaffInfo.cs" />
     <Compile Include="V20180724\Models\SyncPrometheusTempRequest.cs" />
@@ -582,29 +591,80 @@
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLog.cs" />
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogDetail.cs" />
     <Compile Include="V20230616\Models\AIWorkbenchSREDigitalTwinWorkLogList.cs" />
+    <Compile Include="V20230616\Models\AgentInfo.cs" />
     <Compile Include="V20230616\Models\AlarmLable.cs" />
     <Compile Include="V20230616\Models\AlarmNotifyHistory.cs" />
+    <Compile Include="V20230616\Models\ArtifactInfo.cs" />
+    <Compile Include="V20230616\Models\CancelAIWorkbenchChatRequest.cs" />
+    <Compile Include="V20230616\Models\CancelAIWorkbenchChatResponse.cs" />
     <Compile Include="V20230616\Models\ChannelsReceivers.cs" />
+    <Compile Include="V20230616\Models\ContentBlockInfo.cs" />
+    <Compile Include="V20230616\Models\CreateAIWorkbenchAgentRequest.cs" />
+    <Compile Include="V20230616\Models\CreateAIWorkbenchAgentResponse.cs" />
+    <Compile Include="V20230616\Models\CreateAIWorkbenchTaskRequest.cs" />
+    <Compile Include="V20230616\Models\CreateAIWorkbenchTaskResponse.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
+    <Compile Include="V20230616\Models\DeleteAIWorkbenchAgentRequest.cs" />
+    <Compile Include="V20230616\Models\DeleteAIWorkbenchAgentResponse.cs" />
+    <Compile Include="V20230616\Models\DeleteAIWorkbenchTaskRequest.cs" />
+    <Compile Include="V20230616\Models\DeleteAIWorkbenchTaskResponse.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsRequest.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchAgentRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchAgentResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchArtifactRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchArtifactResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchExecutionRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchExecutionResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinTaskListRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinTaskListResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSessionRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSessionResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSkillRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeAIWorkbenchSkillResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesResponse.cs" />
     <Compile Include="V20230616\Models\DescribeNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\DescribeNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\EnvEntry.cs" />
+    <Compile Include="V20230616\Models\EnvVar.cs" />
+    <Compile Include="V20230616\Models\ExecutionInfo.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\GetAIWorkbenchArtifactDownloadURLRequest.cs" />
+    <Compile Include="V20230616\Models\GetAIWorkbenchArtifactDownloadURLResponse.cs" />
     <Compile Include="V20230616\Models\GoogleChatRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\GoogleChatRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\InstructionConfig.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchAgentsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchAgentsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchArtifactsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchArtifactsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchExecutionsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchExecutionsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchMCPsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchMCPsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchMessagesRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchMessagesResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchResourceInstancesRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchResourceInstancesResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchResourceMapsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchResourceMapsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchSessionsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchSessionsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchSkillsRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchSkillsResponse.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchTasksRequest.cs" />
+    <Compile Include="V20230616\Models\ListAIWorkbenchTasksResponse.cs" />
+    <Compile Include="V20230616\Models\MCPInfo.cs" />
+    <Compile Include="V20230616\Models\MessageInfo.cs" />
     <Compile Include="V20230616\Models\ModifyNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\ModifyNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\NoticeContentTmpl.cs" />
@@ -613,6 +673,8 @@
     <Compile Include="V20230616\Models\NotifyRelatedNotice.cs" />
     <Compile Include="V20230616\Models\PageByNoParams.cs" />
     <Compile Include="V20230616\Models\PageByNoResult.cs" />
+    <Compile Include="V20230616\Models\PageByNumParams.cs" />
+    <Compile Include="V20230616\Models\PageByNumResult.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplHeader.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplMatcher.cs" />
@@ -620,15 +682,25 @@
     <Compile Include="V20230616\Models\QCloudYeheNoticeTmplItem.cs" />
     <Compile Include="V20230616\Models\QCloudYeheNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\QCloudYeheWeChatNoticeTmplItem.cs" />
+    <Compile Include="V20230616\Models\ResourceInstance.cs" />
+    <Compile Include="V20230616\Models\ResourceMapInfo.cs" />
+    <Compile Include="V20230616\Models\SessionInfo.cs" />
+    <Compile Include="V20230616\Models\SkillInfo.cs" />
     <Compile Include="V20230616\Models\SlackRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\SlackRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\Tag.cs" />
+    <Compile Include="V20230616\Models\TaskInfo.cs" />
     <Compile Include="V20230616\Models\TeamsRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\TeamsRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\TeamsWorkflowRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\TeamsWorkflowRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\TriggerAIWorkbenchSREDigitalTwinTaskRequest.cs" />
     <Compile Include="V20230616\Models\TriggerAIWorkbenchSREDigitalTwinTaskResponse.cs" />
+    <Compile Include="V20230616\Models\TriggerAIWorkbenchTaskRequest.cs" />
+    <Compile Include="V20230616\Models\TriggerAIWorkbenchTaskResponse.cs" />
     <Compile Include="V20230616\Models\TriggerDigitalTwinTaskResp.cs" />
+    <Compile Include="V20230616\Models\UpdateAIWorkbenchAgentRequest.cs" />
+    <Compile Include="V20230616\Models\UpdateAIWorkbenchAgentResponse.cs" />
     <Compile Include="V20230616\Models\WeWorkRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\WeWorkRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\WebhookNoticeTmpl.cs" />

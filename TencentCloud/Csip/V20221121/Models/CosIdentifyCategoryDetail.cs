@@ -40,6 +40,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <p>数据项集合</p>
         /// </summary>
         [JsonProperty("RuleSet")]
+        [System.Obsolete]
         public CosIdentifyRuleDetail[] RuleSet{ get; set; }
 
 

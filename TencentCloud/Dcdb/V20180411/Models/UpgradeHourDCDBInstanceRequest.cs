@@ -25,61 +25,64 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+        /// <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 升级类型，取值范围: 
-        /// <li> ADD: 新增分片 </li> 
-        ///  <li> EXPAND: 升级实例中的已有分片 </li> 
-        ///  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+        /// <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 新增分片配置，当UpgradeType为ADD时生效。
+        /// <p>新增分片配置，当UpgradeType为ADD时生效。</p>
         /// </summary>
         [JsonProperty("AddShardConfig")]
         public AddShardConfig AddShardConfig{ get; set; }
 
         /// <summary>
-        /// 扩容分片配置，当UpgradeType为EXPAND时生效。
+        /// <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
         /// </summary>
         [JsonProperty("ExpandShardConfig")]
         public ExpandShardConfig ExpandShardConfig{ get; set; }
 
         /// <summary>
-        /// 切分分片配置，当UpgradeType为SPLIT时生效。
+        /// <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
         /// </summary>
         [JsonProperty("SplitShardConfig")]
         public SplitShardConfig SplitShardConfig{ get; set; }
 
         /// <summary>
-        /// 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+        /// <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }
 
         /// <summary>
-        /// 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+        /// <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
         /// </summary>
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }
 
         /// <summary>
-        /// 是否自动重试。 0：不自动重试  1：自动重试
+        /// <p>是否自动重试。 0：不自动重试  1：自动重试</p>
         /// </summary>
         [JsonProperty("SwitchAutoRetry")]
         public long? SwitchAutoRetry{ get; set; }
 
         /// <summary>
-        /// 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+        /// <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("SwitchInterval")]
+        public long? SwitchInterval{ get; set; }
 
 
         /// <summary>
@@ -96,6 +99,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
             this.SetParamSimple(map, prefix + "SwitchAutoRetry", this.SwitchAutoRetry);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "SwitchInterval", this.SwitchInterval);
         }
     }
 }

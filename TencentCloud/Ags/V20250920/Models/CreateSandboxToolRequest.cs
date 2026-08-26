@@ -85,6 +85,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public CustomConfiguration CustomConfiguration{ get; set; }
 
         /// <summary>
+        /// <p>桌面电脑环境类沙箱配置</p>
+        /// </summary>
+        [JsonProperty("ComputerConfiguration")]
+        public ComputerConfiguration ComputerConfiguration{ get; set; }
+
+        /// <summary>
         /// <p>沙箱工具日志推送相关配置</p>
         /// </summary>
         [JsonProperty("LogConfiguration")]
@@ -112,6 +118,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+            this.SetParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
             this.SetParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
             this.SetParamSimple(map, prefix + "Persistent", this.Persistent);
         }

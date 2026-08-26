@@ -54,6 +54,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CategoryDetails")]
         public CosIdentifyCategoryDetail[] CategoryDetails{ get; set; }
 
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("RuleDetails")]
+        public CosIdentifyRuleDetail[] RuleDetails{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("LevelDetails")]
+        public CosIdentifyLevelDetail[] LevelDetails{ get; set; }
+
+        /// <summary>
+        /// <p>是否已发起全量扫描</p>
+        /// </summary>
+        [JsonProperty("IsFullScanned")]
+        public bool? IsFullScanned{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
             this.SetParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+            this.SetParamArrayObj(map, prefix + "RuleDetails.", this.RuleDetails);
+            this.SetParamArrayObj(map, prefix + "LevelDetails.", this.LevelDetails);
+            this.SetParamSimple(map, prefix + "IsFullScanned", this.IsFullScanned);
         }
     }
 }

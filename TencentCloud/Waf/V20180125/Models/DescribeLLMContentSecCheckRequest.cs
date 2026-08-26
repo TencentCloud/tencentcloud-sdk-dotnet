@@ -96,6 +96,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IntentContent")]
         public IntentContent IntentContent{ get; set; }
 
+        /// <summary>
+        /// <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+        /// </summary>
+        [JsonProperty("ClientIP")]
+        public string ClientIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamObj(map, prefix + "IntentContent.", this.IntentContent);
+            this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
         }
     }
 }

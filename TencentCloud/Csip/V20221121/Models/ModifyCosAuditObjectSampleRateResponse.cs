@@ -25,6 +25,24 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
+        /// <p>本次是否实际提交了默认采样率</p>
+        /// </summary>
+        [JsonProperty("DefaultSampleRateUpdated")]
+        public bool? DefaultSampleRateUpdated{ get; set; }
+
+        /// <summary>
+        /// <p>DefaultSampleRateUpdated=true 时返回修改后的值</p>
+        /// </summary>
+        [JsonProperty("DefaultSampleRate")]
+        public float? DefaultSampleRate{ get; set; }
+
+        /// <summary>
+        /// <p>本次成功提交的已有桶数量</p>
+        /// </summary>
+        [JsonProperty("UpdatedBucketCount")]
+        public ulong? UpdatedBucketCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DefaultSampleRateUpdated", this.DefaultSampleRateUpdated);
+            this.SetParamSimple(map, prefix + "DefaultSampleRate", this.DefaultSampleRate);
+            this.SetParamSimple(map, prefix + "UpdatedBucketCount", this.UpdatedBucketCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

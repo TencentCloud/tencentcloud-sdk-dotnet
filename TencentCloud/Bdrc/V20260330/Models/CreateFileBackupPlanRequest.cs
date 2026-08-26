@@ -25,28 +25,34 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 备份策略ID
+        /// <p>备份策略ID</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 备份库ID
+        /// <p>备份库ID</p>
         /// </summary>
         [JsonProperty("BackupStorageId")]
         public string BackupStorageId{ get; set; }
 
         /// <summary>
-        /// 计划名称
+        /// <p>计划名称</p>
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
 
         /// <summary>
-        /// 实例配置列表，[1,20]
+        /// <p>实例配置列表，[1,20]</p>
         /// </summary>
         [JsonProperty("Resources")]
         public ResourcePlan[] Resources{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "BackupStorageId", this.BackupStorageId);
             this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }
