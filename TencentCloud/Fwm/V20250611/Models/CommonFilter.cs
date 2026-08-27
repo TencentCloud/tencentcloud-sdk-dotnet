@@ -25,21 +25,21 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
+        /// 筛选字段名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>筛选值列表</p>
+        /// 筛选值列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// <p>操作类型。1=等于，7=in，9=模糊匹配</p>
+        /// 操作类型：1-精确匹配 9-模糊匹配
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorType")]

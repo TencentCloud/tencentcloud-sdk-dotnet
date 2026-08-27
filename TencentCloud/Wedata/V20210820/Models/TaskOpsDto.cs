@@ -722,6 +722,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProxyTaskTypeId")]
         public long? ProxyTaskTypeId{ get; set; }
 
+        /// <summary>
+        /// <p>对象权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 管理权限</li><li>CAN_VIEW： 只读权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -828,6 +835,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "ProxyTaskId", this.ProxyTaskId);
             this.SetParamSimple(map, prefix + "ProxyTaskTypeId", this.ProxyTaskTypeId);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

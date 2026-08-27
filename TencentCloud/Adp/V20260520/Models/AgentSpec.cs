@@ -31,13 +31,13 @@ namespace TencentCloud.Adp.V20260520.Models
         public AgentProfile Profile{ get; set; }
 
         /// <summary>
-        /// 系统提示词
+        /// <p>系统提示词</p>
         /// </summary>
         [JsonProperty("Instructions")]
         public string Instructions{ get; set; }
 
         /// <summary>
-        /// 主模型配置
+        /// <p>主模型配置</p>
         /// </summary>
         [JsonProperty("Model")]
         public AgentModelConfig Model{ get; set; }
@@ -61,10 +61,16 @@ namespace TencentCloud.Adp.V20260520.Models
         public AgentSkillConfig[] SkillList{ get; set; }
 
         /// <summary>
-        /// 高级设置
+        /// <p>高级设置</p>
         /// </summary>
         [JsonProperty("AdvancedConfig")]
         public AgentAdvancedConfig AdvancedConfig{ get; set; }
+
+        /// <summary>
+        /// <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+        /// </summary>
+        [JsonProperty("ExternalToolList")]
+        public AgentExternalToolConfig[] ExternalToolList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "PluginList.", this.PluginList);
             this.SetParamArrayObj(map, prefix + "SkillList.", this.SkillList);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
         }
     }
 }

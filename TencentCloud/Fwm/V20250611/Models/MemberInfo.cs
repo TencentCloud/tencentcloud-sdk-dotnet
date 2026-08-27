@@ -25,28 +25,34 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 成员AppId
+        /// <p>成员AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 成员Uin
+        /// <p>成员Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 成员昵称
+        /// <p>成员昵称</p>
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 成员Id
+        /// <p>成员Id</p>
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>所属部门</p>
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Fwm.V20250611.Models
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

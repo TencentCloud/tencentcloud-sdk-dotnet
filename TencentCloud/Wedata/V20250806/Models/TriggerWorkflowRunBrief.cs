@@ -276,6 +276,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ParentTaskExecutionName")]
         public string ParentTaskExecutionName{ get; set; }
 
+        /// <summary>
+        /// <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +325,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ParentWorkflowExecutionId", this.ParentWorkflowExecutionId);
             this.SetParamSimple(map, prefix + "ParentTaskExecutionId", this.ParentTaskExecutionId);
             this.SetParamSimple(map, prefix + "ParentTaskExecutionName", this.ParentTaskExecutionName);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

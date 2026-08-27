@@ -25,43 +25,43 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 分页查询起始位
+        /// <p>分页查询起始位</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询页数
+        /// <p>分页查询页数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 支持userId进行检索
+        /// <p>支持userId进行检索</p>
         /// </summary>
         [JsonProperty("OnCallFormStaffIDs")]
         public string[] OnCallFormStaffIDs{ get; set; }
 
         /// <summary>
-        /// 值班类型
+        /// <p>值班类型</p>
         /// </summary>
         [JsonProperty("RotationType")]
         public string RotationType{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// <p>排序方式</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 支持id、name进行检索
+        /// <p>支持id、name进行检索</p>
         /// </summary>
         [JsonProperty("OnCallFormName")]
         public string OnCallFormName{ get; set; }

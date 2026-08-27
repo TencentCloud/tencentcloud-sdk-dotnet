@@ -25,130 +25,137 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// <p>模版名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeTemplateName")]
         public string CodeTemplateName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 代码模版描述
+        /// <p>代码模版描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeTemplateDesc")]
         public string CodeTemplateDesc{ get; set; }
 
         /// <summary>
-        /// 文件夹id
+        /// <p>文件夹id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 文件夹名称
+        /// <p>文件夹名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 责任人名称
+        /// <p>责任人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }
 
         /// <summary>
-        /// 责任人id
+        /// <p>责任人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InChargeId")]
         public string InChargeId{ get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// <p>扩展信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ext")]
         public TaskExtDsVO Ext{ get; set; }
 
         /// <summary>
-        /// 模版id
+        /// <p>模版id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeTemplateId")]
         public string CodeTemplateId{ get; set; }
 
         /// <summary>
-        /// 最后更新时间
+        /// <p>最后更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]
         public string LastUpdateTime{ get; set; }
 
         /// <summary>
-        /// 更新人名称
+        /// <p>更新人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// 更新人id
+        /// <p>更新人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateUserId")]
         public string UpdateUserId{ get; set; }
 
         /// <summary>
-        /// 执行ip
+        /// <p>执行ip</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
-        /// 资源组id
+        /// <p>资源组id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroup")]
         public string ResourceGroup{ get; set; }
 
         /// <summary>
-        /// 是否提交
+        /// <p>是否提交</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Submit")]
         public bool? Submit{ get; set; }
 
         /// <summary>
-        /// 模版脚本是否发生变化
+        /// <p>模版脚本是否发生变化</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptChange")]
         public bool? ScriptChange{ get; set; }
 
         /// <summary>
-        /// 代码模版脚本，base64编码返回
+        /// <p>代码模版脚本，base64编码返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
 
 
         /// <summary>
@@ -174,6 +181,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Submit", this.Submit);
             this.SetParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

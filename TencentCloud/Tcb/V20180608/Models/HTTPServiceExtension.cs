@@ -25,10 +25,16 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 添加请求头列表
+        /// <p>添加请求头列表</p>
         /// </summary>
         [JsonProperty("HeadersHandler")]
         public HTTPServiceHeadersHandler HeadersHandler{ get; set; }
+
+        /// <summary>
+        /// <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+        /// </summary>
+        [JsonProperty("Cache")]
+        public HTTPServiceCacheSet Cache{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "HeadersHandler.", this.HeadersHandler);
+            this.SetParamObj(map, prefix + "Cache.", this.Cache);
         }
     }
 }

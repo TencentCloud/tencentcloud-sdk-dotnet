@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1489";
+       private const string sdkVersion = "SDK_NET_3.0.1497";
 
         /// <summary>
         /// Client constructor.
@@ -1654,6 +1654,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 实例同步/实例复制策略执行记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationExecutionsRequest"/></param>
+        /// <returns><see cref="DescribeReplicationExecutionsResponse"/></returns>
+        public Task<DescribeReplicationExecutionsResponse> DescribeReplicationExecutions(DescribeReplicationExecutionsRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationExecutionsResponse>(req, "DescribeReplicationExecutions");
+        }
+
+        /// <summary>
+        /// 实例同步/实例复制策略执行记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationExecutionsRequest"/></param>
+        /// <returns><see cref="DescribeReplicationExecutionsResponse"/></returns>
+        public DescribeReplicationExecutionsResponse DescribeReplicationExecutionsSync(DescribeReplicationExecutionsRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationExecutionsResponse>(req, "DescribeReplicationExecutions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询创建从实例任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationInstanceCreateTasksRequest"/></param>
@@ -1734,6 +1755,27 @@ namespace TencentCloud.Tcr.V20190924
         public DescribeReplicationPoliciesResponse DescribeReplicationPoliciesSync(DescribeReplicationPoliciesRequest req)
         {
             return InternalRequestAsync<DescribeReplicationPoliciesResponse>(req, "DescribeReplicationPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 实例同步/实例复制执行任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationTasksResponse"/></returns>
+        public Task<DescribeReplicationTasksResponse> DescribeReplicationTasks(DescribeReplicationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationTasksResponse>(req, "DescribeReplicationTasks");
+        }
+
+        /// <summary>
+        /// 实例同步/实例复制执行任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationTasksResponse"/></returns>
+        public DescribeReplicationTasksResponse DescribeReplicationTasksSync(DescribeReplicationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationTasksResponse>(req, "DescribeReplicationTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

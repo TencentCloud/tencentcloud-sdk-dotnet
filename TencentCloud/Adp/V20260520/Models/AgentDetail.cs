@@ -72,6 +72,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("AdvancedConfig")]
         public AgentAdvancedConfig AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+        /// </summary>
+        [JsonProperty("ExternalToolList")]
+        public AgentExternalToolConfig[] ExternalToolList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "PluginList.", this.PluginList);
             this.SetParamArrayObj(map, prefix + "SkillList.", this.SkillList);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
         }
     }
 }

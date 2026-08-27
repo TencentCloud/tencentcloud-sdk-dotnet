@@ -116,14 +116,28 @@ namespace TencentCloud.Wedata.V20250806.Models
         public long? Recursive{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+        /// <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerMinimumInterval")]
+        public long? TriggerMinimumInterval{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerWaitTime")]
+        public long? TriggerWaitTime{ get; set; }
+
+        /// <summary>
+        /// <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMinimumIntervalSecond")]
         public long? TriggerMinimumIntervalSecond{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+        /// <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerWaitTimeSecond")]
@@ -148,6 +162,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
             this.SetParamSimple(map, prefix + "FileNamePattern", this.FileNamePattern);
             this.SetParamSimple(map, prefix + "Recursive", this.Recursive);
+            this.SetParamSimple(map, prefix + "TriggerMinimumInterval", this.TriggerMinimumInterval);
+            this.SetParamSimple(map, prefix + "TriggerWaitTime", this.TriggerWaitTime);
             this.SetParamSimple(map, prefix + "TriggerMinimumIntervalSecond", this.TriggerMinimumIntervalSecond);
             this.SetParamSimple(map, prefix + "TriggerWaitTimeSecond", this.TriggerWaitTimeSecond);
         }

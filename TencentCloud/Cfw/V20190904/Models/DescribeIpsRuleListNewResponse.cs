@@ -25,31 +25,31 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 规则详情
+        /// <p>规则详情</p>
         /// </summary>
         [JsonProperty("Data")]
         public IpsRuleDetailNew[] Data{ get; set; }
 
         /// <summary>
-        /// 返回状态码 0 成功 非0不成功
+        /// <p>返回状态码 0 成功 非0不成功</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// 返回信息  success 成功 其他 不成功
+        /// <p>返回信息  success 成功 其他 不成功</p>
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 字段类型
+        /// <p>字段类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]

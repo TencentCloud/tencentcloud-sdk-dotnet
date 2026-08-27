@@ -25,52 +25,58 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 模板总数
+        /// <p>模板总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 模板列表数据
+        /// <p>模板列表数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public TemplateListInfo[] Data{ get; set; }
 
         /// <summary>
-        /// 模板名称列表
+        /// <p>模板名称列表</p>
         /// </summary>
         [JsonProperty("NameList")]
         public string[] NameList{ get; set; }
 
         /// <summary>
-        /// Ip地址模板数量
+        /// <p>Ip地址模板数量</p>
         /// </summary>
         [JsonProperty("IpTemplateCount")]
         public long? IpTemplateCount{ get; set; }
 
         /// <summary>
-        /// 域名地址模板数量
+        /// <p>域名地址模板数量</p>
         /// </summary>
         [JsonProperty("DomainTemplateCount")]
         public long? DomainTemplateCount{ get; set; }
 
         /// <summary>
-        /// 协议端口模板数量
+        /// <p>协议端口模板数量</p>
         /// </summary>
         [JsonProperty("PortTemplateCount")]
         public long? PortTemplateCount{ get; set; }
 
         /// <summary>
-        /// 已使用的地址模板数
+        /// <p>已使用的地址模板数</p>
         /// </summary>
         [JsonProperty("UsedTemplateCount")]
         public long? UsedTemplateCount{ get; set; }
 
         /// <summary>
-        /// 地址模板配额数量
+        /// <p>地址模板配额数量</p>
         /// </summary>
         [JsonProperty("TemplateQuotaCount")]
         public long? TemplateQuotaCount{ get; set; }
+
+        /// <summary>
+        /// <p>容器服务地址模板数量</p>
+        /// </summary>
+        [JsonProperty("TkeTemplateCount")]
+        public long? TkeTemplateCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +98,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "PortTemplateCount", this.PortTemplateCount);
             this.SetParamSimple(map, prefix + "UsedTemplateCount", this.UsedTemplateCount);
             this.SetParamSimple(map, prefix + "TemplateQuotaCount", this.TemplateQuotaCount);
+            this.SetParamSimple(map, prefix + "TkeTemplateCount", this.TkeTemplateCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

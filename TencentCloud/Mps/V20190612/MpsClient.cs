@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1496";
+       private const string sdkVersion = "SDK_NET_3.0.1497";
 
         /// <summary>
         /// Client constructor.
@@ -178,6 +178,27 @@ namespace TencentCloud.Mps.V20190612
         public BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlowSync(BatchStopStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<BatchStopStreamLinkFlowResponse>(req, "BatchStopStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步音色转换，根据输入音频和指定音色将输入音频转换为指定音色
+        /// </summary>
+        /// <param name="req"><see cref="ChangeVoiceRequest"/></param>
+        /// <returns><see cref="ChangeVoiceResponse"/></returns>
+        public Task<ChangeVoiceResponse> ChangeVoice(ChangeVoiceRequest req)
+        {
+            return InternalRequestAsync<ChangeVoiceResponse>(req, "ChangeVoice");
+        }
+
+        /// <summary>
+        /// 同步音色转换，根据输入音频和指定音色将输入音频转换为指定音色
+        /// </summary>
+        /// <param name="req"><see cref="ChangeVoiceRequest"/></param>
+        /// <returns><see cref="ChangeVoiceResponse"/></returns>
+        public ChangeVoiceResponse ChangeVoiceSync(ChangeVoiceRequest req)
+        {
+            return InternalRequestAsync<ChangeVoiceResponse>(req, "ChangeVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

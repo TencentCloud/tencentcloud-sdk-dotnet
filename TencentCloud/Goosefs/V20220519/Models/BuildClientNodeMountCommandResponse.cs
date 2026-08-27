@@ -25,7 +25,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 挂载命令
+        /// <p>挂载命令</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }

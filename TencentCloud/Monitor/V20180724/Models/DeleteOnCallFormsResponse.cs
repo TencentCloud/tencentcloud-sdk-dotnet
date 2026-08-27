@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 失败删除的排班id
+        /// <p>失败删除的排班id</p>
         /// </summary>
         [JsonProperty("FailedOnCallFormIDs")]
         public string[] FailedOnCallFormIDs{ get; set; }
 
         /// <summary>
-        /// 成功删除的排班id
+        /// <p>成功删除的排班id</p>
         /// </summary>
         [JsonProperty("SuccessOnCallFormIDs")]
         public string[] SuccessOnCallFormIDs{ get; set; }

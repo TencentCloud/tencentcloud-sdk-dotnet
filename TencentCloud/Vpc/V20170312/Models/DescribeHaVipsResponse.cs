@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的对象数。
+        /// <p>符合条件的对象数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// `HAVIP`对象数组。
+        /// <p><code>HAVIP</code>对象数组。</p>
         /// </summary>
         [JsonProperty("HaVipSet")]
         public HaVip[] HaVipSet{ get; set; }

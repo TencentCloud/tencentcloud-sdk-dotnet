@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 值班详情
+        /// <p>值班详情</p>
         /// </summary>
         [JsonProperty("OnCallForm")]
         public OneOnCallForm OnCallForm{ get; set; }

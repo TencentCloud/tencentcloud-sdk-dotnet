@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1496</VersionPrefix>
+    <VersionPrefix>3.0.1497</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -603,12 +603,16 @@
     <Compile Include="V20230616\Models\CreateAIWorkbenchAgentResponse.cs" />
     <Compile Include="V20230616\Models\CreateAIWorkbenchTaskRequest.cs" />
     <Compile Include="V20230616\Models\CreateAIWorkbenchTaskResponse.cs" />
+    <Compile Include="V20230616\Models\CreateDispenseExternalRuleRequest.cs" />
+    <Compile Include="V20230616\Models\CreateDispenseExternalRuleResponse.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\CreateNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DeleteAIWorkbenchAgentRequest.cs" />
     <Compile Include="V20230616\Models\DeleteAIWorkbenchAgentResponse.cs" />
     <Compile Include="V20230616\Models\DeleteAIWorkbenchTaskRequest.cs" />
     <Compile Include="V20230616\Models\DeleteAIWorkbenchTaskResponse.cs" />
+    <Compile Include="V20230616\Models\DeleteDispenseExternalRuleRequest.cs" />
+    <Compile Include="V20230616\Models\DeleteDispenseExternalRuleResponse.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsRequest.cs" />
     <Compile Include="V20230616\Models\DeleteNoticeContentTmplsResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAIWorkbenchAgentRequest.cs" />
@@ -629,13 +633,30 @@
     <Compile Include="V20230616\Models\DescribeAIWorkbenchSkillResponse.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeAlarmNotifyHistoriesResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseExternalRuleListRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseExternalRuleListResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseExternalRuleRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseExternalRuleResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseRegionRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeDispenseRegionResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeExtMetricRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeExtMetricResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeExtNamespaceRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeExtNamespaceResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeKafkaRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeKafkaResponse.cs" />
     <Compile Include="V20230616\Models\DescribeNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\DescribeNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\DingDingRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\DispenseCondition.cs" />
+    <Compile Include="V20230616\Models\DispenseFilter.cs" />
+    <Compile Include="V20230616\Models\DispenseGlobalTag.cs" />
+    <Compile Include="V20230616\Models\DispenseRegion.cs" />
     <Compile Include="V20230616\Models\EnvEntry.cs" />
     <Compile Include="V20230616\Models\EnvVar.cs" />
     <Compile Include="V20230616\Models\ExecutionInfo.cs" />
+    <Compile Include="V20230616\Models\ExtMetric.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\FeiShuRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\GetAIWorkbenchArtifactDownloadURLRequest.cs" />
@@ -643,6 +664,7 @@
     <Compile Include="V20230616\Models\GoogleChatRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\GoogleChatRobotNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\InstructionConfig.cs" />
+    <Compile Include="V20230616\Models\KafkaConnectivity.cs" />
     <Compile Include="V20230616\Models\ListAIWorkbenchAgentsRequest.cs" />
     <Compile Include="V20230616\Models\ListAIWorkbenchAgentsResponse.cs" />
     <Compile Include="V20230616\Models\ListAIWorkbenchArtifactsRequest.cs" />
@@ -665,6 +687,10 @@
     <Compile Include="V20230616\Models\ListAIWorkbenchTasksResponse.cs" />
     <Compile Include="V20230616\Models\MCPInfo.cs" />
     <Compile Include="V20230616\Models\MessageInfo.cs" />
+    <Compile Include="V20230616\Models\ModifyDispenseExternalRuleRequest.cs" />
+    <Compile Include="V20230616\Models\ModifyDispenseExternalRuleResponse.cs" />
+    <Compile Include="V20230616\Models\ModifyDispenseExternalRuleStatusRequest.cs" />
+    <Compile Include="V20230616\Models\ModifyDispenseExternalRuleStatusResponse.cs" />
     <Compile Include="V20230616\Models\ModifyNoticeContentTmplRequest.cs" />
     <Compile Include="V20230616\Models\ModifyNoticeContentTmplResponse.cs" />
     <Compile Include="V20230616\Models\NoticeContentTmpl.cs" />
@@ -678,12 +704,14 @@
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplHeader.cs" />
     <Compile Include="V20230616\Models\PagerDutyRobotNoticeTmplMatcher.cs" />
+    <Compile Include="V20230616\Models\Producer.cs" />
     <Compile Include="V20230616\Models\QCloudYeheNoticeTmpl.cs" />
     <Compile Include="V20230616\Models\QCloudYeheNoticeTmplItem.cs" />
     <Compile Include="V20230616\Models\QCloudYeheNoticeTmplMatcher.cs" />
     <Compile Include="V20230616\Models\QCloudYeheWeChatNoticeTmplItem.cs" />
     <Compile Include="V20230616\Models\ResourceInstance.cs" />
     <Compile Include="V20230616\Models\ResourceMapInfo.cs" />
+    <Compile Include="V20230616\Models\Rule.cs" />
     <Compile Include="V20230616\Models\SessionInfo.cs" />
     <Compile Include="V20230616\Models\SkillInfo.cs" />
     <Compile Include="V20230616\Models\SlackRobotNoticeTmpl.cs" />

@@ -25,160 +25,158 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 工作流Id
+        /// <p>工作流Id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流名
+        /// <p>工作流名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <p>任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeId")]
         public ulong? TaskTypeId{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeDesc")]
         public string TaskTypeDesc{ get; set; }
 
         /// <summary>
-        /// 文件夹名
+        /// <p>文件夹名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderName")]
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 文件夹ID
+        /// <p>文件夹ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 负责人
+        /// <p>负责人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }
 
         /// <summary>
-        /// 是否提交
+        /// <p>是否提交</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Submit")]
         public ulong? Submit{ get; set; }
 
         /// <summary>
-        /// 引擎：
-        /// presto\SparkJob\SparkSql
+        /// <p>引擎：<br>presto\SparkJob\SparkSql</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngine")]
         public string DataEngine{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创造时间
+        /// <p>创造时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 周期类型D天周期
-        /// H小时
-        /// Ccrontab类型
-        /// I分钟
-        /// O一次性
-        /// Y年
-        /// R用户驱动
-        /// W周
-        /// M月
+        /// <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleUnit")]
         public string CycleUnit{ get; set; }
 
         /// <summary>
-        /// 调度计划
+        /// <p>调度计划</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleDesc")]
         public string ScheduleDesc{ get; set; }
 
         /// <summary>
-        /// 数据源ID
+        /// <p>数据源ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 数据源类型
+        /// <p>数据源类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatasourceType")]
         public string DatasourceType{ get; set; }
 
         /// <summary>
-        /// 引擎名称
+        /// <p>引擎名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeResource")]
         public string ComputeResource{ get; set; }
 
         /// <summary>
-        /// dlc地域
+        /// <p>dlc地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DlcRegion")]
         public string DlcRegion{ get; set; }
 
         /// <summary>
-        /// 资源组或自定义
+        /// <p>资源组或自定义</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsInherit")]
         public string IsInherit{ get; set; }
+
+        /// <summary>
+        /// <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
 
 
         /// <summary>
@@ -207,6 +205,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
             this.SetParamSimple(map, prefix + "DlcRegion", this.DlcRegion);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

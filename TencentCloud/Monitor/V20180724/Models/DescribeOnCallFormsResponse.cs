@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 排班信息
+        /// <p>排班信息</p>
         /// </summary>
         [JsonProperty("OnCallForms")]
         public OnCallForm[] OnCallForms{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

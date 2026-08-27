@@ -312,6 +312,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RunScheduleRangeWeekDays")]
         public long?[] RunScheduleRangeWeekDays{ get; set; }
 
+        /// <summary>
+        /// <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -360,6 +367,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RunScheduleRangeStartTime", this.RunScheduleRangeStartTime);
             this.SetParamSimple(map, prefix + "RunScheduleRangeEndTime", this.RunScheduleRangeEndTime);
             this.SetParamArraySimple(map, prefix + "RunScheduleRangeWeekDays.", this.RunScheduleRangeWeekDays);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

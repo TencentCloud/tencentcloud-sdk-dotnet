@@ -98,6 +98,30 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("CustomDestPath")]
         public string CustomDestPath{ get; set; }
 
+        /// <summary>
+        /// <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+        /// </summary>
+        [JsonProperty("OutputBucket")]
+        public string OutputBucket{ get; set; }
+
+        /// <summary>
+        /// <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+        /// </summary>
+        [JsonProperty("OutputPrefix")]
+        public string OutputPrefix{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+        /// </summary>
+        [JsonProperty("EnableCustomSrcPath")]
+        public bool? EnableCustomSrcPath{ get; set; }
+
+        /// <summary>
+        /// <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+        /// </summary>
+        [JsonProperty("CustomSrcPath")]
+        public string CustomSrcPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +140,10 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "DataFlowSubPath", this.DataFlowSubPath);
             this.SetParamSimple(map, prefix + "EnableCustomDestPath", this.EnableCustomDestPath);
             this.SetParamSimple(map, prefix + "CustomDestPath", this.CustomDestPath);
+            this.SetParamSimple(map, prefix + "OutputBucket", this.OutputBucket);
+            this.SetParamSimple(map, prefix + "OutputPrefix", this.OutputPrefix);
+            this.SetParamSimple(map, prefix + "EnableCustomSrcPath", this.EnableCustomSrcPath);
+            this.SetParamSimple(map, prefix + "CustomSrcPath", this.CustomSrcPath);
         }
     }
 }

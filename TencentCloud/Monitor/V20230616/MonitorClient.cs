@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20230616
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1496";
+       private const string sdkVersion = "SDK_NET_3.0.1497";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Monitor.V20230616
         }
 
         /// <summary>
+        /// 转发接口：创建转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="CreateDispenseExternalRuleResponse"/></returns>
+        public Task<CreateDispenseExternalRuleResponse> CreateDispenseExternalRule(CreateDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<CreateDispenseExternalRuleResponse>(req, "CreateDispenseExternalRule");
+        }
+
+        /// <summary>
+        /// 转发接口：创建转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="CreateDispenseExternalRuleResponse"/></returns>
+        public CreateDispenseExternalRuleResponse CreateDispenseExternalRuleSync(CreateDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<CreateDispenseExternalRuleResponse>(req, "CreateDispenseExternalRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建自定义通知内容模板
         /// </summary>
         /// <param name="req"><see cref="CreateNoticeContentTmplRequest"/></param>
@@ -176,6 +197,27 @@ namespace TencentCloud.Monitor.V20230616
         public DeleteAIWorkbenchTaskResponse DeleteAIWorkbenchTaskSync(DeleteAIWorkbenchTaskRequest req)
         {
             return InternalRequestAsync<DeleteAIWorkbenchTaskResponse>(req, "DeleteAIWorkbenchTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 规则删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="DeleteDispenseExternalRuleResponse"/></returns>
+        public Task<DeleteDispenseExternalRuleResponse> DeleteDispenseExternalRule(DeleteDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteDispenseExternalRuleResponse>(req, "DeleteDispenseExternalRule");
+        }
+
+        /// <summary>
+        /// 规则删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="DeleteDispenseExternalRuleResponse"/></returns>
+        public DeleteDispenseExternalRuleResponse DeleteDispenseExternalRuleSync(DeleteDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteDispenseExternalRuleResponse>(req, "DeleteDispenseExternalRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +428,132 @@ namespace TencentCloud.Monitor.V20230616
         public DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistoriesSync(DescribeAlarmNotifyHistoriesRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNotifyHistoriesResponse>(req, "DescribeAlarmNotifyHistories")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发规则查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="DescribeDispenseExternalRuleResponse"/></returns>
+        public Task<DescribeDispenseExternalRuleResponse> DescribeDispenseExternalRule(DescribeDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseExternalRuleResponse>(req, "DescribeDispenseExternalRule");
+        }
+
+        /// <summary>
+        /// 转发规则查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="DescribeDispenseExternalRuleResponse"/></returns>
+        public DescribeDispenseExternalRuleResponse DescribeDispenseExternalRuleSync(DescribeDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseExternalRuleResponse>(req, "DescribeDispenseExternalRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询所有列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseExternalRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDispenseExternalRuleListResponse"/></returns>
+        public Task<DescribeDispenseExternalRuleListResponse> DescribeDispenseExternalRuleList(DescribeDispenseExternalRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseExternalRuleListResponse>(req, "DescribeDispenseExternalRuleList");
+        }
+
+        /// <summary>
+        /// 查询所有列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseExternalRuleListRequest"/></param>
+        /// <returns><see cref="DescribeDispenseExternalRuleListResponse"/></returns>
+        public DescribeDispenseExternalRuleListResponse DescribeDispenseExternalRuleListSync(DescribeDispenseExternalRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseExternalRuleListResponse>(req, "DescribeDispenseExternalRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发地域列表查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseRegionRequest"/></param>
+        /// <returns><see cref="DescribeDispenseRegionResponse"/></returns>
+        public Task<DescribeDispenseRegionResponse> DescribeDispenseRegion(DescribeDispenseRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseRegionResponse>(req, "DescribeDispenseRegion");
+        }
+
+        /// <summary>
+        /// 转发地域列表查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDispenseRegionRequest"/></param>
+        /// <returns><see cref="DescribeDispenseRegionResponse"/></returns>
+        public DescribeDispenseRegionResponse DescribeDispenseRegionSync(DescribeDispenseRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeDispenseRegionResponse>(req, "DescribeDispenseRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询对外指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtMetricRequest"/></param>
+        /// <returns><see cref="DescribeExtMetricResponse"/></returns>
+        public Task<DescribeExtMetricResponse> DescribeExtMetric(DescribeExtMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeExtMetricResponse>(req, "DescribeExtMetric");
+        }
+
+        /// <summary>
+        /// 查询对外指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtMetricRequest"/></param>
+        /// <returns><see cref="DescribeExtMetricResponse"/></returns>
+        public DescribeExtMetricResponse DescribeExtMetricSync(DescribeExtMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeExtMetricResponse>(req, "DescribeExtMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发查询对外命名空间接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeExtNamespaceResponse"/></returns>
+        public Task<DescribeExtNamespaceResponse> DescribeExtNamespace(DescribeExtNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeExtNamespaceResponse>(req, "DescribeExtNamespace");
+        }
+
+        /// <summary>
+        /// 转发查询对外命名空间接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeExtNamespaceResponse"/></returns>
+        public DescribeExtNamespaceResponse DescribeExtNamespaceSync(DescribeExtNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeExtNamespaceResponse>(req, "DescribeExtNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发kafka连通性测试
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaRequest"/></param>
+        /// <returns><see cref="DescribeKafkaResponse"/></returns>
+        public Task<DescribeKafkaResponse> DescribeKafka(DescribeKafkaRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaResponse>(req, "DescribeKafka");
+        }
+
+        /// <summary>
+        /// 转发kafka连通性测试
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaRequest"/></param>
+        /// <returns><see cref="DescribeKafkaResponse"/></returns>
+        public DescribeKafkaResponse DescribeKafkaSync(DescribeKafkaRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaResponse>(req, "DescribeKafka")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -638,6 +806,48 @@ namespace TencentCloud.Monitor.V20230616
         public ListAIWorkbenchTasksResponse ListAIWorkbenchTasksSync(ListAIWorkbenchTasksRequest req)
         {
             return InternalRequestAsync<ListAIWorkbenchTasksResponse>(req, "ListAIWorkbenchTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发规则更新接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="ModifyDispenseExternalRuleResponse"/></returns>
+        public Task<ModifyDispenseExternalRuleResponse> ModifyDispenseExternalRule(ModifyDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyDispenseExternalRuleResponse>(req, "ModifyDispenseExternalRule");
+        }
+
+        /// <summary>
+        /// 转发规则更新接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDispenseExternalRuleRequest"/></param>
+        /// <returns><see cref="ModifyDispenseExternalRuleResponse"/></returns>
+        public ModifyDispenseExternalRuleResponse ModifyDispenseExternalRuleSync(ModifyDispenseExternalRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyDispenseExternalRuleResponse>(req, "ModifyDispenseExternalRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增规则开启关闭接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDispenseExternalRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyDispenseExternalRuleStatusResponse"/></returns>
+        public Task<ModifyDispenseExternalRuleStatusResponse> ModifyDispenseExternalRuleStatus(ModifyDispenseExternalRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDispenseExternalRuleStatusResponse>(req, "ModifyDispenseExternalRuleStatus");
+        }
+
+        /// <summary>
+        /// 新增规则开启关闭接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDispenseExternalRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyDispenseExternalRuleStatusResponse"/></returns>
+        public ModifyDispenseExternalRuleStatusResponse ModifyDispenseExternalRuleStatusSync(ModifyDispenseExternalRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDispenseExternalRuleStatusResponse>(req, "ModifyDispenseExternalRuleStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,99 +25,97 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+        /// <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
         /// </summary>
         [JsonProperty("HaVipId")]
         public string HaVipId{ get; set; }
 
         /// <summary>
-        /// `HAVIP`名称。
+        /// <p><code>HAVIP</code>名称。</p>
         /// </summary>
         [JsonProperty("HaVipName")]
         public string HaVipName{ get; set; }
 
         /// <summary>
-        /// 虚拟IP地址。
+        /// <p>虚拟IP地址。</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// `HAVIP`所在私有网络`ID`。
+        /// <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// `HAVIP`所在子网`ID`。
+        /// <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// `HAVIP`关联弹性网卡`ID`。
+        /// <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 被绑定的实例`ID`。
+        /// <p>被绑定的实例<code>ID</code>。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 绑定`EIP`。
+        /// <p>绑定<code>EIP</code>。</p>
         /// </summary>
         [JsonProperty("AddressIp")]
         public string AddressIp{ get; set; }
 
         /// <summary>
-        /// 状态：
-        /// <li>`AVAILABLE`：运行中</li>
-        /// <li>`UNBIND`：未绑定</li>
+        /// <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 使用havip的业务标识。
+        /// <p>使用havip的业务标识。</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// `HAVIP`的飘移范围。
+        /// <p><code>HAVIP</code>的飘移范围。</p>
         /// </summary>
         [JsonProperty("HaVipAssociationSet")]
         public HaVipAssociation[] HaVipAssociationSet{ get; set; }
 
         /// <summary>
-        /// 是否开启`HAVIP`的漂移范围校验。
+        /// <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
         /// </summary>
         [JsonProperty("CheckAssociate")]
         public bool? CheckAssociate{ get; set; }
 
         /// <summary>
-        /// CDC实例ID。
+        /// <p>CDC实例ID。</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+        /// <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
         /// </summary>
         [JsonProperty("FlushedTime")]
         public string FlushedTime{ get; set; }
 
         /// <summary>
-        /// 标签键值对。	
+        /// <p>标签键值对。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

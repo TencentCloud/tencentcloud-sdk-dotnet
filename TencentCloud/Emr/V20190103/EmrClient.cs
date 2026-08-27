@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1496";
+       private const string sdkVersion = "SDK_NET_3.0.1497";
 
         /// <summary>
         /// Client constructor.
@@ -1001,6 +1001,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfoSync(DescribeKyuubiQueryInfoRequest req)
         {
             return InternalRequestAsync<DescribeKyuubiQueryInfoResponse>(req, "DescribeKyuubiQueryInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 集群metadb数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetaDBInfoRequest"/></param>
+        /// <returns><see cref="DescribeMetaDBInfoResponse"/></returns>
+        public Task<DescribeMetaDBInfoResponse> DescribeMetaDBInfo(DescribeMetaDBInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMetaDBInfoResponse>(req, "DescribeMetaDBInfo");
+        }
+
+        /// <summary>
+        /// 集群metadb数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetaDBInfoRequest"/></param>
+        /// <returns><see cref="DescribeMetaDBInfoResponse"/></returns>
+        public DescribeMetaDBInfoResponse DescribeMetaDBInfoSync(DescribeMetaDBInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMetaDBInfoResponse>(req, "DescribeMetaDBInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1495</VersionPrefix>
+    <VersionPrefix>3.0.1497</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -239,6 +239,11 @@
     <Compile Include="V20180608\Models\GatewayVersionItem.cs" />
     <Compile Include="V20180608\Models\GetProvidersRequest.cs" />
     <Compile Include="V20180608\Models\GetProvidersResponse.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceCacheAction.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceCacheKeyParams.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceCacheParams.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceCacheRule.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceCacheSet.cs" />
     <Compile Include="V20180608\Models\HTTPServiceDomain.cs" />
     <Compile Include="V20180608\Models\HTTPServiceDomainParam.cs" />
     <Compile Include="V20180608\Models\HTTPServiceExtension.cs" />
@@ -249,6 +254,7 @@
     <Compile Include="V20180608\Models\HTTPServiceRoute.cs" />
     <Compile Include="V20180608\Models\HTTPServiceRouteParam.cs" />
     <Compile Include="V20180608\Models\HTTPServiceRouteQPSPolicy.cs" />
+    <Compile Include="V20180608\Models\HTTPServiceRuleCondition.cs" />
     <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\IndexAccesses.cs" />
     <Compile Include="V20180608\Models\IndexInfo.cs" />

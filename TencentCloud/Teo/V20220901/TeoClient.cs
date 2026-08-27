@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1497";
 
         /// <summary>
         /// Client constructor.
@@ -2065,6 +2065,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 查询默认证书列表
+        /// <p style="color: red;">注意：该旧版接口已停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。如需查询域名配置的证书，请使用DescribeAccelerationDomains。</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
         /// <returns><see cref="DescribeDefaultCertificatesResponse"/></returns>
@@ -2075,6 +2076,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 查询默认证书列表
+        /// <p style="color: red;">注意：该旧版接口已停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。如需查询域名配置的证书，请使用DescribeAccelerationDomains。</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
         /// <returns><see cref="DescribeDefaultCertificatesResponse"/></returns>

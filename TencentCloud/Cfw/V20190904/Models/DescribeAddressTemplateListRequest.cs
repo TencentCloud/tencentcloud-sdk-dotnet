@@ -25,52 +25,58 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 偏移量，分页用
+        /// <p>偏移量，分页用</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 条数，分页用
+        /// <p>条数，分页用</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+        /// <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// 排序，取值 ：asc正序，desc逆序
+        /// <p>排序，取值 ：asc正序，desc逆序</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 搜索值
+        /// <p>搜索值</p>
         /// </summary>
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }
 
         /// <summary>
-        /// 检索地址模板唯一id
+        /// <p>检索地址模板唯一id</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+        /// <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// 模板Id
+        /// <p>模板Id</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// <p>模板来源</p>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

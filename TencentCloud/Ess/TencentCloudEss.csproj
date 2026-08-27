@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1495</VersionPrefix>
+    <VersionPrefix>3.0.1497</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -217,6 +217,8 @@
     <Compile Include="V20201111\Models\CreatePreparedPersonalEsignResponse.cs" />
     <Compile Include="V20201111\Models\CreateReleaseFlowRequest.cs" />
     <Compile Include="V20201111\Models\CreateReleaseFlowResponse.cs" />
+    <Compile Include="V20201111\Models\CreateRequestWithEncryptionRequest.cs" />
+    <Compile Include="V20201111\Models\CreateRequestWithEncryptionResponse.cs" />
     <Compile Include="V20201111\Models\CreateResultPageConfig.cs" />
     <Compile Include="V20201111\Models\CreateRiskIdentificationTaskFeedbackRequest.cs" />
     <Compile Include="V20201111\Models\CreateRiskIdentificationTaskFeedbackResponse.cs" />

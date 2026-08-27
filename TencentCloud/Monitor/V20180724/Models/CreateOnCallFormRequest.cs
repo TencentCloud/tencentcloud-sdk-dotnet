@@ -25,67 +25,67 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 值班表名称
+        /// <p>值班表名称</p>
         /// </summary>
         [JsonProperty("OnCallFormName")]
         public string OnCallFormName{ get; set; }
 
         /// <summary>
-        /// 值班人员id组
+        /// <p>值班人员id组</p>
         /// </summary>
         [JsonProperty("StaffInfos")]
         public StaffInfo[] StaffInfos{ get; set; }
 
         /// <summary>
-        /// 轮转类型
+        /// <p>轮转类型</p>
         /// </summary>
         [JsonProperty("RotationType")]
         public string RotationType{ get; set; }
 
         /// <summary>
-        /// 换班时间
+        /// <p>换班时间</p>
         /// </summary>
         [JsonProperty("ShiftTime")]
         public string ShiftTime{ get; set; }
 
         /// <summary>
-        /// 有效期开始时间，单位s
+        /// <p>有效期开始时间，单位s</p>
         /// </summary>
         [JsonProperty("EffectiveStartTime")]
         public long? EffectiveStartTime{ get; set; }
 
         /// <summary>
-        /// 有效期结束时间，单位s
+        /// <p>有效期结束时间，单位s</p>
         /// </summary>
         [JsonProperty("EffectiveEndTime")]
         public long? EffectiveEndTime{ get; set; }
 
         /// <summary>
-        /// 时区(-12 - 12)
+        /// <p>时区(-12 - 12)</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public float? TimeZone{ get; set; }
 
         /// <summary>
-        /// 值班表描述
+        /// <p>值班表描述</p>
         /// </summary>
         [JsonProperty("OnCallFormDesc")]
         public string OnCallFormDesc{ get; set; }
 
         /// <summary>
-        /// 轮班信息
+        /// <p>轮班信息</p>
         /// </summary>
         [JsonProperty("CoverStaffInfos")]
         public CoverStaffInfo[] CoverStaffInfos{ get; set; }
 
         /// <summary>
-        /// 模板绑定的标签
+        /// <p>模板绑定的标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

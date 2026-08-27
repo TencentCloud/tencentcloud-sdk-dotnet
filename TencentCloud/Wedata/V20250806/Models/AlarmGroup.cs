@@ -25,47 +25,53 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 告警升级人ID列表
-        /// 若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。
+        /// <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p>
         /// </summary>
         [JsonProperty("AlarmEscalationRecipientIds")]
         public string[] AlarmEscalationRecipientIds{ get; set; }
 
         /// <summary>
-        /// 告警升级间隔
+        /// <p>告警升级间隔</p>
         /// </summary>
         [JsonProperty("AlarmEscalationInterval")]
         public long? AlarmEscalationInterval{ get; set; }
 
         /// <summary>
-        /// 告警通知疲劳配置
+        /// <p>告警通知疲劳配置</p>
         /// </summary>
         [JsonProperty("NotificationFatigue")]
         public NotificationFatigue NotificationFatigue{ get; set; }
 
         /// <summary>
-        /// 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道
+        /// <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p>
         /// </summary>
         [JsonProperty("AlarmWays")]
         public string[] AlarmWays{ get; set; }
 
         /// <summary>
-        /// 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表
+        /// <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p>
         /// </summary>
         [JsonProperty("WebHooks")]
         public AlarmWayWebHook[] WebHooks{ get; set; }
 
         /// <summary>
-        /// 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）
+        /// <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p>
         /// </summary>
         [JsonProperty("AlarmRecipientType")]
         public long? AlarmRecipientType{ get; set; }
 
         /// <summary>
-        /// 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表
+        /// <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p>
         /// </summary>
         [JsonProperty("AlarmRecipientIds")]
         public string[] AlarmRecipientIds{ get; set; }
+
+        /// <summary>
+        /// <p>自定义邮箱列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomEmails")]
+        public string[] CustomEmails{ get; set; }
 
 
         /// <summary>
@@ -80,6 +86,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
             this.SetParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
             this.SetParamArraySimple(map, prefix + "AlarmRecipientIds.", this.AlarmRecipientIds);
+            this.SetParamArraySimple(map, prefix + "CustomEmails.", this.CustomEmails);
         }
     }
 }

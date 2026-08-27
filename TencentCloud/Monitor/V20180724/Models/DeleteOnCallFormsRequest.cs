@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// <p>固定值，为&quot;monitor&quot;</p>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 要删除的值班表id
+        /// <p>要删除的值班表id</p>
         /// </summary>
         [JsonProperty("OnCallFormIDs")]
         public string[] OnCallFormIDs{ get; set; }

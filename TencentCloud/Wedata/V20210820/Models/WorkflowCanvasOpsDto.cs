@@ -25,109 +25,116 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 工作流id
+        /// <p>工作流id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 工作流详情描述
+        /// <p>工作流详情描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowDesc")]
         public string WorkflowDesc{ get; set; }
 
         /// <summary>
-        /// 工作流名称
+        /// <p>工作流名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 所属文件夹id
+        /// <p>所属文件夹id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 所属文件夹ids
+        /// <p>所属文件夹ids</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FolderIds")]
         public string[] FolderIds{ get; set; }
 
         /// <summary>
-        /// 任务列表
+        /// <p>任务列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public TaskOpsDto[] Tasks{ get; set; }
 
         /// <summary>
-        /// 任务依赖边列表
+        /// <p>任务依赖边列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Links")]
         public LinkOpsDto[] Links{ get; set; }
 
         /// <summary>
-        /// 工作流所属用户分组id,若有多个分号隔开: a;b;c
+        /// <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroupId")]
         public string UserGroupId{ get; set; }
 
         /// <summary>
-        /// 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+        /// <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroupName")]
         public string UserGroupName{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 项目标识
+        /// <p>项目标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectIdent")]
         public string ProjectIdent{ get; set; }
 
         /// <summary>
-        /// 项目名称
+        /// <p>项目名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 责任人
+        /// <p>责任人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 责任人UserId
+        /// <p>责任人UserId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerId")]
         public string OwnerId{ get; set; }
 
         /// <summary>
-        /// 工作流类型，周期cycle，手动manual
+        /// <p>工作流类型，周期cycle，手动manual</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
+
+        /// <summary>
+        /// <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
 
 
         /// <summary>
@@ -150,6 +157,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
             this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

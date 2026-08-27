@@ -164,6 +164,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecuteUserName")]
         public string ExecuteUserName{ get; set; }
 
+        /// <summary>
+        /// <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
             this.SetParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
         }
     }
 }

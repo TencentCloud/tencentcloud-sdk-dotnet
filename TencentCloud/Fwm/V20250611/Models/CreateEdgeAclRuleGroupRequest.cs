@@ -25,19 +25,19 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 规则组名称，长度1-50字符
+        /// <p>规则组名称，长度1-50字符</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 产品类型，固定为 cfw_edge_acl
+        /// <p>产品类型，固定为 cfw_edge_acl</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// <p>规则列表</p>
         /// </summary>
         [JsonProperty("Rules")]
         public EdgeAclRuleInfo[] Rules{ get; set; }

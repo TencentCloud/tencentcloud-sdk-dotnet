@@ -198,6 +198,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("EnableCbsSysEncryptFlag")]
         public bool? EnableCbsSysEncryptFlag{ get; set; }
 
+        /// <summary>
+        /// <p>自定义metadb数据</p>
+        /// </summary>
+        [JsonProperty("MetaDBGroupInfo")]
+        public CustomMetaDBInfo[] MetaDBGroupInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
             this.SetParamSimple(map, prefix + "EnableCbsSysEncryptFlag", this.EnableCbsSysEncryptFlag);
+            this.SetParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
         }
     }
 }

@@ -25,46 +25,58 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 接入点
+        /// <p>接入点</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// vpc信息
+        /// <p>vpc信息</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网信息
+        /// <p>子网信息</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 主机
+        /// <p>主机</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// <p>端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 接入点ip
+        /// <p>接入点ip</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
+
+        /// <summary>
+        /// <p>端口是否打开</p>
+        /// </summary>
+        [JsonProperty("PortEnable")]
+        public bool? PortEnable{ get; set; }
+
+        /// <summary>
+        /// <p>vpce唯一id</p>
+        /// </summary>
+        [JsonProperty("VpcEndpointId")]
+        public string VpcEndpointId{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "PortEnable", this.PortEnable);
+            this.SetParamSimple(map, prefix + "VpcEndpointId", this.VpcEndpointId);
         }
     }
 }

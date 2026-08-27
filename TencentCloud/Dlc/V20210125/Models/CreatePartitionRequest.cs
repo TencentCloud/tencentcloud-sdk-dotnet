@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// <p>交易类型：purchase-新购，renew-续费，modify-变配</p>
+        /// <p>交易类型：purchase-新购</p>
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// <p>付费模式：0-后付费，1-预付费</p>
+        /// <p>付费模式：1-预付费</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ResourceQuota[] ResourceQuotaList{ get; set; }
 
         /// <summary>
-        /// <p>时间大小，预付费时为购买月数，后付费时为3600</p>
+        /// <p>时间大小，预付费时为购买月数</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// <p>时间单位，预付费为m（月），后付费为s（秒）</p>
+        /// <p>时间单位，预付费为m（月）</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>队列描述</p>
+        /// <p>资源包描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
