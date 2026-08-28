@@ -129,7 +129,7 @@ namespace TencentCloud.Common
         /// <returns> The JSON string representing the request body. </returns>
         public string Serialize()
         {
-            return JsonConvert.SerializeObject(_body);
+            return JsonSerialize(_body);
         }
     }
 }
