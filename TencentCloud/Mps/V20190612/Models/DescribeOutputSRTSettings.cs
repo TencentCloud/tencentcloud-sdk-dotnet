@@ -25,77 +25,77 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+        /// <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Destinations")]
         public SRTAddressDestination[] Destinations{ get; set; }
 
         /// <summary>
-        /// 流Id。
+        /// <p>流Id。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// 延迟。
+        /// <p>延迟。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// 接收延迟。
+        /// <p>接收延迟。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// 对端延迟。
+        /// <p>对端延迟。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// 对端空闲超时时间。
+        /// <p>对端空闲超时时间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
 
         /// <summary>
-        /// 加密密钥。
+        /// <p>加密密钥。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Passphrase")]
         public string Passphrase{ get; set; }
 
         /// <summary>
-        /// 加密密钥长度。
+        /// <p>加密密钥长度。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// SRT模式。
+        /// <p>SRT模式。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 服务器监听地址，SRT模式为LISTENER时使用。
+        /// <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public OutputSRTSourceAddressResp[] SourceAddresses{ get; set; }
 
         /// <summary>
-        /// FEC 配置
+        /// <p>FEC 配置</p>
         /// </summary>
         [JsonProperty("FEC")]
         public SRTFECFullOptions FEC{ get; set; }

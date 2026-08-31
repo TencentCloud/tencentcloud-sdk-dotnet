@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1459";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建专业集群——预付费，仅通过api调用
+        /// 创建Pulsar标准版或专业版实例——预付费，仅通过api调用
         /// </summary>
         /// <param name="req"><see cref="CreateProClusterRequest"/></param>
         /// <returns><see cref="CreateProClusterResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 创建专业集群——预付费，仅通过api调用
+        /// 创建Pulsar标准版或专业版实例——预付费，仅通过api调用
         /// </summary>
         /// <param name="req"><see cref="CreateProClusterRequest"/></param>
         /// <returns><see cref="CreateProClusterResponse"/></returns>
@@ -1560,7 +1560,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取Pulsar专业版集群实例信息
+        /// 获取Pulsar标准版或专业版实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
         /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
@@ -1570,7 +1570,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取Pulsar专业版集群实例信息
+        /// 获取Pulsar标准版或专业版实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
         /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
@@ -1581,7 +1581,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询用户已购的Pulsar专业版实例列表
+        /// 查询用户已购的Pulsar实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
         /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
@@ -1591,7 +1591,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 查询用户已购的Pulsar专业版实例列表
+        /// 查询用户已购的Pulsar实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
         /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
@@ -2609,7 +2609,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新集群信息
+        /// 更新虚拟集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterRequest"/></param>
         /// <returns><see cref="ModifyClusterResponse"/></returns>
@@ -2619,7 +2619,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 更新集群信息
+        /// 更新虚拟集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterRequest"/></param>
         /// <returns><see cref="ModifyClusterResponse"/></returns>

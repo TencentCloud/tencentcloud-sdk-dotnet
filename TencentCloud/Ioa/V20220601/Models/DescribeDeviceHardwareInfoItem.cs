@@ -132,6 +132,42 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("BiosUuid")]
         public string BiosUuid{ get; set; }
 
+        /// <summary>
+        /// <p>多网卡数据</p>
+        /// </summary>
+        [JsonProperty("NetworkCards")]
+        public DeviceNetworkCardBrief[] NetworkCards{ get; set; }
+
+        /// <summary>
+        /// <p>多显卡数据</p>
+        /// </summary>
+        [JsonProperty("VideoCards")]
+        public DeviceVideoCardBrief[] VideoCards{ get; set; }
+
+        /// <summary>
+        /// <p>主板型号</p>
+        /// </summary>
+        [JsonProperty("MainBoard")]
+        public string MainBoard{ get; set; }
+
+        /// <summary>
+        /// <p>主板序列号</p>
+        /// </summary>
+        [JsonProperty("BaseBoardSn")]
+        public string BaseBoardSn{ get; set; }
+
+        /// <summary>
+        /// <p>主板制造商</p>
+        /// </summary>
+        [JsonProperty("BaseBoardManufacturer")]
+        public string BaseBoardManufacturer{ get; set; }
+
+        /// <summary>
+        /// <p>声卡</p>
+        /// </summary>
+        [JsonProperty("AudioCard")]
+        public string AudioCard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +192,12 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "Monitor", this.Monitor);
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
             this.SetParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
+            this.SetParamArrayObj(map, prefix + "NetworkCards.", this.NetworkCards);
+            this.SetParamArrayObj(map, prefix + "VideoCards.", this.VideoCards);
+            this.SetParamSimple(map, prefix + "MainBoard", this.MainBoard);
+            this.SetParamSimple(map, prefix + "BaseBoardSn", this.BaseBoardSn);
+            this.SetParamSimple(map, prefix + "BaseBoardManufacturer", this.BaseBoardManufacturer);
+            this.SetParamSimple(map, prefix + "AudioCard", this.AudioCard);
         }
     }
 }

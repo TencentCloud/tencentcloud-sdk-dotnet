@@ -25,94 +25,106 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 路由策略ID
+        /// <p>路由策略ID</p>
         /// </summary>
         [JsonProperty("RouteId")]
         public string RouteId{ get; set; }
 
         /// <summary>
-        /// 目的端
+        /// <p>目的端</p>
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+        /// <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 下一跳（关联实例）
+        /// <p>下一跳（关联实例）</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 下一跳名称（关联实例名称）
+        /// <p>下一跳名称（关联实例名称）</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 下一跳所属地域（关联实例所属地域）
+        /// <p>下一跳所属地域（关联实例所属地域）</p>
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 路由是否启用
+        /// <p>路由是否启用</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 关联实例所属UIN（根账号）
+        /// <p>关联实例所属UIN（根账号）</p>
         /// </summary>
         [JsonProperty("InstanceUin")]
         public string InstanceUin{ get; set; }
 
         /// <summary>
-        /// 路由的扩展状态
+        /// <p>路由的扩展状态</p>
         /// </summary>
         [JsonProperty("ExtraState")]
         public string ExtraState{ get; set; }
 
         /// <summary>
-        /// 是否动态路由
+        /// <p>是否动态路由</p>
         /// </summary>
         [JsonProperty("IsBgp")]
         public bool? IsBgp{ get; set; }
 
         /// <summary>
-        /// 路由优先级
+        /// <p>路由优先级</p>
         /// </summary>
         [JsonProperty("RoutePriority")]
         public ulong? RoutePriority{ get; set; }
 
         /// <summary>
-        /// 下一跳扩展名称（关联实例的扩展名称）
+        /// <p>下一跳扩展名称（关联实例的扩展名称）</p>
         /// </summary>
         [JsonProperty("InstanceExtraName")]
         public string InstanceExtraName{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// <p>实例类型</p>
         /// </summary>
         [JsonProperty("AliasType")]
         public string AliasType{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("AliasInstanceId")]
         public string AliasInstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>路由表ID</p>
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
+        /// <summary>
+        /// <p>AS-PATH</p>
+        /// </summary>
+        [JsonProperty("AsPath")]
+        public string AsPath{ get; set; }
 
 
         /// <summary>
@@ -135,6 +147,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
             this.SetParamSimple(map, prefix + "AliasType", this.AliasType);
             this.SetParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+            this.SetParamSimple(map, prefix + "AsPath", this.AsPath);
         }
     }
 }

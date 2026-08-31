@@ -25,60 +25,55 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否开启定期扫描
+        /// <p>是否开启定期扫描</p>
         /// </summary>
         [JsonProperty("EnableScan")]
         public bool? EnableScan{ get; set; }
 
         /// <summary>
-        /// 检测周期每隔多少天
+        /// <p>检测周期每隔多少天</p>
         /// </summary>
         [JsonProperty("Cycle")]
         public ulong? Cycle{ get; set; }
 
         /// <summary>
-        /// 扫描开始时间
+        /// <p>扫描开始时间</p>
         /// </summary>
         [JsonProperty("BeginScanAt")]
         public string BeginScanAt{ get; set; }
 
         /// <summary>
-        /// 超时时长，单位小时
+        /// <p>超时时长，单位小时</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// SCAN_NODE:扫描节点
-        /// SCAN_CONTAINER:扫描容器
+        /// <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
         /// </summary>
         [JsonProperty("ScanRangeType")]
         public string ScanRangeType{ get; set; }
 
         /// <summary>
-        /// 自选扫描范围的容器id或者节点id 
+        /// <p>自选扫描范围的容器id或者节点id</p>
         /// </summary>
         [JsonProperty("ScanIDs")]
         public ScanRangeInfo[] ScanIDs{ get; set; }
 
         /// <summary>
-        /// 自选排除或扫描的地址
+        /// <p>自选排除或扫描的地址</p>
         /// </summary>
         [JsonProperty("ScanPath")]
         public string[] ScanPath{ get; set; }
 
         /// <summary>
-        /// 扫描路径模式：
-        /// SCAN_PATH_ALL：全部路径
-        /// SCAN_PATH_DEFAULT：默认路径
-        /// SCAN_PATH_USER_DEFINE：用户自定义路径
+        /// <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
         /// </summary>
         [JsonProperty("ScanPathMode")]
         public string ScanPathMode{ get; set; }
 
         /// <summary>
-        /// true:包含路径
-        /// false:排除路径
+        /// <p>true:包含路径<br>false:排除路径</p>
         /// </summary>
         [JsonProperty("IsIncludePath")]
         public bool? IsIncludePath{ get; set; }

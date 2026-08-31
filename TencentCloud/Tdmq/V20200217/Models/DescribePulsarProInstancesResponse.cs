@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 未分页的总数目
+        /// <p>未分页的总数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例信息列表
+        /// <p>实例信息列表</p>
         /// </summary>
         [JsonProperty("Instances")]
         public PulsarProInstance[] Instances{ get; set; }

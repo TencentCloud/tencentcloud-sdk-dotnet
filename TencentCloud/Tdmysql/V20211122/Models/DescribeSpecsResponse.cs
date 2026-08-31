@@ -38,6 +38,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public ServerlessCcu[] ServerlessCcuSpec{ get; set; }
 
         /// <summary>
+        /// <p>serverless节点数量配置</p>
+        /// </summary>
+        [JsonProperty("ServerlessNodeNumSpec")]
+        public ServerlessNodeNumSpec ServerlessNodeNumSpec{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamArrayObj(map, prefix + "HybridNodeSpecs.", this.HybridNodeSpecs);
             this.SetParamArrayObj(map, prefix + "ServerlessCcuSpec.", this.ServerlessCcuSpec);
+            this.SetParamObj(map, prefix + "ServerlessNodeNumSpec.", this.ServerlessNodeNumSpec);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

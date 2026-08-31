@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 参考视频url。需要外网可访问。
-        /// 可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-        /// 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-        /// 参考视频为待编辑视频时，不能定义视频首尾帧。
+        /// <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
         /// </summary>
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
+        /// <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
         /// </summary>
         [JsonProperty("ReferType")]
         public string ReferType{ get; set; }
 
         /// <summary>
-        /// 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+        /// <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
         /// </summary>
         [JsonProperty("KeepOriginalSound")]
         public string KeepOriginalSound{ get; set; }

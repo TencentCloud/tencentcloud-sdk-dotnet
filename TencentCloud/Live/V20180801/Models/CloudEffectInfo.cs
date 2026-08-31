@@ -25,62 +25,55 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 云端特效 ID。
+        /// <p>云端特效 ID。</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 云端特效描述词。
+        /// <p>云端特效描述词。</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 云端特效标签。
+        /// <p>云端特效标签。</p>
         /// </summary>
         [JsonProperty("Flag")]
         public string Flag{ get; set; }
 
         /// <summary>
-        /// 云端特效生成状态。
-        /// 生成中 - GENERATING。
-        /// 处理中 - PROCESSING。
-        /// 生成失败 - FAILED。
-        /// 已完成 - FINISH。
+        /// <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 特效信息，生成失败时，此处返回失败原因。
+        /// <p>特效信息，生成失败时，此处返回失败原因。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 云端特效预览图片。
+        /// <p>云端特效预览图片。</p>
         /// </summary>
         [JsonProperty("PreviewImageUrl")]
         public string PreviewImageUrl{ get; set; }
 
         /// <summary>
-        /// 云端特效类型。
-        /// PGC : 官方精品特效。
-        /// AIGC : AI生成的特效。
-        /// UGC : 用户上传特效。
+        /// <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 云端特效创建时间。
+        /// <p>云端特效创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 云端特效更新时间。
+        /// <p>云端特效更新时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -81,7 +81,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? CanEditRoute{ get; set; }
 
         /// <summary>
-        /// <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+        /// <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingLabelVersion")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? DefaultPartitionNumber{ get; set; }
 
         /// <summary>
-        /// <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+        /// <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
         /// </summary>
         [JsonProperty("Tenant")]
         public string Tenant{ get; set; }
@@ -131,6 +131,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("EncryptionStatus")]
         public long? EncryptionStatus{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+        /// </summary>
+        [JsonProperty("AutoExpansionEnabled")]
+        public long? AutoExpansionEnabled{ get; set; }
 
 
         /// <summary>
@@ -155,6 +161,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
             this.SetParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
             this.SetParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+            this.SetParamSimple(map, prefix + "AutoExpansionEnabled", this.AutoExpansionEnabled);
         }
     }
 }

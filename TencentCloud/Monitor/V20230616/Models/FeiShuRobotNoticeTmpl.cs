@@ -25,16 +25,22 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 内容模板
+        /// <p>内容模板</p>
         /// </summary>
         [JsonProperty("ContentTmpl")]
         public string ContentTmpl{ get; set; }
 
         /// <summary>
-        /// 标题模板
+        /// <p>标题模板</p>
         /// </summary>
         [JsonProperty("TitleTmpl")]
         public string TitleTmpl{ get; set; }
+
+        /// <summary>
+        /// <p>通知内容模版标题自定义颜色</p>
+        /// </summary>
+        [JsonProperty("TitleColor")]
+        public RobotNoticeTitleColor TitleColor{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20230616.Models
         {
             this.SetParamSimple(map, prefix + "ContentTmpl", this.ContentTmpl);
             this.SetParamSimple(map, prefix + "TitleTmpl", this.TitleTmpl);
+            this.SetParamObj(map, prefix + "TitleColor.", this.TitleColor);
         }
     }
 }

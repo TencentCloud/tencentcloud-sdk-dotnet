@@ -68,6 +68,13 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string Cause{ get; set; }
 
         /// <summary>
+        /// 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
         /// 集群活动描述。
         /// </summary>
         [JsonProperty("Description")]
@@ -104,6 +111,7 @@ namespace TencentCloud.Thpc.V20220401.Models
             this.SetParamSimple(map, prefix + "ActivityStatusCode", this.ActivityStatusCode);
             this.SetParamSimple(map, prefix + "ResultDetail", this.ResultDetail);
             this.SetParamSimple(map, prefix + "Cause", this.Cause);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "RelatedNodeActivitySet.", this.RelatedNodeActivitySet);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

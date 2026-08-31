@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+        /// <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
@@ -84,6 +84,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
 
+        /// <summary>
+        /// <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+        /// </summary>
+        [JsonProperty("UserTenant")]
+        public string UserTenant{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+        /// </summary>
+        [JsonProperty("ElasticTpsEnabled")]
+        public long? ElasticTpsEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamObj(map, prefix + "Vpc.", this.Vpc);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+            this.SetParamSimple(map, prefix + "UserTenant", this.UserTenant);
+            this.SetParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
         }
     }
 }

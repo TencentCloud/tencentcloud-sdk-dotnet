@@ -199,7 +199,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string SQLMode{ get; set; }
 
         /// <summary>
-        /// <p>svls实例的ccu变配配置</p>
+        /// <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
         /// </summary>
         [JsonProperty("AutoScaleConfig")]
         public AutoScalingConfig AutoScaleConfig{ get; set; }
@@ -227,6 +227,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         [JsonProperty("EncryptionEnable")]
         public long? EncryptionEnable{ get; set; }
+
+        /// <summary>
+        /// <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+        /// </summary>
+        [JsonProperty("AutoScaleConfigs")]
+        public AutoScalingConfig[] AutoScaleConfigs{ get; set; }
 
 
         /// <summary>
@@ -268,6 +274,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
+            this.SetParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
         }
     }
 }

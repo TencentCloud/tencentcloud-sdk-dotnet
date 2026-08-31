@@ -28,13 +28,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// <p>ccu最小值</p>
         /// </summary>
         [JsonProperty("MinCcu")]
-        public long? MinCcu{ get; set; }
+        public float? MinCcu{ get; set; }
 
         /// <summary>
         /// <p>ccu最大值范围</p>
         /// </summary>
         [JsonProperty("MaxCcu")]
-        public long?[] MaxCcu{ get; set; }
+        public float?[] MaxCcu{ get; set; }
 
 
         /// <summary>

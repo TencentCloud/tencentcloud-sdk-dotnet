@@ -60,6 +60,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("DatabasePrivilegeList")]
         public DatabasePrivilegeInfo[] DatabasePrivilegeList{ get; set; }
 
+        /// <summary>
+        /// <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "AllDatabase", this.AllDatabase);
             this.SetParamArraySimple(map, prefix + "GlobalPrivileges.", this.GlobalPrivileges);
             this.SetParamArrayObj(map, prefix + "DatabasePrivilegeList.", this.DatabasePrivilegeList);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

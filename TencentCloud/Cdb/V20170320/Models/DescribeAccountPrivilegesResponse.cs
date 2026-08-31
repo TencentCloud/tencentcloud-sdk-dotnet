@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 全局权限数组。
+        /// <p>全局权限数组。</p>
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库权限数组。
+        /// <p>数据库权限数组。</p>
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public DatabasePrivilege[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库中的表权限数组。
+        /// <p>数据库中的表权限数组。</p>
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivilege[] TablePrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库表中的列权限数组。
+        /// <p>数据库表中的列权限数组。</p>
         /// </summary>
         [JsonProperty("ColumnPrivileges")]
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }

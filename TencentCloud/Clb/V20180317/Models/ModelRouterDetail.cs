@@ -161,6 +161,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// <p>带宽</p><p>单位：Mbps</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }

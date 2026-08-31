@@ -43,13 +43,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeTaskMetadata Metadata{ get; set; }
 
         /// <summary>
-        /// <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+        /// <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
         /// </summary>
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
 
         /// <summary>
-        /// <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+        /// <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -83,6 +83,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         [JsonProperty("FaceRecognitionResult")]
         public SeeFaceRecognitionResult FaceRecognitionResult{ get; set; }
+
+        /// <summary>
+        /// <p>每日或每周总结结果</p>
+        /// </summary>
+        [JsonProperty("SummarizeResult")]
+        public SeeSummarizeResult SummarizeResult{ get; set; }
 
         /// <summary>
         /// <p>完成该任务所消耗的基础能力额度</p>
@@ -142,6 +148,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
             this.SetParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
             this.SetParamObj(map, prefix + "FaceRecognitionResult.", this.FaceRecognitionResult);
+            this.SetParamObj(map, prefix + "SummarizeResult.", this.SummarizeResult);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);

@@ -25,29 +25,26 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否开启实时监控
+        /// <p>是否开启实时监控</p>
         /// </summary>
         [JsonProperty("EnableScan")]
         public bool? EnableScan{ get; set; }
 
         /// <summary>
-        /// true:包含路径 false:排除路径
+        /// <p>true:包含路径 false:排除路径</p>
         /// </summary>
         [JsonProperty("IsIncludePath")]
         public bool? IsIncludePath{ get; set; }
 
         /// <summary>
-        /// 自选排除或扫描的地址
+        /// <p>自选排除或扫描的地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPath")]
         public string[] ScanPath{ get; set; }
 
         /// <summary>
-        /// 扫描路径模式：
-        /// SCAN_PATH_ALL：全部路径
-        /// SCAN_PATH_DEFAULT：默认路径
-        /// SCAN_PATH_USER_DEFINE：用户自定义路径
+        /// <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
         /// </summary>
         [JsonProperty("ScanPathMode")]
         public string ScanPathMode{ get; set; }

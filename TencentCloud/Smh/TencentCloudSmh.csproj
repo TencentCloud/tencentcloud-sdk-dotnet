@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D0214E5B-694E-35FE-A23E-AAC8BB653013}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1456</VersionPrefix>
+    <VersionPrefix>3.0.1498</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,8 +67,10 @@
     <Compile Include="V20210712\Models\LibraryExtension.cs" />
     <Compile Include="V20210712\Models\ModifyLibraryRequest.cs" />
     <Compile Include="V20210712\Models\ModifyLibraryResponse.cs" />
+    <Compile Include="V20210712\Models\ResourceTag.cs" />
     <Compile Include="V20210712\Models\SendSmsCodeRequest.cs" />
     <Compile Include="V20210712\Models\SendSmsCodeResponse.cs" />
+    <Compile Include="V20210712\Models\TagFilter.cs" />
     <Compile Include="V20210712\Models\TrafficPackage.cs" />
     <Compile Include="V20210712\Models\VerifySmsCodeRequest.cs" />
     <Compile Include="V20210712\Models\VerifySmsCodeResponse.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1497";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -3289,7 +3289,7 @@ namespace TencentCloud.Essbasic.V20210526
         ///     ciphertext = SymmetricEncrypt(ALGO, AESKey, iv, plaintext)
         ///     # 4. 计算完整性签名：HMAC(Key, IV || Ciphertext)
         ///     signature = HMAC(HMACKey, concat(iv, ciphertext))
-        ///     # 5. 组装外层请求参数（三段均为标准 Base64）
+        ///     # 5. 组装外层请求参数
         ///     encReq = {
         ///         RequestAction:       bizAction,
         ///         ApplicationId:       bizApplicationId,
@@ -3328,6 +3328,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// ```
         /// 
         /// **AES-CBC 示例**
+        /// 
         /// 以下示例参数及结果可用于验证 AES-CBC 加密和 HMAC-SHA256 签名算法的实现是否正确。
         /// 
         /// 加密密钥：AES-CBC-Key-1234
@@ -3338,7 +3339,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 最终请求参数：
         /// ```
         /// {
-        ///   "RequestAction": "DescribeFlowComponents",
+        ///   "RequestAction": "ChannelDescribeFlowComponents",
         ///   "ApplicationId: "yD******************************,
         ///   "IV": "MTIzNDU2Nzg5MGFiY2RlZg==",
         ///   "EncryptedData": "Iqp2W1jislwMNmE7bH9dKZZiMQsfkAPyvAAqDFRnWLw=",
@@ -3347,6 +3348,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// ```
         /// 
         /// **SM4-CBC 示例**
+        /// 
         /// 以下示例参数及结果可用于验证 SM4-CBC 加密和 HMAC-SM4 签名算法的实现是否正确。
         /// 
         /// 加密密钥：SM4-CBC-Key-1234
@@ -3357,7 +3359,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 最终请求参数：
         /// ```
         /// {
-        ///   "RequestAction": "DescribeFlowComponents",
+        ///   "RequestAction": "ChannelDescribeFlowComponents",
         ///   "ApplicationId: "yD******************************,
         ///   "IV": "ZmVkY2JhMDk4NzY1NDMyMQ==",
         ///   "EncryptedData": "GwUovQhNUPaUnVM/UDXMtPOYTpTSi2B1oyZDFbyyvns=",
@@ -3416,7 +3418,7 @@ namespace TencentCloud.Essbasic.V20210526
         ///     ciphertext = SymmetricEncrypt(ALGO, AESKey, iv, plaintext)
         ///     # 4. 计算完整性签名：HMAC(Key, IV || Ciphertext)
         ///     signature = HMAC(HMACKey, concat(iv, ciphertext))
-        ///     # 5. 组装外层请求参数（三段均为标准 Base64）
+        ///     # 5. 组装外层请求参数
         ///     encReq = {
         ///         RequestAction:       bizAction,
         ///         ApplicationId:       bizApplicationId,
@@ -3455,6 +3457,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// ```
         /// 
         /// **AES-CBC 示例**
+        /// 
         /// 以下示例参数及结果可用于验证 AES-CBC 加密和 HMAC-SHA256 签名算法的实现是否正确。
         /// 
         /// 加密密钥：AES-CBC-Key-1234
@@ -3465,7 +3468,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 最终请求参数：
         /// ```
         /// {
-        ///   "RequestAction": "DescribeFlowComponents",
+        ///   "RequestAction": "ChannelDescribeFlowComponents",
         ///   "ApplicationId: "yD******************************,
         ///   "IV": "MTIzNDU2Nzg5MGFiY2RlZg==",
         ///   "EncryptedData": "Iqp2W1jislwMNmE7bH9dKZZiMQsfkAPyvAAqDFRnWLw=",
@@ -3474,6 +3477,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// ```
         /// 
         /// **SM4-CBC 示例**
+        /// 
         /// 以下示例参数及结果可用于验证 SM4-CBC 加密和 HMAC-SM4 签名算法的实现是否正确。
         /// 
         /// 加密密钥：SM4-CBC-Key-1234
@@ -3484,7 +3488,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 最终请求参数：
         /// ```
         /// {
-        ///   "RequestAction": "DescribeFlowComponents",
+        ///   "RequestAction": "ChannelDescribeFlowComponents",
         ///   "ApplicationId: "yD******************************,
         ///   "IV": "ZmVkY2JhMDk4NzY1NDMyMQ==",
         ///   "EncryptedData": "GwUovQhNUPaUnVM/UDXMtPOYTpTSi2B1oyZDFbyyvns=",

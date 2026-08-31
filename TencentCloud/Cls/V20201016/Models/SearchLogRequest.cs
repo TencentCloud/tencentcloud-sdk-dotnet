@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
+        /// <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+        /// <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }

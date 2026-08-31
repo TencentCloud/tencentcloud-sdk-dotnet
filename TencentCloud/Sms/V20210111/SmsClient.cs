@@ -28,7 +28,7 @@ namespace TencentCloud.Sms.V20210111
 
        private const string endpoint = "sms.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "SDK_NET_3.0.1435";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -186,6 +186,27 @@ namespace TencentCloud.Sms.V20210111
         public DescribePhoneNumberInfoResponse DescribePhoneNumberInfoSync(DescribePhoneNumberInfoRequest req)
         {
             return InternalRequestAsync<DescribePhoneNumberInfoResponse>(req, "DescribePhoneNumberInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeSendRecordList) 用于查询单个手机号在指定时间范围内的短信下发记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSendRecordListRequest"/></param>
+        /// <returns><see cref="DescribeSendRecordListResponse"/></returns>
+        public Task<DescribeSendRecordListResponse> DescribeSendRecordList(DescribeSendRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeSendRecordListResponse>(req, "DescribeSendRecordList");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeSendRecordList) 用于查询单个手机号在指定时间范围内的短信下发记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSendRecordListRequest"/></param>
+        /// <returns><see cref="DescribeSendRecordListResponse"/></returns>
+        public DescribeSendRecordListResponse DescribeSendRecordListSync(DescribeSendRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeSendRecordListResponse>(req, "DescribeSendRecordList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

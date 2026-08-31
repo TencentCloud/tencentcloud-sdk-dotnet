@@ -25,67 +25,70 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 云联网ID。
+        /// <p>云联网ID。</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。
+        /// <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例绑定路由表的时间。
+        /// <p>实例绑定路由表的时间。</p>
         /// </summary>
         [JsonProperty("InstanceBindTime")]
         public string InstanceBindTime{ get; set; }
 
         /// <summary>
-        /// 路由表ID。
+        /// <p>路由表ID。</p>
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// <p>实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例所在地域。
+        /// <p>实例所在地域。</p>
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// 实例所属的账户uin。
+        /// <p>实例所属的账户uin。</p>
         /// </summary>
         [JsonProperty("InstanceUin")]
         public string InstanceUin{ get; set; }
 
         /// <summary>
-        /// 关联实例状态：
-        /// <li>`PENDING`：申请中</li>
-        /// <li>`ACTIVE`：已连接</li>
-        /// <li>`EXPIRED`：已过期</li>
-        /// <li>`REJECTED`：已拒绝</li>
-        /// <li>`DELETED`：已删除</li>
-        /// <li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-        /// <li>`ATTACHING`：关联中</li>
-        /// <li>`DETACHING`：解关联中</li>
-        /// <li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+        /// <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
+
+        /// <summary>
+        /// <p>别名类型</p>
+        /// </summary>
+        [JsonProperty("AliasType")]
+        public string AliasType{ get; set; }
+
+        /// <summary>
+        /// <p>别名实例ID</p>
+        /// </summary>
+        [JsonProperty("AliasInstanceId")]
+        public string AliasInstanceId{ get; set; }
 
 
         /// <summary>
@@ -102,6 +105,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "AliasType", this.AliasType);
+            this.SetParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
         }
     }
 }

@@ -25,27 +25,25 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品 ID
+        /// <p>产品 ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 算法类型。可选值：
-        /// 
-        /// - `VID_COMP`：视频理解
+        /// <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 通道 ID
+        /// <p>通道 ID</p>
         /// </summary>
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }

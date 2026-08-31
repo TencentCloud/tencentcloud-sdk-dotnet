@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+        /// <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 标签，长度限制：128 个字符。
+        /// <p>标签，长度限制：128 个字符。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

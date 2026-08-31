@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1491</VersionPrefix>
+    <VersionPrefix>3.0.1498</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,6 +95,8 @@
     <Compile Include="V20230321\Models\CosOptionOverview.cs" />
     <Compile Include="V20230321\Models\CreateClusterRequest.cs" />
     <Compile Include="V20230321\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20230321\Models\CreateScheduledActionRequest.cs" />
+    <Compile Include="V20230321\Models\CreateScheduledActionResponse.cs" />
     <Compile Include="V20230321\Models\CreateWorkspacesRequest.cs" />
     <Compile Include="V20230321\Models\CreateWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\DataDisk.cs" />
@@ -108,6 +110,8 @@
     <Compile Include="V20230321\Models\DeleteNodesResponse.cs" />
     <Compile Include="V20230321\Models\DeleteQueueRequest.cs" />
     <Compile Include="V20230321\Models\DeleteQueueResponse.cs" />
+    <Compile Include="V20230321\Models\DeleteScheduledActionRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteScheduledActionResponse.cs" />
     <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20230321\Models\DescribeClusterActivitiesRequest.cs" />
@@ -118,6 +122,8 @@
     <Compile Include="V20230321\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20230321\Models\DescribeInitNodeScriptsRequest.cs" />
     <Compile Include="V20230321\Models\DescribeInitNodeScriptsResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeInstanceFamiliesRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeInstanceFamiliesResponse.cs" />
     <Compile Include="V20230321\Models\DescribeJobSubmitInfoRequest.cs" />
     <Compile Include="V20230321\Models\DescribeJobSubmitInfoResponse.cs" />
     <Compile Include="V20230321\Models\DescribeJobsOverviewRequest.cs" />
@@ -126,8 +132,14 @@
     <Compile Include="V20230321\Models\DescribeJobsResponse.cs" />
     <Compile Include="V20230321\Models\DescribeNodesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeQueueAutoScalingOverviewRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeQueueAutoScalingOverviewResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeQueueAutoScalingRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeQueueAutoScalingResponse.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeScheduledActionsRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="V20230321\Models\DescribeWorkspacesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\DetachNodesRequest.cs" />
@@ -137,11 +149,15 @@
     <Compile Include="V20230321\Models\EnvVar.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />
+    <Compile Include="V20230321\Models\ExpansionPolicy.cs" />
+    <Compile Include="V20230321\Models\ExpansionPriority.cs" />
     <Compile Include="V20230321\Models\Filter.cs" />
     <Compile Include="V20230321\Models\GooseFSOption.cs" />
     <Compile Include="V20230321\Models\GooseFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\GooseFSxOption.cs" />
     <Compile Include="V20230321\Models\GooseFSxOptionOverview.cs" />
+    <Compile Include="V20230321\Models\InquirePriceCreateWorkspacesRequest.cs" />
+    <Compile Include="V20230321\Models\InquirePriceCreateWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\InquirePriceModifyWorkspacesChargeTypeRequest.cs" />
     <Compile Include="V20230321\Models\InquirePriceModifyWorkspacesChargeTypeResponse.cs" />
     <Compile Include="V20230321\Models\InstanceChargePrepaid.cs" />
@@ -160,6 +176,8 @@
     <Compile Include="V20230321\Models\ModifyInitNodeScriptsResponse.cs" />
     <Compile Include="V20230321\Models\ModifyNodeAttributeRequest.cs" />
     <Compile Include="V20230321\Models\ModifyNodeAttributeResponse.cs" />
+    <Compile Include="V20230321\Models\ModifyScheduledActionRequest.cs" />
+    <Compile Include="V20230321\Models\ModifyScheduledActionResponse.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesAttributeRequest.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesAttributeResponse.cs" />
     <Compile Include="V20230321\Models\ModifyWorkspacesChargeTypeRequest.cs" />
@@ -178,8 +196,11 @@
     <Compile Include="V20230321\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20230321\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20230321\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\ScalingPolicy.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationResponse.cs" />
+    <Compile Include="V20230321\Models\SetQueueAutoScalingRequest.cs" />
+    <Compile Include="V20230321\Models\SetQueueAutoScalingResponse.cs" />
     <Compile Include="V20230321\Models\SpaceChargePrepaid.cs" />
     <Compile Include="V20230321\Models\SpaceDataDisk.cs" />
     <Compile Include="V20230321\Models\SpaceInfo.cs" />
@@ -197,6 +218,7 @@
     <Compile Include="V20230321\Models\TagSpecification.cs" />
     <Compile Include="V20230321\Models\Task.cs" />
     <Compile Include="V20230321\Models\TaskDependence.cs" />
+    <Compile Include="V20230321\Models\TemplateOverrides.cs" />
     <Compile Include="V20230321\Models\TerminateJobRequest.cs" />
     <Compile Include="V20230321\Models\TerminateJobResponse.cs" />
     <Compile Include="V20230321\Models\TerminateWorkspacesRequest.cs" />

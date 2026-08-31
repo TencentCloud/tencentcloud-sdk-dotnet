@@ -25,27 +25,27 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 代理机构的应用编号,32位字符串，一般不用传
+        /// <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
         /// </summary>
         [JsonProperty("AppId")]
         [System.Obsolete]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 被代理机构的应用号，一般不用传
+        /// <p>被代理机构的应用号，一般不用传</p>
         /// </summary>
         [JsonProperty("ProxyAppId")]
         [System.Obsolete]
         public string ProxyAppId{ get; set; }
 
         /// <summary>
-        /// 被代理机构在电子签平台的机构编号，集团代理下场景必传
+        /// <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
         /// </summary>
         [JsonProperty("ProxyOrganizationId")]
         public string ProxyOrganizationId{ get; set; }
 
         /// <summary>
-        /// 被代理机构的经办人，一般不用传
+        /// <p>被代理机构的经办人，一般不用传</p>
         /// </summary>
         [JsonProperty("ProxyOperator")]
         [System.Obsolete]

@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Vod.V20180717
         public AttachMediaSubtitlesResponse AttachMediaSubtitlesSync(AttachMediaSubtitlesRequest req)
         {
             return InternalRequestAsync<AttachMediaSubtitlesResponse>(req, "AttachMediaSubtitles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceAsyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceAsyncResponse"/></returns>
+        public Task<CloneVoiceAsyncResponse> CloneVoiceAsync(CloneVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceAsyncResponse>(req, "CloneVoiceAsync");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceAsyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceAsyncResponse"/></returns>
+        public CloneVoiceAsyncResponse CloneVoiceAsyncSync(CloneVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceAsyncResponse>(req, "CloneVoiceAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1981,6 +2002,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public Task<DeleteVoiceResponse> DeleteVoice(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public DeleteVoiceResponse DeleteVoiceSync(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义水印模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteWatermarkTemplateRequest"/></param>
@@ -3526,6 +3568,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public Task<DescribeVoicesResponse> DescribeVoices(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public DescribeVoicesResponse DescribeVoicesSync(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询用户自定义水印模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeWatermarkTemplatesRequest"/></param>
@@ -3564,6 +3627,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeWordSamplesResponse DescribeWordSamplesSync(DescribeWordSamplesRequest req)
         {
             return InternalRequestAsync<DescribeWordSamplesResponse>(req, "DescribeWordSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public Task<DesignVoiceAsyncResponse> DesignVoiceAsync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5562,6 +5646,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public Task<TextToSpeechAsyncResponse> TextToSpeechAsync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public TextToSpeechAsyncResponse TextToSpeechAsyncSync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
@@ -5579,6 +5684,27 @@ namespace TencentCloud.Vod.V20180717
         public UpdateAigcApiTokenResponse UpdateAigcApiTokenSync(UpdateAigcApiTokenRequest req)
         {
             return InternalRequestAsync<UpdateAigcApiTokenResponse>(req, "UpdateAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public Task<UpdateVoiceResponse> UpdateVoice(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice");
+        }
+
+        /// <summary>
+        /// 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public UpdateVoiceResponse UpdateVoiceSync(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

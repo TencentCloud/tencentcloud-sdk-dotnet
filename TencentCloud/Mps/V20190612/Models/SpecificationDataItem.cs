@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务规格。
+        /// <p>任务规格。</p>
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 统计数据。
+        /// <p>统计数据。</p>
         /// </summary>
         [JsonProperty("Data")]
         public TaskStatDataItem[] Data{ get; set; }

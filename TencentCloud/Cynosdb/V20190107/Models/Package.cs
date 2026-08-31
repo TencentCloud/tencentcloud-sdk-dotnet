@@ -50,6 +50,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageType{ get; set; }
 
         /// <summary>
+        /// 资源包套餐版本
+        /// base-基础，common-通用，enterprise-企业
+        /// </summary>
+        [JsonProperty("PackageVersion")]
+        public string PackageVersion{ get; set; }
+
+        /// <summary>
         /// 资源包使用地域
         /// china-中国内地通用，overseas-港澳台及海外通用
         /// </summary>
@@ -120,6 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
             this.SetParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PackageTotalSpec", this.PackageTotalSpec);

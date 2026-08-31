@@ -25,28 +25,34 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例唯一标识符（字符串表示）。
+        /// <p>实例唯一标识符（字符串表示）。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 需要变更的区域名称。
+        /// <p>需要变更的区域名称。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
+        /// <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+        /// <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
         }
     }
 }

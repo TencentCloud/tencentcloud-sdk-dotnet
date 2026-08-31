@@ -25,125 +25,125 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入Id。
+        /// <p>输入Id。</p>
         /// </summary>
         [JsonProperty("InputId")]
         public string InputId{ get; set; }
 
         /// <summary>
-        /// 输入名称。
+        /// <p>输入名称。</p>
         /// </summary>
         [JsonProperty("InputName")]
         public string InputName{ get; set; }
 
         /// <summary>
-        /// 输入描述。
+        /// <p>输入描述。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 输入协议。
+        /// <p>输入协议。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 输入地址列表。
+        /// <p>输入地址列表。</p>
         /// </summary>
         [JsonProperty("InputAddressList")]
         public InputAddress[] InputAddressList{ get; set; }
 
         /// <summary>
-        /// 输入IP白名单列表。
+        /// <p>输入IP白名单列表。</p>
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// 输入的SRT配置信息。
+        /// <p>输入的SRT配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SRTSettings")]
         public DescribeInputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// 输入的RTP配置信息。
+        /// <p>输入的RTP配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTPSettings")]
         public DescribeInputRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// 输入的地区。
+        /// <p>输入的地区。</p>
         /// </summary>
         [JsonProperty("InputRegion")]
         public string InputRegion{ get; set; }
 
         /// <summary>
-        /// 输入的RTMP配置信息。
+        /// <p>输入的RTMP配置信息。</p>
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public DescribeInputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// 输入的主备开关。
+        /// <p>输入的主备开关。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 输入的RTMP_PULL配置信息。
+        /// <p>输入的RTMP_PULL配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// 输入的RTSP_PULL配置信息。
+        /// <p>输入的RTSP_PULL配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 输入的HLS_PULL配置信息。
+        /// <p>输入的HLS_PULL配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 延播平滑吐流配置信息。
+        /// <p>延播平滑吐流配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
 
         /// <summary>
-        /// 绑定的输入安全组 ID。	
+        /// <p>绑定的输入安全组 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+        /// <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 输入的RIST配置信息。
+        /// <p>输入的RIST配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RISTSettings")]
         public DescribeInputRISTSettings RISTSettings{ get; set; }
 
         /// <summary>
-        /// 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+        /// <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
         /// </summary>
         [JsonProperty("StreamUrls")]
         public StreamUrlDetail[] StreamUrls{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 路由条件
+        /// <p>路由条件</p>
         /// </summary>
         [JsonProperty("RouteConditions")]
         public CcnRouteBroadcastPolicyRouteCondition[] RouteConditions{ get; set; }
 
         /// <summary>
-        /// 传播条件
+        /// <p>传播条件</p>
         /// </summary>
         [JsonProperty("BroadcastConditions")]
         public CcnRouteBroadcastPolicyRouteCondition[] BroadcastConditions{ get; set; }
 
         /// <summary>
-        /// 路由行为，`accept` 允许，`drop` 拒绝
+        /// <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// <p>策略描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// as-path操作
+        /// <p>as-path操作</p>
         /// </summary>
         [JsonProperty("OperateAsPath")]
         public string OperateAsPath{ get; set; }
 
         /// <summary>
-        /// as-path操作模式
+        /// <p>as-path操作模式</p>
         /// </summary>
         [JsonProperty("AsPathOperateMode")]
         public string AsPathOperateMode{ get; set; }
 
         /// <summary>
-        /// community操作
+        /// <p>community操作</p>
         /// </summary>
         [JsonProperty("OperateCommunitySet")]
         public string[] OperateCommunitySet{ get; set; }
 
         /// <summary>
-        /// community操作模式
+        /// <p>community操作模式</p>
         /// </summary>
         [JsonProperty("CommunityOperateMode")]
         public string CommunityOperateMode{ get; set; }

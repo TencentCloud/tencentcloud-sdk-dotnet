@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -3557,6 +3557,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryptionSync(ModifyClusterGlobalEncryptionRequest req)
         {
             return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群级别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterLevelRequest"/></param>
+        /// <returns><see cref="ModifyClusterLevelResponse"/></returns>
+        public Task<ModifyClusterLevelResponse> ModifyClusterLevel(ModifyClusterLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterLevelResponse>(req, "ModifyClusterLevel");
+        }
+
+        /// <summary>
+        /// 修改集群级别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterLevelRequest"/></param>
+        /// <returns><see cref="ModifyClusterLevelResponse"/></returns>
+        public ModifyClusterLevelResponse ModifyClusterLevelSync(ModifyClusterLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterLevelResponse>(req, "ModifyClusterLevel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

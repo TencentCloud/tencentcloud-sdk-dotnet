@@ -25,62 +25,62 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 流Id。
+        /// <p>流Id。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 流名称。
+        /// <p>流名称。</p>
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 流状态，目前有IDLE/RUNNING。
+        /// <p>流状态，目前有IDLE/RUNNING。</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 最大带宽值。
+        /// <p>最大带宽值。</p>
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// 输入组。
+        /// <p>输入组。</p>
         /// </summary>
         [JsonProperty("InputGroup")]
         public DescribeInput[] InputGroup{ get; set; }
 
         /// <summary>
-        /// 输出组。
+        /// <p>输出组。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputGroup")]
         public DescribeOutput[] OutputGroup{ get; set; }
 
         /// <summary>
-        /// 该Flow关联的媒体传输事件EventId。
+        /// <p>该Flow关联的媒体传输事件EventId。</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 媒体传输输入流所属的区域，取值和InputRegion相同。
+        /// <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 该Flow允许创建的输入协议
+        /// <p>该Flow允许创建的输入协议</p>
         /// </summary>
         [JsonProperty("AllowedInputProtocols")]
         public string[] AllowedInputProtocols{ get; set; }
 
         /// <summary>
-        /// 该Flow允许创建的输出协议
+        /// <p>该Flow允许创建的输出协议</p>
         /// </summary>
         [JsonProperty("AllowedOutputProtocols")]
         public string[] AllowedOutputProtocols{ get; set; }

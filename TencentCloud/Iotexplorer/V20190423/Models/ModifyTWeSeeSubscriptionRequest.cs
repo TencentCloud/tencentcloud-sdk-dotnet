@@ -25,16 +25,16 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品 ID
-        /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
-
-        /// <summary>
         /// 设备名称
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 产品 ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
         /// 算法类型。可选值：
@@ -51,10 +51,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
-        /// 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+        /// 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
         /// </summary>
-        [JsonProperty("Enabled")]
-        public bool? Enabled{ get; set; }
+        [JsonProperty("CompHighlightConfig")]
+        public SeeCompHighlightConfig CompHighlightConfig{ get; set; }
 
         /// <summary>
         /// 视觉理解配置（适用于视频理解、图片理解），不传则不修改
@@ -63,10 +63,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeComprehensionConfig ComprehensionConfig{ get; set; }
 
         /// <summary>
-        /// 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+        /// 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
         /// </summary>
-        [JsonProperty("CompHighlightConfig")]
-        public SeeCompHighlightConfig CompHighlightConfig{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 云存事件 ID 过滤规则配置，不传则不修改
@@ -74,20 +74,27 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("EventIdFilterConfig")]
         public SeeEventIdFilterConfig EventIdFilterConfig{ get; set; }
 
+        /// <summary>
+        /// 每日与每周总结配置，不传则不修改
+        /// </summary>
+        [JsonProperty("SummarizeConfig")]
+        public SeeSummarizeConfig SummarizeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
-            this.SetParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
             this.SetParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
+            this.SetParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+            this.SetParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
         }
     }
 }

@@ -396,6 +396,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string EncryptionKmsRegion{ get; set; }
 
         /// <summary>
+        /// <p>serverless自动变配配置</p>
+        /// </summary>
+        [JsonProperty("AutoScaleConfigs")]
+        public AutoScalingConfig[] AutoScaleConfigs{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -468,6 +474,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
             this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
             this.SetParamSimple(map, prefix + "EncryptionKmsRegion", this.EncryptionKmsRegion);
+            this.SetParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

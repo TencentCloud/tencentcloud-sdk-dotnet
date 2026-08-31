@@ -25,85 +25,79 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目Id
+        /// <p>项目Id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 分页页码
+        /// <p>分页页码</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 文件Id
+        /// <p>文件Id</p>
         /// </summary>
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
         /// <summary>
-        /// 工作流状态筛选
-        /// * ALL_RUNNING : 全部调度中
-        /// * ALL_FREEZED : 全部已暂停
-        /// * ALL_STOPPTED : 全部已下线
-        /// * PART_RUNNING : 部分调度中
-        /// * ALL_NO_RUNNING : 全部未调度
-        /// * ALL_INVALID : 全部已失效
+        /// <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 负责人Id
+        /// <p>负责人Id</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
+        /// <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
         /// </summary>
         [JsonProperty("WorkflowType")]
         public string WorkflowType{ get; set; }
 
         /// <summary>
-        /// 工作流关键词过滤，支持工作流 Id/name 模糊匹配
+        /// <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
         /// </summary>
         [JsonProperty("KeyWord")]
         public string KeyWord{ get; set; }
 
         /// <summary>
-        /// 排序项，可选CreateTime、TaskCount
+        /// <p>排序项，可选CreateTime、TaskCount</p>
         /// </summary>
         [JsonProperty("SortItem")]
         public string SortItem{ get; set; }
 
         /// <summary>
-        /// 排序方式，DESC或ASC, 大写
+        /// <p>排序方式，DESC或ASC, 大写</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 创建人Id
+        /// <p>创建人Id</p>
         /// </summary>
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
 
         /// <summary>
-        /// 更新时间，格式yyyy-MM-dd HH:mm:ss
+        /// <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间，格式yyyy-MM-dd HH:mm:ss
+        /// <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

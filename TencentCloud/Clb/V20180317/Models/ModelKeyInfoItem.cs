@@ -38,6 +38,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ApiBase{ get; set; }
 
         /// <summary>
+        /// <p>多协议 API Base URL</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiBases")]
+        public ApiBaseItem[] ApiBases{ get; set; }
+
+        /// <summary>
         /// <p>模型创建时间（ISO 8601）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -138,6 +145,26 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthCheckConfig")]
         public ServiceProviderHealthCheckConfigOutput HealthCheckConfig{ get; set; }
 
+        /// <summary>
+        /// <p>私网管道 ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelId")]
+        public string CMRPrivateNetworkTunnelId{ get; set; }
+
+        /// <summary>
+        /// <p>私网管道名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelName")]
+        public string CMRPrivateNetworkTunnelName{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查配置</p>
+        /// </summary>
+        [JsonProperty("HealthCheckConfigs")]
+        public ServiceProviderHealthCheckConfigItemOutput[] HealthCheckConfigs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +173,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamSimple(map, prefix + "ApiBase", this.ApiBase);
+            this.SetParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "KeyCount", this.KeyCount);
@@ -162,6 +190,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelName", this.CMRPrivateNetworkTunnelName);
+            this.SetParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
         }
     }
 }

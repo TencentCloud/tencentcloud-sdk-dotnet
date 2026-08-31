@@ -25,49 +25,49 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 人物 ID。
+        /// <p>人物 ID。</p>
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 人物名称。
+        /// <p>人物名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 人物描述。
+        /// <p>人物描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 人脸信息。
+        /// <p>人脸信息。</p>
         /// </summary>
         [JsonProperty("FaceInfoSet")]
         public AiSampleFaceInfo[] FaceInfoSet{ get; set; }
 
         /// <summary>
-        /// 人物标签。
+        /// <p>人物标签。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// 应用场景。
+        /// <p>应用场景。</p>
         /// </summary>
         [JsonProperty("UsageSet")]
         public string[] UsageSet{ get; set; }
 
         /// <summary>
-        /// 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

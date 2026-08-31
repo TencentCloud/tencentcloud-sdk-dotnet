@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1497";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -2023,6 +2023,27 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyEnvResponse ModifyEnvSync(ModifyEnvRequest req)
         {
             return InternalRequestAsync<ModifyEnvResponse>(req, "ModifyEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改环境额外配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvExtraRequest"/></param>
+        /// <returns><see cref="ModifyEnvExtraResponse"/></returns>
+        public Task<ModifyEnvExtraResponse> ModifyEnvExtra(ModifyEnvExtraRequest req)
+        {
+            return InternalRequestAsync<ModifyEnvExtraResponse>(req, "ModifyEnvExtra");
+        }
+
+        /// <summary>
+        /// 修改环境额外配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvExtraRequest"/></param>
+        /// <returns><see cref="ModifyEnvExtraResponse"/></returns>
+        public ModifyEnvExtraResponse ModifyEnvExtraSync(ModifyEnvExtraRequest req)
+        {
+            return InternalRequestAsync<ModifyEnvExtraResponse>(req, "ModifyEnvExtra")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1497</VersionPrefix>
+    <VersionPrefix>3.0.1498</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -711,6 +711,8 @@
     <Compile Include="V20230616\Models\QCloudYeheWeChatNoticeTmplItem.cs" />
     <Compile Include="V20230616\Models\ResourceInstance.cs" />
     <Compile Include="V20230616\Models\ResourceMapInfo.cs" />
+    <Compile Include="V20230616\Models\RobotNoticeTitleColor.cs" />
+    <Compile Include="V20230616\Models\RobotNoticeTitleColorRules.cs" />
     <Compile Include="V20230616\Models\Rule.cs" />
     <Compile Include="V20230616\Models\SessionInfo.cs" />
     <Compile Include="V20230616\Models\SkillInfo.cs" />

@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 查询条件过滤器
+        /// <p>查询条件过滤器</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询数目上限，默认20
+        /// <p>查询数目上限，默认20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询起始位置
+        /// <p>查询起始位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

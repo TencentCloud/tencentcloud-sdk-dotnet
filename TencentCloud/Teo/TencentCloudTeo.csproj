@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1497</VersionPrefix>
+    <VersionPrefix>3.0.1498</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -329,6 +329,8 @@
     <Compile Include="V20220901\Models\DescribeAliasDomainsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeApplicationProxiesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeApplicationProxiesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeAvailableCustomActionsForRuleEngineRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeAvailableCustomActionsForRuleEngineResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansRequest.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansResponse.cs" />
     <Compile Include="V20220901\Models\DescribeBillingDataRequest.cs" />
@@ -820,6 +822,8 @@
     <Compile Include="V20220901\Models\RuleCodeActionParams.cs" />
     <Compile Include="V20220901\Models\RuleCondition.cs" />
     <Compile Include="V20220901\Models\RuleEngineAction.cs" />
+    <Compile Include="V20220901\Models\RuleEngineCustomAction.cs" />
+    <Compile Include="V20220901\Models\RuleEngineCustomActionParameterSchema.cs" />
     <Compile Include="V20220901\Models\RuleEngineItem.cs" />
     <Compile Include="V20220901\Models\RuleEngineSubRule.cs" />
     <Compile Include="V20220901\Models\RuleExtraParameter.cs" />

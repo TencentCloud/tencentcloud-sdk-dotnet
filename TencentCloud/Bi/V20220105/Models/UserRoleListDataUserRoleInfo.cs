@@ -25,168 +25,175 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 业务ID
+        /// <p>业务ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 角色列表
+        /// <p>角色列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleList")]
         public UserRoleListDataRoleInfo[] RoleList{ get; set; }
 
         /// <summary>
-        /// 角色ID列表
+        /// <p>角色ID列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleIdList")]
         public ulong?[] RoleIdList{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CorpId")]
         public string CorpId{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// <p>邮箱</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedUser")]
         public string CreatedUser{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新人
+        /// <p>更新人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedUser")]
         public string UpdatedUser{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 最后一次登录时间
+        /// <p>最后一次登录时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastLogin")]
         public string LastLogin{ get; set; }
 
         /// <summary>
-        /// 账号状态
+        /// <p>账号状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 手机号码
+        /// <p>手机号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 手机号区号
+        /// <p>手机号区号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AreaCode")]
         public string AreaCode{ get; set; }
 
         /// <summary>
-        /// 是否为主账号
+        /// <p>是否为主账号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootAccount")]
         public bool? RootAccount{ get; set; }
 
         /// <summary>
-        /// 是否为企业管理员
+        /// <p>是否为企业管理员</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpAdmin")]
         public bool? CorpAdmin{ get; set; }
 
         /// <summary>
-        /// 企微用户id
+        /// <p>企微用户id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserId")]
         public string AppUserId{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// <p>昵称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserAliasName")]
         public string AppUserAliasName{ get; set; }
 
         /// <summary>
-        /// 应用用户名
+        /// <p>应用用户名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppUserName")]
         public string AppUserName{ get; set; }
 
         /// <summary>
-        /// 是否在可见范围内
+        /// <p>是否在可见范围内</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InValidateAppRange")]
         public bool? InValidateAppRange{ get; set; }
 
         /// <summary>
-        /// 用户openid
+        /// <p>用户openid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppOpenUserId")]
         public string AppOpenUserId{ get; set; }
 
         /// <summary>
-        /// 邮箱激活状态
+        /// <p>邮箱激活状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmailActivationStatus")]
         public long? EmailActivationStatus{ get; set; }
 
         /// <summary>
-        /// 用户组信息
+        /// <p>用户组信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroupList")]
         public UserGroupDTO[] UserGroupList{ get; set; }
+
+        /// <summary>
+        /// <p>用户类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public string IdentityType{ get; set; }
 
 
         /// <summary>
@@ -218,6 +225,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
             this.SetParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
             this.SetParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

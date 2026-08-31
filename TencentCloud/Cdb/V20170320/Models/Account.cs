@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// <p>账号名，可输入1 - 32个字符。</p>
+        /// 账号名称
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+        /// 账号的主机地址
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

@@ -73,10 +73,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ModelProvider{ get; set; }
 
         /// <summary>
-        /// <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+        /// <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
         /// </summary>
         [JsonProperty("ServiceProviderId")]
         public string ServiceProviderId{ get; set; }
+
+        /// <summary>
+        /// <p>    CMR 私网管道ID </p>
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelId")]
+        public string CMRPrivateNetworkTunnelId{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
             this.SetParamSimple(map, prefix + "ModelProvider", this.ModelProvider);
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         }
     }
 }

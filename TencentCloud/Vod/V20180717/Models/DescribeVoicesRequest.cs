@@ -1,0 +1,113 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Vod.V20180717.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeVoicesRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public string SubAppId{ get; set; }
+
+        /// <summary>
+        /// <p>音色ID</p>
+        /// </summary>
+        [JsonProperty("VoiceId")]
+        public string VoiceId{ get; set; }
+
+        /// <summary>
+        /// <p>音色类别</p><p>枚举值：</p><ul><li>system： 系统音色</li><li>clone： 克隆音色</li><li>design： 设计音色</li><li>all： 所有音色（默认）</li></ul>
+        /// </summary>
+        [JsonProperty("VoiceType")]
+        public string VoiceType{ get; set; }
+
+        /// <summary>
+        /// <p>音色名</p>
+        /// </summary>
+        [JsonProperty("VoiceName")]
+        public string VoiceName{ get; set; }
+
+        /// <summary>
+        /// <p>音色描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>性别</p><p>枚举值：</p><ul><li>male： 男</li><li>female： 女</li><li>unknown： 未知</li></ul>
+        /// </summary>
+        [JsonProperty("Gender")]
+        public string Gender{ get; set; }
+
+        /// <summary>
+        /// <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+        /// </summary>
+        [JsonProperty("Age")]
+        public string Age{ get; set; }
+
+        /// <summary>
+        /// <p>语言</p>
+        /// </summary>
+        [JsonProperty("Languages")]
+        public string[] Languages{ get; set; }
+
+        /// <summary>
+        /// <p>标签</p>
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string[] Labels{ get; set; }
+
+        /// <summary>
+        /// <p>场景</p>
+        /// </summary>
+        [JsonProperty("Scenes")]
+        public string[] Scenes{ get; set; }
+
+        /// <summary>
+        /// <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
+        /// </summary>
+        [JsonProperty("ExtParam")]
+        public string ExtParam{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
+            this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "Age", this.Age);
+            this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
+            this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+            this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
+        }
+    }
+}
+

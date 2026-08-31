@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口用于关闭（删除）数据库代理的指定地址。接口为异步操作，返回 TaskId 供调用方通过 DescribeTasks 查询任务执行进度。约束：代理组至少保留一个地址，不允许删除最后一个地址。
+        /// </summary>
+        /// <param name="req"><see cref="CloseDBProxyAddressRequest"/></param>
+        /// <returns><see cref="CloseDBProxyAddressResponse"/></returns>
+        public Task<CloseDBProxyAddressResponse> CloseDBProxyAddress(CloseDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<CloseDBProxyAddressResponse>(req, "CloseDBProxyAddress");
+        }
+
+        /// <summary>
+        /// 本接口用于关闭（删除）数据库代理的指定地址。接口为异步操作，返回 TaskId 供调用方通过 DescribeTasks 查询任务执行进度。约束：代理组至少保留一个地址，不允许删除最后一个地址。
+        /// </summary>
+        /// <param name="req"><see cref="CloseDBProxyAddressRequest"/></param>
+        /// <returns><see cref="CloseDBProxyAddressResponse"/></returns>
+        public CloseDBProxyAddressResponse CloseDBProxyAddressSync(CloseDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<CloseDBProxyAddressResponse>(req, "CloseDBProxyAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
@@ -281,6 +302,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateDBProxyResponse CreateDBProxySync(CreateDBProxyRequest req)
         {
             return InternalRequestAsync<CreateDBProxyResponse>(req, "CreateDBProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBProxyAddress）用于为指定实例的数据库代理创建连接地址。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>支持同时配置读写分离策略，包括权重模式、路由分配、延迟剔除、故障转移等高级功能。</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBProxyAddressRequest"/></param>
+        /// <returns><see cref="CreateDBProxyAddressResponse"/></returns>
+        public Task<CreateDBProxyAddressResponse> CreateDBProxyAddress(CreateDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<CreateDBProxyAddressResponse>(req, "CreateDBProxyAddress");
+        }
+
+        /// <summary>
+        /// 本接口（CreateDBProxyAddress）用于为指定实例的数据库代理创建连接地址。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>支持同时配置读写分离策略，包括权重模式、路由分配、延迟剔除、故障转移等高级功能。</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBProxyAddressRequest"/></param>
+        /// <returns><see cref="CreateDBProxyAddressResponse"/></returns>
+        public CreateDBProxyAddressResponse CreateDBProxyAddressSync(CreateDBProxyAddressRequest req)
+        {
+            return InternalRequestAsync<CreateDBProxyAddressResponse>(req, "CreateDBProxyAddress")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1134,6 +1176,27 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeDBProxyResponse DescribeDBProxySync(DescribeDBProxyRequest req)
         {
             return InternalRequestAsync<DescribeDBProxyResponse>(req, "DescribeDBProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询指定代理连接地址的 SSL 配置信息，包括 SSL 是否开启、连接地址和 CA 证书下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxySSLConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBProxySSLConfigResponse"/></returns>
+        public Task<DescribeDBProxySSLConfigResponse> DescribeDBProxySSLConfig(DescribeDBProxySSLConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxySSLConfigResponse>(req, "DescribeDBProxySSLConfig");
+        }
+
+        /// <summary>
+        /// 本接口用于查询指定代理连接地址的 SSL 配置信息，包括 SSL 是否开启、连接地址和 CA 证书下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBProxySSLConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBProxySSLConfigResponse"/></returns>
+        public DescribeDBProxySSLConfigResponse DescribeDBProxySSLConfigSync(DescribeDBProxySSLConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBProxySSLConfigResponse>(req, "DescribeDBProxySSLConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2148,6 +2211,27 @@ namespace TencentCloud.Postgres.V20170312
         public ModifyDBProxyAddressResponse ModifyDBProxyAddressSync(ModifyDBProxyAddressRequest req)
         {
             return InternalRequestAsync<ModifyDBProxyAddressResponse>(req, "ModifyDBProxyAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBProxySSLConfig）用于修改数据库代理连接地址的 SSL 配置。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>当前仅支持物理机（local）存储类型的代理开启 SSL。SSL 开启时需提供 ConnectAddress，且必须与代理地址的 Vip 保持一致。</p><p>当 SSL 状态与当前配置一致时，接口直接返回成功，TaskId 为 0，无需等待任务。</p>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxySSLConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBProxySSLConfigResponse"/></returns>
+        public Task<ModifyDBProxySSLConfigResponse> ModifyDBProxySSLConfig(ModifyDBProxySSLConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxySSLConfigResponse>(req, "ModifyDBProxySSLConfig");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBProxySSLConfig）用于修改数据库代理连接地址的 SSL 配置。该接口为异步接口，调用成功后返回 TaskId，可通过 DescribeTasks 接口查询任务执行进度。<p>当前仅支持物理机（local）存储类型的代理开启 SSL。SSL 开启时需提供 ConnectAddress，且必须与代理地址的 Vip 保持一致。</p><p>当 SSL 状态与当前配置一致时，接口直接返回成功，TaskId 为 0，无需等待任务。</p>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBProxySSLConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBProxySSLConfigResponse"/></returns>
+        public ModifyDBProxySSLConfigResponse ModifyDBProxySSLConfigSync(ModifyDBProxySSLConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBProxySSLConfigResponse>(req, "ModifyDBProxySSLConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

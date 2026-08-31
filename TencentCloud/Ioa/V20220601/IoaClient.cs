@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreatePrivilegeCodeResponse CreatePrivilegeCodeSync(CreatePrivilegeCodeRequest req)
         {
             return InternalRequestAsync<CreatePrivilegeCodeResponse>(req, "CreatePrivilegeCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除账户组资源授权，私有化调用path为：capi/NGN/DeleteAccountGroupResources
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupResourcesRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResourcesResponse"/></returns>
+        public Task<DeleteAccountGroupResourcesResponse> DeleteAccountGroupResources(DeleteAccountGroupResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResourcesResponse>(req, "DeleteAccountGroupResources");
+        }
+
+        /// <summary>
+        /// 删除账户组资源授权，私有化调用path为：capi/NGN/DeleteAccountGroupResources
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupResourcesRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResourcesResponse"/></returns>
+        public DeleteAccountGroupResourcesResponse DeleteAccountGroupResourcesSync(DeleteAccountGroupResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResourcesResponse>(req, "DeleteAccountGroupResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

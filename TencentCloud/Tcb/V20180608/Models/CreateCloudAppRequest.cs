@@ -84,6 +84,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Secrets")]
         public BuildSecret[] Secrets{ get; set; }
 
+        /// <summary>
+        /// <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+        /// </summary>
+        [JsonProperty("NodeJsVersion")]
+        public string NodeJsVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "Env.", this.Env);
             this.SetParamArrayObj(map, prefix + "CustomSteps.", this.CustomSteps);
             this.SetParamArrayObj(map, prefix + "Secrets.", this.Secrets);
+            this.SetParamSimple(map, prefix + "NodeJsVersion", this.NodeJsVersion);
         }
     }
 }

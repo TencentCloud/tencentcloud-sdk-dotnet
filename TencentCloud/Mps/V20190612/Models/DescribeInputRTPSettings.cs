@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 是否FEC。
+        /// <p>是否FEC。</p>
         /// </summary>
         [JsonProperty("FEC")]
         public string FEC{ get; set; }
 
         /// <summary>
-        /// 空闲超时时间。
+        /// <p>空闲超时时间。</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public long? IdleTimeout{ get; set; }

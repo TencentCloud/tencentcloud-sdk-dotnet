@@ -25,19 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 能力配置开关，可选值：
-        /// <li>ON：开启；</li>
-        /// <li>OFF：关闭。</li>
-        /// 默认值：ON。
+        /// <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 类型，可多选，可选值：
-        /// <li>declick：杂音去除</li>
-        /// <li>deesser：齿音压制</li>
-        /// 默认值：declick。
+        /// <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Types")]

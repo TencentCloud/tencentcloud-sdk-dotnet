@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 该用户是否被加入了全局的bypass列表
+        /// <p>该用户是否被加入了全局的bypass列表</p>
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

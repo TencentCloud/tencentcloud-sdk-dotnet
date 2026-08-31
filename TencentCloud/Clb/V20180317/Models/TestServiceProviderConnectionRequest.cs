@@ -84,6 +84,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VerifySSL")]
         public bool? VerifySSL{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+        /// </summary>
+        [JsonProperty("HealthCheckProtocol")]
+        public string HealthCheckProtocol{ get; set; }
+
+        /// <summary>
+        /// <p>    CMR 私网管道ID </p>
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelId")]
+        public string CMRPrivateNetworkTunnelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
+            this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         }
     }
 }

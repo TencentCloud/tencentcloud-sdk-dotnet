@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+        /// <p>输出视频的元信息。</p>
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

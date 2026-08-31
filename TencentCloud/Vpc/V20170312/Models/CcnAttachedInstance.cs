@@ -25,100 +25,100 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 云联网实例ID。
+        /// <p>云联网实例ID。</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 关联实例类型：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
+        /// <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 关联实例ID。
+        /// <p>关联实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 关联实例名称。
+        /// <p>关联实例名称。</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 关联实例所属大区，例如：ap-guangzhou。
+        /// <p>关联实例所属大区，例如：ap-guangzhou。</p>
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// 关联实例所属UIN（根账号）。
+        /// <p>关联实例所属UIN（根账号）。</p>
         /// </summary>
         [JsonProperty("InstanceUin")]
         public string InstanceUin{ get; set; }
 
         /// <summary>
-        /// 关联实例CIDR。
+        /// <p>关联实例CIDR。</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string[] CidrBlock{ get; set; }
 
         /// <summary>
-        /// 关联实例状态：
-        /// <li>`PENDING`：申请中</li>
-        /// <li>`ACTIVE`：已连接</li>
-        /// <li>`EXPIRED`：已过期</li>
-        /// <li>`REJECTED`：已拒绝</li>
-        /// <li>`DELETED`：已删除</li>
-        /// <li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-        /// <li>`ATTACHING`：关联中</li>
-        /// <li>`DETACHING`：解关联中</li>
-        /// <li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+        /// <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 关联时间。
+        /// <p>关联时间。</p>
         /// </summary>
         [JsonProperty("AttachedTime")]
         public string AttachedTime{ get; set; }
 
         /// <summary>
-        /// 云联网所属UIN（根账号）。
+        /// <p>云联网所属UIN（根账号）。</p>
         /// </summary>
         [JsonProperty("CcnUin")]
         public string CcnUin{ get; set; }
 
         /// <summary>
-        /// 关联实例所属的大地域，如: CHINA_MAINLAND
+        /// <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
         /// </summary>
         [JsonProperty("InstanceArea")]
         public string InstanceArea{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 路由表ID
+        /// <p>路由表ID</p>
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 路由表名称
+        /// <p>路由表名称</p>
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
+
+        /// <summary>
+        /// <p>别名类型</p>
+        /// </summary>
+        [JsonProperty("AliasType")]
+        public string AliasType{ get; set; }
+
+        /// <summary>
+        /// <p>别名ID</p>
+        /// </summary>
+        [JsonProperty("AliasInstanceId")]
+        public string AliasInstanceId{ get; set; }
 
 
         /// <summary>
@@ -140,6 +140,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
             this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+            this.SetParamSimple(map, prefix + "AliasType", this.AliasType);
+            this.SetParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
         }
     }
 }

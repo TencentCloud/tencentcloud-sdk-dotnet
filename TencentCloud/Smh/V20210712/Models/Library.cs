@@ -25,70 +25,76 @@ namespace TencentCloud.Smh.V20210712.Models
     {
         
         /// <summary>
-        /// 媒体库 ID
+        /// <p>媒体库 ID</p>
         /// </summary>
         [JsonProperty("LibraryId")]
         public string LibraryId{ get; set; }
 
         /// <summary>
-        /// 媒体库友好名称
+        /// <p>媒体库友好名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 媒体库绑定的 COS 存储桶
+        /// <p>媒体库绑定的 COS 存储桶</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 媒体库绑定的 COS 存储桶所在的地域
+        /// <p>媒体库绑定的 COS 存储桶所在的地域</p>
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// 该媒体库的业务 API 访问域名
+        /// <p>该媒体库的业务 API 访问域名</p>
         /// </summary>
         [JsonProperty("AccessDomain")]
         public string AccessDomain{ get; set; }
 
         /// <summary>
-        /// 媒体库创建时间
+        /// <p>媒体库创建时间</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 媒体库配置项
+        /// <p>媒体库配置项</p>
         /// </summary>
         [JsonProperty("LibraryExtension")]
         public LibraryExtension LibraryExtension{ get; set; }
 
         /// <summary>
-        /// 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
+        /// <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
         /// </summary>
         [JsonProperty("Size")]
         public string Size{ get; set; }
 
         /// <summary>
-        /// 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
+        /// <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
         /// </summary>
         [JsonProperty("DirNum")]
         public string DirNum{ get; set; }
 
         /// <summary>
-        /// 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+        /// <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
         /// </summary>
         [JsonProperty("FileNum")]
         public string FileNum{ get; set; }
+
+        /// <summary>
+        /// <p>媒体库关联的标签列表。</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "DirNum", this.DirNum);
             this.SetParamSimple(map, prefix + "FileNum", this.FileNum);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

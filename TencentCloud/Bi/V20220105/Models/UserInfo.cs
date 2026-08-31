@@ -78,6 +78,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("LarkOpenId")]
         public string LarkOpenId{ get; set; }
 
+        /// <summary>
+        /// <p>用户类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public string IdentityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
             this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
             this.SetParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

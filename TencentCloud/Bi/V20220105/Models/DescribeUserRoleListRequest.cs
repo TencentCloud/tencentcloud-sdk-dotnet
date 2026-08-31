@@ -25,46 +25,52 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 页码
+        /// <p>页码</p>
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 全部页码
+        /// <p>全部页码</p>
         /// </summary>
         [JsonProperty("AllPage")]
         public bool? AllPage{ get; set; }
 
         /// <summary>
-        /// 0 企业用户 1 访客 不填表示所有用户
+        /// <p>0 企业用户 1 访客 不填表示所有用户</p>
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// 模糊搜索的关键字
+        /// <p>模糊搜索的关键字</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// <p>项目id</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否只获取绑定企微应用的
+        /// <p>是否只获取绑定企微应用的</p>
         /// </summary>
         [JsonProperty("IsOnlyBindAppUser")]
         public bool? IsOnlyBindAppUser{ get; set; }
+
+        /// <summary>
+        /// <p>用户类型</p>
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public string IdentityType{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

@@ -25,84 +25,85 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 资源 ID
+        /// <p>资源 ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 套餐规格。可能取值：
-        /// 
-        /// - `BASIC`：包年包月基础版（适用于视频理解）
+        /// <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
         /// </summary>
         [JsonProperty("ServiceTier")]
         public string ServiceTier{ get; set; }
 
         /// <summary>
-        /// 到期时间，秒级时间戳
+        /// <p>到期时间，秒级时间戳</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 启用状态，`true` 为开启，`false` 为关闭
+        /// <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 订阅状态。可能取值：
-        /// 
-        /// - `NORMAL`：正常
-        /// - `ISOLATED`：隔离
+        /// <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 视觉理解配置（适用于视频理解、图片理解）
+        /// <p>视觉理解配置（适用于视频理解、图片理解）</p>
         /// </summary>
         [JsonProperty("ComprehensionConfig")]
         public SeeComprehensionConfig ComprehensionConfig{ get; set; }
 
         /// <summary>
-        /// 视频语义浓缩配置（适用于视频语义浓缩）
+        /// <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
         /// </summary>
         [JsonProperty("CompHighlightConfig")]
         public SeeCompHighlightConfig CompHighlightConfig{ get; set; }
 
         /// <summary>
-        /// 云存事件 ID 过滤规则配置项
+        /// <p>云存事件 ID 过滤规则配置项</p>
         /// </summary>
         [JsonProperty("EventIdFilterConfig")]
         public SeeEventIdFilterConfig EventIdFilterConfig{ get; set; }
 
         /// <summary>
-        /// 当前周期基础能力总额度
+        /// <p>每日与每周总结配置</p>
+        /// </summary>
+        [JsonProperty("SummarizeConfig")]
+        public SeeSummarizeConfig SummarizeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>当前周期基础能力总额度</p>
         /// </summary>
         [JsonProperty("QuotaBasic")]
         public long? QuotaBasic{ get; set; }
 
         /// <summary>
-        /// 当前周期基础能力已用额度
+        /// <p>当前周期基础能力已用额度</p>
         /// </summary>
         [JsonProperty("QuotaUsedBasic")]
         public long? QuotaUsedBasic{ get; set; }
 
         /// <summary>
-        /// 当前周期高级能力总额度
+        /// <p>当前周期高级能力总额度</p>
         /// </summary>
         [JsonProperty("QuotaAdvanced")]
         public long? QuotaAdvanced{ get; set; }
 
         /// <summary>
-        /// 当前周期高级能力已用额度
+        /// <p>当前周期高级能力已用额度</p>
         /// </summary>
         [JsonProperty("QuotaUsedAdvanced")]
         public long? QuotaUsedAdvanced{ get; set; }
 
         /// <summary>
-        /// 额度刷新时间
+        /// <p>额度刷新时间</p>
         /// </summary>
         [JsonProperty("QuotaRefreshTime")]
         public long? QuotaRefreshTime{ get; set; }
@@ -127,6 +128,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
             this.SetParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
             this.SetParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+            this.SetParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
             this.SetParamSimple(map, prefix + "QuotaBasic", this.QuotaBasic);
             this.SetParamSimple(map, prefix + "QuotaUsedBasic", this.QuotaUsedBasic);
             this.SetParamSimple(map, prefix + "QuotaAdvanced", this.QuotaAdvanced);

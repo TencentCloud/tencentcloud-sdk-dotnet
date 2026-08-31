@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1497";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建Agent录制任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentRecordTaskRequest"/></param>
+        /// <returns><see cref="CreateAgentRecordTaskResponse"/></returns>
+        public Task<CreateAgentRecordTaskResponse> CreateAgentRecordTask(CreateAgentRecordTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAgentRecordTaskResponse>(req, "CreateAgentRecordTask");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建Agent录制任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentRecordTaskRequest"/></param>
+        /// <returns><see cref="CreateAgentRecordTaskResponse"/></returns>
+        public CreateAgentRecordTaskResponse CreateAgentRecordTaskSync(CreateAgentRecordTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAgentRecordTaskResponse>(req, "CreateAgentRecordTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2027,6 +2048,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAdaptiveDynamicStreamingTemplatesResponse>(req, "DescribeAdaptiveDynamicStreamingTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询Agent录制任务的进度以及获取生成结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeAgentRecordTaskResponse"/></returns>
+        public Task<DescribeAgentRecordTaskResponse> DescribeAgentRecordTask(DescribeAgentRecordTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRecordTaskResponse>(req, "DescribeAgentRecordTask");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于查询Agent录制任务的进度以及获取生成结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeAgentRecordTaskResponse"/></returns>
+        public DescribeAgentRecordTaskResponse DescribeAgentRecordTaskSync(DescribeAgentRecordTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRecordTaskResponse>(req, "DescribeAgentRecordTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4620,6 +4662,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 查询混元3D任务对应的结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="QueryHunyuan3DTaskResponse"/></returns>
+        public Task<QueryHunyuan3DTaskResponse> QueryHunyuan3DTask(QueryHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuan3DTaskResponse>(req, "QueryHunyuan3DTask");
+        }
+
+        /// <summary>
+        /// 查询混元3D任务对应的结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="QueryHunyuan3DTaskResponse"/></returns>
+        public QueryHunyuan3DTaskResponse QueryHunyuan3DTaskSync(QueryHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuan3DTaskResponse>(req, "QueryHunyuan3DTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 剧集项目查询
         /// </summary>
         /// <param name="req"><see cref="QueryProjectRequest"/></param>
@@ -4784,6 +4847,27 @@ namespace TencentCloud.Mps.V20190612
         public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannelSync(StopStreamPackageLinearAssemblyChannelRequest req)
         {
             return InternalRequestAsync<StopStreamPackageLinearAssemblyChannelResponse>(req, "StopStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交创建混元3D的任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="SubmitHunyuan3DTaskResponse"/></returns>
+        public Task<SubmitHunyuan3DTaskResponse> SubmitHunyuan3DTask(SubmitHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuan3DTaskResponse>(req, "SubmitHunyuan3DTask");
+        }
+
+        /// <summary>
+        /// 提交创建混元3D的任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="SubmitHunyuan3DTaskResponse"/></returns>
+        public SubmitHunyuan3DTaskResponse SubmitHunyuan3DTaskSync(SubmitHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuan3DTaskResponse>(req, "SubmitHunyuan3DTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

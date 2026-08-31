@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li><li>WandAsrTask：WAND 语音识别</li></p>
+        /// <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li><li>WandAsrTask：WAND 语音识别</li><li>AigcHunyuan3DTask：AIGC 混元 3D 任务</li><li>DesignVoiceAsync：音色设计</li><li>CloneVoiceAsync：音色克隆</li><li>TextToSpeechAsync：语音生成</li><li>VideoDubbingAsync：视频翻译配音</li></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -299,6 +299,36 @@ namespace TencentCloud.Vod.V20180717.Models
         public DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncTask{ get; set; }
 
         /// <summary>
+        /// <p>混元 3D 任务，仅当 TaskType 为 AigcHunyuan3DTask，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("AigcHunyuan3DTask")]
+        public AigcHunyuan3DTask AigcHunyuan3DTask{ get; set; }
+
+        /// <summary>
+        /// <p>音色设计，仅当 TaskType 为 DesignVoiceAsync，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("DesignVoiceAsyncTask")]
+        public DesignVoiceAsyncTask DesignVoiceAsyncTask{ get; set; }
+
+        /// <summary>
+        /// <p>音色克隆，仅当 TaskType 为 CloneVoiceAsync，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("CloneVoiceAsyncTask")]
+        public CloneVoiceAsyncTask CloneVoiceAsyncTask{ get; set; }
+
+        /// <summary>
+        /// <p>语音合成，仅当 TaskType 为 TextToSpeechAsync，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("TextToSpeechAsyncTask")]
+        public TextToSpeechAsyncTask TextToSpeechAsyncTask{ get; set; }
+
+        /// <summary>
+        /// <p>视频翻译配音，仅当 TaskType 为VideoDubbingAsync，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("VideoDubbingAsyncTask")]
+        public VideoDubbingAsyncTask VideoDubbingAsyncTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -352,6 +382,11 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AigcAudioTask.", this.AigcAudioTask);
             this.SetParamObj(map, prefix + "CreateAigcAudioCloneTask.", this.CreateAigcAudioCloneTask);
             this.SetParamObj(map, prefix + "DescribeAigcFaceInfoAsyncTask.", this.DescribeAigcFaceInfoAsyncTask);
+            this.SetParamObj(map, prefix + "AigcHunyuan3DTask.", this.AigcHunyuan3DTask);
+            this.SetParamObj(map, prefix + "DesignVoiceAsyncTask.", this.DesignVoiceAsyncTask);
+            this.SetParamObj(map, prefix + "CloneVoiceAsyncTask.", this.CloneVoiceAsyncTask);
+            this.SetParamObj(map, prefix + "TextToSpeechAsyncTask.", this.TextToSpeechAsyncTask);
+            this.SetParamObj(map, prefix + "VideoDubbingAsyncTask.", this.VideoDubbingAsyncTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

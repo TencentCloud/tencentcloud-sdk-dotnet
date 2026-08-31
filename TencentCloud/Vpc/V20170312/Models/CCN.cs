@@ -25,160 +25,166 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 云联网唯一ID
+        /// <p>云联网唯一ID</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 云联网名称
+        /// <p>云联网名称</p>
         /// </summary>
         [JsonProperty("CcnName")]
         public string CcnName{ get; set; }
 
         /// <summary>
-        /// 云联网描述信息
+        /// <p>云联网描述信息</p>
         /// </summary>
         [JsonProperty("CcnDescription")]
         public string CcnDescription{ get; set; }
 
         /// <summary>
-        /// 关联实例数量
+        /// <p>关联实例数量</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+        /// <p>实例状态， &#39;ISOLATED&#39;: 隔离中（欠费停服），&#39;AVAILABLE&#39;：运行中。</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+        /// <p>实例服务质量，’PT’：白金，&#39;AU&#39;：金，&#39;AG&#39;：银。</p>
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
         /// <summary>
-        /// 付费类型，PREPAID为预付费，POSTPAID为后付费。
+        /// <p>付费类型，PREPAID为预付费，POSTPAID为后付费。</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 计量类型
+        /// <p>计量类型</p>
         /// </summary>
         [JsonProperty("InstanceMeteringType")]
         public string InstanceMeteringType{ get; set; }
 
         /// <summary>
-        /// 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
+        /// <p>限速类型，<code>INTER_REGION_LIMIT</code> 为地域间限速；<code>OUTER_REGION_LIMIT</code> 为地域出口限速。</p>
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
         public string BandwidthLimitType{ get; set; }
 
         /// <summary>
-        /// 标签键值对。
+        /// <p>标签键值对。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
+        /// <p>是否支持云联网路由优先级的功能。<code>False</code>：不支持，<code>True</code>：支持。</p>
         /// </summary>
         [JsonProperty("RoutePriorityFlag")]
         public bool? RoutePriorityFlag{ get; set; }
 
         /// <summary>
-        /// 实例关联的路由表个数。
+        /// <p>实例关联的路由表个数。</p>
         /// </summary>
         [JsonProperty("RouteTableCount")]
         public ulong? RouteTableCount{ get; set; }
 
         /// <summary>
-        /// 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
+        /// <p>是否开启云联网多路由表特性。<code>False</code>：未开启，<code>True</code>：开启。</p>
         /// </summary>
         [JsonProperty("RouteTableFlag")]
         public bool? RouteTableFlag{ get; set; }
 
         /// <summary>
-        /// `true`：实例已被封禁，流量不通，`false`:解封禁。
+        /// <p><code>true</code>：实例已被封禁，流量不通，<code>false</code>:解封禁。</p>
         /// </summary>
         [JsonProperty("IsSecurityLock")]
         public bool? IsSecurityLock{ get; set; }
 
         /// <summary>
-        /// 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+        /// <p>是否开启云联网路由传播策略。<code>False</code> 未开启，<code>True</code> 开启。</p>
         /// </summary>
         [JsonProperty("RouteBroadcastPolicyFlag")]
         public bool? RouteBroadcastPolicyFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启等价路由功能。`False` 未开启，`True` 开启。
+        /// <p>是否开启等价路由功能。<code>False</code> 未开启，<code>True</code> 开启。</p>
         /// </summary>
         [JsonProperty("RouteECMPFlag")]
         public bool? RouteECMPFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+        /// <p>是否开启路由重叠功能。<code>False</code> 未开启，<code>True</code> 开启。</p>
         /// </summary>
         [JsonProperty("RouteOverlapFlag")]
         public bool? RouteOverlapFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启QOS。
+        /// <p>是否开启QOS。</p>
         /// </summary>
         [JsonProperty("TrafficMarkingPolicyFlag")]
         public bool? TrafficMarkingPolicyFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启路由表选择策略。
+        /// <p>是否开启路由表选择策略。</p>
         /// </summary>
         [JsonProperty("RouteSelectPolicyFlag")]
         public bool? RouteSelectPolicyFlag{ get; set; }
 
         /// <summary>
-        /// 是否开启二层云联网通道。
+        /// <p>是否开启二层云联网通道。</p>
         /// </summary>
         [JsonProperty("DirectConnectAccelerateChannelFlag")]
         public bool? DirectConnectAccelerateChannelFlag{ get; set; }
 
         /// <summary>
-        /// 是否支持ipv6路由表
+        /// <p>是否支持ipv6路由表</p>
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public bool? Ipv6Flag{ get; set; }
 
         /// <summary>
-        /// 是否支持路由表聚合策略
+        /// <p>是否支持路由表聚合策略</p>
         /// </summary>
         [JsonProperty("MrtbAggregatePolicyFlag")]
         public bool? MrtbAggregatePolicyFlag{ get; set; }
 
         /// <summary>
-        /// 是否支持AsPath策略值
+        /// <p>是否支持AsPath策略值</p>
         /// </summary>
         [JsonProperty("MrtbPolicyValueFlag")]
         public bool? MrtbPolicyValueFlag{ get; set; }
 
         /// <summary>
-        /// 是否支持Community策略值
+        /// <p>是否支持Community策略值</p>
         /// </summary>
         [JsonProperty("RouteTablePolicyValueCommunityFlag")]
         public bool? RouteTablePolicyValueCommunityFlag{ get; set; }
 
         /// <summary>
-        /// 是否支持策略路由
+        /// <p>是否支持策略路由</p>
         /// </summary>
         [JsonProperty("PolicyBasedRoutingFlag")]
         public bool? PolicyBasedRoutingFlag{ get; set; }
+
+        /// <summary>
+        /// <p>服务等级模式</p><p>枚举值：</p><ul><li>0： 云联网模式</li><li>1： 地域间模式</li></ul>
+        /// </summary>
+        [JsonProperty("ServiceLevelMode")]
+        public ulong? ServiceLevelMode{ get; set; }
 
 
         /// <summary>
@@ -212,6 +218,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "MrtbPolicyValueFlag", this.MrtbPolicyValueFlag);
             this.SetParamSimple(map, prefix + "RouteTablePolicyValueCommunityFlag", this.RouteTablePolicyValueCommunityFlag);
             this.SetParamSimple(map, prefix + "PolicyBasedRoutingFlag", this.PolicyBasedRoutingFlag);
+            this.SetParamSimple(map, prefix + "ServiceLevelMode", this.ServiceLevelMode);
         }
     }
 }

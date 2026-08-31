@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入地址的IP。
+        /// <p>输入地址的IP。</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 输入地址的端口。
+        /// <p>输入地址的端口。</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

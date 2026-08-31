@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 任务信息
+        /// <p>任务信息</p>
         /// </summary>
         [JsonProperty("TaskInfo")]
         public SeeTaskInfo TaskInfo{ get; set; }

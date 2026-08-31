@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
+        /// 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
-        /// 指定数据库下的对象类型，可选"table"，"*"
+        /// 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 当Type="table"时，用来指定表名
+        /// 当Type="table"时，用来指定表名；Type为table时必填。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }

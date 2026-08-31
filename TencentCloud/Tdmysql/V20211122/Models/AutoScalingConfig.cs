@@ -38,6 +38,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("RangeMax")]
         public float? RangeMax{ get; set; }
 
+        /// <summary>
+        /// <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "RangeMin", this.RangeMin);
             this.SetParamSimple(map, prefix + "RangeMax", this.RangeMax);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }

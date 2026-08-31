@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -167,6 +167,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 为指定集群队列创建定时伸缩任务，按计划时间自动调整队列的节点数量。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledActionRequest"/></param>
+        /// <returns><see cref="CreateScheduledActionResponse"/></returns>
+        public Task<CreateScheduledActionResponse> CreateScheduledAction(CreateScheduledActionRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledActionResponse>(req, "CreateScheduledAction");
+        }
+
+        /// <summary>
+        /// 为指定集群队列创建定时伸缩任务，按计划时间自动调整队列的节点数量。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledActionRequest"/></param>
+        /// <returns><see cref="CreateScheduledActionResponse"/></returns>
+        public CreateScheduledActionResponse CreateScheduledActionSync(CreateScheduledActionRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledActionResponse>(req, "CreateScheduledAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (CreateWorkspaces) 用于创建工作空间。
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspacesRequest"/></param>
@@ -299,6 +320,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 删除指定的定时伸缩任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledActionRequest"/></param>
+        /// <returns><see cref="DeleteScheduledActionResponse"/></returns>
+        public Task<DeleteScheduledActionResponse> DeleteScheduledAction(DeleteScheduledActionRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledActionResponse>(req, "DeleteScheduledAction");
+        }
+
+        /// <summary>
+        /// 删除指定的定时伸缩任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledActionRequest"/></param>
+        /// <returns><see cref="DeleteScheduledActionResponse"/></returns>
+        public DeleteScheduledActionResponse DeleteScheduledActionSync(DeleteScheduledActionRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledActionResponse>(req, "DeleteScheduledAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingConfigurationRequest"/></param>
@@ -404,6 +446,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 查询指定集群可用的机型族列表，用于弹性伸缩配置时选择机型族。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceFamiliesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceFamiliesResponse"/></returns>
+        public Task<DescribeInstanceFamiliesResponse> DescribeInstanceFamilies(DescribeInstanceFamiliesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceFamiliesResponse>(req, "DescribeInstanceFamilies");
+        }
+
+        /// <summary>
+        /// 查询指定集群可用的机型族列表，用于弹性伸缩配置时选择机型族。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceFamiliesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceFamiliesResponse"/></returns>
+        public DescribeInstanceFamiliesResponse DescribeInstanceFamiliesSync(DescribeInstanceFamiliesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceFamiliesResponse>(req, "DescribeInstanceFamilies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于查询作业的提交信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeJobSubmitInfoRequest"/></param>
@@ -488,6 +551,48 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 查询指定集群的队列弹性伸缩配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueueAutoScalingRequest"/></param>
+        /// <returns><see cref="DescribeQueueAutoScalingResponse"/></returns>
+        public Task<DescribeQueueAutoScalingResponse> DescribeQueueAutoScaling(DescribeQueueAutoScalingRequest req)
+        {
+            return InternalRequestAsync<DescribeQueueAutoScalingResponse>(req, "DescribeQueueAutoScaling");
+        }
+
+        /// <summary>
+        /// 查询指定集群的队列弹性伸缩配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueueAutoScalingRequest"/></param>
+        /// <returns><see cref="DescribeQueueAutoScalingResponse"/></returns>
+        public DescribeQueueAutoScalingResponse DescribeQueueAutoScalingSync(DescribeQueueAutoScalingRequest req)
+        {
+            return InternalRequestAsync<DescribeQueueAutoScalingResponse>(req, "DescribeQueueAutoScaling")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定集群的队列弹性伸缩概览信息，包括期望容量、当前容量、当前动态节点数、有效定时任务数等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueueAutoScalingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeQueueAutoScalingOverviewResponse"/></returns>
+        public Task<DescribeQueueAutoScalingOverviewResponse> DescribeQueueAutoScalingOverview(DescribeQueueAutoScalingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeQueueAutoScalingOverviewResponse>(req, "DescribeQueueAutoScalingOverview");
+        }
+
+        /// <summary>
+        /// 查询指定集群的队列弹性伸缩概览信息，包括期望容量、当前容量、当前动态节点数、有效定时任务数等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueueAutoScalingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeQueueAutoScalingOverviewResponse"/></returns>
+        public DescribeQueueAutoScalingOverviewResponse DescribeQueueAutoScalingOverviewSync(DescribeQueueAutoScalingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeQueueAutoScalingOverviewResponse>(req, "DescribeQueueAutoScalingOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeQueuesRequest"/></param>
@@ -505,6 +610,27 @@ namespace TencentCloud.Thpc.V20230321
         public DescribeQueuesResponse DescribeQueuesSync(DescribeQueuesRequest req)
         {
             return InternalRequestAsync<DescribeQueuesResponse>(req, "DescribeQueues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定集群队列的定时伸缩任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledActionsRequest"/></param>
+        /// <returns><see cref="DescribeScheduledActionsResponse"/></returns>
+        public Task<DescribeScheduledActionsResponse> DescribeScheduledActions(DescribeScheduledActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledActionsResponse>(req, "DescribeScheduledActions");
+        }
+
+        /// <summary>
+        /// 查询指定集群队列的定时伸缩任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledActionsRequest"/></param>
+        /// <returns><see cref="DescribeScheduledActionsResponse"/></returns>
+        public DescribeScheduledActionsResponse DescribeScheduledActionsSync(DescribeScheduledActionsRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledActionsResponse>(req, "DescribeScheduledActions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -547,6 +673,27 @@ namespace TencentCloud.Thpc.V20230321
         public DetachNodesResponse DetachNodesSync(DetachNodesRequest req)
         {
             return InternalRequestAsync<DetachNodesResponse>(req, "DetachNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(InquirePriceCreateWorkspaces)用于创建实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateWorkspacesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateWorkspacesResponse"/></returns>
+        public Task<InquirePriceCreateWorkspacesResponse> InquirePriceCreateWorkspaces(InquirePriceCreateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateWorkspacesResponse>(req, "InquirePriceCreateWorkspaces");
+        }
+
+        /// <summary>
+        /// 本接口(InquirePriceCreateWorkspaces)用于创建实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateWorkspacesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateWorkspacesResponse"/></returns>
+        public InquirePriceCreateWorkspacesResponse InquirePriceCreateWorkspacesSync(InquirePriceCreateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<InquirePriceCreateWorkspacesResponse>(req, "InquirePriceCreateWorkspaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -635,6 +782,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 修改指定的定时伸缩任务配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledActionRequest"/></param>
+        /// <returns><see cref="ModifyScheduledActionResponse"/></returns>
+        public Task<ModifyScheduledActionResponse> ModifyScheduledAction(ModifyScheduledActionRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledActionResponse>(req, "ModifyScheduledAction");
+        }
+
+        /// <summary>
+        /// 修改指定的定时伸缩任务配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledActionRequest"/></param>
+        /// <returns><see cref="ModifyScheduledActionResponse"/></returns>
+        public ModifyScheduledActionResponse ModifyScheduledActionSync(ModifyScheduledActionRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledActionResponse>(req, "ModifyScheduledAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkspacesAttributeRequest"/></param>
@@ -715,6 +883,27 @@ namespace TencentCloud.Thpc.V20230321
         public SetAutoScalingConfigurationResponse SetAutoScalingConfigurationSync(SetAutoScalingConfigurationRequest req)
         {
             return InternalRequestAsync<SetAutoScalingConfigurationResponse>(req, "SetAutoScalingConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为指定集群的队列配置弹性伸缩策略，包括伸缩容量、扩容方式等。
+        /// </summary>
+        /// <param name="req"><see cref="SetQueueAutoScalingRequest"/></param>
+        /// <returns><see cref="SetQueueAutoScalingResponse"/></returns>
+        public Task<SetQueueAutoScalingResponse> SetQueueAutoScaling(SetQueueAutoScalingRequest req)
+        {
+            return InternalRequestAsync<SetQueueAutoScalingResponse>(req, "SetQueueAutoScaling");
+        }
+
+        /// <summary>
+        /// 为指定集群的队列配置弹性伸缩策略，包括伸缩容量、扩容方式等。
+        /// </summary>
+        /// <param name="req"><see cref="SetQueueAutoScalingRequest"/></param>
+        /// <returns><see cref="SetQueueAutoScalingResponse"/></returns>
+        public SetQueueAutoScalingResponse SetQueueAutoScalingSync(SetQueueAutoScalingRequest req)
+        {
+            return InternalRequestAsync<SetQueueAutoScalingResponse>(req, "SetQueueAutoScaling")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -48,6 +48,12 @@ namespace TencentCloud.Smh.V20210712.Models
         [JsonProperty("LibraryExtension")]
         public LibraryExtension LibraryExtension{ get; set; }
 
+        /// <summary>
+        /// <p>媒体库标签列表。</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

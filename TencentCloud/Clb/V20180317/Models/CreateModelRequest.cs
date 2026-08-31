@@ -73,6 +73,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ApiBase{ get; set; }
 
         /// <summary>
+        /// <p>多协议 Api Base URL</p>
+        /// </summary>
+        [JsonProperty("ApiBases")]
+        public ApiBaseItem[] ApiBases{ get; set; }
+
+        /// <summary>
         /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
@@ -108,6 +114,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthCheckConfig")]
         public ServiceProviderHealthCheckConfigInput HealthCheckConfig{ get; set; }
 
+        /// <summary>
+        /// <p>私网管道 ID</p>
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelId")]
+        public string CMRPrivateNetworkTunnelId{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查配置</p>
+        /// </summary>
+        [JsonProperty("HealthCheckConfigs")]
+        public ServiceProviderHealthCheckConfigItemInput[] HealthCheckConfigs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,12 +140,15 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "ApiBase", this.ApiBase);
+            this.SetParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
             this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+            this.SetParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
         }
     }
 }

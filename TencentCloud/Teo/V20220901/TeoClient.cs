@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1497";
+       private const string sdkVersion = "SDK_NET_3.0.1498";
 
         /// <summary>
         /// Client constructor.
@@ -1829,6 +1829,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeApplicationProxiesResponse DescribeApplicationProxiesSync(DescribeApplicationProxiesRequest req)
         {
             return InternalRequestAsync<DescribeApplicationProxiesResponse>(req, "DescribeApplicationProxies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询站点规则引擎操作可用的定制配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
+        /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
+        public Task<DescribeAvailableCustomActionsForRuleEngineResponse> DescribeAvailableCustomActionsForRuleEngine(DescribeAvailableCustomActionsForRuleEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine");
+        }
+
+        /// <summary>
+        /// 查询站点规则引擎操作可用的定制配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
+        /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
+        public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngineSync(DescribeAvailableCustomActionsForRuleEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

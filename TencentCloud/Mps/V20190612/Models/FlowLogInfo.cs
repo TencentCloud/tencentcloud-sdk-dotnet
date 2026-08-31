@@ -25,61 +25,61 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 时间戳，单位为秒。
+        /// <p>时间戳，单位为秒。</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// 输入输出类型（input/output）。
+        /// <p>输入输出类型（input/output）。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 输入或输出Id。
+        /// <p>输入或输出Id。</p>
         /// </summary>
         [JsonProperty("InputOutputId")]
         public string InputOutputId{ get; set; }
 
         /// <summary>
-        /// 协议。
+        /// <p>协议。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 事件代码。
+        /// <p>事件代码。</p>
         /// </summary>
         [JsonProperty("EventCode")]
         public string EventCode{ get; set; }
 
         /// <summary>
-        /// 事件信息。
+        /// <p>事件信息。</p>
         /// </summary>
         [JsonProperty("EventMessage")]
         public string EventMessage{ get; set; }
 
         /// <summary>
-        /// 对端IP。
+        /// <p>对端IP。</p>
         /// </summary>
         [JsonProperty("RemoteIp")]
         public string RemoteIp{ get; set; }
 
         /// <summary>
-        /// 对端端口。
+        /// <p>对端端口。</p>
         /// </summary>
         [JsonProperty("RemotePort")]
         public string RemotePort{ get; set; }
 
         /// <summary>
-        /// 主备通道，0为主通道，1为备通道。
+        /// <p>主备通道，0为主通道，1为备通道。</p>
         /// </summary>
         [JsonProperty("Pipeline")]
         public string Pipeline{ get; set; }
 
         /// <summary>
-        /// 输入或输出的名称。
+        /// <p>输入或输出的名称。</p>
         /// </summary>
         [JsonProperty("InputOutputName")]
         public string InputOutputName{ get; set; }

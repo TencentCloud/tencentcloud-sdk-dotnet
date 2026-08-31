@@ -25,38 +25,38 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 安全组 ID。
+        /// <p>安全组 ID。</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 安全组名称。
+        /// <p>安全组名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 白名单列表。
+        /// <p>白名单列表。</p>
         /// </summary>
         [JsonProperty("Whitelist")]
         public string[] Whitelist{ get; set; }
 
         /// <summary>
-        /// 绑定的输入流列表。
+        /// <p>绑定的输入流列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OccupiedInputs")]
         public string[] OccupiedInputs{ get; set; }
 
         /// <summary>
-        /// 安全组地址。
+        /// <p>安全组地址。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 绑定的输出流列表。
+        /// <p>绑定的输出流列表。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OccupiedOutputs")]
