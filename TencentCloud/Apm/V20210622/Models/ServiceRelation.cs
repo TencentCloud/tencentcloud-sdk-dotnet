@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Apm.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditLogFileResponse : AbstractModel
+    public class ServiceRelation : AbstractModel
     {
         
         /// <summary>
-        /// <p>文件名称</p>
+        /// 应用名
         /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 上游应用集合
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("UpstreamServices")]
+        public string[] UpstreamServices{ get; set; }
+
+        /// <summary>
+        /// 下游应用集合
+        /// </summary>
+        [JsonProperty("DownstreamServices")]
+        public string[] DownstreamServices{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamArraySimple(map, prefix + "UpstreamServices.", this.UpstreamServices);
+            this.SetParamArraySimple(map, prefix + "DownstreamServices.", this.DownstreamServices);
         }
     }
 }

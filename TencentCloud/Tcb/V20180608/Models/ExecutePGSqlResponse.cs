@@ -38,6 +38,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string[] Columns{ get; set; }
 
         /// <summary>
+        /// <p>字段类型名</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColumnTypes")]
+        public string[] ColumnTypes{ get; set; }
+
+        /// <summary>
         /// <p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -64,6 +71,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "AffectedRows", this.AffectedRows);
             this.SetParamArraySimple(map, prefix + "Columns.", this.Columns);
+            this.SetParamArraySimple(map, prefix + "ColumnTypes.", this.ColumnTypes);
             this.SetParamArraySimple(map, prefix + "Rows.", this.Rows);
             this.SetParamSimple(map, prefix + "ExecutionTimeMs", this.ExecutionTimeMs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

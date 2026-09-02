@@ -25,154 +25,160 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 发票名称
+        /// <p>发票名称</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 发票号码
+        /// <p>发票号码</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 发票代码
+        /// <p>发票代码</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 校验码
+        /// <p>校验码</p>
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }
 
         /// <summary>
-        /// 开票日期
+        /// <p>开票日期</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 价税合计（小写）
+        /// <p>价税合计（小写）</p>
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 价税合计（大写）
+        /// <p>价税合计（大写）</p>
         /// </summary>
         [JsonProperty("TotalCn")]
         public string TotalCn{ get; set; }
 
         /// <summary>
-        /// 交款人名称
+        /// <p>交款人名称</p>
         /// </summary>
         [JsonProperty("Buyer")]
         public string Buyer{ get; set; }
 
         /// <summary>
-        /// 交款人纳税人识别号
+        /// <p>交款人纳税人识别号</p>
         /// </summary>
         [JsonProperty("BuyerTaxID")]
         public string BuyerTaxID{ get; set; }
 
         /// <summary>
-        /// 收款人名称
+        /// <p>收款人名称</p>
         /// </summary>
         [JsonProperty("Seller")]
         public string Seller{ get; set; }
 
         /// <summary>
-        /// 收款单位名称
+        /// <p>收款单位名称</p>
         /// </summary>
         [JsonProperty("SellerCompany")]
         public string SellerCompany{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 币种
+        /// <p>币种</p>
         /// </summary>
         [JsonProperty("CurrencyCode")]
         public string CurrencyCode{ get; set; }
 
         /// <summary>
-        /// 复核人
+        /// <p>复核人</p>
         /// </summary>
         [JsonProperty("Reviewer")]
         public string Reviewer{ get; set; }
 
         /// <summary>
-        /// 是否存在二维码（1：有，0：无）
+        /// <p>是否存在二维码（1：有，0：无）</p>
         /// </summary>
         [JsonProperty("QRCodeMark")]
         public long? QRCodeMark{ get; set; }
 
         /// <summary>
-        /// 其他信息
+        /// <p>其他信息</p>
         /// </summary>
         [JsonProperty("OtherInfo")]
         public string OtherInfo{ get; set; }
 
         /// <summary>
-        /// 缴款码
+        /// <p>缴款码</p>
         /// </summary>
         [JsonProperty("PaymentCode")]
         public string PaymentCode{ get; set; }
 
         /// <summary>
-        /// 执收单位编码
+        /// <p>执收单位编码</p>
         /// </summary>
         [JsonProperty("ReceiveUnitCode")]
         public string ReceiveUnitCode{ get; set; }
 
         /// <summary>
-        /// 执收单位名称
+        /// <p>执收单位名称</p>
         /// </summary>
         [JsonProperty("Receiver")]
         public string Receiver{ get; set; }
 
         /// <summary>
-        /// 经办人
+        /// <p>经办人</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 付款人账号
+        /// <p>付款人账号</p>
         /// </summary>
         [JsonProperty("PayerAccount")]
         public string PayerAccount{ get; set; }
 
         /// <summary>
-        /// 付款人开户银行
+        /// <p>付款人开户银行</p>
         /// </summary>
         [JsonProperty("PayerBank")]
         public string PayerBank{ get; set; }
 
         /// <summary>
-        /// 收款人账号
+        /// <p>收款人账号</p>
         /// </summary>
         [JsonProperty("ReceiverAccount")]
         public string ReceiverAccount{ get; set; }
 
         /// <summary>
-        /// 收款人开户银行
+        /// <p>收款人开户银行</p>
         /// </summary>
         [JsonProperty("ReceiverBank")]
         public string ReceiverBank{ get; set; }
 
         /// <summary>
-        /// 条目
+        /// <p>条目</p>
         /// </summary>
         [JsonProperty("NonTaxItems")]
         public NonTaxItem[] NonTaxItems{ get; set; }
+
+        /// <summary>
+        /// <p>票据名称</p>
+        /// </summary>
+        [JsonProperty("BillName")]
+        public string BillName{ get; set; }
 
 
         /// <summary>
@@ -205,6 +211,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ReceiverAccount", this.ReceiverAccount);
             this.SetParamSimple(map, prefix + "ReceiverBank", this.ReceiverBank);
             this.SetParamArrayObj(map, prefix + "NonTaxItems.", this.NonTaxItems);
+            this.SetParamSimple(map, prefix + "BillName", this.BillName);
         }
     }
 }

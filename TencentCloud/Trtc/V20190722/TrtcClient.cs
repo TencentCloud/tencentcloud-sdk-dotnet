@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1495";
+       private const string sdkVersion = "SDK_NET_3.0.1499";
 
         /// <summary>
         /// Client constructor.
@@ -266,6 +266,43 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的创建。
+        /// 
+        /// • 默认最多可创建30个热词表。
+        /// • 每个热词表最多可添加1000个词，每个词最长10个汉字或30个英文字符，不能超出限制。
+        /// • 热词表可以通过数组或者本地文件形式上传。
+        /// • 本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
+        /// • 热词权重取值范围为[1,11]之间的整数或者100，权重越大代表该词被识别出来的概率越大。
+        /// • 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="CreateRecognizeVocabV3Response"/></returns>
+        public Task<CreateRecognizeVocabV3Response> CreateRecognizeVocabV3(CreateRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<CreateRecognizeVocabV3Response>(req, "CreateRecognizeVocabV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的创建。
+        /// 
+        /// • 默认最多可创建30个热词表。
+        /// • 每个热词表最多可添加1000个词，每个词最长10个汉字或30个英文字符，不能超出限制。
+        /// • 热词表可以通过数组或者本地文件形式上传。
+        /// • 本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
+        /// • 热词权重取值范围为[1,11]之间的整数或者100，权重越大代表该词被识别出来的概率越大。
+        /// • 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="CreateRecognizeVocabV3Response"/></returns>
+        public CreateRecognizeVocabV3Response CreateRecognizeVocabV3Sync(CreateRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<CreateRecognizeVocabV3Response>(req, "CreateRecognizeVocabV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
@@ -388,6 +425,29 @@ namespace TencentCloud.Trtc.V20190722
         public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
         {
             return InternalRequestAsync<DeletePictureResponse>(req, "DeletePicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="DeleteRecognizeVocabV3Response"/></returns>
+        public Task<DeleteRecognizeVocabV3Response> DeleteRecognizeVocabV3(DeleteRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<DeleteRecognizeVocabV3Response>(req, "DeleteRecognizeVocabV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="DeleteRecognizeVocabV3Response"/></returns>
+        public DeleteRecognizeVocabV3Response DeleteRecognizeVocabV3Sync(DeleteRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<DeleteRecognizeVocabV3Response>(req, "DeleteRecognizeVocabV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1334,6 +1394,75 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
+        /// </summary>
+        /// <param name="req"><see cref="DownloadRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="DownloadRecognizeVocabV3Response"/></returns>
+        public Task<DownloadRecognizeVocabV3Response> DownloadRecognizeVocabV3(DownloadRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<DownloadRecognizeVocabV3Response>(req, "DownloadRecognizeVocabV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
+        /// </summary>
+        /// <param name="req"><see cref="DownloadRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="DownloadRecognizeVocabV3Response"/></returns>
+        public DownloadRecognizeVocabV3Response DownloadRecognizeVocabV3Sync(DownloadRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<DownloadRecognizeVocabV3Response>(req, "DownloadRecognizeVocabV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口分页列举所有的热词表。
+        /// </summary>
+        /// <param name="req"><see cref="GetRecognizeVocabListV3Request"/></param>
+        /// <returns><see cref="GetRecognizeVocabListV3Response"/></returns>
+        public Task<GetRecognizeVocabListV3Response> GetRecognizeVocabListV3(GetRecognizeVocabListV3Request req)
+        {
+            return InternalRequestAsync<GetRecognizeVocabListV3Response>(req, "GetRecognizeVocabListV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口分页列举所有的热词表。
+        /// </summary>
+        /// <param name="req"><see cref="GetRecognizeVocabListV3Request"/></param>
+        /// <returns><see cref="GetRecognizeVocabListV3Response"/></returns>
+        public GetRecognizeVocabListV3Response GetRecognizeVocabListV3Sync(GetRecognizeVocabListV3Request req)
+        {
+            return InternalRequestAsync<GetRecognizeVocabListV3Response>(req, "GetRecognizeVocabListV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户根据词表的ID可以获取对应的热词表信息
+        /// </summary>
+        /// <param name="req"><see cref="GetRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="GetRecognizeVocabV3Response"/></returns>
+        public Task<GetRecognizeVocabV3Response> GetRecognizeVocabV3(GetRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<GetRecognizeVocabV3Response>(req, "GetRecognizeVocabV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户根据词表的ID可以获取对应的热词表信息
+        /// </summary>
+        /// <param name="req"><see cref="GetRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="GetRecognizeVocabV3Response"/></returns>
+        public GetRecognizeVocabV3Response GetRecognizeVocabV3Sync(GetRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<GetRecognizeVocabV3Response>(req, "GetRecognizeVocabV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 成功开启AI 内容理解任务后，可以使用此接口来更新订阅黑白名单。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudModerationRequest"/></param>
@@ -1477,6 +1606,29 @@ namespace TencentCloud.Trtc.V20190722
         public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomIdSync(RemoveUserByStrRoomIdRequest req)
         {
             return InternalRequestAsync<RemoveUserByStrRoomIdResponse>(req, "RemoveUserByStrRoomId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
+        /// </summary>
+        /// <param name="req"><see cref="SetVocabStateV3Request"/></param>
+        /// <returns><see cref="SetVocabStateV3Response"/></returns>
+        public Task<SetVocabStateV3Response> SetVocabStateV3(SetVocabStateV3Request req)
+        {
+            return InternalRequestAsync<SetVocabStateV3Response>(req, "SetVocabStateV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
+        /// </summary>
+        /// <param name="req"><see cref="SetVocabStateV3Request"/></param>
+        /// <returns><see cref="SetVocabStateV3Response"/></returns>
+        public SetVocabStateV3Response SetVocabStateV3Sync(SetVocabStateV3Request req)
+        {
+            return InternalRequestAsync<SetVocabStateV3Response>(req, "SetVocabStateV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1983,6 +2135,29 @@ namespace TencentCloud.Trtc.V20190722
         public UpdatePublishCdnStreamResponse UpdatePublishCdnStreamSync(UpdatePublishCdnStreamRequest req)
         {
             return InternalRequestAsync<UpdatePublishCdnStreamResponse>(req, "UpdatePublishCdnStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="UpdateRecognizeVocabV3Response"/></returns>
+        public Task<UpdateRecognizeVocabV3Response> UpdateRecognizeVocabV3(UpdateRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<UpdateRecognizeVocabV3Response>(req, "UpdateRecognizeVocabV3");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口进行热词表的更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecognizeVocabV3Request"/></param>
+        /// <returns><see cref="UpdateRecognizeVocabV3Response"/></returns>
+        public UpdateRecognizeVocabV3Response UpdateRecognizeVocabV3Sync(UpdateRecognizeVocabV3Request req)
+        {
+            return InternalRequestAsync<UpdateRecognizeVocabV3Response>(req, "UpdateRecognizeVocabV3")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

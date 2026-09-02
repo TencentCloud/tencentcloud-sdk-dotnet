@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1495</VersionPrefix>
+    <VersionPrefix>3.0.1499</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20190722\Models\CreateLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
+    <Compile Include="V20190722\Models\CreateRecognizeVocabV3Request.cs" />
+    <Compile Include="V20190722\Models\CreateRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
@@ -92,6 +94,8 @@
     <Compile Include="V20190722\Models\DeleteLiveStreamModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteRecognizeVocabV3Request.cs" />
+    <Compile Include="V20190722\Models\DeleteRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintRequest.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
@@ -164,10 +168,16 @@
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="V20190722\Models\DismissRoomResponse.cs" />
+    <Compile Include="V20190722\Models\DownloadRecognizeVocabV3Request.cs" />
+    <Compile Include="V20190722\Models\DownloadRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\EmulateMobileParams.cs" />
     <Compile Include="V20190722\Models\EncodeParams.cs" />
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
+    <Compile Include="V20190722\Models\GetRecognizeVocabListV3Request.cs" />
+    <Compile Include="V20190722\Models\GetRecognizeVocabListV3Response.cs" />
+    <Compile Include="V20190722\Models\GetRecognizeVocabV3Request.cs" />
+    <Compile Include="V20190722\Models\GetRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\Input.cs" />
     <Compile Include="V20190722\Models\InvokeLLM.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
@@ -233,6 +243,8 @@
     <Compile Include="V20190722\Models\SeriesInfo.cs" />
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
     <Compile Include="V20190722\Models\ServerPushText.cs" />
+    <Compile Include="V20190722\Models\SetVocabStateV3Request.cs" />
+    <Compile Include="V20190722\Models\SetVocabStateV3Response.cs" />
     <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
     <Compile Include="V20190722\Models\SliceParams.cs" />
     <Compile Include="V20190722\Models\SliceStorageParams.cs" />
@@ -295,6 +307,8 @@
     <Compile Include="V20190722\Models\UpdateAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />
+    <Compile Include="V20190722\Models\UpdateRecognizeVocabV3Request.cs" />
+    <Compile Include="V20190722\Models\UpdateRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestResponse.cs" />
     <Compile Include="V20190722\Models\UpdateVoicePrintRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1487";
+       private const string sdkVersion = "SDK_NET_3.0.1499";
 
         /// <summary>
         /// Client constructor.
@@ -554,6 +554,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeOPRAllVulCountResponse DescribeOPRAllVulCountSync(DescribeOPRAllVulCountRequest req)
         {
             return InternalRequestAsync<DescribeOPRAllVulCountResponse>(req, "DescribeOPRAllVulCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据链路查询目标服务的上下游相关服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedServicesOnTraceRequest"/></param>
+        /// <returns><see cref="DescribeRelatedServicesOnTraceResponse"/></returns>
+        public Task<DescribeRelatedServicesOnTraceResponse> DescribeRelatedServicesOnTrace(DescribeRelatedServicesOnTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedServicesOnTraceResponse>(req, "DescribeRelatedServicesOnTrace");
+        }
+
+        /// <summary>
+        /// 根据链路查询目标服务的上下游相关服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelatedServicesOnTraceRequest"/></param>
+        /// <returns><see cref="DescribeRelatedServicesOnTraceResponse"/></returns>
+        public DescribeRelatedServicesOnTraceResponse DescribeRelatedServicesOnTraceSync(DescribeRelatedServicesOnTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeRelatedServicesOnTraceResponse>(req, "DescribeRelatedServicesOnTrace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

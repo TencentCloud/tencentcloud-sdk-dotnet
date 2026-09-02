@@ -162,6 +162,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("DateEnd")]
         public string DateEnd{ get; set; }
 
+        /// <summary>
+        /// <p>车架号</p>
+        /// </summary>
+        [JsonProperty("VinNo")]
+        public string VinNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
             this.SetParamSimple(map, prefix + "DateStart", this.DateStart);
             this.SetParamSimple(map, prefix + "DateEnd", this.DateEnd);
+            this.SetParamSimple(map, prefix + "VinNo", this.VinNo);
         }
     }
 }

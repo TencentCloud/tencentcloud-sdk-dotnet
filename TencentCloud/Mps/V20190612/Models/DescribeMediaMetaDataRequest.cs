@@ -25,10 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 需要获取元信息的文件输入信息。
+        /// <p>需要获取元信息的文件输入信息。</p>
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
+
+        /// <summary>
+        /// <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }
