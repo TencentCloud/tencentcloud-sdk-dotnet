@@ -163,6 +163,18 @@ namespace TencentCloud.Emr.V20190103.Models
         public ImageInfoV2 ImageInfoV2{ get; set; }
 
         /// <summary>
+        /// <p>是否开启日志收集</p>
+        /// </summary>
+        [JsonProperty("EnableHistoryServer")]
+        public bool? EnableHistoryServer{ get; set; }
+
+        /// <summary>
+        /// <p>tensorboard 链接</p>
+        /// </summary>
+        [JsonProperty("TensorBoardUrl")]
+        public string TensorBoardUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -197,6 +209,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "PersistentVolume.", this.PersistentVolume);
             this.SetParamSimple(map, prefix + "RayClusterYaml", this.RayClusterYaml);
             this.SetParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+            this.SetParamSimple(map, prefix + "EnableHistoryServer", this.EnableHistoryServer);
+            this.SetParamSimple(map, prefix + "TensorBoardUrl", this.TensorBoardUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

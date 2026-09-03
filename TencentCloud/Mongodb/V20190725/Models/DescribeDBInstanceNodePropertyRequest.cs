@@ -25,49 +25,43 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+        /// <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
         /// </summary>
         [JsonProperty("NodeIds")]
         public string[] NodeIds{ get; set; }
 
         /// <summary>
-        /// 节点角色。可选值包括：
-        /// - PRIMARY：主节点。
-        /// - SECONDARY：从节点。
-        /// - READONLY：只读节点。
-        /// - ARBITER：仲裁节点。
+        /// <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
         /// </summary>
         [JsonProperty("Roles")]
         public string[] Roles{ get; set; }
 
         /// <summary>
-        /// 该参数指定节点是否为 Hidden 节点，默认为 false。
+        /// <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
         /// </summary>
         [JsonProperty("OnlyHidden")]
         public bool? OnlyHidden{ get; set; }
 
         /// <summary>
-        /// 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
+        /// <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 该参数指定节点投票权。
-        /// - 1：具有投票权。
-        /// - 0：无投票权。
+        /// <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
         /// </summary>
         [JsonProperty("Votes")]
         public long? Votes{ get; set; }
 
         /// <summary>
-        /// 节点标签。
+        /// <p>节点标签。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public NodeTag[] Tags{ get; set; }

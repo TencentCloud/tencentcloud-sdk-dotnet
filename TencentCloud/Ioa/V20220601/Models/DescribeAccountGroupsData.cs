@@ -25,127 +25,127 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 账号分组名全路径，点分格式
+        /// <p>账号分组名全路径，点分格式</p>
         /// </summary>
         [JsonProperty("NamePath")]
         public string NamePath{ get; set; }
 
         /// <summary>
-        /// 账号分组ID全路径，数组格式
+        /// <p>账号分组ID全路径，数组格式</p>
         /// </summary>
         [JsonProperty("IdPathArr")]
         public long?[] IdPathArr{ get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// <p>扩展信息</p>
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public string ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 最后更新时间
+        /// <p>最后更新时间</p>
         /// </summary>
         [JsonProperty("Utime")]
         public string Utime{ get; set; }
 
         /// <summary>
-        /// 父分组ID
+        /// <p>父分组ID</p>
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+        /// <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
         /// </summary>
         [JsonProperty("OrgId")]
         public string OrgId{ get; set; }
 
         /// <summary>
-        /// 分组名称
+        /// <p>分组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分组ID
+        /// <p>分组ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 分组描述
+        /// <p>分组描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 同步数据源
+        /// <p>同步数据源</p>
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
-        /// 账号分组ID全路径，点分格式
+        /// <p>账号分组ID全路径，点分格式</p>
         /// </summary>
         [JsonProperty("IdPath")]
         public string IdPath{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("Itime")]
         public string Itime{ get; set; }
 
         /// <summary>
-        /// 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+        /// <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
         /// </summary>
         [JsonProperty("ParentOrgId")]
         public string ParentOrgId{ get; set; }
 
         /// <summary>
-        /// 导入类型
+        /// <p>导入类型</p>
         /// </summary>
         [JsonProperty("ImportType")]
         public string ImportType{ get; set; }
 
         /// <summary>
-        /// miniIAM id
+        /// <p>miniIAM id</p>
         /// </summary>
         [JsonProperty("MiniIamId")]
         public string MiniIamId{ get; set; }
 
         /// <summary>
-        /// 该分组下含子组的所有用户总数
+        /// <p>该分组下含子组的所有用户总数</p>
         /// </summary>
         [JsonProperty("UserTotal")]
         public long? UserTotal{ get; set; }
 
         /// <summary>
-        /// 是否叶子节点
+        /// <p>是否叶子节点</p>
         /// </summary>
         [JsonProperty("IsLeaf")]
         public bool? IsLeaf{ get; set; }
 
         /// <summary>
-        /// 是否该账户的直接权限
+        /// <p>是否该账户的直接权限</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 最新一次同步任务的结果
+        /// <p>最新一次同步任务的结果</p>
         /// </summary>
         [JsonProperty("LatestSyncResult")]
         public string LatestSyncResult{ get; set; }
 
         /// <summary>
-        /// 最新一次同步任务的结束时间
+        /// <p>最新一次同步任务的结束时间</p>
         /// </summary>
         [JsonProperty("LatestSyncTime")]
         public string LatestSyncTime{ get; set; }
 
         /// <summary>
-        /// 分组名称数组
+        /// <p>分组名称数组</p>
         /// </summary>
         [JsonProperty("NamePathArr")]
         public string[] NamePathArr{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 账户组Id
+        /// <p>账户组Id</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public ulong? AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 分组名称
+        /// <p>分组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 所属分组Id
+        /// <p>所属分组Id</p>
         /// </summary>
         [JsonProperty("IdPathArray")]
         public ulong?[] IdPathArray{ get; set; }
 
         /// <summary>
-        /// 所属分组NamePathArray
+        /// <p>所属分组NamePathArray</p>
         /// </summary>
         [JsonProperty("NamePathArray")]
         public string[] NamePathArray{ get; set; }
 
         /// <summary>
-        /// 目录id
+        /// <p>目录id</p>
         /// </summary>
         [JsonProperty("AccountCount")]
         public ulong? AccountCount{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 关联id
+        /// <p>关联id</p>
         /// </summary>
         [JsonProperty("RelationId")]
         public ulong? RelationId{ get; set; }

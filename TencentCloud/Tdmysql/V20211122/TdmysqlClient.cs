@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1498";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Tdmysql.V20211122
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 本接口（BreakStandbyDBInstanceRelation）用于提供断开灾备实例主备连接功能
+        /// </summary>
+        /// <param name="req"><see cref="BreakStandbyDBInstanceRelationRequest"/></param>
+        /// <returns><see cref="BreakStandbyDBInstanceRelationResponse"/></returns>
+        public Task<BreakStandbyDBInstanceRelationResponse> BreakStandbyDBInstanceRelation(BreakStandbyDBInstanceRelationRequest req)
+        {
+            return InternalRequestAsync<BreakStandbyDBInstanceRelationResponse>(req, "BreakStandbyDBInstanceRelation");
+        }
+
+        /// <summary>
+        /// 本接口（BreakStandbyDBInstanceRelation）用于提供断开灾备实例主备连接功能
+        /// </summary>
+        /// <param name="req"><see cref="BreakStandbyDBInstanceRelationRequest"/></param>
+        /// <returns><see cref="BreakStandbyDBInstanceRelationResponse"/></returns>
+        public BreakStandbyDBInstanceRelationResponse BreakStandbyDBInstanceRelationSync(BreakStandbyDBInstanceRelationRequest req)
+        {
+            return InternalRequestAsync<BreakStandbyDBInstanceRelationResponse>(req, "BreakStandbyDBInstanceRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -134,6 +155,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public CreateDBSBackupResponse CreateDBSBackupSync(CreateDBSBackupRequest req)
         {
             return InternalRequestAsync<CreateDBSBackupResponse>(req, "CreateDBSBackup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateStandbyDBInstances）提供批量创建灾备实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandbyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateStandbyDBInstanceResponse"/></returns>
+        public Task<CreateStandbyDBInstanceResponse> CreateStandbyDBInstance(CreateStandbyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateStandbyDBInstanceResponse>(req, "CreateStandbyDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口（CreateStandbyDBInstances）提供批量创建灾备实例功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandbyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateStandbyDBInstanceResponse"/></returns>
+        public CreateStandbyDBInstanceResponse CreateStandbyDBInstanceSync(CreateStandbyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateStandbyDBInstanceResponse>(req, "CreateStandbyDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +659,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DescribeSpecsResponse DescribeSpecsSync(DescribeSpecsRequest req)
         {
             return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeStandbyDBinstanceRelations）用于查询实例灾备连接关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandbyDBInstanceRelationDetailRequest"/></param>
+        /// <returns><see cref="DescribeStandbyDBInstanceRelationDetailResponse"/></returns>
+        public Task<DescribeStandbyDBInstanceRelationDetailResponse> DescribeStandbyDBInstanceRelationDetail(DescribeStandbyDBInstanceRelationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeStandbyDBInstanceRelationDetailResponse>(req, "DescribeStandbyDBInstanceRelationDetail");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeStandbyDBinstanceRelations）用于查询实例灾备连接关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandbyDBInstanceRelationDetailRequest"/></param>
+        /// <returns><see cref="DescribeStandbyDBInstanceRelationDetailResponse"/></returns>
+        public DescribeStandbyDBInstanceRelationDetailResponse DescribeStandbyDBInstanceRelationDetailSync(DescribeStandbyDBInstanceRelationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeStandbyDBInstanceRelationDetailResponse>(req, "DescribeStandbyDBInstanceRelationDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

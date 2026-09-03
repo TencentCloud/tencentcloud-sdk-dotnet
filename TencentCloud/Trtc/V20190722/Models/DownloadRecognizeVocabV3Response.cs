@@ -25,6 +25,18 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
+        /// <p>词表 id</p>
+        /// </summary>
+        [JsonProperty("VocabId")]
+        public string VocabId{ get; set; }
+
+        /// <summary>
+        /// <p>文本形式热词</p>
+        /// </summary>
+        [JsonProperty("WordWeightStr")]
+        public string WordWeightStr{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VocabId", this.VocabId);
+            this.SetParamSimple(map, prefix + "WordWeightStr", this.WordWeightStr);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

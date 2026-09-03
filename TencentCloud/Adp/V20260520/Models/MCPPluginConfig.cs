@@ -72,6 +72,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("AuthConfig")]
         public AuthConfig AuthConfig{ get; set; }
 
+        /// <summary>
+        /// <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+        /// </summary>
+        [JsonProperty("SupportsApps")]
+        public bool? SupportsApps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "SSEReadTimeout", this.SSEReadTimeout);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamObj(map, prefix + "AuthConfig.", this.AuthConfig);
+            this.SetParamSimple(map, prefix + "SupportsApps", this.SupportsApps);
         }
     }
 }

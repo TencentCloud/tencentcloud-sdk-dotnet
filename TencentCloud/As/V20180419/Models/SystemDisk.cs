@@ -25,25 +25,28 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 系统盘类型。系统盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围
-        /// <li>LOCAL_BASIC：本地硬盘</li>
-        /// <li>LOCAL_SSD：本地SSD硬盘</li>
-        /// <li>CLOUD_BASIC：普通云硬盘</li>
-        /// <li>CLOUD_PREMIUM：高性能云硬盘</li>
-        /// <li>CLOUD_SSD：SSD云硬盘</li>
-        /// <li>CLOUD_BSSD：通用型SSD云硬盘</li>
-        /// <li>CLOUD_HSSD：增强型SSD云硬盘</li>
-        /// <li>CLOUD_TSSD：极速型SSD云硬盘</li>
-        /// <li>默认取值：CLOUD_PREMIUM。</li>
+        /// <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/362/2353">云硬盘类型</a>。取值范围</p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><li>默认取值：CLOUD_PREMIUM。</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 系统盘大小，单位：GB。默认值为 50
+        /// <p>系统盘大小，单位：GB。默认值为 50</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>是否加密系统盘。TRUE 表示加密，FALSE 表示不加密；具体盘型、地域及 KMS 规则由 CVM 校验。</p>
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
+        /// <summary>
+        /// <p>系统盘加密使用的 KMS 密钥 ID。密钥有效性、权限以及与盘型和地域的适配性由 CVM 校验。</p>
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
 
 
         /// <summary>
@@ -53,6 +56,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

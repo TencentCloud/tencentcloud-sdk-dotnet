@@ -36,6 +36,19 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("Outputs")]
         public ResponseParam[] Outputs{ get; set; }
 
+        /// <summary>
+        /// <p>工具meta信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Meta")]
+        public MCPToolMeta Meta{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+        /// </summary>
+        [JsonProperty("SupportsApps")]
+        public bool? SupportsApps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +57,8 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamArrayObj(map, prefix + "Inputs.", this.Inputs);
             this.SetParamArrayObj(map, prefix + "Outputs.", this.Outputs);
+            this.SetParamObj(map, prefix + "Meta.", this.Meta);
+            this.SetParamSimple(map, prefix + "SupportsApps", this.SupportsApps);
         }
     }
 }

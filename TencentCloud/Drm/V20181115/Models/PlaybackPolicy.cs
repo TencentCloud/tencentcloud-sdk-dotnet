@@ -36,6 +36,12 @@ namespace TencentCloud.Drm.V20181115.Models
         [JsonProperty("PlaybackDurationSeconds")]
         public ulong? PlaybackDurationSeconds{ get; set; }
 
+        /// <summary>
+        /// <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+        /// </summary>
+        [JsonProperty("CanPersistent")]
+        public bool? CanPersistent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Drm.V20181115.Models
         {
             this.SetParamSimple(map, prefix + "LicenseDurationSeconds", this.LicenseDurationSeconds);
             this.SetParamSimple(map, prefix + "PlaybackDurationSeconds", this.PlaybackDurationSeconds);
+            this.SetParamSimple(map, prefix + "CanPersistent", this.CanPersistent);
         }
     }
 }

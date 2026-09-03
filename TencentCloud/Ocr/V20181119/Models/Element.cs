@@ -25,35 +25,41 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 元素内容，当type为figure时该字段内容为图片的位置
+        /// <p>元素内容，当type为figure时该字段内容为图片的位置</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 元素坐标
+        /// <p>元素坐标</p>
         /// </summary>
         [JsonProperty("Coord")]
         public Polygon Coord{ get; set; }
 
         /// <summary>
-        /// 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
+        /// <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 结果列表
+        /// <p>结果列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultList")]
         public ResultList[] ResultList{ get; set; }
 
         /// <summary>
-        /// 元素索引
+        /// <p>元素索引</p>
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
+
+        /// <summary>
+        /// <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
 
 
         /// <summary>
@@ -66,6 +72,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamArrayObj(map, prefix + "ResultList.", this.ResultList);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
         }
     }
 }

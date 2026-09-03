@@ -25,52 +25,58 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 题干
+        /// <p>题干</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Question")]
         public Element[] Question{ get; set; }
 
         /// <summary>
-        /// 选项
+        /// <p>选项</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Option")]
         public Element[] Option{ get; set; }
 
         /// <summary>
-        /// 插图
+        /// <p>插图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Figure")]
         public Element[] Figure{ get; set; }
 
         /// <summary>
-        /// 表格
+        /// <p>表格</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public Element[] Table{ get; set; }
 
         /// <summary>
-        /// 答案
+        /// <p>答案</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Answer")]
         public Element[] Answer{ get; set; }
 
         /// <summary>
-        /// 解析
+        /// <p>解析</p>
         /// </summary>
         [JsonProperty("Parse")]
         public Element[] Parse{ get; set; }
 
         /// <summary>
-        /// 整题的坐标
+        /// <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coord")]
         public Polygon[] Coord{ get; set; }
+
+        /// <summary>
+        /// <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+        /// </summary>
+        [JsonProperty("CoordPageIndex")]
+        public long?[] CoordPageIndex{ get; set; }
 
 
         /// <summary>
@@ -85,6 +91,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Answer.", this.Answer);
             this.SetParamArrayObj(map, prefix + "Parse.", this.Parse);
             this.SetParamArrayObj(map, prefix + "Coord.", this.Coord);
+            this.SetParamArraySimple(map, prefix + "CoordPageIndex.", this.CoordPageIndex);
         }
     }
 }

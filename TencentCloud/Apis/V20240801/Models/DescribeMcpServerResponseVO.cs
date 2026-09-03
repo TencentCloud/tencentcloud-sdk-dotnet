@@ -308,6 +308,32 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("IgnoreHealthCheck")]
         public bool? IgnoreHealthCheck{ get; set; }
 
+        /// <summary>
+        /// <p>凭据ID</p>
+        /// </summary>
+        [JsonProperty("CredentialID")]
+        public string CredentialID{ get; set; }
+
+        /// <summary>
+        /// <p>凭据名称</p>
+        /// </summary>
+        [JsonProperty("CredentialName")]
+        public string CredentialName{ get; set; }
+
+        /// <summary>
+        /// <p>访问域名</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestProtocolType")]
+        public string RequestProtocolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -356,6 +382,10 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
             this.SetParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
             this.SetParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
+            this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
+            this.SetParamSimple(map, prefix + "CredentialName", this.CredentialName);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
         }
     }
 }

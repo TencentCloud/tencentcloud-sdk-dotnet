@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1499";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Ocr.V20181119
         public DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJobSync(DescribeQuestionMarkAgentJobRequest req)
         {
             return InternalRequestAsync<DescribeQuestionMarkAgentJobResponse>(req, "DescribeQuestionMarkAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuestionSplitJobRequest"/></param>
+        /// <returns><see cref="DescribeQuestionSplitJobResponse"/></returns>
+        public Task<DescribeQuestionSplitJobResponse> DescribeQuestionSplitJob(DescribeQuestionSplitJobRequest req)
+        {
+            return InternalRequestAsync<DescribeQuestionSplitJobResponse>(req, "DescribeQuestionSplitJob");
+        }
+
+        /// <summary>
+        /// 异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuestionSplitJobRequest"/></param>
+        /// <returns><see cref="DescribeQuestionSplitJobResponse"/></returns>
+        public DescribeQuestionSplitJobResponse DescribeQuestionSplitJobSync(DescribeQuestionSplitJobRequest req)
+        {
+            return InternalRequestAsync<DescribeQuestionSplitJobResponse>(req, "DescribeQuestionSplitJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2616,6 +2637,27 @@ namespace TencentCloud.Ocr.V20181119
         public SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJobSync(SubmitQuestionMarkAgentJobRequest req)
         {
             return InternalRequestAsync<SubmitQuestionMarkAgentJobResponse>(req, "SubmitQuestionMarkAgentJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitQuestionSplitJobRequest"/></param>
+        /// <returns><see cref="SubmitQuestionSplitJobResponse"/></returns>
+        public Task<SubmitQuestionSplitJobResponse> SubmitQuestionSplitJob(SubmitQuestionSplitJobRequest req)
+        {
+            return InternalRequestAsync<SubmitQuestionSplitJobResponse>(req, "SubmitQuestionSplitJob");
+        }
+
+        /// <summary>
+        /// 异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitQuestionSplitJobRequest"/></param>
+        /// <returns><see cref="SubmitQuestionSplitJobResponse"/></returns>
+        public SubmitQuestionSplitJobResponse SubmitQuestionSplitJobSync(SubmitQuestionSplitJobRequest req)
+        {
+            return InternalRequestAsync<SubmitQuestionSplitJobResponse>(req, "SubmitQuestionSplitJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

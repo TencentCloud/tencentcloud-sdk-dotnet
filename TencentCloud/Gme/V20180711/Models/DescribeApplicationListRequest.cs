@@ -25,40 +25,46 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
+        /// <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 页码ID，0表示第一页，以此后推。默认填0
+        /// <p>页码ID，0表示第一页，以此后推。默认填0</p>
         /// </summary>
         [JsonProperty("PageNo")]
         public ulong? PageNo{ get; set; }
 
         /// <summary>
-        /// 每页展示应用数量。默认填200
+        /// <p>每页展示应用数量。默认填200</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
+        /// <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
         /// </summary>
         [JsonProperty("SearchText")]
         public string SearchText{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 查找过滤关键字列表
+        /// <p>查找过滤关键字列表</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("NewVersion")]
+        public ulong? NewVersion{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "SearchText", this.SearchText);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "NewVersion", this.NewVersion);
         }
     }
 }

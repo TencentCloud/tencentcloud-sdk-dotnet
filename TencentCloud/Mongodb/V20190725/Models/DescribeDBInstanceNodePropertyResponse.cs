@@ -25,16 +25,22 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Mongos节点属性。
+        /// <p>Mongos节点属性。</p>
         /// </summary>
         [JsonProperty("Mongos")]
         public NodeProperty[] Mongos{ get; set; }
 
         /// <summary>
-        /// 副本集节点信息。
+        /// <p>副本集节点信息。</p>
         /// </summary>
         [JsonProperty("ReplicateSets")]
         public ReplicateSetInfo[] ReplicateSets{ get; set; }
+
+        /// <summary>
+        /// <p>Dynamo节点信息</p>
+        /// </summary>
+        [JsonProperty("DynamoProxies")]
+        public NodeProperty[] DynamoProxies{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         {
             this.SetParamArrayObj(map, prefix + "Mongos.", this.Mongos);
             this.SetParamArrayObj(map, prefix + "ReplicateSets.", this.ReplicateSets);
+            this.SetParamArrayObj(map, prefix + "DynamoProxies.", this.DynamoProxies);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

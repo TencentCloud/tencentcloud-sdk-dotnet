@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 组Id(只支持32位)
+        /// <p>组Id(只支持32位)</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }

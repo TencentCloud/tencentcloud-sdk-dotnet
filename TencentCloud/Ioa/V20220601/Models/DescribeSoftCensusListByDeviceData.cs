@@ -25,91 +25,91 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 终端用户名
+        /// <p>终端用户名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// mac地址
+        /// <p>mac地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MacAddr")]
         public string MacAddr{ get; set; }
 
         /// <summary>
-        /// 终端计算机名称
+        /// <p>终端计算机名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 终端组路径名
+        /// <p>终端组路径名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNamePath")]
         public string GroupNamePath{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// <p>IP地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 唯一标识Mid
+        /// <p>唯一标识Mid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mid")]
         public string Mid{ get; set; }
 
         /// <summary>
-        /// 企业账户名
+        /// <p>企业账户名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IoaUserName")]
         public string IoaUserName{ get; set; }
 
         /// <summary>
-        /// 终端分组Id(只支持32位)
+        /// <p>终端分组Id(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 终端组名
+        /// <p>终端组名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 终端列表Id(只支持32位)
+        /// <p>终端列表Id(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 软件数量(只支持32位)
+        /// <p>软件数量(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoftNum")]
         public long? SoftNum{ get; set; }
 
         /// <summary>
-        /// 盗版风险（1=风险;2=未知）
+        /// <p>盗版风险（1=风险;2=未知）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PiracyRisk")]
         public long? PiracyRisk{ get; set; }
 
         /// <summary>
-        /// 终端备注名
+        /// <p>终端备注名</p>
         /// </summary>
         [JsonProperty("RemarkName")]
         public string RemarkName{ get; set; }

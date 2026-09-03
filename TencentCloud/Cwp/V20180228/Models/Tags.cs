@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 标签键
+        /// <p>标签键</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// <p>标签值</p>
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

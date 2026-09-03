@@ -25,127 +25,122 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务的类型，可以取的值有：
-        /// <li>Classification：智能分类</li>
-        /// <li>Cover：智能封面</li>
-        /// <li>Tag：智能标签</li>
-        /// <li>FrameTag：智能按帧标签</li>
-        /// <li>Highlight：智能精彩集锦</li>
-        /// <li>DeLogo：智能擦除</li>
-        /// <li>Description：大模型摘要</li>
-        /// <li>Dubbing：智能译制</li>
-        /// <li>VideoRemake: 视频去重</li>
-        /// <li>VideoComprehension: 视频（音频）理解</li>
-        /// <li>Cutout：视频抠图</li>
-        /// <li>Reel：智能成片</li>
+        /// <p>任务的类型，可以取的值有：</p><li>Classification：智能分类</li><li>Cover：智能封面</li><li>Tag：智能标签</li><li>FrameTag：智能按帧标签</li><li>Highlight：智能精彩集锦</li><li>DeLogo：智能擦除</li><li>Description：大模型摘要</li><li>Dubbing：智能译制</li><li>VideoRemake: 视频去重</li><li>VideoComprehension: 视频（音频）理解</li><li>Cutout：视频抠图</li><li>Reel：智能成片</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+        /// <p>视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+        /// <p>视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+        /// <p>视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+        /// <p>视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+        /// <p>视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
+        /// <p>视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeLogoTask")]
         public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+        /// <p>视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentTask")]
         public AiAnalysisTaskSegmentResult SegmentTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+        /// <p>视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadTailTask")]
         public AiAnalysisTaskHeadTailResult HeadTailTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+        /// <p>视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DescriptionTask")]
         public AiAnalysisTaskDescriptionResult DescriptionTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+        /// <p>视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HorizontalToVerticalTask")]
         public AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+        /// <p>视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DubbingTask")]
         public AiAnalysisTaskDubbingResult DubbingTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+        /// <p>视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoRemakeTask")]
         public AiAnalysisTaskVideoRemakeResult VideoRemakeTask{ get; set; }
 
         /// <summary>
-        /// 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+        /// <p>视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoComprehensionTask")]
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
+        /// <p>视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CutoutTask")]
         public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
+        /// <p>视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReelTask")]
         public AiAnalysisTaskReelResult ReelTask{ get; set; }
+
+        /// <summary>
+        /// <p>智能分析通用任务的查询结果，当任务类型为Generic时有效。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GenericTask")]
+        public AiAnalysisTaskGenericResult GenericTask{ get; set; }
 
 
         /// <summary>
@@ -169,6 +164,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
             this.SetParamObj(map, prefix + "CutoutTask.", this.CutoutTask);
             this.SetParamObj(map, prefix + "ReelTask.", this.ReelTask);
+            this.SetParamObj(map, prefix + "GenericTask.", this.GenericTask);
         }
     }
 }

@@ -43,15 +43,17 @@ namespace TencentCloud.Apis.V20240801.Models
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>
-        /// <p>是否要认证</p>
+        /// <p>是否要认证（已废弃，请勿使用）</p>
         /// </summary>
         [JsonProperty("NeedAuth")]
+        [System.Obsolete]
         public bool? NeedAuth{ get; set; }
 
         /// <summary>
-        /// <p>凭据ID</p>
+        /// <p>凭据ID（已废弃，请勿使用）</p>
         /// </summary>
         [JsonProperty("AgentCredentialID")]
+        [System.Obsolete]
         public string AgentCredentialID{ get; set; }
 
 

@@ -25,63 +25,70 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题 ID
+        /// <p>日志主题 ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 目标服务名称
+        /// <p>目标服务名称</p>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 目标地址
+        /// <p>目标地址</p>
         /// </summary>
         [JsonProperty("RemoteWriteURL")]
         public string RemoteWriteURL{ get; set; }
 
         /// <summary>
-        /// 鉴权类型
-        /// 0: 无鉴权
-        /// 1: basic_auth 
-        /// 2: token
+        /// <p>鉴权类型<br>0: 无鉴权<br>1: basic_auth<br>2: token</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 网络类型： 1 内网 2外网
+        /// <p>网络类型： 1 内网 2外网</p>
         /// </summary>
         [JsonProperty("NetType")]
         public ulong? NetType{ get; set; }
 
         /// <summary>
-        /// 私有网络id
+        /// <p>私有网络id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 鉴权信息
+        /// <p>鉴权信息</p>
         /// </summary>
         [JsonProperty("AuthInfo")]
         public RemoteWriteAuthInfo AuthInfo{ get; set; }
 
         /// <summary>
-        /// 后端服务类型
-        /// 0 CVM
-        /// 1025 CLB
+        /// <p>后端服务类型<br>0 CVM<br>1025 CLB</p>
         /// </summary>
         [JsonProperty("VirtualGatewayType")]
         public long? VirtualGatewayType{ get; set; }
+
+        /// <summary>
+        /// <p>云时序数据库实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
 
 
         /// <summary>
@@ -98,6 +105,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
             this.SetParamSimple(map, prefix + "VirtualGatewayType", this.VirtualGatewayType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         }
     }
 }

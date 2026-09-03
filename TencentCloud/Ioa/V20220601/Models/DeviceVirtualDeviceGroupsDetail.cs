@@ -25,37 +25,37 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 终端自定义分组id
+        /// <p>终端自定义分组id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 自定义分组名称
+        /// <p>自定义分组名称</p>
         /// </summary>
         [JsonProperty("DeviceVirtualGroupName")]
         public string DeviceVirtualGroupName{ get; set; }
 
         /// <summary>
-        /// 设备数
+        /// <p>设备数</p>
         /// </summary>
         [JsonProperty("DeviceCount")]
         public long? DeviceCount{ get; set; }
 
         /// <summary>
-        /// 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
+        /// <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("Itime")]
         public string Itime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("Utime")]
         public string Utime{ get; set; }

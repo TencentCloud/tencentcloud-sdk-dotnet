@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1499</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20230321\Models\Application.cs" />
     <Compile Include="V20230321\Models\AttachNodesRequest.cs" />
     <Compile Include="V20230321\Models\AttachNodesResponse.cs" />
+    <Compile Include="V20230321\Models\BindClusterVpcRequest.cs" />
+    <Compile Include="V20230321\Models\BindClusterVpcResponse.cs" />
     <Compile Include="V20230321\Models\CFSOption.cs" />
     <Compile Include="V20230321\Models\CFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\ClusterActivity.cs" />
@@ -116,6 +118,8 @@
     <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20230321\Models\DescribeClusterActivitiesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeClusterActivitiesResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterDedicatedProxyRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterDedicatedProxyResponse.cs" />
     <Compile Include="V20230321\Models\DescribeClusterStorageOptionRequest.cs" />
     <Compile Include="V20230321\Models\DescribeClusterStorageOptionResponse.cs" />
     <Compile Include="V20230321\Models\DescribeClustersRequest.cs" />
@@ -144,7 +148,11 @@
     <Compile Include="V20230321\Models\DescribeWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\DetachNodesRequest.cs" />
     <Compile Include="V20230321\Models\DetachNodesResponse.cs" />
+    <Compile Include="V20230321\Models\DisableClusterDedicatedProxyRequest.cs" />
+    <Compile Include="V20230321\Models\DisableClusterDedicatedProxyResponse.cs" />
     <Compile Include="V20230321\Models\Docker.cs" />
+    <Compile Include="V20230321\Models\EnableClusterDedicatedProxyRequest.cs" />
+    <Compile Include="V20230321\Models\EnableClusterDedicatedProxyResponse.cs" />
     <Compile Include="V20230321\Models\EnhancedService.cs" />
     <Compile Include="V20230321\Models\EnvVar.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
@@ -152,6 +160,10 @@
     <Compile Include="V20230321\Models\ExpansionPolicy.cs" />
     <Compile Include="V20230321\Models\ExpansionPriority.cs" />
     <Compile Include="V20230321\Models\Filter.cs" />
+    <Compile Include="V20230321\Models\GenerateRegisterCodeRequest.cs" />
+    <Compile Include="V20230321\Models\GenerateRegisterCodeResponse.cs" />
+    <Compile Include="V20230321\Models\GenerateRegisterCommandRequest.cs" />
+    <Compile Include="V20230321\Models\GenerateRegisterCommandResponse.cs" />
     <Compile Include="V20230321\Models\GooseFSOption.cs" />
     <Compile Include="V20230321\Models\GooseFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\GooseFSxOption.cs" />

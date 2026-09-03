@@ -25,115 +25,123 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Remote Write任务名称
+        /// <p>Remote Write任务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 网络类型
-        /// 1: 内网
-        /// 2:外网
+        /// <p>网络类型<br>1: 内网<br>2:外网</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetType")]
         public ulong? NetType{ get; set; }
 
         /// <summary>
-        /// 私有网络id
+        /// <p>私有网络id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 任务运行状态
-        /// 1: 运行中
-        /// 2:暂停
-        /// 3: 失败
+        /// <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 目标服务名称
+        /// <p>目标服务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 目标地址
+        /// <p>目标地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteWriteURL")]
         public string RemoteWriteURL{ get; set; }
 
         /// <summary>
-        /// 鉴权类型
-        /// 0: 无鉴权 1: basic_auth 2: token
+        /// <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 鉴权信息
+        /// <p>鉴权信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthInfo")]
         public RemoteWriteAuthInfo AuthInfo{ get; set; }
 
         /// <summary>
-        /// 日志集
+        /// <p>日志集</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }
 
         /// <summary>
-        /// 后端服务类型
+        /// <p>后端服务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualGatewayType")]
         public long? VirtualGatewayType{ get; set; }
+
+        /// <summary>
+        /// <p>云时序数据库实例ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
 
 
         /// <summary>
@@ -156,6 +164,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "VirtualGatewayType", this.VirtualGatewayType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         }
     }
 }

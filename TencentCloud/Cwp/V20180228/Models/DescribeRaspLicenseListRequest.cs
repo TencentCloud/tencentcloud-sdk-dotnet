@@ -37,6 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// - NodeName 容器节点名称
         /// - ClusterID 容器集群ID
         /// - ClusterName 容器集群名称
+        /// - CWPTags 主机标签(值为标签ID,多个取并集,仅AssetType=CWP/TCSS_HOST生效)
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

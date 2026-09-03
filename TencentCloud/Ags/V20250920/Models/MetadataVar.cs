@@ -25,13 +25,13 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// <p>沙箱元数据名</p>
+        /// <p>元数据名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>沙箱元数据值</p>
+        /// <p>元数据值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

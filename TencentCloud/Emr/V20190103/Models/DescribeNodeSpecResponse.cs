@@ -25,10 +25,16 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 节点规格类型
+        /// <p>节点规格类型</p>
         /// </summary>
         [JsonProperty("NodeSpecs")]
         public DescribeNodeSpec[] NodeSpecs{ get; set; }
+
+        /// <summary>
+        /// <p>机型架构信息</p>
+        /// </summary>
+        [JsonProperty("Architectures")]
+        public ArchitectureInfo[] Architectures{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "NodeSpecs.", this.NodeSpecs);
+            this.SetParamArrayObj(map, prefix + "Architectures.", this.Architectures);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

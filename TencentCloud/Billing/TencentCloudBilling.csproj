@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1493</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,8 @@
     <Compile Include="V20180709\Models\DeleteGatherRuleResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountWarningRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountWarningResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAllocateConditionsRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAllocateConditionsResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAllocationBillConditionsRequest.cs" />
@@ -270,6 +272,8 @@
     <Compile Include="V20180709\Models\GatherResourceSummary.cs" />
     <Compile Include="V20180709\Models\GatherRuleSummary.cs" />
     <Compile Include="V20180709\Models\JsonObject.cs" />
+    <Compile Include="V20180709\Models\ModifyAccountWarningRequest.cs" />
+    <Compile Include="V20180709\Models\ModifyAccountWarningResponse.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationRuleRequest.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationRuleResponse.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationUnitRequest.cs" />

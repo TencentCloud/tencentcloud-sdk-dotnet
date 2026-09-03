@@ -90,6 +90,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("DisplayOnLoginPage")]
         public bool? DisplayOnLoginPage{ get; set; }
 
+        /// <summary>
+        /// <p>名称多语言</p>
+        /// </summary>
+        [JsonProperty("NameI18n")]
+        public I18nString[] NameI18n{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
             this.SetParamSimple(map, prefix + "DisplayOnLoginPage", this.DisplayOnLoginPage);
+            this.SetParamArrayObj(map, prefix + "NameI18n.", this.NameI18n);
         }
     }
 }

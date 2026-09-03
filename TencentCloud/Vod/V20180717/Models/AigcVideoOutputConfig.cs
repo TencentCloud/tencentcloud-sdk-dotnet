@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FrameInterpolate{ get; set; }
 
         /// <summary>
-        /// <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+        /// <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
         /// </summary>
         [JsonProperty("LogoAdd")]
         public string LogoAdd{ get; set; }

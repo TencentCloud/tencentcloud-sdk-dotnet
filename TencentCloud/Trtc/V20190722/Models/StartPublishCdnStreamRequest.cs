@@ -25,77 +25,73 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
+        /// <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和转推的房间所对应的SdkAppId相同。</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
+        /// <p>主房间信息RoomId，转推的TRTC房间所对应的RoomId。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
+        /// <p>主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。</p>
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }
 
         /// <summary>
-        /// 转推服务加入TRTC房间的机器人参数。
+        /// <p>转推服务加入TRTC房间的机器人参数。</p>
         /// </summary>
         [JsonProperty("AgentParams")]
         public AgentParams AgentParams{ get; set; }
 
         /// <summary>
-        /// 是否转码，0表示无需转码，1表示需要转码。
-        /// WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
-        /// 注：
-        /// 1，混流是必须转码的，这个参数需设置为1。
-        /// 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
+        /// <p>是否转码，0表示无需转码，1表示需要转码。<br>WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。<br>注：<br>1，混流是必须转码的，这个参数需设置为1。<br>2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。</p>
         /// </summary>
         [JsonProperty("WithTranscoding")]
         public ulong? WithTranscoding{ get; set; }
 
         /// <summary>
-        /// 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
+        /// <p>转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。</p>
         /// </summary>
         [JsonProperty("AudioParams")]
         public McuAudioParams AudioParams{ get; set; }
 
         /// <summary>
-        /// 转推流的视频编码参数，不填表示纯音频转推。
+        /// <p>转推流的视频编码参数，不填表示纯音频转推。</p>
         /// </summary>
         [JsonProperty("VideoParams")]
         public McuVideoParams VideoParams{ get; set; }
 
         /// <summary>
-        /// 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
+        /// <p>需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。</p>
         /// </summary>
         [JsonProperty("SingleSubscribeParams")]
         public SingleSubscribeParams SingleSubscribeParams{ get; set; }
 
         /// <summary>
-        /// 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
+        /// <p>转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。</p>
         /// </summary>
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
 
         /// <summary>
-        /// 混流SEI参数
+        /// <p>混流SEI参数</p>
         /// </summary>
         [JsonProperty("SeiParams")]
         public McuSeiParams SeiParams{ get; set; }
 
         /// <summary>
-        /// 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+        /// <p>回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。</p>
         /// </summary>
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }
 
         /// <summary>
-        /// 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+        /// <p>转推录制参数，<a href="https://cloud.tencent.com/document/product/647/111748">参考文档</a>。</p>
         /// </summary>
         [JsonProperty("RecordParams")]
         public McuRecordParams RecordParams{ get; set; }

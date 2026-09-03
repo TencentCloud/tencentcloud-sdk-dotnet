@@ -102,6 +102,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("RPM")]
         public long? RPM{ get; set; }
 
+        /// <summary>
+        /// <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+        /// </summary>
+        [JsonProperty("ModelStatus")]
+        public string ModelStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "TPM", this.TPM);
             this.SetParamSimple(map, prefix + "AutoAdjustQuota", this.AutoAdjustQuota);
             this.SetParamSimple(map, prefix + "RPM", this.RPM);
+            this.SetParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
         }
     }
 }

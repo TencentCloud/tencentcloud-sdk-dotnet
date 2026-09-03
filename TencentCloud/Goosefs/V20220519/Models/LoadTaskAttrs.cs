@@ -25,73 +25,79 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 预热任务 ID
+        /// <p>预热任务 ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
+        /// <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务描述，支持中文
+        /// <p>任务描述，支持中文</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+        /// <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+        /// <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
         /// </summary>
         [JsonProperty("MetadataLoadAttrs")]
         public MetadataLoadAttrs MetadataLoadAttrs{ get; set; }
 
         /// <summary>
-        /// 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+        /// <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
         /// </summary>
         [JsonProperty("DistributedLoadAttrs")]
         public DistributedLoadAttrs DistributedLoadAttrs{ get; set; }
 
         /// <summary>
-        /// 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+        /// <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+        /// </summary>
+        [JsonProperty("LoadDataAttrs")]
+        public LoadDataAttrs LoadDataAttrs{ get; set; }
+
+        /// <summary>
+        /// <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
         /// </summary>
         [JsonProperty("ReportPath")]
         public string ReportPath{ get; set; }
 
         /// <summary>
-        /// 枚举，Completed，Running，Waiting，Cancelled
+        /// <p>枚举，Completed，Running，Waiting，Cancelled</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
+        /// <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }
 
         /// <summary>
-        /// 预热任务创建时间
+        /// <p>预热任务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 预热任务变更时间
+        /// <p>预热任务变更时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 任务提交账号，子账号或服务角色 ID
+        /// <p>任务提交账号，子账号或服务角色 ID</p>
         /// </summary>
         [JsonProperty("Requester")]
         public string Requester{ get; set; }
@@ -108,6 +114,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamObj(map, prefix + "MetadataLoadAttrs.", this.MetadataLoadAttrs);
             this.SetParamObj(map, prefix + "DistributedLoadAttrs.", this.DistributedLoadAttrs);
+            this.SetParamObj(map, prefix + "LoadDataAttrs.", this.LoadDataAttrs);
             this.SetParamSimple(map, prefix + "ReportPath", this.ReportPath);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "TaskMessage", this.TaskMessage);

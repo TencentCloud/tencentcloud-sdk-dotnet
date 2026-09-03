@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+        /// <p>音频编码。默认为自动适配</p>
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }

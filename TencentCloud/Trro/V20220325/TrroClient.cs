@@ -28,7 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
-       private const string sdkVersion = "SDK_NET_3.0.1461";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 提交S3兼容存储桶数据源的目录前缀创建批量标注任务。创建后，服务端异步列举前缀下全部视频逐个建立处理项（受配额上限控制，超限截断）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchVideoAnnotationJobRequest"/></param>
+        /// <returns><see cref="CreateBatchVideoAnnotationJobResponse"/></returns>
+        public Task<CreateBatchVideoAnnotationJobResponse> CreateBatchVideoAnnotationJob(CreateBatchVideoAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<CreateBatchVideoAnnotationJobResponse>(req, "CreateBatchVideoAnnotationJob");
+        }
+
+        /// <summary>
+        /// 提交S3兼容存储桶数据源的目录前缀创建批量标注任务。创建后，服务端异步列举前缀下全部视频逐个建立处理项（受配额上限控制，超限截断）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchVideoAnnotationJobRequest"/></param>
+        /// <returns><see cref="CreateBatchVideoAnnotationJobResponse"/></returns>
+        public CreateBatchVideoAnnotationJobResponse CreateBatchVideoAnnotationJobSync(CreateBatchVideoAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<CreateBatchVideoAnnotationJobResponse>(req, "CreateBatchVideoAnnotationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
@@ -180,6 +201,69 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 提交单个视频创建标注任务。支持 S3兼容 存储与 HTTP URL 两种输入源；通过后任务异步执行。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoAnnotationJobRequest"/></param>
+        /// <returns><see cref="CreateVideoAnnotationJobResponse"/></returns>
+        public Task<CreateVideoAnnotationJobResponse> CreateVideoAnnotationJob(CreateVideoAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<CreateVideoAnnotationJobResponse>(req, "CreateVideoAnnotationJob");
+        }
+
+        /// <summary>
+        /// 提交单个视频创建标注任务。支持 S3兼容 存储与 HTTP URL 两种输入源；通过后任务异步执行。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoAnnotationJobRequest"/></param>
+        /// <returns><see cref="CreateVideoAnnotationJobResponse"/></returns>
+        public CreateVideoAnnotationJobResponse CreateVideoAnnotationJobSync(CreateVideoAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<CreateVideoAnnotationJobResponse>(req, "CreateVideoAnnotationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除整个任务并级联删除其全部处理项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAnnotationJobRequest"/></param>
+        /// <returns><see cref="DeleteAnnotationJobResponse"/></returns>
+        public Task<DeleteAnnotationJobResponse> DeleteAnnotationJob(DeleteAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<DeleteAnnotationJobResponse>(req, "DeleteAnnotationJob");
+        }
+
+        /// <summary>
+        /// 删除整个任务并级联删除其全部处理项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAnnotationJobRequest"/></param>
+        /// <returns><see cref="DeleteAnnotationJobResponse"/></returns>
+        public DeleteAnnotationJobResponse DeleteAnnotationJobSync(DeleteAnnotationJobRequest req)
+        {
+            return InternalRequestAsync<DeleteAnnotationJobResponse>(req, "DeleteAnnotationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除任务下的单个处理项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAnnotationTaskRequest"/></param>
+        /// <returns><see cref="DeleteAnnotationTaskResponse"/></returns>
+        public Task<DeleteAnnotationTaskResponse> DeleteAnnotationTask(DeleteAnnotationTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteAnnotationTaskResponse>(req, "DeleteAnnotationTask");
+        }
+
+        /// <summary>
+        /// 删除任务下的单个处理项。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAnnotationTaskRequest"/></param>
+        /// <returns><see cref="DeleteAnnotationTaskResponse"/></returns>
+        public DeleteAnnotationTaskResponse DeleteAnnotationTaskSync(DeleteAnnotationTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteAnnotationTaskResponse>(req, "DeleteAnnotationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
@@ -218,6 +302,69 @@ namespace TencentCloud.Trro.V20220325
         public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
         {
             return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询当前用户的任务列表，支持按状态、输入路径前缀过滤。注意任务的聚合状态由后台周期刷新，处理项全部完成后任务状态有短暂延迟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationJobsRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationJobsResponse"/></returns>
+        public Task<DescribeAnnotationJobsResponse> DescribeAnnotationJobs(DescribeAnnotationJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationJobsResponse>(req, "DescribeAnnotationJobs");
+        }
+
+        /// <summary>
+        /// 分页查询当前用户的任务列表，支持按状态、输入路径前缀过滤。注意任务的聚合状态由后台周期刷新，处理项全部完成后任务状态有短暂延迟。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationJobsRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationJobsResponse"/></returns>
+        public DescribeAnnotationJobsResponse DescribeAnnotationJobsSync(DescribeAnnotationJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationJobsResponse>(req, "DescribeAnnotationJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个处理项的标注结果详情，返回结果的完整 JSON 原文。仅处理成功（或需确认场景）返回内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationResultsRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationResultsResponse"/></returns>
+        public Task<DescribeAnnotationResultsResponse> DescribeAnnotationResults(DescribeAnnotationResultsRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationResultsResponse>(req, "DescribeAnnotationResults");
+        }
+
+        /// <summary>
+        /// 查询单个处理项的标注结果详情，返回结果的完整 JSON 原文。仅处理成功（或需确认场景）返回内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationResultsRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationResultsResponse"/></returns>
+        public DescribeAnnotationResultsResponse DescribeAnnotationResultsSync(DescribeAnnotationResultsRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationResultsResponse>(req, "DescribeAnnotationResults")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询某任务下的处理项列表（每个视频一项），支持按文件名前缀、状态过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationTasksRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationTasksResponse"/></returns>
+        public Task<DescribeAnnotationTasksResponse> DescribeAnnotationTasks(DescribeAnnotationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationTasksResponse>(req, "DescribeAnnotationTasks");
+        }
+
+        /// <summary>
+        /// 分页查询某任务下的处理项列表（每个视频一项），支持按文件名前缀、状态过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAnnotationTasksRequest"/></param>
+        /// <returns><see cref="DescribeAnnotationTasksResponse"/></returns>
+        public DescribeAnnotationTasksResponse DescribeAnnotationTasksSync(DescribeAnnotationTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeAnnotationTasksResponse>(req, "DescribeAnnotationTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -667,6 +814,27 @@ namespace TencentCloud.Trro.V20220325
         public ModifyProjectSecModeResponse ModifyProjectSecModeSync(ModifyProjectSecModeRequest req)
         {
             return InternalRequestAsync<ModifyProjectSecModeResponse>(req, "ModifyProjectSecMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重跑超时或异常的处理项：重置回未处理状态重新等待执行，所属任务若为异常态自动恢复为处理中。其余状态不可重试。
+        /// </summary>
+        /// <param name="req"><see cref="RetryAnnotationTaskRequest"/></param>
+        /// <returns><see cref="RetryAnnotationTaskResponse"/></returns>
+        public Task<RetryAnnotationTaskResponse> RetryAnnotationTask(RetryAnnotationTaskRequest req)
+        {
+            return InternalRequestAsync<RetryAnnotationTaskResponse>(req, "RetryAnnotationTask");
+        }
+
+        /// <summary>
+        /// 重跑超时或异常的处理项：重置回未处理状态重新等待执行，所属任务若为异常态自动恢复为处理中。其余状态不可重试。
+        /// </summary>
+        /// <param name="req"><see cref="RetryAnnotationTaskRequest"/></param>
+        /// <returns><see cref="RetryAnnotationTaskResponse"/></returns>
+        public RetryAnnotationTaskResponse RetryAnnotationTaskSync(RetryAnnotationTaskRequest req)
+        {
+            return InternalRequestAsync<RetryAnnotationTaskResponse>(req, "RetryAnnotationTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,89 +25,88 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 扩容的时间单位。取值范围：
-        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+        /// <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 扩容的时长。结合TimeUnit一起使用。
-        /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-        /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+        /// <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
+        /// <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例计费模式。取值范围：
-        /// <li>0：表示按量计费。</li>
-        /// <li>1：表示包年包月。</li>
+        /// <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 扩容的Core节点数量。
+        /// <p>扩容的Core节点数量。</p>
         /// </summary>
         [JsonProperty("CoreCount")]
         public ulong? CoreCount{ get; set; }
 
         /// <summary>
-        /// 扩容的Task节点数量。
+        /// <p>扩容的Task节点数量。</p>
         /// </summary>
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
         /// <summary>
-        /// 货币种类。取值范围：
-        /// <li>CNY：表示人民币。</li>
+        /// <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// 扩容的Router节点数量。
+        /// <p>扩容的Router节点数量。</p>
         /// </summary>
         [JsonProperty("RouterCount")]
         public ulong? RouterCount{ get; set; }
 
         /// <summary>
-        /// 扩容的Master节点数量。
+        /// <p>扩容的Master节点数量。</p>
         /// </summary>
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
 
         /// <summary>
-        /// 类型为ComputeResource和EMR以及默认，默认为EMR
+        /// <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// 计算资源id
+        /// <p>计算资源id</p>
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
 
         /// <summary>
-        /// 扩容资源类型
+        /// <p>扩容资源类型</p>
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>节点组ID</p>
+        /// </summary>
+        [JsonProperty("NodeGroupId")]
+        public string NodeGroupId{ get; set; }
 
 
         /// <summary>
@@ -128,6 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
         }
     }
 }

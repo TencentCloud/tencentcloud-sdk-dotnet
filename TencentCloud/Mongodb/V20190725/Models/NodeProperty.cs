@@ -25,90 +25,74 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 节点所在的可用区。
+        /// <p>节点所在的可用区。</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 节点名称。
+        /// <p>节点名称。</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 节点访问地址。
+        /// <p>节点访问地址。</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 节点公网访问外网地址(IP或域名，示例为IP方式)。
+        /// <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
         /// </summary>
         [JsonProperty("WanServiceAddress")]
         public string WanServiceAddress{ get; set; }
 
         /// <summary>
-        /// 节点角色。
-        /// - PRIMARY：主节点。
-        /// - SECONDARY：从节点。
-        /// - READONLY：只读节点。
-        /// - ARBITER：仲裁节点。
+        /// <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// 节点是否为 Hidden 节点。
-        /// - true：Hidden 节点。
-        /// - false：非 Hidden 节点。
+        /// <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
 
         /// <summary>
-        /// 节点状态。
-        /// - NORMAL：正常运行中。
-        /// - STARTUP：正在启动。
-        /// - STARTUP2：正在启动，处理中间数据。
-        /// - RECOVERING：恢复中，暂不可用。
-        /// - DOWN：已掉线。
-        /// - UNKNOWN：未知状态。
-        /// - ROLLBACK：回滚中。
-        /// - REMOVED：已移除。
+        /// <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 主从同步延迟时间，单位：秒。
+        /// <p>主从同步延迟时间，单位：秒。</p>
         /// </summary>
         [JsonProperty("SlaveDelay")]
         public long? SlaveDelay{ get; set; }
 
         /// <summary>
-        /// 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+        /// <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 节点投票权。
-        /// - 1：具有投票权。
-        /// - 0：无投票权。
+        /// <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
         /// </summary>
         [JsonProperty("Votes")]
         public long? Votes{ get; set; }
 
         /// <summary>
-        /// 节点标签。
+        /// <p>节点标签。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public NodeTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 副本集 ID。
+        /// <p>副本集 ID。</p>
         /// </summary>
         [JsonProperty("ReplicateSetId")]
         public string ReplicateSetId{ get; set; }

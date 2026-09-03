@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 异步任务ID。
+        /// <p>异步任务ID。</p>
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public long? AsyncRequestId{ get; set; }

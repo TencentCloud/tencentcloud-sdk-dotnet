@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1498</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -73,8 +73,10 @@
     <Compile Include="V20220601\Models\CreatePrivilegeCodeRequest.cs" />
     <Compile Include="V20220601\Models\CreatePrivilegeCodeResponse.cs" />
     <Compile Include="V20220601\Models\CreatePrivilegeCodeRspData.cs" />
+    <Compile Include="V20220601\Models\DeleteAccountGroupRequest.cs" />
     <Compile Include="V20220601\Models\DeleteAccountGroupResourcesRequest.cs" />
     <Compile Include="V20220601\Models\DeleteAccountGroupResourcesResponse.cs" />
+    <Compile Include="V20220601\Models\DeleteAccountGroupResponse.cs" />
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupRequest.cs" />
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupResponse.cs" />
     <Compile Include="V20220601\Models\DeleteResourceData.cs" />
@@ -192,6 +194,7 @@
     <Compile Include="V20220601\Models\GrantedAccountGroupItem.cs" />
     <Compile Include="V20220601\Models\GrantedAccountItem.cs" />
     <Compile Include="V20220601\Models\GrantedVirtualGroupItem.cs" />
+    <Compile Include="V20220601\Models\I18nString.cs" />
     <Compile Include="V20220601\Models\ModifyBusinessResourceRequest.cs" />
     <Compile Include="V20220601\Models\ModifyBusinessResourceResponse.cs" />
     <Compile Include="V20220601\Models\ModifyCompanyDirectoryConfigRequest.cs" />

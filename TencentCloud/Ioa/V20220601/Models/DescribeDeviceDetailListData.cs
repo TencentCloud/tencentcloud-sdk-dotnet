@@ -25,119 +25,119 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 账号名
+        /// <p>账号名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 计算机名
+        /// <p>计算机名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputerName")]
         public string ComputerName{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户组IdPath
+        /// <p>用户组IdPath</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupIdPath")]
         public string AccountGroupIdPath{ get; set; }
 
         /// <summary>
-        /// 用户组id(只支持32位)
+        /// <p>用户组id(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 终端组名path
+        /// <p>终端组名path</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNamePath")]
         public string GroupNamePath{ get; set; }
 
         /// <summary>
-        /// Ip地址
+        /// <p>Ip地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 用户组名
+        /// <p>用户组名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupName")]
         public string AccountGroupName{ get; set; }
 
         /// <summary>
-        /// 终端组IdPath
+        /// <p>终端组IdPath</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupIdPath")]
         public string GroupIdPath{ get; set; }
 
         /// <summary>
-        /// 唯一标识Mid
+        /// <p>唯一标识Mid</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mid")]
         public string Mid{ get; set; }
 
         /// <summary>
-        /// IOA账号名
+        /// <p>IOA账号名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IoaUserName")]
         public string IoaUserName{ get; set; }
 
         /// <summary>
-        /// 所在分组Id(只支持32位)
+        /// <p>所在分组Id(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 所在分组Name
+        /// <p>所在分组Name</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Mac地址
+        /// <p>Mac地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mac")]
         public string Mac{ get; set; }
 
         /// <summary>
-        /// 软件版本
+        /// <p>软件版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 用户组名Path
+        /// <p>用户组名Path</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupNamePath")]
         public string AccountGroupNamePath{ get; set; }
 
         /// <summary>
-        /// 列表Id(只支持32位)
+        /// <p>列表Id(只支持32位)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]

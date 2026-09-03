@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 节点属性
+        /// <p>节点属性</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public NodeProperty[] Nodes{ get; set; }

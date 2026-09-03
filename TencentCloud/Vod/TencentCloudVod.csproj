@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1499</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -284,6 +284,8 @@
     <Compile Include="V20180717\Models\CloneVoiceAsyncRequest.cs" />
     <Compile Include="V20180717\Models\CloneVoiceAsyncResponse.cs" />
     <Compile Include="V20180717\Models\CloneVoiceAsyncTask.cs" />
+    <Compile Include="V20180717\Models\CloneVoiceSyncRequest.cs" />
+    <Compile Include="V20180717\Models\CloneVoiceSyncResponse.cs" />
     <Compile Include="V20180717\Models\ColorEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\CommitUploadRequest.cs" />
     <Compile Include="V20180717\Models\CommitUploadResponse.cs" />
@@ -1156,6 +1158,9 @@
     <Compile Include="V20180717\Models\TextToSpeechAsyncRequest.cs" />
     <Compile Include="V20180717\Models\TextToSpeechAsyncResponse.cs" />
     <Compile Include="V20180717\Models\TextToSpeechAsyncTask.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechSyncOutputOption.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechSyncRequest.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechSyncResponse.cs" />
     <Compile Include="V20180717\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="V20180717\Models\ThirdPartyDrmInfo.cs" />

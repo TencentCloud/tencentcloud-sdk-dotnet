@@ -1,0 +1,190 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Dlc.V20210125.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateBenchmarkTaskResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>benchmark任务id</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// <p>benchmark任务名称</p>
+        /// </summary>
+        [JsonProperty("TaskName")]
+        public string TaskName{ get; set; }
+
+        /// <summary>
+        /// <p>推理服务id</p>
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
+        /// <p>推理服务名称</p>
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// <p>任务状态</p><p>枚举值：</p><ul><li>Completed： 完成</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>输入token量</p>
+        /// </summary>
+        [JsonProperty("InputTokens")]
+        public ulong? InputTokens{ get; set; }
+
+        /// <summary>
+        /// <p>输出token量</p>
+        /// </summary>
+        [JsonProperty("OutputTokens")]
+        public ulong? OutputTokens{ get; set; }
+
+        /// <summary>
+        /// <p>每秒请求量</p>
+        /// </summary>
+        [JsonProperty("RequestsPerSecond")]
+        public float? RequestsPerSecond{ get; set; }
+
+        /// <summary>
+        /// <p>最大并发量</p>
+        /// </summary>
+        [JsonProperty("MaxConcurrency")]
+        public ulong? MaxConcurrency{ get; set; }
+
+        /// <summary>
+        /// <p>prompts总量</p>
+        /// </summary>
+        [JsonProperty("TotalPrompts")]
+        public ulong? TotalPrompts{ get; set; }
+
+        /// <summary>
+        /// <p>是否使用Gateway</p>
+        /// </summary>
+        [JsonProperty("UseGateway")]
+        public bool? UseGateway{ get; set; }
+
+        /// <summary>
+        /// <p>部署集群名称</p>
+        /// </summary>
+        [JsonProperty("DeploymentName")]
+        public string DeploymentName{ get; set; }
+
+        /// <summary>
+        /// <p>apikey的id</p>
+        /// </summary>
+        [JsonProperty("ApiKeyId")]
+        public string ApiKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>apikey名称</p>
+        /// </summary>
+        [JsonProperty("ApiKeyName")]
+        public string ApiKeyName{ get; set; }
+
+        /// <summary>
+        /// <p>主账号uin</p>
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public ulong? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>appid</p>
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// <p>子账号uin</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>与本次评测关联的部署及其资源规格。</p>
+        /// </summary>
+        [JsonProperty("DeploymentResources")]
+        public DeploymentResourceInfo[] DeploymentResources{ get; set; }
+
+        /// <summary>
+        /// <p>评测容器自身使用的资源规格</p>
+        /// </summary>
+        [JsonProperty("Resources")]
+        public BenchmarkResourceInfo Resources{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "InputTokens", this.InputTokens);
+            this.SetParamSimple(map, prefix + "OutputTokens", this.OutputTokens);
+            this.SetParamSimple(map, prefix + "RequestsPerSecond", this.RequestsPerSecond);
+            this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
+            this.SetParamSimple(map, prefix + "TotalPrompts", this.TotalPrompts);
+            this.SetParamSimple(map, prefix + "UseGateway", this.UseGateway);
+            this.SetParamSimple(map, prefix + "DeploymentName", this.DeploymentName);
+            this.SetParamSimple(map, prefix + "ApiKeyId", this.ApiKeyId);
+            this.SetParamSimple(map, prefix + "ApiKeyName", this.ApiKeyName);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamArrayObj(map, prefix + "DeploymentResources.", this.DeploymentResources);
+            this.SetParamObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

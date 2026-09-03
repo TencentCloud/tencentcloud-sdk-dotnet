@@ -25,53 +25,52 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 启动配置ID。可通过如下方式获取：
-        /// <li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
-        /// <li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+        /// <p>启动配置ID。可通过如下方式获取：</p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li><li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// 是否清空数据盘信息，非必填，默认为 false。
-        /// 填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
+        /// <p>是否清空数据盘信息，非必填，默认为 false。<br>填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。</p>
         /// </summary>
         [JsonProperty("ClearDataDisks")]
         public bool? ClearDataDisks{ get; set; }
 
         /// <summary>
-        /// 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
-        /// 填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+        /// <p>是否清空云服务器主机名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。</p>
         /// </summary>
         [JsonProperty("ClearHostNameSettings")]
         public bool? ClearHostNameSettings{ get; set; }
 
         /// <summary>
-        /// 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
-        /// 填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+        /// <p>是否清空云服务器实例名相关设置信息，非必填，默认为 false。<br>填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。</p>
         /// </summary>
         [JsonProperty("ClearInstanceNameSettings")]
         public bool? ClearInstanceNameSettings{ get; set; }
 
         /// <summary>
-        /// 是否清空置放群组信息，非必填，默认为 false。
-        /// 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+        /// <p>是否清空置放群组信息，非必填，默认为 false。<br>填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。</p>
         /// </summary>
         [JsonProperty("ClearDisasterRecoverGroupIds")]
         public bool? ClearDisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// 是否清空实例标签列表，非必填，默认为 false。
-        /// 填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+        /// <p>是否清空实例标签列表，非必填，默认为 false。<br>填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。</p>
         /// </summary>
         [JsonProperty("ClearInstanceTags")]
         public bool? ClearInstanceTags{ get; set; }
 
         /// <summary>
-        /// 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+        /// <p>是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。</p>
         /// </summary>
         [JsonProperty("ClearMetadata")]
         public bool? ClearMetadata{ get; set; }
+
+        /// <summary>
+        /// <p>是否清除启动配置中的 NetworkInterfaces。取值 TRUE 时清除；未传或 FALSE 时不处理该字段。</p>
+        /// </summary>
+        [JsonProperty("ClearNetworkInterfaces")]
+        public bool? ClearNetworkInterfaces{ get; set; }
 
 
         /// <summary>
@@ -86,6 +85,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
             this.SetParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
+            this.SetParamSimple(map, prefix + "ClearNetworkInterfaces", this.ClearNetworkInterfaces);
         }
     }
 }

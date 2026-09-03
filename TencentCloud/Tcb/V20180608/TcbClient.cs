@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1499";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -2113,6 +2113,27 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyLoginConfigResponse ModifyLoginConfigSync(ModifyLoginConfigRequest req)
         {
             return InternalRequestAsync<ModifyLoginConfigResponse>(req, "ModifyLoginConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对 PG 独享实例变配
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPGInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyPGInstanceSpecResponse"/></returns>
+        public Task<ModifyPGInstanceSpecResponse> ModifyPGInstanceSpec(ModifyPGInstanceSpecRequest req)
+        {
+            return InternalRequestAsync<ModifyPGInstanceSpecResponse>(req, "ModifyPGInstanceSpec");
+        }
+
+        /// <summary>
+        /// 对 PG 独享实例变配
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPGInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyPGInstanceSpecResponse"/></returns>
+        public ModifyPGInstanceSpecResponse ModifyPGInstanceSpecSync(ModifyPGInstanceSpecRequest req)
+        {
+            return InternalRequestAsync<ModifyPGInstanceSpecResponse>(req, "ModifyPGInstanceSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

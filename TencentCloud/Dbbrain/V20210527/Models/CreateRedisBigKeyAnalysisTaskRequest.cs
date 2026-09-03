@@ -25,29 +25,34 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
+        /// <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 分片节点序号列表。当列表为空时，选择所有分片节点。
+        /// <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
         /// </summary>
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }
 
         /// <summary>
-        /// Top Key前缀的分隔符列表。
-        /// 目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+        /// <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
         /// </summary>
         [JsonProperty("KeyDelimiterList")]
         public string[] KeyDelimiterList{ get; set; }
+
+        /// <summary>
+        /// <p>历史备份文件ID</p>
+        /// </summary>
+        [JsonProperty("BackupId")]
+        public string BackupId{ get; set; }
 
 
         /// <summary>
@@ -59,6 +64,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
             this.SetParamArraySimple(map, prefix + "KeyDelimiterList.", this.KeyDelimiterList);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
         }
     }
 }

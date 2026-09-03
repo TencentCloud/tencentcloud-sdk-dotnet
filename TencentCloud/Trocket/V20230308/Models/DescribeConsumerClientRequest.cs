@@ -31,7 +31,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+        /// <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }

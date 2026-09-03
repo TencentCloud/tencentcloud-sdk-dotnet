@@ -25,109 +25,109 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 设备组id
+        /// <p>设备组id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 设备组名称
+        /// <p>设备组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备组描述
+        /// <p>设备组描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 父节点id
+        /// <p>父节点id</p>
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 基于id的节点路径
+        /// <p>基于id的节点路径</p>
         /// </summary>
         [JsonProperty("IdPath")]
         public string IdPath{ get; set; }
 
         /// <summary>
-        /// 基于名称的节点路径
+        /// <p>基于名称的节点路径</p>
         /// </summary>
         [JsonProperty("NamePath")]
         public string NamePath{ get; set; }
 
         /// <summary>
-        /// 分组锁定状态
+        /// <p>分组锁定状态</p>
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
-        /// 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
+        /// <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// <p>排序</p>
         /// </summary>
         [JsonProperty("Sort")]
         public long? Sort{ get; set; }
 
         /// <summary>
-        /// 是否自动调整
+        /// <p>是否自动调整</p>
         /// </summary>
         [JsonProperty("FromAuto")]
         public long? FromAuto{ get; set; }
 
         /// <summary>
-        /// 子节点数量
+        /// <p>子节点数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 图标
+        /// <p>图标</p>
         /// </summary>
         [JsonProperty("Icon")]
         public string Icon{ get; set; }
 
         /// <summary>
-        /// 是否有ip
+        /// <p>是否有ip</p>
         /// </summary>
         [JsonProperty("WithIp")]
         public long? WithIp{ get; set; }
 
         /// <summary>
-        /// 是否有组ip
+        /// <p>是否有组ip</p>
         /// </summary>
         [JsonProperty("HasIp")]
         public bool? HasIp{ get; set; }
 
         /// <summary>
-        /// 是否是叶子节点
+        /// <p>是否是叶子节点</p>
         /// </summary>
         [JsonProperty("IsLeaf")]
         public bool? IsLeaf{ get; set; }
 
         /// <summary>
-        /// 是否只读
+        /// <p>是否只读</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 对应绑定的账号id
+        /// <p>对应绑定的账号id</p>
         /// </summary>
         [JsonProperty("BindAccount")]
         public long? BindAccount{ get; set; }
 
         /// <summary>
-        /// 绑定账号的用户名
+        /// <p>绑定账号的用户名</p>
         /// </summary>
         [JsonProperty("BindAccountName")]
         public string BindAccountName{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1497</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -116,6 +116,7 @@
     <Compile Include="V20220519\Models\LinuxNodeAttribute.cs" />
     <Compile Include="V20220519\Models\ListLoadTasksRequest.cs" />
     <Compile Include="V20220519\Models\ListLoadTasksResponse.cs" />
+    <Compile Include="V20220519\Models\LoadDataAttrs.cs" />
     <Compile Include="V20220519\Models\LoadTaskAttrs.cs" />
     <Compile Include="V20220519\Models\LoadTaskCreationAttrs.cs" />
     <Compile Include="V20220519\Models\MappedBucket.cs" />

@@ -66,6 +66,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverMobileMode")]
         public string ApproverMobileMode{ get; set; }
 
+        /// <summary>
+        /// <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+        /// </summary>
+        [JsonProperty("AddSignComponentUseSealSize")]
+        public ulong? AddSignComponentUseSealSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
             this.SetParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
             this.SetParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
+            this.SetParamSimple(map, prefix + "AddSignComponentUseSealSize", this.AddSignComponentUseSealSize);
         }
     }
 }

@@ -25,34 +25,36 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// mcp server id
+        /// <p>mcp server id</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 是否需要鉴权
+        /// <p>是否需要鉴权（已废弃，请勿使用）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedAuth")]
+        [System.Obsolete]
         public bool? NeedAuth{ get; set; }
 
         /// <summary>
-        /// 凭据代填的ID
+        /// <p>凭据代填的ID（已废弃，请勿使用）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentCredentialID")]
+        [System.Obsolete]
         public string AgentCredentialID{ get; set; }
 
         /// <summary>
-        /// 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+        /// <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSEResourceIdentifier")]
         public string SSEResourceIdentifier{ get; set; }
 
         /// <summary>
-        /// 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+        /// <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamableResourceIdentifier")]

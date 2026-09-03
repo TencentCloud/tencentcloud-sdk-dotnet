@@ -38,7 +38,17 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Keywords - String - 是否必填：否 - 关键字(主机内网IP|进程名)</li>
+        /// <li>ProcName - String - 是否必填：否 - 进程名(模糊匹配进程名或父进程名)</li>
+        /// <li>MachineName - String - 是否必填：否 - 主机名称(模糊匹配)</li>
+        /// <li>InstanceID - String - 是否必填：否 - 实例ID(模糊匹配)</li>
+        /// <li>IP - String - 是否必填：否 - 主机IP(内网IP或公网IP,模糊匹配)</li>
+        /// <li>Quuid - String - 是否必填：否 - 主机QUUID(支持多个)</li>
+        /// <li>Uuid - String - 是否必填：否 - 主机UUID</li>
+        /// <li>Status - String - 是否必填：否 - 处理状态(0:待处理 2:已加入白名单 3:已处理 4:已忽略)</li>
+        /// <li>DetectBy - String - 是否必填：否 - 检测方式(0:行为分析 1:命令特征检测)</li>
+        /// <li>ID - String - 是否必填：否 - 事件ID(支持多个)</li>
+        /// <li>CreateBeginTime - String - 是否必填：否 - 发生开始时间</li>
+        /// <li>CreateEndTime - String - 是否必填：否 - 发生结束时间</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

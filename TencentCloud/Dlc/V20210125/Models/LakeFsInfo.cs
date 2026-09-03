@@ -25,58 +25,70 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 托管存储名称
+        /// <p>托管存储名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 托管存储类型
+        /// <p>托管存储类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 存储用量
+        /// <p>存储用量</p>
         /// </summary>
         [JsonProperty("SpaceUsedSize")]
         public float? SpaceUsedSize{ get; set; }
 
         /// <summary>
-        /// 创建时候的时间戳
+        /// <p>创建时候的时间戳</p>
         /// </summary>
         [JsonProperty("CreateTimeStamp")]
         public long? CreateTimeStamp{ get; set; }
 
         /// <summary>
-        /// 是否是用户默认桶，0：默认桶，1：非默认桶
+        /// <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
         /// </summary>
         [JsonProperty("DefaultBucket")]
         public long? DefaultBucket{ get; set; }
 
         /// <summary>
-        /// 托管存储short name
+        /// <p>托管存储short name</p>
         /// </summary>
         [JsonProperty("ShortName")]
         public string ShortName{ get; set; }
 
         /// <summary>
-        /// 桶描述信息
+        /// <p>桶描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+        /// <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 托管存储桶标签列表
+        /// <p>托管存储桶标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
+
+        /// <summary>
+        /// <p>是否是多AZ存储桶</p>
+        /// </summary>
+        [JsonProperty("MultiAZ")]
+        public bool? MultiAZ{ get; set; }
+
+        /// <summary>
+        /// <p>存储桶配置信息</p>
+        /// </summary>
+        [JsonProperty("Configuration")]
+        public KVPair[] Configuration{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "MultiAZ", this.MultiAZ);
+            this.SetParamArrayObj(map, prefix + "Configuration.", this.Configuration);
         }
     }
 }

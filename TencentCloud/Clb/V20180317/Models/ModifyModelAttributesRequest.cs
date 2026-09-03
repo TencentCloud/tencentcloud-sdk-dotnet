@@ -31,10 +31,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ServiceProviderId{ get; set; }
 
         /// <summary>
-        /// <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+        /// <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
         /// </summary>
         [JsonProperty("ServiceProviderName")]
         public string ServiceProviderName{ get; set; }
+
+        /// <summary>
+        /// <p>多协议 Api Base URL</p>
+        /// </summary>
+        [JsonProperty("ApiBases")]
+        public ApiBaseItem[] ApiBases{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+            this.SetParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
         }
     }
 }

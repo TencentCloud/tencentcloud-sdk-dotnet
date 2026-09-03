@@ -25,40 +25,46 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
+        /// <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+        /// <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// 任务描述，支持中文
+        /// <p>任务描述，支持中文</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+        /// <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
         /// </summary>
         [JsonProperty("MetadataLoadAttrs")]
         public MetadataLoadAttrs MetadataLoadAttrs{ get; set; }
 
         /// <summary>
-        /// 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+        /// <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
         /// </summary>
         [JsonProperty("DistributedLoadAttrs")]
         public DistributedLoadAttrs DistributedLoadAttrs{ get; set; }
 
         /// <summary>
-        /// 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+        /// <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
         /// </summary>
         [JsonProperty("ReportPath")]
         public string ReportPath{ get; set; }
+
+        /// <summary>
+        /// <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+        /// </summary>
+        [JsonProperty("LoadDataAttrs")]
+        public LoadDataAttrs LoadDataAttrs{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamObj(map, prefix + "MetadataLoadAttrs.", this.MetadataLoadAttrs);
             this.SetParamObj(map, prefix + "DistributedLoadAttrs.", this.DistributedLoadAttrs);
             this.SetParamSimple(map, prefix + "ReportPath", this.ReportPath);
+            this.SetParamObj(map, prefix + "LoadDataAttrs.", this.LoadDataAttrs);
         }
     }
 }

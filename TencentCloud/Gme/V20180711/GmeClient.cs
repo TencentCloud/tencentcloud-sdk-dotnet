@@ -28,7 +28,7 @@ namespace TencentCloud.Gme.V20180711
 
        private const string endpoint = "gme.tencentcloudapi.com";
        private const string version = "2018-07-11";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -355,7 +355,7 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表，**默认只返回GME2.0应用，如果还需要包含GME3.0应用请将NewVersion置为1**
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>
@@ -365,7 +365,7 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表，**默认只返回GME2.0应用，如果还需要包含GME3.0应用请将NewVersion置为1**
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>

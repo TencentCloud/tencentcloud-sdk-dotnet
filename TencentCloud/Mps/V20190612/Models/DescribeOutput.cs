@@ -25,149 +25,154 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输出Id。
+        /// <p>输出Id。</p>
         /// </summary>
         [JsonProperty("OutputId")]
         public string OutputId{ get; set; }
 
         /// <summary>
-        /// 输出名称。
+        /// <p>输出名称。</p>
         /// </summary>
         [JsonProperty("OutputName")]
         public string OutputName{ get; set; }
 
         /// <summary>
-        /// 输出类型。
+        /// <p>输出类型。</p>
         /// </summary>
         [JsonProperty("OutputType")]
         public string OutputType{ get; set; }
 
         /// <summary>
-        /// 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+        /// <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
         /// </summary>
         [JsonProperty("OutputKind")]
         public string OutputKind{ get; set; }
 
         /// <summary>
-        /// 输出描述。
+        /// <p>输出描述。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 输出协议。
+        /// <p>输出协议。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 输出的出口地址信息列表。
+        /// <p>输出的出口地址信息列表。</p>
         /// </summary>
         [JsonProperty("OutputAddressList")]
         public OutputAddress[] OutputAddressList{ get; set; }
 
         /// <summary>
-        /// 输出的地区。
+        /// <p>输出的地区。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputRegion")]
         public string OutputRegion{ get; set; }
 
         /// <summary>
-        /// 输出的SRT配置信息。
+        /// <p>输出的SRT配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SRTSettings")]
         public DescribeOutputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// 输出的RTP配置信息。
+        /// <p>输出的RTP配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTPSettings")]
         public DescribeOutputRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// 输出的RTMP配置信息。
+        /// <p>输出的RTMP配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public DescribeOutputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// 输出的RTMP拉流配置信息。
+        /// <p>输出的RTMP拉流配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeOutputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// CIDR白名单列表。
-        /// 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+        /// <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// 输出的RTSP拉流配置信息。
+        /// <p>输出的RTSP拉流配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeOutputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 输出的HLS拉流配置信息。
+        /// <p>输出的HLS拉流配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 最大拉流并发数，最大为4，默认4。
+        /// <p>最大拉流并发数，最大为4，默认4。</p>
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
 
         /// <summary>
-        /// 绑定的安全组 ID。
+        /// <p>绑定的安全组 ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 可用区，output目前最多只支持一个。	
+        /// <p>可用区，output目前最多只支持一个。</p>
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 输出的RIST配置信息。
+        /// <p>输出的RIST配置信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RISTSettings")]
         public DescribeOutputRISTSettings RISTSettings{ get; set; }
 
         /// <summary>
-        /// 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+        /// <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
         /// </summary>
         [JsonProperty("PidSelector")]
         [System.Obsolete]
         public PidSelector PidSelector{ get; set; }
 
         /// <summary>
-        /// 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+        /// <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
         /// </summary>
         [JsonProperty("StreamUrls")]
         public StreamUrlDetail[] StreamUrls{ get; set; }
 
         /// <summary>
-        /// 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+        /// <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
         /// </summary>
         [JsonProperty("StreamSelector")]
         public StreamSelector StreamSelector{ get; set; }
+
+        /// <summary>
+        /// <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
 
 
         /// <summary>
@@ -197,6 +202,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
             this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
             this.SetParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

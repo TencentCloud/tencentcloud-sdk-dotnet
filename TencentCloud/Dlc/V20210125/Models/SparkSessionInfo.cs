@@ -25,83 +25,94 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// spark session id
+        /// <p>spark session id</p>
         /// </summary>
         [JsonProperty("SparkSessionId")]
         public string SparkSessionId{ get; set; }
 
         /// <summary>
-        /// spark session名称
+        /// <p>spark session名称</p>
         /// </summary>
         [JsonProperty("SparkSessionName")]
         public string SparkSessionName{ get; set; }
 
         /// <summary>
-        /// 资源组id
+        /// <p>资源组id</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// engine session id
+        /// <p>engine session id</p>
         /// </summary>
         [JsonProperty("EngineSessionId")]
         public string EngineSessionId{ get; set; }
 
         /// <summary>
-        /// engine session   
-        /// name
+        /// <p>engine session<br>name</p>
         /// </summary>
         [JsonProperty("EngineSessionName")]
         public string EngineSessionName{ get; set; }
 
         /// <summary>
-        /// 自动销毁时间
+        /// <p>自动销毁时间</p>
         /// </summary>
         [JsonProperty("IdleTimeoutMin")]
         public long? IdleTimeoutMin{ get; set; }
 
         /// <summary>
-        /// driver规格
+        /// <p>driver规格</p>
         /// </summary>
         [JsonProperty("DriverSpec")]
         public string DriverSpec{ get; set; }
 
         /// <summary>
-        /// executor规格
+        /// <p>executor规格</p>
         /// </summary>
         [JsonProperty("ExecutorSpec")]
         public string ExecutorSpec{ get; set; }
 
         /// <summary>
-        /// executor最小数量
+        /// <p>executor最小数量</p>
         /// </summary>
         [JsonProperty("ExecutorNumMin")]
         public long? ExecutorNumMin{ get; set; }
 
         /// <summary>
-        /// executor最大数量
+        /// <p>executor最大数量</p>
         /// </summary>
         [JsonProperty("ExecutorNumMax")]
         public long? ExecutorNumMax{ get; set; }
 
         /// <summary>
-        /// 总规格最小
+        /// <p>总规格最小</p>
         /// </summary>
         [JsonProperty("TotalSpecMin")]
         public long? TotalSpecMin{ get; set; }
 
         /// <summary>
-        /// 总规格最大
+        /// <p>总规格最大</p>
         /// </summary>
         [JsonProperty("TotalSpecMax")]
         public long? TotalSpecMax{ get; set; }
 
         /// <summary>
-        /// 状态，STARTING、RUNNING、TERMINATED
+        /// <p>状态，STARTING、RUNNING、TERMINATED</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
+
+        /// <summary>
+        /// <p>应用 ID</p>
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// <p>应用启动时间</p>
+        /// </summary>
+        [JsonProperty("ApplicationStartTime")]
+        public long? ApplicationStartTime{ get; set; }
 
 
         /// <summary>
@@ -122,6 +133,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TotalSpecMin", this.TotalSpecMin);
             this.SetParamSimple(map, prefix + "TotalSpecMax", this.TotalSpecMax);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ApplicationStartTime", this.ApplicationStartTime);
         }
     }
 }

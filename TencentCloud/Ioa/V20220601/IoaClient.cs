@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1498";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Ioa.V20220601
         public CreatePrivilegeCodeResponse CreatePrivilegeCodeSync(CreatePrivilegeCodeRequest req)
         {
             return InternalRequestAsync<CreatePrivilegeCodeResponse>(req, "CreatePrivilegeCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 管理员在目录管理页面删除一个分组，私有化调用path为：capi/Assets/DeleteAccountGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public Task<DeleteAccountGroupResponse> DeleteAccountGroup(DeleteAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResponse>(req, "DeleteAccountGroup");
+        }
+
+        /// <summary>
+        /// 管理员在目录管理页面删除一个分组，私有化调用path为：capi/Assets/DeleteAccountGroup
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public DeleteAccountGroupResponse DeleteAccountGroupSync(DeleteAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResponse>(req, "DeleteAccountGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -210,6 +210,18 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("TaskComplexityRoute")]
         public TaskComplexityRouteDTO TaskComplexityRoute{ get; set; }
 
+        /// <summary>
+        /// <p>访问域名</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>访问协议</p>
+        /// </summary>
+        [JsonProperty("RequestProtocolType")]
+        public string RequestProtocolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +259,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
             this.SetParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
             this.SetParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
         }
     }
 }

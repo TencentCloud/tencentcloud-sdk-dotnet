@@ -24,12 +24,33 @@ namespace TencentCloud.Trtc.V20190722.Models
     public class SetVocabStateV3Request : AbstractModel
     {
         
+        /// <summary>
+        /// <p>词表 id</p>
+        /// </summary>
+        [JsonProperty("VocabId")]
+        public string VocabId{ get; set; }
+
+        /// <summary>
+        /// <p>是否设置为默认词表</p>
+        /// </summary>
+        [JsonProperty("State")]
+        public long? State{ get; set; }
+
+        /// <summary>
+        /// <p>客户维度唯一标识</p>
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VocabId", this.VocabId);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

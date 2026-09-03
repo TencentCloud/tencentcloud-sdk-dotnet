@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 获取应用列表返回
+        /// <p>获取应用列表返回</p>
         /// </summary>
         [JsonProperty("ApplicationList")]
         public ApplicationList[] ApplicationList{ get; set; }
 
         /// <summary>
-        /// 应用总数
+        /// <p>应用总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

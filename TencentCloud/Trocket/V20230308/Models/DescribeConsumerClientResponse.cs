@@ -25,18 +25,24 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 客户端详情
+        /// <p>客户端详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Client")]
         public ConsumerClient Client{ get; set; }
 
         /// <summary>
-        /// 主题消费信息
+        /// <p>主题消费信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicList")]
         public TopicConsumeStats[] TopicList{ get; set; }
+
+        /// <summary>
+        /// <p>订阅主题总数</p>
+        /// </summary>
+        [JsonProperty("TopicTotalCount")]
+        public long? TopicTotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,6 +58,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         {
             this.SetParamObj(map, prefix + "Client.", this.Client);
             this.SetParamArrayObj(map, prefix + "TopicList.", this.TopicList);
+            this.SetParamSimple(map, prefix + "TopicTotalCount", this.TopicTotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

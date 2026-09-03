@@ -55,7 +55,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+        /// <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

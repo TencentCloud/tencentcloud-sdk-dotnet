@@ -24,12 +24,54 @@ namespace TencentCloud.Trtc.V20190722.Models
     public class UpdateRecognizeVocabV3Request : AbstractModel
     {
         
+        /// <summary>
+        /// <p>词表 id</p>
+        /// </summary>
+        [JsonProperty("VocabId")]
+        public string VocabId{ get; set; }
+
+        /// <summary>
+        /// <p>客户维度唯一标识</p>
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// <p>词表名称</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>词表描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>热词数组</p>
+        /// </summary>
+        [JsonProperty("WordWeights")]
+        public HotWord[] WordWeights{ get; set; }
+
+        /// <summary>
+        /// <p>base64 编码的词表文本</p>
+        /// </summary>
+        [JsonProperty("WordWeightStr")]
+        public string WordWeightStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VocabId", this.VocabId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "WordWeights.", this.WordWeights);
+            this.SetParamSimple(map, prefix + "WordWeightStr", this.WordWeightStr);
         }
     }
 }

@@ -25,25 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 售卖实例名称。
-        /// Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-        /// CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-        /// TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-        /// CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-        /// CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-        /// ECONOMICAL：表示经济型。
+        /// <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// 引擎版本号
+        /// <p>引擎版本号</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string[] EngineVersion{ get; set; }
 
         /// <summary>
-        /// 售卖规格Id
+        /// <p>售卖规格Id</p>
         /// </summary>
         [JsonProperty("ConfigIds")]
         public long?[] ConfigIds{ get; set; }

@@ -82,6 +82,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MessageTracksCount{ get; set; }
 
         /// <summary>
+        /// <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DelayMessageStatus")]
+        public string DelayMessageStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -102,6 +109,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
             this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
             this.SetParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
+            this.SetParamSimple(map, prefix + "DelayMessageStatus", this.DelayMessageStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

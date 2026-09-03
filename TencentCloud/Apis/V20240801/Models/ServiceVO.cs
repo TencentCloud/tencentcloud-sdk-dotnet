@@ -502,6 +502,25 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("McpServerNum")]
         public long? McpServerNum{ get; set; }
 
+        /// <summary>
+        /// <p>凭据ID</p>
+        /// </summary>
+        [JsonProperty("CredentialID")]
+        public string CredentialID{ get; set; }
+
+        /// <summary>
+        /// <p>凭据名称</p>
+        /// </summary>
+        [JsonProperty("CredentialName")]
+        public string CredentialName{ get; set; }
+
+        /// <summary>
+        /// <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestProtocolType")]
+        public string RequestProtocolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -575,6 +594,9 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamObj(map, prefix + "CustomMatch.", this.CustomMatch);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "McpServerNum", this.McpServerNum);
+            this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
+            this.SetParamSimple(map, prefix + "CredentialName", this.CredentialName);
+            this.SetParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1497";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Dlc.V20210125
         public AddDMSPartitionsResponse AddDMSPartitionsSync(AddDMSPartitionsRequest req)
         {
             return InternalRequestAsync<AddDMSPartitionsResponse>(req, "AddDMSPartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为已有推理服务新增部署
+        /// </summary>
+        /// <param name="req"><see cref="AddDeploymentRequest"/></param>
+        /// <returns><see cref="AddDeploymentResponse"/></returns>
+        public Task<AddDeploymentResponse> AddDeployment(AddDeploymentRequest req)
+        {
+            return InternalRequestAsync<AddDeploymentResponse>(req, "AddDeployment");
+        }
+
+        /// <summary>
+        /// 为已有推理服务新增部署
+        /// </summary>
+        /// <param name="req"><see cref="AddDeploymentRequest"/></param>
+        /// <returns><see cref="AddDeploymentResponse"/></returns>
+        public AddDeploymentResponse AddDeploymentSync(AddDeploymentRequest req)
+        {
+            return InternalRequestAsync<AddDeploymentResponse>(req, "AddDeployment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -306,6 +327,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 绑定 API Key 到推理服务
+        /// </summary>
+        /// <param name="req"><see cref="BindApiKeyRequest"/></param>
+        /// <returns><see cref="BindApiKeyResponse"/></returns>
+        public Task<BindApiKeyResponse> BindApiKey(BindApiKeyRequest req)
+        {
+            return InternalRequestAsync<BindApiKeyResponse>(req, "BindApiKey");
+        }
+
+        /// <summary>
+        /// 绑定 API Key 到推理服务
+        /// </summary>
+        /// <param name="req"><see cref="BindApiKeyRequest"/></param>
+        /// <returns><see cref="BindApiKeyResponse"/></returns>
+        public BindApiKeyResponse BindApiKeySync(BindApiKeyRequest req)
+        {
+            return InternalRequestAsync<BindApiKeyResponse>(req, "BindApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 绑定工作组到用户
         /// </summary>
         /// <param name="req"><see cref="BindWorkGroupsToUserRequest"/></param>
@@ -453,6 +495,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 暂停（取消）实例
+        /// </summary>
+        /// <param name="req"><see cref="CancelTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="CancelTrainingJobInstanceResponse"/></returns>
+        public Task<CancelTrainingJobInstanceResponse> CancelTrainingJobInstance(CancelTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<CancelTrainingJobInstanceResponse>(req, "CancelTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 暂停（取消）实例
+        /// </summary>
+        /// <param name="req"><see cref="CancelTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="CancelTrainingJobInstanceResponse"/></returns>
+        public CancelTrainingJobInstanceResponse CancelTrainingJobInstanceSync(CancelTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<CancelTrainingJobInstanceResponse>(req, "CancelTrainingJobInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查 API Key 名称是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckApiKeyNameRequest"/></param>
+        /// <returns><see cref="CheckApiKeyNameResponse"/></returns>
+        public Task<CheckApiKeyNameResponse> CheckApiKeyName(CheckApiKeyNameRequest req)
+        {
+            return InternalRequestAsync<CheckApiKeyNameResponse>(req, "CheckApiKeyName");
+        }
+
+        /// <summary>
+        /// 检查 API Key 名称是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckApiKeyNameRequest"/></param>
+        /// <returns><see cref="CheckApiKeyNameResponse"/></returns>
+        public CheckApiKeyNameResponse CheckApiKeyNameSync(CheckApiKeyNameRequest req)
+        {
+            return InternalRequestAsync<CheckApiKeyNameResponse>(req, "CheckApiKeyName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CheckDataEngineConfigPairsValidity）用于检查引擎用户自定义参数的有效性
         /// </summary>
         /// <param name="req"><see cref="CheckDataEngineConfigPairsValidityRequest"/></param>
@@ -516,6 +600,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 训练作业配置与普通 RayJob 配置共用 job_spec 表及 (appId, name) 唯一命名空间，重名检查统一挂在本接口，供两类前端表单复用
+        /// </summary>
+        /// <param name="req"><see cref="CheckJobSpecNameRequest"/></param>
+        /// <returns><see cref="CheckJobSpecNameResponse"/></returns>
+        public Task<CheckJobSpecNameResponse> CheckJobSpecName(CheckJobSpecNameRequest req)
+        {
+            return InternalRequestAsync<CheckJobSpecNameResponse>(req, "CheckJobSpecName");
+        }
+
+        /// <summary>
+        /// 训练作业配置与普通 RayJob 配置共用 job_spec 表及 (appId, name) 唯一命名空间，重名检查统一挂在本接口，供两类前端表单复用
+        /// </summary>
+        /// <param name="req"><see cref="CheckJobSpecNameRequest"/></param>
+        /// <returns><see cref="CheckJobSpecNameResponse"/></returns>
+        public CheckJobSpecNameResponse CheckJobSpecNameSync(CheckJobSpecNameRequest req)
+        {
+            return InternalRequestAsync<CheckJobSpecNameResponse>(req, "CheckJobSpecName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 元数据锁检查
         /// </summary>
         /// <param name="req"><see cref="CheckLockMetaDataRequest"/></param>
@@ -533,6 +638,27 @@ namespace TencentCloud.Dlc.V20210125
         public CheckLockMetaDataResponse CheckLockMetaDataSync(CheckLockMetaDataRequest req)
         {
             return InternalRequestAsync<CheckLockMetaDataResponse>(req, "CheckLockMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查模型标识符是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckModelIdentifierRequest"/></param>
+        /// <returns><see cref="CheckModelIdentifierResponse"/></returns>
+        public Task<CheckModelIdentifierResponse> CheckModelIdentifier(CheckModelIdentifierRequest req)
+        {
+            return InternalRequestAsync<CheckModelIdentifierResponse>(req, "CheckModelIdentifier");
+        }
+
+        /// <summary>
+        /// 检查模型标识符是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckModelIdentifierRequest"/></param>
+        /// <returns><see cref="CheckModelIdentifierResponse"/></returns>
+        public CheckModelIdentifierResponse CheckModelIdentifierSync(CheckModelIdentifierRequest req)
+        {
+            return InternalRequestAsync<CheckModelIdentifierResponse>(req, "CheckModelIdentifier")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +726,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 检查推理服务名称是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckServiceNameRequest"/></param>
+        /// <returns><see cref="CheckServiceNameResponse"/></returns>
+        public Task<CheckServiceNameResponse> CheckServiceName(CheckServiceNameRequest req)
+        {
+            return InternalRequestAsync<CheckServiceNameResponse>(req, "CheckServiceName");
+        }
+
+        /// <summary>
+        /// 检查推理服务名称是否重复
+        /// </summary>
+        /// <param name="req"><see cref="CheckServiceNameRequest"/></param>
+        /// <returns><see cref="CheckServiceNameResponse"/></returns>
+        public CheckServiceNameResponse CheckServiceNameSync(CheckServiceNameRequest req)
+        {
+            return InternalRequestAsync<CheckServiceNameResponse>(req, "CheckServiceName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 复制一份已有的作业配置
         /// </summary>
         /// <param name="req"><see cref="CopyJobSpecRequest"/></param>
@@ -617,6 +764,48 @@ namespace TencentCloud.Dlc.V20210125
         public CopyJobSpecResponse CopyJobSpecSync(CopyJobSpecRequest req)
         {
             return InternalRequestAsync<CopyJobSpecResponse>(req, "CopyJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 API Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public Task<CreateApiKeyResponse> CreateApiKey(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey");
+        }
+
+        /// <summary>
+        /// 创建 API Key
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="CreateBenchmarkTaskResponse"/></returns>
+        public Task<CreateBenchmarkTaskResponse> CreateBenchmarkTask(CreateBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBenchmarkTaskResponse>(req, "CreateBenchmarkTask");
+        }
+
+        /// <summary>
+        /// 创建性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="CreateBenchmarkTaskResponse"/></returns>
+        public CreateBenchmarkTaskResponse CreateBenchmarkTaskSync(CreateBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<CreateBenchmarkTaskResponse>(req, "CreateBenchmarkTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -953,6 +1142,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateMetaDatabaseResponse CreateMetaDatabaseSync(CreateMetaDatabaseRequest req)
         {
             return InternalRequestAsync<CreateMetaDatabaseResponse>(req, "CreateMetaDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="CreateMlflowServerRequest"/></param>
+        /// <returns><see cref="CreateMlflowServerResponse"/></returns>
+        public Task<CreateMlflowServerResponse> CreateMlflowServer(CreateMlflowServerRequest req)
+        {
+            return InternalRequestAsync<CreateMlflowServerResponse>(req, "CreateMlflowServer");
+        }
+
+        /// <summary>
+        /// 创建 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="CreateMlflowServerRequest"/></param>
+        /// <returns><see cref="CreateMlflowServerResponse"/></returns>
+        public CreateMlflowServerResponse CreateMlflowServerSync(CreateMlflowServerRequest req)
+        {
+            return InternalRequestAsync<CreateMlflowServerResponse>(req, "CreateMlflowServer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1423,6 +1633,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 基于配置创建实例并提交 RayJob
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="CreateTrainingJobInstanceResponse"/></returns>
+        public Task<CreateTrainingJobInstanceResponse> CreateTrainingJobInstance(CreateTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingJobInstanceResponse>(req, "CreateTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 基于配置创建实例并提交 RayJob
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="CreateTrainingJobInstanceResponse"/></returns>
+        public CreateTrainingJobInstanceResponse CreateTrainingJobInstanceSync(CreateTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingJobInstanceResponse>(req, "CreateTrainingJobInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>
@@ -1503,6 +1734,48 @@ namespace TencentCloud.Dlc.V20210125
         public CreateWorkGroupResponse CreateWorkGroupSync(CreateWorkGroupRequest req)
         {
             return InternalRequestAsync<CreateWorkGroupResponse>(req, "CreateWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 API Key
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public Task<DeleteApiKeyResponse> DeleteApiKey(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey");
+        }
+
+        /// <summary>
+        /// 删除 API Key
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public DeleteApiKeyResponse DeleteApiKeySync(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="DeleteBenchmarkTaskResponse"/></returns>
+        public Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTask(DeleteBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteBenchmarkTaskResponse>(req, "DeleteBenchmarkTask");
+        }
+
+        /// <summary>
+        /// 删除性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="DeleteBenchmarkTaskResponse"/></returns>
+        public DeleteBenchmarkTaskResponse DeleteBenchmarkTaskSync(DeleteBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteBenchmarkTaskResponse>(req, "DeleteBenchmarkTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1591,6 +1864,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 删除指定部署
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeploymentRequest"/></param>
+        /// <returns><see cref="DeleteDeploymentResponse"/></returns>
+        public Task<DeleteDeploymentResponse> DeleteDeployment(DeleteDeploymentRequest req)
+        {
+            return InternalRequestAsync<DeleteDeploymentResponse>(req, "DeleteDeployment");
+        }
+
+        /// <summary>
+        /// 删除指定部署
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeploymentRequest"/></param>
+        /// <returns><see cref="DeleteDeploymentResponse"/></returns>
+        public DeleteDeploymentResponse DeleteDeploymentSync(DeleteDeploymentRequest req)
+        {
+            return InternalRequestAsync<DeleteDeploymentResponse>(req, "DeleteDeployment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除推理服务（含所有部署）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceServiceRequest"/></param>
+        /// <returns><see cref="DeleteInferenceServiceResponse"/></returns>
+        public Task<DeleteInferenceServiceResponse> DeleteInferenceService(DeleteInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceServiceResponse>(req, "DeleteInferenceService");
+        }
+
+        /// <summary>
+        /// 删除推理服务（含所有部署）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceServiceRequest"/></param>
+        /// <returns><see cref="DeleteInferenceServiceResponse"/></returns>
+        public DeleteInferenceServiceResponse DeleteInferenceServiceSync(DeleteInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceServiceResponse>(req, "DeleteInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据配置ID删除作业配置
         /// </summary>
         /// <param name="req"><see cref="DeleteJobSpecRequest"/></param>
@@ -1650,6 +1965,69 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteMetaDatabaseResponse DeleteMetaDatabaseSync(DeleteMetaDatabaseRequest req)
         {
             return InternalRequestAsync<DeleteMetaDatabaseResponse>(req, "DeleteMetaDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 MlFlow Server 请求
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMlflowServerRequest"/></param>
+        /// <returns><see cref="DeleteMlflowServerResponse"/></returns>
+        public Task<DeleteMlflowServerResponse> DeleteMlflowServer(DeleteMlflowServerRequest req)
+        {
+            return InternalRequestAsync<DeleteMlflowServerResponse>(req, "DeleteMlflowServer");
+        }
+
+        /// <summary>
+        /// 删除 MlFlow Server 请求
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMlflowServerRequest"/></param>
+        /// <returns><see cref="DeleteMlflowServerResponse"/></returns>
+        public DeleteMlflowServerResponse DeleteMlflowServerSync(DeleteMlflowServerRequest req)
+        {
+            return InternalRequestAsync<DeleteMlflowServerResponse>(req, "DeleteMlflowServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除模型及其所有版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public Task<DeleteModelResponse> DeleteModel(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel");
+        }
+
+        /// <summary>
+        /// 删除模型及其所有版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除模型版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelVersionRequest"/></param>
+        /// <returns><see cref="DeleteModelVersionResponse"/></returns>
+        public Task<DeleteModelVersionResponse> DeleteModelVersion(DeleteModelVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteModelVersionResponse>(req, "DeleteModelVersion");
+        }
+
+        /// <summary>
+        /// 删除模型版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelVersionRequest"/></param>
+        /// <returns><see cref="DeleteModelVersionResponse"/></returns>
+        public DeleteModelVersionResponse DeleteModelVersionSync(DeleteModelVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteModelVersionResponse>(req, "DeleteModelVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1885,6 +2263,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 删除训练作业实例（软删除本地元数据，仅终态实例可删除）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="DeleteTrainingJobInstanceResponse"/></returns>
+        public Task<DeleteTrainingJobInstanceResponse> DeleteTrainingJobInstance(DeleteTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingJobInstanceResponse>(req, "DeleteTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 删除训练作业实例（软删除本地元数据，仅终态实例可删除）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="DeleteTrainingJobInstanceResponse"/></returns>
+        public DeleteTrainingJobInstanceResponse DeleteTrainingJobInstanceSync(DeleteTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingJobInstanceResponse>(req, "DeleteTrainingJobInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除训练作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="DeleteTrainingJobSpecResponse"/></returns>
+        public Task<DeleteTrainingJobSpecResponse> DeleteTrainingJobSpec(DeleteTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingJobSpecResponse>(req, "DeleteTrainingJobSpec");
+        }
+
+        /// <summary>
+        /// 删除训练作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="DeleteTrainingJobSpecResponse"/></returns>
+        public DeleteTrainingJobSpecResponse DeleteTrainingJobSpecSync(DeleteTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<DeleteTrainingJobSpecResponse>(req, "DeleteTrainingJobSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -1986,6 +2406,69 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
         {
             return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 TKE 集群可绑定的托管 Prometheus 实例列表。若 TKE 已绑定，返回 Bound=true 与 BoundInstance；若未绑定，返回 Bound=false 与候选列表 Instances（同 VPC 实例前置）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindablePrometheusRequest"/></param>
+        /// <returns><see cref="DescribeBindablePrometheusResponse"/></returns>
+        public Task<DescribeBindablePrometheusResponse> DescribeBindablePrometheus(DescribeBindablePrometheusRequest req)
+        {
+            return InternalRequestAsync<DescribeBindablePrometheusResponse>(req, "DescribeBindablePrometheus");
+        }
+
+        /// <summary>
+        /// 查询 TKE 集群可绑定的托管 Prometheus 实例列表。若 TKE 已绑定，返回 Bound=true 与 BoundInstance；若未绑定，返回 Bound=false 与候选列表 Instances（同 VPC 实例前置）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindablePrometheusRequest"/></param>
+        /// <returns><see cref="DescribeBindablePrometheusResponse"/></returns>
+        public DescribeBindablePrometheusResponse DescribeBindablePrometheusSync(DescribeBindablePrometheusRequest req)
+        {
+            return InternalRequestAsync<DescribeBindablePrometheusResponse>(req, "DescribeBindablePrometheus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsTopicsRequest"/></param>
+        /// <returns><see cref="DescribeClsTopicsResponse"/></returns>
+        public Task<DescribeClsTopicsResponse> DescribeClsTopics(DescribeClsTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeClsTopicsResponse>(req, "DescribeClsTopics");
+        }
+
+        /// <summary>
+        /// 查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsTopicsRequest"/></param>
+        /// <returns><see cref="DescribeClsTopicsResponse"/></returns>
+        public DescribeClsTopicsResponse DescribeClsTopicsSync(DescribeClsTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeClsTopicsResponse>(req, "DescribeClsTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 TKE 集群是否开启了事件日志。已开启时同时返回关联的 CLS 日志集 ID、日志主题 ID 与主题所在地域。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterEventLogSwitchRequest"/></param>
+        /// <returns><see cref="DescribeClusterEventLogSwitchResponse"/></returns>
+        public Task<DescribeClusterEventLogSwitchResponse> DescribeClusterEventLogSwitch(DescribeClusterEventLogSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterEventLogSwitchResponse>(req, "DescribeClusterEventLogSwitch");
+        }
+
+        /// <summary>
+        /// 查询指定 TKE 集群是否开启了事件日志。已开启时同时返回关联的 CLS 日志集 ID、日志主题 ID 与主题所在地域。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterEventLogSwitchRequest"/></param>
+        /// <returns><see cref="DescribeClusterEventLogSwitchResponse"/></returns>
+        public DescribeClusterEventLogSwitchResponse DescribeClusterEventLogSwitchSync(DescribeClusterEventLogSwitchRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterEventLogSwitchResponse>(req, "DescribeClusterEventLogSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2389,6 +2872,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 按 EMR 集群 ID 精确查询单个 EMR 集群的详细信息，包含 VPC、COS Bucket、关联 TKE 集群 ID、资源用量等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeEmrClusterInfoResponse"/></returns>
+        public Task<DescribeEmrClusterInfoResponse> DescribeEmrClusterInfo(DescribeEmrClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeEmrClusterInfoResponse>(req, "DescribeEmrClusterInfo");
+        }
+
+        /// <summary>
+        /// 按 EMR 集群 ID 精确查询单个 EMR 集群的详细信息，包含 VPC、COS Bucket、关联 TKE 集群 ID、资源用量等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeEmrClusterInfoResponse"/></returns>
+        public DescribeEmrClusterInfoResponse DescribeEmrClusterInfoSync(DescribeEmrClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeEmrClusterInfoResponse>(req, "DescribeEmrClusterInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询引擎网络信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEngineNetworksRequest"/></param>
@@ -2641,6 +3145,138 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询训练实例的 MLflow 接入配置。 
+        /// MlFlowMode 表示接入的 mlflow 模式，支持 local=Sidecar / remote=已有 Server / none=不启用。云上默认为 remote。
+        /// MlFlowUrl 表示访问的 MLflow URL。
+        /// RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlFlowConfigRequest"/></param>
+        /// <returns><see cref="DescribeMlFlowConfigResponse"/></returns>
+        public Task<DescribeMlFlowConfigResponse> DescribeMlFlowConfig(DescribeMlFlowConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeMlFlowConfigResponse>(req, "DescribeMlFlowConfig");
+        }
+
+        /// <summary>
+        /// 查询训练实例的 MLflow 接入配置。 
+        /// MlFlowMode 表示接入的 mlflow 模式，支持 local=Sidecar / remote=已有 Server / none=不启用。云上默认为 remote。
+        /// MlFlowUrl 表示访问的 MLflow URL。
+        /// RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlFlowConfigRequest"/></param>
+        /// <returns><see cref="DescribeMlFlowConfigResponse"/></returns>
+        public DescribeMlFlowConfigResponse DescribeMlFlowConfigSync(DescribeMlFlowConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeMlFlowConfigResponse>(req, "DescribeMlFlowConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 MlFlow Server 状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerResponse"/></returns>
+        public Task<DescribeMlflowServerResponse> DescribeMlflowServer(DescribeMlflowServerRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerResponse>(req, "DescribeMlflowServer");
+        }
+
+        /// <summary>
+        /// 查询 MlFlow Server 状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerResponse"/></returns>
+        public DescribeMlflowServerResponse DescribeMlflowServerSync(DescribeMlflowServerRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerResponse>(req, "DescribeMlflowServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 MlFlow Server K8s 事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerEventsRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerEventsResponse"/></returns>
+        public Task<DescribeMlflowServerEventsResponse> DescribeMlflowServerEvents(DescribeMlflowServerEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerEventsResponse>(req, "DescribeMlflowServerEvents");
+        }
+
+        /// <summary>
+        /// 查询 MlFlow Server K8s 事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerEventsRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerEventsResponse"/></returns>
+        public DescribeMlflowServerEventsResponse DescribeMlflowServerEventsSync(DescribeMlflowServerEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerEventsResponse>(req, "DescribeMlflowServerEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// MlFlow Server Pod 列表响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerPodsRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerPodsResponse"/></returns>
+        public Task<DescribeMlflowServerPodsResponse> DescribeMlflowServerPods(DescribeMlflowServerPodsRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerPodsResponse>(req, "DescribeMlflowServerPods");
+        }
+
+        /// <summary>
+        /// MlFlow Server Pod 列表响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMlflowServerPodsRequest"/></param>
+        /// <returns><see cref="DescribeMlflowServerPodsResponse"/></returns>
+        public DescribeMlflowServerPodsResponse DescribeMlflowServerPodsSync(DescribeMlflowServerPodsRequest req)
+        {
+            return InternalRequestAsync<DescribeMlflowServerPodsResponse>(req, "DescribeMlflowServerPods")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据模型 UID 查询该模型可选的推理引擎列表。后端自动根据模型的 SupportedEngines 声明或 ModelType 进行引擎过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelEnginesRequest"/></param>
+        /// <returns><see cref="DescribeModelEnginesResponse"/></returns>
+        public Task<DescribeModelEnginesResponse> DescribeModelEngines(DescribeModelEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelEnginesResponse>(req, "DescribeModelEngines");
+        }
+
+        /// <summary>
+        /// 根据模型 UID 查询该模型可选的推理引擎列表。后端自动根据模型的 SupportedEngines 声明或 ModelType 进行引擎过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelEnginesRequest"/></param>
+        /// <returns><see cref="DescribeModelEnginesResponse"/></returns>
+        public DescribeModelEnginesResponse DescribeModelEnginesSync(DescribeModelEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeModelEnginesResponse>(req, "DescribeModelEngines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定模型类型下可选的任务类型列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelTaskOptionsRequest"/></param>
+        /// <returns><see cref="DescribeModelTaskOptionsResponse"/></returns>
+        public Task<DescribeModelTaskOptionsResponse> DescribeModelTaskOptions(DescribeModelTaskOptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelTaskOptionsResponse>(req, "DescribeModelTaskOptions");
+        }
+
+        /// <summary>
+        /// 查询指定模型类型下可选的任务类型列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelTaskOptionsRequest"/></param>
+        /// <returns><see cref="DescribeModelTaskOptionsResponse"/></returns>
+        public DescribeModelTaskOptionsResponse DescribeModelTaskOptionsSync(DescribeModelTaskOptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelTaskOptionsResponse>(req, "DescribeModelTaskOptions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据资源组获取spark session列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNativeSparkSessionsRequest"/></param>
@@ -2889,6 +3525,48 @@ namespace TencentCloud.Dlc.V20210125
         public DescribePartitionsResponse DescribePartitionsSync(DescribePartitionsRequest req)
         {
             return InternalRequestAsync<DescribePartitionsResponse>(req, "DescribePartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取零代码后训练的推荐参数和资源规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostTrainingPresetRequest"/></param>
+        /// <returns><see cref="DescribePostTrainingPresetResponse"/></returns>
+        public Task<DescribePostTrainingPresetResponse> DescribePostTrainingPreset(DescribePostTrainingPresetRequest req)
+        {
+            return InternalRequestAsync<DescribePostTrainingPresetResponse>(req, "DescribePostTrainingPreset");
+        }
+
+        /// <summary>
+        /// 获取零代码后训练的推荐参数和资源规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostTrainingPresetRequest"/></param>
+        /// <returns><see cref="DescribePostTrainingPresetResponse"/></returns>
+        public DescribePostTrainingPresetResponse DescribePostTrainingPresetSync(DescribePostTrainingPresetRequest req)
+        {
+            return InternalRequestAsync<DescribePostTrainingPresetResponse>(req, "DescribePostTrainingPreset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取推荐的高级参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecommendedParamsRequest"/></param>
+        /// <returns><see cref="DescribeRecommendedParamsResponse"/></returns>
+        public Task<DescribeRecommendedParamsResponse> DescribeRecommendedParams(DescribeRecommendedParamsRequest req)
+        {
+            return InternalRequestAsync<DescribeRecommendedParamsResponse>(req, "DescribeRecommendedParams");
+        }
+
+        /// <summary>
+        /// 获取推荐的高级参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecommendedParamsRequest"/></param>
+        /// <returns><see cref="DescribeRecommendedParamsResponse"/></returns>
+        public DescribeRecommendedParamsResponse DescribeRecommendedParamsSync(DescribeRecommendedParamsRequest req)
+        {
+            return InternalRequestAsync<DescribeRecommendedParamsResponse>(req, "DescribeRecommendedParams")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3561,6 +4239,90 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUserSync(DescribeThirdPartyAccessUserRequest req)
         {
             return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按 EMR 集群 ID 查询已导入的 TKE 集群详情，返回 tke_cluster 表中该条导入记录的核心字段，并对 LoadBalancerId / PrometheusInstanceId / ContainerLogTopicId 三个 ID 分别回查腾讯云 API 获取对应名称一并返回。名称查询失败或查不到时对应字段返回空字符串，不影响主接口返回。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTkeClusterImportInfoRequest"/></param>
+        /// <returns><see cref="DescribeTkeClusterImportInfoResponse"/></returns>
+        public Task<DescribeTkeClusterImportInfoResponse> DescribeTkeClusterImportInfo(DescribeTkeClusterImportInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTkeClusterImportInfoResponse>(req, "DescribeTkeClusterImportInfo");
+        }
+
+        /// <summary>
+        /// 按 EMR 集群 ID 查询已导入的 TKE 集群详情，返回 tke_cluster 表中该条导入记录的核心字段，并对 LoadBalancerId / PrometheusInstanceId / ContainerLogTopicId 三个 ID 分别回查腾讯云 API 获取对应名称一并返回。名称查询失败或查不到时对应字段返回空字符串，不影响主接口返回。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTkeClusterImportInfoRequest"/></param>
+        /// <returns><see cref="DescribeTkeClusterImportInfoResponse"/></returns>
+        public DescribeTkeClusterImportInfoResponse DescribeTkeClusterImportInfoSync(DescribeTkeClusterImportInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTkeClusterImportInfoResponse>(req, "DescribeTkeClusterImportInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出训练实例 Checkpoint 文件列表的响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingCheckpointsRequest"/></param>
+        /// <returns><see cref="DescribeTrainingCheckpointsResponse"/></returns>
+        public Task<DescribeTrainingCheckpointsResponse> DescribeTrainingCheckpoints(DescribeTrainingCheckpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingCheckpointsResponse>(req, "DescribeTrainingCheckpoints");
+        }
+
+        /// <summary>
+        /// 列出训练实例 Checkpoint 文件列表的响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingCheckpointsRequest"/></param>
+        /// <returns><see cref="DescribeTrainingCheckpointsResponse"/></returns>
+        public DescribeTrainingCheckpointsResponse DescribeTrainingCheckpointsSync(DescribeTrainingCheckpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingCheckpointsResponse>(req, "DescribeTrainingCheckpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询训练实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobInstanceResponse"/></returns>
+        public Task<DescribeTrainingJobInstanceResponse> DescribeTrainingJobInstance(DescribeTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingJobInstanceResponse>(req, "DescribeTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 查询训练实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobInstanceResponse"/></returns>
+        public DescribeTrainingJobInstanceResponse DescribeTrainingJobInstanceSync(DescribeTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingJobInstanceResponse>(req, "DescribeTrainingJobInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取训练作业配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobSpecResponse"/></returns>
+        public Task<DescribeTrainingJobSpecResponse> DescribeTrainingJobSpec(DescribeTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingJobSpecResponse>(req, "DescribeTrainingJobSpec");
+        }
+
+        /// <summary>
+        /// 获取训练作业配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobSpecResponse"/></returns>
+        public DescribeTrainingJobSpecResponse DescribeTrainingJobSpecSync(DescribeTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<DescribeTrainingJobSpecResponse>(req, "DescribeTrainingJobSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4594,6 +5356,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 通过 ClusterType 区分两种导入模式：TKE（直接导入裸 TKE 集群，ClusterId 为 TKE 集群 ID）或 EMR（通过 EMR 集群导入，ClusterId 为 EMR 集群 ID，底层会关联查询对应的 TKE 集群 ID 一并落库）。两种模式均将 TKE 集群 ID 存入 tke_cluster 表。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+        /// </summary>
+        /// <param name="req"><see cref="ImportExternalClusterRequest"/></param>
+        /// <returns><see cref="ImportExternalClusterResponse"/></returns>
+        public Task<ImportExternalClusterResponse> ImportExternalCluster(ImportExternalClusterRequest req)
+        {
+            return InternalRequestAsync<ImportExternalClusterResponse>(req, "ImportExternalCluster");
+        }
+
+        /// <summary>
+        /// 通过 ClusterType 区分两种导入模式：TKE（直接导入裸 TKE 集群，ClusterId 为 TKE 集群 ID）或 EMR（通过 EMR 集群导入，ClusterId 为 EMR 集群 ID，底层会关联查询对应的 TKE 集群 ID 一并落库）。两种模式均将 TKE 集群 ID 存入 tke_cluster 表。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+        /// </summary>
+        /// <param name="req"><see cref="ImportExternalClusterRequest"/></param>
+        /// <returns><see cref="ImportExternalClusterResponse"/></returns>
+        public ImportExternalClusterResponse ImportExternalClusterSync(ImportExternalClusterRequest req)
+        {
+            return InternalRequestAsync<ImportExternalClusterResponse>(req, "ImportExternalCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将用户在控制台选择的 EMR-TKE 集群及配套的 COS Bucket、Prometheus 实例、负载均衡、容器日志主题等资源，注册为 DLC 的外部资源池（EXTERNAL_TKE）。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+        /// </summary>
+        /// <param name="req"><see cref="ImportTkeClusterRequest"/></param>
+        /// <returns><see cref="ImportTkeClusterResponse"/></returns>
+        public Task<ImportTkeClusterResponse> ImportTkeCluster(ImportTkeClusterRequest req)
+        {
+            return InternalRequestAsync<ImportTkeClusterResponse>(req, "ImportTkeCluster");
+        }
+
+        /// <summary>
+        /// 将用户在控制台选择的 EMR-TKE 集群及配套的 COS Bucket、Prometheus 实例、负载均衡、容器日志主题等资源，注册为 DLC 的外部资源池（EXTERNAL_TKE）。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+        /// </summary>
+        /// <param name="req"><see cref="ImportTkeClusterRequest"/></param>
+        /// <returns><see cref="ImportTkeClusterResponse"/></returns>
+        public ImportTkeClusterResponse ImportTkeClusterSync(ImportTkeClusterRequest req)
+        {
+            return InternalRequestAsync<ImportTkeClusterResponse>(req, "ImportTkeCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开通TCLake
         /// </summary>
         /// <param name="req"><see cref="InitializeTCLakeRequest"/></param>
@@ -4636,6 +5440,90 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 列出 API Key
+        /// </summary>
+        /// <param name="req"><see cref="ListApiKeysRequest"/></param>
+        /// <returns><see cref="ListApiKeysResponse"/></returns>
+        public Task<ListApiKeysResponse> ListApiKeys(ListApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListApiKeysResponse>(req, "ListApiKeys");
+        }
+
+        /// <summary>
+        /// 列出 API Key
+        /// </summary>
+        /// <param name="req"><see cref="ListApiKeysRequest"/></param>
+        /// <returns><see cref="ListApiKeysResponse"/></returns>
+        public ListApiKeysResponse ListApiKeysSync(ListApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListApiKeysResponse>(req, "ListApiKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出空闲 API Key（未绑定服务）
+        /// </summary>
+        /// <param name="req"><see cref="ListAvailableApiKeysRequest"/></param>
+        /// <returns><see cref="ListAvailableApiKeysResponse"/></returns>
+        public Task<ListAvailableApiKeysResponse> ListAvailableApiKeys(ListAvailableApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListAvailableApiKeysResponse>(req, "ListAvailableApiKeys");
+        }
+
+        /// <summary>
+        /// 列出空闲 API Key（未绑定服务）
+        /// </summary>
+        /// <param name="req"><see cref="ListAvailableApiKeysRequest"/></param>
+        /// <returns><see cref="ListAvailableApiKeysResponse"/></returns>
+        public ListAvailableApiKeysResponse ListAvailableApiKeysSync(ListAvailableApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListAvailableApiKeysResponse>(req, "ListAvailableApiKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询评测排行榜（所有模型的评测汇总数据）
+        /// </summary>
+        /// <param name="req"><see cref="ListBenchmarkSummaryRequest"/></param>
+        /// <returns><see cref="ListBenchmarkSummaryResponse"/></returns>
+        public Task<ListBenchmarkSummaryResponse> ListBenchmarkSummary(ListBenchmarkSummaryRequest req)
+        {
+            return InternalRequestAsync<ListBenchmarkSummaryResponse>(req, "ListBenchmarkSummary");
+        }
+
+        /// <summary>
+        /// 查询评测排行榜（所有模型的评测汇总数据）
+        /// </summary>
+        /// <param name="req"><see cref="ListBenchmarkSummaryRequest"/></param>
+        /// <returns><see cref="ListBenchmarkSummaryResponse"/></returns>
+        public ListBenchmarkSummaryResponse ListBenchmarkSummarySync(ListBenchmarkSummaryRequest req)
+        {
+            return InternalRequestAsync<ListBenchmarkSummaryResponse>(req, "ListBenchmarkSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="ListBenchmarkTasksRequest"/></param>
+        /// <returns><see cref="ListBenchmarkTasksResponse"/></returns>
+        public Task<ListBenchmarkTasksResponse> ListBenchmarkTasks(ListBenchmarkTasksRequest req)
+        {
+            return InternalRequestAsync<ListBenchmarkTasksResponse>(req, "ListBenchmarkTasks");
+        }
+
+        /// <summary>
+        /// 列出性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="ListBenchmarkTasksRequest"/></param>
+        /// <returns><see cref="ListBenchmarkTasksResponse"/></returns>
+        public ListBenchmarkTasksResponse ListBenchmarkTasksSync(ListBenchmarkTasksRequest req)
+        {
+            return InternalRequestAsync<ListBenchmarkTasksResponse>(req, "ListBenchmarkTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出所有集群组
         /// </summary>
         /// <param name="req"><see cref="ListClusterGroupsRequest"/></param>
@@ -4653,6 +5541,48 @@ namespace TencentCloud.Dlc.V20210125
         public ListClusterGroupsResponse ListClusterGroupsSync(ListClusterGroupsRequest req)
         {
             return InternalRequestAsync<ListClusterGroupsResponse>(req, "ListClusterGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出部署的副本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeploymentReplicasRequest"/></param>
+        /// <returns><see cref="ListDeploymentReplicasResponse"/></returns>
+        public Task<ListDeploymentReplicasResponse> ListDeploymentReplicas(ListDeploymentReplicasRequest req)
+        {
+            return InternalRequestAsync<ListDeploymentReplicasResponse>(req, "ListDeploymentReplicas");
+        }
+
+        /// <summary>
+        /// 列出部署的副本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeploymentReplicasRequest"/></param>
+        /// <returns><see cref="ListDeploymentReplicasResponse"/></returns>
+        public ListDeploymentReplicasResponse ListDeploymentReplicasSync(ListDeploymentReplicasRequest req)
+        {
+            return InternalRequestAsync<ListDeploymentReplicasResponse>(req, "ListDeploymentReplicas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出推理服务的部署列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeploymentsRequest"/></param>
+        /// <returns><see cref="ListDeploymentsResponse"/></returns>
+        public Task<ListDeploymentsResponse> ListDeployments(ListDeploymentsRequest req)
+        {
+            return InternalRequestAsync<ListDeploymentsResponse>(req, "ListDeployments");
+        }
+
+        /// <summary>
+        /// 列出推理服务的部署列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDeploymentsRequest"/></param>
+        /// <returns><see cref="ListDeploymentsResponse"/></returns>
+        public ListDeploymentsResponse ListDeploymentsSync(ListDeploymentsRequest req)
+        {
+            return InternalRequestAsync<ListDeploymentsResponse>(req, "ListDeployments")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4888,6 +5818,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询 MlFlow Server 关联的训练实例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListMlflowServerTrainingInstancesRequest"/></param>
+        /// <returns><see cref="ListMlflowServerTrainingInstancesResponse"/></returns>
+        public Task<ListMlflowServerTrainingInstancesResponse> ListMlflowServerTrainingInstances(ListMlflowServerTrainingInstancesRequest req)
+        {
+            return InternalRequestAsync<ListMlflowServerTrainingInstancesResponse>(req, "ListMlflowServerTrainingInstances");
+        }
+
+        /// <summary>
+        /// 查询 MlFlow Server 关联的训练实例列表
+        /// </summary>
+        /// <param name="req"><see cref="ListMlflowServerTrainingInstancesRequest"/></param>
+        /// <returns><see cref="ListMlflowServerTrainingInstancesResponse"/></returns>
+        public ListMlflowServerTrainingInstancesResponse ListMlflowServerTrainingInstancesSync(ListMlflowServerTrainingInstancesRequest req)
+        {
+            return InternalRequestAsync<ListMlflowServerTrainingInstancesResponse>(req, "ListMlflowServerTrainingInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="ListMlflowServersRequest"/></param>
+        /// <returns><see cref="ListMlflowServersResponse"/></returns>
+        public Task<ListMlflowServersResponse> ListMlflowServers(ListMlflowServersRequest req)
+        {
+            return InternalRequestAsync<ListMlflowServersResponse>(req, "ListMlflowServers");
+        }
+
+        /// <summary>
+        /// 列出 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="ListMlflowServersRequest"/></param>
+        /// <returns><see cref="ListMlflowServersResponse"/></returns>
+        public ListMlflowServersResponse ListMlflowServersSync(ListMlflowServersRequest req)
+        {
+            return InternalRequestAsync<ListMlflowServersResponse>(req, "ListMlflowServers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出模型所有版本
         /// </summary>
         /// <param name="req"><see cref="ListModelVersionsRequest"/></param>
@@ -4972,6 +5944,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 列出用户在指定地域下的 CLB 负载均衡实例，返回实例 ID、名称与网络类型（OPEN/INTERNAL）。
+        /// </summary>
+        /// <param name="req"><see cref="ListRegionLbsRequest"/></param>
+        /// <returns><see cref="ListRegionLbsResponse"/></returns>
+        public Task<ListRegionLbsResponse> ListRegionLbs(ListRegionLbsRequest req)
+        {
+            return InternalRequestAsync<ListRegionLbsResponse>(req, "ListRegionLbs");
+        }
+
+        /// <summary>
+        /// 列出用户在指定地域下的 CLB 负载均衡实例，返回实例 ID、名称与网络类型（OPEN/INTERNAL）。
+        /// </summary>
+        /// <param name="req"><see cref="ListRegionLbsRequest"/></param>
+        /// <returns><see cref="ListRegionLbsResponse"/></returns>
+        public ListRegionLbsResponse ListRegionLbsSync(ListRegionLbsRequest req)
+        {
+            return InternalRequestAsync<ListRegionLbsResponse>(req, "ListRegionLbs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出所有资源配置模板
         /// </summary>
         /// <param name="req"><see cref="ListResourceConfigsRequest"/></param>
@@ -4989,6 +5982,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListResourceConfigsResponse ListResourceConfigsSync(ListResourceConfigsRequest req)
         {
             return InternalRequestAsync<ListResourceConfigsResponse>(req, "ListResourceConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出指定推理服务绑定的 API Key
+        /// </summary>
+        /// <param name="req"><see cref="ListServiceApiKeysRequest"/></param>
+        /// <returns><see cref="ListServiceApiKeysResponse"/></returns>
+        public Task<ListServiceApiKeysResponse> ListServiceApiKeys(ListServiceApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListServiceApiKeysResponse>(req, "ListServiceApiKeys");
+        }
+
+        /// <summary>
+        /// 列出指定推理服务绑定的 API Key
+        /// </summary>
+        /// <param name="req"><see cref="ListServiceApiKeysRequest"/></param>
+        /// <returns><see cref="ListServiceApiKeysResponse"/></returns>
+        public ListServiceApiKeysResponse ListServiceApiKeysSync(ListServiceApiKeysRequest req)
+        {
+            return InternalRequestAsync<ListServiceApiKeysResponse>(req, "ListServiceApiKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5031,6 +6045,69 @@ namespace TencentCloud.Dlc.V20210125
         public ListTaskJobLogNameResponse ListTaskJobLogNameSync(ListTaskJobLogNameRequest req)
         {
             return InternalRequestAsync<ListTaskJobLogNameResponse>(req, "ListTaskJobLogName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取tke纳管cos列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTkeCosBucketsRequest"/></param>
+        /// <returns><see cref="ListTkeCosBucketsResponse"/></returns>
+        public Task<ListTkeCosBucketsResponse> ListTkeCosBuckets(ListTkeCosBucketsRequest req)
+        {
+            return InternalRequestAsync<ListTkeCosBucketsResponse>(req, "ListTkeCosBuckets");
+        }
+
+        /// <summary>
+        /// 获取tke纳管cos列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTkeCosBucketsRequest"/></param>
+        /// <returns><see cref="ListTkeCosBucketsResponse"/></returns>
+        public ListTkeCosBucketsResponse ListTkeCosBucketsSync(ListTkeCosBucketsRequest req)
+        {
+            return InternalRequestAsync<ListTkeCosBucketsResponse>(req, "ListTkeCosBuckets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出训练作业实例
+        /// </summary>
+        /// <param name="req"><see cref="ListTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="ListTrainingJobInstanceResponse"/></returns>
+        public Task<ListTrainingJobInstanceResponse> ListTrainingJobInstance(ListTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<ListTrainingJobInstanceResponse>(req, "ListTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 列出训练作业实例
+        /// </summary>
+        /// <param name="req"><see cref="ListTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="ListTrainingJobInstanceResponse"/></returns>
+        public ListTrainingJobInstanceResponse ListTrainingJobInstanceSync(ListTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<ListTrainingJobInstanceResponse>(req, "ListTrainingJobInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取训练作业配置的列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="ListTrainingJobSpecResponse"/></returns>
+        public Task<ListTrainingJobSpecResponse> ListTrainingJobSpec(ListTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<ListTrainingJobSpecResponse>(req, "ListTrainingJobSpec");
+        }
+
+        /// <summary>
+        /// 获取训练作业配置的列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="ListTrainingJobSpecResponse"/></returns>
+        public ListTrainingJobSpecResponse ListTrainingJobSpecSync(ListTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<ListTrainingJobSpecResponse>(req, "ListTrainingJobSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5262,6 +6339,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifySparkAppForTDLCResponse ModifySparkAppForTDLCSync(ModifySparkAppForTDLCRequest req)
         {
             return InternalRequestAsync<ModifySparkAppForTDLCResponse>(req, "ModifySparkAppForTDLC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 就地更新训练作业配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="ModifyTrainingJobSpecResponse"/></returns>
+        public Task<ModifyTrainingJobSpecResponse> ModifyTrainingJobSpec(ModifyTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<ModifyTrainingJobSpecResponse>(req, "ModifyTrainingJobSpec");
+        }
+
+        /// <summary>
+        /// 就地更新训练作业配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrainingJobSpecRequest"/></param>
+        /// <returns><see cref="ModifyTrainingJobSpecResponse"/></returns>
+        public ModifyTrainingJobSpecResponse ModifyTrainingJobSpecSync(ModifyTrainingJobSpecRequest req)
+        {
+            return InternalRequestAsync<ModifyTrainingJobSpecResponse>(req, "ModifyTrainingJobSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5539,6 +6637,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 重新运行性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="RerunBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="RerunBenchmarkTaskResponse"/></returns>
+        public Task<RerunBenchmarkTaskResponse> RerunBenchmarkTask(RerunBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<RerunBenchmarkTaskResponse>(req, "RerunBenchmarkTask");
+        }
+
+        /// <summary>
+        /// 重新运行性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="RerunBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="RerunBenchmarkTaskResponse"/></returns>
+        public RerunBenchmarkTaskResponse RerunBenchmarkTaskSync(RerunBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<RerunBenchmarkTaskResponse>(req, "RerunBenchmarkTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重启引擎
         /// </summary>
         /// <param name="req"><see cref="RestartDataEngineRequest"/></param>
@@ -5560,6 +6679,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 再次运行部署（以当前配置重新部署）
+        /// </summary>
+        /// <param name="req"><see cref="RestartDeploymentRequest"/></param>
+        /// <returns><see cref="RestartDeploymentResponse"/></returns>
+        public Task<RestartDeploymentResponse> RestartDeployment(RestartDeploymentRequest req)
+        {
+            return InternalRequestAsync<RestartDeploymentResponse>(req, "RestartDeployment");
+        }
+
+        /// <summary>
+        /// 再次运行部署（以当前配置重新部署）
+        /// </summary>
+        /// <param name="req"><see cref="RestartDeploymentRequest"/></param>
+        /// <returns><see cref="RestartDeploymentResponse"/></returns>
+        public RestartDeploymentResponse RestartDeploymentSync(RestartDeploymentRequest req)
+        {
+            return InternalRequestAsync<RestartDeploymentResponse>(req, "RestartDeployment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重启推理服务（操作所有部署）。
         /// </summary>
         /// <param name="req"><see cref="RestartInferenceServiceRequest"/></param>
@@ -5577,6 +6717,27 @@ namespace TencentCloud.Dlc.V20210125
         public RestartInferenceServiceResponse RestartInferenceServiceSync(RestartInferenceServiceRequest req)
         {
             return InternalRequestAsync<RestartInferenceServiceResponse>(req, "RestartInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 断点续训（克隆实例）
+        /// </summary>
+        /// <param name="req"><see cref="ResumeTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="ResumeTrainingJobInstanceResponse"/></returns>
+        public Task<ResumeTrainingJobInstanceResponse> ResumeTrainingJobInstance(ResumeTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<ResumeTrainingJobInstanceResponse>(req, "ResumeTrainingJobInstance");
+        }
+
+        /// <summary>
+        /// 断点续训（克隆实例）
+        /// </summary>
+        /// <param name="req"><see cref="ResumeTrainingJobInstanceRequest"/></param>
+        /// <returns><see cref="ResumeTrainingJobInstanceResponse"/></returns>
+        public ResumeTrainingJobInstanceResponse ResumeTrainingJobInstanceSync(ResumeTrainingJobInstanceRequest req)
+        {
+            return InternalRequestAsync<ResumeTrainingJobInstanceResponse>(req, "ResumeTrainingJobInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5686,6 +6847,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 启动 MlFlow Server（apply K8s 资源，幂等可重试）
+        /// </summary>
+        /// <param name="req"><see cref="StartMlflowServerRequest"/></param>
+        /// <returns><see cref="StartMlflowServerResponse"/></returns>
+        public Task<StartMlflowServerResponse> StartMlflowServer(StartMlflowServerRequest req)
+        {
+            return InternalRequestAsync<StartMlflowServerResponse>(req, "StartMlflowServer");
+        }
+
+        /// <summary>
+        /// 启动 MlFlow Server（apply K8s 资源，幂等可重试）
+        /// </summary>
+        /// <param name="req"><see cref="StartMlflowServerRequest"/></param>
+        /// <returns><see cref="StartMlflowServerResponse"/></returns>
+        public StartMlflowServerResponse StartMlflowServerSync(StartMlflowServerRequest req)
+        {
+            return InternalRequestAsync<StartMlflowServerResponse>(req, "StartMlflowServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启动集群
         /// </summary>
         /// <param name="req"><see cref="StartRayClusterRequest"/></param>
@@ -5703,6 +6885,48 @@ namespace TencentCloud.Dlc.V20210125
         public StartRayClusterResponse StartRayClusterSync(StartRayClusterRequest req)
         {
             return InternalRequestAsync<StartRayClusterResponse>(req, "StartRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="StopBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="StopBenchmarkTaskResponse"/></returns>
+        public Task<StopBenchmarkTaskResponse> StopBenchmarkTask(StopBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<StopBenchmarkTaskResponse>(req, "StopBenchmarkTask");
+        }
+
+        /// <summary>
+        /// 停止性能评测任务
+        /// </summary>
+        /// <param name="req"><see cref="StopBenchmarkTaskRequest"/></param>
+        /// <returns><see cref="StopBenchmarkTaskResponse"/></returns>
+        public StopBenchmarkTaskResponse StopBenchmarkTaskSync(StopBenchmarkTaskRequest req)
+        {
+            return InternalRequestAsync<StopBenchmarkTaskResponse>(req, "StopBenchmarkTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止部署
+        /// </summary>
+        /// <param name="req"><see cref="StopDeploymentRequest"/></param>
+        /// <returns><see cref="StopDeploymentResponse"/></returns>
+        public Task<StopDeploymentResponse> StopDeployment(StopDeploymentRequest req)
+        {
+            return InternalRequestAsync<StopDeploymentResponse>(req, "StopDeployment");
+        }
+
+        /// <summary>
+        /// 停止部署
+        /// </summary>
+        /// <param name="req"><see cref="StopDeploymentRequest"/></param>
+        /// <returns><see cref="StopDeploymentResponse"/></returns>
+        public StopDeploymentResponse StopDeploymentSync(StopDeploymentRequest req)
+        {
+            return InternalRequestAsync<StopDeploymentResponse>(req, "StopDeployment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5749,6 +6973,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 停止 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="StopMlflowServerRequest"/></param>
+        /// <returns><see cref="StopMlflowServerResponse"/></returns>
+        public Task<StopMlflowServerResponse> StopMlflowServer(StopMlflowServerRequest req)
+        {
+            return InternalRequestAsync<StopMlflowServerResponse>(req, "StopMlflowServer");
+        }
+
+        /// <summary>
+        /// 停止 MlFlow Server
+        /// </summary>
+        /// <param name="req"><see cref="StopMlflowServerRequest"/></param>
+        /// <returns><see cref="StopMlflowServerResponse"/></returns>
+        public StopMlflowServerResponse StopMlflowServerSync(StopMlflowServerRequest req)
+        {
+            return InternalRequestAsync<StopMlflowServerResponse>(req, "StopMlflowServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止集群
         /// </summary>
         /// <param name="req"><see cref="StopRayClusterRequest"/></param>
@@ -5766,6 +7011,27 @@ namespace TencentCloud.Dlc.V20210125
         public StopRayClusterResponse StopRayClusterSync(StopRayClusterRequest req)
         {
             return InternalRequestAsync<StopRayClusterResponse>(req, "StopRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 断点续训（克隆实例）
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTrainingJobRequest"/></param>
+        /// <returns><see cref="SubmitTrainingJobResponse"/></returns>
+        public Task<SubmitTrainingJobResponse> SubmitTrainingJob(SubmitTrainingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTrainingJobResponse>(req, "SubmitTrainingJob");
+        }
+
+        /// <summary>
+        /// 断点续训（克隆实例）
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTrainingJobRequest"/></param>
+        /// <returns><see cref="SubmitTrainingJobResponse"/></returns>
+        public SubmitTrainingJobResponse SubmitTrainingJobSync(SubmitTrainingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitTrainingJobResponse>(req, "SubmitTrainingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5896,6 +7162,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 更新 API Key 状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiKeyStatusRequest"/></param>
+        /// <returns><see cref="UpdateApiKeyStatusResponse"/></returns>
+        public Task<UpdateApiKeyStatusResponse> UpdateApiKeyStatus(UpdateApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateApiKeyStatusResponse>(req, "UpdateApiKeyStatus");
+        }
+
+        /// <summary>
+        /// 更新 API Key 状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiKeyStatusRequest"/></param>
+        /// <returns><see cref="UpdateApiKeyStatusResponse"/></returns>
+        public UpdateApiKeyStatusResponse UpdateApiKeyStatusSync(UpdateApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateApiKeyStatusResponse>(req, "UpdateApiKeyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新集群组
         /// </summary>
         /// <param name="req"><see cref="UpdateClusterGroupRequest"/></param>
@@ -5976,6 +7263,27 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateDataMaskStrategyResponse UpdateDataMaskStrategySync(UpdateDataMaskStrategyRequest req)
         {
             return InternalRequestAsync<UpdateDataMaskStrategyResponse>(req, "UpdateDataMaskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新部署配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeploymentRequest"/></param>
+        /// <returns><see cref="UpdateDeploymentResponse"/></returns>
+        public Task<UpdateDeploymentResponse> UpdateDeployment(UpdateDeploymentRequest req)
+        {
+            return InternalRequestAsync<UpdateDeploymentResponse>(req, "UpdateDeployment");
+        }
+
+        /// <summary>
+        /// 更新部署配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeploymentRequest"/></param>
+        /// <returns><see cref="UpdateDeploymentResponse"/></returns>
+        public UpdateDeploymentResponse UpdateDeploymentSync(UpdateDeploymentRequest req)
+        {
+            return InternalRequestAsync<UpdateDeploymentResponse>(req, "UpdateDeployment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6186,6 +7494,27 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateRowFilterResponse UpdateRowFilterSync(UpdateRowFilterRequest req)
         {
             return InternalRequestAsync<UpdateRowFilterResponse>(req, "UpdateRowFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新推理服务的 API-Key 鉴权配置（启用/停用）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceAuthConfigRequest"/></param>
+        /// <returns><see cref="UpdateServiceAuthConfigResponse"/></returns>
+        public Task<UpdateServiceAuthConfigResponse> UpdateServiceAuthConfig(UpdateServiceAuthConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateServiceAuthConfigResponse>(req, "UpdateServiceAuthConfig");
+        }
+
+        /// <summary>
+        /// 更新推理服务的 API-Key 鉴权配置（启用/停用）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceAuthConfigRequest"/></param>
+        /// <returns><see cref="UpdateServiceAuthConfigResponse"/></returns>
+        public UpdateServiceAuthConfigResponse UpdateServiceAuthConfigSync(UpdateServiceAuthConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateServiceAuthConfigResponse>(req, "UpdateServiceAuthConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

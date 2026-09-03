@@ -131,6 +131,13 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("WorkflowInput")]
         public string WorkflowInput{ get; set; }
 
+        /// <summary>
+        /// <p>MCP-APP调用信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("McpApp")]
+        public ConversationMcpApp McpApp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +161,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "WorkflowInput", this.WorkflowInput);
+            this.SetParamObj(map, prefix + "McpApp.", this.McpApp);
         }
     }
 }

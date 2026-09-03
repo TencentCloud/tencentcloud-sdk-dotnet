@@ -25,28 +25,34 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 自增id，数据库中唯一
+        /// <p>自增id，数据库中唯一</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 节点分组名称
+        /// <p>节点分组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 节点分组id
+        /// <p>节点分组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 包含边缘节点数量
+        /// <p>包含边缘节点数量</p>
         /// </summary>
         [JsonProperty("EdgeCount")]
         public long? EdgeCount{ get; set; }
+
+        /// <summary>
+        /// <p>分组中英文</p>
+        /// </summary>
+        [JsonProperty("GroupNameI18n")]
+        public I18nString[] GroupNameI18n{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EdgeCount", this.EdgeCount);
+            this.SetParamArrayObj(map, prefix + "GroupNameI18n.", this.GroupNameI18n);
         }
     }
 }

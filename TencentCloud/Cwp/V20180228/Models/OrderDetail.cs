@@ -25,25 +25,28 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// <p>资源ID</p>
         /// </summary>
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
         /// <summary>
-        /// 计费项
+        /// <p>计费项</p>
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// 订单状态
-        /// - 1 正常
-        /// - 2 隔离期
-        /// - 3 已销毁
+        /// <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// <p>源类型</p>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public ulong? SourceType{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
             this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

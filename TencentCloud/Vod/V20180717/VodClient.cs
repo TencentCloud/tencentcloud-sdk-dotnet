@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1499";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Vod.V20180717
         public CloneVoiceAsyncResponse CloneVoiceAsyncSync(CloneVoiceAsyncRequest req)
         {
             return InternalRequestAsync<CloneVoiceAsyncResponse>(req, "CloneVoiceAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起音色克隆任务，基于参考音频克隆生成专属音色，生成的音色可供后续语音合成使用。
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceSyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceSyncResponse"/></returns>
+        public Task<CloneVoiceSyncResponse> CloneVoiceSync(CloneVoiceSyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceSyncResponse>(req, "CloneVoiceSync");
+        }
+
+        /// <summary>
+        /// 发起音色克隆任务，基于参考音频克隆生成专属音色，生成的音色可供后续语音合成使用。
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceSyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceSyncResponse"/></returns>
+        public CloneVoiceSyncResponse CloneVoiceSyncSync(CloneVoiceSyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceSyncResponse>(req, "CloneVoiceSync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5671,6 +5692,27 @@ namespace TencentCloud.Vod.V20180717
         public TextToSpeechAsyncResponse TextToSpeechAsyncSync(TextToSpeechAsyncRequest req)
         {
             return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发起语音合成任务，将文本合成为语音。
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechSyncResponse"/></returns>
+        public Task<TextToSpeechSyncResponse> TextToSpeechSync(TextToSpeechSyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSyncResponse>(req, "TextToSpeechSync");
+        }
+
+        /// <summary>
+        /// 发起语音合成任务，将文本合成为语音。
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechSyncResponse"/></returns>
+        public TextToSpeechSyncResponse TextToSpeechSyncSync(TextToSpeechSyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSyncResponse>(req, "TextToSpeechSync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

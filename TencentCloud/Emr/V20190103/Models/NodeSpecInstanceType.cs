@@ -178,6 +178,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsGpuInstance")]
         public bool? IsGpuInstance{ get; set; }
 
+        /// <summary>
+        /// <p>K8S场景GPU资源定义</p>
+        /// </summary>
+        [JsonProperty("GpuResourceKey")]
+        public string GpuResourceKey{ get; set; }
+
+        /// <summary>
+        /// <p>GPU卡数</p>
+        /// </summary>
+        [JsonProperty("GpuNum")]
+        public long? GpuNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +221,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
             this.SetParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
             this.SetParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
+            this.SetParamSimple(map, prefix + "GpuResourceKey", this.GpuResourceKey);
+            this.SetParamSimple(map, prefix + "GpuNum", this.GpuNum);
         }
     }
 }

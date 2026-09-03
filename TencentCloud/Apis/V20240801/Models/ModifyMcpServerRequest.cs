@@ -186,6 +186,24 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("IgnoreHealthCheck")]
         public bool? IgnoreHealthCheck{ get; set; }
 
+        /// <summary>
+        /// <p>凭据ID</p>
+        /// </summary>
+        [JsonProperty("CredentialID")]
+        public string CredentialID{ get; set; }
+
+        /// <summary>
+        /// <p>访问域名</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+        /// </summary>
+        [JsonProperty("RequestProtocolType")]
+        public string RequestProtocolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +237,9 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
             this.SetParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
             this.SetParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
+            this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
         }
     }
 }

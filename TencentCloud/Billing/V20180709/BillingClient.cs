@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1493";
+       private const string sdkVersion = "SDK_NET_3.0.1500";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
         {
             return InternalRequestAsync<DescribeAccountBalanceResponse>(req, "DescribeAccountBalance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云api查余额告警阈值接口，支持传入uin
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountWarningRequest"/></param>
+        /// <returns><see cref="DescribeAccountWarningResponse"/></returns>
+        public Task<DescribeAccountWarningResponse> DescribeAccountWarning(DescribeAccountWarningRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountWarningResponse>(req, "DescribeAccountWarning");
+        }
+
+        /// <summary>
+        /// 云api查余额告警阈值接口，支持传入uin
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountWarningRequest"/></param>
+        /// <returns><see cref="DescribeAccountWarningResponse"/></returns>
+        public DescribeAccountWarningResponse DescribeAccountWarningSync(DescribeAccountWarningRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountWarningResponse>(req, "DescribeAccountWarning")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1349,6 +1370,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetailsSync(DescribeVoucherUsageDetailsRequest req)
         {
             return InternalRequestAsync<DescribeVoucherUsageDetailsResponse>(req, "DescribeVoucherUsageDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云api设置余额告警阈值接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountWarningRequest"/></param>
+        /// <returns><see cref="ModifyAccountWarningResponse"/></returns>
+        public Task<ModifyAccountWarningResponse> ModifyAccountWarning(ModifyAccountWarningRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountWarningResponse>(req, "ModifyAccountWarning");
+        }
+
+        /// <summary>
+        /// 云api设置余额告警阈值接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountWarningRequest"/></param>
+        /// <returns><see cref="ModifyAccountWarningResponse"/></returns>
+        public ModifyAccountWarningResponse ModifyAccountWarningSync(ModifyAccountWarningRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountWarningResponse>(req, "ModifyAccountWarning")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

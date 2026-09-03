@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C1142562-6202-3F63-82C3-66150BEE7B33}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1461</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,23 +48,40 @@
 
   <ItemGroup>
     <Compile Include="V20220325\TrroClient.cs" />
+    <Compile Include="V20220325\Models\AnnotationContext.cs" />
     <Compile Include="V20220325\Models\BatchDeleteDevicesRequest.cs" />
     <Compile Include="V20220325\Models\BatchDeleteDevicesResponse.cs" />
     <Compile Include="V20220325\Models\BatchDeletePolicyRequest.cs" />
     <Compile Include="V20220325\Models\BatchDeletePolicyResponse.cs" />
+    <Compile Include="V20220325\Models\BatchS3SourceInfo.cs" />
     <Compile Include="V20220325\Models\BoundLicensesRequest.cs" />
     <Compile Include="V20220325\Models\BoundLicensesResponse.cs" />
+    <Compile Include="V20220325\Models\CallbackInfo.cs" />
     <Compile Include="V20220325\Models\CloudStorage.cs" />
+    <Compile Include="V20220325\Models\CreateBatchVideoAnnotationJobRequest.cs" />
+    <Compile Include="V20220325\Models\CreateBatchVideoAnnotationJobResponse.cs" />
     <Compile Include="V20220325\Models\CreateCloudRecordingRequest.cs" />
     <Compile Include="V20220325\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="V20220325\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20220325\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20220325\Models\CreateProjectRequest.cs" />
     <Compile Include="V20220325\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20220325\Models\CreateVideoAnnotationJobRequest.cs" />
+    <Compile Include="V20220325\Models\CreateVideoAnnotationJobResponse.cs" />
+    <Compile Include="V20220325\Models\DeleteAnnotationJobRequest.cs" />
+    <Compile Include="V20220325\Models\DeleteAnnotationJobResponse.cs" />
+    <Compile Include="V20220325\Models\DeleteAnnotationTaskRequest.cs" />
+    <Compile Include="V20220325\Models\DeleteAnnotationTaskResponse.cs" />
     <Compile Include="V20220325\Models\DeleteCloudRecordingRequest.cs" />
     <Compile Include="V20220325\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20220325\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20220325\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationJobsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationJobsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationResultsRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationResultsResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationTasksRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeAnnotationTasksResponse.cs" />
     <Compile Include="V20220325\Models\DescribeDeviceInfoRequest.cs" />
     <Compile Include="V20220325\Models\DescribeDeviceInfoResponse.cs" />
     <Compile Include="V20220325\Models\DescribeDeviceListRequest.cs" />
@@ -100,6 +117,7 @@
     <Compile Include="V20220325\Models\GetLicensesResponse.cs" />
     <Compile Include="V20220325\Models\GetTotalDurationRequest.cs" />
     <Compile Include="V20220325\Models\GetTotalDurationResponse.cs" />
+    <Compile Include="V20220325\Models\Job.cs" />
     <Compile Include="V20220325\Models\License.cs" />
     <Compile Include="V20220325\Models\ModifyCallbackUrlRequest.cs" />
     <Compile Include="V20220325\Models\ModifyCallbackUrlResponse.cs" />
@@ -112,10 +130,17 @@
     <Compile Include="V20220325\Models\ModifyProjectSecModeRequest.cs" />
     <Compile Include="V20220325\Models\ModifyProjectSecModeResponse.cs" />
     <Compile Include="V20220325\Models\MultiNet.cs" />
+    <Compile Include="V20220325\Models\OutputInfo.cs" />
+    <Compile Include="V20220325\Models\OutputStorage.cs" />
     <Compile Include="V20220325\Models\PolicyInfo.cs" />
+    <Compile Include="V20220325\Models\ProcessParams.cs" />
     <Compile Include="V20220325\Models\ProjectInfo.cs" />
     <Compile Include="V20220325\Models\PublishParams.cs" />
     <Compile Include="V20220325\Models\RecentSessionInfo.cs" />
+    <Compile Include="V20220325\Models\RetryAnnotationTaskRequest.cs" />
+    <Compile Include="V20220325\Models\RetryAnnotationTaskResponse.cs" />
+    <Compile Include="V20220325\Models\S3SourceInfo.cs" />
+    <Compile Include="V20220325\Models\SecretInfo.cs" />
     <Compile Include="V20220325\Models\SessionDeviceDetail.cs" />
     <Compile Include="V20220325\Models\SessionInfo.cs" />
     <Compile Include="V20220325\Models\SessionIntervalStatistic.cs" />
@@ -123,6 +148,7 @@
     <Compile Include="V20220325\Models\StartPublishLiveStreamResponse.cs" />
     <Compile Include="V20220325\Models\StopPublishLiveStreamRequest.cs" />
     <Compile Include="V20220325\Models\StopPublishLiveStreamResponse.cs" />
+    <Compile Include="V20220325\Models\Task.cs" />
     <Compile Include="V20220325\Models\VideoList.cs" />
     <Compile Include="V20220325\Models\VideoParams.cs" />
   </ItemGroup>

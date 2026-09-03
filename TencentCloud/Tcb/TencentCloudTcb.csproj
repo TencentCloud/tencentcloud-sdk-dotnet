@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1499</VersionPrefix>
+    <VersionPrefix>3.0.1500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -301,6 +301,8 @@
     <Compile Include="V20180608\Models\ModifyHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\ModifyLoginConfigRequest.cs" />
     <Compile Include="V20180608\Models\ModifyLoginConfigResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyPGInstanceSpecRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyPGInstanceSpecResponse.cs" />
     <Compile Include="V20180608\Models\ModifyProviderRequest.cs" />
     <Compile Include="V20180608\Models\ModifyProviderResponse.cs" />
     <Compile Include="V20180608\Models\ModifyResourcePermissionRequest.cs" />

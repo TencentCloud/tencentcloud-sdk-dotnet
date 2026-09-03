@@ -72,6 +72,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// <p>raycluster挂载的volume数量</p>
+        /// </summary>
+        [JsonProperty("StorageCount")]
+        public long? StorageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SubmitType", this.SubmitType);
             this.SetParamSimple(map, prefix + "DashboardUrl", this.DashboardUrl);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "StorageCount", this.StorageCount);
         }
     }
 }
