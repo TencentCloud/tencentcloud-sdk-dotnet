@@ -25,28 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+        /// <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
         /// </summary>
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }
 
         /// <summary>
-        /// 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+        /// <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
         /// </summary>
         [JsonProperty("AutoScalingConfig")]
         public InferenceAutoScalingConfig AutoScalingConfig{ get; set; }
 
         /// <summary>
-        /// 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+        /// <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
         /// </summary>
         [JsonProperty("ManualInstanceConfig")]
         public InferenceManualInstanceConfig ManualInstanceConfig{ get; set; }
 
         /// <summary>
-        /// 单实例的并发数。默认值为 1。
+        /// <p>单实例的并发数。默认值为 1。</p>
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
+
+        /// <summary>
+        /// <p>推理服务的硬件资源配置。</p>
+        /// </summary>
+        [JsonProperty("HardwareConfig")]
+        public InferenceHardwareConfigForModify HardwareConfig{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
             this.SetParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
+            this.SetParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
         }
     }
 }

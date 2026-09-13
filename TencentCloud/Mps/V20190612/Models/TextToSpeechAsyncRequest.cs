@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// <p>文本语言，默认中文</p>
+        /// <p>文本语言，不填时默认自动探测</p>
         /// </summary>
         [JsonProperty("TextLang")]
         public string TextLang{ get; set; }

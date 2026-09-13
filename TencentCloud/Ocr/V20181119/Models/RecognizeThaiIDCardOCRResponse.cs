@@ -25,116 +25,110 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 身份证号码
+        /// <p>身份证号码</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 泰文姓名
+        /// <p>泰文姓名</p>
         /// </summary>
         [JsonProperty("ThaiName")]
         public string ThaiName{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// <p>英文姓名</p>
         /// </summary>
         [JsonProperty("EnFirstName")]
         public string EnFirstName{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// <p>英文姓名</p>
         /// </summary>
         [JsonProperty("EnLastName")]
         public string EnLastName{ get; set; }
 
         /// <summary>
-        /// 泰文签发日期
+        /// <p>泰文签发日期</p>
         /// </summary>
         [JsonProperty("IssueDate")]
         public string IssueDate{ get; set; }
 
         /// <summary>
-        /// 泰文到期日期
+        /// <p>泰文到期日期</p>
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// 英文签发日期
+        /// <p>英文签发日期</p>
         /// </summary>
         [JsonProperty("EnIssueDate")]
         public string EnIssueDate{ get; set; }
 
         /// <summary>
-        /// 英文到期日期
+        /// <p>英文到期日期</p>
         /// </summary>
         [JsonProperty("EnExpirationDate")]
         public string EnExpirationDate{ get; set; }
 
         /// <summary>
-        /// 泰文出生日期
+        /// <p>泰文出生日期</p>
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 英文出生日期
+        /// <p>英文出生日期</p>
         /// </summary>
         [JsonProperty("EnBirthday")]
         public string EnBirthday{ get; set; }
 
         /// <summary>
-        /// 宗教信仰
+        /// <p>宗教信仰</p>
         /// </summary>
         [JsonProperty("Religion")]
         public string Religion{ get; set; }
 
         /// <summary>
-        /// 序列号
+        /// <p>序列号</p>
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 背面号码
+        /// <p>背面号码</p>
         /// </summary>
         [JsonProperty("LaserID")]
         public string LaserID{ get; set; }
 
         /// <summary>
-        /// 证件人像照片抠取
+        /// <p>证件人像照片抠取</p>
         /// </summary>
         [JsonProperty("PortraitImage")]
         public string PortraitImage{ get; set; }
 
         /// <summary>
-        /// 告警码
-        /// -9101 证件边框不完整告警
-        /// -9102 证件复印件告警
-        /// -9103 证件翻拍告警
-        /// -9107 证件反光告警
-        /// -9108 证件模糊告警
-        /// -9109 告警能力未开通
+        /// <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃， 将固定返回"1"，不建议使用。 
+        /// <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+        /// <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
         /// </summary>
         [JsonProperty("CardCount")]
         public long? CardCount{ get; set; }

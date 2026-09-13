@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同流程ID，为32位字符串
+        /// <p>合同流程ID，为32位字符串</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 补充动态合同签署人的结果数组
+        /// <p>补充动态合同签署人的结果数组</p>
         /// </summary>
         [JsonProperty("DynamicFlowApproverList")]
         public DynamicFlowApproverResult[] DynamicFlowApproverList{ get; set; }

@@ -74,7 +74,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ApproveTime{ get; set; }
 
         /// <summary>
-        /// <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+        /// <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }

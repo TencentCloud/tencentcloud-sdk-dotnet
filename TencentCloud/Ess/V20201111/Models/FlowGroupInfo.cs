@@ -92,13 +92,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// <p>发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。<br>若设置为true，审核结果需通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview">CreateFlowSignReview</a> 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。</p><p>注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。<br>示例值：true</p>
+        /// <p>发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。若设置为true，审核结果需通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview">CreateFlowSignReview</a> 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、“授权签”合同。示例值：true</p>
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// <p>个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN</p>
+        /// <p>个人“授权签”场景。发起“授权签”时，需设置对应“授权签”场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN</p>
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }

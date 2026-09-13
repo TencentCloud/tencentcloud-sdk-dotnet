@@ -25,25 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同(流程)组的合同组Id
+        /// <p>合同(流程)组的合同组Id</p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 合同(流程)组中子合同列表.
+        /// <p>合同(流程)组中子合同列表.</p>
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 合同组签署人信息。
+        /// <p>合同组签署人信息。</p>
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowGroupApprovers[] Approvers{ get; set; }
 
         /// <summary>
-        /// FlowGroupNeedWorkflow
+        /// <p>FlowGroupNeedWorkflow</p>
         /// </summary>
         [JsonProperty("WorkflowInstanceId")]
         public string WorkflowInstanceId{ get; set; }

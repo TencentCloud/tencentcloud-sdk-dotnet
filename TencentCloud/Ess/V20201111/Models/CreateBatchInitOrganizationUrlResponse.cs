@@ -25,25 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 小程序路径
+        /// <p>小程序路径</p>
         /// </summary>
         [JsonProperty("MiniAppPath")]
         public string MiniAppPath{ get; set; }
 
         /// <summary>
-        /// 操作长链
+        /// <p>操作长链</p>
         /// </summary>
         [JsonProperty("OperateLongUrl")]
         public string OperateLongUrl{ get; set; }
 
         /// <summary>
-        /// 操作短链
+        /// <p>操作短链</p>
         /// </summary>
         [JsonProperty("OperateShortUrl")]
         public string OperateShortUrl{ get; set; }
 
         /// <summary>
-        /// 操作二维码
+        /// <p>操作二维码</p>
         /// </summary>
         [JsonProperty("QRCodeUrl")]
         public string QRCodeUrl{ get; set; }

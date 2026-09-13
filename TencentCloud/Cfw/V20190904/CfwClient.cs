@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1505";
+       private const string sdkVersion = "SDK_NET_3.0.1506";
 
         /// <summary>
         /// Client constructor.
@@ -1692,6 +1692,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationListSync(DescribeNDRAssetIdentificationListRequest req)
         {
             return InternalRequestAsync<DescribeNDRAssetIdentificationListResponse>(req, "DescribeNDRAssetIdentificationList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeNDRDataLeakOutAlertDetail -- 查询出站数据泄露风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNDRDataLeakOutAlertDetailRequest"/></param>
+        /// <returns><see cref="DescribeNDRDataLeakOutAlertDetailResponse"/></returns>
+        public Task<DescribeNDRDataLeakOutAlertDetailResponse> DescribeNDRDataLeakOutAlertDetail(DescribeNDRDataLeakOutAlertDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNDRDataLeakOutAlertDetailResponse>(req, "DescribeNDRDataLeakOutAlertDetail");
+        }
+
+        /// <summary>
+        /// DescribeNDRDataLeakOutAlertDetail -- 查询出站数据泄露风险详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNDRDataLeakOutAlertDetailRequest"/></param>
+        /// <returns><see cref="DescribeNDRDataLeakOutAlertDetailResponse"/></returns>
+        public DescribeNDRDataLeakOutAlertDetailResponse DescribeNDRDataLeakOutAlertDetailSync(DescribeNDRDataLeakOutAlertDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNDRDataLeakOutAlertDetailResponse>(req, "DescribeNDRDataLeakOutAlertDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

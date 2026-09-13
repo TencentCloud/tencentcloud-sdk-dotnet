@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 动态合同补充结果列表
+        /// <p>动态合同补充结果列表</p>
         /// </summary>
         [JsonProperty("DynamicFlowResultList")]
         public DynamicFlowResult[] DynamicFlowResultList{ get; set; }

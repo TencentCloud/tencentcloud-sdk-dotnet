@@ -109,7 +109,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Recipient Promoter{ get; set; }
 
         /// <summary>
-        /// <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+        /// <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
         /// </summary>
         [JsonProperty("TemplateType")]
         public long? TemplateType{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ShareTemplateId{ get; set; }
 
         /// <summary>
-        /// <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+        /// <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
         /// </summary>
         [JsonProperty("TemplateSeals")]
         public SealInfo[] TemplateSeals{ get; set; }

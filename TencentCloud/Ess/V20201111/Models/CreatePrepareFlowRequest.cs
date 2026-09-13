@@ -25,184 +25,134 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-        /// 支持填入集团子公司经办人 userId 代发合同。
-        /// 
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 资源id，与ResourceType相对应，取值范围：
-        /// <ul>
-        /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-        /// <li>模板Id（通过控制台创建模板后获取模板Id）</li>
-        /// <li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-        /// </ul>
-        /// 注意：需要同时设置 ResourceType 参数指定资源类型
+        /// <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
-        /// 
-        /// 该名称还将用于合同签署完成后文件下载的默认文件名称。
+        /// <p>自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&amp;)、（+）组成。</p><p>该名称还将用于合同签署完成后文件下载的默认文件名称。</p>
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 资源类型，取值有：
-        /// <ul><li> **1**：模板</li>
-        /// <li> **2**：文件（默认值）</li>
-        /// <li> **3**：草稿</li>
-        /// </ul>
+        /// <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// 合同流程的签署顺序类型：
-        /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-        /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+        /// <p>合同流程的签署顺序类型：</p><ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li><li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+        /// <p>合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。</p>
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
-        /// 用户自定义合同类型Id
-        /// 
-        /// 该id为电子签企业内的合同类型id， 可以在控制台-合同-自定义合同类型处获取
-        /// 注: `该参数如果和FlowType同时传，以该参数优先生效`
+        /// <p>用户自定义合同类型Id</p><p>该id为电子签企业内的合同类型id， 可以在控制台-合同-自定义合同类型处获取<br>注: <code>该参数如果和FlowType同时传，以该参数优先生效</code></p>
         /// </summary>
         [JsonProperty("UserFlowTypeId")]
         public string UserFlowTypeId{ get; set; }
 
         /// <summary>
-        /// 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+        /// <p>合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。</p>
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-        /// 
-        /// 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+        /// <p>合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。</p><p>如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。</p>
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowCreateApprover[] Approvers{ get; set; }
 
         /// <summary>
-        /// 开启或者关闭智能添加填写区：
-        /// <ul><li> **OPEN**：开启（默认值）</li>
-        /// <li> **CLOSE**：关闭</li></ul>
+        /// <p>开启或者关闭智能添加填写区：</p><ul><li> **OPEN**：开启（默认值）</li><li> **CLOSE**：关闭</li></ul>
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
 
         /// <summary>
-        /// 该字段已不再使用，请使用InitiatorComponents
+        /// <p>该字段已不再使用，请使用InitiatorComponents</p>
         /// </summary>
         [JsonProperty("Components")]
         public Component Components{ get; set; }
 
         /// <summary>
-        /// 发起合同个性化参数
-        /// 用于满足创建及页面操作过程中的个性化要求
-        /// 具体定制化内容详见数据接口说明
+        /// <p>发起合同个性化参数<br>用于满足创建及页面操作过程中的个性化要求<br>具体定制化内容详见数据接口说明</p>
         /// </summary>
         [JsonProperty("FlowOption")]
         public CreateFlowOption FlowOption{ get; set; }
 
         /// <summary>
-        /// 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
-        /// 1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
-        /// 2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
-        /// 
-        /// 企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
-        /// 1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
-        /// 2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
-        /// 
-        /// 说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。
+        /// <p>发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）1. <strong>false（默认）</strong>：  无需审批，发起方企业签署员工可直接进行签署操作。2. <strong>true</strong>：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和“授权签”两种模式。</p>
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
-        /// 
-        /// 当设置为 `true` 时：  
-        ///   1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
-        ///   2. 只有当审核状态为“通过”时，合同流程正常发起。  
-        ///   3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
-        /// 
-        /// 当设置为 `false` （默认值）时：  
-        ///   发起方无需经过企业内部审批，可直接发起合同流程。
+        /// <p>发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）</p><p>当设置为 <code>true</code> 时：  </p><ol><li>您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 </li><li>只有当审核状态为“通过”时，合同流程正常发起。  </li><li>若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。</li></ol><p>当设置为 <code>false</code> （默认值）时：<br>  发起方无需经过企业内部审批，可直接发起合同流程。</p>
         /// </summary>
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }
 
         /// <summary>
-        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-        /// 
-        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+        /// <p>调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。</p><p>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+        /// <p>合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。</p>
         /// </summary>
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-        /// 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+        /// <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+        /// <p>模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体</p>
         /// </summary>
         [JsonProperty("InitiatorComponents")]
         public Component[] InitiatorComponents{ get; set; }
 
         /// <summary>
-        /// 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+        /// <p>在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:<img src="https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png" alt="FlowDisplayType"></p>
         /// </summary>
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
         /// <summary>
-        /// <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-        /// 签署控件的配置信息，用在嵌入式发起的页面配置，
-        /// 包括  
-        /// 
-        /// - 签署控件 是否默认展示日期.
+        /// <p><font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，<br>包括  </p><ul><li>签署控件 是否默认展示日期.</li></ul>
         /// </summary>
         [JsonProperty("SignComponentConfig")]
         [System.Obsolete]
         public SignComponentConfig SignComponentConfig{ get; set; }
 
         /// <summary>
-        /// 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+        /// <p>是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流</p>
         /// </summary>
         [JsonProperty("Workflow")]
         public bool? Workflow{ get; set; }

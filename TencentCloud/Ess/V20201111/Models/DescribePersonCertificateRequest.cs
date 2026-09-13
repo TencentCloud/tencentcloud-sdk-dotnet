@@ -25,31 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 个人用户的三要素信息：
-        /// <ul><li>姓名</li>
-        /// <li>证件号</li>
-        /// <li>证件类型</li></ul>
+        /// <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul>
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 证书使用场景，可以选择的场景值如下:
-        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }

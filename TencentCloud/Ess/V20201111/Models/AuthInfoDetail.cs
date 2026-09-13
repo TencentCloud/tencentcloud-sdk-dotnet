@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public HasAuthUser[] HasAuthUserList{ get; set; }
 
         /// <summary>
-        /// <p>授权企业列表（企业自动签时，该字段有值）</p>
+        /// <p>授权企业列表（企业“授权签”时，该字段有值）</p>
         /// </summary>
         [JsonProperty("HasAuthOrganizationList")]
         public HasAuthOrganization[] HasAuthOrganizationList{ get; set; }

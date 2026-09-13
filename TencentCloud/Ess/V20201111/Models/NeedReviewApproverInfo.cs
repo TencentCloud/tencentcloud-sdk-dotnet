@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+        /// <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }

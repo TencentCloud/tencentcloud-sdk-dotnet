@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1505</VersionPrefix>
+    <VersionPrefix>3.0.1506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -235,6 +235,8 @@
     <Compile Include="V20190904\Models\DescribeNDRAssetIdentificationCursorListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNDRAssetIdentificationListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNDRAssetIdentificationListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNDRDataLeakOutAlertDetailRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNDRDataLeakOutAlertDetailResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNDRDataLeakOutAlertListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNDRDataLeakOutAlertListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatAcRuleRequest.cs" />
@@ -297,6 +299,7 @@
     <Compile Include="V20190904\Models\DescribeVpcFwCcnPolicyWhiteListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeVpcFwGroupSwitchRequest.cs" />
     <Compile Include="V20190904\Models\DescribeVpcFwGroupSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\DisposalSuggestionItem.cs" />
     <Compile Include="V20190904\Models\DnsVpcSwitch.cs" />
     <Compile Include="V20190904\Models\EdgeIpInfo.cs" />
     <Compile Include="V20190904\Models\EdgeIpInfoSimple.cs" />

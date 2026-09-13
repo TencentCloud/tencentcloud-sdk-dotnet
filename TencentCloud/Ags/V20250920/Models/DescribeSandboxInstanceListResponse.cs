@@ -25,16 +25,22 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// 沙箱实例列表
+        /// <p>沙箱实例列表</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public SandboxInstance[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的实例总数
+        /// <p>符合条件的实例总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

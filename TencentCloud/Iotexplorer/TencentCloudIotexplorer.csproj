@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1498</VersionPrefix>
+    <VersionPrefix>3.0.1506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,9 +60,13 @@
     <Compile Include="V20190423\Models\AuthMiniProgramAppInfo.cs" />
     <Compile Include="V20190423\Models\BatchCreateTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\BatchCreateTWeSeeRecognitionTaskResponse.cs" />
+    <Compile Include="V20190423\Models\BatchCreateTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\BatchCreateTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
+    <Compile Include="V20190423\Models\BatchRenewTWeSeeSubscriptionRequest.cs" />
+    <Compile Include="V20190423\Models\BatchRenewTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\BatchUpdateFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserRequest.cs" />
@@ -598,6 +602,8 @@
     <Compile Include="V20190423\Models\SeeCompHighlightResult.cs" />
     <Compile Include="V20190423\Models\SeeComprehensionConfig.cs" />
     <Compile Include="V20190423\Models\SeeComprehensionResult.cs" />
+    <Compile Include="V20190423\Models\SeeCreateSubscriptionEntry.cs" />
+    <Compile Include="V20190423\Models\SeeCreateSubscriptionResult.cs" />
     <Compile Include="V20190423\Models\SeeDeleteTaskCondition.cs" />
     <Compile Include="V20190423\Models\SeeDetectContinuousConfig.cs" />
     <Compile Include="V20190423\Models\SeeDetectContinuousResult.cs" />
@@ -605,6 +611,8 @@
     <Compile Include="V20190423\Models\SeeFaceInfo.cs" />
     <Compile Include="V20190423\Models\SeeFaceRecognitionResult.cs" />
     <Compile Include="V20190423\Models\SeePersonInfo.cs" />
+    <Compile Include="V20190423\Models\SeeRenewSubscriptionEntry.cs" />
+    <Compile Include="V20190423\Models\SeeRenewSubscriptionResult.cs" />
     <Compile Include="V20190423\Models\SeeStatItem.cs" />
     <Compile Include="V20190423\Models\SeeSummarizeConfig.cs" />
     <Compile Include="V20190423\Models\SeeSummarizeResult.cs" />

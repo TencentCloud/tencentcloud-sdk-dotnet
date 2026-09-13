@@ -78,6 +78,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Thumbnail")]
         public string Thumbnail{ get; set; }
 
+        /// <summary>
+        /// <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+        /// </summary>
+        [JsonProperty("Confidence")]
+        public string Confidence{ get; set; }
+
+        /// <summary>
+        /// <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public SeeTaskInfo TaskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         }
     }
 }

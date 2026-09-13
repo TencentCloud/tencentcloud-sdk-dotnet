@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1498";
+       private const string sdkVersion = "SDK_NET_3.0.1506";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 批量开通 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="BatchCreateTWeSeeSubscriptionResponse"/></returns>
+        public Task<BatchCreateTWeSeeSubscriptionResponse> BatchCreateTWeSeeSubscription(BatchCreateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTWeSeeSubscriptionResponse>(req, "BatchCreateTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 批量开通 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="BatchCreateTWeSeeSubscriptionResponse"/></returns>
+        public BatchCreateTWeSeeSubscriptionResponse BatchCreateTWeSeeSubscriptionSync(BatchCreateTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTWeSeeSubscriptionResponse>(req, "BatchCreateTWeSeeSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量同步执行 TWeSee 语义理解任务
         /// </summary>
         /// <param name="req"><see cref="BatchInvokeTWeSeeRecognitionTaskRequest"/></param>
@@ -134,6 +155,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTaskSync(BatchInvokeTWeSeeRecognitionTaskRequest req)
         {
             return InternalRequestAsync<BatchInvokeTWeSeeRecognitionTaskResponse>(req, "BatchInvokeTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量续费 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="BatchRenewTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="BatchRenewTWeSeeSubscriptionResponse"/></returns>
+        public Task<BatchRenewTWeSeeSubscriptionResponse> BatchRenewTWeSeeSubscription(BatchRenewTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<BatchRenewTWeSeeSubscriptionResponse>(req, "BatchRenewTWeSeeSubscription");
+        }
+
+        /// <summary>
+        /// 批量续费 TWeSee 预付费订阅
+        /// </summary>
+        /// <param name="req"><see cref="BatchRenewTWeSeeSubscriptionRequest"/></param>
+        /// <returns><see cref="BatchRenewTWeSeeSubscriptionResponse"/></returns>
+        public BatchRenewTWeSeeSubscriptionResponse BatchRenewTWeSeeSubscriptionSync(BatchRenewTWeSeeSubscriptionRequest req)
+        {
+            return InternalRequestAsync<BatchRenewTWeSeeSubscriptionResponse>(req, "BatchRenewTWeSeeSubscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

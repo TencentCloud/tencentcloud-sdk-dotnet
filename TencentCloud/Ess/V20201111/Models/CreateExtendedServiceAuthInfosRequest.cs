@@ -25,30 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。
-        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 本企业员工的id，需要已实名，正常在职员工
+        /// <p>本企业员工的id，需要已实名，正常在职员工</p>
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 取值
-        /// <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
-        /// <li>BATCH_SIGN：批量签署</li>
-        /// </ul>
+        /// <p>取值<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
         /// </summary>
         [JsonProperty("ExtendServiceType")]
         public string ExtendServiceType{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

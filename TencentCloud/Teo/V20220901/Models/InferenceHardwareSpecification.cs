@@ -25,40 +25,59 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 规格标识。
+        /// <p>规格标识。已废弃，参考使用字段 <code>HardwareSpecId</code>。</p>
         /// </summary>
         [JsonProperty("Spec")]
+        [System.Obsolete]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// 规格名称。
+        /// <p>规格唯一标识 ID。</p>
+        /// </summary>
+        [JsonProperty("HardwareSpecId")]
+        public string HardwareSpecId{ get; set; }
+
+        /// <summary>
+        /// <p>规格名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// CPU 核数。
-        /// </summary>
-        [JsonProperty("CPUNum")]
-        public float? CPUNum{ get; set; }
-
-        /// <summary>
-        /// 内存大小。单位为 MB。
-        /// </summary>
-        [JsonProperty("MemSize")]
-        public long? MemSize{ get; set; }
-
-        /// <summary>
-        /// GPU 卡数。
+        /// <p>规格默认分配的 GPU 卡数。</p>
         /// </summary>
         [JsonProperty("GPUNum")]
         public float? GPUNum{ get; set; }
 
         /// <summary>
-        /// 显存大小。单位为 MB。
+        /// <p>规格默认分配的 CPU 核数。</p>
+        /// </summary>
+        [JsonProperty("CPUNum")]
+        public float? CPUNum{ get; set; }
+
+        /// <summary>
+        /// <p>规格默认分配的内存大小。</p><p>单位：MB</p>
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public long? MemSize{ get; set; }
+
+        /// <summary>
+        /// <p>规格默认分配的显存大小。</p><p>单位：MB</p>
         /// </summary>
         [JsonProperty("GPUMemSize")]
         public long? GPUMemSize{ get; set; }
+
+        /// <summary>
+        /// <p>规格默认分配的磁盘大小。</p><p>单位：MB</p>
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>规格当前支持的 GPU 卡数列表。</p><p>若不填充或填充空数组，则仅支持规格默认分配的 GPU 卡数。</p>
+        /// </summary>
+        [JsonProperty("AllowedGPUNums")]
+        public float?[] AllowedGPUNums{ get; set; }
 
 
         /// <summary>
@@ -67,11 +86,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
+            this.SetParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "GPUNum", this.GPUNum);
             this.SetParamSimple(map, prefix + "CPUNum", this.CPUNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
-            this.SetParamSimple(map, prefix + "GPUNum", this.GPUNum);
             this.SetParamSimple(map, prefix + "GPUMemSize", this.GPUMemSize);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamArraySimple(map, prefix + "AllowedGPUNums.", this.AllowedGPUNums);
         }
     }
 }

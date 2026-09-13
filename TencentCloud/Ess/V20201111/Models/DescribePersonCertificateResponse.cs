@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 证书的Base64
+        /// <p>证书的Base64</p>
         /// </summary>
         [JsonProperty("Cert")]
         public string Cert{ get; set; }

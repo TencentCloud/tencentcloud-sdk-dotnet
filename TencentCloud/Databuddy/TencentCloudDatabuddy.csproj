@@ -1,0 +1,139 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1506</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Databuddy</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260715\DatabuddyClient.cs" />
+    <Compile Include="V20260715\Models\AdvancedDependencyConfig.cs" />
+    <Compile Include="V20260715\Models\AdvancedParameter.cs" />
+    <Compile Include="V20260715\Models\AlarmBrief.cs" />
+    <Compile Include="V20260715\Models\AlarmGroup.cs" />
+    <Compile Include="V20260715\Models\AsyncActionRsp.cs" />
+    <Compile Include="V20260715\Models\AsyncOperation.cs" />
+    <Compile Include="V20260715\Models\CreateFileRequest.cs" />
+    <Compile Include="V20260715\Models\CreateFileResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteFileRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteFileResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteFileResult.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\DependOnBrief.cs" />
+    <Compile Include="V20260715\Models\FileConfig.cs" />
+    <Compile Include="V20260715\Models\FileInfo.cs" />
+    <Compile Include="V20260715\Models\FileOutputConf.cs" />
+    <Compile Include="V20260715\Models\FileStorage.cs" />
+    <Compile Include="V20260715\Models\GetFileRequest.cs" />
+    <Compile Include="V20260715\Models\GetFileResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunRsp.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskBrief.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRun.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunIteration.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunIterationBrief.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunListOption.cs" />
+    <Compile Include="V20260715\Models\KillWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\KillWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\LabelBrief.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsRsp.cs" />
+    <Compile Include="V20260715\Models\MonitorMetricBrief.cs" />
+    <Compile Include="V20260715\Models\MonitorMetricItem.cs" />
+    <Compile Include="V20260715\Models\OrderBy.cs" />
+    <Compile Include="V20260715\Models\ParamInfo.cs" />
+    <Compile Include="V20260715\Models\RerunWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\RerunWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\ResourceGroupInfo.cs" />
+    <Compile Include="V20260715\Models\RunActionBrief.cs" />
+    <Compile Include="V20260715\Models\RunWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\RunWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\ScheduleBizEnumBrief.cs" />
+    <Compile Include="V20260715\Models\TaskRetryStrategy.cs" />
+    <Compile Include="V20260715\Models\TaskRunConditionRule.cs" />
+    <Compile Include="V20260715\Models\TaskSchedulingParameterBrief.cs" />
+    <Compile Include="V20260715\Models\TaskType.cs" />
+    <Compile Include="V20260715\Models\TaskTypeNotebookExt.cs" />
+    <Compile Include="V20260715\Models\TaskTypeProperty.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleRequest.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleResponse.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateFileRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateFileResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\Workflow.cs" />
+    <Compile Include="V20260715\Models\WorkflowAdvanceConfig.cs" />
+    <Compile Include="V20260715\Models\WorkflowBaseInfo.cs" />
+    <Compile Include="V20260715\Models\WorkflowBaseInfoDetail.cs" />
+    <Compile Include="V20260715\Models\WorkflowBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowRun.cs" />
+    <Compile Include="V20260715\Models\WorkflowRunBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowTask.cs" />
+    <Compile Include="V20260715\Models\WorkflowTaskNodeBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowTaskRun.cs" />
+    <Compile Include="V20260715\Models\WorkflowTriggerAdvancedConfiguration.cs" />
+    <Compile Include="V20260715\Models\WorkflowTriggerConfiguration.cs" />
+  </ItemGroup>
+</Project>

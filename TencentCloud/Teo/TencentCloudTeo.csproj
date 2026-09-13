@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1505</VersionPrefix>
+    <VersionPrefix>3.0.1506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -612,6 +612,8 @@
     <Compile Include="V20220901\Models\InferenceContainerConfig.cs" />
     <Compile Include="V20220901\Models\InferenceContainerConfigForModify.cs" />
     <Compile Include="V20220901\Models\InferenceEnvironmentVariable.cs" />
+    <Compile Include="V20220901\Models\InferenceHardwareConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceHardwareConfigForModify.cs" />
     <Compile Include="V20220901\Models\InferenceHardwareSpecification.cs" />
     <Compile Include="V20220901\Models\InferenceManualInstanceConfig.cs" />
     <Compile Include="V20220901\Models\InferenceResourceConfig.cs" />

@@ -31,13 +31,13 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string Dimension{ get; set; }
 
         /// <summary>
-        /// <p>回填请求的指标族：tokens / search 。</p>
+        /// <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
         /// </summary>
         [JsonProperty("MetricType")]
         public string MetricType{ get; set; }
 
         /// <summary>
-        /// <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+        /// <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
         /// </summary>
         [JsonProperty("MetricKeys")]
         public string[] MetricKeys{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public long?[] Timestamps{ get; set; }
 
         /// <summary>
-        /// <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+        /// <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
         /// </summary>
         [JsonProperty("TopList")]
         public UsageRankItem[] TopList{ get; set; }
@@ -107,6 +107,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         /// </summary>
         [JsonProperty("TotalStats")]
         public UsageStats TotalStats{ get; set; }
+
+        /// <summary>
+        /// <p>排序指标键</p>
+        /// </summary>
+        [JsonProperty("SortKey")]
+        public string SortKey{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -134,6 +140,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamArrayObj(map, prefix + "TopList.", this.TopList);
             this.SetParamObj(map, prefix + "PageStats.", this.PageStats);
             this.SetParamObj(map, prefix + "TotalStats.", this.TotalStats);
+            this.SetParamSimple(map, prefix + "SortKey", this.SortKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1505</VersionPrefix>
+    <VersionPrefix>3.0.1506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,7 @@
     <Compile Include="Cynosdb\**\*.cs" />
     <Compile Include="Dasb\**\*.cs" />
     <Compile Include="Dataagent\**\*.cs" />
+    <Compile Include="Databuddy\**\*.cs" />
     <Compile Include="Dayu\**\*.cs" />
     <Compile Include="Dbbrain\**\*.cs" />
     <Compile Include="Dbdc\**\*.cs" />

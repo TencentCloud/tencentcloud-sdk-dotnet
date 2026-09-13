@@ -43,10 +43,16 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+        /// <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul>
         /// </summary>
         [JsonProperty("MetricType")]
         public string MetricType{ get; set; }
+
+        /// <summary>
+        /// <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p>
+        /// </summary>
+        [JsonProperty("Anchor")]
+        public string Anchor{ get; set; }
 
         /// <summary>
         /// <p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
@@ -72,6 +78,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("ShowAll")]
         public bool? ShowAll{ get; set; }
 
+        /// <summary>
+        /// <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p>
+        /// </summary>
+        [JsonProperty("SortKey")]
+        public string SortKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,10 +94,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "MetricType", this.MetricType);
+            this.SetParamSimple(map, prefix + "Anchor", this.Anchor);
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ShowAll", this.ShowAll);
+            this.SetParamSimple(map, prefix + "SortKey", this.SortKey);
         }
     }
 }

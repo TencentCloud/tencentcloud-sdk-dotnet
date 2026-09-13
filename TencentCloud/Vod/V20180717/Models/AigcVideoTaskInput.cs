@@ -108,6 +108,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }
 
+        /// <summary>
+        /// <p>透传参数。</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

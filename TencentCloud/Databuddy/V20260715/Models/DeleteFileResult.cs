@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReassociateBusinessLogConfigRequest : AbstractModel
+    public class DeleteFileResult : AbstractModel
     {
         
         /// <summary>
-        /// 原关联日志配置ID
+        /// <p>被删除的文件 ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ConfigId")]
-        public string ConfigId{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// 新关联日志配置ID
+        /// <p>删除是否成功</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("NewConfigId")]
-        public string NewConfigId{ get; set; }
-
-        /// <summary>
-        /// TSF应用ID
-        /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
-
-        /// <summary>
-        /// TSF部署组ID
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
-            this.SetParamSimple(map, prefix + "NewConfigId", this.NewConfigId);
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

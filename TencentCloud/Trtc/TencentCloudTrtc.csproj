@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1504</VersionPrefix>
+    <VersionPrefix>3.0.1506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,12 +62,15 @@
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
     <Compile Include="V20190722\Models\AudioFormat.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
+    <Compile Include="V20190722\Models\AudioSegments.cs" />
     <Compile Include="V20190722\Models\CloudModerationStorage.cs" />
     <Compile Include="V20190722\Models\CloudSliceStorage.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
+    <Compile Include="V20190722\Models\CreateAudioModerationSyncRequest.cs" />
+    <Compile Include="V20190722\Models\CreateAudioModerationSyncResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
@@ -179,6 +182,7 @@
     <Compile Include="V20190722\Models\GetRecognizeVocabV3Request.cs" />
     <Compile Include="V20190722\Models\GetRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\HotWord.cs" />
+    <Compile Include="V20190722\Models\ImageLocation.cs" />
     <Compile Include="V20190722\Models\Input.cs" />
     <Compile Include="V20190722\Models\InvokeLLM.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
@@ -208,6 +212,7 @@
     <Compile Include="V20190722\Models\MixLayoutParams.cs" />
     <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
     <Compile Include="V20190722\Models\MixUserInfo.cs" />
+    <Compile Include="V20190722\Models\ModerationCheckDetail.cs" />
     <Compile Include="V20190722\Models\ModerationParams.cs" />
     <Compile Include="V20190722\Models\ModerationStorageParams.cs" />
     <Compile Include="V20190722\Models\ModerationSupplierParam.cs" />

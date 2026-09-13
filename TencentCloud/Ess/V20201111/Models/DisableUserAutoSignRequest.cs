@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p>
+        /// <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p>
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }

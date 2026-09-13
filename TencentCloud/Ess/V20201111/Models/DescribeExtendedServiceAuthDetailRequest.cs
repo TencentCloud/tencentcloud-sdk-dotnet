@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
+        /// <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
         /// </summary>
         [JsonProperty("ExtendServiceType")]
         public string ExtendServiceType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+        /// <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p>
         /// </summary>
         [JsonProperty("PartnerOrganizationName")]
         public string PartnerOrganizationName{ get; set; }

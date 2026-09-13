@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1506";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Trtc.V20190722
         public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
         {
             return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 短音频同步内容理解接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAudioModerationSyncRequest"/></param>
+        /// <returns><see cref="CreateAudioModerationSyncResponse"/></returns>
+        public Task<CreateAudioModerationSyncResponse> CreateAudioModerationSync(CreateAudioModerationSyncRequest req)
+        {
+            return InternalRequestAsync<CreateAudioModerationSyncResponse>(req, "CreateAudioModerationSync");
+        }
+
+        /// <summary>
+        /// 短音频同步内容理解接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAudioModerationSyncRequest"/></param>
+        /// <returns><see cref="CreateAudioModerationSyncResponse"/></returns>
+        public CreateAudioModerationSyncResponse CreateAudioModerationSyncSync(CreateAudioModerationSyncRequest req)
+        {
+            return InternalRequestAsync<CreateAudioModerationSyncResponse>(req, "CreateAudioModerationSync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

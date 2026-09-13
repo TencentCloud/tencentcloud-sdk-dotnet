@@ -132,6 +132,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("COSURI")]
         public string COSURI{ get; set; }
 
+        /// <summary>
+        /// <p>任务的输入 URL</p>
+        /// </summary>
+        [JsonProperty("InputURL")]
+        public string InputURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "COSURI", this.COSURI);
+            this.SetParamSimple(map, prefix + "InputURL", this.InputURL);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 发起流程的web页面链接，有效期5分钟
+        /// <p>发起流程的web页面链接，有效期5分钟</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+        /// <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+        /// <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
         /// </summary>
         [JsonProperty("DraftId")]
         public string DraftId{ get; set; }

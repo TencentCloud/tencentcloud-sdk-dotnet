@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// <p>自动签开通配置信息, 包括开通的人员的信息等</p>
+        /// <p>“授权签”开通配置信息, 包括开通的人员的信息等</p>
         /// </summary>
         [JsonProperty("AutoSignConfig")]
         public AutoSignConfig AutoSignConfig{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
+        /// <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人“授权签”的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵企业。</p>
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
