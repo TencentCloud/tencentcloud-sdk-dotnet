@@ -25,13 +25,13 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 符合条件的策略信息。
+        /// <p>符合条件的策略信息。</p>
         /// </summary>
         [JsonProperty("ForwardingPolicySet")]
         public ForwardingPolicySet[] ForwardingPolicySet{ get; set; }
 
         /// <summary>
-        /// 符合条件的实例个数。
+        /// <p>符合条件的实例个数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

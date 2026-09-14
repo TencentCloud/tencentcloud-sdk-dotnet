@@ -24,12 +24,19 @@ namespace TencentCloud.Ga2.V20250115.Models
     public class DescribeAccessLogParamRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>全球加速实例ID。</p>
+        /// </summary>
+        [JsonProperty("GlobalAcceleratorId")]
+        public string GlobalAcceleratorId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "GlobalAcceleratorId", this.GlobalAcceleratorId);
         }
     }
 }

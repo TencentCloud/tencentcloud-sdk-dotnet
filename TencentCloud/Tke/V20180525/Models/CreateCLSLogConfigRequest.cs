@@ -25,25 +25,25 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 日志采集配置的json表达
+        /// <p>日志采集配置的json表达</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public string LogConfig{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// CLS日志集ID
+        /// <p>CLS日志集ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 当前集群类型支持tke（标准集群）、eks（serverless集群）
+        /// <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

@@ -25,26 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息
+        /// <p>渠道应用相关信息</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 操作人信息
+        /// <p>操作人信息</p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 自动签使用的场景值, 可以选择的场景值如下:
-        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+        /// <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }

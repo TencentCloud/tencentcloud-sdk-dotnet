@@ -25,19 +25,19 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 日志采集配置的json表达
+        /// <p>日志采集配置的json表达</p>
         /// </summary>
         [JsonProperty("LogConfig")]
         public string LogConfig{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// <p>日志集ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }

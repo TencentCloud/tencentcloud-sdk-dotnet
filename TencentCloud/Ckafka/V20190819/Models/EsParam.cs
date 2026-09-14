@@ -150,6 +150,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+        /// </summary>
+        [JsonProperty("SourceDataFormat")]
+        public string SourceDataFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DateField", this.DateField);
             this.SetParamSimple(map, prefix + "RecordMappingMode", this.RecordMappingMode);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "SourceDataFormat", this.SourceDataFormat);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SpokenText{ get; set; }
 
         /// <summary>
-        /// <p>智能体发言类型</p><p>枚举值：</p><ul><li>Script： 智能体话术</li><li>KnowledgeBase： 知识库</li><li>LLMFallback： 大模型兜底</li><li>NoResponseTip： 无响应提示</li><li>智能追问： SmartFollowUp</li><li>FAQ： FAQ</li><li>转人工 - 排队等待音： TransferWaitingPrompt</li><li>无响应挂断前放音： PlayNoResponseEndPrompt</li><li>转人工 - 排队前放音： PlayQueuePrompt</li><li>转人工 - 接待前放音： PlayPromptBeforeReception</li><li>转人工 - 排队超时放音： PlayQueueTimeoutPrompt</li><li>转人工 - 转人工失败放音： PlayTransferFailPrompt</li><li>DTMF收号（按键用户输入）： Dtmf</li><li>按键节点 - 播放提示音： PlayDtmfPrompt</li><li>按键节点 - 输入错误提示音： PlayInvalidDtmfPrompt</li><li>按键节点 - 超时提示音： PlayDtmfTimeoutPrompt</li><li>其他类型： Other</li></ul>
+        /// <p>智能体发言类型</p><p>枚举值：</p><ul><li>Script： 智能体话术</li><li>KnowledgeBase： 知识库</li><li>LLMFallback： 大模型兜底</li><li>NoResponseTip： 无响应提示</li><li>SmartFollowUp： 智能追问</li><li>FAQ： FAQ</li><li>TransferWaitingPrompt： 转人工 - 排队等待音</li><li>PlayNoResponseEndPrompt： 无响应挂断前放音</li><li>PlayQueuePrompt： 转人工 - 排队前放音</li><li>PlayPromptBeforeReception： 转人工 - 接待前放音</li><li>PlayQueueTimeoutPrompt： 转人工 - 排队超时放音</li><li>PlayTransferFailPrompt： 转人工 - 转人工失败放音</li><li>Dtmf： DTMF收号（按键用户输入）</li><li>PlayDtmfPrompt： 按键节点 - 播放提示音</li><li>PlayInvalidDtmfPrompt： 按键节点 - 输入错误提示音</li><li>PlayDtmfTimeoutPrompt： 按键节点 - 超时提示音</li><li>TransferAgentPrompt： 转接智能体 - 转接至目标智能体提示音</li><li>Other： 其他类型</li></ul>
         /// </summary>
         [JsonProperty("SpokenType")]
         public string SpokenType{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("LatencyMetrics")]
         public AICallLatencyMetrics LatencyMetrics{ get; set; }
+
+        /// <summary>
+        /// <p>用户回复命中的知识库问题标题，仅 SpokenType 为 KnowledgeBase 或 FAQ 等命中知识库的场景有值。</p>
+        /// </summary>
+        [JsonProperty("KnowledgeName")]
+        public string KnowledgeName{ get; set; }
 
         /// <summary>
         /// <p>节点跳转的原因，仅画布为灵活模式时有值</p>
@@ -65,6 +71,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SpokenText", this.SpokenText);
             this.SetParamSimple(map, prefix + "SpokenType", this.SpokenType);
             this.SetParamObj(map, prefix + "LatencyMetrics.", this.LatencyMetrics);
+            this.SetParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
             this.SetParamSimple(map, prefix + "TraverseReason", this.TraverseReason);
         }
     }

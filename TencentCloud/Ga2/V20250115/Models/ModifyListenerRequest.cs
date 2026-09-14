@@ -108,6 +108,12 @@ namespace TencentCloud.Ga2.V20250115.Models
         [JsonProperty("GetRealIpType")]
         public string GetRealIpType{ get; set; }
 
+        /// <summary>
+        /// <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+        /// </summary>
+        [JsonProperty("HttpVersion")]
+        public string HttpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamArraySimple(map, prefix + "ServerCertificates.", this.ServerCertificates);
             this.SetParamArraySimple(map, prefix + "ClientCaCertificates.", this.ClientCaCertificates);
             this.SetParamSimple(map, prefix + "GetRealIpType", this.GetRealIpType);
+            this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
         }
     }
 }

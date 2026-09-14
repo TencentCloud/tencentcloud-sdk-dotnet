@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+        /// <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+        /// <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询角色的总数量
+        /// <p>查询角色的总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 查询的角色信息列表
+        /// <p>查询的角色信息列表</p>
         /// </summary>
         [JsonProperty("ChannelRoles")]
         public ChannelRole[] ChannelRoles{ get; set; }

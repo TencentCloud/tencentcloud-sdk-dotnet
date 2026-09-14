@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1506";
+       private const string sdkVersion = "SDK_NET_3.0.1507";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Adp.V20260520
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 校验标签下的标准词是否已存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckLabelRequest"/></param>
+        /// <returns><see cref="CheckLabelResponse"/></returns>
+        public Task<CheckLabelResponse> CheckLabel(CheckLabelRequest req)
+        {
+            return InternalRequestAsync<CheckLabelResponse>(req, "CheckLabel");
+        }
+
+        /// <summary>
+        /// 校验标签下的标准词是否已存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckLabelRequest"/></param>
+        /// <returns><see cref="CheckLabelResponse"/></returns>
+        public CheckLabelResponse CheckLabelSync(CheckLabelRequest req)
+        {
+            return InternalRequestAsync<CheckLabelResponse>(req, "CheckLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -159,6 +180,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 创建分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateCategoryRequest"/></param>
+        /// <returns><see cref="CreateCategoryResponse"/></returns>
+        public Task<CreateCategoryResponse> CreateCategory(CreateCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateCategoryResponse>(req, "CreateCategory");
+        }
+
+        /// <summary>
+        /// 创建分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateCategoryRequest"/></param>
+        /// <returns><see cref="CreateCategoryResponse"/></returns>
+        public CreateCategoryResponse CreateCategorySync(CreateCategoryRequest req)
+        {
+            return InternalRequestAsync<CreateCategoryResponse>(req, "CreateCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
         /// </summary>
         /// <param name="req"><see cref="CreateChannelRequest"/></param>
@@ -197,6 +239,48 @@ namespace TencentCloud.Adp.V20260520
         public CreateConversationResponse CreateConversationSync(CreateConversationRequest req)
         {
             return InternalRequestAsync<CreateConversationResponse>(req, "CreateConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建知识库
+        /// </summary>
+        /// <param name="req"><see cref="CreateKBRequest"/></param>
+        /// <returns><see cref="CreateKBResponse"/></returns>
+        public Task<CreateKBResponse> CreateKB(CreateKBRequest req)
+        {
+            return InternalRequestAsync<CreateKBResponse>(req, "CreateKB");
+        }
+
+        /// <summary>
+        /// 创建知识库
+        /// </summary>
+        /// <param name="req"><see cref="CreateKBRequest"/></param>
+        /// <returns><see cref="CreateKBResponse"/></returns>
+        public CreateKBResponse CreateKBSync(CreateKBRequest req)
+        {
+            return InternalRequestAsync<CreateKBResponse>(req, "CreateKB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateLabelRequest"/></param>
+        /// <returns><see cref="CreateLabelResponse"/></returns>
+        public Task<CreateLabelResponse> CreateLabel(CreateLabelRequest req)
+        {
+            return InternalRequestAsync<CreateLabelResponse>(req, "CreateLabel");
+        }
+
+        /// <summary>
+        /// 创建标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateLabelRequest"/></param>
+        /// <returns><see cref="CreateLabelResponse"/></returns>
+        public CreateLabelResponse CreateLabelSync(CreateLabelRequest req)
+        {
+            return InternalRequestAsync<CreateLabelResponse>(req, "CreateLabel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +327,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 创建 QA 生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateQAGenerationTaskRequest"/></param>
+        /// <returns><see cref="CreateQAGenerationTaskResponse"/></returns>
+        public Task<CreateQAGenerationTaskResponse> CreateQAGenerationTask(CreateQAGenerationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateQAGenerationTaskResponse>(req, "CreateQAGenerationTask");
+        }
+
+        /// <summary>
+        /// 创建 QA 生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateQAGenerationTaskRequest"/></param>
+        /// <returns><see cref="CreateQAGenerationTaskResponse"/></returns>
+        public CreateQAGenerationTaskResponse CreateQAGenerationTaskSync(CreateQAGenerationTaskRequest req)
+        {
+            return InternalRequestAsync<CreateQAGenerationTaskResponse>(req, "CreateQAGenerationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量创建 QA
+        /// </summary>
+        /// <param name="req"><see cref="CreateQAListRequest"/></param>
+        /// <returns><see cref="CreateQAListResponse"/></returns>
+        public Task<CreateQAListResponse> CreateQAList(CreateQAListRequest req)
+        {
+            return InternalRequestAsync<CreateQAListResponse>(req, "CreateQAList");
+        }
+
+        /// <summary>
+        /// 批量创建 QA
+        /// </summary>
+        /// <param name="req"><see cref="CreateQAListRequest"/></param>
+        /// <returns><see cref="CreateQAListResponse"/></returns>
+        public CreateQAListResponse CreateQAListSync(CreateQAListRequest req)
+        {
+            return InternalRequestAsync<CreateQAListResponse>(req, "CreateQAList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新增发布任务
         /// </summary>
         /// <param name="req"><see cref="CreateReleaseRequest"/></param>
@@ -260,6 +386,27 @@ namespace TencentCloud.Adp.V20260520
         public CreateReleaseResponse CreateReleaseSync(CreateReleaseRequest req)
         {
             return InternalRequestAsync<CreateReleaseResponse>(req, "CreateRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建相似问生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSimilarQuestionRequest"/></param>
+        /// <returns><see cref="CreateSimilarQuestionResponse"/></returns>
+        public Task<CreateSimilarQuestionResponse> CreateSimilarQuestion(CreateSimilarQuestionRequest req)
+        {
+            return InternalRequestAsync<CreateSimilarQuestionResponse>(req, "CreateSimilarQuestion");
+        }
+
+        /// <summary>
+        /// 创建相似问生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSimilarQuestionRequest"/></param>
+        /// <returns><see cref="CreateSimilarQuestionResponse"/></returns>
+        public CreateSimilarQuestionResponse CreateSimilarQuestionSync(CreateSimilarQuestionRequest req)
+        {
+            return InternalRequestAsync<CreateSimilarQuestionResponse>(req, "CreateSimilarQuestion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,6 +600,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 删除分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCategoryRequest"/></param>
+        /// <returns><see cref="DeleteCategoryResponse"/></returns>
+        public Task<DeleteCategoryResponse> DeleteCategory(DeleteCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteCategoryResponse>(req, "DeleteCategory");
+        }
+
+        /// <summary>
+        /// 删除分类
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCategoryRequest"/></param>
+        /// <returns><see cref="DeleteCategoryResponse"/></returns>
+        public DeleteCategoryResponse DeleteCategorySync(DeleteCategoryRequest req)
+        {
+            return InternalRequestAsync<DeleteCategoryResponse>(req, "DeleteCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除渠道（通过scene区分场景）
         /// </summary>
         /// <param name="req"><see cref="DeleteChannelRequest"/></param>
@@ -495,6 +663,69 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 批量删除文档
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocListRequest"/></param>
+        /// <returns><see cref="DeleteDocListResponse"/></returns>
+        public Task<DeleteDocListResponse> DeleteDocList(DeleteDocListRequest req)
+        {
+            return InternalRequestAsync<DeleteDocListResponse>(req, "DeleteDocList");
+        }
+
+        /// <summary>
+        /// 批量删除文档
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocListRequest"/></param>
+        /// <returns><see cref="DeleteDocListResponse"/></returns>
+        public DeleteDocListResponse DeleteDocListSync(DeleteDocListRequest req)
+        {
+            return InternalRequestAsync<DeleteDocListResponse>(req, "DeleteDocList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除知识库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKBRequest"/></param>
+        /// <returns><see cref="DeleteKBResponse"/></returns>
+        public Task<DeleteKBResponse> DeleteKB(DeleteKBRequest req)
+        {
+            return InternalRequestAsync<DeleteKBResponse>(req, "DeleteKB");
+        }
+
+        /// <summary>
+        /// 删除知识库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKBRequest"/></param>
+        /// <returns><see cref="DeleteKBResponse"/></returns>
+        public DeleteKBResponse DeleteKBSync(DeleteKBRequest req)
+        {
+            return InternalRequestAsync<DeleteKBResponse>(req, "DeleteKB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLabelListRequest"/></param>
+        /// <returns><see cref="DeleteLabelListResponse"/></returns>
+        public Task<DeleteLabelListResponse> DeleteLabelList(DeleteLabelListRequest req)
+        {
+            return InternalRequestAsync<DeleteLabelListResponse>(req, "DeleteLabelList");
+        }
+
+        /// <summary>
+        /// 批量删除标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLabelListRequest"/></param>
+        /// <returns><see cref="DeleteLabelListResponse"/></returns>
+        public DeleteLabelListResponse DeleteLabelListSync(DeleteLabelListRequest req)
+        {
+            return InternalRequestAsync<DeleteLabelListResponse>(req, "DeleteLabelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除指定的消息记录分类
         /// </summary>
         /// <param name="req"><see cref="DeleteMsgRecordCategoryRequest"/></param>
@@ -533,6 +764,27 @@ namespace TencentCloud.Adp.V20260520
         public DeletePluginResponse DeletePluginSync(DeletePluginRequest req)
         {
             return InternalRequestAsync<DeletePluginResponse>(req, "DeletePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 QA
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQAListRequest"/></param>
+        /// <returns><see cref="DeleteQAListResponse"/></returns>
+        public Task<DeleteQAListResponse> DeleteQAList(DeleteQAListRequest req)
+        {
+            return InternalRequestAsync<DeleteQAListResponse>(req, "DeleteQAList");
+        }
+
+        /// <summary>
+        /// 批量删除 QA
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQAListRequest"/></param>
+        /// <returns><see cref="DeleteQAListResponse"/></returns>
+        public DeleteQAListResponse DeleteQAListSync(DeleteQAListRequest req)
+        {
+            return InternalRequestAsync<DeleteQAListResponse>(req, "DeleteQAList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +1125,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查询分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeCategoryListResponse"/></returns>
+        public Task<DescribeCategoryListResponse> DescribeCategoryList(DescribeCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCategoryListResponse>(req, "DescribeCategoryList");
+        }
+
+        /// <summary>
+        /// 查询分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeCategoryListResponse"/></returns>
+        public DescribeCategoryListResponse DescribeCategoryListSync(DescribeCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCategoryListResponse>(req, "DescribeCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取渠道详情（scene区分场景）
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelRequest"/></param>
@@ -932,6 +1205,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailListSync(DescribeConcurrencyLimitDetailListRequest req)
         {
             return InternalRequestAsync<DescribeConcurrencyLimitDetailListResponse>(req, "DescribeConcurrencyLimitDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询冲突问详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConflictQARequest"/></param>
+        /// <returns><see cref="DescribeConflictQAResponse"/></returns>
+        public Task<DescribeConflictQAResponse> DescribeConflictQA(DescribeConflictQARequest req)
+        {
+            return InternalRequestAsync<DescribeConflictQAResponse>(req, "DescribeConflictQA");
+        }
+
+        /// <summary>
+        /// 查询冲突问详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConflictQARequest"/></param>
+        /// <returns><see cref="DescribeConflictQAResponse"/></returns>
+        public DescribeConflictQAResponse DescribeConflictQASync(DescribeConflictQARequest req)
+        {
+            return InternalRequestAsync<DescribeConflictQAResponse>(req, "DescribeConflictQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询冲突问列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConflictQASummaryListRequest"/></param>
+        /// <returns><see cref="DescribeConflictQASummaryListResponse"/></returns>
+        public Task<DescribeConflictQASummaryListResponse> DescribeConflictQASummaryList(DescribeConflictQASummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeConflictQASummaryListResponse>(req, "DescribeConflictQASummaryList");
+        }
+
+        /// <summary>
+        /// 查询冲突问列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConflictQASummaryListRequest"/></param>
+        /// <returns><see cref="DescribeConflictQASummaryListResponse"/></returns>
+        public DescribeConflictQASummaryListResponse DescribeConflictQASummaryListSync(DescribeConflictQASummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeConflictQASummaryListResponse>(req, "DescribeConflictQASummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1016,6 +1331,132 @@ namespace TencentCloud.Adp.V20260520
         public DescribeConversationMessageListResponse DescribeConversationMessageListSync(DescribeConversationMessageListRequest req)
         {
             return InternalRequestAsync<DescribeConversationMessageListResponse>(req, "DescribeConversationMessageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文档详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocRequest"/></param>
+        /// <returns><see cref="DescribeDocResponse"/></returns>
+        public Task<DescribeDocResponse> DescribeDoc(DescribeDocRequest req)
+        {
+            return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc");
+        }
+
+        /// <summary>
+        /// 查询文档详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocRequest"/></param>
+        /// <returns><see cref="DescribeDocResponse"/></returns>
+        public DescribeDocResponse DescribeDocSync(DescribeDocRequest req)
+        {
+            return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询文档摘要列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeDocSummaryListResponse"/></returns>
+        public Task<DescribeDocSummaryListResponse> DescribeDocSummaryList(DescribeDocSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDocSummaryListResponse>(req, "DescribeDocSummaryList");
+        }
+
+        /// <summary>
+        /// 查询文档摘要列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeDocSummaryListResponse"/></returns>
+        public DescribeDocSummaryListResponse DescribeDocSummaryListSync(DescribeDocSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDocSummaryListResponse>(req, "DescribeDocSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询知识库详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBRequest"/></param>
+        /// <returns><see cref="DescribeKBResponse"/></returns>
+        public Task<DescribeKBResponse> DescribeKB(DescribeKBRequest req)
+        {
+            return InternalRequestAsync<DescribeKBResponse>(req, "DescribeKB");
+        }
+
+        /// <summary>
+        /// 查询知识库详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBRequest"/></param>
+        /// <returns><see cref="DescribeKBResponse"/></returns>
+        public DescribeKBResponse DescribeKBSync(DescribeKBRequest req)
+        {
+            return InternalRequestAsync<DescribeKBResponse>(req, "DescribeKB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询知识库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeKBSummaryListResponse"/></returns>
+        public Task<DescribeKBSummaryListResponse> DescribeKBSummaryList(DescribeKBSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBSummaryListResponse>(req, "DescribeKBSummaryList");
+        }
+
+        /// <summary>
+        /// 查询知识库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeKBSummaryListResponse"/></returns>
+        public DescribeKBSummaryListResponse DescribeKBSummaryListSync(DescribeKBSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBSummaryListResponse>(req, "DescribeKBSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询标签详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLabelRequest"/></param>
+        /// <returns><see cref="DescribeLabelResponse"/></returns>
+        public Task<DescribeLabelResponse> DescribeLabel(DescribeLabelRequest req)
+        {
+            return InternalRequestAsync<DescribeLabelResponse>(req, "DescribeLabel");
+        }
+
+        /// <summary>
+        /// 查询标签详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLabelRequest"/></param>
+        /// <returns><see cref="DescribeLabelResponse"/></returns>
+        public DescribeLabelResponse DescribeLabelSync(DescribeLabelRequest req)
+        {
+            return InternalRequestAsync<DescribeLabelResponse>(req, "DescribeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLabelSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeLabelSummaryListResponse"/></returns>
+        public Task<DescribeLabelSummaryListResponse> DescribeLabelSummaryList(DescribeLabelSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeLabelSummaryListResponse>(req, "DescribeLabelSummaryList");
+        }
+
+        /// <summary>
+        /// 查询标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLabelSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeLabelSummaryListResponse"/></returns>
+        public DescribeLabelSummaryListResponse DescribeLabelSummaryListSync(DescribeLabelSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeLabelSummaryListResponse>(req, "DescribeLabelSummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1163,6 +1604,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribePluginSummaryListResponse DescribePluginSummaryListSync(DescribePluginSummaryListRequest req)
         {
             return InternalRequestAsync<DescribePluginSummaryListResponse>(req, "DescribePluginSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 QA 详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQARequest"/></param>
+        /// <returns><see cref="DescribeQAResponse"/></returns>
+        public Task<DescribeQAResponse> DescribeQA(DescribeQARequest req)
+        {
+            return InternalRequestAsync<DescribeQAResponse>(req, "DescribeQA");
+        }
+
+        /// <summary>
+        /// 查询 QA 详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQARequest"/></param>
+        /// <returns><see cref="DescribeQAResponse"/></returns>
+        public DescribeQAResponse DescribeQASync(DescribeQARequest req)
+        {
+            return InternalRequestAsync<DescribeQAResponse>(req, "DescribeQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 QA 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQASummaryListRequest"/></param>
+        /// <returns><see cref="DescribeQASummaryListResponse"/></returns>
+        public Task<DescribeQASummaryListResponse> DescribeQASummaryList(DescribeQASummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeQASummaryListResponse>(req, "DescribeQASummaryList");
+        }
+
+        /// <summary>
+        /// 查询 QA 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQASummaryListRequest"/></param>
+        /// <returns><see cref="DescribeQASummaryListResponse"/></returns>
+        public DescribeQASummaryListResponse DescribeQASummaryListSync(DescribeQASummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeQASummaryListResponse>(req, "DescribeQASummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1419,6 +1902,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 异步导出 QA
+        /// </summary>
+        /// <param name="req"><see cref="ExportQARequest"/></param>
+        /// <returns><see cref="ExportQAResponse"/></returns>
+        public Task<ExportQAResponse> ExportQA(ExportQARequest req)
+        {
+            return InternalRequestAsync<ExportQAResponse>(req, "ExportQA");
+        }
+
+        /// <summary>
+        /// 异步导出 QA
+        /// </summary>
+        /// <param name="req"><see cref="ExportQARequest"/></param>
+        /// <returns><see cref="ExportQAResponse"/></returns>
+        public ExportQAResponse ExportQASync(ExportQARequest req)
+        {
+            return InternalRequestAsync<ExportQAResponse>(req, "ExportQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 收藏插件
         /// </summary>
         /// <param name="req"><see cref="FavoritePluginRequest"/></param>
@@ -1457,6 +1961,27 @@ namespace TencentCloud.Adp.V20260520
         public FavoriteSkillResponse FavoriteSkillSync(FavoriteSkillRequest req)
         {
             return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量导入文档
+        /// </summary>
+        /// <param name="req"><see cref="ImportDocListRequest"/></param>
+        /// <returns><see cref="ImportDocListResponse"/></returns>
+        public Task<ImportDocListResponse> ImportDocList(ImportDocListRequest req)
+        {
+            return InternalRequestAsync<ImportDocListResponse>(req, "ImportDocList");
+        }
+
+        /// <summary>
+        /// 批量导入文档
+        /// </summary>
+        /// <param name="req"><see cref="ImportDocListRequest"/></param>
+        /// <returns><see cref="ImportDocListResponse"/></returns>
+        public ImportDocListResponse ImportDocListSync(ImportDocListRequest req)
+        {
+            return InternalRequestAsync<ImportDocListResponse>(req, "ImportDocList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +2049,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 修改分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyCategoryResponse"/></returns>
+        public Task<ModifyCategoryResponse> ModifyCategory(ModifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyCategoryResponse>(req, "ModifyCategory");
+        }
+
+        /// <summary>
+        /// 修改分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyCategoryResponse"/></returns>
+        public ModifyCategoryResponse ModifyCategorySync(ModifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyCategoryResponse>(req, "ModifyCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
         /// </summary>
         /// <param name="req"><see cref="ModifyChannelRequest"/></param>
@@ -1545,6 +2091,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 修改冲突问
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConflictQARequest"/></param>
+        /// <returns><see cref="ModifyConflictQAResponse"/></returns>
+        public Task<ModifyConflictQAResponse> ModifyConflictQA(ModifyConflictQARequest req)
+        {
+            return InternalRequestAsync<ModifyConflictQAResponse>(req, "ModifyConflictQA");
+        }
+
+        /// <summary>
+        /// 修改冲突问
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConflictQARequest"/></param>
+        /// <returns><see cref="ModifyConflictQAResponse"/></returns>
+        public ModifyConflictQAResponse ModifyConflictQASync(ModifyConflictQARequest req)
+        {
+            return InternalRequestAsync<ModifyConflictQAResponse>(req, "ModifyConflictQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改会话信息
         /// </summary>
         /// <param name="req"><see cref="ModifyConversationRequest"/></param>
@@ -1562,6 +2129,90 @@ namespace TencentCloud.Adp.V20260520
         public ModifyConversationResponse ModifyConversationSync(ModifyConversationRequest req)
         {
             return InternalRequestAsync<ModifyConversationResponse>(req, "ModifyConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改单个文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocRequest"/></param>
+        /// <returns><see cref="ModifyDocResponse"/></returns>
+        public Task<ModifyDocResponse> ModifyDoc(ModifyDocRequest req)
+        {
+            return InternalRequestAsync<ModifyDocResponse>(req, "ModifyDoc");
+        }
+
+        /// <summary>
+        /// 修改单个文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocRequest"/></param>
+        /// <returns><see cref="ModifyDocResponse"/></returns>
+        public ModifyDocResponse ModifyDocSync(ModifyDocRequest req)
+        {
+            return InternalRequestAsync<ModifyDocResponse>(req, "ModifyDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocListRequest"/></param>
+        /// <returns><see cref="ModifyDocListResponse"/></returns>
+        public Task<ModifyDocListResponse> ModifyDocList(ModifyDocListRequest req)
+        {
+            return InternalRequestAsync<ModifyDocListResponse>(req, "ModifyDocList");
+        }
+
+        /// <summary>
+        /// 批量修改文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocListRequest"/></param>
+        /// <returns><see cref="ModifyDocListResponse"/></returns>
+        public ModifyDocListResponse ModifyDocListSync(ModifyDocListRequest req)
+        {
+            return InternalRequestAsync<ModifyDocListResponse>(req, "ModifyDocList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改知识库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKBRequest"/></param>
+        /// <returns><see cref="ModifyKBResponse"/></returns>
+        public Task<ModifyKBResponse> ModifyKB(ModifyKBRequest req)
+        {
+            return InternalRequestAsync<ModifyKBResponse>(req, "ModifyKB");
+        }
+
+        /// <summary>
+        /// 修改知识库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKBRequest"/></param>
+        /// <returns><see cref="ModifyKBResponse"/></returns>
+        public ModifyKBResponse ModifyKBSync(ModifyKBRequest req)
+        {
+            return InternalRequestAsync<ModifyKBResponse>(req, "ModifyKB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabelRequest"/></param>
+        /// <returns><see cref="ModifyLabelResponse"/></returns>
+        public Task<ModifyLabelResponse> ModifyLabel(ModifyLabelRequest req)
+        {
+            return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel");
+        }
+
+        /// <summary>
+        /// 修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLabelRequest"/></param>
+        /// <returns><see cref="ModifyLabelResponse"/></returns>
+        public ModifyLabelResponse ModifyLabelSync(ModifyLabelRequest req)
+        {
+            return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1604,6 +2255,48 @@ namespace TencentCloud.Adp.V20260520
         public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
         {
             return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改单个 QA
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQARequest"/></param>
+        /// <returns><see cref="ModifyQAResponse"/></returns>
+        public Task<ModifyQAResponse> ModifyQA(ModifyQARequest req)
+        {
+            return InternalRequestAsync<ModifyQAResponse>(req, "ModifyQA");
+        }
+
+        /// <summary>
+        /// 修改单个 QA
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQARequest"/></param>
+        /// <returns><see cref="ModifyQAResponse"/></returns>
+        public ModifyQAResponse ModifyQASync(ModifyQARequest req)
+        {
+            return InternalRequestAsync<ModifyQAResponse>(req, "ModifyQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改 QA
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQAListRequest"/></param>
+        /// <returns><see cref="ModifyQAListResponse"/></returns>
+        public Task<ModifyQAListResponse> ModifyQAList(ModifyQAListRequest req)
+        {
+            return InternalRequestAsync<ModifyQAListResponse>(req, "ModifyQAList");
+        }
+
+        /// <summary>
+        /// 批量修改 QA
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQAListRequest"/></param>
+        /// <returns><see cref="ModifyQAListResponse"/></returns>
+        public ModifyQAListResponse ModifyQAListSync(ModifyQAListRequest req)
+        {
+            return InternalRequestAsync<ModifyQAListResponse>(req, "ModifyQAList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1816,6 +2509,27 @@ namespace TencentCloud.Adp.V20260520
         public RunAppTriggerNowResponse RunAppTriggerNowSync(RunAppTriggerNowRequest req)
         {
             return InternalRequestAsync<RunAppTriggerNowResponse>(req, "RunAppTriggerNow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 知识检索
+        /// </summary>
+        /// <param name="req"><see cref="SearchKnowledgeRequest"/></param>
+        /// <returns><see cref="SearchKnowledgeResponse"/></returns>
+        public Task<SearchKnowledgeResponse> SearchKnowledge(SearchKnowledgeRequest req)
+        {
+            return InternalRequestAsync<SearchKnowledgeResponse>(req, "SearchKnowledge");
+        }
+
+        /// <summary>
+        /// 知识检索
+        /// </summary>
+        /// <param name="req"><see cref="SearchKnowledgeRequest"/></param>
+        /// <returns><see cref="SearchKnowledgeResponse"/></returns>
+        public SearchKnowledgeResponse SearchKnowledgeSync(SearchKnowledgeRequest req)
+        {
+            return InternalRequestAsync<SearchKnowledgeResponse>(req, "SearchKnowledge")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

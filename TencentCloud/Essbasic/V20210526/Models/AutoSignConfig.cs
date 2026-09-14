@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// <p>自动签开通个人用户信息, 包括名字,身份证等</p>
+        /// <p>“授权签”开通个人用户信息, 包括名字,身份证等</p>
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? UserDefineSeal{ get; set; }
 
         /// <summary>
-        /// <p>回调中是否需要自动签将要使用的印章（签名）图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul>
+        /// <p>回调中是否需要“授权签”将要使用的印章（签名）图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p>
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] VerifyChannels{ get; set; }
 
         /// <summary>
-        /// <p>设置用户开通自动签时是否绑定个人自动签账号许可。</p><ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p>
+        /// <p>设置用户开通“授权签”时是否绑定个人“授权签”账号许可。<ul><li><b>1</b>: (默认)不绑定“授权签”账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }

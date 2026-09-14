@@ -25,99 +25,79 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。
-        /// 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
+        /// <p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p>
         /// </summary>
         [JsonProperty("ApproverNumber")]
         public ulong? ApproverNumber{ get; set; }
 
         /// <summary>
-        /// 指定签署人类型，目前支持
-        /// <ul><li> **ORGANIZATION**：企业(默认值)</li>
-        /// <li> **ENTERPRISESERVER**：企业静默签</li></ul>
+        /// <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
         /// <summary>
-        /// <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
+        /// <p><font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置</p>
         /// </summary>
         [JsonProperty("ReleasedApproverRecipientId")]
         public string ReleasedApproverRecipientId{ get; set; }
 
         /// <summary>
-        /// 签署人姓名，最大长度50个字。
+        /// <p>签署人姓名，最大长度50个字。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的证件类型，支持以下类型
-        /// <ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li>
-        /// <li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-        /// <li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
+        /// <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// 证件号码，应符合以下规则
-        /// <ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
-        /// <li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。
-        /// </li>
-        /// <li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+        /// <p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 签署人手机号。
+        /// <p>签署人手机号。</p>
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 组织机构名称。
-        /// 请确认该名称与企业营业执照中注册的名称一致。
-        /// 如果名称中包含英文括号()，请使用中文括号（）代替。
-        /// 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+        /// <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。<br>如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。</p>
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-        /// <font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
+        /// <p>第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。<br><font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font></p>
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-        /// <font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
+        /// <p>第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。<br><font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font></p>
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 签署控件类型，支持自定义企业签署方的签署控件类型
-        /// <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
-        /// <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
+        /// <p>签署控件类型，支持自定义企业签署方的签署控件类型</p><ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li><li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignComponentType")]
         public string ApproverSignComponentType{ get; set; }
 
         /// <summary>
-        /// 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
-        /// 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
-        /// 
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
+        /// <p>参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫<code>甲方</code>,第二个叫<code>乙方</code>,  第三个叫<code>丙方</code>，以此类推。<br>如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。</p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png" alt="image"></p>
         /// </summary>
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }
 
         /// <summary>
-        /// 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+        /// <p>印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署</p>
         /// </summary>
         [JsonProperty("ApproverSignSealId")]
         public string ApproverSignSealId{ get; set; }

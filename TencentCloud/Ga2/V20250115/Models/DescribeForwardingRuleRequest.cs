@@ -25,34 +25,40 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 七层转发规则ID。
+        /// <p>七层转发规则ID。</p>
         /// </summary>
         [JsonProperty("ForwardingPolicyId")]
         public string ForwardingPolicyId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

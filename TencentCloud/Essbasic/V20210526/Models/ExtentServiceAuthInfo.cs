@@ -25,41 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 扩展服务类型
-        /// <ul>
-        /// <li>AUTO_SIGN             企业自动签（自动签署）</li>
-        /// <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-        /// <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-        /// <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-        /// <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-        /// <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-        /// </ul>
+        /// <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 扩展服务名称 
+        /// <p>扩展服务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 扩展服务的开通状态
-        /// **ENABLE**：开通 
-        /// **DISABLE**：未开通	
+        /// <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 操作扩展服务的操作人第三方应用平台的用户openid
+        /// <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
         /// </summary>
         [JsonProperty("OperatorOpenId")]
         public string OperatorOpenId{ get; set; }
 
         /// <summary>
-        /// 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+        /// <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
         /// </summary>
         [JsonProperty("OperateOn")]
         public long? OperateOn{ get; set; }

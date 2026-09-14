@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1506</VersionPrefix>
+    <VersionPrefix>3.0.1507</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -269,6 +269,11 @@
     <Compile Include="V20220901\Models\CustomRule.cs" />
     <Compile Include="V20220901\Models\CustomRules.cs" />
     <Compile Include="V20220901\Models\CustomTime.cs" />
+    <Compile Include="V20220901\Models\CustomVariable.cs" />
+    <Compile Include="V20220901\Models\CustomVariableOperation.cs" />
+    <Compile Include="V20220901\Models\CustomVariableOperationRuleAction.cs" />
+    <Compile Include="V20220901\Models\CustomVariableOperationRuleBranch.cs" />
+    <Compile Include="V20220901\Models\CustomVariableOperationSubRule.cs" />
     <Compile Include="V20220901\Models\CustomizedHeader.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
@@ -869,6 +874,7 @@
     <Compile Include="V20220901\Models\SessionIdAffinityConfig.cs" />
     <Compile Include="V20220901\Models\SessionRateControl.cs" />
     <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
+    <Compile Include="V20220901\Models\SetParameters.cs" />
     <Compile Include="V20220901\Models\SharedCNAMEInfo.cs" />
     <Compile Include="V20220901\Models\ShieldParameters.cs" />
     <Compile Include="V20220901\Models\SiteFailover.cs" />

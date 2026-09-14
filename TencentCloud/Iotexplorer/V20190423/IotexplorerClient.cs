@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1506";
+       private const string sdkVersion = "SDK_NET_3.0.1507";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public BatchCreateTWeSeeSubscriptionResponse BatchCreateTWeSeeSubscriptionSync(BatchCreateTWeSeeSubscriptionRequest req)
         {
             return InternalRequestAsync<BatchCreateTWeSeeSubscriptionResponse>(req, "BatchCreateTWeSeeSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量查询 TWeSee 订单状态
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeTWeSeeOrdersRequest"/></param>
+        /// <returns><see cref="BatchDescribeTWeSeeOrdersResponse"/></returns>
+        public Task<BatchDescribeTWeSeeOrdersResponse> BatchDescribeTWeSeeOrders(BatchDescribeTWeSeeOrdersRequest req)
+        {
+            return InternalRequestAsync<BatchDescribeTWeSeeOrdersResponse>(req, "BatchDescribeTWeSeeOrders");
+        }
+
+        /// <summary>
+        /// 批量查询 TWeSee 订单状态
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeTWeSeeOrdersRequest"/></param>
+        /// <returns><see cref="BatchDescribeTWeSeeOrdersResponse"/></returns>
+        public BatchDescribeTWeSeeOrdersResponse BatchDescribeTWeSeeOrdersSync(BatchDescribeTWeSeeOrdersRequest req)
+        {
+            return InternalRequestAsync<BatchDescribeTWeSeeOrdersResponse>(req, "BatchDescribeTWeSeeOrders")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4792,6 +4813,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyTopicRuleResponse ModifyTopicRuleSync(ModifyTopicRuleRequest req)
         {
             return InternalRequestAsync<ModifyTopicRuleResponse>(req, "ModifyTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询、删除或列举 TWeSee 直传对象
+        /// </summary>
+        /// <param name="req"><see cref="OperateTWeSeeDirectUploadObjectRequest"/></param>
+        /// <returns><see cref="OperateTWeSeeDirectUploadObjectResponse"/></returns>
+        public Task<OperateTWeSeeDirectUploadObjectResponse> OperateTWeSeeDirectUploadObject(OperateTWeSeeDirectUploadObjectRequest req)
+        {
+            return InternalRequestAsync<OperateTWeSeeDirectUploadObjectResponse>(req, "OperateTWeSeeDirectUploadObject");
+        }
+
+        /// <summary>
+        /// 查询、删除或列举 TWeSee 直传对象
+        /// </summary>
+        /// <param name="req"><see cref="OperateTWeSeeDirectUploadObjectRequest"/></param>
+        /// <returns><see cref="OperateTWeSeeDirectUploadObjectResponse"/></returns>
+        public OperateTWeSeeDirectUploadObjectResponse OperateTWeSeeDirectUploadObjectSync(OperateTWeSeeDirectUploadObjectRequest req)
+        {
+            return InternalRequestAsync<OperateTWeSeeDirectUploadObjectResponse>(req, "OperateTWeSeeDirectUploadObject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

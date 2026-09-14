@@ -25,7 +25,7 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 任务状态。
+        /// <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

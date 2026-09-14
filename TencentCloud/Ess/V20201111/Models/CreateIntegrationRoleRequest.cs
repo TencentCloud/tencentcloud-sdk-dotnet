@@ -25,48 +25,43 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
+        /// <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-        /// 支持填入集团子公司经办人 userId 代发合同。
-        /// 
-        /// 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+        /// <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 角色描述，最大长度为50个字符
+        /// <p>角色描述，最大长度为50个字符</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 角色类型，0:saas角色，1:集团角色
-        /// 默认0，saas角色
+        /// <p>角色类型，0:saas角色，1:集团角色<br>默认0，saas角色</p>
         /// </summary>
         [JsonProperty("IsGroupRole")]
         public long? IsGroupRole{ get; set; }
 
         /// <summary>
-        /// 权限树
+        /// <p>权限树</p>
         /// </summary>
         [JsonProperty("PermissionGroups")]
         public PermissionGroup[] PermissionGroups{ get; set; }
 
         /// <summary>
-        /// 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+        /// <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
         /// </summary>
         [JsonProperty("SubOrganizationIds")]
         public string[] SubOrganizationIds{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

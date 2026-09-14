@@ -25,7 +25,7 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 加速地域信息。
+        /// <p>加速地域信息。</p>
         /// </summary>
         [JsonProperty("AcceleratorRegionSet")]
         public AcceleratorRegionSet[] AcceleratorRegionSet{ get; set; }

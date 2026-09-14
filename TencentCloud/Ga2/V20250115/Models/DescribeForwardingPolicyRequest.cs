@@ -25,28 +25,34 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件。<li>forwarding-policy-id - String -（过滤条件）策略ID。</li></p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

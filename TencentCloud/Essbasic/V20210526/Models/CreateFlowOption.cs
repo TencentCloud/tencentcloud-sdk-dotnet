@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? CanSkipAddApprover{ get; set; }
 
         /// <summary>
-        /// <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：</p><ul><li>如果设置参数为 true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</li><li>此参数对子客和自动签无效，不允许进行修改。</li></ul>
+        /// <p>是否可以编辑签署人包括新增，修改，删除 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>注意：* 如果设置参数为 true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空* 此参数对子客和“授权签”无效，不允许进行修改。</p>
         /// </summary>
         [JsonProperty("ForbidEditApprover")]
         public bool? ForbidEditApprover{ get; set; }

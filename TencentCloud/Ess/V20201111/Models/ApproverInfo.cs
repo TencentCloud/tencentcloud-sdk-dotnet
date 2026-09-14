@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+        /// <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p><strong>0</strong>：企业</p><p><strong>1</strong>：个人</p><p><strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }

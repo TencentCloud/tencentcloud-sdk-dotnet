@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 日志采集topicid
+        /// <p>日志采集topicid</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

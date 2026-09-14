@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 角色id
+        /// <p>角色id</p>
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }

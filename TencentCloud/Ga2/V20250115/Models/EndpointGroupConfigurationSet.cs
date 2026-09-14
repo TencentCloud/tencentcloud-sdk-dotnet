@@ -198,6 +198,18 @@ namespace TencentCloud.Ga2.V20250115.Models
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }
 
+        /// <summary>
+        /// <p>出终端节点组内网IP</p>
+        /// </summary>
+        [JsonProperty("OriginPrivateIps")]
+        public string[] OriginPrivateIps{ get; set; }
+
+        /// <summary>
+        /// <p>出终端节点组公网CIDR</p>
+        /// </summary>
+        [JsonProperty("OriginPublicCidrs")]
+        public string[] OriginPublicCidrs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +245,8 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "IspType", this.IspType);
             this.SetParamSimple(map, prefix + "CipherPolicyId", this.CipherPolicyId);
             this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
+            this.SetParamArraySimple(map, prefix + "OriginPrivateIps.", this.OriginPrivateIps);
+            this.SetParamArraySimple(map, prefix + "OriginPublicCidrs.", this.OriginPublicCidrs);
         }
     }
 }

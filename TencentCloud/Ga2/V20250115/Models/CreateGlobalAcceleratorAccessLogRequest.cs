@@ -25,7 +25,7 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// <p>GA示例唯一Id</p>
+        /// <p>GA实例唯一Id</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }

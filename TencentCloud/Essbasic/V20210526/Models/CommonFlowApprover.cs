@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? NotChannelOrganization{ get; set; }
 
         /// <summary>
-        /// <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p> <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业静默签）<br> <strong>1</strong> :个人/自然人<br><strong>3</strong> :企业/企业员工自动签（他方企业自动签署或文件发起时的本方企业自动签）</p><p>注：类型为3（企业/企业员工自动签）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。<br>使用自动签时，请确保企业已经开通自动签功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业自动签。<br>使用文件发起自动签时使用前请联系对接的客户经理沟通。</p>
+        /// <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: <strong>0</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”） <strong>1</strong> :个人/自然人<strong>3</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）注：类型为3（企业/企业员工“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。使用“授权签”时，请确保企业已经开通“授权签”功能，开通方式：控制台 -&gt; 企业设置 -&gt; 扩展服务 -&gt; 企业“授权签”。使用文件发起“授权签”时使用前请联系对接的客户经理沟通。</p>
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// <p>企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传</p>
+        /// <p>企业OpenId，第三方应用集成非“授权签”子客企业签署人发起合同必传</p>
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// <p>企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传</p>
+        /// <p>企业名称，第三方应用集成非“授权签”子客企业签署人必传，saas企业签署人必传</p>
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }

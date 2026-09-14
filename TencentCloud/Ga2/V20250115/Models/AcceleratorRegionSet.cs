@@ -25,7 +25,7 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// <p>地域中文名称。</p>
+        /// <p>地域名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public long? IsAvailable{ get; set; }
 
         /// <summary>
-        /// <p>地域信息。</p>
+        /// <p>地域。</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string AreaName{ get; set; }
 
         /// <summary>
-        /// <p>是否中国地域。</p>
+        /// <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p>
         /// </summary>
         [JsonProperty("IsChinaMainland")]
         public ulong? IsChinaMainland{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string[] SupportIspType{ get; set; }
 
         /// <summary>
-        /// <p>是否腾讯地域。</p>
+        /// <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p>
         /// </summary>
         [JsonProperty("IsTencentRegion")]
         public ulong? IsTencentRegion{ get; set; }

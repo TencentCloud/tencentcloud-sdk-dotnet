@@ -42,6 +42,12 @@ namespace TencentCloud.Ga2.V20250115.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ga2.V20250115.Models
             this.SetParamSimple(map, prefix + "GlobalAcceleratorAclPolicyId", this.GlobalAcceleratorAclPolicyId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

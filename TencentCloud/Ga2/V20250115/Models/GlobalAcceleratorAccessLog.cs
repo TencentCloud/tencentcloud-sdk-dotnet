@@ -24,12 +24,82 @@ namespace TencentCloud.Ga2.V20250115.Models
     public class GlobalAcceleratorAccessLog : AbstractModel
     {
         
+        /// <summary>
+        /// <p>日志唯一Id</p>
+        /// </summary>
+        [JsonProperty("LogPushTaskId")]
+        public string LogPushTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>GA实例唯一Id</p>
+        /// </summary>
+        [JsonProperty("GlobalAcceleratorId")]
+        public string GlobalAcceleratorId{ get; set; }
+
+        /// <summary>
+        /// <p>监听器唯一Id</p>
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// <p>终端节点组唯一Id</p>
+        /// </summary>
+        [JsonProperty("EndpointGroupId")]
+        public string EndpointGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>日志任务描述</p>
+        /// </summary>
+        [JsonProperty("FlowLogDescription")]
+        public string FlowLogDescription{ get; set; }
+
+        /// <summary>
+        /// <p>日志所在地域</p>
+        /// </summary>
+        [JsonProperty("CloudRegion")]
+        public string CloudRegion{ get; set; }
+
+        /// <summary>
+        /// <p>日志主题Id</p>
+        /// </summary>
+        [JsonProperty("CloudLogId")]
+        public string CloudLogId{ get; set; }
+
+        /// <summary>
+        /// <p>日志集Id</p>
+        /// </summary>
+        [JsonProperty("CloudLogSetId")]
+        public string CloudLogSetId{ get; set; }
+
+        /// <summary>
+        /// <p>选择日志采集字段</p>
+        /// </summary>
+        [JsonProperty("FieldKeys")]
+        public string[] FieldKeys{ get; set; }
+
+        /// <summary>
+        /// <p>日志任务状态</p><p>枚举值：</p><ul><li>active： 运行中</li><li>stopped： 已暂停</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LogPushTaskId", this.LogPushTaskId);
+            this.SetParamSimple(map, prefix + "GlobalAcceleratorId", this.GlobalAcceleratorId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "EndpointGroupId", this.EndpointGroupId);
+            this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+            this.SetParamSimple(map, prefix + "CloudRegion", this.CloudRegion);
+            this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+            this.SetParamSimple(map, prefix + "CloudLogSetId", this.CloudLogSetId);
+            this.SetParamArraySimple(map, prefix + "FieldKeys.", this.FieldKeys);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

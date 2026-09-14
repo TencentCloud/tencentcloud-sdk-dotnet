@@ -25,127 +25,127 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 监听器名称。
+        /// <p>监听器名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 监听器描述。
+        /// <p>监听器描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 协议。
+        /// <p>协议。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 端口范围。
+        /// <p>端口范围。</p>
         /// </summary>
         [JsonProperty("PortRanges")]
         public PortRanges PortRanges{ get; set; }
 
         /// <summary>
-        /// 是否打开七层获取源IP方式。
+        /// <p>是否打开七层获取源IP方式。</p>
         /// </summary>
         [JsonProperty("XForwardedForRealIp")]
         public bool? XForwardedForRealIp{ get; set; }
 
         /// <summary>
-        /// 开启会话保持。
+        /// <p>开启会话保持。</p>
         /// </summary>
         [JsonProperty("ClientAffinity")]
         public string ClientAffinity{ get; set; }
 
         /// <summary>
-        /// 会话保持时间。
+        /// <p>会话保持时间。</p>
         /// </summary>
         [JsonProperty("ClientAffinityTime")]
         public ulong? ClientAffinityTime{ get; set; }
 
         /// <summary>
-        /// SSL解析方式。
+        /// <p>SSL解析方式。</p>
         /// </summary>
         [JsonProperty("CertificationType")]
         public string CertificationType{ get; set; }
 
         /// <summary>
-        /// 服务器证书。
+        /// <p>服务器证书。</p>
         /// </summary>
         [JsonProperty("ServerCertificates")]
         public string[] ServerCertificates{ get; set; }
 
         /// <summary>
-        /// 客户端证书。
+        /// <p>客户端证书。</p>
         /// </summary>
         [JsonProperty("ClientCaCertificates")]
         public string[] ClientCaCertificates{ get; set; }
 
         /// <summary>
-        /// TLS密码套件包。
+        /// <p>TLS密码套件包。</p>
         /// </summary>
         [JsonProperty("CipherPolicyId")]
         public string CipherPolicyId{ get; set; }
 
         /// <summary>
-        /// HTTP版本。
+        /// <p>HTTP版本。</p>
         /// </summary>
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }
 
         /// <summary>
-        /// 请求超时时间。
+        /// <p>请求超时时间。</p>
         /// </summary>
         [JsonProperty("RequestTimeout")]
         public ulong? RequestTimeout{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 监听路由类型。
+        /// <p>监听路由类型。</p>
         /// </summary>
         [JsonProperty("ListenerType")]
         public string ListenerType{ get; set; }
 
         /// <summary>
-        /// 监听器状态。
+        /// <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 所属监听器终端节点组个数。
+        /// <p>所属监听器终端节点组个数。</p>
         /// </summary>
         [JsonProperty("EndpointGroupCounts")]
         public ulong? EndpointGroupCounts{ get; set; }
 
         /// <summary>
-        /// 四层获取源IP方式。
+        /// <p>四层获取源IP方式。</p>
         /// </summary>
         [JsonProperty("GetRealIpType")]
         public string GetRealIpType{ get; set; }
 
         /// <summary>
-        /// 连接超时时间。
+        /// <p>连接超时时间。</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public ulong? IdleTimeout{ get; set; }

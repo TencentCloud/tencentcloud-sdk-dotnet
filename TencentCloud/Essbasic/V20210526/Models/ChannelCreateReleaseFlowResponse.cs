@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 解除协议流程编号
+        /// <p>解除协议流程编号</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

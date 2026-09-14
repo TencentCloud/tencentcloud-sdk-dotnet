@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1506</VersionPrefix>
+    <VersionPrefix>3.0.1507</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,10 @@
     <Compile Include="V20190423\Models\BatchCreateTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\BatchCreateTWeSeeSubscriptionRequest.cs" />
     <Compile Include="V20190423\Models\BatchCreateTWeSeeSubscriptionResponse.cs" />
+    <Compile Include="V20190423\Models\BatchDescribeTWeSeeOrdersEntry.cs" />
+    <Compile Include="V20190423\Models\BatchDescribeTWeSeeOrdersRequest.cs" />
+    <Compile Include="V20190423\Models\BatchDescribeTWeSeeOrdersResponse.cs" />
+    <Compile Include="V20190423\Models\BatchDescribeTWeSeeOrdersResult.cs" />
     <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskRequest.cs" />
     <Compile Include="V20190423\Models\BatchInvokeTWeSeeRecognitionTaskResponse.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
@@ -545,6 +549,8 @@
     <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\OperateTWeSeeDirectUploadObjectRequest.cs" />
+    <Compile Include="V20190423\Models\OperateTWeSeeDirectUploadObjectResponse.cs" />
     <Compile Include="V20190423\Models\OtaModuleInfo.cs" />
     <Compile Include="V20190423\Models\PackageConsumeStat.cs" />
     <Compile Include="V20190423\Models\PackageConsumeTask.cs" />
@@ -610,6 +616,11 @@
     <Compile Include="V20190423\Models\SeeEventIdFilterConfig.cs" />
     <Compile Include="V20190423\Models\SeeFaceInfo.cs" />
     <Compile Include="V20190423\Models\SeeFaceRecognitionResult.cs" />
+    <Compile Include="V20190423\Models\SeeObjectListOptions.cs" />
+    <Compile Include="V20190423\Models\SeeObjectListing.cs" />
+    <Compile Include="V20190423\Models\SeeObjectMetadata.cs" />
+    <Compile Include="V20190423\Models\SeeObjectMetadataEntry.cs" />
+    <Compile Include="V20190423\Models\SeeObjectSummary.cs" />
     <Compile Include="V20190423\Models\SeePersonInfo.cs" />
     <Compile Include="V20190423\Models\SeeRenewSubscriptionEntry.cs" />
     <Compile Include="V20190423\Models\SeeRenewSubscriptionResult.cs" />
