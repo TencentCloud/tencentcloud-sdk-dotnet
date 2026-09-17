@@ -25,29 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点 ID。
+        /// <p>站点 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-        /// <li>page-id： 按照页面 ID 进行过滤；</li>
-        /// <li>name： 按照页面名称进行过滤；</li>
-        /// <li>description：按照页面描述过滤；</li>
-        /// <li>content-type：按照页面类型过滤。</li>
+        /// <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量。默认值：0。
+        /// <p>分页查询偏移量。默认值：0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询限制数目。默认值：20，最大值：1000。 
+        /// <p>分页查询限制数目。默认值：20，最大值：1000。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

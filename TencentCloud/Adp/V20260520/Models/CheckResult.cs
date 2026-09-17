@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>是否通过校验</p>
+        /// 是否通过校验
         /// </summary>
         [JsonProperty("Passed")]
         public bool? Passed{ get; set; }
 
         /// <summary>
-        /// <p>失败原因（passed=false 时填充）</p>
+        /// 失败原因（passed=false 时填充）
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

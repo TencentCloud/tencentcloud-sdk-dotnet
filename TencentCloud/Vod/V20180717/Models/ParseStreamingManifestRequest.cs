@@ -25,15 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 待解析的索引文件内容。
+        /// <p>待解析的索引文件内容。</p>
         /// </summary>
         [JsonProperty("MediaManifestContent")]
         public string MediaManifestContent{ get; set; }
 
         /// <summary>
-        /// 视频索引文件格式。默认 m3u8 格式。
-        /// <li>m3u8</li>
-        /// <li>mpd</li>
+        /// <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
         /// </summary>
         [JsonProperty("ManifestType")]
         public string ManifestType{ get; set; }

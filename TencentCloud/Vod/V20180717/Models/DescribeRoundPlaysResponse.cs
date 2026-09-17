@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+        /// <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         [System.Obsolete]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 轮播播单详情列表。
+        /// <p>轮播播单详情列表。</p>
         /// </summary>
         [JsonProperty("RoundPlaySet")]
         public RoundPlayInfo[] RoundPlaySet{ get; set; }
 
         /// <summary>
-        /// 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+        /// <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

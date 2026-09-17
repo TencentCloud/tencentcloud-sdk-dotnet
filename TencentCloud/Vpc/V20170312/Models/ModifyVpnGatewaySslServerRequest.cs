@@ -25,73 +25,74 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// SSL-VPN SERVER 实例ID
+        /// <p>SSL-VPN SERVER 实例ID</p>
         /// </summary>
         [JsonProperty("SslVpnServerId")]
         public string SslVpnServerId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN SERVER NAME
+        /// <p>SSL-VPN SERVER NAME</p>
         /// </summary>
         [JsonProperty("SslVpnServerName")]
         public string SslVpnServerName{ get; set; }
 
         /// <summary>
-        /// 本端地址
+        /// <p>本端地址</p>
         /// </summary>
         [JsonProperty("LocalAddress")]
         public string[] LocalAddress{ get; set; }
 
         /// <summary>
-        /// 客户端地址
+        /// <p>客户端地址</p>
         /// </summary>
         [JsonProperty("RemoteAddress")]
         public string RemoteAddress{ get; set; }
 
         /// <summary>
-        /// SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+        /// <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
         /// </summary>
         [JsonProperty("SslVpnProtocol")]
+        [System.Obsolete]
         public string SslVpnProtocol{ get; set; }
 
         /// <summary>
-        /// SSL VPN服务端监听协议端口。
+        /// <p>SSL VPN服务端监听协议端口。</p>
         /// </summary>
         [JsonProperty("SslVpnPort")]
         public long? SslVpnPort{ get; set; }
 
         /// <summary>
-        /// 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+        /// <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 认证算法。可选 'SHA1'，默认SHA1。
+        /// <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
         /// </summary>
         [JsonProperty("IntegrityAlgorithm")]
         public string IntegrityAlgorithm{ get; set; }
 
         /// <summary>
-        /// 是否支持压缩。当前不支持压缩。默认False。
+        /// <p>是否支持压缩。当前不支持压缩。默认False。</p>
         /// </summary>
         [JsonProperty("Compress")]
         public bool? Compress{ get; set; }
 
         /// <summary>
-        /// 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+        /// <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
         /// </summary>
         [JsonProperty("SsoEnabled")]
         public bool? SsoEnabled{ get; set; }
 
         /// <summary>
-        /// SAML-DATA
+        /// <p>SAML-DATA</p>
         /// </summary>
         [JsonProperty("SamlData")]
         public string SamlData{ get; set; }
 
         /// <summary>
-        /// DNS Server地址
+        /// <p>DNS Server地址</p>
         /// </summary>
         [JsonProperty("DnsServers")]
         public DnsServers DnsServers{ get; set; }

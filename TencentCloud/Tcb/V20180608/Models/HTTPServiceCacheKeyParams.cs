@@ -43,7 +43,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string QueryStringAction{ get; set; }
 
         /// <summary>
-        /// <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+        /// <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
         /// </summary>
         [JsonProperty("QueryStringValues")]
         public string[] QueryStringValues{ get; set; }

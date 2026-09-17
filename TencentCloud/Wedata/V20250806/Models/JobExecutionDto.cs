@@ -95,6 +95,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string ResultPreviewFilePath{ get; set; }
 
         /// <summary>
+        /// 结果集schema信息文件cos路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaInfoFilePath")]
+        public string SchemaInfoFilePath{ get; set; }
+
+        /// <summary>
         /// 任务执行的结果总行数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -157,6 +164,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ScriptContentTruncate")]
         public bool? ScriptContentTruncate{ get; set; }
 
+        /// <summary>
+        /// 预览结果集是否收集完成
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectedPreviewResult")]
+        public bool? CollectedPreviewResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +187,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "LogFilePath", this.LogFilePath);
             this.SetParamSimple(map, prefix + "ResultFilePath", this.ResultFilePath);
             this.SetParamSimple(map, prefix + "ResultPreviewFilePath", this.ResultPreviewFilePath);
+            this.SetParamSimple(map, prefix + "SchemaInfoFilePath", this.SchemaInfoFilePath);
             this.SetParamSimple(map, prefix + "ResultTotalCount", this.ResultTotalCount);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
@@ -182,6 +197,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ResultEffectCount", this.ResultEffectCount);
             this.SetParamSimple(map, prefix + "CollectingTotalResult", this.CollectingTotalResult);
             this.SetParamSimple(map, prefix + "ScriptContentTruncate", this.ScriptContentTruncate);
+            this.SetParamSimple(map, prefix + "CollectedPreviewResult", this.CollectedPreviewResult);
         }
     }
 }

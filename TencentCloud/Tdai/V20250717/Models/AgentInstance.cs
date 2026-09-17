@@ -162,6 +162,18 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
+        /// <summary>
+        /// <p>具备能力</p>
+        /// </summary>
+        [JsonProperty("Capabilities")]
+        public string[] Capabilities{ get; set; }
+
+        /// <summary>
+        /// <p>是否是免部署实例</p>
+        /// </summary>
+        [JsonProperty("DeploymentFree")]
+        public bool? DeploymentFree{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
+            this.SetParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
         }
     }
 }

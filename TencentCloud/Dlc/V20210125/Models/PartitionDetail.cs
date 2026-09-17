@@ -71,6 +71,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ResourceQuota[] ResourceQuota{ get; set; }
 
         /// <summary>
+        /// <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchedulableLimitList")]
+        public SchedulableLimit[] SchedulableLimitList{ get; set; }
+
+        /// <summary>
         /// <p>付费模式</p>
         /// </summary>
         [JsonProperty("PayMode")]
@@ -95,6 +102,37 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+        /// </summary>
+        [JsonProperty("IsolatedTimestamp")]
+        public string IsolatedTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public CloudTag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+        /// </summary>
+        [JsonProperty("ResourcePoolKind")]
+        public string ResourcePoolKind{ get; set; }
+
+        /// <summary>
+        /// <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+        /// </summary>
+        [JsonProperty("ExternalClusterId")]
+        public string ExternalClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,10 +146,16 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ProductInfo", this.ProductInfo);
             this.SetParamSimple(map, prefix + "ResourcePoolCode", this.ResourcePoolCode);
             this.SetParamArrayObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
+            this.SetParamArrayObj(map, prefix + "SchedulableLimitList.", this.SchedulableLimitList);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ResourcePoolKind", this.ResourcePoolKind);
+            this.SetParamSimple(map, prefix + "ExternalClusterId", this.ExternalClusterId);
         }
     }
 }

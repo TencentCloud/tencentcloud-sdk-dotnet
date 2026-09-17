@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string MatchType{ get; set; }
 
         /// <summary>
-        /// <p>Values 匹配值集合，Values 内任一命中即认为条件成立（OR 语义）</p><p>入参限制：单项 1~1024 字节，最多 100 条</p>
+        /// <p>Values 匹配值集合，Values 内任一命中即认为条件成立（OR 语义）</p><p>入参限制：单项 1~1024 字节，最多 30 条</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

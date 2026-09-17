@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1498";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateAccessExportResponse CreateAccessExportSync(CreateAccessExportRequest req)
         {
             return InternalRequestAsync<CreateAccessExportResponse>(req, "CreateAccessExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量cc规则配置接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndUpdateBatchCCRuleRequest"/></param>
+        /// <returns><see cref="CreateAndUpdateBatchCCRuleResponse"/></returns>
+        public Task<CreateAndUpdateBatchCCRuleResponse> CreateAndUpdateBatchCCRule(CreateAndUpdateBatchCCRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAndUpdateBatchCCRuleResponse>(req, "CreateAndUpdateBatchCCRule");
+        }
+
+        /// <summary>
+        /// 批量cc规则配置接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndUpdateBatchCCRuleRequest"/></param>
+        /// <returns><see cref="CreateAndUpdateBatchCCRuleResponse"/></returns>
+        public CreateAndUpdateBatchCCRuleResponse CreateAndUpdateBatchCCRuleSync(CreateAndUpdateBatchCCRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAndUpdateBatchCCRuleResponse>(req, "CreateAndUpdateBatchCCRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

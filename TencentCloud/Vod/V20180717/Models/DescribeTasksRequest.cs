@@ -25,51 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+        /// <p>过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 过滤条件：文件 ID。
+        /// <p>过滤条件：文件 ID。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 过滤条件：任务创建时间。
+        /// <p>过滤条件：任务创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// 过滤条件：任务结束时间。
+        /// <p>过滤条件：任务结束时间。</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public TimeRange FinishTime{ get; set; }
 
         /// <summary>
-        /// 排序方式。Sort.Field 可选：
-        /// <li> CreateTime 任务创建时间。</li>
-        /// <li>FinishTime 任务结束时间。</li>
+        /// <p>排序方式。Sort.Field 可选：</p><li> CreateTime 任务创建时间。</li><li>FinishTime 任务结束时间。</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：10，最大值：100。
+        /// <p>返回记录条数，默认值：10，最大值：100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+        /// <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

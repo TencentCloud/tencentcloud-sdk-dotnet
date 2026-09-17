@@ -25,244 +25,256 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
+        /// <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 规格ID
+        /// <p>规格ID</p>
         /// </summary>
         [JsonProperty("SpecId")]
         public string SpecId{ get; set; }
 
         /// <summary>
-        /// 副本数
+        /// <p>副本数</p>
         /// </summary>
         [JsonProperty("Replica")]
         public long? Replica{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// <p>类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Vpc iD
+        /// <p>Vpc iD</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 是否开启持久化存储
+        /// <p>是否开启持久化存储</p>
         /// </summary>
         [JsonProperty("EnableStorage")]
         public bool? EnableStorage{ get; set; }
 
         /// <summary>
-        /// 数据存储方式
+        /// <p>数据存储方式</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 云硬盘容量
+        /// <p>云硬盘容量</p>
         /// </summary>
         [JsonProperty("StorageCapacity")]
         public long? StorageCapacity{ get; set; }
 
         /// <summary>
-        /// 计费方式
+        /// <p>计费方式</p>
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
         /// <summary>
-        /// EKS集群的ID
+        /// <p>EKS集群的ID</p>
         /// </summary>
         [JsonProperty("EKSClusterID")]
         public string EKSClusterID{ get; set; }
 
         /// <summary>
-        /// 集群创建时间
+        /// <p>集群创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 环境配置信息列表
+        /// <p>环境配置信息列表</p>
         /// </summary>
         [JsonProperty("EnvInfos")]
         public EnvInfo[] EnvInfos{ get; set; }
 
         /// <summary>
-        /// 引擎所在的区域
+        /// <p>引擎所在的区域</p>
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// 注册引擎是否开启公网
+        /// <p>注册引擎是否开启公网</p>
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
-        /// 私有网络列表信息
+        /// <p>私有网络列表信息</p>
         /// </summary>
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }
 
         /// <summary>
-        /// 服务治理相关信息列表
+        /// <p>服务治理相关信息列表</p>
         /// </summary>
         [JsonProperty("ServiceGovernanceInfos")]
         public ServiceGovernanceInfo[] ServiceGovernanceInfos{ get; set; }
 
         /// <summary>
-        /// 实例的标签信息
+        /// <p>实例的标签信息</p>
         /// </summary>
         [JsonProperty("Tags")]
         public KVPair[] Tags{ get; set; }
 
         /// <summary>
-        /// 引擎实例是否开启控制台公网访问地址
+        /// <p>引擎实例是否开启控制台公网访问地址</p>
         /// </summary>
         [JsonProperty("EnableConsoleInternet")]
         public bool? EnableConsoleInternet{ get; set; }
 
         /// <summary>
-        /// 引擎实例是否开启控制台内网访问地址
+        /// <p>引擎实例是否开启控制台内网访问地址</p>
         /// </summary>
         [JsonProperty("EnableConsoleIntranet")]
         public bool? EnableConsoleIntranet{ get; set; }
 
         /// <summary>
-        /// 引擎实例是否展示参数配置页面
+        /// <p>引擎实例是否展示参数配置页面</p>
         /// </summary>
         [JsonProperty("ConfigInfoVisible")]
         public bool? ConfigInfoVisible{ get; set; }
 
         /// <summary>
-        /// 引擎实例控制台默认密码
+        /// <p>引擎实例控制台默认密码</p>
         /// </summary>
         [JsonProperty("ConsoleDefaultPwd")]
         public string ConsoleDefaultPwd{ get; set; }
 
         /// <summary>
-        /// 交易付费类型，0后付费/1预付费
+        /// <p>交易付费类型，0后付费/1预付费</p>
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }
 
         /// <summary>
-        /// 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+        /// <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 预付费到期时间
+        /// <p>预付费到期时间</p>
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
-        /// 隔离开始时间
+        /// <p>隔离开始时间</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 实例地域相关的描述信息
+        /// <p>实例地域相关的描述信息</p>
         /// </summary>
         [JsonProperty("RegionInfos")]
         public DescribeInstanceRegionInfo[] RegionInfos{ get; set; }
 
         /// <summary>
-        /// 所在EKS环境，分为common和yunti
+        /// <p>所在EKS环境，分为common和yunti</p>
         /// </summary>
         [JsonProperty("EKSType")]
         public string EKSType{ get; set; }
 
         /// <summary>
-        /// 引擎的产品版本
+        /// <p>引擎的产品版本</p>
         /// </summary>
         [JsonProperty("FeatureVersion")]
         public string FeatureVersion{ get; set; }
 
         /// <summary>
-        /// 引擎实例是否开启客户端内网访问地址
+        /// <p>引擎实例是否开启客户端内网访问地址</p>
         /// </summary>
         [JsonProperty("EnableClientIntranet")]
         public bool? EnableClientIntranet{ get; set; }
 
         /// <summary>
-        /// 存储额外配置选项
+        /// <p>存储额外配置选项</p>
         /// </summary>
         [JsonProperty("StorageOption")]
         public StorageOption[] StorageOption{ get; set; }
 
         /// <summary>
-        /// Zookeeper的额外环境数据信息
+        /// <p>Zookeeper的额外环境数据信息</p>
         /// </summary>
         [JsonProperty("ZookeeperRegionInfo")]
         public ZookeeperRegionInfo ZookeeperRegionInfo{ get; set; }
 
         /// <summary>
-        /// 部署架构
+        /// <p>部署架构</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
 
         /// <summary>
-        /// 全局属性
+        /// <p>全局属性</p>
         /// </summary>
         [JsonProperty("GlobalType")]
         public string GlobalType{ get; set; }
 
         /// <summary>
-        /// 所属组类型
+        /// <p>所属组类型</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 组id
+        /// <p>组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string[] GroupId{ get; set; }
 
         /// <summary>
-        /// 是否为主地域
+        /// <p>是否为主地域</p>
         /// </summary>
         [JsonProperty("IsMainRegion")]
         public bool? IsMainRegion{ get; set; }
+
+        /// <summary>
+        /// <p>是否禁止变更</p>
+        /// </summary>
+        [JsonProperty("MutationEnabled")]
+        public bool? MutationEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>禁止限流</p>
+        /// </summary>
+        [JsonProperty("MaxCapacityLimitEnabled")]
+        public bool? MaxCapacityLimitEnabled{ get; set; }
 
 
         /// <summary>
@@ -310,6 +322,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamArraySimple(map, prefix + "GroupId.", this.GroupId);
             this.SetParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
+            this.SetParamSimple(map, prefix + "MutationEnabled", this.MutationEnabled);
+            this.SetParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
         }
     }
 }

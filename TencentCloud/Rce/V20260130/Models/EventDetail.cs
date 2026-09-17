@@ -144,6 +144,30 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("Browse")]
         public BrowseEvent Browse{ get; set; }
 
+        /// <summary>
+        /// <p>聊天消息</p>
+        /// </summary>
+        [JsonProperty("Chat")]
+        public ChatEvent Chat{ get; set; }
+
+        /// <summary>
+        /// <p>编辑角色资料</p>
+        /// </summary>
+        [JsonProperty("ModifyRole")]
+        public ModifyRoleEvent ModifyRole{ get; set; }
+
+        /// <summary>
+        /// <p>添加好友</p>
+        /// </summary>
+        [JsonProperty("AddFriend")]
+        public AddFriendEvent AddFriend{ get; set; }
+
+        /// <summary>
+        /// <p>编辑公会资料</p>
+        /// </summary>
+        [JsonProperty("ModifyGuild")]
+        public ModifyGuildEvent ModifyGuild{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +194,10 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamObj(map, prefix + "Invitation.", this.Invitation);
             this.SetParamObj(map, prefix + "ClaimRedPacket.", this.ClaimRedPacket);
             this.SetParamObj(map, prefix + "Browse.", this.Browse);
+            this.SetParamObj(map, prefix + "Chat.", this.Chat);
+            this.SetParamObj(map, prefix + "ModifyRole.", this.ModifyRole);
+            this.SetParamObj(map, prefix + "AddFriend.", this.AddFriend);
+            this.SetParamObj(map, prefix + "ModifyGuild.", this.ModifyGuild);
         }
     }
 }

@@ -156,6 +156,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// <p>私网VPN标识</p>
+        /// </summary>
+        [JsonProperty("IsPrivate")]
+        public bool? IsPrivate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
             this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
         }
     }
 }

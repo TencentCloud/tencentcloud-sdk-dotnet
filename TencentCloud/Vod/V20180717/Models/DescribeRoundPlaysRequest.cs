@@ -25,50 +25,50 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 过滤条件：轮播播单标识，数组长度限制：100。
+        /// <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
         /// </summary>
         [JsonProperty("RoundPlayIds")]
         public string[] RoundPlayIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
+        /// <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 过滤条件：轮播播单创建时间。
+        /// <p>过滤条件：轮播播单创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// 过滤条件：轮播播单更新时间。
+        /// <p>过滤条件：轮播播单更新时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public TimeRange UpdateTime{ get; set; }
 
         /// <summary>
-        /// 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+        /// <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+        /// <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
         /// </summary>
         [JsonProperty("Offset")]
         [System.Obsolete]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：10，最大值：100。
+        /// <p>返回记录条数，默认值：10，最大值：100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

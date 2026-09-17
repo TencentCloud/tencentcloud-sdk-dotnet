@@ -25,109 +25,97 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
+        /// <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
         /// </summary>
         [JsonProperty("DefaultActions")]
         public DefaultAction[] DefaultActions{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例前端使用的端口。  取值：1~65535。
+        /// <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
         /// </summary>
         [JsonProperty("ListenerPort")]
         public ulong? ListenerPort{ get; set; }
 
         /// <summary>
-        /// 监听协议。  取值：HTTP、HTTPS 或 QUIC。
+        /// <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
         /// </summary>
         [JsonProperty("ListenerProtocol")]
         public string ListenerProtocol{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+        /// <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-        /// 当 CaEnabled 参数取值为 true 时，此参数必填。
+        /// <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
         /// </summary>
         [JsonProperty("CaCertificateIds")]
         public string[] CaCertificateIds{ get; set; }
 
         /// <summary>
-        /// 是否开启双向认证。
-        /// 取值：
-        /// true：开启。
-        /// false（默认值）：不开启。
+        /// <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
         /// </summary>
         [JsonProperty("CaEnabled")]
         public bool? CaEnabled{ get; set; }
 
         /// <summary>
-        /// 服务器证书 ID 列表。
+        /// <p>服务器证书 ID 列表。</p>
         /// </summary>
         [JsonProperty("CertificateIds")]
         public string[] CertificateIds{ get; set; }
 
         /// <summary>
-        /// 客户端Token，用于保证请求的幂等性。  
-        /// 
-        /// 从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+        /// <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 是否开启Gzip压缩。取值:true(默认值):是。false:否
+        /// <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
         /// </summary>
         [JsonProperty("GzipEnabled")]
         public bool? GzipEnabled{ get; set; }
 
         /// <summary>
-        /// 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
+        /// <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
         /// </summary>
         [JsonProperty("Http2Enabled")]
         public bool? Http2Enabled{ get; set; }
 
         /// <summary>
-        /// 连接空闲超时时间。单位：秒。
-        /// 取值范围：1~600。
-        /// 默认值：15。
-        /// 如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
+        /// <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public ulong? IdleTimeout{ get; set; }
 
         /// <summary>
-        /// 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+        /// <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 请求超时时间。单位：秒。
-        /// 取值：1~600。
-        /// 默认值：60。
-        /// 如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
+        /// <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
         /// </summary>
         [JsonProperty("RequestTimeout")]
         public ulong? RequestTimeout{ get; set; }
 
         /// <summary>
-        /// 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+        /// <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("SecurityPolicyId")]
         public string SecurityPolicyId{ get; set; }
 
         /// <summary>
-        /// 标签列表。最大支持20个。
+        /// <p>标签列表。最大支持20个。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// X-Forwarded-For配置
+        /// <p>X-Forwarded-For配置</p>
         /// </summary>
         [JsonProperty("XForwardedForConfig")]
         public XForwardedForConfig XForwardedForConfig{ get; set; }

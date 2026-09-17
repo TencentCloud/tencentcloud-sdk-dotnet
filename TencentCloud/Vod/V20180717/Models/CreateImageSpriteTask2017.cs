@@ -25,51 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 截图雪碧图任务 ID。
+        /// <p>截图雪碧图任务 ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 错误码
-        /// <li>0：成功；</li>
-        /// <li>其他值：失败。</li>
+        /// <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// <p>错误信息。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 截取雪碧图文件 ID。
+        /// <p>截取雪碧图文件 ID。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        /// <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 雪碧图小图总数量。
+        /// <p>雪碧图小图总数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 截取雪碧图输出的地址。
+        /// <p>截取雪碧图输出的地址。</p>
         /// </summary>
         [JsonProperty("ImageSpriteUrlSet")]
         public string[] ImageSpriteUrlSet{ get; set; }
 
         /// <summary>
-        /// 雪碧图子图位置与时间关系 WebVtt 文件地址。
+        /// <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p>
         /// </summary>
         [JsonProperty("WebVttUrl")]
         public string WebVttUrl{ get; set; }

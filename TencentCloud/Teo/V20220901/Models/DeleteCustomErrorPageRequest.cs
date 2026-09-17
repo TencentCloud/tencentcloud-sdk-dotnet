@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 自定义页面 ID。
+        /// 自定义响应页面 ID。
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 域名。
+        /// <p>域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// [Referer 防盗链](/document/product/266/14046)规则。
+        /// <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// [Key 防盗链](/document/product/266/14047)规则。
+        /// <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// QUIC 配置。
+        /// <p>QUIC 配置。</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// IP 访问限制规则。
+        /// <p>IP 访问限制规则。</p>
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }

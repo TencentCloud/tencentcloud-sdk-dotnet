@@ -31,10 +31,16 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? Id{ get; set; }
 
         /// <summary>
-        /// <p>队列名称</p>
+        /// <p>不可变的Code</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
+
+        /// <summary>
+        /// <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
 
         /// <summary>
         /// <p>资源用量列表</p>
@@ -42,6 +48,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("ResourceUsage")]
         public ResourceUsage[] ResourceUsage{ get; set; }
+
+        /// <summary>
+        /// <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceQuotas")]
+        public QueueResourceQuota[] ResourceQuotas{ get; set; }
 
         /// <summary>
         /// <p>队列描述</p>
@@ -70,7 +83,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamArrayObj(map, prefix + "ResourceUsage.", this.ResourceUsage);
+            this.SetParamArrayObj(map, prefix + "ResourceQuotas.", this.ResourceQuotas);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "QueueType", this.QueueType);

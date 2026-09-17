@@ -121,6 +121,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Queue{ get; set; }
 
         /// <summary>
+        /// <p>所属队列别名</p>
+        /// </summary>
+        [JsonProperty("QueueAlias")]
+        public string QueueAlias{ get; set; }
+
+        /// <summary>
         /// <p>集群组Id</p>
         /// </summary>
         [JsonProperty("GroupId")]
@@ -151,6 +157,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobPackageName{ get; set; }
 
         /// <summary>
+        /// <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+        /// </summary>
+        [JsonProperty("JobPackageSource")]
+        public string JobPackageSource{ get; set; }
+
+        /// <summary>
         /// <p>优先级</p>
         /// </summary>
         [JsonProperty("Priority")]
@@ -173,6 +185,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
 
         /// <summary>
         /// <p>创建时间</p>
@@ -256,15 +274,18 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
+            this.SetParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterGroup", this.ClusterGroup);
             this.SetParamSimple(map, prefix + "JobPackage", this.JobPackage);
             this.SetParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
+            this.SetParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "JobInstanceCount", this.JobInstanceCount);

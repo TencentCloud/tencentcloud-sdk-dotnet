@@ -42,6 +42,12 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// <p>是否付费账号</p>
+        /// </summary>
+        [JsonProperty("IsPaid")]
+        public bool? IsPaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamSimple(map, prefix + "UserLevel", this.UserLevel);
             this.SetParamObj(map, prefix + "UserPoint.", this.UserPoint);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "IsPaid", this.IsPaid);
         }
     }
 }

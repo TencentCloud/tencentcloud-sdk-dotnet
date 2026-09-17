@@ -25,25 +25,25 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 实例 id
+        /// <p>实例 id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// <p>每页条数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 策略过滤条件：StrategyName：策略名称
+        /// <p>策略过滤条件：StrategyName：策略名称</p>
         /// </summary>
         [JsonProperty("Filters")]
         public ResourceFilter[] Filters{ get; set; }

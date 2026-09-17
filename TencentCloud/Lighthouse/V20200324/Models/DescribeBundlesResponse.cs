@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 套餐详细信息列表。
+        /// <p>套餐详细信息列表。</p>
         /// </summary>
         [JsonProperty("BundleSet")]
         public Bundle[] BundleSet{ get; set; }
 
         /// <summary>
-        /// 符合要求的套餐总数，用于分页展示。
+        /// <p>符合要求的套餐总数，用于分页展示。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

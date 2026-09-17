@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 对端网关对象列表。
+        /// <p>对端网关对象列表。</p>
         /// </summary>
         [JsonProperty("CustomerGatewaySet")]
         public CustomerGateway[] CustomerGatewaySet{ get; set; }
 
         /// <summary>
-        /// 符合条件的实例数量。
+        /// <p>符合条件的实例数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

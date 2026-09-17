@@ -37,7 +37,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public string ExpiresAt{ get; set; }
 
         /// <summary>
-        /// <p>非管控面（envd）的访问Token</p>
+        /// <p>除管控面envd端口(49983)以外端口的访问Token</p>
         /// </summary>
         [JsonProperty("TrafficToken")]
         public string TrafficToken{ get; set; }

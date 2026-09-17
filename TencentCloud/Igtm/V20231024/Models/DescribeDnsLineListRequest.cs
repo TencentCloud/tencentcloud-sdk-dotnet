@@ -25,7 +25,7 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

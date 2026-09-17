@@ -37,10 +37,16 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string PartitionCode{ get; set; }
 
         /// <summary>
-        /// 队列名称
+        /// 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
+
+        /// <summary>
+        /// 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
 
         /// <summary>
         /// 队列描述
@@ -69,6 +75,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "ResourceUsages.", this.ResourceUsages);
             this.SetParamSimple(map, prefix + "QueueType", this.QueueType);

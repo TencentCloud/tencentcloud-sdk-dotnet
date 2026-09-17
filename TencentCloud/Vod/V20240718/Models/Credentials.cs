@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20240718.Models
     {
         
         /// <summary>
-        /// 访问凭证 ID。
+        /// <p>访问凭证 ID。</p>
         /// </summary>
         [JsonProperty("AccessKeyId")]
         public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// 访问凭证 Key。
+        /// <p>访问凭证 Key。</p>
         /// </summary>
         [JsonProperty("SecretAccessKey")]
         public string SecretAccessKey{ get; set; }
 
         /// <summary>
-        /// 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+        /// <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
         /// </summary>
         [JsonProperty("SessionToken")]
         public string SessionToken{ get; set; }
 
         /// <summary>
-        /// 访问凭证的过期时间。
+        /// <p>访问凭证的过期时间。</p>
         /// </summary>
         [JsonProperty("Expiration")]
         public string Expiration{ get; set; }

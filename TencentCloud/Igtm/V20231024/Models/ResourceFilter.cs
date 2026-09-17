@@ -26,8 +26,8 @@ namespace TencentCloud.Igtm.V20231024.Models
         
         /// <summary>
         /// 过滤字段名，支持的列表如下：
-        /// - type：主资源类型，CDN。
-        /// - instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+        /// - MonitorName：监控器名称。
+        /// - MonitorId：监控器名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

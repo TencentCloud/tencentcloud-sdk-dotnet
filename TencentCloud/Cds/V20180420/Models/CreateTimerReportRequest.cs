@@ -25,73 +25,73 @@ namespace TencentCloud.Cds.V20180420.Models
     {
         
         /// <summary>
-        /// 任务名称 不变更为""
+        /// <p>任务名称 不变更为&quot;&quot;</p>
         /// </summary>
         [JsonProperty("TplName")]
         public string TplName{ get; set; }
 
         /// <summary>
-        /// 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
+        /// <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
         /// </summary>
         [JsonProperty("CntTime")]
         public long? CntTime{ get; set; }
 
         /// <summary>
-        /// 重复周期
+        /// <p>重复周期</p>
         /// </summary>
         [JsonProperty("CntCycle")]
         public long? CntCycle{ get; set; }
 
         /// <summary>
-        /// 发送目标
+        /// <p>发送目标</p>
         /// </summary>
         [JsonProperty("Receivers")]
         public string Receivers{ get; set; }
 
         /// <summary>
-        /// 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+        /// <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
         /// </summary>
         [JsonProperty("CntDay")]
         public long? CntDay{ get; set; }
 
         /// <summary>
-        /// 执行时间 格式15:04 到分钟
+        /// <p>执行时间 格式15:04 到分钟</p>
         /// </summary>
         [JsonProperty("CntDate")]
         public string CntDate{ get; set; }
 
         /// <summary>
-        /// 报告说明
+        /// <p>报告说明</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 模版Id
+        /// <p>模板Id</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 报表类型
+        /// <p>报表类型</p>
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
         /// <summary>
-        /// 关联的资产数组
+        /// <p>关联的资产数组</p>
         /// </summary>
         [JsonProperty("AssetsId")]
         public long?[] AssetsId{ get; set; }
 
         /// <summary>
-        /// 报表通知 1关闭 2开启 不变更为0
+        /// <p>报表通知 1关闭 2开启 不变更为0</p>
         /// </summary>
         [JsonProperty("Notification")]
         public long? Notification{ get; set; }
 
         /// <summary>
-        /// 任务起停 1:关闭 2:开启 单次报表默认为2
+        /// <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
         /// </summary>
         [JsonProperty("MissionStart")]
         public long? MissionStart{ get; set; }

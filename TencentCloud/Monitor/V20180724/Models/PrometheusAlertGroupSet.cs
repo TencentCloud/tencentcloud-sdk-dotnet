@@ -25,67 +25,73 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+        /// <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 告警分组名称
+        /// <p>告警分组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+        /// <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AMPReceivers")]
         public string[] AMPReceivers{ get; set; }
 
         /// <summary>
-        /// 自定义告警模板
+        /// <p>自定义告警模板</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomReceiver")]
         public PrometheusAlertCustomReceiver CustomReceiver{ get; set; }
 
         /// <summary>
-        /// 告警通知间隔
+        /// <p>告警通知间隔</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepeatInterval")]
         public string RepeatInterval{ get; set; }
 
         /// <summary>
-        /// 若告警分组通过模板创建，则返回模板ID
+        /// <p>若告警分组通过模板创建，则返回模板ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 分组内告警规则详情
+        /// <p>分组内告警规则详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rules")]
         public PrometheusAlertGroupRuleSet[] Rules{ get; set; }
 
         /// <summary>
-        /// 分组创建时间
+        /// <p>分组创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 分组更新时间
+        /// <p>分组更新时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
+
+        /// <summary>
+        /// <p>最后修改人子账号uin</p>
+        /// </summary>
+        [JsonProperty("LastModifySubAccountUin")]
+        public string LastModifySubAccountUin{ get; set; }
 
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "LastModifySubAccountUin", this.LastModifySubAccountUin);
         }
     }
 }

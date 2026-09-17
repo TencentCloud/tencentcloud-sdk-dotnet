@@ -25,45 +25,34 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 卡证类型
-        /// 身份证人像面
-        /// 身份证国徽面
-        /// 
-        /// 临时身份证人像面
-        /// 临时身份证人像面
-        /// 
-        /// 港澳台居住证人像面
-        /// 港澳台居住证国徽面
-        /// 
-        /// 外国人永久居留证人像面
-        /// 外国人永久居留证国徽面
+        /// <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 身份证信息
+        /// <p>身份证信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IDCardInfo")]
         public IDCardInfo IDCardInfo{ get; set; }
 
         /// <summary>
-        /// 临时身份证信息
+        /// <p>临时身份证信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemporaryIDCardInfo")]
         public TemporaryIDCardInfo TemporaryIDCardInfo{ get; set; }
 
         /// <summary>
-        /// 港澳台居住证信息
+        /// <p>港澳台居住证信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResidencePermitInfo")]
         public ResidencePermitInfo ResidencePermitInfo{ get; set; }
 
         /// <summary>
-        /// 外国人永久居留证信息
+        /// <p>外国人永久居留证信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PermanentResidencePermitInfo")]

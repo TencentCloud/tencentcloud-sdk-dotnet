@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 关键词。
+        /// <p>关键词。</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 关键词标签。
+        /// <p>关键词标签。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// 关键词应用场景。
+        /// <p>关键词应用场景。</p>
         /// </summary>
         [JsonProperty("UsageSet")]
         public string[] UsageSet{ get; set; }
 
         /// <summary>
-        /// 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

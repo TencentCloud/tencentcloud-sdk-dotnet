@@ -25,67 +25,67 @@ namespace TencentCloud.Cds.V20180420.Models
     {
         
         /// <summary>
-        /// 限制数目
+        /// <p>限制数目</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 报告名称
+        /// <p>报告名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 报告类型
+        /// <p>报告类型</p>
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
         /// <summary>
-        /// 报告状态
+        /// <p>报告状态</p>
         /// </summary>
         [JsonProperty("ReportStatus")]
         public long? ReportStatus{ get; set; }
 
         /// <summary>
-        /// 报表模版id
+        /// <p>报表模板id</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 需要排序的字段
+        /// <p>需要排序的字段</p>
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 排序顺序 asc desc
+        /// <p>排序顺序 asc desc</p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+        /// <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
         /// </summary>
         [JsonProperty("CntDay")]
         public long? CntDay{ get; set; }

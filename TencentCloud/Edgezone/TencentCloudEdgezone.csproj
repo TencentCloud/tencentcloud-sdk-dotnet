@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{9115A16B-9113-36A9-B012-EC4DEE4AC422}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1508</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Edgezone</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260401\EdgezoneClient.cs" />
+    <Compile Include="V20260401\Models\ApplyPublicIpsRequest.cs" />
+    <Compile Include="V20260401\Models\ApplyPublicIpsResponse.cs" />
+    <Compile Include="V20260401\Models\CreateEdgeNodeServiceRequest.cs" />
+    <Compile Include="V20260401\Models\CreateEdgeNodeServiceResponse.cs" />
+    <Compile Include="V20260401\Models\CreateInstancesRequest.cs" />
+    <Compile Include="V20260401\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20260401\Models\CreatePrivateNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\CreatePrivateNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\CreatePublicNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\CreatePublicNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\DeletePrivateNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\DeletePrivateNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\DeletePublicNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\DeletePublicNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\DescribeInstanceTypesRequest.cs" />
+    <Compile Include="V20260401\Models\DescribeInstanceTypesResponse.cs" />
+    <Compile Include="V20260401\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20260401\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20260401\Models\DescribePrivateNetworkInstancesRequest.cs" />
+    <Compile Include="V20260401\Models\DescribePrivateNetworkInstancesResponse.cs" />
+    <Compile Include="V20260401\Models\DescribePublicIpsRequest.cs" />
+    <Compile Include="V20260401\Models\DescribePublicIpsResponse.cs" />
+    <Compile Include="V20260401\Models\DescribePublicNetworkInstancesRequest.cs" />
+    <Compile Include="V20260401\Models\DescribePublicNetworkInstancesResponse.cs" />
+    <Compile Include="V20260401\Models\DescribeZoneDataRequest.cs" />
+    <Compile Include="V20260401\Models\DescribeZoneDataResponse.cs" />
+    <Compile Include="V20260401\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20260401\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20260401\Models\FailedInstance.cs" />
+    <Compile Include="V20260401\Models\Instance.cs" />
+    <Compile Include="V20260401\Models\InstanceTypeQuota.cs" />
+    <Compile Include="V20260401\Models\IpInfo.cs" />
+    <Compile Include="V20260401\Models\ModifyInstanceAttributeRequest.cs" />
+    <Compile Include="V20260401\Models\ModifyInstanceAttributeResponse.cs" />
+    <Compile Include="V20260401\Models\ModifyPrivateNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\ModifyPrivateNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\ModifyPublicNetworkInstanceRequest.cs" />
+    <Compile Include="V20260401\Models\ModifyPublicNetworkInstanceResponse.cs" />
+    <Compile Include="V20260401\Models\PrivateNetworkInstanceInfo.cs" />
+    <Compile Include="V20260401\Models\PublicNetworkInstanceInfo.cs" />
+    <Compile Include="V20260401\Models\PublicNetworkSegment.cs" />
+    <Compile Include="V20260401\Models\ReleasePublicIpRequest.cs" />
+    <Compile Include="V20260401\Models\ReleasePublicIpResponse.cs" />
+    <Compile Include="V20260401\Models\SwitchData.cs" />
+    <Compile Include="V20260401\Models\TerminateInstancesRequest.cs" />
+    <Compile Include="V20260401\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20260401\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

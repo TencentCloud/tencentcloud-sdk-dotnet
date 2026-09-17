@@ -25,22 +25,28 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽配额，单位：Mbps。
+        /// <p>带宽配额，单位：Mbps。</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 配额中文名称
+        /// <p>配额中文名称</p>
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 配额英文名称
+        /// <p>配额英文名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>SSL 连接数可选配额</p>
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong?[] MaxConnection{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "MaxConnection.", this.MaxConnection);
         }
     }
 }

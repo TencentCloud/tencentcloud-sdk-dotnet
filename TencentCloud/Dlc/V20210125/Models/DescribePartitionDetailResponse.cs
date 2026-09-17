@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 分区详情
+        /// <p>分区详情</p>
         /// </summary>
         [JsonProperty("PartitionDetail")]
         public PartitionDetail PartitionDetail{ get; set; }

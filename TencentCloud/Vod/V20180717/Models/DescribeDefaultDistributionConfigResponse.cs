@@ -25,26 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 分发配置的域名(已废弃）。
+        /// <p>分发配置的域名(已废弃）。</p>
         /// </summary>
         [JsonProperty("DomainName")]
         [System.Obsolete]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 分发配置的域名。
+        /// <p>分发配置的域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 分发配置的协议，为 HTTP 或 HTTPS。
+        /// <p>分发配置的协议，为 HTTP 或 HTTPS。</p>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。
+        /// <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p>
         /// </summary>
         [JsonProperty("PlayKey")]
         public string PlayKey{ get; set; }

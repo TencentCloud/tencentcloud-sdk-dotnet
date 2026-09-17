@@ -102,6 +102,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
+        /// <summary>
+        /// <p>拓展服务元数据</p>
+        /// </summary>
+        [JsonProperty("ExtendedMetadata")]
+        public ExtendedMetadata[] ExtendedMetadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
             this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "ExtendedMetadata.", this.ExtendedMetadata);
         }
     }
 }

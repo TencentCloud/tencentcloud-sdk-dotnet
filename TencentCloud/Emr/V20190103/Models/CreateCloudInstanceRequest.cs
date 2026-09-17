@@ -162,6 +162,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("TerminateProtection")]
         public bool? TerminateProtection{ get; set; }
 
+        /// <summary>
+        /// <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+        /// </summary>
+        [JsonProperty("EnableEmrProxy")]
+        public bool? EnableEmrProxy{ get; set; }
+
+        /// <summary>
+        /// <p>日志存储服务实例id</p>
+        /// </summary>
+        [JsonProperty("LogStoreID")]
+        public string LogStoreID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
             this.SetParamArraySimple(map, prefix + "ComputeResourceGroupIds.", this.ComputeResourceGroupIds);
             this.SetParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
+            this.SetParamSimple(map, prefix + "EnableEmrProxy", this.EnableEmrProxy);
+            this.SetParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
         }
     }
 }

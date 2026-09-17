@@ -85,6 +85,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string Provider{ get; set; }
 
         /// <summary>
+        /// <p>markdown 原生内容的模型提供方详情</p>
+        /// </summary>
+        [JsonProperty("ProviderIntroduction")]
+        public string ProviderIntroduction{ get; set; }
+
+        /// <summary>
         /// <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
@@ -160,6 +166,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "Brand", this.Brand);
             this.SetParamObj(map, prefix + "ModelImage.", this.ModelImage);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "ProviderIntroduction", this.ProviderIntroduction);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "ModelChargingInfo.", this.ModelChargingInfo);

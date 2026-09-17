@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1507";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -1220,7 +1220,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除自定义错误页面。
+        /// 删除自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
         /// <returns><see cref="DeleteCustomErrorPageResponse"/></returns>
@@ -1230,7 +1230,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除自定义错误页面。
+        /// 删除自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
         /// <returns><see cref="DeleteCustomErrorPageResponse"/></returns>

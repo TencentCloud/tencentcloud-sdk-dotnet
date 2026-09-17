@@ -199,6 +199,24 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Scenario")]
         public string Scenario{ get; set; }
 
+        /// <summary>
+        /// <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+        /// </summary>
+        [JsonProperty("FullDeleteCapacityUsage")]
+        public float? FullDeleteCapacityUsage{ get; set; }
+
+        /// <summary>
+        /// <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("FullDeleteMinTtl")]
+        public ulong? FullDeleteMinTtl{ get; set; }
+
+        /// <summary>
+        /// <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("ExpireDeleteTtl")]
+        public ulong? ExpireDeleteTtl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +252,9 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
             this.SetParamSimple(map, prefix + "Scenario", this.Scenario);
+            this.SetParamSimple(map, prefix + "FullDeleteCapacityUsage", this.FullDeleteCapacityUsage);
+            this.SetParamSimple(map, prefix + "FullDeleteMinTtl", this.FullDeleteMinTtl);
+            this.SetParamSimple(map, prefix + "ExpireDeleteTtl", this.ExpireDeleteTtl);
         }
     }
 }

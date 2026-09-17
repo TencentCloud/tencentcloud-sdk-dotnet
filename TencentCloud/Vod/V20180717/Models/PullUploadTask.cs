@@ -25,85 +25,80 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 拉取上传任务 ID。
+        /// <p>拉取上传任务 ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务流状态，取值：
-        /// <li>PROCESSING：处理中；</li>
-        /// <li>FINISH：已完成。</li>
+        /// <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码，0 表示成功，其他值表示失败：
-        /// <li>40000：输入参数不合法，请检查输入参数；</li>
-        /// <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
-        /// <li>70000：内部服务错误，建议重试。</li>
+        /// <p>错误码，0 表示成功，其他值表示失败：</p><li>40000：输入参数不合法，请检查输入参数；</li><li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li><li>70000：内部服务错误，建议重试。</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// <p>错误信息。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 拉取上传完成后生成的视频 ID。
+        /// <p>拉取上传完成后生成的视频 ID。</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 拉取上传完成后生成的媒体文件基础信息。
+        /// <p>拉取上传完成后生成的媒体文件基础信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaBasicInfo")]
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
-        /// 输出视频的元信息。
+        /// <p>输出视频的元信息。</p>
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 拉取上传完成后生成的播放地址。
+        /// <p>拉取上传完成后生成的播放地址。</p>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+        /// <p>任务类型为 Procedure 的任务 ID。若<a href="https://cloud.tencent.com/document/api/266/35575">拉取上传</a>时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
-        /// 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+        /// <p>任务类型为 ReviewAudioVideo 的任务 ID。若<a href="https://cloud.tencent.com/document/api/266/35575">拉取上传</a>时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。</p>
         /// </summary>
         [JsonProperty("ReviewAudioVideoTaskId")]
         public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
-        /// 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。
+        /// <p>来源上下文，用于透传用户请求信息，<a href="https://cloud.tencent.com/document/product/266/7831">URL 拉取视频上传完成</a>将返回该字段值，最长 1000 个字符。</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+        /// <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 拉取上传进度，取值范围 [0-100] 。
+        /// <p>拉取上传进度，取值范围 [0-100] 。</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

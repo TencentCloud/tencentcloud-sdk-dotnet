@@ -25,77 +25,83 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 是否开启深度思考
+        /// <p>是否开启深度思考</p>
         /// </summary>
         [JsonProperty("DeepThinking")]
         public string DeepThinking{ get; set; }
 
         /// <summary>
-        /// 频率惩罚
+        /// <p>频率惩罚</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrequencyPenalty")]
         public float? FrequencyPenalty{ get; set; }
 
         /// <summary>
-        /// 最大输出长度
+        /// <p>最大输出长度</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }
 
         /// <summary>
-        /// 存在惩罚
+        /// <p>存在惩罚</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PresencePenalty")]
         public float? PresencePenalty{ get; set; }
 
         /// <summary>
-        /// 深度思考效果
+        /// <p>深度思考效果</p>
         /// </summary>
         [JsonProperty("ReasoningEffort")]
         public string ReasoningEffort{ get; set; }
 
         /// <summary>
-        /// 重复惩罚
+        /// <p>重复惩罚</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepetitionPenalty")]
         public float? RepetitionPenalty{ get; set; }
 
         /// <summary>
-        /// 输出格式（text、json_object）
+        /// <p>输出格式（text、json_object）</p>
         /// </summary>
         [JsonProperty("ReplyFormat")]
         public string ReplyFormat{ get; set; }
 
         /// <summary>
-        /// seed 随机种子
+        /// <p>seed 随机种子</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }
 
         /// <summary>
-        /// 停止序列
+        /// <p>停止序列</p>
         /// </summary>
         [JsonProperty("StopSequenceList")]
         public string[] StopSequenceList{ get; set; }
 
         /// <summary>
-        /// 温度
+        /// <p>温度</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }
 
         /// <summary>
-        /// top_p
+        /// <p>top_p</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopP")]
         public float? TopP{ get; set; }
+
+        /// <summary>
+        /// <p>top_k</p>
+        /// </summary>
+        [JsonProperty("TopK")]
+        public long? TopK{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArraySimple(map, prefix + "StopSequenceList.", this.StopSequenceList);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
+            this.SetParamSimple(map, prefix + "TopK", this.TopK);
         }
     }
 }

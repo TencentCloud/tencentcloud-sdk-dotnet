@@ -25,13 +25,13 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 策略列表
+        /// <p>策略列表</p>
         /// </summary>
         [JsonProperty("StrategySet")]
         public Strategy[] StrategySet{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

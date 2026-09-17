@@ -79,6 +79,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Scenes{ get; set; }
 
         /// <summary>
+        /// <p>分页查询页码。从1开始，默认1</p>
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// <p>页大小。不填默认返回所有符合条件数据</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
         /// <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
         /// </summary>
         [JsonProperty("ExtParam")]
@@ -99,6 +111,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

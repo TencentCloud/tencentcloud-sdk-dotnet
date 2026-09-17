@@ -25,37 +25,37 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 策略Id。
+        /// <p>策略Id。</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 每页数量。默认值是 20，必须大于 0 且小于或等于 200
+        /// <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
         /// </summary>
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
         /// <summary>
-        /// 页码。默认值是 1，从 1开始，不能大于 200
+        /// <p>页码。默认值是 1，从 1开始，不能大于 200</p>
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 策略类型。取值范围：All-全部、User-用户、Node-节点
+        /// <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+        /// <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 按照多个策略id搜索，空格隔开。
+        /// <p>按照多个策略id搜索，空格隔开。</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

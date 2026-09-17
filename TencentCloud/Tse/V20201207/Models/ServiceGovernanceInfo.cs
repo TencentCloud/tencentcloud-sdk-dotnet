@@ -25,64 +25,76 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 引擎所在的地域
+        /// <p>引擎所在的地域</p>
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// 服务治理引擎绑定的kubernetes集群信息
+        /// <p>服务治理引擎绑定的kubernetes集群信息</p>
         /// </summary>
         [JsonProperty("BoundK8SInfos")]
         public BoundK8SInfo[] BoundK8SInfos{ get; set; }
 
         /// <summary>
-        /// 服务治理引擎绑定的网络信息
+        /// <p>服务治理引擎绑定的网络信息</p>
         /// </summary>
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }
 
         /// <summary>
-        /// 当前实例鉴权是否开启
+        /// <p>当前实例鉴权是否开启</p>
         /// </summary>
         [JsonProperty("AuthOpen")]
         public bool? AuthOpen{ get; set; }
 
         /// <summary>
-        /// 该实例支持的功能，鉴权就是 Auth
+        /// <p>该实例支持的功能，鉴权就是 Auth</p>
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// 主账户名默认为 polaris，该值为主账户的默认密码
+        /// <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
         /// </summary>
         [JsonProperty("MainPassword")]
         public string MainPassword{ get; set; }
 
         /// <summary>
-        /// 服务治理pushgateway引擎绑定的网络信息
+        /// <p>服务治理pushgateway引擎绑定的网络信息</p>
         /// </summary>
         [JsonProperty("PgwVpcInfos")]
         public VpcInfo[] PgwVpcInfos{ get; set; }
 
         /// <summary>
-        /// 服务治理限流server引擎绑定的网络信息
+        /// <p>服务治理限流server引擎绑定的网络信息</p>
         /// </summary>
         [JsonProperty("LimiterVpcInfos")]
         public VpcInfo[] LimiterVpcInfos{ get; set; }
 
         /// <summary>
-        /// 引擎关联CLS日志主题信息
+        /// <p>引擎关联CLS日志主题信息</p>
         /// </summary>
         [JsonProperty("CLSTopics")]
         public PolarisCLSTopicInfo[] CLSTopics{ get; set; }
 
         /// <summary>
-        /// 子用户密码
+        /// <p>子用户密码</p>
         /// </summary>
         [JsonProperty("SubPassword")]
         public string SubPassword{ get; set; }
+
+        /// <summary>
+        /// <p>是否允许变更</p>
+        /// </summary>
+        [JsonProperty("DisableMutation")]
+        public bool? DisableMutation{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启限流</p>
+        /// </summary>
+        [JsonProperty("MaxCapacityLimitEnabled")]
+        public bool? MaxCapacityLimitEnabled{ get; set; }
 
 
         /// <summary>
@@ -100,6 +112,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
             this.SetParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
             this.SetParamSimple(map, prefix + "SubPassword", this.SubPassword);
+            this.SetParamSimple(map, prefix + "DisableMutation", this.DisableMutation);
+            this.SetParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
         }
     }
 }

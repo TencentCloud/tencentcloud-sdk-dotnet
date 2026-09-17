@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -1332,7 +1332,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取代金券相关信息
+        /// 获取近两年的代金券信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeVoucherInfoRequest"/></param>
         /// <returns><see cref="DescribeVoucherInfoResponse"/></returns>
@@ -1342,7 +1342,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取代金券相关信息
+        /// 获取近两年的代金券信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeVoucherInfoRequest"/></param>
         /// <returns><see cref="DescribeVoucherInfoResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取代金券使用记录
+        /// 获取代金券近两年的使用记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeVoucherUsageDetailsRequest"/></param>
         /// <returns><see cref="DescribeVoucherUsageDetailsResponse"/></returns>
@@ -1363,7 +1363,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取代金券使用记录
+        /// 获取代金券近两年的使用记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeVoucherUsageDetailsRequest"/></param>
         /// <returns><see cref="DescribeVoucherUsageDetailsResponse"/></returns>

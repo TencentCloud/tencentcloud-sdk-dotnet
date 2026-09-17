@@ -25,48 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 拉取的素材类型，可选值：
-        /// <li>UserDefine：用户自定义素材库；</li>
-        /// <li>Default：系统默认素材库。</li>
-        /// 
-        /// 默认值：UserDefine，拉取用户自定义素材库素材。
-        /// 说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
+        /// <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 素材 ID，数组长度限制：100。
+        /// <p>素材 ID，数组长度限制：100。</p>
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// 素材名称，数组长度限制：20。
+        /// <p>素材名称，数组长度限制：20。</p>
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// 素材标签，数组长度限制：20。
+        /// <p>素材标签，数组长度限制：20。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认值：0。
+        /// <p>分页偏移量，默认值：0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：100，最大值：100。
+        /// <p>返回记录条数，默认值：100，最大值：100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

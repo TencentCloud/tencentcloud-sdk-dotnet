@@ -109,6 +109,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Queue{ get; set; }
 
         /// <summary>
+        /// <p>所属队列别名</p>
+        /// </summary>
+        [JsonProperty("QueueAlias")]
+        public string QueueAlias{ get; set; }
+
+        /// <summary>
         /// <p>提交时 runtime_env JSON</p>
         /// </summary>
         [JsonProperty("RuntimeEnv")]
@@ -236,6 +242,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
+            this.SetParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
             this.SetParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
             this.SetParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
             this.SetParamSimple(map, prefix + "Image", this.Image);

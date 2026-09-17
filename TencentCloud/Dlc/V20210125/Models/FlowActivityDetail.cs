@@ -25,26 +25,25 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// <p>活动编码</p>
+        /// <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
         /// </summary>
         [JsonProperty("ActivityCode")]
         public string ActivityCode{ get; set; }
 
         /// <summary>
-        /// <p>活动状态</p>
+        /// <p>活动状态：1-运行中，2-已完成，-2-失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>创建时间</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>活动创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>耗时（秒）</p>
+        /// <p>耗时（秒），活动未完成时省略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]

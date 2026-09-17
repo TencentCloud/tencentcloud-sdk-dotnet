@@ -25,34 +25,46 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 用户网关唯一ID
+        /// <p>用户网关唯一ID</p>
         /// </summary>
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
 
         /// <summary>
-        /// 网关名称
+        /// <p>网关名称</p>
         /// </summary>
         [JsonProperty("CustomerGatewayName")]
         public string CustomerGatewayName{ get; set; }
 
         /// <summary>
-        /// 公网地址
+        /// <p>公网地址</p>
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// BGP ASN。
+        /// <p>BGP ASN。</p>
         /// </summary>
         [JsonProperty("BgpAsn")]
         public ulong? BgpAsn{ get; set; }
+
+        /// <summary>
+        /// <p>关联通道数</p>
+        /// </summary>
+        [JsonProperty("VpnConnNum")]
+        public ulong? VpnConnNum{ get; set; }
+
+        /// <summary>
+        /// <p>标签信息</p>
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+            this.SetParamSimple(map, prefix + "VpnConnNum", this.VpnConnNum);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

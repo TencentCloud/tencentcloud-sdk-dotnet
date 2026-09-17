@@ -25,96 +25,91 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 是否开启双向认证。
+        /// <p>是否开启双向认证。</p>
         /// </summary>
         [JsonProperty("CaEnable")]
         public bool? CaEnable{ get; set; }
 
         /// <summary>
-        /// 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+        /// <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 是否启用 Gzip 压缩。
+        /// <p>是否启用 Gzip 压缩。</p>
         /// </summary>
         [JsonProperty("GzipEnabled")]
         public bool? GzipEnabled{ get; set; }
 
         /// <summary>
-        /// 是否启用http2。
+        /// <p>是否启用http2。</p>
         /// </summary>
         [JsonProperty("Http2Enable")]
         public bool? Http2Enable{ get; set; }
 
         /// <summary>
-        /// 空闲超时时间。
+        /// <p>空闲超时时间。</p>
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public ulong? IdleTimeout{ get; set; }
 
         /// <summary>
-        /// 监听器 ID，格式为 lst- 后接 8 位字母数字。
+        /// <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 监听器名称。
+        /// <p>监听器名称。</p>
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 监听器端口。
+        /// <p>监听器端口。</p>
         /// </summary>
         [JsonProperty("ListenerPort")]
         public ulong? ListenerPort{ get; set; }
 
         /// <summary>
-        /// 监听器协议。
+        /// <p>监听器协议。</p>
         /// </summary>
         [JsonProperty("ListenerProtocol")]
         public string ListenerProtocol{ get; set; }
 
         /// <summary>
-        /// 监听器状态。取值:=
-        /// 
-        /// - **Active**: 运行中。
-        /// - **Provisioning**：创建中。
-        /// - **Configuring**：变配中。
-        /// - **ProvisionFailed**：创建失败
+        /// <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public string ListenerStatus{ get; set; }
 
         /// <summary>
-        /// 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+        /// <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 请求超时时间。
+        /// <p>连接请求超时时间。</p>
         /// </summary>
         [JsonProperty("RequestTimeout")]
         public ulong? RequestTimeout{ get; set; }
 
         /// <summary>
-        /// 标签。
+        /// <p>标签。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 安全策略 ID。
+        /// <p>安全策略 ID。</p>
         /// </summary>
         [JsonProperty("TlsSecurityPolicyId")]
         public string TlsSecurityPolicyId{ get; set; }
 
         /// <summary>
-        /// XForwardedFor配置。
+        /// <p>XForwardedFor配置。</p>
         /// </summary>
         [JsonProperty("XForwardedForConfig")]
         public XForwardedForConfig XForwardedForConfig{ get; set; }

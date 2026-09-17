@@ -25,20 +25,20 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>校验结果</p>
+        /// 校验结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckResult")]
         public CheckResult CheckResult{ get; set; }
 
         /// <summary>
-        /// <p>待校验的标准词</p>
+        /// 待校验的标准词
         /// </summary>
         [JsonProperty("Term")]
         public string Term{ get; set; }
 
         /// <summary>
-        /// <p>已存在时返回对应标准词 ID</p>
+        /// 已存在时返回对应标准词 ID
         /// </summary>
         [JsonProperty("TermId")]
         public string TermId{ get; set; }

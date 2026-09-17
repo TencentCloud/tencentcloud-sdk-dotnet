@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>输入 Token 数目。</p>
+        /// <p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("InputTokens")]
         public long? InputTokens{ get; set; }
 
         /// <summary>
-        /// <p>思考产生的 Token 数目。</p>
+        /// <p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("ThoughtTokens")]
         public long? ThoughtTokens{ get; set; }
 
         /// <summary>
-        /// <p>输入图片数目。</p>
+        /// <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("InputImageCount")]
         public long? InputImageCount{ get; set; }
 
         /// <summary>
-        /// <p>输入视频的时长。</p><p>单位：秒。</p>
+        /// <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("InputSeconds")]
         public long? InputSeconds{ get; set; }
 
         /// <summary>
-        /// <p>输出视频时长。</p><p>单位：秒。</p>
+        /// <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("OutputSeconds")]
         public long? OutputSeconds{ get; set; }
 
         /// <summary>
-        /// <p>输入输出总时长。</p><p>默认值：秒。</p>
+        /// <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
         /// </summary>
         [JsonProperty("TotalSeconds")]
         public long? TotalSeconds{ get; set; }

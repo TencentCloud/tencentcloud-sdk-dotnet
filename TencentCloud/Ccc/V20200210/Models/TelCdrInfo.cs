@@ -286,6 +286,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SysHangupReasonString")]
         public string SysHangupReasonString{ get; set; }
 
+        /// <summary>
+        /// <p>通话结束状态V2（灰度中）</p>
+        /// </summary>
+        [JsonProperty("EndStatusV2")]
+        public long? EndStatusV2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -335,6 +341,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
             this.SetParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
             this.SetParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
+            this.SetParamSimple(map, prefix + "EndStatusV2", this.EndStatusV2);
         }
     }
 }

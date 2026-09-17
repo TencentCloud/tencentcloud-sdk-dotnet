@@ -25,7 +25,7 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 探测规则
+        /// <p>探测规则</p>
         /// </summary>
         [JsonProperty("MonitorDetail")]
         public MonitorDetail MonitorDetail{ get; set; }

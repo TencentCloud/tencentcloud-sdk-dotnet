@@ -25,13 +25,13 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 资源组列表
+        /// <p>资源组列表</p>
         /// </summary>
         [JsonProperty("AddressPoolSet")]
         public AddressPool[] AddressPoolSet{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

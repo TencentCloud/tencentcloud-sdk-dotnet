@@ -25,7 +25,7 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 监听器 ID，格式为 lst- 后接 8 位字母数字。
+        /// <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }

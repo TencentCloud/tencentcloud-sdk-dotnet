@@ -25,55 +25,49 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 独占额度。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("ExclusiveQuota")]
         public string ExclusiveQuota{ get; set; }
 
         /// <summary>
-        /// 独占额度已用量。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("ExclusiveUsed")]
         public string ExclusiveUsed{ get; set; }
 
         /// <summary>
-        /// 独占额度剩余量。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("ExclusiveRemain")]
         public string ExclusiveRemain{ get; set; }
 
         /// <summary>
-        /// 共享额度上限，-1 表示不限。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("SharedQuota")]
         public string SharedQuota{ get; set; }
 
         /// <summary>
-        /// 共享额度已用量。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("SharedUsed")]
         public string SharedUsed{ get; set; }
 
         /// <summary>
-        /// 共享额度剩余量。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("SharedRemain")]
         public string SharedRemain{ get; set; }
 
         /// <summary>
-        /// API Key 额度包状态。取值：0（正常）、1（耗尽）。
+        /// <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+        /// </summary>
+        [JsonProperty("TotalUsed")]
+        public string TotalUsed{ get; set; }
+
+        /// <summary>
+        /// <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -90,6 +84,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "SharedQuota", this.SharedQuota);
             this.SetParamSimple(map, prefix + "SharedUsed", this.SharedUsed);
             this.SetParamSimple(map, prefix + "SharedRemain", this.SharedRemain);
+            this.SetParamSimple(map, prefix + "TotalUsed", this.TotalUsed);
             this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }

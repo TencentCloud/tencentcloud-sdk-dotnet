@@ -25,13 +25,13 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 监听器 ID，格式为 lst- 后接 8 位字母数字。
+        /// <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+        /// <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }

@@ -25,31 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 需要设置加速配置的域名。
+        /// <p>需要设置加速配置的域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 区域，可选值：
-        /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-        /// <li>Outside Chinese Mainland: 中国境外。</li>
-        /// <li>Global: 全球范围。</li>
+        /// <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 开启或者关闭所选区域的域名加速，可选值：
-        /// <li>Enabled: 开启。</li>
-        /// <li>Disabled：关闭。</li>
-        /// 开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+        /// <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

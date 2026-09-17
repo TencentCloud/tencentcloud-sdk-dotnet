@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 文件系统信息
+        /// <p>文件系统信息</p>
         /// </summary>
         [JsonProperty("FileSystems")]
         public FileSystemInfo[] FileSystems{ get; set; }
 
         /// <summary>
-        /// 文件系统总数
+        /// <p>文件系统总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

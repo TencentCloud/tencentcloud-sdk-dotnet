@@ -25,19 +25,19 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
+        /// <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
         /// </summary>
         [JsonProperty("Filters")]
         public ResourceFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数
+        /// <p>每页数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

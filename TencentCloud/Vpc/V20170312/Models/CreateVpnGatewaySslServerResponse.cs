@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 创建SSL-VPN server 异步任务ID。
+        /// <p>创建SSL-VPN server 异步任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN-SERVER 唯一ID。
+        /// <p>SSL-VPN-SERVER 唯一ID。</p>
         /// </summary>
         [JsonProperty("SslVpnServerId")]
         public string SslVpnServerId{ get; set; }

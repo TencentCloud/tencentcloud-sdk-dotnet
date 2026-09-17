@@ -25,41 +25,40 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+        /// <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 节点规格配置
-        /// 备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-        /// 示例中参数说明：
-        /// NodeCount：节点个数
-        /// Region：节点地域
-        /// Zone：节点可用区
-        /// Cpu：单个代理节点核数（单位：核）
-        /// Mem：单个代理节点内存数（单位：MB）
+        /// <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
         /// </summary>
         [JsonProperty("ProxyNodeCustom")]
         public ProxyNodeCustom[] ProxyNodeCustom{ get; set; }
 
         /// <summary>
-        /// 重新负载均衡：auto(自动),manual(手动)
+        /// <p>重新负载均衡：auto(自动),manual(手动)</p>
         /// </summary>
         [JsonProperty("ReloadBalance")]
         public string ReloadBalance{ get; set; }
 
         /// <summary>
-        /// 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+        /// <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
         /// </summary>
         [JsonProperty("UpgradeTime")]
         public string UpgradeTime{ get; set; }
+
+        /// <summary>
+        /// <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("RollUpgradeWaitingTime")]
+        public long? RollUpgradeWaitingTime{ get; set; }
 
 
         /// <summary>
@@ -72,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "ProxyNodeCustom.", this.ProxyNodeCustom);
             this.SetParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
             this.SetParamSimple(map, prefix + "UpgradeTime", this.UpgradeTime);
+            this.SetParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
         }
     }
 }

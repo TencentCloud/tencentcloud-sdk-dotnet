@@ -25,13 +25,13 @@ namespace TencentCloud.Cds.V20180420.Models
     {
         
         /// <summary>
-        /// 总数目
+        /// <p>总数目</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 数据列表
+        /// <p>数据列表</p>
         /// </summary>
         [JsonProperty("List")]
         public Reports[] List{ get; set; }

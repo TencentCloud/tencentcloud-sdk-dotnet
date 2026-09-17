@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// SSL-VPN-SERVER 实例ID。
+        /// <p>SSL-VPN-SERVER 实例ID。</p>
         /// </summary>
         [JsonProperty("SslVpnServerId")]
         public string SslVpnServerId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+        /// <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
         /// </summary>
         [JsonProperty("SslVpnClientName")]
         public string SslVpnClientName{ get; set; }
 
         /// <summary>
-        /// SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+        /// <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
         /// </summary>
         [JsonProperty("SslVpnClientNames")]
         public string[] SslVpnClientNames{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表
+        /// <p>指定绑定的标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

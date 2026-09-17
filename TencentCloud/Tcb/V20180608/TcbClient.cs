@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1505";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -530,6 +530,27 @@ namespace TencentCloud.Tcb.V20180608
         public CreateMySQLResponse CreateMySQLSync(CreateMySQLRequest req)
         {
             return InternalRequestAsync<CreateMySQLResponse>(req, "CreateMySQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户在购买平台版套餐后，可调用此接口创建平台版套餐环境，将产生一个平台版套餐环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlatformEnvRequest"/></param>
+        /// <returns><see cref="CreatePlatformEnvResponse"/></returns>
+        public Task<CreatePlatformEnvResponse> CreatePlatformEnv(CreatePlatformEnvRequest req)
+        {
+            return InternalRequestAsync<CreatePlatformEnvResponse>(req, "CreatePlatformEnv");
+        }
+
+        /// <summary>
+        /// 用户在购买平台版套餐后，可调用此接口创建平台版套餐环境，将产生一个平台版套餐环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlatformEnvRequest"/></param>
+        /// <returns><see cref="CreatePlatformEnvResponse"/></returns>
+        public CreatePlatformEnvResponse CreatePlatformEnvSync(CreatePlatformEnvRequest req)
+        {
+            return InternalRequestAsync<CreatePlatformEnvResponse>(req, "CreatePlatformEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1571,6 +1592,165 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询平台版资源计费周期。
+        /// 云开发平台版资源点都是按月结算的，每个月都有一定的抵扣额度。
+        /// 
+        /// 例如：
+        ///   某个平台版在 2026-01-05 购买了3个月(到期时间: 2026-04-05)，则他可以在以下3个周期内，分别享有40000资源点的额度：
+        ///   1. 2026-01-05 ~ 2026-02-05 23:59:59
+        ///   2. 2026-02-06 ~ 2026-03-05 23:59:59
+        ///   3. 2026-03-06 ~ 2026-04-05 23:59:59
+        /// 
+        /// 本接口，用于获取平台版当前属于哪个计费周期内。
+        /// 
+        /// 影响范围：只读查询，不影响平台版资源
+        /// 使用场景：控制台资源用量页面/API 主动查询当前计费周期等
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformAccountCircleRequest"/></param>
+        /// <returns><see cref="DescribePlatformAccountCircleResponse"/></returns>
+        public Task<DescribePlatformAccountCircleResponse> DescribePlatformAccountCircle(DescribePlatformAccountCircleRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformAccountCircleResponse>(req, "DescribePlatformAccountCircle");
+        }
+
+        /// <summary>
+        /// 查询平台版资源计费周期。
+        /// 云开发平台版资源点都是按月结算的，每个月都有一定的抵扣额度。
+        /// 
+        /// 例如：
+        ///   某个平台版在 2026-01-05 购买了3个月(到期时间: 2026-04-05)，则他可以在以下3个周期内，分别享有40000资源点的额度：
+        ///   1. 2026-01-05 ~ 2026-02-05 23:59:59
+        ///   2. 2026-02-06 ~ 2026-03-05 23:59:59
+        ///   3. 2026-03-06 ~ 2026-04-05 23:59:59
+        /// 
+        /// 本接口，用于获取平台版当前属于哪个计费周期内。
+        /// 
+        /// 影响范围：只读查询，不影响平台版资源
+        /// 使用场景：控制台资源用量页面/API 主动查询当前计费周期等
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformAccountCircleRequest"/></param>
+        /// <returns><see cref="DescribePlatformAccountCircleResponse"/></returns>
+        public DescribePlatformAccountCircleResponse DescribePlatformAccountCircleSync(DescribePlatformAccountCircleRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformAccountCircleResponse>(req, "DescribePlatformAccountCircle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台版本资源点模式下的资源点用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformCreditsUsageRequest"/></param>
+        /// <returns><see cref="DescribePlatformCreditsUsageResponse"/></returns>
+        public Task<DescribePlatformCreditsUsageResponse> DescribePlatformCreditsUsage(DescribePlatformCreditsUsageRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformCreditsUsageResponse>(req, "DescribePlatformCreditsUsage");
+        }
+
+        /// <summary>
+        /// 查询平台版本资源点模式下的资源点用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformCreditsUsageRequest"/></param>
+        /// <returns><see cref="DescribePlatformCreditsUsageResponse"/></returns>
+        public DescribePlatformCreditsUsageResponse DescribePlatformCreditsUsageSync(DescribePlatformCreditsUsageRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformCreditsUsageResponse>(req, "DescribePlatformCreditsUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台版资源点模式下的资源点用量及原始用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformCreditsUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribePlatformCreditsUsageDetailResponse"/></returns>
+        public Task<DescribePlatformCreditsUsageDetailResponse> DescribePlatformCreditsUsageDetail(DescribePlatformCreditsUsageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformCreditsUsageDetailResponse>(req, "DescribePlatformCreditsUsageDetail");
+        }
+
+        /// <summary>
+        /// 查询平台版资源点模式下的资源点用量及原始用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformCreditsUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribePlatformCreditsUsageDetailResponse"/></returns>
+        public DescribePlatformCreditsUsageDetailResponse DescribePlatformCreditsUsageDetailSync(DescribePlatformCreditsUsageDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformCreditsUsageDetailResponse>(req, "DescribePlatformCreditsUsageDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台版环境资源用量
+        /// 
+        /// 指定查询范围，按资源类型返回各资源指标的用量及用量明细(按天)
+        /// 用量信息包含资源点用量，原始用量值（如流量、调用次数、容量等），原始用量单位等
+        /// 
+        /// 影响范围：只读查询、不改变资源
+        /// 使用场景：控制台用量页/API 查询平台版环境用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformEnvUsageRequest"/></param>
+        /// <returns><see cref="DescribePlatformEnvUsageResponse"/></returns>
+        public Task<DescribePlatformEnvUsageResponse> DescribePlatformEnvUsage(DescribePlatformEnvUsageRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformEnvUsageResponse>(req, "DescribePlatformEnvUsage");
+        }
+
+        /// <summary>
+        /// 查询平台版环境资源用量
+        /// 
+        /// 指定查询范围，按资源类型返回各资源指标的用量及用量明细(按天)
+        /// 用量信息包含资源点用量，原始用量值（如流量、调用次数、容量等），原始用量单位等
+        /// 
+        /// 影响范围：只读查询、不改变资源
+        /// 使用场景：控制台用量页/API 查询平台版环境用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformEnvUsageRequest"/></param>
+        /// <returns><see cref="DescribePlatformEnvUsageResponse"/></returns>
+        public DescribePlatformEnvUsageResponse DescribePlatformEnvUsageSync(DescribePlatformEnvUsageRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformEnvUsageResponse>(req, "DescribePlatformEnvUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询平台版资源信息列表，返回信息包括
+        /// 
+        /// 1.平台版基础信息如资源id，所属地域等;
+        /// 2.计费相关信息如：购买/过期时间，资源规格，计费状态等; 
+        /// 3.底层资源信息如：存储，日志，静态托管等资源信息等;
+        /// 
+        /// 入参支持platformIds，可查询指定平台版套餐信息
+        /// 
+        /// 影响范围：查询接口，返回当前用户账号下平台版资源信息
+        /// 使用场景：控制台展示平台版套餐信息/查平台版资源详情/资源状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
+        /// <returns><see cref="DescribePlatformsResponse"/></returns>
+        public Task<DescribePlatformsResponse> DescribePlatforms(DescribePlatformsRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformsResponse>(req, "DescribePlatforms");
+        }
+
+        /// <summary>
+        /// 查询平台版资源信息列表，返回信息包括
+        /// 
+        /// 1.平台版基础信息如资源id，所属地域等;
+        /// 2.计费相关信息如：购买/过期时间，资源规格，计费状态等; 
+        /// 3.底层资源信息如：存储，日志，静态托管等资源信息等;
+        /// 
+        /// 入参支持platformIds，可查询指定平台版套餐信息
+        /// 
+        /// 影响范围：查询接口，返回当前用户账号下平台版资源信息
+        /// 使用场景：控制台展示平台版套餐信息/查平台版资源详情/资源状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
+        /// <returns><see cref="DescribePlatformsResponse"/></returns>
+        public DescribePlatformsResponse DescribePlatformsSync(DescribePlatformsRequest req)
+        {
+            return InternalRequestAsync<DescribePlatformsResponse>(req, "DescribePlatforms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定指标的配额使用量
         /// </summary>
         /// <param name="req"><see cref="DescribeQuotaDataRequest"/></param>
@@ -1788,6 +1968,27 @@ namespace TencentCloud.Tcb.V20180608
         public DestroyMySQLResponse DestroyMySQLSync(DestroyMySQLRequest req)
         {
             return InternalRequestAsync<DestroyMySQLResponse>(req, "DestroyMySQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户可以调用本接口，删除平台版套餐下的指定平台版环境。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlatformEnvRequest"/></param>
+        /// <returns><see cref="DestroyPlatformEnvResponse"/></returns>
+        public Task<DestroyPlatformEnvResponse> DestroyPlatformEnv(DestroyPlatformEnvRequest req)
+        {
+            return InternalRequestAsync<DestroyPlatformEnvResponse>(req, "DestroyPlatformEnv");
+        }
+
+        /// <summary>
+        /// 用户可以调用本接口，删除平台版套餐下的指定平台版环境。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlatformEnvRequest"/></param>
+        /// <returns><see cref="DestroyPlatformEnvResponse"/></returns>
+        public DestroyPlatformEnvResponse DestroyPlatformEnvSync(DestroyPlatformEnvRequest req)
+        {
+            return InternalRequestAsync<DestroyPlatformEnvResponse>(req, "DestroyPlatformEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2157,6 +2358,27 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyPGInstanceSpecResponse ModifyPGInstanceSpecSync(ModifyPGInstanceSpecRequest req)
         {
             return InternalRequestAsync<ModifyPGInstanceSpecResponse>(req, "ModifyPGInstanceSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改平台版环境信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlatformEnvRequest"/></param>
+        /// <returns><see cref="ModifyPlatformEnvResponse"/></returns>
+        public Task<ModifyPlatformEnvResponse> ModifyPlatformEnv(ModifyPlatformEnvRequest req)
+        {
+            return InternalRequestAsync<ModifyPlatformEnvResponse>(req, "ModifyPlatformEnv");
+        }
+
+        /// <summary>
+        /// 修改平台版环境信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlatformEnvRequest"/></param>
+        /// <returns><see cref="ModifyPlatformEnvResponse"/></returns>
+        public ModifyPlatformEnvResponse ModifyPlatformEnvSync(ModifyPlatformEnvRequest req)
+        {
+            return InternalRequestAsync<ModifyPlatformEnvResponse>(req, "ModifyPlatformEnv")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

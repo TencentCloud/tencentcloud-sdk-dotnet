@@ -54,6 +54,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+        /// </summary>
+        [JsonProperty("ShowResourceQuotas")]
+        public bool? ShowResourceQuotas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ShowResourceQuotas", this.ShowResourceQuotas);
         }
     }
 }

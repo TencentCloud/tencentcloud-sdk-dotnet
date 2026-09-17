@@ -25,15 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 关键词，长度限制：20 个字符。
+        /// <p>关键词，长度限制：20 个字符。</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 关键词标签
-        /// <li>数组长度限制：20 个标签；</li>
-        /// <li>单个标签长度限制：128 个字符。</li>
+        /// <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

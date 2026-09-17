@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1507";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 校验标签下的标准词是否已存在
+        /// 校验标签
         /// </summary>
         /// <param name="req"><see cref="CheckLabelRequest"/></param>
         /// <returns><see cref="CheckLabelResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 校验标签下的标准词是否已存在
+        /// 校验标签
         /// </summary>
         /// <param name="req"><see cref="CheckLabelRequest"/></param>
         /// <returns><see cref="CheckLabelResponse"/></returns>
@@ -1688,6 +1688,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeReleaseSummaryResponse DescribeReleaseSummarySync(DescribeReleaseSummaryRequest req)
         {
             return InternalRequestAsync<DescribeReleaseSummaryResponse>(req, "DescribeReleaseSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户资源套餐和增值包用量信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceSummaryRequest"/></param>
+        /// <returns><see cref="DescribeResourceSummaryResponse"/></returns>
+        public Task<DescribeResourceSummaryResponse> DescribeResourceSummary(DescribeResourceSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceSummaryResponse>(req, "DescribeResourceSummary");
+        }
+
+        /// <summary>
+        /// 获取用户资源套餐和增值包用量信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceSummaryRequest"/></param>
+        /// <returns><see cref="DescribeResourceSummaryResponse"/></returns>
+        public DescribeResourceSummaryResponse DescribeResourceSummarySync(DescribeResourceSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceSummaryResponse>(req, "DescribeResourceSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

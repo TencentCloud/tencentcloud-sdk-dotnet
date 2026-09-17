@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 处理结果打包后的字符串，具体与后台一同协调。
+        /// <p>处理结果打包后的字符串，具体与后台一同协调。</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

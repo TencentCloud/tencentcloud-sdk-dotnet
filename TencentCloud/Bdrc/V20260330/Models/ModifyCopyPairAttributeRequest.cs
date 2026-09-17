@@ -25,22 +25,28 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 要修改属性的复制对id
+        /// <p>要修改属性的复制对id</p>
         /// </summary>
         [JsonProperty("CopyPairId")]
         public string CopyPairId{ get; set; }
 
         /// <summary>
-        /// 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
+        /// <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
         /// </summary>
         [JsonProperty("CopyPairType")]
         public string CopyPairType{ get; set; }
 
         /// <summary>
-        /// 修改复制对名称（长度最大支持 64 个字符）
+        /// <p>修改复制对名称（长度最大支持 64 个字符）</p>
         /// </summary>
         [JsonProperty("CopyPairName")]
         public string CopyPairName{ get; set; }
+
+        /// <summary>
+        /// <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "CopyPairId", this.CopyPairId);
             this.SetParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
             this.SetParamSimple(map, prefix + "CopyPairName", this.CopyPairName);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

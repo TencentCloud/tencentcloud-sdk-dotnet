@@ -26,12 +26,14 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewType")]
         public string ViewType{ get; set; }
 
         /// <summary>
         /// <p>图片 URL（http / https）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewImageUrl")]
         public string ViewImageUrl{ get; set; }

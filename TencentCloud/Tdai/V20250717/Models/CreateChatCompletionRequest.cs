@@ -54,6 +54,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("IsChatHidden")]
         public bool? IsChatHidden{ get; set; }
 
+        /// <summary>
+        /// <p>传递图片附件</p>
+        /// </summary>
+        [JsonProperty("Attachments")]
+        public Attachments[] Attachments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "ChatId", this.ChatId);
             this.SetParamSimple(map, prefix + "IsHidden", this.IsHidden);
             this.SetParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
+            this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         }
     }
 }

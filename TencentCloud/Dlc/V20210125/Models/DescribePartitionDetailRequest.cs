@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 分区编码
+        /// <p>分区编码</p>
         /// </summary>
         [JsonProperty("PartitionCode")]
         public string PartitionCode{ get; set; }

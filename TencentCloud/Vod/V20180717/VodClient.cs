@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1506";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -416,6 +416,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcCustomVoiceResponse CreateAigcCustomVoiceSync(CreateAigcCustomVoiceRequest req)
         {
             return InternalRequestAsync<CreateAigcCustomVoiceResponse>(req, "CreateAigcCustomVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 混元 3D 任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcHunyuan3DTaskResponse"/></returns>
+        public Task<CreateAigcHunyuan3DTaskResponse> CreateAigcHunyuan3DTask(CreateAigcHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcHunyuan3DTaskResponse>(req, "CreateAigcHunyuan3DTask");
+        }
+
+        /// <summary>
+        /// 该接口用于创建 AIGC 混元 3D 任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcHunyuan3DTaskResponse"/></returns>
+        public CreateAigcHunyuan3DTaskResponse CreateAigcHunyuan3DTaskSync(CreateAigcHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcHunyuan3DTaskResponse>(req, "CreateAigcHunyuan3DTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

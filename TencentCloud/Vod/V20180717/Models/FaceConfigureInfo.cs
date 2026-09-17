@@ -25,41 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 人脸识别任务开关，可选值：
-        /// <li>ON：开启智能人脸识别任务；</li>
-        /// <li>OFF：关闭智能人脸识别任务。</li>
+        /// <p>人脸识别任务开关，可选值：</p><li>ON：开启智能人脸识别任务；</li><li>OFF：关闭智能人脸识别任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
+        /// <p>人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-        /// <li>entertainment：娱乐明星；</li>
-        /// <li>sport：体育明星；</li>
-        /// <li>politician：相关人物。</li>
+        /// <p>默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：</p><li>entertainment：娱乐明星；</li><li>sport：体育明星；</li><li>politician：相关人物。</li>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-        /// 标签个数最多 100 个，每个标签长度最多 16 个字符。
+        /// <p>用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。<br>标签个数最多 100 个，每个标签长度最多 16 个字符。</p>
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 人物库选择，可选值：
-        /// <li>Default：使用默认人物库；</li>
-        /// <li>UserDefine：使用用户自定义人物库。</li>
-        /// <li>All：同时使用默认人物库和用户自定义人物库。</li>
-        /// 默认值：All，使用系统默认人物库及用户自定义人物库。
+        /// <p>人物库选择，可选值：</p><li>Default：使用默认人物库；</li><li>UserDefine：使用用户自定义人物库。</li><li>All：同时使用默认人物库和用户自定义人物库。</li>默认值：All，使用系统默认人物库及用户自定义人物库。
         /// </summary>
         [JsonProperty("FaceLibrary")]
         public string FaceLibrary{ get; set; }

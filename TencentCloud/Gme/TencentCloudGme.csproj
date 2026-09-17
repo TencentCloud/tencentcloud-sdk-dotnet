@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1508</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,7 @@
     <Compile Include="V20180711\Models\ApplicationDataStatistics.cs" />
     <Compile Include="V20180711\Models\ApplicationList.cs" />
     <Compile Include="V20180711\Models\AsrConf.cs" />
+    <Compile Include="V20180711\Models\AudioSegments.cs" />
     <Compile Include="V20180711\Models\AudioTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\AuditResultDetailExternal.cs" />
     <Compile Include="V20180711\Models\ControlAIConversationRequest.cs" />
@@ -65,6 +66,8 @@
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="V20180711\Models\CreateAppResp.cs" />
     <Compile Include="V20180711\Models\CreateAppResponse.cs" />
+    <Compile Include="V20180711\Models\CreateAudioModerationSyncRequest.cs" />
+    <Compile Include="V20180711\Models\CreateAudioModerationSyncResponse.cs" />
     <Compile Include="V20180711\Models\CreateCustomizationRequest.cs" />
     <Compile Include="V20180711\Models\CreateCustomizationResponse.cs" />
     <Compile Include="V20180711\Models\CreateScanUserRequest.cs" />
@@ -110,8 +113,10 @@
     <Compile Include="V20180711\Models\Filter.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListRequest.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListResponse.cs" />
+    <Compile Include="V20180711\Models\ImageLocation.cs" />
     <Compile Include="V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="V20180711\Models\InvokeLLM.cs" />
+    <Compile Include="V20180711\Models\ModerationCheckDetail.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />

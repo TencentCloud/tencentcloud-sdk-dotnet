@@ -87,6 +87,13 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// <p>操作权限</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Permission")]
+        public KBPermission Permission{ get; set; }
+
+        /// <summary>
         /// <p>处理中状态列表</p>
         /// </summary>
         [JsonProperty("ProcessingFlagList")]
@@ -120,6 +127,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "KbType", this.KbType);
             this.SetParamObj(map, prefix + "LatestOperator.", this.LatestOperator);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamObj(map, prefix + "Permission.", this.Permission);
             this.SetParamArraySimple(map, prefix + "ProcessingFlagList.", this.ProcessingFlagList);
             this.SetParamSimple(map, prefix + "SharedSubType", this.SharedSubType);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

@@ -25,66 +25,58 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 证件边缘是否完整
-        /// 0：正常
-        /// 1：边缘不完整
+        /// <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
         /// </summary>
         [JsonProperty("BorderCheck")]
         public long? BorderCheck{ get; set; }
 
         /// <summary>
-        /// 证件是否被遮挡
-        /// 0：正常
-        /// 1：有遮挡
+        /// <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
         /// </summary>
         [JsonProperty("OcclusionCheck")]
         public long? OcclusionCheck{ get; set; }
 
         /// <summary>
-        /// 是否复印
-        /// 0:正常
-        /// 1:复印件
+        /// <p>是否复印<br>0:正常<br>1:复印件</p>
         /// </summary>
         [JsonProperty("CopyCheck")]
         public long? CopyCheck{ get; set; }
 
         /// <summary>
-        /// 是否屏幕翻拍
-        /// 0:正常
-        /// 1:翻拍
+        /// <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
         /// </summary>
         [JsonProperty("ReshootCheck")]
         public long? ReshootCheck{ get; set; }
 
         /// <summary>
-        /// 证件是否有PS
-        /// 0：正常
-        /// 1：有PS
+        /// <p>证件是否有PS<br>0：正常<br>1：有PS</p>
         /// </summary>
         [JsonProperty("PSCheck")]
         public long? PSCheck{ get; set; }
 
         /// <summary>
-        /// 是否模糊：
-        /// 0:正常
-        /// 1:模糊
+        /// <p>是否模糊：<br>0:正常<br>1:模糊</p>
         /// </summary>
         [JsonProperty("BlurCheck")]
         public long? BlurCheck{ get; set; }
 
         /// <summary>
-        /// 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+        /// <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
         /// </summary>
         [JsonProperty("BlurScore")]
         public float? BlurScore{ get; set; }
 
         /// <summary>
-        /// 是否电子身份证
-        /// 0：否
-        /// 1：是电子身份证
+        /// <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
         /// </summary>
         [JsonProperty("ElectronCheck")]
         public long? ElectronCheck{ get; set; }
+
+        /// <summary>
+        /// <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ReflectCheck")]
+        public long? ReflectCheck{ get; set; }
 
 
         /// <summary>
@@ -100,6 +92,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
             this.SetParamSimple(map, prefix + "BlurScore", this.BlurScore);
             this.SetParamSimple(map, prefix + "ElectronCheck", this.ElectronCheck);
+            this.SetParamSimple(map, prefix + "ReflectCheck", this.ReflectCheck);
         }
     }
 }

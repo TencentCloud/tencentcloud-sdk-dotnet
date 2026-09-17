@@ -25,67 +25,67 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 固定填值：9。
+        /// <p>固定填值：9。</p>
         /// </summary>
         [JsonProperty("CaptchaType")]
         public ulong? CaptchaType{ get; set; }
 
         /// <summary>
-        /// 前端回调函数返回的用户验证票据
+        /// <p>前端回调函数返回的用户验证票据</p>
         /// </summary>
         [JsonProperty("Ticket")]
         public string Ticket{ get; set; }
 
         /// <summary>
-        /// 业务侧获取到的验证码使用者的外网IP
+        /// <p>业务侧获取到的验证码使用者的外网IP</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 前端回调函数返回的随机字符串
+        /// <p>前端回调函数返回的随机字符串</p>
         /// </summary>
         [JsonProperty("Randstr")]
         public string Randstr{ get; set; }
 
         /// <summary>
-        /// 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+        /// <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
         /// </summary>
         [JsonProperty("CaptchaAppId")]
         public ulong? CaptchaAppId{ get; set; }
 
         /// <summary>
-        /// 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+        /// <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
         /// </summary>
         [JsonProperty("AppSecretKey")]
         public string AppSecretKey{ get; set; }
 
         /// <summary>
-        /// 预留字段
+        /// <p>预留字段</p>
         /// </summary>
         [JsonProperty("BusinessId")]
         public ulong? BusinessId{ get; set; }
 
         /// <summary>
-        /// 预留字段
+        /// <p>预留字段</p>
         /// </summary>
         [JsonProperty("SceneId")]
         public ulong? SceneId{ get; set; }
 
         /// <summary>
-        /// mac 地址或设备唯一标识
+        /// <p>mac 地址或设备唯一标识</p>
         /// </summary>
         [JsonProperty("MacAddress")]
         public string MacAddress{ get; set; }
 
         /// <summary>
-        /// 手机设备号
+        /// <p>手机设备号</p>
         /// </summary>
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
 
         /// <summary>
-        /// 是否返回前端获取验证码时间，取值1：需要返回
+        /// <p>是否返回前端获取验证码时间，取值1：需要返回</p>
         /// </summary>
         [JsonProperty("NeedGetCaptchaTime")]
         public long? NeedGetCaptchaTime{ get; set; }

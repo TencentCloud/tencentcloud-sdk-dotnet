@@ -25,138 +25,149 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警策略名称。
+        /// <p>告警策略名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 监控对象列表。
+        /// <p>监控对象列表。</p>
         /// </summary>
         [JsonProperty("AlarmTargets")]
         public AlarmTargetInfo[] AlarmTargets{ get; set; }
 
         /// <summary>
-        /// 监控任务运行时间点。
+        /// <p>监控任务运行时间点。</p>
         /// </summary>
         [JsonProperty("MonitorTime")]
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// 是否触发告警的单触发条件。与MultiConditions参数互斥。
+        /// <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+        /// <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
         /// </summary>
         [JsonProperty("TriggerCount")]
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// 告警重复的周期。单位是min。取值范围是0~1440。
+        /// <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
 
         /// <summary>
-        /// 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+        /// <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
         /// </summary>
         [JsonProperty("AlarmNoticeIds")]
         public string[] AlarmNoticeIds{ get; set; }
 
         /// <summary>
-        /// 开启状态。
+        /// <p>开启状态。</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 告警策略ID。
+        /// <p>告警策略ID。</p>
         /// </summary>
         [JsonProperty("AlarmId")]
         public string AlarmId{ get; set; }
 
         /// <summary>
-        /// 创建时间。格式： YYYY-MM-DD HH:MM:SS
+        /// <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+        /// <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 自定义通知模板
+        /// <p>自定义通知模板</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTemplate")]
         public string MessageTemplate{ get; set; }
 
         /// <summary>
-        /// 自定义回调模板
+        /// <p>自定义回调模板</p>
         /// </summary>
         [JsonProperty("CallBack")]
         public CallBackInfo CallBack{ get; set; }
 
         /// <summary>
-        /// 多维分析设置
+        /// <p>多维分析设置</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
-        /// 分组触发状态。true：开启，false：关闭（默认）
+        /// <p>分组触发状态。true：开启，false：关闭（默认）</p>
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
         public bool? GroupTriggerStatus{ get; set; }
 
         /// <summary>
-        /// 分组触发条件。
+        /// <p>分组触发条件。</p>
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public string[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
-        /// 告警策略绑定的标签信息。
+        /// <p>告警策略绑定的标签信息。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+        /// <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
         /// <summary>
-        /// 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+        /// <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// 告警附加分类字段。
+        /// <p>告警附加分类字段。</p>
         /// </summary>
         [JsonProperty("Classifications")]
         public AlarmClassification[] Classifications{ get; set; }
 
         /// <summary>
-        /// 多触发条件。与
-        /// Condition互斥。
+        /// <p>多触发条件。与<br>Condition互斥。</p>
         /// </summary>
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+        /// <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
         /// </summary>
         [JsonProperty("MonitorNotice")]
         public MonitorNotice MonitorNotice{ get; set; }
+
+        /// <summary>
+        /// <p>AI分析内容</p>
+        /// </summary>
+        [JsonProperty("AIAnalysis")]
+        public AIAnalysis AIAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>最后修改人的uin信息</p>
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public ulong? SubUin{ get; set; }
 
 
         /// <summary>
@@ -186,6 +197,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
             this.SetParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
+            this.SetParamObj(map, prefix + "AIAnalysis.", this.AIAnalysis);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
         }
     }
 }

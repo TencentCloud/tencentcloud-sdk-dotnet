@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群Id
+        /// <p>集群Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 旧从可用区
+        /// <p>旧备可用区</p>
         /// </summary>
         [JsonProperty("OldSlaveZone")]
         public string OldSlaveZone{ get; set; }
 
         /// <summary>
-        /// 新从可用区
+        /// <p>新备可用区</p>
         /// </summary>
         [JsonProperty("NewSlaveZone")]
         public string NewSlaveZone{ get; set; }
 
         /// <summary>
-        /// binlog同步方式。默认值：async。可选值：sync、semisync、async
+        /// <p>binlog同步方式。默认值：async。可选值：sync、semisync、async</p>
         /// </summary>
         [JsonProperty("BinlogSyncWay")]
         public string BinlogSyncWay{ get; set; }
 
         /// <summary>
-        /// 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+        /// <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。</p>
         /// </summary>
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }

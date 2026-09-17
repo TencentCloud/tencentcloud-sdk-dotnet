@@ -25,27 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 域名。
+        /// <p>域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 本次接口调用的操作类型，可选值：
-        /// <li>Set：设置域名的 HTTPS 所需证书；</li>
-        /// <li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+        /// <p>本次接口调用的操作类型，可选值：</p><li>Set：设置域名的 HTTPS 所需证书；</li><li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// [腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
+        /// <p><a href="/document/product/400/7572">腾讯云SSL</a> 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。</p>
         /// </summary>
         [JsonProperty("CertID")]
         public string CertID{ get; set; }

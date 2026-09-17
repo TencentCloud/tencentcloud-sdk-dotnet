@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public HTTPServiceHeadersHandler HeadersHandler{ get; set; }
 
         /// <summary>
-        /// <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+        /// <p>HTTPService 缓存配置，仅限自定义域名配置。包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
         /// </summary>
         [JsonProperty("Cache")]
         public HTTPServiceCacheSet Cache{ get; set; }

@@ -25,28 +25,40 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// scp账号uin或节点Id
+        /// <p>scp账号uin或节点Id</p>
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 关联类型 1-节点关联 2-用户关联
+        /// <p>关联类型 1-节点关联 2-用户关联</p>
         /// </summary>
         [JsonProperty("RelatedType")]
         public ulong? RelatedType{ get; set; }
 
         /// <summary>
-        /// 账号或者节点名称
+        /// <p>账号或者节点名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 绑定时间
+        /// <p>绑定时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
+
+        /// <summary>
+        /// <p>目标对象所属的组织层级名称路径</p>
+        /// </summary>
+        [JsonProperty("NodePath")]
+        public string[] NodePath{ get; set; }
+
+        /// <summary>
+        /// <p>对应的组织层级 ID 路径</p>
+        /// </summary>
+        [JsonProperty("NodePathIds")]
+        public long?[] NodePathIds{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "RelatedType", this.RelatedType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamArraySimple(map, prefix + "NodePath.", this.NodePath);
+            this.SetParamArraySimple(map, prefix + "NodePathIds.", this.NodePathIds);
         }
     }
 }

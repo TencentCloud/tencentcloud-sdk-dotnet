@@ -25,16 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 异步任务ID。
+        /// <p>异步任务ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN client 唯一ID
+        /// <p>SSL VPN客户端唯一ID</p>
         /// </summary>
         [JsonProperty("SslVpnClientId")]
         public string SslVpnClientId{ get; set; }
+
+        /// <summary>
+        /// <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+        /// </summary>
+        [JsonProperty("SslVpnClientIds")]
+        public string[] SslVpnClientIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+            this.SetParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

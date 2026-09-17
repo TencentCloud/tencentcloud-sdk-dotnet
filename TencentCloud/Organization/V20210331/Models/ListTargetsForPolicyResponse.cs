@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 总数。
+        /// <p>总数。</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 指定SCP策略关联目标列表。
+        /// <p>指定SCP策略关联目标列表。</p>
         /// </summary>
         [JsonProperty("List")]
         public ListTargetsForPolicyNode[] List{ get; set; }

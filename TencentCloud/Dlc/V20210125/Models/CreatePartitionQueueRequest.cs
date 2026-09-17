@@ -31,12 +31,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string PartitionCode{ get; set; }
 
         /// <summary>
-        /// <p>队列名称</p>
-        /// </summary>
-        [JsonProperty("QueueName")]
-        public string QueueName{ get; set; }
-
-        /// <summary>
         /// <p>资源规格列表，定义队列的资源类型及大小范围</p>
         /// </summary>
         [JsonProperty("ResourceUsages")]
@@ -47,6 +41,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("QueueType")]
         public long? QueueType{ get; set; }
+
+        /// <summary>
+        /// <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
 
         /// <summary>
         /// <p>队列描述</p>
@@ -61,9 +67,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
-            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamArrayObj(map, prefix + "ResourceUsages.", this.ResourceUsages);
             this.SetParamSimple(map, prefix + "QueueType", this.QueueType);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

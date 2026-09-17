@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 符合条件的记录总数。
+        /// <p>符合条件的记录总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 人物信息。
+        /// <p>人物信息。</p>
         /// </summary>
         [JsonProperty("PersonSet")]
         public AiSamplePerson[] PersonSet{ get; set; }

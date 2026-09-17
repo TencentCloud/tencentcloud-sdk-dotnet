@@ -25,7 +25,7 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 监控器id
+        /// <p>监控器id</p>
         /// </summary>
         [JsonProperty("MonitorId")]
         public ulong? MonitorId{ get; set; }

@@ -25,92 +25,85 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+        /// <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 0 自动，自动判断输入证件的类型
-        /// 1 身份证人像面，指定输入证件类型为二代身份证人像面
-        /// 2 身份证国徽面，指定输入证件类型为二代身份证国徽面
-        /// 3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面
-        /// 4 临时身份证人像面，指定输入证件类型为临时身份证人像面
-        /// 5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面
-        /// 6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面
-        /// 7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面
-        /// 8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面
-        /// 9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面
-        /// 10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面
-        /// 11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面
-        /// 12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面
-        /// 该参数如果不填，将为您自动判断卡证类型。
+        /// <p>0 自动，自动判断输入证件的类型<br>1 身份证人像面，指定输入证件类型为二代身份证人像面<br>2 身份证国徽面，指定输入证件类型为二代身份证国徽面<br>3 身份证人像国徽面，指定输入证件类型为二代身份证人像面或者国徽面<br>4 临时身份证人像面，指定输入证件类型为临时身份证人像面<br>5 临时身份证国徽面，指定输入证件类型为临时身份证国徽面<br>6 临时身份证人像国徽面，指定输入证件类型为临时身份证人像面或者国徽面<br>7 港澳台居住证人像面，指定输入证件类型为港澳台居住证人像面<br>8 港澳台居住证国徽面，指定输入证件类型为港澳台居住证国徽面<br>9 港澳台居住证人像国徽面，指定输入证件类型为港澳台居住证人像面或者国徽面<br>10 外国人永久居留身份证人像面，指定输入证件类型为外国人永久居留证人像面<br>11 外国人永久居留身份证国徽面，指定输入证件类型为外国人永久居留证国徽面<br>12 外国人永久居留身份证人像国徽面，指定输入证件类型为外国人永久居留证人像或者国徽面<br>该参数如果不填，将为您自动判断卡证类型。</p>
         /// </summary>
         [JsonProperty("CardType")]
         public long? CardType{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件头像切图。
+        /// <p>默认值为false，打开返回证件头像切图。</p>
         /// </summary>
         [JsonProperty("EnablePortrait")]
         public bool? EnablePortrait{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件主体切图。
+        /// <p>默认值为false，打开返回证件主体切图。</p>
         /// </summary>
         [JsonProperty("EnableCropImage")]
         public bool? EnableCropImage{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回边缘完整性判断。
+        /// <p>默认值为false，打开返回边缘完整性判断。</p>
         /// </summary>
         [JsonProperty("EnableBorderCheck")]
         public bool? EnableBorderCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件是否被遮挡。
+        /// <p>默认值为false，打开返回证件是否被遮挡。</p>
         /// </summary>
         [JsonProperty("EnableOcclusionCheck")]
         public bool? EnableOcclusionCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件是否存在复印。
+        /// <p>默认值为false，打开返回证件是否存在复印。</p>
         /// </summary>
         [JsonProperty("EnableCopyCheck")]
         public bool? EnableCopyCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件是否存在屏幕翻拍。
+        /// <p>默认值为false，打开返回证件是否存在屏幕翻拍。</p>
         /// </summary>
         [JsonProperty("EnableReshootCheck")]
         public bool? EnableReshootCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
+        /// <p>默认值为false，打开返回是否存在反光。</p>
+        /// </summary>
+        [JsonProperty("EnableReflectCheck")]
+        public bool? EnableReflectCheck{ get; set; }
+
+        /// <summary>
+        /// <p>默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效</p>
         /// </summary>
         [JsonProperty("EnablePSCheck")]
         public bool? EnablePSCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+        /// <p>默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效</p>
         /// </summary>
         [JsonProperty("EnableWordCheck")]
         public bool? EnableWordCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回证件是否模糊。
+        /// <p>默认值为false，打开返回证件是否模糊。</p>
         /// </summary>
         [JsonProperty("EnableQualityCheck")]
         public bool? EnableQualityCheck{ get; set; }
 
         /// <summary>
-        /// 默认值为false，打开返回是否存在电子身份证判断。
+        /// <p>默认值为false，打开返回是否存在电子身份证判断。</p>
         /// </summary>
         [JsonProperty("EnableElectronCheck")]
         public bool? EnableElectronCheck{ get; set; }
@@ -130,6 +123,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableOcclusionCheck", this.EnableOcclusionCheck);
             this.SetParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
             this.SetParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
+            this.SetParamSimple(map, prefix + "EnableReflectCheck", this.EnableReflectCheck);
             this.SetParamSimple(map, prefix + "EnablePSCheck", this.EnablePSCheck);
             this.SetParamSimple(map, prefix + "EnableWordCheck", this.EnableWordCheck);
             this.SetParamSimple(map, prefix + "EnableQualityCheck", this.EnableQualityCheck);

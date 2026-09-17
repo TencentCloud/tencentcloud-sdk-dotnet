@@ -25,47 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+        /// <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 是否去除视频数据，取值：
-        /// <li>0：保留；<\li>
-        /// <li>1：去除。<\li>
+        /// <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 是否去除音频数据，取值：
-        /// <li>0：保留；<\li>
-        /// <li>1：去除。<\li>
+        /// <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 视频流配置参数。
+        /// <p>视频流配置参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfoForUpdate VideoTemplate{ get; set; }
 
         /// <summary>
-        /// 音频流配置参数。
+        /// <p>音频流配置参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 极速高清转码配置参数。
+        /// <p>极速高清转码配置参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
+
+        /// <summary>
+        /// <p>标准扩展字段，特殊用途使用。</p>
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -79,6 +81,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

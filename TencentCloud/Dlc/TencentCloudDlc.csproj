@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1502</VersionPrefix>
+    <VersionPrefix>3.0.1508</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -130,6 +130,7 @@
     <Compile Include="V20210125\Models\CheckpointConfig.cs" />
     <Compile Include="V20210125\Models\CheckpointMetrics.cs" />
     <Compile Include="V20210125\Models\CheckpointMountInfo.cs" />
+    <Compile Include="V20210125\Models\CloudTag.cs" />
     <Compile Include="V20210125\Models\ClsTopicItem.cs" />
     <Compile Include="V20210125\Models\ClusterGroup.cs" />
     <Compile Include="V20210125\Models\ClusterPod.cs" />
@@ -816,6 +817,7 @@
     <Compile Include="V20210125\Models\QueryTaskCostDetailRequest.cs" />
     <Compile Include="V20210125\Models\QueryTaskCostDetailResponse.cs" />
     <Compile Include="V20210125\Models\QueueInfo.cs" />
+    <Compile Include="V20210125\Models\QueueResourceQuota.cs" />
     <Compile Include="V20210125\Models\RayClusterEntity.cs" />
     <Compile Include="V20210125\Models\RayClusterHistory.cs" />
     <Compile Include="V20210125\Models\RayJobEventItem.cs" />
@@ -854,6 +856,7 @@
     <Compile Include="V20210125\Models\RunJobSpecRequest.cs" />
     <Compile Include="V20210125\Models\RunJobSpecResponse.cs" />
     <Compile Include="V20210125\Models\SQLTask.cs" />
+    <Compile Include="V20210125\Models\SchedulableLimit.cs" />
     <Compile Include="V20210125\Models\ScheduleElasticityConf.cs" />
     <Compile Include="V20210125\Models\Script.cs" />
     <Compile Include="V20210125\Models\ServiceMetricsItem.cs" />

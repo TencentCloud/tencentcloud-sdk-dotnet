@@ -25,28 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Ocr 文字鉴别结果的评分，分值为0到100。
+        /// <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Ocr 文字鉴别的结果建议，取值范围：
-        /// <li>pass；</li>
-        /// <li>review；</li>
-        /// <li>block。</li>
+        /// <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Ocr 文字鉴别的嫌疑关键词列表。
+        /// <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }
 
         /// <summary>
-        /// Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        /// <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

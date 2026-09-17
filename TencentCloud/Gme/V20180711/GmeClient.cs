@@ -28,7 +28,7 @@ namespace TencentCloud.Gme.V20180711
 
        private const string endpoint = "gme.tencentcloudapi.com";
        private const string version = "2018-07-11";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1508";
 
         /// <summary>
         /// Client constructor.
@@ -137,6 +137,27 @@ namespace TencentCloud.Gme.V20180711
         public CreateAppResponse CreateAppSync(CreateAppRequest req)
         {
             return InternalRequestAsync<CreateAppResponse>(req, "CreateApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 短音频内容理解同步接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAudioModerationSyncRequest"/></param>
+        /// <returns><see cref="CreateAudioModerationSyncResponse"/></returns>
+        public Task<CreateAudioModerationSyncResponse> CreateAudioModerationSync(CreateAudioModerationSyncRequest req)
+        {
+            return InternalRequestAsync<CreateAudioModerationSyncResponse>(req, "CreateAudioModerationSync");
+        }
+
+        /// <summary>
+        /// 短音频内容理解同步接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateAudioModerationSyncRequest"/></param>
+        /// <returns><see cref="CreateAudioModerationSyncResponse"/></returns>
+        public CreateAudioModerationSyncResponse CreateAudioModerationSyncSync(CreateAudioModerationSyncRequest req)
+        {
+            return InternalRequestAsync<CreateAudioModerationSyncResponse>(req, "CreateAudioModerationSync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

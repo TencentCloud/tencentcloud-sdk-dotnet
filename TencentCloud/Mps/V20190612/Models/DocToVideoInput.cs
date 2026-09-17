@@ -37,16 +37,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-        /// </summary>
-        [JsonProperty("ModelName")]
-        public string ModelName{ get; set; }
-
-        /// <summary>
         /// <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
+
+        /// <summary>
+        /// <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
 
         /// <summary>
         /// <p>生成视频的宽高比。</p><p>枚举值：</p><ul><li>16:9： 16:9</li><li>9:16： 9:16</li><li>1:1： 1:1</li></ul><p>默认值：16:9</p>
@@ -116,8 +116,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArraySimple(map, prefix + "FileUrl.", this.FileUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
-            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20240718.Models
     {
         
         /// <summary>
-        /// 临时访问凭证。
+        /// <p>临时访问凭证。</p>
         /// </summary>
         [JsonProperty("Credentials")]
         public Credentials Credentials{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Igtm.V20231024.Models
     {
         
         /// <summary>
-        /// 地址池列表
+        /// <p>地址池列表</p>
         /// </summary>
         [JsonProperty("DnsLineSet")]
         public GroupLine[] DnsLineSet{ get; set; }

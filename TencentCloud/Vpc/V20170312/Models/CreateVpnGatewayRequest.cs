@@ -58,6 +58,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <p>可用区，如：ap-guangzhou-2。</p>
         /// </summary>
         [JsonProperty("Zone")]
+        [System.Obsolete]
         public string Zone{ get; set; }
 
         /// <summary>
@@ -90,6 +91,36 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BgpAsn")]
         public ulong? BgpAsn{ get; set; }
 
+        /// <summary>
+        /// <p>是否是私网类型</p>
+        /// </summary>
+        [JsonProperty("IsPrivate")]
+        public bool? IsPrivate{ get; set; }
+
+        /// <summary>
+        /// <p>私网唯一ID</p>
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// <p>BGP 开关，开启时需指定BgpAsn。</p>
+        /// </summary>
+        [JsonProperty("BgpEnable")]
+        public bool? BgpEnable{ get; set; }
+
+        /// <summary>
+        /// <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+        /// </summary>
+        [JsonProperty("IpStack")]
+        public string IpStack{ get; set; }
+
+        /// <summary>
+        /// <p>CCN类型私网VPN接入网段</p>
+        /// </summary>
+        [JsonProperty("AccessSubnet")]
+        public string AccessSubnet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +138,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
             this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+            this.SetParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "BgpEnable", this.BgpEnable);
+            this.SetParamSimple(map, prefix + "IpStack", this.IpStack);
+            this.SetParamSimple(map, prefix + "AccessSubnet", this.AccessSubnet);
         }
     }
 }
