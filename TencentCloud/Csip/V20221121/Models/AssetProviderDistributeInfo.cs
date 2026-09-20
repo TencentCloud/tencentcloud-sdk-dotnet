@@ -54,6 +54,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AzureAssetCount")]
         public ulong? AzureAssetCount{ get; set; }
 
+        /// <summary>
+        /// <p>腾讯TCE专有云资产数量</p>
+        /// </summary>
+        [JsonProperty("TceAssetCount")]
+        public ulong? TceAssetCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AwsAssetCount", this.AwsAssetCount);
             this.SetParamSimple(map, prefix + "OtherAssetCount", this.OtherAssetCount);
             this.SetParamSimple(map, prefix + "AzureAssetCount", this.AzureAssetCount);
+            this.SetParamSimple(map, prefix + "TceAssetCount", this.TceAssetCount);
         }
     }
 }

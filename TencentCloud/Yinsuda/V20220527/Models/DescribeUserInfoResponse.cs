@@ -25,7 +25,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
     {
         
         /// <summary>
-        /// 用户信息。
+        /// <p>用户信息。</p>
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserInfo UserInfo{ get; set; }

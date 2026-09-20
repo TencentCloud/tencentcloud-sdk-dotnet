@@ -25,76 +25,82 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志时间，单位ms
+        /// <p>日志时间，单位ms</p>
         /// </summary>
         [JsonProperty("Time")]
         public long? Time{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志主题名称
+        /// <p>日志主题名称</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 日志来源IP
+        /// <p>日志来源IP</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 日志文件名称
+        /// <p>日志文件名称</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 日志上报请求包的ID
+        /// <p>日志上报请求包的ID</p>
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// 请求包内日志的ID
+        /// <p>请求包内日志的ID</p>
         /// </summary>
         [JsonProperty("PkgLogId")]
         public string PkgLogId{ get; set; }
 
         /// <summary>
-        /// 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+        /// <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p>
         /// </summary>
         [JsonProperty("HighLights")]
         public HighLightItem[] HighLights{ get; set; }
 
         /// <summary>
-        /// 日志内容的Json序列化字符串
+        /// <p>日志内容的Json序列化字符串</p>
         /// </summary>
         [JsonProperty("LogJson")]
         public string LogJson{ get; set; }
 
         /// <summary>
-        /// 日志来源主机名称
+        /// <p>日志来源主机名称</p>
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 原始日志(仅在日志创建索引异常时有值)
+        /// <p>原始日志(仅在日志创建索引异常时有值)</p>
         /// </summary>
         [JsonProperty("RawLog")]
         public string RawLog{ get; set; }
 
         /// <summary>
-        /// 日志创建索引异常原因(仅在日志创建索引异常时有值)
+        /// <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p>
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
+
+        /// <summary>
+        /// <p>日志时间，单位ns</p><p>单位：纳秒</p>
+        /// </summary>
+        [JsonProperty("TimeNanos")]
+        public long? TimeNanos{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "RawLog", this.RawLog);
             this.SetParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
+            this.SetParamSimple(map, prefix + "TimeNanos", this.TimeNanos);
         }
     }
 }

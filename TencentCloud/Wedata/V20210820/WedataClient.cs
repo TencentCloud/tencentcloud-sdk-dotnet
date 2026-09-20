@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -6355,6 +6355,27 @@ namespace TencentCloud.Wedata.V20210820
         public TriggerManualTasksResponse TriggerManualTasksSync(TriggerManualTasksRequest req)
         {
             return InternalRequestAsync<TriggerManualTasksResponse>(req, "TriggerManualTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑bundle绑定的资源
+        /// </summary>
+        /// <param name="req"><see cref="UnbindingResourceRequest"/></param>
+        /// <returns><see cref="UnbindingResourceResponse"/></returns>
+        public Task<UnbindingResourceResponse> UnbindingResource(UnbindingResourceRequest req)
+        {
+            return InternalRequestAsync<UnbindingResourceResponse>(req, "UnbindingResource");
+        }
+
+        /// <summary>
+        /// 解绑bundle绑定的资源
+        /// </summary>
+        /// <param name="req"><see cref="UnbindingResourceRequest"/></param>
+        /// <returns><see cref="UnbindingResourceResponse"/></returns>
+        public UnbindingResourceResponse UnbindingResourceSync(UnbindingResourceRequest req)
+        {
+            return InternalRequestAsync<UnbindingResourceResponse>(req, "UnbindingResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

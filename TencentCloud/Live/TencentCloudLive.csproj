@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1502</VersionPrefix>
+    <VersionPrefix>3.0.1509</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,9 +64,17 @@
     <Compile Include="V20180801\Models\AddLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="V20180801\Models\AddLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\AuditGroupClassInfo.cs" />
+    <Compile Include="V20180801\Models\AuditGroupInfo.cs" />
+    <Compile Include="V20180801\Models\AuditImage.cs" />
+    <Compile Include="V20180801\Models\AuditImageCreateDetail.cs" />
+    <Compile Include="V20180801\Models\AuditImageDeleteDetail.cs" />
+    <Compile Include="V20180801\Models\AuditImageInfo.cs" />
     <Compile Include="V20180801\Models\AuditKeyword.cs" />
     <Compile Include="V20180801\Models\AuditKeywordDeleteDetail.cs" />
     <Compile Include="V20180801\Models\AuditKeywordInfo.cs" />
+    <Compile Include="V20180801\Models\AuditKeywordLibInfo.cs" />
+    <Compile Include="V20180801\Models\AuditLabelGroupInfo.cs" />
     <Compile Include="V20180801\Models\AuthenticateDomainOwnerRequest.cs" />
     <Compile Include="V20180801\Models\AuthenticateDomainOwnerResponse.cs" />
     <Compile Include="V20180801\Models\AvatarAnchorInfo.cs" />
@@ -116,6 +124,8 @@
     <Compile Include="V20180801\Models\CopyCasterResponse.cs" />
     <Compile Include="V20180801\Models\CopyLiveAvatarRoomRequest.cs" />
     <Compile Include="V20180801\Models\CopyLiveAvatarRoomResponse.cs" />
+    <Compile Include="V20180801\Models\CreateAuditImagesRequest.cs" />
+    <Compile Include="V20180801\Models\CreateAuditImagesResponse.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordLibRequest.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordLibResponse.cs" />
     <Compile Include="V20180801\Models\CreateAuditKeywordsRequest.cs" />
@@ -184,6 +194,10 @@
     <Compile Include="V20180801\Models\CreateVideoRedrawTaskResponse.cs" />
     <Compile Include="V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="V20180801\Models\DelayInfo.cs" />
+    <Compile Include="V20180801\Models\DeleteAuditImagesRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteAuditImagesResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteAuditKeywordLibRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteAuditKeywordLibResponse.cs" />
     <Compile Include="V20180801\Models\DeleteAuditKeywordsRequest.cs" />
     <Compile Include="V20180801\Models\DeleteAuditKeywordsResponse.cs" />
     <Compile Include="V20180801\Models\DeleteCasterInputInfoRequest.cs" />
@@ -252,6 +266,12 @@
     <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeAreaBillBandwidthAndFluxListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeAreaBillBandwidthAndFluxListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditGroupTagRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditGroupTagResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditImagesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditImagesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditKeywordLibsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAuditKeywordLibsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeAuditKeywordsRequest.cs" />
     <Compile Include="V20180801\Models\DescribeAuditKeywordsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeBackupStreamListRequest.cs" />
@@ -494,6 +514,8 @@
     <Compile Include="V20180801\Models\LogInfo.cs" />
     <Compile Include="V20180801\Models\MPSResult.cs" />
     <Compile Include="V20180801\Models\MixPortraitSegmentParams.cs" />
+    <Compile Include="V20180801\Models\ModifyAuditKeywordLibRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyAuditKeywordLibResponse.cs" />
     <Compile Include="V20180801\Models\ModifyCasterInputInfoRequest.cs" />
     <Compile Include="V20180801\Models\ModifyCasterInputInfoResponse.cs" />
     <Compile Include="V20180801\Models\ModifyCasterLayoutInfoRequest.cs" />

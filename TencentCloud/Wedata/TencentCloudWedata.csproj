@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1508</VersionPrefix>
+    <VersionPrefix>3.0.1509</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20210820\Models\BindProjectExecutorResourceResponse.cs" />
     <Compile Include="V20210820\Models\BizCatalogsInfo.cs" />
     <Compile Include="V20210820\Models\BizParams.cs" />
+    <Compile Include="V20210820\Models\BooleanResponse.cs" />
+    <Compile Include="V20210820\Models\BundleResource.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
     <Compile Include="V20210820\Models\CandidateDsDTo.cs" />
     <Compile Include="V20210820\Models\ChangeLog.cs" />
@@ -1018,6 +1020,8 @@
     <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
     <Compile Include="V20210820\Models\TriggerManualTasksRequest.cs" />
     <Compile Include="V20210820\Models\TriggerManualTasksResponse.cs" />
+    <Compile Include="V20210820\Models\UnbindingResourceRequest.cs" />
+    <Compile Include="V20210820\Models\UnbindingResourceResponse.cs" />
     <Compile Include="V20210820\Models\UnboundProjectExecutorResourceRequest.cs" />
     <Compile Include="V20210820\Models\UnboundProjectExecutorResourceResponse.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskRequest.cs" />

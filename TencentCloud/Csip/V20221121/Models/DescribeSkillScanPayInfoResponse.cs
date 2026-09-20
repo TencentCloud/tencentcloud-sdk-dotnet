@@ -115,6 +115,24 @@ namespace TencentCloud.Csip.V20221121.Models
         public string NickName{ get; set; }
 
         /// <summary>
+        /// <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+        /// </summary>
+        [JsonProperty("PostPayStatus")]
+        public long? PostPayStatus{ get; set; }
+
+        /// <summary>
+        /// <p>后付费资源ID，未开通后付费时为空</p>
+        /// </summary>
+        [JsonProperty("PostPayResourceId")]
+        public string PostPayResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+        /// </summary>
+        [JsonProperty("PostPayBeginTime")]
+        public string PostPayBeginTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +159,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "TimeNow", this.TimeNow);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
+            this.SetParamSimple(map, prefix + "PostPayStatus", this.PostPayStatus);
+            this.SetParamSimple(map, prefix + "PostPayResourceId", this.PostPayResourceId);
+            this.SetParamSimple(map, prefix + "PostPayBeginTime", this.PostPayBeginTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

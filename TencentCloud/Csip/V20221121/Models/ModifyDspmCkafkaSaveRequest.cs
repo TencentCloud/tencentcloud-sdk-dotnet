@@ -25,55 +25,55 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+        /// <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
 
         /// <summary>
-        /// 实例的地域
+        /// <p>实例的地域</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 实例的id
+        /// <p>实例的id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例的接入信息
+        /// <p>实例的接入信息</p>
         /// </summary>
         [JsonProperty("RouteInfo")]
         public RouteInfo RouteInfo{ get; set; }
 
         /// <summary>
-        /// 接入为域名的时候，有效
+        /// <p>接入为域名的时候，有效</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 接入为域名的时候，有效
+        /// <p>接入为域名的时候，有效</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 日志投递的主题配置
+        /// <p>日志投递的主题配置</p>
         /// </summary>
         [JsonProperty("LogDeliveryInfo")]
         public LogDeliveryInfo[] LogDeliveryInfo{ get; set; }
 
         /// <summary>
-        /// 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+        /// <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
         /// </summary>
         [JsonProperty("IsOverwrite")]
         public bool? IsOverwrite{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("SecretKeyId")]
         public string SecretKeyId{ get; set; }
 
+        /// <summary>
+        /// 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+        /// </summary>
+        [JsonProperty("SecretValueType")]
+        public string SecretValueType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+            this.SetParamSimple(map, prefix + "SecretValueType", this.SecretValueType);
         }
     }
 }

@@ -297,6 +297,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("InnerTask")]
         public InnerWorkflowTaskBrief InnerTask{ get; set; }
 
+        /// <summary>
+        /// <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduledTime")]
+        public string ScheduledTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +349,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "DependOnRunCondition", this.DependOnRunCondition);
             this.SetParamObj(map, prefix + "AdvancedDependencyConfig.", this.AdvancedDependencyConfig);
             this.SetParamObj(map, prefix + "InnerTask.", this.InnerTask);
+            this.SetParamSimple(map, prefix + "ScheduledTime", this.ScheduledTime);
         }
     }
 }

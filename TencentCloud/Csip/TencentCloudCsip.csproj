@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1496</VersionPrefix>
+    <VersionPrefix>3.0.1509</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,8 +155,6 @@
     <Compile Include="V20221121\Models\BatchModifyImageVulWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\BehaviorInfo.cs" />
     <Compile Include="V20221121\Models\BehaviorSummary.cs" />
-    <Compile Include="V20221121\Models\BindClusterOwnerRequest.cs" />
-    <Compile Include="V20221121\Models\BindClusterOwnerResponse.cs" />
     <Compile Include="V20221121\Models\BruteAttackRule.cs" />
     <Compile Include="V20221121\Models\BruteAttackRuleList.cs" />
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
@@ -786,8 +784,6 @@
     <Compile Include="V20221121\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterInstallCommandRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterInstallCommandResponse.cs" />
-    <Compile Include="V20221121\Models\DescribeClusterListV2Request.cs" />
-    <Compile Include="V20221121\Models\DescribeClusterListV2Response.cs" />
     <Compile Include="V20221121\Models\DescribeClusterNamespaceListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterNamespaceListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterNodeListRequest.cs" />
@@ -1324,6 +1320,8 @@
     <Compile Include="V20221121\Models\DescribeSkillScanPayInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSkillScanResultRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSkillScanResultResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanTaskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSkillScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPAssetResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSourceIPDetailRequest.cs" />
@@ -1969,6 +1967,7 @@
     <Compile Include="V20221121\Models\SkillScanEngineResult.cs" />
     <Compile Include="V20221121\Models\SkillScanItem.cs" />
     <Compile Include="V20221121\Models\SkillScanRuleHit.cs" />
+    <Compile Include="V20221121\Models\SkillScanTaskItem.cs" />
     <Compile Include="V20221121\Models\SkillState.cs" />
     <Compile Include="V20221121\Models\SourceIPAsset.cs" />
     <Compile Include="V20221121\Models\SourceIPVpcInfo.cs" />

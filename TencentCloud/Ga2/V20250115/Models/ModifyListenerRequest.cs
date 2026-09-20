@@ -109,7 +109,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string GetRealIpType{ get; set; }
 
         /// <summary>
-        /// <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+        /// <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul><p>当前还支持修改。</p>
         /// </summary>
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }

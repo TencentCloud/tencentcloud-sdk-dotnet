@@ -25,7 +25,7 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// MCP Server 列表结果
+        /// <p>MCP Server 列表结果</p>
         /// </summary>
         [JsonProperty("Result")]
         public CNAPIGwAIServiceSourceList Result{ get; set; }

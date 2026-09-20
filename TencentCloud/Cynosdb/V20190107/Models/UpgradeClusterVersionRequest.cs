@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 内核版本
+        /// <p>内核版本</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+        /// <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

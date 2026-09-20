@@ -49,7 +49,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string Transport{ get; set; }
 
         /// <summary>
-        /// <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+        /// <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
@@ -153,6 +153,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("PreserveHost")]
         public bool? PreserveHost{ get; set; }
 
+        /// <summary>
+        /// <p>日志采集配置</p>
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public AIGWLogConfig LogConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
             this.SetParamSimple(map, prefix + "MarketStatus", this.MarketStatus);
             this.SetParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
+            this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
         }
     }
 }

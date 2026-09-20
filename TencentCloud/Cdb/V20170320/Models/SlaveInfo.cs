@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Second")]
         public SlaveInstanceInfo Second{ get; set; }
 
+        /// <summary>
+        /// <p>第三备机信息</p>
+        /// </summary>
+        [JsonProperty("Third")]
+        public SlaveInstanceInfo Third{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamObj(map, prefix + "First.", this.First);
             this.SetParamObj(map, prefix + "Second.", this.Second);
+            this.SetParamObj(map, prefix + "Third.", this.Third);
         }
     }
 }

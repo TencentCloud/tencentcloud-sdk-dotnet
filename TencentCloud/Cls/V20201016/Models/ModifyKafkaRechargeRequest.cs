@@ -25,86 +25,85 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 导入配置Id。
-        /// - 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-        /// - 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+        /// <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 导入CLS目标TopicId。
-        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+        /// <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Kafka导入配置名称
+        /// <p>Kafka导入配置名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
+        /// <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID，KafkaType为0时必填。
-        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+        /// <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// 服务地址，KafkaType为1时必填。
+        /// <p>服务地址，KafkaType为1时必填。</p>
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接，KafkaType为1时必填。
+        /// <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+        /// <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-        /// 
-        /// - Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+        /// <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
 
         /// <summary>
-        /// 用户Kafka消费组名称
+        /// <p>用户Kafka消费组名称</p>
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 日志导入规则
+        /// <p>日志导入规则</p>
         /// </summary>
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// 导入控制，1：暂停；2：启动。
+        /// <p>导入控制，1：暂停；2：启动。</p>
         /// </summary>
         [JsonProperty("StatusControl")]
         public ulong? StatusControl{ get; set; }
 
         /// <summary>
-        /// 用户kafka拓展信息
+        /// <p>私有网络信息参数</p>
+        /// </summary>
+        [JsonProperty("NetworkInfo")]
+        public NetworkInfo NetworkInfo{ get; set; }
+
+        /// <summary>
+        /// <p>用户kafka拓展信息</p>
         /// </summary>
         [JsonProperty("UserKafkaMeta")]
         public UserKafkaMeta UserKafkaMeta{ get; set; }
@@ -127,6 +126,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
             this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
             this.SetParamSimple(map, prefix + "StatusControl", this.StatusControl);
+            this.SetParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
             this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }

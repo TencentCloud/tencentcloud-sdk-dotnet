@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -974,6 +974,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeAppResponse DescribeAppSync(DescribeAppRequest req)
         {
             return InternalRequestAsync<DescribeAppResponse>(req, "DescribeApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用视图下的调用统计总览，包含总调用次数、调用成功率、总tokens平均耗时及首tokens平均耗时；RAG 应用额外返回各回复方式的调用次数及占比，用于绘制饼图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppStatisticsOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAppStatisticsOverviewResponse"/></returns>
+        public Task<DescribeAppStatisticsOverviewResponse> DescribeAppStatisticsOverview(DescribeAppStatisticsOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAppStatisticsOverviewResponse>(req, "DescribeAppStatisticsOverview");
+        }
+
+        /// <summary>
+        /// 查询应用视图下的调用统计总览，包含总调用次数、调用成功率、总tokens平均耗时及首tokens平均耗时；RAG 应用额外返回各回复方式的调用次数及占比，用于绘制饼图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppStatisticsOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAppStatisticsOverviewResponse"/></returns>
+        public DescribeAppStatisticsOverviewResponse DescribeAppStatisticsOverviewSync(DescribeAppStatisticsOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAppStatisticsOverviewResponse>(req, "DescribeAppStatisticsOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

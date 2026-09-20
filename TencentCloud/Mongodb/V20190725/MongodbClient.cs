@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mongodb.V20190725
         public AssignProjectResponse AssignProjectSync(AssignProjectRequest req)
         {
             return InternalRequestAsync<AssignProjectResponse>(req, "AssignProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询cpu弹性扩容信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckDBInstanceElasticCpuScalableRequest"/></param>
+        /// <returns><see cref="CheckDBInstanceElasticCpuScalableResponse"/></returns>
+        public Task<CheckDBInstanceElasticCpuScalableResponse> CheckDBInstanceElasticCpuScalable(CheckDBInstanceElasticCpuScalableRequest req)
+        {
+            return InternalRequestAsync<CheckDBInstanceElasticCpuScalableResponse>(req, "CheckDBInstanceElasticCpuScalable");
+        }
+
+        /// <summary>
+        /// 查询cpu弹性扩容信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckDBInstanceElasticCpuScalableRequest"/></param>
+        /// <returns><see cref="CheckDBInstanceElasticCpuScalableResponse"/></returns>
+        public CheckDBInstanceElasticCpuScalableResponse CheckDBInstanceElasticCpuScalableSync(CheckDBInstanceElasticCpuScalableRequest req)
+        {
+            return InternalRequestAsync<CheckDBInstanceElasticCpuScalableResponse>(req, "CheckDBInstanceElasticCpuScalable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

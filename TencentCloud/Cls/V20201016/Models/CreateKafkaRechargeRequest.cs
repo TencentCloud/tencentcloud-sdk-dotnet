@@ -25,78 +25,79 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 导入CLS目标TopicId。
-        /// - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-        /// - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+        /// <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Kafka导入配置名称
+        /// <p>Kafka导入配置名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+        /// <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+        /// <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
 
         /// <summary>
-        /// 导入数据位置，-2:最早（默认），-1：最晚
+        /// <p>导入数据位置，-2:最早（默认），-1：最晚</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 日志导入规则。
+        /// <p>日志导入规则。</p>
         /// </summary>
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID，KafkaType为0时必填。
-        /// - 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+        /// <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// 服务地址，KafkaType为1时必填。
+        /// <p>服务地址，KafkaType为1时必填。</p>
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接，KafkaType为1时必填。
+        /// <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议。
-        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
+        /// <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// 用户Kafka消费组名称。
-        /// - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+        /// <p>用户Kafka消费组名称。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul>
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 用户kafka拓展信息
+        /// <p>网络信息参数</p>
+        /// </summary>
+        [JsonProperty("NetworkInfo")]
+        public NetworkInfo NetworkInfo{ get; set; }
+
+        /// <summary>
+        /// <p>用户kafka拓展信息</p>
         /// </summary>
         [JsonProperty("UserKafkaMeta")]
         public UserKafkaMeta UserKafkaMeta{ get; set; }
@@ -118,6 +119,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+            this.SetParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
             this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }

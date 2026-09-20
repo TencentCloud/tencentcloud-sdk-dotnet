@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1502";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,27 @@ namespace TencentCloud.Live.V20180801
         public CopyLiveAvatarRoomResponse CopyLiveAvatarRoomSync(CopyLiveAvatarRoomRequest req)
         {
             return InternalRequestAsync<CopyLiveAvatarRoomResponse>(req, "CopyLiveAvatarRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 直播审核图库添加图片，添加到预设库，图库不需要创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditImagesRequest"/></param>
+        /// <returns><see cref="CreateAuditImagesResponse"/></returns>
+        public Task<CreateAuditImagesResponse> CreateAuditImages(CreateAuditImagesRequest req)
+        {
+            return InternalRequestAsync<CreateAuditImagesResponse>(req, "CreateAuditImages");
+        }
+
+        /// <summary>
+        /// 直播审核图库添加图片，添加到预设库，图库不需要创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditImagesRequest"/></param>
+        /// <returns><see cref="CreateAuditImagesResponse"/></returns>
+        public CreateAuditImagesResponse CreateAuditImagesSync(CreateAuditImagesRequest req)
+        {
+            return InternalRequestAsync<CreateAuditImagesResponse>(req, "CreateAuditImages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1140,6 +1161,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 直播审核图库删除图片。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditImagesRequest"/></param>
+        /// <returns><see cref="DeleteAuditImagesResponse"/></returns>
+        public Task<DeleteAuditImagesResponse> DeleteAuditImages(DeleteAuditImagesRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditImagesResponse>(req, "DeleteAuditImages");
+        }
+
+        /// <summary>
+        /// 直播审核图库删除图片。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditImagesRequest"/></param>
+        /// <returns><see cref="DeleteAuditImagesResponse"/></returns>
+        public DeleteAuditImagesResponse DeleteAuditImagesSync(DeleteAuditImagesRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditImagesResponse>(req, "DeleteAuditImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除关键词库，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="DeleteAuditKeywordLibResponse"/></returns>
+        public Task<DeleteAuditKeywordLibResponse> DeleteAuditKeywordLib(DeleteAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditKeywordLibResponse>(req, "DeleteAuditKeywordLib");
+        }
+
+        /// <summary>
+        /// 删除关键词库，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="DeleteAuditKeywordLibResponse"/></returns>
+        public DeleteAuditKeywordLibResponse DeleteAuditKeywordLibSync(DeleteAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditKeywordLibResponse>(req, "DeleteAuditKeywordLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除关键词信息。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditKeywordsRequest"/></param>
@@ -1864,6 +1927,69 @@ namespace TencentCloud.Live.V20180801
         public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxListSync(DescribeAreaBillBandwidthAndFluxListRequest req)
         {
             return InternalRequestAsync<DescribeAreaBillBandwidthAndFluxListResponse>(req, "DescribeAreaBillBandwidthAndFluxList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取标签组分类数据，直播审核中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditGroupTagRequest"/></param>
+        /// <returns><see cref="DescribeAuditGroupTagResponse"/></returns>
+        public Task<DescribeAuditGroupTagResponse> DescribeAuditGroupTag(DescribeAuditGroupTagRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditGroupTagResponse>(req, "DescribeAuditGroupTag");
+        }
+
+        /// <summary>
+        /// 获取标签组分类数据，直播审核中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditGroupTagRequest"/></param>
+        /// <returns><see cref="DescribeAuditGroupTagResponse"/></returns>
+        public DescribeAuditGroupTagResponse DescribeAuditGroupTagSync(DescribeAuditGroupTagRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditGroupTagResponse>(req, "DescribeAuditGroupTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 直播审核图库获取图片。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditImagesRequest"/></param>
+        /// <returns><see cref="DescribeAuditImagesResponse"/></returns>
+        public Task<DescribeAuditImagesResponse> DescribeAuditImages(DescribeAuditImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditImagesResponse>(req, "DescribeAuditImages");
+        }
+
+        /// <summary>
+        /// 直播审核图库获取图片。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditImagesRequest"/></param>
+        /// <returns><see cref="DescribeAuditImagesResponse"/></returns>
+        public DescribeAuditImagesResponse DescribeAuditImagesSync(DescribeAuditImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditImagesResponse>(req, "DescribeAuditImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取关键词库列表，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditKeywordLibsRequest"/></param>
+        /// <returns><see cref="DescribeAuditKeywordLibsResponse"/></returns>
+        public Task<DescribeAuditKeywordLibsResponse> DescribeAuditKeywordLibs(DescribeAuditKeywordLibsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditKeywordLibsResponse>(req, "DescribeAuditKeywordLibs");
+        }
+
+        /// <summary>
+        /// 获取关键词库列表，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditKeywordLibsRequest"/></param>
+        /// <returns><see cref="DescribeAuditKeywordLibsResponse"/></returns>
+        public DescribeAuditKeywordLibsResponse DescribeAuditKeywordLibsSync(DescribeAuditKeywordLibsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditKeywordLibsResponse>(req, "DescribeAuditKeywordLibs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4273,6 +4399,27 @@ namespace TencentCloud.Live.V20180801
         public InsertTaskTemporaryFilesResponse InsertTaskTemporaryFilesSync(InsertTaskTemporaryFilesRequest req)
         {
             return InternalRequestAsync<InsertTaskTemporaryFilesResponse>(req, "InsertTaskTemporaryFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新关键词库信息，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="ModifyAuditKeywordLibResponse"/></returns>
+        public Task<ModifyAuditKeywordLibResponse> ModifyAuditKeywordLib(ModifyAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditKeywordLibResponse>(req, "ModifyAuditKeywordLib");
+        }
+
+        /// <summary>
+        /// 更新关键词库信息，直播审核功能使用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditKeywordLibRequest"/></param>
+        /// <returns><see cref="ModifyAuditKeywordLibResponse"/></returns>
+        public ModifyAuditKeywordLibResponse ModifyAuditKeywordLibSync(ModifyAuditKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditKeywordLibResponse>(req, "ModifyAuditKeywordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

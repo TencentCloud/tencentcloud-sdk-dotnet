@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1507";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -1957,6 +1957,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询 TWeSee 人员关联的云存事件及 AI 任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsByTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsByTWeSeePersonResponse"/></returns>
+        public Task<DescribeCloudStorageEventsByTWeSeePersonResponse> DescribeCloudStorageEventsByTWeSeePerson(DescribeCloudStorageEventsByTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsByTWeSeePersonResponse>(req, "DescribeCloudStorageEventsByTWeSeePerson");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 人员关联的云存事件及 AI 任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsByTWeSeePersonRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsByTWeSeePersonResponse"/></returns>
+        public DescribeCloudStorageEventsByTWeSeePersonResponse DescribeCloudStorageEventsByTWeSeePersonSync(DescribeCloudStorageEventsByTWeSeePersonRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsByTWeSeePersonResponse>(req, "DescribeCloudStorageEventsByTWeSeePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 拉取云存事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStorageEventsWithAITasksRequest"/></param>
@@ -2923,6 +2944,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询 TWeSee 直传信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeDirectUploadInfoRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeDirectUploadInfoResponse"/></returns>
+        public Task<DescribeTWeSeeDirectUploadInfoResponse> DescribeTWeSeeDirectUploadInfo(DescribeTWeSeeDirectUploadInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeDirectUploadInfoResponse>(req, "DescribeTWeSeeDirectUploadInfo");
+        }
+
+        /// <summary>
+        /// 查询 TWeSee 直传信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTWeSeeDirectUploadInfoRequest"/></param>
+        /// <returns><see cref="DescribeTWeSeeDirectUploadInfoResponse"/></returns>
+        public DescribeTWeSeeDirectUploadInfoResponse DescribeTWeSeeDirectUploadInfoSync(DescribeTWeSeeDirectUploadInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTWeSeeDirectUploadInfoResponse>(req, "DescribeTWeSeeDirectUploadInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定 TWeSee 人脸详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeTWeSeeFaceRequest"/></param>
@@ -3280,6 +3322,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeVideoLicenseResponse DescribeVideoLicenseSync(DescribeVideoLicenseRequest req)
         {
             return InternalRequestAsync<DescribeVideoLicenseResponse>(req, "DescribeVideoLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取云存日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeVodCloudStorageDateResponse"/></returns>
+        public Task<DescribeVodCloudStorageDateResponse> DescribeVodCloudStorageDate(DescribeVodCloudStorageDateRequest req)
+        {
+            return InternalRequestAsync<DescribeVodCloudStorageDateResponse>(req, "DescribeVodCloudStorageDate");
+        }
+
+        /// <summary>
+        /// 拉取云存日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeVodCloudStorageDateResponse"/></returns>
+        public DescribeVodCloudStorageDateResponse DescribeVodCloudStorageDateSync(DescribeVodCloudStorageDateRequest req)
+        {
+            return InternalRequestAsync<DescribeVodCloudStorageDateResponse>(req, "DescribeVodCloudStorageDate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3847,6 +3910,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTopicRuleListResponse GetTopicRuleListSync(GetTopicRuleListRequest req)
         {
             return InternalRequestAsync<GetTopicRuleListResponse>(req, "GetTopicRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVodCloudStorageEventListRequest"/></param>
+        /// <returns><see cref="GetVodCloudStorageEventListResponse"/></returns>
+        public Task<GetVodCloudStorageEventListResponse> GetVodCloudStorageEventList(GetVodCloudStorageEventListRequest req)
+        {
+            return InternalRequestAsync<GetVodCloudStorageEventListResponse>(req, "GetVodCloudStorageEventList");
+        }
+
+        /// <summary>
+        /// 获取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVodCloudStorageEventListRequest"/></param>
+        /// <returns><see cref="GetVodCloudStorageEventListResponse"/></returns>
+        public GetVodCloudStorageEventListResponse GetVodCloudStorageEventListSync(GetVodCloudStorageEventListRequest req)
+        {
+            return InternalRequestAsync<GetVodCloudStorageEventListResponse>(req, "GetVodCloudStorageEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存时间轴视频列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVodCloudStorageVideoListRequest"/></param>
+        /// <returns><see cref="GetVodCloudStorageVideoListResponse"/></returns>
+        public Task<GetVodCloudStorageVideoListResponse> GetVodCloudStorageVideoList(GetVodCloudStorageVideoListRequest req)
+        {
+            return InternalRequestAsync<GetVodCloudStorageVideoListResponse>(req, "GetVodCloudStorageVideoList");
+        }
+
+        /// <summary>
+        /// 获取云存时间轴视频列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVodCloudStorageVideoListRequest"/></param>
+        /// <returns><see cref="GetVodCloudStorageVideoListResponse"/></returns>
+        public GetVodCloudStorageVideoListResponse GetVodCloudStorageVideoListSync(GetVodCloudStorageVideoListRequest req)
+        {
+            return InternalRequestAsync<GetVodCloudStorageVideoListResponse>(req, "GetVodCloudStorageVideoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

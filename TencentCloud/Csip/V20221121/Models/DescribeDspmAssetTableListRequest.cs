@@ -25,16 +25,22 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 资产实例id
+        /// <p>资产实例id</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
+
+        /// <summary>
+        /// <p>Schema名称</p>
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
 
         /// <summary>
         /// <p>集团账号的成员id</p>
@@ -43,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 筛选项
+        /// <p>筛选项</p>
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }
@@ -56,6 +62,7 @@ namespace TencentCloud.Csip.V20221121.Models
         {
             this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
         }

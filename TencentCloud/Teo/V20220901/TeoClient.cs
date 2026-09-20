@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -1850,6 +1850,59 @@ namespace TencentCloud.Teo.V20220901
         public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngineSync(DescribeAvailableCustomActionsForRuleEngineRequest req)
         {
             return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询源站防护 IP 段控制域详细信息，包含版本号和具体IP网段信息等。
+        /// 标准控制域和精简控制域主要区别在于提供的 IP 段数量差异，后者数量更少,但是使用上有些限制，具体限制请咨询产品。具体格式说明如下：
+        /// 标准控制域：
+        /// <li>gaz：标准全球控制域；</li>
+        /// <li>mlc：标准中国控制域；</li>
+        /// <li>emc：标准海外(全球不含中国)控制域；</li>
+        /// 精简控制域控制域：
+        /// <li>plat-gaz：精简全球控制域；</li>
+        /// <li>plat-mlc：精简中国控制域；</li>
+        /// <li>plat-emc：精简海外(全球不含中国)控制域；</li>
+        /// <li>plat-specific-gaz：定制版控全球可用区制域；</li>
+        /// <li>plat-specific-mlc：定制版控中国大陆可用区控制域；</li>
+        /// <li>plat-specific-emc：定制版控全球（不含中国大陆）可用区控制域；</li>
+        /// 缩写说明：
+        /// <li>gaz：Global AZ Availability Zone;</li>
+        /// <li>mlc：mainlandChina;</li>
+        /// <li>emc：Exclude mainlandChina.</li>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableOriginACLFamilyRequest"/></param>
+        /// <returns><see cref="DescribeAvailableOriginACLFamilyResponse"/></returns>
+        public Task<DescribeAvailableOriginACLFamilyResponse> DescribeAvailableOriginACLFamily(DescribeAvailableOriginACLFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableOriginACLFamilyResponse>(req, "DescribeAvailableOriginACLFamily");
+        }
+
+        /// <summary>
+        /// 查询源站防护 IP 段控制域详细信息，包含版本号和具体IP网段信息等。
+        /// 标准控制域和精简控制域主要区别在于提供的 IP 段数量差异，后者数量更少,但是使用上有些限制，具体限制请咨询产品。具体格式说明如下：
+        /// 标准控制域：
+        /// <li>gaz：标准全球控制域；</li>
+        /// <li>mlc：标准中国控制域；</li>
+        /// <li>emc：标准海外(全球不含中国)控制域；</li>
+        /// 精简控制域控制域：
+        /// <li>plat-gaz：精简全球控制域；</li>
+        /// <li>plat-mlc：精简中国控制域；</li>
+        /// <li>plat-emc：精简海外(全球不含中国)控制域；</li>
+        /// <li>plat-specific-gaz：定制版控全球可用区制域；</li>
+        /// <li>plat-specific-mlc：定制版控中国大陆可用区控制域；</li>
+        /// <li>plat-specific-emc：定制版控全球（不含中国大陆）可用区控制域；</li>
+        /// 缩写说明：
+        /// <li>gaz：Global AZ Availability Zone;</li>
+        /// <li>mlc：mainlandChina;</li>
+        /// <li>emc：Exclude mainlandChina.</li>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableOriginACLFamilyRequest"/></param>
+        /// <returns><see cref="DescribeAvailableOriginACLFamilyResponse"/></returns>
+        public DescribeAvailableOriginACLFamilyResponse DescribeAvailableOriginACLFamilySync(DescribeAvailableOriginACLFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableOriginACLFamilyResponse>(req, "DescribeAvailableOriginACLFamily")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

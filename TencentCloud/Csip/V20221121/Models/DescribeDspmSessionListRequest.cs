@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>登陆状态(0 全部 1 成功 2 失败)</p>
+        /// <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
         /// </summary>
         [JsonProperty("LoginType")]
         public long? LoginType{ get; set; }

@@ -43,10 +43,34 @@ namespace TencentCloud.Cngw.V20230418.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
+        /// <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>模糊匹配密钥名称。</p>
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
         /// <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+        /// </summary>
+        [JsonProperty("UseToBind")]
+        public bool? UseToBind{ get; set; }
 
 
         /// <summary>
@@ -57,7 +81,11 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "UseToBind", this.UseToBind);
         }
     }
 }

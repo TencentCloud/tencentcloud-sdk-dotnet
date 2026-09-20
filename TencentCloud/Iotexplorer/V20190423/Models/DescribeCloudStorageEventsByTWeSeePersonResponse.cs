@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindClusterOwnerRequest : AbstractModel
+    public class DescribeCloudStorageEventsByTWeSeePersonResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>集群资产id</p>
+        /// <p>人员关联的云存事件列表</p>
         /// </summary>
-        [JsonProperty("ClusterAssetIds")]
-        public string[] ClusterAssetIds{ get; set; }
+        [JsonProperty("Events")]
+        public CloudStorageEventWithAITasks[] Events{ get; set; }
 
         /// <summary>
-        /// <p>集团账号的成员id</p>
+        /// <p>人员关联的云存事件总数</p>
         /// </summary>
-        [JsonProperty("MemberId")]
-        public string[] MemberId{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// <p>负责人名称</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("OwnerName")]
-        public string OwnerName{ get; set; }
-
-        /// <summary>
-        /// <p>集群CAMD5值</p>
-        /// </summary>
-        [JsonProperty("ClusterCaMD5List")]
-        public string[] ClusterCaMD5List{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ClusterAssetIds.", this.ClusterAssetIds);
-            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
-            this.SetParamArraySimple(map, prefix + "ClusterCaMD5List.", this.ClusterCaMD5List);
+            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

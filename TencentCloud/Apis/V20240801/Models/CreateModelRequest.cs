@@ -55,6 +55,18 @@ namespace TencentCloud.Apis.V20240801.Models
         public TargetHostDTO[] TargetHosts{ get; set; }
 
         /// <summary>
+        /// <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+        /// </summary>
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
+        /// <summary>
+        /// <p>Provider=tencentTokenHub时对应的密钥</p>
+        /// </summary>
+        [JsonProperty("ApiKeys")]
+        public string[] ApiKeys{ get; set; }
+
+        /// <summary>
         /// <p>凭据ID</p>
         /// </summary>
         [JsonProperty("CredentialID")]
@@ -95,6 +107,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "HttpProtocolType", this.HttpProtocolType);
             this.SetParamSimple(map, prefix + "TargetPath", this.TargetPath);
             this.SetParamArrayObj(map, prefix + "TargetHosts.", this.TargetHosts);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamArraySimple(map, prefix + "ApiKeys.", this.ApiKeys);
             this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
             this.SetParamSimple(map, prefix + "CheckTargetCertsError", this.CheckTargetCertsError);
             this.SetParamSimple(map, prefix + "HttpProtocolVersion", this.HttpProtocolVersion);

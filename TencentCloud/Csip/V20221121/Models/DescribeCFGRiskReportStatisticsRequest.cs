@@ -36,6 +36,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("StandardIDs")]
         public ulong?[] StandardIDs{ get; set; }
 
+        /// <summary>
+        /// <p>资产标签ID</p>
+        /// </summary>
+        [JsonProperty("AssetTagIDs")]
+        public ulong?[] AssetTagIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Csip.V20221121.Models
         {
             this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArraySimple(map, prefix + "StandardIDs.", this.StandardIDs);
+            this.SetParamArraySimple(map, prefix + "AssetTagIDs.", this.AssetTagIDs);
         }
     }
 }

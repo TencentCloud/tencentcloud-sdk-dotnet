@@ -25,13 +25,13 @@ namespace TencentCloud.Yinsuda.V20220527.Models
     {
         
         /// <summary>
-        /// 应用名称。
+        /// <p>应用名称。</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 用户标识。
+        /// <p>用户标识。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

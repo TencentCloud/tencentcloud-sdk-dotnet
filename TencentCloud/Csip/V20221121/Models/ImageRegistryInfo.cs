@@ -144,6 +144,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
+        /// <summary>
+        /// <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+        /// </summary>
+        [JsonProperty("ConnStatus")]
+        public string ConnStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "ConnStatus", this.ConnStatus);
         }
     }
 }

@@ -31,25 +31,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 资产IP
+        /// <p>资产IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 资产域名
+        /// <p>资产域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 端口或端口范围
+        /// <p>端口或端口范围</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

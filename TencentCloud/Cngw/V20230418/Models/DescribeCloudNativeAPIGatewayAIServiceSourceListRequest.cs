@@ -25,22 +25,34 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// <p>分页大小</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移
+        /// <p>分页偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>搜索关键词</p>
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

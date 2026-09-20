@@ -43,7 +43,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string ServerId{ get; set; }
 
         /// <summary>
-        /// <p>后端类型</p><p>枚举值：</p><ul><li>HostIP： 域名 ip</li><li>MCPRegistry： MCP 注册中心</li><li>VirtualMCPServer： 虚拟MCP 服务</li></ul>
+        /// <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
@@ -96,6 +96,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("PreserveHost")]
         public bool? PreserveHost{ get; set; }
 
+        /// <summary>
+        /// <p>日志配置</p>
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public AIGWLogConfig LogConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
+            this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
         }
     }
 }

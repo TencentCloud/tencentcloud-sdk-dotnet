@@ -91,7 +91,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public bool? XForwardedForRealIp{ get; set; }
 
         /// <summary>
-        /// <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+        /// <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
         /// </summary>
         [JsonProperty("CertificationType")]
         public string CertificationType{ get; set; }

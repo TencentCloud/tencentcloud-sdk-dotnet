@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka导入配置ID
+        /// <p>Kafka导入配置ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

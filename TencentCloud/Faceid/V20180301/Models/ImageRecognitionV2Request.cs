@@ -55,7 +55,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+        /// <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

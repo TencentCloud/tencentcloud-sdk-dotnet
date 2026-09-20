@@ -25,73 +25,67 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 中文姓名
+        /// <p>中文姓名</p>
         /// </summary>
         [JsonProperty("CnName")]
         public string CnName{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// <p>英文姓名</p>
         /// </summary>
         [JsonProperty("EnName")]
         public string EnName{ get; set; }
 
         /// <summary>
-        /// 中文姓名对应电码
+        /// <p>中文姓名对应电码</p>
         /// </summary>
         [JsonProperty("TelexCode")]
         public string TelexCode{ get; set; }
 
         /// <summary>
-        /// 性别 ：“男M”或“女F”
+        /// <p>性别 ：“男M”或“女F”</p>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// <p>出生日期</p>
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 永久性居民身份证。
-        /// 0：非永久；
-        /// 1：永久；
-        /// -1：未知。
+        /// <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
         /// </summary>
         [JsonProperty("Permanent")]
         public long? Permanent{ get; set; }
 
         /// <summary>
-        /// 身份证号码
+        /// <p>身份证号码</p>
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// 证件符号，出生日期下的符号，例如"***AZ"
+        /// <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
         /// </summary>
         [JsonProperty("Symbol")]
         public string Symbol{ get; set; }
 
         /// <summary>
-        /// 首次签发日期
+        /// <p>首次签发日期</p>
         /// </summary>
         [JsonProperty("FirstIssueDate")]
         public string FirstIssueDate{ get; set; }
 
         /// <summary>
-        /// 最近领用日期
+        /// <p>最近领用日期</p>
         /// </summary>
         [JsonProperty("CurrentIssueDate")]
         public string CurrentIssueDate{ get; set; }
 
         /// <summary>
-        /// 真假判断。
-        /// 0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-        /// 1：假；
-        /// 2：真。
+        /// <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FakeDetectResult")]
@@ -99,34 +93,34 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? FakeDetectResult{ get; set; }
 
         /// <summary>
-        /// Base64编码的证件左侧人像大图
+        /// <p>Base64编码的证件左侧人像大图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadImage")]
         public string HeadImage{ get; set; }
 
         /// <summary>
-        /// Base64编码的证件右侧人像小图
+        /// <p>Base64编码的证件右侧人像小图</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmallHeadImage")]
         public string SmallHeadImage{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃， 将固定返回空数组，不建议使用。
+        /// <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
         /// </summary>
         [JsonProperty("WarningCode")]
         [System.Obsolete]
         public long?[] WarningCode{ get; set; }
 
         /// <summary>
-        /// 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+        /// <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
 
         /// <summary>
-        /// 证件透明视窗内的文本信息
+        /// <p>证件透明视窗内的文本信息</p>
         /// </summary>
         [JsonProperty("WindowEmbeddedText")]
         public string WindowEmbeddedText{ get; set; }

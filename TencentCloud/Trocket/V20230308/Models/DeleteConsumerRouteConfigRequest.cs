@@ -42,6 +42,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
+        /// <summary>
+        /// <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

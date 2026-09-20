@@ -102,6 +102,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AssetTypeIconURL")]
         public string AssetTypeIconURL{ get; set; }
 
+        /// <summary>
+        /// <p>规则默认开启状态</p>
+        /// </summary>
+        [JsonProperty("EnableDefault")]
+        public ulong? EnableDefault{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
             this.SetParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
             this.SetParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+            this.SetParamSimple(map, prefix + "EnableDefault", this.EnableDefault);
         }
     }
 }

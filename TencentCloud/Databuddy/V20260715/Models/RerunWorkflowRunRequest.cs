@@ -60,6 +60,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
+        /// <summary>
+        /// <p>计划调度时间列表配置</p>
+        /// </summary>
+        [JsonProperty("ScheduledTimeConfig")]
+        public ScheduledTimeConfig ScheduledTimeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "RunType", this.RunType);
             this.SetParamArrayObj(map, prefix + "AdvancedParams.", this.AdvancedParams);
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamObj(map, prefix + "ScheduledTimeConfig.", this.ScheduledTimeConfig);
         }
     }
 }

@@ -331,6 +331,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DestroyProtect{ get; set; }
 
         /// <summary>
+        /// <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+        /// </summary>
+        [JsonProperty("DiskEncryption")]
+        public string DiskEncryption{ get; set; }
+
+        /// <summary>
         /// <p>TDSQL引擎参数</p>
         /// </summary>
         [JsonProperty("CpuModel")]
@@ -400,6 +406,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
             this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+            this.SetParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
             this.SetParamSimple(map, prefix + "CpuModel", this.CpuModel);
             this.SetParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
         }

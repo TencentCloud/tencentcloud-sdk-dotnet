@@ -78,6 +78,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("LogsetTags")]
         public Tag[] LogsetTags{ get; set; }
 
+        /// <summary>
+        /// <p>应用id</p>
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
             this.SetParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

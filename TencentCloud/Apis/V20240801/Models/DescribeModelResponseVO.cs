@@ -49,6 +49,12 @@ namespace TencentCloud.Apis.V20240801.Models
         public string ID{ get; set; }
 
         /// <summary>
+        /// <p>模型提供商</p>
+        /// </summary>
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
+        /// <summary>
         /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("Name")]
@@ -136,6 +142,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
             this.SetParamSimple(map, prefix + "CredentialName", this.CredentialName);

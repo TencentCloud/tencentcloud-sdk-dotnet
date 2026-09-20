@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1496";
+       private const string sdkVersion = "SDK_NET_3.0.1509";
 
         /// <summary>
         /// Client constructor.
@@ -281,27 +281,6 @@ namespace TencentCloud.Csip.V20221121
         public BatchModifyImageVulWhitelistResponse BatchModifyImageVulWhitelistSync(BatchModifyImageVulWhitelistRequest req)
         {
             return InternalRequestAsync<BatchModifyImageVulWhitelistResponse>(req, "BatchModifyImageVulWhitelist")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 绑定集群负责人
-        /// </summary>
-        /// <param name="req"><see cref="BindClusterOwnerRequest"/></param>
-        /// <returns><see cref="BindClusterOwnerResponse"/></returns>
-        public Task<BindClusterOwnerResponse> BindClusterOwner(BindClusterOwnerRequest req)
-        {
-            return InternalRequestAsync<BindClusterOwnerResponse>(req, "BindClusterOwner");
-        }
-
-        /// <summary>
-        /// 绑定集群负责人
-        /// </summary>
-        /// <param name="req"><see cref="BindClusterOwnerRequest"/></param>
-        /// <returns><see cref="BindClusterOwnerResponse"/></returns>
-        public BindClusterOwnerResponse BindClusterOwnerSync(BindClusterOwnerRequest req)
-        {
-            return InternalRequestAsync<BindClusterOwnerResponse>(req, "BindClusterOwner")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5882,27 +5861,6 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询集群列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterListV2Request"/></param>
-        /// <returns><see cref="DescribeClusterListV2Response"/></returns>
-        public Task<DescribeClusterListV2Response> DescribeClusterListV2(DescribeClusterListV2Request req)
-        {
-            return InternalRequestAsync<DescribeClusterListV2Response>(req, "DescribeClusterListV2");
-        }
-
-        /// <summary>
-        /// 查询集群列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterListV2Request"/></param>
-        /// <returns><see cref="DescribeClusterListV2Response"/></returns>
-        public DescribeClusterListV2Response DescribeClusterListV2Sync(DescribeClusterListV2Request req)
-        {
-            return InternalRequestAsync<DescribeClusterListV2Response>(req, "DescribeClusterListV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询集群命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
@@ -11468,7 +11426,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
+        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。后付费资源信息通过 PostPayStatus、PostPayResourceId、PostPayBeginTime 返回，与预付费订单字段相互独立，二者可同时有效（预付额度耗尽后溢出用量进入后付费）。
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
         /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
@@ -11478,7 +11436,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
+        /// 查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。后付费资源信息通过 PostPayStatus、PostPayResourceId、PostPayBeginTime 返回，与预付费订单字段相互独立，二者可同时有效（预付额度耗尽后溢出用量进入后付费）。
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
         /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
@@ -11506,6 +11464,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSkillScanResultResponse DescribeSkillScanResultSync(DescribeSkillScanResultRequest req)
         {
             return InternalRequestAsync<DescribeSkillScanResultResponse>(req, "DescribeSkillScanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询 Skill 扫描任务列表，返回每个任务的 Skill 名称、消耗次数与上传时间，按上传时间倒序排列。默认查询本月数据，可通过 StartTime / EndTime 指定时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanTaskListResponse"/></returns>
+        public Task<DescribeSkillScanTaskListResponse> DescribeSkillScanTaskList(DescribeSkillScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanTaskListResponse>(req, "DescribeSkillScanTaskList");
+        }
+
+        /// <summary>
+        /// 分页查询 Skill 扫描任务列表，返回每个任务的 Skill 名称、消耗次数与上传时间，按上传时间倒序排列。默认查询本月数据，可通过 StartTime / EndTime 指定时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanTaskListResponse"/></returns>
+        public DescribeSkillScanTaskListResponse DescribeSkillScanTaskListSync(DescribeSkillScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanTaskListResponse>(req, "DescribeSkillScanTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

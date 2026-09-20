@@ -43,6 +43,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// <p>关键字</p>
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
         /// <p>过滤条件</p>
         /// </summary>
         [JsonProperty("Filters")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
         }

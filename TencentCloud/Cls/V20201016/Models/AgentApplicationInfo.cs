@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+        /// <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
@@ -72,6 +72,36 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// <p>日志集id</p>
+        /// </summary>
+        [JsonProperty("LogsetId")]
+        public string LogsetId{ get; set; }
+
+        /// <summary>
+        /// <p>服务方名称</p>
+        /// </summary>
+        [JsonProperty("AssumerName")]
+        public string AssumerName{ get; set; }
+
+        /// <summary>
+        /// <p>服务方子名称</p>
+        /// </summary>
+        [JsonProperty("SubAssumerName")]
+        public string SubAssumerName{ get; set; }
+
+        /// <summary>
+        /// <p>服务方Uin</p>
+        /// </summary>
+        [JsonProperty("AssumerUin")]
+        public ulong? AssumerUin{ get; set; }
+
+        /// <summary>
+        /// <p>服务方使用的角色</p>
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "MetricsTopics.", this.MetricsTopics);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
+            this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+            this.SetParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
         }
     }
 }

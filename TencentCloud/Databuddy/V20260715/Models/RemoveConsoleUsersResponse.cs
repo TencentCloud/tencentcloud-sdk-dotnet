@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterListV2Response : AbstractModel
+    public class RemoveConsoleUsersResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>总数</p>
+        /// <p>批量移除控制台用户结果</p>
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// <p>列表</p>
-        /// </summary>
-        [JsonProperty("List")]
-        public ClusterListItem[] List{ get; set; }
+        [JsonProperty("Data")]
+        public RemoveConsoleUsersRsp Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

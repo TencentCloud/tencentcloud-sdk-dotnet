@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志样例，PreviewType为2时返回
+        /// <p>日志样例，PreviewType为2时返回</p>
         /// </summary>
         [JsonProperty("LogSample")]
         public string LogSample{ get; set; }
 
         /// <summary>
-        /// 日志预览结果
+        /// <p>日志预览结果</p>
         /// </summary>
         [JsonProperty("LogData")]
         public string LogData{ get; set; }

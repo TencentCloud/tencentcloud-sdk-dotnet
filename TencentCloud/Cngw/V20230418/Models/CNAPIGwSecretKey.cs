@@ -190,6 +190,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("QueryParamCredentialConfig")]
         public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
 
+        /// <summary>
+        /// <p>该消费者密钥绑定的模型密钥列表</p>
+        /// </summary>
+        [JsonProperty("BoundModelSecretKeys")]
+        public AIGWSimpleSecretKey[] BoundModelSecretKeys{ get; set; }
+
+        /// <summary>
+        /// <p>绑定了该模型密钥的消费者密钥列表</p>
+        /// </summary>
+        [JsonProperty("BoundConsumerSecretKeys")]
+        public AIGWSimpleSecretKey[] BoundConsumerSecretKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +235,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
             this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
             this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+            this.SetParamArrayObj(map, prefix + "BoundModelSecretKeys.", this.BoundModelSecretKeys);
+            this.SetParamArrayObj(map, prefix + "BoundConsumerSecretKeys.", this.BoundConsumerSecretKeys);
         }
     }
 }

@@ -25,54 +25,50 @@ namespace TencentCloud.Yinsuda.V20220527.Models
     {
         
         /// <summary>
-        /// 歌曲Id。
+        /// <p>歌曲Id。</p>
         /// </summary>
         [JsonProperty("MusicId")]
         public string MusicId{ get; set; }
 
         /// <summary>
-        /// 歌曲名称。
+        /// <p>歌曲名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 歌手名称。
+        /// <p>歌手名称。</p>
         /// </summary>
         [JsonProperty("SingerSet")]
         public string[] SingerSet{ get; set; }
 
         /// <summary>
-        /// 播放时长。
+        /// <p>播放时长。</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 歌手图片链接。
+        /// <p>歌手图片链接。</p>
         /// </summary>
         [JsonProperty("SingerImageUrl")]
         public string SingerImageUrl{ get; set; }
 
         /// <summary>
-        /// 专辑信息。
+        /// <p>专辑信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbumInfo")]
         public MusicAlbumInfo AlbumInfo{ get; set; }
 
         /// <summary>
-        /// 权益列表，取值有：
-        /// <li>Play：可播；</li>
-        /// <li>Sing：可唱。</li>
+        /// <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
         /// </summary>
         [JsonProperty("RightSet")]
         public string[] RightSet{ get; set; }
 
         /// <summary>
-        /// 推荐类型，取值有：
-        /// <li>Featured：精选；</li>
-        /// <li>Other：其他。</li>
+        /// <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
         /// </summary>
         [JsonProperty("RecommendType")]
         public string RecommendType{ get; set; }

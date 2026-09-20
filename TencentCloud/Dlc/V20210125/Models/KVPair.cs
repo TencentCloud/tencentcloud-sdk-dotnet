@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// <p>配置的key值</p>
+        /// 配置的key值
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// <p>配置的value值</p>
+        /// 配置的value值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

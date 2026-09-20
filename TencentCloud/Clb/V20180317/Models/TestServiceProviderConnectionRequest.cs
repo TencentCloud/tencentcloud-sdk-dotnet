@@ -108,6 +108,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EndpointPath")]
         public string EndpointPath{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+        /// </summary>
+        [JsonProperty("HealthCheckMethod")]
+        public string HealthCheckMethod{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+        /// </summary>
+        [JsonProperty("HealthCheckPath")]
+        public string HealthCheckPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
             this.SetParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
+            this.SetParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
+            this.SetParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
         }
     }
 }
