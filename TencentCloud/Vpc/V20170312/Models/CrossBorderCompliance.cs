@@ -168,6 +168,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("LegalPersonIdCard")]
         public string LegalPersonIdCard{ get; set; }
 
+        /// <summary>
+        /// 白名单开关是否开启
+        /// </summary>
+        [JsonProperty("WhiteListFlag")]
+        public bool? WhiteListFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
             this.SetParamSimple(map, prefix + "LegalPersonIdCard", this.LegalPersonIdCard);
+            this.SetParamSimple(map, prefix + "WhiteListFlag", this.WhiteListFlag);
         }
     }
 }

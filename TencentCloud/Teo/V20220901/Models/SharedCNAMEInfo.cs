@@ -25,39 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 共享CNAME类型：取值范围如下：
-        /// <li>custom：由用户创建的自定义共享CNAME</li>
-        /// <li>ip-ssl：IP SSL类型的共享CNAME</li>
+        /// <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 共享CNAME名称。
+        /// <p>共享CNAME名称。</p>
         /// </summary>
         [JsonProperty("SharedCNAME")]
         public string SharedCNAME{ get; set; }
 
         /// <summary>
-        /// 描述。
+        /// <p>描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
+        /// <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
         /// </summary>
         [JsonProperty("IPSSLConfig")]
         public IPSSLConfig IPSSLConfig{ get; set; }
 
         /// <summary>
-        /// 共享CNAME绑定的加速域名数量。
+        /// <p>共享CNAME绑定的加速域名数量。</p>
         /// </summary>
         [JsonProperty("BindDomainCount")]
         public long? BindDomainCount{ get; set; }
 
         /// <summary>
-        /// 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+        /// <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
         /// </summary>
         [JsonProperty("AccelerationDomains")]
         public ReferenceHolder[] AccelerationDomains{ get; set; }

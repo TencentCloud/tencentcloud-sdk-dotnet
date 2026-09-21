@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Aiart.V20221229.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryTextToImageJobRequest : AbstractModel
+    public class UpdateConsoleGroupRsp : AbstractModel
     {
         
         /// <summary>
-        /// 任务 ID。
+        /// 操作是否成功
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

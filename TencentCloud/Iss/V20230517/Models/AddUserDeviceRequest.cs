@@ -25,97 +25,97 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+        /// <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+        /// <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }
 
         /// <summary>
-        /// 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+        /// <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 设备所属组织ID，从查询组织接口DescribeOrganization中获取
+        /// <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
+        /// <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
+        /// <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
         /// </summary>
         [JsonProperty("TransportProtocol")]
         public long? TransportProtocol{ get; set; }
 
         /// <summary>
-        /// 设备密码（国标，网关设备必填，长度为1-64个字符）
+        /// <p>设备密码（国标设备必填，长度为1-64个字符）</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 设备描述，长度不超过128个字符
+        /// <p>设备描述，长度不超过128个字符</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
+        /// <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+        /// <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
         /// <summary>
-        /// 设备接入IP（仅网关接入需要）
+        /// <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 设备端口（仅网关接入需要）
+        /// <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 设备用户名（仅网关接入需要）
+        /// <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 设备 SN，仅IVCP 协议设备需要
+        /// <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("SNCode")]
         public string SNCode{ get; set; }
 
         /// <summary>
-        /// RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+        /// <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+        /// <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }

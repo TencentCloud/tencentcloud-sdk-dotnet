@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1412";
+       private const string sdkVersion = "SDK_NET_3.0.1510";
 
         /// <summary>
         /// Client constructor.
@@ -148,29 +148,6 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
-        /// 图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
-        /// 图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="ImageToImageRequest"/></param>
-        /// <returns><see cref="ImageToImageResponse"/></returns>
-        public Task<ImageToImageResponse> ImageToImage(ImageToImageRequest req)
-        {
-            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage");
-        }
-
-        /// <summary>
-        /// 图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
-        /// 图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="ImageToImageRequest"/></param>
-        /// <returns><see cref="ImageToImageResponse"/></returns>
-        public ImageToImageResponse ImageToImageSync(ImageToImageRequest req)
-        {
-            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// AI 写真分为上传训练图片、训练写真模型（可选跳过）、生成写真图片3个环节，需要依次调用对应接口。
         /// 生成图片分为提交任务和查询任务2个接口：
         /// 
@@ -258,29 +235,6 @@ namespace TencentCloud.Aiart.V20221229
         public QueryMemeJobResponse QueryMemeJobSync(QueryMemeJobRequest req)
         {
             return InternalRequestAsync<QueryMemeJobResponse>(req, "QueryMemeJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-        /// 默认提供0个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="QueryTextToImageJobRequest"/></param>
-        /// <returns><see cref="QueryTextToImageJobResponse"/></returns>
-        public Task<QueryTextToImageJobResponse> QueryTextToImageJob(QueryTextToImageJobRequest req)
-        {
-            return InternalRequestAsync<QueryTextToImageJobResponse>(req, "QueryTextToImageJob");
-        }
-
-        /// <summary>
-        /// 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-        /// 默认提供0个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="QueryTextToImageJobRequest"/></param>
-        /// <returns><see cref="QueryTextToImageJobResponse"/></returns>
-        public QueryTextToImageJobResponse QueryTextToImageJobSync(QueryTextToImageJobRequest req)
-        {
-            return InternalRequestAsync<QueryTextToImageJobResponse>(req, "QueryTextToImageJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -515,29 +469,6 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
-        /// 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTextToImageJobRequest"/></param>
-        /// <returns><see cref="SubmitTextToImageJobResponse"/></returns>
-        public Task<SubmitTextToImageJobResponse> SubmitTextToImageJob(SubmitTextToImageJobRequest req)
-        {
-            return InternalRequestAsync<SubmitTextToImageJobResponse>(req, "SubmitTextToImageJob");
-        }
-
-        /// <summary>
-        /// 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTextToImageJobRequest"/></param>
-        /// <returns><see cref="SubmitTextToImageJobResponse"/></returns>
-        public SubmitTextToImageJobResponse SubmitTextToImageJobSync(SubmitTextToImageJobRequest req)
-        {
-            return InternalRequestAsync<SubmitTextToImageJobResponse>(req, "SubmitTextToImageJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -598,52 +529,6 @@ namespace TencentCloud.Aiart.V20221229
         public SubmitTrainPortraitModelJobResponse SubmitTrainPortraitModelJobSync(SubmitTrainPortraitModelJobRequest req)
         {
             return InternalRequestAsync<SubmitTrainPortraitModelJobResponse>(req, "SubmitTrainPortraitModelJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageLiteRequest"/></param>
-        /// <returns><see cref="TextToImageLiteResponse"/></returns>
-        public Task<TextToImageLiteResponse> TextToImageLite(TextToImageLiteRequest req)
-        {
-            return InternalRequestAsync<TextToImageLiteResponse>(req, "TextToImageLite");
-        }
-
-        /// <summary>
-        /// 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageLiteRequest"/></param>
-        /// <returns><see cref="TextToImageLiteResponse"/></returns>
-        public TextToImageLiteResponse TextToImageLiteSync(TextToImageLiteRequest req)
-        {
-            return InternalRequestAsync<TextToImageLiteResponse>(req, "TextToImageLite")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageRapidRequest"/></param>
-        /// <returns><see cref="TextToImageRapidResponse"/></returns>
-        public Task<TextToImageRapidResponse> TextToImageRapid(TextToImageRapidRequest req)
-        {
-            return InternalRequestAsync<TextToImageRapidResponse>(req, "TextToImageRapid");
-        }
-
-        /// <summary>
-        /// 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
-        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-        /// </summary>
-        /// <param name="req"><see cref="TextToImageRapidRequest"/></param>
-        /// <returns><see cref="TextToImageRapidResponse"/></returns>
-        public TextToImageRapidResponse TextToImageRapidSync(TextToImageRapidRequest req)
-        {
-            return InternalRequestAsync<TextToImageRapidResponse>(req, "TextToImageRapid")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

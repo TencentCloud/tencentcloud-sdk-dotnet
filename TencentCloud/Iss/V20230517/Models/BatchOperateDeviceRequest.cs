@@ -25,13 +25,13 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设备 ID 数组（从获取设备列表接口ListDevices中获取）
+        /// <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
         /// </summary>
         [JsonProperty("DeviceIds")]
         public string[] DeviceIds{ get; set; }
 
         /// <summary>
-        /// 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+        /// <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }

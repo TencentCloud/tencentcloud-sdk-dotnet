@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1510";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeServicesCallInfoResponse DescribeServicesCallInfoSync(DescribeServicesCallInfoRequest req)
         {
             return InternalRequestAsync<DescribeServicesCallInfoResponse>(req, "DescribeServicesCallInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(GetServicePodLogs)用于查询推理服务Pod日志
+        /// </summary>
+        /// <param name="req"><see cref="GetServicePodLogsRequest"/></param>
+        /// <returns><see cref="GetServicePodLogsResponse"/></returns>
+        public Task<GetServicePodLogsResponse> GetServicePodLogs(GetServicePodLogsRequest req)
+        {
+            return InternalRequestAsync<GetServicePodLogsResponse>(req, "GetServicePodLogs");
+        }
+
+        /// <summary>
+        /// 本接口(GetServicePodLogs)用于查询推理服务Pod日志
+        /// </summary>
+        /// <param name="req"><see cref="GetServicePodLogsRequest"/></param>
+        /// <returns><see cref="GetServicePodLogsResponse"/></returns>
+        public GetServicePodLogsResponse GetServicePodLogsSync(GetServicePodLogsRequest req)
+        {
+            return InternalRequestAsync<GetServicePodLogsResponse>(req, "GetServicePodLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

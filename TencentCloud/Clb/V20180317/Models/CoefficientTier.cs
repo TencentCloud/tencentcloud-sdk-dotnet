@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Aiart.V20221229.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Image : AbstractModel
+    public class CoefficientTier : AbstractModel
     {
         
         /// <summary>
-        /// 图片Base64
+        /// <p>积分分级条件</p>
         /// </summary>
-        [JsonProperty("Base64")]
-        public string Base64{ get; set; }
+        [JsonProperty("Condition")]
+        public CoefficientTierCondition Condition{ get; set; }
 
         /// <summary>
-        /// 图片Url
+        /// <p>积分系数</p>
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("Coefficient")]
+        public Coefficient Coefficient{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Base64", this.Base64);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamObj(map, prefix + "Condition.", this.Condition);
+            this.SetParamObj(map, prefix + "Coefficient.", this.Coefficient);
         }
     }
 }

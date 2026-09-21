@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,9 @@
     <Compile Include="V20180317\Models\ClusterResource.cs" />
     <Compile Include="V20180317\Models\ClustersZone.cs" />
     <Compile Include="V20180317\Models\Coefficient.cs" />
+    <Compile Include="V20180317\Models\CoefficientScheduleRule.cs" />
+    <Compile Include="V20180317\Models\CoefficientTier.cs" />
+    <Compile Include="V20180317\Models\CoefficientTierCondition.cs" />
     <Compile Include="V20180317\Models\ConfigListItem.cs" />
     <Compile Include="V20180317\Models\CreateBYOKNetworkRequest.cs" />
     <Compile Include="V20180317\Models\CreateBYOKNetworkResponse.cs" />

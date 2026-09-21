@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+        /// <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -491,6 +491,8 @@
     <Compile Include="V20220901\Models\DescribeWebSecurityTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeZoneCustomVariablesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeZoneCustomVariablesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZonesRequest.cs" />
@@ -745,6 +747,8 @@
     <Compile Include="V20220901\Models\ModifySharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\ModifyWebSecurityTemplateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyWebSecurityTemplateResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyZoneCustomVariablesRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyZoneCustomVariablesResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneSettingRequest.cs" />

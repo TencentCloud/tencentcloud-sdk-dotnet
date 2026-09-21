@@ -25,16 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 美颜效果
+        /// <p>美颜效果</p>
         /// </summary>
         [JsonProperty("BeautyEffectItems")]
         public BeautyEffectItemConfig[] BeautyEffectItems{ get; set; }
 
         /// <summary>
-        /// 美颜滤镜
+        /// <p>美颜滤镜</p>
         /// </summary>
         [JsonProperty("BeautyFilterItems")]
         public BeautyFilterItemConfig[] BeautyFilterItems{ get; set; }
+
+        /// <summary>
+        /// <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "BeautyEffectItems.", this.BeautyEffectItems);
             this.SetParamArrayObj(map, prefix + "BeautyFilterItems.", this.BeautyFilterItems);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

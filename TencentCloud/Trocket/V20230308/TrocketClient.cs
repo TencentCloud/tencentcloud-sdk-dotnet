@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1510";
 
         /// <summary>
         /// Client constructor.
@@ -115,6 +115,27 @@ namespace TencentCloud.Trocket.V20230308
         public CreateConsumerLabelResponse CreateConsumerLabelSync(CreateConsumerLabelRequest req)
         {
             return InternalRequestAsync<CreateConsumerLabelResponse>(req, "CreateConsumerLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量创建消费组灰度标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerLabelsRequest"/></param>
+        /// <returns><see cref="CreateConsumerLabelsResponse"/></returns>
+        public Task<CreateConsumerLabelsResponse> CreateConsumerLabels(CreateConsumerLabelsRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerLabelsResponse>(req, "CreateConsumerLabels");
+        }
+
+        /// <summary>
+        /// 批量创建消费组灰度标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerLabelsRequest"/></param>
+        /// <returns><see cref="CreateConsumerLabelsResponse"/></returns>
+        public CreateConsumerLabelsResponse CreateConsumerLabelsSync(CreateConsumerLabelsRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerLabelsResponse>(req, "CreateConsumerLabels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -253,6 +274,27 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 批量删除消费组灰度标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerLabelsRequest"/></param>
+        /// <returns><see cref="DeleteConsumerLabelsResponse"/></returns>
+        public Task<DeleteConsumerLabelsResponse> DeleteConsumerLabels(DeleteConsumerLabelsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerLabelsResponse>(req, "DeleteConsumerLabels");
+        }
+
+        /// <summary>
+        /// 批量删除消费组灰度标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerLabelsRequest"/></param>
+        /// <returns><see cref="DeleteConsumerLabelsResponse"/></returns>
+        public DeleteConsumerLabelsResponse DeleteConsumerLabelsSync(DeleteConsumerLabelsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerLabelsResponse>(req, "DeleteConsumerLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除消费组灰度路由配置
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRouteConfigRequest"/></param>
@@ -270,6 +312,27 @@ namespace TencentCloud.Trocket.V20230308
         public DeleteConsumerRouteConfigResponse DeleteConsumerRouteConfigSync(DeleteConsumerRouteConfigRequest req)
         {
             return InternalRequestAsync<DeleteConsumerRouteConfigResponse>(req, "DeleteConsumerRouteConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="DeleteConsumerRouteConfigsResponse"/></returns>
+        public Task<DeleteConsumerRouteConfigsResponse> DeleteConsumerRouteConfigs(DeleteConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerRouteConfigsResponse>(req, "DeleteConsumerRouteConfigs");
+        }
+
+        /// <summary>
+        /// 批量删除消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="DeleteConsumerRouteConfigsResponse"/></returns>
+        public DeleteConsumerRouteConfigsResponse DeleteConsumerRouteConfigsSync(DeleteConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerRouteConfigsResponse>(req, "DeleteConsumerRouteConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -520,6 +583,48 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 批量查询多个消费组的灰度标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLabelListsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLabelListsResponse"/></returns>
+        public Task<DescribeConsumerLabelListsResponse> DescribeConsumerLabelLists(DescribeConsumerLabelListsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLabelListsResponse>(req, "DescribeConsumerLabelLists");
+        }
+
+        /// <summary>
+        /// 批量查询多个消费组的灰度标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLabelListsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLabelListsResponse"/></returns>
+        public DescribeConsumerLabelListsResponse DescribeConsumerLabelListsSync(DescribeConsumerLabelListsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLabelListsResponse>(req, "DescribeConsumerLabelLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量查询消费组灰度标签命中的 Topic 路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLabelRoutesRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLabelRoutesResponse"/></returns>
+        public Task<DescribeConsumerLabelRoutesResponse> DescribeConsumerLabelRoutes(DescribeConsumerLabelRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLabelRoutesResponse>(req, "DescribeConsumerLabelRoutes");
+        }
+
+        /// <summary>
+        /// 批量查询消费组灰度标签命中的 Topic 路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLabelRoutesRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLabelRoutesResponse"/></returns>
+        public DescribeConsumerLabelRoutesResponse DescribeConsumerLabelRoutesSync(DescribeConsumerLabelRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLabelRoutesResponse>(req, "DescribeConsumerLabelRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定消费组堆积数。
         /// 当前 API 适用集群：4.x 集群和 5.x 集群。
         /// </summary>
@@ -560,6 +665,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeConsumerRouteConfigResponse DescribeConsumerRouteConfigSync(DescribeConsumerRouteConfigRequest req)
         {
             return InternalRequestAsync<DescribeConsumerRouteConfigResponse>(req, "DescribeConsumerRouteConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量查询消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerRouteConfigsResponse"/></returns>
+        public Task<DescribeConsumerRouteConfigsResponse> DescribeConsumerRouteConfigs(DescribeConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerRouteConfigsResponse>(req, "DescribeConsumerRouteConfigs");
+        }
+
+        /// <summary>
+        /// 批量查询消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerRouteConfigsResponse"/></returns>
+        public DescribeConsumerRouteConfigsResponse DescribeConsumerRouteConfigsSync(DescribeConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerRouteConfigsResponse>(req, "DescribeConsumerRouteConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1383,6 +1509,27 @@ namespace TencentCloud.Trocket.V20230308
         public PutConsumerRouteConfigResponse PutConsumerRouteConfigSync(PutConsumerRouteConfigRequest req)
         {
             return InternalRequestAsync<PutConsumerRouteConfigResponse>(req, "PutConsumerRouteConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量写入消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="PutConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="PutConsumerRouteConfigsResponse"/></returns>
+        public Task<PutConsumerRouteConfigsResponse> PutConsumerRouteConfigs(PutConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<PutConsumerRouteConfigsResponse>(req, "PutConsumerRouteConfigs");
+        }
+
+        /// <summary>
+        /// 批量写入消费组灰度路由配置
+        /// </summary>
+        /// <param name="req"><see cref="PutConsumerRouteConfigsRequest"/></param>
+        /// <returns><see cref="PutConsumerRouteConfigsResponse"/></returns>
+        public PutConsumerRouteConfigsResponse PutConsumerRouteConfigsSync(PutConsumerRouteConfigsRequest req)
+        {
+            return InternalRequestAsync<PutConsumerRouteConfigsResponse>(req, "PutConsumerRouteConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

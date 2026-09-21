@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 分配给弹性网卡的`IPv6`地址列表。
+        /// <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p>
         /// </summary>
         [JsonProperty("Ipv6AddressSet")]
         public Ipv6Address[] Ipv6AddressSet{ get; set; }

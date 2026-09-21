@@ -74,7 +74,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>任务类型名称</p>
+        /// 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeName")]
@@ -200,7 +200,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// <p>依赖上游任务ID列表</p>
+        /// <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependOnList")]

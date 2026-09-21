@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,10 +54,20 @@
     <Compile Include="V20230308\Models\ConsumeGroupItem.cs" />
     <Compile Include="V20230308\Models\ConsumerClient.cs" />
     <Compile Include="V20230308\Models\ConsumerLabel.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelFailure.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelItem.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelKey.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelList.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelRoute.cs" />
+    <Compile Include="V20230308\Models\ConsumerLabelRouteItem.cs" />
+    <Compile Include="V20230308\Models\ConsumerRouteKey.cs" />
+    <Compile Include="V20230308\Models\ConsumerRouteLabelKey.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\CreateConsumerLabelRequest.cs" />
     <Compile Include="V20230308\Models\CreateConsumerLabelResponse.cs" />
+    <Compile Include="V20230308\Models\CreateConsumerLabelsRequest.cs" />
+    <Compile Include="V20230308\Models\CreateConsumerLabelsResponse.cs" />
     <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20230308\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20230308\Models\CreateMigrationTaskRequest.cs" />
@@ -70,8 +80,13 @@
     <Compile Include="V20230308\Models\DeleteConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerLabelRequest.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerLabelResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteConsumerLabelsRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteConsumerLabelsResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteConsumerRouteConfigFailure.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerRouteConfigRequest.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerRouteConfigResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteConsumerRouteConfigsRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteConsumerRouteConfigsResponse.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20230308\Models\DeleteRoleRequest.cs" />
@@ -90,12 +105,19 @@
     <Compile Include="V20230308\Models\DescribeConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLabelListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLabelListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerLabelListsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerLabelListsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLabelRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLabelResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerLabelRoutesRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerLabelRoutesResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLagRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLagResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerRouteConfigItem.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerRouteConfigRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerRouteConfigResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerRouteConfigsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerRouteConfigsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerRouteVersionListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerRouteVersionListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeFusionInstanceListRequest.cs" />
@@ -140,6 +162,7 @@
     <Compile Include="V20230308\Models\DoHealthCheckOnMigratingTopicRequest.cs" />
     <Compile Include="V20230308\Models\DoHealthCheckOnMigratingTopicResponse.cs" />
     <Compile Include="V20230308\Models\Endpoint.cs" />
+    <Compile Include="V20230308\Models\ErrorInfo.cs" />
     <Compile Include="V20230308\Models\Filter.cs" />
     <Compile Include="V20230308\Models\FusionInstanceItem.cs" />
     <Compile Include="V20230308\Models\ImportSourceClusterConsumerGroupsRequest.cs" />
@@ -167,8 +190,12 @@
     <Compile Include="V20230308\Models\PriceTag.cs" />
     <Compile Include="V20230308\Models\ProducerInfo.cs" />
     <Compile Include="V20230308\Models\ProductSKU.cs" />
+    <Compile Include="V20230308\Models\PutConsumerRouteConfigFailure.cs" />
+    <Compile Include="V20230308\Models\PutConsumerRouteConfigItem.cs" />
     <Compile Include="V20230308\Models\PutConsumerRouteConfigRequest.cs" />
     <Compile Include="V20230308\Models\PutConsumerRouteConfigResponse.cs" />
+    <Compile Include="V20230308\Models\PutConsumerRouteConfigsRequest.cs" />
+    <Compile Include="V20230308\Models\PutConsumerRouteConfigsResponse.cs" />
     <Compile Include="V20230308\Models\RemoveMigratingTopicRequest.cs" />
     <Compile Include="V20230308\Models\RemoveMigratingTopicResponse.cs" />
     <Compile Include="V20230308\Models\ResendDeadLetterMessageRequest.cs" />

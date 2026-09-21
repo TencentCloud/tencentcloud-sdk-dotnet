@@ -25,16 +25,16 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
-        /// </summary>
-        [JsonProperty("Coefficient")]
-        public Coefficient Coefficient{ get; set; }
-
-        /// <summary>
         /// <p>模型别名</p>
         /// </summary>
         [JsonProperty("ModelAliasNames")]
         public string[] ModelAliasNames{ get; set; }
+
+        /// <summary>
+        /// <p>基础积分系数配置，选填。不传时保留原配置。各系数字段均为选填，取值范围为 [0, 5000]，最多支持 6 位小数，0 表示零价。传入本参数时，至少填写一项有效系数，不能传空对象。</p>
+        /// </summary>
+        [JsonProperty("Coefficient")]
+        public Coefficient Coefficient{ get; set; }
 
         /// <summary>
         /// <p>BYOK 实例（ServiceProvider）ID 列表。</p><p>可选，数组。传入时按 ServiceProvider 维度修改：把同一份 Coefficient 批量应用到数组内每一个实例（覆盖配置，仅作用于这些实例），此时 <code>ModelAliasNames</code> 只能传 1 个别名（即 1 别名 × N ServiceProvider）；数组需去重、非空、上限 100，任一实例不归属/不存在/该实例下无该别名将整批返回错误。不传时按 ModelAlias（账号）维度修改，作用于该别名下未单独配置覆盖的全部实例。</p>
@@ -43,10 +43,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ServiceProviderIds{ get; set; }
 
         /// <summary>
-        /// <p>模型能力</p>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
         /// </summary>
         [JsonProperty("Capability")]
         public string Capability{ get; set; }
+
+        /// <summary>
+        /// <p>积分梯度设置</p>
+        /// </summary>
+        [JsonProperty("CoefficientTiers")]
+        public CoefficientTier[] CoefficientTiers{ get; set; }
+
+        /// <summary>
+        /// <p>积分峰谷设置</p>
+        /// </summary>
+        [JsonProperty("CoefficientSchedule")]
+        public CoefficientScheduleRule[] CoefficientSchedule{ get; set; }
 
 
         /// <summary>
@@ -54,10 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Coefficient.", this.Coefficient);
             this.SetParamArraySimple(map, prefix + "ModelAliasNames.", this.ModelAliasNames);
+            this.SetParamObj(map, prefix + "Coefficient.", this.Coefficient);
             this.SetParamArraySimple(map, prefix + "ServiceProviderIds.", this.ServiceProviderIds);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamArrayObj(map, prefix + "CoefficientTiers.", this.CoefficientTiers);
+            this.SetParamArrayObj(map, prefix + "CoefficientSchedule.", this.CoefficientSchedule);
         }
     }
 }

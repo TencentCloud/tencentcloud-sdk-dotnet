@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 规则白名单ID列表
+        /// 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

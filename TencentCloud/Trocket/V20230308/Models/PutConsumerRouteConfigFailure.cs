@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Aiart.V20221229.Models
+namespace TencentCloud.Trocket.V20230308.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubmitTextToImageJobResponse : AbstractModel
+    public class PutConsumerRouteConfigFailure : AbstractModel
     {
         
         /// <summary>
-        /// <p>任务 ID。</p>
+        /// <p>失败项标识</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Key")]
+        public ConsumerRouteKey Key{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>错误信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "Key.", this.Key);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
         }
     }
 }

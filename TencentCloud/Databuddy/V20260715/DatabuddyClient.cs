@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1510";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Databuddy.V20260715
         public AddConsoleUsersResponse AddConsoleUsersSync(AddConsoleUsersRequest req)
         {
             return InternalRequestAsync<AddConsoleUsersResponse>(req, "AddConsoleUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleGroupRequest"/></param>
+        /// <returns><see cref="CreateConsoleGroupResponse"/></returns>
+        public Task<CreateConsoleGroupResponse> CreateConsoleGroup(CreateConsoleGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleGroupResponse>(req, "CreateConsoleGroup");
+        }
+
+        /// <summary>
+        /// 创建控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleGroupRequest"/></param>
+        /// <returns><see cref="CreateConsoleGroupResponse"/></returns>
+        public CreateConsoleGroupResponse CreateConsoleGroupSync(CreateConsoleGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleGroupResponse>(req, "CreateConsoleGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -127,6 +148,27 @@ namespace TencentCloud.Databuddy.V20260715
         public CreateWorkflowResponse CreateWorkflowSync(CreateWorkflowRequest req)
         {
             return InternalRequestAsync<CreateWorkflowResponse>(req, "CreateWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleGroupsRequest"/></param>
+        /// <returns><see cref="DeleteConsoleGroupsResponse"/></returns>
+        public Task<DeleteConsoleGroupsResponse> DeleteConsoleGroups(DeleteConsoleGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleGroupsResponse>(req, "DeleteConsoleGroups");
+        }
+
+        /// <summary>
+        /// 删除控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleGroupsRequest"/></param>
+        /// <returns><see cref="DeleteConsoleGroupsResponse"/></returns>
+        public DeleteConsoleGroupsResponse DeleteConsoleGroupsSync(DeleteConsoleGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleGroupsResponse>(req, "DeleteConsoleGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -346,6 +388,69 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 查询控制台用户组成员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleGroupUsersRequest"/></param>
+        /// <returns><see cref="ListConsoleGroupUsersResponse"/></returns>
+        public Task<ListConsoleGroupUsersResponse> ListConsoleGroupUsers(ListConsoleGroupUsersRequest req)
+        {
+            return InternalRequestAsync<ListConsoleGroupUsersResponse>(req, "ListConsoleGroupUsers");
+        }
+
+        /// <summary>
+        /// 查询控制台用户组成员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleGroupUsersRequest"/></param>
+        /// <returns><see cref="ListConsoleGroupUsersResponse"/></returns>
+        public ListConsoleGroupUsersResponse ListConsoleGroupUsersSync(ListConsoleGroupUsersRequest req)
+        {
+            return InternalRequestAsync<ListConsoleGroupUsersResponse>(req, "ListConsoleGroupUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询控制台用户组列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleGroupsRequest"/></param>
+        /// <returns><see cref="ListConsoleGroupsResponse"/></returns>
+        public Task<ListConsoleGroupsResponse> ListConsoleGroups(ListConsoleGroupsRequest req)
+        {
+            return InternalRequestAsync<ListConsoleGroupsResponse>(req, "ListConsoleGroups");
+        }
+
+        /// <summary>
+        /// 查询控制台用户组列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleGroupsRequest"/></param>
+        /// <returns><see cref="ListConsoleGroupsResponse"/></returns>
+        public ListConsoleGroupsResponse ListConsoleGroupsSync(ListConsoleGroupsRequest req)
+        {
+            return InternalRequestAsync<ListConsoleGroupsResponse>(req, "ListConsoleGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询控制台角色列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleRolesRequest"/></param>
+        /// <returns><see cref="ListConsoleRolesResponse"/></returns>
+        public Task<ListConsoleRolesResponse> ListConsoleRoles(ListConsoleRolesRequest req)
+        {
+            return InternalRequestAsync<ListConsoleRolesResponse>(req, "ListConsoleRoles");
+        }
+
+        /// <summary>
+        /// 查询控制台角色列表
+        /// </summary>
+        /// <param name="req"><see cref="ListConsoleRolesRequest"/></param>
+        /// <returns><see cref="ListConsoleRolesResponse"/></returns>
+        public ListConsoleRolesResponse ListConsoleRolesSync(ListConsoleRolesRequest req)
+        {
+            return InternalRequestAsync<ListConsoleRolesResponse>(req, "ListConsoleRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询控制台用户列表
         /// </summary>
         /// <param name="req"><see cref="ListConsoleUsersRequest"/></param>
@@ -512,6 +617,27 @@ namespace TencentCloud.Databuddy.V20260715
         public UnbindWorkflowBundleResponse UnbindWorkflowBundleSync(UnbindWorkflowBundleRequest req)
         {
             return InternalRequestAsync<UnbindWorkflowBundleResponse>(req, "UnbindWorkflowBundle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateConsoleGroupRequest"/></param>
+        /// <returns><see cref="UpdateConsoleGroupResponse"/></returns>
+        public Task<UpdateConsoleGroupResponse> UpdateConsoleGroup(UpdateConsoleGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateConsoleGroupResponse>(req, "UpdateConsoleGroup");
+        }
+
+        /// <summary>
+        /// 修改控制台用户组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateConsoleGroupRequest"/></param>
+        /// <returns><see cref="UpdateConsoleGroupResponse"/></returns>
+        public UpdateConsoleGroupResponse UpdateConsoleGroupSync(UpdateConsoleGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateConsoleGroupResponse>(req, "UpdateConsoleGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

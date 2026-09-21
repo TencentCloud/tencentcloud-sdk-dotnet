@@ -25,22 +25,21 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 上游任务ID
+        /// <p>上游任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamTaskId")]
         public string UpstreamTaskId{ get; set; }
 
         /// <summary>
-        /// 上游任务名称
+        /// <p>上游任务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamTaskName")]
         public string UpstreamTaskName{ get; set; }
 
         /// <summary>
-        /// 任务可运行条件
-        /// 支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+        /// <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowedStates")]

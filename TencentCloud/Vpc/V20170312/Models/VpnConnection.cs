@@ -25,157 +25,157 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 通道实例ID。
+        /// <p>通道实例ID。</p>
         /// </summary>
         [JsonProperty("VpnConnectionId")]
         public string VpnConnectionId{ get; set; }
 
         /// <summary>
-        /// 通道名称。
+        /// <p>通道名称。</p>
         /// </summary>
         [JsonProperty("VpnConnectionName")]
         public string VpnConnectionName{ get; set; }
 
         /// <summary>
-        /// VPC实例ID。
+        /// <p>VPC实例ID。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPN网关实例ID。
+        /// <p>VPN网关实例ID。</p>
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 对端网关实例ID。
+        /// <p>对端网关实例ID。</p>
         /// </summary>
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
 
         /// <summary>
-        /// 预共享密钥。
+        /// <p>预共享密钥。</p>
         /// </summary>
         [JsonProperty("PreShareKey")]
         public string PreShareKey{ get; set; }
 
         /// <summary>
-        /// 通道传输协议。
+        /// <p>通道传输协议。</p>
         /// </summary>
         [JsonProperty("VpnProto")]
         public string VpnProto{ get; set; }
 
         /// <summary>
-        /// 通道加密协议。
+        /// <p>通道加密协议。</p>
         /// </summary>
         [JsonProperty("EncryptProto")]
         public string EncryptProto{ get; set; }
 
         /// <summary>
-        /// 路由类型。
+        /// <p>路由类型。</p>
         /// </summary>
         [JsonProperty("RouteType")]
         public string RouteType{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+        /// <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 通道连接状态，AVAILABLE：已连接。
+        /// <p>通道连接状态，AVAILABLE：已连接。</p>
         /// </summary>
         [JsonProperty("NetStatus")]
         public string NetStatus{ get; set; }
 
         /// <summary>
-        /// SPD。
+        /// <p>SPD。</p>
         /// </summary>
         [JsonProperty("SecurityPolicyDatabaseSet")]
         public SecurityPolicyDatabase[] SecurityPolicyDatabaseSet{ get; set; }
 
         /// <summary>
-        /// IKE选项。
+        /// <p>IKE选项。</p>
         /// </summary>
         [JsonProperty("IKEOptionsSpecification")]
         public IKEOptionsSpecification IKEOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// IPSEC选择。
+        /// <p>IPSEC选择。</p>
         /// </summary>
         [JsonProperty("IPSECOptionsSpecification")]
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// 是否支持健康状态探测
+        /// <p>是否支持健康状态探测</p>
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 本端探测ip
+        /// <p>本端探测ip</p>
         /// </summary>
         [JsonProperty("HealthCheckLocalIp")]
         public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// 对端探测ip
+        /// <p>对端探测ip</p>
         /// </summary>
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }
 
         /// <summary>
-        /// 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+        /// <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
         /// </summary>
         [JsonProperty("HealthCheckStatus")]
         public string HealthCheckStatus{ get; set; }
 
         /// <summary>
-        /// DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+        /// <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
         /// </summary>
         [JsonProperty("DpdEnable")]
         public long? DpdEnable{ get; set; }
 
         /// <summary>
-        /// DPD超时时间。即探测确认对端不存在需要的时间。
+        /// <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
         /// </summary>
         [JsonProperty("DpdTimeout")]
         public string DpdTimeout{ get; set; }
 
         /// <summary>
-        /// DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+        /// <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
         /// </summary>
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
 
         /// <summary>
-        /// 标签键值对数组
+        /// <p>标签键值对数组</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 协商类型
+        /// <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
         /// </summary>
         [JsonProperty("NegotiationType")]
         public string NegotiationType{ get; set; }
 
         /// <summary>
-        /// Bgp配置信息
+        /// <p>Bgp配置信息</p>
         /// </summary>
         [JsonProperty("BgpConfig")]
         public BgpConfigAndAsn BgpConfig{ get; set; }
 
         /// <summary>
-        /// Nqa配置信息
+        /// <p>Nqa配置信息</p>
         /// </summary>
         [JsonProperty("HealthCheckConfig")]
         public HealthCheckConfig HealthCheckConfig{ get; set; }

@@ -25,82 +25,100 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 索引
+        /// <p>索引</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 索引开始时间
+        /// <p>索引开始时间</p>
         /// </summary>
         [JsonProperty("IndexStartTime")]
         public long? IndexStartTime{ get; set; }
 
         /// <summary>
-        /// 索引结束时间
+        /// <p>索引结束时间</p>
         /// </summary>
         [JsonProperty("IndexEndTime")]
         public long? IndexEndTime{ get; set; }
 
         /// <summary>
-        /// 备份后压缩的大小，单位M
+        /// <p>备份后压缩的大小，单位M</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
+        /// <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 恢复剩余的分钟数，分钟，需要前端转换
+        /// <p>恢复剩余的分钟数，分钟，需要前端转换</p>
         /// </summary>
         [JsonProperty("RestoreProcessRemindTime")]
         public long? RestoreProcessRemindTime{ get; set; }
 
         /// <summary>
-        /// 恢复日志保留的时间
+        /// <p>恢复日志保留的时间</p>
         /// </summary>
         [JsonProperty("RestoreRemindTime")]
         public long? RestoreRemindTime{ get; set; }
 
         /// <summary>
-        /// 恢复索引大小
+        /// <p>恢复索引大小</p>
         /// </summary>
         [JsonProperty("RestoreIndexSize")]
         public long? RestoreIndexSize{ get; set; }
 
         /// <summary>
-        /// 恢复日志执行结束时间
+        /// <p>恢复日志执行结束时间</p>
         /// </summary>
         [JsonProperty("RestoreEndTime")]
         public long? RestoreEndTime{ get; set; }
 
         /// <summary>
-        /// 备份所属的appId
+        /// <p>备份所属的appId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 备份所属的资产ID
+        /// <p>备份所属的资产ID</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public ulong? AssetId{ get; set; }
 
         /// <summary>
-        /// 账号昵称
+        /// <p>账号昵称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 资产所属账号uin
+        /// <p>资产所属账号uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>实例名称</p>
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
 
 
         /// <summary>
@@ -121,6 +139,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

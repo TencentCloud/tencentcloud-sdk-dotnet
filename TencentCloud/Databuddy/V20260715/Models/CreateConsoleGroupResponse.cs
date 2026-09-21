@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Aiart.V20221229.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextToImageRapidResponse : AbstractModel
+    public class CreateConsoleGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+        /// <p>返回结果</p>
         /// </summary>
-        [JsonProperty("ResultImage")]
-        public string ResultImage{ get; set; }
-
-        /// <summary>
-        /// <p>Seed</p>
-        /// </summary>
-        [JsonProperty("Seed")]
-        public long? Seed{ get; set; }
+        [JsonProperty("Data")]
+        public CreateConsoleGroupRsp Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
-            this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

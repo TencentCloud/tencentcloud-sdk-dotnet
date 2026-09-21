@@ -120,6 +120,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EnableRouteVpcPublishIpv6")]
         public bool? EnableRouteVpcPublishIpv6{ get; set; }
 
+        /// <summary>
+        /// <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+        /// </summary>
+        [JsonProperty("StackType")]
+        public string StackType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
             this.SetParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
             this.SetParamSimple(map, prefix + "EnableRouteVpcPublishIpv6", this.EnableRouteVpcPublishIpv6);
+            this.SetParamSimple(map, prefix + "StackType", this.StackType);
         }
     }
 }

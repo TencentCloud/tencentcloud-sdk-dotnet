@@ -49,13 +49,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public CommonFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// <p>检索的起始时间，可不传</p>
+        /// <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>检索的截止时间，可不传</p>
+        /// <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 日志导出ID
+        /// <p>日志导出ID，可以通过DescribeExports接口获取</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }

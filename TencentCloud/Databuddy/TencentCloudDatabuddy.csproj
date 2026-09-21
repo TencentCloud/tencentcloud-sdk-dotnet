@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,12 +58,21 @@
     <Compile Include="V20260715\Models\AsyncActionRsp.cs" />
     <Compile Include="V20260715\Models\AsyncOperation.cs" />
     <Compile Include="V20260715\Models\CommonFailItem.cs" />
+    <Compile Include="V20260715\Models\ConsoleGroupInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleGroupUserInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleRoleInfo.cs" />
     <Compile Include="V20260715\Models\ConsoleUserInfo.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupRequest.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupResponse.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupRsp.cs" />
     <Compile Include="V20260715\Models\CreateFileRequest.cs" />
     <Compile Include="V20260715\Models\CreateFileResponse.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsRsp.cs" />
     <Compile Include="V20260715\Models\DeleteFileRequest.cs" />
     <Compile Include="V20260715\Models\DeleteFileResponse.cs" />
     <Compile Include="V20260715\Models\DeleteFileResult.cs" />
@@ -94,6 +103,15 @@
     <Compile Include="V20260715\Models\KillWorkflowRunRequest.cs" />
     <Compile Include="V20260715\Models\KillWorkflowRunResponse.cs" />
     <Compile Include="V20260715\Models\LabelBrief.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesRsp.cs" />
     <Compile Include="V20260715\Models\ListConsoleUsersRequest.cs" />
     <Compile Include="V20260715\Models\ListConsoleUsersResponse.cs" />
     <Compile Include="V20260715\Models\ListConsoleUsersRsp.cs" />
@@ -117,6 +135,8 @@
     <Compile Include="V20260715\Models\RerunWorkflowRunResponse.cs" />
     <Compile Include="V20260715\Models\ResourceGroupInfo.cs" />
     <Compile Include="V20260715\Models\RoleBasicInfo.cs" />
+    <Compile Include="V20260715\Models\RoleMetaData.cs" />
+    <Compile Include="V20260715\Models\RolePermission.cs" />
     <Compile Include="V20260715\Models\RunActionBrief.cs" />
     <Compile Include="V20260715\Models\RunWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\RunWorkflowResponse.cs" />
@@ -131,6 +151,9 @@
     <Compile Include="V20260715\Models\UnbindWorkflowBundleRequest.cs" />
     <Compile Include="V20260715\Models\UnbindWorkflowBundleResponse.cs" />
     <Compile Include="V20260715\Models\UnbindWorkflowBundleRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupRsp.cs" />
     <Compile Include="V20260715\Models\UpdateConsoleUsersRequest.cs" />
     <Compile Include="V20260715\Models\UpdateConsoleUsersResponse.cs" />
     <Compile Include="V20260715\Models\UpdateConsoleUsersRsp.cs" />

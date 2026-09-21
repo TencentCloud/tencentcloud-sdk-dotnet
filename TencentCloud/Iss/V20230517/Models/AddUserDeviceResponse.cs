@@ -25,7 +25,7 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 增加设备返回数据
+        /// <p>增加设备返回数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public AddDeviceData Data{ get; set; }

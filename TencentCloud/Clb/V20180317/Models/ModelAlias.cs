@@ -55,10 +55,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>模型能力</p>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
         /// </summary>
         [JsonProperty("Capability")]
         public string Capability{ get; set; }
+
+        /// <summary>
+        /// <p>分级积分系数配置</p>
+        /// </summary>
+        [JsonProperty("CoefficientTiers")]
+        public CoefficientTier[] CoefficientTiers{ get; set; }
+
+        /// <summary>
+        /// <p>峰谷积分系数配置</p>
+        /// </summary>
+        [JsonProperty("CoefficientSchedule")]
+        public CoefficientScheduleRule[] CoefficientSchedule{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamArrayObj(map, prefix + "CoefficientTiers.", this.CoefficientTiers);
+            this.SetParamArrayObj(map, prefix + "CoefficientSchedule.", this.CoefficientSchedule);
         }
     }
 }

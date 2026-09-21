@@ -43,7 +43,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+        /// <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }
@@ -127,43 +127,43 @@ namespace TencentCloud.Iss.V20230517.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+        /// <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// <p>设备所属网关名称</p>
+        /// <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
-        /// <p>设备网关协议名称</p>
+        /// <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("ProtocolTypeName")]
         public string ProtocolTypeName{ get; set; }
 
         /// <summary>
-        /// <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+        /// <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
         /// <summary>
-        /// <p>设备接入IP</p>
+        /// <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// <p>设备Port</p>
+        /// <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// <p>设备用户名</p>
+        /// <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
@@ -216,6 +216,24 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("PushStreamSecureUrl")]
         public string PushStreamSecureUrl{ get; set; }
 
+        /// <summary>
+        /// <p>国标SIP域名</p>
+        /// </summary>
+        [JsonProperty("SipFQDN")]
+        public string SipFQDN{ get; set; }
+
+        /// <summary>
+        /// <p>国标SIP三网IP地址</p>
+        /// </summary>
+        [JsonProperty("SipCarrierEndpoints")]
+        public SipCarrierEndpoints SipCarrierEndpoints{ get; set; }
+
+        /// <summary>
+        /// <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+        /// </summary>
+        [JsonProperty("TimeSyncSwitch")]
+        public long? TimeSyncSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +272,9 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
             this.SetParamSimple(map, prefix + "PushStreamSecureUrl", this.PushStreamSecureUrl);
+            this.SetParamSimple(map, prefix + "SipFQDN", this.SipFQDN);
+            this.SetParamObj(map, prefix + "SipCarrierEndpoints.", this.SipCarrierEndpoints);
+            this.SetParamSimple(map, prefix + "TimeSyncSwitch", this.TimeSyncSwitch);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1510";
 
         /// <summary>
         /// Client constructor.
@@ -1709,6 +1709,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeTopSpaceTablesResponse DescribeTopSpaceTablesSync(DescribeTopSpaceTablesRequest req)
         {
             return InternalRequestAsync<DescribeTopSpaceTablesResponse>(req, "DescribeTopSpaceTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 表级空间 Top 对象查询（融合接口，多产品统一入口），按 SortBy 指定的排序字段返回实例内空间占用 Top N 的表/集合。支持产品：mysql（云数据库 MySQL）、cynosdb（TDSQL-C MySQL 版）、mongodb（云数据库 MongoDB）、postgres（云数据库 PostgreSQL）、dcdb（TDSQL MySQL 版）、tdsql（TDSQL）、mariadb（云数据库 MariaDB）。返回值根据产品类型返回对应字段：MySQL 系列返回 MysqlObjects，PostgreSQL 返回 PostgresObjects（PG 的 relation/bloat 字段与 MySQL 语义不同），MongoDB 返回 MongodbObjects。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesV2Request"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesV2Response"/></returns>
+        public Task<DescribeTopSpaceTablesV2Response> DescribeTopSpaceTablesV2(DescribeTopSpaceTablesV2Request req)
+        {
+            return InternalRequestAsync<DescribeTopSpaceTablesV2Response>(req, "DescribeTopSpaceTablesV2");
+        }
+
+        /// <summary>
+        /// 表级空间 Top 对象查询（融合接口，多产品统一入口），按 SortBy 指定的排序字段返回实例内空间占用 Top N 的表/集合。支持产品：mysql（云数据库 MySQL）、cynosdb（TDSQL-C MySQL 版）、mongodb（云数据库 MongoDB）、postgres（云数据库 PostgreSQL）、dcdb（TDSQL MySQL 版）、tdsql（TDSQL）、mariadb（云数据库 MariaDB）。返回值根据产品类型返回对应字段：MySQL 系列返回 MysqlObjects，PostgreSQL 返回 PostgresObjects（PG 的 relation/bloat 字段与 MySQL 语义不同），MongoDB 返回 MongodbObjects。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesV2Request"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesV2Response"/></returns>
+        public DescribeTopSpaceTablesV2Response DescribeTopSpaceTablesV2Sync(DescribeTopSpaceTablesV2Request req)
+        {
+            return InternalRequestAsync<DescribeTopSpaceTablesV2Response>(req, "DescribeTopSpaceTablesV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

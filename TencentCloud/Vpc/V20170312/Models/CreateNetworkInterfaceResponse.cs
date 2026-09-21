@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性网卡实例。
+        /// <p>弹性网卡实例。</p>
         /// </summary>
         [JsonProperty("NetworkInterface")]
         public NetworkInterface NetworkInterface{ get; set; }

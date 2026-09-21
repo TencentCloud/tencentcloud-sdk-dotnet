@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 客户的投递流列表
+        /// <p>客户的投递流列表</p>
         /// </summary>
         [JsonProperty("PostCLSFlows")]
         public PostCLSFlowInfo[] PostCLSFlows{ get; set; }

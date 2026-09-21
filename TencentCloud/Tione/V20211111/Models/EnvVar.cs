@@ -25,14 +25,14 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 环境变量key
+        /// <p>环境变量key</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 环境变量value
+        /// <p>环境变量value</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]

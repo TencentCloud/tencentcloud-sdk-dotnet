@@ -174,6 +174,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SqlType")]
+        public string SqlType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
             this.SetParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
+            this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

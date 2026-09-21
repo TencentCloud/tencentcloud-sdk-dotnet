@@ -312,6 +312,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InferTemplateId")]
         public string InferTemplateId{ get; set; }
 
+        /// <summary>
+        /// <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+        /// </summary>
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +372,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
             this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
             this.SetParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

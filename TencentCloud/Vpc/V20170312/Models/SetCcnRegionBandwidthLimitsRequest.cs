@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SetDefaultLimitFlag")]
         public bool? SetDefaultLimitFlag{ get; set; }
 
+        /// <summary>
+        /// 是否设置默认QOS带宽；
+        /// </summary>
+        [JsonProperty("SetQosDefaultLimitFlag")]
+        public bool? SetQosDefaultLimitFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
             this.SetParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
+            this.SetParamSimple(map, prefix + "SetQosDefaultLimitFlag", this.SetQosDefaultLimitFlag);
         }
     }
 }

@@ -25,109 +25,109 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设备iD
+        /// <p>设备iD</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+        /// <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备接入协议，1:RTMP,2:GB,3:GW 
+        /// <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul>
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }
 
         /// <summary>
-        /// 设备类型，1:IPC,2:NVR
+        /// <p>设备类型，1:IPC,2:NVR</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 设备接入服务节点ID
+        /// <p>设备接入服务节点ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 设备接入服务节点名称
+        /// <p>设备接入服务节点名称</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 设备流传输协议，1:UDP,2:TCP 
+        /// <p>设备流传输协议，1:UDP,2:TCP</p>
         /// </summary>
         [JsonProperty("TransportProtocol")]
         public long? TransportProtocol{ get; set; }
 
         /// <summary>
-        /// 设备密码
+        /// <p>设备密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 设备描述
+        /// <p>设备描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 设备状态，0:未注册,1:在线,2:离线,3:禁用
+        /// <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 设备所属组织ID
+        /// <p>设备所属组织ID</p>
         /// </summary>
         [JsonProperty("OrganizationId")]
         public long? OrganizationId{ get; set; }
 
         /// <summary>
-        /// 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+        /// <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+        /// <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
         /// <summary>
-        /// 设备接入IP（仅网关接入需要）
+        /// <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 设备Port（仅网关接入需要）
+        /// <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 设备用户名（仅网关接入需要）
+        /// <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }

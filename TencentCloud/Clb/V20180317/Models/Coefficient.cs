@@ -48,6 +48,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("OutputCoefficient")]
         public float? OutputCoefficient{ get; set; }
 
+        /// <summary>
+        /// <p>输入图片系数</p>
+        /// </summary>
+        [JsonProperty("InputImageCoefficient")]
+        public float? InputImageCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>输入视频每秒系数</p>
+        /// </summary>
+        [JsonProperty("InputVideoSecondCoefficient")]
+        public float? InputVideoSecondCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>输出视频每秒系数</p>
+        /// </summary>
+        [JsonProperty("OutputVideoSecondCoefficient")]
+        public float? OutputVideoSecondCoefficient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InputCacheCreationCoefficient", this.InputCacheCreationCoefficient);
             this.SetParamSimple(map, prefix + "InputCoefficient", this.InputCoefficient);
             this.SetParamSimple(map, prefix + "OutputCoefficient", this.OutputCoefficient);
+            this.SetParamSimple(map, prefix + "InputImageCoefficient", this.InputImageCoefficient);
+            this.SetParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
+            this.SetParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
         }
     }
 }

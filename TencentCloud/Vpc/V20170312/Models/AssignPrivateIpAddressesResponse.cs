@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 内网IP详细信息。
+        /// <p>内网IP详细信息。</p>
         /// </summary>
         [JsonProperty("PrivateIpAddressSet")]
         public PrivateIpAddressSpecification[] PrivateIpAddressSet{ get; set; }

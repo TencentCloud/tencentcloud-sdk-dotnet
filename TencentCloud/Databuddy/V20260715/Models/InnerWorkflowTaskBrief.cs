@@ -39,7 +39,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型名称
+        /// 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeName")]

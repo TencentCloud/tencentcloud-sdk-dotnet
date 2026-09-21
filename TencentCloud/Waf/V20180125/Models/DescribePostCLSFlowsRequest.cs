@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 1-访问日志，2-攻击日志，默认为访问日志。
+        /// <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
         /// </summary>
         [JsonProperty("LogType")]
         public long? LogType{ get; set; }

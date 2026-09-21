@@ -25,76 +25,82 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设备ID（从获取设备列表接口ListDevices中获取）
+        /// <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+        /// <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
+        /// <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p>
         /// </summary>
         [JsonProperty("TransportProtocol")]
         public long? TransportProtocol{ get; set; }
 
         /// <summary>
-        /// 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+        /// <p>设备密码（仅国标设备支持，长度不超过 64 位）</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 设备描述（长度不超过128位）
+        /// <p>设备描述（长度不超过128位）</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 设备接入Ip（仅网关接入支持）
+        /// <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 设备Port（仅网关接入支持）
+        /// <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 设备用户名（仅网关接入支持）
+        /// <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 网关设备接入协议（仅网关接入支持）
+        /// <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
         /// <summary>
-        /// 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+        /// <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p>
         /// </summary>
         [JsonProperty("AudioSwitch")]
         public long? AudioSwitch{ get; set; }
 
         /// <summary>
-        /// 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+        /// <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
         /// </summary>
         [JsonProperty("SubscribeSwitch")]
         public long? SubscribeSwitch{ get; set; }
 
         /// <summary>
-        /// 是否开启静音帧（0：关闭；1 开启）
+        /// <p>是否开启静音帧（0：关闭；1 开启）</p>
         /// </summary>
         [JsonProperty("SilentFrameSwitch")]
         public long? SilentFrameSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+        /// </summary>
+        [JsonProperty("TimeSyncSwitch")]
+        public long? TimeSyncSwitch{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
             this.SetParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
             this.SetParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
+            this.SetParamSimple(map, prefix + "TimeSyncSwitch", this.TimeSyncSwitch);
         }
     }
 }

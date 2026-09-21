@@ -126,6 +126,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IsCdcSubnet")]
         public long? IsCdcSubnet{ get; set; }
 
+        /// <summary>
+        /// <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+        /// </summary>
+        [JsonProperty("StackType")]
+        public string StackType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "IsCdcSubnet", this.IsCdcSubnet);
+            this.SetParamSimple(map, prefix + "StackType", this.StackType);
         }
     }
 }

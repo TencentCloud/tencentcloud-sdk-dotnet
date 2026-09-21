@@ -54,18 +54,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TaxClassifyCode")]
         public string TaxClassifyCode{ get; set; }
 
-        /// <summary>
-        /// <p>通行费车牌号</p>
-        /// </summary>
-        [JsonProperty("CarType")]
-        public string CarType{ get; set; }
-
-        /// <summary>
-        /// <p>通行费车辆类型</p>
-        /// </summary>
-        [JsonProperty("PlateNumber")]
-        public string PlateNumber{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,8 +65,6 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PassDateBegin", this.PassDateBegin);
             this.SetParamSimple(map, prefix + "PassDateEnd", this.PassDateEnd);
             this.SetParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
-            this.SetParamSimple(map, prefix + "CarType", this.CarType);
-            this.SetParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
         }
     }
 }

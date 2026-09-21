@@ -25,84 +25,77 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 调度配置ID，创建时无需传入，由服务端生成
+        /// <p>调度配置ID，创建时无需传入，由服务端生成</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerId")]
         public string TriggerId{ get; set; }
 
         /// <summary>
-        /// 调度状态 启动：START，暂停：PAUSE
+        /// <p>调度状态 启动：START，暂停：PAUSE</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerStatus")]
         public string SchedulerStatus{ get; set; }
 
         /// <summary>
-        /// 触发方式，
-        /// - 定时触发：TIME_TRIGGER
-        /// - 持续运行：CONTINUE_RUN
-        /// 
-        /// 注意：
-        /// - TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-        /// - CONTINUE_RUN 模式下，AdvancedConfig必填；
+        /// <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
-        /// 调度时区
+        /// <p>调度时区</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchedulerTimeZone")]
         public string SchedulerTimeZone{ get; set; }
 
         /// <summary>
-        /// 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+        /// <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+        /// <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+        /// <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigMode")]
         public string ConfigMode{ get; set; }
 
         /// <summary>
-        /// 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-        /// HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+        /// <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// cron表达式
+        /// <p>cron表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// Json格式，对账使用
+        /// <p>Json格式，对账使用</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public string ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 高级配置
+        /// <p>高级配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedConfig")]

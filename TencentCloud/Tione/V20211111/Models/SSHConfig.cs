@@ -25,42 +25,42 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 是否开启ssh
+        /// <p>是否开启ssh</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 公钥信息
+        /// <p>公钥信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicKey")]
         public string PublicKey{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// <p>端口号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 登录命令
+        /// <p>登录命令</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoginCommand")]
         public string LoginCommand{ get; set; }
 
         /// <summary>
-        /// 登录地址是否改变
+        /// <p>登录地址是否改变</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAddressChanged")]
         public bool? IsAddressChanged{ get; set; }
 
         /// <summary>
-        /// POD访问信息
+        /// <p>POD访问信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodSSHInfo")]

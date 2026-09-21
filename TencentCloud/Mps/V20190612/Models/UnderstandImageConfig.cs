@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+        /// <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

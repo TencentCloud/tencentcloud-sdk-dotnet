@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpc对象。
+        /// <p>Vpc对象。</p>
         /// </summary>
         [JsonProperty("Vpc")]
         public Vpc Vpc{ get; set; }

@@ -25,21 +25,21 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+        /// <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 资源组节点信息
+        /// <p>资源组节点信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceSet")]
         public Instance[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// 资源组纳管类型
+        /// <p>资源组纳管类型</p>
         /// </summary>
         [JsonProperty("ResourceGroupSWType")]
         public string ResourceGroupSWType{ get; set; }

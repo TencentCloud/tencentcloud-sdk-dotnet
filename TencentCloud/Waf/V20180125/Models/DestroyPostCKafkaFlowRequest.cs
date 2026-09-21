@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 投递流的流ID
+        /// <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 1-访问日志，2-攻击日志，默认为访问日志。
+        /// <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
         /// </summary>
         [JsonProperty("LogType")]
         public long? LogType{ get; set; }

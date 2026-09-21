@@ -78,6 +78,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("RowsSent")]
         public long? RowsSent{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "LockTime", this.LockTime);
             this.SetParamSimple(map, prefix + "RowsExamined", this.RowsExamined);
             this.SetParamSimple(map, prefix + "RowsSent", this.RowsSent);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

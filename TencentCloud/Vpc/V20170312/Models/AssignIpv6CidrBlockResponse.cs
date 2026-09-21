@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+        /// <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
         /// <summary>
-        /// 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+        /// <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }

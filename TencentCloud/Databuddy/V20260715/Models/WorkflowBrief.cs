@@ -137,7 +137,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public ResourceGroupInfo[] ResourceGroupInfoList{ get; set; }
 
         /// <summary>
-        /// <p>工作流权限信息</p>
+        /// <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Permission")]

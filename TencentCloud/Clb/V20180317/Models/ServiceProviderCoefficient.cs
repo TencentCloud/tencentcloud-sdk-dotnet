@@ -43,6 +43,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ServiceProviderName")]
         public string ServiceProviderName{ get; set; }
 
+        /// <summary>
+        /// <p>分级积分系数设置</p>
+        /// </summary>
+        [JsonProperty("CoefficientTiers")]
+        public CoefficientTier[] CoefficientTiers{ get; set; }
+
+        /// <summary>
+        /// <p>峰谷积分系数设置</p>
+        /// </summary>
+        [JsonProperty("CoefficientSchedule")]
+        public CoefficientScheduleRule[] CoefficientSchedule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +64,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Coefficient.", this.Coefficient);
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+            this.SetParamArrayObj(map, prefix + "CoefficientTiers.", this.CoefficientTiers);
+            this.SetParamArrayObj(map, prefix + "CoefficientSchedule.", this.CoefficientSchedule);
         }
     }
 }

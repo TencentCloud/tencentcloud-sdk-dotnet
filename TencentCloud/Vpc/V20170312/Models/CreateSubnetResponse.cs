@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 子网对象。
+        /// <p>子网对象。</p>
         /// </summary>
         [JsonProperty("Subnet")]
         public Subnet Subnet{ get; set; }

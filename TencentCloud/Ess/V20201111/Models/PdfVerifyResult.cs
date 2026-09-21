@@ -25,90 +25,94 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+        /// <p>验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。</p>
         /// </summary>
         [JsonProperty("VerifyResult")]
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 签署平台
-        /// 如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
-        /// 如果文件不在腾讯电子签平台签署，则为**其他平台**。
+        /// <p>签署平台<br>如果文件是在腾讯电子签平台签署，则为<strong>腾讯电子签</strong>，<br>如果文件不在腾讯电子签平台签署，则为<strong>其他平台</strong>。</p>
         /// </summary>
         [JsonProperty("SignPlatform")]
         public string SignPlatform{ get; set; }
 
         /// <summary>
-        /// 申请证书的主体的名字
-        /// 
-        /// 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-        /// **企业**:  ESS@企业名称@编码
-        /// **个人**: ESS@个人姓名@证件号@808854
-        /// 
-        /// 如果在其他平台签署的, 主体的名字参考其他平台的说明
+        /// <p>申请证书的主体的名字</p><p>如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下<br><strong>企业</strong>:  ESS@企业名称@编码<br><strong>个人</strong>: ESS@个人姓名@证件号@808854</p><p>如果在其他平台签署的, 主体的名字参考其他平台的说明</p>
         /// </summary>
         [JsonProperty("SignerName")]
         public string SignerName{ get; set; }
 
         /// <summary>
-        /// 签署时间的Unix时间戳，单位毫秒
+        /// <p>签署时间的Unix时间戳，单位毫秒</p>
         /// </summary>
         [JsonProperty("SignTime")]
         public long? SignTime{ get; set; }
 
         /// <summary>
-        /// 证书签名算法,  如SHA1withRSA等算法
+        /// <p>证书签名算法,  如SHA1withRSA等算法</p>
         /// </summary>
         [JsonProperty("SignAlgorithm")]
         public string SignAlgorithm{ get; set; }
 
         /// <summary>
-        /// 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
+        /// <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。</p>
         /// </summary>
         [JsonProperty("CertSn")]
         public string CertSn{ get; set; }
 
         /// <summary>
-        /// 证书起始时间的Unix时间戳，单位毫秒
+        /// <p>证书起始时间的Unix时间戳，单位毫秒</p>
         /// </summary>
         [JsonProperty("CertNotBefore")]
         public long? CertNotBefore{ get; set; }
 
         /// <summary>
-        /// 证书过期时间的时间戳，单位毫秒
+        /// <p>证书过期时间的时间戳，单位毫秒</p>
         /// </summary>
         [JsonProperty("CertNotAfter")]
         public long? CertNotAfter{ get; set; }
 
         /// <summary>
-        /// 签名域横坐标，单位px
+        /// <p>签名域横坐标，单位px</p>
         /// </summary>
         [JsonProperty("ComponentPosX")]
         public float? ComponentPosX{ get; set; }
 
         /// <summary>
-        /// 签名域纵坐标，单位px
+        /// <p>签名域纵坐标，单位px</p>
         /// </summary>
         [JsonProperty("ComponentPosY")]
         public float? ComponentPosY{ get; set; }
 
         /// <summary>
-        /// 签名域宽度，单位px
+        /// <p>签名域宽度，单位px</p>
         /// </summary>
         [JsonProperty("ComponentWidth")]
         public float? ComponentWidth{ get; set; }
 
         /// <summary>
-        /// 签名域高度，单位px
+        /// <p>签名域高度，单位px</p>
         /// </summary>
         [JsonProperty("ComponentHeight")]
         public float? ComponentHeight{ get; set; }
 
         /// <summary>
-        /// 签名域所在页码，1～N
+        /// <p>签名域所在页码，1～N</p>
         /// </summary>
         [JsonProperty("ComponentPage")]
         public long? ComponentPage{ get; set; }
+
+        /// <summary>
+        /// <p>证书颁发机构</p>
+        /// </summary>
+        [JsonProperty("CertProvider")]
+        public string CertProvider{ get; set; }
+
+        /// <summary>
+        /// <p>是否有可信时间戳</p>
+        /// </summary>
+        [JsonProperty("IsTimestampTrust")]
+        public bool? IsTimestampTrust{ get; set; }
 
 
         /// <summary>
@@ -129,6 +133,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
             this.SetParamSimple(map, prefix + "ComponentHeight", this.ComponentHeight);
             this.SetParamSimple(map, prefix + "ComponentPage", this.ComponentPage);
+            this.SetParamSimple(map, prefix + "CertProvider", this.CertProvider);
+            this.SetParamSimple(map, prefix + "IsTimestampTrust", this.IsTimestampTrust);
         }
     }
 }
