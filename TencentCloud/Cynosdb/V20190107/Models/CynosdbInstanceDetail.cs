@@ -240,6 +240,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
+        /// <summary>
+        /// <p>实例的真实可用区</p>
+        /// </summary>
+        [JsonProperty("RealZone")]
+        public string RealZone{ get; set; }
+
+        /// <summary>
+        /// <p>备可用区列表</p>
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public string[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+        /// </summary>
+        [JsonProperty("StorageVersion")]
+        public string StorageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +300,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
         }
     }
 }

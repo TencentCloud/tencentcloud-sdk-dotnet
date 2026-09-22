@@ -39,7 +39,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public TaskTypeNotebookExt Notebook{ get; set; }
 
         /// <summary>
-        /// <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+        /// <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypePropertyList")]

@@ -30,6 +30,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// <p>指定的音频输出格式。</p>
+        /// </summary>
+        [JsonProperty("OutputAudioFormat")]
+        public string OutputAudioFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "OutputAudioFormat", this.OutputAudioFormat);
         }
     }
 }

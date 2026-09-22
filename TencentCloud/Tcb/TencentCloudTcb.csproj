@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1511</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -227,6 +227,8 @@
     <Compile Include="V20180608\Models\DescribeTableResponse.cs" />
     <Compile Include="V20180608\Models\DescribeTablesRequest.cs" />
     <Compile Include="V20180608\Models\DescribeTablesResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20180608\Models\DescribeUserListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeUserListResp.cs" />
     <Compile Include="V20180608\Models\DescribeUserListResponse.cs" />
@@ -349,6 +351,7 @@
     <Compile Include="V20180608\Models\MySQLClusterDetail.cs" />
     <Compile Include="V20180608\Models\MySQLNetDetail.cs" />
     <Compile Include="V20180608\Models\MySQLTaskStatus.cs" />
+    <Compile Include="V20180608\Models\ObjectKV.cs" />
     <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\OwnershipVerificationDnsInfo.cs" />
     <Compile Include="V20180608\Models\OwnershipVerificationFileInfo.cs" />
@@ -381,6 +384,8 @@
     <Compile Include="V20180608\Models\RenewEnvResponse.cs" />
     <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryRequest.cs" />
     <Compile Include="V20180608\Models\RepairPGUserMigrationHistoryResponse.cs" />
+    <Compile Include="V20180608\Models\ResetPGAccountPasswordRequest.cs" />
+    <Compile Include="V20180608\Models\ResetPGAccountPasswordResponse.cs" />
     <Compile Include="V20180608\Models\ResourcePermission.cs" />
     <Compile Include="V20180608\Models\RunCommandsRequest.cs" />
     <Compile Include="V20180608\Models\RunCommandsResponse.cs" />
@@ -411,6 +416,8 @@
     <Compile Include="V20180608\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
+    <Compile Include="V20180608\Models\UpgradePGInstanceToDedicatedRequest.cs" />
+    <Compile Include="V20180608\Models\UpgradePGInstanceToDedicatedResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />
     <Compile Include="V20180608\Models\ValueDetail.cs" />
     <Compile Include="V20180608\Models\Variable.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Thpc.V20230321.Models
     {
         
         /// <summary>
-        /// 队列名称。
+        /// <p>队列名称。</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

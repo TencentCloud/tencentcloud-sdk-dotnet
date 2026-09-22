@@ -25,31 +25,31 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// <p>负载均衡实例ID。</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器的ID。
+        /// <p>HTTPS:443监听器的ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+        /// <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 重定向状态码，可取值301,302,307。
+        /// <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
         /// </summary>
         [JsonProperty("RewriteCodes")]
         public long?[] RewriteCodes{ get; set; }
 
         /// <summary>
-        /// 重定向是否携带匹配的URL。
+        /// <p>重定向是否携带匹配的URL。</p>
         /// </summary>
         [JsonProperty("TakeUrls")]
         public bool?[] TakeUrls{ get; set; }

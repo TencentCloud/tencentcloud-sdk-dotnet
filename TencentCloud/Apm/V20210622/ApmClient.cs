@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1499";
+       private const string sdkVersion = "SDK_NET_3.0.1511";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Apm.V20210622
         public ModifyGeneralApmApplicationConfigResponse ModifyGeneralApmApplicationConfigSync(ModifyGeneralApmApplicationConfigRequest req)
         {
             return InternalRequestAsync<ModifyGeneralApmApplicationConfigResponse>(req, "ModifyGeneralApmApplicationConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通付费版本
+        /// </summary>
+        /// <param name="req"><see cref="OpenApmPaidVersionRequest"/></param>
+        /// <returns><see cref="OpenApmPaidVersionResponse"/></returns>
+        public Task<OpenApmPaidVersionResponse> OpenApmPaidVersion(OpenApmPaidVersionRequest req)
+        {
+            return InternalRequestAsync<OpenApmPaidVersionResponse>(req, "OpenApmPaidVersion");
+        }
+
+        /// <summary>
+        /// 开通付费版本
+        /// </summary>
+        /// <param name="req"><see cref="OpenApmPaidVersionRequest"/></param>
+        /// <returns><see cref="OpenApmPaidVersionResponse"/></returns>
+        public OpenApmPaidVersionResponse OpenApmPaidVersionSync(OpenApmPaidVersionRequest req)
+        {
+            return InternalRequestAsync<OpenApmPaidVersionResponse>(req, "OpenApmPaidVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

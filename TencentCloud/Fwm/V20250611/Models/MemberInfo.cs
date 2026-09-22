@@ -25,31 +25,31 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// <p>成员AppId</p>
+        /// 成员 AppId
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// <p>成员Uin</p>
+        /// 成员 Uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// <p>成员昵称</p>
+        /// 成员昵称
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// <p>成员Id</p>
+        /// 成员 ID（个人场景为空）
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// <p>所属部门</p>
+        /// 所属部门
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

@@ -44,6 +44,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckMaxTokens")]
         public ulong? HealthCheckMaxTokens{ get; set; }
@@ -54,6 +55,18 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("HealthCheckProtocol")]
         public string HealthCheckProtocol{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+        /// </summary>
+        [JsonProperty("HealthCheckPath")]
+        public string HealthCheckPath{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查方式。</p>
+        /// </summary>
+        [JsonProperty("HealthCheckMethod")]
+        public string HealthCheckMethod{ get; set; }
 
 
         /// <summary>
@@ -66,6 +79,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthCheckUnhealthyThreshold", this.HealthCheckUnhealthyThreshold);
             this.SetParamSimple(map, prefix + "HealthCheckMaxTokens", this.HealthCheckMaxTokens);
             this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+            this.SetParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
+            this.SetParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
         }
     }
 }

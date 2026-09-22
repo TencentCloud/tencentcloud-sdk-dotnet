@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1511</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -302,6 +302,7 @@
     <Compile Include="V20201016\Models\DeliverConfig.cs" />
     <Compile Include="V20201016\Models\DeliverRule.cs" />
     <Compile Include="V20201016\Models\Delta.cs" />
+    <Compile Include="V20201016\Models\DependencyTopology.cs" />
     <Compile Include="V20201016\Models\DescribeAgentApplicationsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAgentApplicationsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAgentConfigsRequest.cs" />
@@ -466,6 +467,8 @@
     <Compile Include="V20201016\Models\EBPFDestEndpointFilter.cs" />
     <Compile Include="V20201016\Models\EBPFEndpoint.cs" />
     <Compile Include="V20201016\Models\EBPFProcessNameFilter.cs" />
+    <Compile Include="V20201016\Models\EntityAttribute.cs" />
+    <Compile Include="V20201016\Models\EntityInfo.cs" />
     <Compile Include="V20201016\Models\EnvInfo.cs" />
     <Compile Include="V20201016\Models\EsImportInfo.cs" />
     <Compile Include="V20201016\Models\EsInfo.cs" />
@@ -655,12 +658,14 @@
     <Compile Include="V20201016\Models\RecordingRuleTaskInfo.cs" />
     <Compile Include="V20201016\Models\RecordingRuleYamlTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
+    <Compile Include="V20201016\Models\RelatedTopicItem.cs" />
     <Compile Include="V20201016\Models\RelationLogset.cs" />
     <Compile Include="V20201016\Models\RelationTopic.cs" />
     <Compile Include="V20201016\Models\RemoteWriteAuthInfo.cs" />
     <Compile Include="V20201016\Models\RemoteWriteInfo.cs" />
     <Compile Include="V20201016\Models\ResourceGraphDetailInfo.cs" />
     <Compile Include="V20201016\Models\ResourceGraphEntityRelatedTopic.cs" />
+    <Compile Include="V20201016\Models\ResourceGraphInfo.cs" />
     <Compile Include="V20201016\Models\ResourceGraphTkeClusterInfo.cs" />
     <Compile Include="V20201016\Models\RetryResourceGraphProductIngestTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryResourceGraphProductIngestTaskResponse.cs" />
@@ -705,6 +710,8 @@
     <Compile Include="V20201016\Models\TopicInfo.cs" />
     <Compile Include="V20201016\Models\TopicPartitionInfo.cs" />
     <Compile Include="V20201016\Models\TopicPartitionOffsetInfo.cs" />
+    <Compile Include="V20201016\Models\TopologyEdge.cs" />
+    <Compile Include="V20201016\Models\TopologyNode.cs" />
     <Compile Include="V20201016\Models\UploadLogRequest.cs" />
     <Compile Include="V20201016\Models\UploadLogResponse.cs" />
     <Compile Include="V20201016\Models\UserKafkaMeta.cs" />

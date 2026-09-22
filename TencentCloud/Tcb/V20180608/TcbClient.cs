@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1511";
 
         /// <summary>
         /// Client constructor.
@@ -1887,6 +1887,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（DescribeTaskResult）用于查询任务结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public Task<DescribeTaskResultResponse> DescribeTaskResult(DescribeTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTaskResult）用于查询任务结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询tcb用户列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserListRequest"/></param>
@@ -2636,6 +2657,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改 PG 实例用户角色密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetPGAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetPGAccountPasswordResponse"/></returns>
+        public Task<ResetPGAccountPasswordResponse> ResetPGAccountPassword(ResetPGAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetPGAccountPasswordResponse>(req, "ResetPGAccountPassword");
+        }
+
+        /// <summary>
+        /// 修改 PG 实例用户角色密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetPGAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetPGAccountPasswordResponse"/></returns>
+        public ResetPGAccountPasswordResponse ResetPGAccountPasswordSync(ResetPGAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetPGAccountPasswordResponse>(req, "ResetPGAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（RunCommands）用于执行文档型数据库命令。
         /// </summary>
         /// <param name="req"><see cref="RunCommandsRequest"/></param>
@@ -2846,6 +2888,27 @@ namespace TencentCloud.Tcb.V20180608
         public UpdateTableResponse UpdateTableSync(UpdateTableRequest req)
         {
             return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePGInstanceToDedicatedRequest"/></param>
+        /// <returns><see cref="UpgradePGInstanceToDedicatedResponse"/></returns>
+        public Task<UpgradePGInstanceToDedicatedResponse> UpgradePGInstanceToDedicated(UpgradePGInstanceToDedicatedRequest req)
+        {
+            return InternalRequestAsync<UpgradePGInstanceToDedicatedResponse>(req, "UpgradePGInstanceToDedicated");
+        }
+
+        /// <summary>
+        /// 本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePGInstanceToDedicatedRequest"/></param>
+        /// <returns><see cref="UpgradePGInstanceToDedicatedResponse"/></returns>
+        public UpgradePGInstanceToDedicatedResponse UpgradePGInstanceToDedicatedSync(UpgradePGInstanceToDedicatedRequest req)
+        {
+            return InternalRequestAsync<UpgradePGInstanceToDedicatedResponse>(req, "UpgradePGInstanceToDedicated")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

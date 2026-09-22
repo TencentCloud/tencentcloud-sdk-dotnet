@@ -39,7 +39,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string WorkflowTaskRunId{ get; set; }
 
         /// <summary>
-        /// <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+        /// <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunState")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+        /// <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeName")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskVersionId{ get; set; }
 
         /// <summary>
-        /// <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+        /// <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]

@@ -39,7 +39,7 @@ namespace TencentCloud.Fwm.V20250611.Models
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 操作类型：1-精确匹配 9-模糊匹配
+        /// 操作类型：1=精确匹配，7=in，9=模糊匹配
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorType")]

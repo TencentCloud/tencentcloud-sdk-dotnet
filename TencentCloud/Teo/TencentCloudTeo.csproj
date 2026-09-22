@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1510</VersionPrefix>
+    <VersionPrefix>3.0.1511</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20220901\Models\AccelerationDomainCertificate.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectParameters.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectQueryString.cs" />
+    <Compile Include="V20220901\Models\AccountProtectionSettings.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
     <Compile Include="V20220901\Models\AclConfig.cs" />
     <Compile Include="V20220901\Models\AclUserRule.cs" />
@@ -853,6 +854,7 @@
     <Compile Include="V20220901\Models\SecEntryValue.cs" />
     <Compile Include="V20220901\Models\SecurityAction.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
+    <Compile Include="V20220901\Models\SecurityHeadersToOrigin.cs" />
     <Compile Include="V20220901\Models\SecurityPolicy.cs" />
     <Compile Include="V20220901\Models\SecurityPolicyTemplateInfo.cs" />
     <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
@@ -908,6 +910,7 @@
     <Compile Include="V20220901\Models\UpstreamRequestParameters.cs" />
     <Compile Include="V20220901\Models\UpstreamRequestQueryString.cs" />
     <Compile Include="V20220901\Models\UpstreamURLRewriteParameters.cs" />
+    <Compile Include="V20220901\Models\UserRiskProfile.cs" />
     <Compile Include="V20220901\Models\VanityNameServers.cs" />
     <Compile Include="V20220901\Models\VanityNameServersIps.cs" />
     <Compile Include="V20220901\Models\VaryParameters.cs" />

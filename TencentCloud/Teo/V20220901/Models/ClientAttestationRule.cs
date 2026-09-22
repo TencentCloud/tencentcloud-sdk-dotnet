@@ -25,52 +25,58 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
+        /// <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 客户端认证规则的名称。
+        /// <p>客户端认证规则的名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+        /// <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
+        /// <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+        /// <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 客户端认证选项 ID。
+        /// <p>客户端认证选项 ID。</p>
         /// </summary>
         [JsonProperty("AttesterId")]
         public string AttesterId{ get; set; }
 
         /// <summary>
-        /// 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
+        /// <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
+        /// </summary>
+        [JsonProperty("InvalidAttestationAction")]
+        public SecurityAction InvalidAttestationAction{ get; set; }
+
+        /// <summary>
+        /// <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
         /// </summary>
         [JsonProperty("DeviceProfiles")]
         public DeviceProfile[] DeviceProfiles{ get; set; }
 
         /// <summary>
-        /// 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+        /// <p>账号保护配置。</p>
         /// </summary>
-        [JsonProperty("InvalidAttestationAction")]
-        public SecurityAction InvalidAttestationAction{ get; set; }
+        [JsonProperty("AccountProtectionSettings")]
+        public AccountProtectionSettings AccountProtectionSettings{ get; set; }
 
 
         /// <summary>
@@ -84,8 +90,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
             this.SetParamSimple(map, prefix + "AttesterId", this.AttesterId);
-            this.SetParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
             this.SetParamObj(map, prefix + "InvalidAttestationAction.", this.InvalidAttestationAction);
+            this.SetParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
+            this.SetParamObj(map, prefix + "AccountProtectionSettings.", this.AccountProtectionSettings);
         }
     }
 }

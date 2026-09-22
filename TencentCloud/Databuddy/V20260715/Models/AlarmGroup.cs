@@ -25,35 +25,35 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 通知渠道ID，可通过基础平台通知渠道相关接口获取
+        /// <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// 通知渠道名称，可以是用户组名称或邮箱地址
+        /// <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 是否启用邮件渠道，默认值：false
+        /// <p>是否启用邮件渠道，默认值：false</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEmailChannel")]
         public bool? IsEmailChannel{ get; set; }
 
         /// <summary>
-        /// 一组告警条件，有 启动，成功，失败和任务超时告警
+        /// <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmConditions")]
         public string[] AlarmConditions{ get; set; }
 
         /// <summary>
-        /// 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+        /// <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelType")]

@@ -25,52 +25,58 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 自定义规则配置。
+        /// <p>自定义规则配置。</p>
         /// </summary>
         [JsonProperty("CustomRules")]
         public CustomRules CustomRules{ get; set; }
 
         /// <summary>
-        /// 托管规则配置。
+        /// <p>托管规则配置。</p>
         /// </summary>
         [JsonProperty("ManagedRules")]
         public ManagedRules ManagedRules{ get; set; }
 
         /// <summary>
-        /// HTTP DDOS 防护配置。
+        /// <p>HTTP DDOS 防护配置。</p>
         /// </summary>
         [JsonProperty("HttpDDoSProtection")]
         public HttpDDoSProtection HttpDDoSProtection{ get; set; }
 
         /// <summary>
-        /// 速率限制规则配置。
+        /// <p>速率限制规则配置。</p>
         /// </summary>
         [JsonProperty("RateLimitingRules")]
         public RateLimitingRules RateLimitingRules{ get; set; }
 
         /// <summary>
-        /// 例外规则配置。
+        /// <p>例外规则配置。</p>
         /// </summary>
         [JsonProperty("ExceptionRules")]
         public ExceptionRules ExceptionRules{ get; set; }
 
         /// <summary>
-        /// Bot 管理配置。
+        /// <p>Bot 管理配置。</p>
         /// </summary>
         [JsonProperty("BotManagement")]
         public BotManagement BotManagement{ get; set; }
 
         /// <summary>
-        /// 基础 Bot 管理配置。
+        /// <p>基础 Bot 管理配置。</p>
         /// </summary>
         [JsonProperty("BotManagementLite")]
         public BotManagementLite BotManagementLite{ get; set; }
 
         /// <summary>
-        /// 默认拦截动作配置。
+        /// <p>默认拦截动作配置。</p>
         /// </summary>
         [JsonProperty("DefaultDenySecurityActionParameters")]
         public DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters{ get; set; }
+
+        /// <summary>
+        /// <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+        /// </summary>
+        [JsonProperty("SecurityHeadersToOrigin")]
+        public SecurityHeadersToOrigin SecurityHeadersToOrigin{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "BotManagement.", this.BotManagement);
             this.SetParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
             this.SetParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
+            this.SetParamObj(map, prefix + "SecurityHeadersToOrigin.", this.SecurityHeadersToOrigin);
         }
     }
 }

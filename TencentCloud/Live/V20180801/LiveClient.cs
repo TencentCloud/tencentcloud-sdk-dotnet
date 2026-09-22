@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1511";
 
         /// <summary>
         /// Client constructor.
@@ -390,6 +390,48 @@ namespace TencentCloud.Live.V20180801
         public CreateAuditKeywordsResponse CreateAuditKeywordsSync(CreateAuditKeywordsRequest req)
         {
             return InternalRequestAsync<CreateAuditKeywordsResponse>(req, "CreateAuditKeywords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建审核规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleResponse"/></returns>
+        public Task<CreateAuditRuleResponse> CreateAuditRule(CreateAuditRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAuditRuleResponse>(req, "CreateAuditRule");
+        }
+
+        /// <summary>
+        /// 创建审核规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleResponse"/></returns>
+        public CreateAuditRuleResponse CreateAuditRuleSync(CreateAuditRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAuditRuleResponse>(req, "CreateAuditRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建单个审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditTemplateResponse"/></returns>
+        public Task<CreateAuditTemplateResponse> CreateAuditTemplate(CreateAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateAuditTemplateResponse>(req, "CreateAuditTemplate");
+        }
+
+        /// <summary>
+        /// 创建单个审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditTemplateResponse"/></returns>
+        public CreateAuditTemplateResponse CreateAuditTemplateSync(CreateAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateAuditTemplateResponse>(req, "CreateAuditTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -834,6 +876,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveSmartEraseTemplateResponse"/></returns>
+        public Task<CreateLiveSmartEraseTemplateResponse> CreateLiveSmartEraseTemplate(CreateLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLiveSmartEraseTemplateResponse>(req, "CreateLiveSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 创建直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveSmartEraseTemplateResponse"/></returns>
+        public CreateLiveSmartEraseTemplateResponse CreateLiveSmartEraseTemplateSync(CreateLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLiveSmartEraseTemplateResponse>(req, "CreateLiveSmartEraseTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
         /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
         /// 注意：单个域名仅支持关联一个截图模板。
@@ -1220,6 +1283,48 @@ namespace TencentCloud.Live.V20180801
         public DeleteAuditKeywordsResponse DeleteAuditKeywordsSync(DeleteAuditKeywordsRequest req)
         {
             return InternalRequestAsync<DeleteAuditKeywordsResponse>(req, "DeleteAuditKeywords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除审核规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleResponse"/></returns>
+        public Task<DeleteAuditRuleResponse> DeleteAuditRule(DeleteAuditRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditRuleResponse>(req, "DeleteAuditRule");
+        }
+
+        /// <summary>
+        /// 删除审核规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleResponse"/></returns>
+        public DeleteAuditRuleResponse DeleteAuditRuleSync(DeleteAuditRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditRuleResponse>(req, "DeleteAuditRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAuditTemplateResponse"/></returns>
+        public Task<DeleteAuditTemplateResponse> DeleteAuditTemplate(DeleteAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditTemplateResponse>(req, "DeleteAuditTemplate");
+        }
+
+        /// <summary>
+        /// 删除审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAuditTemplateResponse"/></returns>
+        public DeleteAuditTemplateResponse DeleteAuditTemplateSync(DeleteAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditTemplateResponse>(req, "DeleteAuditTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2011,6 +2116,69 @@ namespace TencentCloud.Live.V20180801
         public DescribeAuditKeywordsResponse DescribeAuditKeywordsSync(DescribeAuditKeywordsRequest req)
         {
             return InternalRequestAsync<DescribeAuditKeywordsResponse>(req, "DescribeAuditKeywords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取审核规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRulesResponse"/></returns>
+        public Task<DescribeAuditRulesResponse> DescribeAuditRules(DescribeAuditRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRulesResponse>(req, "DescribeAuditRules");
+        }
+
+        /// <summary>
+        /// 获取审核规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRulesResponse"/></returns>
+        public DescribeAuditRulesResponse DescribeAuditRulesSync(DescribeAuditRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRulesResponse>(req, "DescribeAuditRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取单个审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTemplateRequest"/></param>
+        /// <returns><see cref="DescribeAuditTemplateResponse"/></returns>
+        public Task<DescribeAuditTemplateResponse> DescribeAuditTemplate(DescribeAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditTemplateResponse>(req, "DescribeAuditTemplate");
+        }
+
+        /// <summary>
+        /// 获取单个审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTemplateRequest"/></param>
+        /// <returns><see cref="DescribeAuditTemplateResponse"/></returns>
+        public DescribeAuditTemplateResponse DescribeAuditTemplateSync(DescribeAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditTemplateResponse>(req, "DescribeAuditTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 返回当前用户的审核模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditTemplatesResponse"/></returns>
+        public Task<DescribeAuditTemplatesResponse> DescribeAuditTemplates(DescribeAuditTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditTemplatesResponse>(req, "DescribeAuditTemplates");
+        }
+
+        /// <summary>
+        /// 返回当前用户的审核模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditTemplatesResponse"/></returns>
+        public DescribeAuditTemplatesResponse DescribeAuditTemplatesSync(DescribeAuditTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditTemplatesResponse>(req, "DescribeAuditTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4420,6 +4588,27 @@ namespace TencentCloud.Live.V20180801
         public ModifyAuditKeywordLibResponse ModifyAuditKeywordLibSync(ModifyAuditKeywordLibRequest req)
         {
             return InternalRequestAsync<ModifyAuditKeywordLibResponse>(req, "ModifyAuditKeywordLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAuditTemplateResponse"/></returns>
+        public Task<ModifyAuditTemplateResponse> ModifyAuditTemplate(ModifyAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditTemplateResponse>(req, "ModifyAuditTemplate");
+        }
+
+        /// <summary>
+        /// 修改审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAuditTemplateResponse"/></returns>
+        public ModifyAuditTemplateResponse ModifyAuditTemplateSync(ModifyAuditTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditTemplateResponse>(req, "ModifyAuditTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

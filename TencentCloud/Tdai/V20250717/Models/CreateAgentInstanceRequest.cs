@@ -90,6 +90,18 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("UsePlatformAccount")]
         public bool? UsePlatformAccount{ get; set; }
 
+        /// <summary>
+        /// <p>是否是免部署实例</p>
+        /// </summary>
+        [JsonProperty("DeploymentFree")]
+        public bool? DeploymentFree{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持记忆</p>
+        /// </summary>
+        [JsonProperty("EnableMemory")]
+        public bool? EnableMemory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "SoulId", this.SoulId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "UsePlatformAccount", this.UsePlatformAccount);
+            this.SetParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
+            this.SetParamSimple(map, prefix + "EnableMemory", this.EnableMemory);
         }
     }
 }

@@ -74,7 +74,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+        /// <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTypeName")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string TaskVersionId{ get; set; }
 
         /// <summary>
-        /// <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+        /// <p>触发类型</p><p>枚举值：</p><ul><li>Scheduler： 调度触发</li><li>Manual： 手动触发</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerType")]

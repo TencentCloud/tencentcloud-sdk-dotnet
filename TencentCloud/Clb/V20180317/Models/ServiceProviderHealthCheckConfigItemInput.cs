@@ -54,6 +54,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthCheckProtocol")]
         public string HealthCheckProtocol{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+        /// </summary>
+        [JsonProperty("HealthCheckPath")]
+        public string HealthCheckPath{ get; set; }
+
+        /// <summary>
+        /// <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+        /// </summary>
+        [JsonProperty("HealthCheckMethod")]
+        public string HealthCheckMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthCheckUnhealthyThreshold", this.HealthCheckUnhealthyThreshold);
             this.SetParamSimple(map, prefix + "HealthCheckMaxTokens", this.HealthCheckMaxTokens);
             this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+            this.SetParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
+            this.SetParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
         }
     }
 }

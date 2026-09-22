@@ -25,92 +25,91 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志导出任务ID
+        /// <p>日志导出任务ID</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }
 
         /// <summary>
-        /// 日志导出查询语句
+        /// <p>日志导出查询语句</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 日志导出文件名
+        /// <p>日志导出文件名</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 日志文件大小
+        /// <p>日志文件大小</p><p>单位：字节</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// 日志导出时间排序
+        /// <p>日志导出时间排序</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 日志导出格式
+        /// <p>日志导出格式</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 日志导出数量
+        /// <p>日志导出数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+        /// <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 日志导出起始时间
+        /// <p>日志导出起始时间</p>
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 日志导出结束时间
+        /// <p>日志导出结束时间</p>
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
 
         /// <summary>
-        /// 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+        /// <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
 
         /// <summary>
-        /// 日志导出创建时间
+        /// <p>日志导出创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 语法规则。 默认值为0。
-        /// 0：Lucene语法，1：CQL语法。
+        /// <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
         /// <summary>
-        /// 导出字段
+        /// <p>导出字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DerivedFields")]

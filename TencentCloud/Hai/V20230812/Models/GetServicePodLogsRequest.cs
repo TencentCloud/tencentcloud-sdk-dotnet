@@ -24,12 +24,33 @@ namespace TencentCloud.Hai.V20230812.Models
     public class GetServicePodLogsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>服务Id</p>
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
+        /// <p>Pod名称</p>
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// <p>日志行数</p>
+        /// </summary>
+        [JsonProperty("TailLines")]
+        public string TailLines{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "TailLines", this.TailLines);
         }
     }
 }

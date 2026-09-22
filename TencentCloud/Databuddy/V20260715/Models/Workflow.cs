@@ -46,14 +46,14 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public WorkflowTriggerConfiguration[] Trigger{ get; set; }
 
         /// <summary>
-        /// <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;<!--'，最长128个字符--></p>
+        /// <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt; 最长128个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamInfo[] ParamList{ get; set; }
 
         /// <summary>
-        /// <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;<!--'，最长128个字符--></p>
+        /// <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;'，最长128个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelList")]
@@ -102,7 +102,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string BundleInfo{ get; set; }
 
         /// <summary>
-        /// <p>GIT配置ID，对应GetWorkspaceConfig接口中的ConfigKey</p>
+        /// <p>GIT配置ID，对应GetWorkspaceConfig接口中的ConfigKey</p>    -
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GitConfigId")]

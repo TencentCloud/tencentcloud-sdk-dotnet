@@ -25,6 +25,18 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
+        /// <p>实体列表</p>
+        /// </summary>
+        [JsonProperty("EntityInfos")]
+        public EntityInfo[] EntityInfos{ get; set; }
+
+        /// <summary>
+        /// <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul>
+        /// </summary>
+        [JsonProperty("HasMore")]
+        public ulong? HasMore{ get; set; }
+
+        /// <summary>
         /// <p>分页的游标，有值则下次分页请求原样带上，无值则表示无下一页</p>
         /// </summary>
         [JsonProperty("NextCursor")]
@@ -42,6 +54,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "EntityInfos.", this.EntityInfos);
+            this.SetParamSimple(map, prefix + "HasMore", this.HasMore);
             this.SetParamSimple(map, prefix + "NextCursor", this.NextCursor);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

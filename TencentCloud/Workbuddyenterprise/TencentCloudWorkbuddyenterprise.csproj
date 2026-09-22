@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{38CD7696-3B38-3CEA-932D-D1E86BA7D17A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1511</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Workbuddyenterprise</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260709\WorkbuddyenterpriseClient.cs" />
+    <Compile Include="V20260709\Models\A2AConfig.cs" />
+    <Compile Include="V20260709\Models\A2ASkillInput.cs" />
+    <Compile Include="V20260709\Models\A2ASkillItem.cs" />
+    <Compile Include="V20260709\Models\AgentItem.cs" />
+    <Compile Include="V20260709\Models\AgentVersionItem.cs" />
+    <Compile Include="V20260709\Models\BindExternalAgentRequest.cs" />
+    <Compile Include="V20260709\Models\BindExternalAgentResponse.cs" />
+    <Compile Include="V20260709\Models\BuiltinModel.cs" />
+    <Compile Include="V20260709\Models\ChatEndpoint.cs" />
+    <Compile Include="V20260709\Models\ConnectorInfo.cs" />
+    <Compile Include="V20260709\Models\ConnectorRefInput.cs" />
+    <Compile Include="V20260709\Models\CreateAgentRequest.cs" />
+    <Compile Include="V20260709\Models\CreateAgentResponse.cs" />
+    <Compile Include="V20260709\Models\CreateAgentSessionRequest.cs" />
+    <Compile Include="V20260709\Models\CreateAgentSessionResponse.cs" />
+    <Compile Include="V20260709\Models\CreateAgentVersionFromSourceRequest.cs" />
+    <Compile Include="V20260709\Models\CreateAgentVersionFromSourceResponse.cs" />
+    <Compile Include="V20260709\Models\CreateAgentVersionRequest.cs" />
+    <Compile Include="V20260709\Models\CreateAgentVersionResponse.cs" />
+    <Compile Include="V20260709\Models\DeleteAgentRequest.cs" />
+    <Compile Include="V20260709\Models\DeleteAgentResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentSessionListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentSessionListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentSessionRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentSessionResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentVersionListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentVersionListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentVersionRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeAgentVersionResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeBuiltinModelListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeBuiltinModelListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeConnectorListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeConnectorListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeExpertListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeExpertListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeExternalAgentListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeExternalAgentListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeExternalAgentRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeExternalAgentResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeMessageEventListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeMessageEventListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeSkillListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeSkillListResponse.cs" />
+    <Compile Include="V20260709\Models\ExpertCounts.cs" />
+    <Compile Include="V20260709\Models\ExpertItem.cs" />
+    <Compile Include="V20260709\Models\ExternalAgentInfo.cs" />
+    <Compile Include="V20260709\Models\Filter.cs" />
+    <Compile Include="V20260709\Models\MessageEvent.cs" />
+    <Compile Include="V20260709\Models\MessageEventMessage.cs" />
+    <Compile Include="V20260709\Models\MessageEventToolCall.cs" />
+    <Compile Include="V20260709\Models\MigrateAgentSessionRequest.cs" />
+    <Compile Include="V20260709\Models\MigrateAgentSessionResponse.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentA2AConfigRequest.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentA2AConfigResponse.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentRequest.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentResponse.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentRoutingRequest.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentRoutingResponse.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentVersionRequest.cs" />
+    <Compile Include="V20260709\Models\ModifyAgentVersionResponse.cs" />
+    <Compile Include="V20260709\Models\RoutingItem.cs" />
+    <Compile Include="V20260709\Models\SessionItem.cs" />
+    <Compile Include="V20260709\Models\SkillCounts.cs" />
+    <Compile Include="V20260709\Models\SkillItem.cs" />
+    <Compile Include="V20260709\Models\TokenUsage.cs" />
+    <Compile Include="V20260709\Models\UnbindExternalAgentRequest.cs" />
+    <Compile Include="V20260709\Models\UnbindExternalAgentResponse.cs" />
+  </ItemGroup>
+</Project>
